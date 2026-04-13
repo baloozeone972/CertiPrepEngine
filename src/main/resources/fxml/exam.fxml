@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.ExamController" spacing="15" styleClass="exam-container">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Barre supérieure -->
+    <HBox spacing="20" alignment="CENTER_LEFT">
+        <Label fx:id="questionCounter" text="Question 1/80" styleClass="counter-label" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label fx:id="timerLabel" text="03:00:00" styleClass="timer-label" />
+        <!-- Dans exam.fxml, ajouter ce bouton -->
+        <Button fx:id="pauseBtn" text="Pause" onAction="#pauseTimer" styleClass="secondary-btn" prefWidth="80" />
+        <Button fx:id="submitBtn" text="%submit.exam" onAction="#submitExam" styleClass="primary-btn" />
+    </HBox>
+
+    <Separator />
+
+    <!-- Zone question -->
+    <ScrollPane fitToWidth="true" styleClass="question-scroll">
+        <VBox spacing="20">
+            <Text fx:id="questionText" styleClass="question-text" wrappingWidth="700" />
+
+            <VBox fx:id="optionsContainer" spacing="10" />
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="prevBtn" text="%previous" onAction="#previousQuestion" styleClass="secondary-btn" />
+                <Button fx:id="nextBtn" text="%next" onAction="#nextQuestion" styleClass="secondary-btn" />
+                <Button fx:id="markBtn" text="%mark.review" onAction="#toggleMark" styleClass="mark-btn" />
+            </HBox>
+        </VBox>
+    </ScrollPane>
+
+    <Separator />
+
+    <!-- Navigation palette -->
+    <VBox spacing="5">
+        <Label text="%question.palette" styleClass="palette-title" />
+        <FlowPane fx:id="paletteContainer" hgap="8" vgap="8" alignment="CENTER" />
+    </VBox>
+
+    <!-- Barre progression -->
+    <ProgressBar fx:id="progressBar" prefWidth="Infinity" progress="0" />
+    <HBox alignment="CENTER">
+        <Label fx:id="answeredStatus" text="Répondues: 0/80" styleClass="status-label" />
+    </HBox>
+</VBox>

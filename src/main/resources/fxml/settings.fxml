@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.SettingsController" spacing="20" styleClass="settings-container">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Text text="%settings" styleClass="title" />
+
+    <!-- Thème -->
+    <VBox spacing="10">
+        <Label text="%theme" styleClass="section-title" />
+        <HBox spacing="20">
+            <RadioButton fx:id="lightThemeBtn" text="%light" />
+            <RadioButton fx:id="darkThemeBtn" text="%dark" />
+        </HBox>
+    </VBox>
+
+    <!-- Langue -->
+    <VBox spacing="10">
+        <Label text="%language" styleClass="section-title" />
+        <HBox spacing="20">
+            <RadioButton fx:id="frenchBtn" text="Français" />
+            <RadioButton fx:id="englishBtn" text="English" />
+        </HBox>
+    </VBox>
+
+    <!-- Export/Import -->
+    <VBox spacing="10">
+        <Label text="%data.management" styleClass="section-title" />
+        <HBox spacing="20">
+            <Button fx:id="exportDataBtn" text="%export.data" onAction="#exportData" styleClass="secondary-btn" />
+            <Button fx:id="importDataBtn" text="%import.data" onAction="#importData" styleClass="secondary-btn" />
+            <Button fx:id="resetDataBtn" text="%reset.data" onAction="#resetData" styleClass="danger-btn" />
+        </HBox>
+    </VBox>
+
+    <!-- À propos -->
+    <VBox spacing="10">
+        <Label text="%about" styleClass="section-title" />
+        <Text text="CertiPrep Engine v1.0" />
+        <Text text="%copyright" />
+        <Hyperlink fx:id="websiteLink" text="https://github.com/certiprep" onAction="#openWebsite" />
+    </VBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="saveSettingsBtn" text="%save" onAction="#saveSettings" styleClass="primary-btn" prefWidth="120" />
+        <Button fx:id="cancelSettingsBtn" text="%cancel" onAction="#close" styleClass="secondary-btn" prefWidth="100" />
+    </HBox>
+</VBox>

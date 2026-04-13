@@ -1,0 +1,750 @@
+[
+{
+"id": "J21-10-001",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Quelle est la version LTS (Long Term Support) la plus récente de Java ?",
+"options": ["Java 11", "Java 17", "Java 21", "Java 21 (septembre 2023)"],
+"correct": 3,
+"explanation": "Java 21 est la dernière LTS (septembre 2023). Les LTS précédentes : 8, 11, 17."
+},
+
+{
+"id": "J21-10-002",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Qu'est-ce que les 'record patterns' (Java 21) ?",
+"options": [
+  "Déstructuration de records dans switch et instanceof",
+  "Pattern matching pour les records",
+  "record Point(int x, int y); case Point(int x, int y) -> x+y",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Record patterns permettent de déconstruire un record pour accéder directement à ses composants."
+},
+
+{
+"id": "J21-10-003",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que produit ce code avec Java 21 ?\n```java\nrecord Point(int x, int y) {}\nObject obj = new Point(3, 4);\nif (obj instanceof Point(int x, int y)) {\n    System.out.println(x + y);\n}\n```",
+"options": ["7", "3 4", "Point(3,4)", "Erreur compilation"],
+"correct": 0,
+"explanation": "Record pattern déconstruit Point en x=3, y=4. x+y = 7."
+},
+
+{
+"id": "J21-10-004",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'switch pattern matching' améliorés en Java 21 ?",
+"options": [
+  "Switch sur n'importe quel type, pas seulement constantes",
+  "case Point(int x, int y) -> x + y",
+  "case String s -> s.length()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 21 généralise switch avec des patterns, records, et guard conditions (when)."
+},
+
+{
+"id": "J21-10-005",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que produit ce code avec Java 21 ?\n```java\nObject obj = \"Hello\";\nString result = switch(obj) {\n    case Integer i -> \"Integer: \" + i;\n    case String s -> \"String: \" + s;\n    case null -> \"Null\";\n    default -> \"Unknown\";\n};\nSystem.out.println(result);\n```",
+"options": ["String: Hello", "Hello", "Integer: Hello", "Unknown"],
+"correct": 0,
+"explanation": "Le switch pattern matching match le type String. case String s → s = \"Hello\"."
+},
+
+{
+"id": "J21-10-006",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'guard patterns' (when clause) en Java 21 ?",
+"options": [
+  "Condition supplémentaire dans un case",
+  "case Point p when p.x() > 0 -> ...",
+  "Filtrage avancé dans switch",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "when permet d'ajouter une condition booléenne après un pattern."
+},
+
+{
+"id": "J21-10-007",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'virtual threads' (Java 21) ?",
+"options": [
+  "Threads légers montés sur des threads plateforme",
+  "Millions de threads concurrents",
+  "Thread.startVirtualThread()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Virtual threads (Project Loom) sont des threads utilisateur très légers, idéaux pour I/O intensif."
+},
+
+{
+"id": "J21-10-008",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Comment créer un virtual thread en Java 21 ?",
+"options": [
+  "Thread.startVirtualThread(() -> task())",
+  "Thread.ofVirtual().start(task)",
+  "Executors.newVirtualThreadPerTaskExecutor()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Trois façons : API directe, builder, ou via ExecutorService."
+},
+
+{
+"id": "J21-10-009",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'structured concurrency' (Java 21 preview) ?",
+"options": [
+  "Concurrence structurée comme les blocs de code",
+  "StructuredTaskScope",
+  "Les threads enfants sont liés au parent",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "StructuredTaskScope garantit que les sous-tâches sont terminées avant la fin du scope."
+},
+
+{
+"id": "J21-10-010",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'scoped values' (Java 21 preview) ?",
+"options": [
+  "Alternative à ThreadLocal pour virtual threads",
+  "Immuables et héritées",
+  "ScopedValue.where(key, value).run(() -> ...)",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "ScopedValues remplacent ThreadLocal pour les virtual threads, avec meilleures performances et immutabilité."
+},
+
+{
+"id": "J21-10-011",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'sequenced collections' (Java 21) ?",
+"options": [
+  "Interfaces SequencedCollection, SequencedSet, SequencedMap",
+  "Méthodes getFirst(), getLast(), reversed()",
+  "addFirst(), addLast()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Les sequenced collections standardisent l'accès aux premier/dernier éléments pour List, Deque, SortedSet, etc."
+},
+
+{
+"id": "J21-10-012",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que produit ce code avec Java 21 ?\n```java\nSequencedCollection<String> list = new ArrayList<>(List.of(\"A\", \"B\", \"C\"));\nSystem.out.println(list.getFirst());\n```",
+"options": ["A", "C", "null", "Erreur"],
+"correct": 0,
+"explanation": "getFirst() retourne le premier élément (A). getLast() retournerait C."
+},
+
+{
+"id": "J21-10-013",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'string templates' (Java 21 preview) ?",
+"options": [
+  "Interpolation de chaînes sécurisée",
+  "STR.\"Hello \{name}\"",
+  "FMT.\"%d\" pour formatage",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "String templates (preview) offrent une interpolation de chaînes avec processeurs STR, FMT, RAW."
+},
+
+{
+"id": "J21-10-014",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que produit ce code avec Java 21 preview ?\n```java\nString name = \"Alice\";\nString result = STR.\"Hello \{name}\";\nSystem.out.println(result);\n```",
+"options": ["Hello Alice", "Hello {name}", "STR.Hello Alice", "Erreur"],
+"correct": 0,
+"explanation": "STR.\"Hello \{name}\" évalue l'expression et l'insère dans la chaîne."
+},
+
+{
+"id": "J21-10-015",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'foreign function & memory API' (Java 21) ?",
+"options": [
+  "Accès à du code natif sans JNI",
+  "Gestion de mémoire hors heap",
+  "Arena, SegmentAllocator",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Foreign API (Panama) remplace JNI avec plus de sécurité et performance."
+},
+
+{
+"id": "J21-10-016",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'vector API' (Java 21 incubator) ?",
+"options": [
+  "Calcul vectoriel SIMD portable",
+  "FloatVector, IntVector",
+  "Améliore les performances calcul intensif",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Vector API permet des opérations SIMD vectorielles portables sur différentes architectures."
+},
+
+{
+"id": "J21-10-017",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "easy",
+"question": "Quelle méthode permet de créer un Set immuable en Java 9+ ?",
+"options": ["Set.of()", "Set.copyOf()", "ImmutableSet.of()", "Set.immutable()"],
+"correct": 0,
+"explanation": "Set.of() (Java 9+) crée un Set immuable. Set.copyOf() aussi (Java 10+)."
+},
+
+{
+"id": "J21-10-018",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'switch expressions' (Java 14) ?",
+"options": [
+  "Switch qui retourne une valeur",
+  "Syntaxe avec -> et yield",
+  "Plus concis que switch statement",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Switch expressions : int result = switch(x) { case 1 -> 10; default -> 0; };"
+},
+
+{
+"id": "J21-10-019",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nint x = 2;\nint result = switch(x) {\n    case 1 -> 10;\n    case 2 -> 20;\n    default -> 0;\n};\nSystem.out.println(result);\n```",
+"options": ["20", "10", "0", "Erreur"],
+"correct": 0,
+"explanation": "Switch expression retourne 20 pour case 2."
+},
+
+{
+"id": "J21-10-020",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Qu'est-ce que 'yield' dans switch expression ?",
+"options": [
+  "Retourne une valeur depuis un bloc case",
+  "case 2 -> { int x = compute(); yield x; }",
+  "Alternative à -> pour blocs multi-instructions",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "yield remplace return dans les switch expressions pour les blocs avec accolades."
+},
+
+{
+"id": "J21-10-021",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'text blocks' (Java 15) ?",
+"options": [
+  "Chaînes multi-lignes avec \"\"\"",
+  "Préservent l'indentation",
+  "string.formatted()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Text blocks : \"\"\" ligne1\nligne2 \"\"\""
+},
+
+{
+"id": "J21-10-022",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Qu'est-ce que 'instanceof pattern matching' (Java 16) ?",
+"options": [
+  "if (obj instanceof String s) { s.length(); }",
+  "Déclare variable automatiquement",
+  "Évite cast explicite",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Pattern matching pour instanceof simplifie le code et élimine les casts."
+},
+
+{
+"id": "J21-10-023",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'records' (Java 16) ?",
+"options": [
+  "Classes immuables de données",
+  "record Point(int x, int y) {}",
+  "Génère equals, hashCode, toString",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Records sont des classes de données immuables avec constructeur canonique automatique."
+},
+
+{
+"id": "J21-10-024",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Un record peut-il avoir des méthodes ?",
+"options": [
+  "Non, seulement des composants",
+  "Oui, des méthodes d'instance et statiques",
+  "Oui, mais pas de constructeur personnalisé",
+  "Oui, mais seulement des getters",
+"correct": 1,
+"explanation": "Les records peuvent avoir des méthodes d'instance (non mutatrices), statiques, et des constructeurs compacts."
+},
+
+{
+"id": "J21-10-025",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'sealed classes' (Java 17) ?",
+"options": [
+  "Classes qui restreignent l'héritage",
+  "sealed class Shape permits Circle, Rectangle",
+  "Sous-classes : final, sealed, non-sealed",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Sealed classes (Java 17) permettent de spécifier exactement quelles classes peuvent hériter."
+},
+
+{
+"id": "J21-10-026",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que signifie 'non-sealed' dans une sealed class ?",
+"options": [
+  "Une sous-classe qui permet l'héritage libre",
+  "Rouvre l'héritage à d'autres classes",
+  "Contraire de sealed",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "non-sealed permet à une sous-classe d'une sealed class d'être étendue sans restriction."
+},
+
+{
+"id": "J21-10-027",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'helpful NullPointerExceptions' (Java 17) ?",
+"options": [
+  "NPE indique quelle variable était null",
+  "Exemple : Exception in thread \"main\" java.lang.NullPointerException: Cannot invoke \"String.length()\" because \"str\" is null",
+  "Active par défaut depuis Java 15+",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Helpful NPE donnent des messages détaillés indiquant précisément quelle référence est null."
+},
+
+{
+"id": "J21-10-028",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'Day Period Support' (Java 21) ?",
+"options": [
+  "Formatage AM/PM étendu (morning, afternoon, night)",
+  "java.time.format.FormatStyle",
+  "DateTimeFormatter.ofPattern(\"B\")",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 21 ajoute le support des périodes de jour étendues (aube, matin, après-midi, soir, nuit)."
+},
+
+{
+"id": "J21-10-029",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'Unicode 15.1' en Java 21 ?",
+"options": [
+  "Support des nouveaux émojis",
+  "Mise à jour des catégories de caractères",
+  "Nouveaux scripts",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 21 supporte Unicode 15.1 avec nouveaux caractères et émojis."
+},
+
+{
+"id": "J21-10-030",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'key encapsulation mechanism (KEM)' en Java 21 ?",
+"options": [
+  "API cryptographique pour KEM",
+  "Security.getKEMInstances()",
+  "Pour post-quantum cryptography",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 21 introduit une API pour le Key Encapsulation Mechanism (KEM)."
+},
+
+{
+"id": "J21-10-031",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'generational ZGC' (Java 21) ?",
+"options": [
+  "ZGC avec générations (jeunes/vieux objets)",
+  "Meilleures performances",
+  "Réduction de la fragmentation",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Generational ZGC (optionnel) améliore ZGC pour certains workloads."
+},
+
+{
+"id": "J21-10-032",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'simple web server' (Java 18) ?",
+"options": [
+  "jwebserver commande",
+  "Serveur HTTP minimal pour tests",
+  "Classe com.sun.net.httpserver.SimpleFileServer",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 18 ajoute jwebserver, un serveur HTTP statique minimal pour développement."
+},
+
+{
+"id": "J21-10-033",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'UTF-8 by default' (Java 18) ?",
+"options": [
+  "Charset par défaut = UTF-8",
+  "Files.readString() utilise UTF-8",
+  "InputStreamReader utilise UTF-8",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Depuis Java 18, l'encodage par défaut est UTF-8 sur toutes les plateformes."
+},
+
+{
+"id": "J21-10-034",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'vector incubator API' (Java 16-21) ?",
+"options": [
+  "API pour calculs SIMD",
+  "jdk.incubator.vector",
+  "FloatVector, IntVector",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Vector API est en incubation depuis Java 16, toujours en incubation en Java 21."
+},
+
+{
+"id": "J21-10-035",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'foreign memory access API' (Java 19) ?",
+"options": [
+  "Accès à mémoire hors heap",
+  "MemorySegment, Arena",
+  "Remplace ByteBuffer",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Foreign memory API (Panama) permet une gestion efficace de mémoire hors heap."
+},
+
+{
+"id": "J21-10-036",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Quelle version a introduit les 'pattern matching for switch' en preview ?",
+"options": ["Java 17", "Java 18", "Java 19", "Java 20"],
+"correct": 2,
+"explanation": "Pattern matching for switch était en preview depuis Java 17, finalisé en Java 21."
+},
+
+{
+"id": "J21-10-037",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "easy",
+"question": "Quelle méthode permet de créer une copie immuable d'une collection ?",
+"options": ["List.copyOf()", "Set.copyOf()", "Map.copyOf()", "Toutes ces réponses"],
+"correct": 3,
+"explanation": "copyOf() (Java 10+) crée des collections immuables depuis des collections existantes."
+},
+
+{
+"id": "J21-10-038",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'optional.isEmpty()' (Java 11) ?",
+"options": [
+  "Alternative à !isPresent()",
+  "Plus lisible",
+  "Optional.ofNullable().isEmpty()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "isEmpty() (Java 11) retourne true si Optional est vide."
+},
+
+{
+"id": "J21-10-039",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'local variable syntax for lambda parameters' (Java 11) ?",
+"options": [
+  "(var x, var y) -> x + y",
+  "Permet d'utiliser var dans lambda",
+  "Uniforme avec var ailleurs",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 11 permet d'utiliser var dans les paramètres de lambda."
+},
+
+{
+"id": "J21-10-040",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'launch single-file source-code programs' (Java 11) ?",
+"options": [
+  "java Hello.java sans compilation",
+  "Exécution directe de fichier .java",
+  "Permet shebang (#!) sur Unix",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 11 permet d'exécuter directement un fichier .java sans javac préalable."
+},
+
+{
+"id": "J21-10-041",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'deprecation for removal' en Java ?",
+"options": [
+  "@Deprecated(forRemoval = true)",
+  "Indique suppression dans version future",
+  "Outil jdeprscan",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "forRemoval=true indique que l'API sera supprimée dans une prochaine version."
+},
+
+{
+"id": "J21-10-042",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Quelle API de date/heure est recommandée depuis Java 8 ?",
+"options": [
+  "java.time (LocalDate, LocalTime, ZonedDateTime)",
+  "java.util.Date (obsolète)",
+  "Calendar (obsolète)",
+  "Joda-Time (externe)"
+],
+"correct": 0,
+"explanation": "java.time (Date/Time API) est l'API moderne depuis Java 8."
+},
+
+{
+"id": "J21-10-043",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'Collectors.teeing' (Java 12) ?",
+"options": [
+  "Combine deux collectors",
+  "Collectors.teeing(collector1, collector2, merger)",
+  "Exemple : average et count",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "teeing permet d'appliquer deux collectors en parallèle et de combiner leurs résultats."
+},
+
+{
+"id": "J21-10-044",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Que sont les 'String.formatted()' (Java 15) ?",
+"options": [
+  "Alternative à String.format()",
+  "\"Hello %s\".formatted(\"World\")",
+  "Plus concis",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "formatted() est une méthode d'instance pour le formatage de chaînes."
+},
+
+{
+"id": "J21-10-045",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'enhanced pseudo-random number generators' (Java 17) ?",
+"options": [
+  "RandomGenerator interface",
+  "RandomGeneratorFactory",
+  "Xoroshiro128PlusPlus, L64X128MixRandom",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 17 unifie les générateurs aléatoires avec RandomGenerator et nouvelles implémentations."
+},
+
+{
+"id": "J21-10-046",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'simple source files' (Java 21 preview) ?",
+"options": [
+  "Classes sans classe explicite",
+  "void main() { System.out.println(\"Hello\"); }",
+  "Syntaxe simplifiée pour débutants",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 21 preview permet des fichiers sources très simples sans déclaration de classe."
+},
+
+{
+"id": "J21-10-047",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Quel garbage collector est devenu default en Java 21 ?",
+"options": ["G1GC", "ZGC", "Shenandoah", "Parallel GC"],
+"correct": 0,
+"explanation": "G1GC reste le default en Java 21. ZGC et Shenandoah sont disponibles en option."
+},
+
+{
+"id": "J21-10-048",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'class-file API' (Java 21 preview) ?",
+"options": [
+  "API pour lire/écrire des fichiers .class",
+  "Alternative à ASM/ByteBuddy",
+  "jdk.classfile package",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Class-file API (preview) standardise la manipulation des fichiers .class."
+},
+
+{
+"id": "J21-10-049",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "hard",
+"question": "Que sont les 'premain manifest attribute' pour les agents Java ?",
+"options": [
+  "Agent JVM via -javaagent",
+  "Instrumentation API",
+  "Permet monitoring",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Les agents Java (premain) permettent d'instrumenter le bytecode au chargement."
+},
+
+{
+"id": "J21-10-050",
+"theme": "Nouveautés Java 17-21",
+"theme_label": "Java 17, 18, 19, 20, 21 - Nouvelles fonctionnalités",
+"difficulty": "medium",
+"question": "Quel est le support des virtual threads en Java 21 ?",
+"options": [
+  "Finalisé (non preview)",
+  "Thread.startVirtualThread()",
+  "Executors.newVirtualThreadPerTaskExecutor()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Virtual threads sont finalisés en Java 21 (plus en preview depuis Java 20)."
+}
+]

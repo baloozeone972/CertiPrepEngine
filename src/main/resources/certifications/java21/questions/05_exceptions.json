@@ -1,0 +1,726 @@
+[
+{
+"id": "J21-05-001",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle est la classe parente de toutes les exceptions en Java ?",
+"options": ["Exception", "Throwable", "Error", "RuntimeException"],
+"correct": 1,
+"explanation": "Throwable est la classe racine de toute la hiérarchie des exceptions. Exception et Error héritent de Throwable."
+},
+
+{
+"id": "J21-05-002",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle est la différence entre Exception et Error ?",
+"options": [
+  "Error est pour des problèmes système, Exception pour des erreurs applicatives",
+  "Exception est checked, Error est unchecked",
+  "Error ne doit pas être rattrapé",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Error (OutOfMemoryError, StackOverflowError) indique des problèmes système graves. Exception est pour les erreurs applicatives."
+},
+
+{
+"id": "J21-05-003",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle est la différence entre checked et unchecked exception ?",
+"options": [
+  "Checked doit être catchée ou déclarée (throws), unchecked non",
+  "Unchecked hérite de RuntimeException",
+  "Checked hérite d'Exception (sauf RuntimeException)",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Checked exceptions : IOException, SQLException. Unchecked : RuntimeException, NullPointerException, etc."
+},
+
+{
+"id": "J21-05-004",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Que se passe-t-il si une checked exception n'est ni catchée ni déclarée ?",
+"options": [
+  "Runtime exception",
+  "Erreur de compilation",
+  "L'exception est ignorée",
+  "La JVM s'arrête"
+],
+"correct": 1,
+"explanation": "Le compilateur exige que les checked exceptions soient gérées (catch) ou déclarées (throws). Sinon, erreur de compilation."
+},
+
+{
+"id": "J21-05-005",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Que produit ce code ?\n```java\ntry {\n    int x = 10 / 0;\n} catch (ArithmeticException e) {\n    System.out.print(\"A\");\n} finally {\n    System.out.print(\"B\");\n}\n```",
+"options": ["A", "B", "AB", "BA"],
+"correct": 2,
+"explanation": "ArithmeticException est catchée → affiche A, puis finally s'exécute toujours → affiche B."
+},
+
+{
+"id": "J21-05-006",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Le bloc finally s'exécute-t-il toujours ?",
+"options": [
+  "Oui, toujours",
+  "Non, jamais",
+  "Oui, sauf si System.exit() est appelé",
+  "Oui, sauf si une exception non catchée est levée"
+],
+"correct": 2,
+"explanation": "finally s'exécute toujours, sauf en cas de System.exit() ou de crash JVM (segfault). Même avec return, finally s'exécute."
+},
+
+{
+"id": "J21-05-007",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\ntry {\n    return 1;\n} finally {\n    return 2;\n}\n```",
+"options": ["1", "2", "Erreur compilation", "0"],
+"correct": 1,
+"explanation": "finally s'exécute après le return du try, et son return remplace la valeur. Donc retourne 2. (À éviter absolument !)"
+},
+
+{
+"id": "J21-05-008",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\ntry {\n    throw new RuntimeException();\n} finally {\n    return 42;\n}\n```",
+"options": [
+  "42 (l'exception est supprimée)",
+  "RuntimeException est levée",
+  "Erreur compilation",
+  "42 puis exception"
+],
+"correct": 0,
+"explanation": "finally avec return supprime l'exception. L'exception est perdue, la méthode retourne 42. Très mauvais pattern."
+},
+
+{
+"id": "J21-05-009",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Quel est l'ordre d'exécution des blocs try-catch-finally ?",
+"options": [
+  "try → catch (si exception) → finally",
+  "try → finally → catch",
+  "catch → try → finally",
+  "finally → try → catch"
+],
+"correct": 0,
+"explanation": "Ordre : try d'abord, puis catch si exception, puis finally toujours (sauf System.exit)."
+},
+
+{
+"id": "J21-05-010",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Que signifie 'try-with-resources' ?",
+"options": [
+  "Ferme automatiquement les ressources implémentant AutoCloseable",
+  "Un try avec plusieurs catch",
+  "Un try sans catch",
+  "Une nouvelle syntaxe pour les exceptions"
+],
+"correct": 0,
+"explanation": "try-with-resources (Java 7+) ferme automatiquement les ressources déclarées entre parenthèses après try."
+},
+
+{
+"id": "J21-05-011",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Quelle interface doit implémenter une ressource pour try-with-resources ?",
+"options": ["Closeable", "AutoCloseable", "Flushable", "Runnable"],
+"correct": 1,
+"explanation": "AutoCloseable (Java 7+) avec méthode close(). Closeable étend AutoCloseable. Les deux fonctionnent."
+},
+
+{
+"id": "J21-05-012",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Quelle est la syntaxe correcte du try-with-resources ?",
+"options": [
+  "try (BufferedReader br = new BufferedReader(...)) { ... }",
+  "try (br) { ... } (Java 9+)",
+  "try (var br = new BufferedReader(...)) { ... } (Java 10+)",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Java 7 : try (Resource r = new Resource()). Java 9 : try (r) avec variable effectively final. Java 10+ : try (var r = ...)."
+},
+
+{
+"id": "J21-05-013",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Que se passe-t-il si close() lève une exception dans try-with-resources ?",
+"options": [
+  "L'exception est ignorée",
+  "L'exception est ajoutée comme suppressed",
+  "L'exception est levée immédiatement",
+  "Le programme s'arrête"
+],
+"correct": 1,
+"explanation": "Si une exception est levée dans le try, et une autre dans close(), l'exception de close() est ajoutée comme 'suppressed' à l'exception principale."
+},
+
+{
+"id": "J21-05-014",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Comment récupérer les exceptions supprimées (suppressed) ?",
+"options": [
+  "Throwable.getSuppressed()",
+  "Exception.getSuppressedExceptions()",
+  "Throwable.getCauses()",
+  "Impossible"
+],
+"correct": 0,
+"explanation": "getSuppressed() retourne un tableau des exceptions qui ont été supprimées (typiquement dans try-with-resources)."
+},
+
+{
+"id": "J21-05-015",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Que signifie 'throws' dans une signature de méthode ?",
+"options": [
+  "La méthode peut lever cette exception",
+  "La méthode attrape cette exception",
+  "La méthode ignore l'exception",
+  "La méthode crée l'exception"
+],
+"correct": 0,
+"explanation": "throws déclare qu'une méthode peut lever une checked exception. L'appelant doit la gérer ou la déclarer aussi."
+},
+
+{
+"id": "J21-05-016",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Peut-on déclarer plusieurs exceptions avec throws ?",
+"options": [
+  "Non, une seule",
+  "Oui, séparées par des virgules",
+  "Oui, mais seulement des unchecked",
+  "Oui, avec un tableau"
+],
+"correct": 1,
+"explanation": "throws IOException, SQLException déclare plusieurs exceptions séparées par des virgules."
+},
+
+{
+"id": "J21-05-017",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\npublic static void main(String[] args) {\n    try {\n        throw new NullPointerException();\n    } catch (ArithmeticException e) {\n        System.out.print(\"A\");\n    }\n}\n```",
+"options": [
+  "A",
+  "NullPointerException non catchée",
+  "Erreur compilation",
+  "Rien"
+],
+"correct": 1,
+"explanation": "NullPointerException n'est pas un ArithmeticException, donc non catchée → exception non gérée."
+},
+
+{
+"id": "J21-05-018",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\ntry {\n    throw new IOException();\n} catch (Exception e) {\n    System.out.print(\"A\");\n} catch (IOException e) {\n    System.out.print(\"B\");\n}\n```",
+"options": [
+  "A",
+  "B",
+  "Erreur compilation : IOException déjà catchée",
+  "AB"
+],
+"correct": 2,
+"explanation": "IOException est une sous-classe d'Exception. Le premier catch attrape tout, le second est inaccessible → erreur compilation."
+},
+
+{
+"id": "J21-05-019",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "L'ordre des blocs catch est important. Pourquoi ?",
+"options": [
+  "Pour des raisons de performance",
+  "Les exceptions plus spécifiques doivent précéder les plus générales",
+  "L'ordre n'a pas d'importance",
+  "Les exceptions générales d'abord"
+],
+"correct": 1,
+"explanation": "Le premier catch qui correspond est exécuté. Il faut mettre les sous-classes avant les super-classes."
+},
+
+{
+"id": "J21-05-020",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que signifie 'multi-catch' (Java 7+) ?",
+"options": [
+  "Attraper plusieurs exceptions dans un seul catch",
+  "catch (IOException | SQLException e)",
+  "catch (IOException, SQLException e)",
+  "A et B sont correctes"
+],
+"correct": 3,
+"explanation": "Multi-catch : catch (IOException | SQLException e) {}. Le type de e est la super-classe commune."
+},
+
+{
+"id": "J21-05-021",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Que peut-on faire avec 'e' dans un multi-catch ?",
+"options": [
+  "Appeler des méthodes communes à toutes les exceptions",
+  "Relaver l'exception avec throw e",
+  "Utiliser instanceof pour distinguer",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "e a le type de la super-classe commune. On peut relaver (si effectivement final ou effectively final en Java 7+)."
+},
+
+{
+"id": "J21-05-022",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle exception est levée par Integer.parseInt(\"abc\") ?",
+"options": ["NumberFormatException", "IllegalArgumentException", "ParseException", "NullPointerException"],
+"correct": 0,
+"explanation": "NumberFormatException (sous-classe de IllegalArgumentException) est levée quand la chaîne n'est pas un nombre valide."
+},
+
+{
+"id": "J21-05-023",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle exception est levée par new int[-1] ?",
+"options": ["NegativeArraySizeException", "IllegalArgumentException", "ArrayIndexOutOfBoundsException", "IndexOutOfBoundsException"],
+"correct": 0,
+"explanation": "NegativeArraySizeException (RuntimeException) est levée quand on tente de créer un tableau avec une taille négative."
+},
+
+{
+"id": "J21-05-024",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle exception est levée par arr[10] si arr a taille 5 ?",
+"options": ["ArrayIndexOutOfBoundsException", "IndexOutOfBoundsException", "IllegalArgumentException", "NegativeArraySizeException"],
+"correct": 0,
+"explanation": "ArrayIndexOutOfBoundsException (sous-classe de IndexOutOfBoundsException) pour les accès hors limites de tableau."
+},
+
+{
+"id": "J21-05-025",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle exception est levée par String s = null; s.length(); ?",
+"options": ["NullPointerException", "IllegalStateException", "IllegalArgumentException", "ClassCastException"],
+"correct": 0,
+"explanation": "NullPointerException quand on appelle une méthode sur une référence null."
+},
+
+{
+"id": "J21-05-026",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle exception est levée par Object obj = new Integer(5); String s = (String) obj; ?",
+"options": ["ClassCastException", "NullPointerException", "IllegalArgumentException", "ClassNotFoundException"],
+"correct": 0,
+"explanation": "ClassCastException quand on caste un objet vers un type incompatible."
+},
+
+{
+"id": "J21-05-027",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\ntry {\n    int[] arr = new int[-5];\n} catch (NegativeArraySizeException e) {\n    System.out.print(\"A\");\n} catch (RuntimeException e) {\n    System.out.print(\"B\");\n}\n```",
+"options": ["A", "B", "AB", "Erreur"],
+"correct": 0,
+"explanation": "NegativeArraySizeException est une RuntimeException, mais le catch spécifique est trouvé en premier."
+},
+
+{
+"id": "J21-05-028",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Que sont les 'exception chaining' ?",
+"options": [
+  "Une exception qui en contient une autre (cause)",
+  "Utiliser initCause() ou constructeur avec cause",
+  "getCause() pour remonter la chaîne",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Exception chaining permet d'encapsuler une exception dans une autre pour préserver la trace de la cause originale."
+},
+
+{
+"id": "J21-05-029",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Comment créer une exception personnalisée ?",
+"options": [
+  "Étendre Exception (checked) ou RuntimeException (unchecked)",
+  "Définir des constructeurs",
+  "Peut ajouter des champs spécifiques",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Une exception personnalisée étend Exception ou RuntimeException. Recommandé : fournir les 4 constructeurs standards."
+},
+
+{
+"id": "J21-05-030",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Quelle est la sortie de 'e.printStackTrace()' ?",
+"options": [
+  "Affiche la trace de la pile sur System.err",
+  "Retourne une String",
+  "Lève une exception",
+  "Ne fait rien"
+],
+"correct": 0,
+"explanation": "printStackTrace() affiche la trace d'exécution (stack trace) sur la sortie d'erreur standard (System.err)."
+},
+
+{
+"id": "J21-05-031",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que fait 'throw new AssertionError()' ?",
+"options": [
+  "Lève une erreur d'assertion",
+  "Est utilisé pour les tests",
+  "Indique une condition qui ne devrait jamais arriver",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "AssertionError est une Error (unchecked). Typiquement utilisé avec assert, ou pour des cas 'impossible' dans le code."
+},
+
+{
+"id": "J21-05-032",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que se passe-t-il avec 'assert x > 0' ?",
+"options": [
+  "Lève AssertionError si x ≤ 0",
+  "Ne fait rien si les assertions sont désactivées",
+  "Doit être activé avec -ea",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Les assertions (assert) sont désactivées par défaut. Activer avec -ea (enable assertions)."
+},
+
+{
+"id": "J21-05-033",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\npublic static int test() {\n    try {\n        return 1;\n    } finally {\n        System.out.print(\"finally \");\n    }\n}\nSystem.out.print(test());\n```",
+"options": ["1", "finally 1", "1 finally", "finally"],
+"correct": 1,
+"explanation": "finally s'exécute avant que le return ne soit effectif. Donc 'finally ' puis '1'."
+},
+
+{
+"id": "J21-05-034",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\npublic static int test() {\n    int x = 1;\n    try {\n        return x;\n    } finally {\n        x = 2;\n    }\n}\nSystem.out.print(test());\n```",
+"options": ["1", "2", "0", "Erreur"],
+"correct": 0,
+"explanation": "La valeur de retour est calculée avant l'exécution de finally. x=2 n'affecte pas la valeur retournée (1)."
+},
+
+{
+"id": "J21-05-035",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que signifie 'finally block does not complete normally' ?",
+"options": [
+  "Le finally contient un return ou throw",
+  "Le finally est vide",
+  "Le finally n'existe pas",
+  "Erreur de compilation"
+],
+"correct": 0,
+"explanation": "Si finally contient return ou throw, le compilateur avertit que le bloc finally peut interrompre le flux normal."
+},
+
+{
+"id": "J21-05-036",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Peut-on avoir un try sans catch ?",
+"options": [
+  "Non, try nécessite catch ou finally",
+  "Oui, try-finally est valide",
+  "Oui, mais seulement avec try-with-resources",
+  "B et C sont correctes"
+],
+"correct": 3,
+"explanation": "try-finally est valide (sans catch). try-with-resources peut aussi être sans catch (les ressources sont fermées)."
+},
+
+{
+"id": "J21-05-037",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\npublic static void main(String[] args) {\n    try {\n        System.exit(0);\n    } finally {\n        System.out.print(\"finally\");\n    }\n}\n```",
+"options": ["finally", "Rien", "Erreur", "finally puis exit"],
+"correct": 1,
+"explanation": "System.exit() arrête la JVM immédiatement. finally n'est PAS exécuté."
+},
+
+{
+"id": "J21-05-038",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Qu'est-ce que 'try-with-resources' améliore par rapport à try-catch-finally ?",
+"options": [
+  "Moins de code boilerplate",
+  "Gestion automatique des exceptions supprimées (suppressed)",
+  "Fermeture garantie des ressources",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "try-with-resources simplifie la gestion des ressources et gère correctement les exceptions multiples avec suppressed."
+},
+
+{
+"id": "J21-05-039",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Quelle est l'ordre de fermeture dans try-with-resources ?",
+"options": [
+  "Ordre inverse de déclaration",
+  "Ordre de déclaration",
+  "Ordre alphabétique",
+  "Aléatoire"
+],
+"correct": 0,
+"explanation": "Les ressources sont fermées dans l'ordre inverse de leur déclaration (LIFO : last declared, first closed)."
+},
+
+{
+"id": "J21-05-040",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Que se passe-t-il si deux ressources lèvent des exceptions lors de close() ?",
+"options": [
+  "La première est perdue",
+  "La seconde est ajoutée comme suppressed à la première",
+  "Les deux sont perdues",
+  "Une seule est levée"
+],
+"correct": 1,
+"explanation": "La première exception de close est la principale, les suivantes lui sont ajoutées comme suppressed."
+},
+
+{
+"id": "J21-05-041",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Quelle méthode permet d'ajouter une exception supprimée ?",
+"options": ["addSuppressed()", "addSuppressedException()", "suppress()", "addCause()"],
+"correct": 0,
+"explanation": "Throwable.addSuppressed(Throwable) ajoute une exception à la liste des exceptions supprimées."
+},
+
+{
+"id": "J21-05-042",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Quelle est la différence entre 'throws' et 'throw' ?",
+"options": [
+  "throws déclare, throw lance une exception",
+  "throw lance, throws déclare",
+  "Les deux sont identiques",
+  "throws est pour les méthodes, throw pour les blocs"
+],
+"correct": 0,
+"explanation": "throw new Exception() lance une exception. throws Exception dans la signature déclare qu'elle peut être lancée."
+},
+
+{
+"id": "J21-05-043",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Peut-on relancer une exception dans un catch ?",
+"options": [
+  "Oui, avec throw e",
+  "Oui, mais seulement si e est déclaré dans throws",
+  "Oui, en utilisant la même variable",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "On peut relancer une exception. En Java 7+, si e est effectively final, le type déclaré est plus précis."
+},
+
+{
+"id": "J21-05-044",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Qu'est-ce que 'final rethrow' (Java 7+) ?",
+"options": [
+  "Relaver une exception avec un type plus précis",
+  "Le compilateur peut inférer un type plus spécifique que Exception",
+  "Utilise la précision du catch",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Final rethrow : si le paramètre catch est effectively final, le compilateur peut utiliser le type exact de l'exception."
+},
+
+{
+"id": "J21-05-045",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Que signifie 'StackOverflowError' ?",
+"options": [
+  "Récursion infinie ou trop profonde",
+  "Mémoire heap insuffisante",
+  "Trop de threads",
+  "Erreur d'E/S"
+],
+"correct": 0,
+"explanation": "StackOverflowError se produit quand la pile d'appels dépasse sa capacité (typiquement récursion infinie)."
+},
+
+{
+"id": "J21-05-046",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "easy",
+"question": "Que signifie 'OutOfMemoryError' ?",
+"options": [
+  "Plus assez de mémoire heap",
+  "Trop d'objets en mémoire",
+  "Fuite mémoire",
+  "Toutes ces réponses peuvent causer OOME"
+],
+"correct": 3,
+"explanation": "OutOfMemoryError se produit quand la JVM ne peut plus allouer d'objet faute de mémoire heap."
+},
+
+{
+"id": "J21-05-047",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Peut-on rattraper un Error ?",
+"options": [
+  "Non, jamais",
+  "Oui, avec catch (Error e)",
+  "Oui, mais déconseillé",
+  "B et C sont correctes"
+],
+"correct": 3,
+"explanation": "On peut techniquement rattraper Error, mais c'est déconseillé car indique des problèmes système graves (OOME, SOE)."
+},
+
+{
+"id": "J21-05-048",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\ntry {\n    throw new NullPointerException();\n} catch (NullPointerException e) {\n    throw new IllegalArgumentException(e);\n}\n```",
+"options": [
+  "IllegalArgumentException avec NPE comme cause",
+  "NullPointerException",
+  "Les deux exceptions",
+  "Erreur compilation"
+],
+"correct": 0,
+"explanation": "On encapsule NPE dans IllegalArgumentException. getCause() retournera le NPE d'origine."
+},
+
+{
+"id": "J21-05-049",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Comment obtenir la cause originale d'une exception encapsulée ?",
+"options": ["getCause()", "getRootCause()", "getOriginalException()", "getSuppressed()"],
+"correct": 0,
+"explanation": "Throwable.getCause() retourne l'exception qui a causé l'exception courante (si encapsulée)."
+},
+
+{
+"id": "J21-05-050",
+"theme": "Exceptions et Gestion d'erreurs",
+"theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+"difficulty": "medium",
+"question": "Quelle est la meilleure pratique pour les exceptions ?",
+"options": [
+  "Ne pas avaler les exceptions (catch vide)",
+  "Logger l'exception",
+  "Utiliser des exceptions spécifiques plutôt que Exception générique",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Bonnes pratiques : ne jamais avaler d'exception, logger, utiliser des types spécifiques, ne pas utiliser Exception pour tout."
+}
+]

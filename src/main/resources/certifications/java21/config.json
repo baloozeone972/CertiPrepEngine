@@ -1,0 +1,22 @@
+{
+  "id": "java21",
+  "name": "Java 21 Developer Certification (1Z0-830)",
+  "version": "1.0",
+  "description": "Préparation complète à la certification Oracle Java 21 Developer. Couvre tous les thèmes essentiels pour réussir l'examen.",
+  "totalQuestions": 500,
+  "examDurationMinutes": 180,
+  "examQuestionCount": 80,
+  "passingScore": 68,
+  "themes": [
+    {"name": "Fondamentaux du Langage", "count": 50},
+    {"name": "Types de données et Wrappers", "count": 50},
+    {"name": "POO - Classes, Héritage, Polymorphisme", "count": 60},
+    {"name": "Collections et Génériques", "count": 60},
+    {"name": "Exceptions et Gestion d'erreurs", "count": 50},
+    {"name": "Flux I/O et NIO", "count": 40},
+    {"name": "Multithreading et Concurrence", "count": 50},
+    {"name": "Lambda, Streams et API fonctionnelle", "count": 60},
+    {"name": "Modules JPMS", "count": 30},
+    {"name": "Nouveautés Java 17-21", "count": 50}
+  ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.HistoryController" spacing="15" styleClass="history-container">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text text="%history" styleClass="title" />
+
+    <!-- Filtres -->
+    <HBox spacing="20">
+        <Label text="%filter.certification" />
+        <ComboBox fx:id="certFilterCombo" prefWidth="200" />
+        <Label text="%filter.mode" />
+        <ComboBox fx:id="modeFilterCombo" prefWidth="150" />
+        <Button fx:id="refreshBtn" text="%refresh" onAction="#refreshHistory" styleClass="secondary-btn" />
+        <Button fx:id="deleteAllBtn" text="%delete.all" onAction="#deleteAllHistory" styleClass="danger-btn" />
+    </HBox>
+
+    <!-- Tableau des sessions -->
+    <TableView fx:id="historyTable" prefHeight="400">
+        <columns>
+            <TableColumn text="%date" fx:id="dateCol" prefWidth="150" />
+            <TableColumn text="%certification" fx:id="certCol" prefWidth="150" />
+            <TableColumn text="%mode" fx:id="modeCol" prefWidth="100" />
+            <TableColumn text="%score" fx:id="scoreCol" prefWidth="80" />
+            <TableColumn text="%" fx:id="percentCol" prefWidth="80" />
+            <TableColumn text="%status" fx:id="statusCol" prefWidth="100" />
+            <TableColumn text="%duration" fx:id="durationCol" prefWidth="100" />
+        </columns>
+    </TableView>
+
+    <!-- Boutons -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="viewDetailsBtn" text="%view.details" onAction="#viewDetails" styleClass="secondary-btn" />
+        <Button fx:id="deleteSessionBtn" text="%delete.session" onAction="#deleteSession" styleClass="danger-btn" />
+        <Button fx:id="closeHistoryBtn" text="%close" onAction="#close" styleClass="primary-btn" />
+    </HBox>
+</VBox>

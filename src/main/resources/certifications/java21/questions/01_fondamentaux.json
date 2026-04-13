@@ -1,0 +1,801 @@
+[
+  {
+    "id": "J21-01-001",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la convention de nommage pour une classe en Java ?",
+    "options": [
+      "snake_case",
+      "camelCase",
+      "PascalCase",
+      "UPPER_CASE"
+    ],
+    "correct": 2,
+    "explanation": "En Java, les classes suivent la convention PascalCase (première lettre de chaque mot en majuscule). Exemple : 'ArrayList', 'HashMap', 'MyCustomClass'."
+  },
+
+  {
+    "id": "J21-01-002",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est le point d'entrée d'une application Java ?",
+    "options": [
+      "public static void start(String[] args)",
+      "public static void main(String[] args)",
+      "public void main(String... args)",
+      "public static int main(String[] args)"
+    ],
+    "correct": 1,
+    "explanation": "La méthode main avec la signature 'public static void main(String[] args)' est le point d'entrée standard. Depuis Java 21, la signature 'void main()' simplifiée existe pour les classes sans état."
+  },
+
+  {
+    "id": "J21-01-003",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que signifie 'static' pour une méthode ?",
+    "options": [
+      "La méthode ne peut pas être surchargée",
+      "La méthode appartient à la classe et non à une instance",
+      "La méthode ne peut pas avoir de paramètres",
+      "La méthode s'exécute une seule fois"
+    ],
+    "correct": 1,
+    "explanation": "static signifie que la méthode appartient à la classe elle-même. On peut l'appeler sans créer d'instance de la classe, via NomClasse.methode()."
+  },
+
+  {
+    "id": "J21-01-004",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est l'ordre correct des modificateurs pour une méthode main valide en Java 21 ?",
+    "options": [
+      "static public void main(String[] args)",
+      "public static void main(String[] args)",
+      "public void static main(String[] args)",
+      "public static main(String[] args)"
+    ],
+    "correct": 1,
+    "explanation": "L'ordre conventionnel est 'public static void main(String[] args)'. Java accepte 'static public void main' mais ce n'est pas la convention standard."
+  },
+
+  {
+    "id": "J21-01-005",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que produit ce code ?\n```java\nSystem.out.print(\"A\");\nSystem.out.println(\"B\");\nSystem.out.print(\"C\");\n```",
+    "options": [
+      "A B C",
+      "AB\nC",
+      "A\nB\nC",
+      "ABC"
+    ],
+    "correct": 1,
+    "explanation": "print() n'ajoute pas de nouvelle ligne. println() ajoute un saut de ligne après 'B'. Résultat : 'AB' sur la première ligne, 'C' sur la deuxième."
+  },
+
+  {
+    "id": "J21-01-006",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la portée d'une variable déclarée dans un bloc d'initialisation (entre {}) ?",
+    "options": [
+      "Toute la classe",
+      "Seulement le bloc où elle est déclarée",
+      "Toutes les méthodes de la classe",
+      "Le package entier"
+    ],
+    "correct": 1,
+    "explanation": "Une variable déclarée dans un bloc a une portée limitée à ce bloc. Elle n'est pas accessible en dehors des accolades où elle est définie."
+  },
+
+  {
+    "id": "J21-01-007",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel mot-clé permet d'importer toutes les classes d'un package ?",
+    "options": [
+      "import package.*;",
+      "import package.all;",
+      "import package.*.*;",
+      "from package import *;"
+    ],
+    "correct": 0,
+    "explanation": "L'import wildcard 'import java.util.*;' importe toutes les classes du package, mais pas les sous-packages. C'est une importation de commodité qui n'affecte pas les performances."
+  },
+
+  {
+    "id": "J21-01-008",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre // et /* */ en Java ?",
+    "options": [
+      "Pas de différence",
+      "// pour commentaire sur une ligne, /* */ pour commentaire multi-lignes",
+      "/* */ est obsolète depuis Java 17",
+      "// crée un commentaire Javadoc"
+    ],
+    "correct": 1,
+    "explanation": "// est pour les commentaires sur une seule ligne. /* */ permet des commentaires sur plusieurs lignes. /** */ est pour la documentation Javadoc."
+  },
+
+  {
+    "id": "J21-01-009",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Un fichier .java peut contenir plusieurs classes publiques ?",
+    "options": [
+      "Oui, sans limitation",
+      "Oui, mais une seule peut être publique",
+      "Non, une seule classe maximum par fichier",
+      "Oui, si elles sont toutes dans le même package"
+    ],
+    "correct": 1,
+    "explanation": "Un fichier .java peut contenir plusieurs classes, mais une seule peut être déclarée 'public'. Le nom du fichier doit correspondre au nom de la classe publique."
+  },
+
+  {
+    "id": "J21-01-010",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que signifie le mot-clé 'final' sur une variable ?",
+    "options": [
+      "La variable ne peut être modifiée qu'une seule fois",
+      "La variable ne peut pas être modifiée après initialisation",
+      "La variable est visible partout",
+      "La variable est automatiquement partagée entre threads"
+    ],
+    "correct": 1,
+    "explanation": "Une variable final ne peut être initialisée qu'une seule fois. Toute tentative de réassignation cause une erreur de compilation. C'est l'équivalent d'une constante."
+  },
+
+  {
+    "id": "J21-01-011",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nint x = 0;\nfor(int i = 0; i < 3; i++) {\n    x = x++;\n}\nSystem.out.println(x);\n```",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "correct": 3,
+    "explanation": "x = x++ utilise d'abord la valeur de x (0) pour l'affectation, puis incrémente x. À chaque itération, x est réaffecté à 0. Résultat final : 0."
+  },
+
+  {
+    "id": "J21-01-012",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Quelle est la particularité de la méthode main avec 'String... args' ?",
+    "options": [
+      "C'est invalide en Java",
+      "C'est équivalent à String[] args (varargs)",
+      "Cela permet de passer des arguments de types différents",
+      "Cela crée une méthode main privée"
+    ],
+    "correct": 1,
+    "explanation": "String... args est la syntaxe varargs, équivalente à String[] args. Les deux signatures sont valides pour la méthode main."
+  },
+
+  {
+    "id": "J21-01-013",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que signifie 'transient' comme modificateur ?",
+    "options": [
+      "La variable est temporaire et sera supprimée par le GC",
+      "La variable ne sera pas sérialisée",
+      "La variable ne peut être utilisée que dans un thread",
+      "La variable est automatiquement final"
+    ],
+    "correct": 1,
+    "explanation": "transient indique qu'un champ ne doit pas être sérialisé. Lors de la sérialisation de l'objet, ce champ sera ignoré et prendra la valeur par défaut après désérialisation."
+  },
+
+  {
+    "id": "J21-01-014",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Quel est l'ordre d'exécution dans une classe Java ?",
+    "options": [
+      "Constructeur → blocs static → blocs d'instance",
+      "Blocs static → blocs d'instance → constructeur",
+      "Blocs d'instance → constructeur → blocs static",
+      "Constructeur → blocs d'instance → blocs static"
+    ],
+    "correct": 1,
+    "explanation": "Ordre : 1) Blocs static (au chargement de la classe), 2) Blocs d'instance (avant chaque constructeur), 3) Constructeur."
+  },
+
+  {
+    "id": "J21-01-015",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Que produit ce code avec Java 21 ?\n```java\npublic class Test {\n    void main() {\n        System.out.println(\"Hello\");\n    }\n}\n```",
+    "options": [
+      "Erreur de compilation - main non static",
+      "Hello s'affiche si lancé avec java Test.java",
+      "Erreur car la classe n'est pas publique",
+      "Le code ne compile pas car main doit avoir String[] args"
+    ],
+    "correct": 1,
+    "explanation": "Java 21 introduit les méthodes main simplifiées. 'void main()' non-static fonctionne avec java --source 21 Test.java (prévisualisation)."
+  },
+
+  {
+    "id": "J21-01-016",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est le résultat de 'System.out.println(010)' ?",
+    "options": [
+      "10",
+      "8",
+      "010",
+      "Erreur de compilation"
+    ],
+    "correct": 1,
+    "explanation": "Les littéraux commençant par 0 sont en octal (base 8). 010 octal = 1×8 + 0 = 8 décimal. Depuis Java 7, on peut aussi écrire 0b10 pour binaire."
+  },
+
+  {
+    "id": "J21-01-017",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est le résultat de 'System.out.println(0x10)' ?",
+    "options": [
+      "10",
+      "16",
+      "0x10",
+      "Erreur de compilation"
+    ],
+    "correct": 1,
+    "explanation": "0x10 est un littéral hexadécimal. 0x10 = 1×16 + 0 = 16 décimal. Les lettres A-F sont acceptées en majuscule ou minuscule."
+  },
+
+  {
+    "id": "J21-01-018",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nlabel: for(int i = 0; i < 3; i++) {\n    for(int j = 0; j < 3; j++) {\n        if(i == 1 && j == 1) break label;\n        System.out.print(i + \",\" + j + \" \");\n    }\n}\n```",
+    "options": [
+      "0,0 0,1 0,2 1,0 ",
+      "0,0 0,1 0,2 1,0 1,1 1,2 2,0 2,1 2,2",
+      "0,0 0,1 0,2 ",
+      "0,0 0,1 0,2 1,0 1,1 1,2"
+    ],
+    "correct": 0,
+    "explanation": "break label interrompt les deux boucles quand i=1 et j=1. Les valeurs affichées sont avant cette condition : (0,0)(0,1)(0,2)(1,0)."
+  },
+
+  {
+    "id": "J21-01-019",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que fait 'continue label' ?",
+    "options": [
+      "Continue à l'itération suivante de la boucle étiquetée",
+      "Sort de toutes les boucles",
+      "Continue à la ligne suivante du code",
+      "Relance l'exécution depuis le début"
+    ],
+    "correct": 0,
+    "explanation": "continue label saute à l'itération suivante de la boucle étiquetée, contrairement à break qui sort complètement de la boucle."
+  },
+
+  {
+    "id": "J21-01-020",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Quel est le résultat de ce code Java 21 ?\n```java\nString text = \"\"\"\n    Ligne 1\n    Ligne 2\n    \"\"\";\nSystem.out.println(text);\n```",
+    "options": [
+      "    Ligne 1\n    Ligne 2\n    ",
+      "Ligne 1\nLigne 2\n",
+      "Erreur de compilation",
+      "\"Ligne 1 Ligne 2\""
+    ],
+    "correct": 0,
+    "explanation": "Les blocs de texte (Java 15+) préservent l'indentation relative. L'indentation de base est déterminée par la ligne de fermeture \"\"\"."
+  },
+
+  {
+    "id": "J21-01-021",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel package est importé automatiquement sans déclaration ?",
+    "options": [
+      "java.util",
+      "java.lang",
+      "java.io",
+      "java.base"
+    ],
+    "correct": 1,
+    "explanation": "java.lang est automatiquement importé dans tous les fichiers Java. Il contient les classes fondamentales comme String, System, Object, Math."
+  },
+
+  {
+    "id": "J21-01-022",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que signifie le modificateur 'abstract' sur une classe ?",
+    "options": [
+      "La classe ne peut pas avoir de constructeur",
+      "La classe ne peut pas être instanciée directement",
+      "La classe ne peut contenir que des méthodes abstraites",
+      "La classe est automatiquement final"
+    ],
+    "correct": 1,
+    "explanation": "Une classe abstraite ne peut pas être instanciée avec 'new'. Elle est conçue pour être étendue. Elle peut contenir à la fois des méthodes abstraites et concrètes."
+  },
+
+  {
+    "id": "J21-01-023",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\npublic class Test {\n    static { System.out.print(\"A\"); }\n    { System.out.print(\"B\"); }\n    public Test() { System.out.print(\"C\"); }\n    public static void main(String[] args) {\n        new Test();\n        new Test();\n    }\n}\n```",
+    "options": [
+      "ABCABC",
+      "ABCBCC",
+      "ABCBC",
+      "AABCBC"
+    ],
+    "correct": 0,
+    "explanation": "Le bloc static s'exécute une fois au chargement : 'A'. Pour chaque instance : bloc instance 'B', puis constructeur 'C'. Donc ABC puis ABC."
+  },
+
+  {
+    "id": "J21-01-024",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Quelle est la valeur de 'args.length' si on exécute 'java Test.java arg1 arg2' avec Java 21 ?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "Avec Java 21 et l'exécution directe d'un fichier source (java Test.java), les arguments après le nom du fichier sont passés à la méthode main. Donc args.length = 2."
+  },
+
+  {
+    "id": "J21-01-025",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel modificateur rend un membre accessible uniquement dans le même package ?",
+    "options": [
+      "private",
+      "protected",
+      "public",
+      "Aucun (package-private)"
+    ],
+    "correct": 3,
+    "explanation": "L'absence de modificateur (package-private ou default) rend le membre accessible seulement dans les classes du même package."
+  },
+
+  {
+    "id": "J21-01-026",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(1 + 2 + \"3\" + 4 + 5)' ?",
+    "options": [
+      "12345",
+      "3345",
+      "15234",
+      "15"
+    ],
+    "correct": 1,
+    "explanation": "Évaluation gauche à droite : 1+2=3, 3+\"3\"=\"33\", \"33\"+4=\"334\", \"334\"+5=\"3345\"."
+  },
+
+  {
+    "id": "J21-01-027",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(\"1\" + 2 + 3 + \"4\")' ?",
+    "options": [
+      "1234",
+      "64",
+      "123",
+      "6"
+    ],
+    "correct": 0,
+    "explanation": "\"1\"+2=\"12\", \"12\"+3=\"123\", \"123\"+\"4\"=\"1234\". La présence d'une String au début convertit tout le reste en String."
+  },
+
+  {
+    "id": "J21-01-028",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Que signifie 'strictfp' en Java ?",
+    "options": [
+      "Force les calculs flottants à suivre strictement IEEE 754",
+      "Empêche l'héritage de la classe",
+      "Rend la classe immuable",
+      "Optimise les performances des boucles"
+    ],
+    "correct": 0,
+    "explanation": "strictfp force toutes les opérations flottantes à suivre strictement la norme IEEE 754, garantissant les mêmes résultats sur toutes les plateformes."
+  },
+
+  {
+    "id": "J21-01-029",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre '>>' et '>>>' ?",
+    "options": [
+      ">> divise par 2, >>> multiplie par 2",
+      ">> préserve le signe, >>> décale avec des 0",
+      ">> est pour les entiers, >>> pour les flottants",
+      "Pas de différence"
+    ],
+    "correct": 1,
+    "explanation": ">> (shift droit signé) préserve le bit de signe. >>> (shift droit non signé) insère toujours des 0 à gauche. -1 >> 1 = -1, -1 >>> 1 = Integer.MAX_VALUE."
+  },
+
+  {
+    "id": "J21-01-030",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(3 << 2)' ?",
+    "options": [
+      "6",
+      "12",
+      "1",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "<< est le shift gauche : 3 (binary 11) décalé de 2 positions = 1100 binary = 12. Équivalent à multiplier par 2^n."
+  },
+
+  {
+    "id": "J21-01-031",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est le résultat de 'System.out.println(5 > 3 ? 10 : 20)' ?",
+    "options": [
+      "10",
+      "20",
+      "true",
+      "false"
+    ],
+    "correct": 0,
+    "explanation": "L'opérateur ternaire évalue la condition : 5 > 3 est true, donc retourne la première valeur : 10."
+  },
+
+  {
+    "id": "J21-01-032",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nint a = 10;\nint b = 20;\nSystem.out.println(a == b ? \"égal\" : a > b ? \"plus grand\" : \"plus petit\");\n```",
+    "options": [
+      "égal",
+      "plus grand",
+      "plus petit",
+      "Erreur de compilation"
+    ],
+    "correct": 2,
+    "explanation": "L'opérateur ternaire est associatif à droite. a==b?\"égal\": (a>b?\"plus grand\":\"plus petit\"). 10>20 false → \"plus petit\"."
+  },
+
+  {
+    "id": "J21-01-033",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est le comportement de 'switch' avec des String depuis Java 7 ?",
+    "options": [
+      "Non supporté",
+      "Supporté mais case-sensitive",
+      "Supporté mais insensible à la casse",
+      "Supporté uniquement avec des constantes"
+    ],
+    "correct": 1,
+    "explanation": "Depuis Java 7, switch supporte String. La comparaison est case-sensitive et utilise equals(). Les valeurs case doivent être des constantes."
+  },
+
+  {
+    "id": "J21-01-034",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Que produit ce code avec Java 21 ?\n```java\nswitch(1) {\n    case 1 -> System.out.print(\"A\");\n    case 2 -> System.out.print(\"B\");\n    default -> System.out.print(\"C\");\n}\n```",
+    "options": [
+      "A",
+      "AB",
+      "AC",
+      "Erreur de compilation"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe avec -> (switch amélioré) n'a pas de fall-through. Seul le cas correspondant s'exécute. Pas besoin de break."
+  },
+
+  {
+    "id": "J21-01-035",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(10 % 3)' ?",
+    "options": [
+      "1",
+      "3.33",
+      "3",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "% est l'opérateur modulo (reste de division entière). 10 divisé par 3 = 3, reste 1."
+  },
+
+  {
+    "id": "J21-01-036",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(-7 % 3)' ?",
+    "options": [
+      "2",
+      "-1",
+      "1",
+      "-2"
+    ],
+    "correct": 1,
+    "explanation": "En Java, le signe du résultat du modulo suit le signe du dividende. -7 % 3 = -1 (car -7 = -3×3 + (-1)?) En réalité -7 = -3×3 + 2? Non, -7 = -3×3 + 2? -9+2=-7. Le résultat est -1? Vérifions : -7 / 3 = -2 (tronqué vers 0), -2×3=-6, -7-(-6)=-1."
+  },
+
+  {
+    "id": "J21-01-037",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'Math.floorMod(-7, 3)' ?",
+    "options": [
+      "-1",
+      "2",
+      "1",
+      "-2"
+    ],
+    "correct": 1,
+    "explanation": "floorMod retourne un reste positif ou nul. floorMod(-7, 3) = 2 car -7 = -3×3 + 2. C'est la différence avec l'opérateur %."
+  },
+
+  {
+    "id": "J21-01-038",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que signifie 'assert' en Java ?",
+    "options": [
+      "Crée une nouvelle assertion de test",
+      "Vérifie une condition et lève AssertionError si fausse",
+      "Déclare une variable constante",
+      "Force l'arrêt du programme"
+    ],
+    "correct": 1,
+    "explanation": "assert vérifie une condition. Si elle est false, AssertionError est levée. Les assertions sont désactivées par défaut, activables avec -ea."
+  },
+
+  {
+    "id": "J21-01-039",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Quel est le résultat de ce code ?\n```java\nint i = 0;\nSystem.out.println(i++ + ++i + i-- + --i);\n```",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 1,
+    "explanation": "i=0: i++=0 (i=1), ++i=2 (i=2), i--=2 (i=1), --i=0 (i=0). Total: 0+2+2+0=4."
+  },
+
+  {
+    "id": "J21-01-040",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(10 / 0.0)' ?",
+    "options": [
+      "ArithmeticException",
+      "Infinity",
+      "NaN",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "La division par 0.0 (double) ne lève pas d'exception. Elle retourne Infinity pour double, tandis que 10/0 (int) lève ArithmeticException."
+  },
+
+  {
+    "id": "J21-01-041",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit 'System.out.println(0.0 / 0.0)' ?",
+    "options": [
+      "0",
+      "Infinity",
+      "NaN",
+      "ArithmeticException"
+    ],
+    "correct": 2,
+    "explanation": "0.0/0.0 = NaN (Not a Number). NaN n'est égal à rien, même pas à lui-même. NaN != NaN retourne true."
+  },
+
+  {
+    "id": "J21-01-042",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel est le résultat de 'System.out.println(5 + 3 + \"abc\" + 2 + 1)' ?",
+    "options": [
+      "8abc21",
+      "8abc3",
+      "53abc21",
+      "53abc3"
+    ],
+    "correct": 0,
+    "explanation": "5+3=8, 8+\"abc\"=\"8abc\", \"8abc\"+2=\"8abc2\", \"8abc2\"+1=\"8abc21\"."
+  },
+
+  {
+    "id": "J21-01-043",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la valeur par défaut d'une variable d'instance de type boolean ?",
+    "options": [
+      "true",
+      "false",
+      "null",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "Les variables d'instance boolean ont la valeur par défaut false. Les variables locales n'ont pas de valeur par défaut et doivent être initialisées."
+  },
+
+  {
+    "id": "J21-01-044",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la valeur par défaut d'une variable d'instance de type int ?",
+    "options": [
+      "0",
+      "null",
+      "undefined",
+      "Random"
+    ],
+    "correct": 0,
+    "explanation": "Les variables d'instance int ont la valeur par défaut 0. Les types primitifs ont toujours une valeur par défaut."
+  },
+
+  {
+    "id": "J21-01-045",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la valeur par défaut d'une variable d'instance de type Integer (wrapper) ?",
+    "options": [
+      "0",
+      "null",
+      "0",
+      "Optional.empty()"
+    ],
+    "correct": 1,
+    "explanation": "Les variables d'instance de type référence (y compris les wrappers) ont la valeur par défaut null."
+  },
+
+  {
+    "id": "J21-01-046",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nint x = 5;\nint y = x++ + ++x;\nSystem.out.println(y);\n```",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "correct": 2,
+    "explanation": "x=5: x++=5 (x=6), ++x=7 (x=7). 5+7=12."
+  },
+
+  {
+    "id": "J21-01-047",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Que produit ce code avec Java 21 ?\n```java\npublic class Test {\n    public static void main(String[] args) {\n        var x = 10;\n        var y = 20;\n        System.out.println(x + y);\n    }\n}\n```",
+    "options": [
+      "1020",
+      "30",
+      "Erreur de compilation",
+      "x+y"
+    ],
+    "correct": 1,
+    "explanation": "var infère int pour x et y. 10+20=30. var est une inférence de type à la compilation, pas du typage dynamique."
+  },
+
+  {
+    "id": "J21-01-048",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Quel est l'ordre d'évaluation des opérandes en Java ?",
+    "options": [
+      "Droite à gauche",
+      "Gauche à droite",
+      "Dépend des priorités",
+      "Aléatoire"
+    ],
+    "correct": 1,
+    "explanation": "Java évalue les opérandes de gauche à droite. Par exemple dans a() + b(), a() s'exécute avant b()."
+  },
+
+  {
+    "id": "J21-01-049",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\n```java\nint i = 0;\nint j = i++ + ++i + i++;\nSystem.out.println(j);\n```",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "i=0: i++=0 (i=1), ++i=2 (i=2), i++=2 (i=3). Total: 0+2+2=4."
+  },
+
+  {
+    "id": "J21-01-050",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Fondamentaux du Langage - Structure et syntaxe de base",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre les blocs de texte (text blocks) et les String classiques ?",
+    "options": [
+      "Les blocs de texte sont mutables",
+      "Les blocs de texte préservent l'indentation relative et les retours à la ligne",
+      "Les blocs de texte sont plus rapides",
+      "Les blocs de texte ne supportent pas les échappements"
+    ],
+    "correct": 1,
+    "explanation": "Les blocs de texte (\"\"\" ... \"\"\") préservent la mise en forme, gèrent l'indentation automatiquement et sont plus lisibles pour les chaînes multi-lignes."
+  }
+]

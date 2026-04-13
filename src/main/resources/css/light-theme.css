@@ -1,0 +1,210 @@
+/* Light Theme - CertiPrep Engine */
+
+.root {
+    -fx-font-family: "Segoe UI", "System", "Arial", sans-serif;
+}
+
+.main-container, .exam-container, .config-container, .revision-container, .results-container, .history-container, .settings-container {
+    -fx-background-color: #f5f5f5;
+}
+
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-fill: #7f8c8d;
+}
+
+.section-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.primary-btn {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+}
+
+.primary-btn:hover {
+    -fx-background-color: #2980b9;
+    -fx-cursor: hand;
+}
+
+.secondary-btn {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+}
+
+.secondary-btn:hover {
+    -fx-background-color: #7f8c8d;
+    -fx-cursor: hand;
+}
+
+.danger-btn {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+}
+
+.danger-btn:hover {
+    -fx-background-color: #c0392b;
+    -fx-cursor: hand;
+}
+
+.theme-btn, .lang-btn, .mark-btn {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20px;
+    -fx-padding: 5px 10px;
+}
+
+.theme-btn:hover, .lang-btn:hover, .mark-btn:hover {
+    -fx-background-color: #bdc3c7;
+    -fx-cursor: hand;
+}
+
+.question-text {
+    -fx-font-size: 18px;
+    -fx-fill: #2c3e50;
+    -fx-font-weight: normal;
+}
+
+.counter-label, .timer-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.timer-label {
+    -fx-text-fill: #e67e22;
+}
+
+.cert-list {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+}
+
+.info-area {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+}
+
+.score-big {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-fill: #27ae60;
+}
+
+.score-percent {
+    -fx-font-size: 24px;
+    -fx-fill: #7f8c8d;
+}
+
+.status-big {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-fill: #95a5a6;
+}
+
+.correct-answer {
+    -fx-fill: #27ae60;
+    -fx-font-weight: bold;
+}
+
+.explanation {
+    -fx-fill: #7f8c8d;
+    -fx-font-size: 13px;
+}
+
+.radio-button {
+    -fx-text-fill: #2c3e50;
+}
+
+.check-box {
+    -fx-text-fill: #2c3e50;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #3498db;
+}
+
+.tab-pane {
+    -fx-background-color: white;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+}
+
+.table-view .column-header {
+    -fx-background-color: #ecf0f1;
+}
+
+.question-option {
+    -fx-padding: 10px;
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.question-option:hover {
+    -fx-background-color: #ecf0f1;
+    -fx-cursor: hand;
+}
+
+.question-option-selected {
+    -fx-background-color: #3498db20;
+    -fx-border-color: #3498db;
+}
+
+.palette-btn {
+    -fx-min-width: 35px;
+    -fx-min-height: 35px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 12px;
+}
+
+.palette-answered {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+.palette-current {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-border-color: #2c3e50;
+    -fx-border-width: 2px;
+}
+
+.palette-marked {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+}
+
+.palette-unanswered {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #7f8c8d;
+}

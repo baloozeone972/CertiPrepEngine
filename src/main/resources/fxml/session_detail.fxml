@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.SessionDetailController" spacing="15" styleClass="results-container">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text text="Détail de la session" styleClass="title" />
+
+    <!-- Informations session -->
+    <GridPane hgap="20" vgap="10">
+        <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label fx:id="dateLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Score:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label fx:id="scoreLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Durée:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label fx:id="durationLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <Separator />
+
+    <!-- Navigation questions -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Question:" />
+        <ComboBox fx:id="questionCombo" prefWidth="100" />
+        <Button fx:id="prevBtn" text="◀" onAction="#previousQuestion" />
+        <Button fx:id="nextBtn" text="▶" onAction="#nextQuestion" />
+        <Label fx:id="questionCounter" />
+    </HBox>
+
+    <Separator />
+
+    <!-- Détail question -->
+    <ScrollPane fitToWidth="true">
+        <VBox spacing="15">
+            <Text fx:id="questionText" styleClass="question-text" wrappingWidth="700" />
+
+            <VBox fx:id="optionsContainer" spacing="8" />
+
+            <VBox fx:id="resultContainer" spacing="10">
+                <Text fx:id="userAnswerText" />
+                <Text fx:id="correctAnswerText" styleClass="correct-answer" />
+                <Text fx:id="explanationText" styleClass="explanation" wrapText="true" />
+            </VBox>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Palette navigation -->
+    <FlowPane fx:id="paletteContainer" hgap="8" vgap="8" alignment="CENTER" />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="closeBtn" text="Fermer" onAction="#close" styleClass="primary-btn" prefWidth="100" />
+    </HBox>
+</VBox>

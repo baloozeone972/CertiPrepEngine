@@ -1,0 +1,696 @@
+[
+{
+"id": "J21-08-001",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Quelle est la syntaxe correcte d'une expression lambda ?",
+"options": [
+  "(param) -> expression",
+  "(param) -> { return expression; }",
+  "(param) -> { expression; }",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Lambda peut être : (x) -> x+1 (expression) ou (x) -> { return x+1; } (bloc). Les parenthèses peuvent être omises pour un seul paramètre."
+},
+
+{
+"id": "J21-08-002",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Quelle interface fonctionnelle représente une fonction avec un paramètre et un retour ?",
+"options": ["Consumer<T>", "Function<T,R>", "Supplier<T>", "Predicate<T>"],
+"correct": 1,
+"explanation": "Function<T,R> : applique une fonction à T et retourne R. Consumer<T> : consomme sans retour. Supplier<T> : fournit sans paramètre."
+},
+
+{
+"id": "J21-08-003",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Quelle interface fonctionnelle est utilisée pour les conditions (retourne boolean) ?",
+"options": ["Function<T,R>", "Predicate<T>", "Consumer<T>", "Supplier<T>"],
+"correct": 1,
+"explanation": "Predicate<T> : test(T) retourne boolean. Utilisé pour filter(), anyMatch(), allMatch(), noneMatch()."
+},
+
+{
+"id": "J21-08-004",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Quelle interface fonctionnelle ne prend aucun paramètre et retourne une valeur ?",
+"options": ["Function<T,R>", "Predicate<T>", "Consumer<T>", "Supplier<T>"],
+"correct": 3,
+"explanation": "Supplier<T> : get() retourne T. Utilisé pour générer des valeurs (ex: generate(Supplier))."
+},
+
+{
+"id": "J21-08-005",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Quelle annotation indique qu'une interface est fonctionnelle ?",
+"options": ["@Functional", "@FunctionalInterface", "@Lambda", "@SingleMethod"],
+"correct": 1,
+"explanation": "@FunctionalInterface est optionnelle mais recommandée. Le compilateur vérifie qu'il n'y a qu'une seule méthode abstraite."
+},
+
+{
+"id": "J21-08-006",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Quelle est la sortie de ce code ?\n```java\nList<String> list = Arrays.asList(\"a\", \"b\", \"c\");\nlist.forEach(System.out::print);\n```",
+"options": ["abc", "a b c", "[a, b, c]", "Erreur"],
+"correct": 0,
+"explanation": "forEach applique l'action à chaque élément. System.out::print est une référence de méthode. Résultat : abc."
+},
+
+{
+"id": "J21-08-007",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nStream.of(1, 2, 3)\n    .map(x -> x * 2)\n    .forEach(System.out::print);\n```",
+"options": ["123", "246", "2 4 6", "Erreur"],
+"correct": 1,
+"explanation": "map(x -> x*2) transforme 1→2, 2→4, 3→6. forEach affiche 246."
+},
+
+{
+"id": "J21-08-008",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nStream.of(1, 2, 3, 4, 5)\n    .filter(x -> x % 2 == 0)\n    .count();\n```",
+"options": ["2", "3", "4", "5"],
+"correct": 0,
+"explanation": "filter garde les nombres pairs : 2,4 → count() = 2."
+},
+
+{
+"id": "J21-08-009",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nStream.of(\"a\", \"bb\", \"ccc\")\n    .map(String::length)\n    .reduce(0, Integer::sum);\n```",
+"options": ["6", "1+2+3=6", "0", "Erreur"],
+"correct": 0,
+"explanation": "map en longueurs : 1,2,3. reduce(0, Integer::sum) = 1+2+3 = 6."
+},
+
+{
+"id": "J21-08-010",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "easy",
+"question": "Que fait l'opération terminale 'collect(Collectors.toList())' ?",
+"options": [
+  "Convertit le stream en List",
+  "Termine le stream",
+  "Matérialise les résultats",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "collect est une opération terminale qui accumule les éléments dans une collection (List, Set, Map)."
+},
+
+{
+"id": "J21-08-011",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nStream.of(1, 2, 2, 3, 3, 3)\n    .distinct()\n    .count();\n```",
+"options": ["6", "3", "2", "4"],
+"correct": 1,
+"explanation": "distinct() supprime les doublons : 1,2,3 → count() = 3."
+},
+
+{
+"id": "J21-08-012",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nStream.of(3, 1, 4, 1, 5)\n    .sorted()\n    .limit(3)\n    .forEach(System.out::print);\n```",
+"options": ["314", "134", "135", "113"],
+"correct": 1,
+"explanation": "sorted() trie : 1,1,3,4,5. limit(3) garde les 3 premiers : 1,1,3."
+},
+
+{
+"id": "J21-08-013",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nStream.iterate(0, n -> n + 2)\n    .limit(5)\n    .forEach(System.out::print);\n```",
+"options": ["02468", "13579", "01234", "24680"],
+"correct": 0,
+"explanation": "iterate(0, n->n+2) génère : 0,2,4,6,8. limit(5) → 02468."
+},
+
+{
+"id": "J21-08-014",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'primitive streams' (IntStream, LongStream, DoubleStream) ?",
+"options": [
+  "Streams optimisés pour primitifs",
+  "Évitent l'autoboxing",
+  "Méthodes spécifiques : sum(), average(), range()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "IntStream évite Integer, offre range(), sum(), average(). mapToInt(), boxed() pour conversion."
+},
+
+{
+"id": "J21-08-015",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nIntStream.range(1, 5)\n    .forEach(System.out::print);\n```",
+"options": ["1234", "12345", "01234", "1 2 3 4"],
+"correct": 0,
+"explanation": "range(1,5) génère 1,2,3,4 (exclut le 5). rangeClosed(1,5) inclut 5."
+},
+
+{
+"id": "J21-08-016",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'parallel streams' ?",
+"options": [
+  "Streams exécutés en parallèle",
+  "parallelStream() ou .parallel()",
+  "Attention aux opérations non thread-safe",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "parallelStream() utilise ForkJoinPool. Peut améliorer performances pour grandes données, mais overhead pour petites."
+},
+
+{
+"id": "J21-08-017",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nList<Integer> list = Arrays.asList(1, 2, 3);\nlist.parallelStream()\n    .forEach(System.out::print);\n```",
+"options": ["123", "321", "Ordre non garanti", "Erreur"],
+"correct": 2,
+"explanation": "L'ordre d'exécution en parallèle n'est pas garanti. forEachOrdered() garantit l'ordre."
+},
+
+{
+"id": "J21-08-018",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que fait 'Optional.ofNullable(value)' ?",
+"options": [
+  "Crée Optional vide si null, sinon Optional avec valeur",
+  "Optional.of(value) lève NPE si null",
+  "Optional.ofNullable est plus sûr",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "ofNullable accepte null et retourne Optional.empty(). of() ne l'accepte pas."
+},
+
+{
+"id": "J21-08-019",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nOptional<String> opt = Optional.of(\"Hello\");\nSystem.out.println(opt.orElse(\"Default\"));\n```",
+"options": ["Hello", "Default", "Optional[Hello]", "null"],
+"correct": 0,
+"explanation": "orElse() retourne la valeur si présente, sinon la valeur par défaut."
+},
+
+{
+"id": "J21-08-020",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que fait 'opt.orElseThrow(() -> new RuntimeException())' ?",
+"options": [
+  "Retourne la valeur ou lève l'exception",
+  "Lève exception si Optional vide",
+  "Alternative à get() avec meilleur message",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "orElseThrow() (Java 10+) remplace get() qui lève NoSuchElementException."
+},
+
+{
+"id": "J21-08-021",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que fait 'opt.ifPresent(System.out::println)' ?",
+"options": [
+  "Affiche la valeur si présente, rien sinon",
+  "Équivalent à if(opt.isPresent()) println",
+  "Ne lève pas d'exception",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "ifPresent() exécute le Consumer seulement si valeur présente."
+},
+
+{
+"id": "J21-08-022",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que fait 'opt.map(String::toUpperCase)' ?",
+"options": [
+  "Applique la fonction, retourne Optional<String>",
+  "Retourne Optional.empty() si opt vide",
+  "Permet chaînage d'opérations",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "map transforme la valeur si présente, retourne Optional. flatMap pour éviter Optional<Optional>."
+},
+
+{
+"id": "J21-08-023",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nOptional.of(\"Hello\")\n    .filter(s -> s.length() > 10)\n    .orElse(\"Short\");\n```",
+"options": ["Hello", "Short", "Optional[Short]", "null"],
+"correct": 1,
+"explanation": "filter garde la valeur si condition vraie. 'Hello' a 5 caractères ≤ 10 → filter retourne empty → orElse donne 'Short'."
+},
+
+{
+"id": "J21-08-024",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Quel est le but de l'API Stream ?",
+"options": [
+  "Traitement déclaratif de séquences d'éléments",
+  "Opérations paresseuses (lazy)",
+  "Faciliter la programmation fonctionnelle",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Stream permet filter, map, reduce de façon déclarative. Les opérations intermédiaires sont paresseuses."
+},
+
+{
+"id": "J21-08-025",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que sont les opérations intermédiaires vs terminales ?",
+"options": [
+  "Intermédiaires : filter, map, sorted (retournent Stream)",
+  "Terminales : forEach, collect, reduce (retournent résultat)",
+  "Stream ne s'exécute qu'avec opération terminale",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Sans opération terminale, le stream n'est pas exécuté (lazy evaluation)."
+},
+
+{
+"id": "J21-08-026",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(1, 2, 3)\n    .peek(System.out::print)\n    .count();\n```",
+"options": ["123", "1", "Rien", "Erreur"],
+"correct": 0,
+"explanation": "peek() est intermédiaire. count() est terminal, force exécution → peek affiche 123."
+},
+
+{
+"id": "J21-08-027",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'collectors' personnalisés ?",
+"options": [
+  "Collector.of(supplier, accumulator, combiner, finisher)",
+  "Permet logique d'accumulation personnalisée",
+  "Exemple : toImmutableList()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Collector.of() permet de créer des collectors sur mesure pour des réductions complexes."
+},
+
+{
+"id": "J21-08-028",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(\"a\", \"b\", \"c\")\n    .collect(Collectors.joining(\",\"));\n```",
+"options": ["a,b,c", "abc", "[a, b, c]", "a b c"],
+"correct": 0,
+"explanation": "joining() concatène avec délimiteur. Résultat : 'a,b,c'."
+},
+
+{
+"id": "J21-08-029",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(\"apple\", \"banana\", \"cherry\")\n    .collect(Collectors.groupingBy(String::length));\n```",
+"options": [
+  "{5=[apple], 6=[banana, cherry]}",
+  "Map<Integer, List<String>>",
+  "Groupement par longueur",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "groupingBy classe les éléments par clé (longueur). Résultat : Map<Integer, List<String>>."
+},
+
+{
+"id": "J21-08-030",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(\"apple\", \"banana\", \"cherry\")\n    .collect(Collectors.partitioningBy(s -> s.length() > 5));\n```",
+"options": [
+  "{false=[apple], true=[banana, cherry]}",
+  "Partition en deux groupes (condition vraie/fausse)",
+  "Map<Boolean, List<String>>",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "partitioningBy() est un cas particulier de groupingBy avec clé booléenne."
+},
+
+{
+"id": "J21-08-031",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que signifie 'method reference' ?",
+"options": [
+  "Raccourci pour lambda",
+  "Types : Class::staticMethod, obj::instanceMethod, Class::instanceMethod",
+  "Exemple : System.out::println",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Les références de méthode sont des lambdas concises quand la méthode existe déjà."
+},
+
+{
+"id": "J21-08-032",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que signifie 'String::length' comme méthode reference ?",
+"options": [
+  "Function<String, Integer>",
+  "Équivalent à s -> s.length()",
+  "Méthode d'instance sur l'argument",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Class::instanceMethod prend l'argument comme récepteur. Function<String,Integer>."
+},
+
+{
+"id": "J21-08-033",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que signifie 'Integer::sum' comme méthode reference ?",
+"options": [
+  "BinaryOperator<Integer>",
+  "Méthode statique avec deux arguments",
+  "Équivalent à (a,b) -> Integer.sum(a,b)",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Class::staticMethod pour méthodes statiques."
+},
+
+{
+"id": "J21-08-034",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'streams infinis' ?",
+"options": [
+  "Stream.generate() ou Stream.iterate() sans limite",
+  "Nécessitent limit() ou findFirst()",
+  "Peuvent causer OutOfMemoryError",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Stream.generate(Math::random) est infini. Toujours utiliser limit() pour terminer."
+},
+
+{
+"id": "J21-08-035",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'reduction operations' ?",
+"options": [
+  "reduce(), collect(), count(), sum()",
+  "Combinent les éléments en un résultat",
+  "Opérations terminales",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "La réduction combine tous les éléments. reduce() est générique, sum() et count() sont spécialisées."
+},
+
+{
+"id": "J21-08-036",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(1, 2, 3)\n    .reduce((a, b) -> a + b)\n    .ifPresent(System.out::print);\n```",
+"options": ["6", "1+2+3=6", "Optional[6]", "Erreur"],
+"correct": 0,
+"explanation": "reduce() retourne Optional (stream peut être vide). ifPresent affiche 6."
+},
+
+{
+"id": "J21-08-037",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'flatMap' ?",
+"options": [
+  "Aplatit les streams imbriqués",
+  "Chaque élément → Stream, puis concaténation",
+  "Exemple : flatMap(line -> Stream.of(line.split(\" \")))",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "flatMap transforme chaque élément en Stream, puis aplatit en un seul stream."
+},
+
+{
+"id": "J21-08-038",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(\"a b\", \"c d\")\n    .flatMap(s -> Stream.of(s.split(\" \")))\n    .forEach(System.out::print);\n```",
+"options": ["ab cd", "abcd", "a b c d", "[a, b, c, d]"],
+"correct": 1,
+"explanation": "split(\" \") : [\"a\",\"b\"] puis [\"c\",\"d\"]. flatMap aplatit en [\"a\",\"b\",\"c\",\"d\"] → affiche 'abcd'."
+},
+
+{
+"id": "J21-08-039",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'optional chaining' ?",
+"options": [
+  "opt.map().flatMap().filter().orElse()",
+  "Évite les null checks",
+  "Pattern monadique",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Le chaînage d'Optional permet de composer des opérations sans NPE."
+},
+
+{
+"id": "J21-08-040",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nOptional.of(\"42\")\n    .map(Integer::parseInt)\n    .filter(n -> n > 0)\n    .orElse(0);\n```",
+"options": ["42", "0", "Optional[42]", "Erreur"],
+"correct": 0,
+"explanation": "map convertit en 42, filter true, orElse non utilisé → 42."
+},
+
+{
+"id": "J21-08-041",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'IntStream.rangeClosed' vs 'IntStream.range' ?",
+"options": [
+  "rangeClosed inclut la fin, range l'exclut",
+  "range(1,5) → 1,2,3,4 ; rangeClosed(1,5) → 1,2,3,4,5",
+  "Similaire à Python range",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "rangeClosed() est inclusif. Utile pour indices de tableau (0 à length-1 avec range)."
+},
+
+{
+"id": "J21-08-042",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'collectors teeing' (Java 12) ?",
+"options": [
+  "Combine deux collectors en un",
+  "Collectors.teeing(collector1, collector2, merger)",
+  "Exemple : average et count simultanément",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "teeing (Java 12+) applique deux collectors, puis combine leurs résultats."
+},
+
+{
+"id": "J21-08-043",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'stream takeWhile/dropWhile' (Java 9) ?",
+"options": [
+  "takeWhile prend éléments tant que condition vraie",
+  "dropWhile ignore éléments tant que condition vraie",
+  "Opérations intermédiaires",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "takeWhile/dropWhile sont pour streams triés/ordonnés. S'arrêtent à première condition fausse."
+},
+
+{
+"id": "J21-08-044",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nStream.of(1, 2, 3, 4, 5)\n    .takeWhile(n -> n < 3)\n    .forEach(System.out::print);\n```",
+"options": ["12", "123", "1 2", "3"],
+"correct": 0,
+"explanation": "takeWhile prend 1 (true), 2 (true), 3 (false) → stop. Donc 12."
+},
+
+{
+"id": "J21-08-045",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'Optional.or()' (Java 9) ?",
+"options": [
+  "or(Supplier<Optional>)",
+  "Permet chaînage de fallbacks",
+  "Alternative à orElseGet retournant Optional",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "or() (Java 9) retourne un Optional. Pratique pour plusieurs tentatives : opt.or(() -> backup()).or(() -> default)."
+},
+
+{
+"id": "J21-08-046",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "medium",
+"question": "Que signifie 'effectively final' pour les lambdas ?",
+"options": [
+  "Variable non modifiée après initialisation",
+  "Peut être utilisée dans lambda",
+  "Final implicite",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Les lambdas ne peuvent capturer que des variables effectively final (non réassignées)."
+},
+
+{
+"id": "J21-08-047",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'Stream.ofNullable()' (Java 9) ?",
+"options": [
+  "Crée Stream vide si null, sinon Stream.of(value)",
+  "Évite null checks",
+  "Retourne Stream<T>",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Stream.ofNullable(null) retourne empty stream, utile pour flatMap avec valeurs possiblement null."
+},
+
+{
+"id": "J21-08-048",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'toUnmodifiableList/Set/Map' (Java 10+) ?",
+"options": [
+  "Collectors.toUnmodifiableList()",
+  "Crée collection immuable",
+  "Plus sûr que toList()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "toUnmodifiableList (Java 10+) crée des collections immuables. Modifications lèvent UnsupportedOperationException."
+},
+
+{
+"id": "J21-08-049",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que sont les 'Collectors.filtering/mapping' (Java 9) ?",
+"options": [
+  "Filtrage dans le collecteur",
+  "Évite stream intermédiaire",
+  "Collectors.filtering(pred, downstream)",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "filtering/mapping sont des adaptateurs de collectors pour traitement conditionnel dans la collecte."
+},
+
+{
+"id": "J21-08-050",
+"theme": "Lambda, Streams et API fonctionnelle",
+"theme_label": "Expressions lambda, Stream API, Optional, API fonctionnelle",
+"difficulty": "hard",
+"question": "Que signifie 'Stream.iterate(T seed, Predicate hasNext, UnaryOperator next)' (Java 9) ?",
+"options": [
+  "iterate conditionné (style boucle for)",
+  "S'arrête quand hasNext false",
+  "Alternative à for loop",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "iterate(0, i->i<10, i->i+2) génère 0,2,4,6,8. Plus sûr que l'iterate infini."
+}
+]

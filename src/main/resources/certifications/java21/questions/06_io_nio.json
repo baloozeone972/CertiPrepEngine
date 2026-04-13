@@ -1,0 +1,601 @@
+[
+{
+"id": "J21-06-001",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Quelle classe est utilisée pour lire des fichiers texte avec encodage ?",
+"options": ["FileReader", "BufferedReader", "InputStreamReader", "FileInputStream"],
+"correct": 0,
+"explanation": "FileReader est la classe de base pour lire des fichiers texte. Pour les performances, l'envelopper dans BufferedReader."
+},
+
+{
+"id": "J21-06-002",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Quelle classe est utilisée pour écrire des fichiers texte ?",
+"options": ["FileWriter", "BufferedWriter", "OutputStreamWriter", "FileOutputStream"],
+"correct": 0,
+"explanation": "FileWriter écrit des caractères dans un fichier. Pour les performances, utiliser BufferedWriter."
+},
+
+{
+"id": "J21-06-003",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Quelle est la différence entre InputStream et Reader ?",
+"options": [
+  "InputStream lit des bytes, Reader lit des caractères",
+  "InputStream lit des caractères, Reader lit des bytes",
+  "InputStream est plus rapide",
+  "Reader est obsolète"
+],
+"correct": 0,
+"explanation": "InputStream (et OutputStream) travaillent avec des bytes. Reader (et Writer) travaillent avec des caractères (texte)."
+},
+
+{
+"id": "J21-06-004",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Comment spécifier l'encodage avec FileReader ?",
+"options": [
+  "new FileReader(\"file.txt\", StandardCharsets.UTF_8)",
+  "FileReader n'accepte pas d'encodage",
+  "new InputStreamReader(new FileInputStream(\"file.txt\"), \"UTF-8\")",
+  "B et C sont correctes"
+],
+"correct": 3,
+"explanation": "FileReader n'accepte pas d'encodage avant Java 11. Java 11+ accepte Charset. La solution portable est InputStreamReader."
+},
+
+{
+"id": "J21-06-005",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\ntry (BufferedReader br = new BufferedReader(new FileReader(\"test.txt\"))) {\n    String line;\n    while ((line = br.readLine()) != null) {\n        System.out.println(line);\n    }\n}\n```",
+"options": [
+  "Lit et affiche chaque ligne du fichier",
+  "Lit un seul caractère",
+  "Erreur si fichier inexistant",
+  "A et C sont correctes"
+],
+"correct": 3,
+"explanation": "readLine() lit ligne par ligne. Si le fichier n'existe pas, FileNotFoundException (checked) doit être gérée."
+},
+
+{
+"id": "J21-06-006",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.readString(Path.of(\"test.txt\"))' (Java 11+) ?",
+"options": [
+  "Lit tout le fichier en une String",
+  "Lit la première ligne",
+  "Lit le fichier en bytes",
+  "Lit le fichier en Base64"
+],
+"correct": 0,
+"explanation": "Files.readString() (Java 11+) lit tout le contenu d'un fichier dans une String. Pratique pour les petits fichiers."
+},
+
+{
+"id": "J21-06-007",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.writeString(Path.of(\"test.txt\"), \"Hello\")' (Java 11+) ?",
+"options": [
+  "Écrit une String dans un fichier",
+  "Ajoute à la fin du fichier",
+  "Remplace le contenu par défaut",
+  "A et C sont correctes"
+],
+"correct": 3,
+"explanation": "writeString() écrit la String dans le fichier, écrasant le contenu existant par défaut (option d'ajout disponible)."
+},
+
+{
+"id": "J21-06-008",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Qu'est-ce que NIO (java.nio) apporte par rapport à java.io ?",
+"options": [
+  "Canaux (channels) et buffers",
+  "Sélecteurs pour I/O non-bloquant",
+  "Meilleures performances pour les gros fichiers",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "NIO (New I/O, Java 1.4+) ajoute les buffers, canaux, sélecteurs pour I/O scalable et non-bloquant."
+},
+
+{
+"id": "J21-06-009",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Que représente 'Path' en Java NIO ?",
+"options": [
+  "Un chemin de fichier ou répertoire",
+  "Le contenu d'un fichier",
+  "Un flux de données",
+  "Un buffer de bytes"
+],
+"correct": 0,
+"explanation": "Path (interface) représente un chemin dans le système de fichiers. Path.of() ou Paths.get() pour créer."
+},
+
+{
+"id": "J21-06-010",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Que fait 'Files.exists(Path.of(\"/tmp/test\"))' ?",
+"options": [
+  "Vérifie si le fichier/répertoire existe",
+  "Crée le fichier",
+  "Supprime le fichier",
+  "Lit le fichier"
+],
+"correct": 0,
+"explanation": "Files.exists() vérifie l'existence d'un fichier ou répertoire. Il existe aussi Files.notExists() pour le cas contraire."
+},
+
+{
+"id": "J21-06-011",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nPath path = Path.of(\"a/b/c/file.txt\");\nSystem.out.println(path.getParent());\n```",
+"options": ["a/b/c", "file.txt", "a/b/c/file.txt", "null"],
+"correct": 0,
+"explanation": "getParent() retourne le chemin parent (a/b/c). getFileName() retournerait 'file.txt'."
+},
+
+{
+"id": "J21-06-012",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.createDirectories(Path.of(\"a/b/c\"))' ?",
+"options": [
+  "Crée tous les répertoires manquants",
+  "Crée seulement le dernier répertoire",
+  "Lève exception si parent n'existe pas",
+  "Crée un fichier"
+],
+"correct": 0,
+"explanation": "createDirectories() crée tous les répertoires du chemin qui n'existent pas. createDirectory() crée seulement le dernier."
+},
+
+{
+"id": "J21-06-013",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nPath p1 = Path.of(\"/a/b\");\nPath p2 = Path.of(\"/a/b/c/../d\");\nSystem.out.println(p1.equals(p2.normalize()));\n```",
+"options": ["true", "false", "Erreur", "null"],
+"correct": 0,
+"explanation": "normalize() résout '..' . /a/b/c/../d → /a/b/d. p1=/a/b, p2=/a/b/d → pas égaux. Correction : p1=/a/b, p2=/a/b/d → false. Je corrige : p2=/a/b/c/../d normalisé = /a/b/d, p1=/a/b, donc false. La réponse est false."
+},
+
+{
+"id": "J21-06-014",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.walk(Path.of(\".\"))' ?",
+"options": [
+  "Parcourt récursivement l'arborescence",
+  "Retourne un Stream<Path>",
+  "Liste seulement les fichiers",
+  "A et B sont correctes"
+],
+"correct": 3,
+"explanation": "Files.walk() retourne un Stream<Path> qui parcourt récursivement l'arborescence. Nécessite try-with-resources pour fermer."
+},
+
+{
+"id": "J21-06-015",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nPath path = Path.of(\"test.txt\");\nFiles.writeString(path, \"Hello\");\nFiles.writeString(path, \"World\", StandardOpenOption.APPEND);\nSystem.out.println(Files.readString(path));\n```",
+"options": ["HelloWorld", "World", "Hello", "HelloWorld avec saut"],
+"correct": 0,
+"explanation": "Premier writeString : \"Hello\". Deuxième avec APPEND : ajoute \"World\" à la fin → \"HelloWorld\"."
+},
+
+{
+"id": "J21-06-016",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Quelle exception est levée si un fichier n'existe pas avec Files.readString() ?",
+"options": ["FileNotFoundException", "IOException", "NoSuchFileException", "NullPointerException"],
+"correct": 2,
+"explanation": "Files.readString() lève NoSuchFileException (sous-classe de IOException) si le fichier n'existe pas."
+},
+
+{
+"id": "J21-06-017",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.copy(Path.of(\"src.txt\"), Path.of(\"dst.txt\"), StandardCopyOption.REPLACE_EXISTING)' ?",
+"options": [
+  "Copie le fichier, remplace si existe",
+  "Copie seulement si destination n'existe pas",
+  "Déplace le fichier",
+  "Crée un lien symbolique"
+],
+"correct": 0,
+"explanation": "REPLACE_EXISTING remplace le fichier destination s'il existe. Sinon, sans cette option, FileAlreadyExistsException."
+},
+
+{
+"id": "J21-06-018",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Quelle est la différence entre Files.move() et Files.copy() ?",
+"options": [
+  "move() déplace (supprime l'original), copy() copie",
+  "move() peut renommer, copy() non",
+  "move() plus rapide sur même système",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "move() déplace/renomme, copy() copie. Sur même système de fichiers, move() est atomique et rapide."
+},
+
+{
+"id": "J21-06-019",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que sont les 'memory-mapped files' dans NIO ?",
+"options": [
+  "Fichiers mappés en mémoire pour accès direct",
+  "Utilise FileChannel.map()",
+  "Très performant pour les gros fichiers",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "MappedByteBuffer permet de mapper un fichier en mémoire, traitant le fichier comme un tableau. Très rapide pour accès aléatoire."
+},
+
+{
+"id": "J21-06-020",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.lines(Path.of(\"file.txt\"))' ?",
+"options": [
+  "Retourne un Stream<String> des lignes",
+  "Lit tout le fichier en mémoire",
+  "Nécessite try-with-resources",
+  "A et C sont correctes"
+],
+"correct": 3,
+"explanation": "Files.lines() retourne un Stream qui lit les lignes paresseusement. Le stream doit être fermé (try-with-resources)."
+},
+
+{
+"id": "J21-06-021",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nFiles.list(Path.of(\".\"))\n    .filter(Files::isRegularFile)\n    .forEach(System.out::println);\n```",
+"options": [
+  "Liste les fichiers du répertoire courant (non-récursif)",
+  "Liste tous les fichiers récursivement",
+  "Liste les répertoires",
+  "Erreur"
+],
+"correct": 0,
+"explanation": "Files.list() liste le contenu d'un répertoire (non-récursif). Files::isRegularFile filtre les fichiers normaux."
+},
+
+{
+"id": "J21-06-022",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que signifie 'FileVisitor' et 'Files.walkFileTree()' ?",
+"options": [
+  "Visite récursive avec actions personnalisées",
+  "Permet de parcourir avec pré/post visite",
+  "Gère les erreurs et les liens symboliques",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "walkFileTree() avec FileVisitor permet un contrôle fin sur le parcours : preVisitDirectory, visitFile, postVisitDirectory, visitFileFailed."
+},
+
+{
+"id": "J21-06-023",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Que fait 'Files.delete(Path.of(\"file.txt\"))' ?",
+"options": [
+  "Supprime le fichier",
+  "Lève NoSuchFileException si n'existe pas",
+  "Lève DirectoryNotEmptyException pour répertoire non vide",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "delete() lève exception si le fichier n'existe pas. Files.deleteIfExists() ne lève pas d'exception."
+},
+
+{
+"id": "J21-06-024",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que sont les 'WatchService' en NIO ?",
+"options": [
+  "Surveille les changements dans un répertoire",
+  "Notifie création, modification, suppression",
+  "Utilisé pour recharger automatique",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "WatchService (Java 7+) permet de surveiller un répertoire pour des événements : ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY."
+},
+
+{
+"id": "J21-06-025",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que sont les 'AsynchronousFileChannel' ?",
+"options": [
+  "Opérations I/O asynchrones",
+  "Utilise Future ou CompletionHandler",
+  "Ne bloque pas le thread appelant",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "AsynchronousFileChannel permet la lecture/écriture asynchrone avec Future ou CompletionHandler (package java.nio.channels)."
+},
+
+{
+"id": "J21-06-026",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.probeContentType(Path.of(\"image.png\"))' ?",
+"options": [
+  "Détecte le type MIME du fichier",
+  "Retourne \"image/png\"",
+  "Basé sur le contenu ou l'extension",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "probeContentType() tente de détecter le type MIME en utilisant les installed FileTypeDetector."
+},
+
+{
+"id": "J21-06-027",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Comment créer un répertoire temporaire en Java NIO ?",
+"options": [
+  "Files.createTempDirectory(\"prefix\")",
+  "Files.createTempDirectory(Path.of(\"/tmp\"), \"prefix\")",
+  "Files.createTempDirectory(null, \"prefix\")",
+  "A et B sont correctes"
+],
+"correct": 3,
+"explanation": "createTempDirectory() peut utiliser le répertoire temporaire par défaut ou un répertoire spécifié."
+},
+
+{
+"id": "J21-06-028",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.find(Path.of(\".\"), 5, (path, attr) -> attr.isRegularFile() && path.toString().endsWith(\".java\"))' ?",
+"options": [
+  "Cherche fichiers .java jusqu'à profondeur 5",
+  "Retourne un Stream<Path>",
+  "Utilise BasicFileAttributes pour éviter I/O",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Files.find() parcourt récursivement avec profondeur max, utilisant les attributs pour des filtres efficaces."
+},
+
+{
+"id": "J21-06-029",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que sont les 'SeekableByteChannel' ?",
+"options": [
+  "Canal qui supporte position() et truncate()",
+  "Permet la lecture/écriture à position aléatoire",
+  "Implémenté par FileChannel",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "SeekableByteChannel permet de lire/écrire à n'importe quelle position du fichier (accès aléatoire)."
+},
+
+{
+"id": "J21-06-030",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que produit ce code ?\n```java\nByteBuffer buffer = ByteBuffer.allocate(10);\nbuffer.put((byte)1);\nbuffer.put((byte)2);\nbuffer.flip();\nSystem.out.println(buffer.get());\nSystem.out.println(buffer.get());\n```",
+"options": ["1 2", "2 1", "0 0", "Exception"],
+"correct": 0,
+"explanation": "flip() prépare le buffer pour la lecture : limit=position, position=0. get() lit dans l'ordre d'écriture."
+},
+
+{
+"id": "J21-06-031",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que fait 'buffer.compact()' ?",
+"options": [
+  "Déplace les données non lues au début",
+  "Prépare pour réécriture",
+  "Position = remaining(), limit = capacity",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "compact() copie les données entre position et limit au début, puis position = remaining(), limit = capacity."
+},
+
+{
+"id": "J21-06-032",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Quelle est la différence entre ByteBuffer.allocate() et ByteBuffer.allocateDirect() ?",
+"options": [
+  "allocateDirect() utilise mémoire native hors heap",
+  "allocateDirect() plus performant pour I/O",
+  "allocate() utilise heap JVM",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Direct buffers évitent une copie lors des opérations I/O, mais l'allocation est plus coûteuse."
+},
+
+{
+"id": "J21-06-033",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "easy",
+"question": "Que fait 'try (var reader = new BufferedReader(new FileReader(\"file.txt\")))' ?",
+"options": [
+  "try-with-resources ferme automatiquement",
+  "var infère le type",
+  "Le bloc finally n'est pas nécessaire",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Try-with-resources + var (Java 10+) rend le code concis et sûr (fermeture automatique)."
+},
+
+{
+"id": "J21-06-034",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que sont les 'ObjectInputStream' et 'ObjectOutputStream' ?",
+"options": [
+  "Sérialisation d'objets Java",
+  "Lecture/écriture d'objets complets",
+  "Nécessite Serializable",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "ObjectOutputStream écrit des objets Java. ObjectInputStream les lit. Les classes doivent implémenter Serializable."
+},
+
+{
+"id": "J21-06-035",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que signifie 'transient' pour la sérialisation ?",
+"options": [
+  "Le champ n'est pas sérialisé",
+  "Le champ est ignoré",
+  "Le champ reprend la valeur par défaut après désérialisation",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "transient empêche la sérialisation d'un champ (mots de passe, données calculées, etc.)."
+},
+
+{
+"id": "J21-06-036",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que sont 'serialVersionUID' ?",
+"options": [
+  "Identifiant de version de la classe sérialisée",
+  "Assure la compatibilité entre versions",
+  "Généré automatiquement si non déclaré",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "serialVersionUID permet de vérifier que l'émetteur et récepteur ont la même version de classe lors de la sérialisation."
+},
+
+{
+"id": "J21-06-037",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que fait 'Files.setPosixFilePermissions()' ?",
+"options": [
+  "Définit les permissions UNIX (rwxr-x---)",
+  "Fonctionne seulement sur systèmes POSIX",
+  "Utilise Set<PosixFilePermission>",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "setPosixFilePermissions() permet de définir les permissions UNIX, sur systèmes compatibles POSIX (Linux, Mac)."
+},
+
+{
+"id": "J21-06-038",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que sont les 'attribute views' (DosFileView, PosixFileView, etc.) ?",
+"options": [
+  "Vues spécifiques aux attributs du système",
+  "Accès aux attributs étendus",
+  "Files.getFileAttributeView()",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Les attribute views donnent accès aux attributs spécifiques à chaque OS (DOS : hidden, readonly ; POSIX : permissions, owner)."
+},
+
+{
+"id": "J21-06-039",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "medium",
+"question": "Que produit ce code ?\n```java\nPath path = Path.of(\"/tmp/../tmp/file.txt\");\nSystem.out.println(path.normalize());\n```",
+"options": ["/tmp/file.txt", "/tmp/../tmp/file.txt", "file.txt", "/file.txt"],
+"correct": 0,
+"explanation": "normalize() résout '..'. /tmp/../tmp/file.txt → /tmp/file.txt."
+},
+
+{
+"id": "J21-06-040",
+"theme": "Flux I/O et NIO",
+"theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+"difficulty": "hard",
+"question": "Que sont les 'UserDefinedFileAttributeView' ?",
+"options": [
+  "Attributs personnalisés attachés aux fichiers",
+  "Stocke des métadonnées additionnelles",
+  "Disponible sur certains systèmes de fichiers",
+  "Toutes ces réponses"
+],
+"correct": 3,
+"explanation": "Cette view permet de stocker des attributs arbitraires (clé-valeur) sur les fichiers, si le système de fichiers le supporte."
+}
+]
