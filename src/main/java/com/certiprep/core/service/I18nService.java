@@ -2,11 +2,9 @@ package com.certiprep.core.service;
 
 import com.certiprep.core.utils.LoggerUtil;
 
-import java.util.logging.Logger;
-
-
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class I18nService {
 
@@ -30,9 +28,9 @@ public class I18nService {
     private void loadBundle() {
         try {
             bundle = ResourceBundle.getBundle("i18n/messages", currentLocale);
-            logger.info("Langue chargée: {}" +"currentLocale.getDisplayName()");
+            logger.info("Langue chargée: {}" + "currentLocale.getDisplayName()");
         } catch (Exception e) {
-            logger.severe("Erreur chargement bundle pour " +" currentLocale");
+            logger.severe("Erreur chargement bundle pour " + " currentLocale");
             bundle = ResourceBundle.getBundle("i18n/messages", Locale.ENGLISH);
         }
     }
@@ -54,7 +52,7 @@ public class I18nService {
         try {
             return bundle.getString(key);
         } catch (Exception e) {
-            logger.warning("Clé non trouvée: " +" key");
+            logger.warning("Clé non trouvée: " + " key");
             return key;
         }
     }

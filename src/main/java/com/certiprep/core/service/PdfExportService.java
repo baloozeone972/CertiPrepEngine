@@ -6,8 +6,6 @@ import com.certiprep.core.model.ThemeStats;
 import com.certiprep.core.model.UserAnswer;
 import com.certiprep.core.utils.LoggerUtil;
 import com.itextpdf.kernel.colors.ColorConstants;
-import com.itextpdf.kernel.font.PdfFont;
-import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
@@ -18,21 +16,20 @@ import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.properties.TextAlignment;
 import com.itextpdf.layout.properties.UnitValue;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Logger;
-
-
 import java.io.FileOutputStream;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Logger;
 
 public class PdfExportService {
 
     private static final Logger logger = LoggerUtil.getLogger(PdfExportService.class);
     private static PdfExportService instance;
 
-    private PdfExportService() {}
+    private PdfExportService() {
+    }
 
     public static synchronized PdfExportService getInstance() {
         if (instance == null) {
@@ -117,7 +114,7 @@ public class PdfExportService {
             }
 
             document.close();
-            logger.info("PDF exporté avec succès: {}"+ filePath);
+            logger.info("PDF exporté avec succès: {}" + filePath);
             return true;
 
         } catch (Exception e) {

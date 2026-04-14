@@ -2,34 +2,44 @@ package com.certiprep.ui;
 
 import com.certiprep.core.service.DatabaseService;
 import com.certiprep.core.service.I18nService;
+import com.certiprep.core.service.PreferencesService;
 import com.certiprep.core.service.QuestionLoader;
 import com.certiprep.core.utils.LoggerUtil;
 import com.certiprep.core.utils.ThemeManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import java.util.logging.Logger;
-
 
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.logging.Logger;
 
 public class SettingsController {
 
     private static final Logger logger = LoggerUtil.getLogger(SettingsController.class);
 
-    @FXML private RadioButton lightThemeBtn;
-    @FXML private RadioButton darkThemeBtn;
-    @FXML private RadioButton frenchBtn;
-    @FXML private RadioButton englishBtn;
-    @FXML private Button exportDataBtn;
-    @FXML private Button importDataBtn;
-    @FXML private Button resetDataBtn;
-    @FXML private Button saveSettingsBtn;
-    @FXML private Button cancelSettingsBtn;
-    @FXML private Hyperlink websiteLink;
+    @FXML
+    private RadioButton lightThemeBtn;
+    @FXML
+    private RadioButton darkThemeBtn;
+    @FXML
+    private RadioButton frenchBtn;
+    @FXML
+    private RadioButton englishBtn;
+    @FXML
+    private Button exportDataBtn;
+    @FXML
+    private Button importDataBtn;
+    @FXML
+    private Button resetDataBtn;
+    @FXML
+    private Button saveSettingsBtn;
+    @FXML
+    private Button cancelSettingsBtn;
+    @FXML
+    private Hyperlink websiteLink;
 
     private ThemeManager themeManager;
     private I18nService i18nService;
@@ -200,5 +210,39 @@ public class SettingsController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void loadPreferences() {
+        PreferencesService prefs = PreferencesService.getInstance();
+
+        // Thème
+        boolean isDark = "dark".equals(prefs.getTheme());
+        if (isDark) darkThemeBtn.setSelected(true);
+        else lightThemeBtn.setSelected(true);
+
+        // Langue
+        boolean isFrench = "fr".equals(prefs.getLanguage());
+        if (isFrench) frenchBtn.setSelected(true);
+        else englishBtn.setSelected(true);
+    }
+
+    @FXML
+    private void savePreferences() {
+        PreferencesService prefs = PreferencesService.getInstance();
+        prefs.setTheme(darkThemeBtn.isSelected() ? "dark" : "light");
+        prefs.setLanguage(frenchBtn.isSelected() ? "fr" : "en");
+
+        // Appliquer immédiatement
+        if (darkThemeBtn.isSelected() != themeManager.isDarkMode()) {
+            themeManager.toggleTheme(saveSettingsBtn.getScene());
+        }
+        if (frenchBtn.isSelected() && i18nService.isEnglish()) {
+            i18nService.setFrench();
+        } else if (englishBtn.isSelected() && i18nService.isFrench()) {
+            i18nService.setEnglish();
+        }
+
+        showAlert("Succès", "Préférences sauvegardées");
     }
 }

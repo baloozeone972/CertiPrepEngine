@@ -1,7 +1,10 @@
 package com.certiprep.ui;
 
-import com.certiprep.core.model.*;
-import com.certiprep.core.service.*;
+import com.certiprep.core.model.Certification;
+import com.certiprep.core.model.Question;
+import com.certiprep.core.service.DatabaseService;
+import com.certiprep.core.service.I18nService;
+import com.certiprep.core.service.QuestionLoader;
 import com.certiprep.core.utils.LoggerUtil;
 import com.certiprep.core.utils.ThemeManager;
 import javafx.fxml.FXML;
@@ -9,30 +12,47 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 import java.util.logging.Logger;
-
-
-import java.util.*;
 
 public class RevisionController {
 
     private static final Logger logger = LoggerUtil.getLogger(RevisionController.class);
 
-    @FXML private ComboBox<String> themeCombo;
-    @FXML private Slider questionSlider;
-    @FXML private Label questionCountLabel;
-    @FXML private Button startBtn;
-    @FXML private ScrollPane revisionScroll;
-    @FXML private Text revisionQuestion;
-    @FXML private VBox revisionOptions;
-    @FXML private Button showAnswerBtn;
-    @FXML private VBox answerContainer;
-    @FXML private Text correctAnswerText;
-    @FXML private Text explanationText;
-    @FXML private Button prevRevisionBtn;
-    @FXML private Button nextRevisionBtn;
-    @FXML private Button randomRevisionBtn;
-    @FXML private Label revisionCounter;
+    @FXML
+    private ComboBox<String> themeCombo;
+    @FXML
+    private Slider questionSlider;
+    @FXML
+    private Label questionCountLabel;
+    @FXML
+    private Button startBtn;
+    @FXML
+    private ScrollPane revisionScroll;
+    @FXML
+    private Text revisionQuestion;
+    @FXML
+    private VBox revisionOptions;
+    @FXML
+    private Button showAnswerBtn;
+    @FXML
+    private VBox answerContainer;
+    @FXML
+    private Text correctAnswerText;
+    @FXML
+    private Text explanationText;
+    @FXML
+    private Button prevRevisionBtn;
+    @FXML
+    private Button nextRevisionBtn;
+    @FXML
+    private Button randomRevisionBtn;
+    @FXML
+    private Label revisionCounter;
 
     private Certification certification;
     private ThemeManager themeManager;
@@ -280,4 +300,51 @@ public class RevisionController {
         revisionCounter.setText(String.format("Question %d/%d", currentIndex + 1, revisionQuestions.size()));
         updateNavigationButtons();
     }
+
+
+    /*// Variables
+private Set<Integer> favoriteQuestions = new HashSet<>();
+private Button favoriteBtn;
+
+// Dans setupRevisionUI()
+private void setupRevisionUI() {
+    // ... code existant ...
+
+    favoriteBtn = new Button("⭐");
+    favoriteBtn.getStyleClass().add("mark-btn");
+    favoriteBtn.setOnAction(e -> toggleFavorite());
+    // Ajouter à l'interface
+}
+
+private void toggleFavorite() {
+    if (favoriteQuestions.contains(currentIndex)) {
+        favoriteQuestions.remove(currentIndex);
+        favoriteBtn.setText("☆");
+        favoriteBtn.setStyle("-fx-text-fill: gray;");
+    } else {
+        favoriteQuestions.add(currentIndex);
+        favoriteBtn.setText("★");
+        favoriteBtn.setStyle("-fx-text-fill: gold;");
+    }
+}
+
+private void loadFavorites() {
+    // Charger depuis les préférences
+    Set<String> saved = Preferences.userNodeForPackage(RevisionController.class)
+        .get("favorites", "").chars()
+        .filter(c -> c != ',')
+        .mapToObj(c -> String.valueOf((char)c))
+        .map(Integer::parseInt)
+        .collect(Collectors.toSet());
+    // Restaurer...
+}
+
+private void saveFavorites() {
+    // Sauvegarder dans les préférences
+    String favStr = favoriteQuestions.stream()
+        .map(String::valueOf)
+        .collect(Collectors.joining(","));
+    Preferences.userNodeForPackage(RevisionController.class)
+        .put("favorites", favStr);
+}*/
 }

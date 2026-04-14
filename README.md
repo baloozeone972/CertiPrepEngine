@@ -2,7 +2,8 @@
 
 ## Application de préparation aux certifications Java
 
-CertiPrep Engine est une application de bureau permettant de se préparer aux certifications Java (et extensible à d'autres technologies) avec des modes d'examen réalistes, un mode libre et un mode révision.
+CertiPrep Engine est une application de bureau permettant de se préparer aux certifications Java (et extensible à
+d'autres technologies) avec des modes d'examen réalistes, un mode libre et un mode révision.
 
 ## Fonctionnalités
 

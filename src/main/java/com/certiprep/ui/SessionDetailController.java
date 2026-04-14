@@ -1,15 +1,17 @@
 package com.certiprep.ui;
 
-import com.certiprep.core.model.*;
+import com.certiprep.core.model.ExamSession;
+import com.certiprep.core.model.Question;
+import com.certiprep.core.model.UserAnswer;
 import com.certiprep.core.service.I18nService;
 import com.certiprep.core.utils.ThemeManager;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,20 +21,34 @@ public class SessionDetailController {
 
     private static final Logger logger = Logger.getLogger(SessionDetailController.class.getName());
 
-    @FXML private Label dateLabel;
-    @FXML private Label scoreLabel;
-    @FXML private Label durationLabel;
-    @FXML private ComboBox<Integer> questionCombo;
-    @FXML private Button prevBtn;
-    @FXML private Button nextBtn;
-    @FXML private Label questionCounter;
-    @FXML private Text questionText;
-    @FXML private VBox optionsContainer;
-    @FXML private Text userAnswerText;
-    @FXML private Text correctAnswerText;
-    @FXML private Text explanationText;
-    @FXML private FlowPane paletteContainer;
-    @FXML private Button closeBtn;
+    @FXML
+    private Label dateLabel;
+    @FXML
+    private Label scoreLabel;
+    @FXML
+    private Label durationLabel;
+    @FXML
+    private ComboBox<Integer> questionCombo;
+    @FXML
+    private Button prevBtn;
+    @FXML
+    private Button nextBtn;
+    @FXML
+    private Label questionCounter;
+    @FXML
+    private Text questionText;
+    @FXML
+    private VBox optionsContainer;
+    @FXML
+    private Text userAnswerText;
+    @FXML
+    private Text correctAnswerText;
+    @FXML
+    private Text explanationText;
+    @FXML
+    private FlowPane paletteContainer;
+    @FXML
+    private Button closeBtn;
 
     private ExamSession session;
     private List<Question> questions;

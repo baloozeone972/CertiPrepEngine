@@ -1,14 +1,11 @@
 package com.certiprep.core.utils;
 
-import java.util.logging.Logger;
-
-
-import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.logging.Logger;
 
 /**
  * Utilitaire de gestion des logs
@@ -26,7 +23,7 @@ public class LogUtils {
             Path logPath = Paths.get(LOG_DIR);
             if (!Files.exists(logPath)) {
                 Files.createDirectories(logPath);
-                logger.info("Dossier de logs créé: {}"+LOG_DIR);
+                logger.info("Dossier de logs créé: {}" + LOG_DIR);
             }
         } catch (Exception e) {
             System.err.println("Impossible de créer le dossier de logs: " + e.getMessage());
@@ -52,10 +49,10 @@ public class LogUtils {
                         try {
                             if (Files.getLastModifiedTime(path).toMillis() < thirtyDaysAgo) {
                                 Files.delete(path);
-                                logger.info("Log supprimé (ancien): {}"+ path.getFileName());
+                                logger.info("Log supprimé (ancien): {}" + path.getFileName());
                             }
                         } catch (Exception e) {
-                            logger.warning("Impossible de supprimer le log: {}"+ path);
+                            logger.warning("Impossible de supprimer le log: {}" + path);
                         }
                     });
         } catch (Exception e) {
@@ -72,7 +69,7 @@ public class LogUtils {
             String filename = String.format("%s/session_%s_%s.txt", LOG_DIR, sessionId, timestamp);
             Path filePath = Paths.get(filename);
             Files.writeString(filePath, content);
-            logger.info("Rapport de session créé: {}"+ filename);
+            logger.info("Rapport de session créé: {}" + filename);
         } catch (Exception e) {
             logger.severe("Erreur lors de la création du rapport de session");
         }
@@ -118,9 +115,9 @@ public class LogUtils {
                     .forEach(path -> {
                         try {
                             Files.delete(path);
-                            logger.info("Log supprimé: {}"+ path.getFileName());
+                            logger.info("Log supprimé: {}" + path.getFileName());
                         } catch (Exception e) {
-                            logger.warning("Impossible de supprimer le log: {}"+ path);
+                            logger.warning("Impossible de supprimer le log: {}" + path);
                         }
                     });
         } catch (Exception e) {

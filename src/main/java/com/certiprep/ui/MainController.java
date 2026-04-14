@@ -11,31 +11,41 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import java.util.logging.Logger;
-
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class MainController {
 
     private static final Logger logger = LoggerUtil.getLogger(MainController.class);
 
-    @FXML private Button themeToggleBtn;
-    @FXML private Button languageToggleBtn;
-    @FXML private ListView<String> certificationList;
-    @FXML private TextArea certInfoArea;
-    @FXML private Button examModeBtn;
-    @FXML private Button freeModeBtn;
-    @FXML private Button revisionModeBtn;
-    @FXML private Button historyBtn;
-    @FXML private Button settingsBtn;
-    @FXML private Button importBtn;
-    @FXML private Button quitBtn;
-    @FXML private Label statusLabel;
+    @FXML
+    private Button themeToggleBtn;
+    @FXML
+    private Button languageToggleBtn;
+    @FXML
+    private ListView<String> certificationList;
+    @FXML
+    private TextArea certInfoArea;
+    @FXML
+    private Button examModeBtn;
+    @FXML
+    private Button freeModeBtn;
+    @FXML
+    private Button revisionModeBtn;
+    @FXML
+    private Button historyBtn;
+    @FXML
+    private Button settingsBtn;
+    @FXML
+    private Button importBtn;
+    @FXML
+    private Button quitBtn;
+    @FXML
+    private Label statusLabel;
 
     private ThemeManager themeManager;
     private I18nService i18nService;

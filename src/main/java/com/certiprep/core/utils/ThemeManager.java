@@ -1,23 +1,19 @@
 package com.certiprep.core.utils;
 
 import javafx.scene.Scene;
-import java.util.logging.Logger;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 public class ThemeManager {
 
     private static final Logger logger = LoggerUtil.getLogger(ThemeManager.class);
     private static final String CONFIG_FILE = "data/settings.properties";
     private boolean isDarkMode;
-
-    public enum Theme {
-        LIGHT, DARK
-    }
 
     public ThemeManager() {
         loadSettings();
@@ -79,5 +75,9 @@ public class ThemeManager {
 
     public boolean isLightMode() {
         return !isDarkMode;
+    }
+
+    public enum Theme {
+        LIGHT, DARK
     }
 }

@@ -1,6 +1,7 @@
 package com.certiprep.core.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -31,7 +32,8 @@ public class Question {
     private String explanation;
 
     // Constructeurs
-    public Question() {}
+    public Question() {
+    }
 
     public Question(String id, String theme, String themeLabel, String difficulty,
                     String question, List<String> options, int correct, String explanation) {
@@ -46,29 +48,69 @@ public class Question {
     }
 
     // Getters et Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public String getId() {
+        return id;
+    }
 
-    public String getTheme() { return theme; }
-    public void setTheme(String theme) { this.theme = theme; }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    public String getThemeLabel() { return themeLabel; }
-    public void setThemeLabel(String themeLabel) { this.themeLabel = themeLabel; }
+    public String getTheme() {
+        return theme;
+    }
 
-    public String getDifficulty() { return difficulty; }
-    public void setDifficulty(String difficulty) { this.difficulty = difficulty; }
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
 
-    public String getQuestion() { return question; }
-    public void setQuestion(String question) { this.question = question; }
+    public String getThemeLabel() {
+        return themeLabel;
+    }
 
-    public List<String> getOptions() { return options; }
-    public void setOptions(List<String> options) { this.options = options; }
+    public void setThemeLabel(String themeLabel) {
+        this.themeLabel = themeLabel;
+    }
 
-    public int getCorrect() { return correct; }
-    public void setCorrect(int correct) { this.correct = correct; }
+    public String getDifficulty() {
+        return difficulty;
+    }
 
-    public String getExplanation() { return explanation; }
-    public void setExplanation(String explanation) { this.explanation = explanation; }
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<String> options) {
+        this.options = options;
+    }
+
+    public int getCorrect() {
+        return correct;
+    }
+
+    public void setCorrect(int correct) {
+        this.correct = correct;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
 
     public String getCorrectAnswer() {
         return options != null && correct >= 0 && correct < options.size()

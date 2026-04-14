@@ -18,10 +18,6 @@ public class ExamSession {
     private ExamMode mode;
     private List<UserAnswer> userAnswers;
 
-    public enum ExamMode {
-        EXAM, FREE, REVISION
-    }
-
     public ExamSession() {
         this.sessionId = UUID.randomUUID().toString();
         this.startTime = LocalDateTime.now();
@@ -37,35 +33,85 @@ public class ExamSession {
     }
 
     // Getters et Setters
-    public String getSessionId() { return sessionId; }
-    public void setSessionId(String sessionId) { this.sessionId = sessionId; }
+    public String getSessionId() {
+        return sessionId;
+    }
 
-    public String getCertificationId() { return certificationId; }
-    public void setCertificationId(String certificationId) { this.certificationId = certificationId; }
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
 
-    public LocalDateTime getStartTime() { return startTime; }
-    public void setStartTime(LocalDateTime startTime) { this.startTime = startTime; }
+    public String getCertificationId() {
+        return certificationId;
+    }
 
-    public LocalDateTime getEndTime() { return endTime; }
-    public void setEndTime(LocalDateTime endTime) { this.endTime = endTime; }
+    public void setCertificationId(String certificationId) {
+        this.certificationId = certificationId;
+    }
 
-    public int getDurationMinutes() { return durationMinutes; }
-    public void setDurationMinutes(int durationMinutes) { this.durationMinutes = durationMinutes; }
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
 
-    public int getTotalQuestions() { return totalQuestions; }
-    public void setTotalQuestions(int totalQuestions) { this.totalQuestions = totalQuestions; }
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
+    }
 
-    public int getScore() { return score; }
-    public void setScore(int score) { this.score = score; }
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
 
-    public boolean isPassed() { return passed; }
-    public void setPassed(boolean passed) { this.passed = passed; }
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
+    }
 
-    public ExamMode getMode() { return mode; }
-    public void setMode(ExamMode mode) { this.mode = mode; }
+    public int getDurationMinutes() {
+        return durationMinutes;
+    }
 
-    public List<UserAnswer> getUserAnswers() { return userAnswers; }
-    public void setUserAnswers(List<UserAnswer> userAnswers) { this.userAnswers = userAnswers; }
+    public void setDurationMinutes(int durationMinutes) {
+        this.durationMinutes = durationMinutes;
+    }
+
+    public int getTotalQuestions() {
+        return totalQuestions;
+    }
+
+    public void setTotalQuestions(int totalQuestions) {
+        this.totalQuestions = totalQuestions;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public boolean isPassed() {
+        return passed;
+    }
+
+    public void setPassed(boolean passed) {
+        this.passed = passed;
+    }
+
+    public ExamMode getMode() {
+        return mode;
+    }
+
+    public void setMode(ExamMode mode) {
+        this.mode = mode;
+    }
+
+    public List<UserAnswer> getUserAnswers() {
+        return userAnswers;
+    }
+
+    public void setUserAnswers(List<UserAnswer> userAnswers) {
+        this.userAnswers = userAnswers;
+    }
 
     public int getAnsweredCount() {
         return (int) userAnswers.stream().filter(a -> a.getSelectedAnswer() != -1).count();
@@ -82,5 +128,9 @@ public class ExamSession {
     public long getDurationSeconds() {
         if (endTime == null) return 0;
         return java.time.Duration.between(startTime, endTime).getSeconds();
+    }
+
+    public enum ExamMode {
+        EXAM, FREE, REVISION
     }
 }

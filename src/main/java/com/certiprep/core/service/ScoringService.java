@@ -1,18 +1,19 @@
 package com.certiprep.core.service;
 
-import com.certiprep.core.model.ExamSession;
-import com.certiprep.core.model.Question;
-import com.certiprep.core.model.ThemeStats;
-import com.certiprep.core.model.UserAnswer;
-import com.certiprep.core.model.Certification;
-import java.util.*;
+import com.certiprep.core.model.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ScoringService {
 
     private static ScoringService instance;
 
-    private ScoringService() {}
+    private ScoringService() {
+    }
 
     public static synchronized ScoringService getInstance() {
         if (instance == null) {

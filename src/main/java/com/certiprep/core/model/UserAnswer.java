@@ -8,7 +8,8 @@ public class UserAnswer {
     private long responseTimeMs;
     private String theme;
 
-    public UserAnswer() {}
+    public UserAnswer() {
+    }
 
     public UserAnswer(String questionId, int selectedAnswer, boolean isCorrect, long responseTimeMs, String theme) {
         this.questionId = questionId;
@@ -19,18 +20,43 @@ public class UserAnswer {
     }
 
     // Getters et Setters
-    public String getQuestionId() { return questionId; }
-    public void setQuestionId(String questionId) { this.questionId = questionId; }
+    public String getQuestionId() {
+        return questionId;
+    }
 
-    public int getSelectedAnswer() { return selectedAnswer; }
-    public void setSelectedAnswer(int selectedAnswer) { this.selectedAnswer = selectedAnswer; }
+    public void setQuestionId(String questionId) {
+        this.questionId = questionId;
+    }
 
-    public boolean isCorrect() { return isCorrect; }
-    public void setCorrect(boolean correct) { isCorrect = correct; }
+    public int getSelectedAnswer() {
+        return selectedAnswer;
+    }
 
-    public long getResponseTimeMs() { return responseTimeMs; }
-    public void setResponseTimeMs(long responseTimeMs) { this.responseTimeMs = responseTimeMs; }
+    public void setSelectedAnswer(int selectedAnswer) {
+        this.selectedAnswer = selectedAnswer;
+    }
 
-    public String getTheme() { return theme; }
-    public void setTheme(String theme) { this.theme = theme; }
+    public boolean isCorrect() {
+        return isCorrect;
+    }
+
+    public void setCorrect(boolean correct) {
+        isCorrect = correct;
+    }
+
+    public long getResponseTimeMs() {
+        return responseTimeMs;
+    }
+
+    public void setResponseTimeMs(long responseTimeMs) {
+        this.responseTimeMs = responseTimeMs;
+    }
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
 }

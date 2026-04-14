@@ -10,33 +10,52 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import java.util.logging.Logger;
 
-
+import java.io.File;
+import java.io.PrintWriter;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class HistoryController {
 
     private static final Logger logger = LoggerUtil.getLogger(HistoryController.class);
 
-    @FXML private ComboBox<String> certFilterCombo;
-    @FXML private ComboBox<String> modeFilterCombo;
-    @FXML private Button refreshBtn;
-    @FXML private Button deleteAllBtn;
-    @FXML private TableView<ExamSession> historyTable;
-    @FXML private TableColumn<ExamSession, String> dateCol;
-    @FXML private TableColumn<ExamSession, String> certCol;
-    @FXML private TableColumn<ExamSession, String> modeCol;
-    @FXML private TableColumn<ExamSession, Integer> scoreCol;
-    @FXML private TableColumn<ExamSession, Double> percentCol;
-    @FXML private TableColumn<ExamSession, String> statusCol;
-    @FXML private TableColumn<ExamSession, String> durationCol;
-    @FXML private Button viewDetailsBtn;
-    @FXML private Button deleteSessionBtn;
-    @FXML private Button closeHistoryBtn;
+    @FXML
+    private ComboBox<String> certFilterCombo;
+    @FXML
+    private ComboBox<String> modeFilterCombo;
+    @FXML
+    private Button refreshBtn;
+    @FXML
+    private Button deleteAllBtn;
+    @FXML
+    private Button exportCsvBtn;
+    @FXML
+    private TableView<ExamSession> historyTable;
+    @FXML
+    private TableColumn<ExamSession, String> dateCol;
+    @FXML
+    private TableColumn<ExamSession, String> certCol;
+    @FXML
+    private TableColumn<ExamSession, String> modeCol;
+    @FXML
+    private TableColumn<ExamSession, Integer> scoreCol;
+    @FXML
+    private TableColumn<ExamSession, Double> percentCol;
+    @FXML
+    private TableColumn<ExamSession, String> statusCol;
+    @FXML
+    private TableColumn<ExamSession, String> durationCol;
+    @FXML
+    private Button viewDetailsBtn;
+    @FXML
+    private Button deleteSessionBtn;
+    @FXML
+    private Button closeHistoryBtn;
 
     private ThemeManager themeManager;
     private I18nService i18nService;
@@ -58,6 +77,7 @@ public class HistoryController {
         viewDetailsBtn.setOnAction(e -> viewDetails());
         deleteSessionBtn.setOnAction(e -> deleteSelectedSession());
         closeHistoryBtn.setOnAction(e -> close());
+        exportCsvBtn.setOnAction(e -> exportCsv());
 
         certFilterCombo.valueProperty().addListener((obs, oldVal, newVal) -> filterHistory());
         modeFilterCombo.valueProperty().addListener((obs, oldVal, newVal) -> filterHistory());
@@ -141,7 +161,6 @@ public class HistoryController {
     private void loadHistory() {
         String certId = certFilterCombo.getValue();
         if ("Toutes".equals(certId)) {
-            // Charger toutes les certifications
             allSessions = databaseService.getSessions(null);
         } else {
             allSessions = databaseService.getSessions(certId);
@@ -162,6 +181,7 @@ public class HistoryController {
         sessionsList.setAll(filtered);
     }
 
+    @FXML
     private void viewDetails() {
         ExamSession selected = historyTable.getSelectionModel().getSelectedItem();
         if (selected == null) {
@@ -169,7 +189,6 @@ public class HistoryController {
             return;
         }
 
-        // TODO: Afficher les détails de la session
         showAlert("Détails", "Session du " + selected.getStartTime().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")) +
                 "\nScore: " + selected.getScore() + "/" + selected.getTotalQuestions() +
                 "\nPourcentage: " + String.format("%.1f", selected.getPercentage()) + "%" +
@@ -194,6 +213,7 @@ public class HistoryController {
         }
     }
 
+    @FXML
     private void deleteAllHistory() {
         Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
         confirm.setTitle("Confirmation");
@@ -208,6 +228,7 @@ public class HistoryController {
         }
     }
 
+    @FXML
     private void close() {
         Stage stage = (Stage) closeHistoryBtn.getScene().getWindow();
         stage.close();
@@ -226,5 +247,42 @@ public class HistoryController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void exportCsv() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Exporter l'historique en CSV");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("CSV files (*.csv)", "*.csv")
+        );
+        fileChooser.setInitialFileName("certiprep_history_" + System.currentTimeMillis() + ".csv");
+
+        File file = fileChooser.showSaveDialog(exportCsvBtn.getScene().getWindow());
+        if (file != null) {
+            try (PrintWriter writer = new PrintWriter(file)) {
+                // En-têtes CSV
+                writer.println("Date,Certification,Mode,Score,Total,Pourcentage,Statut,Durée(secondes)");
+
+                // Données
+                for (ExamSession session : sessionsList) {
+                    writer.printf("%s,%s,%s,%d,%d,%.1f,%s,%d%n",
+                            session.getStartTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                            session.getCertificationId(),
+                            session.getMode().name(),
+                            session.getScore(),
+                            session.getTotalQuestions(),
+                            session.getPercentage(),
+                            session.isPassed() ? "RÉUSSI" : "ÉCHEC",
+                            session.getDurationSeconds()
+                    );
+                }
+
+                showAlert("Succès", "Historique exporté avec succès vers " + file.getName());
+            } catch (Exception e) {
+                logger.severe("Erreur export CSV: " + e.getMessage());
+                showAlert("Erreur", "Erreur lors de l'export: " + e.getMessage());
+            }
+        }
     }
 }

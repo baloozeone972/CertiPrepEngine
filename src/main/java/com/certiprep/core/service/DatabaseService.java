@@ -4,22 +4,21 @@ import com.certiprep.core.model.ExamSession;
 import com.certiprep.core.model.UserAnswer;
 import com.certiprep.core.utils.LoggerUtil;
 
-import java.util.logging.Logger;
-
-
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class DatabaseService {
 
     private static final Logger logger = LoggerUtil.getLogger(DatabaseService.class);
     private static DatabaseService instance;
-    private Connection connection;
     private final String dbPath = "data/certiprep.db";
+    private Connection connection;
 
-    private DatabaseService() {}
+    private DatabaseService() {
+    }
 
     public static synchronized DatabaseService getInstance() {
         if (instance == null) {
@@ -45,32 +44,32 @@ public class DatabaseService {
 
     private void createTables() throws SQLException {
         String createSessionsTable = """
-            CREATE TABLE IF NOT EXISTS exam_sessions (
-                session_id TEXT PRIMARY KEY,
-                certification_id TEXT NOT NULL,
-                start_time TEXT NOT NULL,
-                end_time TEXT,
-                duration_minutes INTEGER,
-                total_questions INTEGER,
-                score INTEGER,
-                passed INTEGER,
-                mode TEXT,
-                percentage REAL
-            )
-            """;
+                CREATE TABLE IF NOT EXISTS exam_sessions (
+                    session_id TEXT PRIMARY KEY,
+                    certification_id TEXT NOT NULL,
+                    start_time TEXT NOT NULL,
+                    end_time TEXT,
+                    duration_minutes INTEGER,
+                    total_questions INTEGER,
+                    score INTEGER,
+                    passed INTEGER,
+                    mode TEXT,
+                    percentage REAL
+                )
+                """;
 
         String createAnswersTable = """
-            CREATE TABLE IF NOT EXISTS user_answers (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                session_id TEXT NOT NULL,
-                question_id TEXT NOT NULL,
-                selected_answer INTEGER,
-                is_correct INTEGER,
-                response_time_ms INTEGER,
-                theme TEXT,
-                FOREIGN KEY (session_id) REFERENCES exam_sessions(session_id)
-            )
-            """;
+                CREATE TABLE IF NOT EXISTS user_answers (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    session_id TEXT NOT NULL,
+                    question_id TEXT NOT NULL,
+                    selected_answer INTEGER,
+                    is_correct INTEGER,
+                    response_time_ms INTEGER,
+                    theme TEXT,
+                    FOREIGN KEY (session_id) REFERENCES exam_sessions(session_id)
+                )
+                """;
 
         String createIndex = "CREATE INDEX IF NOT EXISTS idx_session_id ON user_answers(session_id)";
 
@@ -83,11 +82,11 @@ public class DatabaseService {
 
     public void saveSession(ExamSession session) {
         String sql = """
-            INSERT OR REPLACE INTO exam_sessions 
-            (session_id, certification_id, start_time, end_time, duration_minutes, 
-             total_questions, score, passed, mode, percentage)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """;
+                INSERT OR REPLACE INTO exam_sessions 
+                (session_id, certification_id, start_time, end_time, duration_minutes, 
+                 total_questions, score, passed, mode, percentage)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """;
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, session.getSessionId());
@@ -105,7 +104,7 @@ public class DatabaseService {
             // Sauvegarder les réponses
             saveAnswers(session);
 
-            logger.info("Session sauvegardée: {}"+"session.getSessionId()");
+            logger.info("Session sauvegardée: {}" + "session.getSessionId()");
         } catch (SQLException e) {
             logger.severe("Erreur lors de la sauvegarde de la session");
         }
@@ -119,10 +118,10 @@ public class DatabaseService {
         }
 
         String insertSql = """
-            INSERT INTO user_answers 
-            (session_id, question_id, selected_answer, is_correct, response_time_ms, theme)
-            VALUES (?, ?, ?, ?, ?, ?)
-            """;
+                INSERT INTO user_answers 
+                (session_id, question_id, selected_answer, is_correct, response_time_ms, theme)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """;
 
         try (PreparedStatement pstmt = connection.prepareStatement(insertSql)) {
             for (UserAnswer answer : session.getUserAnswers()) {
@@ -212,7 +211,7 @@ public class DatabaseService {
             }
 
             connection.commit();
-            logger.info("Session supprimée: {}"+"sessionId");
+            logger.info("Session supprimée: {}" + "sessionId");
         } catch (SQLException e) {
             try {
                 connection.rollback();

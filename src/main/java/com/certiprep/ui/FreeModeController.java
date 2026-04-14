@@ -1,7 +1,10 @@
 package com.certiprep.ui;
 
-import com.certiprep.core.model.*;
-import com.certiprep.core.service.*;
+import com.certiprep.core.model.Certification;
+import com.certiprep.core.model.Question;
+import com.certiprep.core.service.DatabaseService;
+import com.certiprep.core.service.I18nService;
+import com.certiprep.core.service.QuestionLoader;
 import com.certiprep.core.utils.LoggerUtil;
 import com.certiprep.core.utils.ThemeManager;
 import javafx.fxml.FXML;
@@ -11,23 +14,31 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.util.logging.Logger;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class FreeModeController {
 
     private static final Logger logger = LoggerUtil.getLogger(FreeModeController.class);
 
-    @FXML private VBox themesContainer;
-    @FXML private Slider questionSlider;
-    @FXML private Label questionCountLabel;
-    @FXML private RadioButton unlimitedTimeBtn;
-    @FXML private RadioButton limitedTimeBtn;
-    @FXML private Spinner<Integer> minutesSpinner;
-    @FXML private Button generateBtn;
-    @FXML private Button cancelBtn;
+    @FXML
+    private VBox themesContainer;
+    @FXML
+    private Slider questionSlider;
+    @FXML
+    private Label questionCountLabel;
+    @FXML
+    private RadioButton unlimitedTimeBtn;
+    @FXML
+    private RadioButton limitedTimeBtn;
+    @FXML
+    private Spinner<Integer> minutesSpinner;
+    @FXML
+    private Button generateBtn;
+    @FXML
+    private Button cancelBtn;
 
     private Certification certification;
     private ThemeManager themeManager;

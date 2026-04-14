@@ -1,7 +1,13 @@
 package com.certiprep.ui;
 
-import com.certiprep.core.model.*;
-import com.certiprep.core.service.*;
+import com.certiprep.core.model.ExamSession;
+import com.certiprep.core.model.Question;
+import com.certiprep.core.model.ThemeStats;
+import com.certiprep.core.model.UserAnswer;
+import com.certiprep.core.service.DatabaseService;
+import com.certiprep.core.service.I18nService;
+import com.certiprep.core.service.PdfExportService;
+import com.certiprep.core.service.ScoringService;
 import com.certiprep.core.utils.ThemeManager;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -15,32 +21,55 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 public class ResultsController {
 
     private static final Logger logger = Logger.getLogger(ResultsController.class.getName());
 
-    @FXML private Text resultTitle;
-    @FXML private Text scoreText;
-    @FXML private Text percentageText;
-    @FXML private Text statusText;
-    @FXML private Text timeText;
-    @FXML private BarChart<String, Number> themeChart;
-    @FXML private CategoryAxis xAxis;
-    @FXML private NumberAxis yAxis;
-    @FXML private TableView<ThemeStats> themeTable;
-    @FXML private TableColumn<ThemeStats, String> themeCol;
-    @FXML private TableColumn<ThemeStats, Integer> correctCol;
-    @FXML private TableColumn<ThemeStats, Integer> totalCol;
-    @FXML private TableColumn<ThemeStats, Double> percentCol;
-    @FXML private Button exportPdfBtn;
-    @FXML private Button reviewWrongBtn;
-    @FXML private Button viewDetailsBtn;
-    @FXML private Button newExamBtn;
-    @FXML private Button closeBtn;
+    @FXML
+    private Text resultTitle;
+    @FXML
+    private Text scoreText;
+    @FXML
+    private Text percentageText;
+    @FXML
+    private Text statusText;
+    @FXML
+    private Text timeText;
+    @FXML
+    private BarChart<String, Number> themeChart;
+    @FXML
+    private CategoryAxis xAxis;
+    @FXML
+    private NumberAxis yAxis;
+    @FXML
+    private TableView<ThemeStats> themeTable;
+    @FXML
+    private TableColumn<ThemeStats, String> themeCol;
+    @FXML
+    private TableColumn<ThemeStats, Integer> correctCol;
+    @FXML
+    private TableColumn<ThemeStats, Integer> totalCol;
+    @FXML
+    private TableColumn<ThemeStats, Double> percentCol;
+    @FXML
+    private Button exportPdfBtn;
+    @FXML
+    private Button reviewWrongBtn;
+    @FXML
+    private Button viewDetailsBtn;
+    @FXML
+    private Button newExamBtn;
+    @FXML
+    private Button closeBtn;
 
     private ExamSession session;
     private List<Question> questions;
@@ -48,6 +77,11 @@ public class ResultsController {
     private I18nService i18nService;
     private DatabaseService databaseService;
     private List<ThemeStats> themeStats;
+    // Variables supplémentaires
+    @FXML
+    private TableView<DifficultyStats> difficultyTable;
+    @FXML
+    private BarChart<String, Number> difficultyChart;
 
     public void init(ExamSession session, List<Question> questions, ThemeManager themeManager,
                      I18nService i18nService, DatabaseService databaseService) {
@@ -259,5 +293,111 @@ public class ResultsController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    // Méthode pour calculer les stats par difficulté
+    private List<DifficultyStats> calculateDifficultyStats() {
+        Map<String, DifficultyStats> statsMap = new HashMap<>();
+        statsMap.put("easy", new DifficultyStats("Facile"));
+        statsMap.put("medium", new DifficultyStats("Moyen"));
+        statsMap.put("hard", new DifficultyStats("Difficile"));
+
+        Map<String, Question> questionMap = questions.stream()
+                .collect(Collectors.toMap(Question::getId, q -> q));
+
+        for (UserAnswer answer : session.getUserAnswers()) {
+            Question q = questionMap.get(answer.getQuestionId());
+            if (q == null || answer.getSelectedAnswer() == -1) continue;
+
+            DifficultyStats stats = statsMap.get(q.getDifficulty());
+            if (stats != null) {
+                if (answer.isCorrect()) {
+                    stats.addCorrect();
+                } else {
+                    stats.addWrong();
+                }
+            }
+        }
+
+        return new ArrayList<>(statsMap.values());
+    }
+
+    // Configurer le tableau des difficultés
+    private void setupDifficultyTable() {
+        TableColumn<DifficultyStats, String> diffCol = new TableColumn<>("Difficulté");
+        TableColumn<DifficultyStats, Integer> correctCol = new TableColumn<>("Correct");
+        TableColumn<DifficultyStats, Integer> totalCol = new TableColumn<>("Total");
+        TableColumn<DifficultyStats, Double> percentCol = new TableColumn<>("%");
+
+        diffCol.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleStringProperty(cellData.getValue().getDifficulty()));
+        correctCol.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleIntegerProperty(cellData.getValue().getCorrect()).asObject());
+        totalCol.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleIntegerProperty(cellData.getValue().getTotal()).asObject());
+        percentCol.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleDoubleProperty(cellData.getValue().getPercentage()).asObject());
+
+        percentCol.setCellFactory(col -> new TableCell<DifficultyStats, Double>() {
+            @Override
+            protected void updateItem(Double item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty || item == null ? null : String.format("%.1f%%", item));
+            }
+        });
+
+        difficultyTable.getColumns().setAll(diffCol, correctCol, totalCol, percentCol);
+        difficultyTable.setItems(FXCollections.observableArrayList(calculateDifficultyStats()));
+    }
+
+    // Configurer le graphique des difficultés
+    private void setupDifficultyChart() {
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Réussite par difficulté");
+
+        for (DifficultyStats stats : calculateDifficultyStats()) {
+            series.getData().add(new XYChart.Data<>(stats.getDifficulty(), stats.getPercentage()));
+        }
+
+        difficultyChart.getData().clear();
+        difficultyChart.getData().add(series);
+    }
+
+    // Classe interne pour les stats par difficulté
+    public static class DifficultyStats {
+        private String difficulty;
+        private int correct;
+        private int total;
+
+        public DifficultyStats(String difficulty) {
+            this.difficulty = difficulty;
+            this.correct = 0;
+            this.total = 0;
+        }
+
+        public String getDifficulty() {
+            return difficulty;
+        }
+
+        public int getCorrect() {
+            return correct;
+        }
+
+        public int getTotal() {
+            return total;
+        }
+
+        public double getPercentage() {
+            return total > 0 ? correct * 100.0 / total : 0;
+        }
+
+        public void addCorrect() {
+            correct++;
+            total++;
+        }
+
+        public void addWrong() {
+            total++;
+        }
     }
 }

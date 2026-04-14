@@ -1,15 +1,19 @@
 package com.certiprep.ui;
 
-import com.certiprep.core.model.*;
-import com.certiprep.core.service.*;
+import com.certiprep.core.model.Certification;
+import com.certiprep.core.model.ExamSession;
+import com.certiprep.core.model.Question;
+import com.certiprep.core.model.UserAnswer;
+import com.certiprep.core.service.DatabaseService;
+import com.certiprep.core.service.I18nService;
+import com.certiprep.core.service.QuestionLoader;
+import com.certiprep.core.service.ScoringService;
 import com.certiprep.core.utils.LoggerUtil;
 import com.certiprep.core.utils.ThemeManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
@@ -17,28 +21,42 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import java.util.logging.Logger;
-
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.logging.Logger;
 
 public class ExamController {
 
     private static final Logger logger = LoggerUtil.getLogger(ExamController.class);
-    @FXML public Button pauseBtn;
+    @FXML
+    public Button pauseBtn;
 
-    @FXML private Label questionCounter;
-    @FXML private Label timerLabel;
-    @FXML private Button submitBtn;
-    @FXML private Text questionText;
-    @FXML private VBox optionsContainer;
-    @FXML private Button prevBtn;
-    @FXML private Button nextBtn;
-    @FXML private Button markBtn;
-    @FXML private FlowPane paletteContainer;
-    @FXML private ProgressBar progressBar;
-    @FXML private Label answeredStatus;
+    @FXML
+    private Label questionCounter;
+    @FXML
+    private Label timerLabel;
+    @FXML
+    private Button submitBtn;
+    @FXML
+    private Text questionText;
+    @FXML
+    private VBox optionsContainer;
+    @FXML
+    private Button prevBtn;
+    @FXML
+    private Button nextBtn;
+    @FXML
+    private Button markBtn;
+    @FXML
+    private FlowPane paletteContainer;
+    @FXML
+    private ProgressBar progressBar;
+    @FXML
+    private Label answeredStatus;
 
     private Certification certification;
     private ThemeManager themeManager;
@@ -79,13 +97,13 @@ public class ExamController {
             return;
         }
 
-        logger.info("{} questions chargées pour l'examen"+"examQuestions.size()");
+        logger.info("{} questions chargées pour l'examen" + "examQuestions.size()");
 
         // Initialiser le timer avec la durée de l'examen
         totalSeconds = certification.getExamDurationMinutes() * 60L;
         remainingSeconds = totalSeconds;
 
-        logger.info("Timer initialisé à {} secondes ({} minutes)"+" remainingSeconds, certification.getExamDurationMinutes()");
+        logger.info("Timer initialisé à {} secondes ({} minutes)" + " remainingSeconds, certification.getExamDurationMinutes()");
 
         initExam();
     }
@@ -110,7 +128,7 @@ public class ExamController {
             remainingSeconds = 0;
         }
 
-        logger.info("Mode libre: {} questions, durée: {} minutes"+"examQuestions.size(), durationMinutes");
+        logger.info("Mode libre: {} questions, durée: {} minutes" + "examQuestions.size(), durationMinutes");
 
         initExam();
     }
@@ -132,7 +150,7 @@ public class ExamController {
         // Démarrer le timer seulement si une durée est définie
         if (totalSeconds > 0) {
             startTimer();
-            logger.info("Timer démarré avec {} secondes"+ remainingSeconds);
+            logger.info("Timer démarré avec {} secondes" + remainingSeconds);
         } else {
             timerLabel.setText("Illimité");
             logger.info("Mode sans limite de temps");
@@ -448,4 +466,80 @@ public class ExamController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    @FXML
+    private void togglePause() {
+        isPaused = !isPaused;
+        if (timer != null) {
+            if (isPaused) {
+                timer.pause();
+                pauseBtn.setText("▶ Reprendre");
+                timerLabel.setStyle("-fx-text-fill: orange; -fx-font-weight: bold;");
+                logger.info("Examen mis en pause");
+            } else {
+                timer.play();
+                pauseBtn.setText("⏸ Pause");
+                updateTimerDisplay();
+                logger.info("Examen repris");
+            }
+        }
+    }
+
+    //TODO
+    /*// Variables supplémentaires
+private boolean isPaused = false;
+private Button pauseBtn;
+
+// Dans setupUI() ou initExam()
+private void setupUI() {
+    // ... code existant ...
+
+    // Ajouter bouton pause si pas déjà fait
+    if (pauseBtn == null && timerLabel != null) {
+        pauseBtn = new Button("⏸ Pause");
+        pauseBtn.getStyleClass().add("secondary-btn");
+        pauseBtn.setOnAction(e -> togglePause());
+        // Ajouter à la barre supérieure - à adapter selon votre layout
+    }
+}
+
+@FXML
+private void togglePause() {
+    isPaused = !isPaused;
+    if (timer != null) {
+        if (isPaused) {
+            timer.pause();
+            pauseBtn.setText("▶ Reprendre");
+            timerLabel.setStyle("-fx-text-fill: orange; -fx-font-weight: bold;");
+            logger.info("Examen mis en pause");
+        } else {
+            timer.play();
+            pauseBtn.setText("⏸ Pause");
+            updateTimerDisplay();
+            logger.info("Examen repris");
+        }
+    }
+}
+
+// Modifier updateTimer pour vérifier isPaused
+private void updateTimer() {
+    if (!isPaused && remainingSeconds > 0) {
+        remainingSeconds--;
+        updateTimerDisplay();
+
+        if (remainingSeconds <= 0) {
+            timer.stop();
+            submitExam();
+        }
+    }
+}
+
+// Sauvegarder l'état de pause dans la session
+private ExamSession createSession() {
+    ExamSession session = new ExamSession(...);
+    // ... code existant ...
+
+    // Ajouter le temps de pause? Optionnel
+    return session;
+}*/
 }

@@ -16,20 +16,45 @@ public class ThemeStats {
         this.skippedAnswers = 0;
     }
 
-    public String getThemeName() { return themeName; }
-    public void setThemeName(String themeName) { this.themeName = themeName; }
+    public String getThemeName() {
+        return themeName;
+    }
 
-    public int getTotalQuestions() { return totalQuestions; }
-    public void setTotalQuestions(int totalQuestions) { this.totalQuestions = totalQuestions; }
+    public void setThemeName(String themeName) {
+        this.themeName = themeName;
+    }
 
-    public int getCorrectAnswers() { return correctAnswers; }
-    public void setCorrectAnswers(int correctAnswers) { this.correctAnswers = correctAnswers; }
+    public int getTotalQuestions() {
+        return totalQuestions;
+    }
 
-    public int getWrongAnswers() { return wrongAnswers; }
-    public void setWrongAnswers(int wrongAnswers) { this.wrongAnswers = wrongAnswers; }
+    public void setTotalQuestions(int totalQuestions) {
+        this.totalQuestions = totalQuestions;
+    }
 
-    public int getSkippedAnswers() { return skippedAnswers; }
-    public void setSkippedAnswers(int skippedAnswers) { this.skippedAnswers = skippedAnswers; }
+    public int getCorrectAnswers() {
+        return correctAnswers;
+    }
+
+    public void setCorrectAnswers(int correctAnswers) {
+        this.correctAnswers = correctAnswers;
+    }
+
+    public int getWrongAnswers() {
+        return wrongAnswers;
+    }
+
+    public void setWrongAnswers(int wrongAnswers) {
+        this.wrongAnswers = wrongAnswers;
+    }
+
+    public int getSkippedAnswers() {
+        return skippedAnswers;
+    }
+
+    public void setSkippedAnswers(int skippedAnswers) {
+        this.skippedAnswers = skippedAnswers;
+    }
 
     public double getPercentage() {
         return totalQuestions > 0 ? (correctAnswers * 100.0 / totalQuestions) : 0;
