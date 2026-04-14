@@ -3,43 +3,47 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.FreeModeController" spacing="20" styleClass="config-container">
+<?import javafx.scene.text.Text?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+      fx:controller="com.certiprep.ui.FreeModeController" spacing="20" styleClass="config-container">
     <padding>
         <Insets top="30" right="30" bottom="30" left="30"/>
     </padding>
 
-    <Text text="%free.mode.config" styleClass="title" />
+    <Text text="%free.mode.config" styleClass="title"/>
 
     <!-- Sélection thèmes -->
     <VBox spacing="10">
-        <Label text="%select.themes" styleClass="section-title" />
+        <Label text="%select.themes" styleClass="section-title"/>
         <ScrollPane prefHeight="250" fitToWidth="true">
-            <VBox fx:id="themesContainer" spacing="8" />
+            <VBox fx:id="themesContainer" spacing="8"/>
         </ScrollPane>
     </VBox>
 
     <!-- Configuration -->
     <GridPane hgap="20" vgap="15">
-        <Label text="%nb.questions" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <Slider fx:id="questionSlider" min="1" max="500" value="30" showTickLabels="true" showTickMarks="true" majorTickUnit="50" minorTickCount="4" blockIncrement="10" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <Label fx:id="questionCountLabel" text="30" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Label text="%nb.questions" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Slider fx:id="questionSlider" min="1" max="500" value="30" showTickLabels="true" showTickMarks="true"
+                majorTickUnit="50" minorTickCount="4" blockIncrement="10" GridPane.columnIndex="1"
+                GridPane.rowIndex="0"/>
+        <Label fx:id="questionCountLabel" text="30" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
 
-        <Label text="%duration" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="%duration" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
         <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
-            <RadioButton fx:id="unlimitedTimeBtn" text="%unlimited" selected="true" />
-            <RadioButton fx:id="limitedTimeBtn" text="%limited" />
+            <RadioButton fx:id="unlimitedTimeBtn" text="%unlimited" selected="true"/>
+            <RadioButton fx:id="limitedTimeBtn" text="%limited"/>
         </HBox>
         <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
-            <Label text="%minutes" />
-            <Spinner fx:id="minutesSpinner" editable="true" min="1" max="360" initialValue="60" prefWidth="80" disable="true" />
+            <Label text="%minutes"/>
+            <Spinner fx:id="minutesSpinner" editable="true" min="1" max="360" initialValue="60" prefWidth="80"
+                     disable="true"/>
         </HBox>
     </GridPane>
 
     <!-- Boutons -->
     <HBox spacing="20" alignment="CENTER">
-        <Button fx:id="generateBtn" text="%generate.test" onAction="#generateTest" styleClass="primary-btn" prefWidth="150" />
-        <Button fx:id="cancelBtn" text="%cancel" onAction="#cancel" styleClass="secondary-btn" prefWidth="100" />
+        <Button fx:id="generateBtn" text="%generate.test" onAction="#generateTest" styleClass="primary-btn"
+                prefWidth="150"/>
+        <Button fx:id="cancelBtn" text="%cancel" onAction="#cancel" styleClass="secondary-btn" prefWidth="100"/>
     </HBox>
 </VBox>

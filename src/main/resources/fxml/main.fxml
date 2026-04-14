@@ -3,54 +3,59 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.MainController" spacing="20" styleClass="main-container">
+<?import javafx.scene.text.Text?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+      fx:controller="com.certiprep.ui.MainController" spacing="20" styleClass="main-container">
     <padding>
         <Insets top="30" right="30" bottom="30" left="30"/>
     </padding>
 
     <!-- En-tête -->
     <HBox alignment="CENTER_RIGHT" spacing="10">
-        <Region HBox.hgrow="ALWAYS" />
-        <Button fx:id="themeToggleBtn" text="🌙" onAction="#toggleTheme" styleClass="theme-btn" />
-        <Button fx:id="languageToggleBtn" text="EN/FR" onAction="#toggleLanguage" styleClass="lang-btn" />
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="themeToggleBtn" text="🌙" onAction="#toggleTheme" styleClass="theme-btn"/>
+        <Button fx:id="languageToggleBtn" text="EN/FR" onAction="#toggleLanguage" styleClass="lang-btn"/>
     </HBox>
 
     <!-- Titre -->
     <VBox alignment="CENTER" spacing="10">
-        <Text text="CertiPrep Engine" styleClass="title" />
-        <Text text="Préparation aux certifications Java" styleClass="subtitle" />
+        <Text text="CertiPrep Engine" styleClass="title"/>
+        <Text text="Préparation aux certifications Java" styleClass="subtitle"/>
     </VBox>
 
     <!-- Sélection certification -->
     <VBox spacing="10">
-        <Label text="%select.certification" styleClass="section-title" />
-        <ListView fx:id="certificationList" styleClass="cert-list" prefHeight="150" />
+        <Label text="%select.certification" styleClass="section-title"/>
+        <ListView fx:id="certificationList" styleClass="cert-list" prefHeight="150"/>
     </VBox>
 
     <!-- Informations certification -->
     <VBox spacing="10">
-        <Label text="%certification.details" styleClass="section-title" />
-        <TextArea fx:id="certInfoArea" editable="false" wrapText="true" styleClass="info-area" prefHeight="100" />
+        <Label text="%certification.details" styleClass="section-title"/>
+        <TextArea fx:id="certInfoArea" editable="false" wrapText="true" styleClass="info-area" prefHeight="100"/>
     </VBox>
 
     <!-- Boutons principaux -->
     <HBox spacing="20" alignment="CENTER">
-        <Button fx:id="examModeBtn" text="%mode.exam" onAction="#startExamMode" styleClass="primary-btn" prefWidth="150" />
-        <Button fx:id="freeModeBtn" text="%mode.free" onAction="#startFreeMode" styleClass="primary-btn" prefWidth="150" />
-        <Button fx:id="revisionModeBtn" text="%mode.revision" onAction="#startRevisionMode" styleClass="secondary-btn" prefWidth="150" />
+        <Button fx:id="examModeBtn" text="%mode.exam" onAction="#startExamMode" styleClass="primary-btn"
+                prefWidth="150"/>
+        <Button fx:id="freeModeBtn" text="%mode.free" onAction="#startFreeMode" styleClass="primary-btn"
+                prefWidth="150"/>
+        <Button fx:id="revisionModeBtn" text="%mode.revision" onAction="#startRevisionMode" styleClass="secondary-btn"
+                prefWidth="150"/>
     </HBox>
 
     <HBox spacing="20" alignment="CENTER">
-        <Button fx:id="historyBtn" text="%history" onAction="#showHistory" styleClass="secondary-btn" prefWidth="120" />
-        <Button fx:id="settingsBtn" text="%settings" onAction="#showSettings" styleClass="secondary-btn" prefWidth="120" />
-        <Button fx:id="importBtn" text="%import.questions" onAction="#importQuestions" styleClass="secondary-btn" prefWidth="150" />
-        <Button fx:id="quitBtn" text="%quit" onAction="#quit" styleClass="danger-btn" prefWidth="100" />
+        <Button fx:id="historyBtn" text="%history" onAction="#showHistory" styleClass="secondary-btn" prefWidth="120"/>
+        <Button fx:id="settingsBtn" text="%settings" onAction="#showSettings" styleClass="secondary-btn"
+                prefWidth="120"/>
+        <Button fx:id="importBtn" text="%import.questions" onAction="#importQuestions" styleClass="secondary-btn"
+                prefWidth="150"/>
+        <Button fx:id="quitBtn" text="%quit" onAction="#quit" styleClass="danger-btn" prefWidth="100"/>
     </HBox>
 
     <!-- Statut -->
     <HBox alignment="CENTER">
-        <Label fx:id="statusLabel" text="%ready" styleClass="status-label" />
+        <Label fx:id="statusLabel" text="%ready" styleClass="status-label"/>
     </HBox>
 </VBox>

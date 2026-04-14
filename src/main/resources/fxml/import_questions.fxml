@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+      fx:controller="com.certiprep.ui.ImportQuestionsController" spacing="15" styleClass="settings-container">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text text="Import de questions supplémentaires" styleClass="title"/>
+
+    <GridPane hgap="15" vgap="10">
+        <Label text="Fichier JSON:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Button fx:id="selectFileBtn" text="Sélectionner"/>
+            <Label fx:id="fileNameLabel"/>
+        </HBox>
+
+        <Label text="Thème:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="themeField" promptText="Nom du thème" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Fichier cible:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="targetFileCombo" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+
+    <Label text="Aperçu:"/>
+    <TextArea fx:id="previewArea" prefHeight="150" editable="false"/>
+
+    <Label fx:id="statusLabel"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="importBtn" text="Importer" styleClass="primary-btn" prefWidth="100"/>
+        <Button fx:id="cancelBtn" text="Annuler" styleClass="secondary-btn" prefWidth="100"/>
+    </HBox>
+</VBox>

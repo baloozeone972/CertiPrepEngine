@@ -2,10 +2,10 @@
 <configuration scan="true" scanPeriod="30 seconds">
 
     <!-- Propriétés -->
-    <property name="LOG_PATH" value="logs" />
-    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
-    <property name="MAX_HISTORY" value="30" />
-    <property name="MAX_FILE_SIZE" value="10MB" />
+    <property name="LOG_PATH" value="logs"/>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="MAX_HISTORY" value="30"/>
+    <property name="MAX_FILE_SIZE" value="10MB"/>
 
     <!-- Console Appender -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
@@ -48,35 +48,35 @@
 
     <!-- Logger racine -->
     <root level="INFO">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE" />
-        <appender-ref ref="ERROR_FILE" />
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
     </root>
 
     <!-- Logger spécifique pour l'application -->
     <logger name="com.certiprep" level="DEBUG" additivity="false">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE" />
-        <appender-ref ref="ERROR_FILE" />
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
     </logger>
 
     <!-- Logger pour les services -->
     <logger name="com.certiprep.core.service" level="DEBUG" additivity="false">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
     </logger>
 
     <!-- Logger pour l'interface utilisateur -->
     <logger name="com.certiprep.ui" level="INFO" additivity="false">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
     </logger>
 
     <!-- Réduire le bruit des bibliothèques tierces -->
-    <logger name="org.apache" level="WARN" />
-    <logger name="com.fasterxml.jackson" level="WARN" />
-    <logger name="org.xerial" level="WARN" />
-    <logger name="com.itextpdf" level="WARN" />
-    <logger name="javafx" level="WARN" />
+    <logger name="org.apache" level="WARN"/>
+    <logger name="com.fasterxml.jackson" level="WARN"/>
+    <logger name="org.xerial" level="WARN"/>
+    <logger name="com.itextpdf" level="WARN"/>
+    <logger name="javafx" level="WARN"/>
 
 </configuration>

@@ -3,50 +3,52 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.certiprep.ui.RevisionController" spacing="20" styleClass="revision-container">
+<?import javafx.scene.text.Text?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+      fx:controller="com.certiprep.ui.RevisionController" spacing="20" styleClass="revision-container">
     <padding>
         <Insets top="30" right="30" bottom="30" left="30"/>
     </padding>
 
-    <Text text="%revision.mode" styleClass="title" />
+    <Text text="%revision.mode" styleClass="title"/>
 
     <!-- Configuration -->
     <GridPane hgap="20" vgap="15">
-        <Label text="%select.themes" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <ComboBox fx:id="themeCombo" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="%select.themes" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="themeCombo" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-        <Label text="%nb.questions" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <Slider fx:id="questionSlider" min="1" max="50" value="10" showTickLabels="true" showTickMarks="true" majorTickUnit="10" minorTickCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <Label fx:id="questionCountLabel" text="10" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label text="%nb.questions" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Slider fx:id="questionSlider" min="1" max="50" value="10" showTickLabels="true" showTickMarks="true"
+                majorTickUnit="10" minorTickCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label fx:id="questionCountLabel" text="10" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
     </GridPane>
 
-    <Button fx:id="startBtn" text="%start.revision" onAction="#startRevision" styleClass="primary-btn" prefWidth="200" />
+    <Button fx:id="startBtn" text="%start.revision" onAction="#startRevision" styleClass="primary-btn" prefWidth="200"/>
 
-    <Separator />
+    <Separator/>
 
     <!-- Zone de révision -->
     <ScrollPane fitToWidth="true" visible="false" fx:id="revisionScroll">
         <VBox spacing="15">
-            <Text fx:id="revisionQuestion" styleClass="question-text" wrappingWidth="700" />
+            <Text fx:id="revisionQuestion" styleClass="question-text" wrappingWidth="700"/>
 
-            <VBox fx:id="revisionOptions" spacing="8" />
+            <VBox fx:id="revisionOptions" spacing="8"/>
 
-            <Button fx:id="showAnswerBtn" text="%show.answer" onAction="#showAnswer" styleClass="secondary-btn" />
+            <Button fx:id="showAnswerBtn" text="%show.answer" onAction="#showAnswer" styleClass="secondary-btn"/>
 
             <VBox fx:id="answerContainer" visible="false" spacing="10">
-                <Text fx:id="correctAnswerText" styleClass="correct-answer" />
-                <Text fx:id="explanationText" styleClass="explanation" wrapText="true" />
+                <Text fx:id="correctAnswerText" styleClass="correct-answer"/>
+                <Text fx:id="explanationText" styleClass="explanation" wrapText="true"/>
             </VBox>
 
             <HBox spacing="20" alignment="CENTER">
-                <Button fx:id="prevRevisionBtn" text="%previous" onAction="#previousQuestion" styleClass="secondary-btn" />
-                <Button fx:id="nextRevisionBtn" text="%next" onAction="#nextQuestion" styleClass="secondary-btn" />
-                <Button fx:id="randomRevisionBtn" text="%random" onAction="#randomQuestion" styleClass="mark-btn" />
+                <Button fx:id="prevRevisionBtn" text="%previous" onAction="#previousQuestion"
+                        styleClass="secondary-btn"/>
+                <Button fx:id="nextRevisionBtn" text="%next" onAction="#nextQuestion" styleClass="secondary-btn"/>
+                <Button fx:id="randomRevisionBtn" text="%random" onAction="#randomQuestion" styleClass="mark-btn"/>
             </HBox>
 
-            <Label fx:id="revisionCounter" text="Question 1/10" styleClass="counter-label" />
+            <Label fx:id="revisionCounter" text="Question 1/10" styleClass="counter-label"/>
         </VBox>
     </ScrollPane>
 </VBox>
