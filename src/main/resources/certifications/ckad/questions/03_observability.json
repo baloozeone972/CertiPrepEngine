@@ -1,0 +1,567 @@
+[
+  {
+    "id": "CKAD-03-001",
+    "theme": "Observability",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "question": "Comment voir les logs d'un pod ?",
+    "options": [
+      "kubectl logs <pod>",
+      "kubectl logs <pod> -c <container>",
+      "kubectl logs --tail=100 <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs options pour affiner les logs."
+  },
+  {
+    "id": "CKAD-03-002",
+    "theme": "Observability",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "question": "Comment suivre les logs en temps réel ?",
+    "options": [
+      "kubectl logs -f <pod>",
+      "kubectl logs --follow <pod>",
+      "kubectl attach <pod>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "-f ou --follow."
+  },
+  {
+    "id": "CKAD-03-003",
+    "theme": "Observability",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "question": "Comment voir les logs du conteneur précédent (redémarré) ?",
+    "options": [
+      "kubectl logs --previous <pod>",
+      "kubectl logs -p <pod>",
+      "A et B",
+      "kubectl logs --tail=100 <pod>"
+    ],
+    "correct": 2,
+    "explication": "--previous ou -p."
+  },
+  {
+    "id": "CKAD-03-004",
+    "theme": "Observability",
+    "theme_label": "Events",
+    "difficulty": "easy",
+    "question": "Comment lister les événements du namespace ?",
+    "options": [
+      "kubectl get events",
+      "kubectl get events --sort-by='.lastTimestamp'",
+      "kubectl describe pod <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les événements aident à diagnostiquer les problèmes."
+  },
+  {
+    "id": "CKAD-03-005",
+    "theme": "Observability",
+    "theme_label": "Events",
+    "difficulty": "easy",
+    "question": "Comment filtrer les événements pour un pod spécifique ?",
+    "options": [
+      "kubectl get events --field-selector involvedObject.name=<pod>",
+      "kubectl describe pod <pod>",
+      "kubectl get events | grep <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "field-selector est plus précis."
+  },
+  {
+    "id": "CKAD-03-006",
+    "theme": "Observability",
+    "theme_label": "Metrics",
+    "difficulty": "easy",
+    "question": "Quelle commande montre l'utilisation CPU/mémoire des pods ?",
+    "options": [
+      "kubectl top pod",
+      "kubectl top pod --containers",
+      "kubectl top pod --all-namespaces",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl top nécessite Metrics Server."
+  },
+  {
+    "id": "CKAD-03-007",
+    "theme": "Observability",
+    "theme_label": "Metrics",
+    "difficulty": "easy",
+    "question": "Comment voir l'utilisation des ressources des nœuds ?",
+    "options": [
+      "kubectl top nodes",
+      "kubectl top node",
+      "kubectl describe node",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "top nodes montre CPU et mémoire."
+  },
+  {
+    "id": "CKAD-03-008",
+    "theme": "Observability",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "question": "Que signifie le statut 'CrashLoopBackOff' ?",
+    "options": [
+      "Le conteneur crash en boucle, Kubernetes attend avant de redémarrer",
+      "Le pod est en cours de création",
+      "Le pod est terminé",
+      "Le pod manque de ressources"
+    ],
+    "correct": 0,
+    "explication": "Vérifier les logs pour la cause."
+  },
+  {
+    "id": "CKAD-03-009",
+    "theme": "Observability",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "question": "Que signifie le statut 'ImagePullBackOff' ?",
+    "options": [
+      "Impossible de tirer l'image",
+      "L'image est introuvable",
+      "Erreur d'authentification",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier le nom de l'image et les credentials."
+  },
+  {
+    "id": "CKAD-03-010",
+    "theme": "Observability",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "question": "Que signifie le statut 'Pending' ?",
+    "options": [
+      "Le pod n'a pas encore été programmé",
+      "Le pod manque de ressources",
+      "Le PVC n'est pas lié",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl describe pod montre la raison."
+  },
+  {
+    "id": "CKAD-03-011",
+    "theme": "Observability",
+    "theme_label": "Conditions",
+    "difficulty": "easy",
+    "question": "Quelles sont les conditions d'un pod ?",
+    "options": [
+      "PodScheduled, Initialized, ContainersReady, Ready",
+      "Running, Pending, Failed",
+      "Scheduled, Ready, Terminated",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les conditions sont dans le status du pod."
+  },
+  {
+    "id": "CKAD-03-012",
+    "theme": "Observability",
+    "theme_label": "Container states",
+    "difficulty": "easy",
+    "question": "Quels sont les états d'un conteneur ?",
+    "options": [
+      "Waiting, Running, Terminated",
+      "Pending, Running, Succeeded",
+      "Starting, Running, Stopped",
+      "A et B"
+    ],
+    "correct": 0,
+    "explication": "Waiting (en attente), Running, Terminated (terminé avec code)."
+  },
+  {
+    "id": "CKAD-03-013",
+    "theme": "Observability",
+    "theme_label": "Readiness probe",
+    "difficulty": "easy",
+    "question": "Comment vérifier si un pod est prêt à recevoir du trafic ?",
+    "options": [
+      "kubectl get pod <pod> -o wide",
+      "kubectl describe pod <pod> | grep Ready",
+      "Condition Ready dans le status",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "La condition Ready indique si le pod est prêt."
+  },
+  {
+    "id": "CKAD-03-014",
+    "theme": "Observability",
+    "theme_label": "Liveness probe",
+    "difficulty": "easy",
+    "question": "Comment savoir si un conteneur a été redémarré ?",
+    "options": [
+      "kubectl get pod <pod> -o wide (RESTARTS)",
+      "kubectl describe pod <pod> | grep -A5 'Last State'",
+      "kubectl logs -p <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Le nombre de redémarrages est affiché dans get pods."
+  },
+  {
+    "id": "CKAD-03-015",
+    "theme": "Observability",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "question": "Comment exécuter une commande dans un pod ?",
+    "options": [
+      "kubectl exec <pod> -- <commande>",
+      "kubectl exec -it <pod> -- /bin/sh",
+      "kubectl exec <pod> -c <container> -- <commande>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "exec permet d'exécuter des commandes interactives."
+  },
+  {
+    "id": "CKAD-03-016",
+    "theme": "Observability",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "question": "Comment copier un fichier depuis un pod vers l'hôte ?",
+    "options": [
+      "kubectl cp <pod>:/chemin/fichier ./fichier",
+      "kubectl cp <pod>:<chemin> <local>",
+      "kubectl cp <namespace>/<pod>:<chemin> <local>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl cp fonctionne comme scp."
+  },
+  {
+    "id": "CKAD-03-017",
+    "theme": "Observability",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "question": "Comment créer un pod de debug temporaire ?",
+    "options": [
+      "kubectl run debug --image=busybox -it --rm --restart=Never -- /bin/sh",
+      "kubectl debug -it <pod> --image=busybox",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "kubectl debug (v1.18+) est plus puissant."
+  },
+  {
+    "id": "CKAD-03-018",
+    "theme": "Observability",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "question": "Comment partager le network namespace d'un pod existant ?",
+    "options": [
+      "kubectl debug -it <pod> --image=busybox --target=<pod>",
+      "kubectl run debug --image=busybox --network=container:<pod>",
+      "kubectl exec -it <pod> -- /bin/sh",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "kubectl debug avec --target partage le namespace réseau."
+  },
+  {
+    "id": "CKAD-03-019",
+    "theme": "Observability",
+    "theme_label": "Events",
+    "difficulty": "easy",
+    "question": "Comment voir les événements récents (dernière heure) ?",
+    "options": [
+      "kubectl get events --field-selector lastTimestamp>=$(date -d '1 hour ago' -Is)",
+      "kubectl get events --watch",
+      "kubectl get events --sort-by='.lastTimestamp' | tail",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Il faut souvent un outil externe pour filtrer par temps."
+  },
+  {
+    "id": "CKAD-03-020",
+    "theme": "Observability",
+    "theme_label": "Log aggregation",
+    "difficulty": "easy",
+    "question": "Quel add-on peut agréger les logs des conteneurs ?",
+    "options": [
+      "Fluentd, Fluent Bit, Logstash",
+      "Prometheus",
+      "Metrics Server",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Fluentd est couramment utilisé avec Elasticsearch."
+  },
+  {
+    "id": "CKAD-03-021",
+    "theme": "Observability",
+    "theme_label": "Prometheus",
+    "difficulty": "easy",
+    "question": "Quel outil collecte des métriques avec un modèle pull ?",
+    "options": ["Prometheus", "Datadog", "New Relic", "Dynatrace"],
+    "correct": 0,
+    "explication": "Prometheus est l'outil de monitoring pull-based le plus populaire."
+  },
+  {
+    "id": "CKAD-03-022",
+    "theme": "Observability",
+    "theme_label": "Prometheus",
+    "difficulty": "easy",
+    "question": "Comment Prometheus découvre-t-il les cibles dans Kubernetes ?",
+    "options": [
+      "Kubernetes SD (service discovery)",
+      "Fichiers de configuration statiques",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Prometheus utilise l'API Kubernetes pour découvrir les pods, services, endpoints."
+  },
+  {
+    "id": "CKAD-03-023",
+    "theme": "Observability",
+    "theme_label": "Grafana",
+    "difficulty": "easy",
+    "question": "Quel outil visualise les métriques de Prometheus ?",
+    "options": ["Grafana", "Kibana", "Tableau", "Power BI"],
+    "correct": 0,
+    "explication": "Grafana est le plus couramment utilisé avec Prometheus."
+  },
+  {
+    "id": "CKAD-03-024",
+    "theme": "Observability",
+    "theme_label": "Distributed tracing",
+    "difficulty": "easy",
+    "question": "Quel outil de tracing distribué est souvent utilisé avec Kubernetes ?",
+    "options": ["Jaeger", "Zipkin", "AWS X-Ray", "Toutes ces réponses"],
+    "correct": 3,
+    "explication": "Jaeger et Zipkin sont des projets CNCF."
+  },
+  {
+    "id": "CKAD-03-025",
+    "theme": "Observability",
+    "theme_label": "Troubleshooting network",
+    "difficulty": "easy",
+    "question": "Comment tester la connectivité entre deux pods ?",
+    "options": [
+      "kubectl exec pod1 -- ping <pod2-ip>",
+      "kubectl exec pod1 -- curl http://<pod2-ip>:<port>",
+      "kubectl exec pod1 -- nslookup <service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "ping, curl, nslookup depuis un pod."
+  },
+  {
+    "id": "CKAD-03-026",
+    "theme": "Observability",
+    "theme_label": "Troubleshooting DNS",
+    "difficulty": "easy",
+    "question": "Comment vérifier la résolution DNS depuis un pod ?",
+    "options": [
+      "kubectl exec <pod> -- nslookup kubernetes.default",
+      "kubectl exec <pod> -- cat /etc/resolv.conf",
+      "kubectl exec <pod> -- ping <service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier que le pod utilise le serveur DNS du cluster."
+  },
+  {
+    "id": "CKAD-03-027",
+    "theme": "Observability",
+    "theme_label": "Resource limits troubleshooting",
+    "difficulty": "easy",
+    "question": "Un pod peut-il être OOMKilled même s'il ne dépasse pas sa limit ?",
+    "options": ["Non", "Oui (si node manque de mémoire)", "A et B", "Uniquement avec limit"],
+    "correct": 0,
+    "explication": "OOMKill se produit lorsque le conteneur dépasse sa limit de mémoire."
+  },
+  {
+    "id": "CKAD-03-028",
+    "theme": "Observability",
+    "theme_label": "CPU throttling",
+    "difficulty": "easy",
+    "question": "Comment détecter un throttling CPU ?",
+    "options": [
+      "kubectl top pod",
+      "Métriques Prometheus (container_cpu_cfs_throttled_seconds)",
+      "kubectl logs",
+      "B seulement"
+    ],
+    "correct": 1,
+    "explication": "Les métriques CPU throttling sont visibles via Prometheus."
+  },
+  {
+    "id": "CKAD-03-029",
+    "theme": "Observability",
+    "theme_label": "Pod termination",
+    "difficulty": "easy",
+    "question": "Comment savoir pourquoi un pod a été supprimé ?",
+    "options": [
+      "kubectl get events --field-selector involvedObject.name=<pod>",
+      "kubectl describe pod <pod> (si encore présent)",
+      "kubectl logs -p <pod> (si redémarré)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les événements donnent la raison."
+  },
+  {
+    "id": "CKAD-03-030",
+    "theme": "Observability",
+    "theme_label": "Node conditions",
+    "difficulty": "easy",
+    "question": "Quelle condition indique qu'un nœud est prêt à recevoir des pods ?",
+    "options": ["Ready", "Healthy", "Available", "Schedulable"],
+    "correct": 0,
+    "explication": "La condition Ready est True lorsque le nœud est sain."
+  },
+  {
+    "id": "CKAD-03-031",
+    "theme": "Observability",
+    "theme_label": "Node pressure",
+    "difficulty": "easy",
+    "question": "Quelle condition indique une pression mémoire sur le nœud ?",
+    "options": ["MemoryPressure", "DiskPressure", "PIDPressure", "A et B"],
+    "correct": 3,
+    "explication": "MemoryPressure peut entraîner l'éviction de pods."
+  },
+  {
+    "id": "CKAD-03-032",
+    "theme": "Observability",
+    "theme_label": "API server health",
+    "difficulty": "easy",
+    "question": "Comment vérifier la santé de l'API server ?",
+    "options": [
+      "kubectl get --raw /healthz",
+      "curl -k https://<master>:6443/healthz",
+      "kubectl cluster-info",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "/healthz retourne OK si l'API server est sain."
+  },
+  {
+    "id": "CKAD-03-033",
+    "theme": "Observability",
+    "theme_label": "Controller logs",
+    "difficulty": "easy",
+    "question": "Où trouver les logs du scheduler ?",
+    "options": [
+      "kubectl logs -n kube-system kube-scheduler-<node>",
+      "journalctl -u kube-scheduler (sur le nœud)",
+      "kubectl get events",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Le scheduler s'exécute dans un pod sur les nœuds masters."
+  },
+  {
+    "id": "CKAD-03-034",
+    "theme": "Observability",
+    "theme_label": "Kubelet logs",
+    "difficulty": "easy",
+    "question": "Comment voir les logs du kubelet ?",
+    "options": [
+      "journalctl -u kubelet -f",
+      "kubectl logs -n kube-system kubelet-<node>",
+      "kubectl get events",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le kubelet est un service systemd sur les nœuds."
+  },
+  {
+    "id": "CKAD-03-035",
+    "theme": "Observability",
+    "theme_label": "Container runtime logs",
+    "difficulty": "easy",
+    "question": "Avec containerd, où voir les logs des conteneurs ?",
+    "options": [
+      "crictl logs <container>",
+      "journalctl -u containerd",
+      "kubectl logs",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "kubectl logs utilise l'API kubelet."
+  },
+  {
+    "id": "CKAD-03-036",
+    "theme": "Observability",
+    "theme_label": "Audit logs",
+    "difficulty": "easy",
+    "question": "Les audit logs enregistrent-ils les actions des utilisateurs ?",
+    "options": ["Oui", "Non", "Seulement les échecs", "Seulement les succès"],
+    "correct": 0,
+    "explication": "Les audit logs sont utiles pour la sécurité et la conformité."
+  },
+  {
+    "id": "CKAD-03-037",
+    "theme": "Observability",
+    "theme_label": "Profiling",
+    "difficulty": "easy",
+    "question": "Comment activer le profiling sur l'API server ?",
+    "options": [
+      "--profiling=true",
+      "kubectl proxy --profiling",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le profiling expose des métriques de performance."
+  },
+  {
+    "id": "CKAD-03-038",
+    "theme": "Observability",
+    "theme_label": "Trace debugging",
+    "difficulty": "easy",
+    "question": "Quelle commande permet de tracer les appels API ?",
+    "options": [
+      "kubectl get --raw /api/v1/namespaces -v=8",
+      "kubectl -v=8 get pods",
+      "kubectl --v=8 get pods",
+      "B et C"
+    ],
+    "correct": 3,
+    "explication": "Le niveau de verbosité 8 montre les requêtes API."
+  },
+  {
+    "id": "CKAD-03-039",
+    "theme": "Observability",
+    "theme_label": "kubectl describe",
+    "difficulty": "easy",
+    "question": "Quelle commande donne le plus de détails sur une ressource ?",
+    "options": [
+      "kubectl describe <type> <nom>",
+      "kubectl get <type> <nom> -o yaml",
+      "kubectl get <type> <nom> -o json",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "describe inclut les événements, get -o yaml montre la définition."
+  },
+  {
+    "id": "CKAD-03-040",
+    "theme": "Observability",
+    "theme_label": "Watch",
+    "difficulty": "easy",
+    "question": "Comment surveiller les changements de pods en temps réel ?",
+    "options": [
+      "kubectl get pods -w",
+      "kubectl get pods --watch",
+      "kubectl get pods -o wide -w",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "-w ou --watch suit les modifications."
+  }
+]

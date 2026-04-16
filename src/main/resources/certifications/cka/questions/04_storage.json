@@ -1,0 +1,562 @@
+[
+  {
+    "id": "CKA-04-001",
+    "theme": "Storage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "question": "Quels sont les types de volumes Kubernetes ?",
+    "options": [
+      "emptyDir, hostPath, configMap, secret, persistentVolumeClaim, etc.",
+      "Seulement emptyDir",
+      "Seulement hostPath",
+      "Seulement persistentVolumeClaim"
+    ],
+    "correct": 0,
+    "explication": "Kubernetes supporte de nombreux types de volumes."
+  },
+  {
+    "id": "CKA-04-002",
+    "theme": "Storage",
+    "theme_label": "emptyDir",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un volume emptyDir ?",
+    "options": [
+      "Répertoire vide créé lorsque le pod est assigné à un nœud, partagé entre les conteneurs du pod",
+      "Volume persistant",
+      "Volume monté depuis l'hôte",
+      "Volume depuis un ConfigMap"
+    ],
+    "correct": 0,
+    "explication": "emptyDir est temporaire, son contenu disparaît avec le pod."
+  },
+  {
+    "id": "CKA-04-003",
+    "theme": "Storage",
+    "theme_label": "hostPath",
+    "difficulty": "easy",
+    "question": "Quand utiliser hostPath ?",
+    "options": [
+      "Accéder à des fichiers système de l'hôte (ex: docker.sock)",
+      "Stockage persistant partagé",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "hostPath monte un répertoire du nœud, dangereux pour les données critiques."
+  },
+  {
+    "id": "CKA-04-004",
+    "theme": "Storage",
+    "theme_label": "PersistentVolume (PV)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un PersistentVolume (PV) ?",
+    "options": [
+      "Stockage provisionné par l'administrateur, indépendant des pods",
+      "Volume temporaire",
+      "Volume lié à un pod",
+      "Volume depuis un ConfigMap"
+    ],
+    "correct": 0,
+    "explication": "Un PV est une ressource de cluster (comme un nœud) représentant du stockage."
+  },
+  {
+    "id": "CKA-04-005",
+    "theme": "Storage",
+    "theme_label": "PersistentVolumeClaim (PVC)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un PersistentVolumeClaim (PVC) ?",
+    "options": [
+      "Demande de stockage par un utilisateur/pod",
+      "Volume persistant",
+      "Stockage temporaire",
+      "Configuration de stockage"
+    ],
+    "correct": 0,
+    "explication": "Le PVC demande une certaine quantité de stockage à un PV."
+  },
+  {
+    "id": "CKA-04-006",
+    "theme": "Storage",
+    "theme_label": "PVC",
+    "difficulty": "easy",
+    "question": "Comment lier un pod à un PVC ?",
+    "options": [
+      "volumes: - name: monvol persistentVolumeClaim: claimName: monpvc",
+      "persistentVolumeClaim: monpvc",
+      "volumeMounts: - name: monvol mountPath: /data",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Il faut déclarer le volume dans le pod puis le monter."
+  },
+  {
+    "id": "CKA-04-007",
+    "theme": "Storage",
+    "theme_label": "StorageClass",
+    "difficulty": "easy",
+    "question": "À quoi sert une StorageClass ?",
+    "options": [
+      "Définir un type de stockage (ex: ssd, slow) pour le provisionnement dynamique",
+      "Classe de volume",
+      "Type de PVC",
+      "Type de PV"
+    ],
+    "correct": 0,
+    "explication": "Les StorageClasses permettent le provisionnement dynamique de PV."
+  },
+  {
+    "id": "CKA-04-008",
+    "theme": "Storage",
+    "theme_label": "StorageClass",
+    "difficulty": "easy",
+    "question": "Quelle StorageClass est utilisée par défaut ?",
+    "options": [
+      "Celle marquée avec l'annotation storageclass.kubernetes.io/is-default-class: true",
+      "standard",
+      "default",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explication": "L'annotation désigne la StorageClass par défaut."
+  },
+  {
+    "id": "CKA-04-009",
+    "theme": "Storage",
+    "theme_label": "Provisionnement dynamique",
+    "difficulty": "easy",
+    "question": "Que permet le provisionnement dynamique ?",
+    "options": [
+      "Créer automatiquement un PV lorsqu'un PVC est créé",
+      "Créer un PV manuellement",
+      "Créer un PVC",
+      "Créer un volume"
+    ],
+    "correct": 0,
+    "explication": "Le provisionnement dynamique nécessite une StorageClass."
+  },
+  {
+    "id": "CKA-04-010",
+    "theme": "Storage",
+    "theme_label": "Volume modes",
+    "difficulty": "easy",
+    "question": "Quels sont les modes de volume possibles pour un PV ?",
+    "options": [
+      "Filesystem (par défaut), Block",
+      "ReadWriteOnce, ReadOnlyMany, ReadWriteMany",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les modes d'accès et le mode de volume sont différents."
+  },
+  {
+    "id": "CKA-04-011",
+    "theme": "Storage",
+    "theme_label": "Access modes",
+    "difficulty": "easy",
+    "question": "Quels sont les modes d'accès pour les PV/PVC ?",
+    "options": [
+      "ReadWriteOnce (RWO), ReadOnlyMany (ROX), ReadWriteMany (RWX)",
+      "ReadOnly, ReadWrite",
+      "Shared, Exclusive",
+      "Single, Multiple"
+    ],
+    "correct": 0,
+    "explication": "RWO (un seul nœud lecture-écriture), ROX (plusieurs nœuds lecture seule), RWX (plusieurs nœuds lecture-écriture)."
+  },
+  {
+    "id": "CKA-04-012",
+    "theme": "Storage",
+    "theme_label": "Reclaim policy",
+    "difficulty": "easy",
+    "question": "Quelles sont les politiques de récupération (reclaim policy) d'un PV ?",
+    "options": ["Retain, Delete, Recycle", "Keep, Remove, Reuse", "Persist, Delete, Recycle", "Retain, Delete, Reclaim"],
+    "correct": 0,
+    "explication": "Retain (conserve), Delete (supprime), Recycle (déprécié)."
+  },
+  {
+    "id": "CKA-04-013",
+    "theme": "Storage",
+    "theme_label": "CSI",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le CSI (Container Storage Interface) ?",
+    "options": [
+      "Standard pour les plugins de stockage",
+      "Type de volume",
+      "StorageClass",
+      "PVC"
+    ],
+    "correct": 0,
+    "explication": "CSI permet d'intégrer des solutions de stockage externes."
+  },
+  {
+    "id": "CKA-04-014",
+    "theme": "Storage",
+    "theme_label": "PVC status",
+    "difficulty": "easy",
+    "question": "Quels sont les statuts possibles d'un PVC ?",
+    "options": ["Pending, Bound, Lost", "Created, Bound, Deleted", "Waiting, Bound, Failed", "Pending, Available, Bound"],
+    "correct": 0,
+    "explication": "Pending (en attente), Bound (lié à un PV), Lost (perdu)."
+  },
+  {
+    "id": "CKA-04-015",
+    "theme": "Storage",
+    "theme_label": "Expansion de PVC",
+    "difficulty": "easy",
+    "question": "Peut-on augmenter la taille d'un PVC après création ?",
+    "options": [
+      "Oui, si la StorageClass le permet (allowVolumeExpansion: true)",
+      "Non",
+      "Oui, toujours",
+      "Uniquement pour les PV statiques"
+    ],
+    "correct": 0,
+    "explication": "L'expansion de volume nécessite le support du driver CSI."
+  },
+  {
+    "id": "CKA-04-016",
+    "theme": "Storage",
+    "theme_label": "VolumeSnapshot",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un VolumeSnapshot ?",
+    "options": [
+      "Snapshot d'un volume persistant",
+      "Backup de PV",
+      "Clone de volume",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "VolumeSnapshot permet de sauvegarder l'état d'un volume."
+  },
+  {
+    "id": "CKA-04-017",
+    "theme": "Storage",
+    "theme_label": "VolumeSnapshotClass",
+    "difficulty": "easy",
+    "question": "À quoi sert VolumeSnapshotClass ?",
+    "options": [
+      "Définir les paramètres pour les snapshots (ex: driver)",
+      "Classer les snapshots",
+      "Définir la politique de rétention",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "VolumeSnapshotClass est l'équivalent de StorageClass pour les snapshots."
+  },
+  {
+    "id": "CKA-04-018",
+    "theme": "Storage",
+    "theme_label": "Ephemeral volumes",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un volume éphémère (ephemeral) ?",
+    "options": [
+      "Volume qui existe avec le pod, supprimé à la fin",
+      "emptyDir",
+      "CSI ephemeral inline volume",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les volumes éphémères (ex: inline CSI) sont créés avec le pod et détruits avec lui."
+  },
+  {
+    "id": "CKA-04-019",
+    "theme": "Storage",
+    "theme_label": "Local PV",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un volume local persistent (Local PV) ?",
+    "options": [
+      "PV utilisant le stockage local d'un nœud",
+      "Volume partagé",
+      "Volume réseau",
+      "Volume cloud"
+    ],
+    "correct": 0,
+    "explication": "Local PV est utile pour les bases de données, mais le pod est lié au nœud."
+  },
+  {
+    "id": "CKA-04-020",
+    "theme": "Storage",
+    "theme_label": "Local PV",
+    "difficulty": "easy",
+    "question": "Un pod utilisant un Local PV peut-il être déplacé sur un autre nœud ?",
+    "options": ["Non (lié au nœud)", "Oui", "Uniquement avec PVC", "Uniquement avec StorageClass"],
+    "correct": 0,
+    "explication": "Le stockage local est attaché à un nœud spécifique."
+  },
+  {
+    "id": "CKA-04-021",
+    "theme": "Storage",
+    "theme_label": "HostPath vs Local PV",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre hostPath et Local PV ?",
+    "options": [
+      "Local PV est une ressource de cluster (PV), hostPath est un volume de pod",
+      "Identiques",
+      "hostPath est persistant",
+      "Local PV est plus rapide"
+    ],
+    "correct": 0,
+    "explication": "Local PV est un PV standard qui peut être réclamé par PVC, hostPath est direct."
+  },
+  {
+    "id": "CKA-04-022",
+    "theme": "Storage",
+    "theme_label": "PVC with selector",
+    "difficulty": "easy",
+    "question": "Comment lier un PVC à un PV spécifique ?",
+    "options": [
+      "selector: matchLabels: name: monpv",
+      "volumeName: monpv",
+      "storageClassName: standard",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "selector ou volumeName permettent de lier à un PV particulier."
+  },
+  {
+    "id": "CKA-04-023",
+    "theme": "Storage",
+    "theme_label": "Default StorageClass",
+    "difficulty": "easy",
+    "question": "Si aucune StorageClass n'est spécifiée, quelle classe est utilisée ?",
+    "options": [
+      "La StorageClass par défaut du cluster",
+      "Aucune (PVC reste pending)",
+      "La classe standard",
+      "La classe default"
+    ],
+    "correct": 0,
+    "explication": "La StorageClass par défaut est utilisée si elle existe."
+  },
+  {
+    "id": "CKA-04-024",
+    "theme": "Storage",
+    "theme_label": "PVC resize",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si on augmente la taille d'un PVC déjà lié ?",
+    "options": [
+      "Le PV doit supporter l'expansion, le pod peut nécessiter un redémarrage",
+      "Le PVC est recréé",
+      "Le PV est supprimé",
+      "Rien"
+    ],
+    "correct": 0,
+    "explication": "L'expansion dépend du driver de stockage."
+  },
+  {
+    "id": "CKA-04-025",
+    "theme": "Storage",
+    "theme_label": "CSI inline volumes",
+    "difficulty": "easy",
+    "question": "Les volumes CSI inline sont-ils persistants ?",
+    "options": ["Non (éphémères)", "Oui", "Dépend du driver", "Uniquement avec snapshot"],
+    "correct": 0,
+    "explication": "Les CSI inline volumes sont éphémères (avec le pod)."
+  },
+  {
+    "id": "CKA-04-026",
+    "theme": "Storage",
+    "theme_label": "VolumeBindingMode",
+    "difficulty": "easy",
+    "question": "Quel est le mode de liaison de volume par défaut pour une StorageClass ?",
+    "options": ["Immediate", "WaitForFirstConsumer", "Delayed", "Deferred"],
+    "correct": 0,
+    "explication": "Immediate crée le PV immédiatement, WaitForFirstConsumer attend qu'un pod utilise le PVC."
+  },
+  {
+    "id": "CKA-04-027",
+    "theme": "Storage",
+    "theme_label": "Mount options",
+    "difficulty": "easy",
+    "question": "Comment spécifier des options de montage (ex: noexec) pour un PV ?",
+    "options": [
+      "mountOptions: - noexec",
+      "mountFlags: - noexec",
+      "volumeMounts: - mountOptions: noexec",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "mountOptions dans la StorageClass ou le PV."
+  },
+  {
+    "id": "CKA-04-028",
+    "theme": "Storage",
+    "theme_label": "Node affinity for PV",
+    "difficulty": "easy",
+    "question": "Peut-on lier un PV à des nœuds spécifiques ?",
+    "options": [
+      "nodeAffinity dans le PV",
+      "nodeSelector dans le pod",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le PV peut avoir une nodeAffinity, le pod peut aussi avoir des contraintes."
+  },
+  {
+    "id": "CKA-04-029",
+    "theme": "Storage",
+    "theme_label": "StorageClass parameters",
+    "difficulty": "easy",
+    "question": "Comment spécifier des paramètres spécifiques au provisionneur (ex: type de disque) ?",
+    "options": [
+      "parameters: type: pd-ssd",
+      "params: type: ssd",
+      "options: type: ssd",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le champ parameters dépend du provisionneur (ex: GCE, AWS, Azure)."
+  },
+  {
+    "id": "CKA-04-030",
+    "theme": "Storage",
+    "theme_label": "PVC deletion protection",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si on supprime un PVC alors que le PV a reclaimPolicy=Retain ?",
+    "options": [
+      "Le PV passe à Released, les données persistent",
+      "Le PV est supprimé",
+      "Le PV est recyclé",
+      "Rien"
+    ],
+    "correct": 0,
+    "explication": "Le PV n'est pas supprimé, il devient Released et peut être réutilisé."
+  },
+  {
+    "id": "CKA-04-031",
+    "theme": "Storage",
+    "theme_label": "CSI driver deployment",
+    "difficulty": "easy",
+    "question": "Où s'exécutent généralement les drivers CSI ?",
+    "options": [
+      "DaemonSet (node plugin) et Deployment (controller)",
+      "StatefulSet",
+      "Job",
+      "CronJob"
+    ],
+    "correct": 0,
+    "explication": "Le driver CSI a un composant de nœud (DaemonSet) et un composant de contrôle (Deployment)."
+  },
+  {
+    "id": "CKA-04-032",
+    "theme": "Storage",
+    "theme_label": "Ephemeral inline CSI",
+    "difficulty": "easy",
+    "question": "Comment déclarer un volume CSI éphémère inline dans un pod ?",
+    "options": [
+      "volumes: - name: monvol csi: driver: mon-driver volumeAttributes: ...",
+      "ephemeral: - csi: driver: ...",
+      "inlineCSI: driver: ...",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La syntaxe est similaire à un volume CSI normal, sans PVC."
+  },
+  {
+    "id": "CKA-04-033",
+    "theme": "Storage",
+    "theme_label": "PVC in StatefulSet",
+    "difficulty": "easy",
+    "question": "Comment chaque pod d'un StatefulSet obtient-il son propre PVC ?",
+    "options": [
+      "volumeClaimTemplates",
+      "volumes: - persistentVolumeClaim",
+      "Les deux",
+      "A seulement"
+    ],
+    "correct": 3,
+    "explication": "volumeClaimTemplates crée un PVC par réplica."
+  },
+  {
+    "id": "CKA-04-034",
+    "theme": "Storage",
+    "theme_label": "Resizing PVC",
+    "difficulty": "easy",
+    "question": "Comment déclencher le redimensionnement d'un PVC après modification de sa taille ?",
+    "options": [
+      "kubectl edit pvc monpvc, puis le contrôleur tente de redimensionner",
+      "kubectl patch pvc monpvc -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"10Gi\"}}}}'",
+      "Les deux",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Il suffit de modifier la spec.resources.requests.storage."
+  },
+  {
+    "id": "CKA-04-035",
+    "theme": "Storage",
+    "theme_label": "PVC in Deployment",
+    "difficulty": "easy",
+    "question": "Si plusieurs réplicas d'un Deployment partagent-ils le même PVC ?",
+    "options": ["Oui (par défaut)", "Non, chaque réplica a son propre PVC", "Uniquement si shareProcessNamespace", "Dépend du volume mode"],
+    "correct": 0,
+    "explication": "Le même PVC est monté sur tous les réplicas (si RWO, un seul peut écrire)."
+  },
+  {
+    "id": "CKA-04-036",
+    "theme": "Storage",
+    "theme_label": "PV from PVC",
+    "difficulty": "easy",
+    "question": "Peut-on créer un PV à partir d'un PVC existant ?",
+    "options": [
+      "Non, mais on peut créer un snapshot puis un nouveau PV",
+      "Oui, avec kubectl create pv --from=pvc",
+      "Oui, en copiant le YAML",
+      "Non"
+    ],
+    "correct": 0,
+    "explication": "Il faut utiliser un snapshot ou cloner via CSI."
+  },
+  {
+    "id": "CKA-04-037",
+    "theme": "Storage",
+    "theme_label": "CSI cloning",
+    "difficulty": "easy",
+    "question": "Le clonage de volume (clone) est-il supporté par tous les CSI drivers ?",
+    "options": ["Non (dépend du driver)", "Oui, tous", "Uniquement pour les snapshots", "Uniquement pour les volumes locaux"],
+    "correct": 0,
+    "explication": "Le clonage nécessite le support du driver CSI."
+  },
+  {
+    "id": "CKA-04-038",
+    "theme": "Storage",
+    "theme_label": "PVC data source",
+    "difficulty": "easy",
+    "question": "Comment créer un PVC à partir d'un snapshot ?",
+    "options": [
+      "dataSource: kind: VolumeSnapshot name: mon-snapshot",
+      "dataSourceRef: kind: VolumeSnapshot name: mon-snapshot",
+      "snapshot: mon-snapshot",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "dataSource ou dataSourceRef (pour les cross-namespace) sont supportés."
+  },
+  {
+    "id": "CKA-04-039",
+    "theme": "Storage",
+    "theme_label": "PVC naming",
+    "difficulty": "easy",
+    "question": "Le nom d'un PVC doit-il être unique dans un namespace ?",
+    "options": ["Oui", "Non", "Uniquement pour les PVC liés", "Uniquement pour les PVC en attente"],
+    "correct": 0,
+    "explication": "Les noms de ressources doivent être uniques dans leur namespace."
+  },
+  {
+    "id": "CKA-04-040",
+    "theme": "Storage",
+    "theme_label": "PVC default storage class",
+    "difficulty": "easy",
+    "question": "Si la StorageClass par défaut est marquée avec 'storageclass.kubernetes.io/is-default-class: true', que se passe-t-il si un PVC ne spécifie pas storageClassName ?",
+    "options": [
+      "Il utilise la classe par défaut",
+      "Il reste pending",
+      "Il utilise la classe standard",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explication": "Le PVC utilisera automatiquement la StorageClass par défaut."
+  }
+]

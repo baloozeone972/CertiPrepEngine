@@ -1,0 +1,114 @@
+[
+  {
+    "id": "TF-06-001",
+    "theme": "Best Practices",
+    "theme_label": "Structure de projet",
+    "difficulty": "easy",
+    "question": "Quelle est une structure recommandée pour un projet Terraform ?",
+    "options": [
+      "environments/dev, environments/prod, modules",
+      "main.tf, variables.tf, outputs.tf",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Séparer les environnements et utiliser des modules."
+  },
+  {
+    "id": "TF-06-002",
+    "theme": "Best Practices",
+    "theme_label": "Structure de projet",
+    "difficulty": "easy",
+    "question": "Pourquoi séparer les environnements ?",
+    "options": [
+      "Isolation, éviter les erreurs en prod",
+      "Réutiliser le code",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les environnements distincts réduisent les risques."
+  },
+  {
+    "id": "TF-06-003",
+    "theme": "Best Practices",
+    "theme_label": "Structure de projet",
+    "difficulty": "easy",
+    "question": "Que mettre dans un fichier main.tf ?",
+    "options": [
+      "Les ressources principales",
+      "Les providers",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "main.tf contient les ressources et providers."
+  },
+  {
+    "id": "TF-06-004",
+    "theme": "Best Practices",
+    "theme_label": "Structure de projet",
+    "difficulty": "easy",
+    "question": "Que mettre dans variables.tf ?",
+    "options": [
+      "Les déclarations de variables",
+      "Les valeurs par défaut",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "variables.tf contient les définitions de variables."
+  },
+  {
+    "id": "TF-06-005",
+    "theme": "Best Practices",
+    "theme_label": "Structure de projet",
+    "difficulty": "easy",
+    "question": "Que mettre dans outputs.tf ?",
+    "options": ["Les outputs", "Les variables", "A et B", "A seulement"],
+    "correct": 0,
+    "explication": "outputs.tf contient les outputs."
+  },
+  {
+    "id": "TF-06-006",
+    "theme": "Best Practices",
+    "theme_label": "Structure de projet",
+    "difficulty": "easy",
+    "question": "Que mettre dans terraform.tfvars ?",
+    "options": [
+      "Les valeurs des variables (non versionnées)",
+      "Les valeurs par défaut",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "terraform.tfvars contient les valeurs sensibles ou spécifiques à l'environnement."
+  },
+  {
+    "id": "TF-06-007",
+    "theme": "Best Practices",
+    "theme_label": "Versionnement",
+    "difficulty": "easy",
+    "question": "Faut-il versionner le dossier .terraform ?",
+    "options": ["Non", "Oui", "Optionnel", "A seulement"],
+    "correct": 0,
+    "explication": ".terraform doit être ignoré (dans .gitignore)."
+  },
+  {
+    "id": "TF-06-008",
+    "theme": "Best Practices",
+    "theme_label": "Versionnement",
+    "difficulty": "easy",
+    "question": "Faut-il versionner terraform.tfstate ?",
+    "options": ["Non (utiliser backend distant)", "Oui", "Optionnel", "A seulement"],
+    "correct": 0,
+    "explication": "L'état ne doit pas être versionné (contient des secrets)."
+  },
+  {
+    "id": "TF-06-009",
+    "theme": "Best Practices",
+    "theme_label": "Versionnement",
+    "difficulty": "easy",
+    "question": "Faut-il versionner terraform.tfvars ?",
+    "options": ["Non (sauf exemple)", "Oui", "Optionnel", "A seulement"],
+    "correct": 0,

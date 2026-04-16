@@ -1,0 +1,657 @@
+[
+  {
+    "id": "OCP21-SC-001",
+    "theme": "Sequenced Collections",
+    "theme_label": "Interfaces",
+    "difficulty": "easy",
+    "question": "Quelles nouvelles interfaces ont été ajoutées pour les collections ordonnées ?",
+    "options": [
+      "SequencedCollection, SequencedSet, SequencedMap",
+      "OrderedCollection, OrderedSet, OrderedMap",
+      "IndexedCollection, IndexedSet, IndexedMap",
+      "SortedCollection, SortedSet, SortedMap"
+    ],
+    "correct": 0,
+    "explanation": "Java 21 ajoute SequencedCollection, SequencedSet et SequencedMap."
+  },
+  {
+    "id": "OCP21-SC-002",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Quelle méthode retourne le premier élément d'une SequencedCollection ?",
+    "options": ["getFirst()", "first()", "element()", "peek()"],
+    "correct": 0,
+    "explanation": "getFirst() retourne le premier élément sans le supprimer."
+  },
+  {
+    "id": "OCP21-SC-003",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Quelle méthode retourne le dernier élément d'une SequencedCollection ?",
+    "options": ["getLast()", "last()", "element()", "peekLast()"],
+    "correct": 0,
+    "explanation": "getLast() retourne le dernier élément sans le supprimer."
+  },
+  {
+    "id": "OCP21-SC-004",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Quelle méthode supprime et retourne le premier élément ?",
+    "options": ["removeFirst()", "pollFirst()", "pop()", "remove()"],
+    "correct": 0,
+    "explanation": "removeFirst() supprime et retourne le premier élément."
+  },
+  {
+    "id": "OCP21-SC-005",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Quelle méthode supprime et retourne le dernier élément ?",
+    "options": ["removeLast()", "pollLast()", "popLast()", "removeLastElement()"],
+    "correct": 0,
+    "explanation": "removeLast() supprime et retourne le dernier élément."
+  },
+  {
+    "id": "OCP21-SC-006",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Quelle méthode ajoute un élément en première position ?",
+    "options": ["addFirst()", "push()", "offerFirst()", "prepend()"],
+    "correct": 0,
+    "explanation": "addFirst() ajoute un élément en première position."
+  },
+  {
+    "id": "OCP21-SC-007",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Quelle méthode ajoute un élément en dernière position ?",
+    "options": ["addLast()", "add()", "offerLast()", "append()"],
+    "correct": 0,
+    "explanation": "addLast() ajoute un élément en dernière position."
+  },
+  {
+    "id": "OCP21-SC-008",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Que retourne la méthode reversed() sur une SequencedCollection ?",
+    "options": [
+      "Une vue inversée de la collection",
+      "Une nouvelle collection inversée",
+      "Le dernier élément",
+      "Un stream inversé"
+    ],
+    "correct": 0,
+    "explanation": "reversed() retourne une vue inversée (non modifiable) de la collection."
+  },
+  {
+    "id": "OCP21-SC-009",
+    "theme": "Sequenced Collections",
+    "theme_label": "Collections supportées",
+    "difficulty": "medium",
+    "question": "Quelles implémentations supportent SequencedCollection ?",
+    "options": [
+      "ArrayList, LinkedList, ArrayDeque",
+      "HashSet, HashMap",
+      "TreeSet, TreeMap",
+      "PriorityQueue"
+    ],
+    "correct": 0,
+    "explanation": "ArrayList, LinkedList, ArrayDeque implémentent SequencedCollection."
+  },
+  {
+    "id": "OCP21-SC-010",
+    "theme": "Sequenced Collections",
+    "theme_label": "Collections supportées",
+    "difficulty": "medium",
+    "question": "Quelle implémentation de List supporte SequencedCollection ?",
+    "options": [
+      "ArrayList et LinkedList",
+      "ArrayList seulement",
+      "LinkedList seulement",
+      "Vector seulement"
+    ],
+    "correct": 0,
+    "explanation": "ArrayList et LinkedList supportent toutes deux SequencedCollection."
+  },
+  {
+    "id": "OCP21-SC-011",
+    "theme": "Sequenced Collections",
+    "theme_label": "Collections supportées",
+    "difficulty": "hard",
+    "question": "Vector supporte-t-il SequencedCollection ?",
+    "options": [
+      "Oui, depuis Java 21",
+      "Non",
+      "Oui, partiellement",
+      "Oui, avec Vector implemente List"
+    ],
+    "correct": 0,
+    "explanation": "Vector implémente SequencedCollection car il implémente List."
+  },
+  {
+    "id": "OCP21-SC-012",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedSet",
+    "difficulty": "medium",
+    "question": "Quelle méthode est spécifique à SequencedSet ?",
+    "options": ["reversed()", "addFirst()", "getFirst()", "removeLast()"],
+    "correct": 0,
+    "explanation": "SequencedSet hérite de SequencedCollection et Set, reversed() retourne un SequencedSet."
+  },
+  {
+    "id": "OCP21-SC-013",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedSet",
+    "difficulty": "hard",
+    "question": "LinkedHashSet implémente-t-il SequencedSet ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement avec ordre"
+    ],
+    "correct": 0,
+    "explanation": "LinkedHashSet implémente SequencedSet car il a un ordre défini."
+  },
+  {
+    "id": "OCP21-SC-014",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedSet",
+    "difficulty": "hard",
+    "question": "TreeSet implémente-t-il SequencedSet ?",
+    "options": [
+      "Oui, depuis Java 21",
+      "Non, ordre naturel",
+      "Partiellement",
+      "Uniquement avec comparator"
+    ],
+    "correct": 0,
+    "explanation": "TreeSet implémente SequencedSet car il a un ordre défini."
+  },
+  {
+    "id": "OCP21-SC-015",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedMap",
+    "difficulty": "hard",
+    "question": "Quelle méthode sur SequencedMap retourne la première entrée ?",
+    "options": ["firstEntry()", "getFirst()", "firstKey()", "entrySet().getFirst()"],
+    "correct": 0,
+    "explanation": "firstEntry() retourne la première entrée de la map ordonnée."
+  },
+  {
+    "id": "OCP21-SC-016",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedMap",
+    "difficulty": "hard",
+    "question": "Quelle méthode sur SequencedMap retourne la dernière entrée ?",
+    "options": ["lastEntry()", "getLast()", "lastKey()", "entrySet().getLast()"],
+    "correct": 0,
+    "explanation": "lastEntry() retourne la dernière entrée de la map ordonnée."
+  },
+  {
+    "id": "OCP21-SC-017",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedMap",
+    "difficulty": "hard",
+    "question": "LinkedHashMap implémente-t-il SequencedMap ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement en mode accès"
+    ],
+    "correct": 0,
+    "explanation": "LinkedHashMap implémente SequencedMap depuis Java 21."
+  },
+  {
+    "id": "OCP21-SC-018",
+    "theme": "Sequenced Collections",
+    "theme_label": "SequencedMap",
+    "difficulty": "hard",
+    "question": "TreeMap implémente-t-il SequencedMap ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement en mode tri"
+    ],
+    "correct": 0,
+    "explanation": "TreeMap implémente SequencedMap depuis Java 21."
+  },
+  {
+    "id": "OCP21-SC-019",
+    "theme": "Sequenced Collections",
+    "theme_label": "Polymorphisme",
+    "difficulty": "hard",
+    "question": "Quel type de retour a reversed() sur une SequencedMap ?",
+    "options": [
+      "SequencedMap",
+      "Map",
+      "NavigableMap",
+      "SequencedCollection"
+    ],
+    "correct": 0,
+    "explanation": "reversed() sur SequencedMap retourne un SequencedMap inversé."
+  },
+  {
+    "id": "OCP21-SC-020",
+    "theme": "Sequenced Collections",
+    "theme_label": "Polymorphisme",
+    "difficulty": "hard",
+    "question": "Que retourne reversed() sur une SequencedSet ?",
+    "options": [
+      "SequencedSet",
+      "Set",
+      "SequencedCollection",
+      "Collection"
+    ],
+    "correct": 0,
+    "explanation": "reversed() sur SequencedSet retourne un SequencedSet inversé."
+  },
+  {
+    "id": "OCP21-SC-021",
+    "theme": "Sequenced Collections",
+    "theme_label": "List",
+    "difficulty": "medium",
+    "question": "ArrayList a-t-il getFirst() depuis Java 21 ?",
+    "options": [
+      "Oui, hérité de SequencedCollection",
+      "Non",
+      "Oui, méthode propre",
+      "Oui, via List"
+    ],
+    "correct": 0,
+    "explanation": "ArrayList implémente SequencedCollection, donc getFirst() est disponible."
+  },
+  {
+    "id": "OCP21-SC-022",
+    "theme": "Sequenced Collections",
+    "theme_label": "List",
+    "difficulty": "medium",
+    "question": "LinkedList a-t-il addFirst() depuis Java 21 ?",
+    "options": [
+      "Oui, hérité de SequencedCollection",
+      "Oui, méthode propre depuis toujours",
+      "Non",
+      "Oui, via Deque"
+    ],
+    "correct": 1,
+    "explanation": "LinkedList avait déjà addFirst() via Deque, maintenant aussi via SequencedCollection."
+  },
+  {
+    "id": "OCP21-SC-023",
+    "theme": "Sequenced Collections",
+    "theme_label": "Deque",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre Deque et SequencedCollection ?",
+    "options": [
+      "SequencedCollection est plus général",
+      "Deque a plus de méthodes",
+      "Identiques",
+      "Incompatibles"
+    ],
+    "correct": 0,
+    "explanation": "SequencedCollection est l'interface plus générale, Deque hérite de SequencedCollection."
+  },
+  {
+    "id": "OCP21-SC-024",
+    "theme": "Sequenced Collections",
+    "theme_label": "Deque",
+    "difficulty": "hard",
+    "question": "ArrayDeque implémente-t-il SequencedCollection ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement via Deque"
+    ],
+    "correct": 0,
+    "explanation": "ArrayDeque implémente SequencedCollection via Deque."
+  },
+  {
+    "id": "OCP21-SC-025",
+    "theme": "Sequenced Collections",
+    "theme_label": "getFirst vs peek",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre getFirst() et peek() ?",
+    "options": [
+      "getFirst() lance exception si vide, peek() retourne null",
+      "getFirst() retourne null, peek() lance exception",
+      "Identiques",
+      "getFirst() supprime, peek() non"
+    ],
+    "correct": 0,
+    "explanation": "getFirst() lève NoSuchElementException, peek() retourne null."
+  },
+  {
+    "id": "OCP21-SC-026",
+    "theme": "Sequenced Collections",
+    "theme_label": "removeFirst vs poll",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre removeFirst() et poll() ?",
+    "options": [
+      "removeFirst() lance exception si vide, poll() retourne null",
+      "removeFirst() retourne null, poll() lance exception",
+      "Identiques",
+      "removeFirst() ne supprime pas"
+    ],
+    "correct": 0,
+    "explanation": "removeFirst() lève NoSuchElementException, poll() retourne null."
+  },
+  {
+    "id": "OCP21-SC-027",
+    "theme": "Sequenced Collections",
+    "theme_label": "Modification",
+    "difficulty": "hard",
+    "question": "addFirst() est-il supporté sur une List.of() ?",
+    "options": [
+      "Non, UnsupportedOperationException",
+      "Oui",
+      "Oui, mais seulement si taille < capacité",
+      "Non, NullPointerException"
+    ],
+    "correct": 0,
+    "explanation": "List.of() crée des listes immuables, addFirst() lève exception."
+  },
+  {
+    "id": "OCP21-SC-028",
+    "theme": "Sequenced Collections",
+    "theme_label": "Modification",
+    "difficulty": "hard",
+    "question": "removeFirst() fonctionne-t-il sur une collection immuable ?",
+    "options": [
+      "Non, UnsupportedOperationException",
+      "Oui",
+      "Oui, mais retourne null",
+      "Non, lance IllegalStateException"
+    ],
+    "correct": 0,
+    "explanation": "Les collections immuables ne supportent pas removeFirst()."
+  },
+  {
+    "id": "OCP21-SC-029",
+    "theme": "Sequenced Collections",
+    "theme_label": "Vue inversée",
+    "difficulty": "hard",
+    "question": "La vue retournée par reversed() est-elle modifiable ?",
+    "options": [
+      "Oui, les modifications sont répercutées",
+      "Non, immuable",
+      "Partiellement",
+      "Dépend de la collection"
+    ],
+    "correct": 0,
+    "explanation": "Les modifications de la vue inversée affectent la collection originale."
+  },
+  {
+    "id": "OCP21-SC-030",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "getFirst() sur ArrayList est-il O(1) ?",
+    "options": [
+      "Oui",
+      "Non, O(n)",
+      "O(1) amorti",
+      "O(log n)"
+    ],
+    "correct": 0,
+    "explanation": "getFirst() sur ArrayList est O(1) comme get(0)."
+  },
+  {
+    "id": "OCP21-SC-031",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "getFirst() sur LinkedList est-il O(1) ?",
+    "options": [
+      "Oui",
+      "Non, O(n)",
+      "O(1) amorti",
+      "O(log n)"
+    ],
+    "correct": 0,
+    "explanation": "getFirst() sur LinkedList est O(1) grâce à la référence au premier nœud."
+  },
+  {
+    "id": "OCP21-SC-032",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "addFirst() sur ArrayList est-il O(1) ?",
+    "options": [
+      "Non, O(n)",
+      "Oui",
+      "O(1) amorti",
+      "O(log n)"
+    ],
+    "correct": 0,
+    "explanation": "addFirst() sur ArrayList nécessite un décalage de tous les éléments, donc O(n)."
+  },
+  {
+    "id": "OCP21-SC-033",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "addFirst() sur LinkedList est-il O(1) ?",
+    "options": [
+      "Oui",
+      "Non, O(n)",
+      "O(1) amorti",
+      "O(log n)"
+    ],
+    "correct": 0,
+    "explanation": "addFirst() sur LinkedList est O(1) grâce à la liste doublement chaînée."
+  },
+  {
+    "id": "OCP21-SC-034",
+    "theme": "Sequenced Collections",
+    "theme_label": "Streams",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser reversed() avec des streams ?",
+    "options": [
+      "Oui, collection.reversed().stream()",
+      "Non",
+      "Oui, mais via Stream.iterate",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "reversed() retourne une collection, donc compatible avec streams."
+  },
+  {
+    "id": "OCP21-SC-035",
+    "theme": "Sequenced Collections",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Le code existant utilisant list.get(0) continue-t-il de fonctionner ?",
+    "options": [
+      "Oui, getFirst() est additionnel",
+      "Non, get(0) est déprécié",
+      "Oui, mais plus lent",
+      "Non, lève exception"
+    ],
+    "correct": 0,
+    "explanation": "get(0) continue de fonctionner, getFirst() est une alternative plus expressive."
+  },
+  {
+    "id": "OCP21-SC-036",
+    "theme": "Sequenced Collections",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Faut-il migrer tous les list.get(0) vers getFirst() ?",
+    "options": [
+      "Non, optionnel",
+      "Oui, recommandé",
+      "Oui, obligatoire",
+      "Non, déconseillé"
+    ],
+    "correct": 0,
+    "explanation": "La migration est optionnelle, getFirst() est plus lisible pour le premier élément."
+  },
+  {
+    "id": "OCP21-SC-037",
+    "theme": "Sequenced Collections",
+    "theme_label": "Casting",
+    "difficulty": "hard",
+    "question": "Une List peut-elle être castée en SequencedCollection ?",
+    "options": [
+      "Oui, List extends SequencedCollection",
+      "Non",
+      "Oui, avec warning",
+      "Oui, mais risque"
+    ],
+    "correct": 0,
+    "explanation": "List extends SequencedCollection depuis Java 21."
+  },
+  {
+    "id": "OCP21-SC-038",
+    "theme": "Sequenced Collections",
+    "theme_label": "Casting",
+    "difficulty": "hard",
+    "question": "Un Set peut-il être casté en SequencedSet ?",
+    "options": [
+      "Uniquement si le Set a un ordre défini",
+      "Toujours",
+      "Jamais",
+      "Uniquement les TreeSet"
+    ],
+    "correct": 0,
+    "explanation": "Seuls les Set avec ordre (LinkedHashSet, TreeSet) implémentent SequencedSet."
+  },
+  {
+    "id": "OCP21-SC-039",
+    "theme": "Sequenced Collections",
+    "theme_label": "Documentation",
+    "difficulty": "hard",
+    "question": "Où trouver la documentation des Sequenced Collections ?",
+    "options": [
+      "javadoc de java.util",
+      "JEP 431",
+      "Java Language Specification",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La documentation est disponible dans la javadoc et le JEP 431."
+  },
+  {
+    "id": "OCP21-SC-040",
+    "theme": "Sequenced Collections",
+    "theme_label": "JEP",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit les Sequenced Collections ?",
+    "options": [
+      "JEP 431",
+      "JEP 421",
+      "JEP 441",
+      "JEP 451"
+    ],
+    "correct": 0,
+    "explanation": "JEP 431: Sequenced Collections."
+  },
+  {
+    "id": "OCP21-SC-041",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nlist.addFirst(0);\nSystem.out.println(list);",
+    "options": ["[0, 1, 2, 3]", "[1, 2, 3, 0]", "[0, 1, 2, 3, 0]", "Erreur"],
+    "correct": 0,
+    "explanation": "addFirst(0) ajoute 0 au début de la liste."
+  },
+  {
+    "id": "OCP21-SC-042",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nvar reversed = list.reversed();\nSystem.out.println(reversed.getFirst());",
+    "options": ["3", "1", "2", "Erreur"],
+    "correct": 0,
+    "explanation": "reversed() donne une vue inversée, getFirst() retourne 3."
+  },
+  {
+    "id": "OCP21-SC-043",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar map = new LinkedHashMap<String, Integer>();\nmap.put(\"A\", 1);\nmap.put(\"B\", 2);\nSystem.out.println(map.firstEntry().getKey());",
+    "options": ["A", "B", "null", "Erreur"],
+    "correct": 0,
+    "explanation": "firstEntry() retourne la première entrée (A)."
+  },
+  {
+    "id": "OCP21-SC-044",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar set = new LinkedHashSet<>(Set.of(1, 2, 3));\nset.addFirst(0);\nSystem.out.println(set);",
+    "options": ["[0, 1, 2, 3]", "[1, 2, 3, 0]", "[0, 1, 2, 3, 0]", "Erreur"],
+    "correct": 0,
+    "explanation": "addFirst(0) ajoute 0 au début du LinkedHashSet."
+  },
+  {
+    "id": "OCP21-SC-045",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar deque = new ArrayDeque<>(List.of(1, 2, 3));\ndeque.addFirst(0);\nSystem.out.println(deque.getFirst());",
+    "options": ["0", "1", "2", "3"],
+    "correct": 0,
+    "explanation": "addFirst(0) ajoute 0 au début, getFirst() retourne 0."
+  },
+  {
+    "id": "OCP21-SC-046",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nlist.removeFirst();\nSystem.out.println(list);",
+    "options": ["[2, 3]", "[1, 2]", "[1, 3]", "Erreur"],
+    "correct": 0,
+    "explanation": "removeFirst() supprime le premier élément (1), reste [2, 3]."
+  },
+  {
+    "id": "OCP21-SC-047",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nlist.removeLast();\nSystem.out.println(list);",
+    "options": ["[1, 2]", "[2, 3]", "[1, 3]", "Erreur"],
+    "correct": 0,
+    "explanation": "removeLast() supprime le dernier élément (3), reste [1, 2]."
+  },
+  {
+    "id": "OCP21-SC-048",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar map = new TreeMap<String, Integer>();\nmap.put(\"A\", 1);\nmap.put(\"C\", 3);\nmap.put(\"B\", 2);\nSystem.out.println(map.firstEntry().getKey());",
+    "options": ["A", "B", "C", "null"],
+    "correct": 0,
+    "explanation": "TreeMap trie par clé, firstEntry() retourne la plus petite clé (A)."
+  },
+  {
+    "id": "OCP21-SC-049",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar map = new TreeMap<String, Integer>();\nmap.put(\"A\", 1);\nmap.put(\"C\", 3);\nmap.put(\"B\", 2);\nSystem.out.println(map.lastEntry().getKey());",
+    "options": ["C", "A", "B", "null"],
+    "correct": 0,
+    "explanation": "TreeMap trie par clé, lastEntry() retourne la plus grande clé (C)."
+  },
+  {
+    "id": "OCP21-SC-050",
+    "theme": "Sequenced Collections",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nvar reversed = list.reversed();\nreversed.addFirst(0);\nSystem.out.println(list);",
+    "options": ["[1, 2, 3, 0]", "[0, 1, 2, 3]", "[0, 1, 2, 3, 0]", "[1, 2, 3]"],
+    "correct": 0,
+    "explanation": "La modification de la vue inversée affecte la liste originale."
+  }
+]

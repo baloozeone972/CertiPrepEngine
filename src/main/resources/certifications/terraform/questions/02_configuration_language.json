@@ -1,0 +1,867 @@
+[
+  {
+    "id": "TF-02-001",
+    "theme": "Configuration Language",
+    "theme_label": "Types de données",
+    "difficulty": "easy",
+    "question": "Quels sont les types primitifs dans Terraform ?",
+    "options": [
+      "string, number, bool",
+      "string, int, boolean",
+      "string, float, bool",
+      "string, number, boolean"
+    ],
+    "correct": 0,
+    "explication": "Les types primitifs sont string, number, bool."
+  },
+  {
+    "id": "TF-02-002",
+    "theme": "Configuration Language",
+    "theme_label": "Types de données",
+    "difficulty": "easy",
+    "question": "Quels sont les types de collection ?",
+    "options": [
+      "list, map, set",
+      "array, dictionary, set",
+      "list, map, object",
+      "list, map, tuple"
+    ],
+    "correct": 0,
+    "explication": "list (ordre), map (clé-valeur), set (unique, non ordonné)."
+  },
+  {
+    "id": "TF-02-003",
+    "theme": "Configuration Language",
+    "theme_label": "Types de données",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre list et tuple ?",
+    "options": [
+      "tuple permet des types d'éléments différents, list non",
+      "list permet des types différents, tuple non",
+      "Identiques",
+      "tuple est ordonné, list non"
+    ],
+    "correct": 0,
+    "explication": "tuple = [string, number, bool] peut mélanger les types."
+  },
+  {
+    "id": "TF-02-004",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment définir une variable avec une description ?",
+    "options": [
+      "variable 'name' { type = string description = 'Le nom de la ressource' }",
+      "variable 'name' { description = '...' }",
+      "variable 'name' (description = '...')",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "description est optionnelle mais recommandée."
+  },
+  {
+    "id": "TF-02-005",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment définir une variable sensible (ne pas afficher dans les logs) ?",
+    "options": [
+      "sensitive = true",
+      "secret = true",
+      "hidden = true",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "sensitive = true masque la valeur dans les logs."
+  },
+  {
+    "id": "TF-02-006",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment passer une variable via la ligne de commande ?",
+    "options": [
+      "-var 'instance_type=t2.micro'",
+      "--var instance_type=t2.micro",
+      "-var instance_type=t2.micro",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "-var 'key=value' ou -var key=value."
+  },
+  {
+    "id": "TF-02-007",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment passer un fichier de variables ?",
+    "options": [
+      "-var-file=dev.tfvars",
+      "-var-file dev.tfvars",
+      "--var-file dev.tfvars",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "-var-file est l'option."
+  },
+  {
+    "id": "TF-02-008",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Quel fichier de variables est automatiquement chargé ?",
+    "options": [
+      "terraform.tfvars, terraform.tfvars.json, *.auto.tfvars",
+      "variables.tf",
+      "terraform.tfvars seulement",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Ces fichiers sont chargés automatiquement s'ils existent."
+  },
+  {
+    "id": "TF-02-009",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Quelle est la priorité des sources de variables ?",
+    "options": [
+      "Ligne de commande > fichier auto > terraform.tfvars > variables par défaut",
+      "fichier auto > ligne de commande > variables par défaut",
+      "variables par défaut > terraform.tfvars > ligne de commande",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La ligne de commande écrase les autres sources."
+  },
+  {
+    "id": "TF-02-010",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction concatène des listes ?",
+    "options": ["concat", "merge", "join", "flatten"],
+    "correct": 0,
+    "explication": "concat([1,2], [3,4]) = [1,2,3,4]."
+  },
+  {
+    "id": "TF-02-011",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction fusionne des maps ?",
+    "options": ["merge", "concat", "map", "join"],
+    "correct": 0,
+    "explication": "merge(map1, map2) combine les maps."
+  },
+  {
+    "id": "TF-02-012",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne la longueur d'une liste ou d'une map ?",
+    "options": ["length", "count", "size", "len"],
+    "correct": 0,
+    "explication": "length(list) retourne le nombre d'éléments."
+  },
+  {
+    "id": "TF-02-013",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne un élément d'une liste par index ?",
+    "options": ["element", "index", "lookup", "get"],
+    "correct": 0,
+    "explication": "element(list, index) retourne l'élément (avec wrap-around)."
+  },
+  {
+    "id": "TF-02-014",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction cherche une clé dans une map avec valeur par défaut ?",
+    "options": ["lookup", "get", "element", "index"],
+    "correct": 0,
+    "explication": "lookup(map, key, default) est très utilisée."
+  },
+  {
+    "id": "TF-02-015",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction crée une map à partir d'une liste de paires clé-valeur ?",
+    "options": ["map", "tomap", "merge", "zipmap"],
+    "correct": 3,
+    "explication": "zipmap(['a','b'], [1,2]) = {'a':1,'b':2}."
+  },
+  {
+    "id": "TF-02-016",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne une sous-liste (slice) ?",
+    "options": ["slice", "substr", "split", "element"],
+    "correct": 0,
+    "explication": "slice(list, start, end) fonctionne comme en Python."
+  },
+  {
+    "id": "TF-02-017",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction convertit une chaîne en liste en la divisant ?",
+    "options": ["split", "join", "regex", "chomp"],
+    "correct": 0,
+    "explication": "split(',', 'a,b,c') = ['a','b','c']."
+  },
+  {
+    "id": "TF-02-018",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction combine une liste en chaîne avec un séparateur ?",
+    "options": ["join", "split", "format", "concat"],
+    "correct": 0,
+    "explication": "join(',', ['a','b','c']) = 'a,b,c'."
+  },
+  {
+    "id": "TF-02-019",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction formate une chaîne (comme printf) ?",
+    "options": ["format", "sprintf", "printf", "formatstring"],
+    "correct": 0,
+    "explication": "format('Hello %s', name)."
+  },
+  {
+    "id": "TF-02-020",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne la valeur absolue ?",
+    "options": ["abs", "absolut", "absolute", "math.abs"],
+    "correct": 0,
+    "explication": "abs(-5) = 5."
+  },
+  {
+    "id": "TF-02-021",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne le plus grand nombre ?",
+    "options": ["max", "maximum", "biggest", "maxnum"],
+    "correct": 0,
+    "explication": "max(5,12,9) = 12."
+  },
+  {
+    "id": "TF-02-022",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne le plus petit nombre ?",
+    "options": ["min", "minimum", "smallest", "minnum"],
+    "correct": 0,
+    "explication": "min(5,12,9) = 5."
+  },
+  {
+    "id": "TF-02-023",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction encode une chaîne en base64 ?",
+    "options": ["base64encode", "base64", "b64encode", "encodebase64"],
+    "correct": 0,
+    "explication": "base64encode('hello') = 'aGVsbG8='."
+  },
+  {
+    "id": "TF-02-024",
+    "theme": "Configuration Language",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Quelle fonction décode une chaîne base64 ?",
+    "options": ["base64decode", "base64", "b64decode", "decodebase64"],
+    "correct": 0,
+    "explication": "base64decode('aGVsbG8=') = 'hello'."
+  },
+  {
+    "id": "TF-02-025",
+    "theme": "Configuration Language",
+    "theme_label": "Conditions",
+    "difficulty": "easy",
+    "question": "Syntaxe de l'opérateur conditionnel (ternaire) ?",
+    "options": [
+      "condition ? value_true : value_false",
+      "if condition then value_true else value_false",
+      "cond ? value_true : value_false",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "condition ? valeur_si_vrai : valeur_si_faux."
+  },
+  {
+    "id": "TF-02-026",
+    "theme": "Configuration Language",
+    "theme_label": "Conditions",
+    "difficulty": "easy",
+    "question": "Comment utiliser une condition avec count ?",
+    "options": [
+      "count = var.create ? 1 : 0",
+      "count = var.create ? 0 : 1",
+      "count = if(var.create) 1 else 0",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "C'est un pattern courant pour rendre une ressource optionnelle."
+  },
+  {
+    "id": "TF-02-027",
+    "theme": "Configuration Language",
+    "theme_label": "For expressions",
+    "difficulty": "easy",
+    "question": "Syntaxe d'une for expression pour transformer une liste ?",
+    "options": [
+      "[for s in var.list : upper(s)]",
+      "{for s in var.list => upper(s)}",
+      "for s in var.list { upper(s) }",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "[for item in list : expression] produit une liste."
+  },
+  {
+    "id": "TF-02-028",
+    "theme": "Configuration Language",
+    "theme_label": "For expressions",
+    "difficulty": "easy",
+    "question": "Syntaxe d'une for expression pour produire une map ?",
+    "options": [
+      "{for s in var.list : s => upper(s)}",
+      "[for s in var.list : upper(s)]",
+      "map(for s in var.list : s => upper(s))",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "{for item in list : key => value} produit une map."
+  },
+  {
+    "id": "TF-02-029",
+    "theme": "Configuration Language",
+    "theme_label": "For expressions",
+    "difficulty": "easy",
+    "question": "Comment filtrer avec une for expression ?",
+    "options": [
+      "[for s in var.list : upper(s) if length(s) > 3]",
+      "[for s in var.list if length(s) > 3 : upper(s)]",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les deux syntaxes sont valides."
+  },
+  {
+    "id": "TF-02-030",
+    "theme": "Configuration Language",
+    "theme_label": "Dynamic blocks",
+    "difficulty": "easy",
+    "question": "À quoi servent les dynamic blocks ?",
+    "options": [
+      "Générer des blocs répétés (ex: security_group_rules)",
+      "Définir des variables",
+      "Créer des modules",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "dynamic permet de générer des blocs imbriqués dynamiquement."
+  },
+  {
+    "id": "TF-02-031",
+    "theme": "Configuration Language",
+    "theme_label": "Dynamic blocks",
+    "difficulty": "easy",
+    "question": "Syntaxe d'un dynamic block ?",
+    "options": [
+      "dynamic 'rule' { for_each = var.rules content { ... } }",
+      "dynamic rule { for_each = var.rules content { ... } }",
+      "dynamic 'rule' { content { ... } }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "dynamic 'nom' { for_each = collection content { ... } }."
+  },
+  {
+    "id": "TF-02-032",
+    "theme": "Configuration Language",
+    "theme_label": "Splat expressions",
+    "difficulty": "easy",
+    "question": "Que fait l'opérateur * (splat) ?",
+    "options": [
+      "Récupère un attribut de tous les éléments d'une liste",
+      "Multiplie les nombres",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "aws_instance.web[*].public_ip retourne toutes les IPs."
+  },
+  {
+    "id": "TF-02-033",
+    "theme": "Configuration Language",
+    "theme_label": "Splat expressions",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre * et [*] ?",
+    "options": [
+      "identique, mais [*] est plus explicite",
+      "[*] est pour les listes, * pour les maps",
+      "* est déprécié",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les deux syntaxes sont équivalentes."
+  },
+  {
+    "id": "TF-02-034",
+    "theme": "Configuration Language",
+    "theme_label": "Interpolation",
+    "difficulty": "easy",
+    "question": "Comment interpoler une valeur dans une chaîne ?",
+    "options": ["${var.name}", "$var.name", "{var.name}", "A et B"],
+    "correct": 3,
+    "explication": "${} est la syntaxe d'interpolation."
+  },
+  {
+    "id": "TF-02-035",
+    "theme": "Configuration Language",
+    "theme_label": "Heredoc",
+    "difficulty": "easy",
+    "question": "Comment écrire une chaîne multi-lignes ?",
+    "options": [
+      "<<-EOT\n...\nEOT",
+      "''' ... '''",
+      "\"\"\" ... \"\"\"",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Heredoc (<<-EOT) ou \"\"\" (multi-lignes)."
+  },
+  {
+    "id": "TF-02-036",
+    "theme": "Configuration Language",
+    "theme_label": "Expressions régulières",
+    "difficulty": "easy",
+    "question": "Quelle fonction applique une regex ?",
+    "options": ["regex", "match", "regexall", "A et C"],
+    "correct": 3,
+    "explication": "regex capture la première correspondance, regexall toutes."
+  },
+  {
+    "id": "TF-02-037",
+    "theme": "Configuration Language",
+    "theme_label": "Expressions régulières",
+    "difficulty": "easy",
+    "question": "Que retourne regex('([a-z]+)', 'hello world') ?",
+    "options": ["hello", "world", "['hello']", "null"],
+    "correct": 0,
+    "explication": "regex retourne la première capture."
+  },
+  {
+    "id": "TF-02-038",
+    "theme": "Configuration Language",
+    "theme_label": "Filesystem functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction lit le contenu d'un fichier ?",
+    "options": ["file", "readfile", "templatefile", "filecontent"],
+    "correct": 0,
+    "explication": "file('path') retourne le contenu sous forme de chaîne."
+  },
+  {
+    "id": "TF-02-039",
+    "theme": "Configuration Language",
+    "theme_label": "Filesystem functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction lit un fichier et le traite comme un template ?",
+    "options": ["templatefile", "file", "template", "render"],
+    "correct": 0,
+    "explication": "templatefile('script.sh.tpl', { var = 'value' })"
+  },
+  {
+    "id": "TF-02-040",
+    "theme": "Configuration Language",
+    "theme_label": "Filesystem functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction liste les fichiers d'un répertoire ?",
+    "options": ["fileset", "listdir", "glob", "filelist"],
+    "correct": 0,
+    "explication": "fileset(path, pattern) retourne une liste de fichiers."
+  },
+  {
+    "id": "TF-02-041",
+    "theme": "Configuration Language",
+    "theme_label": "Type conversion",
+    "difficulty": "easy",
+    "question": "Comment convertir une liste en set ?",
+    "options": ["toset", "set", "newset", "convert"],
+    "correct": 0,
+    "explication": "toset(list) élimine les doublons."
+  },
+  {
+    "id": "TF-02-042",
+    "theme": "Configuration Language",
+    "theme_label": "Type conversion",
+    "difficulty": "easy",
+    "question": "Comment convertir une map en liste de valeurs ?",
+    "options": ["values", "mapvalues", "list", "tolist"],
+    "correct": 0,
+    "explication": "values(map) retourne une liste des valeurs."
+  },
+  {
+    "id": "TF-02-043",
+    "theme": "Configuration Language",
+    "theme_label": "Type conversion",
+    "difficulty": "easy",
+    "question": "Comment convertir une map en liste de clés ?",
+    "options": ["keys", "mapkeys", "keylist", "tokeys"],
+    "correct": 0,
+    "explication": "keys(map) retourne une liste des clés."
+  },
+  {
+    "id": "TF-02-044",
+    "theme": "Configuration Language",
+    "theme_label": "Try/Catch",
+    "difficulty": "easy",
+    "question": "Que fait la fonction try ?",
+    "options": [
+      "Essaye plusieurs expressions, retourne la première qui réussit",
+      "Gère les exceptions",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "try(expr1, expr2, ...) retourne la première non nulle."
+  },
+  {
+    "id": "TF-02-045",
+    "theme": "Configuration Language",
+    "theme_label": "Try/Catch",
+    "difficulty": "easy",
+    "question": "Que fait la fonction can ?",
+    "options": [
+      "Vérifie si une expression est valide sans erreur",
+      "Essaye d'exécuter",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "can(expr) retourne true si l'expression réussit."
+  },
+  {
+    "id": "TF-02-046",
+    "theme": "Configuration Language",
+    "theme_label": "Time functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction retourne l'horodatage actuel (RFC3339) ?",
+    "options": ["timestamp", "time", "now", "current_time"],
+    "correct": 0,
+    "explication": "timestamp() retourne une chaîne comme '2024-01-01T00:00:00Z'."
+  },
+  {
+    "id": "TF-02-047",
+    "theme": "Configuration Language",
+    "theme_label": "Time functions",
+    "difficulty": "easy",
+    "question": "Comment formater une date ?",
+    "options": ["formatdate", "dateformat", "format_time", "strftime"],
+    "correct": 0,
+    "explication": "formatdate('DD MMM YYYY', timestamp())"
+  },
+  {
+    "id": "TF-02-048",
+    "theme": "Configuration Language",
+    "theme_label": "Time functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction ajoute une durée à un timestamp ?",
+    "options": ["timeadd", "addtime", "timestamp_add", "time_plus"],
+    "correct": 0,
+    "explication": "timeadd(timestamp, '72h') ajoute 72 heures."
+  },
+  {
+    "id": "TF-02-049",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction calcule le MD5 d'une chaîne ?",
+    "options": ["md5", "hash", "md5sum", "digest"],
+    "correct": 0,
+    "explication": "md5('hello') retourne le hash."
+  },
+  {
+    "id": "TF-02-050",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction calcule le SHA256 ?",
+    "options": ["sha256", "sha256sum", "hash", "digest256"],
+    "correct": 0,
+    "explication": "sha256('hello') retourne le hash."
+  },
+  {
+    "id": "TF-02-051",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction génère un UUID aléatoire ?",
+    "options": ["uuid", "uuidv4", "random_uuid", "A et B"],
+    "correct": 3,
+    "explication": "uuid() retourne un UUID v4."
+  },
+  {
+    "id": "TF-02-052",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "easy",
+    "question": "Quelle fonction encode en base64 ?",
+    "options": ["base64encode", "b64encode", "encodebase64", "A et B"],
+    "correct": 3,
+    "explication": "base64encode('hello')"
+  },
+  {
+    "id": "TF-02-053",
+    "theme": "Configuration Language",
+    "theme_label": "JSON/YAML",
+    "difficulty": "easy",
+    "question": "Quelle fonction parse une chaîne JSON ?",
+    "options": ["jsondecode", "jsonparse", "from_json", "parsejson"],
+    "correct": 0,
+    "explication": "jsondecode('{\"a\":1}') retourne une map."
+  },
+  {
+    "id": "TF-02-054",
+    "theme": "Configuration Language",
+    "theme_label": "JSON/YAML",
+    "difficulty": "easy",
+    "question": "Quelle fonction encode une valeur en JSON ?",
+    "options": ["jsonencode", "to_json", "jsonstring", "json"],
+    "correct": 0,
+    "explication": "jsonencode({a=1}) = '{\"a\":1}'."
+  },
+  {
+    "id": "TF-02-055",
+    "theme": "Configuration Language",
+    "theme_label": "JSON/YAML",
+    "difficulty": "easy",
+    "question": "Quelle fonction parse une chaîne YAML ?",
+    "options": ["yamldecode", "yamlparse", "from_yaml", "parseyaml"],
+    "correct": 0,
+    "explication": "yamldecode('a: 1') retourne une map."
+  },
+  {
+    "id": "TF-02-056",
+    "theme": "Configuration Language",
+    "theme_label": "JSON/YAML",
+    "difficulty": "easy",
+    "question": "Quelle fonction encode une valeur en YAML ?",
+    "options": ["yamlencode", "to_yaml", "yamlstring", "yaml"],
+    "correct": 0,
+    "explication": "yamlencode({a=1}) = 'a: 1\\n'."
+  },
+  {
+    "id": "TF-02-057",
+    "theme": "Configuration Language",
+    "theme_label": "Provider configuration",
+    "difficulty": "easy",
+    "question": "Comment configurer un provider AWS avec une région ?",
+    "options": [
+      "provider 'aws' { region = 'us-east-1' }",
+      "provider aws { region = 'us-east-1' }",
+      "aws { region = 'us-east-1' }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "provider 'aws' { ... } ou provider aws { ... }."
+  },
+  {
+    "id": "TF-02-058",
+    "theme": "Configuration Language",
+    "theme_label": "Provider configuration",
+    "difficulty": "easy",
+    "question": "Comment utiliser plusieurs configurations d'un même provider (alias) ?",
+    "options": [
+      "provider 'aws' { alias = 'west' region = 'us-west-2' }",
+      "provider aws { alias = 'west' region = 'us-west-2' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "alias permet d'avoir plusieurs configurations."
+  },
+  {
+    "id": "TF-02-059",
+    "theme": "Configuration Language",
+    "theme_label": "Provider configuration",
+    "difficulty": "easy",
+    "question": "Comment référencer un provider avec alias dans une ressource ?",
+    "options": [
+      "provider = aws.west",
+      "provider = 'aws.west'",
+      "provider = aws.alias",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "provider = aws.west."
+  },
+  {
+    "id": "TF-02-060",
+    "theme": "Configuration Language",
+    "theme_label": "Module calls",
+    "difficulty": "easy",
+    "question": "Comment appeler un module ?",
+    "options": [
+      "module 'vpc' { source = './modules/vpc' }",
+      "module vpc { source = './modules/vpc' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "module 'nom' { source = ... }."
+  },
+  {
+    "id": "TF-02-061",
+    "theme": "Configuration Language",
+    "theme_label": "Module outputs",
+    "difficulty": "easy",
+    "question": "Comment accéder à un output d'un module ?",
+    "options": ["module.vpc.vpc_id", "${module.vpc.vpc_id}", "A et B", "module['vpc'].vpc_id"],
+    "correct": 3,
+    "explication": "module.nom.output."
+  },
+  {
+    "id": "TF-02-062",
+    "theme": "Configuration Language",
+    "theme_label": "Module versioning",
+    "difficulty": "easy",
+    "question": "Comment spécifier une version pour un module du registry ?",
+    "options": [
+      "source = 'terraform-aws-modules/vpc/aws' version = '3.0.0'",
+      "source = 'terraform-aws-modules/vpc/aws@3.0.0'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "version = '...' dans le bloc module."
+  },
+  {
+    "id": "TF-02-063",
+    "theme": "Configuration Language",
+    "theme_label": "Module meta-arguments",
+    "difficulty": "easy",
+    "question": "Que fait count dans un module ?",
+    "options": [
+      "Crée plusieurs instances du module",
+      "Compte les modules",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "count = 3 crée 3 modules."
+  },
+  {
+    "id": "TF-02-064",
+    "theme": "Configuration Language",
+    "theme_label": "Module meta-arguments",
+    "difficulty": "easy",
+    "question": "Que fait for_each dans un module ?",
+    "options": [
+      "Crée une instance par élément d'une map/set",
+      "Itère sur les modules",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "for_each = var.map crée un module par élément."
+  },
+  {
+    "id": "TF-02-065",
+    "theme": "Configuration Language",
+    "theme_label": "Module sources",
+    "difficulty": "easy",
+    "question": "Quels sont les types de sources pour les modules ?",
+    "options": [
+      "Chemin local, Terraform Registry, Git, HTTP",
+      "Seulement local",
+      "Seulement Registry",
+      "Seulement Git"
+    ],
+    "correct": 0,
+    "explication": "Source peut être locale, registry, git, etc."
+  },
+  {
+    "id": "TF-02-066",
+    "theme": "Configuration Language",
+    "theme_label": "Module sources",
+    "difficulty": "easy",
+    "question": "Comment utiliser un module depuis GitHub ?",
+    "options": [
+      "source = 'github.com/hashicorp/example'",
+      "source = 'git::https://github.com/hashicorp/example.git'",
+      "source = 'github.com/hashicorp/example.git'",
+      "A et C"
+    ],
+    "correct": 1,
+    "explication": "git:: devant l'URL."
+  },
+  {
+    "id": "TF-02-067",
+    "theme": "Configuration Language",
+    "theme_label": "Module sources",
+    "difficulty": "easy",
+    "question": "Comment utiliser une branche spécifique d'un dépôt Git ?",
+    "options": [
+      "source = 'git::https://example.com/repo.git?ref=dev'",
+      "source = 'git::https://example.com/repo.git' version = 'dev'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le paramètre ref spécifie la branche/tag/commit."
+  },
+  {
+    "id": "TF-02-068",
+    "theme": "Configuration Language",
+    "theme_label": "Module outputs",
+    "difficulty": "easy",
+    "question": "Un module peut-il avoir des outputs ?",
+    "options": ["Oui", "Non", "Uniquement les modules racine", "Uniquement les modules enfants"],
+    "correct": 0,
+    "explication": "Les outputs permettent de passer des données du module au parent."
+  },
+  {
+    "id": "TF-02-069",
+    "theme": "Configuration Language",
+    "theme_label": "Module inputs",
+    "difficulty": "easy",
+    "question": "Comment passer des variables à un module ?",
+    "options": [
+      "module 'vpc' { source = './vpc' cidr = '10.0.0.0/16' }",
+      "module 'vpc' { source = './vpc' var.cidr = '10.0.0.0/16' }",
+      "module 'vpc' { source = './vpc' cidr = var.cidr }",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les arguments du module sont les noms des variables."
+  },
+  {
+    "id": "TF-02-070",
+    "theme": "Configuration Language",
+    "theme_label": "Module outputs",
+    "difficulty": "easy",
+    "question": "Comment exposer une valeur du module ?",
+    "options": [
+      "output 'vpc_id' { value = aws_vpc.main.id }",
+      "output vpc_id { value = aws_vpc.main.id }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "output 'nom' { value = ... }."
+  }
+]

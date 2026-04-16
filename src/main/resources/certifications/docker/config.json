@@ -1,0 +1,36 @@
+{
+  "id": "docker",
+  "name": "Docker Certified Associate (DCA)",
+  "version": "1.0",
+  "description": "Certification Docker - Conteneurisation et orchestration avec Docker",
+  "totalQuestions": 350,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 55,
+  "passingScore": 75,
+  "themes": [
+    {
+      "name": "Docker Basics",
+      "count": 60
+    },
+    {
+      "name": "Images et Dockerfiles",
+      "count": 70
+    },
+    {
+      "name": "Networking Docker",
+      "count": 50
+    },
+    {
+      "name": "Volumes et Stockage",
+      "count": 50
+    },
+    {
+      "name": "Docker Compose",
+      "count": 60
+    },
+    {
+      "name": "Docker Swarm",
+      "count": 60
+    }
+  ]
+}

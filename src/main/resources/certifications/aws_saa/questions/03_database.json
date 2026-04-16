@@ -1,0 +1,842 @@
+[
+  {
+    "id": "AWS-SAA-151",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "easy",
+    "question": "Que signifie RDS ?",
+    "options": [
+      "Relational Database Service",
+      "Remote Database Service",
+      "Relational Data Storage",
+      "Redundant Database Service"
+    ],
+    "correct": 0,
+    "explanation": "RDS est un service de base de données relationnelle managée."
+  },
+  {
+    "id": "AWS-SAA-152",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "easy",
+    "question": "Quels moteurs de base de données sont supportés par RDS ?",
+    "options": [
+      "MySQL, PostgreSQL, Oracle, SQL Server, MariaDB, IBM Db2",
+      "MongoDB, Cassandra",
+      "DynamoDB, Redshift",
+      "Neptune, Elasticache"
+    ],
+    "correct": 0,
+    "explanation": "RDS supporte les bases SQL traditionnelles et Db2."
+  },
+  {
+    "id": "AWS-SAA-153",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que RDS Multi-AZ ?",
+    "options": [
+      "Réplication synchrone pour haute disponibilité",
+      "Réplication asynchrone",
+      "Scale-out de lecture",
+      "Backup automatique"
+    ],
+    "correct": 0,
+    "explanation": "Multi-AZ réplique synchrone vers une instance standby dans une autre AZ."
+  },
+  {
+    "id": "AWS-SAA-154",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que RDS Read Replica ?",
+    "options": [
+      "Réplication asynchrone pour lecture seule",
+      "Réplication synchrone",
+      "Haute disponibilité",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "Les Read Replicas sont asynchrones et permettent de décharger les lectures."
+  },
+  {
+    "id": "AWS-SAA-155",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Combien de Read Replicas peut-on avoir par instance RDS ?",
+    "options": ["Jusqu'à 5", "Jusqu'à 10", "Jusqu'à 15", "Illimité"],
+    "correct": 0,
+    "explanation": "Maximum 5 Read Replicas par instance (pour MySQL, PostgreSQL)."
+  },
+  {
+    "id": "AWS-SAA-156",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Peut-on promouvoir un Read Replica en instance principale ?",
+    "options": ["Oui", "Non", "Uniquement avec Multi-AZ", "Uniquement avec Aurora"],
+    "correct": 0,
+    "explanation": "On peut promouvoir manuellement un Read Replica en instance autonome."
+  },
+  {
+    "id": "AWS-SAA-157",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que RDS Proxy ?",
+    "options": [
+      "Pool de connexions pour RDS",
+      "Load balancer",
+      "Cache",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "RDS Proxy gère les connexions, améliore la scalabilité et la sécurité."
+  },
+  {
+    "id": "AWS-SAA-158",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Quels sont les avantages de RDS Proxy ?",
+    "options": [
+      "Pool de connexions, réduction de latence, IAM authentication",
+      "Haute disponibilité",
+      "Backup",
+      "Chiffrement"
+    ],
+    "correct": 0,
+    "explanation": "RDS Proxy mutualise les connexions et supporte l'authentification IAM."
+  },
+  {
+    "id": "AWS-SAA-159",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un snapshot RDS ?",
+    "options": [
+      "Sauvegarde manuelle complète",
+      "Sauvegarde automatique",
+      "Sauvegarde incrémentale",
+      "Réplica"
+    ],
+    "correct": 0,
+    "explanation": "Les snapshots sont des sauvegardes manuelles complètes."
+  },
+  {
+    "id": "AWS-SAA-160",
+    "theme": "Database",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Combien de temps sont conservées les sauvegardes automatiques RDS ?",
+    "options": ["0-35 jours", "1-7 jours", "7-30 jours", "30-90 jours"],
+    "correct": 0,
+    "explanation": "La période de rétention des sauvegardes automatiques est de 0 à 35 jours."
+  },
+  {
+    "id": "AWS-SAA-161",
+    "theme": "Database",
+    "theme_label": "Aurora",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'Amazon Aurora ?",
+    "options": [
+      "Base de données relationnelle compatible MySQL/PostgreSQL",
+      "Base NoSQL",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Aurora est un moteur de base de données compatible MySQL/PostgreSQL."
+  },
+  {
+    "id": "AWS-SAA-162",
+    "theme": "Database",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Combien de réplicas Aurora peut-on avoir ?",
+    "options": ["Jusqu'à 15", "Jusqu'à 5", "Jusqu'à 10", "Jusqu'à 20"],
+    "correct": 0,
+    "explanation": "Aurora supporte jusqu'à 15 réplicas de lecture."
+  },
+  {
+    "id": "AWS-SAA-163",
+    "theme": "Database",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Aurora Serverless ?",
+    "options": [
+      "Base de données serverless auto-scalable",
+      "Aurora classique",
+      "Aurora Multi-AZ",
+      "Aurora Global"
+    ],
+    "correct": 0,
+    "explanation": "Aurora Serverless s'adapte automatiquement à la charge."
+  },
+  {
+    "id": "AWS-SAA-164",
+    "theme": "Database",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Aurora Global Database ?",
+    "options": [
+      "Réplication cross-region avec latence <1s",
+      "Multi-AZ",
+      "Read replicas",
+      "Snapshot"
+    ],
+    "correct": 0,
+    "explanation": "Aurora Global Database réplique dans plusieurs régions avec faible latence."
+  },
+  {
+    "id": "AWS-SAA-165",
+    "theme": "Database",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Combien de régions peut couvrir Aurora Global Database ?",
+    "options": ["Jusqu'à 5", "Jusqu'à 3", "Jusqu'à 10", "Jusqu'à 1"],
+    "correct": 0,
+    "explanation": "Jusqu'à 5 régions secondaires."
+  },
+  {
+    "id": "AWS-SAA-166",
+    "theme": "Database",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Aurora Machine Learning ?",
+    "options": [
+      "Intégration avec SageMaker et Comprehend",
+      "Base de données ML",
+      "Cache ML",
+      "Entraînement ML"
+    ],
+    "correct": 0,
+    "explanation": "Aurora ML permet d'appeler des modèles ML directement depuis SQL."
+  },
+  {
+    "id": "AWS-SAA-167",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que DynamoDB ?",
+    "options": [
+      "Base de données NoSQL clé-valeur",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "DynamoDB est une base NoSQL clé-valeur/documents."
+  },
+  {
+    "id": "AWS-SAA-168",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "medium",
+    "question": "Quels sont les modes de capacité DynamoDB ?",
+    "options": [
+      "Provisioned et On-Demand",
+      "Standard et Premium",
+      "Basic et Advanced",
+      "Single et Multi-AZ"
+    ],
+    "correct": 0,
+    "explanation": "Provisioned (RCU/WCU) ou On-Demand (pay-per-request)."
+  },
+  {
+    "id": "AWS-SAA-169",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Accelerator (DAX) ?",
+    "options": [
+      "Cache in-memory pour DynamoDB",
+      "Backup",
+      "Réplication",
+      "Migration"
+    ],
+    "correct": 0,
+    "explanation": "DAX est un cache Redis compatible DynamoDB pour des lectures microsecondes."
+  },
+  {
+    "id": "AWS-SAA-170",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Streams ?",
+    "options": [
+      "Flux de changements en temps réel",
+      "Backup",
+      "Réplication",
+      "Migration"
+    ],
+    "correct": 0,
+    "explanation": "Streams capture les modifications (création, mise à jour, suppression)."
+  },
+  {
+    "id": "AWS-SAA-171",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Combien de temps les données sont conservées dans DynamoDB Streams ?",
+    "options": ["24 heures", "7 jours", "30 jours", "48 heures"],
+    "correct": 0,
+    "explanation": "La rétention par défaut est 24 heures (configurable jusqu'à 7 jours)."
+  },
+  {
+    "id": "AWS-SAA-172",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une DynamoDB Global Table ?",
+    "options": [
+      "Table multi-région multi-actif",
+      "Table répliquée",
+      "Table partitionnée",
+      "Table indexée"
+    ],
+    "correct": 0,
+    "explanation": "Les Global Tables répliquent les données dans plusieurs régions, lecture/écriture partout."
+  },
+  {
+    "id": "AWS-SAA-173",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un élément DynamoDB ?",
+    "options": ["400 KB", "1 MB", "64 KB", "256 KB"],
+    "correct": 0,
+    "explanation": "La taille maximale d'un élément est 400 KB."
+  },
+  {
+    "id": "AWS-SAA-174",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un index secondaire global (GSI) ?",
+    "options": [
+      "Index avec clé de partition différente",
+      "Index avec même partition",
+      "Index local",
+      "Index unique"
+    ],
+    "correct": 0,
+    "explanation": "GSI permet d'interroger avec une clé de partition alternative."
+  },
+  {
+    "id": "AWS-SAA-175",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un index secondaire local (LSI) ?",
+    "options": [
+      "Index avec même partition, clé de tri différente",
+      "Index avec partition différente",
+      "Index global",
+      "Index unique"
+    ],
+    "correct": 0,
+    "explanation": "LSI partage la même clé de partition, clé de tri différente."
+  },
+  {
+    "id": "AWS-SAA-176",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Combien de LSI peut-on créer par table ?",
+    "options": ["5", "10", "20", "Illimité"],
+    "correct": 0,
+    "explanation": "Maximum 5 LSI par table."
+  },
+  {
+    "id": "AWS-SAA-177",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Combien de GSI peut-on créer par table ?",
+    "options": ["20", "5", "10", "50"],
+    "correct": 0,
+    "explanation": "Maximum 20 GSI par table (par défaut)."
+  },
+  {
+    "id": "AWS-SAA-178",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Transactions ?",
+    "options": [
+      "ACID sur plusieurs opérations",
+      "Lecture seule",
+      "Écriture seule",
+      "Batch"
+    ],
+    "correct": 0,
+    "explanation": "Les transactions offrent des garanties ACID sur plusieurs éléments."
+  },
+  {
+    "id": "AWS-SAA-179",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Time To Live (TTL) ?",
+    "options": [
+      "Suppression automatique après délai",
+      "Expiration de cache",
+      "Timeout de lecture",
+      "Limite de temps"
+    ],
+    "correct": 0,
+    "explanation": "TTL marque les éléments pour suppression automatique à une date."
+  },
+  {
+    "id": "AWS-SAA-180",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Backup ?",
+    "options": [
+      "Sauvegarde complète ponctuelle",
+      "Sauvegarde continue",
+      "Snapshot",
+      "Point-in-time recovery"
+    ],
+    "correct": 0,
+    "explanation": "Les backups manuels (on-demand) sont complets et conservés indéfiniment."
+  },
+  {
+    "id": "AWS-SAA-181",
+    "theme": "Database",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Point-in-Time Recovery (PITR) pour DynamoDB ?",
+    "options": [
+      "Restauration à n'importe quel moment dans les 35 jours",
+      "Backup quotidien",
+      "Snapshot",
+      "Réplication"
+    ],
+    "correct": 0,
+    "explanation": "PITR permet de restaurer à n'importe quelle seconde dans les 35 jours."
+  },
+  {
+    "id": "AWS-SAA-182",
+    "theme": "Database",
+    "theme_label": "Redshift",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Redshift ?",
+    "options": [
+      "Data warehouse",
+      "Base de données relationnelle",
+      "Base NoSQL",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Redshift est un data warehouse columnar pour l'analytique."
+  },
+  {
+    "id": "AWS-SAA-183",
+    "theme": "Database",
+    "theme_label": "Redshift",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Redshift Spectrum ?",
+    "options": [
+      "Interroge directement des données dans S3",
+      "Cache",
+      "Backup",
+      "Réplication"
+    ],
+    "correct": 0,
+    "explanation": "Spectrum permet d'interroger des données S3 sans les charger dans Redshift."
+  },
+  {
+    "id": "AWS-SAA-184",
+    "theme": "Database",
+    "theme_label": "Redshift",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Redshift RA3 ?",
+    "options": [
+      "Nœuds avec stockage géré (compute/storage séparés)",
+      "Nœuds classiques",
+      "Nœuds serveurless",
+      "Nœuds GPU"
+    ],
+    "correct": 0,
+    "explanation": "RA3 sépare le calcul du stockage pour une meilleure scalabilité."
+  },
+  {
+    "id": "AWS-SAA-185",
+    "theme": "Database",
+    "theme_label": "Redshift",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Redshift Serverless ?",
+    "options": [
+      "Data warehouse serverless auto-scalable",
+      "Redshift classique",
+      "Redshift Spectrum",
+      "Redshift RA3"
+    ],
+    "correct": 0,
+    "explanation": "Serverless ajuste automatiquement les ressources."
+  },
+  {
+    "id": "AWS-SAA-186",
+    "theme": "Database",
+    "theme_label": "ElastiCache",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'ElastiCache ?",
+    "options": [
+      "Cache managé (Redis/Memcached)",
+      "Base de données",
+      "Stockage",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "ElastiCache est un service de cache in-memory managé."
+  },
+  {
+    "id": "AWS-SAA-187",
+    "theme": "Database",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "Quels moteurs sont supportés par ElastiCache ?",
+    "options": [
+      "Redis et Memcached",
+      "Redis seulement",
+      "Memcached seulement",
+      "Redis et MongoDB"
+    ],
+    "correct": 0,
+    "explanation": "ElastiCache supporte Redis et Memcached."
+  },
+  {
+    "id": "AWS-SAA-188",
+    "theme": "Database",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Redis Cluster ?",
+    "options": [
+      "Sharding horizontal pour Redis",
+      "Réplication",
+      "Persistance",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "Redis Cluster permet de partitionner les données sur plusieurs nœuds."
+  },
+  {
+    "id": "AWS-SAA-189",
+    "theme": "Database",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Redis Replication Group ?",
+    "options": [
+      "Réplication maître-esclave avec failover",
+      "Cluster",
+      "Sharding",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "Replication Group offre haute disponibilité avec un maître et des réplicas."
+  },
+  {
+    "id": "AWS-SAA-190",
+    "theme": "Database",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Redis Multi-AZ ?",
+    "options": [
+      "Réplication cross-AZ avec failover automatique",
+      "Cluster",
+      "Sharding",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "Multi-AZ garantit la disponibilité en cas de panne d'AZ."
+  },
+  {
+    "id": "AWS-SAA-191",
+    "theme": "Database",
+    "theme_label": "Neptune",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Neptune ?",
+    "options": [
+      "Base de données graphe",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Neptune est une base de données graphe (RDF/Property Graph)."
+  },
+  {
+    "id": "AWS-SAA-192",
+    "theme": "Database",
+    "theme_label": "Neptune",
+    "difficulty": "hard",
+    "question": "Quels langages de requête supporte Neptune ?",
+    "options": [
+      "Gremlin, SPARQL, openCypher",
+      "SQL",
+      "GraphQL",
+      "Cypher seulement"
+    ],
+    "correct": 0,
+    "explanation": "Neptune supporte Gremlin (Apache TinkerPop), SPARQL, openCypher."
+  },
+  {
+    "id": "AWS-SAA-193",
+    "theme": "Database",
+    "theme_label": "DocumentDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon DocumentDB ?",
+    "options": [
+      "Base de données MongoDB compatible",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "DocumentDB est compatible avec MongoDB (MongoDB 3.6, 4.0, 5.0)."
+  },
+  {
+    "id": "AWS-SAA-194",
+    "theme": "Database",
+    "theme_label": "DocumentDB",
+    "difficulty": "hard",
+    "question": "DocumentDB est-il un remplacement direct de MongoDB ?",
+    "options": [
+      "Oui, compatible",
+      "Non, différent",
+      "Partiellement",
+      "API différentes"
+    ],
+    "correct": 0,
+    "explanation": "DocumentDB imite l'API MongoDB, mais n'est pas un fork."
+  },
+  {
+    "id": "AWS-SAA-195",
+    "theme": "Database",
+    "theme_label": "QLDB",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon QLDB ?",
+    "options": [
+      "Registre immutable (blockchain-like)",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "QLDB est un registre cryptographiquement vérifiable."
+  },
+  {
+    "id": "AWS-SAA-196",
+    "theme": "Database",
+    "theme_label": "QLDB",
+    "difficulty": "hard",
+    "question": "QLDB est-il centralisé ou décentralisé ?",
+    "options": ["Centralisé", "Décentralisé", "Les deux", "Blockchain public"],
+    "correct": 0,
+    "explanation": "QLDB est centralisé (géré par AWS), contrairement aux blockchains."
+  },
+  {
+    "id": "AWS-SAA-197",
+    "theme": "Database",
+    "theme_label": "Timestream",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Timestream ?",
+    "options": [
+      "Base de données time-series",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Timestream est optimisé pour les séries temporelles (IoT, logs, métriques)."
+  },
+  {
+    "id": "AWS-SAA-198",
+    "theme": "Database",
+    "theme_label": "Keyspaces",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Keyspaces ?",
+    "options": [
+      "Base de données Cassandra compatible",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Keyspaces est un service Cassandra managé."
+  },
+  {
+    "id": "AWS-SAA-199",
+    "theme": "Database",
+    "theme_label": "Database migration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Database Migration Service (DMS) ?",
+    "options": [
+      "Migration de bases de données",
+      "Backup",
+      "Réplication",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explanation": "DMS migre des bases de données vers AWS avec minimum de downtime."
+  },
+  {
+    "id": "AWS-SAA-200",
+    "theme": "Database",
+    "theme_label": "Database migration",
+    "difficulty": "hard",
+    "question": "DMS supporte-t-il la migration homogène et hétérogène ?",
+    "options": ["Oui", "Non", "Homogène seulement", "Hétérogène seulement"],
+    "correct": 0,
+    "explanation": "DMS peut migrer entre moteurs différents (ex: Oracle vers PostgreSQL)."
+  },
+  {
+    "id": "AWS-SAA-201",
+    "theme": "Database",
+    "theme_label": "Database migration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Schema Conversion Tool (SCT) ?",
+    "options": [
+      "Convertit les schémas entre moteurs",
+      "Migre les données",
+      "Réplique les données",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "SCT convertit les schémas, procédures stockées, etc."
+  },
+  {
+    "id": "AWS-SAA-202",
+    "theme": "Database",
+    "theme_label": "Database best practices",
+    "difficulty": "hard",
+    "question": "Quand utiliser RDS vs DynamoDB ?",
+    "options": [
+      "RDS pour SQL, relations; DynamoDB pour NoSQL, haute scalabilité",
+      "Toujours RDS",
+      "Toujours DynamoDB",
+      "RDS pour NoSQL"
+    ],
+    "correct": 0,
+    "explanation": "RDS pour données relationnelles, DynamoDB pour NoSQL avec scaling automatique."
+  },
+  {
+    "id": "AWS-SAA-203",
+    "theme": "Database",
+    "theme_label": "Database best practices",
+    "difficulty": "hard",
+    "question": "Comment améliorer les performances de lecture RDS ?",
+    "options": [
+      "Read Replicas, cache (ElastiCache)",
+      "Multi-AZ",
+      "Snapshots",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "Les Read Replicas déchargent les lectures, ElastiCache réduit la charge."
+  },
+  {
+    "id": "AWS-SAA-204",
+    "theme": "Database",
+    "theme_label": "Database best practices",
+    "difficulty": "hard",
+    "question": "Comment améliorer la haute disponibilité RDS ?",
+    "options": ["Multi-AZ", "Read Replicas", "Snapshots", "Backup"],
+    "correct": 0,
+    "explanation": "Multi-AZ réplique synchrone pour failover automatique."
+  },
+  {
+    "id": "AWS-SAA-205",
+    "theme": "Database",
+    "theme_label": "Database security",
+    "difficulty": "hard",
+    "question": "Comment chiffrer RDS ?",
+    "options": [
+      "Chiffrement au repos via KMS",
+      "Chiffrement en transit via TLS",
+      "Chiffrement des snapshots",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "RDS supporte le chiffrement au repos et en transit."
+  },
+  {
+    "id": "AWS-SAA-206",
+    "theme": "Database",
+    "theme_label": "Database security",
+    "difficulty": "hard",
+    "question": "Peut-on chiffrer un RDS existant ?",
+    "options": [
+      "Non, créer un snapshot chiffré puis restaurer",
+      "Oui, directement",
+      "Oui, avec modification",
+      "Uniquement au lancement"
+    ],
+    "correct": 0,
+    "explanation": "Pour chiffrer une base non chiffrée, il faut créer un snapshot chiffré et restaurer."
+  },
+  {
+    "id": "AWS-SAA-207",
+    "theme": "Database",
+    "theme_label": "Database security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que RDS IAM Authentication ?",
+    "options": [
+      "Authentification des utilisateurs via IAM",
+      "Authentification des instances",
+      "Authentification des services",
+      "Authentification des applications"
+    ],
+    "correct": 0,
+    "explanation": "IAM Authentication permet d'utiliser les rôles IAM pour accéder à RDS."
+  },
+  {
+    "id": "AWS-SAA-208",
+    "theme": "Database",
+    "theme_label": "Database monitoring",
+    "difficulty": "hard",
+    "question": "Comment surveiller les performances RDS ?",
+    "options": [
+      "CloudWatch, Performance Insights, Enhanced Monitoring",
+      "CloudTrail",
+      "S3",
+      "Lambda"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs outils pour monitorer RDS."
+  },
+  {
+    "id": "AWS-SAA-209",
+    "theme": "Database",
+    "theme_label": "Database monitoring",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Performance Insights pour RDS ?",
+    "options": [
+      "Analyse des charges et des requêtes",
+      "Métriques de base",
+      "Logs",
+      "Alertes"
+    ],
+    "correct": 0,
+    "explanation": "Performance Insights visualise la charge de la base."
+  },
+  {
+    "id": "AWS-SAA-210",
+    "theme": "Database",
+    "theme_label": "Database backup",
+    "difficulty": "hard",
+    "question": "Comment sauvegarder RDS ?",
+    "options": [
+      "Sauvegardes automatiques, snapshots manuels",
+      "Snapshots seulement",
+      "Backup S3",
+      "DMS"
+    ],
+    "correct": 0,
+    "explanation": "RDS offre des sauvegardes automatiques (0-35 jours) et des snapshots manuels."
+  }
+]

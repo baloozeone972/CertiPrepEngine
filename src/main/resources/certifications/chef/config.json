@@ -1,0 +1,32 @@
+{
+  "id": "chef",
+  "name": "Chef Developer",
+  "version": "1.0",
+  "description": "Certification Chef - Infrastructure as Code avec Chef (Ruby-based)",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Chef Resources",
+      "count": 60
+    },
+    {
+      "name": "Recipes & Cookbooks",
+      "count": 70
+    },
+    {
+      "name": "Chef Workstation",
+      "count": 40
+    },
+    {
+      "name": "Chef Server",
+      "count": 40
+    },
+    {
+      "name": "Inspec",
+      "count": 40
+    }
+  ]
+}

@@ -1,0 +1,712 @@
+[
+  {
+    "id": "DKR-04-001",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Types de volumes",
+    "difficulty": "easy",
+    "question": "Quels sont les types de volumes Docker ?",
+    "options": [
+      "Volumes, bind mounts, tmpfs",
+      "Volumes, bind mounts, named pipes",
+      "Volumes, host mounts, network mounts",
+      "Volumes, named volumes, anonymous volumes"
+    ],
+    "correct": 0,
+    "explication": "Volumes (gérés par Docker), bind mounts (chemin hôte), tmpfs (mémoire)."
+  },
+  {
+    "id": "DKR-04-002",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "question": "Comment créer un volume nommé ?",
+    "options": [
+      "docker volume create monvolume",
+      "docker run -v monvolume:/data",
+      "docker run --volume monvolume:/data",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "On peut créer explicitement ou implicitement via -v."
+  },
+  {
+    "id": "DKR-04-003",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "question": "Comment lister les volumes ?",
+    "options": [
+      "docker volume ls",
+      "docker volume list",
+      "docker ls volume",
+      "docker volume show"
+    ],
+    "correct": 0,
+    "explication": "docker volume ls affiche la liste des volumes."
+  },
+  {
+    "id": "DKR-04-004",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "question": "Comment inspecter un volume ?",
+    "options": [
+      "docker volume inspect monvolume",
+      "docker inspect monvolume",
+      "docker volume show monvolume",
+      "docker volume details monvolume"
+    ],
+    "correct": 0,
+    "explication": "docker volume inspect donne le point de montage et les options."
+  },
+  {
+    "id": "DKR-04-005",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "question": "Comment supprimer un volume ?",
+    "options": [
+      "docker volume rm monvolume",
+      "docker rm monvolume",
+      "docker volume delete monvolume",
+      "docker volume remove monvolume"
+    ],
+    "correct": 0,
+    "explication": "docker volume rm supprime un volume (s'il n'est pas utilisé)."
+  },
+  {
+    "id": "DKR-04-006",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "question": "Comment supprimer tous les volumes non utilisés ?",
+    "options": [
+      "docker volume prune",
+      "docker system prune --volumes",
+      "docker volume prune -a",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "prune supprime les volumes non référencés par un conteneur."
+  },
+  {
+    "id": "DKR-04-007",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts",
+    "difficulty": "easy",
+    "question": "Comment monter un répertoire de l'hôte dans un conteneur (bind mount) ?",
+    "options": [
+      "docker run -v /host/path:/container/path",
+      "docker run --mount type=bind,source=/host/path,target=/container/path",
+      "docker run -v /host/path:/container/path:ro",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Deux syntaxes : -v ou --mount (plus explicite)."
+  },
+  {
+    "id": "DKR-04-008",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre bind mount et volume ?",
+    "options": [
+      "Bind mount dépend du chemin de l'hôte, volume est géré par Docker",
+      "Volume est plus portable",
+      "Bind mount peut être plus lent",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les volumes sont préférés pour la portabilité."
+  },
+  {
+    "id": "DKR-04-009",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts",
+    "difficulty": "easy",
+    "question": "Comment monter un bind mount en lecture seule ?",
+    "options": [
+      "docker run -v /host/path:/container/path:ro",
+      "docker run --mount type=bind,source=/host/path,target=/container/path,readonly",
+      "docker run --read-only",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": ":ro ou readonly=true."
+  },
+  {
+    "id": "DKR-04-010",
+    "theme": "Volumes et Stockage",
+    "theme_label": "tmpfs mounts",
+    "difficulty": "easy",
+    "question": "À quoi sert un mount tmpfs ?",
+    "options": [
+      "Stocker des données en mémoire (non persistantes)",
+      "Stocker des données sur disque",
+      "Stocker des données dans un volume",
+      "Stocker des données sur le réseau"
+    ],
+    "correct": 0,
+    "explication": "tmpfs est utilisé pour des données temporaires sensibles."
+  },
+  {
+    "id": "DKR-04-011",
+    "theme": "Volumes et Stockage",
+    "theme_label": "tmpfs mounts",
+    "difficulty": "easy",
+    "question": "Comment utiliser tmpfs dans un conteneur ?",
+    "options": [
+      "docker run --tmpfs /app/tmp",
+      "docker run --mount type=tmpfs,destination=/app/tmp",
+      "docker run --tmpfs /app/tmp:rw,noexec,nosuid",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "--tmpfs ou --mount type=tmpfs."
+  },
+  {
+    "id": "DKR-04-012",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes",
+    "difficulty": "easy",
+    "question": "Où sont stockés les volumes Docker par défaut ?",
+    "options": [
+      "/var/lib/docker/volumes/",
+      "/var/lib/docker/containers/",
+      "/var/lib/docker/overlay2/",
+      "/var/lib/docker/aufs/"
+    ],
+    "correct": 0,
+    "explication": "Les volumes sont dans /var/lib/docker/volumes/ (Linux)."
+  },
+  {
+    "id": "DKR-04-013",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes",
+    "difficulty": "easy",
+    "question": "Peut-on partager un volume entre plusieurs conteneurs ?",
+    "options": ["Oui", "Non", "Uniquement avec les mêmes images", "Uniquement avec les mêmes options"],
+    "correct": 0,
+    "explication": "Plusieurs conteneurs peuvent monter le même volume simultanément."
+  },
+  {
+    "id": "DKR-04-014",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes",
+    "difficulty": "easy",
+    "question": "Comment remplir un volume avec le contenu d'une image ?",
+    "options": [
+      "Le volume est initialisé au montage si vide",
+      "docker cp",
+      "docker volume populate",
+      "docker run --volume-driver"
+    ],
+    "correct": 0,
+    "explication": "Si un volume vide est monté sur un répertoire contenant des données, les données sont copiées."
+  },
+  {
+    "id": "DKR-04-015",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Quel driver permet d'utiliser des volumes sur NFS ?",
+    "options": [
+      "local (avec options nfs)",
+      "nfs",
+      "vieux",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Le driver local peut être configuré avec des options NFS."
+  },
+  {
+    "id": "DKR-04-016",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Comment créer un volume avec un driver spécifique ?",
+    "options": [
+      "docker volume create --driver vieux/sshfs --opt sshcmd=user@host:/remote myvol",
+      "docker volume create -d vieux/sshfs myvol",
+      "docker run -v myvol:/data --volume-driver vieux/sshfs",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "On peut spécifier le driver lors de la création du volume."
+  },
+  {
+    "id": "DKR-04-017",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Backup de volumes",
+    "difficulty": "medium",
+    "question": "Comment sauvegarder le contenu d'un volume ?",
+    "options": [
+      "docker run --rm -v monvolume:/source -v $(pwd):/backup alpine tar czf /backup/backup.tar.gz -C /source .",
+      "docker cp monvolume:/ /backup",
+      "docker volume backup monvolume",
+      "docker export monvolume"
+    ],
+    "correct": 0,
+    "explication": "Monter le volume dans un conteneur temporaire et tar."
+  },
+  {
+    "id": "DKR-04-018",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Backup de volumes",
+    "difficulty": "medium",
+    "question": "Comment restaurer un volume à partir d'une archive ?",
+    "options": [
+      "docker run --rm -v monvolume:/target -v $(pwd):/backup alpine sh -c 'cd /target && tar xzf /backup/backup.tar.gz'",
+      "docker volume restore monvolume backup.tar.gz",
+      "docker cp backup.tar.gz monvolume:/",
+      "docker volume import"
+    ],
+    "correct": 0,
+    "explication": "Utiliser un conteneur temporaire pour extraire l'archive."
+  },
+  {
+    "id": "DKR-04-019",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume permissions",
+    "difficulty": "medium",
+    "question": "Quel utilisateur possède les fichiers dans un volume ?",
+    "options": [
+      "L'utilisateur du conteneur (root par défaut)",
+      "L'utilisateur de l'hôte",
+      "L'utilisateur 1000",
+      "L'utilisateur nobody"
+    ],
+    "correct": 0,
+    "explication": "Les permissions dépendent de l'UID dans le conteneur."
+  },
+  {
+    "id": "DKR-04-020",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume permissions",
+    "difficulty": "medium",
+    "question": "Comment résoudre les problèmes de permission avec les volumes ?",
+    "options": [
+      "Utiliser un utilisateur non root avec le même UID que l'hôte",
+      "Changer les permissions avec une commande RUN dans le Dockerfile",
+      "Utiliser un volume nommé (copie les permissions initiales)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Il faut aligner les UID entre l'hôte et le conteneur."
+  },
+  {
+    "id": "DKR-04-021",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Quel driver de volume est utilisé par défaut ?",
+    "options": ["local", "default", "native", "builtin"],
+    "correct": 0,
+    "explication": "Le driver local gère les volumes sur le système de fichiers de l'hôte."
+  },
+  {
+    "id": "DKR-04-022",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Comment installer un plugin de volume ?",
+    "options": [
+      "docker plugin install <plugin>",
+      "docker volume install <plugin>",
+      "docker plugin enable <plugin>",
+      "docker volume create --driver <plugin>"
+    ],
+    "correct": 0,
+    "explication": "Les plugins se gèrent via docker plugin."
+  },
+  {
+    "id": "DKR-04-023",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts vs volumes",
+    "difficulty": "easy",
+    "question": "Quel type de montage est recommandé pour la persistance des données ?",
+    "options": ["Volumes", "Bind mounts", "tmpfs", "Les deux"],
+    "correct": 0,
+    "explication": "Les volumes sont plus portables et sécurisés."
+  },
+  {
+    "id": "DKR-04-024",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts vs volumes",
+    "difficulty": "easy",
+    "question": "Quel type de montage permet de partager des fichiers de configuration entre l'hôte et le conteneur ?",
+    "options": ["Bind mounts", "Volumes", "tmpfs", "Named pipes"],
+    "correct": 0,
+    "explication": "Bind mount permet de monter un fichier ou répertoire de l'hôte."
+  },
+  {
+    "id": "DKR-04-025",
+    "theme": "Volumes et Stockage",
+    "theme_label": "tmpfs limits",
+    "difficulty": "easy",
+    "question": "Quelle est la taille maximale d'un tmpfs ?",
+    "options": [
+      "Limitée par la mémoire disponible",
+      "50% de la RAM",
+      "1 Go",
+      "Illimitée"
+    ],
+    "correct": 0,
+    "explication": "tmpfs utilise la mémoire, donc limitée par la RAM de l'hôte."
+  },
+  {
+    "id": "DKR-04-026",
+    "theme": "Volumes et Stockage",
+    "theme_label": "tmpfs limits",
+    "difficulty": "easy",
+    "question": "Comment limiter la taille d'un tmpfs ?",
+    "options": [
+      "--tmpfs /app/tmp:size=100m",
+      "--mount type=tmpfs,destination=/app/tmp,tmpfs-size=100m",
+      "Impossible",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "On peut spécifier la taille (ex: 100m)."
+  },
+  {
+    "id": "DKR-04-027",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume CLI",
+    "difficulty": "easy",
+    "question": "Comment afficher l'utilisation de l'espace disque par les volumes ?",
+    "options": [
+      "docker system df",
+      "docker volume ls --size",
+      "docker volume inspect",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "docker system df montre l'utilisation globale, volume ls --size montre la taille de chaque volume."
+  },
+  {
+    "id": "DKR-04-028",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume CLI",
+    "difficulty": "easy",
+    "question": "Comment supprimer un volume même s'il est utilisé ?",
+    "options": [
+      "docker volume rm -f monvolume",
+      "docker volume rm monvolume échouera",
+      "Il faut d'abord supprimer les conteneurs",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "On ne peut pas supprimer un volume attaché à un conteneur en cours."
+  },
+  {
+    "id": "DKR-04-029",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Quel plugin de volume permet le chiffrement ?",
+    "options": ["Volume plugins tiers (ex: netapp, rexray)", "local", "overlay", "bind"],
+    "correct": 0,
+    "explication": "Certains plugins offrent le chiffrement au repos."
+  },
+  {
+    "id": "DKR-04-030",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Comment spécifier des options pour le driver local ?",
+    "options": [
+      "docker volume create --opt type=nfs --opt device=:/export --opt o=addr=192.168.1.1",
+      "docker run -v monvolume:/data --volume-opt type=nfs",
+      "docker volume create -o type=nfs -o device=:/export",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les options sont passées avec --opt lors de la création du volume."
+  },
+  {
+    "id": "DKR-04-031",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume backup",
+    "difficulty": "medium",
+    "question": "Comment sauvegarder un volume directement depuis l'hôte ?",
+    "options": [
+      "tar -czf backup.tar.gz -C /var/lib/docker/volumes/monvolume/_data .",
+      "docker run --rm -v monvolume:/data alpine tar czf /backup/backup.tar.gz -C /data .",
+      "docker volume backup monvolume",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Accès direct ou via conteneur temporaire."
+  },
+  {
+    "id": "DKR-04-032",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume backup",
+    "difficulty": "medium",
+    "question": "Comment restaurer un volume à partir d'un répertoire de l'hôte ?",
+    "options": [
+      "docker run --rm -v monvolume:/target -v /host/backup:/backup alpine cp -r /backup/. /target/",
+      "docker cp /host/backup monvolume:/",
+      "docker volume restore monvolume /host/backup",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs méthodes (cp ou conteneur temporaire)."
+  },
+  {
+    "id": "DKR-04-033",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Dockerfile VOLUME",
+    "difficulty": "easy",
+    "question": "Que fait l'instruction VOLUME dans un Dockerfile ?",
+    "options": [
+      "Déclare un point de montage pour un volume",
+      "Monte un volume",
+      "Crée un volume",
+      "Supprime un volume"
+    ],
+    "correct": 0,
+    "explication": "VOLUME /data empêche de modifier le contenu dans le Dockerfile."
+  },
+  {
+    "id": "DKR-04-034",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Dockerfile VOLUME",
+    "difficulty": "easy",
+    "question": "Peut-on initialiser un volume déclaré avec VOLUME dans le Dockerfile ?",
+    "options": [
+      "Non, les instructions après VOLUME ne peuvent pas modifier ce chemin",
+      "Oui, on peut copier des fichiers avant VOLUME",
+      "Oui, avec COPY après VOLUME",
+      "Non, jamais"
+    ],
+    "correct": 1,
+    "explication": "Les instructions avant VOLUME sont incluses dans le volume initial."
+  },
+  {
+    "id": "DKR-04-035",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes vs anonymous",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un volume anonyme ?",
+    "options": [
+      "Volume créé sans nom (ex: -v /data)",
+      "Volume sans contenu",
+      "Volume temporaire",
+      "Volume non persistant"
+    ],
+    "correct": 0,
+    "explication": "Les volumes anonymes sont difficiles à gérer (nom généré)."
+  },
+  {
+    "id": "DKR-04-036",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes vs anonymous",
+    "difficulty": "easy",
+    "question": "Pourquoi préférer les volumes nommés ?",
+    "options": [
+      "Réutilisables, plus faciles à gérer",
+      "Plus performants",
+      "Plus sécurisés",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les volumes nommés sont recommandés pour la persistance."
+  },
+  {
+    "id": "DKR-04-037",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume sharing",
+    "difficulty": "easy",
+    "question": "Comment partager un volume entre deux conteneurs ?",
+    "options": [
+      "docker run -v monvolume:/data1 conteneur1",
+      "docker run -v monvolume:/data2 conteneur2",
+      "docker run --volumes-from conteneur1",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "On peut utiliser le même volume nommé ou --volumes-from."
+  },
+  {
+    "id": "DKR-04-038",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume sharing",
+    "difficulty": "easy",
+    "question": "Que fait l'option `--volumes-from` ?",
+    "options": [
+      "Monte tous les volumes d'un autre conteneur",
+      "Crée un volume partagé",
+      "Copie les volumes",
+      "Supprime les volumes"
+    ],
+    "correct": 0,
+    "explication": "docker run --volumes-from conteneur_source ..."
+  },
+  {
+    "id": "DKR-04-039",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume consistency",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le mode de cohérence `consistent`, `cached`, `delegated` ?",
+    "options": [
+      "Options pour les bind mounts sur Mac/Windows (performance)",
+      "Options pour les volumes",
+      "Options pour tmpfs",
+      "Options pour les réseaux"
+    ],
+    "correct": 0,
+    "explication": "Ces modes améliorent les performances des bind mounts sur Docker Desktop."
+  },
+  {
+    "id": "DKR-04-040",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Quel driver de volume est utilisé par Docker Desktop pour les partages Mac ?",
+    "options": ["osxfs", "fuse", "virtiofs", "9p"],
+    "correct": 0,
+    "explication": "osxfs (ancien), maintenant virtiofs plus performant."
+  },
+  {
+    "id": "DKR-04-041",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume migration",
+    "difficulty": "hard",
+    "question": "Comment migrer un volume entre deux hôtes Docker ?",
+    "options": [
+      "Sauvegarder et restaurer via tar",
+      "Utiliser docker volume cp",
+      "docker volume migrate",
+      "docker save volume"
+    ],
+    "correct": 0,
+    "explication": "La méthode standard est de sauvegarder en archive et de restaurer."
+  },
+  {
+    "id": "DKR-04-042",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume performance",
+    "difficulty": "hard",
+    "question": "Quel type de montage offre les meilleures performances ?",
+    "options": ["tmpfs (mémoire)", "volumes", "bind mounts", "tous identiques"],
+    "correct": 0,
+    "explication": "tmpfs est en mémoire, donc très rapide mais non persistant."
+  },
+  {
+    "id": "DKR-04-043",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume performance",
+    "difficulty": "hard",
+    "question": "Quel est l'impact sur les performances des volumes sur Docker Desktop Windows ?",
+    "options": [
+      "Les bind mounts sont plus lents (transit par hyperviseur)",
+      "Les volumes sont plus rapides",
+      "Les deux sont équivalents",
+      "Les volumes sont plus lents"
+    ],
+    "correct": 0,
+    "explication": "Les bind mounts traversent la couche de virtualisation, donc plus lents."
+  },
+  {
+    "id": "DKR-04-044",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume troubleshooting",
+    "difficulty": "medium",
+    "question": "Pourquoi un conteneur ne peut-il pas écrire dans un volume monté en bind ?",
+    "options": [
+      "Problème de permission (UID différent)",
+      "Le volume est en lecture seule",
+      "L'hôte n'a pas assez d'espace",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Souvent le problème vient des permissions UID/GID."
+  },
+  {
+    "id": "DKR-04-045",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume troubleshooting",
+    "difficulty": "medium",
+    "question": "Comment vérifier si un volume est utilisé ?",
+    "options": [
+      "docker volume inspect monvolume | grep -A5 Mountpoint",
+      "docker ps -a --filter volume=monvolume",
+      "docker volume ls --filter dangling=true",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "inspect donne les conteneurs utilisateurs, ps peut filtrer."
+  },
+  {
+    "id": "DKR-04-046",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "easy",
+    "question": "Que signifie l'option `nocopy` dans un bind mount ?",
+    "options": [
+      "Empêche la copie des données de l'image vers le volume",
+      "Désactive la copie des fichiers",
+      "Ne pas copier les métadonnées",
+      "Ne pas copier les permissions"
+    ],
+    "correct": 0,
+    "explication": "Lorsqu'un volume vide est monté, Docker copie par défaut le contenu existant. nocopy l'empêche."
+  },
+  {
+    "id": "DKR-04-047",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "easy",
+    "question": "Comment monter un fichier unique en bind mount ?",
+    "options": [
+      "docker run -v /host/file.txt:/container/file.txt",
+      "docker run --mount type=bind,source=/host/file.txt,target=/container/file.txt",
+      "docker run -v /host/file.txt:/container/dir (ne fonctionne pas)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "On peut monter un fichier, mais la cible doit être un fichier."
+  },
+  {
+    "id": "DKR-04-048",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "easy",
+    "question": "Que signifie l'option `z` ou `Z` dans un bind mount SELinux ?",
+    "options": [
+      "Re-label du fichier pour partage (z) ou privé (Z)",
+      "Chiffrement",
+      "Compression",
+      "Permissions"
+    ],
+    "correct": 0,
+    "explication": "Utilisé sur les systèmes SELinux (RHEL/CentOS)."
+  },
+  {
+    "id": "DKR-04-049",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Comment créer un volume avec un driver personnalisé ?",
+    "options": [
+      "docker volume create --driver <driver> monvolume",
+      "docker run -v monvolume:/data --volume-driver <driver>",
+      "docker plugin install <driver>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Le driver doit être installé au préalable."
+  },
+  {
+    "id": "DKR-04-050",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "hard",
+    "question": "Quel plugin de volume est souvent utilisé avec AWS EBS ?",
+    "options": ["rexray/ebs", "docker-volume-ebs", "aws-ebs-plugin", "local"],
+    "correct": 0,
+    "explication": "REX-Ray est un plugin populaire pour EBS."
+  }
+]

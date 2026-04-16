@@ -1,0 +1,32 @@
+[
+  {
+    "id": "GL-01-001",
+    "theme": "GitLab CI/CD",
+    "theme_label": "Configuration CI/CD",
+    "difficulty": "easy",
+    "question": "Quel fichier contient la configuration CI/CD de GitLab ?",
+    "options": [
+      ".gitlab-ci.yml",
+      "gitlab-ci.yml",
+      ".gitlab/cicd.yml",
+      "ci.yml"
+    ],
+    "correct": 0,
+    "explanation": ".gitlab-ci.yml est le fichier de configuration standard pour GitLab CI/CD."
+  },
+  {
+    "id": "GL-01-002",
+    "theme": "GitLab CI/CD",
+    "theme_label": "Configuration CI/CD",
+    "difficulty": "medium",
+    "question": "Que sont les 'stages' dans GitLab CI/CD ?",
+    "options": [
+      "Des étapes séquentielles d'exécution",
+      "Des environnements de déploiement",
+      "Des variables globales",
+      "Des règles conditionnelles"
+    ],
+    "correct": 0,
+    "explanation": "Les stages définissent l'ordre d'exécution des jobs (build, test, deploy)."
+  }
+]

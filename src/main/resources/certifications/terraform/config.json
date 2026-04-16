@@ -1,0 +1,36 @@
+{
+  "id": "terraform",
+  "name": "HashiCorp Terraform Associate (003)",
+  "version": "1.0",
+  "description": "Infrastructure as Code avec Terraform - Provisionnement d'infrastructure multi-cloud",
+  "totalQuestions": 300,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 57,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Terraform Basics",
+      "count": 50
+    },
+    {
+      "name": "Configuration Language",
+      "count": 70
+    },
+    {
+      "name": "State Management",
+      "count": 50
+    },
+    {
+      "name": "Providers & Modules",
+      "count": 50
+    },
+    {
+      "name": "CLI Commands",
+      "count": 40
+    },
+    {
+      "name": "Best Practices",
+      "count": 40
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "github_actions",
+  "name": "GitHub Actions",
+  "version": "1.0",
+  "description": "Certification GitHub Actions - Automatisation CI/CD avec GitHub Actions",
+  "totalQuestions": 200,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Workflows",
+      "count": 60
+    },
+    {
+      "name": "Actions & Runners",
+      "count": 50
+    },
+    {
+      "name": "Environment Variables",
+      "count": 30
+    },
+    {
+      "name": "Security",
+      "count": 30
+    },
+    {
+      "name": "Matrix Builds",
+      "count": 30
+    }
+  ]
+}

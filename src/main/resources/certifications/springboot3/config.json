@@ -1,0 +1,36 @@
+{
+  "id": "springboot3",
+  "name": "Spring Boot 3 Professional",
+  "version": "1.0",
+  "description": "Certification Spring Boot 3 - Développement d'applications microservices avec Spring Boot, auto-configuration, starters et actuators",
+  "totalQuestions": 300,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Spring Boot Auto-configuration",
+      "count": 60
+    },
+    {
+      "name": "Spring Boot Starters",
+      "count": 50
+    },
+    {
+      "name": "Spring Boot Actuator",
+      "count": 50
+    },
+    {
+      "name": "Spring Boot Testing",
+      "count": 50
+    },
+    {
+      "name": "Spring Boot DevTools",
+      "count": 40
+    },
+    {
+      "name": "Spring Boot with Docker",
+      "count": 50
+    }
+  ]
+}

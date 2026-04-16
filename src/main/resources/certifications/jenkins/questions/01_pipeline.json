@@ -1,0 +1,32 @@
+[
+  {
+    "id": "JEN-01-001",
+    "theme": "Pipeline as Code",
+    "theme_label": "Jenkinsfile et syntaxe Pipeline",
+    "difficulty": "medium",
+    "question": "Quelle est la syntaxe correcte pour déclarer un pipeline Jenkins ?",
+    "options": [
+      "pipeline { agent any; stages { stage('Build') { steps { echo 'Building' } } } }",
+      "node { stage('Build') { echo 'Building' } }",
+      "Les deux sont correctes",
+      "Aucune des deux"
+    ],
+    "correct": 2,
+    "explanation": "Les deux syntaxes existent : Declarative Pipeline (pipeline) et Scripted Pipeline (node)."
+  },
+  {
+    "id": "JEN-01-002",
+    "theme": "Pipeline as Code",
+    "theme_label": "Jenkinsfile et syntaxe Pipeline",
+    "difficulty": "hard",
+    "question": "Que fait l'option 'when' dans un stage de pipeline déclaratif ?",
+    "options": [
+      "Définit quand exécuter le stage",
+      "Définit la durée du stage",
+      "Définit les conditions de succès",
+      "Définit les variables d'environnement"
+    ],
+    "correct": 0,
+    "explanation": "La directive 'when' permet d'exécuter un stage conditionnellement."
+  }
+]

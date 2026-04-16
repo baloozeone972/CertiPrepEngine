@@ -1,831 +1,902 @@
 [
-{
-"id": "J21-04-001",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle interface est à la racine de la hiérarchie des collections (hors Map) ?",
-"options": ["Collection", "Iterable", "List", "Set"],
-"correct": 0,
-"explanation": "Collection est l'interface racine pour List, Set, Queue. Iterable est au-dessus de Collection (permet le foreach)."
-},
-
-{
-"id": "J21-04-002",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle est la différence principale entre List et Set ?",
-"options": [
-  "List est ordonné et accepte les doublons, Set n'est pas ordonné et n'accepte pas les doublons",
-  "List est plus rapide que Set",
-  "Set est plus rapide que List",
-  "List ne peut contenir que des objets, Set que des primitives"
-],
-"correct": 0,
-"explanation": "List maintient l'ordre d'insertion et permet les éléments en double. Set ne permet pas de doublons (basé sur equals/hashCode)."
-},
-
-{
-"id": "J21-04-003",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle implémentation de List est la plus utilisée pour un accès aléatoire rapide ?",
-"options": ["LinkedList", "ArrayList", "Vector", "Stack"],
-"correct": 1,
-"explanation": "ArrayList est basé sur un tableau, offrant un accès O(1) par index. LinkedList a un accès O(n)."
-},
-
-{
-"id": "J21-04-004",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle implémentation de List est préférable pour des insertions/suppressions fréquentes au milieu ?",
-"options": ["ArrayList", "LinkedList", "Vector", "CopyOnWriteArrayList"],
-"correct": 1,
-"explanation": "LinkedList est basé sur une liste chaînée, offrant des insertions/suppressions O(1) au milieu (après avoir trouvé la position)."
-},
-
-{
-"id": "J21-04-005",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle implémentation de Set garantit l'ordre d'insertion ?",
-"options": ["HashSet", "TreeSet", "LinkedHashSet", "EnumSet"],
-"correct": 2,
-"explanation": "LinkedHashSet maintient l'ordre d'insertion via une liste chaînée. HashSet n'a pas d'ordre, TreeSet est trié."
-},
-
-{
-"id": "J21-04-006",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle implémentation de Set trie les éléments ?",
-"options": ["HashSet", "TreeSet", "LinkedHashSet", "Set.of()"],
-"correct": 1,
-"explanation": "TreeSet implémente SortedSet et maintient les éléments triés (ordre naturel ou via Comparator)."
-},
-
-{
-"id": "J21-04-007",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle est la complexité temporelle moyenne pour contains() dans un HashSet ?",
-"options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
-"correct": 0,
-"explanation": "HashSet utilise une table de hachage, donc contains() est O(1) en moyenne. O(n) dans le pire cas (beaucoup de collisions)."
-},
-
-{
-"id": "J21-04-008",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle interface Map conserve l'ordre d'insertion ?",
-"options": ["HashMap", "TreeMap", "LinkedHashMap", "Hashtable"],
-"correct": 2,
-"explanation": "LinkedHashMap maintient l'ordre d'insertion ou l'ordre d'accès (si accessOrder=true)."
-},
-
-{
-"id": "J21-04-009",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle implémentation de Map trie les clés ?",
-"options": ["HashMap", "TreeMap", "LinkedHashMap", "ConcurrentHashMap"],
-"correct": 1,
-"explanation": "TreeMap implémente SortedMap et maintient les clés triées selon l'ordre naturel ou un Comparator."
-},
-
-{
-"id": "J21-04-010",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Que signifie la capacité initiale d'un HashMap ?",
-"options": [
-  "Le nombre maximum d'éléments",
-  "Le nombre de buckets au moment de la création",
-  "La taille de chaque bucket",
-  "Le seuil de rehachage"
-],
-"correct": 1,
-"explanation": "La capacité initiale est le nombre de buckets (cases) dans la table de hachage à la création. Par défaut 16."
-},
-
-{
-"id": "J21-04-011",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<String> list = new ArrayList<>();\nlist.add(\"A\");\nlist.add(\"B\");\nlist.add(1, \"C\");\nSystem.out.println(list);\n```",
-"options": ["[A, B, C]", "[A, C, B]", "[C, A, B]", "[A, B]"],
-"correct": 1,
-"explanation": "add(1, \"C\") insère à l'index 1. Liste initiale [A, B] → après insertion [A, C, B]."
-},
-
-{
-"id": "J21-04-012",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nSet<Integer> set = new HashSet<>();\nset.add(1);\nset.add(2);\nset.add(1);\nSystem.out.println(set.size());\n```",
-"options": ["3", "2", "1", "0"],
-"correct": 1,
-"explanation": "HashSet n'accepte pas les doublons. 1 est ajouté une seule fois → taille = 2."
-},
-
-{
-"id": "J21-04-013",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nMap<String, Integer> map = new HashMap<>();\nmap.put(\"A\", 1);\nmap.put(\"A\", 2);\nSystem.out.println(map.get(\"A\"));\n```",
-"options": ["1", "2", "null", "Erreur"],
-"correct": 1,
-"explanation": "put() avec une clé existante remplace l'ancienne valeur. La nouvelle valeur est 2."
-},
-
-{
-"id": "J21-04-014",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<Integer> list = Arrays.asList(1, 2, 3);\nlist.add(4);\nSystem.out.println(list);\n```",
-"options": ["[1, 2, 3, 4]", "Erreur - UnsupportedOperationException", "[1, 2, 3]", "NullPointerException"],
-"correct": 1,
-"explanation": "Arrays.asList() retourne une liste de taille fixe. add() n'est pas supporté → UnsupportedOperationException."
-},
-
-{
-"id": "J21-04-015",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Comment créer une liste immuable (non modifiable) en Java 9+ ?",
-"options": [
-  "new ArrayList<>(Arrays.asList(1,2,3))",
-  "List.of(1, 2, 3)",
-  "Collections.unmodifiableList()",
-  "B et C sont correctes"
-],
-"correct": 3,
-"explanation": "List.of() (Java 9+) crée une liste immuable. Collections.unmodifiableList() crée une vue non modifiable mais la liste sous-jacente peut l'être."
-},
-
-{
-"id": "J21-04-016",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Quelle est la différence entre Collection.remove() et Iterator.remove() ?",
-"options": [
-  "Aucune différence",
-  "Iterator.remove() peut être appelé pendant l'itération, pas Collection.remove()",
-  "Collection.remove() est plus rapide",
-  "Iterator.remove() lève une exception si la collection est vide"
-],
-"correct": 1,
-"explanation": "Pendant l'itération, appeler Collection.remove() cause ConcurrentModificationException. Iterator.remove() est sûr."
-},
-
-{
-"id": "J21-04-017",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<Integer> list = new ArrayList<>(List.of(1,2,3));\nfor (Integer i : list) {\n    if (i == 2) list.remove(i);\n}\n```",
-"options": [
-  "[1, 3]",
-  "ConcurrentModificationException",
-  "[1, 2, 3]",
-  "IndexOutOfBoundsException"
-],
-"correct": 1,
-"explanation": "Modifier une collection pendant une itération foreach (qui utilise un Iterator implicite) lève ConcurrentModificationException."
-},
-
-{
-"id": "J21-04-018",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Comment supprimer correctement des éléments pendant l'itération ?",
-"options": [
-  "Utiliser Iterator.remove()",
-  "Utiliser Collection.removeIf()",
-  "Utiliser une copie de la collection",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Trois méthodes sûres : Iterator.remove(), removeIf(Predicate) (Java 8+), ou itérer sur une copie."
-},
-
-{
-"id": "J21-04-019",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle est la capacité par défaut d'un ArrayList ?",
-"options": ["10", "16", "0", "Dépend de la JVM"],
-"correct": 0,
-"explanation": "ArrayList a une capacité initiale par défaut de 10 éléments. Il s'agrandit automatiquement quand nécessaire."
-},
-
-{
-"id": "J21-04-020",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle est la capacité par défaut d'un HashMap ?",
-"options": ["10", "16", "32", "8"],
-"correct": 1,
-"explanation": "HashMap a une capacité initiale par défaut de 16 buckets. Le facteur de charge par défaut est 0.75."
-},
-
-{
-"id": "J21-04-021",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Qu'est-ce que le 'load factor' d'un HashMap ?",
-"options": [
-  "Le ratio taille/capacité qui déclenche le rehachage",
-  "Le nombre moyen d'éléments par bucket",
-  "La limite avant débordement",
-  "A et B sont correctes"
-],
-"correct": 3,
-"explanation": "Le load factor (0.75 par défaut) détermine quand rehasher : quand nombre éléments > capacité × load factor."
-},
-
-{
-"id": "J21-04-022",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nQueue<String> queue = new LinkedList<>();\nqueue.offer(\"A\");\nqueue.offer(\"B\");\nSystem.out.println(queue.poll());\nSystem.out.println(queue.peek());\n```",
-"options": ["A B", "A A", "B B", "A null"],
-"correct": 0,
-"explanation": "offer() ajoute, poll() retire et retourne la tête (A), peek() regarde sans retirer (B restant)."
-},
-
-{
-"id": "J21-04-023",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Différence entre poll() et remove() d'une Queue ?",
-"options": [
-  "poll() retourne null si vide, remove() lève NoSuchElementException",
-  "remove() retourne null si vide, poll() lève exception",
-  "Pas de différence",
-  "poll() est plus rapide"
-],
-"correct": 0,
-"explanation": "poll() retourne null quand la file est vide. remove() lève NoSuchElementException."
-},
-
-{
-"id": "J21-04-024",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nDeque<String> deque = new ArrayDeque<>();\ndeque.push(\"A\");\ndeque.push(\"B\");\nSystem.out.println(deque.pop());\n```",
-"options": ["A", "B", "null", "NoSuchElementException"],
-"correct": 1,
-"explanation": "push() ajoute en tête, pop() retire de la tête (LIFO). B a été ajouté après A → B sort en premier."
-},
-
-{
-"id": "J21-04-025",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle est la différence entre ArrayDeque et LinkedList comme Deque ?",
-"options": [
-  "ArrayDeque est plus rapide pour la plupart des opérations",
-  "LinkedList implémente aussi List",
-  "ArrayDeque n'accepte pas les éléments null",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ArrayDeque est plus performant, n'accepte pas null, mais LinkedList implémente aussi List et accepte null."
-},
-
-{
-"id": "J21-04-026",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Que sont les 'weak references' dans WeakHashMap ?",
-"options": [
-  "Les clés peuvent être garbage collectées",
-  "Les valeurs peuvent être garbage collectées",
-  "Les entrées sont automatiquement supprimées",
-  "A et C sont correctes"
-],
-"correct": 3,
-"explanation": "WeakHashMap utilise des WeakReference pour les clés. Si une clé n'a plus de référence forte, elle peut être GC et l'entrée est supprimée."
-},
-
-{
-"id": "J21-04-027",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nTreeSet<Integer> set = new TreeSet<>();\nset.add(5);\nset.add(2);\nset.add(8);\nSystem.out.println(set.first());\n```",
-"options": ["2", "5", "8", "null"],
-"correct": 0,
-"explanation": "TreeSet trie les éléments. first() retourne le plus petit élément (2)."
-},
-
-{
-"id": "J21-04-028",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit 'TreeSet<Integer> set = new TreeSet<>(); set.add(null);' ?",
-"options": [
-  "Ajoute null",
-  "NullPointerException",
-  "ClassCastException",
-  "Compilation OK, runtime NPE"
-],
-"correct": 3,
-"explanation": "TreeSet utilise compareTo() pour trier. null ne peut pas être comparé → NullPointerException à l'exécution."
-},
-
-{
-"id": "J21-04-029",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Que signifie le type générique 'T' dans une classe ?",
-"options": [
-  "Type paramètre (Type Parameter)",
-  "Test",
-  "Template",
-  "Temporary"
-],
-"correct": 0,
-"explanation": "T est une convention pour Type Parameter. On peut utiliser n'importe quel identifiant, mais T, E (Element), K (Key), V (Value) sont des conventions."
-},
-
-{
-"id": "J21-04-030",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quel est l'intérêt des génériques en Java ?",
-"options": [
-  "La sécurité de type à la compilation",
-  "Éviter les casts explicites",
-  "Réutiliser du code avec différents types",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Les génériques apportent la sécurité de type (type-safety) et éliminent les casts. L'inférence de type est aussi améliorée."
-},
-
-{
-"id": "J21-04-031",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que signifie 'List<? extends Number>' ?",
-"options": [
-  "Liste de Number ou de ses sous-types (Integer, Double...)",
-  "Liste de Number uniquement",
-  "Liste de tout type",
-  "Liste de types non Number"
-],
-"correct": 0,
-"explanation": "? extends Number est un upper bounded wildcard. On peut lire des Number, mais on ne peut pas ajouter (sauf null)."
-},
-
-{
-"id": "J21-04-032",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que signifie 'List<? super Integer>' ?",
-"options": [
-  "Liste de Integer ou de ses super-types (Number, Object)",
-  "Liste de Integer uniquement",
-  "Liste de sous-types de Integer",
-  "Liste de tout type"
-],
-"correct": 0,
-"explanation": "? super Integer est un lower bounded wildcard. On peut ajouter des Integer, mais on lit des Object."
-},
-
-{
-"id": "J21-04-033",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Quel est le principe PECS (Producer Extends, Consumer Super) ?",
-"options": [
-  "Pour lire (produire) : ? extends, pour écrire (consommer) : ? super",
-  "Pour lire : ? super, pour écrire : ? extends",
-  "PEC S n'a pas de sens",
-  "Uniquement pour les streams"
-],
-"correct": 0,
-"explanation": "PECS : Producer Extends (si on lit, on utilise ? extends), Consumer Super (si on écrit, on utilise ? super)."
-},
-
-{
-"id": "J21-04-034",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que se passe-t-il à l'exécution avec les génériques ?",
-"options": [
-  "Les types génériques sont préservés",
-  "L'effacement des types (type erasure) supprime les informations génériques",
-  "Les génériques sont réifiés",
-  "Les types sont vérifiés à l'exécution"
-],
-"correct": 1,
-"explanation": "Java utilise l'effacement des types (type erasure). Les informations génériques sont disponibles à la compilation mais effacées à l'exécution."
-},
-
-{
-"id": "J21-04-035",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit 'new ArrayList<String>().getClass() == new ArrayList<Integer>().getClass()' ?",
-"options": ["true", "false", "Erreur compilation", "ClassCastException"],
-"correct": 0,
-"explanation": "Type erasure : à l'exécution, les deux sont ArrayList.class. Donc true."
-},
-
-{
-"id": "J21-04-036",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Qu'est-ce qu'un 'raw type' en Java ?",
-"options": [
-  "Une collection sans paramètre générique",
-  "Une collection qui accepte tout type",
-  "List list = new ArrayList() (sans <>)",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Un raw type est l'utilisation d'un type générique sans paramètre. Ex: List list (au lieu de List<String>). À éviter."
-},
-
-{
-"id": "J21-04-037",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<String> strings = new ArrayList<>();\nList raw = strings;\nraw.add(42);\nString s = strings.get(0);\n```",
-"options": [
-  "ClassCastException",
-  "Compilation OK, runtime erreur",
-  "Compilation error",
-  "42 est converti en String"
-],
-"correct": 0,
-"explanation": "Le raw type permet d'ajouter un Integer. Mais strings.get(0) tente de cast en String → ClassCastException."
-},
-
-{
-"id": "J21-04-038",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<?> list = new ArrayList<String>();\nlist.add(\"hello\");\n```",
-"options": [
-  "Compilation OK",
-  "Erreur compilation : cannot add to wildcard type",
-  "Runtime exception",
-  "Ajoute hello"
-],
-"correct": 1,
-"explanation": "List<?> est une liste de type inconnu. On ne peut rien ajouter (sauf null) car le type n'est pas connu."
-},
-
-{
-"id": "J21-04-039",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que signifie le 'diamond operator' <> ?",
-"options": [
-  "Inférence de type générique",
-  "Déclaration d'un type brut",
-  "Création d'un type générique anonyme",
-  "Opérateur de comparaison"
-],
-"correct": 0,
-"explanation": "Le diamond operator (<>) permet au compilateur d'inférer le type générique du côté droit. Ex: List<String> list = new ArrayList<>();"
-},
-
-{
-"id": "J21-04-040",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Quelle interface permet de comparer des objets pour le tri ?",
-"options": ["Comparable", "Comparator", "Comparable et Comparator", "Comparer"],
-"correct": 2,
-"explanation": "Comparable (ordre naturel, méthode compareTo) et Comparator (ordre externe, méthode compare) permettent le tri."
-},
-
-{
-"id": "J21-04-041",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<String> list = new ArrayList<>();\nlist.add(\"B\");\nlist.add(\"A\");\nCollections.sort(list);\nSystem.out.println(list);\n```",
-"options": ["[A, B]", "[B, A]", "[B, A]", "Erreur"],
-"correct": 0,
-"explanation": "Collections.sort() trie dans l'ordre naturel (String est Comparable, ordre alphabétique)."
-},
-
-{
-"id": "J21-04-042",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Comment trier une liste dans l'ordre inverse ?",
-"options": [
-  "Collections.sort(list, Collections.reverseOrder())",
-  "Collections.reverse(list)",
-  "list.sort(Comparator.reverseOrder())",
-  "A et C sont correctes"
-],
-"correct": 3,
-"explanation": "Collections.reverseOrder() ou Comparator.reverseOrder() pour tri inversé. Collections.reverse() inverse l'ordre existant sans tri."
-},
-
-{
-"id": "J21-04-043",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<Person> persons = new ArrayList<>();\npersons.add(new Person(\"Alice\"));\npersons.add(new Person(\"Bob\"));\nCollections.sort(persons);\n```\n(si Person n'implémente pas Comparable)",
-"options": [
-  "Tri par ordre alphabétique",
-  "Compilation error",
-  "Runtime ClassCastException",
-  "Tri par ordre d'insertion"
-],
-"correct": 1,
-"explanation": "Si Person n'implémente pas Comparable, Collections.sort() ne compile pas car il ne sait pas comment comparer."
-},
-
-{
-"id": "J21-04-044",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<Integer> list = Arrays.asList(1, 2, 3);\nlist.replaceAll(x -> x * 2);\nSystem.out.println(list);\n```",
-"options": ["[2, 4, 6]", "[1, 2, 3]", "Erreur", "[1, 4, 9]"],
-"correct": 0,
-"explanation": "replaceAll() applique un UnaryOperator à chaque élément. Multiplie chaque élément par 2."
-},
-
-{
-"id": "J21-04-045",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que fait 'Map.computeIfAbsent()' ?",
-"options": [
-  "Calcule une valeur si la clé est absente",
-  "Ajoute une valeur par défaut",
-  "Supprime la clé si absente",
-  "Met à jour toutes les clés"
-],
-"correct": 0,
-"explanation": "computeIfAbsent(key, mappingFunction) calcule et ajoute une valeur si la clé n'existe pas ou est associée à null."
-},
-
-{
-"id": "J21-04-046",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nMap<String, Integer> map = new HashMap<>();\nmap.put(\"A\", 1);\nmap.merge(\"A\", 2, Integer::sum);\nSystem.out.println(map.get(\"A\"));\n```",
-"options": ["1", "2", "3", "null"],
-"correct": 2,
-"explanation": "merge() combine l'ancienne valeur (1) avec la nouvelle (2) via la fonction sum → 3."
-},
-
-{
-"id": "J21-04-047",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Quelle est la différence entre HashMap et ConcurrentHashMap ?",
-"options": [
-  "ConcurrentHashMap est thread-safe",
-  "ConcurrentHashMap n'accepte pas les clés null",
-  "ConcurrentHashMap permet des opérations concurrentes",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ConcurrentHashMap est thread-safe, n'accepte pas null (clé ni valeur), et supporte un haut niveau de concurrence."
-},
-
-{
-"id": "J21-04-048",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<Integer> list = List.of(1, 2, 3);\nlist.add(4);\n```",
-"options": [
-  "[1, 2, 3, 4]",
-  "UnsupportedOperationException",
-  "IllegalArgumentException",
-  "NullPointerException"
-],
-"correct": 1,
-"explanation": "List.of() crée une liste immuable. Toute tentative de modification lève UnsupportedOperationException."
-},
-
-{
-"id": "J21-04-049",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Comment créer une copie défensive d'une liste ?",
-"options": [
-  "new ArrayList<>(original)",
-  "List.copyOf(original)",
-  "original.clone()",
-  "A et B sont correctes"
-],
-"correct": 3,
-"explanation": "new ArrayList<>(original) et List.copyOf() créent des copies. copyOf() crée une liste immuable."
-},
-
-{
-"id": "J21-04-050",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que sont les 'NavigableMap' et 'NavigableSet' ?",
-"options": [
-  "Interfaces avec des méthodes comme lower(), ceiling(), floor()",
-  "Extensions de SortedMap/SortedSet",
-  "Permettent de naviguer entre les éléments",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "NavigableMap/Set (Java 6+) ajoutent des méthodes pour trouver les plus proches voisins : lower(), floor(), ceiling(), higher()."
-},
-
-{
-"id": "J21-04-051",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Que produit ce code ?\n```java\nTreeMap<Integer, String> map = new TreeMap<>();\nmap.put(1, \"A\");\nmap.put(3, \"C\");\nmap.put(5, \"E\");\nSystem.out.println(map.ceilingKey(4));\n```",
-"options": ["3", "4", "5", "null"],
-"correct": 2,
-"explanation": "ceilingKey() retourne la plus petite clé ≥ à la clé donnée. 5 ≥ 4, donc retourne 5."
-},
-
-{
-"id": "J21-04-052",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Que produit 'map.floorKey(4)' avec le même map ?",
-"options": ["3", "4", "5", "null"],
-"correct": 0,
-"explanation": "floorKey() retourne la plus grande clé ≤ à la clé donnée. 3 ≤ 4, donc retourne 3."
-},
-
-{
-"id": "J21-04-053",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que sont les 'BlockingQueue' ?",
-"options": [
-  "File d'attente thread-safe avec opérations bloquantes",
-  "File d'attente avec capacité limitée",
-  "Utilisée dans les patterns producteur-consommateur",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "BlockingQueue (package java.util.concurrent) fournit put()/take() qui bloquent si pleine/vide."
-},
-
-{
-"id": "J21-04-054",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Quelle implémentation de BlockingQueue est généralement la plus performante ?",
-"options": ["ArrayBlockingQueue", "LinkedBlockingQueue", "PriorityBlockingQueue", "DelayQueue"],
-"correct": 0,
-"explanation": "ArrayBlockingQueue est basée sur un tableau circulaire, très performante pour une capacité fixe. LinkedBlockingQueue est optionnellement bornée."
-},
-
-{
-"id": "J21-04-055",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que signifie 'fail-fast iterator' ?",
-"options": [
-  "Lève ConcurrentModificationException si la collection est modifiée pendant l'itération",
-  "Itère très rapidement",
-  "Ne fonctionne qu'avec des threads",
-  "Ignore les modifications"
-],
-"correct": 0,
-"explanation": "Les itérateurs des collections java.util sont fail-fast : ils détectent les modifications concurrentes et lèvent ConcurrentModificationException."
-},
-
-{
-"id": "J21-04-056",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Que sont les 'copy-on-write' collections ?",
-"options": [
-  "Créent une copie à chaque modification",
-  "Sont thread-safe sans verrouillage",
-  "Conviennent pour des lectures fréquentes, rares modifications",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "CopyOnWriteArrayList et CopyOnWriteArraySet créent une nouvelle copie du tableau à chaque modification. Les itérateurs ne lèvent pas ConcurrentModificationException."
-},
-
-{
-"id": "J21-04-057",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "hard",
-"question": "Qu'est-ce que 'EnumSet' et 'EnumMap' ?",
-"options": [
-  "Implémentations optimisées pour les clés de type enum",
-  "Utilisent des bit masks pour EnumSet",
-  "Sont très performants",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "EnumSet et EnumMap sont des implémentations spécialisées pour les enums. EnumSet utilise un BitSet interne, très compact et rapide."
-},
-
-{
-"id": "J21-04-058",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Comment créer un EnumSet de toutes les constantes d'une enum ?",
-"options": [
-  "EnumSet.allOf(Day.class)",
-  "EnumSet.of(Day.values())",
-  "new EnumSet<>(Day.class)",
-  "Day.values()"
-],
-"correct": 0,
-"explanation": "EnumSet.allOf(Class) retourne un EnumSet contenant toutes les constantes de l'enum spécifiée."
-},
-
-{
-"id": "J21-04-059",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "easy",
-"question": "Que signifie 'Collection' vs 'Collections' ?",
-"options": [
-  "Collection est une interface, Collections une classe utilitaire",
-  "Collections est une interface, Collection une classe",
-  "Ce sont des synonymes",
-  "Collection est pour les List, Collections pour les Set"
-],
-"correct": 0,
-"explanation": "Collection (interface racine) vs Collections (classe utilitaire avec méthodes statiques comme sort(), reverse(), etc.)."
-},
-
-{
-"id": "J21-04-060",
-"theme": "Collections et Génériques",
-"theme_label": "Collections Framework - List, Set, Map, Queue",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nList<Integer> list = new ArrayList<>(List.of(1, 2, 3, 2, 1));\nSet<Integer> set = new LinkedHashSet<>(list);\nSystem.out.println(set);\n```",
-"options": ["[1, 2, 3]", "[1, 2, 3, 2, 1]", "[3, 2, 1]", "Erreur"],
-"correct": 0,
-"explanation": "LinkedHashSet supprime les doublons tout en conservant l'ordre d'apparition (1, puis 2, puis 3)."
-}
+  {
+    "id": "J21-04-001",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle interface est à la racine de la hiérarchie des collections (hors Map) ?",
+    "options": [
+      "Collection",
+      "Iterable",
+      "List",
+      "Set"
+    ],
+    "correct": 0,
+    "explanation": "Collection est l'interface racine pour List, Set, Queue. Iterable est au-dessus de Collection (permet le foreach)."
+  },
+  {
+    "id": "J21-04-002",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle est la différence principale entre List et Set ?",
+    "options": [
+      "List est ordonné et accepte les doublons, Set n'est pas ordonné et n'accepte pas les doublons",
+      "List est plus rapide que Set",
+      "Set est plus rapide que List",
+      "List ne peut contenir que des objets, Set que des primitives"
+    ],
+    "correct": 0,
+    "explanation": "List maintient l'ordre d'insertion et permet les éléments en double. Set ne permet pas de doublons (basé sur equals/hashCode)."
+  },
+  {
+    "id": "J21-04-003",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle implémentation de List est la plus utilisée pour un accès aléatoire rapide ?",
+    "options": [
+      "LinkedList",
+      "ArrayList",
+      "Vector",
+      "Stack"
+    ],
+    "correct": 1,
+    "explanation": "ArrayList est basé sur un tableau, offrant un accès O(1) par index. LinkedList a un accès O(n)."
+  },
+  {
+    "id": "J21-04-004",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle implémentation de List est préférable pour des insertions/suppressions fréquentes au milieu ?",
+    "options": [
+      "ArrayList",
+      "LinkedList",
+      "Vector",
+      "CopyOnWriteArrayList"
+    ],
+    "correct": 1,
+    "explanation": "LinkedList est basé sur une liste chaînée, offrant des insertions/suppressions O(1) au milieu (après avoir trouvé la position)."
+  },
+  {
+    "id": "J21-04-005",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle implémentation de Set garantit l'ordre d'insertion ?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "LinkedHashSet",
+      "EnumSet"
+    ],
+    "correct": 2,
+    "explanation": "LinkedHashSet maintient l'ordre d'insertion via une liste chaînée. HashSet n'a pas d'ordre, TreeSet est trié."
+  },
+  {
+    "id": "J21-04-006",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle implémentation de Set trie les éléments ?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "LinkedHashSet",
+      "Set.of()"
+    ],
+    "correct": 1,
+    "explanation": "TreeSet implémente SortedSet et maintient les éléments triés (ordre naturel ou via Comparator)."
+  },
+  {
+    "id": "J21-04-007",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle est la complexité temporelle moyenne pour contains() dans un HashSet ?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "correct": 0,
+    "explanation": "HashSet utilise une table de hachage, donc contains() est O(1) en moyenne. O(n) dans le pire cas (beaucoup de collisions)."
+  },
+  {
+    "id": "J21-04-008",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle interface Map conserve l'ordre d'insertion ?",
+    "options": [
+      "HashMap",
+      "TreeMap",
+      "LinkedHashMap",
+      "Hashtable"
+    ],
+    "correct": 2,
+    "explanation": "LinkedHashMap maintient l'ordre d'insertion ou l'ordre d'accès (si accessOrder=true)."
+  },
+  {
+    "id": "J21-04-009",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle implémentation de Map trie les clés ?",
+    "options": [
+      "HashMap",
+      "TreeMap",
+      "LinkedHashMap",
+      "ConcurrentHashMap"
+    ],
+    "correct": 1,
+    "explanation": "TreeMap implémente SortedMap et maintient les clés triées selon l'ordre naturel ou un Comparator."
+  },
+  {
+    "id": "J21-04-010",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Que signifie la capacité initiale d'un HashMap ?",
+    "options": [
+      "Le nombre maximum d'éléments",
+      "Le nombre de buckets au moment de la création",
+      "La taille de chaque bucket",
+      "Le seuil de rehachage"
+    ],
+    "correct": 1,
+    "explanation": "La capacité initiale est le nombre de buckets (cases) dans la table de hachage à la création. Par défaut 16."
+  },
+  {
+    "id": "J21-04-011",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<String> list = new ArrayList<>();\nlist.add(\"A\");\nlist.add(\"B\");\nlist.add(1, \"C\");\nSystem.out.println(list);\n```",
+    "options": [
+      "[A, B, C]",
+      "[A, C, B]",
+      "[C, A, B]",
+      "[A, B]"
+    ],
+    "correct": 1,
+    "explanation": "add(1, \"C\") insère à l'index 1. Liste initiale [A, B] → après insertion [A, C, B]."
+  },
+  {
+    "id": "J21-04-012",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nSet<Integer> set = new HashSet<>();\nset.add(1);\nset.add(2);\nset.add(1);\nSystem.out.println(set.size());\n```",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "HashSet n'accepte pas les doublons. 1 est ajouté une seule fois → taille = 2."
+  },
+  {
+    "id": "J21-04-013",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nMap<String, Integer> map = new HashMap<>();\nmap.put(\"A\", 1);\nmap.put(\"A\", 2);\nSystem.out.println(map.get(\"A\"));\n```",
+    "options": [
+      "1",
+      "2",
+      "null",
+      "Erreur"
+    ],
+    "correct": 1,
+    "explanation": "put() avec une clé existante remplace l'ancienne valeur. La nouvelle valeur est 2."
+  },
+  {
+    "id": "J21-04-014",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<Integer> list = Arrays.asList(1, 2, 3);\nlist.add(4);\nSystem.out.println(list);\n```",
+    "options": [
+      "[1, 2, 3, 4]",
+      "Erreur - UnsupportedOperationException",
+      "[1, 2, 3]",
+      "NullPointerException"
+    ],
+    "correct": 1,
+    "explanation": "Arrays.asList() retourne une liste de taille fixe. add() n'est pas supporté → UnsupportedOperationException."
+  },
+  {
+    "id": "J21-04-015",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Comment créer une liste immuable (non modifiable) en Java 9+ ?",
+    "options": [
+      "new ArrayList<>(Arrays.asList(1,2,3))",
+      "List.of(1, 2, 3)",
+      "Collections.unmodifiableList()",
+      "B et C sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "List.of() (Java 9+) crée une liste immuable. Collections.unmodifiableList() crée une vue non modifiable mais la liste sous-jacente peut l'être."
+  },
+  {
+    "id": "J21-04-016",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre Collection.remove() et Iterator.remove() ?",
+    "options": [
+      "Aucune différence",
+      "Iterator.remove() peut être appelé pendant l'itération, pas Collection.remove()",
+      "Collection.remove() est plus rapide",
+      "Iterator.remove() lève une exception si la collection est vide"
+    ],
+    "correct": 1,
+    "explanation": "Pendant l'itération, appeler Collection.remove() cause ConcurrentModificationException. Iterator.remove() est sûr."
+  },
+  {
+    "id": "J21-04-017",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<Integer> list = new ArrayList<>(List.of(1,2,3));\nfor (Integer i : list) {\n    if (i == 2) list.remove(i);\n}\n```",
+    "options": [
+      "[1, 3]",
+      "ConcurrentModificationException",
+      "[1, 2, 3]",
+      "IndexOutOfBoundsException"
+    ],
+    "correct": 1,
+    "explanation": "Modifier une collection pendant une itération foreach (qui utilise un Iterator implicite) lève ConcurrentModificationException."
+  },
+  {
+    "id": "J21-04-018",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Comment supprimer correctement des éléments pendant l'itération ?",
+    "options": [
+      "Utiliser Iterator.remove()",
+      "Utiliser Collection.removeIf()",
+      "Utiliser une copie de la collection",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Trois méthodes sûres : Iterator.remove(), removeIf(Predicate) (Java 8+), ou itérer sur une copie."
+  },
+  {
+    "id": "J21-04-019",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle est la capacité par défaut d'un ArrayList ?",
+    "options": [
+      "10",
+      "16",
+      "0",
+      "Dépend de la JVM"
+    ],
+    "correct": 0,
+    "explanation": "ArrayList a une capacité initiale par défaut de 10 éléments. Il s'agrandit automatiquement quand nécessaire."
+  },
+  {
+    "id": "J21-04-020",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle est la capacité par défaut d'un HashMap ?",
+    "options": [
+      "10",
+      "16",
+      "32",
+      "8"
+    ],
+    "correct": 1,
+    "explanation": "HashMap a une capacité initiale par défaut de 16 buckets. Le facteur de charge par défaut est 0.75."
+  },
+  {
+    "id": "J21-04-021",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que le 'load factor' d'un HashMap ?",
+    "options": [
+      "Le ratio taille/capacité qui déclenche le rehachage",
+      "Le nombre moyen d'éléments par bucket",
+      "La limite avant débordement",
+      "A et B sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "Le load factor (0.75 par défaut) détermine quand rehasher : quand nombre éléments > capacité × load factor."
+  },
+  {
+    "id": "J21-04-022",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nQueue<String> queue = new LinkedList<>();\nqueue.offer(\"A\");\nqueue.offer(\"B\");\nSystem.out.println(queue.poll());\nSystem.out.println(queue.peek());\n```",
+    "options": [
+      "A B",
+      "A A",
+      "B B",
+      "A null"
+    ],
+    "correct": 0,
+    "explanation": "offer() ajoute, poll() retire et retourne la tête (A), peek() regarde sans retirer (B restant)."
+  },
+  {
+    "id": "J21-04-023",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Différence entre poll() et remove() d'une Queue ?",
+    "options": [
+      "poll() retourne null si vide, remove() lève NoSuchElementException",
+      "remove() retourne null si vide, poll() lève exception",
+      "Pas de différence",
+      "poll() est plus rapide"
+    ],
+    "correct": 0,
+    "explanation": "poll() retourne null quand la file est vide. remove() lève NoSuchElementException."
+  },
+  {
+    "id": "J21-04-024",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nDeque<String> deque = new ArrayDeque<>();\ndeque.push(\"A\");\ndeque.push(\"B\");\nSystem.out.println(deque.pop());\n```",
+    "options": [
+      "A",
+      "B",
+      "null",
+      "NoSuchElementException"
+    ],
+    "correct": 1,
+    "explanation": "push() ajoute en tête, pop() retire de la tête (LIFO). B a été ajouté après A → B sort en premier."
+  },
+  {
+    "id": "J21-04-025",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre ArrayDeque et LinkedList comme Deque ?",
+    "options": [
+      "ArrayDeque est plus rapide pour la plupart des opérations",
+      "LinkedList implémente aussi List",
+      "ArrayDeque n'accepte pas les éléments null",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ArrayDeque est plus performant, n'accepte pas null, mais LinkedList implémente aussi List et accepte null."
+  },
+  {
+    "id": "J21-04-026",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Que sont les 'weak references' dans WeakHashMap ?",
+    "options": [
+      "Les clés peuvent être garbage collectées",
+      "Les valeurs peuvent être garbage collectées",
+      "Les entrées sont automatiquement supprimées",
+      "A et C sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "WeakHashMap utilise des WeakReference pour les clés. Si une clé n'a plus de référence forte, elle peut être GC et l'entrée est supprimée."
+  },
+  {
+    "id": "J21-04-027",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nTreeSet<Integer> set = new TreeSet<>();\nset.add(5);\nset.add(2);\nset.add(8);\nSystem.out.println(set.first());\n```",
+    "options": [
+      "2",
+      "5",
+      "8",
+      "null"
+    ],
+    "correct": 0,
+    "explanation": "TreeSet trie les éléments. first() retourne le plus petit élément (2)."
+  },
+  {
+    "id": "J21-04-028",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit 'TreeSet<Integer> set = new TreeSet<>(); set.add(null);' ?",
+    "options": [
+      "Ajoute null",
+      "NullPointerException",
+      "ClassCastException",
+      "Compilation OK, runtime NPE"
+    ],
+    "correct": 3,
+    "explanation": "TreeSet utilise compareTo() pour trier. null ne peut pas être comparé → NullPointerException à l'exécution."
+  },
+  {
+    "id": "J21-04-029",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Que signifie le type générique 'T' dans une classe ?",
+    "options": [
+      "Type paramètre (Type Parameter)",
+      "Test",
+      "Template",
+      "Temporary"
+    ],
+    "correct": 0,
+    "explanation": "T est une convention pour Type Parameter. On peut utiliser n'importe quel identifiant, mais T, E (Element), K (Key), V (Value) sont des conventions."
+  },
+  {
+    "id": "J21-04-030",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quel est l'intérêt des génériques en Java ?",
+    "options": [
+      "La sécurité de type à la compilation",
+      "Éviter les casts explicites",
+      "Réutiliser du code avec différents types",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les génériques apportent la sécurité de type (type-safety) et éliminent les casts. L'inférence de type est aussi améliorée."
+  },
+  {
+    "id": "J21-04-031",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que signifie 'List<? extends Number>' ?",
+    "options": [
+      "Liste de Number ou de ses sous-types (Integer, Double...)",
+      "Liste de Number uniquement",
+      "Liste de tout type",
+      "Liste de types non Number"
+    ],
+    "correct": 0,
+    "explanation": "? extends Number est un upper bounded wildcard. On peut lire des Number, mais on ne peut pas ajouter (sauf null)."
+  },
+  {
+    "id": "J21-04-032",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que signifie 'List<? super Integer>' ?",
+    "options": [
+      "Liste de Integer ou de ses super-types (Number, Object)",
+      "Liste de Integer uniquement",
+      "Liste de sous-types de Integer",
+      "Liste de tout type"
+    ],
+    "correct": 0,
+    "explanation": "? super Integer est un lower bounded wildcard. On peut ajouter des Integer, mais on lit des Object."
+  },
+  {
+    "id": "J21-04-033",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Quel est le principe PECS (Producer Extends, Consumer Super) ?",
+    "options": [
+      "Pour lire (produire) : ? extends, pour écrire (consommer) : ? super",
+      "Pour lire : ? super, pour écrire : ? extends",
+      "PEC S n'a pas de sens",
+      "Uniquement pour les streams"
+    ],
+    "correct": 0,
+    "explanation": "PECS : Producer Extends (si on lit, on utilise ? extends), Consumer Super (si on écrit, on utilise ? super)."
+  },
+  {
+    "id": "J21-04-034",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que se passe-t-il à l'exécution avec les génériques ?",
+    "options": [
+      "Les types génériques sont préservés",
+      "L'effacement des types (type erasure) supprime les informations génériques",
+      "Les génériques sont réifiés",
+      "Les types sont vérifiés à l'exécution"
+    ],
+    "correct": 1,
+    "explanation": "Java utilise l'effacement des types (type erasure). Les informations génériques sont disponibles à la compilation mais effacées à l'exécution."
+  },
+  {
+    "id": "J21-04-035",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit 'new ArrayList<String>().getClass() == new ArrayList<Integer>().getClass()' ?",
+    "options": [
+      "true",
+      "false",
+      "Erreur compilation",
+      "ClassCastException"
+    ],
+    "correct": 0,
+    "explanation": "Type erasure : à l'exécution, les deux sont ArrayList.class. Donc true."
+  },
+  {
+    "id": "J21-04-036",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un 'raw type' en Java ?",
+    "options": [
+      "Une collection sans paramètre générique",
+      "Une collection qui accepte tout type",
+      "List list = new ArrayList() (sans <>)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Un raw type est l'utilisation d'un type générique sans paramètre. Ex: List list (au lieu de List<String>). À éviter."
+  },
+  {
+    "id": "J21-04-037",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<String> strings = new ArrayList<>();\nList raw = strings;\nraw.add(42);\nString s = strings.get(0);\n```",
+    "options": [
+      "ClassCastException",
+      "Compilation OK, runtime erreur",
+      "Compilation error",
+      "42 est converti en String"
+    ],
+    "correct": 0,
+    "explanation": "Le raw type permet d'ajouter un Integer. Mais strings.get(0) tente de cast en String → ClassCastException."
+  },
+  {
+    "id": "J21-04-038",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<?> list = new ArrayList<String>();\nlist.add(\"hello\");\n```",
+    "options": [
+      "Compilation OK",
+      "Erreur compilation : cannot add to wildcard type",
+      "Runtime exception",
+      "Ajoute hello"
+    ],
+    "correct": 1,
+    "explanation": "List<?> est une liste de type inconnu. On ne peut rien ajouter (sauf null) car le type n'est pas connu."
+  },
+  {
+    "id": "J21-04-039",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que signifie le 'diamond operator' <> ?",
+    "options": [
+      "Inférence de type générique",
+      "Déclaration d'un type brut",
+      "Création d'un type générique anonyme",
+      "Opérateur de comparaison"
+    ],
+    "correct": 0,
+    "explanation": "Le diamond operator (<>) permet au compilateur d'inférer le type générique du côté droit. Ex: List<String> list = new ArrayList<>();"
+  },
+  {
+    "id": "J21-04-040",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Quelle interface permet de comparer des objets pour le tri ?",
+    "options": [
+      "Comparable",
+      "Comparator",
+      "Comparable et Comparator",
+      "Comparer"
+    ],
+    "correct": 2,
+    "explanation": "Comparable (ordre naturel, méthode compareTo) et Comparator (ordre externe, méthode compare) permettent le tri."
+  },
+  {
+    "id": "J21-04-041",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<String> list = new ArrayList<>();\nlist.add(\"B\");\nlist.add(\"A\");\nCollections.sort(list);\nSystem.out.println(list);\n```",
+    "options": [
+      "[A, B]",
+      "[B, A]",
+      "[B, A]",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "Collections.sort() trie dans l'ordre naturel (String est Comparable, ordre alphabétique)."
+  },
+  {
+    "id": "J21-04-042",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Comment trier une liste dans l'ordre inverse ?",
+    "options": [
+      "Collections.sort(list, Collections.reverseOrder())",
+      "Collections.reverse(list)",
+      "list.sort(Comparator.reverseOrder())",
+      "A et C sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "Collections.reverseOrder() ou Comparator.reverseOrder() pour tri inversé. Collections.reverse() inverse l'ordre existant sans tri."
+  },
+  {
+    "id": "J21-04-043",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<Person> persons = new ArrayList<>();\npersons.add(new Person(\"Alice\"));\npersons.add(new Person(\"Bob\"));\nCollections.sort(persons);\n```\n(si Person n'implémente pas Comparable)",
+    "options": [
+      "Tri par ordre alphabétique",
+      "Compilation error",
+      "Runtime ClassCastException",
+      "Tri par ordre d'insertion"
+    ],
+    "correct": 1,
+    "explanation": "Si Person n'implémente pas Comparable, Collections.sort() ne compile pas car il ne sait pas comment comparer."
+  },
+  {
+    "id": "J21-04-044",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<Integer> list = Arrays.asList(1, 2, 3);\nlist.replaceAll(x -> x * 2);\nSystem.out.println(list);\n```",
+    "options": [
+      "[2, 4, 6]",
+      "[1, 2, 3]",
+      "Erreur",
+      "[1, 4, 9]"
+    ],
+    "correct": 0,
+    "explanation": "replaceAll() applique un UnaryOperator à chaque élément. Multiplie chaque élément par 2."
+  },
+  {
+    "id": "J21-04-045",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que fait 'Map.computeIfAbsent()' ?",
+    "options": [
+      "Calcule une valeur si la clé est absente",
+      "Ajoute une valeur par défaut",
+      "Supprime la clé si absente",
+      "Met à jour toutes les clés"
+    ],
+    "correct": 0,
+    "explanation": "computeIfAbsent(key, mappingFunction) calcule et ajoute une valeur si la clé n'existe pas ou est associée à null."
+  },
+  {
+    "id": "J21-04-046",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nMap<String, Integer> map = new HashMap<>();\nmap.put(\"A\", 1);\nmap.merge(\"A\", 2, Integer::sum);\nSystem.out.println(map.get(\"A\"));\n```",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "null"
+    ],
+    "correct": 2,
+    "explanation": "merge() combine l'ancienne valeur (1) avec la nouvelle (2) via la fonction sum → 3."
+  },
+  {
+    "id": "J21-04-047",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre HashMap et ConcurrentHashMap ?",
+    "options": [
+      "ConcurrentHashMap est thread-safe",
+      "ConcurrentHashMap n'accepte pas les clés null",
+      "ConcurrentHashMap permet des opérations concurrentes",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ConcurrentHashMap est thread-safe, n'accepte pas null (clé ni valeur), et supporte un haut niveau de concurrence."
+  },
+  {
+    "id": "J21-04-048",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<Integer> list = List.of(1, 2, 3);\nlist.add(4);\n```",
+    "options": [
+      "[1, 2, 3, 4]",
+      "UnsupportedOperationException",
+      "IllegalArgumentException",
+      "NullPointerException"
+    ],
+    "correct": 1,
+    "explanation": "List.of() crée une liste immuable. Toute tentative de modification lève UnsupportedOperationException."
+  },
+  {
+    "id": "J21-04-049",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Comment créer une copie défensive d'une liste ?",
+    "options": [
+      "new ArrayList<>(original)",
+      "List.copyOf(original)",
+      "original.clone()",
+      "A et B sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "new ArrayList<>(original) et List.copyOf() créent des copies. copyOf() crée une liste immuable."
+  },
+  {
+    "id": "J21-04-050",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que sont les 'NavigableMap' et 'NavigableSet' ?",
+    "options": [
+      "Interfaces avec des méthodes comme lower(), ceiling(), floor()",
+      "Extensions de SortedMap/SortedSet",
+      "Permettent de naviguer entre les éléments",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "NavigableMap/Set (Java 6+) ajoutent des méthodes pour trouver les plus proches voisins : lower(), floor(), ceiling(), higher()."
+  },
+  {
+    "id": "J21-04-051",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\n```java\nTreeMap<Integer, String> map = new TreeMap<>();\nmap.put(1, \"A\");\nmap.put(3, \"C\");\nmap.put(5, \"E\");\nSystem.out.println(map.ceilingKey(4));\n```",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "null"
+    ],
+    "correct": 2,
+    "explanation": "ceilingKey() retourne la plus petite clé ≥ à la clé donnée. 5 ≥ 4, donc retourne 5."
+  },
+  {
+    "id": "J21-04-052",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Que produit 'map.floorKey(4)' avec le même map ?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "null"
+    ],
+    "correct": 0,
+    "explanation": "floorKey() retourne la plus grande clé ≤ à la clé donnée. 3 ≤ 4, donc retourne 3."
+  },
+  {
+    "id": "J21-04-053",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que sont les 'BlockingQueue' ?",
+    "options": [
+      "File d'attente thread-safe avec opérations bloquantes",
+      "File d'attente avec capacité limitée",
+      "Utilisée dans les patterns producteur-consommateur",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "BlockingQueue (package java.util.concurrent) fournit put()/take() qui bloquent si pleine/vide."
+  },
+  {
+    "id": "J21-04-054",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Quelle implémentation de BlockingQueue est généralement la plus performante ?",
+    "options": [
+      "ArrayBlockingQueue",
+      "LinkedBlockingQueue",
+      "PriorityBlockingQueue",
+      "DelayQueue"
+    ],
+    "correct": 0,
+    "explanation": "ArrayBlockingQueue est basée sur un tableau circulaire, très performante pour une capacité fixe. LinkedBlockingQueue est optionnellement bornée."
+  },
+  {
+    "id": "J21-04-055",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que signifie 'fail-fast iterator' ?",
+    "options": [
+      "Lève ConcurrentModificationException si la collection est modifiée pendant l'itération",
+      "Itère très rapidement",
+      "Ne fonctionne qu'avec des threads",
+      "Ignore les modifications"
+    ],
+    "correct": 0,
+    "explanation": "Les itérateurs des collections java.util sont fail-fast : ils détectent les modifications concurrentes et lèvent ConcurrentModificationException."
+  },
+  {
+    "id": "J21-04-056",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Que sont les 'copy-on-write' collections ?",
+    "options": [
+      "Créent une copie à chaque modification",
+      "Sont thread-safe sans verrouillage",
+      "Conviennent pour des lectures fréquentes, rares modifications",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CopyOnWriteArrayList et CopyOnWriteArraySet créent une nouvelle copie du tableau à chaque modification. Les itérateurs ne lèvent pas ConcurrentModificationException."
+  },
+  {
+    "id": "J21-04-057",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'EnumSet' et 'EnumMap' ?",
+    "options": [
+      "Implémentations optimisées pour les clés de type enum",
+      "Utilisent des bit masks pour EnumSet",
+      "Sont très performants",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "EnumSet et EnumMap sont des implémentations spécialisées pour les enums. EnumSet utilise un BitSet interne, très compact et rapide."
+  },
+  {
+    "id": "J21-04-058",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Comment créer un EnumSet de toutes les constantes d'une enum ?",
+    "options": [
+      "EnumSet.allOf(Day.class)",
+      "EnumSet.of(Day.values())",
+      "new EnumSet<>(Day.class)",
+      "Day.values()"
+    ],
+    "correct": 0,
+    "explanation": "EnumSet.allOf(Class) retourne un EnumSet contenant toutes les constantes de l'enum spécifiée."
+  },
+  {
+    "id": "J21-04-059",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "question": "Que signifie 'Collection' vs 'Collections' ?",
+    "options": [
+      "Collection est une interface, Collections une classe utilitaire",
+      "Collections est une interface, Collection une classe",
+      "Ce sont des synonymes",
+      "Collection est pour les List, Collections pour les Set"
+    ],
+    "correct": 0,
+    "explanation": "Collection (interface racine) vs Collections (classe utilitaire avec méthodes statiques comme sort(), reverse(), etc.)."
+  },
+  {
+    "id": "J21-04-060",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nList<Integer> list = new ArrayList<>(List.of(1, 2, 3, 2, 1));\nSet<Integer> set = new LinkedHashSet<>(list);\nSystem.out.println(set);\n```",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 2, 3, 2, 1]",
+      "[3, 2, 1]",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "LinkedHashSet supprime les doublons tout en conservant l'ordre d'apparition (1, puis 2, puis 3)."
+  }
 ]

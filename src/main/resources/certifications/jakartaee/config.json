@@ -1,0 +1,36 @@
+{
+  "id": "jakartaee",
+  "name": "Jakarta EE Developer (Eclipse Foundation)",
+  "version": "1.0",
+  "description": "Certification Jakarta EE - Développement d'applications d'entreprise avec Jakarta EE (ex-Java EE)",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
+  "passingScore": 65,
+  "themes": [
+    {
+      "name": "Jakarta Servlet",
+      "count": 60
+    },
+    {
+      "name": "Jakarta Server Pages (JSP)",
+      "count": 50
+    },
+    {
+      "name": "Jakarta Persistence (JPA)",
+      "count": 70
+    },
+    {
+      "name": "Jakarta Enterprise Beans (EJB)",
+      "count": 60
+    },
+    {
+      "name": "Jakarta REST (JAX-RS)",
+      "count": 50
+    },
+    {
+      "name": "Jakarta Security",
+      "count": 60
+    }
+  ]
+}

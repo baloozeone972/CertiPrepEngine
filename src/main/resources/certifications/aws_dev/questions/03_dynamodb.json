@@ -1,0 +1,917 @@
+[
+  {
+    "id": "AWS-DEV-141",
+    "theme": "DynamoDB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que DynamoDB ?",
+    "options": [
+      "Base de données NoSQL clé-valeur",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "DynamoDB est une base NoSQL clé-valeur/documents."
+  },
+  {
+    "id": "AWS-DEV-142",
+    "theme": "DynamoDB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quels sont les modes de capacité DynamoDB ?",
+    "options": [
+      "Provisioned et On-Demand",
+      "Standard et Premium",
+      "Basic et Advanced",
+      "Single et Multi-AZ"
+    ],
+    "correct": 0,
+    "explanation": "Provisioned (RCU/WCU) ou On-Demand (pay-per-request)."
+  },
+  {
+    "id": "AWS-DEV-143",
+    "theme": "DynamoDB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une RCU (Read Capacity Unit) ?",
+    "options": [
+      "Une lecture fortement cohérente de 4 Ko par seconde",
+      "Une lecture éventuellement cohérente de 4 Ko par seconde",
+      "Une écriture de 1 Ko par seconde",
+      "Une lecture de 1 Ko par seconde"
+    ],
+    "correct": 0,
+    "explanation": "Une RCU = une lecture fortement cohérente de 4 Ko (ou 2 lectures éventuellement cohérentes)."
+  },
+  {
+    "id": "AWS-DEV-144",
+    "theme": "DynamoDB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une WCU (Write Capacity Unit) ?",
+    "options": [
+      "Une écriture de 1 Ko par seconde",
+      "Une écriture de 4 Ko par seconde",
+      "Une écriture de 8 Ko par seconde",
+      "Une écriture de 16 Ko par seconde"
+    ],
+    "correct": 0,
+    "explanation": "Une WCU = une écriture de 1 Ko par seconde."
+  },
+  {
+    "id": "AWS-DEV-145",
+    "theme": "DynamoDB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un élément DynamoDB ?",
+    "options": ["400 KB", "1 MB", "64 KB", "256 KB"],
+    "correct": 0,
+    "explanation": "La taille maximale d'un élément est 400 KB."
+  },
+  {
+    "id": "AWS-DEV-146",
+    "theme": "DynamoDB",
+    "theme_label": "Clés",
+    "difficulty": "easy",
+    "question": "Quels sont les types de clés dans DynamoDB ?",
+    "options": [
+      "Clé de partition, clé de tri",
+      "Clé primaire seulement",
+      "Clé étrangère",
+      "Clé unique"
+    ],
+    "correct": 0,
+    "explanation": "La clé de partition est obligatoire, la clé de tri est optionnelle."
+  },
+  {
+    "id": "AWS-DEV-147",
+    "theme": "DynamoDB",
+    "theme_label": "Clés",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une clé de partition ?",
+    "options": [
+      "Détermine la distribution des données",
+      "Ordonne les éléments",
+      "Crée un index",
+      "Réplique les données"
+    ],
+    "correct": 0,
+    "explanation": "La clé de partition (hash key) définit sur quel nœud l'élément est stocké."
+  },
+  {
+    "id": "AWS-DEV-148",
+    "theme": "DynamoDB",
+    "theme_label": "Clés",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une clé de tri (sort key) ?",
+    "options": [
+      "Ordonne les éléments ayant la même partition",
+      "Deuxième partition",
+      "Index secondaire",
+      "Clé étrangère"
+    ],
+    "correct": 0,
+    "explanation": "La clé de tri permet d'ordonner les éléments au sein d'une même partition."
+  },
+  {
+    "id": "AWS-DEV-149",
+    "theme": "DynamoDB",
+    "theme_label": "Index",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un index secondaire global (GSI) ?",
+    "options": [
+      "Index avec clé de partition différente",
+      "Index avec même partition",
+      "Index local",
+      "Index unique"
+    ],
+    "correct": 0,
+    "explanation": "GSI permet d'interroger avec une clé de partition alternative."
+  },
+  {
+    "id": "AWS-DEV-150",
+    "theme": "DynamoDB",
+    "theme_label": "Index",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un index secondaire local (LSI) ?",
+    "options": [
+      "Index avec même partition, clé de tri différente",
+      "Index avec partition différente",
+      "Index global",
+      "Index unique"
+    ],
+    "correct": 0,
+    "explanation": "LSI partage la même clé de partition, clé de tri différente."
+  },
+  {
+    "id": "AWS-DEV-151",
+    "theme": "DynamoDB",
+    "theme_label": "Index",
+    "difficulty": "hard",
+    "question": "Combien de LSI peut-on créer par table ?",
+    "options": ["5", "10", "20", "Illimité"],
+    "correct": 0,
+    "explanation": "Maximum 5 LSI par table."
+  },
+  {
+    "id": "AWS-DEV-152",
+    "theme": "DynamoDB",
+    "theme_label": "Index",
+    "difficulty": "hard",
+    "question": "Combien de GSI peut-on créer par table ?",
+    "options": ["20", "5", "10", "50"],
+    "correct": 0,
+    "explanation": "Maximum 20 GSI par table (par défaut)."
+  },
+  {
+    "id": "AWS-DEV-153",
+    "theme": "DynamoDB",
+    "theme_label": "Read consistency",
+    "difficulty": "hard",
+    "question": "Différence entre lecture éventuellement cohérente et fortement cohérente ?",
+    "options": [
+      "Eventual = moins chère, plus rapide; Strong = plus chère, garantit le dernier écrit",
+      "Identiques",
+      "Strong moins chère",
+      "Eventual garantit le dernier écrit"
+    ],
+    "correct": 0,
+    "explication": "Les lectures fortement cohérentes utilisent 2 RCU, les éventuellement cohérentes 0.5 RCU."
+  },
+  {
+    "id": "AWS-DEV-154",
+    "theme": "DynamoDB",
+    "theme_label": "Read consistency",
+    "difficulty": "hard",
+    "question": "Par défaut, les lectures DynamoDB sont-elles fortement cohérentes ?",
+    "options": ["Non (éventuellement cohérentes)", "Oui", "Optionnel", "Dépend du mode capacité"],
+    "correct": 0,
+    "explication": "Les lectures par défaut sont éventuellement cohérentes."
+  },
+  {
+    "id": "AWS-DEV-155",
+    "theme": "DynamoDB",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "DynamoDB supporte-t-il les transactions ACID ?",
+    "options": ["Oui", "Non", "Uniquement pour les écritures", "Uniquement pour les lectures"],
+    "correct": 0,
+    "explication": "Les transactions offrent des garanties ACID sur plusieurs éléments."
+  },
+  {
+    "id": "AWS-DEV-156",
+    "theme": "DynamoDB",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelles opérations sont supportées dans les transactions ?",
+    "options": [
+      "TransactGetItems, TransactWriteItems",
+      "GetItem seulement",
+      "PutItem seulement",
+      "UpdateItem seulement"
+    ],
+    "correct": 0,
+    "explication": "Deux opérations transactionnelles."
+  },
+  {
+    "id": "AWS-DEV-157",
+    "theme": "DynamoDB",
+    "theme_label": "DAX",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Accelerator (DAX) ?",
+    "options": [
+      "Cache in-memory pour DynamoDB",
+      "Backup",
+      "Réplication",
+      "Migration"
+    ],
+    "correct": 0,
+    "explication": "DAX est un cache Redis compatible DynamoDB pour des lectures microsecondes."
+  },
+  {
+    "id": "AWS-DEV-158",
+    "theme": "DynamoDB",
+    "theme_label": "DAX",
+    "difficulty": "hard",
+    "question": "DAX est-il compatible avec l'API DynamoDB ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement pour les lectures"],
+    "correct": 0,
+    "explication": "DAX est compatible avec l'API DynamoDB (GetItem, Query, Scan)."
+  },
+  {
+    "id": "AWS-DEV-159",
+    "theme": "DynamoDB",
+    "theme_label": "DAX",
+    "difficulty": "hard",
+    "question": "DAX est-il écrit en lecture ou écriture ?",
+    "options": ["Lecture seulement", "Lecture/écriture", "Écriture seulement", "Cache uniquement"],
+    "correct": 0,
+    "explication": "DAX est un cache de lecture seulement."
+  },
+  {
+    "id": "AWS-DEV-160",
+    "theme": "DynamoDB",
+    "theme_label": "Streams",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DynamoDB Streams ?",
+    "options": [
+      "Flux de changements en temps réel",
+      "Backup",
+      "Réplication",
+      "Migration"
+    ],
+    "correct": 0,
+    "explication": "Streams capture les modifications (création, mise à jour, suppression)."
+  },
+  {
+    "id": "AWS-DEV-161",
+    "theme": "DynamoDB",
+    "theme_label": "Streams",
+    "difficulty": "hard",
+    "question": "Combien de temps les données sont-elles conservées dans DynamoDB Streams ?",
+    "options": ["24 heures", "7 jours", "30 jours", "48 heures"],
+    "correct": 0,
+    "explication": "La rétention par défaut est 24 heures (configurable jusqu'à 7 jours)."
+  },
+  {
+    "id": "AWS-DEV-162",
+    "theme": "DynamoDB",
+    "theme_label": "Global Tables",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une DynamoDB Global Table ?",
+    "options": [
+      "Table multi-région multi-actif",
+      "Table répliquée",
+      "Table partitionnée",
+      "Table indexée"
+    ],
+    "correct": 0,
+    "explication": "Les Global Tables répliquent les données dans plusieurs régions, lecture/écriture partout."
+  },
+  {
+    "id": "AWS-DEV-163",
+    "theme": "DynamoDB",
+    "theme_label": "Global Tables",
+    "difficulty": "hard",
+    "question": "Global Tables nécessite-t-il l'activation des streams ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement pour les nouvelles tables"],
+    "correct": 0,
+    "explication": "Global Tables utilise DynamoDB Streams pour la réplication."
+  },
+  {
+    "id": "AWS-DEV-164",
+    "theme": "DynamoDB",
+    "theme_label": "Time To Live (TTL)",
+    "difficulty": "hard",
+    "question": "À quoi sert DynamoDB TTL ?",
+    "options": [
+      "Suppression automatique après délai",
+      "Expiration de cache",
+      "Timeout de lecture",
+      "Limite de temps"
+    ],
+    "correct": 0,
+    "explication": "TTL marque les éléments pour suppression automatique à une date."
+  },
+  {
+    "id": "AWS-DEV-165",
+    "theme": "DynamoDB",
+    "theme_label": "Time To Live (TTL)",
+    "difficulty": "hard",
+    "question": "TTL supprime-t-il immédiatement les éléments ?",
+    "options": [
+      "Non, suppression asynchrone dans les 48h",
+      "Oui, immédiatement",
+      "Dans les 24h",
+      "Dans les 72h"
+    ],
+    "correct": 0,
+    "explication": "La suppression est asynchrone et peut prendre jusqu'à 48 heures."
+  },
+  {
+    "id": "AWS-DEV-166",
+    "theme": "DynamoDB",
+    "theme_label": "Backup",
+    "difficulty": "hard",
+    "question": "Quels types de backup DynamoDB supporte-t-il ?",
+    "options": [
+      "On-demand et Point-in-Time Recovery (PITR)",
+      "On-demand seulement",
+      "PITR seulement",
+      "Snapshots seulement"
+    ],
+    "correct": 0,
+    "explication": "Les backups on-demand sont complets, PITR permet la restauration à n'importe quel moment."
+  },
+  {
+    "id": "AWS-DEV-167",
+    "theme": "DynamoDB",
+    "theme_label": "Backup",
+    "difficulty": "hard",
+    "question": "Quelle est la période de rétention de PITR ?",
+    "options": ["35 jours", "7 jours", "90 jours", "1 an"],
+    "correct": 0,
+    "explication": "PITR permet de restaurer à n'importe quelle seconde dans les 35 derniers jours."
+  },
+  {
+    "id": "AWS-DEV-168",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "hard",
+    "question": "Quelle opération est la plus efficace pour trouver des éléments ?",
+    "options": ["Query", "Scan", "GetItem", "BatchGetItem"],
+    "correct": 0,
+    "explication": "Query utilise la clé de partition (plus efficace). Scan lit toute la table."
+  },
+  {
+    "id": "AWS-DEV-169",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "hard",
+    "question": "Scan consomme-t-il plus de RCU que Query ?",
+    "options": ["Oui", "Non", "Identique", "Dépend de la taille des résultats"],
+    "correct": 0,
+    "explication": "Scan lit tous les éléments, donc consomme plus de RCU."
+  },
+  {
+    "id": "AWS-DEV-170",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "hard",
+    "question": "Comment paginer les résultats de Query/Scan ?",
+    "options": [
+      "LastEvaluatedKey / ExclusiveStartKey",
+      "Offset / Limit",
+      "Page / Size",
+      "NextToken / PreviousToken"
+    ],
+    "correct": 0,
+    "explication": "La pagination utilise LastEvaluatedKey pour obtenir la page suivante."
+  },
+  {
+    "id": "AWS-DEV-171",
+    "theme": "DynamoDB",
+    "theme_label": "Batch operations",
+    "difficulty": "hard",
+    "question": "BatchGetItem peut-il lire jusqu'à combien d'éléments ?",
+    "options": ["100", "25", "50", "200"],
+    "correct": 0,
+    "explication": "BatchGetItem peut lire jusqu'à 100 éléments (ou 16 Mo)."
+  },
+  {
+    "id": "AWS-DEV-172",
+    "theme": "DynamoDB",
+    "theme_label": "Batch operations",
+    "difficulty": "hard",
+    "question": "BatchWriteItem peut-il écrire jusqu'à combien d'éléments ?",
+    "options": ["25", "10", "50", "100"],
+    "correct": 0,
+    "explication": "BatchWriteItem peut écrire jusqu'à 25 éléments (ou 16 Mo)."
+  },
+  {
+    "id": "AWS-DEV-173",
+    "theme": "DynamoDB",
+    "theme_label": "Conditional writes",
+    "difficulty": "hard",
+    "question": "À quoi servent les écritures conditionnelles ?",
+    "options": [
+      "Vérifier une condition avant d'écrire",
+      "Forcer l'écriture",
+      "Ignorer l'écriture",
+      "Journaliser l'écriture"
+    ],
+    "correct": 0,
+    "explication": "Les écritures conditionnelles (ConditionExpression) évitent les race conditions."
+  },
+  {
+    "id": "AWS-DEV-174",
+    "theme": "DynamoDB",
+    "theme_label": "Conditional writes",
+    "difficulty": "hard",
+    "question": "Quelle exception est levée si la condition échoue ?",
+    "options": [
+      "ConditionalCheckFailedException",
+      "ValidationException",
+      "ResourceNotFoundException",
+      "InternalServerError"
+    ],
+    "correct": 0,
+    "explication": "ConditionalCheckFailedException indique que la condition n'est pas satisfaite."
+  },
+  {
+    "id": "AWS-DEV-175",
+    "theme": "DynamoDB",
+    "theme_label": "Atomic counters",
+    "difficulty": "hard",
+    "question": "Comment implémenter un compteur atomique dans DynamoDB ?",
+    "options": [
+      "UpdateItem avec ADD",
+      "GetItem + PutItem",
+      "BatchWriteItem",
+      "TransactWriteItems"
+    ],
+    "correct": 0,
+    "explication": "ADD (UpdateItem) permet des incrémentations atomiques."
+  },
+  {
+    "id": "AWS-DEV-176",
+    "theme": "DynamoDB",
+    "theme_label": "Expressions",
+    "difficulty": "hard",
+    "question": "Quels types d'expressions sont supportés ?",
+    "options": [
+      "ConditionExpression, UpdateExpression, FilterExpression, KeyConditionExpression",
+      "Seulement ConditionExpression",
+      "Seulement UpdateExpression",
+      "Seulement FilterExpression"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs expressions pour différents usages."
+  },
+  {
+    "id": "AWS-DEV-177",
+    "theme": "DynamoDB",
+    "theme_label": "Expressions",
+    "difficulty": "hard",
+    "question": "À quoi sert FilterExpression ?",
+    "options": [
+      "Filtrer les résultats après Query/Scan",
+      "Filtrer avant Query/Scan",
+      "Filtrer les écritures",
+      "Filtrer les clés"
+    ],
+    "correct": 0,
+    "explication": "FilterExpression s'applique après la lecture, n'affecte pas la capacité consommée."
+  },
+  {
+    "id": "AWS-DEV-178",
+    "theme": "DynamoDB",
+    "theme_label": "Expression attribute names",
+    "difficulty": "hard",
+    "question": "Pourquoi utiliser ExpressionAttributeNames ?",
+    "options": [
+      "Échapper les mots réservés",
+      "Raccourcir les noms",
+      "Rendre les expressions plus lisibles",
+      "Optimiser les performances"
+    ],
+    "correct": 0,
+    "explication": "ExpressionAttributeNames permet d'utiliser des noms d'attributs qui sont des mots réservés."
+  },
+  {
+    "id": "AWS-DEV-179",
+    "theme": "DynamoDB",
+    "theme_label": "Expression attribute values",
+    "difficulty": "hard",
+    "question": "À quoi servent ExpressionAttributeValues ?",
+    "options": [
+      "Passer des valeurs dans les expressions",
+      "Définir des valeurs par défaut",
+      "Créer des constantes",
+      "Optimiser les requêtes"
+    ],
+    "correct": 0,
+    "explication": "ExpressionAttributeValues évite l'injection et permet de réutiliser les expressions."
+  },
+  {
+    "id": "AWS-DEV-180",
+    "theme": "DynamoDB",
+    "theme_label": "Data types",
+    "difficulty": "hard",
+    "question": "Quels types de données sont supportés par DynamoDB ?",
+    "options": [
+      "Scalaires (S, N, B), Document (M, L), Sets (SS, NS, BS)",
+      "Seulement scalaires",
+      "Seulement document",
+      "Seulement sets"
+    ],
+    "correct": 0,
+    "explication": "DynamoDB supporte plusieurs types de données."
+  },
+  {
+    "id": "AWS-DEV-181",
+    "theme": "DynamoDB",
+    "theme_label": "JSON support",
+    "difficulty": "hard",
+    "question": "DynamoDB peut-il stocker des documents JSON ?",
+    "options": ["Oui (type M ou L)", "Non", "Uniquement avec DAX", "Uniquement avec Streams"],
+    "correct": 0,
+    "explication": "Les types Map (M) et List (L) permettent de stocker des documents JSON."
+  },
+  {
+    "id": "AWS-DEV-182",
+    "theme": "DynamoDB",
+    "theme_label": "JSON support",
+    "difficulty": "hard",
+    "question": "Comment insérer un document JSON dans DynamoDB ?",
+    "options": [
+      "Utiliser un Map",
+      "Convertir en String",
+      "Utiliser un Set",
+      "Utiliser un Binary"
+    ],
+    "correct": 0,
+    "explication": "JSON est converti en Map (objet) et List (tableau)."
+  },
+  {
+    "id": "AWS-DEV-183",
+    "theme": "DynamoDB",
+    "theme_label": "Partition keys design",
+    "difficulty": "hard",
+    "question": "Pourquoi éviter les clés de partition monotones (timestamp) ?",
+    "options": [
+      "Créer des hotspots",
+      "Plus lent",
+      "Plus cher",
+      "Moins sécurisé"
+    ],
+    "correct": 0,
+    "explication": "Les clés monotones concentrent les écritures sur une seule partition."
+  },
+  {
+    "id": "AWS-DEV-184",
+    "theme": "DynamoDB",
+    "theme_label": "Partition keys design",
+    "difficulty": "hard",
+    "question": "Comment distribuer uniformément la charge ?",
+    "options": [
+      "Ajouter un suffixe aléatoire (sharding)",
+      "Utiliser un timestamp",
+      "Utiliser une séquence",
+      "Utiliser une clé unique"
+    ],
+    "correct": 0,
+    "explication": "Le sharding (suffixe aléatoire) distribue les écritures sur plusieurs partitions."
+  },
+  {
+    "id": "AWS-DEV-185",
+    "theme": "DynamoDB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment modéliser une relation one-to-many dans DynamoDB ?",
+    "options": [
+      "Clé de partition parent, clé de tri enfant",
+      "Deux tables",
+      "Document imbriqué",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Le pattern d'adjacence utilise la clé de tri pour les relations."
+  },
+  {
+    "id": "AWS-DEV-186",
+    "theme": "DynamoDB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment implémenter le pattern d'adjacence (adjacency list) ?",
+    "options": [
+      "PK = parent, SK = enfant",
+      "PK = enfant, SK = parent",
+      "Table séparée",
+      "Index GSI"
+    ],
+    "correct": 0,
+    "explication": "Le pattern d'adjacence utilise une seule table avec PK et SK pour représenter les relations."
+  },
+  {
+    "id": "AWS-DEV-187",
+    "theme": "DynamoDB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment gérer les requêtes multi-conditions (filtres) ?",
+    "options": [
+      "Utiliser un GSI avec clé composite",
+      "Scan avec FilterExpression",
+      "Plusieurs requêtes",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "GSI ou Scan avec filtre selon le volume de données."
+  },
+  {
+    "id": "AWS-DEV-188",
+    "theme": "DynamoDB",
+    "theme_label": "Error handling",
+    "difficulty": "hard",
+    "question": "Que faire en cas de ProvisionedThroughputExceededException ?",
+    "options": [
+      "Retry avec backoff exponentiel",
+      "Augmenter la capacité",
+      "Réduire la capacité",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Retry avec backoff ou augmenter la capacité."
+  },
+  {
+    "id": "AWS-DEV-189",
+    "theme": "DynamoDB",
+    "theme_label": "Error handling",
+    "difficulty": "hard",
+    "question": "Quel est le mécanisme de retry du SDK AWS ?",
+    "options": [
+      "Retry automatique avec backoff",
+      "Aucun retry",
+      "Retry illimité",
+      "Retry sans backoff"
+    ],
+    "correct": 0,
+    "explication": "Le SDK AWS implémente des retries automatiques avec backoff exponentiel."
+  },
+  {
+    "id": "AWS-DEV-190",
+    "theme": "DynamoDB",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Quelles métriques CloudWatch sont importantes pour DynamoDB ?",
+    "options": [
+      "ConsumedReadCapacityUnits, ConsumedWriteCapacityUnits, ThrottledRequests",
+      "Seulement ThrottledRequests",
+      "Seulement ConsumedCapacity",
+      "Seulement Latency"
+    ],
+    "correct": 0,
+    "explication": "Surveiller la consommation et les throttling."
+  },
+  {
+    "id": "AWS-DEV-191",
+    "theme": "DynamoDB",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment détecter des hotspots (partition chaude) ?",
+    "options": [
+      "CloudWatch metrics par partition (OperationLatency)",
+      "Scan de la table",
+      "Logs CloudTrail",
+      "DAX"
+    ],
+    "correct": 0,
+    "explication": "Les métriques par partition sont disponibles dans CloudWatch."
+  },
+  {
+    "id": "AWS-DEV-192",
+    "theme": "DynamoDB",
+    "theme_label": "Local development",
+    "difficulty": "hard",
+    "question": "Comment développer localement avec DynamoDB ?",
+    "options": [
+      "DynamoDB Local",
+      "AWS SAM local",
+      "Docker",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "DynamoDB Local peut être exécuté via Docker ou JAR."
+  },
+  {
+    "id": "AWS-DEV-193",
+    "theme": "DynamoDB",
+    "theme_label": "Local development",
+    "difficulty": "hard",
+    "question": "DynamoDB Local supporte-t-il toutes les fonctionnalités ?",
+    "options": [
+      "Non (certaines fonctionnalités manquent)",
+      "Oui",
+      "Partiellement",
+      "Uniquement les API de base"
+    ],
+    "correct": 0,
+    "explication": "Quelques fonctionnalités (comme les Global Tables) ne sont pas supportées localement."
+  },
+  {
+    "id": "AWS-DEV-194",
+    "theme": "DynamoDB",
+    "theme_label": "IAM permissions",
+    "difficulty": "hard",
+    "question": "Quelles permissions IAM sont nécessaires pour DynamoDB ?",
+    "options": [
+      "dynamodb:GetItem, PutItem, UpdateItem, DeleteItem, Query, Scan",
+      "Seulement GetItem",
+      "Seulement PutItem",
+      "Seulement Query"
+    ],
+    "correct": 0,
+    "explication": "Les permissions dépendent des opérations nécessaires."
+  },
+  {
+    "id": "AWS-DEV-195",
+    "theme": "DynamoDB",
+    "theme_label": "IAM conditions",
+    "difficulty": "hard",
+    "question": "Peut-on restreindre l'accès par attribut ?",
+    "options": ["Oui (ConditionExpression)", "Non", "Uniquement par clé", "Uniquement par table"],
+    "correct": 0,
+    "explication": "Les politiques IAM peuvent limiter l'accès à certains attributs."
+  },
+  {
+    "id": "AWS-DEV-196",
+    "theme": "DynamoDB",
+    "theme_label": "Encryption at rest",
+    "difficulty": "hard",
+    "question": "DynamoDB chiffre-t-il les données au repos par défaut ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement pour les tables avec DAX"],
+    "correct": 0,
+    "explication": "Le chiffrement au repos est activé par défaut (AWS owned CMK)."
+  },
+  {
+    "id": "AWS-DEV-197",
+    "theme": "DynamoDB",
+    "theme_label": "Encryption at rest",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser une clé KMS personnalisée ?",
+    "options": ["Oui", "Non", "Uniquement pour les backups", "Uniquement pour les streams"],
+    "correct": 0,
+    "explication": "On peut choisir une clé KMS (Customer Managed CMK) lors de la création de la table."
+  },
+  {
+    "id": "AWS-DEV-198",
+    "theme": "DynamoDB",
+    "theme_label": "Export to S3",
+    "difficulty": "hard",
+    "question": "DynamoDB peut-il exporter des données vers S3 ?",
+    "options": ["Oui (export to S3)", "Non", "Uniquement via EMR", "Uniquement via Lambda"],
+    "correct": 0,
+    "explication": "L'export to S3 (DynamoDB Backup) permet d'exporter au format DynamoDB JSON ou Ion."
+  },
+  {
+    "id": "AWS-DEV-199",
+    "theme": "DynamoDB",
+    "theme_label": "Import from S3",
+    "difficulty": "hard",
+    "question": "DynamoDB peut-il importer des données depuis S3 ?",
+    "options": ["Oui", "Non", "Uniquement via EMR", "Uniquement via Lambda"],
+    "correct": 0,
+    "explication": "L'import depuis S3 supporte CSV, DynamoDB JSON, Ion."
+  },
+  {
+    "id": "AWS-DEV-200",
+    "theme": "DynamoDB",
+    "theme_label": "PartiQL",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que PartiQL pour DynamoDB ?",
+    "options": [
+      "Langage de requête SQL-like",
+      "API de streaming",
+      "Outil de migration",
+      "Client SDK"
+    ],
+    "correct": 0,
+    "explication": "PartiQL permet d'interroger DynamoDB avec une syntaxe similaire à SQL."
+  },
+  {
+    "id": "AWS-DEV-201",
+    "theme": "DynamoDB",
+    "theme_label": "PartiQL",
+    "difficulty": "hard",
+    "question": "PartiQL supporte-t-il les opérations d'écriture ?",
+    "options": ["Oui (INSERT, UPDATE, DELETE)", "Non", "Lecture seulement", "Uniquement SELECT"],
+    "correct": 0,
+    "explication": "PartiQL supporte les opérations DML (INSERT, UPDATE, DELETE)."
+  },
+  {
+    "id": "AWS-DEV-202",
+    "theme": "DynamoDB",
+    "theme_label": "NoSQL Workbench",
+    "difficulty": "hard",
+    "question": "À quoi sert NoSQL Workbench for DynamoDB ?",
+    "options": [
+      "Modélisation, visualisation, requêtage local",
+      "Migration",
+      "Backup",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "NoSQL Workbench aide à concevoir et tester les modèles DynamoDB."
+  },
+  {
+    "id": "AWS-DEV-203",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with Lambda",
+    "difficulty": "hard",
+    "question": "Comment intégrer DynamoDB et Lambda efficacement ?",
+    "options": [
+      "Streams + Lambda",
+      "Lambda appelle directement DynamoDB",
+      "DAX + Lambda",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Streams pour réactivité, appel direct pour requêtes."
+  },
+  {
+    "id": "AWS-DEV-204",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with API Gateway",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il s'intégrer directement à DynamoDB ?",
+    "options": ["Oui (intégration AWS)", "Non", "Uniquement via Lambda", "Uniquement via VTL"],
+    "correct": 0,
+    "explication": "API Gateway peut appeler DynamoDB directement via l'intégration AWS."
+  },
+  {
+    "id": "AWS-DEV-205",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with AppSync",
+    "difficulty": "hard",
+    "question": "AWS AppSync peut-il utiliser DynamoDB comme source de données ?",
+    "options": ["Oui", "Non", "Uniquement avec Lambda", "Uniquement avec Aurora"],
+    "correct": 0,
+    "explication": "AppSync a une intégration native avec DynamoDB pour GraphQL."
+  },
+  {
+    "id": "AWS-DEV-206",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with EMR",
+    "difficulty": "hard",
+    "question": "EMR peut-il lire/écrire dans DynamoDB ?",
+    "options": ["Oui", "Non", "Uniquement en lecture", "Uniquement en écriture"],
+    "correct": 0,
+    "explication": "EMR peut interagir avec DynamoDB via Hadoop/Hive."
+  },
+  {
+    "id": "AWS-DEV-207",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with Glue",
+    "difficulty": "hard",
+    "question": "AWS Glue peut-il extraire des données de DynamoDB ?",
+    "options": ["Oui", "Non", "Uniquement avec ETL", "Uniquement avec Crawlers"],
+    "correct": 0,
+    "explication": "Glue peut lire DynamoDB comme source ETL."
+  },
+  {
+    "id": "AWS-DEV-208",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with Athena",
+    "difficulty": "hard",
+    "question": "Athena peut-il interroger DynamoDB ?",
+    "options": ["Non", "Oui (via Connector)", "Uniquement avec EMR", "Uniquement avec Glue"],
+    "correct": 1,
+    "explication": "Un connecteur Athena pour DynamoDB existe (via Lambda)."
+  },
+  {
+    "id": "AWS-DEV-209",
+    "theme": "DynamoDB",
+    "theme_label": "DynamoDB with QuickSight",
+    "difficulty": "hard",
+    "question": "QuickSight peut-il se connecter directement à DynamoDB ?",
+    "options": ["Non", "Oui", "Uniquement via Athena", "Uniquement via Glue"],
+    "correct": 1,
+    "explication": "QuickSight a un connecteur natif pour DynamoDB."
+  },
+  {
+    "id": "AWS-DEV-210",
+    "theme": "DynamoDB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment optimiser les coûts DynamoDB ?",
+    "options": [
+      "Utiliser On-Demand pour les charges variables",
+      "Utiliser l'auto-scaling",
+      "Utiliser DAX pour les lectures répétées",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs stratégies pour optimiser les coûts."
+  }
+]

@@ -1,0 +1,487 @@
+[
+  {
+    "id": "GCP-DL-211",
+    "theme": "Security & Operations",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que IAM dans GCP ?",
+    "options": [
+      "Identity and Access Management",
+      "Infrastructure and Access Management",
+      "Integrated Access Management",
+      "Internet Access Management"
+    ],
+    "correct": 0,
+    "explication": "IAM gère les accès aux ressources GCP."
+  },
+  {
+    "id": "GCP-DL-212",
+    "theme": "Security & Operations",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Quels sont les composants d'IAM ?",
+    "options": [
+      "Membres, rôles, politiques",
+      "Utilisateurs, groupes, services",
+      "Rôles, permissions, comptes",
+      "Identités, clés, certificats"
+    ],
+    "correct": 0,
+    "explication": "Les politiques IAM lient des membres à des rôles."
+  },
+  {
+    "id": "GCP-DL-213",
+    "theme": "Security & Operations",
+    "theme_label": "IAM roles",
+    "difficulty": "easy",
+    "question": "Quels sont les types de rôles IAM ?",
+    "options": [
+      "Primitive, prédéfini, personnalisé",
+      "Basic, standard, premium",
+      "Lecteur, rédacteur, propriétaire",
+      "Admin, utilisateur, invité"
+    ],
+    "correct": 0,
+    "explication": "Les rôles primitifs (Owner, Editor, Viewer) sont hérités, les prédéfinis sont spécifiques aux services."
+  },
+  {
+    "id": "GCP-DL-214",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Identity",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Identity ?",
+    "options": [
+      "Service d'annuaire et de gestion des identités (IDaaS)",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Cloud Identity gère les utilisateurs, groupes et appareils pour GCP et Google Workspace."
+  },
+  {
+    "id": "GCP-DL-215",
+    "theme": "Security & Operations",
+    "theme_label": "Resource Hierarchy",
+    "difficulty": "easy",
+    "question": "Quelle est la hiérarchie des ressources GCP ?",
+    "options": [
+      "Organization → Folders → Projects → Resources",
+      "Projects → Folders → Organization",
+      "Resources → Projects → Folders",
+      "Organization → Projects → Resources"
+    ],
+    "correct": 0,
+    "explication": "La hiérarchie permet une délégation des politiques et des quotas."
+  },
+  {
+    "id": "GCP-DL-216",
+    "theme": "Security & Operations",
+    "theme_label": "Organization policies",
+    "difficulty": "easy",
+    "question": "À quoi servent les politiques d'organisation (Organization Policies) ?",
+    "options": [
+      "Restreindre les configurations au niveau de l'organisation",
+      "Gérer les utilisateurs",
+      "Définir les budgets",
+      "Créer des rapports"
+    ],
+    "correct": 0,
+    "explication": "Les politiques d'organisation (ex: interdire les VMs externes) s'appliquent à toute la hiérarchie."
+  },
+  {
+    "id": "GCP-DL-217",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud KMS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud KMS ?",
+    "options": [
+      "Service de gestion de clés de chiffrement",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Cloud KMS permet de créer, utiliser, faire tourner et détruire des clés cryptographiques."
+  },
+  {
+    "id": "GCP-DL-218",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud KMS",
+    "difficulty": "easy",
+    "question": "Cloud KMS supporte-t-il la rotation automatique des clés ?",
+    "options": ["Oui", "Non", "Uniquement pour les clés symétriques", "Uniquement pour les clés asymétriques"],
+    "correct": 0,
+    "explication": "La rotation automatique peut être programmée (ex: tous les 90 jours)."
+  },
+  {
+    "id": "GCP-DL-219",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud HSM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud HSM ?",
+    "options": [
+      "Hardware Security Module (HSM) dans le cloud",
+      "Service de clés logicielles",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Cloud HSM fournit un HSM certifié FIPS 140-2 niveau 3."
+  },
+  {
+    "id": "GCP-DL-220",
+    "theme": "Security & Operations",
+    "theme_label": "Secret Manager",
+    "difficulty": "easy",
+    "question": "À quoi sert Secret Manager ?",
+    "options": [
+      "Stocker et gérer des secrets (mots de passe, clés API)",
+      "Chiffrer des données",
+      "Gérer des certificats",
+      "Stocker des logs"
+    ],
+    "correct": 0,
+    "explication": "Secret Manager centralise les secrets avec versioning et accès contrôlé."
+  },
+  {
+    "id": "GCP-DL-221",
+    "theme": "Security & Operations",
+    "theme_label": "Security Command Center",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Security Command Center ?",
+    "options": [
+      "Plateforme de gestion de la sécurité (vulnérabilités, menaces)",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Security Command Center offre une vue unifiée des risques de sécurité."
+  },
+  {
+    "id": "GCP-DL-222",
+    "theme": "Security & Operations",
+    "theme_label": "Security Command Center",
+    "difficulty": "easy",
+    "question": "Security Command Center peut-il détecter des anomalies de configuration ?",
+    "options": ["Oui", "Non", "Uniquement les vulnérabilités", "Uniquement les menaces"],
+    "correct": 0,
+    "explication": "Il inclut la détection de problèmes de configuration (ex: buckets publics)."
+  },
+  {
+    "id": "GCP-DL-223",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud DLP",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud DLP (Data Loss Prevention) ?",
+    "options": [
+      "Détection et masquage de données sensibles (PII, PCI)",
+      "Chiffrement",
+      "Authentification",
+      "Logging"
+    ],
+    "correct": 0,
+    "explication": "Cloud DLP inspecte les données et peut les anonymiser (tokenisation, redaction)."
+  },
+  {
+    "id": "GCP-DL-224",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud DLP",
+    "difficulty": "easy",
+    "question": "Cloud DLP peut-il analyser des images pour trouver des données sensibles ?",
+    "options": ["Oui (OCR)", "Non", "Uniquement du texte", "Uniquement des bases de données"],
+    "correct": 0,
+    "explication": "Cloud DLP peut utiliser l'OCR pour extraire et analyser le texte des images."
+  },
+  {
+    "id": "GCP-DL-225",
+    "theme": "Security & Operations",
+    "theme_label": "Access Transparency",
+    "difficulty": "easy",
+    "question": "Access Transparency fournit-il des logs des accès des employés Google aux données ?",
+    "options": ["Oui", "Non", "Uniquement pour les administrateurs", "Uniquement pour les incidents de sécurité"],
+    "correct": 0,
+    "explication": "Access Transparency journalise les accès des ingénieurs Google aux données client."
+  },
+  {
+    "id": "GCP-DL-226",
+    "theme": "Security & Operations",
+    "theme_label": "VPC Service Controls",
+    "difficulty": "easy",
+    "question": "À quoi servent les VPC Service Controls ?",
+    "options": [
+      "Isoler les services GCP dans un périmètre de sécurité",
+      "Configurer les pare-feu",
+      "Créer des VPN",
+      "Gérer les identités"
+    ],
+    "correct": 0,
+    "explication": "Les VPC Service Controls empêchent l'exfiltration de données en limitant les appels entre services."
+  },
+  {
+    "id": "GCP-DL-227",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud NAT",
+    "difficulty": "easy",
+    "question": "Cloud NAT est-il un service de sécurité réseau ?",
+    "options": ["Oui (masque les IP privées)", "Non", "Uniquement pour le load balancing", "Uniquement pour le firewall"],
+    "correct": 0,
+    "explication": "Cloud NAT permet aux instances sans IP publique d'accéder à Internet, améliorant la sécurité."
+  },
+  {
+    "id": "GCP-DL-228",
+    "theme": "Security & Operations",
+    "theme_label": "BeyondCorp Enterprise",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que BeyondCorp Enterprise ?",
+    "options": [
+      "Modèle de sécurité Zero Trust (accès basé sur l'identité et l'appareil)",
+      "VPN",
+      "Firewall",
+      "Anti-virus"
+    ],
+    "correct": 0,
+    "explication": "BeyondCorp supprime le périmètre réseau pour l'accès aux applications."
+  },
+  {
+    "id": "GCP-DL-229",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Identity-Aware Proxy (IAP)",
+    "difficulty": "easy",
+    "question": "À quoi sert IAP ?",
+    "options": [
+      "Contrôler l'accès aux applications basé sur l'identité",
+      "Proxy HTTP",
+      "Load balancer",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "IAP permet d'autoriser l'accès aux applications sans VPN."
+  },
+  {
+    "id": "GCP-DL-230",
+    "theme": "Security & Operations",
+    "theme_label": "Web Security Scanner",
+    "difficulty": "easy",
+    "question": "Web Security Scanner détecte-t-il les vulnérabilités des applications web ?",
+    "options": ["Oui (XSS, SQLi, etc.)", "Non", "Uniquement les problèmes de configuration", "Uniquement les problèmes de performance"],
+    "correct": 0,
+    "explication": "Web Security Scanner scanne les applications déployées sur App Engine, GCE, GKE."
+  },
+  {
+    "id": "GCP-DL-231",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Armor",
+    "difficulty": "easy",
+    "question": "Cloud Armor protège-t-il contre les attaques DDoS ?",
+    "options": ["Oui", "Non", "Uniquement contre les injections SQL", "Uniquement contre le XSS"],
+    "correct": 0,
+    "explication": "Cloud Armor offre une protection DDoS au niveau de la couche 3/4/7."
+  },
+  {
+    "id": "GCP-DL-232",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud IDS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud IDS (Intrusion Detection System) ?",
+    "options": [
+      "Détection d'intrusions dans le trafic réseau",
+      "Pare-feu",
+      "Anti-virus",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Cloud IDS est un service managé de détection d'intrusion (IPS/IDS)."
+  },
+  {
+    "id": "GCP-DL-233",
+    "theme": "Security & Operations",
+    "theme_label": "Chronicle",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Chronicle ?",
+    "options": [
+      "Plateforme SIEM/SOAR (analyse de sécurité)",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Chronicle (Google Cloud) analyse les logs de sécurité pour détecter les menaces."
+  },
+  {
+    "id": "GCP-DL-234",
+    "theme": "Security & Operations",
+    "theme_label": "Assured Workloads",
+    "difficulty": "easy",
+    "question": "Assured Workloads aide-t-il à répondre aux exigences réglementaires (IL4, IL5, FedRAMP) ?",
+    "options": ["Oui", "Non", "Uniquement pour HIPAA", "Uniquement pour GDPR"],
+    "correct": 0,
+    "explication": "Assured Workloads configure automatiquement les contrôles de conformité."
+  },
+  {
+    "id": "GCP-DL-235",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud External Key Manager (EKM)",
+    "difficulty": "easy",
+    "question": "EKM permet-il d'utiliser des clés externes (gérées par le client) pour chiffrer les données GCP ?",
+    "options": ["Oui", "Non", "Uniquement pour Cloud Storage", "Uniquement pour Compute Engine"],
+    "correct": 0,
+    "explication": "EKM utilise des clés stockées dans des systèmes externes (on-premise ou autres clouds)."
+  },
+  {
+    "id": "GCP-DL-236",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Audit Logs",
+    "difficulty": "easy",
+    "question": "Les audit logs peuvent-ils être envoyés à Pub/Sub ?",
+    "options": ["Oui", "Non", "Uniquement vers Cloud Storage", "Uniquement vers BigQuery"],
+    "correct": 0,
+    "explication": "Les sinks d'audit peuvent envoyer les logs vers Pub/Sub, Cloud Storage, BigQuery."
+  },
+  {
+    "id": "GCP-DL-237",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Asset Inventory",
+    "difficulty": "easy",
+    "question": "Cloud Asset Inventory permet-il d'exporter la liste de toutes les ressources GCP ?",
+    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour Cloud Storage"],
+    "correct": 0,
+    "explication": "Cloud Asset Inventory fournit une vue complète des ressources et des politiques."
+  },
+  {
+    "id": "GCP-DL-238",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Billing budgets",
+    "difficulty": "easy",
+    "question": "Les budgets Cloud Billing peuvent-ils déclencher des alertes et des actions automatisées ?",
+    "options": ["Oui", "Non", "Uniquement des alertes", "Uniquement des actions"],
+    "correct": 0,
+    "explication": "Les budgets peuvent envoyer des notifications Pub/Sub, qui peuvent déclencher des fonctions."
+  },
+  {
+    "id": "GCP-DL-239",
+    "theme": "Security & Operations",
+    "theme_label": "Quotas",
+    "difficulty": "easy",
+    "question": "Les quotas GCP sont-ils des limites de ressources par projet ?",
+    "options": ["Oui", "Non", "Uniquement pour les régions", "Uniquement pour les services"],
+    "correct": 0,
+    "explication": "Les quotas empêchent une utilisation excessive et peuvent être augmentés sur demande."
+  },
+  {
+    "id": "GCP-DL-240",
+    "theme": "Security & Operations",
+    "theme_label": "Service accounts",
+    "difficulty": "easy",
+    "question": "Les comptes de service (service accounts) sont-ils utilisés pour l'authentification des applications ?",
+    "options": ["Oui", "Non", "Uniquement pour les utilisateurs", "Uniquement pour les VMs"],
+    "correct": 0,
+    "explication": "Les comptes de service permettent aux applications d'accéder aux ressources GCP sans utilisateur."
+  },
+  {
+    "id": "GCP-DL-241",
+    "theme": "Security & Operations",
+    "theme_label": "Workload Identity",
+    "difficulty": "easy",
+    "question": "Workload Identity permet-il aux applications GKE de s'authentifier sans clés de compte de service ?",
+    "options": ["Oui", "Non", "Uniquement pour GKE Autopilot", "Uniquement pour GKE Standard"],
+    "correct": 0,
+    "explication": "Workload Identity associe les comptes de service Kubernetes aux comptes de service GCP."
+  },
+  {
+    "id": "GCP-DL-242",
+    "theme": "Security & Operations",
+    "theme_label": "Binary Authorization",
+    "difficulty": "easy",
+    "question": "Binary Authorization impose-t-il que seules les images signées soient déployées sur GKE ?",
+    "options": ["Oui", "Non", "Uniquement pour les images publiques", "Uniquement pour les images privées"],
+    "correct": 0,
+    "explication": "Binary Authorization vérifie la signature des images avant le déploiement."
+  },
+  {
+    "id": "GCP-DL-243",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Build integration",
+    "difficulty": "easy",
+    "question": "Cloud Build peut-il être intégré à Binary Authorization pour signer les images ?",
+    "options": ["Oui", "Non", "Uniquement avec Container Registry", "Uniquement avec Artifact Registry"],
+    "correct": 0,
+    "explication": "Cloud Build peut signer les images avec des clés KMS pour Binary Authorization."
+  },
+  {
+    "id": "GCP-DL-244",
+    "theme": "Security & Operations",
+    "theme_label": "Artifact Registry",
+    "difficulty": "easy",
+    "question": "Artifact Registry remplace-t-il Container Registry ?",
+    "options": ["Oui", "Non", "Uniquement pour les images Docker", "Uniquement pour les paquets Maven"],
+    "correct": 0,
+    "explication": "Artifact Registry est le successeur de Container Registry, supportant plus de formats."
+  },
+  {
+    "id": "GCP-DL-245",
+    "theme": "Security & Operations",
+    "theme_label": "Container Analysis",
+    "difficulty": "easy",
+    "question": "Container Analysis scanne-t-il les images de conteneurs pour les vulnérabilités ?",
+    "options": ["Oui", "Non", "Uniquement les images publiques", "Uniquement les images Windows"],
+    "correct": 0,
+    "explication": "Container Analysis (intégré à Artifact Registry) détecte les vulnérabilités connues."
+  },
+  {
+    "id": "GCP-DL-246",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Functions with Cloud KMS",
+    "difficulty": "easy",
+    "question": "Cloud Functions peut-il utiliser Cloud KMS pour déchiffrer des secrets ?",
+    "options": ["Oui", "Non", "Uniquement avec Secret Manager", "Uniquement avec Cloud HSM"],
+    "correct": 0,
+    "explication": "Cloud Functions peut appeler l'API KMS pour déchiffrer des données."
+  },
+  {
+    "id": "GCP-DL-247",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Scheduler with OAuth",
+    "difficulty": "easy",
+    "question": "Cloud Scheduler peut-il authentifier les requêtes vers Cloud Run avec OIDC ?",
+    "options": ["Oui", "Non", "Uniquement vers HTTP endpoints", "Uniquement vers App Engine"],
+    "correct": 0,
+    "explication": "Cloud Scheduler peut ajouter un token OIDC pour authentifier les appels vers Cloud Run ou Cloud Functions."
+  },
+  {
+    "id": "GCP-DL-248",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Tasks with IAM",
+    "difficulty": "easy",
+    "question": "Cloud Tasks peut-il utiliser IAM pour autoriser l'accès aux files ?",
+    "options": ["Oui", "Non", "Uniquement avec des clés d'API", "Uniquement avec des certificats"],
+    "correct": 0,
+    "explication": "Cloud Tasks supporte IAM pour contrôler qui peut créer, lister ou supprimer des tâches."
+  },
+  {
+    "id": "GCP-DL-249",
+    "theme": "Security & Operations",
+    "theme_label": "Cloud Workflows with IAM",
+    "difficulty": "easy",
+    "question": "Les workflows Cloud Workflows s'exécutent-ils avec un compte de service ?",
+    "options": ["Oui", "Non", "Uniquement avec le compte de l'utilisateur", "Uniquement sans authentification"],
+    "correct": 0,
+    "explication": "Cloud Workflows nécessite un compte de service pour s'authentifier auprès des autres services GCP."
+  },
+  {
+    "id": "GCP-DL-250",
+    "theme": "Security & Operations",
+    "theme_label": "Best practices",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne pratique pour la gestion des clés d'API ?",
+    "options": [
+      "Les stocker dans Secret Manager, limiter leur portée",
+      "Les coder en dur dans l'application",
+      "Les partager publiquement",
+      "Les envoyer par email"
+    ],
+    "correct": 0,
+    "explication": "Les clés d'API doivent être protégées comme des secrets."
+  }
+]

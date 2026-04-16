@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "AWS-CCP-051",
+    "theme": "Core Services",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Que signifie EC2 ?",
+    "options": [
+      "Elastic Compute Cloud",
+      "Elastic Container Cloud",
+      "Elastic Compute Cluster",
+      "Elastic Cloud Compute"
+    ],
+    "correct": 0,
+    "explanation": "EC2 fournit des machines virtuelles scalables."
+  },
+  {
+    "id": "AWS-CCP-052",
+    "theme": "Core Services",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Quel est le type d'instance EC2 pour usage général ?",
+    "options": [
+      "t3, m5",
+      "c5",
+      "r5",
+      "i3"
+    ],
+    "correct": 0,
+    "explanation": "t3 (burstable) et m5 (general purpose) sont pour usage général."
+  },
+  {
+    "id": "AWS-CCP-053",
+    "theme": "Core Services",
+    "theme_label": "EC2",
+    "difficulty": "medium",
+    "question": "Quel type d'instance est optimisé pour le calcul ?",
+    "options": [
+      "c5",
+      "m5",
+      "r5",
+      "i3"
+    ],
+    "correct": 0,
+    "explanation": "c5 est optimisé pour le calcul (Compute optimized)."
+  },
+  {
+    "id": "AWS-CCP-054",
+    "theme": "Core Services",
+    "theme_label": "EC2",
+    "difficulty": "medium",
+    "question": "Quel type d'instance est optimisé pour la mémoire ?",
+    "options": [
+      "r5",
+      "m5",
+      "c5",
+      "i3"
+    ],
+    "correct": 0,
+    "explanation": "r5 est optimisé pour la mémoire (Memory optimized)."
+  },
+  {
+    "id": "AWS-CCP-055",
+    "theme": "Core Services",
+    "theme_label": "S3",
+    "difficulty": "easy",
+    "question": "Que signifie S3 ?",
+    "options": [
+      "Simple Storage Service",
+      "Secure Storage Service",
+      "Simple Storage System",
+      "Standard Storage Service"
+    ],
+    "correct": 0,
+    "explanation": "S3 est le stockage objet d'AWS."
+  },
+  {
+    "id": "AWS-CCP-056",
+    "theme": "Core Services",
+    "theme_label": "S3",
+    "difficulty": "easy",
+    "question": "Quelle est la taille maximale d'un objet S3 ?",
+    "options": [
+      "5 To",
+      "1 To",
+      "500 Go",
+      "10 To"
+    ],
+    "correct": 0,
+    "explanation": "La taille maximale d'un objet S3 est 5 To."
+  },
+  {
+    "id": "AWS-CCP-057",
+    "theme": "Core Services",
+    "theme_label": "S3",
+    "difficulty": "medium",
+    "question": "Quelle classe de stockage S3 est la moins chère ?",
+    "options": [
+      "S3 Glacier Deep Archive",
+      "S3 Glacier",
+      "S3 Standard-IA",
+      "S3 One Zone-IA"
+    ],
+    "correct": 0,
+    "explanation": "Glacier Deep Archive est la classe la moins chère."
+  },
+  {
+    "id": "AWS-CCP-058",
+    "theme": "Core Services",
+    "theme_label": "S3",
+    "difficulty": "medium",
+    "question": "Quelle classe de stockage est pour les données consultées rarement ?",
+    "options": [
+      "S3 Standard-IA",
+      "S3 Standard",
+      "S3 Glacier",
+      "S3 Intelligent-Tiering"
+    ],
+    "correct": 0,
+    "explanation": "Standard-IA pour accès peu fréquents."
+  },
+  {
+    "id": "AWS-CCP-059",
+    "theme": "Core Services",
+    "theme_label": "VPC",
+    "difficulty": "easy",
+    "question": "Que signifie VPC ?",
+    "options": [
+      "Virtual Private Cloud",
+      "Virtual Public Cloud",
+      "Virtual Private Cluster",
+      "Virtual Private Compute"
+    ],
+    "correct": 0,
+    "explanation": "VPC est un réseau virtuel isolé dans AWS."
+  },
+  {
+    "id": "AWS-CCP-060",
+    "theme": "Core Services",
+    "theme_label": "VPC",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un subnet ?",
+    "options": [
+      "Sous-réseau dans un VPC",
+      "Type d'instance",
+      "Service de stockage",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Un subnet est une plage d'adresses IP dans un VPC."
+  },
+  {
+    "id": "AWS-CCP-061",
+    "theme": "Core Services",
+    "theme_label": "VPC",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre public et private subnet ?",
+    "options": [
+      "Public subnet a accès à Internet",
+      "Private subnet a accès à Internet",
+      "Identiques",
+      "Public subnet est plus cher"
+    ],
+    "correct": 0,
+    "explanation": "Les subnets publics ont une route vers Internet Gateway."
+  },
+  {
+    "id": "AWS-CCP-062",
+    "theme": "Core Services",
+    "theme_label": "RDS",
+    "difficulty": "easy",
+    "question": "Que signifie RDS ?",
+    "options": [
+      "Relational Database Service",
+      "Remote Database Service",
+      "Relational Data Storage",
+      "Redundant Database Service"
+    ],
+    "correct": 0,
+    "explanation": "RDS est un service de base de données relationnelle managée."
+  },
+  {
+    "id": "AWS-CCP-063",
+    "theme": "Core Services",
+    "theme_label": "RDS",
+    "difficulty": "medium",
+    "question": "Quels moteurs de base de données sont supportés par RDS ?",
+    "options": [
+      "MySQL, PostgreSQL, Oracle, SQL Server, MariaDB",
+      "MongoDB, Cassandra",
+      "DynamoDB, Redshift",
+      "Neptune, Elasticache"
+    ],
+    "correct": 0,
+    "explanation": "RDS supporte les bases SQL traditionnelles."
+  },
+  {
+    "id": "AWS-CCP-064",
+    "theme": "Core Services",
+    "theme_label": "RDS",
+    "difficulty": "hard",
+    "question": "Que fait Multi-AZ sur RDS ?",
+    "options": [
+      "Réplication synchrone pour HA",
+      "Réplication asynchrone",
+      "Scale-out de lecture",
+      "Backup automatique"
+    ],
+    "correct": 0,
+    "explanation": "Multi-AZ réplique synchrone pour haute disponibilité."
+  },
+  {
+    "id": "AWS-CCP-065",
+    "theme": "Core Services",
+    "theme_label": "Lambda",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'AWS Lambda ?",
+    "options": [
+      "Fonction serverless",
+      "Service de calcul",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Lambda exécute du code sans provisionner de serveurs."
+  },
+  {
+    "id": "AWS-CCP-066",
+    "theme": "Core Services",
+    "theme_label": "Lambda",
+    "difficulty": "medium",
+    "question": "Quel est le timeout maximum d'une fonction Lambda ?",
+    "options": [
+      "15 minutes",
+      "5 minutes",
+      "30 minutes",
+      "1 heure"
+    ],
+    "correct": 0,
+    "explanation": "Le timeout maximum est 15 minutes (900 secondes)."
+  },
+  {
+    "id": "AWS-CCP-067",
+    "theme": "Core Services",
+    "theme_label": "Lambda",
+    "difficulty": "medium",
+    "question": "Quelle est la mémoire maximale pour Lambda ?",
+    "options": [
+      "10 Go",
+      "5 Go",
+      "3 Go",
+      "1 Go"
+    ],
+    "correct": 0,
+    "explanation": "La mémoire maximale est 10 Go."
+  },
+  {
+    "id": "AWS-CCP-068",
+    "theme": "Core Services",
+    "theme_label": "CloudFront",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que CloudFront ?",
+    "options": [
+      "CDN (Content Delivery Network)",
+      "Service de calcul",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "CloudFront est le CDN d'AWS."
+  },
+  {
+    "id": "AWS-CCP-069",
+    "theme": "Core Services",
+    "theme_label": "CloudFront",
+    "difficulty": "medium",
+    "question": "Où sont situés les edge locations ?",
+    "options": [
+      "Partout dans le monde",
+      "Seulement aux USA",
+      "Seulement en Europe",
+      "Seulement en Asie"
+    ],
+    "correct": 0,
+    "explanation": "Les edge locations sont répartis mondialement."
+  },
+  {
+    "id": "AWS-CCP-070",
+    "theme": "Core Services",
+    "theme_label": "Route53",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Route53 ?",
+    "options": [
+      "Service DNS",
+      "Service de routage",
+      "Service de calcul",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Route53 est le service DNS d'AWS."
+  },
+  {
+    "id": "AWS-CCP-071",
+    "theme": "Core Services",
+    "theme_label": "Route53",
+    "difficulty": "medium",
+    "question": "Quels types d'enregistrements DNS sont supportés ?",
+    "options": [
+      "A, AAAA, CNAME, MX, TXT, etc.",
+      "Seulement A",
+      "Seulement CNAME",
+      "Seulement MX"
+    ],
+    "correct": 0,
+    "explanation": "Route53 supporte tous les types DNS standards."
+  },
+  {
+    "id": "AWS-CCP-072",
+    "theme": "Core Services",
+    "theme_label": "EBS",
+    "difficulty": "easy",
+    "question": "Que signifie EBS ?",
+    "options": [
+      "Elastic Block Store",
+      "Elastic Bulk Storage",
+      "Elastic Backup Storage",
+      "Elastic Byte Storage"
+    ],
+    "correct": 0,
+    "explanation": "EBS est le stockage bloc pour EC2."
+  },
+  {
+    "id": "AWS-CCP-073",
+    "theme": "Core Services",
+    "theme_label": "EBS",
+    "difficulty": "medium",
+    "question": "Quel type de volume EBS est SSD généraliste ?",
+    "options": [
+      "gp2/gp3",
+      "io1/io2",
+      "st1",
+      "sc1"
+    ],
+    "correct": 0,
+    "explanation": "gp2/gp3 sont les volumes SSD à usage général."
+  },
+  {
+    "id": "AWS-CCP-074",
+    "theme": "Core Services",
+    "theme_label": "EBS",
+    "difficulty": "medium",
+    "question": "Quel type de volume EBS est optimisé IOPS ?",
+    "options": [
+      "io1/io2",
+      "gp2/gp3",
+      "st1",
+      "sc1"
+    ],
+    "correct": 0,
+    "explanation": "io1/io2 sont les volumes SSD provisioned IOPS."
+  },
+  {
+    "id": "AWS-CCP-075",
+    "theme": "Core Services",
+    "theme_label": "EFS",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'EFS ?",
+    "options": [
+      "Elastic File System (NFS)",
+      "Elastic Block Store",
+      "Elastic Container Service",
+      "Elastic Compute Service"
+    ],
+    "correct": 0,
+    "explanation": "EFS est un système de fichiers NFS partagé."
+  },
+  {
+    "id": "AWS-CCP-076",
+    "theme": "Core Services",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "Combien d'instances EC2 peuvent monter un EFS ?",
+    "options": [
+      "Illimité",
+      "1",
+      "10",
+      "100"
+    ],
+    "correct": 0,
+    "explanation": "EFS peut être monté par un grand nombre d'instances."
+  },
+  {
+    "id": "AWS-CCP-077",
+    "theme": "Core Services",
+    "theme_label": "ElastiCache",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'ElastiCache ?",
+    "options": [
+      "Cache managé (Redis/Memcached)",
+      "Base de données",
+      "Stockage",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "ElastiCache est un service de cache in-memory managé."
+  },
+  {
+    "id": "AWS-CCP-078",
+    "theme": "Core Services",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "Quels moteurs sont supportés par ElastiCache ?",
+    "options": [
+      "Redis et Memcached",
+      "Redis seulement",
+      "Memcached seulement",
+      "Redis et MongoDB"
+    ],
+    "correct": 0,
+    "explanation": "ElastiCache supporte Redis et Memcached."
+  },
+  {
+    "id": "AWS-CCP-079",
+    "theme": "Core Services",
+    "theme_label": "DynamoDB",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que DynamoDB ?",
+    "options": [
+      "Base de données NoSQL",
+      "Base de données SQL",
+      "Cache",
+      "Stockage objet"
+    ],
+    "correct": 0,
+    "explanation": "DynamoDB est une base de données NoSQL clé-valeur."
+  },
+  {
+    "id": "AWS-CCP-080",
+    "theme": "Core Services",
+    "theme_label": "DynamoDB",
+    "difficulty": "medium",
+    "question": "Quels sont les modes de capacité DynamoDB ?",
+    "options": [
+      "Provisioned et On-Demand",
+      "Standard et Premium",
+      "Basic et Advanced",
+      "Single et Multi-AZ"
+    ],
+    "correct": 0,
+    "explanation": "Provisioned (RCU/WCU) ou On-Demand (pay-per-request)."
+  },
+  {
+    "id": "AWS-CCP-081",
+    "theme": "Core Services",
+    "theme_label": "SQS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que SQS ?",
+    "options": [
+      "File d'attente de messages",
+      "Base de données",
+      "Cache",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "SQS est un service de file d'attente managé."
+  },
+  {
+    "id": "AWS-CCP-082",
+    "theme": "Core Services",
+    "theme_label": "SQS",
+    "difficulty": "medium",
+    "question": "Quels types de files SQS existent ?",
+    "options": [
+      "Standard et FIFO",
+      "Standard seulement",
+      "FIFO seulement",
+      "Priority et Normal"
+    ],
+    "correct": 0,
+    "explanation": "SQS Standard (haute throughput) et FIFO (ordre garanti)."
+  },
+  {
+    "id": "AWS-CCP-083",
+    "theme": "Core Services",
+    "theme_label": "SNS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que SNS ?",
+    "options": [
+      "Service de notifications",
+      "File d'attente",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "SNS est un service de notifications pub/sub."
+  },
+  {
+    "id": "AWS-CCP-084",
+    "theme": "Core Services",
+    "theme_label": "SNS",
+    "difficulty": "medium",
+    "question": "Quels protocoles sont supportés par SNS ?",
+    "options": [
+      "Email, SMS, HTTP, Lambda, SQS",
+      "Email seulement",
+      "SMS seulement",
+      "HTTP seulement"
+    ],
+    "correct": 0,
+    "explanation": "SNS supporte de nombreux protocoles d'endpoint."
+  },
+  {
+    "id": "AWS-CCP-085",
+    "theme": "Core Services",
+    "theme_label": "Kinesis",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Kinesis ?",
+    "options": [
+      "Ingestion de flux de données",
+      "Base de données",
+      "Cache",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Kinesis ingère et traite des flux de données en temps réel."
+  },
+  {
+    "id": "AWS-CCP-086",
+    "theme": "Core Services",
+    "theme_label": "Kinesis",
+    "difficulty": "hard",
+    "question": "Quels sont les services Kinesis ?",
+    "options": [
+      "Data Streams, Data Firehose, Data Analytics",
+      "Streams seulement",
+      "Firehose seulement",
+      "Analytics seulement"
+    ],
+    "correct": 0,
+    "explanation": "Kinesis a plusieurs composants pour les flux."
+  },
+  {
+    "id": "AWS-CCP-087",
+    "theme": "Core Services",
+    "theme_label": "CloudWatch",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que CloudWatch ?",
+    "options": [
+      "Monitoring et observabilité",
+      "Logging",
+      "Alerting",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CloudWatch collecte métriques, logs et alarmes."
+  },
+  {
+    "id": "AWS-CCP-088",
+    "theme": "Core Services",
+    "theme_label": "CloudWatch",
+    "difficulty": "medium",
+    "question": "Quelle est la résolution standard des métriques CloudWatch ?",
+    "options": [
+      "1 minute",
+      "5 minutes",
+      "10 secondes",
+      "1 seconde"
+    ],
+    "correct": 0,
+    "explanation": "Les métriques standard ont une granularité d'1 minute."
+  },
+  {
+    "id": "AWS-CCP-089",
+    "theme": "Core Services",
+    "theme_label": "CloudTrail",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que CloudTrail ?",
+    "options": [
+      "Journalisation des appels API",
+      "Monitoring",
+      "Logging d'applications",
+      "Audit de sécurité"
+    ],
+    "correct": 0,
+    "explanation": "CloudTrail enregistre tous les appels API AWS."
+  },
+  {
+    "id": "AWS-CCP-090",
+    "theme": "Core Services",
+    "theme_label": "CloudTrail",
+    "difficulty": "hard",
+    "question": "Où sont stockés les logs CloudTrail ?",
+    "options": [
+      "S3",
+      "CloudWatch Logs",
+      "CloudWatch",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les logs peuvent être envoyés vers S3 et CloudWatch Logs."
+  },
+  {
+    "id": "AWS-CCP-091",
+    "theme": "Core Services",
+    "theme_label": "ECS",
+    "difficulty": "easy",
+    "question": "Que signifie ECS ?",
+    "options": [
+      "Elastic Container Service",
+      "Elastic Compute Service",
+      "Elastic Container System",
+      "Elastic Compute System"
+    ],
+    "correct": 0,
+    "explanation": "ECS est un service d'orchestration de conteneurs."
+  },
+  {
+    "id": "AWS-CCP-092",
+    "theme": "Core Services",
+    "theme_label": "ECS",
+    "difficulty": "medium",
+    "question": "Quels modes de lancement ECS ?",
+    "options": [
+      "Fargate et EC2",
+      "Fargate seulement",
+      "EC2 seulement",
+      "Lambda"
+    ],
+    "correct": 0,
+    "explanation": "Fargate (serverless) ou EC2 (géré par client)."
+  },
+  {
+    "id": "AWS-CCP-093",
+    "theme": "Core Services",
+    "theme_label": "EKS",
+    "difficulty": "easy",
+    "question": "Que signifie EKS ?",
+    "options": [
+      "Elastic Kubernetes Service",
+      "Elastic Kinesis Service",
+      "Elastic Key Service",
+      "Elastic Knowledge Service"
+    ],
+    "correct": 0,
+    "explanation": "EKS est le service Kubernetes managé d'AWS."
+  },
+  {
+    "id": "AWS-CCP-094",
+    "theme": "Core Services",
+    "theme_label": "EKS",
+    "difficulty": "hard",
+    "question": "EKS est-il compatible avec Kubernetes upstream ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Version modifiée"
+    ],
+    "correct": 0,
+    "explanation": "EKS est certifié Kubernetes conforme."
+  },
+  {
+    "id": "AWS-CCP-095",
+    "theme": "Core Services",
+    "theme_label": "Fargate",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que Fargate ?",
+    "options": [
+      "Moteur serverless pour conteneurs",
+      "Type d'instance EC2",
+      "Service de stockage",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Fargate exécute des conteneurs sans gérer de serveurs."
+  },
+  {
+    "id": "AWS-CCP-096",
+    "theme": "Core Services",
+    "theme_label": "Batch",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Batch ?",
+    "options": [
+      "Traitement par lots",
+      "Traitement temps réel",
+      "Streaming",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Batch planifie et exécute des jobs de calcul par lots."
+  },
+  {
+    "id": "AWS-CCP-097",
+    "theme": "Core Services",
+    "theme_label": "Step Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Step Functions ?",
+    "options": [
+      "Orchestration de workflows",
+      "Base de données",
+      "Cache",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Step Functions orchestre des services AWS dans un workflow."
+  },
+  {
+    "id": "AWS-CCP-098",
+    "theme": "Core Services",
+    "theme_label": "Secrets Manager",
+    "difficulty": "hard",
+    "question": "À quoi sert Secrets Manager ?",
+    "options": [
+      "Gestion des secrets",
+      "Stockage de données",
+      "Cache",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explanation": "Secrets Manager stocke et gère les secrets (mots de passe, clés API)."
+  },
+  {
+    "id": "AWS-CCP-099",
+    "theme": "Core Services",
+    "theme_label": "Systems Manager",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Systems Manager ?",
+    "options": [
+      "Gestion d'infrastructure",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Systems Manager permet la gestion et l'automatisation des ressources."
+  },
+  {
+    "id": "AWS-CCP-100",
+    "theme": "Core Services",
+    "theme_label": "Organizations",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Organizations ?",
+    "options": [
+      "Gestion multi-comptes",
+      "Base de données",
+      "Cache",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Organizations centralise la gestion de plusieurs comptes AWS."
+  },
+  {
+    "id": "AWS-CCP-101",
+    "theme": "Core Services Suite",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet de créer des machines virtuelles ?",
+    "options": [
+      "EC2",
+      "Lambda",
+      "ECS",
+      "Fargate"
+    ],
+    "correct": 0,
+    "explanation": "EC2 (Elastic Compute Cloud) fournit des machines virtuelles."
+  },
+  {
+    "id": "AWS-CCP-102",
+    "theme": "Core Services Suite",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Quel type d'instance EC2 est le plus économique pour les charges variables ?",
+    "options": [
+      "Spot Instances",
+      "On-Demand",
+      "Reserved Instances",
+      "Dedicated Hosts"
+    ],
+    "correct": 0,
+    "explanation": "Les instances Spot offrent jusqu'à 90% de réduction mais peuvent être interrompues."
+  },
+  {
+    "id": "AWS-CCP-103",
+    "theme": "Core Services Suite",
+    "theme_label": "S3",
+    "difficulty": "easy",
+    "question": "Quelle classe de stockage S3 est la plus durable ?",
+    "options": [
+      "Toutes ont 99.999999999% (11 9's) de durabilité",
+      "S3 Standard",
+      "S3 Glacier",
+      "S3 One Zone-IA"
+    ],
+    "correct": 0,
+    "explication": "Toutes les classes S3 (sauf One Zone-IA) ont 11 9's de durabilité."
+  },
+  {
+    "id": "AWS-CCP-104",
+    "theme": "Core Services Suite",
+    "theme_label": "RDS",
+    "difficulty": "easy",
+    "question": "Quel service AWS gère les bases de données relationnelles ?",
+    "options": [
+      "RDS",
+      "DynamoDB",
+      "Redshift",
+      "Neptune"
+    ],
+    "correct": 0,
+    "explication": "RDS (Relational Database Service) gère les bases SQL."
+  },
+  {
+    "id": "AWS-CCP-105",
+    "theme": "Core Services Suite",
+    "theme_label": "Lambda",
+    "difficulty": "easy",
+    "question": "Quel service AWS exécute du code sans provisionner de serveurs ?",
+    "options": [
+      "Lambda",
+      "EC2",
+      "ECS",
+      "Fargate"
+    ],
+    "correct": 0,
+    "explication": "Lambda est le service serverless d'AWS."
+  },
+  {
+    "id": "AWS-CCP-106",
+    "theme": "Core Services Suite",
+    "theme_label": "VPC",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un VPC ?",
+    "options": [
+      "Virtual Private Cloud - réseau isolé",
+      "Virtual Public Cloud",
+      "Virtual Private Compute",
+      "Virtual Private Cluster"
+    ],
+    "correct": 0,
+    "explication": "VPC est un réseau virtuel isolé dans AWS."
+  },
+  {
+    "id": "AWS-CCP-107",
+    "theme": "Core Services Suite",
+    "theme_label": "Route53",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un service DNS ?",
+    "options": [
+      "Route53",
+      "CloudFront",
+      "ELB",
+      "API Gateway"
+    ],
+    "correct": 0,
+    "explication": "Route53 est le service DNS d'AWS."
+  },
+  {
+    "id": "AWS-CCP-108",
+    "theme": "Core Services Suite",
+    "theme_label": "CloudFront",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un CDN (Content Delivery Network) ?",
+    "options": [
+      "CloudFront",
+      "S3",
+      "EC2",
+      "Global Accelerator"
+    ],
+    "correct": 0,
+    "explication": "CloudFront est le CDN d'AWS."
+  },
+  {
+    "id": "AWS-CCP-109",
+    "theme": "Core Services Suite",
+    "theme_label": "ELB",
+    "difficulty": "easy",
+    "question": "Quel service AWS distribue le trafic entre plusieurs instances ?",
+    "options": [
+      "ELB",
+      "Route53",
+      "CloudFront",
+      "Global Accelerator"
+    ],
+    "correct": 0,
+    "explication": "ELB (Elastic Load Balancing) distribue le trafic."
+  },
+  {
+    "id": "AWS-CCP-110",
+    "theme": "Core Services Suite",
+    "theme_label": "Auto Scaling",
+    "difficulty": "easy",
+    "question": "Quel service AWS ajuste automatiquement le nombre d'instances ?",
+    "options": [
+      "Auto Scaling",
+      "ELB",
+      "CloudWatch",
+      "EC2"
+    ],
+    "correct": 0,
+    "explication": "Auto Scaling ajuste la capacité en fonction de la charge."
+  },
+  {
+    "id": "AWS-CCP-111",
+    "theme": "Core Services Suite",
+    "theme_label": "EBS",
+    "difficulty": "easy",
+    "question": "Quel service AWS fournit du stockage bloc pour EC2 ?",
+    "options": [
+      "EBS",
+      "S3",
+      "EFS",
+      "Instance Store"
+    ],
+    "correct": 0,
+    "explication": "EBS (Elastic Block Store) est le stockage bloc pour EC2."
+  },
+  {
+    "id": "AWS-CCP-112",
+    "theme": "Core Services Suite",
+    "theme_label": "EFS",
+    "difficulty": "easy",
+    "question": "Quel service AWS fournit un système de fichiers partagé ?",
+    "options": [
+      "EFS",
+      "EBS",
+      "S3",
+      "FSx"
+    ],
+    "correct": 0,
+    "explication": "EFS (Elastic File System) est un système de fichiers NFS partagé."
+  },
+  {
+    "id": "AWS-CCP-113",
+    "theme": "Core Services Suite",
+    "theme_label": "DynamoDB",
+    "difficulty": "easy",
+    "question": "Quel service AWS est une base de données NoSQL ?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "Redshift",
+      "Aurora"
+    ],
+    "correct": 0,
+    "explication": "DynamoDB est une base NoSQL clé-valeur."
+  },
+  {
+    "id": "AWS-CCP-114",
+    "theme": "Core Services Suite",
+    "theme_label": "SQS",
+    "difficulty": "easy",
+    "question": "Quel service AWS est une file d'attente de messages ?",
+    "options": [
+      "SQS",
+      "SNS",
+      "EventBridge",
+      "Kinesis"
+    ],
+    "correct": 0,
+    "explication": "SQS (Simple Queue Service) est une file d'attente."
+  },
+  {
+    "id": "AWS-CCP-115",
+    "theme": "Core Services Suite",
+    "theme_label": "SNS",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un service de notifications pub/sub ?",
+    "options": [
+      "SNS",
+      "SQS",
+      "EventBridge",
+      "Kinesis"
+    ],
+    "correct": 0,
+    "explication": "SNS (Simple Notification Service) envoie des notifications."
+  },
+  {
+    "id": "AWS-CCP-116",
+    "theme": "Core Services Suite",
+    "theme_label": "CloudWatch",
+    "difficulty": "easy",
+    "question": "Quel service AWS surveille les métriques et les logs ?",
+    "options": [
+      "CloudWatch",
+      "CloudTrail",
+      "Config",
+      "Trusted Advisor"
+    ],
+    "correct": 0,
+    "explication": "CloudWatch collecte métriques, logs et alarmes."
+  },
+  {
+    "id": "AWS-CCP-117",
+    "theme": "Core Services Suite",
+    "theme_label": "CloudTrail",
+    "difficulty": "easy",
+    "question": "Quel service AWS enregistre les appels API ?",
+    "options": [
+      "CloudTrail",
+      "CloudWatch",
+      "Config",
+      "GuardDuty"
+    ],
+    "correct": 0,
+    "explication": "CloudTrail enregistre tous les appels API AWS."
+  },
+  {
+    "id": "AWS-CCP-118",
+    "theme": "Core Services Suite",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Quel service AWS gère les identités et les accès ?",
+    "options": [
+      "IAM",
+      "Cognito",
+      "Directory Service",
+      "Organizations"
+    ],
+    "correct": 0,
+    "explication": "IAM (Identity and Access Management) gère les permissions."
+  },
+  {
+    "id": "AWS-CCP-119",
+    "theme": "Core Services Suite",
+    "theme_label": "KMS",
+    "difficulty": "easy",
+    "question": "Quel service AWS gère les clés de chiffrement ?",
+    "options": [
+      "KMS",
+      "CloudHSM",
+      "Secrets Manager",
+      "ACM"
+    ],
+    "correct": 0,
+    "explication": "KMS (Key Management Service) gère les clés de chiffrement."
+  },
+  {
+    "id": "AWS-CCP-120",
+    "theme": "Core Services Suite",
+    "theme_label": "Secrets Manager",
+    "difficulty": "easy",
+    "question": "Quel service AWS gère les secrets (mots de passe, clés API) ?",
+    "options": [
+      "Secrets Manager",
+      "KMS",
+      "Parameter Store",
+      "IAM"
+    ],
+    "correct": 0,
+    "explication": "Secrets Manager stocke et gère les secrets."
+  },
+  {
+    "id": "AWS-CCP-121",
+    "theme": "Core Services Suite",
+    "theme_label": "ECR",
+    "difficulty": "easy",
+    "question": "Quel service AWS stocke les images Docker ?",
+    "options": [
+      "ECR",
+      "ECS",
+      "EKS",
+      "S3"
+    ],
+    "correct": 0,
+    "explication": "ECR (Elastic Container Registry) stocke les images Docker."
+  },
+  {
+    "id": "AWS-CCP-122",
+    "theme": "Core Services Suite",
+    "theme_label": "ECS",
+    "difficulty": "easy",
+    "question": "Quel service AWS orchestre les conteneurs Docker ?",
+    "options": [
+      "ECS",
+      "EKS",
+      "ECR",
+      "Fargate"
+    ],
+    "correct": 0,
+    "explication": "ECS (Elastic Container Service) orchestre les conteneurs."
+  },
+  {
+    "id": "AWS-CCP-123",
+    "theme": "Core Services Suite",
+    "theme_label": "EKS",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un service Kubernetes managé ?",
+    "options": [
+      "EKS",
+      "ECS",
+      "Fargate",
+      "ECR"
+    ],
+    "correct": 0,
+    "explication": "EKS (Elastic Kubernetes Service) est Kubernetes managé."
+  },
+  {
+    "id": "AWS-CCP-124",
+    "theme": "Core Services Suite",
+    "theme_label": "Fargate",
+    "difficulty": "easy",
+    "question": "Quel service AWS exécute des conteneurs sans gérer de serveurs ?",
+    "options": [
+      "Fargate",
+      "ECS",
+      "EKS",
+      "Lambda"
+    ],
+    "correct": 0,
+    "explication": "Fargate est serverless pour les conteneurs."
+  },
+  {
+    "id": "AWS-CCP-125",
+    "theme": "Core Services Suite",
+    "theme_label": "CodeCommit",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un dépôt Git managé ?",
+    "options": [
+      "CodeCommit",
+      "CodeBuild",
+      "CodeDeploy",
+      "CodePipeline"
+    ],
+    "correct": 0,
+    "explication": "CodeCommit est un service de dépôt Git privé."
+  },
+  {
+    "id": "AWS-CCP-126",
+    "theme": "Core Services Suite",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un service de build managé ?",
+    "options": [
+      "CodeBuild",
+      "CodeCommit",
+      "CodeDeploy",
+      "CodePipeline"
+    ],
+    "correct": 0,
+    "explication": "CodeBuild compile et teste le code."
+  },
+  {
+    "id": "AWS-CCP-127",
+    "theme": "Core Services Suite",
+    "theme_label": "CodeDeploy",
+    "difficulty": "easy",
+    "question": "Quel service AWS automatise les déploiements ?",
+    "options": [
+      "CodeDeploy",
+      "CodeBuild",
+      "CodeCommit",
+      "CodePipeline"
+    ],
+    "correct": 0,
+    "explication": "CodeDeploy déploie automatiquement les applications."
+  },
+  {
+    "id": "AWS-CCP-128",
+    "theme": "Core Services Suite",
+    "theme_label": "CodePipeline",
+    "difficulty": "easy",
+    "question": "Quel service AWS orchestre les pipelines CI/CD ?",
+    "options": [
+      "CodePipeline",
+      "CodeBuild",
+      "CodeDeploy",
+      "CodeCommit"
+    ],
+    "correct": 0,
+    "explication": "CodePipeline orchestre les étapes de livraison continue."
+  },
+  {
+    "id": "AWS-CCP-129",
+    "theme": "Core Services Suite",
+    "theme_label": "CloudFormation",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet l'Infrastructure as Code ?",
+    "options": [
+      "CloudFormation",
+      "CDK",
+      "Terraform",
+      "SAM"
+    ],
+    "correct": 0,
+    "explication": "CloudFormation est le service IaC d'AWS."
+  },
+  {
+    "id": "AWS-CCP-130",
+    "theme": "Core Services Suite",
+    "theme_label": "AWS Organizations",
+    "difficulty": "easy",
+    "question": "Quel service AWS gère plusieurs comptes ?",
+    "options": [
+      "Organizations",
+      "Control Tower",
+      "IAM",
+      "Consolidated Billing"
+    ],
+    "correct": 0,
+    "explication": "Organizations centralise la gestion multi-comptes."
+  },
+  {
+    "id": "AWS-CCP-131",
+    "theme": "Core Services Suite",
+    "theme_label": "Control Tower",
+    "difficulty": "easy",
+    "question": "Quel service AWS simplifie la gouvernance multi-comptes ?",
+    "options": [
+      "Control Tower",
+      "Organizations",
+      "Config",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "Control Tower automatise la configuration de landing zones."
+  },
+  {
+    "id": "AWS-CCP-132",
+    "theme": "Core Services Suite",
+    "theme_label": "Config",
+    "difficulty": "easy",
+    "question": "Quel service AWS évalue la conformité des ressources ?",
+    "options": [
+      "Config",
+      "CloudTrail",
+      "CloudWatch",
+      "Trusted Advisor"
+    ],
+    "correct": 0,
+    "explication": "AWS Config enregistre les changements et évalue les règles."
+  },
+  {
+    "id": "AWS-CCP-133",
+    "theme": "Core Services Suite",
+    "theme_label": "GuardDuty",
+    "difficulty": "easy",
+    "question": "Quel service AWS détecte les menaces ?",
+    "options": [
+      "GuardDuty",
+      "Inspector",
+      "Macie",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "GuardDuty analyse les logs pour détecter des comportements malveillants."
+  },
+  {
+    "id": "AWS-CCP-134",
+    "theme": "Core Services Suite",
+    "theme_label": "Inspector",
+    "difficulty": "easy",
+    "question": "Quel service AWS analyse les vulnérabilités sur EC2 ?",
+    "options": [
+      "Inspector",
+      "GuardDuty",
+      "Macie",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "Amazon Inspector scanne les instances pour des vulnérabilités."
+  },
+  {
+    "id": "AWS-CCP-135",
+    "theme": "Core Services Suite",
+    "theme_label": "Macie",
+    "difficulty": "easy",
+    "question": "Quel service AWS détecte les données sensibles dans S3 ?",
+    "options": [
+      "Macie",
+      "GuardDuty",
+      "Inspector",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "Amazon Macie utilise ML pour identifier les PII."
+  },
+  {
+    "id": "AWS-CCP-136",
+    "theme": "Core Services Suite",
+    "theme_label": "WAF",
+    "difficulty": "easy",
+    "question": "Quel service AWS protège contre les injections SQL et XSS ?",
+    "options": [
+      "WAF",
+      "Shield",
+      "Network Firewall",
+      "Firewall Manager"
+    ],
+    "correct": 0,
+    "explication": "AWS WAF filtre les requêtes HTTP/HTTPS."
+  },
+  {
+    "id": "AWS-CCP-137",
+    "theme": "Core Services Suite",
+    "theme_label": "Shield",
+    "difficulty": "easy",
+    "question": "Quel service AWS protège contre les attaques DDoS ?",
+    "options": [
+      "Shield",
+      "WAF",
+      "Network Firewall",
+      "Firewall Manager"
+    ],
+    "correct": 0,
+    "explication": "AWS Shield protège contre les DDoS (Standard gratuit, Advanced payant)."
+  },
+  {
+    "id": "AWS-CCP-138",
+    "theme": "Core Services Suite",
+    "theme_label": "CloudHSM",
+    "difficulty": "easy",
+    "question": "Quel service AWS fournit un HSM dédié ?",
+    "options": [
+      "CloudHSM",
+      "KMS",
+      "Secrets Manager",
+      "ACM"
+    ],
+    "correct": 0,
+    "explication": "CloudHSM est un Hardware Security Module dédié."
+  },
+  {
+    "id": "AWS-CCP-139",
+    "theme": "Core Services Suite",
+    "theme_label": "ACM",
+    "difficulty": "easy",
+    "question": "Quel service AWS fournit des certificats SSL/TLS gratuits ?",
+    "options": [
+      "ACM",
+      "KMS",
+      "CloudHSM",
+      "Secrets Manager"
+    ],
+    "correct": 0,
+    "explication": "AWS Certificate Manager fournit des certificats gratuits."
+  },
+  {
+    "id": "AWS-CCP-140",
+    "theme": "Core Services Suite",
+    "theme_label": "Trusted Advisor",
+    "difficulty": "easy",
+    "question": "Quel service AWS fournit des recommandations de bonnes pratiques ?",
+    "options": [
+      "Trusted Advisor",
+      "Well-Architected Tool",
+      "Config",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "Trusted Advisor conseille sur sécurité, performance, coûts, etc."
+  },
+  {
+    "id": "AWS-CCP-141",
+    "theme": "Core Services Suite",
+    "theme_label": "Well-Architected Tool",
+    "difficulty": "easy",
+    "question": "Quel service AWS aide à revoir l'architecture selon les piliers ?",
+    "options": [
+      "Well-Architected Tool",
+      "Trusted Advisor",
+      "Config",
+      "CloudFormation"
+    ],
+    "correct": 0,
+    "explication": "Le Well-Architected Tool évalue les architectures."
+  },
+  {
+    "id": "AWS-CCP-142",
+    "theme": "Core Services Suite",
+    "theme_label": "Artifact",
+    "difficulty": "easy",
+    "question": "Quel service AWS donne accès aux rapports de conformité ?",
+    "options": [
+      "Artifact",
+      "Audit Manager",
+      "Config",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "AWS Artifact fournit des rapports de conformité."
+  },
+  {
+    "id": "AWS-CCP-143",
+    "theme": "Core Services Suite",
+    "theme_label": "Audit Manager",
+    "difficulty": "easy",
+    "question": "Quel service AWS automatise la collecte de preuves pour audits ?",
+    "options": [
+      "Audit Manager",
+      "Artifact",
+      "Config",
+      "Security Hub"
+    ],
+    "correct": 0,
+    "explication": "AWS Audit Manager aide à préparer des audits."
+  },
+  {
+    "id": "AWS-CCP-144",
+    "theme": "Core Services Suite",
+    "theme_label": "Cost Explorer",
+    "difficulty": "easy",
+    "question": "Quel service AWS analyse les coûts ?",
+    "options": [
+      "Cost Explorer",
+      "Budgets",
+      "Pricing Calculator",
+      "Cost Anomaly Detection"
+    ],
+    "correct": 0,
+    "explication": "AWS Cost Explorer visualise et analyse les coûts."
+  },
+  {
+    "id": "AWS-CCP-145",
+    "theme": "Core Services Suite",
+    "theme_label": "Budgets",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet de définir des alertes de dépenses ?",
+    "options": [
+      "Budgets",
+      "Cost Explorer",
+      "Pricing Calculator",
+      "Cost Anomaly Detection"
+    ],
+    "correct": 0,
+    "explication": "AWS Budgets surveille les coûts et envoie des alertes."
+  },
+  {
+    "id": "AWS-CCP-146",
+    "theme": "Core Services Suite",
+    "theme_label": "Pricing Calculator",
+    "difficulty": "easy",
+    "question": "Quel service AWS estime les coûts avant déploiement ?",
+    "options": [
+      "Pricing Calculator",
+      "Cost Explorer",
+      "Budgets",
+      "Cost Anomaly Detection"
+    ],
+    "correct": 0,
+    "explication": "Le calculateur estime les coûts des services AWS."
+  },
+  {
+    "id": "AWS-CCP-147",
+    "theme": "Core Services Suite",
+    "theme_label": "Cost Anomaly Detection",
+    "difficulty": "easy",
+    "question": "Quel service AWS détecte les pics de dépenses inhabituels ?",
+    "options": [
+      "Cost Anomaly Detection",
+      "Cost Explorer",
+      "Budgets",
+      "Pricing Calculator"
+    ],
+    "correct": 0,
+    "explication": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
+  },
+  {
+    "id": "AWS-CCP-148",
+    "theme": "Core Services Suite",
+    "theme_label": "Savings Plans",
+    "difficulty": "easy",
+    "question": "Quel modèle de tarification offre des réductions pour engagement ?",
+    "options": [
+      "Savings Plans",
+      "Reserved Instances",
+      "Spot Instances",
+      "On-Demand"
+    ],
+    "correct": 0,
+    "explication": "Savings Plans offrent des réductions en échange d'un engagement."
+  },
+  {
+    "id": "AWS-CCP-149",
+    "theme": "Core Services Suite",
+    "theme_label": "Support Plans",
+    "difficulty": "easy",
+    "question": "Quel plan de support offre un Technical Account Manager (TAM) ?",
+    "options": [
+      "Enterprise",
+      "Business",
+      "Developer",
+      "Basic"
+    ],
+    "correct": 0,
+    "explication": "Le plan Enterprise inclut un TAM dédié."
+  },
+  {
+    "id": "AWS-CCP-150",
+    "theme": "Core Services Suite",
+    "theme_label": "Support Plans",
+    "difficulty": "easy",
+    "question": "Quel plan de support est gratuit ?",
+    "options": [
+      "Basic",
+      "Developer",
+      "Business",
+      "Enterprise"
+    ],
+    "correct": 0,
+    "explication": "Le plan Basic est inclus gratuitement."
+  }
+]

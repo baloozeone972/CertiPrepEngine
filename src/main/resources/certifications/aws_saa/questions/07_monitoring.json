@@ -1,0 +1,512 @@
+[
+  {
+    "id": "AWS-SAA-421",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Amazon CloudWatch ?",
+    "options": [
+      "Service de monitoring et observabilité",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "CloudWatch collecte métriques, logs et alarmes."
+  },
+  {
+    "id": "AWS-SAA-422",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch",
+    "difficulty": "easy",
+    "question": "Quelle est la résolution standard des métriques CloudWatch ?",
+    "options": ["1 minute", "5 minutes", "10 secondes", "1 seconde"],
+    "correct": 0,
+    "explanation": "Les métriques standard ont une granularité d'1 minute."
+  },
+  {
+    "id": "AWS-SAA-423",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les métriques haute résolution (high-res) ?",
+    "options": [
+      "Métriques avec granularité jusqu'à 1 seconde",
+      "Métriques avec granularité 5 minutes",
+      "Métriques avec granularité 1 minute",
+      "Métriques avec granularité 1 heure"
+    ],
+    "correct": 0,
+    "explanation": "Les métriques haute résolution peuvent avoir une granularité d'1 seconde."
+  },
+  {
+    "id": "AWS-SAA-424",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch",
+    "difficulty": "hard",
+    "question": "Combien de temps les métriques sont-elles conservées par défaut ?",
+    "options": ["15 mois", "1 mois", "3 mois", "6 mois"],
+    "correct": 0,
+    "explanation": "Les métriques CloudWatch sont conservées 15 mois."
+  },
+  {
+    "id": "AWS-SAA-425",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Alarms",
+    "difficulty": "medium",
+    "question": "À quoi servent les alarmes CloudWatch ?",
+    "options": [
+      "Déclencher des actions basées sur des métriques",
+      "Logging",
+      "Dashboard",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Les alarmes surveillent les métriques et déclenchent des actions (SNS, ASG, etc.)."
+  },
+  {
+    "id": "AWS-SAA-426",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Alarms",
+    "difficulty": "hard",
+    "question": "Quels sont les états possibles d'une alarme ?",
+    "options": ["OK, ALARM, INSUFFICIENT_DATA", "OK, ERROR, WARNING", "GREEN, RED, YELLOW", "ACTIVE, INACTIVE"],
+    "correct": 0,
+    "explanation": "Les alarmes peuvent être OK, ALARM ou INSUFFICIENT_DATA."
+  },
+  {
+    "id": "AWS-SAA-427",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Logs",
+    "difficulty": "medium",
+    "question": "Où sont stockés les CloudWatch Logs ?",
+    "options": [
+      "CloudWatch Logs (stockage propre)",
+      "S3",
+      "DynamoDB",
+      "RDS"
+    ],
+    "correct": 0,
+    "explanation": "CloudWatch Logs a son propre stockage."
+  },
+  {
+    "id": "AWS-SAA-428",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Logs",
+    "difficulty": "hard",
+    "question": "Combien de temps les logs sont-ils conservés par défaut ?",
+    "options": ["Jamais expiré", "30 jours", "7 jours", "1 an"],
+    "correct": 0,
+    "explanation": "Par défaut, les logs n'expirent jamais."
+  },
+  {
+    "id": "AWS-SAA-429",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Logs Insights",
+    "difficulty": "hard",
+    "question": "À quoi sert CloudWatch Logs Insights ?",
+    "options": [
+      "Requêter et analyser les logs",
+      "Stocker les logs",
+      "Archiver les logs",
+      "Supprimer les logs"
+    ],
+    "correct": 0,
+    "explanation": "Logs Insights permet d'interroger les logs avec un langage dédié."
+  },
+  {
+    "id": "AWS-SAA-430",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Contributor Insights",
+    "difficulty": "hard",
+    "question": "À quoi sert Contributor Insights ?",
+    "options": [
+      "Identifier les contributeurs (top IP, URLs, etc.)",
+      "Logs",
+      "Métriques",
+      "Alarmes"
+    ],
+    "correct": 0,
+    "explanation": "Contributor Insights analyse les logs pour trouver les principaux contributeurs."
+  },
+  {
+    "id": "AWS-SAA-431",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Synthetics",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudWatch Synthetics (Canaries) ?",
+    "options": [
+      "Tests de disponibilité (API, UI) automatisés",
+      "Monitoring de logs",
+      "Métriques personnalisées",
+      "Dashboard"
+    ],
+    "correct": 0,
+    "explanation": "Les canaries simulent des actions utilisateur pour vérifier la disponibilité."
+  },
+  {
+    "id": "AWS-SAA-432",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch ServiceLens",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudWatch ServiceLens ?",
+    "options": [
+      "Intégration de traces, métriques et logs",
+      "Logs",
+      "Métriques",
+      "Alarmes"
+    ],
+    "correct": 0,
+    "explanation": "ServiceLens combine CloudWatch et X-Ray pour la visibilité des applications."
+  },
+  {
+    "id": "AWS-SAA-433",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS X-Ray",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS X-Ray ?",
+    "options": [
+      "Tracing distribué",
+      "Métriques",
+      "Logs",
+      "Alarmes"
+    ],
+    "correct": 0,
+    "explanation": "X-Ray trace les requêtes à travers les services distribués."
+  },
+  {
+    "id": "AWS-SAA-434",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS X-Ray",
+    "difficulty": "hard",
+    "question": "Quelles informations X-Ray fournit-il ?",
+    "options": [
+      "Latence, segments, sous-segments, traces",
+      "Seulement la latence",
+      "Seulement les erreurs",
+      "Seulement les logs"
+    ],
+    "correct": 0,
+    "explanation": "X-Ray montre le chemin complet d'une requête avec les temps."
+  },
+  {
+    "id": "AWS-SAA-435",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudTrail",
+    "difficulty": "hard",
+    "question": "CloudTrail enregistre-t-il les événements de données (S3, DynamoDB) ?",
+    "options": ["Oui, optionnel", "Non", "Oui, par défaut", "Uniquement pour S3"],
+    "correct": 0,
+    "explanation": "Les événements de données sont optionnels (payants)."
+  },
+  {
+    "id": "AWS-SAA-436",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudTrail",
+    "difficulty": "hard",
+    "question": "CloudTrail peut-il envoyer des logs vers CloudWatch Logs ?",
+    "options": ["Oui", "Non", "Uniquement vers S3", "Uniquement vers Kinesis"],
+    "correct": 0,
+    "explanation": "CloudTrail peut envoyer les logs vers S3 et/ou CloudWatch Logs."
+  },
+  {
+    "id": "AWS-SAA-437",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudTrail Insights",
+    "difficulty": "hard",
+    "question": "Que détecte CloudTrail Insights ?",
+    "options": [
+      "Comportements anormaux d'appels API",
+      "Erreurs HTTP",
+      "Logs d'application",
+      "Métriques de performance"
+    ],
+    "correct": 0,
+    "explanation": "Insights identifie les pics d'activité API inhabituels."
+  },
+  {
+    "id": "AWS-SAA-438",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS Config",
+    "difficulty": "hard",
+    "question": "AWS Config enregistre-t-il l'historique des configurations ?",
+    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour S3"],
+    "correct": 0,
+    "explanation": "AWS Config conserve l'historique des changements de configuration."
+  },
+  {
+    "id": "AWS-SAA-439",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS Config",
+    "difficulty": "hard",
+    "question": "Combien de temps AWS Config conserve-t-il l'historique ?",
+    "options": ["7 ans", "30 jours", "1 an", "Indéfini"],
+    "correct": 0,
+    "explanation": "AWS Config conserve l'historique jusqu'à 7 ans (configurable)."
+  },
+  {
+    "id": "AWS-SAA-440",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS Config Rules",
+    "difficulty": "hard",
+    "question": "Peut-on créer des règles Config personnalisées ?",
+    "options": ["Oui, via Lambda", "Non", "Uniquement des règles managées", "Uniquement avec CloudFormation"],
+    "correct": 0,
+    "explanation": "Les règles personnalisées s'écrivent avec AWS Lambda."
+  },
+  {
+    "id": "AWS-SAA-441",
+    "theme": "Monitoring & Logging",
+    "theme_label": "VPC Flow Logs",
+    "difficulty": "hard",
+    "question": "Que captent les VPC Flow Logs ?",
+    "options": [
+      "Métadonnées du trafic IP",
+      "Contenu des paquets",
+      "Payload des requêtes",
+      "Données utilisateur"
+    ],
+    "correct": 0,
+    "explanation": "Flow Logs enregistrent les en-têtes (source, destination, ports, etc.), pas le contenu."
+  },
+  {
+    "id": "AWS-SAA-442",
+    "theme": "Monitoring & Logging",
+    "theme_label": "VPC Flow Logs",
+    "difficulty": "hard",
+    "question": "Peut-on activer Flow Logs au niveau du subnet ?",
+    "options": ["Oui", "Non", "Uniquement au niveau VPC", "Uniquement au niveau ENI"],
+    "correct": 0,
+    "explanation": "Flow Logs peuvent être activés au niveau VPC, subnet, ou ENI."
+  },
+  {
+    "id": "AWS-SAA-443",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS Health Dashboard",
+    "difficulty": "hard",
+    "question": "AWS Health Dashboard fournit-il des informations personnalisées ?",
+    "options": ["Oui (Personal Health Dashboard)", "Non", "Uniquement des informations publiques", "Uniquement pour les comptes Enterprise"],
+    "correct": 0,
+    "explanation": "Le Personal Health Dashboard montre les événements affectant vos ressources."
+  },
+  {
+    "id": "AWS-SAA-444",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS Health API",
+    "difficulty": "hard",
+    "question": "Peut-on interroger AWS Health via API ?",
+    "options": ["Oui", "Non", "Uniquement pour les comptes support", "Uniquement pour les organisations"],
+    "correct": 0,
+    "explanation": "AWS Health a une API pour récupérer les événements."
+  },
+  {
+    "id": "AWS-SAA-445",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Agent",
+    "difficulty": "hard",
+    "question": "Le CloudWatch Agent peut-il collecter des métriques système sur EC2 ?",
+    "options": ["Oui", "Non", "Uniquement avec SSM", "Uniquement avec Lambda"],
+    "correct": 0,
+    "explanation": "L'agent CloudWatch collecte les métriques système et les logs."
+  },
+  {
+    "id": "AWS-SAA-446",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Agent",
+    "difficulty": "hard",
+    "question": "CloudWatch Agent peut-il collecter des logs d'applications ?",
+    "options": ["Oui", "Non", "Uniquement des logs système", "Uniquement des logs Windows"],
+    "correct": 0,
+    "explanation": "L'agent peut collecter des logs d'applications personnalisées."
+  },
+  {
+    "id": "AWS-SAA-447",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Embedded Metric Format",
+    "difficulty": "hard",
+    "question": "À quoi sert le format de métrique embarqué (EMF) ?",
+    "options": [
+      "Générer des métriques depuis des logs",
+      "Stocker des logs",
+      "Compresser des logs",
+      "Archiver des logs"
+    ],
+    "correct": 0,
+    "explanation": "EMF extrait des métriques à partir de logs structurés."
+  },
+  {
+    "id": "AWS-SAA-448",
+    "theme": "Monitoring & Logging",
+    "theme_label": "Amazon Managed Service for Prometheus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Managed Service for Prometheus (AMP) ?",
+    "options": [
+      "Service Prometheus managé",
+      "Base de données",
+      "Stockage",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "AMP est un service Prometheus entièrement managé."
+  },
+  {
+    "id": "AWS-SAA-449",
+    "theme": "Monitoring & Logging",
+    "theme_label": "Amazon Managed Grafana",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Managed Grafana (AMG) ?",
+    "options": [
+      "Service Grafana managé",
+      "Base de données",
+      "Stockage",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "AMG est un service Grafana entièrement managé."
+  },
+  {
+    "id": "AWS-SAA-450",
+    "theme": "Monitoring & Logging",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelles métriques sont critiques pour EC2 ?",
+    "options": [
+      "CPUUtilization, NetworkIn/Out, DiskRead/Write",
+      "Memory (nécessite agent)",
+      "Status checks",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs métriques sont importantes, certaines nécessitent l'agent."
+  },
+  {
+    "id": "AWS-SAA-451",
+    "theme": "Monitoring & Logging",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment surveiller les logs d'application ?",
+    "options": [
+      "CloudWatch Logs, CloudWatch Logs Insights, X-Ray",
+      "S3",
+      "DynamoDB",
+      "RDS"
+    ],
+    "correct": 0,
+    "explanation": "CloudWatch Logs est la solution recommandée."
+  },
+  {
+    "id": "AWS-SAA-452",
+    "theme": "Monitoring & Logging",
+    "theme_label": "Cost optimization monitoring",
+    "difficulty": "hard",
+    "question": "Comment surveiller les coûts ?",
+    "options": [
+      "AWS Cost Explorer, Budgets, Trusted Advisor",
+      "CloudWatch",
+      "CloudTrail",
+      "Config"
+    ],
+    "correct": 0,
+    "explanation": "Cost Explorer et Budgets sont dédiés à la gestion des coûts."
+  },
+  {
+    "id": "AWS-SAA-453",
+    "theme": "Monitoring & Logging",
+    "theme_label": "EventBridge",
+    "difficulty": "hard",
+    "question": "EventBridge peut-il répondre aux événements CloudWatch Alarms ?",
+    "options": ["Oui", "Non", "Uniquement aux événements AWS", "Uniquement aux événements personnalisés"],
+    "correct": 0,
+    "explanation": "EventBridge peut déclencher des actions basées sur les alarmes."
+  },
+  {
+    "id": "AWS-SAA-454",
+    "theme": "Monitoring & Logging",
+    "theme_label": "EventBridge",
+    "difficulty": "hard",
+    "question": "EventBridge supporte-t-il les schémas d'événements ?",
+    "options": ["Oui (Schema Registry)", "Non", "Uniquement pour les événements AWS", "Uniquement pour les événements personnalisés"],
+    "correct": 0,
+    "explanation": "EventBridge Schema Registry découvre et versionne les schémas."
+  },
+  {
+    "id": "AWS-SAA-455",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Dashboards",
+    "difficulty": "hard",
+    "question": "Les dashboards CloudWatch sont-ils partageables ?",
+    "options": ["Oui", "Non", "Uniquement avec un compte pro", "Uniquement avec AWS Organizations"],
+    "correct": 0,
+    "explanation": "Les dashboards peuvent être partagés via des comptes ou publics."
+  },
+  {
+    "id": "AWS-SAA-456",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Dashboards",
+    "difficulty": "hard",
+    "question": "Peut-on exporter un dashboard CloudWatch en JSON ?",
+    "options": ["Oui", "Non", "Uniquement en PNG", "Uniquement en PDF"],
+    "correct": 0,
+    "explanation": "Les dashboards peuvent être exportés en JSON pour sauvegarde."
+  },
+  {
+    "id": "AWS-SAA-457",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS Distro for OpenTelemetry",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Distro for OpenTelemetry (ADOT) ?",
+    "options": [
+      "Distribution certifiée d'OpenTelemetry",
+      "Service de tracing",
+      "Métriques",
+      "Logs"
+    ],
+    "correct": 0,
+    "explanation": "ADOT est la distribution AWS d'OpenTelemetry."
+  },
+  {
+    "id": "AWS-SAA-458",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Application Signals",
+    "difficulty": "hard",
+    "question": "À quoi sert CloudWatch Application Signals ?",
+    "options": [
+      "Monitoring des applications sans instrumentation",
+      "Logs",
+      "Métriques",
+      "Tracing"
+    ],
+    "correct": 0,
+    "explanation": "Application Signals fournit une visibilité sans code sur les applications."
+  },
+  {
+    "id": "AWS-SAA-459",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Internet Monitor",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudWatch Internet Monitor ?",
+    "options": [
+      "Surveille la connectivité Internet vers vos applications",
+      "Logs",
+      "Métriques",
+      "Tracing"
+    ],
+    "correct": 0,
+    "explanation": "Internet Monitor détecte les problèmes de connectivité réseau entre les utilisateurs et AWS."
+  },
+  {
+    "id": "AWS-SAA-460",
+    "theme": "Monitoring & Logging",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour centraliser les logs multi-comptes ?",
+    "options": [
+      "Centralisation vers un compte de logging avec CloudWatch cross-account",
+      "Logs séparés par compte",
+      "S3 dans chaque compte",
+      "CloudTrail uniquement"
+    ],
+    "correct": 0,
+    "explanation": "Centraliser les logs facilite l'analyse et la conformité."
+  }
+]

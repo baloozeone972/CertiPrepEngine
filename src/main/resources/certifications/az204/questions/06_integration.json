@@ -1,0 +1,557 @@
+[
+  {
+    "id": "AZ-204-311",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Service Bus ?",
+    "options": [
+      "Bus de messages enterprise (files, topics, relais)",
+      "File d'attente simple",
+      "Streaming d'événements",
+      "Notifications push"
+    ],
+    "correct": 0,
+    "explication": "Service Bus offre des fonctionnalités avancées comme les sessions, les transactions, la détection de doublons."
+  },
+  {
+    "id": "AZ-204-312",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre une file (queue) et un topic dans Service Bus ?",
+    "options": [
+      "Queue = point à point, Topic = pub/sub",
+      "Queue = pub/sub, Topic = point à point",
+      "Identiques",
+      "Queue pour les messages courts, Topic pour les longs"
+    ],
+    "correct": 0,
+    "explication": "Une file est consommée par un seul consommateur, un topic peut avoir plusieurs abonnements."
+  },
+  {
+    "id": "AZ-204-313",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les sessions dans Service Bus ?",
+    "options": [
+      "Grouper des messages pour un traitement séquentiel",
+      "Sessions utilisateur",
+      "Connexions",
+      "Abonnements"
+    ],
+    "correct": 0,
+    "explication": "Les sessions garantissent que les messages d'un même groupe sont traités dans l'ordre."
+  },
+  {
+    "id": "AZ-204-314",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la détection de doublons (duplicate detection) ?",
+    "options": [
+      "Ignore les messages en double pendant une fenêtre de temps",
+      "Supprime les messages en double",
+      "Détecte les doublons dans les données",
+      "Empêche la duplication"
+    ],
+    "correct": 0,
+    "explication": "La détection de doublons utilise un identifiant de message (MessageId) pour ignorer les doublons."
+  },
+  {
+    "id": "AZ-204-315",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le verrouillage de message (peek-lock) ?",
+    "options": [
+      "Rendre le message invisible pendant le traitement",
+      "Verrouiller la file",
+      "Verrouiller l'abonnement",
+      "Verrouiller le topic"
+    ],
+    "correct": 0,
+    "explication": "Le mode peek-lock permet de traiter le message sans le supprimer immédiatement."
+  },
+  {
+    "id": "AZ-204-316",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la file de lettres mortes (dead-letter queue) ?",
+    "options": [
+      "File pour les messages non livrables",
+      "File pour les messages prioritaires",
+      "File pour les messages différés",
+      "File pour les messages expirés"
+    ],
+    "correct": 0,
+    "explication": "Les messages qui ne peuvent pas être traités (ex: expiration, dépassement de livraisons) sont placés dans la DLQ."
+  },
+  {
+    "id": "AZ-204-317",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Comment envoyer un message à une file Service Bus avec le SDK .NET ?",
+    "options": [
+      "await sender.SendMessageAsync(message)",
+      "await queue.SendAsync(message)",
+      "await client.SendAsync(message)",
+      "await topic.SendAsync(message)"
+    ],
+    "correct": 0,
+    "explication": "ServiceBusSender a la méthode SendMessageAsync."
+  },
+  {
+    "id": "AZ-204-318",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Comment recevoir un message avec le SDK .NET ?",
+    "options": [
+      "await receiver.ReceiveMessageAsync()",
+      "await queue.ReceiveAsync()",
+      "await client.ReceiveAsync()",
+      "await subscription.ReceiveAsync()"
+    ],
+    "correct": 0,
+    "explication": "ServiceBusReceiver a la méthode ReceiveMessageAsync."
+  },
+  {
+    "id": "AZ-204-319",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Event Hubs ?",
+    "options": [
+      "Ingestion de flux de données à grande échelle",
+      "File d'attente de messages",
+      "Bus de messages enterprise",
+      "Notifications push"
+    ],
+    "correct": 0,
+    "explication": "Event Hubs est conçu pour des millions d'événements par seconde."
+  },
+  {
+    "id": "AZ-204-320",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une partition dans Event Hubs ?",
+    "options": [
+      "Unité de stockage ordonné des événements",
+      "Topic",
+      "File",
+      "Abonnement"
+    ],
+    "correct": 0,
+    "explication": "Les partitions permettent le parallélisme et l'ordre au sein de chaque partition."
+  },
+  {
+    "id": "AZ-204-321",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Comment les consommateurs lisent-ils les événements ?",
+    "options": [
+      "Consumer groups (groupes de consommateurs)",
+      "Abonnements",
+      "Files",
+      "Topics"
+    ],
+    "correct": 0,
+    "explication": "Chaque groupe de consommateurs a son propre curseur de lecture sur le flux."
+  },
+  {
+    "id": "AZ-204-322",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Quelle est la durée de rétention par défaut des événements ?",
+    "options": ["1 jour", "7 jours", "24 heures", "48 heures"],
+    "correct": 0,
+    "explication": "La rétention par défaut est d'1 jour (configurable jusqu'à 90 jours)."
+  },
+  {
+    "id": "AZ-204-323",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le débit unité (Throughput Unit) pour Event Hubs standard ?",
+    "options": [
+      "Capacité d'ingestion (1 Mo/s entrant, 2 Mo/s sortant)",
+      "Nombre de partitions",
+      "Nombre de consommateurs",
+      "Nombre d'événements par seconde"
+    ],
+    "correct": 0,
+    "explication": "Les TU déterminent la capacité de débit."
+  },
+  {
+    "id": "AZ-204-324",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Event Hubs Capture ?",
+    "options": [
+      "Envoie automatiquement les événements vers Blob Storage ou Data Lake",
+      "Capture des métriques",
+      "Capture des logs",
+      "Capture des erreurs"
+    ],
+    "correct": 0,
+    "explication": "Capture permet de persister les événements pour une analyse ultérieure."
+  },
+  {
+    "id": "AZ-204-325",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un message dans Event Hubs ?",
+    "options": ["1 Mo", "256 Ko", "4 Mo", "64 Ko"],
+    "correct": 0,
+    "explication": "La taille maximale d'un événement est 1 Mo (niveau standard) ou 1 Mo (niveau dédié)."
+  },
+  {
+    "id": "AZ-204-326",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Event Grid ?",
+    "options": [
+      "Routage d'événements réactif (pub/sub)",
+      "Ingestion de flux",
+      "File d'attente",
+      "Bus de messages"
+    ],
+    "correct": 0,
+    "explication": "Event Grid distribue des événements à des abonnés (webhooks, fonctions, etc.)."
+  },
+  {
+    "id": "AZ-204-327",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Quels sont les types d'événements supportés ?",
+    "options": [
+      "Événements système (Azure), événements personnalisés",
+      "Seulement événements système",
+      "Seulement événements personnalisés",
+      "Seulement événements HTTP"
+    ],
+    "correct": 0,
+    "explication": "Event Grid peut gérer des événements provenant de services Azure ou des applications personnalisées."
+  },
+  {
+    "id": "AZ-204-328",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un sujet (topic) Event Grid ?",
+    "options": [
+      "Point de terminaison où sont publiés les événements",
+      "Abonnement",
+      "File",
+      "Partition"
+    ],
+    "correct": 0,
+    "explication": "Les événements sont publiés sur un topic, puis distribués aux abonnements."
+  },
+  {
+    "id": "AZ-204-329",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un filtre d'événements (event filtering) ?",
+    "options": [
+      "Permet de sélectionner les événements à recevoir",
+      "Supprime les événements",
+      "Transforme les événements",
+      "Enrichit les événements"
+    ],
+    "correct": 0,
+    "explication": "Les abonnements peuvent filtrer par type d'événement, préfixe/suffixe de sujet, etc."
+  },
+  {
+    "id": "AZ-204-330",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la nouvelle tentative (retry policy) dans Event Grid ?",
+    "options": [
+      "Nouvelle tentative de livraison en cas d'échec",
+      "Réenvoi manuel",
+      "Suppression des événements",
+      "Archivage"
+    ],
+    "correct": 0,
+    "explication": "Event Grid réessaie la livraison avec backoff exponentiel."
+  },
+  {
+    "id": "AZ-204-331",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la file de lettres mortes (dead-letter) dans Event Grid ?",
+    "options": [
+      "Stockage des événements qui n'ont pas pu être livrés",
+      "File pour les événements prioritaires",
+      "File pour les événements différés",
+      "File pour les événements expirés"
+    ],
+    "correct": 0,
+    "explication": "Les événements non livrés après un certain nombre de tentatives sont envoyés vers un conteneur blob."
+  },
+  {
+    "id": "AZ-204-332",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Logic Apps",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure Logic Apps ?",
+    "options": [
+      "Service d'intégration low-code (workflows)",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Logic Apps permet de créer des workflows d'intégration sans code."
+  },
+  {
+    "id": "AZ-204-333",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Logic Apps",
+    "difficulty": "hard",
+    "question": "Quels sont les déclencheurs (triggers) supportés par Logic Apps ?",
+    "options": [
+      "HTTP, recurrence, Service Bus, Event Grid, etc.",
+      "HTTP seulement",
+      "Recurrence seulement",
+      "Service Bus seulement"
+    ],
+    "correct": 0,
+    "explication": "Logic Apps a de nombreux connecteurs et déclencheurs."
+  },
+  {
+    "id": "AZ-204-334",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Logic Apps",
+    "difficulty": "hard",
+    "question": "Logic Apps peut-il s'exécuter en mode multi-locataire ou mono-locataire ?",
+    "options": ["Oui", "Non", "Uniquement multi-locataire", "Uniquement mono-locataire"],
+    "correct": 0,
+    "explication": "Logic Apps standard (mono-locataire) offre plus de flexibilité et VNet."
+  },
+  {
+    "id": "AZ-204-335",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Logic Apps",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un connecteur personnalisé dans Logic Apps ?",
+    "options": [
+      "Connecteur créé pour une API personnalisée",
+      "Connecteur prédéfini",
+      "Connecteur pour les bases de données",
+      "Connecteur pour le stockage"
+    ],
+    "correct": 0,
+    "explication": "Les connecteurs personnalisés permettent d'appeler des API non prises en charge nativement."
+  },
+  {
+    "id": "AZ-204-336",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure API Management (APIM) ?",
+    "options": [
+      "Service de gestion d'API (portail développeur, sécurité, analyse)",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "APIM permet de publier, sécuriser et analyser les API."
+  },
+  {
+    "id": "AZ-204-337",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "Quels sont les composants d'APIM ?",
+    "options": [
+      "API Gateway, Portail développeur, Portail administrateur",
+      "Seulement Gateway",
+      "Seulement Portail développeur",
+      "Seulement Portail administrateur"
+    ],
+    "correct": 0,
+    "explication": "APIM se compose de plusieurs composants."
+  },
+  {
+    "id": "AZ-204-338",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une politique (policy) dans APIM ?",
+    "options": [
+      "Règle pour transformer/modifier les requêtes/réponses",
+      "Règle de sécurité",
+      "Règle de limitation",
+      "Règle de cache"
+    ],
+    "correct": 0,
+    "explication": "Les politiques sont des fragments XML qui modifient le comportement de l'API."
+  },
+  {
+    "id": "AZ-204-339",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "APIM peut-il mettre en cache les réponses ?",
+    "options": ["Oui (cache intégré ou externe Redis)", "Non", "Uniquement avec Redis", "Uniquement avec le cache intégré"],
+    "correct": 0,
+    "explication": "Le cache réduit la charge sur le backend."
+  },
+  {
+    "id": "AZ-204-340",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la limitation de débit (rate limiting) dans APIM ?",
+    "options": [
+      "Limite le nombre d'appels par clé d'abonnement",
+      "Limite la taille des réponses",
+      "Limite le temps d'exécution",
+      "Limite le nombre de produits"
+    ],
+    "correct": 0,
+    "explication": "Les politiques rate-limit et quota contrôlent l'utilisation."
+  },
+  {
+    "id": "AZ-204-341",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "APIM supporte-t-il OAuth2 pour l'authentification ?",
+    "options": ["Oui", "Non", "Uniquement avec Azure AD", "Uniquement avec des clés d'API"],
+    "correct": 0,
+    "explication": "APIM peut valider les tokens JWT (OAuth2)."
+  },
+  {
+    "id": "AZ-204-342",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Event Grid peut-il délivrer des événements à une fonction Azure ?",
+    "options": ["Oui", "Non", "Uniquement à Logic Apps", "Uniquement à webhook"],
+    "correct": 0,
+    "explication": "Azure Functions peut être un abonné Event Grid."
+  },
+  {
+    "id": "AZ-204-343",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Service Bus supporte-t-il AMQP et HTTPS ?",
+    "options": ["Oui", "Non", "Uniquement AMQP", "Uniquement HTTPS"],
+    "correct": 0,
+    "explication": "Service Bus supporte AMQP (performant) et HTTPS (compatible)."
+  },
+  {
+    "id": "AZ-204-344",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les abonnements (subscriptions) dans un topic Service Bus ?",
+    "options": [
+      "Copie du topic avec son propre curseur",
+      "Partition",
+      "File",
+      "File d'attente"
+    ],
+    "correct": 0,
+    "explication": "Chaque abonnement reçoit une copie de chaque message publié sur le topic."
+  },
+  {
+    "id": "AZ-204-345",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre Event Hubs et Service Bus ?",
+    "options": [
+      "Event Hubs pour streaming haute vélocité, Service Bus pour messagerie enterprise",
+      "Identiques",
+      "Event Hubs pour messagerie, Service Bus pour streaming",
+      "Event Hubs pour les files, Service Bus pour les topics"
+    ],
+    "correct": 0,
+    "explication": "Event Hubs est optimisé pour l'ingestion massive, Service Bus pour les messages structurés."
+  },
+  {
+    "id": "AZ-204-346",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Grid",
+    "difficulty": "hard",
+    "question": "Event Grid garantit-il l'ordre des événements ?",
+    "options": [
+      "Non (ordre non garanti pour les événements de différents sujets)",
+      "Oui",
+      "Uniquement pour les événements système",
+      "Uniquement pour les événements personnalisés"
+    ],
+    "correct": 0,
+    "explication": "L'ordre n'est pas garanti entre différents sujets ou abonnements."
+  },
+  {
+    "id": "AZ-204-347",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Logic Apps",
+    "difficulty": "hard",
+    "question": "Logic Apps peut-il s'exécuter en local avec le runtime local ?",
+    "options": ["Oui (Logic Apps Standard)", "Non", "Uniquement dans le cloud", "Uniquement avec le portail"],
+    "correct": 0,
+    "explication": "Logic Apps Standard peut être déployé en conteneur, localement ou dans AKS."
+  },
+  {
+    "id": "AZ-204-348",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "API Management",
+    "difficulty": "hard",
+    "question": "APIM peut-il être intégré à Key Vault pour gérer les secrets ?",
+    "options": ["Oui", "Non", "Uniquement pour les clés d'API", "Uniquement pour les certificats"],
+    "correct": 0,
+    "explication": "APIM peut référencer Key Vault pour les secrets des backends."
+  },
+  {
+    "id": "AZ-204-349",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Service Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la messagerie premium dans Service Bus ?",
+    "options": [
+      "Niveau avec performances dédiées et plus élevées",
+      "Messagerie gratuite",
+      "Messagerie avec stockage illimité",
+      "Messagerie avec transactions"
+    ],
+    "correct": 0,
+    "explication": "Le niveau Premium offre des performances prédictibles avec des ressources dédiées."
+  },
+  {
+    "id": "AZ-204-350",
+    "theme": "Azure Integration & Messaging",
+    "theme_label": "Event Hubs",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le niveau dédié (Dedicated) pour Event Hubs ?",
+    "options": [
+      "Capacité dédiée avec échelle élevée (millions d'événements/seconde)",
+      "Gratuit",
+      "Partagé",
+      "Standard"
+    ],
+    "correct": 0,
+    "explication": "Le niveau dédié offre des clusters isolés pour les charges très élevées."
+  }
+]

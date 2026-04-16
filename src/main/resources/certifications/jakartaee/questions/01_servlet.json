@@ -1,0 +1,822 @@
+[
+  {
+    "id": "JAK-SRV-001",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Cycle de vie Servlet",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée une seule fois lors du chargement d'une servlet ?",
+    "options": ["init()", "service()", "doGet()", "destroy()"],
+    "correct": 0,
+    "explanation": "init() est appelée une fois lors de l'initialisation de la servlet."
+  },
+  {
+    "id": "JAK-SRV-002",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Cycle de vie Servlet",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée pour chaque requête HTTP ?",
+    "options": ["service()", "init()", "destroy()", "doGet()"],
+    "correct": 0,
+    "explanation": "service() distribue la requête aux méthodes doGet/doPost."
+  },
+  {
+    "id": "JAK-SRV-003",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Cycle de vie Servlet",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée lors du déchargement de la servlet ?",
+    "options": ["destroy()", "init()", "service()", "finalize()"],
+    "correct": 0,
+    "explanation": "destroy() est appelée avant la suppression de la servlet."
+  },
+  {
+    "id": "JAK-SRV-004",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Annotations",
+    "difficulty": "medium",
+    "question": "Quelle annotation déclare une servlet ?",
+    "options": ["@WebServlet", "@Servlet", "@HttpServlet", "@WebService"],
+    "correct": 0,
+    "explanation": "@WebServlet est l'annotation pour déclarer une servlet."
+  },
+  {
+    "id": "JAK-SRV-005",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Annotations",
+    "difficulty": "medium",
+    "question": "Comment spécifier l'URL d'une servlet ?",
+    "options": [
+      "@WebServlet(\"/path\")",
+      "@Servlet(urlPatterns = \"/path\")",
+      "@WebServlet(url = \"/path\")",
+      "@Servlet(\"/path\")"
+    ],
+    "correct": 0,
+    "explanation": "@WebServlet(\"/path\") définit le pattern d'URL."
+  },
+  {
+    "id": "JAK-SRV-006",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Annotations",
+    "difficulty": "hard",
+    "question": "Comment spécifier plusieurs patterns d'URL ?",
+    "options": [
+      "@WebServlet(urlPatterns = {\"/a\", \"/b\"})",
+      "@WebServlet({\"/a\", \"/b\"})",
+      "@WebServlet(value = {\"/a\", \"/b\"})",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs syntaxes pour les patterns multiples."
+  },
+  {
+    "id": "JAK-SRV-007",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "medium",
+    "question": "Comment obtenir un paramètre de requête ?",
+    "options": [
+      "request.getParameter(\"name\")",
+      "request.getParam(\"name\")",
+      "request.getAttribute(\"name\")",
+      "request.getQueryString()"
+    ],
+    "correct": 0,
+    "explanation": "getParameter() retourne la valeur d'un paramètre de requête."
+  },
+  {
+    "id": "JAK-SRV-008",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "medium",
+    "question": "Comment obtenir tous les paramètres d'une requête ?",
+    "options": [
+      "request.getParameterMap()",
+      "request.getParameters()",
+      "request.getParamMap()",
+      "request.getAllParameters()"
+    ],
+    "correct": 0,
+    "explanation": "getParameterMap() retourne une Map des paramètres."
+  },
+  {
+    "id": "JAK-SRV-009",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "hard",
+    "question": "Comment obtenir la méthode HTTP (GET, POST, etc.) ?",
+    "options": [
+      "request.getMethod()",
+      "request.getHttpMethod()",
+      "request.getRequestMethod()",
+      "request.getVerb()"
+    ],
+    "correct": 0,
+    "explanation": "getMethod() retourne la méthode HTTP de la requête."
+  },
+  {
+    "id": "JAK-SRV-010",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "medium",
+    "question": "Comment définir le code de statut HTTP ?",
+    "options": [
+      "response.setStatus(HttpServletResponse.SC_OK)",
+      "response.setStatusCode(200)",
+      "response.setStatus(200)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "setStatus() avec constante ou code numérique."
+  },
+  {
+    "id": "JAK-SRV-011",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "medium",
+    "question": "Comment envoyer une redirection ?",
+    "options": [
+      "response.sendRedirect(\"/page\")",
+      "response.redirect(\"/page\")",
+      "response.setRedirect(\"/page\")",
+      "response.forward(\"/page\")"
+    ],
+    "correct": 0,
+    "explanation": "sendRedirect() envoie une redirection au client."
+  },
+  {
+    "id": "JAK-SRV-012",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "hard",
+    "question": "Différence entre sendRedirect et forward ?",
+    "options": [
+      "sendRedirect est côté client, forward côté serveur",
+      "sendRedirect est côté serveur, forward côté client",
+      "Identiques",
+      "sendRedirect pour POST, forward pour GET"
+    ],
+    "correct": 0,
+    "explanation": "sendRedirect est une réponse HTTP 302, forward est interne."
+  },
+  {
+    "id": "JAK-SRV-013",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "medium",
+    "question": "Comment obtenir la session HTTP ?",
+    "options": [
+      "request.getSession()",
+      "request.getSession(true)",
+      "request.getSession(false)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "getSession() crée ou récupère la session."
+  },
+  {
+    "id": "JAK-SRV-014",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "hard",
+    "question": "Comment invalider une session ?",
+    "options": [
+      "session.invalidate()",
+      "session.destroy()",
+      "session.remove()",
+      "session.end()"
+    ],
+    "correct": 0,
+    "explanation": "invalidate() termine la session et supprime ses attributs."
+  },
+  {
+    "id": "JAK-SRV-015",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "hard",
+    "question": "Comment définir le timeout d'une session ?",
+    "options": [
+      "session.setMaxInactiveInterval(seconds)",
+      "web.xml <session-timeout>",
+      "@SessionTimeout",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Programmatiquement ou via web.xml."
+  },
+  {
+    "id": "JAK-SRV-016",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "hard",
+    "question": "Quel est l'ID de session par défaut ?",
+    "options": ["JSESSIONID", "SESSIONID", "ID", "JSESSION"],
+    "correct": 0,
+    "explanation": "Le nom du cookie de session est JSESSIONID."
+  },
+  {
+    "id": "JAK-SRV-017",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Context",
+    "difficulty": "hard",
+    "question": "Comment obtenir le ServletContext ?",
+    "options": [
+      "request.getServletContext()",
+      "session.getServletContext()",
+      "getServletContext()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Le ServletContext est accessible de plusieurs façons."
+  },
+  {
+    "id": "JAK-SRV-018",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Context",
+    "difficulty": "hard",
+    "question": "À quoi sert ServletContext ?",
+    "options": [
+      "Partager des données entre servlets",
+      "Configurer l'application",
+      "Accéder aux ressources",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ServletContext est le contexte global de l'application."
+  },
+  {
+    "id": "JAK-SRV-019",
+    "theme": "Jakarta Servlet",
+    "theme_label": "web.xml",
+    "difficulty": "medium",
+    "question": "Où se trouve le fichier web.xml ?",
+    "options": [
+      "WEB-INF/web.xml",
+      "META-INF/web.xml",
+      "WEB-INF/classes/web.xml",
+      "conf/web.xml"
+    ],
+    "correct": 0,
+    "explanation": "web.xml est dans le répertoire WEB-INF."
+  },
+  {
+    "id": "JAK-SRV-020",
+    "theme": "Jakarta Servlet",
+    "theme_label": "web.xml",
+    "difficulty": "hard",
+    "question": "Comment déclarer une servlet dans web.xml ?",
+    "options": [
+      "<servlet><servlet-name>...",
+      "<servlet-mapping>",
+      "<servlet-class>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Déclaration et mapping sont nécessaires."
+  },
+  {
+    "id": "JAK-SRV-021",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Listener",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un ServletContextListener ?",
+    "options": [
+      "Écoute le démarrage/arrêt de l'application",
+      "Écoute les requêtes",
+      "Écoute les sessions",
+      "Écoute les attributs"
+    ],
+    "correct": 0,
+    "explanation": "ServletContextListener écoute les événements du contexte."
+  },
+  {
+    "id": "JAK-SRV-022",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Listener",
+    "difficulty": "hard",
+    "question": "Quelle méthode est appelée au démarrage ?",
+    "options": ["contextInitialized()", "contextDestroyed()", "init()", "start()"],
+    "correct": 0,
+    "explanation": "contextInitialized() au démarrage de l'application."
+  },
+  {
+    "id": "JAK-SRV-023",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Listener",
+    "difficulty": "hard",
+    "question": "Quelle annotation déclare un listener ?",
+    "options": ["@WebListener", "@Listener", "@ServletListener", "@ContextListener"],
+    "correct": 0,
+    "explanation": "@WebListener est l'annotation pour les listeners."
+  },
+  {
+    "id": "JAK-SRV-024",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "medium",
+    "question": "À quoi sert un filtre ?",
+    "options": [
+      "Intercepter les requêtes/réponses",
+      "Créer des servlets",
+      "Gérer les sessions",
+      "Configurer l'application"
+    ],
+    "correct": 0,
+    "explanation": "Les filtres interceptent et peuvent modifier requêtes/réponses."
+  },
+  {
+    "id": "JAK-SRV-025",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "medium",
+    "question": "Quelle interface implémenter pour un filtre ?",
+    "options": ["Filter", "HttpFilter", "ServletFilter", "RequestFilter"],
+    "correct": 0,
+    "explanation": "L'interface Filter est à implémenter."
+  },
+  {
+    "id": "JAK-SRV-026",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "hard",
+    "question": "Quelle méthode est appelée pour chaque requête ?",
+    "options": ["doFilter()", "init()", "destroy()", "execute()"],
+    "correct": 0,
+    "explanation": "doFilter() traite chaque requête."
+  },
+  {
+    "id": "JAK-SRV-027",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "hard",
+    "question": "Comment chaîner les filtres ?",
+    "options": [
+      "filterChain.doFilter()",
+      "next.doFilter()",
+      "chain.proceed()",
+      "filter.next()"
+    ],
+    "correct": 0,
+    "explanation": "doFilter() appelle le filtre suivant ou la servlet."
+  },
+  {
+    "id": "JAK-SRV-028",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "hard",
+    "question": "Quelle annotation déclare un filtre ?",
+    "options": ["@WebFilter", "@Filter", "@ServletFilter", "@HttpFilter"],
+    "correct": 0,
+    "explanation": "@WebFilter est l'annotation pour les filtres."
+  },
+  {
+    "id": "JAK-SRV-029",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Async",
+    "difficulty": "hard",
+    "question": "Comment activer le support asynchrone ?",
+    "options": [
+      "asyncSupported = true dans @WebServlet",
+      "<async-supported>true</async-supported>",
+      "@AsyncServlet",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "asyncSupported active le traitement asynchrone."
+  },
+  {
+    "id": "JAK-SRV-030",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Async",
+    "difficulty": "hard",
+    "question": "Comment démarrer un traitement asynchrone ?",
+    "options": [
+      "request.startAsync()",
+      "request.beginAsync()",
+      "request.async()",
+      "request.start()"
+    ],
+    "correct": 0,
+    "explanation": "startAsync() commence un traitement asynchrone."
+  },
+  {
+    "id": "JAK-SRV-031",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Async",
+    "difficulty": "hard",
+    "question": "Comment terminer un traitement asynchrone ?",
+    "options": ["asyncContext.complete()", "asyncContext.done()", "asyncContext.finish()", "asyncContext.end()"],
+    "correct": 0,
+    "explanation": "complete() termine le traitement asynchrone."
+  },
+  {
+    "id": "JAK-SRV-032",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Error handling",
+    "difficulty": "hard",
+    "question": "Comment configurer une page d'erreur ?",
+    "options": [
+      "<error-page> dans web.xml",
+      "@WebErrorPage",
+      "response.setErrorPage()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration XML ou annotation."
+  },
+  {
+    "id": "JAK-SRV-033",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Error handling",
+    "difficulty": "hard",
+    "question": "Quelle exception HTTP est levée pour 404 ?",
+    "options": [
+      "HttpServletResponse.SC_NOT_FOUND",
+      "ServletException",
+      "IOException",
+      "FileNotFoundException"
+    ],
+    "correct": 0,
+    "explanation": "SC_NOT_FOUND est la constante pour 404."
+  },
+  {
+    "id": "JAK-SRV-034",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment restreindre l'accès à une URL ?",
+    "options": [
+      "<security-constraint> dans web.xml",
+      "@ServletSecurity",
+      "http://localhost:8080",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration XML ou annotation @ServletSecurity."
+  },
+  {
+    "id": "JAK-SRV-035",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation déclare les rôles autorisés ?",
+    "options": ["@RolesAllowed", "@PermitAll", "@DenyAll", "Toutes ces réponses"],
+    "correct": 3,
+    "explanation": "Les annotations JSR-250 sont supportées."
+  },
+  {
+    "id": "JAK-SRV-036",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Upload",
+    "difficulty": "hard",
+    "question": "Comment gérer l'upload de fichiers ?",
+    "options": [
+      "@MultipartConfig",
+      "request.getPart()",
+      "request.getParts()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "@MultipartConfig active le support multipart."
+  },
+  {
+    "id": "JAK-SRV-037",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Upload",
+    "difficulty": "hard",
+    "question": "Quelle taille maximale par défaut pour un fichier ?",
+    "options": [
+      "Pas de limite",
+      "1 Mo",
+      "10 Mo",
+      "100 Mo"
+    ],
+    "correct": 0,
+    "explanation": "Il n'y a pas de limite par défaut."
+  },
+  {
+    "id": "JAK-SRV-038",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Cookies",
+    "difficulty": "hard",
+    "question": "Comment créer un cookie ?",
+    "options": [
+      "new Cookie(name, value)",
+      "request.createCookie(name, value)",
+      "response.addCookie(new Cookie(name, value))",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Création puis ajout via response.addCookie()."
+  },
+  {
+    "id": "JAK-SRV-039",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Cookies",
+    "difficulty": "hard",
+    "question": "Comment lire les cookies ?",
+    "options": [
+      "request.getCookies()",
+      "request.getCookie()",
+      "request.getHeader(\"Cookie\")",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "getCookies() retourne un tableau de cookies."
+  },
+  {
+    "id": "JAK-SRV-040",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Headers",
+    "difficulty": "hard",
+    "question": "Comment obtenir un en-tête de requête ?",
+    "options": [
+      "request.getHeader(\"name\")",
+      "request.getRequestHeader(\"name\")",
+      "request.getHttpHeader(\"name\")",
+      "request.getHeaderValue(\"name\")"
+    ],
+    "correct": 0,
+    "explanation": "getHeader() retourne la valeur d'un en-tête."
+  },
+  {
+    "id": "JAK-SRV-041",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Headers",
+    "difficulty": "hard",
+    "question": "Comment définir un en-tête de réponse ?",
+    "options": [
+      "response.setHeader(\"name\", \"value\")",
+      "response.addHeader(\"name\", \"value\")",
+      "response.setResponseHeader(\"name\", \"value\")",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "setHeader() remplace, addHeader() ajoute."
+  },
+  {
+    "id": "JAK-SRV-042",
+    "theme": "Jakarta Servlet",
+    "theme_label": "MIME types",
+    "difficulty": "hard",
+    "question": "Comment définir le type MIME de la réponse ?",
+    "options": [
+      "response.setContentType(\"text/html\")",
+      "response.setMimeType(\"text/html\")",
+      "response.setType(\"text/html\")",
+      "response.contentType(\"text/html\")"
+    ],
+    "correct": 0,
+    "explanation": "setContentType() définit le type MIME."
+  },
+  {
+    "id": "JAK-SRV-043",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Character encoding",
+    "difficulty": "hard",
+    "question": "Comment définir l'encodage de la réponse ?",
+    "options": [
+      "response.setCharacterEncoding(\"UTF-8\")",
+      "response.setEncoding(\"UTF-8\")",
+      "response.setCharEncoding(\"UTF-8\")",
+      "response.setContentType(\"text/html; charset=UTF-8\")"
+    ],
+    "correct": 0,
+    "explanation": "setCharacterEncoding() ou via setContentType()."
+  },
+  {
+    "id": "JAK-SRV-044",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Output",
+    "difficulty": "hard",
+    "question": "Comment écrire dans la réponse ?",
+    "options": [
+      "response.getWriter().write()",
+      "response.getOutputStream().write()",
+      "response.print()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Writer pour texte, OutputStream pour binaire."
+  },
+  {
+    "id": "JAK-SRV-045",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Versions",
+    "difficulty": "hard",
+    "question": "Quelle version de Servlet est incluse dans Jakarta EE 10 ?",
+    "options": ["Servlet 6.0", "Servlet 5.0", "Servlet 4.0", "Servlet 3.1"],
+    "correct": 0,
+    "explanation": "Jakarta EE 10 inclut Servlet 6.0."
+  },
+  {
+    "id": "JAK-SRV-046",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Versions",
+    "difficulty": "hard",
+    "question": "Quelle version a introduit les annotations ?",
+    "options": ["Servlet 3.0", "Servlet 2.5", "Servlet 4.0", "Servlet 5.0"],
+    "correct": 0,
+    "explanation": "Servlet 3.0 a introduit les annotations @WebServlet, @WebFilter."
+  },
+  {
+    "id": "JAK-SRV-047",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Versions",
+    "difficulty": "hard",
+    "question": "Quelle version a introduit le support asynchrone ?",
+    "options": ["Servlet 3.0", "Servlet 2.5", "Servlet 4.0", "Servlet 5.0"],
+    "correct": 0,
+    "explanation": "Servlet 3.0 a introduit le traitement asynchrone."
+  },
+  {
+    "id": "JAK-SRV-048",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Versions",
+    "difficulty": "hard",
+    "question": "Quelle version a introduit HTTP/2 ?",
+    "options": ["Servlet 4.0", "Servlet 3.1", "Servlet 5.0", "Servlet 6.0"],
+    "correct": 0,
+    "explanation": "Servlet 4.0 a introduit le support HTTP/2."
+  },
+  {
+    "id": "JAK-SRV-049",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les servlets doivent-elles être thread-safe ?",
+    "options": [
+      "Oui, une seule instance partagée",
+      "Non, chaque requête a sa propre instance",
+      "Oui, mais avec synchronisation",
+      "Non, le conteneur gère"
+    ],
+    "correct": 0,
+    "explanation": "Une seule instance de servlet est partagée entre toutes les requêtes."
+  },
+  {
+    "id": "JAK-SRV-050",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment éviter les problèmes de concurrence ?",
+    "options": [
+      "Éviter les variables d'instance",
+      "Utiliser les variables locales",
+      "Synchroniser si nécessaire",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les variables d'instance partagées doivent être évitées."
+  },
+  {
+    "id": "JAK-SRV-051",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les méthodes doGet/doPost doivent-elles être synchronisées ?",
+    "options": [
+      "Non, le conteneur gère",
+      "Oui, toujours",
+      "Oui, si variables d'instance",
+      "Non, jamais"
+    ],
+    "correct": 2,
+    "explanation": "Synchroniser si la servlet a des variables d'instance modifiables."
+  },
+  {
+    "id": "JAK-SRV-052",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment améliorer les performances ?",
+    "options": [
+      "Utiliser les filtres avec parcimonie",
+      "Éviter les synchronisations inutiles",
+      "Utiliser le cache",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques d'optimisation."
+  },
+  {
+    "id": "JAK-SRV-053",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment voir les requêtes entrantes ?",
+    "options": [
+      "Logs du serveur",
+      "Filtre de logging",
+      "Debugger",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour déboguer."
+  },
+  {
+    "id": "JAK-SRV-054",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Migration de Java EE vers Jakarta EE ?",
+    "options": [
+      "Changer les packages javax -> jakarta",
+      "Mettre à jour web.xml",
+      "Recompiler",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La migration principale est le changement de namespace."
+  },
+  {
+    "id": "JAK-SRV-055",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Quel outil aide à la migration ?",
+    "options": [
+      "Eclipse Transformer",
+      "Migration tool",
+      "OpenRewrite",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs outils automatisent la migration."
+  },
+  {
+    "id": "JAK-SRV-056",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\n@WebServlet(\"/hello\")\npublic class HelloServlet extends HttpServlet {\n    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {\n        resp.getWriter().write(\"Hello\");\n    }\n}",
+    "options": [
+      "Répond 'Hello' à /hello",
+      "Répond 'Hello' à toutes les URLs",
+      "Erreur",
+      "Redirige vers /hello"
+    ],
+    "correct": 0,
+    "explanation": "La servlet répond 'Hello' à la route /hello."
+  },
+  {
+    "id": "JAK-SRV-057",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nrequest.getSession().setAttribute(\"user\", username);",
+    "options": [
+      "Stocke username en session",
+      "Stocke username en requête",
+      "Stocke username en contexte",
+      "Stocke username en cookie"
+    ],
+    "correct": 0,
+    "explanation": "setAttribute stocke un attribut dans la session."
+  },
+  {
+    "id": "JAK-SRV-058",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nresponse.sendRedirect(\"/login\");",
+    "options": [
+      "Redirige vers /login",
+      "Forward vers /login",
+      "Inclut /login",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "sendRedirect() envoie une redirection HTTP 302."
+  },
+  {
+    "id": "JAK-SRV-059",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nrequest.getRequestDispatcher(\"/page.jsp\").forward(request, response);",
+    "options": [
+      "Forward vers /page.jsp",
+      "Redirige vers /page.jsp",
+      "Inclut /page.jsp",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "forward() transfère la requête en interne."
+  },
+  {
+    "id": "JAK-SRV-060",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nresponse.setHeader(\"Cache-Control\", \"no-cache\");",
+    "options": [
+      "Désactive le cache",
+      "Active le cache",
+      "Redirige",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "Cache-Control: no-cache désactive la mise en cache."
+  }
+]

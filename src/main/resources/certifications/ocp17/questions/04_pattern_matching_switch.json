@@ -1,0 +1,1367 @@
+[
+  {
+    "id": "OCP17-PMS-001",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la syntaxe correcte pour un switch avec pattern matching ?",
+    "options": [
+      "switch(obj) { case Integer i -> i * 2; }",
+      "switch(obj) { case Integer: i -> i * 2; }",
+      "switch(obj) { case i instanceof Integer -> i * 2; }",
+      "switch(obj) { case (Integer i) -> i * 2; }"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe correcte est 'case Integer i -> i * 2'."
+  },
+  {
+    "id": "OCP17-PMS-002",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que produit ce code ?\nObject obj = 42;\nString result = switch(obj) {\n    case Integer i -> \"Integer: \" + i;\n    case String s -> \"String: \" + s;\n    default -> \"Unknown\";\n};",
+    "options": ["Integer: 42", "String: 42", "Unknown", "Erreur"],
+    "correct": 0,
+    "explanation": "obj est un Integer, donc case Integer i est exécuté."
+  },
+  {
+    "id": "OCP17-PMS-003",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Que produit ce code ?\nObject obj = \"Hello\";\nString result = switch(obj) {\n    case Integer i -> \"Integer\";\n    case String s -> \"String\";\n};",
+    "options": ["String", "Integer", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "obj est une String, case String s est exécuté."
+  },
+  {
+    "id": "OCP17-PMS-004",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Null handling",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\nObject obj = null;\nString result = switch(obj) {\n    case null -> \"Null\";\n    case String s -> \"String\";\n    default -> \"Default\";\n};",
+    "options": ["Null", "String", "Default", "NullPointerException"],
+    "correct": 0,
+    "explanation": "case null capture explicitement les valeurs null."
+  },
+  {
+    "id": "OCP17-PMS-005",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Null handling",
+    "difficulty": "medium",
+    "question": "Que se passe-t-il si null n'est pas capturé dans un switch ?",
+    "options": [
+      "NullPointerException",
+      "Case default est exécuté",
+      "Le switch ignore null",
+      "Erreur de compilation"
+    ],
+    "correct": 0,
+    "explanation": "Si null n'est pas capturé explicitement, NullPointerException est levée."
+  },
+  {
+    "id": "OCP17-PMS-006",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Null handling",
+    "difficulty": "hard",
+    "question": "Peut-on capturer null après des patterns ?",
+    "options": [
+      "Oui, case null peut être placé n'importe où",
+      "Non, case null doit être en premier",
+      "Oui, mais seulement en dernier",
+      "Non, case null interdit après default"
+    ],
+    "correct": 0,
+    "explanation": "case null peut être placé n'importe où dans le switch."
+  },
+  {
+    "id": "OCP17-PMS-007",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Guarded patterns",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\nObject obj = 15;\nString result = switch(obj) {\n    case Integer i when i < 10 -> \"Petit\";\n    case Integer i when i < 20 -> \"Moyen\";\n    default -> \"Grand\";\n};",
+    "options": ["Moyen", "Petit", "Grand", "Erreur"],
+    "correct": 0,
+    "explanation": "i=15, premier when false, second when true → 'Moyen'."
+  },
+  {
+    "id": "OCP17-PMS-008",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Guarded patterns",
+    "difficulty": "medium",
+    "question": "Quel mot-clé introduit une condition dans un pattern de switch ?",
+    "options": ["when", "if", "guard", "where"],
+    "correct": 0,
+    "explanation": "Le mot-clé 'when' introduit une condition dans un pattern de switch."
+  },
+  {
+    "id": "OCP17-PMS-009",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Guarded patterns",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser plusieurs conditions dans un guarded pattern ?",
+    "options": [
+      "Oui, avec && ou ||",
+      "Non, une seule condition",
+      "Oui, mais seulement &&",
+      "Oui, mais seulement ||"
+    ],
+    "correct": 0,
+    "explanation": "On peut combiner des conditions avec && ou ||."
+  },
+  {
+    "id": "OCP17-PMS-010",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Guarded patterns",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = 25;\nString result = switch(obj) {\n    case Integer i when i > 0 && i < 10 -> \"A\";\n    case Integer i when i >= 10 && i < 20 -> \"B\";\n    case Integer i when i >= 20 -> \"C\";\n    default -> \"D\";\n};",
+    "options": ["C", "A", "B", "D"],
+    "correct": 0,
+    "explanation": "i=25, i>=20 true → 'C'."
+  },
+  {
+    "id": "OCP17-PMS-011",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Exhaustivité",
+    "difficulty": "hard",
+    "question": "Un switch sur une sealed class doit-il être exhaustif ?",
+    "options": [
+      "Oui, le compilateur le vérifie",
+      "Non, optionnel",
+      "Oui, mais seulement avec default",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Pour les sealed classes, le compilateur vérifie l'exhaustivité."
+  },
+  {
+    "id": "OCP17-PMS-012",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Exhaustivité",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un switch sur sealed class n'est pas exhaustif ?",
+    "options": [
+      "Erreur de compilation",
+      "Warning",
+      "Exception à l'exécution",
+      "Case default implicite"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur génère une erreur si le switch n'est pas exhaustif."
+  },
+  {
+    "id": "OCP17-PMS-013",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Exhaustivité",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser default pour rendre un switch exhaustif ?",
+    "options": [
+      "Oui, default couvre tous les cas restants",
+      "Non, default ne compte pas",
+      "Oui, mais avec restrictions",
+      "Non, sealed classes ne supportent pas default"
+    ],
+    "correct": 0,
+    "explanation": "default rend le switch exhaustif pour les sealed classes."
+  },
+  {
+    "id": "OCP17-PMS-014",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Record patterns",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Point(int x, int y) {}\nObject obj = new Point(3, 4);\nString result = switch(obj) {\n    case Point(int x, int y) when x > y -> x - y + \"\";\n    case Point(int x, int y) -> x + y + \"\";\n};",
+    "options": ["7", "1", "3", "4"],
+    "correct": 0,
+    "explanation": "x=3, y=4, x>y false, second case: 3+4=7."
+  },
+  {
+    "id": "OCP17-PMS-015",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Record patterns",
+    "difficulty": "hard",
+    "question": "Peut-on déconstruire des records imbriqués dans un switch ?",
+    "options": [
+      "Oui, avec nested patterns",
+      "Non, un seul niveau",
+      "Oui, mais avec var",
+      "Non, records imbriqués non supportés"
+    ],
+    "correct": 0,
+    "explanation": "Les nested patterns permettent de déconstruire des records imbriqués."
+  },
+  {
+    "id": "OCP17-PMS-016",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Record patterns",
+    "difficulty": "hard",
+    "question": "Que signifie 'var' dans un record pattern de switch ?",
+    "options": [
+      "Inférence de type pour le composant",
+      "Variable non typée",
+      "Variable finale",
+      "Variable statique"
+    ],
+    "correct": 0,
+    "explanation": "var permet l'inférence du type du composant du record."
+  },
+  {
+    "id": "OCP17-PMS-017",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Arrow vs colon",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre '->' et ':' dans un switch ?",
+    "options": [
+      "-> pas de fall-through, : avec fall-through",
+      "Identiques",
+      "-> avec fall-through, : sans",
+      "-> pour expressions, : pour statements"
+    ],
+    "correct": 0,
+    "explanation": "-> n'a pas de fall-through contrairement à : qui nécessite break."
+  },
+  {
+    "id": "OCP17-PMS-018",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Arrow vs colon",
+    "difficulty": "medium",
+    "question": "Peut-on utiliser yield avec la syntaxe '->' ?",
+    "options": [
+      "Non, '->' retourne directement",
+      "Oui, avec des accolades",
+      "Oui, toujours",
+      "Non, seulement avec ':'"
+    ],
+    "correct": 0,
+    "explanation": "Avec '->', la valeur est retournée directement sans yield."
+  },
+  {
+    "id": "OCP17-PMS-019",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Arrow vs colon",
+    "difficulty": "hard",
+    "question": "Quand utiliser yield dans un switch ?",
+    "options": [
+      "Avec la syntaxe ':' et un bloc",
+      "Avec la syntaxe '->'",
+      "Jamais, déprécié",
+      "Uniquement avec les enums"
+    ],
+    "correct": 0,
+    "explanation": "yield est utilisé avec la syntaxe ':' pour retourner une valeur."
+  },
+  {
+    "id": "OCP17-PMS-020",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Arrow vs colon",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nint x = 2;\nint result = switch(x) {\n    case 1 -> 10;\n    case 2: yield 20;\n    default -> 0;\n};",
+    "options": ["20", "10", "0", "Erreur"],
+    "correct": 0,
+    "explanation": "case 2 utilise yield pour retourner 20."
+  },
+  {
+    "id": "OCP17-PMS-021",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Variables pattern",
+    "difficulty": "hard",
+    "question": "La variable pattern est-elle final dans un switch ?",
+    "options": [
+      "Oui, implicitement final",
+      "Non, peut être réassignée",
+      "Oui, avec var",
+      "Non, dépend du type"
+    ],
+    "correct": 0,
+    "explanation": "Les variables pattern sont implicitement final dans un switch."
+  },
+  {
+    "id": "OCP17-PMS-022",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Variables pattern",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser la même variable pattern dans plusieurs case ?",
+    "options": [
+      "Non, chaque case a sa propre portée",
+      "Oui, c'est la même variable",
+      "Oui, avec le même nom",
+      "Non, interdit"
+    ],
+    "correct": 0,
+    "explanation": "Chaque case a sa propre portée et ses propres variables."
+  },
+  {
+    "id": "OCP17-PMS-023",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Ordre des case",
+    "difficulty": "hard",
+    "question": "Quel est l'ordre requis pour les case patterns ?",
+    "options": [
+      "Plus spécifique d'abord",
+      "Plus général d'abord",
+      "Ordre alphabétique",
+      "Ordre de déclaration"
+    ],
+    "correct": 0,
+    "explanation": "Les patterns plus spécifiques doivent précéder les plus généraux."
+  },
+  {
+    "id": "OCP17-PMS-024",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Ordre des case",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si l'ordre est incorrect ?",
+    "options": [
+      "Erreur de compilation",
+      "Warning",
+      "Le premier est exécuté",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur génère une erreur si l'ordre est incorrect."
+  },
+  {
+    "id": "OCP17-PMS-025",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Dominance",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la dominance entre patterns ?",
+    "options": [
+      "Un pattern plus général domine un plus spécifique",
+      "Un pattern plus spécifique domine",
+      "L'ordre détermine la dominance",
+      "Pas de notion de dominance"
+    ],
+    "correct": 0,
+    "explanation": "Un pattern plus général domine un pattern plus spécifique."
+  },
+  {
+    "id": "OCP17-PMS-026",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Dominance",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un pattern est dominé par un précédent ?",
+    "options": [
+      "Erreur de compilation",
+      "Le pattern dominé est ignoré",
+      "Warning seulement",
+      "Le pattern dominé est exécuté quand même"
+    ],
+    "correct": 0,
+    "explanation": "Un pattern dominé génère une erreur de compilation."
+  },
+  {
+    "id": "OCP17-PMS-027",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Type patterns",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des patterns avec des types primitifs ?",
+    "options": [
+      "Oui, depuis Java 21",
+      "Non, seulement objets",
+      "Oui, avec autoboxing",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Java 21 supporte les patterns avec types primitifs."
+  },
+  {
+    "id": "OCP17-PMS-028",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Type patterns",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = 42;\nString result = switch(obj) {\n    case int i -> \"int: \" + i;\n    case Integer i -> \"Integer: \" + i;\n    default -> \"unknown\";\n};",
+    "options": ["int: 42", "Integer: 42", "unknown", "Erreur"],
+    "correct": 0,
+    "explanation": "Le pattern int capture l'autoboxing déballé."
+  },
+  {
+    "id": "OCP17-PMS-029",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les switch pattern matching sont-ils performants ?",
+    "options": [
+      "Oui, optimisés par la JVM",
+      "Non, plus lents",
+      "Identiques aux if-else",
+      "Moins performants"
+    ],
+    "correct": 0,
+    "explanation": "Les switch pattern matching peuvent être optimisés par la JVM."
+  },
+  {
+    "id": "OCP17-PMS-030",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Peut-on migrer des if-else chaînés vers switch pattern ?",
+    "options": [
+      "Oui, plus lisible",
+      "Non, incompatible",
+      "Oui, mais avec précautions",
+      "Non, perte de performance"
+    ],
+    "correct": 0,
+    "explanation": "Les if-else chaînés peuvent souvent être remplacés par des switch patterns."
+  },
+  {
+    "id": "OCP17-PMS-031",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Cas d'usage",
+    "difficulty": "hard",
+    "question": "Quand utiliser switch pattern matching plutôt que instanceof ?",
+    "options": [
+      "Quand plusieurs types sont à traiter",
+      "Pour un seul type",
+      "Pour les primitifs",
+      "Pour les enums"
+    ],
+    "correct": 0,
+    "explanation": "Switch pattern est idéal pour traiter plusieurs types différents."
+  },
+  {
+    "id": "OCP17-PMS-032",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Compatibilité",
+    "difficulty": "hard",
+    "question": "Les switch patterns sont-ils compatibles avec les anciens switch ?",
+    "options": [
+      "Oui, peuvent être mélangés",
+      "Non, incompatibles",
+      "Oui, mais avec restrictions",
+      "Non, syntaxe différente"
+    ],
+    "correct": 0,
+    "explanation": "On peut mélanger patterns et constantes dans un même switch."
+  },
+  {
+    "id": "OCP17-PMS-033",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Compatibilité",
+    "difficulty": "hard",
+    "question": "Peut-on mélanger case constant et case pattern ?",
+    "options": [
+      "Oui, case 1 -> ...; case String s -> ...",
+      "Non, types incompatibles",
+      "Oui, mais avec warning",
+      "Non, un seul type par switch"
+    ],
+    "correct": 0,
+    "explanation": "On peut mélanger constantes et patterns dans un switch."
+  },
+  {
+    "id": "OCP17-PMS-034",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Erreurs courantes",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si on oublie default sur un type non scellé ?",
+    "options": [
+      "Erreur de compilation",
+      "Warning",
+      "Switch non exhaustif",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Pour les types non scellés, default est requis pour l'exhaustivité."
+  },
+  {
+    "id": "OCP17-PMS-035",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Erreurs courantes",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si deux case patterns sont identiques ?",
+    "options": [
+      "Erreur de compilation",
+      "Le premier est utilisé",
+      "Warning",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Des case patterns dupliqués génèrent une erreur de compilation."
+  },
+  {
+    "id": "OCP17-PMS-036",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Enums et patterns",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des patterns avec des enums ?",
+    "options": [
+      "Oui, case Direction.NORTH -> ...",
+      "Non, enums incompatibles",
+      "Oui, mais avec when",
+      "Non, constantes seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les enums fonctionnent normalement avec les switch patterns."
+  },
+  {
+    "id": "OCP17-PMS-037",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Lambdas",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des expressions lambda dans les case ?",
+    "options": [
+      "Non, pas supporté",
+      "Oui, comme valeur de retour",
+      "Oui, comme condition",
+      "Non, interdites"
+    ],
+    "correct": 1,
+    "explanation": "Les lambdas peuvent être utilisées comme valeur de retour des case."
+  },
+  {
+    "id": "OCP17-PMS-038",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Variables locales",
+    "difficulty": "hard",
+    "question": "Peut-on déclarer des variables locales dans un case ?",
+    "options": [
+      "Oui, dans le bloc",
+      "Non, pas de déclarations",
+      "Oui, mais seulement final",
+      "Non, scope limité"
+    ],
+    "correct": 0,
+    "explanation": "On peut déclarer des variables locales dans le bloc d'un case."
+  },
+  {
+    "id": "OCP17-PMS-039",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Return",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser return dans un case de switch expression ?",
+    "options": [
+      "Non, utiliser yield",
+      "Oui, return fonctionne",
+      "Oui, mais avec break",
+      "Non, seulement dans les statements"
+    ],
+    "correct": 0,
+    "explanation": "Dans une switch expression, utiliser yield, pas return."
+  },
+  {
+    "id": "OCP17-PMS-040",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Throw",
+    "difficulty": "hard",
+    "question": "Peut-on lever une exception dans un case ?",
+    "options": [
+      "Oui, throw new Exception()",
+      "Non, pas autorisé",
+      "Oui, mais seulement RuntimeException",
+      "Non, les switch expressions ne supportent pas les exceptions"
+    ],
+    "correct": 0,
+    "explanation": "On peut lever des exceptions dans les case."
+  },
+  {
+    "id": "OCP17-PMS-041",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Blocs",
+    "difficulty": "hard",
+    "question": "Peut-on avoir plusieurs instructions dans un case ?",
+    "options": [
+      "Oui, avec des accolades",
+      "Non, une seule instruction",
+      "Oui, séparées par des virgules",
+      "Non, seulement une expression"
+    ],
+    "correct": 0,
+    "explanation": "Avec des accolades, on peut avoir plusieurs instructions."
+  },
+  {
+    "id": "OCP17-PMS-042",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Blocs",
+    "difficulty": "hard",
+    "question": "Comment retourner une valeur depuis un bloc d'instructions ?",
+    "options": [
+      "Utiliser yield",
+      "Utiliser return",
+      "Utiliser break",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "Dans un bloc, utiliser yield pour retourner une valeur."
+  },
+  {
+    "id": "OCP17-PMS-043",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Type inference",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser var dans les case patterns ?",
+    "options": [
+      "Oui, case var x -> ...",
+      "Non, var interdit",
+      "Oui, avec restrictions",
+      "Non, types explicites requis"
+    ],
+    "correct": 0,
+    "explanation": "var peut être utilisé pour inférer le type dans un case pattern."
+  },
+  {
+    "id": "OCP17-PMS-044",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Type inference",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = 42;\nString result = switch(obj) {\n    case var x -> \"Type: \" + x.getClass().getSimpleName();\n};",
+    "options": ["Type: Integer", "Type: Object", "Type: int", "Erreur"],
+    "correct": 0,
+    "explanation": "var infère Integer pour x."
+  },
+  {
+    "id": "OCP17-PMS-045",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Parentheses",
+    "difficulty": "hard",
+    "question": "Les parenthèses sont-elles obligatoires pour les patterns ?",
+    "options": [
+      "Non, optionnelles",
+      "Oui, obligatoires",
+      "Oui, pour les records seulement",
+      "Non, interdites"
+    ],
+    "correct": 0,
+    "explanation": "Les parenthèses autour des patterns sont optionnelles."
+  },
+  {
+    "id": "OCP17-PMS-046",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Documentation",
+    "difficulty": "hard",
+    "question": "Comment documenter un switch pattern matching ?",
+    "options": [
+      "JavaDoc standard",
+      "Annotations spéciales",
+      "Commentaires inline",
+      "Pas de documentation spécifique"
+    ],
+    "correct": 0,
+    "explanation": "La JavaDoc standard suffit pour documenter."
+  },
+  {
+    "id": "OCP17-PMS-047",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Refactoring",
+    "difficulty": "hard",
+    "question": "Est-ce que les IDE supportent le refactoring des switch patterns ?",
+    "options": [
+      "Oui, la plupart des IDE modernes",
+      "Non, pas encore",
+      "Partiellement",
+      "Uniquement IntelliJ"
+    ],
+    "correct": 0,
+    "explanation": "Les IDE modernes comme IntelliJ supportent les switch patterns."
+  },
+  {
+    "id": "OCP17-PMS-048",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Tests",
+    "difficulty": "hard",
+    "question": "Comment tester l'exhaustivité d'un switch pattern ?",
+    "options": [
+      "Le compilateur le garantit",
+      "Tests unitaires",
+      "Reflection",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur garantit l'exhaustivité pour les sealed classes."
+  },
+  {
+    "id": "OCP17-PMS-049",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Performance JVM",
+    "difficulty": "hard",
+    "question": "La JVM optimise-t-elle les switch patterns ?",
+    "options": [
+      "Oui, comme les switch tables",
+      "Non, pas d'optimisation",
+      "Partiellement",
+      "Uniquement pour les enums"
+    ],
+    "correct": 0,
+    "explanation": "La JVM peut optimiser les switch patterns avec des tables de saut."
+  },
+  {
+    "id": "OCP17-PMS-050",
+    "theme": "Pattern Matching Switch",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quelle évolution est prévue pour les switch patterns ?",
+    "options": [
+      "Patterns pour les tableaux",
+      "Dépréciation",
+      "Remplacement par if-else",
+      "Aucune évolution"
+    ],
+    "correct": 0,
+    "explanation": "L'extension aux tableaux est une évolution prévue."
+  },
+  {
+    "id": "OCP17-PM-051",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = List.of(1, 2, 3);\nif (obj instanceof List<?> list && list.size() > 2) {\n    System.out.println(list.get(0));\n}",
+    "options": ["1", "null", "Erreur", "ClassCastException"],
+    "correct": 0,
+    "explanation": "instanceof avec pattern capture la liste, get(0) retourne 1."
+  },
+  {
+    "id": "OCP17-PM-052",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching avec des types génériques ?",
+    "options": [
+      "Oui, avec des types bruts",
+      "Non, pas supporté",
+      "Oui, avec List<?>",
+      "Uniquement avec des records"
+    ],
+    "correct": 2,
+    "explanation": "On peut utiliser List<?> ou List<String> avec pattern matching."
+  },
+  {
+    "id": "OCP17-PM-053",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = new int[]{1, 2, 3};\nif (obj instanceof int[] arr && arr.length > 2) {\n    System.out.println(arr[0]);\n}",
+    "options": ["1", "Erreur", "null", "ClassCastException"],
+    "correct": 0,
+    "explanation": "Pattern matching fonctionne avec les tableaux, arr[0]=1."
+  },
+  {
+    "id": "OCP17-PM-054",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching avec des classes internes ?",
+    "options": [
+      "Oui, normalement",
+      "Non, restrictions",
+      "Oui, avec des qualifiers",
+      "Uniquement static nested"
+    ],
+    "correct": 0,
+    "explanation": "Les classes internes sont supportées comme les classes normales."
+  },
+  {
+    "id": "OCP17-PM-055",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = \"123\";\nif (obj instanceof String s && Integer.parseInt(s) > 100) {\n    System.out.println(\"A\");\n}",
+    "options": ["A", "Rien", "Erreur", "NullPointerException"],
+    "correct": 0,
+    "explanation": "s=123, parseInt=123 > 100, condition true."
+  },
+  {
+    "id": "OCP17-PM-056",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Les pattern variables sont-elles final ?",
+    "options": [
+      "Oui, implicitement final",
+      "Non, modifiables",
+      "Oui, avec final explicite",
+      "Dépend du contexte"
+    ],
+    "correct": 0,
+    "explanation": "Les pattern variables sont implicitement final dans leur portée."
+  },
+  {
+    "id": "OCP17-PM-057",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = \"Hello\";\nif (obj instanceof String s) {\n    s = \"World\";\n    System.out.println(s);\n}",
+    "options": ["World", "Hello", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "La variable pattern peut être réassignée dans le bloc if."
+  },
+  {
+    "id": "OCP17-PM-058",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching dans une boucle ?",
+    "options": [
+      "Oui, dans la condition",
+      "Non, interdit",
+      "Oui, avec des records",
+      "Uniquement avec instanceof"
+    ],
+    "correct": 0,
+    "explanation": "On peut utiliser pattern matching dans la condition d'une boucle."
+  },
+  {
+    "id": "OCP17-PM-059",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nList<Object> list = List.of(\"A\", 1, \"B\");\nfor (Object obj : list) {\n    if (obj instanceof String s) {\n        System.out.print(s);\n    }\n}",
+    "options": ["AB", "A1B", "A B", "1"],
+    "correct": 0,
+    "explanation": "Seuls les String sont capturés et affichés."
+  },
+  {
+    "id": "OCP17-PM-060",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre pattern matching et cast ?",
+    "options": [
+      "Pattern matching combine test et déclaration",
+      "Cast est plus sûr",
+      "Identiques",
+      "Pattern matching est plus lent"
+    ],
+    "correct": 0,
+    "explanation": "Pattern matching teste le type et déclare la variable en une seule opération."
+  },
+  {
+    "id": "OCP17-PM-061",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Pattern matching est-il plus performant qu'un cast ?",
+    "options": [
+      "Similaire",
+      "Beaucoup plus lent",
+      "Beaucoup plus rapide",
+      "Dépend de la JVM"
+    ],
+    "correct": 0,
+    "explanation": "Les performances sont comparables à instanceof suivi d'un cast."
+  },
+  {
+    "id": "OCP17-PM-062",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "La JVM optimise-t-elle les patterns ?",
+    "options": [
+      "Oui, comme instanceof",
+      "Non",
+      "Partiellement",
+      "Seulement pour les records"
+    ],
+    "correct": 0,
+    "explanation": "Les patterns sont optimisés comme les instanceof classiques."
+  },
+  {
+    "id": "OCP17-PM-063",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec enum",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching avec des enums ?",
+    "options": [
+      "Oui, normalement",
+      "Non, enums incompatibles",
+      "Oui, avec des gardes",
+      "Uniquement pour les valeurs"
+    ],
+    "correct": 0,
+    "explanation": "Les enums fonctionnent normalement avec pattern matching."
+  },
+  {
+    "id": "OCP17-PM-064",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec enum",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nenum Color { RED, GREEN, BLUE }\nObject obj = Color.RED;\nif (obj instanceof Color c && c == Color.RED) {\n    System.out.println(\"Rouge\");\n}",
+    "options": ["Rouge", "Rien", "Erreur", "ClassCastException"],
+    "correct": 0,
+    "explanation": "c est Color.RED, condition true."
+  },
+  {
+    "id": "OCP17-PM-065",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Optional",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nOptional<String> opt = Optional.of(\"Hello\");\nif (opt instanceof Optional<String> o && o.isPresent()) {\n    System.out.println(o.get());\n}",
+    "options": ["Hello", "Rien", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "Pattern matching fonctionne avec Optional générique."
+  },
+  {
+    "id": "OCP17-PM-066",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Optional",
+    "difficulty": "hard",
+    "question": "Peut-on déconstruire Optional avec pattern matching ?",
+    "options": [
+      "Non, Optional n'a pas de deconstructor",
+      "Oui, Optional.of(var x)",
+      "Oui, avec des records",
+      "Uniquement avec des classes"
+    ],
+    "correct": 0,
+    "explanation": "Optional ne fournit pas de deconstructor pour pattern matching."
+  },
+  {
+    "id": "OCP17-PM-067",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Stream",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching dans Stream.filter() ?",
+    "options": [
+      "Oui, avec des lambdas",
+      "Non, pas supporté",
+      "Oui, avec des méthodes références",
+      "Uniquement pour les records"
+    ],
+    "correct": 0,
+    "explanation": "On peut utiliser pattern matching dans l'expression lambda de filter."
+  },
+  {
+    "id": "OCP17-PM-068",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Stream",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nstream.filter(obj -> obj instanceof String s && s.length() > 3)",
+    "options": [
+      "Filtre les String de longueur > 3",
+      "Filtre tous les String",
+      "Erreur compilation",
+      "Filtre les objets non String"
+    ],
+    "correct": 0,
+    "explanation": "Le pattern matching dans le lambda filtre les String de longueur > 3."
+  },
+  {
+    "id": "OCP17-PM-069",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Stream",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nList.of(\"a\", 1, \"bc\", 2).stream()\n    .filter(obj -> obj instanceof String s && s.length() > 1)\n    .forEach(System.out::print);",
+    "options": ["bc", "a", "a bc", "1 2"],
+    "correct": 0,
+    "explanation": "Seul 'bc' est un String de longueur > 1."
+  },
+  {
+    "id": "OCP17-PM-070",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Map",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching avec Map.Entry ?",
+    "options": [
+      "Oui, avec des records",
+      "Non, Map.Entry est une interface",
+      "Oui, depuis Java 21",
+      "Uniquement avec des classes"
+    ],
+    "correct": 2,
+    "explanation": "Java 21 permet pattern matching avec Map.Entry."
+  },
+  {
+    "id": "OCP17-PM-071",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Map",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nMap<String, Integer> map = Map.of(\"A\", 1);\nfor (Map.Entry<?, ?> entry : map.entrySet()) {\n    if (entry instanceof Map.Entry(String key, Integer value)) {\n        System.out.println(key + value);\n    }\n}",
+    "options": ["A1", "A", "1", "Erreur"],
+    "correct": 0,
+    "explanation": "Le record pattern déconstruit Map.Entry en key et value."
+  },
+  {
+    "id": "OCP17-PM-072",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avec Map",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser var dans Map.Entry pattern ?",
+    "options": [
+      "Oui, Map.Entry(var key, var value)",
+      "Non, types explicites requis",
+      "Oui, avec des restrictions",
+      "Uniquement avec des records"
+    ],
+    "correct": 0,
+    "explanation": "var peut être utilisé pour l'inférence de type."
+  },
+  {
+    "id": "OCP17-PM-073",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - nested",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Pair(Object a, Object b) {}\nObject obj = new Pair(new Pair(1, 2), 3);\nif (obj instanceof Pair(Pair(var x, var y), var z)) {\n    System.out.println(x + y + z);\n}",
+    "options": ["6", "123", "Pair", "Erreur"],
+    "correct": 0,
+    "explanation": "Déconstruction imbriquée, x=1, y=2, z=3, somme=6."
+  },
+  {
+    "id": "OCP17-PM-074",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - nested",
+    "difficulty": "hard",
+    "question": "Jusqu'à combien de niveaux de nested patterns sont supportés ?",
+    "options": [
+      "Sans limite théorique",
+      "Maximum 3",
+      "Maximum 5",
+      "Maximum 10"
+    ],
+    "correct": 0,
+    "explanation": "Il n'y a pas de limite théorique aux nested patterns."
+  },
+  {
+    "id": "OCP17-PM-075",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - nested",
+    "difficulty": "hard",
+    "question": "Les nested patterns fonctionnent-ils avec les types génériques ?",
+    "options": [
+      "Oui, avec des restrictions",
+      "Non, pas supporté",
+      "Oui, complètement",
+      "Uniquement avec les records"
+    ],
+    "correct": 0,
+    "explanation": "Les nested patterns supportent les types génériques avec certaines restrictions."
+  },
+  {
+    "id": "OCP17-PM-076",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - scoping",
+    "difficulty": "hard",
+    "question": "Dans 'if (obj instanceof String s && s.length() > 0)', où s est-il accessible ?",
+    "options": [
+      "Dans toute la condition &&",
+      "Seulement après le &&",
+      "Dans tout le if",
+      "Dans le bloc if seulement"
+    ],
+    "correct": 0,
+    "explanation": "La variable est accessible dans toute la condition après sa définition."
+  },
+  {
+    "id": "OCP17-PM-077",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - scoping",
+    "difficulty": "hard",
+    "question": "Dans 'if (obj instanceof String s || s.length() > 0)', que se passe-t-il ?",
+    "options": [
+      "Erreur compilation",
+      "Fonctionne normalement",
+      "Warning",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Erreur car 's' n'est pas défini dans la partie droite du OR."
+  },
+  {
+    "id": "OCP17-PM-078",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - scoping",
+    "difficulty": "hard",
+    "question": "Peut-on avoir plusieurs variables pattern dans un même if ?",
+    "options": [
+      "Oui, avec des &&",
+      "Non, une seule",
+      "Oui, avec des ||",
+      "Oui, avec des records"
+    ],
+    "correct": 0,
+    "explanation": "On peut avoir plusieurs patterns séparés par &&."
+  },
+  {
+    "id": "OCP17-PM-079",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - scoping",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj1 = \"A\";\nObject obj2 = 1;\nif (obj1 instanceof String s && obj2 instanceof Integer i) {\n    System.out.println(s + i);\n}",
+    "options": ["A1", "A", "1", "Erreur"],
+    "correct": 0,
+    "explanation": "Les deux patterns sont évalués, s='A', i=1."
+  },
+  {
+    "id": "OCP17-PM-080",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - dominance",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la dominance entre patterns ?",
+    "options": [
+      "Un pattern plus général domine un plus spécifique",
+      "Un pattern plus spécifique domine",
+      "L'ordre détermine la dominance",
+      "Pas de notion de dominance"
+    ],
+    "correct": 0,
+    "explanation": "Un pattern plus général (Number) domine un plus spécifique (Integer)."
+  },
+  {
+    "id": "OCP17-PM-081",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - dominance",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un pattern est dominé par un précédent ?",
+    "options": [
+      "Erreur de compilation",
+      "Le pattern dominé est ignoré",
+      "Warning seulement",
+      "Le pattern dominé est exécuté quand même"
+    ],
+    "correct": 0,
+    "explanation": "Un pattern dominé génère une erreur de compilation."
+  },
+  {
+    "id": "OCP17-PM-082",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - dominance",
+    "difficulty": "hard",
+    "question": "Quel pattern domine ? Number n ou Integer i ?",
+    "options": [
+      "Number n domine Integer i",
+      "Integer i domine Number n",
+      "Aucune dominance",
+      "Dépend de l'ordre"
+    ],
+    "correct": 0,
+    "explanation": "Number est plus général, donc domine Integer."
+  },
+  {
+    "id": "OCP17-PM-083",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - switch",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = 42;\nString result = switch(obj) {\n    case Integer i when i > 50 -> \"Grand\";\n    case Integer i -> \"Petit\";\n    default -> \"Autre\";\n};",
+    "options": ["Petit", "Grand", "Autre", "Erreur"],
+    "correct": 0,
+    "explanation": "i=42, i>50 false, second case s'exécute."
+  },
+  {
+    "id": "OCP17-PM-084",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - switch",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des patterns null dans un switch ?",
+    "options": [
+      "Oui, case null",
+      "Non, interdit",
+      "Oui, avec default",
+      "Uniquement avec des records"
+    ],
+    "correct": 0,
+    "explanation": "case null capture explicitement les valeurs null."
+  },
+  {
+    "id": "OCP17-PM-085",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - switch",
+    "difficulty": "hard",
+    "question": "L'ordre des case dans un switch pattern est-il important ?",
+    "options": [
+      "Oui, plus spécifique d'abord",
+      "Non, ordre quelconque",
+      "Oui, alphabétique",
+      "Non, automatique"
+    ],
+    "correct": 0,
+    "explanation": "Les patterns plus spécifiques doivent précéder les plus généraux."
+  },
+  {
+    "id": "OCP17-PM-086",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - switch",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = 42;\nString result = switch(obj) {\n    case Integer i -> \"Integer\";\n    case Number n -> \"Number\";\n    default -> \"Unknown\";\n};",
+    "options": ["Integer", "Number", "Unknown", "Erreur"],
+    "correct": 0,
+    "explanation": "Le premier case matchant est exécuté."
+  },
+  {
+    "id": "OCP17-PM-087",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - enums",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser pattern matching avec des enums paramétrés ?",
+    "options": [
+      "Oui, normalement",
+      "Non, enums incompatibles",
+      "Oui, avec des gardes",
+      "Uniquement pour les constantes"
+    ],
+    "correct": 0,
+    "explanation": "Les enums paramétrés fonctionnent avec pattern matching."
+  },
+  {
+    "id": "OCP17-PM-088",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - enums",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nenum Result { SUCCESS(String msg), ERROR(String msg); }\nObject obj = Result.SUCCESS(\"OK\");\nif (obj instanceof Result.SUCCESS(var msg)) {\n    System.out.println(msg);\n}",
+    "options": ["OK", "SUCCESS", "ERROR", "Erreur"],
+    "correct": 0,
+    "explanation": "Le pattern déconstruit l'enum paramétré."
+  },
+  {
+    "id": "OCP17-PM-089",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - classes",
+    "difficulty": "hard",
+    "question": "Peut-on créer un deconstructor personnalisé pour pattern matching ?",
+    "options": [
+      "Oui, avec deconstructor",
+      "Non, réservé aux records",
+      "Oui, avec @Deconstructor",
+      "Non, seulement automatique"
+    ],
+    "correct": 0,
+    "explanation": "On peut définir un deconstructor dans une classe normale."
+  },
+  {
+    "id": "OCP17-PM-090",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - classes",
+    "difficulty": "hard",
+    "question": "Comment déclarer un deconstructor ?",
+    "options": [
+      "public deconstructor Point(int x, int y) { ... }",
+      "public void deconstruct(Point p) { ... }",
+      "@Deconstructor Point(int x, int y)",
+      "record Point(int x, int y)"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe est 'deconstructor Point(int x, int y)'."
+  },
+  {
+    "id": "OCP17-PM-091",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - classes",
+    "difficulty": "hard",
+    "question": "Les deconstructors peuvent-ils être privés ?",
+    "options": [
+      "Non, doivent être publics",
+      "Oui, privés",
+      "Oui, protected",
+      "Uniquement package-private"
+    ],
+    "correct": 0,
+    "explanation": "Les deconstructors doivent être publics pour être utilisables."
+  },
+  {
+    "id": "OCP17-PM-092",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - deconstruction",
+    "difficulty": "hard",
+    "question": "Que signifie 'deconstruction' ?",
+    "options": [
+      "Extraire les composants d'un objet",
+      "Détruire un objet",
+      "Supprimer une variable",
+      "Nettoyer la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "La déconstruction extrait les composants d'un objet."
+  },
+  {
+    "id": "OCP17-PM-093",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - deconstruction",
+    "difficulty": "hard",
+    "question": "Peut-on déconstruire un tableau ?",
+    "options": [
+      "Oui, avec pattern array",
+      "Non, pas supporté",
+      "Oui, avec des records",
+      "Uniquement avec List"
+    ],
+    "correct": 0,
+    "explanation": "Les array patterns permettent de déconstruire des tableaux."
+  },
+  {
+    "id": "OCP17-PM-094",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - deconstruction",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nObject obj = new int[]{1, 2, 3};\nif (obj instanceof int[]{int x, int y, int z}) {\n    System.out.println(x + y + z);\n}",
+    "options": ["6", "123", "1 2 3", "Erreur"],
+    "correct": 0,
+    "explanation": "L'array pattern déconstruit le tableau en ses éléments."
+  },
+  {
+    "id": "OCP17-PM-095",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - deconstruction",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser var dans les array patterns ?",
+    "options": [
+      "Oui, int[]{var x, var y, var z}",
+      "Non, types explicites requis",
+      "Oui, avec des restrictions",
+      "Uniquement avec des records"
+    ],
+    "correct": 0,
+    "explanation": "var peut être utilisé pour l'inférence de type dans les array patterns."
+  },
+  {
+    "id": "OCP17-PM-096",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - future",
+    "difficulty": "hard",
+    "question": "Quelle évolution est prévue pour pattern matching ?",
+    "options": [
+      "Patterns pour les expressions régulières",
+      "Suppression",
+      "Stabilisation",
+      "Extension aux primitifs"
+    ],
+    "correct": 0,
+    "explanation": "Les patterns pour regex sont une évolution prévue."
+  },
+  {
+    "id": "OCP17-PM-097",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - future",
+    "difficulty": "hard",
+    "question": "Quand les pattern matching seront-ils finalisés ?",
+    "options": [
+      "Java 21 partiellement",
+      "Java 17",
+      "Java 25",
+      "Déjà finalisés"
+    ],
+    "correct": 0,
+    "explanation": "Le pattern matching pour switch est finalisé en Java 21."
+  },
+  {
+    "id": "OCP17-PM-098",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - future",
+    "difficulty": "hard",
+    "question": "Quel JEP a finalisé pattern matching pour switch ?",
+    "options": ["JEP 441", "JEP 430", "JEP 420", "JEP 410"],
+    "correct": 0,
+    "explanation": "JEP 441 a finalisé pattern matching pour switch en Java 21."
+  },
+  {
+    "id": "OCP17-PM-099",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - future",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit les record patterns ?",
+    "options": ["JEP 440", "JEP 441", "JEP 442", "JEP 443"],
+    "correct": 0,
+    "explanation": "JEP 440: Record Patterns."
+  },
+  {
+    "id": "OCP17-PM-100",
+    "theme": "Pattern Matching Suite",
+    "theme_label": "Pattern matching avancé - future",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit les array patterns ?",
+    "options": [
+      "En développement",
+      "JEP 441",
+      "JEP 440",
+      "Déjà inclus"
+    ],
+    "correct": 0,
+    "explanation": "Les array patterns sont encore en développement."
+  }
+]

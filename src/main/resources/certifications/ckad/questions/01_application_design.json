@@ -1,0 +1,572 @@
+[
+  {
+    "id": "CKAD-01-001",
+    "theme": "Application Design",
+    "theme_label": "Multi-container pods",
+    "difficulty": "easy",
+    "question": "Quels sont les patterns de pods multi-conteneurs ?",
+    "options": [
+      "Sidecar, adapter, ambassador",
+      "DaemonSet, StatefulSet",
+      "Job, CronJob",
+      "Deployment, ReplicaSet"
+    ],
+    "correct": 0,
+    "explication": "Sidecar (ex: logging), adapter (transformer les métriques), ambassador (proxy)."
+  },
+  {
+    "id": "CKAD-01-002",
+    "theme": "Application Design",
+    "theme_label": "Multi-container pods",
+    "difficulty": "easy",
+    "question": "Les conteneurs d'un pod partagent-ils le même réseau ?",
+    "options": ["Oui", "Non", "Uniquement si configuré", "Uniquement si shareProcessNamespace"],
+    "correct": 0,
+    "explication": "Ils partagent la même adresse IP et les mêmes ports."
+  },
+  {
+    "id": "CKAD-01-003",
+    "theme": "Application Design",
+    "theme_label": "Multi-container pods",
+    "difficulty": "easy",
+    "question": "Comment communiquent les conteneurs d'un même pod ?",
+    "options": [
+      "localhost:port",
+      "Nom du conteneur",
+      "Service",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Via localhost car ils partagent le network namespace."
+  },
+  {
+    "id": "CKAD-01-004",
+    "theme": "Application Design",
+    "theme_label": "Init containers",
+    "difficulty": "easy",
+    "question": "Les init containers s'exécutent-ils avant ou après les conteneurs principaux ?",
+    "options": ["Avant", "Après", "En parallèle", "Séquentiellement entre eux"],
+    "correct": 0,
+    "explication": "Ils s'exécutent dans l'ordre avant le démarrage des conteneurs principaux."
+  },
+  {
+    "id": "CKAD-01-005",
+    "theme": "Application Design",
+    "theme_label": "Init containers",
+    "difficulty": "easy",
+    "question": "Si un init container échoue, que se passe-t-il ?",
+    "options": [
+      "Le pod redémarre (selon restartPolicy)",
+      "Le pod continue",
+      "Le pod est supprimé",
+      "Rien"
+    ],
+    "correct": 0,
+    "explication": "Le pod redémarre jusqu'à ce que tous les init containers réussissent."
+  },
+  {
+    "id": "CKAD-01-006",
+    "theme": "Application Design",
+    "theme_label": "Labels & annotations",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre labels et annotations ?",
+    "options": [
+      "Labels pour sélectionner des ressources, annotations pour métadonnées non identifiantes",
+      "Labels pour les annotations, annotations pour les labels",
+      "Identiques",
+      "Labels sont des clés-valeurs, annotations aussi"
+    ],
+    "correct": 0,
+    "explication": "Les labels sont utilisés par les sélecteurs, les annotations pour stocker des informations auxiliaires."
+  },
+  {
+    "id": "CKAD-01-007",
+    "theme": "Application Design",
+    "theme_label": "Labels & selectors",
+    "difficulty": "easy",
+    "question": "Comment lister les pods avec un label spécifique ?",
+    "options": [
+      "kubectl get pods -l app=web",
+      "kubectl get pods --selector app=web",
+      "A et B",
+      "kubectl get pods --filter app=web"
+    ],
+    "correct": 2,
+    "explication": "-l ou --selector."
+  },
+  {
+    "id": "CKAD-01-008",
+    "theme": "Application Design",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "question": "Que sont les requests et limits ?",
+    "options": [
+      "Requests: ressources garanties, limits: maximum autorisé",
+      "Requests: maximum, limits: minimum",
+      "Identiques",
+      "Requests pour CPU, limits pour mémoire"
+    ],
+    "correct": 0,
+    "explication": "Les requests sont utilisées pour le scheduling, les limits pour le throttling/OOM."
+  },
+  {
+    "id": "CKAD-01-009",
+    "theme": "Application Design",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si un conteneur dépasse sa limit de mémoire ?",
+    "options": ["OOM kill", "Throttling", "Pod suspendu", "Redémarrage"],
+    "correct": 0,
+    "explication": "Le conteneur est tué par OOM Killer."
+  },
+  {
+    "id": "CKAD-01-010",
+    "theme": "Application Design",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "question": "Comment définir une request CPU de 0.5 cœur ?",
+    "options": ["500m", "0.5", "1/2", "A et B"],
+    "correct": 3,
+    "explication": "500m (millicores) ou 0.5."
+  },
+  {
+    "id": "CKAD-01-011",
+    "theme": "Application Design",
+    "theme_label": "ConfigMap",
+    "difficulty": "easy",
+    "question": "Comment créer un ConfigMap à partir d'un fichier ?",
+    "options": [
+      "kubectl create configmap moncm --from-file=config.properties",
+      "kubectl create configmap moncm --from-file=config=config.properties",
+      "kubectl create configmap moncm --from-file=./dir",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "--from-file peut être un fichier, un répertoire, ou une paire clé=chemin."
+  },
+  {
+    "id": "CKAD-01-012",
+    "theme": "Application Design",
+    "theme_label": "ConfigMap",
+    "difficulty": "easy",
+    "question": "Comment monter un ConfigMap comme volume ?",
+    "options": [
+      "volumes: - name: config configMap: name: moncm",
+      "volumeMounts: - name: config mountPath: /etc/config",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Déclarer le volume configMap puis le monter."
+  },
+  {
+    "id": "CKAD-01-013",
+    "theme": "Application Design",
+    "theme_label": "Secrets",
+    "difficulty": "easy",
+    "question": "Comment créer un secret à partir de valeurs littérales ?",
+    "options": [
+      "kubectl create secret generic monsecret --from-literal=password=123",
+      "kubectl create secret generic monsecret --from-literal=user=admin",
+      "A et B",
+      "kubectl create secret generic monsecret --from-file=password.txt"
+    ],
+    "correct": 2,
+    "explication": "--from-literal permet des paires clé-valeur."
+  },
+  {
+    "id": "CKAD-01-014",
+    "theme": "Application Design",
+    "theme_label": "Environment variables",
+    "difficulty": "easy",
+    "question": "Comment injecter une variable d'environnement depuis un ConfigMap ?",
+    "options": [
+      "env: - name: MY_VAR valueFrom: configMapKeyRef: name: moncm key: mykey",
+      "envFrom: - configMapRef: name: moncm",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "envFrom importe toutes les clés, env une seule clé."
+  },
+  {
+    "id": "CKAD-01-015",
+    "theme": "Application Design",
+    "theme_label": "Downward API",
+    "difficulty": "easy",
+    "question": "À quoi sert la Downward API ?",
+    "options": [
+      "Exposer les métadonnées du pod (name, namespace, labels, annotations) au conteneur",
+      "Exposer les secrets",
+      "Exposer les configmaps",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Via variables d'environnement ou volumes."
+  },
+  {
+    "id": "CKAD-01-016",
+    "theme": "Application Design",
+    "theme_label": "Downward API",
+    "difficulty": "easy",
+    "question": "Comment exposer le nom du pod via variable d'environnement ?",
+    "options": [
+      "env: - name: POD_NAME valueFrom: fieldRef: fieldPath: metadata.name",
+      "env: - name: POD_NAME value: $(POD_NAME)",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "fieldRef sur metadata.name."
+  },
+  {
+    "id": "CKAD-01-017",
+    "theme": "Application Design",
+    "theme_label": "Security context",
+    "difficulty": "easy",
+    "question": "Comment exécuter un conteneur en tant qu'utilisateur non root ?",
+    "options": [
+      "securityContext: runAsUser: 1000",
+      "securityContext: runAsNonRoot: true",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "runAsNonRoot: true est préférable."
+  },
+  {
+    "id": "CKAD-01-018",
+    "theme": "Application Design",
+    "theme_label": "Resource quotas",
+    "difficulty": "easy",
+    "question": "À quoi sert un ResourceQuota ?",
+    "options": [
+      "Limiter la consommation totale de ressources dans un namespace",
+      "Limiter les pods",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Peut limiter CPU, mémoire, nombre de pods, etc."
+  },
+  {
+    "id": "CKAD-01-019",
+    "theme": "Application Design",
+    "theme_label": "LimitRange",
+    "difficulty": "easy",
+    "question": "Que fait un LimitRange ?",
+    "options": [
+      "Définit des valeurs par défaut/min/max pour les ressources des conteneurs",
+      "Limite le nombre de pods",
+      "Limite les services",
+      "A et B"
+    ],
+    "correct": 0,
+    "explication": "Un LimitRange s'applique au namespace."
+  },
+  {
+    "id": "CKAD-01-020",
+    "theme": "Application Design",
+    "theme_label": "Pod priority",
+    "difficulty": "easy",
+    "question": "Comment définir la priorité d'un pod ?",
+    "options": [
+      "priorityClassName: high-priority",
+      "priority: 1000",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Il faut créer une PriorityClass, puis l'utiliser."
+  },
+  {
+    "id": "CKAD-01-021",
+    "theme": "Application Design",
+    "theme_label": "Pod priority",
+    "difficulty": "easy",
+    "question": "Les pods de haute priorité peuvent-ils évincer des pods de basse priorité ?",
+    "options": ["Oui", "Non", "Uniquement si ressources insuffisantes", "A et C"],
+    "correct": 3,
+    "explication": "La préemption permet aux pods prioritaires de prendre la place des moins prioritaires."
+  },
+  {
+    "id": "CKAD-01-022",
+    "theme": "Application Design",
+    "theme_label": "Pod affinity/anti-affinity",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre podAffinity et podAntiAffinity ?",
+    "options": [
+      "Affinity attire les pods, anti-affinity les repousse",
+      "Identiques",
+      "Affinity pour les nœuds, anti-affinity pour les pods",
+      "A et C"
+    ],
+    "correct": 0,
+    "explication": "podAffinity: co-localisation, podAntiAffinity: séparation."
+  },
+  {
+    "id": "CKAD-01-023",
+    "theme": "Application Design",
+    "theme_label": "Topology spread constraints",
+    "difficulty": "easy",
+    "question": "À quoi servent les topology spread constraints ?",
+    "options": [
+      "Répartir les pods uniformément sur les zones",
+      "Limiter les pods par zone",
+      "A et B",
+      "Forcer l'affinité"
+    ],
+    "correct": 2,
+    "explication": "Améliore la haute disponibilité."
+  },
+  {
+    "id": "CKAD-01-024",
+    "theme": "Application Design",
+    "theme_label": "Readiness probe",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si une readiness probe échoue ?",
+    "options": [
+      "Le pod est retiré du service (plus de trafic)",
+      "Le pod est redémarré",
+      "Le pod est arrêté",
+      "Rien"
+    ],
+    "correct": 0,
+    "explication": "Le pod n'est pas prêt à recevoir du trafic."
+  },
+  {
+    "id": "CKAD-01-025",
+    "theme": "Application Design",
+    "theme_label": "Liveness probe",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si une liveness probe échoue ?",
+    "options": [
+      "Le conteneur est redémarré",
+      "Le pod est retiré du service",
+      "Rien",
+      "Le pod est supprimé"
+    ],
+    "correct": 0,
+    "explication": "Le kubelet redémarre le conteneur."
+  },
+  {
+    "id": "CKAD-01-026",
+    "theme": "Application Design",
+    "theme_label": "Startup probe",
+    "difficulty": "easy",
+    "question": "Quand utiliser une startup probe ?",
+    "options": [
+      "Pour les applications à démarrage lent",
+      "Pour les applications rapides",
+      "Pour les jobs",
+      "Pour les cronjobs"
+    ],
+    "correct": 0,
+    "explication": "La startup probe désactive la liveness probe jusqu'à son succès."
+  },
+  {
+    "id": "CKAD-01-027",
+    "theme": "Application Design",
+    "theme_label": "Probe types",
+    "difficulty": "easy",
+    "question": "Quels sont les types de probes ?",
+    "options": [
+      "httpGet, tcpSocket, exec",
+      "ping, curl, nslookup",
+      "http, tcp, command",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "httpGet (HTTP), tcpSocket (TCP), exec (commande)."
+  },
+  {
+    "id": "CKAD-01-028",
+    "theme": "Application Design",
+    "theme_label": "Probe configuration",
+    "difficulty": "easy",
+    "question": "Que signifie initialDelaySeconds ?",
+    "options": [
+      "Temps d'attente avant la première sonde",
+      "Intervalle entre les sondes",
+      "Timeout de la sonde",
+      "Nombre d'échecs avant action"
+    ],
+    "correct": 0,
+    "explication": "Laisser le temps au conteneur de démarrer."
+  },
+  {
+    "id": "CKAD-01-029",
+    "theme": "Application Design",
+    "theme_label": "Graceful termination",
+    "difficulty": "easy",
+    "question": "Quel signal est envoyé au conteneur lors d'un arrêt gracieux ?",
+    "options": ["SIGTERM", "SIGKILL", "SIGINT", "SIGQUIT"],
+    "correct": 0,
+    "explication": "SIGTERM donne au conteneur le temps de se terminer proprement."
+  },
+  {
+    "id": "CKAD-01-030",
+    "theme": "Application Design",
+    "theme_label": "Graceful termination",
+    "difficulty": "easy",
+    "question": "Comment définir un délai d'arrêt plus long ?",
+    "options": [
+      "terminationGracePeriodSeconds: 60",
+      "gracePeriodSeconds: 60",
+      "shutdownGracePeriod: 60",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Le champ est terminationGracePeriodSeconds."
+  },
+  {
+    "id": "CKAD-01-031",
+    "theme": "Application Design",
+    "theme_label": "PreStop hook",
+    "difficulty": "easy",
+    "question": "À quoi sert le hook preStop ?",
+    "options": [
+      "Exécuter une commande avant l'arrêt",
+      "Nettoyer les ressources",
+      "Se retirer d'un service",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Le hook preStop est exécuté avant SIGTERM."
+  },
+  {
+    "id": "CKAD-01-032",
+    "theme": "Application Design",
+    "theme_label": "Pod lifecycle",
+    "difficulty": "easy",
+    "question": "Quels sont les statuts possibles d'un pod ?",
+    "options": [
+      "Pending, Running, Succeeded, Failed, Unknown",
+      "Starting, Running, Stopped",
+      "Created, Started, Terminated",
+      "A et B"
+    ],
+    "correct": 0,
+    "explication": "Succeeded pour les jobs terminés avec succès, Failed pour les jobs échoués."
+  },
+  {
+    "id": "CKAD-01-033",
+    "theme": "Application Design",
+    "theme_label": "Pod conditions",
+    "difficulty": "easy",
+    "question": "Quelles sont les conditions d'un pod ?",
+    "options": [
+      "PodScheduled, Initialized, ContainersReady, Ready",
+      "Running, Pending, Failed",
+      "Scheduled, Ready, Terminated",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les conditions sont des booléens dans le status du pod."
+  },
+  {
+    "id": "CKAD-01-034",
+    "theme": "Application Design",
+    "theme_label": "Container states",
+    "difficulty": "easy",
+    "question": "Quels sont les états d'un conteneur ?",
+    "options": [
+      "Waiting, Running, Terminated",
+      "Pending, Running, Succeeded",
+      "Starting, Running, Stopped",
+      "A et B"
+    ],
+    "correct": 0,
+    "explication": "Waiting (en attente), Running, Terminated (terminé avec code)."
+  },
+  {
+    "id": "CKAD-01-035",
+    "theme": "Application Design",
+    "theme_label": "Container restart policy",
+    "difficulty": "easy",
+    "question": "Quelles sont les valeurs possibles de restartPolicy ?",
+    "options": [
+      "Always, OnFailure, Never",
+      "Always, OnError, Never",
+      "Always, Never",
+      "OnFailure, Never"
+    ],
+    "correct": 0,
+    "explication": "Always (par défaut), OnFailure (redémarre si erreur), Never."
+  },
+  {
+    "id": "CKAD-01-036",
+    "theme": "Application Design",
+    "theme_label": "Share process namespace",
+    "difficulty": "easy",
+    "question": "Que permet shareProcessNamespace: true ?",
+    "options": [
+      "Partager l'espace des processus entre les conteneurs du pod",
+      "Voir les processus des autres conteneurs",
+      "A et B",
+      "Rien"
+    ],
+    "correct": 2,
+    "explication": "Utile pour les sidecars qui doivent surveiller d'autres processus."
+  },
+  {
+    "id": "CKAD-01-037",
+    "theme": "Application Design",
+    "theme_label": "Ephemeral containers",
+    "difficulty": "easy",
+    "question": "À quoi servent les conteneurs éphémères ?",
+    "options": [
+      "Debugging",
+      "Tâches temporaires",
+      "A et B",
+      "Services permanents"
+    ],
+    "correct": 2,
+    "explication": "Ils ne sont pas persistants et utiles pour inspecter un pod."
+  },
+  {
+    "id": "CKAD-01-038",
+    "theme": "Application Design",
+    "theme_label": "Pod disruption budget",
+    "difficulty": "easy",
+    "question": "À quoi sert un PodDisruptionBudget ?",
+    "options": [
+      "Limiter le nombre de pods qui peuvent être évincés volontairement",
+      "Protéger les applications pendant les drain",
+      "A et B",
+      "Limiter les ressources"
+    ],
+    "correct": 2,
+    "explication": "Utile pour les StatefulSets et les applications critiques."
+  },
+  {
+    "id": "CKAD-01-039",
+    "theme": "Application Design",
+    "theme_label": "Container logging",
+    "difficulty": "easy",
+    "question": "Où sont écrits les logs des conteneurs ?",
+    "options": [
+      "stdout/stderr",
+      "Fichier /var/log/containers",
+      "A et B",
+      "Dans le conteneur"
+    ],
+    "correct": 2,
+    "explication": "Les logs sont capturés par le kubelet et accessibles via kubectl logs."
+  },
+  {
+    "id": "CKAD-01-040",
+    "theme": "Application Design",
+    "theme_label": "Container logging",
+    "difficulty": "easy",
+    "question": "Comment voir les logs des conteneurs précédents (redémarrés) ?",
+    "options": [
+      "kubectl logs --previous <pod>",
+      "kubectl logs -p <pod>",
+      "A et B",
+      "kubectl logs --tail=100 <pod>"
+    ],
+    "correct": 2,
+    "explication": "--previous ou -p."
+  }
+]

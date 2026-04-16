@@ -1,0 +1,617 @@
+[
+  {
+    "id": "AWS-CCP-201",
+    "theme": "Pricing & Billing",
+    "theme_label": "Modèles de tarification",
+    "difficulty": "easy",
+    "question": "Quels sont les modèles de tarification AWS ?",
+    "options": [
+      "Pay-as-you-go, Reserved, Spot, Savings Plans",
+      "Uniquement pay-as-you-go",
+      "Uniquement Reserved",
+      "Uniquement Spot"
+    ],
+    "correct": 0,
+    "explanation": "AWS propose plusieurs modèles pour optimiser les coûts."
+  },
+  {
+    "id": "AWS-CCP-202",
+    "theme": "Pricing & Billing",
+    "theme_label": "On-Demand",
+    "difficulty": "easy",
+    "question": "Quel est le modèle de paiement On-Demand ?",
+    "options": [
+      "Payer à l'heure ou à la seconde",
+      "Paiement anticipé",
+      "Engagement 1 an",
+      "Engagement 3 ans"
+    ],
+    "correct": 0,
+    "explanation": "On-Demand ne nécessite aucun engagement et facture à l'usage."
+  },
+  {
+    "id": "AWS-CCP-203",
+    "theme": "Pricing & Billing",
+    "theme_label": "Reserved Instances",
+    "difficulty": "easy",
+    "question": "Quels sont les avantages des Reserved Instances ?",
+    "options": [
+      "Réduction de prix (jusqu'à 75%) contre engagement",
+      "Plus de flexibilité",
+      "Accès prioritaire",
+      "Meilleures performances"
+    ],
+    "correct": 0,
+    "explanation": "Les RI offrent des réductions en échange d'un engagement de 1 ou 3 ans."
+  },
+  {
+    "id": "AWS-CCP-204",
+    "theme": "Pricing & Billing",
+    "theme_label": "Reserved Instances",
+    "difficulty": "easy",
+    "question": "Quelles sont les options de paiement pour Reserved Instances ?",
+    "options": [
+      "All Upfront, Partial Upfront, No Upfront",
+      "Mensuel, Trimestriel, Annuel",
+      "À la demande uniquement",
+      "Pay as you go"
+    ],
+    "correct": 0,
+    "explanation": "Trois options de paiement pour les RI."
+  },
+  {
+    "id": "AWS-CCP-205",
+    "theme": "Pricing & Billing",
+    "theme_label": "Spot Instances",
+    "difficulty": "easy",
+    "question": "Quel est l'inconvénient des instances Spot ?",
+    "options": [
+      "Peuvent être interrompues avec préavis de 2 minutes",
+      "Plus chères",
+      "Pas de Linux",
+      "Pas de Windows"
+    ],
+    "correct": 0,
+    "explanation": "Les instances Spot peuvent être reprises par AWS avec un préavis."
+  },
+  {
+    "id": "AWS-CCP-206",
+    "theme": "Pricing & Billing",
+    "theme_label": "Spot Instances",
+    "difficulty": "easy",
+    "question": "Quel est le rabais typique des instances Spot ?",
+    "options": ["Jusqu'à 90%", "Jusqu'à 50%", "Jusqu'à 30%", "Jusqu'à 10%"],
+    "correct": 0,
+    "explanation": "Les instances Spot peuvent offrir jusqu'à 90% de réduction."
+  },
+  {
+    "id": "AWS-CCP-207",
+    "theme": "Pricing & Billing",
+    "theme_label": "Savings Plans",
+    "difficulty": "easy",
+    "question": "Savings Plans s'applique-t-il à Lambda ?",
+    "options": ["Oui", "Non", "Uniquement à EC2", "Uniquement à Fargate"],
+    "correct": 0,
+    "explanation": "Savings Plans couvre EC2, Fargate et Lambda."
+  },
+  {
+    "id": "AWS-CCP-208",
+    "theme": "Pricing & Billing",
+    "theme_label": "Savings Plans",
+    "difficulty": "easy",
+    "question": "Quels sont les types de Savings Plans ?",
+    "options": [
+      "Compute Savings Plans, EC2 Instance Savings Plans, SageMaker Savings Plans",
+      "EC2 seulement",
+      "Lambda seulement",
+      "Fargate seulement"
+    ],
+    "correct": 0,
+    "explanation": "Trois types de Savings Plans."
+  },
+  {
+    "id": "AWS-CCP-209",
+    "theme": "Pricing & Billing",
+    "theme_label": "Free Tier",
+    "difficulty": "easy",
+    "question": "Combien de temps dure le Free Tier ?",
+    "options": ["12 mois", "6 mois", "24 mois", "Toujours"],
+    "correct": 0,
+    "explanation": "Le Free Tier dure 12 mois pour les nouveaux comptes AWS."
+  },
+  {
+    "id": "AWS-CCP-210",
+    "theme": "Pricing & Billing",
+    "theme_label": "Free Tier",
+    "difficulty": "easy",
+    "question": "Quelle est la limite EC2 du Free Tier ?",
+    "options": [
+      "750 heures/ mois t2.micro",
+      "100 heures/ mois",
+      "Illimité",
+      "500 heures/ mois"
+    ],
+    "correct": 0,
+    "explanation": "750 heures par mois d'instance t2.micro."
+  },
+  {
+    "id": "AWS-CCP-211",
+    "theme": "Pricing & Billing",
+    "theme_label": "Free Tier",
+    "difficulty": "easy",
+    "question": "Quelle est la limite S3 du Free Tier ?",
+    "options": [
+      "5 Go de stockage",
+      "10 Go",
+      "1 Go",
+      "50 Go"
+    ],
+    "correct": 0,
+    "explanation": "5 Go de stockage S3 standard."
+  },
+  {
+    "id": "AWS-CCP-212",
+    "theme": "Pricing & Billing",
+    "theme_label": "Free Tier",
+    "difficulty": "easy",
+    "question": "Quelle est la limite Lambda du Free Tier ?",
+    "options": [
+      "1 million de requêtes/ mois",
+      "100 000 requêtes/ mois",
+      "10 millions/ mois",
+      "Illimité"
+    ],
+    "correct": 0,
+    "explanation": "1 million de requêtes Lambda par mois."
+  },
+  {
+    "id": "AWS-CCP-213",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Pricing Calculator",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Pricing Calculator ?",
+    "options": [
+      "Estimer les coûts avant de déployer",
+      "Facturer les clients",
+      "Gérer les budgets",
+      "Suivre les dépenses"
+    ],
+    "correct": 0,
+    "explanation": "Le calculateur aide à estimer les coûts des services."
+  },
+  {
+    "id": "AWS-CCP-214",
+    "theme": "Pricing & Billing",
+    "theme_label": "Cost Explorer",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Cost Explorer ?",
+    "options": [
+      "Analyser les coûts passés et prévoir les futurs",
+      "Facturer",
+      "Budgéter",
+      "Payer"
+    ],
+    "correct": 0,
+    "explanation": "Cost Explorer permet d'analyser les tendances des coûts."
+  },
+  {
+    "id": "AWS-CCP-215",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Budgets",
+    "difficulty": "easy",
+    "question": "Les budgets AWS peuvent-ils déclencher des alarmes ?",
+    "options": ["Oui", "Non", "Uniquement des notifications", "Uniquement des actions"],
+    "correct": 0,
+    "explanation": "Les budgets peuvent envoyer des alertes SNS."
+  },
+  {
+    "id": "AWS-CCP-216",
+    "theme": "Pricing & Billing",
+    "theme_label": "Cost Anomaly Detection",
+    "difficulty": "easy",
+    "question": "À quoi sert Cost Anomaly Detection ?",
+    "options": [
+      "Détecter les pics de dépenses inhabituels",
+      "Prévoir les coûts",
+      "Budgéter",
+      "Optimiser"
+    ],
+    "correct": 0,
+    "explication": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
+  },
+  {
+    "id": "AWS-CCP-217",
+    "theme": "Pricing & Billing",
+    "theme_label": "Consolidated Billing",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet la facturation consolidée ?",
+    "options": ["AWS Organizations", "Consolidated Billing", "Cost Explorer", "Budgets"],
+    "correct": 0,
+    "explication": "AWS Organizations offre la facturation consolidée pour tous les comptes membres."
+  },
+  {
+    "id": "AWS-CCP-218",
+    "theme": "Pricing & Billing",
+    "theme_label": "Data transfer costs",
+    "difficulty": "easy",
+    "question": "Le transfert de données entre services dans la même AZ est-il facturé ?",
+    "options": ["Non", "Oui", "Uniquement pour les grands volumes", "Uniquement pour les régions"],
+    "correct": 0,
+    "explication": "Le trafic entre services dans la même AZ via IP privée est gratuit."
+  },
+  {
+    "id": "AWS-CCP-219",
+    "theme": "Pricing & Billing",
+    "theme_label": "Data transfer costs",
+    "difficulty": "easy",
+    "question": "Le transfert de données sortant d'Internet est-il facturé ?",
+    "options": ["Oui", "Non", "Seulement au-delà d'un seuil", "Uniquement pour EC2"],
+    "correct": 0,
+    "explication": "Le trafic sortant vers Internet est facturé."
+  },
+  {
+    "id": "AWS-CCP-220",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Support Plans",
+    "difficulty": "easy",
+    "question": "Quels sont les plans de support AWS ?",
+    "options": [
+      "Basic, Developer, Business, Enterprise",
+      "Basic seulement",
+      "Premium seulement",
+      "Standard, Premium"
+    ],
+    "correct": 0,
+    "explication": "AWS propose quatre plans de support."
+  },
+  {
+    "id": "AWS-CCP-221",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Support",
+    "difficulty": "easy",
+    "question": "Le plan Basic est-il gratuit ?",
+    "options": ["Oui", "Non", "Uniquement pour les comptes de moins d'un an", "Uniquement pour les comptes éducatifs"],
+    "correct": 0,
+    "explication": "Le plan Basic est inclus gratuitement."
+  },
+  {
+    "id": "AWS-CCP-222",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Support",
+    "difficulty": "easy",
+    "question": "Quel plan supporte le Technical Account Manager (TAM) ?",
+    "options": ["Enterprise", "Business", "Developer", "Basic"],
+    "correct": 0,
+    "explication": "Le plan Enterprise inclut un TAM dédié."
+  },
+  {
+    "id": "AWS-CCP-223",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Support",
+    "difficulty": "easy",
+    "question": "Quel plan offre un temps de réponse de 15 minutes pour les cas de production ?",
+    "options": ["Enterprise", "Business", "Developer", "Basic"],
+    "correct": 0,
+    "explication": "Enterprise offre une réponse critique en 15 minutes."
+  },
+  {
+    "id": "AWS-CCP-224",
+    "theme": "Pricing & Billing",
+    "theme_label": "Cost Optimization",
+    "difficulty": "easy",
+    "question": "Comment réduire les coûts S3 ?",
+    "options": [
+      "Lifecycle policies, classes de stockage",
+      "Plus de réplication",
+      "Plus de versions",
+      "Chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les lifecycle policies et le choix de classe de stockage réduisent les coûts."
+  },
+  {
+    "id": "AWS-CCP-225",
+    "theme": "Pricing & Billing",
+    "theme_label": "Cost Optimization",
+    "difficulty": "easy",
+    "question": "Comment réduire les coûts EC2 ?",
+    "options": [
+      "RI, Savings Plans, Spot, auto-scaling",
+      "Plus d'instances",
+      "Plus de mémoire",
+      "Plus de CPU"
+    ],
+    "correct": 0,
+    "explication": "Utiliser des modèles de tarification économiques et ajuster la capacité."
+  },
+  {
+    "id": "AWS-CCP-226",
+    "theme": "Pricing & Billing",
+    "theme_label": "Tagging",
+    "difficulty": "easy",
+    "question": "À quoi servent les tags pour les coûts ?",
+    "options": [
+      "Attribuer les coûts par projet, équipe, environnement",
+      "Sécuriser les ressources",
+      "Automatiser les tâches",
+      "Monitore les performances"
+    ],
+    "correct": 0,
+    "explication": "Le tagging aide à analyser les coûts par dimension."
+  },
+  {
+    "id": "AWS-CCP-227",
+    "theme": "Pricing & Billing",
+    "theme_label": "Trusted Advisor",
+    "difficulty": "easy",
+    "question": "Trusted Advisor aide-t-il à réduire les coûts ?",
+    "options": ["Oui", "Non", "Uniquement pour la sécurité", "Uniquement pour les performances"],
+    "correct": 0,
+    "explication": "Trusted Advisor identifie les ressources sous-utilisées."
+  },
+  {
+    "id": "AWS-CCP-228",
+    "theme": "Pricing & Billing",
+    "theme_label": "Compute Optimizer",
+    "difficulty": "easy",
+    "question": "Compute Optimizer aide-t-il à réduire les coûts ?",
+    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour Lambda"],
+    "correct": 0,
+    "explication": "Compute Optimizer recommande des types d'instance plus adaptés."
+  },
+  {
+    "id": "AWS-CCP-229",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Organizations",
+    "difficulty": "easy",
+    "question": "Organizations permet-il une facturation consolidée ?",
+    "options": ["Oui", "Non", "Uniquement avec Control Tower", "Uniquement avec AWS Config"],
+    "correct": 0,
+    "explication": "Organizations consolide la facturation des comptes membres."
+  },
+  {
+    "id": "AWS-CCP-230",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Price List API",
+    "difficulty": "easy",
+    "question": "Peut-on obtenir les prix AWS via API ?",
+    "options": ["Oui", "Non", "Uniquement via le console", "Uniquement via le calculateur"],
+    "correct": 0,
+    "explication": "L'API AWS Price List permet d'obtenir les tarifs par programme."
+  },
+  {
+    "id": "AWS-CCP-231",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Billing Conductor",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Billing Conductor ?",
+    "options": [
+      "Créer des factures personnalisées pour les clients internes",
+      "Facturer AWS",
+      "Budgéter",
+      "Optimiser"
+    ],
+    "correct": 0,
+    "explication": "Billing Conductor permet de regrouper et facturer des comptes internes."
+  },
+  {
+    "id": "AWS-CCP-232",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Marketplace",
+    "difficulty": "easy",
+    "question": "AWS Marketplace permet-il d'acheter des logiciels tiers ?",
+    "options": ["Oui", "Non", "Uniquement des AMI", "Uniquement des SaaS"],
+    "correct": 0,
+    "explication": "Marketplace propose des AMI, SaaS, conteneurs, etc."
+  },
+  {
+    "id": "AWS-CCP-233",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Activate",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Activate ?",
+    "options": [
+      "Crédits et support pour startups",
+      "Facturation",
+      "Budgéter",
+      "Optimisation"
+    ],
+    "correct": 0,
+    "explication": "AWS Activate offre des crédits et du support aux startups."
+  },
+  {
+    "id": "AWS-CCP-234",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Credits",
+    "difficulty": "easy",
+    "question": "Les crédits AWS peuvent-ils être appliqués à tous les services ?",
+    "options": ["Non, certains services exclus", "Oui", "Uniquement EC2", "Uniquement S3"],
+    "correct": 0,
+    "explication": "Certains services (ex: Marketplace) peuvent être exclus."
+  },
+  {
+    "id": "AWS-CCP-235",
+    "theme": "Pricing & Billing",
+    "theme_label": "Reserved Instances types",
+    "difficulty": "easy",
+    "question": "Quels sont les types de Reserved Instances ?",
+    "options": [
+      "Standard, Convertible, Scheduled",
+      "Standard seulement",
+      "Convertible seulement",
+      "Scheduled seulement"
+    ],
+    "correct": 0,
+    "explication": "Standard, Convertible (flexibilité), Scheduled (heures fixes)."
+  },
+  {
+    "id": "AWS-CCP-236",
+    "theme": "Pricing & Billing",
+    "theme_label": "Savings Plans vs RI",
+    "difficulty": "easy",
+    "question": "Quel est l'avantage des Savings Plans sur les RI ?",
+    "options": [
+      "Plus de flexibilité (famille d'instances, région, services)",
+      "Plus de réduction",
+      "Engagement plus court",
+      "Aucun"
+    ],
+    "correct": 0,
+    "explication": "Savings Plans sont plus flexibles que les RI."
+  },
+  {
+    "id": "AWS-CCP-237",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Budgets alerts",
+    "difficulty": "easy",
+    "question": "Les budgets AWS peuvent-ils être basés sur des métriques ?",
+    "options": ["Oui (coût, utilisation)", "Non", "Uniquement sur le coût", "Uniquement sur l'utilisation"],
+    "correct": 0,
+    "explication": "Les budgets peuvent surveiller le coût ou l'utilisation."
+  },
+  {
+    "id": "AWS-CCP-238",
+    "theme": "Pricing & Billing",
+    "theme_label": "Cost Explorer features",
+    "difficulty": "easy",
+    "question": "Cost Explorer peut-il prévoir les coûts futurs ?",
+    "options": ["Oui", "Non", "Uniquement pour les 3 prochains mois", "Uniquement pour l'année suivante"],
+    "correct": 0,
+    "explication": "Cost Explorer utilise le machine learning pour les prévisions."
+  },
+  {
+    "id": "AWS-CCP-239",
+    "theme": "Pricing & Billing",
+    "theme_label": "Data transfer costs",
+    "difficulty": "easy",
+    "question": "Le transfert de données entre régions est-il facturé ?",
+    "options": ["Oui", "Non", "Seulement pour les grands volumes", "Seulement pour les services de calcul"],
+    "correct": 0,
+    "explication": "Le transfert inter-régions est facturé par Go."
+  },
+  {
+    "id": "AWS-CCP-240",
+    "theme": "Pricing & Billing",
+    "theme_label": "Data transfer costs",
+    "difficulty": "easy",
+    "question": "Le transfert de données entrant (upload) vers AWS est-il facturé ?",
+    "options": ["Non", "Oui", "Seulement au-delà d'un seuil", "Seulement pour S3"],
+    "correct": 0,
+    "explication": "Le transfert entrant vers AWS est généralement gratuit."
+  },
+  {
+    "id": "AWS-CCP-241",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Pricing Calculator",
+    "difficulty": "easy",
+    "question": "Le calculateur de prix AWS est-il gratuit ?",
+    "options": ["Oui", "Non", "Uniquement pour les comptes pro", "Uniquement pour les comptes enterprise"],
+    "correct": 0,
+    "explication": "Le calculateur est accessible gratuitement à tous."
+  },
+  {
+    "id": "AWS-CCP-242",
+    "theme": "Pricing & Billing",
+    "theme_label": "Cost Anomaly Detection",
+    "difficulty": "easy",
+    "question": "Cost Anomaly Detection est-il basé sur le machine learning ?",
+    "options": ["Oui", "Non", "Basé sur des règles fixes", "Basé sur des seuils"],
+    "correct": 0,
+    "explication": "Il utilise ML pour apprendre les modèles de dépenses."
+  },
+  {
+    "id": "AWS-CCP-243",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Organizations",
+    "difficulty": "easy",
+    "question": "Organizations permet-il des réductions sur les RI partagées ?",
+    "options": ["Oui", "Non", "Uniquement pour les Savings Plans", "Uniquement pour les comptes master"],
+    "correct": 0,
+    "explication": "Les RI et Savings Plans sont partagés entre les comptes de l'organisation."
+  },
+  {
+    "id": "AWS-CCP-244",
+    "theme": "Pricing & Billing",
+    "theme_label": "Spot Fleet",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un Spot Fleet ?",
+    "options": [
+      "Collection d'instances Spot",
+      "Type d'instance",
+      "Service de calcul",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explication": "Spot Fleet gère un ensemble d'instances Spot et On-Demand."
+  },
+  {
+    "id": "AWS-CCP-245",
+    "theme": "Pricing & Billing",
+    "theme_label": "Spot Instance interruption",
+    "difficulty": "easy",
+    "question": "Quel est le préavis avant interruption d'une instance Spot ?",
+    "options": ["2 minutes", "5 minutes", "10 minutes", "30 minutes"],
+    "correct": 0,
+    "explication": "AWS donne un préavis de 2 minutes avant l'interruption."
+  },
+  {
+    "id": "AWS-CCP-246",
+    "theme": "Pricing & Billing",
+    "theme_label": "Compute Savings Plans",
+    "difficulty": "easy",
+    "question": "Compute Savings Plans s'applique-t-il à Fargate ?",
+    "options": ["Oui", "Non", "Uniquement à EC2", "Uniquement à Lambda"],
+    "correct": 0,
+    "explication": "Compute Savings Plans couvre EC2, Fargate et Lambda."
+  },
+  {
+    "id": "AWS-CCP-247",
+    "theme": "Pricing & Billing",
+    "theme_label": "EC2 Instance Savings Plans",
+    "difficulty": "easy",
+    "question": "EC2 Instance Savings Plans s'applique-t-il à une famille d'instances spécifique ?",
+    "options": ["Oui", "Non", "À toutes les familles", "À toutes les régions"],
+    "correct": 0,
+    "explication": "EC2 Instance Savings Plans est limité à une famille d'instances dans une région."
+  },
+  {
+    "id": "AWS-CCP-248",
+    "theme": "Pricing & Billing",
+    "theme_label": "SageMaker Savings Plans",
+    "difficulty": "easy",
+    "question": "SageMaker Savings Plans s'applique-t-il aux notebooks ?",
+    "options": ["Oui", "Non", "Uniquement aux endpoints", "Uniquement aux jobs de training"],
+    "correct": 0,
+    "explication": "Couvre les instances SageMaker (notebooks, training, endpoints)."
+  },
+  {
+    "id": "AWS-CCP-249",
+    "theme": "Pricing & Billing",
+    "theme_label": "AWS Cost Categories",
+    "difficulty": "easy",
+    "question": "À quoi servent les Cost Categories ?",
+    "options": [
+      "Regrouper les coûts par dimensions personnalisées",
+      "Catégoriser les ressources",
+      "Définir des budgets",
+      "Optimiser les coûts"
+    ],
+    "correct": 0,
+    "explication": "Les Cost Categories permettent de regrouper les coûts par équipe, projet, environnement."
+  },
+  {
+    "id": "AWS-CCP-250",
+    "theme": "Pricing & Billing",
+    "theme_label": "Best practices",
+    "difficulty": "easy",
+    "question": "Quelle est la meilleure pratique pour éviter les surprises de facturation ?",
+    "options": [
+      "Budgets, alertes, analyse régulière",
+      "Ne pas utiliser AWS",
+      "Utiliser uniquement le Free Tier",
+      "RI seulement"
+    ],
+    "correct": 0,
+    "explication": "Configurer des budgets et des alarmes pour surveiller les coûts."
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "id": "az204",
+  "name": "Microsoft Azure Developer Associate (AZ-204)",
+  "version": "1.0",
+  "description": "Certification Azure Developer - Développement de solutions cloud sur Azure",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Azure Compute (App Services)",
+      "count": 60
+    },
+    {
+      "name": "Azure Functions",
+      "count": 60
+    },
+    {
+      "name": "Azure Storage",
+      "count": 60
+    },
+    {
+      "name": "Azure SQL",
+      "count": 50
+    },
+    {
+      "name": "Authentication & Security",
+      "count": 60
+    },
+    {
+      "name": "Monitoring & Logging",
+      "count": 60
+    }
+  ]
+}

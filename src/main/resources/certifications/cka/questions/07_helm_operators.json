@@ -1,0 +1,442 @@
+[
+  {
+    "id": "CKA-07-001",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Helm ?",
+    "options": [
+      "Package manager pour Kubernetes",
+      "Orchestrateur",
+      "CI/CD",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Helm gère les charts (templates Kubernetes)."
+  },
+  {
+    "id": "CKA-07-002",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un chart Helm ?",
+    "options": [
+      "Ensemble de templates Kubernetes",
+      "Un package",
+      "Une release",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Un chart est une collection de fichiers décrivant un ensemble de ressources."
+  },
+  {
+    "id": "CKA-07-003",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Quelle commande installe un chart Helm ?",
+    "options": [
+      "helm install <release> <chart>",
+      "helm install --name <release> <chart>",
+      "helm create <release>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "helm install déploie une release."
+  },
+  {
+    "id": "CKA-07-004",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment lister les releases Helm ?",
+    "options": [
+      "helm list",
+      "helm ls",
+      "helm status",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "helm list montre les releases installées."
+  },
+  {
+    "id": "CKA-07-005",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment mettre à jour une release Helm ?",
+    "options": [
+      "helm upgrade <release> <chart>",
+      "helm update <release>",
+      "helm refresh <release>",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "helm upgrade met à jour la release."
+  },
+  {
+    "id": "CKA-07-006",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment désinstaller une release Helm ?",
+    "options": [
+      "helm uninstall <release>",
+      "helm delete <release>",
+      "helm remove <release>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "uninstall et delete (ancien) suppriment la release."
+  },
+  {
+    "id": "CKA-07-007",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment passer des valeurs personnalisées à Helm ?",
+    "options": [
+      "--set key=value",
+      "-f values.yaml",
+      "--values values.yaml",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "--set pour les valeurs simples, -f pour un fichier."
+  },
+  {
+    "id": "CKA-07-008",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Où sont stockées les releases Helm ?",
+    "options": [
+      "Secrets dans le namespace du release",
+      "ConfigMaps (ancien)",
+      "A et B",
+      "Dans etcd"
+    ],
+    "correct": 2,
+    "explication": "Helm v3 stocke les releases dans des secrets (plus sécurisé)."
+  },
+  {
+    "id": "CKA-07-009",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment créer un nouveau chart Helm ?",
+    "options": [
+      "helm create monchart",
+      "helm init monchart",
+      "helm new monchart",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "helm create génère un squelette de chart."
+  },
+  {
+    "id": "CKA-07-010",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Quelle commande valide un chart Helm ?",
+    "options": [
+      "helm lint",
+      "helm template --debug",
+      "helm install --dry-run",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "lint vérifie la syntaxe, template génère les manifests."
+  },
+  {
+    "id": "CKA-07-011",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment ajouter un dépôt Helm ?",
+    "options": [
+      "helm repo add <nom> <url>",
+      "helm repo update",
+      "helm repo list",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "repo add ajoute, repo update rafraîchit l'index."
+  },
+  {
+    "id": "CKA-07-012",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment rechercher un chart dans les dépôts ?",
+    "options": [
+      "helm search hub <terme>",
+      "helm search repo <terme>",
+      "helm search <terme>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "search hub pour Artifact Hub, search repo pour les dépôts configurés."
+  },
+  {
+    "id": "CKA-07-013",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un repository Helm ?",
+    "options": [
+      "Serveur d'index de charts",
+      "Registry OCI",
+      "A et B",
+      "Un registre Docker"
+    ],
+    "correct": 2,
+    "explication": "Les dépôts HTTP ou OCI stockent les charts."
+  },
+  {
+    "id": "CKA-07-014",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le templating dans Helm ?",
+    "options": [
+      "Utilisation de Go templates pour générer les manifests",
+      "Langage de template",
+      "A et B",
+      "Remplacer les valeurs"
+    ],
+    "correct": 2,
+    "explication": "Les templates utilisent des fonctions, des pipelines, des conditions."
+  },
+  {
+    "id": "CKA-07-015",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment accéder à une valeur de .Values dans un template ?",
+    "options": ["{{ .Values.key }}", "{{ .Values.key }}", "${Values.key}", "A et B"],
+    "correct": 3,
+    "explication": "La syntaxe Go template utilise {{ .Values.key }}."
+  },
+  {
+    "id": "CKA-07-016",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la fonction 'include' dans Helm ?",
+    "options": [
+      "Inclure un autre template",
+      "Importer un fichier",
+      "A et B",
+      "Remplacer"
+    ],
+    "correct": 2,
+    "explication": "include permet de réutiliser des blocs de template."
+  },
+  {
+    "id": "CKA-07-017",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Que fait l'instruction 'tpl' dans Helm ?",
+    "options": [
+      "Évalue une chaîne comme un template",
+      "Crée un template",
+      "Charge un fichier",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "tpl permet d'interpréter une chaîne contenant des directives de template."
+  },
+  {
+    "id": "CKA-07-018",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Comment définir des valeurs par défaut dans un chart ?",
+    "options": [
+      "values.yaml",
+      "requirements.yaml",
+      "Chart.yaml",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "values.yaml contient les valeurs par défaut."
+  },
+  {
+    "id": "CKA-07-019",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Quel fichier contient les métadonnées du chart (nom, version) ?",
+    "options": ["Chart.yaml", "values.yaml", "requirements.yaml", "metadata.yaml"],
+    "correct": 0,
+    "explication": "Chart.yaml est obligatoire."
+  },
+  {
+    "id": "CKA-07-020",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un Operator Kubernetes ?",
+    "options": [
+      "Extension pour gérer des applications complexes (état)",
+      "Controller personnalisé",
+      "Utilise des Custom Resources (CRD)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les Operators automatisent les opérations (backup, upgrade, scaling)."
+  },
+  {
+    "id": "CKA-07-021",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Quel outil permet de créer des Operators ?",
+    "options": [
+      "Operator SDK",
+      "Kubebuilder",
+      "Metacontroller",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Operator SDK et Kubebuilder sont les plus courants."
+  },
+  {
+    "id": "CKA-07-022",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un Custom Resource Definition (CRD) ?",
+    "options": [
+      "Définition d'une nouvelle ressource Kubernetes",
+      "Extension de l'API",
+      "A et B",
+      "Type de secret"
+    ],
+    "correct": 2,
+    "explication": "Les CRD permettent de créer des ressources personnalisées."
+  },
+  {
+    "id": "CKA-07-023",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Comment créer un CRD ?",
+    "options": [
+      "Fichier YAML avec kind: CustomResourceDefinition",
+      "kubectl create crd",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "kubectl create -f crd.yaml."
+  },
+  {
+    "id": "CKA-07-024",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le contrôleur d'un Operator ?",
+    "options": [
+      "Boucle qui surveille les ressources personnalisées",
+      "Réconcilie l'état désiré avec l'état actuel",
+      "A et B",
+      "Un pod"
+    ],
+    "correct": 2,
+    "explication": "Le contrôleur est le cœur de l'Operator."
+  },
+  {
+    "id": "CKA-07-025",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Où s'exécute généralement un Operator ?",
+    "options": [
+      "Dans un pod du cluster",
+      "Hors cluster",
+      "Sur chaque nœud",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "L'Operator s'exécute comme un pod dans le cluster."
+  },
+  {
+    "id": "CKA-07-026",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "question": "Quel est l'avantage d'un Operator par rapport à Helm ?",
+    "options": [
+      "Gère l'état (reconciliation)",
+      "Peut effectuer des actions automatisées (backup, upgrade)",
+      "Plus adapté aux applications stateful",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Helm est pour le déploiement, Operator pour la gestion du cycle de vie."
+  },
+  {
+    "id": "CKA-07-027",
+    "theme": "Helm & Operators",
+    "theme_label": "OLM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Operator Lifecycle Manager (OLM) ?",
+    "options": [
+      "Gestionnaire d'Operators",
+      "Installe et met à jour les Operators",
+      "A et B",
+      "Un registry"
+    ],
+    "correct": 2,
+    "explication": "OLM est un composant de Operator Framework."
+  },
+  {
+    "id": "CKA-07-028",
+    "theme": "Helm & Operators",
+    "theme_label": "OLM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un CatalogSource dans OLM ?",
+    "options": [
+      "Source de bundles d'Operators",
+      "Dépôt d'Operators",
+      "A et B",
+      "CRD"
+    ],
+    "correct": 2,
+    "explication": "CatalogSource pointe vers un registry contenant les Operators."
+  },
+  {
+    "id": "CKA-07-029",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm vs Operator",
+    "difficulty": "easy",
+    "question": "Peut-on combiner Helm et Operator ?",
+    "options": [
+      "Oui (ex: Helm chart pour déployer l'Operator)",
+      "Non",
+      "Uniquement avec OLM",
+      "Uniquement avec Operator SDK"
+    ],
+    "correct": 0,
+    "explication": "Beaucoup d'Operators sont distribués sous forme de Helm charts."
+  },
+  {
+    "id": "CKA-07-030",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "easy",
+    "question": "Quelle commande génère les manifests sans installer ?",
+    "options": [
+      "helm template <release> <chart>",
+      "helm install --dry-run <release> <chart>",
+      "helm lint",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "template et install --dry-run produisent les YAML."
+  }
+]

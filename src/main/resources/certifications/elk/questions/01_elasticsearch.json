@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ELK-01-001",
+    "theme": "Elasticsearch",
+    "theme_label": "Recherche et indexation",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un index dans Elasticsearch ?",
+    "options": [
+      "Une collection de documents",
+      "Une table de base de données",
+      "Un champ indexé",
+      "Un type de requête"
+    ],
+    "correct": 0,
+    "explanation": "Un index est une collection de documents partageant des caractéristiques."
+  },
+  {
+    "id": "ELK-01-002",
+    "theme": "Logstash",
+    "theme_label": "Pipeline de logs",
+    "difficulty": "medium",
+    "question": "Quels sont les trois composants d'un pipeline Logstash ?",
+    "options": [
+      "input, filter, output",
+      "read, process, write",
+      "source, transform, sink",
+      "collect, parse, store"
+    ],
+    "correct": 0,
+    "explanation": "Un pipeline Logstash se compose de input, filter, output."
+  }
+]

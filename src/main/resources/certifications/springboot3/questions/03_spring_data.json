@@ -1,0 +1,702 @@
+[
+  {
+    "id": "SB3-DATA-001",
+    "theme": "Spring Data",
+    "theme_label": "JPA et repositories",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque une entité JPA ?",
+    "options": ["@Entity", "@Table", "@Document", "@Model"],
+    "correct": 0,
+    "explanation": "@Entity est l'annotation JPA standard pour les entités."
+  },
+  {
+    "id": "SB3-DATA-002",
+    "theme": "Spring Data",
+    "theme_label": "JPA et repositories",
+    "difficulty": "easy",
+    "question": "Quelle interface étendre pour créer un repository JPA ?",
+    "options": [
+      "JpaRepository<T, ID>",
+      "CrudRepository<T, ID>",
+      "Repository<T, ID>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs interfaces sont disponibles selon les besoins."
+  },
+  {
+    "id": "SB3-DATA-003",
+    "theme": "Spring Data",
+    "theme_label": "JPA et repositories",
+    "difficulty": "easy",
+    "question": "Quelle annotation active les repositories JPA ?",
+    "options": [
+      "@EnableJpaRepositories",
+      "@EnableRepositories",
+      "@JpaRepositories",
+      "@EnableSpringData"
+    ],
+    "correct": 0,
+    "explanation": "@EnableJpaRepositories active la détection des repositories JPA."
+  },
+  {
+    "id": "SB3-DATA-004",
+    "theme": "Spring Data",
+    "theme_label": "Query methods",
+    "difficulty": "medium",
+    "question": "Quelle méthode trouverait les utilisateurs par nom ?",
+    "options": [
+      "findByName(String name)",
+      "getByName(String name)",
+      "selectByName(String name)",
+      "queryByName(String name)"
+    ],
+    "correct": 0,
+    "explanation": "findBy suivi du nom de propriété est la convention Spring Data."
+  },
+  {
+    "id": "SB3-DATA-005",
+    "theme": "Spring Data",
+    "theme_label": "Query methods",
+    "difficulty": "medium",
+    "question": "Quelle méthode trouverait les utilisateurs par nom et âge ?",
+    "options": [
+      "findByNameAndAge(String name, int age)",
+      "findByNameAge(String name, int age)",
+      "findByName_Age(String name, int age)",
+      "findByName+Age(String name, int age)"
+    ],
+    "correct": 0,
+    "explanation": "And combine deux conditions dans le nom de méthode."
+  },
+  {
+    "id": "SB3-DATA-006",
+    "theme": "Spring Data",
+    "theme_label": "Query methods",
+    "difficulty": "medium",
+    "question": "Quelle méthode compterait les utilisateurs par nom ?",
+    "options": [
+      "countByName(String name)",
+      "findCountByName(String name)",
+      "getCountByName(String name)",
+      "numberByName(String name)"
+    ],
+    "correct": 0,
+    "explanation": "countBy est le préfixe pour les méthodes de comptage."
+  },
+  {
+    "id": "SB3-DATA-007",
+    "theme": "Spring Data",
+    "theme_label": "Query methods",
+    "difficulty": "hard",
+    "question": "Quelle méthode supprimerait les utilisateurs par nom ?",
+    "options": [
+      "deleteByName(String name)",
+      "removeByName(String name)",
+      "eraseByName(String name)",
+      "clearByName(String name)"
+    ],
+    "correct": 0,
+    "explanation": "deleteBy est le préfixe pour les suppressions."
+  },
+  {
+    "id": "SB3-DATA-008",
+    "theme": "Spring Data",
+    "theme_label": "Query methods",
+    "difficulty": "hard",
+    "question": "Que signifie le mot-clé 'Distinct' dans une méthode ?",
+    "options": [
+      "Retourne des résultats uniques",
+      "Retourne des doublons",
+      "Ignore les null",
+      "Trie les résultats"
+    ],
+    "correct": 0,
+    "explanation": "Distinct élimine les doublons des résultats."
+  },
+  {
+    "id": "SB3-DATA-009",
+    "theme": "Spring Data",
+    "theme_label": "Query methods",
+    "difficulty": "hard",
+    "question": "Quelle méthode trouverait les 10 premiers utilisateurs ?",
+    "options": [
+      "findFirst10ByOrderByAge()",
+      "findTop10ByOrderByAge()",
+      "find10ByOrderByAge()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "First et Top sont équivalents pour limiter les résultats."
+  },
+  {
+    "id": "SB3-DATA-010",
+    "theme": "Spring Data",
+    "theme_label": "@Query",
+    "difficulty": "medium",
+    "question": "Quelle annotation définit une requête JPQL personnalisée ?",
+    "options": ["@Query", "@JPQL", "@NativeQuery", "@SqlQuery"],
+    "correct": 0,
+    "explanation": "@Query permet d'écrire des requêtes JPQL personnalisées."
+  },
+  {
+    "id": "SB3-DATA-011",
+    "theme": "Spring Data",
+    "theme_label": "@Query",
+    "difficulty": "medium",
+    "question": "Comment écrire une requête native SQL ?",
+    "options": [
+      "@Query(value = \"SELECT * FROM user\", nativeQuery = true)",
+      "@NativeQuery(\"SELECT * FROM user\")",
+      "@SqlQuery(\"SELECT * FROM user\")",
+      "@Query(native = true, value = \"SELECT * FROM user\")"
+    ],
+    "correct": 0,
+    "explanation": "nativeQuery=true indique une requête SQL native."
+  },
+  {
+    "id": "SB3-DATA-012",
+    "theme": "Spring Data",
+    "theme_label": "@Query",
+    "difficulty": "hard",
+    "question": "Comment passer des paramètres dans @Query ?",
+    "options": [
+      ":param ou ?1",
+      "${param}",
+      "#{param}",
+      "@param"
+    ],
+    "correct": 0,
+    "explanation": "Les paramètres nommés (:param) ou positionnels (?1) sont supportés."
+  },
+  {
+    "id": "SB3-DATA-013",
+    "theme": "Spring Data",
+    "theme_label": "@Modifying",
+    "difficulty": "hard",
+    "question": "À quoi sert @Modifying ?",
+    "options": [
+      "Requête de modification",
+      "Requête de lecture",
+      "Requête de suppression",
+      "Requête d'insertion"
+    ],
+    "correct": 0,
+    "explanation": "@Modifying indique que la requête modifie les données."
+  },
+  {
+    "id": "SB3-DATA-014",
+    "theme": "Spring Data",
+    "theme_label": "@Modifying",
+    "difficulty": "hard",
+    "question": "Que faut-il ajouter avec @Modifying pour vider le cache ?",
+    "options": [
+      "@Modifying(clearAutomatically = true)",
+      "@Modifying(flushAutomatically = true)",
+      "@Modifying(clearPersistenceContext = true)",
+      "@Modifying(refresh = true)"
+    ],
+    "correct": 0,
+    "explanation": "clearAutomatically vide le cache après la modification."
+  },
+  {
+    "id": "SB3-DATA-015",
+    "theme": "Spring Data",
+    "theme_label": "Pagination",
+    "difficulty": "hard",
+    "question": "Comment paginer les résultats d'un repository ?",
+    "options": [
+      "Ajouter Pageable en paramètre",
+      "Ajouter PageRequest en paramètre",
+      "Ajouter Sort en paramètre",
+      "Ajouter Limit en paramètre"
+    ],
+    "correct": 0,
+    "explanation": "Pageable permet la pagination des résultats."
+  },
+  {
+    "id": "SB3-DATA-016",
+    "theme": "Spring Data",
+    "theme_label": "Pagination",
+    "difficulty": "hard",
+    "question": "Quel type retourne une méthode avec Pageable ?",
+    "options": ["Page<T>", "List<T>", "Slice<T>", "A et C"],
+    "correct": 3,
+    "explanation": "Page ou Slice peuvent être retournés selon les besoins."
+  },
+  {
+    "id": "SB3-DATA-017",
+    "theme": "Spring Data",
+    "theme_label": "Pagination",
+    "difficulty": "hard",
+    "question": "Différence entre Page et Slice ?",
+    "options": [
+      "Page connaît le total, Slice non",
+      "Slice connaît le total, Page non",
+      "Identiques",
+      "Page est pour les listes, Slice pour les sets"
+    ],
+    "correct": 0,
+    "explanation": "Page inclut le nombre total d'éléments, Slice non."
+  },
+  {
+    "id": "SB3-DATA-018",
+    "theme": "Spring Data",
+    "theme_label": "Sorting",
+    "difficulty": "hard",
+    "question": "Comment trier les résultats d'un repository ?",
+    "options": [
+      "Ajouter Sort en paramètre",
+      "Ajouter OrderBy dans le nom",
+      "Ajouter @OrderBy",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Deux méthodes : OrderBy dans le nom ou paramètre Sort."
+  },
+  {
+    "id": "SB3-DATA-019",
+    "theme": "Spring Data",
+    "theme_label": "Projections",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une projection ?",
+    "options": [
+      "Sélectionner uniquement certains champs",
+      "Joindre des tables",
+      "Grouper des données",
+      "Trier des résultats"
+    ],
+    "correct": 0,
+    "explanation": "Les projections limitent les champs retournés."
+  },
+  {
+    "id": "SB3-DATA-020",
+    "theme": "Spring Data",
+    "theme_label": "Projections",
+    "difficulty": "hard",
+    "question": "Comment créer une projection interface ?",
+    "options": [
+      "Interface avec des getters",
+      "Classe avec des champs",
+      "Record",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Les interfaces et records peuvent servir de projections."
+  },
+  {
+    "id": "SB3-DATA-021",
+    "theme": "Spring Data",
+    "theme_label": "Projections",
+    "difficulty": "hard",
+    "question": "Les projections fermées utilisent-elles tous les champs ?",
+    "options": [
+      "Non, seulement les getters définis",
+      "Oui, tous les champs",
+      "Oui, avec @Projection",
+      "Non, avec @Closed"
+    ],
+    "correct": 0,
+    "explanation": "Les projections fermées ne contiennent que les getters définis."
+  },
+  {
+    "id": "SB3-DATA-022",
+    "theme": "Spring Data",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle annotation gère les transactions ?",
+    "options": ["@Transactional", "@Transaction", "@Tx", "@Transact"],
+    "correct": 0,
+    "explanation": "@Transactional est l'annotation standard pour les transactions."
+  },
+  {
+    "id": "SB3-DATA-023",
+    "theme": "Spring Data",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle propagation est la valeur par défaut ?",
+    "options": [
+      "REQUIRED",
+      "REQUIRES_NEW",
+      "MANDATORY",
+      "SUPPORTS"
+    ],
+    "correct": 0,
+    "explanation": "REQUIRED est la propagation par défaut."
+  },
+  {
+    "id": "SB3-DATA-024",
+    "theme": "Spring Data",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle isolation est la valeur par défaut ?",
+    "options": [
+      "DEFAULT",
+      "READ_COMMITTED",
+      "REPEATABLE_READ",
+      "SERIALIZABLE"
+    ],
+    "correct": 0,
+    "explanation": "DEFAULT utilise l'isolation par défaut de la base de données."
+  },
+  {
+    "id": "SB3-DATA-025",
+    "theme": "Spring Data",
+    "theme_label": "Auditing",
+    "difficulty": "hard",
+    "question": "Quelle annotation active l'auditing ?",
+    "options": [
+      "@EnableJpaAuditing",
+      "@EnableAuditing",
+      "@Auditing",
+      "@JpaAuditing"
+    ],
+    "correct": 0,
+    "explanation": "@EnableJpaAuditing active l'auditing JPA."
+  },
+  {
+    "id": "SB3-DATA-026",
+    "theme": "Spring Data",
+    "theme_label": "Auditing",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une date de création ?",
+    "options": [
+      "@CreatedDate",
+      "@CreationTimestamp",
+      "@CreateDate",
+      "@DateCreated"
+    ],
+    "correct": 0,
+    "explanation": "@CreatedDate est géré par Spring Data."
+  },
+  {
+    "id": "SB3-DATA-027",
+    "theme": "Spring Data",
+    "theme_label": "Auditing",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une date de modification ?",
+    "options": [
+      "@LastModifiedDate",
+      "@UpdateTimestamp",
+      "@ModificationDate",
+      "@DateModified"
+    ],
+    "correct": 0,
+    "explanation": "@LastModifiedDate est géré par Spring Data."
+  },
+  {
+    "id": "SB3-DATA-028",
+    "theme": "Spring Data",
+    "theme_label": "Auditing",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque le créateur ?",
+    "options": [
+      "@CreatedBy",
+      "@Creator",
+      "@CreateBy",
+      "@Author"
+    ],
+    "correct": 0,
+    "explanation": "@CreatedBy capture l'utilisateur qui a créé l'entité."
+  },
+  {
+    "id": "SB3-DATA-029",
+    "theme": "Spring Data",
+    "theme_label": "Auditing",
+    "difficulty": "hard",
+    "question": "Quelle interface fournit l'utilisateur courant ?",
+    "options": [
+      "AuditorAware<T>",
+      "CurrentUserProvider",
+      "UserAuditor",
+      "AuditProvider"
+    ],
+    "correct": 0,
+    "explanation": "AuditorAware fournit l'utilisateur courant pour l'auditing."
+  },
+  {
+    "id": "SB3-DATA-030",
+    "theme": "Spring Data",
+    "theme_label": "MongoDB",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une entité MongoDB ?",
+    "options": ["@Document", "@Entity", "@Collection", "@MongoEntity"],
+    "correct": 0,
+    "explanation": "@Document est l'annotation pour les entités MongoDB."
+  },
+  {
+    "id": "SB3-DATA-031",
+    "theme": "Spring Data",
+    "theme_label": "MongoDB",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour un repository MongoDB ?",
+    "options": [
+      "MongoRepository<T, ID>",
+      "MongoDbRepository<T, ID>",
+      "DocumentRepository<T, ID>",
+      "NoSqlRepository<T, ID>"
+    ],
+    "correct": 0,
+    "explanation": "MongoRepository étend CrudRepository pour MongoDB."
+  },
+  {
+    "id": "SB3-DATA-032",
+    "theme": "Spring Data",
+    "theme_label": "Redis",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une entité Redis ?",
+    "options": ["@RedisHash", "@RedisEntity", "@Hash", "@RedisDocument"],
+    "correct": 0,
+    "explanation": "@RedisHash définit la clé pour les entités Redis."
+  },
+  {
+    "id": "SB3-DATA-033",
+    "theme": "Spring Data",
+    "theme_label": "Redis",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour un repository Redis ?",
+    "options": [
+      "CrudRepository<T, ID>",
+      "RedisRepository<T, ID>",
+      "KeyValueRepository<T, ID>",
+      "HashRepository<T, ID>"
+    ],
+    "correct": 0,
+    "explanation": "CrudRepository fonctionne avec Redis via Spring Data Redis."
+  },
+  {
+    "id": "SB3-DATA-034",
+    "theme": "Spring Data",
+    "theme_label": "Cassandra",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une table Cassandra ?",
+    "options": ["@Table", "@CassandraTable", "@ColumnFamily", "@Entity"],
+    "correct": 0,
+    "explanation": "@Table est l'annotation pour les tables Cassandra."
+  },
+  {
+    "id": "SB3-DATA-035",
+    "theme": "Spring Data",
+    "theme_label": "Cassandra",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour un repository Cassandra ?",
+    "options": [
+      "CassandraRepository<T, ID>",
+      "CrudRepository<T, ID>",
+      "CqlRepository<T, ID>",
+      "NoSqlRepository<T, ID>"
+    ],
+    "correct": 0,
+    "explanation": "CassandraRepository est l'interface spécifique pour Cassandra."
+  },
+  {
+    "id": "SB3-DATA-036",
+    "theme": "Spring Data",
+    "theme_label": "JDBC",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une entité JDBC ?",
+    "options": ["@Table", "@JdbcEntity", "@Row", "@JdbcTable"],
+    "correct": 0,
+    "explanation": "@Table est l'annotation pour les entités Spring Data JDBC."
+  },
+  {
+    "id": "SB3-DATA-037",
+    "theme": "Spring Data",
+    "theme_label": "JDBC",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour un repository JDBC ?",
+    "options": [
+      "CrudRepository<T, ID>",
+      "JdbcRepository<T, ID>",
+      "RowMapper<T>",
+      "SimpleJdbcRepository<T, ID>"
+    ],
+    "correct": 0,
+    "explanation": "CrudRepository fonctionne avec Spring Data JDBC."
+  },
+  {
+    "id": "SB3-DATA-038",
+    "theme": "Spring Data",
+    "theme_label": "R2DBC",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que R2DBC ?",
+    "options": [
+      "API reactive pour bases de données",
+      "ORM traditionnel",
+      "Pool de connexions",
+      "Driver JDBC"
+    ],
+    "correct": 0,
+    "explanation": "R2DBC est l'API reactive pour les bases de données."
+  },
+  {
+    "id": "SB3-DATA-039",
+    "theme": "Spring Data",
+    "theme_label": "R2DBC",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour un repository R2DBC ?",
+    "options": [
+      "ReactiveCrudRepository<T, ID>",
+      "R2dbcRepository<T, ID>",
+      "ReactiveRepository<T, ID>",
+      "FluxRepository<T, ID>"
+    ],
+    "correct": 0,
+    "explanation": "ReactiveCrudRepository est l'interface pour R2DBC."
+  },
+  {
+    "id": "SB3-DATA-040",
+    "theme": "Spring Data",
+    "theme_label": "R2DBC",
+    "difficulty": "hard",
+    "question": "Quels types sont utilisés pour les résultats ?",
+    "options": ["Mono<T> et Flux<T>", "CompletableFuture<T>", "DeferredResult<T>", "ListenableFuture<T>"],
+    "correct": 0,
+    "explanation": "Les types reactive Project Reactor sont utilisés."
+  },
+  {
+    "id": "SB3-DATA-041",
+    "theme": "Spring Data",
+    "theme_label": "Specifications",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une Specification ?",
+    "options": [
+      "Requête dynamique",
+      "Requête fixe",
+      "Requête native",
+      "Requête JPQL"
+    ],
+    "correct": 0,
+    "explanation": "Les Specifications permettent de construire des requêtes dynamiques."
+  },
+  {
+    "id": "SB3-DATA-042",
+    "theme": "Spring Data",
+    "theme_label": "Specifications",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour les Specifications ?",
+    "options": [
+      "Specification<T>",
+      "QuerySpecification<T>",
+      "DynamicQuery<T>",
+      "CriteriaQuery<T>"
+    ],
+    "correct": 0,
+    "explanation": "Specification est l'interface pour les requêtes dynamiques."
+  },
+  {
+    "id": "SB3-DATA-043",
+    "theme": "Spring Data",
+    "theme_label": "QueryDSL",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que QueryDSL ?",
+    "options": [
+      "Framework de requêtes type-safe",
+      "ORM",
+      "Pool de connexions",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "QueryDSL permet des requêtes type-safe avec une API fluente."
+  },
+  {
+    "id": "SB3-DATA-044",
+    "theme": "Spring Data",
+    "theme_label": "QueryDSL",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour QueryDSL ?",
+    "options": [
+      "QuerydslPredicateExecutor<T>",
+      "QueryDslRepository<T>",
+      "PredicateExecutor<T>",
+      "DslRepository<T>"
+    ],
+    "correct": 0,
+    "explanation": "QuerydslPredicateExecutor ajoute le support QueryDSL."
+  },
+  {
+    "id": "SB3-DATA-045",
+    "theme": "Spring Data",
+    "theme_label": "Entity Graphs",
+    "difficulty": "hard",
+    "question": "À quoi servent les Entity Graphs ?",
+    "options": [
+      "Optimiser les chargements JPA",
+      "Définir des index",
+      "Créer des contraintes",
+      "Gérer les transactions"
+    ],
+    "correct": 0,
+    "explanation": "Les Entity Graphs contrôlent quelles associations sont chargées."
+  },
+  {
+    "id": "SB3-DATA-046",
+    "theme": "Spring Data",
+    "theme_label": "Entity Graphs",
+    "difficulty": "hard",
+    "question": "Quelle annotation définit un Entity Graph ?",
+    "options": ["@NamedEntityGraph", "@EntityGraph", "@Graph", "@FetchGraph"],
+    "correct": 0,
+    "explanation": "@NamedEntityGraph définit un graph nommé."
+  },
+  {
+    "id": "SB3-DATA-047",
+    "theme": "Spring Data",
+    "theme_label": "Entity Graphs",
+    "difficulty": "hard",
+    "question": "Comment utiliser un Entity Graph dans un repository ?",
+    "options": [
+      "@EntityGraph(attributePaths = {\"address\"})",
+      "@Fetch(attributePaths = {\"address\"})",
+      "@Load(attributePaths = {\"address\"})",
+      "@Graph(attributePaths = {\"address\"})"
+    ],
+    "correct": 0,
+    "explanation": "@EntityGraph sur une méthode de repository active le graph."
+  },
+  {
+    "id": "SB3-DATA-048",
+    "theme": "Spring Data",
+    "theme_label": "N+1 problem",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le problème N+1 ?",
+    "options": [
+      "N requêtes + 1 pour les associations",
+      "N tables + 1 join",
+      "N transactions + 1 rollback",
+      "N caches + 1 miss"
+    ],
+    "correct": 0,
+    "explanation": "Le problème N+1 est une requête principale suivie de N requêtes pour les associations."
+  },
+  {
+    "id": "SB3-DATA-049",
+    "theme": "Spring Data",
+    "theme_label": "N+1 solution",
+    "difficulty": "hard",
+    "question": "Comment résoudre le problème N+1 ?",
+    "options": [
+      "JOIN FETCH",
+      "Entity Graphs",
+      "@BatchSize",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques résolvent le problème N+1."
+  },
+  {
+    "id": "SB3-DATA-050",
+    "theme": "Spring Data",
+    "theme_label": "JOIN FETCH",
+    "difficulty": "hard",
+    "question": "Quelle est la syntaxe JOIN FETCH ?",
+    "options": [
+      "FROM User u JOIN FETCH u.address",
+      "FROM User u JOIN u.address FETCH",
+      "FROM User u FETCH JOIN u.address",
+      "FROM User u INNER FETCH u.address"
+    ],
+    "correct": 0,
+    "explanation": "JOIN FETCH charge l'association dans la même requête."
+  }
+]

@@ -1,0 +1,852 @@
+[
+  {
+    "id": "GCP-DL-051",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Google Compute Engine ?",
+    "options": [
+      "Service de machines virtuelles (IaaS)",
+      "Service serverless",
+      "Orchestration de conteneurs",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Compute Engine est le service IaaS de GCP pour les VMs."
+  },
+  {
+    "id": "GCP-DL-052",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine",
+    "difficulty": "easy",
+    "question": "Quels types de machines (machine families) propose Compute Engine ?",
+    "options": [
+      "General-purpose, Compute-optimized, Memory-optimized, Accelerator-optimized",
+      "Seulement General-purpose",
+      "Seulement Compute-optimized",
+      "Seulement Memory-optimized"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs familles selon les besoins (CPU, mémoire, GPU)."
+  },
+  {
+    "id": "GCP-DL-053",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une instance préemptible (preemptible VM) ?",
+    "options": [
+      "Instance peu coûteuse pouvant être interrompue à tout moment",
+      "Instance réservée",
+      "Instance avec GPU",
+      "Instance avec SSD"
+    ],
+    "correct": 0,
+    "explication": "Les instances préemptibles sont jusqu'à 80% moins chères mais peuvent être arrêtées avec un préavis de 30 secondes."
+  },
+  {
+    "id": "GCP-DL-054",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une instance spot (spot VM) ?",
+    "options": [
+      "Nouveau nom pour les instances préemptibles",
+      "Instance réservée",
+      "Instance à la demande",
+      "Instance dédiée"
+    ],
+    "correct": 0,
+    "explication": "Les instances spot (anciennement préemptibles) offrent des réductions importantes avec risque d'interruption."
+  },
+  {
+    "id": "GCP-DL-055",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un groupe d'instances (instance group) ?",
+    "options": [
+      "Ensemble de VMs gérées ensemble (redimensionnement, auto-scaling)",
+      "Type de VM",
+      "Réseau",
+      "Disque"
+    ],
+    "correct": 0,
+    "explication": "Les groupes d'instances permettent la mise à l'échelle et la gestion des mises à jour."
+  },
+  {
+    "id": "GCP-DL-056",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Google Kubernetes Engine (GKE)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Google Kubernetes Engine (GKE) ?",
+    "options": [
+      "Service Kubernetes managé",
+      "Service de VMs",
+      "Service serverless",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explication": "GKE est le service Kubernetes managé de Google."
+  },
+  {
+    "id": "GCP-DL-057",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "GKE",
+    "difficulty": "easy",
+    "question": "GKE supporte-t-il les modes Standard et Autopilot ?",
+    "options": ["Oui", "Non", "Uniquement Standard", "Uniquement Autopilot"],
+    "correct": 0,
+    "explication": "Autopilot est serverless (Gère le plan de contrôle et les nœuds), Standard donne plus de contrôle."
+  },
+  {
+    "id": "GCP-DL-058",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "GKE",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que GKE Autopilot ?",
+    "options": [
+      "Mode serverless où Google gère les nœuds",
+      "Mode avec gestion manuelle des nœuds",
+      "Mode pour les clusters temporaires",
+      "Mode pour les clusters de développement"
+    ],
+    "correct": 0,
+    "explication": "Autopilot optimise les coûts et la gestion, facturation par pod."
+  },
+  {
+    "id": "GCP-DL-059",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Run",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Google Cloud Run ?",
+    "options": [
+      "Service serverless pour exécuter des conteneurs",
+      "Service de VMs",
+      "Service de bases de données",
+      "Service de stockage"
+    ],
+    "correct": 0,
+    "explication": "Cloud Run exécute des conteneurs stateless sur un environnement serverless."
+  },
+  {
+    "id": "GCP-DL-060",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Run",
+    "difficulty": "easy",
+    "question": "Cloud Run facture-t-il à la demande (par requête) ?",
+    "options": ["Oui (facturation à la requête + CPU/mémoire)", "Non (forfait fixe)", "Uniquement pour les requêtes", "Uniquement pour le CPU"],
+    "correct": 0,
+    "explication": "Cloud Run facture les ressources consommées pendant le traitement des requêtes."
+  },
+  {
+    "id": "GCP-DL-061",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Functions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Google Cloud Functions ?",
+    "options": [
+      "Service serverless pour exécuter du code événementiel",
+      "Service de conteneurs",
+      "Service de VMs",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explication": "Cloud Functions est le FaaS (Function as a Service) de GCP."
+  },
+  {
+    "id": "GCP-DL-062",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Functions",
+    "difficulty": "easy",
+    "question": "Quels langages sont supportés par Cloud Functions ?",
+    "options": [
+      "Node.js, Python, Go, Java, .NET, Ruby, PHP",
+      "Node.js seulement",
+      "Python seulement",
+      "Go seulement"
+    ],
+    "correct": 0,
+    "explication": "Cloud Functions supporte plusieurs langages."
+  },
+  {
+    "id": "GCP-DL-063",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Functions",
+    "difficulty": "easy",
+    "question": "Quels déclencheurs (triggers) supporte Cloud Functions ?",
+    "options": [
+      "HTTP, Cloud Storage, Pub/Sub, Firestore, etc.",
+      "HTTP seulement",
+      "Cloud Storage seulement",
+      "Pub/Sub seulement"
+    ],
+    "correct": 0,
+    "explication": "Cloud Functions peut être déclenché par de nombreux événements GCP."
+  },
+  {
+    "id": "GCP-DL-064",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "App Engine",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Google App Engine ?",
+    "options": [
+      "PaaS pour héberger des applications web",
+      "IaaS",
+      "FaaS",
+      "CaaS"
+    ],
+    "correct": 0,
+    "explication": "App Engine est un PaaS qui gère l'infrastructure automatiquement."
+  },
+  {
+    "id": "GCP-DL-065",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "App Engine",
+    "difficulty": "easy",
+    "question": "Quels sont les environnements App Engine ?",
+    "options": [
+      "Standard et Flexible",
+      "Standard seulement",
+      "Flexible seulement",
+      "Classic et Modern"
+    ],
+    "correct": 0,
+    "explication": "L'environnement Standard est plus restrictif mais plus économique, Flexible offre plus de contrôle."
+  },
+  {
+    "id": "GCP-DL-066",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Run for Anthos",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Run for Anthos ?",
+    "options": [
+      "Exécution de Cloud Run sur GKE on-premise ou dans d'autres clouds",
+      "Cloud Run standard",
+      "GKE standard",
+      "App Engine flexible"
+    ],
+    "correct": 0,
+    "explication": "Cloud Run for Anthos permet d'exécuter des workloads serverless sur des clusters Kubernetes."
+  },
+  {
+    "id": "GCP-DL-067",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Virtual Private Cloud (VPC)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un VPC dans GCP ?",
+    "options": [
+      "Réseau virtuel global pour les ressources GCP",
+      "Service de sécurité",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Un VPC GCP est un réseau virtuel isolé, global (peut s'étendre sur plusieurs régions)."
+  },
+  {
+    "id": "GCP-DL-068",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "VPC",
+    "difficulty": "easy",
+    "question": "Les sous-réseaux (subnets) dans GCP sont-ils régionaux ?",
+    "options": ["Oui", "Non", "Uniquement globaux", "Uniquement zonaux"],
+    "correct": 0,
+    "explication": "Les subnets dans GCP sont régionaux (un subnet par région)."
+  },
+  {
+    "id": "GCP-DL-069",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Load Balancing",
+    "difficulty": "easy",
+    "question": "Quels sont les types de load balancers GCP ?",
+    "options": [
+      "HTTP(S), TCP/SSL, UDP, Internal",
+      "HTTP(S) seulement",
+      "TCP seulement",
+      "Internal seulement"
+    ],
+    "correct": 0,
+    "explication": "GCP offre plusieurs types de load balancers (global, régional, interne, externe)."
+  },
+  {
+    "id": "GCP-DL-070",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Load Balancing",
+    "difficulty": "easy",
+    "question": "Le load balancer HTTP(S) GCP est-il global ?",
+    "options": ["Oui", "Non", "Uniquement régional", "Uniquement par zone"],
+    "correct": 0,
+    "explication": "Le load balancer HTTP(S) est global, distribue le trafic vers les backends proches des utilisateurs."
+  },
+  {
+    "id": "GCP-DL-071",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud CDN",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud CDN ?",
+    "options": [
+      "Service de diffusion de contenu (cache)",
+      "Load balancer",
+      "Service de sécurité",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explication": "Cloud CDN utilise les edge locations de Google pour mettre en cache le contenu."
+  },
+  {
+    "id": "GCP-DL-072",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud NAT",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud NAT ?",
+    "options": [
+      "Permettre aux instances sans IP publique d'accéder à Internet",
+      "Sécuriser les VMs",
+      "Load balancer",
+      "Firewall"
+    ],
+    "correct": 0,
+    "explication": "Cloud NAT gère la traduction d'adresses réseau pour les instances privées."
+  },
+  {
+    "id": "GCP-DL-073",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Interconnect",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Interconnect ?",
+    "options": [
+      "Connexion dédiée entre le réseau on-premise et GCP",
+      "VPN",
+      "Load balancer",
+      "Firewall"
+    ],
+    "correct": 0,
+    "explication": "Cloud Interconnect offre une connexion physique privée à haute bande passante."
+  },
+  {
+    "id": "GCP-DL-074",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud VPN",
+    "difficulty": "easy",
+    "question": "Cloud VPN permet-il une connexion sécurisée via Internet ?",
+    "options": ["Oui", "Non", "Uniquement pour le trafic interne", "Uniquement pour le trafic sortant"],
+    "correct": 0,
+    "explication": "Cloud VPN utilise IPsec pour connecter un réseau on-premise à GCP via Internet."
+  },
+  {
+    "id": "GCP-DL-075",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud DNS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud DNS ?",
+    "options": [
+      "Service DNS managé",
+      "Load balancer",
+      "Firewall",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "Cloud DNS fournit un service DNS fiable avec faible latence."
+  },
+  {
+    "id": "GCP-DL-076",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Network Service Tiers",
+    "difficulty": "easy",
+    "question": "Quels sont les niveaux de service réseau GCP ?",
+    "options": [
+      "Premium Tier et Standard Tier",
+      "Gold et Silver",
+      "High et Low",
+      "Fast et Slow"
+    ],
+    "correct": 0,
+    "explication": "Premium Tier utilise le réseau global de Google, Standard Tier utilise les réseaux de transit."
+  },
+  {
+    "id": "GCP-DL-077",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Armor",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Armor ?",
+    "options": [
+      "Protection DDoS et WAF",
+      "Load balancer",
+      "Firewall",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Cloud Armor protège les applications contre les attaques DDoS et les menaces web."
+  },
+  {
+    "id": "GCP-DL-078",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Firewall (VPC Firewall Rules)",
+    "difficulty": "easy",
+    "question": "Les règles de pare-feu VPC sont-elles globales ?",
+    "options": ["Oui", "Non", "Uniquement régionales", "Uniquement zonales"],
+    "correct": 0,
+    "explication": "Les règles de pare-feu VPC s'appliquent à l'ensemble du VPC (global)."
+  },
+  {
+    "id": "GCP-DL-079",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Router",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Router ?",
+    "options": [
+      "Échange dynamique de routes (BGP) pour Cloud VPN et Cloud Interconnect",
+      "Load balancer",
+      "Firewall",
+      "NAT"
+    ],
+    "correct": 0,
+    "explication": "Cloud Router permet l'échange de routes BGP pour les connexions hybrides."
+  },
+  {
+    "id": "GCP-DL-080",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Traffic Director",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Traffic Director ?",
+    "options": [
+      "Plan de contrôle pour les mailles de service (service mesh)",
+      "Load balancer",
+      "CDN",
+      "Firewall"
+    ],
+    "correct": 0,
+    "explication": "Traffic Director est le plan de contrôle pour les déploiements de mailles de service (Envoy)."
+  },
+  {
+    "id": "GCP-DL-081",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Anthos",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Google Anthos ?",
+    "options": [
+      "Plateforme pour gérer des applications sur GCP, on-premise, et autres clouds",
+      "Service de conteneurs",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Anthos permet la gestion unifiée des applications sur plusieurs environnements."
+  },
+  {
+    "id": "GCP-DL-082",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Anthos components",
+    "difficulty": "easy",
+    "question": "Quels sont les composants d'Anthos ?",
+    "options": [
+      "GKE, Anthos Config Management, Anthos Service Mesh, Cloud Run for Anthos",
+      "Seulement GKE",
+      "Seulement Config Management",
+      "Seulement Service Mesh"
+    ],
+    "correct": 0,
+    "explication": "Anthos inclut plusieurs outils pour la gestion et la sécurité des applications."
+  },
+  {
+    "id": "GCP-DL-083",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Bare Metal Solution",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Bare Metal Solution ?",
+    "options": [
+      "Serveurs physiques dédiés pour des applications nécessitant du matériel spécifique",
+      "VMs",
+      "Conteneurs",
+      "Serverless"
+    ],
+    "correct": 0,
+    "explication": "Bare Metal Solution fournit des serveurs physiques pour des charges de travail spécifiques (ex: bases de données)."
+  },
+  {
+    "id": "GCP-DL-084",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine pricing",
+    "difficulty": "easy",
+    "question": "Quel est le modèle de tarification de Compute Engine ?",
+    "options": [
+      "À la seconde (durée d'exécution)",
+      "À l'heure",
+      "Au mois",
+      "À l'année"
+    ],
+    "correct": 0,
+    "explication": "Compute Engine facture à la seconde (minimum 1 minute)."
+  },
+  {
+    "id": "GCP-DL-085",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Committed use discounts",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un engagement d'utilisation (committed use discount) ?",
+    "options": [
+      "Réduction en échange d'un engagement sur 1 ou 3 ans",
+      "Instances spot",
+      "Instances préemptibles",
+      "Instances réservées"
+    ],
+    "correct": 0,
+    "explication": "Les CUD offrent jusqu'à 70% de réduction pour des engagements."
+  },
+  {
+    "id": "GCP-DL-086",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Sole-tenant nodes",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un nœud locataire unique (sole-tenant node) ?",
+    "options": [
+      "Serveur physique dédié à un client",
+      "Instance préemptible",
+      "Instance réservée",
+      "Instance spot"
+    ],
+    "correct": 0,
+    "explication": "Les sole-tenant nodes isolent les instances sur du matériel dédié pour la conformité."
+  },
+  {
+    "id": "GCP-DL-087",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Machine images",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une machine image dans Compute Engine ?",
+    "options": [
+      "Sauvegarde d'une VM avec ses disques et configuration",
+      "Image de démarrage",
+      "Snapshot de disque",
+      "Template d'instance"
+    ],
+    "correct": 0,
+    "explication": "Les machine images permettent de créer des copies de VMs pour le déploiement ou la reprise."
+  },
+  {
+    "id": "GCP-DL-088",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Instance templates",
+    "difficulty": "easy",
+    "question": "À quoi sert un template d'instance (instance template) ?",
+    "options": [
+      "Définir la configuration de base pour les groupes d'instances",
+      "Créer une VM unique",
+      "Sauvegarder une VM",
+      "Configurer le réseau"
+    ],
+    "correct": 0,
+    "explication": "Les templates sont utilisés par les groupes d'instances (managed instance groups)."
+  },
+  {
+    "id": "GCP-DL-089",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Managed instance groups (MIG)",
+    "difficulty": "easy",
+    "question": "Que permet de faire un groupe d'instances géré (MIG) ?",
+    "options": [
+      "Mise à l'échelle automatique, auto-repair, déploiements canary",
+      "Créer une seule VM",
+      "Sauvegarder des VMs",
+      "Configurer le réseau"
+    ],
+    "correct": 0,
+    "explication": "Les MIG offrent des fonctionnalités avancées pour les applications stateless."
+  },
+  {
+    "id": "GCP-DL-090",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Build",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Build ?",
+    "options": [
+      "Service CI/CD entièrement managé",
+      "Service de stockage",
+      "Base de données",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explication": "Cloud Build exécute des pipelines de build et de test."
+  },
+  {
+    "id": "GCP-DL-091",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Source Repositories",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Source Repositories ?",
+    "options": [
+      "Dépôts Git privés",
+      "Service de stockage",
+      "Base de données",
+      "Outil de build"
+    ],
+    "correct": 0,
+    "explication": "Cloud Source Repositories héberge du code source avec intégration à Cloud Build."
+  },
+  {
+    "id": "GCP-DL-092",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Deploy",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Deploy ?",
+    "options": [
+      "Déploiement continu (CD) pour GKE, Cloud Run, etc.",
+      "Build",
+      "Test",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Cloud Deploy automatise les déploiements avec des stratégies de promotion (canary, blue/green)."
+  },
+  {
+    "id": "GCP-DL-093",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Run jobs",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un Cloud Run job ?",
+    "options": [
+      "Tâche batch exécutée jusqu'à complétion",
+      "Service web",
+      "Fonction événementielle",
+      "Conteneur long terme"
+    ],
+    "correct": 0,
+    "explication": "Cloud Run jobs sont des tâches exécutées une seule fois (batch)."
+  },
+  {
+    "id": "GCP-DL-094",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Workflows",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Workflows ?",
+    "options": [
+      "Orchestration de services (séquence d'étapes)",
+      "Base de données",
+      "Stockage",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Cloud Workflows permet de chaîner des services (ex: Cloud Functions, Cloud Run)."
+  },
+  {
+    "id": "GCP-DL-095",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Eventarc",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Eventarc ?",
+    "options": [
+      "Service de routage d'événements vers Cloud Run, Cloud Functions",
+      "Base de données",
+      "Stockage",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Eventarc simplifie l'ingestion d'événements depuis les services GCP."
+  },
+  {
+    "id": "GCP-DL-096",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Scheduler",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Scheduler ?",
+    "options": [
+      "Planifier des tâches (cron)",
+      "Base de données",
+      "Stockage",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Cloud Scheduler déclenche des tâches périodiques vers des endpoints HTTP ou Pub/Sub."
+  },
+  {
+    "id": "GCP-DL-097",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Tasks",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Tasks ?",
+    "options": [
+      "Files d'attente asynchrones pour la distribution de tâches",
+      "Base de données",
+      "Stockage",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Cloud Tasks permet de gérer des tâches en file d'attente avec réessais."
+  },
+  {
+    "id": "GCP-DL-098",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Compute Engine images",
+    "difficulty": "easy",
+    "question": "Quels sont les types d'images pour Compute Engine ?",
+    "options": [
+      "Public, custom, marketplace",
+      "Seulement public",
+      "Seulement custom",
+      "Seulement marketplace"
+    ],
+    "correct": 0,
+    "explication": "GCP fournit des images publiques, permet des images personnalisées et des images du marketplace."
+  },
+  {
+    "id": "GCP-DL-099",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Shielded VMs",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une VM protégée (Shielded VM) ?",
+    "options": [
+      "VM avec des vérifications de sécurité au démarrage (Secure Boot, vTPM)",
+      "VM avec pare-feu",
+      "VM avec anti-virus",
+      "VM avec chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les Shielded VMs protègent contre les rootkits et les bootkits."
+  },
+  {
+    "id": "GCP-DL-100",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Confidential VMs",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une VM confidentielle (Confidential VM) ?",
+    "options": [
+      "VM avec chiffrement en mémoire (AMD SEV)",
+      "VM avec pare-feu",
+      "VM avec anti-virus",
+      "VM avec sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Les Confidential VMs chiffrent les données en utilisation (mémoire)."
+  },
+  {
+    "id": "GCP-DL-101",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Sole-tenant nodes pricing",
+    "difficulty": "easy",
+    "question": "Les sole-tenant nodes sont-ils plus chers que les instances normales ?",
+    "options": ["Oui", "Non", "Pareil", "Moins cher"],
+    "correct": 0,
+    "explication": "Les sole-tenant nodes sont plus chers car le matériel est dédié."
+  },
+  {
+    "id": "GCP-DL-102",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "GPU on Compute Engine",
+    "difficulty": "easy",
+    "question": "Compute Engine propose-t-il des GPUs ?",
+    "options": ["Oui (NVIDIA)", "Non", "Uniquement pour les VMs Windows", "Uniquement pour les VMs Linux"],
+    "correct": 0,
+    "explication": "Compute Engine supporte les GPUs NVIDIA pour l'IA/ML et le calcul intensif."
+  },
+  {
+    "id": "GCP-DL-103",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "TPU on Google Cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une TPU (Tensor Processing Unit) ?",
+    "options": [
+      "Accélérateur matériel pour TensorFlow",
+      "GPU",
+      "CPU",
+      "FPGA"
+    ],
+    "correct": 0,
+    "explication": "Les TPU sont des ASICs conçus par Google pour l'apprentissage automatique."
+  },
+  {
+    "id": "GCP-DL-104",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "VM Manager",
+    "difficulty": "easy",
+    "question": "À quoi sert VM Manager ?",
+    "options": [
+      "Gestion des mises à jour, inventaire, conformité des VMs",
+      "Création de VMs",
+      "Sauvegarde de VMs",
+      "Monitoring des VMs"
+    ],
+    "correct": 0,
+    "explication": "VM Manager automatise les tâches d'administration des VMs."
+  },
+  {
+    "id": "GCP-DL-105",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "OS Patch Management",
+    "difficulty": "easy",
+    "question": "OS Patch Management est-il inclus dans VM Manager ?",
+    "options": ["Oui", "Non", "Uniquement pour Windows", "Uniquement pour Linux"],
+    "correct": 0,
+    "explication": "OS Patch Management permet de planifier des correctifs de sécurité."
+  },
+  {
+    "id": "GCP-DL-106",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Migrate",
+    "difficulty": "easy",
+    "question": "Quel service GCP aide à migrer des VMs depuis on-premise ou d'autres clouds ?",
+    "options": ["Migrate to Virtual Machines", "Cloud Run", "Compute Engine", "GKE"],
+    "correct": 0,
+    "explication": "Migrate to Virtual Machines (anciennement Velostrata) migre des VMs vers Compute Engine."
+  },
+  {
+    "id": "GCP-DL-107",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Transfer Appliance",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Transfer Appliance ?",
+    "options": [
+      "Appareil physique pour le transfert de données vers GCP",
+      "Service de transfert en ligne",
+      "Base de données",
+      "Service de sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Transfer Appliance est un dispositif de transfert de données hors ligne pour les grandes quantités."
+  },
+  {
+    "id": "GCP-DL-108",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Storage Transfer Service",
+    "difficulty": "easy",
+    "question": "À quoi sert Storage Transfer Service ?",
+    "options": [
+      "Transfert de données depuis S3, Azure Blob, ou HTTP vers GCS",
+      "Transfert de VMs",
+      "Transfert de bases de données",
+      "Transfert de conteneurs"
+    ],
+    "correct": 0,
+    "explication": "Storage Transfer Service automatise les transferts de données vers Cloud Storage."
+  },
+  {
+    "id": "GCP-DL-109",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "BigQuery Transfer Service",
+    "difficulty": "easy",
+    "question": "À quoi sert BigQuery Transfer Service ?",
+    "options": [
+      "Transfert de données de sources SaaS (Google Ads, etc.) vers BigQuery",
+      "Transfert de VMs",
+      "Transfert de bases de données",
+      "Transfert de conteneurs"
+    ],
+    "correct": 0,
+    "explication": "BigQuery Transfer Service charge automatiquement des données depuis des sources externes."
+  },
+  {
+    "id": "GCP-DL-110",
+    "theme": "Compute & Infrastructure",
+    "theme_label": "Cloud Foundation Toolkit",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Foundation Toolkit ?",
+    "options": [
+      "Modèles Terraform pour les bonnes pratiques GCP",
+      "Service de build",
+      "Base de données",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Le Cloud Foundation Toolkit fournit des modules Terraform réutilisables."
+  }
+]

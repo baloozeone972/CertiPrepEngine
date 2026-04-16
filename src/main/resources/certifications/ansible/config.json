@@ -1,0 +1,32 @@
+{
+  "id": "ansible",
+  "name": "Ansible Automation (Red Hat EX294)",
+  "version": "1.0",
+  "description": "Certification Ansible - Automatisation de configuration et déploiement avec Ansible",
+  "totalQuestions": 300,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Ansible Core",
+      "count": 60
+    },
+    {
+      "name": "Playbooks",
+      "count": 70
+    },
+    {
+      "name": "Roles",
+      "count": 60
+    },
+    {
+      "name": "Variables & Facts",
+      "count": 60
+    },
+    {
+      "name": "Templates (Jinja2)",
+      "count": 50
+    }
+  ]
+}

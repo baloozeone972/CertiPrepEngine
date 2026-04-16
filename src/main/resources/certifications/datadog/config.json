@@ -1,0 +1,32 @@
+{
+  "id": "datadog",
+  "name": "Datadog Fundamentals",
+  "version": "1.0",
+  "description": "Certification Datadog - Monitoring et observabilité avec Datadog",
+  "totalQuestions": 200,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Infrastructure Monitoring",
+      "count": 50
+    },
+    {
+      "name": "APM",
+      "count": 40
+    },
+    {
+      "name": "Logs Management",
+      "count": 40
+    },
+    {
+      "name": "Dashboards",
+      "count": 40
+    },
+    {
+      "name": "Alerting",
+      "count": 30
+    }
+  ]
+}

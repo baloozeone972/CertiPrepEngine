@@ -1,0 +1,777 @@
+[
+  {
+    "id": "AZ-204-141",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Cosmos DB ?",
+    "options": [
+      "Base de données NoSQL distribuée globalement",
+      "Base relationnelle",
+      "Data warehouse",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "Cosmos DB est une base NoSQL multi-modèle et globalement distribuée."
+  },
+  {
+    "id": "AZ-204-142",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quels modèles de données (API) sont supportés ?",
+    "options": [
+      "Core (SQL), MongoDB, Cassandra, Gremlin, Table",
+      "SQL seulement",
+      "MongoDB seulement",
+      "Cassandra seulement"
+    ],
+    "correct": 0,
+    "explication": "Cosmos DB supporte plusieurs API pour la compatibilité."
+  },
+  {
+    "id": "AZ-204-143",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que la distribution globale (global distribution) ?",
+    "options": [
+      "Répliquer les données dans plusieurs régions",
+      "Partitionnement",
+      "Indexation",
+      "Backup"
+    ],
+    "correct": 0,
+    "explication": "La distribution globale permet une faible latence pour les utilisateurs du monde entier."
+  },
+  {
+    "id": "AZ-204-144",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le throughput (débit) en RU/s ?",
+    "options": [
+      "Request Units par seconde (mesure de débit normalisé)",
+      "Nombre de requêtes",
+      "Taille des données",
+      "Latence"
+    ],
+    "correct": 0,
+    "explication": "RU/s mesure le débit de traitement, normalisé pour tous les types d'opérations."
+  },
+  {
+    "id": "AZ-204-145",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le partitionnement (partitioning) ?",
+    "options": [
+      "Division des données en partitions physiques pour la scalabilité",
+      "Réplication",
+      "Indexation",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Le partitionnement est clé pour la scalabilité horizontale."
+  },
+  {
+    "id": "AZ-204-146",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une clé de partition (partition key) ?",
+    "options": [
+      "Attribut utilisé pour répartir les données entre les partitions",
+      "Clé primaire",
+      "Clé étrangère",
+      "Index"
+    ],
+    "correct": 0,
+    "explication": "La clé de partition détermine comment les données sont distribuées."
+  },
+  {
+    "id": "AZ-204-147",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Fondamentaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une partition logique ?",
+    "options": [
+      "Ensemble d'éléments avec la même valeur de clé de partition",
+      "Partition physique",
+      "Shard",
+      "Réplica"
+    ],
+    "correct": 0,
+    "explication": "Les partitions logiques sont contenues dans des partitions physiques."
+  },
+  {
+    "id": "AZ-204-148",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Core (SQL)",
+    "difficulty": "hard",
+    "question": "Quel langage de requête utilise l'API Core (SQL) ?",
+    "options": [
+      "SQL-like (syntaxe proche de SQL)",
+      "MongoDB Query Language",
+      "Gremlin",
+      "Cassandra CQL"
+    ],
+    "correct": 0,
+    "explication": "L'API Core utilise une syntaxe SQL-like pour interroger les documents JSON."
+  },
+  {
+    "id": "AZ-204-149",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Core (SQL)",
+    "difficulty": "hard",
+    "question": "Comment sélectionner tous les documents d'un conteneur ?",
+    "options": [
+      "SELECT * FROM c",
+      "SELECT * FROM container",
+      "SELECT * FROM documents",
+      "SELECT * FROM items"
+    ],
+    "correct": 0,
+    "explication": "La requête utilise 'c' comme alias du conteneur."
+  },
+  {
+    "id": "AZ-204-150",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Core (SQL)",
+    "difficulty": "hard",
+    "question": "Comment filtrer avec une condition ?",
+    "options": [
+      "SELECT * FROM c WHERE c.age > 18",
+      "WHERE c.age > 18",
+      "FILTER c.age > 18",
+      "c.age > 18"
+    ],
+    "correct": 0,
+    "explication": "La clause WHERE filtre les documents."
+  },
+  {
+    "id": "AZ-204-151",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Core (SQL)",
+    "difficulty": "hard",
+    "question": "Comment projeter uniquement certains champs ?",
+    "options": [
+      "SELECT c.name, c.age FROM c",
+      "SELECT * FROM c",
+      "SELECT c FROM c",
+      "SELECT c.name, c.age"
+    ],
+    "correct": 0,
+    "explication": "La projection spécifie les champs à retourner."
+  },
+  {
+    "id": "AZ-204-152",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Core (SQL)",
+    "difficulty": "hard",
+    "question": "Comment joindre un tableau dans un document ?",
+    "options": [
+      "JOIN",
+      "MERGE",
+      "UNION",
+      "CONCAT"
+    ],
+    "correct": 0,
+    "explication": "JOIN permet d'exploser les tableaux imbriqués."
+  },
+  {
+    "id": "AZ-204-153",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Indexation",
+    "difficulty": "hard",
+    "question": "Cosmos DB indexe-t-il automatiquement tous les champs ?",
+    "options": ["Oui (par défaut)", "Non", "Uniquement la clé de partition", "Uniquement l'ID"],
+    "correct": 0,
+    "explication": "L'indexation automatique peut être personnalisée (politique d'indexation)."
+  },
+  {
+    "id": "AZ-204-154",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Indexation",
+    "difficulty": "hard",
+    "question": "Quels sont les modes d'indexation ?",
+    "options": [
+      "Consistent, Lazy, None",
+      "Automatic, Manual",
+      "Sync, Async",
+      "Full, Partial"
+    ],
+    "correct": 0,
+    "explication": "Consistent (mise à jour synchrone), Lazy (asynchrone), None (pas d'index)."
+  },
+  {
+    "id": "AZ-204-155",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Indexation",
+    "difficulty": "hard",
+    "question": "Quel est l'impact de désactiver l'indexation ?",
+    "options": [
+      "Requêtes plus lentes, écritures plus rapides",
+      "Écritures plus lentes",
+      "Requêtes plus rapides",
+      "Aucun impact"
+    ],
+    "correct": 0,
+    "explication": "Sans index, les requêtes deviennent des scans coûteux."
+  },
+  {
+    "id": "AZ-204-156",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Change feed",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le Change Feed dans Cosmos DB ?",
+    "options": [
+      "Journal des modifications des documents",
+      "Backup",
+      "Réplication",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Le Change Feed permet de traiter les modifications en temps réel."
+  },
+  {
+    "id": "AZ-204-157",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Change feed",
+    "difficulty": "hard",
+    "question": "Comment lire le Change Feed ?",
+    "options": [
+      "SDK (Change Feed Processor), Azure Functions",
+      "Requêtes SQL",
+      "API REST",
+      "Portal"
+    ],
+    "correct": 0,
+    "explication": "Le Change Feed Processor simplifie la lecture parallèle et reprise."
+  },
+  {
+    "id": "AZ-204-158",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Change feed",
+    "difficulty": "hard",
+    "question": "Le déclencheur Cosmos DB pour Functions utilise-t-il le Change Feed ?",
+    "options": ["Oui", "Non", "Uniquement pour les insertions", "Uniquement pour les suppressions"],
+    "correct": 0,
+    "explication": "Le déclencheur Cosmos DB lit le Change Feed pour invoquer la fonction."
+  },
+  {
+    "id": "AZ-204-159",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Consistency levels",
+    "difficulty": "hard",
+    "question": "Quels sont les niveaux de cohérence dans Cosmos DB ?",
+    "options": [
+      "Strong, Bounded Staleness, Session, Consistent Prefix, Eventual",
+      "Strong seulement",
+      "Eventual seulement",
+      "Session seulement"
+    ],
+    "correct": 0,
+    "explication": "Cosmos DB offre cinq niveaux de cohérence bien définis."
+  },
+  {
+    "id": "AZ-204-160",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Consistency levels",
+    "difficulty": "hard",
+    "question": "Quel niveau de cohérence garantit les lectures à jour (linearizability) ?",
+    "options": ["Strong", "Bounded Staleness", "Session", "Eventual"],
+    "correct": 0,
+    "explication": "Strong offre la plus forte cohérence (mais impacte la latence)."
+  },
+  {
+    "id": "AZ-204-161",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Consistency levels",
+    "difficulty": "hard",
+    "question": "Quel niveau de cohérence est le plus performant ?",
+    "options": ["Eventual", "Strong", "Bounded Staleness", "Session"],
+    "correct": 0,
+    "explication": "Eventual offre la meilleure performance et disponibilité."
+  },
+  {
+    "id": "AZ-204-162",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Stored procedures",
+    "difficulty": "hard",
+    "question": "Cosmos DB supporte-t-il les procédures stockées ?",
+    "options": ["Oui (JavaScript)", "Non", "Uniquement en SQL", "Uniquement en C#"],
+    "correct": 0,
+    "explication": "Les procédures stockées, triggers et UDF s'écrivent en JavaScript."
+  },
+  {
+    "id": "AZ-204-163",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Stored procedures",
+    "difficulty": "hard",
+    "question": "Les procédures stockées s'exécutent-elles au sein de la transaction de partition ?",
+    "options": ["Oui", "Non", "Uniquement en lecture", "Uniquement en écriture"],
+    "correct": 0,
+    "explication": "Elles sont exécutées dans la portée de la partition."
+  },
+  {
+    "id": "AZ-204-164",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Triggers",
+    "difficulty": "hard",
+    "question": "Quels types de triggers sont supportés ?",
+    "options": ["Pre-trigger, Post-trigger", "Before, After", "Insert, Update, Delete", "A et B"],
+    "correct": 3,
+    "explication": "Les pre-triggers s'exécutent avant l'opération, post-triggers après."
+  },
+  {
+    "id": "AZ-204-165",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "User-Defined Functions (UDF)",
+    "difficulty": "hard",
+    "question": "À quoi servent les UDF dans Cosmos DB ?",
+    "options": [
+      "Fonctions personnalisées utilisables dans les requêtes SQL",
+      "Procédures stockées",
+      "Triggers",
+      "Vues"
+    ],
+    "correct": 0,
+    "explication": "Les UDF étendent la logique des requêtes."
+  },
+  {
+    "id": "AZ-204-166",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Transactional batches",
+    "difficulty": "hard",
+    "question": "Cosmos DB supporte-t-il les opérations transactionnelles par lot ?",
+    "options": [
+      "Oui (transactional batch sur une même partition)",
+      "Non",
+      "Uniquement avec procédures stockées",
+      "Uniquement avec Change Feed"
+    ],
+    "correct": 0,
+    "explication": "Les lots transactionnels permettent d'exécuter plusieurs opérations atomiquement sur une même partition."
+  },
+  {
+    "id": "AZ-204-167",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Transactional batches",
+    "difficulty": "hard",
+    "question": "Les lots transactionnels peuvent-ils traverser les partitions ?",
+    "options": ["Non", "Oui", "Uniquement en lecture", "Uniquement en écriture"],
+    "correct": 0,
+    "explication": "Les transactions sont limitées à une seule partition logique."
+  },
+  {
+    "id": "AZ-204-168",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Request Units (RU)",
+    "difficulty": "hard",
+    "question": "Combien de RU coûte une lecture d'un document de 1 Ko ?",
+    "options": ["1 RU", "2 RU", "0.5 RU", "10 RU"],
+    "correct": 0,
+    "explication": "Une lecture point de 1 Ko coûte 1 RU."
+  },
+  {
+    "id": "AZ-204-169",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Request Units (RU)",
+    "difficulty": "hard",
+    "question": "Une écriture de 1 Ko coûte combien de RU ?",
+    "options": ["5 RU", "1 RU", "10 RU", "2 RU"],
+    "correct": 0,
+    "explication": "Une écriture de 1 Ko coûte 5 RU."
+  },
+  {
+    "id": "AZ-204-170",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Request Units (RU)",
+    "difficulty": "hard",
+    "question": "Comment estimer la consommation de RU ?",
+    "options": [
+      "Utiliser l'en-tête x-ms-request-charge",
+      "Calculer manuellement",
+      "Cosmos DB explorer",
+      "Portail"
+    ],
+    "correct": 0,
+    "explication": "Chaque réponse inclut le nombre de RU consommées."
+  },
+  {
+    "id": "AZ-204-171",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Throughput",
+    "difficulty": "hard",
+    "question": "Peut-on définir le throughput au niveau du conteneur ou de la base ?",
+    "options": ["Oui (les deux)", "Non (seulement conteneur)", "Non (seulement base)", "Uniquement partagé"],
+    "correct": 0,
+    "explication": "Le throughput peut être dédié à un conteneur ou partagé entre plusieurs conteneurs d'une même base."
+  },
+  {
+    "id": "AZ-204-172",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Autoscale",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'autoscale dans Cosmos DB ?",
+    "options": [
+      "Ajustement automatique du throughput selon la charge",
+      "Mise à l'échelle manuelle",
+      "Partitionnement automatique",
+      "Réplication automatique"
+    ],
+    "correct": 0,
+    "explication": "L'autoscale ajuste les RU/s entre un minimum et un maximum."
+  },
+  {
+    "id": "AZ-204-173",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Serverless",
+    "difficulty": "hard",
+    "question": "Cosmos DB a-t-il un mode serverless ?",
+    "options": ["Oui (facturation à la demande)", "Non", "Uniquement pour l'API Core", "Uniquement pour MongoDB"],
+    "correct": 0,
+    "explication": "Le mode serverless facture les RU consommées, pas de provisionnement."
+  },
+  {
+    "id": "AZ-204-174",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Time To Live (TTL)",
+    "difficulty": "hard",
+    "question": "Le TTL dans Cosmos DB supprime-t-il automatiquement les documents après un certain temps ?",
+    "options": ["Oui", "Non", "Uniquement pour les conteneurs", "Uniquement pour les bases"],
+    "correct": 0,
+    "explication": "TTL peut être défini au niveau du conteneur ou par document."
+  },
+  {
+    "id": "AZ-204-175",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Time To Live (TTL)",
+    "difficulty": "hard",
+    "question": "Comment activer TTL sur un conteneur ?",
+    "options": [
+      "Définir la propriété defaultTtl",
+      "Définir une politique",
+      "Créer un trigger",
+      "Utiliser le Change Feed"
+    ],
+    "correct": 0,
+    "explication": "La propriété defaultTtl (en secondes) active le TTL."
+  },
+  {
+    "id": "AZ-204-176",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Backup and restore",
+    "difficulty": "hard",
+    "question": "Cosmos DB sauvegarde-t-il automatiquement les données ?",
+    "options": ["Oui (backup continu)", "Non", "Uniquement manuel", "Uniquement avec Azure Backup"],
+    "correct": 0,
+    "explication": "Les sauvegardes continues sont effectuées automatiquement."
+  },
+  {
+    "id": "AZ-204-177",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Backup and restore",
+    "difficulty": "hard",
+    "question": "Quel est le mode de sauvegarde par défaut ?",
+    "options": ["Périodique (toutes les 4 heures)", "Continue", "Manuelle", "Aucune"],
+    "correct": 1,
+    "explication": "Le mode continu (point-in-time) est désormais la valeur par défaut."
+  },
+  {
+    "id": "AZ-204-178",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API MongoDB",
+    "difficulty": "hard",
+    "question": "L'API MongoDB de Cosmos DB est-elle compatible avec les drivers MongoDB ?",
+    "options": ["Oui (version 3.6, 4.0, 4.2, 5.0)", "Non", "Partiellement", "Uniquement les drivers .NET"],
+    "correct": 0,
+    "explication": "Cosmos DB imite le protocole MongoDB pour la compatibilité."
+  },
+  {
+    "id": "AZ-204-179",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Cassandra",
+    "difficulty": "hard",
+    "question": "L'API Cassandra supporte-t-elle CQL ?",
+    "options": ["Oui", "Non", "Uniquement les requêtes de base", "Uniquement les écritures"],
+    "correct": 0,
+    "explication": "L'API Cassandra est compatible avec CQL et les drivers Cassandra."
+  },
+  {
+    "id": "AZ-204-180",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Gremlin (Graphe)",
+    "difficulty": "hard",
+    "question": "Quel langage de requête utilise l'API Gremlin ?",
+    "options": ["Gremlin (Apache TinkerPop)", "Cypher", "SPARQL", "SQL"],
+    "correct": 0,
+    "explication": "L'API Gremlin supporte le langage de traversée de graphe Gremlin."
+  },
+  {
+    "id": "AZ-204-181",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "API Table",
+    "difficulty": "hard",
+    "question": "L'API Table est-elle compatible avec Azure Table Storage ?",
+    "options": ["Oui (API identique)", "Non", "Partiellement", "Uniquement les opérations de base"],
+    "correct": 0,
+    "explication": "L'API Table de Cosmos DB est compatible avec Azure Table Storage, mais avec des performances supérieures."
+  },
+  {
+    "id": "AZ-204-182",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Data migration",
+    "difficulty": "hard",
+    "question": "Quels outils peuvent migrer des données vers Cosmos DB ?",
+    "options": [
+      "Azure Data Factory, Azure Databricks, l'outil de migration de données Cosmos DB",
+      "Seulement Data Factory",
+      "Seulement Databricks",
+      "Seulement l'outil de migration"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs outils sont disponibles."
+  },
+  {
+    "id": "AZ-204-183",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Data migration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'outil de migration de données Cosmos DB (dt.exe) ?",
+    "options": [
+      "Outil en ligne de commande pour importer/exporter des données",
+      "Outil graphique",
+      "Service cloud",
+      "API"
+    ],
+    "correct": 0,
+    "explication": "L'outil dt.exe prend en charge plusieurs sources (JSON, MongoDB, SQL, etc.)."
+  },
+  {
+    "id": "AZ-204-184",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment se connecter à Cosmos DB avec le SDK .NET ?",
+    "options": [
+      "CosmosClient (chaîne de connexion ou endpoint + clé)",
+      "DocumentClient",
+      "MongoClient",
+      "TableClient"
+    ],
+    "correct": 0,
+    "explication": "CosmosClient est le client principal (SDK v3)."
+  },
+  {
+    "id": "AZ-204-185",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment créer un conteneur avec le SDK ?",
+    "options": [
+      "database.CreateContainerAsync()",
+      "client.CreateContainerAsync()",
+      "container.CreateAsync()",
+      "collection.CreateAsync()"
+    ],
+    "correct": 0,
+    "explication": "Il faut d'abord obtenir la base de données, puis créer le conteneur."
+  },
+  {
+    "id": "AZ-204-186",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment exécuter une requête avec le SDK ?",
+    "options": [
+      "container.GetItemQueryIterator<T>()",
+      "container.QueryItemsAsync()",
+      "client.QueryAsync()",
+      "database.QueryAsync()"
+    ],
+    "correct": 0,
+    "explication": "GetItemQueryIterator retourne un itérateur pour paginer les résultats."
+  },
+  {
+    "id": "AZ-204-187",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment effectuer une lecture point (point read) ?",
+    "options": [
+      "container.ReadItemAsync<T>(id, partitionKey)",
+      "container.GetItemAsync()",
+      "client.ReadItemAsync()",
+      "database.ReadItemAsync()"
+    ],
+    "correct": 0,
+    "explication": "La lecture point est la plus efficace (faible latence, faible coût)."
+  },
+  {
+    "id": "AZ-204-188",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment insérer un document avec le SDK ?",
+    "options": [
+      "container.CreateItemAsync<T>(item, partitionKey)",
+      "container.InsertItemAsync()",
+      "client.CreateItemAsync()",
+      "database.CreateItemAsync()"
+    ],
+    "correct": 0,
+    "explication": "CreateItemAsync crée un nouvel élément."
+  },
+  {
+    "id": "AZ-204-189",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment mettre à jour un document ?",
+    "options": [
+      "container.UpsertItemAsync<T>(item, partitionKey)",
+      "container.UpdateItemAsync()",
+      "container.ReplaceItemAsync()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "ReplaceItemAsync remplace, UpsertItemAsync insère ou remplace."
+  },
+  {
+    "id": "AZ-204-190",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "SDK .NET",
+    "difficulty": "hard",
+    "question": "Comment supprimer un document ?",
+    "options": [
+      "container.DeleteItemAsync<T>(id, partitionKey)",
+      "container.RemoveItemAsync()",
+      "client.DeleteItemAsync()",
+      "database.DeleteItemAsync()"
+    ],
+    "correct": 0,
+    "explication": "La suppression nécessite l'ID et la clé de partition."
+  },
+  {
+    "id": "AZ-204-191",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment choisir une clé de partition ?",
+    "options": [
+      "Clé avec grande cardinalité, répartition uniforme",
+      "Clé unique",
+      "Clé avec peu de valeurs",
+      "Date"
+    ],
+    "correct": 0,
+    "explication": "Une bonne clé de partition distribue uniformément la charge."
+  },
+  {
+    "id": "AZ-204-192",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un document ?",
+    "options": ["2 Mo", "1 Mo", "512 Ko", "4 Mo"],
+    "correct": 0,
+    "explication": "La taille maximale d'un document est 2 Mo (augmentable à 16 Mo avec les grandes documents)."
+  },
+  {
+    "id": "AZ-204-193",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Quelles métriques sont disponibles pour Cosmos DB ?",
+    "options": [
+      "RU consommées, requêtes par seconde, latence, stockage",
+      "Seulement RU",
+      "Seulement latence",
+      "Seulement stockage"
+    ],
+    "correct": 0,
+    "explication": "Azure Monitor fournit des métriques détaillées."
+  },
+  {
+    "id": "AZ-204-194",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment détecter les partitions chaudes (hot partitions) ?",
+    "options": [
+      "Métrique PartitionKey RU consumption",
+      "Logs",
+      "Change Feed",
+      "TTL"
+    ],
+    "correct": 0,
+    "explication": "La métrique PartitionKeyRUConsumption montre la consommation par clé de partition."
+  },
+  {
+    "id": "AZ-204-195",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Cosmos DB supporte-t-il l'authentification Azure AD ?",
+    "options": ["Oui", "Non", "Uniquement pour l'API Core", "Uniquement pour l'API MongoDB"],
+    "correct": 0,
+    "explication": "Azure AD est supporté pour l'authentification (rôles, RBAC)."
+  },
+  {
+    "id": "AZ-204-196",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les clés en lecture seule ?",
+    "options": [
+      "Clés primaires avec permission de lecture seulement",
+      "Clés secondaires",
+      "Clés de partition",
+      "Clés de chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Cosmos DB permet de générer des clés en lecture seule pour les applications."
+  },
+  {
+    "id": "AZ-204-197",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Peut-on restreindre l'accès à Cosmos DB via un VNet ?",
+    "options": ["Oui (service endpoints, private endpoints)", "Non", "Uniquement avec pare-feu IP", "Uniquement avec points de terminaison privés"],
+    "correct": 0,
+    "explication": "Les service endpoints et private endpoints sont supportés."
+  },
+  {
+    "id": "AZ-204-198",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Encryption at rest",
+    "difficulty": "hard",
+    "question": "Les données dans Cosmos DB sont-elles chiffrées au repos ?",
+    "options": ["Oui", "Non", "Uniquement pour l'API Core", "Optionnel"],
+    "correct": 0,
+    "explication": "Le chiffrement au repos est activé par défaut."
+  },
+  {
+    "id": "AZ-204-199",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Customer-managed keys",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser ses propres clés de chiffrement (CMK) ?",
+    "options": ["Oui (via Key Vault)", "Non", "Uniquement pour les backups", "Uniquement pour les index"],
+    "correct": 0,
+    "explication": "CMK permet d'utiliser des clés gérées par le client (Key Vault)."
+  },
+  {
+    "id": "AZ-204-200",
+    "theme": "Azure Cosmos DB",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Pour réduire les coûts, faut-il provisionner les RU/s au plus juste ?",
+    "options": ["Oui, en surveillant la consommation", "Non, toujours plus", "Utiliser autoscale", "A et C"],
+    "correct": 3,
+    "explication": "L'autoscale et le monitoring aident à optimiser les coûts."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "PUP-01-001",
+    "theme": "Puppet DSL",
+    "theme_label": "Syntaxe Puppet",
+    "difficulty": "easy",
+    "question": "Quel mot-clé Puppet déclare une ressource ?",
+    "options": [
+      "package { 'nginx': ensure => installed }",
+      "resource package 'nginx'",
+      "class package::nginx",
+      "define package { 'nginx' }"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe 'type { 'title': attribute => value }' déclare une ressource."
+  },
+  {
+    "id": "PUP-01-002",
+    "theme": "Classes",
+    "theme_label": "Classes Puppet",
+    "difficulty": "medium",
+    "question": "Comment inclure une classe Puppet ?",
+    "options": [
+      "include classe",
+      "class classe",
+      "require classe",
+      "contain classe"
+    ],
+    "correct": 0,
+    "explanation": "include est la fonction pour inclure une classe."
+  }
+]

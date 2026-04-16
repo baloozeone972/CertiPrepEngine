@@ -1,0 +1,32 @@
+{
+  "id": "az900",
+  "name": "Microsoft Azure Fundamentals (AZ-900)",
+  "version": "1.0",
+  "description": "Certification Azure Fundamentals - Concepts de base du cloud Microsoft Azure",
+  "totalQuestions": 300,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Cloud Concepts",
+      "count": 50
+    },
+    {
+      "name": "Azure Core Services",
+      "count": 80
+    },
+    {
+      "name": "Security & Compliance",
+      "count": 60
+    },
+    {
+      "name": "Pricing & Support",
+      "count": 60
+    },
+    {
+      "name": "Azure Management Tools",
+      "count": 50
+    }
+  ]
+}

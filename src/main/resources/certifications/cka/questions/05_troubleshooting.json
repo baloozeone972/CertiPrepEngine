@@ -1,0 +1,742 @@
+[
+  {
+    "id": "CKA-05-001",
+    "theme": "Troubleshooting",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "question": "Comment voir les logs d'un pod ?",
+    "options": [
+      "kubectl logs <pod>",
+      "kubectl logs <pod> -c <container>",
+      "kubectl logs --tail=100 <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl logs avec options -c, --tail, --since."
+  },
+  {
+    "id": "CKA-05-002",
+    "theme": "Troubleshooting",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "question": "Comment streamer les logs d'un pod en temps réel ?",
+    "options": [
+      "kubectl logs -f <pod>",
+      "kubectl logs --follow <pod>",
+      "kubectl attach <pod>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "-f ou --follow suit les logs."
+  },
+  {
+    "id": "CKA-05-003",
+    "theme": "Troubleshooting",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "question": "Comment voir les logs des pods précédents (redémarrés) ?",
+    "options": [
+      "kubectl logs --previous <pod>",
+      "kubectl logs -p <pod>",
+      "kubectl logs --prev <pod>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "--previous ou -p montre les logs du dernier conteneur terminé."
+  },
+  {
+    "id": "CKA-05-004",
+    "theme": "Troubleshooting",
+    "theme_label": "Events",
+    "difficulty": "easy",
+    "question": "Comment lister les événements du cluster ?",
+    "options": [
+      "kubectl get events",
+      "kubectl get events --sort-by='.lastTimestamp'",
+      "kubectl describe node <node>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les événements aident à comprendre pourquoi un pod ne démarre pas."
+  },
+  {
+    "id": "CKA-05-005",
+    "theme": "Troubleshooting",
+    "theme_label": "Events",
+    "difficulty": "easy",
+    "question": "Comment filtrer les événements pour un pod spécifique ?",
+    "options": [
+      "kubectl get events --field-selector involvedObject.name=<pod>",
+      "kubectl describe pod <pod> (inclut les événements)",
+      "kubectl get events | grep <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "describe pod montre les événements liés au pod."
+  },
+  {
+    "id": "CKA-05-006",
+    "theme": "Troubleshooting",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "question": "Que signifie le statut 'CrashLoopBackOff' ?",
+    "options": [
+      "Le conteneur crash en boucle, Kubernetes attend avant de redémarrer",
+      "Le pod est en cours de création",
+      "Le pod est terminé",
+      "Le pod est en attente de ressources"
+    ],
+    "correct": 0,
+    "explication": "CrashLoopBackOff indique que le conteneur se termine anormalement à chaque démarrage."
+  },
+  {
+    "id": "CKA-05-007",
+    "theme": "Troubleshooting",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "question": "Que signifie le statut 'ImagePullBackOff' ?",
+    "options": [
+      "Impossible de tirer l'image du conteneur",
+      "L'image est introuvable",
+      "Erreur d'authentification",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier le nom de l'image, les credentials, ou la connectivité réseau."
+  },
+  {
+    "id": "CKA-05-008",
+    "theme": "Troubleshooting",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "question": "Que signifie le statut 'Pending' ?",
+    "options": [
+      "Le pod n'a pas encore été programmé sur un nœud",
+      "Le pod est en cours d'exécution",
+      "Le pod est en train de se terminer",
+      "Le pod a échoué"
+    ],
+    "correct": 0,
+    "explication": "Causes possibles : ressources insuffisantes, nœud non prêt, PVC non lié."
+  },
+  {
+    "id": "CKA-05-009",
+    "theme": "Troubleshooting",
+    "theme_label": "Node status",
+    "difficulty": "easy",
+    "question": "Comment vérifier l'état d'un nœud ?",
+    "options": [
+      "kubectl get nodes",
+      "kubectl describe node <node>",
+      "kubectl top node",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "get nodes montre l'état, describe donne les détails (conditions)."
+  },
+  {
+    "id": "CKA-05-010",
+    "theme": "Troubleshooting",
+    "theme_label": "Node conditions",
+    "difficulty": "easy",
+    "question": "Quelles sont les conditions d'un nœud ?",
+    "options": [
+      "Ready, MemoryPressure, DiskPressure, PIDPressure, NetworkUnavailable",
+      "Ready, NotReady, Unknown",
+      "Healthy, Unhealthy",
+      "Up, Down"
+    ],
+    "correct": 0,
+    "explication": "Les conditions sont des indicateurs de santé du nœud."
+  },
+  {
+    "id": "CKA-05-011",
+    "theme": "Troubleshooting",
+    "theme_label": "Resource usage",
+    "difficulty": "easy",
+    "question": "Comment voir l'utilisation des ressources des pods ?",
+    "options": [
+      "kubectl top pod",
+      "kubectl top pod --all-namespaces",
+      "kubectl top pod --containers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl top nécessite Metrics Server."
+  },
+  {
+    "id": "CKA-05-012",
+    "theme": "Troubleshooting",
+    "theme_label": "Resource usage",
+    "difficulty": "easy",
+    "question": "Comment voir l'utilisation des ressources des nœuds ?",
+    "options": [
+      "kubectl top nodes",
+      "kubectl top node",
+      "kubectl describe node",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "top nodes montre CPU et mémoire."
+  },
+  {
+    "id": "CKA-05-013",
+    "theme": "Troubleshooting",
+    "theme_label": "Debug pod",
+    "difficulty": "easy",
+    "question": "Comment créer un pod de débogage temporaire ?",
+    "options": [
+      "kubectl run debug --image=busybox -it --rm --restart=Never -- /bin/sh",
+      "kubectl debug pod <pod> -it --image=busybox",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "kubectl debug (v1.18+) est plus puissant."
+  },
+  {
+    "id": "CKA-05-014",
+    "theme": "Troubleshooting",
+    "theme_label": "Debug pod",
+    "difficulty": "easy",
+    "question": "Comment partager le network namespace d'un pod existant ?",
+    "options": [
+      "kubectl debug -it <pod> --image=busybox --target=<pod>",
+      "kubectl run debug --image=busybox --network=container:<pod>",
+      "kubectl exec -it <pod> -- /bin/sh",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "kubectl debug avec --target partage le namespace réseau."
+  },
+  {
+    "id": "CKA-05-015",
+    "theme": "Troubleshooting",
+    "theme_label": "Service troubleshooting",
+    "difficulty": "easy",
+    "question": "Comment vérifier si un service fonctionne correctement ?",
+    "options": [
+      "kubectl get endpoints <service>",
+      "kubectl describe service <service>",
+      "kubectl exec -it <pod> -- curl http://<service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les endpoints doivent lister les pods."
+  },
+  {
+    "id": "CKA-05-016",
+    "theme": "Troubleshooting",
+    "theme_label": "Service troubleshooting",
+    "difficulty": "easy",
+    "question": "Les endpoints d'un service sont vides. Quelle pourrait être la cause ?",
+    "options": [
+      "Le sélecteur ne correspond à aucun pod",
+      "Les pods sont dans un autre namespace",
+      "Les pods ne sont pas prêts",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier le selector, les labels des pods, et les readiness probes."
+  },
+  {
+    "id": "CKA-05-017",
+    "theme": "Troubleshooting",
+    "theme_label": "DNS troubleshooting",
+    "difficulty": "easy",
+    "question": "Comment tester la résolution DNS depuis un pod ?",
+    "options": [
+      "kubectl exec -it <pod> -- nslookup kubernetes.default",
+      "kubectl exec -it <pod> -- cat /etc/resolv.conf",
+      "kubectl exec -it <pod> -- ping <service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier que le pod utilise le serveur DNS du cluster (kube-dns)."
+  },
+  {
+    "id": "CKA-05-018",
+    "theme": "Troubleshooting",
+    "theme_label": "DNS troubleshooting",
+    "difficulty": "easy",
+    "question": "Quel est le nom DNS du service Kubernetes API ?",
+    "options": [
+      "kubernetes.default.svc.cluster.local",
+      "kube-apiserver.default.svc",
+      "api.default.svc",
+      "kubernetes.default"
+    ],
+    "correct": 0,
+    "explication": "Le service kubernetes dans le namespace default."
+  },
+  {
+    "id": "CKA-05-019",
+    "theme": "Troubleshooting",
+    "theme_label": "Certificates",
+    "difficulty": "easy",
+    "question": "Comment vérifier l'expiration des certificats du cluster ?",
+    "options": [
+      "kubeadm certs check-expiration",
+      "openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout",
+      "kubectl get csr",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "kubeadm certs check-expiration est la commande pratique."
+  },
+  {
+    "id": "CKA-05-020",
+    "theme": "Troubleshooting",
+    "theme_label": "Certificates",
+    "difficulty": "easy",
+    "question": "Comment renouveler les certificats avec kubeadm ?",
+    "options": [
+      "kubeadm certs renew all",
+      "kubeadm upgrade apply",
+      "kubeadm init --renew-certs",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "renew all renouvelle tous les certificats."
+  },
+  {
+    "id": "CKA-05-021",
+    "theme": "Troubleshooting",
+    "theme_label": "API server",
+    "difficulty": "easy",
+    "question": "Comment vérifier que l'API server fonctionne ?",
+    "options": [
+      "kubectl cluster-info",
+      "kubectl get --raw /healthz",
+      "curl -k https://<master>:6443/healthz",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Le endpoint /healthz retourne OK si l'API server est sain."
+  },
+  {
+    "id": "CKA-05-022",
+    "theme": "Troubleshooting",
+    "theme_label": "Scheduler",
+    "difficulty": "easy",
+    "question": "Comment savoir pourquoi un pod n'est pas programmé ?",
+    "options": [
+      "kubectl describe pod <pod> (voir Events)",
+      "kubectl get events --field-selector involvedObject.name=<pod>",
+      "kubectl logs kube-scheduler-<node> -n kube-system",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les événements du pod contiennent le message du scheduler."
+  },
+  {
+    "id": "CKA-05-023",
+    "theme": "Troubleshooting",
+    "theme_label": "Controller manager",
+    "difficulty": "easy",
+    "question": "Comment vérifier que le controller manager fonctionne ?",
+    "options": [
+      "kubectl get --raw /healthz/healthz-kube-controller-manager",
+      "kubectl get pods -n kube-system | grep controller-manager",
+      "kubectl logs kube-controller-manager-<node> -n kube-system",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Le controller manager expose un healthz."
+  },
+  {
+    "id": "CKA-05-024",
+    "theme": "Troubleshooting",
+    "theme_label": "etcd",
+    "difficulty": "easy",
+    "question": "Comment vérifier l'état du cluster etcd ?",
+    "options": [
+      "ETCDCTL_API=3 etcdctl endpoint health",
+      "kubectl get pods -n kube-system | grep etcd",
+      "etcdctl cluster health",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "etcdctl endpoint health vérifie la santé."
+  },
+  {
+    "id": "CKA-05-025",
+    "theme": "Troubleshooting",
+    "theme_label": "etcd",
+    "difficulty": "easy",
+    "question": "Comment sauvegarder etcd ?",
+    "options": [
+      "ETCDCTL_API=3 etcdctl snapshot save snapshot.db",
+      "etcdctl backup",
+      "kubectl backup etcd",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "etcdctl snapshot save est la commande standard."
+  },
+  {
+    "id": "CKA-05-026",
+    "theme": "Troubleshooting",
+    "theme_label": "Kubelet",
+    "difficulty": "easy",
+    "question": "Comment vérifier l'état du kubelet sur un nœud ?",
+    "options": [
+      "systemctl status kubelet",
+      "journalctl -u kubelet -f",
+      "kubectl get nodes",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Sur le nœud, systemctl et journalctl."
+  },
+  {
+    "id": "CKA-05-027",
+    "theme": "Troubleshooting",
+    "theme_label": "Kubelet",
+    "difficulty": "easy",
+    "question": "Où sont stockés les logs du kubelet ?",
+    "options": [
+      "/var/log/kubelet.log",
+      "journalctl -u kubelet",
+      "/var/log/messages",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Sur les systèmes systemd, journalctl est la méthode standard."
+  },
+  {
+    "id": "CKA-05-028",
+    "theme": "Troubleshooting",
+    "theme_label": "Container runtime",
+    "difficulty": "easy",
+    "question": "Comment vérifier le container runtime utilisé ?",
+    "options": [
+      "kubectl get nodes -o wide",
+      "kubectl describe node | grep Runtime",
+      "kubectl version --short",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "kubectl get nodes -o wide montre le runtime."
+  },
+  {
+    "id": "CKA-05-029",
+    "theme": "Troubleshooting",
+    "theme_label": "Container runtime",
+    "difficulty": "easy",
+    "question": "Comment inspecter les conteneurs avec containerd ?",
+    "options": [
+      "crictl ps",
+      "crictl inspect <container>",
+      "docker ps (si Docker)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "crictl est l'outil CRI pour interagir avec le runtime."
+  },
+  {
+    "id": "CKA-05-030",
+    "theme": "Troubleshooting",
+    "theme_label": "Network",
+    "difficulty": "easy",
+    "question": "Comment vérifier la connectivité réseau entre deux pods ?",
+    "options": [
+      "kubectl exec pod1 -- ping <pod2-ip>",
+      "kubectl exec pod1 -- curl http://<pod2-ip>:<port>",
+      "kubectl exec pod1 -- nslookup <service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Utiliser ping, curl, ou netcat depuis un pod."
+  },
+  {
+    "id": "CKA-05-031",
+    "theme": "Troubleshooting",
+    "theme_label": "Network policies",
+    "difficulty": "easy",
+    "question": "Pourquoi une NetworkPolicy peut-elle bloquer le trafic ?",
+    "options": [
+      "Par défaut, les policies sont en whitelist (rien n'est autorisé si une policy existe)",
+      "La policy peut être mal configurée",
+      "Le CNI peut ne pas supporter les policies",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Une fois une NetworkPolicy créée, tout le trafic non autorisé est bloqué."
+  },
+  {
+    "id": "CKA-05-032",
+    "theme": "Troubleshooting",
+    "theme_label": "Storage",
+    "difficulty": "easy",
+    "question": "Pourquoi un PVC reste-t-il en statut Pending ?",
+    "options": [
+      "Aucun PV disponible",
+      "La StorageClass n'existe pas",
+      "Le provisionneur dynamique ne fonctionne pas",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl describe pvc monpvc montre la raison."
+  },
+  {
+    "id": "CKA-05-033",
+    "theme": "Troubleshooting",
+    "theme_label": "Storage",
+    "difficulty": "easy",
+    "question": "Comment vérifier qu'un volume est monté correctement ?",
+    "options": [
+      "kubectl exec <pod> -- df -h",
+      "kubectl exec <pod> -- mount | grep <path>",
+      "kubectl describe pod <pod> | grep Mounts",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier le point de montage et l'espace disque."
+  },
+  {
+    "id": "CKA-05-034",
+    "theme": "Troubleshooting",
+    "theme_label": "Quota",
+    "difficulty": "easy",
+    "question": "Comment vérifier les ResourceQuotas dans un namespace ?",
+    "options": [
+      "kubectl get resourcequota",
+      "kubectl describe resourcequota",
+      "kubectl get quota",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les ResourceQuotas limitent les ressources dans un namespace."
+  },
+  {
+    "id": "CKA-05-035",
+    "theme": "Troubleshooting",
+    "theme_label": "LimitRange",
+    "difficulty": "easy",
+    "question": "Que fait un LimitRange ?",
+    "options": [
+      "Définit des valeurs par défaut/min/max pour les ressources des conteneurs",
+      "Limite le nombre de pods",
+      "Limite le nombre de services",
+      "Limite le nombre de PVC"
+    ],
+    "correct": 0,
+    "explication": "LimitRange s'applique au niveau du namespace."
+  },
+  {
+    "id": "CKA-05-036",
+    "theme": "Troubleshooting",
+    "theme_label": "API priority and fairness",
+    "difficulty": "easy",
+    "question": "Que sont les APF (API Priority and Fairness) ?",
+    "options": [
+      "Mécanisme pour prioriser les requêtes API",
+      "Protection contre le flooding",
+      "A et B",
+      "Uniquement pour les administrateurs"
+    ],
+    "correct": 2,
+    "explication": "APF améliore la stabilité de l'API server sous charge."
+  },
+  {
+    "id": "CKA-05-037",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl get",
+    "difficulty": "easy",
+    "question": "Comment obtenir la sortie en YAML d'une ressource ?",
+    "options": [
+      "kubectl get <type> <nom> -o yaml",
+      "kubectl get <type> <nom> --output=yaml",
+      "kubectl describe <type> <nom> -o yaml",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "-o yaml ou --output=yaml."
+  },
+  {
+    "id": "CKA-05-038",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl get",
+    "difficulty": "easy",
+    "question": "Comment surveiller en temps réel les changements de ressources ?",
+    "options": [
+      "kubectl get pods -w",
+      "kubectl get pods --watch",
+      "kubectl get pods -o wide -w",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "-w ou --watch surveille les événements."
+  },
+  {
+    "id": "CKA-05-039",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl describe",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre kubectl get et kubectl describe ?",
+    "options": [
+      "describe montre plus de détails (events, conditions)",
+      "get montre l'état résumé",
+      "describe est plus verbeux",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "describe est utile pour le dépannage."
+  },
+  {
+    "id": "CKA-05-040",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl explain",
+    "difficulty": "easy",
+    "question": "Que fait kubectl explain ?",
+    "options": [
+      "Affiche la documentation des champs d'une ressource",
+      "Explique la ressource",
+      "kubectl explain pod.spec.containers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "explain est très utile pour écrire des manifests."
+  },
+  {
+    "id": "CKA-05-041",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl patch",
+    "difficulty": "easy",
+    "question": "Comment mettre à jour un champ d'une ressource en ligne de commande ?",
+    "options": [
+      "kubectl patch pod monpod -p '{\"spec\":{\"containers\":[{\"name\":\"nginx\",\"image\":\"nginx:1.20\"}]}}'",
+      "kubectl edit pod monpod",
+      "kubectl replace -f fichier.yaml",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "patch est utile pour les modifications stratégiques."
+  },
+  {
+    "id": "CKA-05-042",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl set",
+    "difficulty": "easy",
+    "question": "Comment changer l'image d'un deployment avec kubectl set ?",
+    "options": [
+      "kubectl set image deployment/mondeploy nginx=nginx:1.20",
+      "kubectl set image deployment mondeploy nginx=nginx:1.20",
+      "kubectl set deployment mondeploy image nginx=nginx:1.20",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "set image est pratique pour les mises à jour rapides."
+  },
+  {
+    "id": "CKA-05-043",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl cordon/uncordon",
+    "difficulty": "easy",
+    "question": "Que fait kubectl cordon <node> ?",
+    "options": [
+      "Marque le nœud comme non schedulable",
+      "Empêche les nouveaux pods d'être placés sur ce nœud",
+      "N'affecte pas les pods existants",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "cordon est utilisé avant maintenance."
+  },
+  {
+    "id": "CKA-05-044",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl drain",
+    "difficulty": "easy",
+    "question": "Que fait kubectl drain <node> ?",
+    "options": [
+      "Évacue tous les pods du nœud",
+      "Marque le nœud comme non schedulable",
+      "Supprime les pods (respecte les PDB)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "drain prépare le nœud pour maintenance."
+  },
+  {
+    "id": "CKA-05-045",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl taint",
+    "difficulty": "easy",
+    "question": "Comment ajouter une taint à un nœud ?",
+    "options": [
+      "kubectl taint nodes node1 key=value:NoSchedule",
+      "kubectl taint node node1 key=value:NoSchedule",
+      "kubectl taint node1 key=value:NoSchedule",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "kubectl taint nodes <node> <key>=<value>:<effect>."
+  },
+  {
+    "id": "CKA-05-046",
+    "theme": "Troubleshooting",
+    "theme_label": "kubectl top",
+    "difficulty": "easy",
+    "question": "kubectl top nécessite-t-il un add-on ?",
+    "options": ["Oui (Metrics Server)", "Non", "Uniquement pour les nœuds", "Uniquement pour les pods"],
+    "correct": 0,
+    "explication": "Metrics Server doit être installé pour kubectl top."
+  },
+  {
+    "id": "CKA-05-047",
+    "theme": "Troubleshooting",
+    "theme_label": "Profiling",
+    "difficulty": "easy",
+    "question": "Comment activer le profiling sur kube-proxy ?",
+    "options": [
+      "--profiling=true",
+      "kubectl proxy --profiling",
+      "Modifier le manifeste du pod",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Le profiling expose des métriques de performance."
+  },
+  {
+    "id": "CKA-05-048",
+    "theme": "Troubleshooting",
+    "theme_label": "Audit logs",
+    "difficulty": "easy",
+    "question": "Où sont configurés les audit logs de l'API server ?",
+    "options": [
+      "Fichier de configuration de l'API server (--audit-policy-file)",
+      "kube-apiserver.yaml",
+      "kubectl edit configmap",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les audit logs enregistrent les requêtes API."
+  },
+  {
+    "id": "CKA-05-049",
+    "theme": "Troubleshooting",
+    "theme_label": "Debug container",
+    "difficulty": "easy",
+    "question": "Comment ajouter un conteneur de debug temporaire à un pod existant ?",
+    "options": [
+      "kubectl debug -it <pod> --image=busybox",
+      "kubectl run debug --image=busybox --share-processes=<pod>",
+      "kubectl exec -it <pod> -- /bin/sh",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "kubectl debug (v1.18+) crée un conteneur éphémère dans le pod."
+  },
+  {
+    "id": "CKA-05-050",
+    "theme": "Troubleshooting",
+    "theme_label": "Ephemeral containers",
+    "difficulty": "easy",
+    "question": "Les conteneurs éphémères sont-ils persistants après redémarrage du pod ?",
+    "options": ["Non", "Oui", "Uniquement si spécifié", "Dépend du pod"],
+    "correct": 0,
+    "explication": "Ils sont temporaires et utiles pour le debugging."
+  }
+]

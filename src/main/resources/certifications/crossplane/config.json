@@ -1,0 +1,32 @@
+{
+  "id": "crossplane",
+  "name": "Crossplane Associate (Upbound)",
+  "version": "1.0",
+  "description": "Certification Crossplane - Control plane universel pour infrastructure multicloud",
+  "totalQuestions": 200,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Crossplane Concepts",
+      "count": 50
+    },
+    {
+      "name": "Providers",
+      "count": 40
+    },
+    {
+      "name": "Managed Resources",
+      "count": 40
+    },
+    {
+      "name": "Compositions",
+      "count": 40
+    },
+    {
+      "name": "Composite Resources",
+      "count": 30
+    }
+  ]
+}

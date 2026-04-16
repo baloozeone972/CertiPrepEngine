@@ -1,0 +1,788 @@
+[
+  {
+    "id": "DKR-01-001",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Quelle commande liste tous les conteneurs en cours d'exécution ?",
+    "options": [
+      "docker ps",
+      "docker container ls",
+      "docker list",
+      "docker ps et docker container ls"
+    ],
+    "correct": 3,
+    "explanation": "docker ps et docker container ls sont équivalents pour lister les conteneurs actifs."
+  },
+  {
+    "id": "DKR-01-002",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment lister tous les conteneurs (y compris arrêtés) ?",
+    "options": [
+      "docker ps -a",
+      "docker ps --all",
+      "docker container ls -a",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "-a ou --all liste tous les conteneurs, actifs ou arrêtés."
+  },
+  {
+    "id": "DKR-01-003",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment démarrer un conteneur arrêté ?",
+    "options": [
+      "docker start <container>",
+      "docker run <container>",
+      "docker restart <container>",
+      "docker exec <container>"
+    ],
+    "correct": 0,
+    "explication": "docker start démarre un conteneur existant arrêté."
+  },
+  {
+    "id": "DKR-01-004",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment arrêter un conteneur en cours d'exécution ?",
+    "options": [
+      "docker stop <container>",
+      "docker kill <container>",
+      "docker pause <container>",
+      "docker rm <container>"
+    ],
+    "correct": 0,
+    "explication": "docker stop arrête proprement le conteneur (SIGTERM)."
+  },
+  {
+    "id": "DKR-01-005",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment supprimer un conteneur arrêté ?",
+    "options": [
+      "docker rm <container>",
+      "docker rmi <container>",
+      "docker container remove <container>",
+      "docker delete <container>"
+    ],
+    "correct": 0,
+    "explication": "docker rm supprime un conteneur (doit être arrêté ou utiliser -f)."
+  },
+  {
+    "id": "DKR-01-006",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment supprimer tous les conteneurs arrêtés ?",
+    "options": [
+      "docker container prune",
+      "docker rm $(docker ps -a -q)",
+      "docker system prune",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs méthodes pour nettoyer les conteneurs arrêtés."
+  },
+  {
+    "id": "DKR-01-007",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment exécuter une commande dans un conteneur en cours d'exécution ?",
+    "options": [
+      "docker exec <container> <commande>",
+      "docker run <container> <commande>",
+      "docker attach <container>",
+      "docker exec -it <container> bash"
+    ],
+    "correct": 0,
+    "explication": "docker exec exécute une commande dans un conteneur existant."
+  },
+  {
+    "id": "DKR-01-008",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment obtenir un shell interactif dans un conteneur ?",
+    "options": [
+      "docker exec -it <container> bash",
+      "docker run -it <image> bash",
+      "docker attach <container>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "exec pour conteneur existant, run pour nouveau conteneur."
+  },
+  {
+    "id": "DKR-01-009",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Que fait l'option '-it' dans 'docker run -it ubuntu bash' ?",
+    "options": [
+      "Interactive et pseudo-TTY",
+      "Image et tag",
+      "Internal et timeout",
+      "Install et test"
+    ],
+    "correct": 0,
+    "explication": "-it combine -i (interactive) et -t (pseudo-TTY) pour une session interactive."
+  },
+  {
+    "id": "DKR-01-010",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment voir les logs d'un conteneur ?",
+    "options": [
+      "docker logs <container>",
+      "docker logs -f <container>",
+      "docker logs --tail 100 <container>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "docker logs avec options -f (follow) ou --tail."
+  },
+  {
+    "id": "DKR-01-011",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "question": "Comment inspecter les détails d'un conteneur ou d'une image ?",
+    "options": [
+      "docker inspect <container/image>",
+      "docker info <container>",
+      "docker details <container>",
+      "docker show <container>"
+    ],
+    "correct": 0,
+    "explication": "docker inspect retourne des informations JSON détaillées."
+  },
+  {
+    "id": "DKR-01-012",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment lister les images Docker locales ?",
+    "options": [
+      "docker images",
+      "docker image ls",
+      "docker images -a",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "docker images et docker image ls sont équivalents."
+  },
+  {
+    "id": "DKR-01-013",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment supprimer une image Docker ?",
+    "options": [
+      "docker rmi <image>",
+      "docker image rm <image>",
+      "docker rm <image>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "docker rmi ou docker image rm supprime une image."
+  },
+  {
+    "id": "DKR-01-014",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment supprimer toutes les images non utilisées ?",
+    "options": [
+      "docker image prune",
+      "docker system prune -a",
+      "docker rmi $(docker images -q)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs méthodes pour nettoyer les images inutilisées."
+  },
+  {
+    "id": "DKR-01-015",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment taguer une image ?",
+    "options": [
+      "docker tag <source> <target>",
+      "docker image tag <source> <target>",
+      "docker tag <image> <repository>:<tag>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "docker tag crée un alias pour une image."
+  },
+  {
+    "id": "DKR-01-016",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment pousser une image vers un registre (ex: Docker Hub) ?",
+    "options": [
+      "docker push <image>",
+      "docker image push <image>",
+      "docker upload <image>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "docker push envoie l'image vers le registre configuré."
+  },
+  {
+    "id": "DKR-01-017",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment tirer une image depuis un registre ?",
+    "options": [
+      "docker pull <image>",
+      "docker image pull <image>",
+      "docker fetch <image>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "docker pull télécharge une image depuis un registre."
+  },
+  {
+    "id": "DKR-01-018",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment sauvegarder une image dans un fichier tar ?",
+    "options": [
+      "docker save -o fichier.tar <image>",
+      "docker export -o fichier.tar <conteneur>",
+      "docker image save > fichier.tar",
+      "docker backup <image>"
+    ],
+    "correct": 0,
+    "explication": "docker save exporte une image (avec son historique)."
+  },
+  {
+    "id": "DKR-01-019",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Comment charger une image depuis un fichier tar ?",
+    "options": [
+      "docker load -i fichier.tar",
+      "docker import fichier.tar",
+      "docker image load < fichier.tar",
+      "docker restore fichier.tar"
+    ],
+    "correct": 0,
+    "explication": "docker load importe une image sauvegardée avec save."
+  },
+  {
+    "id": "DKR-01-020",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "question": "Différence entre docker save et docker export ?",
+    "options": [
+      "save pour images, export pour conteneurs",
+      "save pour conteneurs, export pour images",
+      "Identiques",
+      "save conserve l'historique, export non"
+    ],
+    "correct": 0,
+    "explication": "save exporte une image (couches), export exporte un conteneur (système de fichiers)."
+  },
+  {
+    "id": "DKR-01-021",
+    "theme": "Docker Basics",
+    "theme_label": "Architecture",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le daemon Docker ?",
+    "options": [
+      "Service qui gère les conteneurs (dockerd)",
+      "Client Docker",
+      "Registre",
+      "Orchestrateur"
+    ],
+    "correct": 0,
+    "explication": "Le daemon Docker (dockerd) écoute les requêtes de l'API Docker."
+  },
+  {
+    "id": "DKR-01-022",
+    "theme": "Docker Basics",
+    "theme_label": "Architecture",
+    "difficulty": "easy",
+    "question": "Quel protocole utilise le client Docker pour communiquer avec le daemon ?",
+    "options": [
+      "HTTP/HTTPS (Unix socket ou TCP)",
+      "gRPC",
+      "WebSocket",
+      "TCP seulement"
+    ],
+    "correct": 0,
+    "explication": "Le client Docker communique via l'API REST sur un socket Unix (par défaut) ou TCP."
+  },
+  {
+    "id": "DKR-01-023",
+    "theme": "Docker Basics",
+    "theme_label": "Architecture",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Docker Hub ?",
+    "options": [
+      "Registre public d'images Docker",
+      "Orchestrateur",
+      "Daemon",
+      "Client"
+    ],
+    "correct": 0,
+    "explication": "Docker Hub est le registre par défaut pour partager des images."
+  },
+  {
+    "id": "DKR-01-024",
+    "theme": "Docker Basics",
+    "theme_label": "Conteneurs vs VMs",
+    "difficulty": "easy",
+    "question": "Les conteneurs partagent-ils le noyau de l'hôte ?",
+    "options": ["Oui", "Non", "Uniquement sur Linux", "Uniquement sur Windows"],
+    "correct": 0,
+    "explication": "Les conteneurs utilisent le noyau de l'hôte (isolation via namespaces)."
+  },
+  {
+    "id": "DKR-01-025",
+    "theme": "Docker Basics",
+    "theme_label": "Conteneurs vs VMs",
+    "difficulty": "easy",
+    "question": "Les conteneurs sont-ils plus légers que les VMs ?",
+    "options": ["Oui", "Non", "Pareil", "Dépend du workload"],
+    "correct": 0,
+    "explication": "Les conteneurs partagent le noyau, donc démarrage rapide et faible overhead."
+  },
+  {
+    "id": "DKR-01-026",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle commande construit une image à partir d'un Dockerfile ?",
+    "options": [
+      "docker build -t myimage .",
+      "docker create -t myimage .",
+      "docker make -t myimage .",
+      "docker compile -t myimage ."
+    ],
+    "correct": 0,
+    "explication": "docker build construit l'image à partir du Dockerfile dans le contexte courant."
+  },
+  {
+    "id": "DKR-01-027",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction Dockerfile définit l'image de base ?",
+    "options": ["FROM", "BASE", "IMAGE", "LAYER"],
+    "correct": 0,
+    "explication": "FROM spécifie l'image parente."
+  },
+  {
+    "id": "DKR-01-028",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction copie des fichiers depuis l'hôte dans l'image ?",
+    "options": ["COPY", "ADD", "CP", "A et B"],
+    "correct": 3,
+    "explication": "COPY et ADD copient des fichiers. ADD supporte les URLs et les archives."
+  },
+  {
+    "id": "DKR-01-029",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction exécute des commandes pendant la construction ?",
+    "options": ["RUN", "CMD", "ENTRYPOINT", "EXEC"],
+    "correct": 0,
+    "explication": "RUN exécute des commandes pour créer des couches."
+  },
+  {
+    "id": "DKR-01-030",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit la commande par défaut à exécuter dans le conteneur ?",
+    "options": ["CMD", "ENTRYPOINT", "RUN", "START"],
+    "correct": 0,
+    "explication": "CMD fournit les arguments par défaut (peut être remplacé)."
+  },
+  {
+    "id": "DKR-01-031",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit le point d'entrée (ne peut être remplacé facilement) ?",
+    "options": ["ENTRYPOINT", "CMD", "RUN", "START"],
+    "correct": 0,
+    "explication": "ENTRYPOINT configure l'exécutable qui ne peut être écrasé."
+  },
+  {
+    "id": "DKR-01-032",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction expose un port ?",
+    "options": ["EXPOSE", "PORT", "PUBLISH", "OPEN"],
+    "correct": 0,
+    "explication": "EXPOSE documente les ports, mais ne les publie pas (nécessite -p)."
+  },
+  {
+    "id": "DKR-01-033",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit une variable d'environnement ?",
+    "options": ["ENV", "ARG", "SET", "VAR"],
+    "correct": 0,
+    "explication": "ENV définit une variable d'environnement persistante."
+  },
+  {
+    "id": "DKR-01-034",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit une variable de build (non persistante) ?",
+    "options": ["ARG", "ENV", "PARAM", "BUILD_ARG"],
+    "correct": 0,
+    "explication": "ARG est disponible pendant le build seulement, pas dans le conteneur final."
+  },
+  {
+    "id": "DKR-01-035",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction change le répertoire de travail ?",
+    "options": ["WORKDIR", "CD", "DIR", "PWD"],
+    "correct": 0,
+    "explication": "WORKDIR définit le répertoire courant pour les instructions suivantes."
+  },
+  {
+    "id": "DKR-01-036",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit l'utilisateur pour exécuter le conteneur ?",
+    "options": ["USER", "RUNAS", "UID", "USERNAME"],
+    "correct": 0,
+    "explication": "USER change l'utilisateur par défaut (UID/GID)."
+  },
+  {
+    "id": "DKR-01-037",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit un point de montage de volume ?",
+    "options": ["VOLUME", "MOUNT", "VOL", "BIND"],
+    "correct": 0,
+    "explication": "VOLUME crée un point de montage pour un volume anonyme."
+  },
+  {
+    "id": "DKR-01-038",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction indique que le conteneur écoute sur un port ?",
+    "options": ["EXPOSE", "PORT", "LISTEN", "OPEN"],
+    "correct": 0,
+    "explication": "EXPOSE est informatif (n'ouvre pas réellement le port)."
+  },
+  {
+    "id": "DKR-01-039",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction exécute une commande lors de la création du conteneur (juste avant le démarrage) ?",
+    "options": ["ONBUILD", "RUN", "CMD", "ENTRYPOINT"],
+    "correct": 0,
+    "explication": "ONBUILD ajoute une instruction qui sera exécutée lors de la construction d'une image enfant."
+  },
+  {
+    "id": "DKR-01-040",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit une étiquette (métadonnée) sur l'image ?",
+    "options": ["LABEL", "TAG", "METADATA", "ANNOTATE"],
+    "correct": 0,
+    "explication": "LABEL ajoute des métadonnées (ex: version, maintainer)."
+  },
+  {
+    "id": "DKR-01-041",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction vérifie l'état de santé du conteneur ?",
+    "options": ["HEALTHCHECK", "HEALTH", "CHECK", "STATUS"],
+    "correct": 0,
+    "explication": "HEALTHCHECK définit une commande pour vérifier si le conteneur fonctionne."
+  },
+  {
+    "id": "DKR-01-042",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction définit le shell par défaut ?",
+    "options": ["SHELL", "CMD", "RUN", "ENTRYPOINT"],
+    "correct": 0,
+    "explication": "SHELL change le shell par défaut (ex: powershell)."
+  },
+  {
+    "id": "DKR-01-043",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction permet d'optimiser le cache en fusionnant plusieurs commandes ?",
+    "options": ["Chaque instruction crée une couche, donc regrouper avec &&"],
+    "options_list": [
+      "Chaque RUN crée une couche, il faut regrouper avec &&",
+      "Utiliser --squash",
+      "Utiliser --no-cache",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explication": "Regrouper les commandes avec && réduit le nombre de couches."
+  },
+  {
+    "id": "DKR-01-044",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction crée un utilisateur ?",
+    "options": ["RUN useradd", "USERADD", "ADDUSER", "RUN adduser"],
+    "correct": 0,
+    "explication": "Utiliser RUN avec useradd ou adduser."
+  },
+  {
+    "id": "DKR-01-045",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "question": "Quelle instruction supprime le cache ?",
+    "options": ["--no-cache", "--no-cache=true", "--no-cache-dir", "A et B"],
+    "correct": 3,
+    "explication": "L'option --no-cache lors de docker build évite l'utilisation du cache."
+  },
+  {
+    "id": "DKR-01-046",
+    "theme": "Docker Basics",
+    "theme_label": "Registre",
+    "difficulty": "easy",
+    "question": "Quelle commande se connecte à un registre ?",
+    "options": ["docker login", "docker auth", "docker registry login", "docker connect"],
+    "correct": 0,
+    "explication": "docker login s'authentifie auprès d'un registre (Docker Hub, privé)."
+  },
+  {
+    "id": "DKR-01-047",
+    "theme": "Docker Basics",
+    "theme_label": "Registre",
+    "difficulty": "easy",
+    "question": "Comment se déconnecter d'un registre ?",
+    "options": ["docker logout", "docker login --logout", "docker auth logout", "docker signout"],
+    "correct": 0,
+    "explication": "docker logout supprime les identifiants stockés."
+  },
+  {
+    "id": "DKR-01-048",
+    "theme": "Docker Basics",
+    "theme_label": "Registre",
+    "difficulty": "easy",
+    "question": "Quelle commande recherche des images sur Docker Hub ?",
+    "options": ["docker search <terme>", "docker find <terme>", "docker query <terme>", "docker look <terme>"],
+    "correct": 0,
+    "explication": "docker search interroge Docker Hub pour des images publiques."
+  },
+  {
+    "id": "DKR-01-049",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Quelle commande exécute un conteneur en mode privilégié ?",
+    "options": [
+      "docker run --privileged",
+      "docker run --root",
+      "docker run --admin",
+      "docker run --full-access"
+    ],
+    "correct": 0,
+    "explication": "--privileged donne tous les accès (dangereux)."
+  },
+  {
+    "id": "DKR-01-050",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Comment limiter la mémoire d'un conteneur ?",
+    "options": [
+      "docker run --memory=512m",
+      "docker run --mem-limit=512m",
+      "docker run -m 512m",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "--memory ou -m limite la mémoire."
+  },
+  {
+    "id": "DKR-01-051",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Comment limiter l'utilisation CPU d'un conteneur ?",
+    "options": [
+      "docker run --cpus=1.5",
+      "docker run --cpu-shares=512",
+      "docker run --cpu-quota",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs options pour limiter le CPU."
+  },
+  {
+    "id": "DKR-01-052",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le principe de moindre privilège dans Docker ?",
+    "options": [
+      "Ne pas donner plus de permissions que nécessaire",
+      "Toujours utiliser root",
+      "Désactiver les namespaces",
+      "Ignorer les capabilities"
+    ],
+    "correct": 0,
+    "explication": "Exécuter les conteneurs en tant qu'utilisateur non root, drop capabilities."
+  },
+  {
+    "id": "DKR-01-053",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Comment exécuter un conteneur avec un utilisateur spécifique ?",
+    "options": [
+      "docker run --user 1000:1000",
+      "docker run -u 1000",
+      "docker run --uid 1000",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "--user ou -u définit l'UID/GID."
+  },
+  {
+    "id": "DKR-01-054",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Quelle option retire toutes les capacités Linux d'un conteneur ?",
+    "options": [
+      "docker run --cap-drop=ALL",
+      "docker run --no-cap",
+      "docker run --disable-cap",
+      "docker run --drop-all"
+    ],
+    "correct": 0,
+    "explication": "--cap-drop=ALL supprime toutes les capacités, puis on peut ajouter celles nécessaires."
+  },
+  {
+    "id": "DKR-01-055",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Comment ajouter une capacité spécifique ?",
+    "options": [
+      "docker run --cap-add=NET_ADMIN",
+      "docker run --add-cap=NET_ADMIN",
+      "docker run --cap=NET_ADMIN",
+      "docker run --enable-cap=NET_ADMIN"
+    ],
+    "correct": 0,
+    "explication": "--cap-add ajoute une capacité Linux."
+  },
+  {
+    "id": "DKR-01-056",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Quelle commande analyse les vulnérabilités d'une image ?",
+    "options": [
+      "docker scan",
+      "docker security scan",
+      "docker image scan",
+      "docker inspect --vuln"
+    ],
+    "correct": 0,
+    "explication": "docker scan (nécessite un abonnement Snyk ou Docker Scout)."
+  },
+  {
+    "id": "DKR-01-057",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Docker Content Trust (DCT) ?",
+    "options": [
+      "Vérification de signature des images",
+      "Chiffrement des images",
+      "Scan des vulnérabilités",
+      "Contrôle d'accès"
+    ],
+    "correct": 0,
+    "explication": "DCT utilise des signatures pour garantir l'intégrité des images."
+  },
+  {
+    "id": "DKR-01-058",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "easy",
+    "question": "Comment activer Docker Content Trust ?",
+    "options": [
+      "export DOCKER_CONTENT_TRUST=1",
+      "docker trust enable",
+      "docker --trust",
+      "docker content-trust on"
+    ],
+    "correct": 0,
+    "explication": "La variable d'environnement DOCKER_CONTENT_TRUST=1 active la vérification."
+  },
+  {
+    "id": "DKR-01-059",
+    "theme": "Docker Basics",
+    "theme_label": "Docker System",
+    "difficulty": "easy",
+    "question": "Quelle commande affiche les statistiques d'utilisation des ressources ?",
+    "options": [
+      "docker stats",
+      "docker system stats",
+      "docker top",
+      "docker info"
+    ],
+    "correct": 0,
+    "explication": "docker stats affiche CPU, mémoire, réseau, I/O des conteneurs en cours."
+  },
+  {
+    "id": "DKR-01-060",
+    "theme": "Docker Basics",
+    "theme_label": "Docker System",
+    "difficulty": "easy",
+    "question": "Quelle commande nettoie les ressources inutilisées (conteneurs, images, volumes, réseaux) ?",
+    "options": [
+      "docker system prune",
+      "docker cleanup",
+      "docker garbage collect",
+      "docker system clean"
+    ],
+    "correct": 0,
+    "explication": "docker system prune supprime les ressources non utilisées."
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "id": "QRK-REACT-001",
+    "theme": "Reactive",
+    "theme_label": "Mutiny",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Mutiny ?",
+    "options": [
+      "Bibliothèque reactive pour Quarkus",
+      "Framework web",
+      "ORM",
+      "Client HTTP"
+    ],
+    "correct": 0,
+    "explanation": "Mutiny est la bibliothèque reactive de Quarkus."
+  },
+  {
+    "id": "QRK-REACT-002",
+    "theme": "Reactive",
+    "theme_label": "Mutiny",
+    "difficulty": "hard",
+    "question": "Quels sont les types principaux de Mutiny ?",
+    "options": [
+      "Uni<T> et Multi<T>",
+      "Mono<T> et Flux<T>",
+      "Single<T> et Observable<T>",
+      "Promise<T> et Stream<T>"
+    ],
+    "correct": 0,
+    "explanation": "Uni pour 0/1 résultat, Multi pour flux."
+  },
+  {
+    "id": "QRK-REACT-003",
+    "theme": "Reactive",
+    "theme_label": "Uni",
+    "difficulty": "hard",
+    "question": "Que représente Uni<T> ?",
+    "options": [
+      "0 ou 1 résultat",
+      "Flux de résultats",
+      "Résultat bloquant",
+      "Résultat synchrone"
+    ],
+    "correct": 0,
+    "explanation": "Uni émet au maximum un élément."
+  },
+  {
+    "id": "QRK-REACT-004",
+    "theme": "Reactive",
+    "theme_label": "Multi",
+    "difficulty": "hard",
+    "question": "Que représente Multi<T> ?",
+    "options": [
+      "Flux de résultats",
+      "0 ou 1 résultat",
+      "Résultat unique",
+      "Résultat optionnel"
+    ],
+    "correct": 0,
+    "explanation": "Multi émet un flux potentiellement infini d'éléments."
+  },
+  {
+    "id": "QRK-REACT-005",
+    "theme": "Reactive",
+    "theme_label": "Création Uni",
+    "difficulty": "hard",
+    "question": "Comment créer un Uni à partir d'une valeur ?",
+    "options": [
+      "Uni.createFrom().item(value)",
+      "Uni.of(value)",
+      "Uni.just(value)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de créer un Uni."
+  },
+  {
+    "id": "QRK-REACT-006",
+    "theme": "Reactive",
+    "theme_label": "Création Uni",
+    "difficulty": "hard",
+    "question": "Comment créer un Uni à partir d'une exception ?",
+    "options": [
+      "Uni.createFrom().failure(exception)",
+      "Uni.fail(exception)",
+      "Uni.error(exception)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de créer un Uni en échec."
+  },
+  {
+    "id": "QRK-REACT-007",
+    "theme": "Reactive",
+    "theme_label": "Création Multi",
+    "difficulty": "hard",
+    "question": "Comment créer un Multi à partir d'une liste ?",
+    "options": [
+      "Multi.createFrom().iterable(list)",
+      "Multi.of(list)",
+      "Multi.from(list)",
+      "Multi.just(list)"
+    ],
+    "correct": 0,
+    "explanation": "createFrom().iterable() convertit une liste en flux."
+  },
+  {
+    "id": "QRK-REACT-008",
+    "theme": "Reactive",
+    "theme_label": "Transformation",
+    "difficulty": "hard",
+    "question": "Comment transformer la valeur d'un Uni ?",
+    "options": [
+      "uni.onItem().transform(v -> ...)",
+      "uni.map(v -> ...)",
+      "uni.transform(v -> ...)",
+      "uni.onItem().apply(v -> ...)"
+    ],
+    "correct": 0,
+    "explanation": "onItem().transform() est la méthode standard."
+  },
+  {
+    "id": "QRK-REACT-009",
+    "theme": "Reactive",
+    "theme_label": "Transformation",
+    "difficulty": "hard",
+    "question": "Comment transformer un Uni en Multi ?",
+    "options": [
+      "uni.onItem().transformToMulti(v -> Multi.createFrom().item(v))",
+      "uni.toMulti()",
+      "uni.flatMap(v -> Multi.createFrom().item(v))",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "transformToMulti ou flatMap."
+  },
+  {
+    "id": "QRK-REACT-010",
+    "theme": "Reactive",
+    "theme_label": "Filtrage",
+    "difficulty": "hard",
+    "question": "Comment filtrer les éléments d'un Multi ?",
+    "options": [
+      "multi.onItem().filter(v -> condition)",
+      "multi.filter(v -> condition)",
+      "multi.select(v -> condition)",
+      "multi.where(v -> condition)"
+    ],
+    "correct": 0,
+    "explanation": "onItem().filter() conserve les éléments satisfaisant la condition."
+  },
+  {
+    "id": "QRK-REACT-011",
+    "theme": "Reactive",
+    "theme_label": "Combinaison",
+    "difficulty": "hard",
+    "question": "Comment combiner deux Uni ?",
+    "options": [
+      "Uni.combine().all().unis(uni1, uni2).combinedWith((a,b) -> ...)",
+      "uni1.and(uni2).with((a,b) -> ...)",
+      "uni1.join(uni2).with((a,b) -> ...)",
+      "Uni.zip(uni1, uni2).with((a,b) -> ...)"
+    ],
+    "correct": 0,
+    "explanation": "combine().all().unis() attend tous les résultats."
+  },
+  {
+    "id": "QRK-REACT-012",
+    "theme": "Reactive",
+    "theme_label": "Combinaison",
+    "difficulty": "hard",
+    "question": "Comment fusionner deux Multi ?",
+    "options": [
+      "Multi.createBy().merging().streams(multi1, multi2)",
+      "multi1.mergeWith(multi2)",
+      "multi1.concatWith(multi2)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Merge combine les flux en parallèle."
+  },
+  {
+    "id": "QRK-REACT-013",
+    "theme": "Reactive",
+    "theme_label": "Gestion erreurs",
+    "difficulty": "hard",
+    "question": "Comment gérer une erreur sur Uni ?",
+    "options": [
+      "uni.onFailure().recoverWithItem(v -> ...)",
+      "uni.onFailure().recoverWithUni(() -> ...)",
+      "uni.onFailure().retry()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs stratégies de récupération."
+  },
+  {
+    "id": "QRK-REACT-014",
+    "theme": "Reactive",
+    "theme_label": "Gestion erreurs",
+    "difficulty": "hard",
+    "question": "Comment retenter une opération en cas d'erreur ?",
+    "options": [
+      "uni.onFailure().retry().atMost(3)",
+      "uni.retry().maxAttempts(3)",
+      "uni.onFailure().retry().withBackOff(...)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "retry() avec backoff pour les politiques avancées."
+  },
+  {
+    "id": "QRK-REACT-015",
+    "theme": "Reactive",
+    "theme_label": "Subscription",
+    "difficulty": "hard",
+    "question": "Comment s'abonner à un Uni ?",
+    "options": [
+      "uni.subscribe().with(item -> ..., failure -> ...)",
+      "uni.subscribe().withSubscriber(subscriber)",
+      "uni.subscribe().withConsumer(consumer)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de s'abonner."
+  },
+  {
+    "id": "QRK-REACT-016",
+    "theme": "Reactive",
+    "theme_label": "Subscription",
+    "difficulty": "hard",
+    "question": "Comment s'abonner à un Multi ?",
+    "options": [
+      "multi.subscribe().with(item -> ..., failure -> ..., completion -> ...)",
+      "multi.subscribe().withSubscriber(subscriber)",
+      "multi.forEach().subscribe(item -> ...)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "with() prend jusqu'à 3 callbacks."
+  },
+  {
+    "id": "QRK-REACT-017",
+    "theme": "Reactive",
+    "theme_label": "Backpressure",
+    "difficulty": "hard",
+    "question": "Comment gérer la backpressure sur Multi ?",
+    "options": [
+      "multi.onOverflow().drop()",
+      "multi.onOverflow().buffer()",
+      "multi.onOverflow().throttle()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs stratégies de gestion de backpressure."
+  },
+  {
+    "id": "QRK-REACT-018",
+    "theme": "Reactive",
+    "theme_label": "Backpressure",
+    "difficulty": "hard",
+    "question": "Quelle est la stratégie par défaut ?",
+    "options": [
+      "Buffer",
+      "Drop",
+      "Fail",
+      "Ignore"
+    ],
+    "correct": 0,
+    "explanation": "Buffer est la stratégie par défaut."
+  },
+  {
+    "id": "QRK-REACT-019",
+    "theme": "Reactive",
+    "theme_label": "Threading",
+    "difficulty": "hard",
+    "question": "Sur quel thread s'exécute Uni ?",
+    "options": [
+      "Thread appelant",
+      "Event loop",
+      "Worker pool",
+      "Configurable"
+    ],
+    "correct": 1,
+    "explanation": "Par défaut sur l'event loop (non-bloquant)."
+  },
+  {
+    "id": "QRK-REACT-020",
+    "theme": "Reactive",
+    "theme_label": "Threading",
+    "difficulty": "hard",
+    "question": "Comment déplacer l'exécution sur un worker pool ?",
+    "options": [
+      "uni.runSubscriptionOn(Infrastructure.getDefaultWorkerPool())",
+      "uni.emitOn(Infrastructure.getDefaultWorkerPool())",
+      "@Blocking",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "runSubscriptionOn ou @Blocking."
+  },
+  {
+    "id": "QRK-REACT-021",
+    "theme": "Reactive",
+    "theme_label": "Reactive SQL",
+    "difficulty": "hard",
+    "question": "Quelle extension pour les bases de données réactives ?",
+    "options": [
+      "quarkus-reactive-pg-client",
+      "quarkus-reactive-mysql-client",
+      "quarkus-reactive-db2-client",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs clients réactifs pour différentes bases."
+  },
+  {
+    "id": "QRK-REACT-022",
+    "theme": "Reactive",
+    "theme_label": "Reactive SQL",
+    "difficulty": "hard",
+    "question": "Comment exécuter une requête reactive ?",
+    "options": [
+      "client.query(\"SELECT * FROM user\").onItem().transform(...)",
+      "client.preparedQuery(\"SELECT * FROM user\").execute()",
+      "client.query(\"SELECT * FROM user\").subscribe().with(...)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les clients réactifs retournent Uni/Multi."
+  },
+  {
+    "id": "QRK-REACT-023",
+    "theme": "Reactive",
+    "theme_label": "Reactive Routes",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Reactive Routes ?",
+    "options": [
+      "API de routage non-bloquante",
+      "Framework MVC",
+      "Client HTTP",
+      "ORM"
+    ],
+    "correct": 0,
+    "explanation": "Reactive Routes est une alternative à JAX-RS."
+  },
+  {
+    "id": "QRK-REACT-024",
+    "theme": "Reactive",
+    "theme_label": "Reactive Routes",
+    "difficulty": "hard",
+    "question": "Comment définir une route ?",
+    "options": [
+      "@Route(path = \"/api\")",
+      "routes.get(\"/api\").handler(rc -> ...)",
+      "@Path",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Annotations ou DSL pour définir les routes."
+  },
+  {
+    "id": "QRK-REACT-025",
+    "theme": "Reactive",
+    "theme_label": "Reactive Messaging",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Reactive Messaging ?",
+    "options": [
+      "Messaging non-bloquant",
+      "Message broker",
+      "Event sourcing",
+      "CQRS"
+    ],
+    "correct": 0,
+    "explanation": "Reactive Messaging est basé sur SmallRye Reactive Messaging."
+  },
+  {
+    "id": "QRK-REACT-026",
+    "theme": "Reactive",
+    "theme_label": "Reactive Messaging",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un producteur de messages ?",
+    "options": [
+      "@Outgoing",
+      "@Producer",
+      "@Emitter",
+      "@Source"
+    ],
+    "correct": 0,
+    "explanation": "@Outgoing marque une méthode ou un champ producteur."
+  },
+  {
+    "id": "QRK-REACT-027",
+    "theme": "Reactive",
+    "theme_label": "Reactive Messaging",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un consommateur de messages ?",
+    "options": [
+      "@Incoming",
+      "@Consumer",
+      "@Listener",
+      "@Sink"
+    ],
+    "correct": 0,
+    "explanation": "@Incoming marque une méthode consommatrice."
+  },
+  {
+    "id": "QRK-REACT-028",
+    "theme": "Reactive",
+    "theme_label": "Reactive Messaging",
+    "difficulty": "hard",
+    "question": "Quels sont les types supportés par Reactive Messaging ?",
+    "options": [
+      "Uni, Multi",
+      "CompletionStage",
+      "Message<T>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs types pour les messages."
+  },
+  {
+    "id": "QRK-REACT-029",
+    "theme": "Reactive",
+    "theme_label": "Kafka Reactive",
+    "difficulty": "hard",
+    "question": "Comment configurer un channel Kafka ?",
+    "options": [
+      "mp.messaging.outgoing.channel-name.connector=smallrye-kafka",
+      "mp.messaging.incoming.channel-name.connector=smallrye-kafka",
+      "application.properties",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration via properties pour les connectors."
+  },
+  {
+    "id": "QRK-REACT-030",
+    "theme": "Reactive",
+    "theme_label": "Kafka Reactive",
+    "difficulty": "hard",
+    "question": "Comment produire des messages Kafka ?",
+    "options": [
+      "@Outgoing(\"channel\") Multi<T> producer()",
+      "@Inject @Channel(\"channel\") Emitter<T> emitter",
+      "MutinyEmitter<T>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de produire des messages."
+  },
+  {
+    "id": "QRK-REACT-031",
+    "theme": "Reactive",
+    "theme_label": "Kafka Reactive",
+    "difficulty": "hard",
+    "question": "Comment consommer des messages Kafka ?",
+    "options": [
+      "@Incoming(\"channel\") Uni<Void> consumer(Message<T> msg)",
+      "@Incoming(\"channel\") void consumer(T value)",
+      "@Incoming(\"channel\") Multi<T> consumer()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs signatures pour les consommateurs."
+  },
+  {
+    "id": "QRK-REACT-032",
+    "theme": "Reactive",
+    "theme_label": "Vert.x",
+    "difficulty": "hard",
+    "question": "Quelle est la relation entre Quarkus et Vert.x ?",
+    "options": [
+      "Quarkus utilise Vert.x en interne",
+      "Quarkus remplace Vert.x",
+      "Vert.x est indépendant",
+      "Quarkus est basé sur Netty"
+    ],
+    "correct": 0,
+    "explanation": "Quarkus utilise Vert.x pour la couche réseau."
+  },
+  {
+    "id": "QRK-REACT-033",
+    "theme": "Reactive",
+    "theme_label": "Vert.x",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser Vert.x API directement ?",
+    "options": [
+      "Oui, avec @Inject Vertx",
+      "Non",
+      "Oui, avec extension",
+      "Oui, mais déconseillé"
+    ],
+    "correct": 0,
+    "explanation": "Vert.x est accessible via injection."
+  },
+  {
+    "id": "QRK-REACT-034",
+    "theme": "Reactive",
+    "theme_label": "Event Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'Event Bus de Vert.x ?",
+    "options": [
+      "Système de messagerie distribué",
+      "Base de données",
+      "Cache",
+      "File d'attente"
+    ],
+    "correct": 0,
+    "explanation": "L'Event Bus permet la communication entre composants."
+  },
+  {
+    "id": "QRK-REACT-035",
+    "theme": "Reactive",
+    "theme_label": "Event Bus",
+    "difficulty": "hard",
+    "question": "Comment envoyer un message sur l'Event Bus ?",
+    "options": [
+      "vertx.eventBus().send(\"address\", message)",
+      "vertx.eventBus().publish(\"address\", message)",
+      "@EventBus",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "send (point-à-point) ou publish (diffusion)."
+  },
+  {
+    "id": "QRK-REACT-036",
+    "theme": "Reactive",
+    "theme_label": "Event Bus",
+    "difficulty": "hard",
+    "question": "Comment recevoir des messages sur l'Event Bus ?",
+    "options": [
+      "vertx.eventBus().consumer(\"address\", handler)",
+      "@ConsumeEvent",
+      "@EventConsumer",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "API Vert.x ou annotation @ConsumeEvent."
+  },
+  {
+    "id": "QRK-REACT-037",
+    "theme": "Reactive",
+    "theme_label": "WebClient",
+    "difficulty": "hard",
+    "question": "Comment créer un WebClient réactif ?",
+    "options": [
+      "WebClient.create(vertx)",
+      "@Inject WebClient",
+      "quarkus-rest-client-reactive",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons d'obtenir un WebClient."
+  },
+  {
+    "id": "QRK-REACT-038",
+    "theme": "Reactive",
+    "theme_label": "WebClient",
+    "difficulty": "hard",
+    "question": "Comment faire une requête HTTP avec WebClient ?",
+    "options": [
+      "client.get(port, host, path).send().onItem().transform(resp -> ...)",
+      "client.request(HttpMethod.GET, path).send()",
+      "client.getAbs(url).send()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "L'API fluent permet de construire les requêtes."
+  },
+  {
+    "id": "QRK-REACT-039",
+    "theme": "Reactive",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester du code réactif ?",
+    "options": [
+      "@QuarkusTest",
+      "UniAssertSubscriber",
+      "MultiAssertSubscriber",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "AssertSubscriber pour tester Uni/Multi."
+  },
+  {
+    "id": "QRK-REACT-040",
+    "theme": "Reactive",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment attendre un résultat dans un test ?",
+    "options": [
+      "uni.await().indefinitely()",
+      "uni.subscribe().withSubscriber(UniAssertSubscriber.create()).assertCompleted()",
+      "uni.await().atMost(Duration.ofSeconds(5))",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons d'attendre un résultat."
+  },
+  {
+    "id": "QRK-REACT-041",
+    "theme": "Reactive",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Le modèle réactif est-il toujours plus performant ?",
+    "options": [
+      "Non, dépend du workload",
+      "Oui, toujours",
+      "Pour I/O intensif",
+      "Pour CPU intensif"
+    ],
+    "correct": 2,
+    "explanation": "Réactif excelle pour I/O, pas pour CPU."
+  },
+  {
+    "id": "QRK-REACT-042",
+    "theme": "Reactive",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Quand utiliser @Blocking ?",
+    "options": [
+      "Pour les opérations CPU intensives",
+      "Pour les appels JDBC bloquants",
+      "Pour les appels réseau synchrones",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "@Blocking pour les opérations bloquantes."
+  },
+  {
+    "id": "QRK-REACT-043",
+    "theme": "Reactive",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment déboguer des flux réactifs ?",
+    "options": [
+      "uni.onItem().invoke(v -> log.debug(v))",
+      "uni.onFailure().invoke(e -> log.error(e))",
+      "uni.onTermination().invoke(() -> log.debug(\"done\"))",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "invoke() pour les callbacks de debug."
+  },
+  {
+    "id": "QRK-REACT-044",
+    "theme": "Reactive",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment activer les traces Mutiny ?",
+    "options": [
+      "quarkus.log.category=\"io.smallrye.mutiny\".level=DEBUG",
+      "-Dmutiny.debug=true",
+      "mutiny.debug=true",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Logs ou propriété système pour debug."
+  },
+  {
+    "id": "QRK-REACT-045",
+    "theme": "Reactive",
+    "theme_label": "Verticle",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un Verticle ?",
+    "options": [
+      "Unité de déploiement Vert.x",
+      "Un thread",
+      "Un composant",
+      "Un service"
+    ],
+    "correct": 0,
+    "explanation": "Les Verticles sont des unités de code déployables."
+  },
+  {
+    "id": "QRK-REACT-046",
+    "theme": "Reactive",
+    "theme_label": "Verticle",
+    "difficulty": "hard",
+    "question": "Comment déployer un Verticle ?",
+    "options": [
+      "vertx.deployVerticle(new MyVerticle())",
+      "@ApplicationScoped + @Verticle",
+      "quarkus.verticle.classes",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Déploiement programmatique ou automatique."
+  },
+  {
+    "id": "QRK-REACT-047",
+    "theme": "Reactive",
+    "theme_label": "RxJava vs Mutiny",
+    "difficulty": "hard",
+    "question": "Quelle est la différence principale ?",
+    "options": [
+      "Mutiny est non-bloquant",
+      "RxJava est obsolète",
+      "Mutiny est plus simple",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explanation": "Mutiny est intégré nativement à Quarkus."
+  },
+  {
+    "id": "QRK-REACT-048",
+    "theme": "Reactive",
+    "theme_label": "Migration RxJava",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser RxJava dans Quarkus ?",
+    "options": [
+      "Oui, avec extension",
+      "Non",
+      "Oui, mais déconseillé",
+      "Uniquement avec Vert.x"
+    ],
+    "correct": 0,
+    "explanation": "RxJava est supporté via extension."
+  },
+  {
+    "id": "QRK-REACT-049",
+    "theme": "Reactive",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Mutiny supporte-t-il la concurrence structurée ?",
+    "options": [
+      "Oui, avec Uni.combine()",
+      "Non",
+      "Oui, avec Multi",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "combine() permet d'attendre plusieurs Uni."
+  },
+  {
+    "id": "QRK-REACT-050",
+    "theme": "Reactive",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Ne pas bloquer l'event loop signifie ?",
+    "options": [
+      "Éviter les opérations longues",
+      "Utiliser @Blocking si nécessaire",
+      "Utiliser des appels non-bloquants",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "L'event loop ne doit pas être bloqué."
+  }
+]

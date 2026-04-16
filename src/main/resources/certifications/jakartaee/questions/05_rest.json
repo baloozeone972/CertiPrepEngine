@@ -1,0 +1,672 @@
+[
+  {
+    "id": "JAK-REST-001",
+    "theme": "Jakarta REST",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque une ressource REST ?",
+    "options": ["@Path", "@Resource", "@RestController", "@Endpoint"],
+    "correct": 0,
+    "explanation": "@Path définit le chemin de la ressource REST."
+  },
+  {
+    "id": "JAK-REST-002",
+    "theme": "Jakarta REST",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour une méthode GET ?",
+    "options": ["@GET", "@Get", "@GetMapping", "@Read"],
+    "correct": 0,
+    "explanation": "@GET est l'annotation JAX-RS pour GET."
+  },
+  {
+    "id": "JAK-REST-003",
+    "theme": "Jakarta REST",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour une méthode POST ?",
+    "options": ["@POST", "@Post", "@PostMapping", "@Create"],
+    "correct": 0,
+    "explanation": "@POST est l'annotation JAX-RS pour POST."
+  },
+  {
+    "id": "JAK-REST-004",
+    "theme": "Jakarta REST",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour une méthode PUT ?",
+    "options": ["@PUT", "@Put", "@PutMapping", "@Update"],
+    "correct": 0,
+    "explanation": "@PUT est l'annotation JAX-RS pour PUT."
+  },
+  {
+    "id": "JAK-REST-005",
+    "theme": "Jakarta REST",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour une méthode DELETE ?",
+    "options": ["@DELETE", "@Delete", "@DeleteMapping", "@Remove"],
+    "correct": 0,
+    "explanation": "@DELETE est l'annotation JAX-RS pour DELETE."
+  },
+  {
+    "id": "JAK-REST-006",
+    "theme": "Jakarta REST",
+    "theme_label": "Paramètres",
+    "difficulty": "medium",
+    "question": "Quelle annotation capture un paramètre de chemin ?",
+    "options": ["@PathParam", "@PathVariable", "@Param", "@Path"],
+    "correct": 0,
+    "explanation": "@PathParam lie un paramètre au chemin."
+  },
+  {
+    "id": "JAK-REST-007",
+    "theme": "Jakarta REST",
+    "theme_label": "Paramètres",
+    "difficulty": "medium",
+    "question": "Quelle annotation capture un paramètre de requête ?",
+    "options": ["@QueryParam", "@RequestParam", "@Param", "@Query"],
+    "correct": 0,
+    "explanation": "@QueryParam lie un paramètre de requête (?key=value)."
+  },
+  {
+    "id": "JAK-REST-008",
+    "theme": "Jakarta REST",
+    "theme_label": "Paramètres",
+    "difficulty": "medium",
+    "question": "Quelle annotation capture un paramètre de formulaire ?",
+    "options": ["@FormParam", "@RequestParam", "@Param", "@Form"],
+    "correct": 0,
+    "explanation": "@FormParam lie un paramètre de formulaire."
+  },
+  {
+    "id": "JAK-REST-009",
+    "theme": "Jakarta REST",
+    "theme_label": "Paramètres",
+    "difficulty": "hard",
+    "question": "Quelle annotation capture l'en-tête HTTP ?",
+    "options": ["@HeaderParam", "@Header", "@RequestHeader", "@HttpHeader"],
+    "correct": 0,
+    "explanation": "@HeaderParam lie un en-tête HTTP."
+  },
+  {
+    "id": "JAK-REST-010",
+    "theme": "Jakarta REST",
+    "theme_label": "Paramètres",
+    "difficulty": "hard",
+    "question": "Quelle annotation capture les cookies ?",
+    "options": ["@CookieParam", "@Cookie", "@CookieValue", "@HttpCookie"],
+    "correct": 0,
+    "explanation": "@CookieParam lie un cookie HTTP."
+  },
+  {
+    "id": "JAK-REST-011",
+    "theme": "Jakarta REST",
+    "theme_label": "Corps de requête",
+    "difficulty": "medium",
+    "question": "Quelle annotation lie le corps de la requête ?",
+    "options": ["@RequestBody", "@Body", "@Payload", "@RestBody"],
+    "correct": 0,
+    "explanation": "@RequestBody (ou absence) lie le corps de la requête."
+  },
+  {
+    "id": "JAK-REST-012",
+    "theme": "Jakarta REST",
+    "theme_label": "Réponses",
+    "difficulty": "medium",
+    "question": "Comment retourner un code HTTP spécifique ?",
+    "options": [
+      "return Response.status(201).build()",
+      "@ResponseStatus(201)",
+      "return new Response(201)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Response ou @ResponseStatus."
+  },
+  {
+    "id": "JAK-REST-013",
+    "theme": "Jakarta REST",
+    "theme_label": "Réponses",
+    "difficulty": "hard",
+    "question": "Comment retourner une entité avec un code ?",
+    "options": [
+      "return Response.ok(entity).build()",
+      "return Response.status(200).entity(entity).build()",
+      "return entity (code 200 par défaut)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de retourner une réponse."
+  },
+  {
+    "id": "JAK-REST-014",
+    "theme": "Jakarta REST",
+    "theme_label": "Media types",
+    "difficulty": "medium",
+    "question": "Quelle annotation spécifie le type produit ?",
+    "options": ["@Produces", "@Consumes", "@MediaType", "@ContentType"],
+    "correct": 0,
+    "explanation": "@Produces définit le type MIME de la réponse."
+  },
+  {
+    "id": "JAK-REST-015",
+    "theme": "Jakarta REST",
+    "theme_label": "Media types",
+    "difficulty": "medium",
+    "question": "Quelle annotation spécifie le type consommé ?",
+    "options": ["@Consumes", "@Produces", "@MediaType", "@ContentType"],
+    "correct": 0,
+    "explanation": "@Consumes définit le type MIME de la requête."
+  },
+  {
+    "id": "JAK-REST-016",
+    "theme": "Jakarta REST",
+    "theme_label": "JSON",
+    "difficulty": "hard",
+    "question": "Quelle annotation active le support JSON ?",
+    "options": [
+      "@ApplicationPath avec JSON provider",
+      "@Produces(MediaType.APPLICATION_JSON)",
+      "JSON-B ou Jackson",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration du provider JSON."
+  },
+  {
+    "id": "JAK-REST-017",
+    "theme": "Jakarta REST",
+    "theme_label": "JSON-B",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que JSON-B ?",
+    "options": [
+      "Binding JSON standard Jakarta",
+      "JSON parser",
+      "JSON generator",
+      "Validation JSON"
+    ],
+    "correct": 0,
+    "explanation": "JSON-B est la spécification Jakarta pour JSON binding."
+  },
+  {
+    "id": "JAK-REST-018",
+    "theme": "Jakarta REST",
+    "theme_label": "JSON-P",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que JSON-P ?",
+    "options": [
+      "Processing JSON (streaming)",
+      "JSON binding",
+      "JSON validation",
+      "JSON schema"
+    ],
+    "correct": 0,
+    "explanation": "JSON-P (Processing) permet le streaming JSON."
+  },
+  {
+    "id": "JAK-REST-019",
+    "theme": "Jakarta REST",
+    "theme_label": "Exception mapping",
+    "difficulty": "hard",
+    "question": "Comment mapper une exception en réponse HTTP ?",
+    "options": [
+      "@Provider + ExceptionMapper<E>",
+      "@ExceptionMapper",
+      "WebApplicationException",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "ExceptionMapper personnalisé ou WebApplicationException."
+  },
+  {
+    "id": "JAK-REST-020",
+    "theme": "Jakarta REST",
+    "theme_label": "Exception mapping",
+    "difficulty": "hard",
+    "question": "Quelle exception lève une réponse HTTP ?",
+    "options": [
+      "WebApplicationException",
+      "NotFoundException",
+      "NotAllowedException",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs exceptions HTTP sont prédéfinies."
+  },
+  {
+    "id": "JAK-REST-021",
+    "theme": "Jakarta REST",
+    "theme_label": "Filters",
+    "difficulty": "hard",
+    "question": "Quelle interface pour un filtre de requête ?",
+    "options": [
+      "ContainerRequestFilter",
+      "ContainerResponseFilter",
+      "RequestFilter",
+      "ResponseFilter"
+    ],
+    "correct": 0,
+    "explanation": "ContainerRequestFilter intercepte la requête."
+  },
+  {
+    "id": "JAK-REST-022",
+    "theme": "Jakarta REST",
+    "theme_label": "Filters",
+    "difficulty": "hard",
+    "question": "Quelle interface pour un filtre de réponse ?",
+    "options": [
+      "ContainerResponseFilter",
+      "ContainerRequestFilter",
+      "ResponseFilter",
+      "RequestFilter"
+    ],
+    "correct": 0,
+    "explanation": "ContainerResponseFilter intercepte la réponse."
+  },
+  {
+    "id": "JAK-REST-023",
+    "theme": "Jakarta REST",
+    "theme_label": "Filters",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un filtre ?",
+    "options": ["@Provider", "@Filter", "@Interceptor", "@JAXRSFilter"],
+    "correct": 0,
+    "explanation": "@Provider enregistre le filtre."
+  },
+  {
+    "id": "JAK-REST-024",
+    "theme": "Jakarta REST",
+    "theme_label": "Interceptors",
+    "difficulty": "hard",
+    "question": "Différence entre filtre et interceptor ?",
+    "options": [
+      "Filtre pour requête/réponse, interceptor pour méthodes",
+      "Identiques",
+      "Filtre pour méthodes, interceptor pour requêtes",
+      "Filtre plus rapide"
+    ],
+    "correct": 0,
+    "explanation": "Les interceptors ciblent les méthodes des ressources."
+  },
+  {
+    "id": "JAK-REST-025",
+    "theme": "Jakarta REST",
+    "theme_label": "Client API",
+    "difficulty": "hard",
+    "question": "Comment créer un client REST ?",
+    "options": [
+      "ClientBuilder.newClient()",
+      "new Client()",
+      "JAXRSClient.create()",
+      "RestClientBuilder.newBuilder()"
+    ],
+    "correct": 0,
+    "explanation": "ClientBuilder.newClient() crée un client JAX-RS."
+  },
+  {
+    "id": "JAK-REST-026",
+    "theme": "Jakarta REST",
+    "theme_label": "Client API",
+    "difficulty": "hard",
+    "question": "Comment cibler une ressource avec le client ?",
+    "options": [
+      "client.target(\"http://api\")",
+      "client.resource(\"http://api\")",
+      "client.path(\"http://api\")",
+      "client.url(\"http://api\")"
+    ],
+    "correct": 0,
+    "explanation": "target() crée un WebTarget."
+  },
+  {
+    "id": "JAK-REST-027",
+    "theme": "Jakarta REST",
+    "theme_label": "Client API",
+    "difficulty": "hard",
+    "question": "Comment exécuter une requête GET ?",
+    "options": [
+      "target.request().get()",
+      "target.get()",
+      "target.request().get(Response.class)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "request().get() exécute une requête GET."
+  },
+  {
+    "id": "JAK-REST-028",
+    "theme": "Jakarta REST",
+    "theme_label": "Client API",
+    "difficulty": "hard",
+    "question": "Comment lire le corps de la réponse ?",
+    "options": [
+      "response.readEntity(String.class)",
+      "response.getEntity()",
+      "response.getBody()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "readEntity() lit le corps de la réponse."
+  },
+  {
+    "id": "JAK-REST-029",
+    "theme": "Jakarta REST",
+    "theme_label": "Async client",
+    "difficulty": "hard",
+    "question": "Comment créer un client asynchrone ?",
+    "options": [
+      "client.async()",
+      "ClientBuilder.newClient().register(AsyncInvoker.class)",
+      "client.target().request().async()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "async() sur le Invocation.Builder."
+  },
+  {
+    "id": "JAK-REST-030",
+    "theme": "Jakarta REST",
+    "theme_label": "Async client",
+    "difficulty": "hard",
+    "question": "Quel type de retour pour une requête async ?",
+    "options": [
+      "Future<Response>",
+      "CompletableFuture<Response>",
+      "AsyncResponse",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Future ou CompletableFuture pour les résultats asynchrones."
+  },
+  {
+    "id": "JAK-REST-031",
+    "theme": "Jakarta REST",
+    "theme_label": "Bean Validation",
+    "difficulty": "hard",
+    "question": "Comment valider les entrées REST ?",
+    "options": [
+      "@Valid sur paramètres",
+      "@NotNull, @Size, etc.",
+      "Bean Validation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Bean Validation avec @Valid."
+  },
+  {
+    "id": "JAK-REST-032",
+    "theme": "Jakarta REST",
+    "theme_label": "Bean Validation",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si validation échoue ?",
+    "options": [
+      "ConstraintViolationException",
+      "HTTP 400",
+      "Message d'erreur",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Exception et réponse 400."
+  },
+  {
+    "id": "JAK-REST-033",
+    "theme": "Jakarta REST",
+    "theme_label": "Content negotiation",
+    "difficulty": "hard",
+    "question": "Comment gérer la négociation de contenu ?",
+    "options": [
+      "Accept header",
+      "@Produces avec plusieurs types",
+      "Content-Type header",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Négociation via headers et @Produces."
+  },
+  {
+    "id": "JAK-REST-034",
+    "theme": "Jakarta REST",
+    "theme_label": "Content negotiation",
+    "difficulty": "hard",
+    "question": "Quel header indique le type accepté ?",
+    "options": ["Accept", "Content-Type", "Accept-Charset", "Accept-Language"],
+    "correct": 0,
+    "explanation": "Accept spécifie les types MIME acceptés."
+  },
+  {
+    "id": "JAK-REST-035",
+    "theme": "Jakarta REST",
+    "theme_label": "Sub-resources",
+    "difficulty": "hard",
+    "question": "Comment créer une sous-ressource ?",
+    "options": [
+      "Méthode retournant une classe avec @Path",
+      "@SubResource",
+      "@Path sur une méthode retournant une ressource",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Les sous-ressources sont des méthodes retournant des ressources."
+  },
+  {
+    "id": "JAK-REST-036",
+    "theme": "Jakarta REST",
+    "theme_label": "Sub-resources",
+    "difficulty": "hard",
+    "question": "Quelle annotation sur une méthode de sous-ressource ?",
+    "options": ["@Path", "@SubResource", "@Resource", "@Child"],
+    "correct": 0,
+    "explanation": "@Path sur la méthode de sous-ressource."
+  },
+  {
+    "id": "JAK-REST-037",
+    "theme": "Jakarta REST",
+    "theme_label": "HATEOAS",
+    "difficulty": "hard",
+    "question": "Que signifie HATEOAS ?",
+    "options": [
+      "Hypermedia as Engine of Application State",
+      "HTTP as Engine of Application State",
+      "Hypertext as Engine of Application State",
+      "Hypermedia as Engine of Application Service"
+    ],
+    "correct": 0,
+    "explanation": "HATEOAS inclut des liens dans les réponses."
+  },
+  {
+    "id": "JAK-REST-038",
+    "theme": "Jakarta REST",
+    "theme_label": "HATEOAS",
+    "difficulty": "hard",
+    "question": "Comment ajouter des liens HATEOAS ?",
+    "options": [
+      "Link header",
+      "Corps JSON avec liens",
+      "Link.Builder",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons d'ajouter des liens."
+  },
+  {
+    "id": "JAK-REST-039",
+    "theme": "Jakarta REST",
+    "theme_label": "ApplicationPath",
+    "difficulty": "hard",
+    "question": "À quoi sert @ApplicationPath ?",
+    "options": [
+      "Définit le chemin de base de l'API",
+      "Définit le chemin des ressources",
+      "Configure les providers",
+      "Active les filtres"
+    ],
+    "correct": 0,
+    "explanation": "@ApplicationPath définit le préfixe de l'API REST."
+  },
+  {
+    "id": "JAK-REST-040",
+    "theme": "Jakarta REST",
+    "theme_label": "ApplicationPath",
+    "difficulty": "hard",
+    "question": "Quelle classe étendre pour configurer l'API ?",
+    "options": [
+      "Application",
+      "ResourceConfig",
+      "RestApplication",
+      "JAXRSApplication"
+    ],
+    "correct": 0,
+    "explanation": "La classe Application configure l'API REST."
+  },
+  {
+    "id": "JAK-REST-041",
+    "theme": "Jakarta REST",
+    "theme_label": "CORS",
+    "difficulty": "hard",
+    "question": "Comment activer CORS ?",
+    "options": [
+      "ContainerResponseFilter ajoutant headers",
+      "@CrossOrigin",
+      "web.xml",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Filtre personnalisé ou annotation."
+  },
+  {
+    "id": "JAK-REST-042",
+    "theme": "Jakarta REST",
+    "theme_label": "CORS",
+    "difficulty": "hard",
+    "question": "Quel header CORS est obligatoire ?",
+    "options": [
+      "Access-Control-Allow-Origin",
+      "Access-Control-Allow-Methods",
+      "Access-Control-Allow-Headers",
+      "Access-Control-Max-Age"
+    ],
+    "correct": 0,
+    "explanation": "Access-Control-Allow-Origin est minimal."
+  },
+  {
+    "id": "JAK-REST-043",
+    "theme": "Jakarta REST",
+    "theme_label": "Versioning",
+    "difficulty": "hard",
+    "question": "Comment versionner une API REST ?",
+    "options": [
+      "URL (/v1/resource)",
+      "Header (Accept: version=1)",
+      "Custom header",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs stratégies de versionning."
+  },
+  {
+    "id": "JAK-REST-044",
+    "theme": "Jakarta REST",
+    "theme_label": "Pagination",
+    "difficulty": "hard",
+    "question": "Comment implémenter la pagination ?",
+    "options": [
+      "Paramètres page et size",
+      "Headers Link",
+      "Response avec pagination",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs approches pour la pagination."
+  },
+  {
+    "id": "JAK-REST-045",
+    "theme": "Jakarta REST",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser une ressource REST ?",
+    "options": [
+      "@RolesAllowed",
+      "@PermitAll",
+      "@DenyAll",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Annotations de sécurité JSR-250."
+  },
+  {
+    "id": "JAK-REST-046",
+    "theme": "Jakarta REST",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment obtenir l'utilisateur courant ?",
+    "options": [
+      "@Context SecurityContext",
+      "securityContext.getUserPrincipal()",
+      "@Inject SecurityContext",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "SecurityContext via @Context ou @Inject."
+  },
+  {
+    "id": "JAK-REST-047",
+    "theme": "Jakarta REST",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "Quelle annotation documente une ressource ?",
+    "options": [
+      "@OpenAPIDefinition",
+      "@Operation",
+      "@APIResponse",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations pour OpenAPI."
+  },
+  {
+    "id": "JAK-REST-048",
+    "theme": "Jakarta REST",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester une API REST ?",
+    "options": [
+      "JUnit avec client REST",
+      "REST Assured",
+      "MockMvc",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "REST Assured ou client JAX-RS pour les tests."
+  },
+  {
+    "id": "JAK-REST-049",
+    "theme": "Jakarta REST",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Quel framework est spécialisé pour tests REST ?",
+    "options": [
+      "REST Assured",
+      "MockMvc",
+      "JUnit",
+      "TestNG"
+    ],
+    "correct": 0,
+    "explanation": "REST Assured est dédié aux tests REST."
+  },
+  {
+    "id": "JAK-REST-050",
+    "theme": "Jakarta REST",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les ressources doivent-elles être stateless ?",
+    "options": [
+      "Oui, recommandé",
+      "Non, stateful possible",
+      "Oui, obligatoire",
+      "Non, dépend"
+    ],
+    "correct": 0,
+    "explanation": "Le stateless est recommandé pour la scalabilité."
+  }
+]

@@ -1,0 +1,537 @@
+[
+  {
+    "id": "CKA-01-001",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants du control plane",
+    "difficulty": "easy",
+    "question": "Quels sont les composants du control plane Kubernetes ?",
+    "options": [
+      "kube-apiserver, etcd, kube-scheduler, kube-controller-manager",
+      "kubelet, kube-proxy, container runtime",
+      "kube-apiserver, kubelet, kube-proxy",
+      "etcd, kubelet, kube-proxy"
+    ],
+    "correct": 0,
+    "explanation": "Le control plane comprend l'API server, etcd, scheduler, controller manager."
+  },
+  {
+    "id": "CKA-01-002",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants du control plane",
+    "difficulty": "easy",
+    "question": "Quel composant stocke l'état du cluster ?",
+    "options": ["etcd", "kube-apiserver", "kube-scheduler", "kube-controller-manager"],
+    "correct": 0,
+    "explication": "etcd est la base de données clé-valeur qui stocke l'état du cluster."
+  },
+  {
+    "id": "CKA-01-003",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants du control plane",
+    "difficulty": "easy",
+    "question": "Quel composant est responsable de la planification des pods ?",
+    "options": ["kube-scheduler", "kube-apiserver", "kube-controller-manager", "kubelet"],
+    "correct": 0,
+    "explication": "Le scheduler assigne les pods aux nœuds."
+  },
+  {
+    "id": "CKA-01-004",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants du control plane",
+    "difficulty": "easy",
+    "question": "Quel composant exécute les controllers (ex: deployment controller) ?",
+    "options": ["kube-controller-manager", "kube-apiserver", "kube-scheduler", "kubelet"],
+    "correct": 0,
+    "explication": "Le controller manager exécute les boucles de contrôle."
+  },
+  {
+    "id": "CKA-01-005",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants du control plane",
+    "difficulty": "easy",
+    "question": "Quel composant est le point d'entrée de toutes les opérations Kubernetes ?",
+    "options": ["kube-apiserver", "kube-scheduler", "kube-controller-manager", "etcd"],
+    "correct": 0,
+    "explication": "L'API server valide et traite toutes les requêtes."
+  },
+  {
+    "id": "CKA-01-006",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants des nœuds",
+    "difficulty": "easy",
+    "question": "Quels sont les composants qui s'exécutent sur chaque nœud worker ?",
+    "options": [
+      "kubelet, kube-proxy, container runtime",
+      "kube-apiserver, kube-scheduler",
+      "etcd, kubelet",
+      "kube-controller-manager, kube-proxy"
+    ],
+    "correct": 0,
+    "explication": "Les nœuds workers exécutent kubelet, kube-proxy et un container runtime."
+  },
+  {
+    "id": "CKA-01-007",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants des nœuds",
+    "difficulty": "easy",
+    "question": "Quel composant s'assure que les conteneurs tournent sur le nœud ?",
+    "options": ["kubelet", "kube-proxy", "container runtime", "kube-apiserver"],
+    "correct": 0,
+    "explication": "Le kubelet gère les pods et conteneurs sur le nœud."
+  },
+  {
+    "id": "CKA-01-008",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants des nœuds",
+    "difficulty": "easy",
+    "question": "Quel composant gère les règles réseau (iptables) sur le nœud ?",
+    "options": ["kube-proxy", "kubelet", "container runtime", "cni plugin"],
+    "correct": 0,
+    "explication": "kube-proxy implémente le service proxy et les règles iptables."
+  },
+  {
+    "id": "CKA-01-009",
+    "theme": "Cluster Architecture",
+    "theme_label": "Add-ons",
+    "difficulty": "easy",
+    "question": "Quel add-on fournit la résolution DNS dans le cluster ?",
+    "options": ["CoreDNS", "kube-dns", "coredns", "A et B"],
+    "correct": 3,
+    "explication": "CoreDNS est l'add-on DNS standard depuis Kubernetes 1.13."
+  },
+  {
+    "id": "CKA-01-010",
+    "theme": "Cluster Architecture",
+    "theme_label": "Add-ons",
+    "difficulty": "easy",
+    "question": "Quel add-on expose les métriques des nœuds et pods ?",
+    "options": ["Metrics Server", "Heapster", "Prometheus", "cAdvisor"],
+    "correct": 0,
+    "explication": "Metrics Server collecte les métriques de ressources pour HPA et kubectl top."
+  },
+  {
+    "id": "CKA-01-011",
+    "theme": "Cluster Architecture",
+    "theme_label": "Add-ons",
+    "difficulty": "easy",
+    "question": "Quel add-on est nécessaire pour l'auto-scaling horizontal (HPA) ?",
+    "options": ["Metrics Server", "Heapster", "Prometheus", "Custom Metrics API"],
+    "correct": 0,
+    "explication": "HPA utilise les métriques de Metrics Server par défaut."
+  },
+  {
+    "id": "CKA-01-012",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment changer le contexte kubectl pour un cluster ?",
+    "options": [
+      "kubectl config use-context <nom>",
+      "kubectl config set-context",
+      "kubectl config current-context",
+      "kubectl config get-contexts"
+    ],
+    "correct": 0,
+    "explication": "use-context bascule vers un contexte existant."
+  },
+  {
+    "id": "CKA-01-013",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment lister tous les contextes ?",
+    "options": [
+      "kubectl config get-contexts",
+      "kubectl config view",
+      "kubectl get contexts",
+      "kubectl config list-contexts"
+    ],
+    "correct": 0,
+    "explication": "get-contexts liste les contextes avec l'astérisque pour le courant."
+  },
+  {
+    "id": "CKA-01-014",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment obtenir les logs d'un pod ?",
+    "options": [
+      "kubectl logs <pod>",
+      "kubectl logs <pod> -c <container>",
+      "kubectl logs --tail=100 <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl logs avec options -c, --tail, --since."
+  },
+  {
+    "id": "CKA-01-015",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment exécuter une commande dans un pod ?",
+    "options": [
+      "kubectl exec <pod> -- <commande>",
+      "kubectl exec -it <pod> -- bash",
+      "kubectl exec <pod> -c <container> -- <commande>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl exec permet d'exécuter des commandes dans un conteneur."
+  },
+  {
+    "id": "CKA-01-016",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment copier un fichier depuis un pod ?",
+    "options": [
+      "kubectl cp <pod>:/chemin/fichier ./fichier",
+      "kubectl cp <pod>:<chemin> <chemin_local>",
+      "kubectl cp <namespace>/<pod>:<chemin> <local>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl cp fonctionne comme scp."
+  },
+  {
+    "id": "CKA-01-017",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment appliquer un fichier manifeste ?",
+    "options": [
+      "kubectl apply -f fichier.yaml",
+      "kubectl create -f fichier.yaml",
+      "kubectl apply -f repertoire/",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "apply est déclaratif, create est impératif."
+  },
+  {
+    "id": "CKA-01-018",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment supprimer une ressource ?",
+    "options": [
+      "kubectl delete <type> <nom>",
+      "kubectl delete -f fichier.yaml",
+      "kubectl delete <type> --all",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "delete peut supprimer par nom, fichier, ou tout."
+  },
+  {
+    "id": "CKA-01-019",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment décrire une ressource en détail ?",
+    "options": [
+      "kubectl describe <type> <nom>",
+      "kubectl get <type> <nom> -o yaml",
+      "kubectl explain <type>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "describe donne l'état, -o yaml donne la définition complète."
+  },
+  {
+    "id": "CKA-01-020",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubectl",
+    "difficulty": "easy",
+    "question": "Comment obtenir les événements du cluster ?",
+    "options": [
+      "kubectl get events",
+      "kubectl get events --sort-by='.lastTimestamp'",
+      "kubectl describe nodes",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "kubectl get events liste les événements."
+  },
+  {
+    "id": "CKA-01-021",
+    "theme": "Cluster Architecture",
+    "theme_label": "API Server",
+    "difficulty": "easy",
+    "question": "Quel port utilise l'API server par défaut ?",
+    "options": ["6443", "8080", "443", "8443"],
+    "correct": 0,
+    "explication": "L'API server écoute sur le port 6443 (HTTPS)."
+  },
+  {
+    "id": "CKA-01-022",
+    "theme": "Cluster Architecture",
+    "theme_label": "API Server",
+    "difficulty": "easy",
+    "question": "Comment accéder directement à l'API Kubernetes ?",
+    "options": [
+      "kubectl proxy",
+      "curl https://<master>:6443 -k",
+      "kubectl get --raw /api/v1/namespaces",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "kubectl proxy ou direct avec certificats."
+  },
+  {
+    "id": "CKA-01-023",
+    "theme": "Cluster Architecture",
+    "theme_label": "API Server",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'API aggregation layer ?",
+    "options": [
+      "Extension de l'API avec des ressources personnalisées",
+      "Agrégation des logs",
+      "Load balancing",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "L'aggregation layer permet d'ajouter des API via des apiservices."
+  },
+  {
+    "id": "CKA-01-024",
+    "theme": "Cluster Architecture",
+    "theme_label": "etcd",
+    "difficulty": "easy",
+    "question": "Quel port etcd utilise-t-il par défaut ?",
+    "options": ["2379", "2380", "6443", "10250"],
+    "correct": 0,
+    "explication": "2379 pour le client, 2380 pour le peer-to-peer."
+  },
+  {
+    "id": "CKA-01-025",
+    "theme": "Cluster Architecture",
+    "theme_label": "etcd",
+    "difficulty": "easy",
+    "question": "Comment sauvegarder etcd ?",
+    "options": [
+      "ETCDCTL_API=3 etcdctl snapshot save snapshot.db",
+      "etcdctl backup",
+      "kubectl backup etcd",
+      "A et B"
+    ],
+    "correct": 0,
+    "explication": "etcdctl snapshot save sauvegarde l'état."
+  },
+  {
+    "id": "CKA-01-026",
+    "theme": "Cluster Architecture",
+    "theme_label": "etcd",
+    "difficulty": "easy",
+    "question": "Comment restaurer une sauvegarde etcd ?",
+    "options": [
+      "etcdctl snapshot restore snapshot.db",
+      "etcdctl restore",
+      "etcdctl snapshot load",
+      "etcdctl load"
+    ],
+    "correct": 0,
+    "explication": "snapshot restore restaure la sauvegarde."
+  },
+  {
+    "id": "CKA-01-027",
+    "theme": "Cluster Architecture",
+    "theme_label": "Scheduler",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un scheduler policy ?",
+    "options": [
+      "Règles de priorisation pour le placement des pods",
+      "Stratégie de mise à l'échelle",
+      "Politique de sécurité",
+      "Règle réseau"
+    ],
+    "correct": 0,
+    "explication": "La politique de scheduler définit comment les pods sont placés."
+  },
+  {
+    "id": "CKA-01-028",
+    "theme": "Cluster Architecture",
+    "theme_label": "Scheduler",
+    "difficulty": "easy",
+    "question": "Comment forcer un pod à s'exécuter sur un nœud spécifique ?",
+    "options": [
+      "nodeSelector",
+      "nodeName",
+      "affinity",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "nodeSelector, nodeName, ou node affinity."
+  },
+  {
+    "id": "CKA-01-029",
+    "theme": "Cluster Architecture",
+    "theme_label": "Controller Manager",
+    "difficulty": "easy",
+    "question": "Quels sont les contrôleurs inclus dans kube-controller-manager ?",
+    "options": [
+      "Deployment controller, ReplicaSet controller, Node controller, etc.",
+      "Seulement Deployment",
+      "Seulement ReplicaSet",
+      "Seulement Node"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs contrôleurs tournent dans le controller manager."
+  },
+  {
+    "id": "CKA-01-030",
+    "theme": "Cluster Architecture",
+    "theme_label": "Controller Manager",
+    "difficulty": "easy",
+    "question": "Que fait le node controller ?",
+    "options": [
+      "Surveille la santé des nœuds et réagit aux pannes",
+      "Gère les pods",
+      "Crée les services",
+      "Gère les volumes"
+    ],
+    "correct": 0,
+    "explication": "Le node controller gère le cycle de vie des nœuds."
+  },
+  {
+    "id": "CKA-01-031",
+    "theme": "Cluster Architecture",
+    "theme_label": "Cloud Controller Manager",
+    "difficulty": "easy",
+    "question": "À quoi sert le cloud controller manager ?",
+    "options": [
+      "Interface avec le fournisseur cloud (load balancers, volumes)",
+      "Gérer les pods",
+      "Gérer les secrets",
+      "Gérer les configmaps"
+    ],
+    "correct": 0,
+    "explication": "CCM intègre Kubernetes avec l'API du cloud provider."
+  },
+  {
+    "id": "CKA-01-032",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubelet",
+    "difficulty": "easy",
+    "question": "Sur quel port le kubelet expose ses métriques ?",
+    "options": ["10250", "10255", "6443", "8080"],
+    "correct": 0,
+    "explication": "Le kubelet expose son API sur le port 10250 (HTTPS)."
+  },
+  {
+    "id": "CKA-01-033",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubelet",
+    "difficulty": "easy",
+    "question": "Où sont stockés les manifests statiques (static pods) ?",
+    "options": [
+      "/etc/kubernetes/manifests",
+      "/var/lib/kubelet",
+      "/etc/kubernetes/static-pods",
+      "/var/lib/kubelet/config"
+    ],
+    "correct": 0,
+    "explication": "Le kubelet surveille ce répertoire pour les manifests statiques."
+  },
+  {
+    "id": "CKA-01-034",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kube-proxy",
+    "difficulty": "easy",
+    "question": "Quels modes de fonctionnement kube-proxy supporte-t-il ?",
+    "options": ["iptables, ipvs, userspace", "iptables seulement", "ipvs seulement", "userspace seulement"],
+    "correct": 0,
+    "explication": "iptables est le mode par défaut, ipvs est plus performant."
+  },
+  {
+    "id": "CKA-01-035",
+    "theme": "Cluster Architecture",
+    "theme_label": "Container runtime",
+    "difficulty": "easy",
+    "question": "Quels container runtimes sont supportés par Kubernetes ?",
+    "options": [
+      "containerd, CRI-O, Docker (via cri-dockerd)",
+      "Docker seulement",
+      "containerd seulement",
+      "CRI-O seulement"
+    ],
+    "correct": 0,
+    "explication": "Kubernetes utilise l'interface CRI pour communiquer avec le runtime."
+  },
+  {
+    "id": "CKA-01-036",
+    "theme": "Cluster Architecture",
+    "theme_label": "CNI",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le CNI (Container Network Interface) ?",
+    "options": [
+      "Plugin réseau pour les conteneurs",
+      "Interface de stockage",
+      "Interface de sécurité",
+      "Interface de logging"
+    ],
+    "correct": 0,
+    "explication": "CNI est un standard pour configurer le réseau des conteneurs."
+  },
+  {
+    "id": "CKA-01-037",
+    "theme": "Cluster Architecture",
+    "theme_label": "CNI",
+    "difficulty": "easy",
+    "question": "Quels sont des plugins CNI populaires ?",
+    "options": [
+      "Calico, Flannel, Weave, Cilium",
+      "iptables",
+      "kube-proxy",
+      "CoreDNS"
+    ],
+    "correct": 0,
+    "explication": "Calico, Flannel, Weave, Cilium sont des plugins réseau."
+  },
+  {
+    "id": "CKA-01-038",
+    "theme": "Cluster Architecture",
+    "theme_label": "CSI",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le CSI (Container Storage Interface) ?",
+    "options": [
+      "Standard pour les plugins de stockage",
+      "Interface réseau",
+      "Interface de sécurité",
+      "Interface de logging"
+    ],
+    "correct": 0,
+    "explication": "CSI permet d'intégrer des solutions de stockage externes."
+  },
+  {
+    "id": "CKA-01-039",
+    "theme": "Cluster Architecture",
+    "theme_label": "CRI",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le CRI (Container Runtime Interface) ?",
+    "options": [
+      "API pour intégrer des container runtimes",
+      "Interface réseau",
+      "Interface de stockage",
+      "Interface de sécurité"
+    ],
+    "correct": 0,
+    "explication": "CRI permet à kubelet de communiquer avec différents runtimes."
+  },
+  {
+    "id": "CKA-01-040",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubeadm",
+    "difficulty": "easy",
+    "question": "Quelle commande initialise un cluster avec kubeadm ?",
+    "options": [
+      "kubeadm init",
+      "kubeadm start",
+      "kubeadm create",
+      "kubeadm cluster"
+    ],
+    "correct": 0,
+    "explication": "kubeadm init initialise le control plane."
+  }
+]

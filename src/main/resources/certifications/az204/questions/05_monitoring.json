@@ -1,0 +1,612 @@
+[
+  {
+    "id": "AZ-204-261",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Monitor ?",
+    "options": [
+      "Service de collecte et d'analyse des métriques, logs, et traces",
+      "Base de données",
+      "Stockage",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Azure Monitor est la plateforme d'observabilité d'Azure."
+  },
+  {
+    "id": "AZ-204-262",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor",
+    "difficulty": "easy",
+    "question": "Azure Monitor collecte-t-il des métriques depuis les ressources Azure ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les applications"],
+    "correct": 0,
+    "explication": "Azure Monitor collecte des métriques de plateforme pour toutes les ressources."
+  },
+  {
+    "id": "AZ-204-263",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Application Insights ?",
+    "options": [
+      "Surveillance des performances des applications (APM)",
+      "Surveillance de l'infrastructure",
+      "Collecte des logs système",
+      "Analyse des coûts"
+    ],
+    "correct": 0,
+    "explication": "Application Insights est un service APM pour les applications."
+  },
+  {
+    "id": "AZ-204-264",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "medium",
+    "question": "Quels langages sont supportés par Application Insights ?",
+    "options": [
+      ".NET, Java, Node.js, Python, etc.",
+      ".NET seulement",
+      "Java seulement",
+      "Node.js seulement"
+    ],
+    "correct": 0,
+    "explication": "Application Insights prend en charge de nombreux langages via le SDK."
+  },
+  {
+    "id": "AZ-204-265",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une requête dépendante (dependency) dans Application Insights ?",
+    "options": [
+      "Appel à une dépendance externe (SQL, HTTP, etc.)",
+      "Requête de base de données",
+      "Appel API",
+      "Log"
+    ],
+    "correct": 0,
+    "explication": "Application Insights suit automatiquement les dépendances pour les frameworks courants."
+  },
+  {
+    "id": "AZ-204-266",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une trace (trace) dans Application Insights ?",
+    "options": [
+      "Message de log personnalisé",
+      "Requête",
+      "Exception",
+      "Métrique"
+    ],
+    "correct": 0,
+    "explication": "Les traces sont des logs textuels envoyés via TrackTrace."
+  },
+  {
+    "id": "AZ-204-267",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Comment envoyer des événements personnalisés à Application Insights ?",
+    "options": ["TrackEvent()", "TrackTrace()", "TrackException()", "TrackMetric()"],
+    "correct": 0,
+    "explication": "TrackEvent permet d'envoyer des événements personnalisés (ex: actions utilisateur)."
+  },
+  {
+    "id": "AZ-204-268",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le sampling (échantillonnage) dans Application Insights ?",
+    "options": [
+      "Réduire le volume de données télémétriques",
+      "Augmenter le volume",
+      "Filtrer les erreurs",
+      "Filtrer les succès"
+    ],
+    "correct": 0,
+    "explication": "Le sampling réduit les coûts en conservant un pourcentage représentatif des données."
+  },
+  {
+    "id": "AZ-204-269",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la disponibilité (availability) dans Application Insights ?",
+    "options": [
+      "Tests de disponibilité (ping tests) depuis plusieurs emplacements",
+      "Métriques de disponibilité",
+      "Logs de disponibilité",
+      "Alertes de disponibilité"
+    ],
+    "correct": 0,
+    "explication": "Les tests de disponibilité vérifient que l'application répond correctement."
+  },
+  {
+    "id": "AZ-204-270",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le profilage (profiler) dans Application Insights ?",
+    "options": [
+      "Analyse du temps passé dans les méthodes (courbes de chauffe)",
+      "Collecte des exceptions",
+      "Analyse des dépendances",
+      "Analyse des métriques"
+    ],
+    "correct": 0,
+    "explication": "Application Insights Profiler montre où le temps est passé dans le code."
+  },
+  {
+    "id": "AZ-204-271",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le snapshot debugger ?",
+    "options": [
+      "Capture d'une exception avec l'état du code",
+      "Capture d'écran",
+      "Snapshot de la base de données",
+      "Snapshot du cache"
+    ],
+    "correct": 0,
+    "explication": "Le Snapshot Debugger capture l'état de l'application lorsqu'une exception se produit."
+  },
+  {
+    "id": "AZ-204-272",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Log Analytics",
+    "difficulty": "hard",
+    "question": "Quel langage de requête utilise Log Analytics ?",
+    "options": ["KQL (Kusto Query Language)", "SQL", "PromQL", "LogQL"],
+    "correct": 0,
+    "explication": "KQL est le langage de requête pour Log Analytics."
+  },
+  {
+    "id": "AZ-204-273",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Log Analytics",
+    "difficulty": "hard",
+    "question": "Comment filtrer les logs d'une table spécifique dans Log Analytics ?",
+    "options": ["TableName | where ...", "where TableName ...", "search TableName ...", "filter TableName ..."],
+    "correct": 0,
+    "explication": "Exemple : AppRequests | where timestamp > ago(1h)."
+  },
+  {
+    "id": "AZ-204-274",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Log Analytics",
+    "difficulty": "hard",
+    "question": "Comment limiter le nombre de résultats dans une requête KQL ?",
+    "options": ["take N", "limit N", "top N", "A et B"],
+    "correct": 3,
+    "explication": "take N ou limit N limitent le nombre de lignes retournées."
+  },
+  {
+    "id": "AZ-204-275",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Alerts",
+    "difficulty": "hard",
+    "question": "Quels sont les types de règles d'alerte dans Azure Monitor ?",
+    "options": [
+      "Métriques, logs, activité",
+      "Seulement métriques",
+      "Seulement logs",
+      "Seulement activité"
+    ],
+    "correct": 0,
+    "explication": "Les alertes peuvent être basées sur des métriques, des requêtes de logs, ou des événements du journal d'activité."
+  },
+  {
+    "id": "AZ-204-276",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Alerts",
+    "difficulty": "hard",
+    "question": "Où peuvent être envoyées les alertes ?",
+    "options": [
+      "E-mail, SMS, webhook, ITSM, Action Groups",
+      "E-mail seulement",
+      "SMS seulement",
+      "Webhook seulement"
+    ],
+    "correct": 0,
+    "explication": "Les groupes d'actions (Action Groups) définissent les notifications."
+  },
+  {
+    "id": "AZ-204-277",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Metrics",
+    "difficulty": "hard",
+    "question": "Quelle est la granularité par défaut des métriques de plateforme ?",
+    "options": ["1 minute", "5 minutes", "1 seconde", "1 heure"],
+    "correct": 0,
+    "explication": "La plupart des métriques de plateforme sont disponibles à la minute."
+  },
+  {
+    "id": "AZ-204-278",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Metrics",
+    "difficulty": "hard",
+    "question": "Peut-on envoyer des métriques personnalisées à Azure Monitor ?",
+    "options": ["Oui", "Non", "Uniquement via Application Insights", "Uniquement via Log Analytics"],
+    "correct": 0,
+    "explication": "Les métriques personnalisées peuvent être envoyées via le SDK ou l'API."
+  },
+  {
+    "id": "AZ-204-279",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Diagnostic settings",
+    "difficulty": "hard",
+    "question": "Les paramètres de diagnostic permettent-ils d'envoyer des logs vers Log Analytics ?",
+    "options": ["Oui", "Non", "Uniquement vers Storage", "Uniquement vers Event Hub"],
+    "correct": 0,
+    "explication": "Les paramètres de diagnostic peuvent envoyer les logs vers Log Analytics, Storage, Event Hub."
+  },
+  {
+    "id": "AZ-204-280",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Diagnostic settings",
+    "difficulty": "hard",
+    "question": "Quels types de logs peuvent être envoyés via les paramètres de diagnostic ?",
+    "options": [
+      "Logs de ressource (ex: AppServiceHTTPLogs), métriques",
+      "Seulement les métriques",
+      "Seulement les logs d'application",
+      "Seulement les logs d'infrastructure"
+    ],
+    "correct": 0,
+    "explication": "Les paramètres de diagnostic permettent de sélectionner les catégories de logs et métriques."
+  },
+  {
+    "id": "AZ-204-281",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Workbooks",
+    "difficulty": "hard",
+    "question": "Les classeurs (workbooks) permettent-ils de créer des rapports interactifs ?",
+    "options": ["Oui", "Non", "Uniquement pour les métriques", "Uniquement pour les logs"],
+    "correct": 0,
+    "explication": "Les workbooks combinent des requêtes, des visualisations et du texte."
+  },
+  {
+    "id": "AZ-204-282",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Workbooks",
+    "difficulty": "hard",
+    "question": "Les classeurs peuvent-ils être partagés ?",
+    "options": ["Oui", "Non", "Uniquement en lecture", "Uniquement en écriture"],
+    "correct": 0,
+    "explication": "Les classeurs peuvent être enregistrés et partagés avec d'autres utilisateurs."
+  },
+  {
+    "id": "AZ-204-283",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Service Health",
+    "difficulty": "hard",
+    "question": "Service Health fournit-il des informations sur les incidents Azure ?",
+    "options": ["Oui", "Non", "Uniquement pour les régions", "Uniquement pour les services"],
+    "correct": 0,
+    "explication": "Service Health donne des informations sur les incidents, maintenances, et avis de santé."
+  },
+  {
+    "id": "AZ-204-284",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Service Health",
+    "difficulty": "hard",
+    "question": "Service Health peut-il envoyer des alertes personnalisées ?",
+    "options": ["Oui", "Non", "Uniquement pour les incidents", "Uniquement pour les maintenances"],
+    "correct": 0,
+    "explication": "On peut configurer des alertes Service Health pour être notifié des événements affectant les ressources."
+  },
+  {
+    "id": "AZ-204-285",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Advisor",
+    "difficulty": "hard",
+    "question": "Azure Advisor donne-t-il des recommandations pour améliorer la fiabilité ?",
+    "options": ["Oui", "Non", "Uniquement pour les coûts", "Uniquement pour la sécurité"],
+    "correct": 0,
+    "explication": "Advisor a plusieurs catégories, dont Reliability."
+  },
+  {
+    "id": "AZ-204-286",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Advisor",
+    "difficulty": "hard",
+    "question": "Les recommandations d'Advisor sont-elles personnalisées ?",
+    "options": ["Oui", "Non", "Uniquement pour les abonnements", "Uniquement pour les groupes de ressources"],
+    "correct": 0,
+    "explication": "Advisor analyse les ressources et donne des recommandations spécifiques."
+  },
+  {
+    "id": "AZ-204-287",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "App Service diagnostics",
+    "difficulty": "hard",
+    "question": "App Service Diagnostics est-il un outil intégré pour résoudre les problèmes ?",
+    "options": ["Oui", "Non", "Uniquement pour les performances", "Uniquement pour les erreurs"],
+    "correct": 0,
+    "explication": "App Service Diagnostics aide à diagnostiquer les problèmes courants."
+  },
+  {
+    "id": "AZ-204-288",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Log streaming",
+    "difficulty": "hard",
+    "question": "Le streaming de logs (log stream) dans App Service permet-il de voir les logs en temps réel ?",
+    "options": ["Oui", "Non", "Uniquement pour les erreurs", "Uniquement pour les accès"],
+    "correct": 0,
+    "explication": "Le log stream affiche les logs d'application, du serveur web, et de déploiement en temps réel."
+  },
+  {
+    "id": "AZ-204-289",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Kudu",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Kudu dans App Service ?",
+    "options": [
+      "Moteur de déploiement et console de débogage",
+      "Base de données",
+      "Cache",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Kudu fournit des outils de débogage (console, processus, variables d'environnement)."
+  },
+  {
+    "id": "AZ-204-290",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Kudu",
+    "difficulty": "hard",
+    "question": "L'URL de Kudu pour une App Service est généralement ?",
+    "options": [
+      "https://<appname>.scm.azurewebsites.net",
+      "https://<appname>.kudu.azurewebsites.net",
+      "https://<appname>.debug.azurewebsites.net",
+      "https://<appname>.console.azurewebsites.net"
+    ],
+    "correct": 0,
+    "explication": "L'endpoint SCM (Site Control Manager) est accessible via .scm."
+  },
+  {
+    "id": "AZ-204-291",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Application Map",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la carte d'application (Application Map) dans Application Insights ?",
+    "options": [
+      "Vue graphique des composants et dépendances",
+      "Carte géographique",
+      "Carte des régions",
+      "Carte des utilisateurs"
+    ],
+    "correct": 0,
+    "explication": "Application Map montre les relations entre les services et les dépendances."
+  },
+  {
+    "id": "AZ-204-292",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Smart Detection",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la détection intelligente (Smart Detection) dans Application Insights ?",
+    "options": [
+      "Détection automatique des anomalies (augmentation des échecs, latence, etc.)",
+      "Détection des vulnérabilités",
+      "Détection des fuites mémoire",
+      "Détection des dégradations de performance"
+    ],
+    "correct": 0,
+    "explication": "Smart Detection utilise le ML pour détecter des modèles inhabituels."
+  },
+  {
+    "id": "AZ-204-293",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Live Metrics Stream",
+    "difficulty": "hard",
+    "question": "Le flux de métriques en direct (Live Metrics Stream) affiche-t-il les métriques en quasi temps réel ?",
+    "options": ["Oui", "Non", "Uniquement pour les requêtes", "Uniquement pour les exceptions"],
+    "correct": 0,
+    "explication": "Live Metrics Stream affiche les métriques avec une latence d'environ 1 seconde."
+  },
+  {
+    "id": "AZ-204-294",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Agent (AMA)",
+    "difficulty": "hard",
+    "question": "À quoi sert l'Agent Azure Monitor (AMA) ?",
+    "options": [
+      "Collecter des données depuis les VMs et les envoyer à Azure Monitor",
+      "Déployer des applications",
+      "Sauvegarder des données",
+      "Chiffrer des disques"
+    ],
+    "correct": 0,
+    "explication": "AMA collecte les métriques et logs depuis les machines virtuelles."
+  },
+  {
+    "id": "AZ-204-295",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Agent (AMA)",
+    "difficulty": "hard",
+    "question": "AMA remplace-t-il les anciens agents (Log Analytics agent, Diagnostics extension) ?",
+    "options": ["Oui (progressivement)", "Non", "Uniquement pour Windows", "Uniquement pour Linux"],
+    "correct": 0,
+    "explication": "AMA est l'agent unifié recommandé pour les nouveaux déploiements."
+  },
+  {
+    "id": "AZ-204-296",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Data Collection Rules (DCR)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une règle de collecte de données (DCR) ?",
+    "options": [
+      "Définit quelles données collecter et où les envoyer",
+      "Règle d'alerte",
+      "Politique de diagnostic",
+      "Règle de pare-feu"
+    ],
+    "correct": 0,
+    "explication": "Les DCR sont utilisées avec AMA pour configurer la collecte de données."
+  },
+  {
+    "id": "AZ-204-297",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Workbooks",
+    "difficulty": "hard",
+    "question": "Les classeurs peuvent-ils être créés à partir de modèles (templates) ?",
+    "options": ["Oui", "Non", "Uniquement pour les métriques", "Uniquement pour les logs"],
+    "correct": 0,
+    "explication": "Il existe des modèles prédéfinis pour les scénarios courants."
+  },
+  {
+    "id": "AZ-204-298",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Container insights ?",
+    "options": [
+      "Surveillance des performances des conteneurs (AKS, ACI)",
+      "Surveillance des VMs",
+      "Surveillance des applications",
+      "Surveillance des réseaux"
+    ],
+    "correct": 0,
+    "explication": "Container insights collecte des métriques et logs pour Kubernetes."
+  },
+  {
+    "id": "AZ-204-299",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que VM insights ?",
+    "options": [
+      "Surveillance des performances et des dépendances des VMs",
+      "Surveillance des conteneurs",
+      "Surveillance des applications",
+      "Surveillance des bases de données"
+    ],
+    "correct": 0,
+    "explication": "VM insights fournit des métriques détaillées et une carte des dépendances."
+  },
+  {
+    "id": "AZ-204-300",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Insights",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que SQL insights ?",
+    "options": [
+      "Surveillance des bases de données SQL",
+      "Surveillance des VMs",
+      "Surveillance des conteneurs",
+      "Surveillance des applications"
+    ],
+    "correct": 0,
+    "explication": "SQL insights aide à surveiller les performances des bases de données SQL."
+  },
+  {
+    "id": "AZ-204-301",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Network Insights",
+    "difficulty": "hard",
+    "question": "Network insights permet-il de surveiller la connectivité réseau ?",
+    "options": ["Oui", "Non", "Uniquement pour les VPN", "Uniquement pour les ExpressRoute"],
+    "correct": 0,
+    "explication": "Network insights fournit une vue d'ensemble de la santé du réseau."
+  },
+  {
+    "id": "AZ-204-302",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Logs ingestion",
+    "difficulty": "hard",
+    "question": "Peut-on envoyer des logs personnalisés à Log Analytics via l'API ?",
+    "options": ["Oui", "Non", "Uniquement via l'agent", "Uniquement via Event Hub"],
+    "correct": 0,
+    "explication": "L'API de collecte de données permet d'envoyer des données personnalisées."
+  },
+  {
+    "id": "AZ-204-303",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Logs queries",
+    "difficulty": "hard",
+    "question": "Quel est l'opérateur KQL pour joindre deux tables ?",
+    "options": ["join", "union", "merge", "combine"],
+    "correct": 0,
+    "explication": "L'opérateur join fusionne les lignes de deux tables."
+  },
+  {
+    "id": "AZ-204-304",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Logs queries",
+    "difficulty": "hard",
+    "question": "Comment regrouper des résultats par une colonne en KQL ?",
+    "options": ["summarize", "group by", "aggregate", "rollup"],
+    "correct": 0,
+    "explication": "summarize avec by regroupe les résultats."
+  },
+  {
+    "id": "AZ-204-305",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Logs queries",
+    "difficulty": "hard",
+    "question": "Comment trier les résultats par une colonne en KQL ?",
+    "options": ["order by", "sort by", "order", "sort"],
+    "correct": 0,
+    "explication": "order by asc/desc trie les résultats."
+  },
+  {
+    "id": "AZ-204-306",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Logs queries",
+    "difficulty": "hard",
+    "question": "Comment calculer le nombre de lignes dans une table KQL ?",
+    "options": ["count", "sum", "total", "rowcount"],
+    "correct": 0,
+    "explication": "L'opérateur count retourne le nombre de lignes."
+  },
+  {
+    "id": "AZ-204-307",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Logs queries",
+    "difficulty": "hard",
+    "question": "Comment filtrer les logs des dernières 24 heures en KQL ?",
+    "options": ["where timestamp > ago(24h)", "where timestamp > now(-24h)", "where timestamp > 24h", "where timestamp > 1d"],
+    "correct": 0,
+    "explication": "ago(24h) retourne l'heure il y a 24 heures."
+  },
+  {
+    "id": "AZ-204-308",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Workbooks",
+    "difficulty": "hard",
+    "question": "Les classeurs peuvent-ils contenir des graphiques, des métriques et des requêtes ?",
+    "options": ["Oui", "Non", "Uniquement des graphiques", "Uniquement des requêtes"],
+    "correct": 0,
+    "explication": "Les classeurs sont très flexibles et peuvent combiner plusieurs types de visualisations."
+  },
+  {
+    "id": "AZ-204-309",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Azure Monitor Alerts",
+    "difficulty": "hard",
+    "question": "Les alertes peuvent-elles déclencher des fonctions Azure ?",
+    "options": ["Oui (via Action Group - Webhook)", "Non", "Uniquement via e-mail", "Uniquement via SMS"],
+    "correct": 0,
+    "explication": "Un webhook peut appeler une fonction Azure pour une action automatisée."
+  },
+  {
+    "id": "AZ-204-310",
+    "theme": "Azure Monitoring & Troubleshooting",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour le logging dans une application distribuée ?",
+    "options": [
+      "Utiliser un corrélation ID (operation ID) pour tracer les requêtes",
+      "Logs séparés par service",
+      "Logs sans corrélation",
+      "Logs uniquement en cas d'erreur"
+    ],
+    "correct": 0,
+    "explication": "Un ID de corrélation permet de suivre une requête à travers les services."
+  }
+]

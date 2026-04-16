@@ -1,0 +1,47 @@
+[
+  {
+    "id": "SPR-01-001",
+    "theme": "Spring Core et IoC",
+    "theme_label": "Inversion de Contrôle et Injection de Dépendances",
+    "difficulty": "easy",
+    "question": "Quelle annotation Spring est utilisée pour l'injection automatique de dépendances ?",
+    "options": [
+      "@Resource",
+      "@Inject",
+      "@Autowired",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "@Autowired, @Inject et @Resource sont toutes supportées par Spring pour l'injection de dépendances."
+  },
+  {
+    "id": "SPR-01-002",
+    "theme": "Spring Core et IoC",
+    "theme_label": "Inversion de Contrôle et Injection de Dépendances",
+    "difficulty": "medium",
+    "question": "Quelle est la portée par défaut d'un bean Spring ?",
+    "options": [
+      "prototype",
+      "singleton",
+      "request",
+      "session"
+    ],
+    "correct": 1,
+    "explanation": "La portée par défaut d'un bean Spring est singleton (une seule instance par conteneur)."
+  },
+  {
+    "id": "SPR-01-003",
+    "theme": "Spring Core et IoC",
+    "theme_label": "Inversion de Contrôle et Injection de Dépendances",
+    "difficulty": "medium",
+    "question": "Que fait l'annotation @ComponentScan ?",
+    "options": [
+      "Scan les packages pour trouver des composants Spring",
+      "Déclare un composant Spring",
+      "Configure la sécurité",
+      "Gère les transactions"
+    ],
+    "correct": 0,
+    "explanation": "@ComponentScan indique à Spring où chercher les classes annotées avec @Component, @Service, etc."
+  }
+]

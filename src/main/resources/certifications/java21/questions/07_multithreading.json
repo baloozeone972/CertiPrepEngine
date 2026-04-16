@@ -1,781 +1,752 @@
 [
-{
-"id": "J21-07-001",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "easy",
-"question": "Comment créer un thread en Java ?",
-"options": [
-  "Étendre Thread",
-  "Implémenter Runnable",
-  "Utiliser ExecutorService",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Trois façons : extends Thread, implements Runnable, ou utiliser ExecutorService (recommandé)."
-},
-
-{
-"id": "J21-07-002",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "easy",
-"question": "Quelle méthode démarre l'exécution d'un thread ?",
-"options": ["run()", "start()", "execute()", "begin()"],
-"correct": 1,
-"explanation": "start() crée un nouveau thread et appelle run(). run() direct n'exécute pas dans un nouveau thread."
-},
-
-{
-"id": "J21-07-003",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "easy",
-"question": "Que fait 'Thread.sleep(1000)' ?",
-"options": [
-  "Met le thread en pause pour 1000ms",
-  "Lève InterruptedException",
-  "Ne libère pas les locks",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "sleep() suspend le thread, mais ne libère pas les locks qu'il détient. InterruptedException peut être levée."
-},
-
-{
-"id": "J21-07-004",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "easy",
-"question": "Que fait 'Thread.yield()' ?",
-"options": [
-  "Indique qu'on veut céder le processeur",
-  "Ne garantit rien (hint seulement)",
-  "Ne libère pas les locks",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "yield() est un hint au scheduler pour céder le CPU. Peut être ignoré. Utile pour le testing."
-},
-
-{
-"id": "J21-07-005",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nThread t = new Thread(() -> System.out.print(\"A\"));\nt.run();\nSystem.out.print(\"B\");\n```",
-"options": ["AB", "BA", "A B (ordre variable)", "Erreur"],
-"correct": 0,
-"explanation": "t.run() appelle run() directement dans le thread courant, pas de nouveau thread. Donc A puis B."
-},
-
-{
-"id": "J21-07-006",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nThread t = new Thread(() -> System.out.print(\"A\"));\nt.start();\nSystem.out.print(\"B\");\n```",
-"options": ["AB", "BA", "AB ou BA (ordre non déterminé)", "Erreur"],
-"correct": 2,
-"explanation": "start() crée un nouveau thread. L'ordre d'exécution entre les deux threads n'est pas garanti."
-},
-
-{
-"id": "J21-07-007",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "easy",
-"question": "Que signifie 'synchronized' ?",
-"options": [
-  "Un seul thread peut exécuter le bloc/méthode à la fois",
-  "Garantit la visibilité mémoire",
-  "Établit une relation happens-before",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "synchronized assure exclusion mutuelle et visibilité mémoire (flush/refresh des caches)."
-},
-
-{
-"id": "J21-07-008",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Quelle est la différence entre synchronized méthode et synchronized bloc ?",
-"options": [
-  "Méthode = lock sur this, bloc = lock sur objet spécifique",
-  "Bloc permet plus de contrôle (lock plus fin)",
-  "Méthode est équivalente à synchronized(this)",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "synchronized méthode lock sur this (ou Class pour static). Bloc permet lock sur n'importe quel objet."
-},
-
-{
-"id": "J21-07-009",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'wait()' ?",
-"options": [
-  "Met le thread en attente, libère le lock",
-  "Doit être appelé dans synchronized",
-  "Attend jusqu'à notify()/notifyAll()",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "wait() libère le lock et attend. Nécessite d'avoir le lock sur l'objet. Se réveille avec notify()."
-},
-
-{
-"id": "J21-07-010",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'notify()' ?",
-"options": [
-  "Réveille un thread en wait sur cet objet",
-  "Le thread réveillé doit reacquérir le lock",
-  "Ne garantit pas quel thread est réveillé",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "notify() réveille un thread arbitraire en wait(). notifyAll() réveille tous les threads en wait()."
-},
-
-{
-"id": "J21-07-011",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nsynchronized(this) {\n    this.wait();\n    System.out.print(\"A\");\n}\n```",
-"options": [
-  "Affiche A",
-  "Bloque indéfiniment (si pas notify)",
-  "IllegalMonitorStateException",
-  "Erreur compilation"
-],
-"correct": 1,
-"explanation": "wait() doit être appelé dans un bloc synchronized. Sans notify(), le thread attend indéfiniment."
-},
-
-{
-"id": "J21-07-012",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont 'volatile' variables ?",
-"options": [
-  "Garantit la visibilité (pas d'atomicité)",
-  "Lecture/écriture directement en mémoire (pas de cache thread)",
-  "Plus léger que synchronized",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "volatile assure visibilité entre threads, mais pas d'atomicité pour i++ (non atomique)."
-},
-
-{
-"id": "J21-07-013",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "volatile est-il suffisant pour un compteur partagé (counter++) ?",
-"options": [
-  "Oui, volatile garantit atomicité",
-  "Non, counter++ n'est pas atomique",
-  "Oui, si counter est volatile",
-  "Non, même avec volatile, besoin de synchronized ou AtomicInteger"
-],
-"correct": 3,
-"explanation": "counter++ est lecture+incrémentation+écriture, non atomique. volatile ne suffit pas → utiliser AtomicInteger ou synchronized."
-},
-
-{
-"id": "J21-07-014",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Qu'est-ce qu'une 'deadlock' ?",
-"options": [
-  "Deux threads bloqués attendant mutuellement les locks",
-  "Thread 1 lock A attend B, Thread 2 lock B attend A",
-  "Situation qui ne se résout pas sans intervention",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Deadlock : situation où chaque thread attend un lock détenu par un autre. Programme bloqué indéfiniment."
-},
-
-{
-"id": "J21-07-015",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Comment éviter les deadlocks ?",
-"options": [
-  "Acquérir les locks dans un ordre fixe",
-  "Utiliser tryLock() avec timeout",
-  "Limiter l'utilisation des locks",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Stratégies : ordre fixe, tryLock() avec timeout, éviter locks imbriqués, utiliser lock striping."
-},
-
-{
-"id": "J21-07-016",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'locks' dans java.util.concurrent.locks ?",
-"options": [
-  "ReentrantLock (plus flexible que synchronized)",
-  "tryLock(), lockInterruptibly()",
-  "Condition (remplace wait/notify)",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ReentrantLock offre tryLock() (non-bloquant), lockInterruptibly(), et Conditions multiples."
-},
-
-{
-"id": "J21-07-017",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Quelle est la différence entre ReentrantLock et synchronized ?",
-"options": [
-  "ReentrantLock peut être interrompu (lockInterruptibly)",
-  "ReentrantLock a tryLock() non-bloquant",
-  "ReentrantLock supporte Conditions multiples",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ReentrantLock est plus flexible mais plus verbeux. synchronized est plus simple pour les cas basiques."
-},
-
-{
-"id": "J21-07-018",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'ReentrantLock.tryLock()' ?",
-"options": [
-  "Tente d'acquérir le lock, retourne true/false immédiatement",
-  "Ne bloque pas",
-  "Peut avoir un timeout",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "tryLock() tente sans bloquer. tryLock(1, TimeUnit.SECONDS) attend jusqu'à 1 seconde."
-},
-
-{
-"id": "J21-07-019",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Qu'est-ce que 'ReadWriteLock' ?",
-"options": [
-  "Sépare lock lecture (partagé) et écriture (exclusif)",
-  "Plusieurs lecteurs simultanés, un seul écrivain",
-  "Meilleures performances pour lectures fréquentes",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ReadWriteLock permet accès concurrent en lecture, exclusif en écriture. ReentrantReadWriteLock est l'implémentation."
-},
-
-{
-"id": "J21-07-020",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Qu'est-ce que 'StampedLock' (Java 8) ?",
-"options": [
-  "Optimistic locking pour lectures",
-  "Convertible (upgrade/downgrade)",
-  "Plus performant que ReadWriteLock",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "StampedLock offre optimistic read (tryOptimisticRead()) pour des lectures sans blocage si pas d'écriture."
-},
-
-{
-"id": "J21-07-021",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "easy",
-"question": "Qu'est-ce qu'ExecutorService ?",
-"options": [
-  "Pool de threads",
-  "Sépare soumission de tâches de l'exécution",
-  "Gère le cycle de vie des threads",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ExecutorService gère un pool de threads. Utiliser Executors.newFixedThreadPool() ou .newCachedThreadPool()."
-},
-
-{
-"id": "J21-07-022",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'ExecutorService.submit(Callable)' ?",
-"options": [
-  "Retourne un Future<T>",
-  "Tâche retourne une valeur",
-  "Peut lever une exception",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Callable retourne une valeur et peut lever une exception (contrairement à Runnable). Future.get() récupère la valeur."
-},
-
-{
-"id": "J21-07-023",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'Future.get()' ?",
-"options": [
-  "Bloque jusqu'à résultat disponible",
-  "Lève ExecutionException si tâche a échoué",
-  "Peut avoir timeout",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "get() bloque. get(1, TimeUnit.SECONDS) avec timeout lève TimeoutException si dépassé."
-},
-
-{
-"id": "J21-07-024",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'Future.cancel(true)' ?",
-"options": [
-  "Tente d'annuler la tâche",
-  "Interrompt le thread si true",
-  "Retourne false si déjà terminée",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "cancel() tente d'annuler. mayInterruptIfRunning=true interrompt le thread si en cours d'exécution."
-},
-
-{
-"id": "J21-07-025",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'atomic classes' (AtomicInteger, AtomicReference) ?",
-"options": [
-  "Opérations atomiques sans locks",
-  "Basées sur CAS (Compare-And-Swap)",
-  "Plus performantes que synchronized",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "AtomicInteger offre incrementAndGet(), compareAndSet() atomiques via instructions CPU (CAS)."
-},
-
-{
-"id": "J21-07-026",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que produit ce code avec AtomicInteger ?\n```java\nAtomicInteger ai = new AtomicInteger(0);\nai.incrementAndGet();\nSystem.out.println(ai.get());\n```",
-"options": ["0", "1", "2", "Dépend du thread"],
-"correct": 1,
-"explanation": "incrementAndGet() incrémente atomiquement et retourne la nouvelle valeur (1)."
-},
-
-{
-"id": "J21-07-027",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont les 'CompletableFuture' ?",
-"options": [
-  "Composition asynchrone de tâches",
-  "thenApply(), thenCompose(), thenCombine()",
-  "Exceptionally(), handle() pour erreurs",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "CompletableFuture (Java 8+) permet la programmation asynchrone déclarative, similaire à Promise/async-await."
-},
-
-{
-"id": "J21-07-028",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que fait 'CompletableFuture.supplyAsync(() -> compute())' ?",
-"options": [
-  "Exécute compute() asynchrone",
-  "Retourne CompletableFuture<T>",
-  "Utilise ForkJoinPool.commonPool() par défaut",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "supplyAsync() exécute une tâche qui retourne une valeur, asynchrone. thenAccept() pour consommer résultat."
-},
-
-{
-"id": "J21-07-029",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont les 'virtual threads' (Java 21) ?",
-"options": [
-  "Threads légers gérés par la JVM",
-  "Millions de threads sans overhead",
-  "Thread.start() sur virtual thread",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Virtual threads (Project Loom) sont des threads utilisateur très légers. Thread.startVirtualThread() ou Executors.newVirtualThreadPerTaskExecutor()."
-},
-
-{
-"id": "J21-07-030",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Comment créer un virtual thread en Java 21 ?",
-"options": [
-  "Thread.startVirtualThread(() -> task())",
-  "Thread.ofVirtual().start(task)",
-  "Executors.newVirtualThreadPerTaskExecutor()",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Trois façons : startVirtualThread(), Thread.ofVirtual(), ou ExecutorService dédié."
-},
-
-{
-"id": "J21-07-031",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'ThreadLocal' ?",
-"options": [
-  "Variables propres à chaque thread",
-  "Chaque thread a sa copie",
-  "Utile pour éviter le partage",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ThreadLocal stocke une valeur par thread. Utilisé pour SimpleDateFormat thread-safe, ou contexte par requête."
-},
-
-{
-"id": "J21-07-032",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que risque-t-on avec ThreadLocal ?",
-"options": [
-  "Memory leak (si thread pool)",
-  "Oubli de remove()",
-  "Valeur persistante entre requêtes",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Dans un thread pool, les threads sont réutilisés. Sans remove(), les valeurs persistent entre tâches."
-},
-
-{
-"id": "J21-07-033",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'BlockingQueue' ?",
-"options": [
-  "File d'attente thread-safe avec blocage",
-  "put() bloque si pleine, take() bloque si vide",
-  "Implémentations : ArrayBlockingQueue, LinkedBlockingQueue",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "BlockingQueue est parfaite pour pattern producteur-consommateur. offer()/poll() non-bloquants aussi disponibles."
-},
-
-{
-"id": "J21-07-034",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'ConcurrentHashMap' ?",
-"options": [
-  "HashMap thread-safe",
-  "Lock striping (plusieurs segments)",
-  "Meilleures performances que Hashtable",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ConcurrentHashMap permet accès concurrent sans bloquer toute la map. computeIfAbsent() est atomique."
-},
-
-{
-"id": "J21-07-035",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont les 'LongAdder' vs 'AtomicLong' ?",
-"options": [
-  "LongAdder plus performant en haute concurrence",
-  "LongAdder utilise striping (plusieurs cellules)",
-  "AtomicLong pour faible concurrence",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "LongAdder (Java 8+) divise le compteur en cellules, mieux pour mises à jour fréquentes, lectures rares."
-},
-
-{
-"id": "J21-07-036",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont les 'Phaser' (Java 7+) ?",
-"options": [
-  "Barrière plus flexible que CyclicBarrier",
-  "Permet phases dynamiques",
-  "arriveAndAwaitAdvance()",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Phaser permet synchronisation par phases, où le nombre de participants peut changer dynamiquement."
-},
-
-{
-"id": "J21-07-037",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont 'CountDownLatch' ?",
-"options": [
-  "Compte à rebours, await() bloque jusqu'à zéro",
-  "Usage unique (non réutilisable)",
-  "countDown() décrémente",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "CountDownLatch attend que N événements arrivent. Une fois à zéro, ne peut être réinitialisé."
-},
-
-{
-"id": "J21-07-038",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont 'CyclicBarrier' ?",
-"options": [
-  "Attend que N threads arrivent à un point",
-  "Réutilisable (reset())",
-  "Action optionnelle quand barrière franchie",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "CyclicBarrier permet synchronisation de N threads. reset() pour réutilisation. Diffère de CountDownLatch (usage unique)."
-},
-
-{
-"id": "J21-07-039",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont 'Semaphore' ?",
-"options": [
-  "Contrôle le nombre d'accès simultanés",
-  "acquire() / release()",
-  "Permet de limiter des ressources",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Semaphore gère un nombre de permits. Semaphore(3) permet 3 accès simultanés. Binaire = Mutex."
-},
-
-{
-"id": "J21-07-040",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont 'Exchanger' ?",
-"options": [
-  "Point d'échange entre deux threads",
-  "exchange(obj) bloque jusqu'à autre thread",
-  "Échange des objets mutuellement",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Exchanger<V> permet à deux threads d'échanger des objets de façon synchrone."
-},
-
-{
-"id": "J21-07-041",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Qu'est-ce que 'ForkJoinPool' ?",
-"options": [
-  "Pool pour tâches récursives (divide and conquer)",
-  "Work-stealing algorithm",
-  "Utilisé par parallel streams",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "ForkJoinPool est conçu pour RecursiveTask. parallelStream() l'utilise. Work-stealing équilibre la charge."
-},
-
-{
-"id": "J21-07-042",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont les 'Structured Concurrency' (Java 21 preview) ?",
-"options": [
-  "Concurrence structurée (comme les appels)",
-  "Fork/join avec scope explicite",
-  "Prévient les fuites de threads",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "StructuredTaskScope (incubateur Java 21) traite les threads comme des unités de travail avec début/fin explicite."
-},
-
-{
-"id": "J21-07-043",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que fait 'Thread.interrupt()' ?",
-"options": [
-  "Demande l'interruption du thread",
-  "Réveille le thread si en wait/sleep",
-  "set flag d'interruption",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "interrupt() ne force pas l'arrêt mais signale. Le thread doit vérifier isInterrupted() ou attraper InterruptedException."
-},
-
-{
-"id": "J21-07-044",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Comment répondre correctement à une interruption ?",
-"options": [
-  "Restaurer le flag : Thread.currentThread().interrupt()",
-  "Lever InterruptedException",
-  "Arrêter proprement",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Si on ne peut pas lever InterruptedException, appeler interrupt() pour restaurer le flag."
-},
-
-{
-"id": "J21-07-045",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Que sont les 'deadlock detection tools' ?",
-"options": [
-  "ThreadMXBean.findDeadlockedThreads()",
-  "jstack, VisualVM",
-  "JConsole",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Programmatiquement : ThreadMXBean. Outils : jstack, jconsole, VisualVM détectent les deadlocks."
-},
-
-{
-"id": "J21-07-046",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'happens-before' relationships ?",
-"options": [
-  "Garanties mémoire du JMM",
-  "Synchronized, volatile, start() créent happens-before",
-  "Garantit visibilité des écritures",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Happens-before définit quand une écriture est visible par une autre lecture. Essentiel pour le threading correct."
-},
-
-{
-"id": "J21-07-047",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Qu'est-ce que 'false sharing' ?",
-"options": [
-  "Plusieurs threads écrivent dans même cache line",
-  "Dégradation de performance",
-  "Solution : padding ou @Contended",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "False sharing : threads sur CPU différents écrivent dans variables proches en mémoire (même ligne de cache)."
-},
-
-{
-"id": "J21-07-048",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Qu'est-ce que 'lock striping' ?",
-"options": [
-  "Diviser une structure en segments avec locks distincts",
-  "Utilisé par ConcurrentHashMap",
-  "Réduit contention",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Lock striping : plusieurs locks pour différentes parties des données. ConcurrentHashMap utilise 16 segments par défaut."
-},
-
-{
-"id": "J21-07-049",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "medium",
-"question": "Que sont les 'CopyOnWriteArrayList' ?",
-"options": [
-  "Créée copie à chaque modification",
-  "Idéal pour lectures fréquentes, modifications rares",
-  "Iterateurs ne lèvent pas ConcurrentModificationException",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "CopyOnWriteArrayList est thread-safe. Les écritures créent une nouvelle copie, les lectures sont lock-free."
-},
-
-{
-"id": "J21-07-050",
-"theme": "Multithreading et Concurrence",
-"theme_label": "Threads, synchronisation, locks, concurrent utilities",
-"difficulty": "hard",
-"question": "Qu'est-ce que 'race condition' ?",
-"options": [
-  "Résultat dépend de l'ordre d'exécution des threads",
-  "Check-then-act, read-modify-write",
-  "Corrigé par synchronisation",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Race condition : comportement incorrect dû à un timing non contrôlé. Exemple : if(!map.containsKey(key)) map.put(key, value)."
-}
+  {
+    "id": "J21-07-001",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "question": "Comment créer un thread en Java ?",
+    "options": [
+      "Étendre Thread",
+      "Implémenter Runnable",
+      "Utiliser ExecutorService",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Trois façons : extends Thread, implements Runnable, ou utiliser ExecutorService (recommandé)."
+  },
+  {
+    "id": "J21-07-002",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "question": "Quelle méthode démarre l'exécution d'un thread ?",
+    "options": [
+      "run()",
+      "start()",
+      "execute()",
+      "begin()"
+    ],
+    "correct": 1,
+    "explanation": "start() crée un nouveau thread et appelle run(). run() direct n'exécute pas dans un nouveau thread."
+  },
+  {
+    "id": "J21-07-003",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "question": "Que fait 'Thread.sleep(1000)' ?",
+    "options": [
+      "Met le thread en pause pour 1000ms",
+      "Lève InterruptedException",
+      "Ne libère pas les locks",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "sleep() suspend le thread, mais ne libère pas les locks qu'il détient. InterruptedException peut être levée."
+  },
+  {
+    "id": "J21-07-004",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "question": "Que fait 'Thread.yield()' ?",
+    "options": [
+      "Indique qu'on veut céder le processeur",
+      "Ne garantit rien (hint seulement)",
+      "Ne libère pas les locks",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "yield() est un hint au scheduler pour céder le CPU. Peut être ignoré. Utile pour le testing."
+  },
+  {
+    "id": "J21-07-005",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nThread t = new Thread(() -> System.out.print(\"A\"));\nt.run();\nSystem.out.print(\"B\");\n```",
+    "options": [
+      "AB",
+      "BA",
+      "A B (ordre variable)",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "t.run() appelle run() directement dans le thread courant, pas de nouveau thread. Donc A puis B."
+  },
+  {
+    "id": "J21-07-006",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nThread t = new Thread(() -> System.out.print(\"A\"));\nt.start();\nSystem.out.print(\"B\");\n```",
+    "options": [
+      "AB",
+      "BA",
+      "AB ou BA (ordre non déterminé)",
+      "Erreur"
+    ],
+    "correct": 2,
+    "explanation": "start() crée un nouveau thread. L'ordre d'exécution entre les deux threads n'est pas garanti."
+  },
+  {
+    "id": "J21-07-007",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "question": "Que signifie 'synchronized' ?",
+    "options": [
+      "Un seul thread peut exécuter le bloc/méthode à la fois",
+      "Garantit la visibilité mémoire",
+      "Établit une relation happens-before",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "synchronized assure exclusion mutuelle et visibilité mémoire (flush/refresh des caches)."
+  },
+  {
+    "id": "J21-07-008",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre synchronized méthode et synchronized bloc ?",
+    "options": [
+      "Méthode = lock sur this, bloc = lock sur objet spécifique",
+      "Bloc permet plus de contrôle (lock plus fin)",
+      "Méthode est équivalente à synchronized(this)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "synchronized méthode lock sur this (ou Class pour static). Bloc permet lock sur n'importe quel objet."
+  },
+  {
+    "id": "J21-07-009",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'wait()' ?",
+    "options": [
+      "Met le thread en attente, libère le lock",
+      "Doit être appelé dans synchronized",
+      "Attend jusqu'à notify()/notifyAll()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "wait() libère le lock et attend. Nécessite d'avoir le lock sur l'objet. Se réveille avec notify()."
+  },
+  {
+    "id": "J21-07-010",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'notify()' ?",
+    "options": [
+      "Réveille un thread en wait sur cet objet",
+      "Le thread réveillé doit reacquérir le lock",
+      "Ne garantit pas quel thread est réveillé",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "notify() réveille un thread arbitraire en wait(). notifyAll() réveille tous les threads en wait()."
+  },
+  {
+    "id": "J21-07-011",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nsynchronized(this) {\n    this.wait();\n    System.out.print(\"A\");\n}\n```",
+    "options": [
+      "Affiche A",
+      "Bloque indéfiniment (si pas notify)",
+      "IllegalMonitorStateException",
+      "Erreur compilation"
+    ],
+    "correct": 1,
+    "explanation": "wait() doit être appelé dans un bloc synchronized. Sans notify(), le thread attend indéfiniment."
+  },
+  {
+    "id": "J21-07-012",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont 'volatile' variables ?",
+    "options": [
+      "Garantit la visibilité (pas d'atomicité)",
+      "Lecture/écriture directement en mémoire (pas de cache thread)",
+      "Plus léger que synchronized",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "volatile assure visibilité entre threads, mais pas d'atomicité pour i++ (non atomique)."
+  },
+  {
+    "id": "J21-07-013",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "volatile est-il suffisant pour un compteur partagé (counter++) ?",
+    "options": [
+      "Oui, volatile garantit atomicité",
+      "Non, counter++ n'est pas atomique",
+      "Oui, si counter est volatile",
+      "Non, même avec volatile, besoin de synchronized ou AtomicInteger"
+    ],
+    "correct": 3,
+    "explanation": "counter++ est lecture+incrémentation+écriture, non atomique. volatile ne suffit pas → utiliser AtomicInteger ou synchronized."
+  },
+  {
+    "id": "J21-07-014",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une 'deadlock' ?",
+    "options": [
+      "Deux threads bloqués attendant mutuellement les locks",
+      "Thread 1 lock A attend B, Thread 2 lock B attend A",
+      "Situation qui ne se résout pas sans intervention",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Deadlock : situation où chaque thread attend un lock détenu par un autre. Programme bloqué indéfiniment."
+  },
+  {
+    "id": "J21-07-015",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Comment éviter les deadlocks ?",
+    "options": [
+      "Acquérir les locks dans un ordre fixe",
+      "Utiliser tryLock() avec timeout",
+      "Limiter l'utilisation des locks",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Stratégies : ordre fixe, tryLock() avec timeout, éviter locks imbriqués, utiliser lock striping."
+  },
+  {
+    "id": "J21-07-016",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'locks' dans java.util.concurrent.locks ?",
+    "options": [
+      "ReentrantLock (plus flexible que synchronized)",
+      "tryLock(), lockInterruptibly()",
+      "Condition (remplace wait/notify)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ReentrantLock offre tryLock() (non-bloquant), lockInterruptibly(), et Conditions multiples."
+  },
+  {
+    "id": "J21-07-017",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre ReentrantLock et synchronized ?",
+    "options": [
+      "ReentrantLock peut être interrompu (lockInterruptibly)",
+      "ReentrantLock a tryLock() non-bloquant",
+      "ReentrantLock supporte Conditions multiples",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ReentrantLock est plus flexible mais plus verbeux. synchronized est plus simple pour les cas basiques."
+  },
+  {
+    "id": "J21-07-018",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'ReentrantLock.tryLock()' ?",
+    "options": [
+      "Tente d'acquérir le lock, retourne true/false immédiatement",
+      "Ne bloque pas",
+      "Peut avoir un timeout",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "tryLock() tente sans bloquer. tryLock(1, TimeUnit.SECONDS) attend jusqu'à 1 seconde."
+  },
+  {
+    "id": "J21-07-019",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que 'ReadWriteLock' ?",
+    "options": [
+      "Sépare lock lecture (partagé) et écriture (exclusif)",
+      "Plusieurs lecteurs simultanés, un seul écrivain",
+      "Meilleures performances pour lectures fréquentes",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ReadWriteLock permet accès concurrent en lecture, exclusif en écriture. ReentrantReadWriteLock est l'implémentation."
+  },
+  {
+    "id": "J21-07-020",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'StampedLock' (Java 8) ?",
+    "options": [
+      "Optimistic locking pour lectures",
+      "Convertible (upgrade/downgrade)",
+      "Plus performant que ReadWriteLock",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "StampedLock offre optimistic read (tryOptimisticRead()) pour des lectures sans blocage si pas d'écriture."
+  },
+  {
+    "id": "J21-07-021",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'ExecutorService ?",
+    "options": [
+      "Pool de threads",
+      "Sépare soumission de tâches de l'exécution",
+      "Gère le cycle de vie des threads",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ExecutorService gère un pool de threads. Utiliser Executors.newFixedThreadPool() ou .newCachedThreadPool()."
+  },
+  {
+    "id": "J21-07-022",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'ExecutorService.submit(Callable)' ?",
+    "options": [
+      "Retourne un Future<T>",
+      "Tâche retourne une valeur",
+      "Peut lever une exception",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Callable retourne une valeur et peut lever une exception (contrairement à Runnable). Future.get() récupère la valeur."
+  },
+  {
+    "id": "J21-07-023",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'Future.get()' ?",
+    "options": [
+      "Bloque jusqu'à résultat disponible",
+      "Lève ExecutionException si tâche a échoué",
+      "Peut avoir timeout",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "get() bloque. get(1, TimeUnit.SECONDS) avec timeout lève TimeoutException si dépassé."
+  },
+  {
+    "id": "J21-07-024",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'Future.cancel(true)' ?",
+    "options": [
+      "Tente d'annuler la tâche",
+      "Interrompt le thread si true",
+      "Retourne false si déjà terminée",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "cancel() tente d'annuler. mayInterruptIfRunning=true interrompt le thread si en cours d'exécution."
+  },
+  {
+    "id": "J21-07-025",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'atomic classes' (AtomicInteger, AtomicReference) ?",
+    "options": [
+      "Opérations atomiques sans locks",
+      "Basées sur CAS (Compare-And-Swap)",
+      "Plus performantes que synchronized",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "AtomicInteger offre incrementAndGet(), compareAndSet() atomiques via instructions CPU (CAS)."
+  },
+  {
+    "id": "J21-07-026",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que produit ce code avec AtomicInteger ?\n```java\nAtomicInteger ai = new AtomicInteger(0);\nai.incrementAndGet();\nSystem.out.println(ai.get());\n```",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Dépend du thread"
+    ],
+    "correct": 1,
+    "explanation": "incrementAndGet() incrémente atomiquement et retourne la nouvelle valeur (1)."
+  },
+  {
+    "id": "J21-07-027",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont les 'CompletableFuture' ?",
+    "options": [
+      "Composition asynchrone de tâches",
+      "thenApply(), thenCompose(), thenCombine()",
+      "Exceptionally(), handle() pour erreurs",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CompletableFuture (Java 8+) permet la programmation asynchrone déclarative, similaire à Promise/async-await."
+  },
+  {
+    "id": "J21-07-028",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que fait 'CompletableFuture.supplyAsync(() -> compute())' ?",
+    "options": [
+      "Exécute compute() asynchrone",
+      "Retourne CompletableFuture<T>",
+      "Utilise ForkJoinPool.commonPool() par défaut",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "supplyAsync() exécute une tâche qui retourne une valeur, asynchrone. thenAccept() pour consommer résultat."
+  },
+  {
+    "id": "J21-07-029",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont les 'virtual threads' (Java 21) ?",
+    "options": [
+      "Threads légers gérés par la JVM",
+      "Millions de threads sans overhead",
+      "Thread.start() sur virtual thread",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Virtual threads (Project Loom) sont des threads utilisateur très légers. Thread.startVirtualThread() ou Executors.newVirtualThreadPerTaskExecutor()."
+  },
+  {
+    "id": "J21-07-030",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Comment créer un virtual thread en Java 21 ?",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "Thread.ofVirtual().start(task)",
+      "Executors.newVirtualThreadPerTaskExecutor()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Trois façons : startVirtualThread(), Thread.ofVirtual(), ou ExecutorService dédié."
+  },
+  {
+    "id": "J21-07-031",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'ThreadLocal' ?",
+    "options": [
+      "Variables propres à chaque thread",
+      "Chaque thread a sa copie",
+      "Utile pour éviter le partage",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ThreadLocal stocke une valeur par thread. Utilisé pour SimpleDateFormat thread-safe, ou contexte par requête."
+  },
+  {
+    "id": "J21-07-032",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que risque-t-on avec ThreadLocal ?",
+    "options": [
+      "Memory leak (si thread pool)",
+      "Oubli de remove()",
+      "Valeur persistante entre requêtes",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Dans un thread pool, les threads sont réutilisés. Sans remove(), les valeurs persistent entre tâches."
+  },
+  {
+    "id": "J21-07-033",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'BlockingQueue' ?",
+    "options": [
+      "File d'attente thread-safe avec blocage",
+      "put() bloque si pleine, take() bloque si vide",
+      "Implémentations : ArrayBlockingQueue, LinkedBlockingQueue",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "BlockingQueue est parfaite pour pattern producteur-consommateur. offer()/poll() non-bloquants aussi disponibles."
+  },
+  {
+    "id": "J21-07-034",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'ConcurrentHashMap' ?",
+    "options": [
+      "HashMap thread-safe",
+      "Lock striping (plusieurs segments)",
+      "Meilleures performances que Hashtable",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ConcurrentHashMap permet accès concurrent sans bloquer toute la map. computeIfAbsent() est atomique."
+  },
+  {
+    "id": "J21-07-035",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont les 'LongAdder' vs 'AtomicLong' ?",
+    "options": [
+      "LongAdder plus performant en haute concurrence",
+      "LongAdder utilise striping (plusieurs cellules)",
+      "AtomicLong pour faible concurrence",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "LongAdder (Java 8+) divise le compteur en cellules, mieux pour mises à jour fréquentes, lectures rares."
+  },
+  {
+    "id": "J21-07-036",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont les 'Phaser' (Java 7+) ?",
+    "options": [
+      "Barrière plus flexible que CyclicBarrier",
+      "Permet phases dynamiques",
+      "arriveAndAwaitAdvance()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Phaser permet synchronisation par phases, où le nombre de participants peut changer dynamiquement."
+  },
+  {
+    "id": "J21-07-037",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont 'CountDownLatch' ?",
+    "options": [
+      "Compte à rebours, await() bloque jusqu'à zéro",
+      "Usage unique (non réutilisable)",
+      "countDown() décrémente",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CountDownLatch attend que N événements arrivent. Une fois à zéro, ne peut être réinitialisé."
+  },
+  {
+    "id": "J21-07-038",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont 'CyclicBarrier' ?",
+    "options": [
+      "Attend que N threads arrivent à un point",
+      "Réutilisable (reset())",
+      "Action optionnelle quand barrière franchie",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CyclicBarrier permet synchronisation de N threads. reset() pour réutilisation. Diffère de CountDownLatch (usage unique)."
+  },
+  {
+    "id": "J21-07-039",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont 'Semaphore' ?",
+    "options": [
+      "Contrôle le nombre d'accès simultanés",
+      "acquire() / release()",
+      "Permet de limiter des ressources",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Semaphore gère un nombre de permits. Semaphore(3) permet 3 accès simultanés. Binaire = Mutex."
+  },
+  {
+    "id": "J21-07-040",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont 'Exchanger' ?",
+    "options": [
+      "Point d'échange entre deux threads",
+      "exchange(obj) bloque jusqu'à autre thread",
+      "Échange des objets mutuellement",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Exchanger<V> permet à deux threads d'échanger des objets de façon synchrone."
+  },
+  {
+    "id": "J21-07-041",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'ForkJoinPool' ?",
+    "options": [
+      "Pool pour tâches récursives (divide and conquer)",
+      "Work-stealing algorithm",
+      "Utilisé par parallel streams",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ForkJoinPool est conçu pour RecursiveTask. parallelStream() l'utilise. Work-stealing équilibre la charge."
+  },
+  {
+    "id": "J21-07-042",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont les 'Structured Concurrency' (Java 21 preview) ?",
+    "options": [
+      "Concurrence structurée (comme les appels)",
+      "Fork/join avec scope explicite",
+      "Prévient les fuites de threads",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "StructuredTaskScope (incubateur Java 21) traite les threads comme des unités de travail avec début/fin explicite."
+  },
+  {
+    "id": "J21-07-043",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que fait 'Thread.interrupt()' ?",
+    "options": [
+      "Demande l'interruption du thread",
+      "Réveille le thread si en wait/sleep",
+      "set flag d'interruption",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "interrupt() ne force pas l'arrêt mais signale. Le thread doit vérifier isInterrupted() ou attraper InterruptedException."
+  },
+  {
+    "id": "J21-07-044",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Comment répondre correctement à une interruption ?",
+    "options": [
+      "Restaurer le flag : Thread.currentThread().interrupt()",
+      "Lever InterruptedException",
+      "Arrêter proprement",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Si on ne peut pas lever InterruptedException, appeler interrupt() pour restaurer le flag."
+  },
+  {
+    "id": "J21-07-045",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Que sont les 'deadlock detection tools' ?",
+    "options": [
+      "ThreadMXBean.findDeadlockedThreads()",
+      "jstack, VisualVM",
+      "JConsole",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Programmatiquement : ThreadMXBean. Outils : jstack, jconsole, VisualVM détectent les deadlocks."
+  },
+  {
+    "id": "J21-07-046",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'happens-before' relationships ?",
+    "options": [
+      "Garanties mémoire du JMM",
+      "Synchronized, volatile, start() créent happens-before",
+      "Garantit visibilité des écritures",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Happens-before définit quand une écriture est visible par une autre lecture. Essentiel pour le threading correct."
+  },
+  {
+    "id": "J21-07-047",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'false sharing' ?",
+    "options": [
+      "Plusieurs threads écrivent dans même cache line",
+      "Dégradation de performance",
+      "Solution : padding ou @Contended",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "False sharing : threads sur CPU différents écrivent dans variables proches en mémoire (même ligne de cache)."
+  },
+  {
+    "id": "J21-07-048",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'lock striping' ?",
+    "options": [
+      "Diviser une structure en segments avec locks distincts",
+      "Utilisé par ConcurrentHashMap",
+      "Réduit contention",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Lock striping : plusieurs locks pour différentes parties des données. ConcurrentHashMap utilise 16 segments par défaut."
+  },
+  {
+    "id": "J21-07-049",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "question": "Que sont les 'CopyOnWriteArrayList' ?",
+    "options": [
+      "Créée copie à chaque modification",
+      "Idéal pour lectures fréquentes, modifications rares",
+      "Iterateurs ne lèvent pas ConcurrentModificationException",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CopyOnWriteArrayList est thread-safe. Les écritures créent une nouvelle copie, les lectures sont lock-free."
+  },
+  {
+    "id": "J21-07-050",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'race condition' ?",
+    "options": [
+      "Résultat dépend de l'ordre d'exécution des threads",
+      "Check-then-act, read-modify-write",
+      "Corrigé par synchronisation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Race condition : comportement incorrect dû à un timing non contrôlé. Exemple : if(!map.containsKey(key)) map.put(key, value)."
+  }
 ]

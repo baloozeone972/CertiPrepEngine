@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ANS-01-001",
+    "theme": "Playbooks",
+    "theme_label": "Playbooks Ansible",
+    "difficulty": "easy",
+    "question": "Quelle commande exécute un playbook Ansible ?",
+    "options": [
+      "ansible-playbook",
+      "ansible run",
+      "ansible execute",
+      "ansible apply"
+    ],
+    "correct": 0,
+    "explanation": "ansible-playbook est la commande pour exécuter des playbooks."
+  },
+  {
+    "id": "ANS-01-002",
+    "theme": "Modules",
+    "theme_label": "Modules Ansible",
+    "difficulty": "easy",
+    "question": "Quel module installe un package ?",
+    "options": [
+      "apt",
+      "yum",
+      "package",
+      "Tous selon l'OS"
+    ],
+    "correct": 3,
+    "explanation": "Le module package est générique, apt pour Debian, yum pour RHEL."
+  }
+]

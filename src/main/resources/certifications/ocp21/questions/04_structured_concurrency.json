@@ -1,0 +1,667 @@
+[
+  {
+    "id": "OCP21-SC-051",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que StructuredTaskScope ?",
+    "options": [
+      "API pour concurrence structurée",
+      "Type de virtual thread",
+      "ExecutorService spécial",
+      "Outil de debugging"
+    ],
+    "correct": 0,
+    "explanation": "StructuredTaskScope permet la concurrence structurée."
+  },
+  {
+    "id": "OCP21-SC-052",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Quel est le principe de StructuredTaskScope ?",
+    "options": [
+      "Les sous-tâches sont liées au scope",
+      "Les tâches sont indépendantes",
+      "Les threads sont réutilisés",
+      "Les résultats sont ignorés"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-tâches doivent se terminer avant la fin du scope."
+  },
+  {
+    "id": "OCP21-SC-053",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Comment créer un StructuredTaskScope ?",
+    "options": [
+      "new StructuredTaskScope<>()",
+      "StructuredTaskScope.create()",
+      "StructuredTaskScope.newInstance()",
+      "StructuredTaskScope.open()"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur de StructuredTaskScope crée un nouveau scope."
+  },
+  {
+    "id": "OCP21-SC-054",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Quelle méthode fork() retourne-t-elle ?",
+    "options": [
+      "Future<T>",
+      "Subtask<T>",
+      "Task<T>",
+      "Promise<T>"
+    ],
+    "correct": 0,
+    "explanation": "fork() retourne un Future représentant la tâche."
+  },
+  {
+    "id": "OCP21-SC-055",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Que fait join() sur StructuredTaskScope ?",
+    "options": [
+      "Attend toutes les sous-tâches",
+      "Termine le scope",
+      "Annule les tâches",
+      "Ferme le scope"
+    ],
+    "correct": 0,
+    "explanation": "join() attend la fin de toutes les sous-tâches."
+  },
+  {
+    "id": "OCP21-SC-056",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Comment fermer un StructuredTaskScope ?",
+    "options": ["close()", "shutdown()", "terminate()", "stop()"],
+    "correct": 0,
+    "explanation": "close() ferme le scope et attend les tâches."
+  },
+  {
+    "id": "OCP21-SC-057",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser try-with-resources avec StructuredTaskScope ?",
+    "options": [
+      "Oui, implémente AutoCloseable",
+      "Non, pas supporté",
+      "Oui, mais avec warning",
+      "Non, il faut close() manuel"
+    ],
+    "correct": 0,
+    "explanation": "StructuredTaskScope implémente AutoCloseable."
+  },
+  {
+    "id": "OCP21-SC-058",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une tâche lève une exception ?",
+    "options": [
+      "Propagée via Future.get()",
+      "Le scope ignore",
+      "Le scope s'arrête",
+      "Exception ignorée"
+    ],
+    "correct": 0,
+    "explanation": "L'exception est accessible via Future.get()."
+  },
+  {
+    "id": "OCP21-SC-059",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnSuccess",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ShutdownOnSuccess ?",
+    "options": [
+      "Scope qui s'arrête à la première réussite",
+      "Scope qui ignore les erreurs",
+      "Scope qui annule tout",
+      "Scope qui attend tous les résultats"
+    ],
+    "correct": 0,
+    "explanation": "ShutdownOnSuccess est un scope qui s'arrête dès qu'une tâche réussit."
+  },
+  {
+    "id": "OCP21-SC-060",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnSuccess",
+    "difficulty": "hard",
+    "question": "Comment créer un ShutdownOnSuccess ?",
+    "options": [
+      "new StructuredTaskScope.ShutdownOnSuccess<>()",
+      "StructuredTaskScope.onSuccess()",
+      "ShutdownOnSuccess.create()",
+      "StructuredTaskScope.success()"
+    ],
+    "correct": 0,
+    "explanation": "ShutdownOnSuccess est une sous-classe de StructuredTaskScope."
+  },
+  {
+    "id": "OCP21-SC-061",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnSuccess",
+    "difficulty": "hard",
+    "question": "Comment obtenir le résultat du premier succès ?",
+    "options": [
+      "scope.result()",
+      "scope.get()",
+      "scope.first()",
+      "scope.success()"
+    ],
+    "correct": 0,
+    "explanation": "result() retourne le résultat de la première tâche réussie."
+  },
+  {
+    "id": "OCP21-SC-062",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnFailure",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ShutdownOnFailure ?",
+    "options": [
+      "Scope qui s'arrête à la première erreur",
+      "Scope qui ignore les erreurs",
+      "Scope qui annule tout",
+      "Scope qui attend tous les résultats"
+    ],
+    "correct": 0,
+    "explanation": "ShutdownOnFailure est un scope qui s'arrête dès qu'une tâche échoue."
+  },
+  {
+    "id": "OCP21-SC-063",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnFailure",
+    "difficulty": "hard",
+    "question": "Comment vérifier si une tâche a échoué ?",
+    "options": [
+      "scope.throwIfFailed()",
+      "scope.checkFailed()",
+      "scope.hasFailed()",
+      "scope.isFailed()"
+    ],
+    "correct": 0,
+    "explanation": "throwIfFailed() lance une exception si une tâche a échoué."
+  },
+  {
+    "id": "OCP21-SC-064",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope.Subtask",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Subtask ?",
+    "options": [
+      "Représentation d'une sous-tâche",
+      "Un thread",
+      "Un résultat",
+      "Une exception"
+    ],
+    "correct": 0,
+    "explanation": "Subtask représente une sous-tâche dans un StructuredTaskScope."
+  },
+  {
+    "id": "OCP21-SC-065",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope.Subtask",
+    "difficulty": "hard",
+    "question": "Quels sont les états possibles d'une Subtask ?",
+    "options": [
+      "UNAVAILABLE, SUCCESS, FAILED",
+      "PENDING, RUNNING, DONE",
+      "NEW, RUNNABLE, TERMINATED",
+      "ACTIVE, COMPLETED, ERROR"
+    ],
+    "correct": 0,
+    "explanation": "Les états sont UNAVAILABLE, SUCCESS, FAILED."
+  },
+  {
+    "id": "OCP21-SC-066",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope.Subtask",
+    "difficulty": "hard",
+    "question": "Comment obtenir l'état d'une Subtask ?",
+    "options": ["state()", "getState()", "status()", "isDone()"],
+    "correct": 0,
+    "explanation": "state() retourne l'état de la sous-tâche."
+  },
+  {
+    "id": "OCP21-SC-067",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope.Subtask",
+    "difficulty": "hard",
+    "question": "Comment obtenir le résultat d'une Subtask ?",
+    "options": ["get()", "result()", "value()", "output()"],
+    "correct": 0,
+    "explanation": "get() retourne le résultat ou lance une exception."
+  },
+  {
+    "id": "OCP21-SC-068",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<String>()) {\n    Future<String> f1 = scope.fork(() -> \"A\");\n    Future<String> f2 = scope.fork(() -> \"B\");\n    scope.join();\n    System.out.println(scope.result());\n}",
+    "options": ["A", "B", "AB", "Erreur"],
+    "correct": 0,
+    "explanation": "ShutdownOnSuccess retourne le premier résultat (A)."
+  },
+  {
+    "id": "OCP21-SC-069",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    Future<String> f1 = scope.fork(() -> { throw new RuntimeException(); });\n    Future<String> f2 = scope.fork(() -> \"B\");\n    scope.join();\n    scope.throwIfFailed();\n} catch (Exception e) {\n    System.out.println(\"Erreur\");\n}",
+    "options": ["Erreur", "B", "A", "Rien"],
+    "correct": 0,
+    "explanation": "La première tâche échoue, throwIfFailed() lance une exception."
+  },
+  {
+    "id": "OCP21-SC-070",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { Thread.sleep(100); return 1; });\n    scope.fork(() -> 2);\n    scope.join();\n    System.out.println(scope.result());\n}",
+    "options": ["2", "1", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "La deuxième tâche (2) se termine plus rapidement."
+  },
+  {
+    "id": "OCP21-SC-071",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope vs ExecutorService",
+    "difficulty": "hard",
+    "question": "Quelle est la principale différence ?",
+    "options": [
+      "StructuredTaskScope garantit la terminaison",
+      "ExecutorService est plus rapide",
+      "Identiques",
+      "StructuredTaskScope est déprécié"
+    ],
+    "correct": 0,
+    "explanation": "StructuredTaskScope garantit que toutes les sous-tâches sont terminées."
+  },
+  {
+    "id": "OCP21-SC-072",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope vs ExecutorService",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des virtual threads avec StructuredTaskScope ?",
+    "options": [
+      "Oui, par défaut",
+      "Non",
+      "Oui, avec configuration",
+      "Uniquement avec platform threads"
+    ],
+    "correct": 0,
+    "explanation": "StructuredTaskScope utilise des virtual threads par défaut."
+  },
+  {
+    "id": "OCP21-SC-073",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope vs ExecutorService",
+    "difficulty": "hard",
+    "question": "Faut-il fermer StructuredTaskScope manuellement ?",
+    "options": [
+      "Oui, avec close() ou try-with-resources",
+      "Non, auto",
+      "Oui, avec shutdown()",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Il faut fermer le scope pour libérer les ressources."
+  },
+  {
+    "id": "OCP21-SC-074",
+    "theme": "Structured Concurrency",
+    "theme_label": "Gestion des erreurs",
+    "difficulty": "hard",
+    "question": "Comment gérer les exceptions dans un StructuredTaskScope ?",
+    "options": [
+      "Try-catch autour de join()",
+      "Future.get()",
+      "scope.throwIfFailed()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour gérer les exceptions."
+  },
+  {
+    "id": "OCP21-SC-075",
+    "theme": "Structured Concurrency",
+    "theme_label": "Gestion des erreurs",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si on oublie de fermer le scope ?",
+    "options": [
+      "Memory leak",
+      "Exception",
+      "Rien",
+      "Les threads continuent"
+    ],
+    "correct": 0,
+    "explanation": "Les ressources peuvent ne pas être libérées."
+  },
+  {
+    "id": "OCP21-SC-076",
+    "theme": "Structured Concurrency",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "StructuredTaskScope est-il plus performant ?",
+    "options": [
+      "Overhead minimal",
+      "Beaucoup plus lent",
+      "Beaucoup plus rapide",
+      "Identique"
+    ],
+    "correct": 0,
+    "explanation": "L'overhead par rapport aux executors standards est minimal."
+  },
+  {
+    "id": "OCP21-SC-077",
+    "theme": "Structured Concurrency",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser fork() après join() ?",
+    "options": [
+      "Non, IllegalStateException",
+      "Oui",
+      "Oui, avec warning",
+      "Non, les threads sont arrêtés"
+    ],
+    "correct": 0,
+    "explanation": "join() marque la fin des forks."
+  },
+  {
+    "id": "OCP21-SC-078",
+    "theme": "Structured Concurrency",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on fork() après close() ?",
+    "options": [
+      "Non, scope fermé",
+      "Oui",
+      "Oui, mais ignoré",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Le scope est fermé, plus de fork possible."
+  },
+  {
+    "id": "OCP21-SC-079",
+    "theme": "Structured Concurrency",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Comment migrer un ExecutorService vers StructuredTaskScope ?",
+    "options": [
+      "Remplacer submit() par fork()",
+      "Remplacer shutdown() par close()",
+      "Ajouter join()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs modifications sont nécessaires."
+  },
+  {
+    "id": "OCP21-SC-080",
+    "theme": "Structured Concurrency",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Les patterns existants fonctionnent-ils avec StructuredTaskScope ?",
+    "options": [
+      "Oui, avec adaptations",
+      "Non, incompatibles",
+      "Oui, sans changement",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Le code doit être adapté au modèle structuré."
+  },
+  {
+    "id": "OCP21-SC-081",
+    "theme": "Structured Concurrency",
+    "theme_label": "JEP",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit Structured Concurrency ?",
+    "options": ["JEP 453", "JEP 440", "JEP 441", "JEP 442"],
+    "correct": 0,
+    "explanation": "JEP 453: Structured Concurrency (preview)."
+  },
+  {
+    "id": "OCP21-SC-082",
+    "theme": "Structured Concurrency",
+    "theme_label": "Preview",
+    "difficulty": "hard",
+    "question": "Structured Concurrency est-il finalisé en Java 21 ?",
+    "options": [
+      "Non, preview",
+      "Oui, finalisé",
+      "Non, supprimé",
+      "Oui, depuis Java 20"
+    ],
+    "correct": 0,
+    "explanation": "Structured Concurrency reste en preview en Java 21."
+  },
+  {
+    "id": "OCP21-SC-083",
+    "theme": "Structured Concurrency",
+    "theme_label": "Activation",
+    "difficulty": "hard",
+    "question": "Comment activer Structured Concurrency ?",
+    "options": [
+      "--enable-preview",
+      "--enable-structured-concurrency",
+      "--preview",
+      "Automatique"
+    ],
+    "correct": 0,
+    "explanation": "Il faut utiliser --enable-preview."
+  },
+  {
+    "id": "OCP21-SC-084",
+    "theme": "Structured Concurrency",
+    "theme_label": "Subtask states",
+    "difficulty": "hard",
+    "question": "Que signifie UNAVAILABLE pour une Subtask ?",
+    "options": [
+      "Tâche non encore terminée",
+      "Tâche réussie",
+      "Tâche échouée",
+      "Tâche annulée"
+    ],
+    "correct": 0,
+    "explanation": "UNAVAILABLE indique que la tâche n'est pas terminée."
+  },
+  {
+    "id": "OCP21-SC-085",
+    "theme": "Structured Concurrency",
+    "theme_label": "Subtask states",
+    "difficulty": "hard",
+    "question": "Que signifie SUCCESS pour une Subtask ?",
+    "options": [
+      "Tâche réussie",
+      "Tâche non terminée",
+      "Tâche échouée",
+      "Tâche annulée"
+    ],
+    "correct": 0,
+    "explanation": "SUCCESS indique que la tâche s'est terminée avec succès."
+  },
+  {
+    "id": "OCP21-SC-086",
+    "theme": "Structured Concurrency",
+    "theme_label": "Subtask states",
+    "difficulty": "hard",
+    "question": "Que signifie FAILED pour une Subtask ?",
+    "options": [
+      "Tâche échouée",
+      "Tâche réussie",
+      "Tâche non terminée",
+      "Tâche annulée"
+    ],
+    "correct": 0,
+    "explanation": "FAILED indique que la tâche a lancé une exception."
+  },
+  {
+    "id": "OCP21-SC-087",
+    "theme": "Structured Concurrency",
+    "theme_label": "Annulation",
+    "difficulty": "hard",
+    "question": "Comment annuler toutes les sous-tâches ?",
+    "options": [
+      "scope.shutdown()",
+      "scope.cancel()",
+      "scope.stop()",
+      "scope.interrupt()"
+    ],
+    "correct": 0,
+    "explanation": "shutdown() demande l'annulation des sous-tâches."
+  },
+  {
+    "id": "OCP21-SC-088",
+    "theme": "Structured Concurrency",
+    "theme_label": "Annulation",
+    "difficulty": "hard",
+    "question": "Que fait shutdown() sur un scope ?",
+    "options": [
+      "Interrompt toutes les sous-tâches",
+      "Ferme le scope",
+      "Attend la fin",
+      "Ignore les exceptions"
+    ],
+    "correct": 0,
+    "explanation": "shutdown() interrompt les sous-tâches en cours."
+  },
+  {
+    "id": "OCP21-SC-089",
+    "theme": "Structured Concurrency",
+    "theme_label": "Thread factory",
+    "difficulty": "hard",
+    "question": "Peut-on personnaliser la thread factory ?",
+    "options": [
+      "Oui, dans le constructeur",
+      "Non, fixe",
+      "Oui, avec setFactory()",
+      "Uniquement pour les virtual threads"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur de StructuredTaskScope accepte une ThreadFactory."
+  },
+  {
+    "id": "OCP21-SC-090",
+    "theme": "Structured Concurrency",
+    "theme_label": "Thread factory",
+    "difficulty": "hard",
+    "question": "Comment utiliser des platform threads avec StructuredTaskScope ?",
+    "options": [
+      "Thread.ofPlatform().factory()",
+      "Impossible",
+      "Thread.ofVirtual().factory()",
+      "Thread.builder().factory()"
+    ],
+    "correct": 0,
+    "explanation": "On peut passer une factory de platform threads."
+  },
+  {
+    "id": "OCP21-SC-091",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<String>()) {\n    scope.fork(() -> { Thread.sleep(1000); return \"Lent\"; });\n    scope.fork(() -> { Thread.sleep(100); return \"Rapide\"; });\n    scope.join();\n    System.out.println(scope.result());\n}",
+    "options": ["Rapide", "Lent", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "La tâche 'Rapide' se termine en premier."
+  },
+  {
+    "id": "OCP21-SC-092",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    Future<String> f1 = scope.fork(() -> { throw new IOException(); });\n    Future<String> f2 = scope.fork(() -> \"OK\");\n    scope.join();\n    scope.throwIfFailed();\n} catch (IOException e) {\n    System.out.println(\"IO\");\n} catch (Exception e) {\n    System.out.println(\"Autre\");\n}",
+    "options": ["IO", "OK", "Autre", "Rien"],
+    "correct": 0,
+    "explanation": "La première tâche lance IOException."
+  },
+  {
+    "id": "OCP21-SC-093",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    scope.fork(() -> 1);\n    scope.fork(() -> 2);\n    scope.join();\n    System.out.println(\"Fin\");\n}",
+    "options": ["Fin", "Erreur", "1", "2"],
+    "correct": 0,
+    "explanation": "Les tâches s'exécutent, 'Fin' est affiché."
+  },
+  {
+    "id": "OCP21-SC-094",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> 42);\n    scope.join();\n    System.out.println(scope.result());\n}",
+    "options": ["42", "Erreur", "null", "0"],
+    "correct": 0,
+    "explanation": "Une seule tâche, son résultat est 42."
+  },
+  {
+    "id": "OCP21-SC-095",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { throw new RuntimeException(); });\n    scope.join();\n    System.out.println(scope.result());\n} catch (Exception e) {\n    System.out.println(\"Exception\");\n}",
+    "options": ["Exception", "Erreur", "null", "0"],
+    "correct": 0,
+    "explanation": "La tâche échoue, result() lance une exception."
+  },
+  {
+    "id": "OCP21-SC-096",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { Thread.sleep(500); return 1; });\n    scope.fork(() -> { Thread.sleep(1000); return 2; });\n    scope.join();\n    System.out.println(scope.result());\n}",
+    "options": ["1", "2", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "La première tâche (1) se termine en premier."
+  },
+  {
+    "id": "OCP21-SC-097",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    scope.fork(() -> { Thread.sleep(100); return 1; });\n    scope.fork(() -> { Thread.sleep(200); return 2; });\n    scope.join();\n    System.out.println(\"Terminé\");\n}",
+    "options": ["Terminé", "Erreur", "1", "2"],
+    "correct": 0,
+    "explanation": "Toutes les tâches se terminent, 'Terminé' est affiché."
+  },
+  {
+    "id": "OCP21-SC-098",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    var future = scope.fork(() -> { Thread.sleep(100); return 1; });\n    scope.join();\n    System.out.println(future.get());\n} catch (Exception e) {\n    System.out.println(\"Erreur\");\n}",
+    "options": ["1", "Erreur", "Terminé", "null"],
+    "correct": 0,
+    "explanation": "future.get() retourne le résultat de la tâche (1)."
+  },
+  {
+    "id": "OCP21-SC-099",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { throw new RuntimeException(\"Erreur1\"); });\n    scope.fork(() -> 42);\n    scope.join();\n    System.out.println(scope.result());\n} catch (Exception e) {\n    System.out.println(e.getMessage());\n}",
+    "options": ["42", "Erreur1", "Erreur", "null"],
+    "correct": 0,
+    "explanation": "La deuxième tâche réussit, result() retourne 42."
+  },
+  {
+    "id": "OCP21-SC-100",
+    "theme": "Structured Concurrency",
+    "theme_label": "Exemples avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    var f1 = scope.fork(() -> 1);\n    var f2 = scope.fork(() -> 2);\n    scope.join();\n    System.out.println(f1.get() + f2.get());\n} catch (Exception e) {\n    System.out.println(\"Erreur\");\n}",
+    "options": ["3", "Erreur", "1", "2"],
+    "correct": 0,
+    "explanation": "Les deux tâches réussissent, somme = 3."
+  }
+]

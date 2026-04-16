@@ -1,0 +1,44 @@
+{
+  "id": "aws_saa",
+  "name": "AWS Certified Solutions Architect - Associate (SAA-C03)",
+  "version": "1.0",
+  "description": "Conception de solutions sur AWS - Architecture cloud, haute disponibilité, scalabilité",
+  "totalQuestions": 500,
+  "examDurationMinutes": 130,
+  "examQuestionCount": 65,
+  "passingScore": 72,
+  "themes": [
+    {
+      "name": "Compute (EC2, Lambda, ECS)",
+      "count": 80
+    },
+    {
+      "name": "Storage (S3, EBS, EFS)",
+      "count": 70
+    },
+    {
+      "name": "Database (RDS, DynamoDB)",
+      "count": 60
+    },
+    {
+      "name": "Networking (VPC, Route53)",
+      "count": 80
+    },
+    {
+      "name": "Security & IAM",
+      "count": 70
+    },
+    {
+      "name": "High Availability & Scalability",
+      "count": 60
+    },
+    {
+      "name": "Monitoring & Logging",
+      "count": 40
+    },
+    {
+      "name": "Pricing & Support",
+      "count": 40
+    }
+  ]
+}

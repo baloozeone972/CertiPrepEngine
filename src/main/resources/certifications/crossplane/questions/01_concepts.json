@@ -1,0 +1,32 @@
+[
+  {
+    "id": "CRS-01-001",
+    "theme": "Concepts",
+    "theme_label": "Fondamentaux Crossplane",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un Provider dans Crossplane ?",
+    "options": [
+      "Un plugin pour un cloud provider (AWS, Azure)",
+      "Un package d'applications",
+      "Une ressource Kubernetes",
+      "Un namespace Crossplane"
+    ],
+    "correct": 0,
+    "explanation": "Un Provider permet à Crossplane de provisionner des ressources sur un cloud."
+  },
+  {
+    "id": "CRS-01-002",
+    "theme": "Compositions",
+    "theme_label": "Compositions",
+    "difficulty": "hard",
+    "question": "Quelle ressource Crossplane définit un modèle d'infrastructure réutilisable ?",
+    "options": [
+      "Composition",
+      "Provider",
+      "Managed Resource",
+      "Claim"
+    ],
+    "correct": 0,
+    "explanation": "Une Composition définit comment assembler des ressources managées."
+  }
+]

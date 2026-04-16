@@ -1,0 +1,32 @@
+{
+  "id": "elk",
+  "name": "ELK Stack Developer (Elastic)",
+  "version": "1.0",
+  "description": "Certification ELK Stack - Centralisation et analyse de logs avec Elasticsearch, Logstash, Kibana",
+  "totalQuestions": 300,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Elasticsearch",
+      "count": 70
+    },
+    {
+      "name": "Logstash",
+      "count": 60
+    },
+    {
+      "name": "Kibana",
+      "count": 60
+    },
+    {
+      "name": "Beats",
+      "count": 50
+    },
+    {
+      "name": "Elastic Cloud",
+      "count": 60
+    }
+  ]
+}

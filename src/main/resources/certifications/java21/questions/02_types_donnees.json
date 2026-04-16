@@ -1,566 +1,752 @@
 [
-{
-"id": "J21-02-001",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'byte' en Java ?",
-"options": ["8", "16", "32", "64"],
-"correct": 0,
-"explanation": "byte est un entier signé sur 8 bits. Plage de valeurs : -128 à 127."
-},
-
-{
-"id": "J21-02-002",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'short' en Java ?",
-"options": ["8", "16", "32", "64"],
-"correct": 1,
-"explanation": "short est un entier signé sur 16 bits. Plage : -32,768 à 32,767."
-},
-
-{
-"id": "J21-02-003",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'int' en Java ?",
-"options": ["8", "16", "32", "64"],
-"correct": 2,
-"explanation": "int est un entier signé sur 32 bits. Plage : -2^31 à 2^31-1 (-2,147,483,648 à 2,147,483,647)."
-},
-
-{
-"id": "J21-02-004",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'long' en Java ?",
-"options": ["32", "64", "128", "Dépend de la plateforme"],
-"correct": 1,
-"explanation": "long est TOUJOURS un entier signé 64 bits en Java, quelle que soit la plateforme. C'est une garantie de portabilité."
-},
-
-{
-"id": "J21-02-005",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'float' en Java ?",
-"options": ["16", "32", "64", "80"],
-"correct": 1,
-"explanation": "float est un flottant IEEE 754 sur 32 bits. Précision d'environ 6-7 chiffres décimaux significatifs."
-},
-
-{
-"id": "J21-02-006",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'double' en Java ?",
-"options": ["32", "64", "128", "80"],
-"correct": 1,
-"explanation": "double est un flottant IEEE 754 sur 64 bits. Précision d'environ 15-16 chiffres décimaux significatifs."
-},
-
-{
-"id": "J21-02-007",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'char' en Java ?",
-"options": ["8", "16", "32", "Dépend de l'encodage"],
-"correct": 1,
-"explanation": "char est un type UTF-16 sur 16 bits non signé. Plage : 0 à 65,535 (\\u0000 à \\uffff)."
-},
-
-{
-"id": "J21-02-008",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la taille en bits d'un type 'boolean' en Java ?",
-"options": ["1 bit", "8 bits", "Non spécifié (dépend de la JVM)", "32 bits"],
-"correct": 2,
-"explanation": "La taille de boolean n'est pas strictement définie par la spécification Java. La JVM peut l'implémenter sur 1 bit, 8 bits, ou 32 bits selon l'architecture."
-},
-
-{
-"id": "J21-02-009",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la valeur de 'Integer.MAX_VALUE' ?",
-"options": ["2^31 - 1", "2^31", "2^32 - 1", "2^16 - 1"],
-"correct": 0,
-"explanation": "Integer.MAX_VALUE = 2,147,483,647 = 2^31 - 1 (car int est sur 32 bits signé, 1 bit pour le signe)."
-},
-
-{
-"id": "J21-02-010",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la valeur de 'Integer.MIN_VALUE' ?",
-"options": ["-2^31", "-2^31 + 1", "-2^32", "0"],
-"correct": 0,
-"explanation": "Integer.MIN_VALUE = -2,147,483,648 = -2^31. C'est la valeur négative la plus petite pour un int."
-},
-
-{
-"id": "J21-02-011",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Que vaut 'Double.NaN' ?",
-"options": ["0.0", "Infinity", "Not a Number", "Null"],
-"correct": 2,
-"explanation": "NaN (Not a Number) représente le résultat d'une opération invalide comme 0.0/0.0. NaN n'est égal à rien, même pas à lui-même."
-},
-
-{
-"id": "J21-02-012",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Que vaut 'Double.POSITIVE_INFINITY' ?",
-"options": ["1.0/0.0", "0.0/0.0", "Double.MAX_VALUE + 1", "Toutes ces réponses"],
-"correct": 0,
-"explanation": "POSITIVE_INFINITY est le résultat d'une division par zéro positive, comme 1.0/0.0."
-},
-
-{
-"id": "J21-02-013",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle est la plage de valeurs d'un type 'char' ?",
-"options": ["0 à 255", "0 à 65535", "-32768 à 32767", "0 à 127"],
-"correct": 1,
-"explanation": "char est non signé sur 16 bits : 0 (\\u0000) à 65535 (\\uffff). Il représente des caractères Unicode."
-},
-
-{
-"id": "J21-02-014",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quel wrapper correspond au type primitif 'int' ?",
-"options": ["Integer", "Int", "Int32", "IntWrapper"],
-"correct": 0,
-"explanation": "Le wrapper de int est Integer. Tous les wrappers : Byte, Short, Integer, Long, Float, Double, Character, Boolean."
-},
-
-{
-"id": "J21-02-015",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quel wrapper correspond au type primitif 'char' ?",
-"options": ["Char", "Character", "CharWrapper", "Ch"],
-"correct": 1,
-"explanation": "Le wrapper de char est Character. Les wrappers sont immuables et implémentent Comparable."
-},
-
-{
-"id": "J21-02-016",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Qu'est-ce que l'autoboxing en Java ?",
-"options": [
-  "Conversion automatique primitive → wrapper",
-  "Conversion automatique wrapper → primitive",
-  "Les deux",
-  "Boxing manuel avec new Integer()"
-],
-"correct": 2,
-"explanation": "Autoboxing : primitive → wrapper (ex: int to Integer). Unboxing : wrapper → primitive. Introduit en Java 5."
-},
-
-{
-"id": "J21-02-017",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nInteger a = 127;\nInteger b = 127;\nSystem.out.println(a == b);\nInteger c = 128;\nInteger d = 128;\nSystem.out.println(c == d);\n```",
-"options": ["true true", "true false", "false true", "false false"],
-"correct": 1,
-"explanation": "Integer cache les valeurs entre -128 et 127. a et b sont le même objet (true). 128 n'est pas dans le cache, donc c et d sont des objets différents (false)."
-},
-
-{
-"id": "J21-02-018",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nInteger a = 100;\nInteger b = 100;\nSystem.out.println(a == b);\nInteger c = 200;\nInteger d = 200;\nSystem.out.println(c == d);\n```",
-"options": ["true true", "true false", "false true", "false false"],
-"correct": 1,
-"explanation": "Même explication : cache Integer pour -128 à 127. 100 est dans le cache (true), 200 n'y est pas (false)."
-},
-
-{
-"id": "J21-02-019",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nInteger a = null;\nint b = a;\nSystem.out.println(b);\n```",
-"options": ["0", "null", "NullPointerException", "Erreur de compilation"],
-"correct": 2,
-"explanation": "Unboxing d'un Integer null provoque NullPointerException. Java ne peut pas convertir null en int primitif."
-},
-
-{
-"id": "J21-02-020",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Integer.parseInt(\"10\", 2)' ?",
-"options": ["10", "2", "Lève exception", "5"],
-"correct": 1,
-"explanation": "parseInt avec base 2 interprète \"10\" en binaire = 2 décimal. \"1010\" en binaire = 10 décimal."
-},
-
-{
-"id": "J21-02-021",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Integer.parseInt(\"FF\", 16)' ?",
-"options": ["255", "FF", "15", "Lève exception"],
-"correct": 0,
-"explanation": "parseInt avec base 16 interprète \"FF\" en hexadécimal = 15×16 + 15 = 255 décimal."
-},
-
-{
-"id": "J21-02-022",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Integer.toBinaryString(10)' ?",
-"options": ["\"1010\"", "\"10\"", "\"101\"", "\"1001\""],
-"correct": 0,
-"explanation": "10 en binaire = 1010₂. toBinaryString retourne la représentation binaire sans zéros non significatifs."
-},
-
-{
-"id": "J21-02-023",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "hard",
-"question": "Que produit 'Integer.toBinaryString(-1)' ?",
-"options": [
-  "\"11111111111111111111111111111111\"",
-  "\"-1\"",
-  "Lève exception",
-  "\"1\""
-],
-"correct": 0,
-"explanation": "-1 en complément à deux 32 bits = tous les bits à 1 → 32 caractères '1'."
-},
-
-{
-"id": "J21-02-024",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "hard",
-"question": "Que produit 'Integer.toBinaryString(-10)' ?",
-"options": [
-  "\"11111111111111111111111111110110\"",
-  "\"-1010\"",
-  "\"1010\"",
-  "\"11111111111111111111111111111010\""
-],
-"correct": 0,
-"explanation": "-10 en complément à deux : prendre 10 (1010), inverser bits, ajouter 1 = 111...11110110 (32 bits)."
-},
-
-{
-"id": "J21-02-025",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quelle interface tous les wrappers primitifs implémentent-ils ?",
-"options": ["Cloneable", "Comparable", "Serializable", "Les deux B et C"],
-"correct": 3,
-"explanation": "Tous les wrappers implémentent Comparable<T> et Serializable. Ils étendent Number (sauf Character et Boolean)."
-},
-
-{
-"id": "J21-02-026",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nint a = 5;\nInteger b = 5;\nSystem.out.println(a == b);\n```",
-"options": ["true", "false", "Erreur compilation", "NullPointerException"],
-"correct": 0,
-"explanation": "Comparaison == entre primitive et wrapper déclenche l'unboxing de b en int. 5 == 5 → true."
-},
-
-{
-"id": "J21-02-027",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nInteger a = 5;\nInteger b = 5;\nSystem.out.println(a.equals(b));\n```",
-"options": ["true", "false", "Erreur compilation", "NullPointerException"],
-"correct": 0,
-"explanation": "equals() compare la valeur, pas la référence. a.equals(b) compare Integer.valueOf(5).equals(Integer.valueOf(5)) → true."
-},
-
-{
-"id": "J21-02-028",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "hard",
-"question": "Quelle est la sortie ?\n```java\nint a = 1000;\nint b = 1000;\nSystem.out.println(a == b);\nInteger c = 1000;\nInteger d = 1000;\nSystem.out.println(c == d);\n```",
-"options": ["true true", "true false", "false true", "false false"],
-"correct": 1,
-"explanation": "a==b (primitives) → true. c==d (références) → false car 1000 hors du cache Integer (-128 à 127)."
-},
-
-{
-"id": "J21-02-029",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Character.isDigit('5')' ?",
-"options": ["true", "false", "Erreur", "5"],
-"correct": 0,
-"explanation": "isDigit() retourne true pour les caractères qui sont des chiffres décimaux Unicode (0-9 mais aussi d'autres écritures)."
-},
-
-{
-"id": "J21-02-030",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Character.isLetter('5')' ?",
-"options": ["true", "false", "Erreur", "5"],
-"correct": 1,
-"explanation": "isLetter() retourne true pour les lettres Unicode. '5' est un chiffre, pas une lettre → false."
-},
-
-{
-"id": "J21-02-031",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Character.isWhitespace(' ')' ?",
-"options": ["true", "false", "Erreur", "space"],
-"correct": 0,
-"explanation": "isWhitespace() retourne true pour l'espace, le tab, le saut de ligne, etc. L'espace simple est un whitespace."
-},
-
-{
-"id": "J21-02-032",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Character.toLowerCase('A')' ?",
-"options": ["'a'", "'A'", "65", "97"],
-"correct": 0,
-"explanation": "toLowerCase() retourne le caractère en minuscule. 'A' → 'a'. La méthode retourne un char."
-},
-
-{
-"id": "J21-02-033",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Comment convertir une String en int ?",
-"options": ["(int)str", "str.toInt()", "Integer.parseInt(str)", "Integer.valueOf(str)"],
-"correct": 2,
-"explanation": "Integer.parseInt(String) retourne un int primitif. Integer.valueOf(String) retourne un Integer (wrapper)."
-},
-
-{
-"id": "J21-02-034",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Comment convertir un int en String ?",
-"options": ["(String)i", "i.toString()", "String.valueOf(i)", "Integer.toString(i)"],
-"correct": 2,
-"explanation": "String.valueOf(int) et Integer.toString(int) convertissent un int en String. Les deux sont valides."
-},
-
-{
-"id": "J21-02-035",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Double.compare(0.0, -0.0)' ?",
-"options": ["1", "0", "-1", "NaN"],
-"correct": 0,
-"explanation": "Double.compare considère 0.0 > -0.0, donc retourne 1. (0.0 == -0.0) est true, mais compare distingue les zéros signés."
-},
-
-{
-"id": "J21-02-036",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "hard",
-"question": "Que produit 'Double.compare(Double.NaN, 1.0)' ?",
-"options": ["0", "1", "-1", "NaN"],
-"correct": 1,
-"explanation": "Double.compare traite NaN comme plus grand que toute autre valeur (y compris POSITIVE_INFINITY). Donc retourne 1."
-},
-
-{
-"id": "J21-02-037",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Float.isNaN(0.0f / 0.0f)' ?",
-"options": ["true", "false", "Erreur", "0"],
-"correct": 0,
-"explanation": "0.0f/0.0f = NaN. isNaN() retourne true pour NaN, false pour toute autre valeur."
-},
-
-{
-"id": "J21-02-038",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Float.isInfinite(1.0f / 0.0f)' ?",
-"options": ["true", "false", "Erreur", "Infinity"],
-"correct": 0,
-"explanation": "1.0f/0.0f = Infinity. isInfinite() retourne true pour ±Infinity."
-},
-
-{
-"id": "J21-02-039",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Que vaut 'Byte.BYTES' en Java ?",
-"options": ["1", "2", "4", "8"],
-"correct": 0,
-"explanation": "Byte.BYTES retourne le nombre d'octets d'un byte : 1. Chaque wrapper a une constante BYTES."
-},
-
-{
-"id": "J21-02-040",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Que vaut 'Integer.BYTES' ?",
-"options": ["1", "2", "4", "8"],
-"correct": 2,
-"explanation": "Integer.BYTES = 4 octets (32 bits). Long.BYTES = 8, Short.BYTES = 2, Double.BYTES = 8."
-},
-
-{
-"id": "J21-02-041",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'Long.parseUnsignedLong(\"FFFFFFFF\", 16)' ?",
-"options": ["4294967295", "-1", "Lève exception", "0xFFFFFFFF"],
-"correct": 0,
-"explanation": "parseUnsignedLong interprète la chaîne comme non signée. FFFFFFFF hex = 2^32 - 1 = 4294967295."
-},
-
-{
-"id": "J21-02-042",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "hard",
-"question": "Que produit 'Integer.divideUnsigned(-1, 2)' ?",
-"options": ["-1", "0", "2147483647", "Lève exception"],
-"correct": 2,
-"explanation": "divideUnsigned traite -1 comme 0xFFFFFFFF (4294967295 non signé). 4294967295 / 2 = 2147483647."
-},
-
-{
-"id": "J21-02-043",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quel type utiliser pour des calculs monétaires précis ?",
-"options": ["float", "double", "BigDecimal", "long en centimes"],
-"correct": 2,
-"explanation": "BigDecimal est recommandé pour les calculs monétaires car il évite les erreurs d'arrondi des flottants."
-},
-
-{
-"id": "J21-02-044",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit 'new BigDecimal(\"0.1\").add(new BigDecimal(\"0.2\"))' ?",
-"options": ["0.3", "0.30000000000000004", "0.30", "0.2999999999999999"],
-"correct": 0,
-"explanation": "BigDecimal avec String donne une représentation exacte. 0.1 + 0.2 = 0.3 exactement, pas d'erreur flottante."
-},
-
-{
-"id": "J21-02-045",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "hard",
-"question": "Que produit ce code ?\n```java\nBigDecimal bd = new BigDecimal(\"123.456\");\nSystem.out.println(bd.scale());\n```",
-"options": ["3", "6", "0", "Erreur"],
-"correct": 0,
-"explanation": "scale() retourne le nombre de décimales. \"123.456\" a 3 décimales → scale=3."
-},
-
-{
-"id": "J21-02-046",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Quelle méthode de BigDecimal arrondit à l'entier le plus proche ?",
-"options": ["round()", "setScale(0, RoundingMode.HALF_UP)", "toBigInteger()", "intValue()"],
-"correct": 1,
-"explanation": "setScale(0, RoundingMode.HALF_UP) arrondit à l'entier le plus proche. toBigInteger() tronque."
-},
-
-{
-"id": "J21-02-047",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quel suffixe pour un littéral long ?",
-"options": ["L", "l", "L ou l", "Long"],
-"correct": 2,
-"explanation": "L ou l (recommandé L majuscule pour lisibilité). Ex: 10L. Sans suffixe, c'est un int."
-},
-
-{
-"id": "J21-02-048",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "easy",
-"question": "Quel suffixe pour un littéral float ?",
-"options": ["F", "f", "F ou f", "float"],
-"correct": 2,
-"explanation": "F ou f. Ex: 3.14f. Sans suffixe, un littéral décimal est double par défaut."
-},
-
-{
-"id": "J21-02-049",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nbyte b = 127;\nb++;\nSystem.out.println(b);\n```",
-"options": ["128", "-128", "0", "Erreur de compilation"],
-"correct": 1,
-"explanation": "byte dépasse sa plage. 127 + 1 = -128 (wraparound). Pas d'erreur à l'exécution."
-},
-
-{
-"id": "J21-02-050",
-"theme": "Types de données et Wrappers",
-"theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nshort s = 32767;\ns += 1;\nSystem.out.println(s);\n```",
-"options": ["32768", "-32768", "0", "Erreur de compilation"],
-"correct": 1,
-"explanation": "short max = 32767. +1 → overflow silencieux à -32768 (MIN_VALUE)."
-}
+  {
+    "id": "J21-02-001",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'byte' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 0,
+    "explanation": "byte est un entier signé sur 8 bits. Plage de valeurs : -128 à 127."
+  },
+  {
+    "id": "J21-02-002",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'short' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 1,
+    "explanation": "short est un entier signé sur 16 bits. Plage : -32,768 à 32,767."
+  },
+  {
+    "id": "J21-02-003",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'int' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "explanation": "int est un entier signé sur 32 bits. Plage : -2^31 à 2^31-1 (-2,147,483,648 à 2,147,483,647)."
+  },
+  {
+    "id": "J21-02-004",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'long' en Java ?",
+    "options": [
+      "32",
+      "64",
+      "128",
+      "Dépend de la plateforme"
+    ],
+    "correct": 1,
+    "explanation": "long est TOUJOURS un entier signé 64 bits en Java, quelle que soit la plateforme. C'est une garantie de portabilité."
+  },
+  {
+    "id": "J21-02-005",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'float' en Java ?",
+    "options": [
+      "16",
+      "32",
+      "64",
+      "80"
+    ],
+    "correct": 1,
+    "explanation": "float est un flottant IEEE 754 sur 32 bits. Précision d'environ 6-7 chiffres décimaux significatifs."
+  },
+  {
+    "id": "J21-02-006",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'double' en Java ?",
+    "options": [
+      "32",
+      "64",
+      "128",
+      "80"
+    ],
+    "correct": 1,
+    "explanation": "double est un flottant IEEE 754 sur 64 bits. Précision d'environ 15-16 chiffres décimaux significatifs."
+  },
+  {
+    "id": "J21-02-007",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'char' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "Dépend de l'encodage"
+    ],
+    "correct": 1,
+    "explanation": "char est un type UTF-16 sur 16 bits non signé. Plage : 0 à 65,535 (\\u0000 à \\uffff)."
+  },
+  {
+    "id": "J21-02-008",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un type 'boolean' en Java ?",
+    "options": [
+      "1 bit",
+      "8 bits",
+      "Non spécifié (dépend de la JVM)",
+      "32 bits"
+    ],
+    "correct": 2,
+    "explanation": "La taille de boolean n'est pas strictement définie par la spécification Java. La JVM peut l'implémenter sur 1 bit, 8 bits, ou 32 bits selon l'architecture."
+  },
+  {
+    "id": "J21-02-009",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la valeur de 'Integer.MAX_VALUE' ?",
+    "options": [
+      "2^31 - 1",
+      "2^31",
+      "2^32 - 1",
+      "2^16 - 1"
+    ],
+    "correct": 0,
+    "explanation": "Integer.MAX_VALUE = 2,147,483,647 = 2^31 - 1 (car int est sur 32 bits signé, 1 bit pour le signe)."
+  },
+  {
+    "id": "J21-02-010",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la valeur de 'Integer.MIN_VALUE' ?",
+    "options": [
+      "-2^31",
+      "-2^31 + 1",
+      "-2^32",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "Integer.MIN_VALUE = -2,147,483,648 = -2^31. C'est la valeur négative la plus petite pour un int."
+  },
+  {
+    "id": "J21-02-011",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Que vaut 'Double.NaN' ?",
+    "options": [
+      "0.0",
+      "Infinity",
+      "Not a Number",
+      "Null"
+    ],
+    "correct": 2,
+    "explanation": "NaN (Not a Number) représente le résultat d'une opération invalide comme 0.0/0.0. NaN n'est égal à rien, même pas à lui-même."
+  },
+  {
+    "id": "J21-02-012",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Que vaut 'Double.POSITIVE_INFINITY' ?",
+    "options": [
+      "1.0/0.0",
+      "0.0/0.0",
+      "Double.MAX_VALUE + 1",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "explanation": "POSITIVE_INFINITY est le résultat d'une division par zéro positive, comme 1.0/0.0."
+  },
+  {
+    "id": "J21-02-013",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle est la plage de valeurs d'un type 'char' ?",
+    "options": [
+      "0 à 255",
+      "0 à 65535",
+      "-32768 à 32767",
+      "0 à 127"
+    ],
+    "correct": 1,
+    "explanation": "char est non signé sur 16 bits : 0 (\\u0000) à 65535 (\\uffff). Il représente des caractères Unicode."
+  },
+  {
+    "id": "J21-02-014",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quel wrapper correspond au type primitif 'int' ?",
+    "options": [
+      "Integer",
+      "Int",
+      "Int32",
+      "IntWrapper"
+    ],
+    "correct": 0,
+    "explanation": "Le wrapper de int est Integer. Tous les wrappers : Byte, Short, Integer, Long, Float, Double, Character, Boolean."
+  },
+  {
+    "id": "J21-02-015",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quel wrapper correspond au type primitif 'char' ?",
+    "options": [
+      "Char",
+      "Character",
+      "CharWrapper",
+      "Ch"
+    ],
+    "correct": 1,
+    "explanation": "Le wrapper de char est Character. Les wrappers sont immuables et implémentent Comparable."
+  },
+  {
+    "id": "J21-02-016",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'autoboxing en Java ?",
+    "options": [
+      "Conversion automatique primitive → wrapper",
+      "Conversion automatique wrapper → primitive",
+      "Les deux",
+      "Boxing manuel avec new Integer()"
+    ],
+    "correct": 2,
+    "explanation": "Autoboxing : primitive → wrapper (ex: int to Integer). Unboxing : wrapper → primitive. Introduit en Java 5."
+  },
+  {
+    "id": "J21-02-017",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nInteger a = 127;\nInteger b = 127;\nSystem.out.println(a == b);\nInteger c = 128;\nInteger d = 128;\nSystem.out.println(c == d);\n```",
+    "options": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ],
+    "correct": 1,
+    "explanation": "Integer cache les valeurs entre -128 et 127. a et b sont le même objet (true). 128 n'est pas dans le cache, donc c et d sont des objets différents (false)."
+  },
+  {
+    "id": "J21-02-018",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nInteger a = 100;\nInteger b = 100;\nSystem.out.println(a == b);\nInteger c = 200;\nInteger d = 200;\nSystem.out.println(c == d);\n```",
+    "options": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ],
+    "correct": 1,
+    "explanation": "Même explication : cache Integer pour -128 à 127. 100 est dans le cache (true), 200 n'y est pas (false)."
+  },
+  {
+    "id": "J21-02-019",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nInteger a = null;\nint b = a;\nSystem.out.println(b);\n```",
+    "options": [
+      "0",
+      "null",
+      "NullPointerException",
+      "Erreur de compilation"
+    ],
+    "correct": 2,
+    "explanation": "Unboxing d'un Integer null provoque NullPointerException. Java ne peut pas convertir null en int primitif."
+  },
+  {
+    "id": "J21-02-020",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Integer.parseInt(\"10\", 2)' ?",
+    "options": [
+      "10",
+      "2",
+      "Lève exception",
+      "5"
+    ],
+    "correct": 1,
+    "explanation": "parseInt avec base 2 interprète \"10\" en binaire = 2 décimal. \"1010\" en binaire = 10 décimal."
+  },
+  {
+    "id": "J21-02-021",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Integer.parseInt(\"FF\", 16)' ?",
+    "options": [
+      "255",
+      "FF",
+      "15",
+      "Lève exception"
+    ],
+    "correct": 0,
+    "explanation": "parseInt avec base 16 interprète \"FF\" en hexadécimal = 15×16 + 15 = 255 décimal."
+  },
+  {
+    "id": "J21-02-022",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Integer.toBinaryString(10)' ?",
+    "options": [
+      "\"1010\"",
+      "\"10\"",
+      "\"101\"",
+      "\"1001\""
+    ],
+    "correct": 0,
+    "explanation": "10 en binaire = 1010₂. toBinaryString retourne la représentation binaire sans zéros non significatifs."
+  },
+  {
+    "id": "J21-02-023",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "question": "Que produit 'Integer.toBinaryString(-1)' ?",
+    "options": [
+      "\"11111111111111111111111111111111\"",
+      "\"-1\"",
+      "Lève exception",
+      "\"1\""
+    ],
+    "correct": 0,
+    "explanation": "-1 en complément à deux 32 bits = tous les bits à 1 → 32 caractères '1'."
+  },
+  {
+    "id": "J21-02-024",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "question": "Que produit 'Integer.toBinaryString(-10)' ?",
+    "options": [
+      "\"11111111111111111111111111110110\"",
+      "\"-1010\"",
+      "\"1010\"",
+      "\"11111111111111111111111111111010\""
+    ],
+    "correct": 0,
+    "explanation": "-10 en complément à deux : prendre 10 (1010), inverser bits, ajouter 1 = 111...11110110 (32 bits)."
+  },
+  {
+    "id": "J21-02-025",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quelle interface tous les wrappers primitifs implémentent-ils ?",
+    "options": [
+      "Cloneable",
+      "Comparable",
+      "Serializable",
+      "Les deux B et C"
+    ],
+    "correct": 3,
+    "explanation": "Tous les wrappers implémentent Comparable<T> et Serializable. Ils étendent Number (sauf Character et Boolean)."
+  },
+  {
+    "id": "J21-02-026",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nint a = 5;\nInteger b = 5;\nSystem.out.println(a == b);\n```",
+    "options": [
+      "true",
+      "false",
+      "Erreur compilation",
+      "NullPointerException"
+    ],
+    "correct": 0,
+    "explanation": "Comparaison == entre primitive et wrapper déclenche l'unboxing de b en int. 5 == 5 → true."
+  },
+  {
+    "id": "J21-02-027",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nInteger a = 5;\nInteger b = 5;\nSystem.out.println(a.equals(b));\n```",
+    "options": [
+      "true",
+      "false",
+      "Erreur compilation",
+      "NullPointerException"
+    ],
+    "correct": 0,
+    "explanation": "equals() compare la valeur, pas la référence. a.equals(b) compare Integer.valueOf(5).equals(Integer.valueOf(5)) → true."
+  },
+  {
+    "id": "J21-02-028",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "question": "Quelle est la sortie ?\n```java\nint a = 1000;\nint b = 1000;\nSystem.out.println(a == b);\nInteger c = 1000;\nInteger d = 1000;\nSystem.out.println(c == d);\n```",
+    "options": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ],
+    "correct": 1,
+    "explanation": "a==b (primitives) → true. c==d (références) → false car 1000 hors du cache Integer (-128 à 127)."
+  },
+  {
+    "id": "J21-02-029",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Character.isDigit('5')' ?",
+    "options": [
+      "true",
+      "false",
+      "Erreur",
+      "5"
+    ],
+    "correct": 0,
+    "explanation": "isDigit() retourne true pour les caractères qui sont des chiffres décimaux Unicode (0-9 mais aussi d'autres écritures)."
+  },
+  {
+    "id": "J21-02-030",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Character.isLetter('5')' ?",
+    "options": [
+      "true",
+      "false",
+      "Erreur",
+      "5"
+    ],
+    "correct": 1,
+    "explanation": "isLetter() retourne true pour les lettres Unicode. '5' est un chiffre, pas une lettre → false."
+  },
+  {
+    "id": "J21-02-031",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Character.isWhitespace(' ')' ?",
+    "options": [
+      "true",
+      "false",
+      "Erreur",
+      "space"
+    ],
+    "correct": 0,
+    "explanation": "isWhitespace() retourne true pour l'espace, le tab, le saut de ligne, etc. L'espace simple est un whitespace."
+  },
+  {
+    "id": "J21-02-032",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Character.toLowerCase('A')' ?",
+    "options": [
+      "'a'",
+      "'A'",
+      "65",
+      "97"
+    ],
+    "correct": 0,
+    "explanation": "toLowerCase() retourne le caractère en minuscule. 'A' → 'a'. La méthode retourne un char."
+  },
+  {
+    "id": "J21-02-033",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Comment convertir une String en int ?",
+    "options": [
+      "(int)str",
+      "str.toInt()",
+      "Integer.parseInt(str)",
+      "Integer.valueOf(str)"
+    ],
+    "correct": 2,
+    "explanation": "Integer.parseInt(String) retourne un int primitif. Integer.valueOf(String) retourne un Integer (wrapper)."
+  },
+  {
+    "id": "J21-02-034",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Comment convertir un int en String ?",
+    "options": [
+      "(String)i",
+      "i.toString()",
+      "String.valueOf(i)",
+      "Integer.toString(i)"
+    ],
+    "correct": 2,
+    "explanation": "String.valueOf(int) et Integer.toString(int) convertissent un int en String. Les deux sont valides."
+  },
+  {
+    "id": "J21-02-035",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Double.compare(0.0, -0.0)' ?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "NaN"
+    ],
+    "correct": 0,
+    "explanation": "Double.compare considère 0.0 > -0.0, donc retourne 1. (0.0 == -0.0) est true, mais compare distingue les zéros signés."
+  },
+  {
+    "id": "J21-02-036",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "question": "Que produit 'Double.compare(Double.NaN, 1.0)' ?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "NaN"
+    ],
+    "correct": 1,
+    "explanation": "Double.compare traite NaN comme plus grand que toute autre valeur (y compris POSITIVE_INFINITY). Donc retourne 1."
+  },
+  {
+    "id": "J21-02-037",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Float.isNaN(0.0f / 0.0f)' ?",
+    "options": [
+      "true",
+      "false",
+      "Erreur",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "0.0f/0.0f = NaN. isNaN() retourne true pour NaN, false pour toute autre valeur."
+  },
+  {
+    "id": "J21-02-038",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Float.isInfinite(1.0f / 0.0f)' ?",
+    "options": [
+      "true",
+      "false",
+      "Erreur",
+      "Infinity"
+    ],
+    "correct": 0,
+    "explanation": "1.0f/0.0f = Infinity. isInfinite() retourne true pour ±Infinity."
+  },
+  {
+    "id": "J21-02-039",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Que vaut 'Byte.BYTES' en Java ?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "correct": 0,
+    "explanation": "Byte.BYTES retourne le nombre d'octets d'un byte : 1. Chaque wrapper a une constante BYTES."
+  },
+  {
+    "id": "J21-02-040",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Que vaut 'Integer.BYTES' ?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "Integer.BYTES = 4 octets (32 bits). Long.BYTES = 8, Short.BYTES = 2, Double.BYTES = 8."
+  },
+  {
+    "id": "J21-02-041",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'Long.parseUnsignedLong(\"FFFFFFFF\", 16)' ?",
+    "options": [
+      "4294967295",
+      "-1",
+      "Lève exception",
+      "0xFFFFFFFF"
+    ],
+    "correct": 0,
+    "explanation": "parseUnsignedLong interprète la chaîne comme non signée. FFFFFFFF hex = 2^32 - 1 = 4294967295."
+  },
+  {
+    "id": "J21-02-042",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "question": "Que produit 'Integer.divideUnsigned(-1, 2)' ?",
+    "options": [
+      "-1",
+      "0",
+      "2147483647",
+      "Lève exception"
+    ],
+    "correct": 2,
+    "explanation": "divideUnsigned traite -1 comme 0xFFFFFFFF (4294967295 non signé). 4294967295 / 2 = 2147483647."
+  },
+  {
+    "id": "J21-02-043",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quel type utiliser pour des calculs monétaires précis ?",
+    "options": [
+      "float",
+      "double",
+      "BigDecimal",
+      "long en centimes"
+    ],
+    "correct": 2,
+    "explanation": "BigDecimal est recommandé pour les calculs monétaires car il évite les erreurs d'arrondi des flottants."
+  },
+  {
+    "id": "J21-02-044",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit 'new BigDecimal(\"0.1\").add(new BigDecimal(\"0.2\"))' ?",
+    "options": [
+      "0.3",
+      "0.30000000000000004",
+      "0.30",
+      "0.2999999999999999"
+    ],
+    "correct": 0,
+    "explanation": "BigDecimal avec String donne une représentation exacte. 0.1 + 0.2 = 0.3 exactement, pas d'erreur flottante."
+  },
+  {
+    "id": "J21-02-045",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\n```java\nBigDecimal bd = new BigDecimal(\"123.456\");\nSystem.out.println(bd.scale());\n```",
+    "options": [
+      "3",
+      "6",
+      "0",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "scale() retourne le nombre de décimales. \"123.456\" a 3 décimales → scale=3."
+  },
+  {
+    "id": "J21-02-046",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Quelle méthode de BigDecimal arrondit à l'entier le plus proche ?",
+    "options": [
+      "round()",
+      "setScale(0, RoundingMode.HALF_UP)",
+      "toBigInteger()",
+      "intValue()"
+    ],
+    "correct": 1,
+    "explanation": "setScale(0, RoundingMode.HALF_UP) arrondit à l'entier le plus proche. toBigInteger() tronque."
+  },
+  {
+    "id": "J21-02-047",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quel suffixe pour un littéral long ?",
+    "options": [
+      "L",
+      "l",
+      "L ou l",
+      "Long"
+    ],
+    "correct": 2,
+    "explanation": "L ou l (recommandé L majuscule pour lisibilité). Ex: 10L. Sans suffixe, c'est un int."
+  },
+  {
+    "id": "J21-02-048",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "question": "Quel suffixe pour un littéral float ?",
+    "options": [
+      "F",
+      "f",
+      "F ou f",
+      "float"
+    ],
+    "correct": 2,
+    "explanation": "F ou f. Ex: 3.14f. Sans suffixe, un littéral décimal est double par défaut."
+  },
+  {
+    "id": "J21-02-049",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nbyte b = 127;\nb++;\nSystem.out.println(b);\n```",
+    "options": [
+      "128",
+      "-128",
+      "0",
+      "Erreur de compilation"
+    ],
+    "correct": 1,
+    "explanation": "byte dépasse sa plage. 127 + 1 = -128 (wraparound). Pas d'erreur à l'exécution."
+  },
+  {
+    "id": "J21-02-050",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Types de données et Wrappers - Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nshort s = 32767;\ns += 1;\nSystem.out.println(s);\n```",
+    "options": [
+      "32768",
+      "-32768",
+      "0",
+      "Erreur de compilation"
+    ],
+    "correct": 1,
+    "explanation": "short max = 32767. +1 → overflow silencieux à -32768 (MIN_VALUE)."
+  }
 ]

@@ -1,0 +1,1157 @@
+[
+  {
+    "id": "AWS-SAA-211",
+    "theme": "Networking",
+    "theme_label": "VPC",
+    "difficulty": "easy",
+    "question": "Que signifie VPC ?",
+    "options": [
+      "Virtual Private Cloud",
+      "Virtual Public Cloud",
+      "Virtual Private Cluster",
+      "Virtual Private Compute"
+    ],
+    "correct": 0,
+    "explanation": "VPC est un réseau virtuel isolé dans AWS."
+  },
+  {
+    "id": "AWS-SAA-212",
+    "theme": "Networking",
+    "theme_label": "VPC",
+    "difficulty": "easy",
+    "question": "Quelle est la plage CIDR maximale pour un VPC ?",
+    "options": ["/16", "/24", "/28", "/8"],
+    "correct": 0,
+    "explanation": "La plage CIDR maximale pour un VPC est /16 (65 536 adresses)."
+  },
+  {
+    "id": "AWS-SAA-213",
+    "theme": "Networking",
+    "theme_label": "VPC",
+    "difficulty": "easy",
+    "question": "Quelle est la plage CIDR minimale pour un VPC ?",
+    "options": ["/28", "/16", "/24", "/8"],
+    "correct": 0,
+    "explanation": "La plage minimale est /28 (16 adresses)."
+  },
+  {
+    "id": "AWS-SAA-214",
+    "theme": "Networking",
+    "theme_label": "Subnet",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un subnet ?",
+    "options": [
+      "Sous-réseau dans un VPC",
+      "Type d'instance",
+      "Service de stockage",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Un subnet est une plage d'adresses IP dans un VPC."
+  },
+  {
+    "id": "AWS-SAA-215",
+    "theme": "Networking",
+    "theme_label": "Subnet",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre public et private subnet ?",
+    "options": [
+      "Public subnet a une route vers Internet Gateway",
+      "Private subnet a accès à Internet",
+      "Identiques",
+      "Public subnet est plus cher"
+    ],
+    "correct": 0,
+    "explanation": "Les subnets publics ont une route vers Internet Gateway."
+  },
+  {
+    "id": "AWS-SAA-216",
+    "theme": "Networking",
+    "theme_label": "Subnet",
+    "difficulty": "hard",
+    "question": "Combien d'adresses IP sont réservées par subnet ?",
+    "options": ["5", "3", "4", "2"],
+    "correct": 0,
+    "explanation": "AWS réserve 5 adresses par subnet (réseau, routeur, DNS, broadcast, future)."
+  },
+  {
+    "id": "AWS-SAA-217",
+    "theme": "Networking",
+    "theme_label": "Internet Gateway (IGW)",
+    "difficulty": "easy",
+    "question": "À quoi sert un Internet Gateway ?",
+    "options": [
+      "Connecter le VPC à Internet",
+      "Connecter des VPC entre eux",
+      "Connecter on-premise",
+      "Connecter des régions"
+    ],
+    "correct": 0,
+    "explanation": "IGW permet la communication entre le VPC et Internet."
+  },
+  {
+    "id": "AWS-SAA-218",
+    "theme": "Networking",
+    "theme_label": "Internet Gateway (IGW)",
+    "difficulty": "hard",
+    "question": "Combien d'IGW peut-on attacher à un VPC ?",
+    "options": ["1", "2", "5", "Illimité"],
+    "correct": 0,
+    "explanation": "Un VPC ne peut avoir qu'un seul Internet Gateway."
+  },
+  {
+    "id": "AWS-SAA-219",
+    "theme": "Networking",
+    "theme_label": "NAT Gateway",
+    "difficulty": "medium",
+    "question": "À quoi sert un NAT Gateway ?",
+    "options": [
+      "Donner accès Internet aux instances privées",
+      "Donner accès public aux instances",
+      "Connecter des VPC",
+      "Filtrer le trafic"
+    ],
+    "correct": 0,
+    "explanation": "NAT Gateway permet aux instances privées d'accéder à Internet (pas l'inverse)."
+  },
+  {
+    "id": "AWS-SAA-220",
+    "theme": "Networking",
+    "theme_label": "NAT Gateway vs NAT Instance",
+    "difficulty": "hard",
+    "question": "Avantage de NAT Gateway sur NAT Instance ?",
+    "options": [
+      "Managé, haute disponibilité, plus de bande passante",
+      "Moins cher",
+      "Plus simple",
+      "Personnalisable"
+    ],
+    "correct": 0,
+    "explanation": "NAT Gateway est un service managé avec HA intégrée."
+  },
+  {
+    "id": "AWS-SAA-221",
+    "theme": "Networking",
+    "theme_label": "NAT Gateway",
+    "difficulty": "hard",
+    "question": "NAT Gateway est-il redondant au sein d'une AZ ?",
+    "options": ["Oui", "Non", "Optionnel", "Dépend de la configuration"],
+    "correct": 0,
+    "explanation": "NAT Gateway est redondant au sein d'une AZ."
+  },
+  {
+    "id": "AWS-SAA-222",
+    "theme": "Networking",
+    "theme_label": "VPC Peering",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que VPC Peering ?",
+    "options": [
+      "Connexion entre deux VPC",
+      "Connexion à Internet",
+      "Connexion on-premise",
+      "Connexion entre régions"
+    ],
+    "correct": 0,
+    "explanation": "VPC Peering connecte deux VPC en utilisant le réseau AWS."
+  },
+  {
+    "id": "AWS-SAA-223",
+    "theme": "Networking",
+    "theme_label": "VPC Peering",
+    "difficulty": "hard",
+    "question": "VPC Peering supporte-t-il le transit routing ?",
+    "options": ["Non", "Oui", "Optionnel", "Uniquement avec TGW"],
+    "correct": 0,
+    "explanation": "Le peering ne supporte pas le transit routing (pas de chaînage)."
+  },
+  {
+    "id": "AWS-SAA-224",
+    "theme": "Networking",
+    "theme_label": "VPC Peering",
+    "difficulty": "hard",
+    "question": "Peut-on faire du peering entre VPC de régions différentes ?",
+    "options": ["Oui", "Non", "Uniquement avec TGW", "Uniquement avec VPN"],
+    "correct": 0,
+    "explanation": "Inter-region VPC Peering est possible (cross-region)."
+  },
+  {
+    "id": "AWS-SAA-225",
+    "theme": "Networking",
+    "theme_label": "Transit Gateway (TGW)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Transit Gateway ?",
+    "options": [
+      "Hub central connectant VPC, VPN, Direct Connect",
+      "Passerelle NAT",
+      "Passerelle Internet",
+      "Passerelle VPN"
+    ],
+    "correct": 0,
+    "explanation": "TGW est un hub de transit pour connecter plusieurs VPC et réseaux."
+  },
+  {
+    "id": "AWS-SAA-226",
+    "theme": "Networking",
+    "theme_label": "Transit Gateway",
+    "difficulty": "hard",
+    "question": "Avantage de Transit Gateway sur VPC Peering ?",
+    "options": [
+      "Transit routing, moins de connections (N*(N-1)/2)",
+      "Moins cher",
+      "Plus rapide",
+      "Plus sécurisé"
+    ],
+    "correct": 0,
+    "explanation": "TGW réduit le nombre de connexions et permet le transit."
+  },
+  {
+    "id": "AWS-SAA-227",
+    "theme": "Networking",
+    "theme_label": "VPN",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS VPN ?",
+    "options": [
+      "Connexion VPN entre on-premise et AWS",
+      "VPN entre VPC",
+      "VPN public",
+      "VPN client"
+    ],
+    "correct": 0,
+    "explanation": "AWS VPN connecte un réseau on-premise au VPC via IPsec."
+  },
+  {
+    "id": "AWS-SAA-228",
+    "theme": "Networking",
+    "theme_label": "VPN",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Client VPN ?",
+    "options": [
+      "VPN pour utilisateurs individuels",
+      "VPN site-to-site",
+      "VPN entre VPC",
+      "VPN de gestion"
+    ],
+    "correct": 0,
+    "explanation": "Client VPN permet à des utilisateurs de se connecter au VPC."
+  },
+  {
+    "id": "AWS-SAA-229",
+    "theme": "Networking",
+    "theme_label": "Direct Connect",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Direct Connect ?",
+    "options": [
+      "Connexion réseau dédiée privée",
+      "VPN",
+      "Peering",
+      "Transit Gateway"
+    ],
+    "correct": 0,
+    "explanation": "Direct Connect est une connexion réseau physique privée entre on-premise et AWS."
+  },
+  {
+    "id": "AWS-SAA-230",
+    "theme": "Networking",
+    "theme_label": "Direct Connect",
+    "difficulty": "hard",
+    "question": "Avantages de Direct Connect sur VPN ?",
+    "options": [
+      "Latence plus faible, bande passante dédiée",
+      "Moins cher",
+      "Plus simple",
+      "Plus rapide à configurer"
+    ],
+    "correct": 0,
+    "explanation": "Direct Connect offre des performances constantes et prédictibles."
+  },
+  {
+    "id": "AWS-SAA-231",
+    "theme": "Networking",
+    "theme_label": "Route53",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Route53 ?",
+    "options": [
+      "Service DNS",
+      "Service de routage",
+      "Service de calcul",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Route53 est le service DNS d'AWS."
+  },
+  {
+    "id": "AWS-SAA-232",
+    "theme": "Networking",
+    "theme_label": "Route53",
+    "difficulty": "easy",
+    "question": "Quels types d'enregistrements DNS sont supportés ?",
+    "options": [
+      "A, AAAA, CNAME, MX, TXT, etc.",
+      "Seulement A",
+      "Seulement CNAME",
+      "Seulement MX"
+    ],
+    "correct": 0,
+    "explanation": "Route53 supporte tous les types DNS standards."
+  },
+  {
+    "id": "AWS-SAA-233",
+    "theme": "Networking",
+    "theme_label": "Route53 Routing Policies",
+    "difficulty": "hard",
+    "question": "Quelles sont les politiques de routage Route53 ?",
+    "options": [
+      "Simple, Weighted, Latency, Failover, Geolocation, Geoproximity, Multivalue",
+      "Simple seulement",
+      "Weighted seulement",
+      "Latency seulement"
+    ],
+    "correct": 0,
+    "explanation": "Route53 propose plusieurs politiques de routage."
+  },
+  {
+    "id": "AWS-SAA-234",
+    "theme": "Networking",
+    "theme_label": "Route53 Routing Policies",
+    "difficulty": "hard",
+    "question": "À quoi sert la politique Weighted ?",
+    "options": [
+      "Répartir le trafic avec des poids",
+      "Routage basé sur latence",
+      "Failover",
+      "Routage géographique"
+    ],
+    "correct": 0,
+    "explanation": "Weighted répartit le trafic selon des poids (A/B testing)."
+  },
+  {
+    "id": "AWS-SAA-235",
+    "theme": "Networking",
+    "theme_label": "Route53 Routing Policies",
+    "difficulty": "hard",
+    "question": "À quoi sert la politique Latency ?",
+    "options": [
+      "Redirige vers la région avec la meilleure latence",
+      "Répartition pondérée",
+      "Failover",
+      "Géolocalisation"
+    ],
+    "correct": 0,
+    "explanation": "Latency dirige les utilisateurs vers la région avec la plus faible latence."
+  },
+  {
+    "id": "AWS-SAA-236",
+    "theme": "Networking",
+    "theme_label": "Route53 Routing Policies",
+    "difficulty": "hard",
+    "question": "À quoi sert la politique Failover ?",
+    "options": [
+      "Bascule active-passive",
+      "Répartition équitable",
+      "Latence",
+      "Géolocalisation"
+    ],
+    "correct": 0,
+    "explanation": "Failover redirige vers un secondary en cas de défaillance du primary."
+  },
+  {
+    "id": "AWS-SAA-237",
+    "theme": "Networking",
+    "theme_label": "Route53 Routing Policies",
+    "difficulty": "hard",
+    "question": "À quoi sert la politique Geolocation ?",
+    "options": [
+      "Redirige selon la localisation de l'utilisateur",
+      "Latence",
+      "Poids",
+      "Failover"
+    ],
+    "correct": 0,
+    "explanation": "Geolocation dirige selon le pays/continent de l'utilisateur."
+  },
+  {
+    "id": "AWS-SAA-238",
+    "theme": "Networking",
+    "theme_label": "Route53 Routing Policies",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Geoproximity routing ?",
+    "options": [
+      "Routage basé sur la proximité géographique (bias)",
+      "Latence",
+      "Géolocalisation",
+      "Poids"
+    ],
+    "correct": 0,
+    "explanation": "Geoproximity permet de décaler le trafic vers certaines régions via un bias."
+  },
+  {
+    "id": "AWS-SAA-239",
+    "theme": "Networking",
+    "theme_label": "Route53 Health Checks",
+    "difficulty": "hard",
+    "question": "À quoi servent les Health Checks dans Route53 ?",
+    "options": [
+      "Surveiller les endpoints et déclencher les failover",
+      "Surveiller la latence",
+      "Surveiller le DNS",
+      "Surveiller le SSL"
+    ],
+    "correct": 0,
+    "explanation": "Les health checks surveillent la disponibilité des endpoints pour les failover."
+  },
+  {
+    "id": "AWS-SAA-240",
+    "theme": "Networking",
+    "theme_label": "Route53 Resolver",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Route53 Resolver ?",
+    "options": [
+      "Résolution DNS conditionnelle entre VPC et on-premise",
+      "Service DNS public",
+      "Service DNS privé",
+      "Health check"
+    ],
+    "correct": 0,
+    "explanation": "Resolver permet la résolution DNS entre VPC et réseaux on-premise."
+  },
+  {
+    "id": "AWS-SAA-241",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que CloudFront ?",
+    "options": [
+      "CDN (Content Delivery Network)",
+      "Service de calcul",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "CloudFront est le CDN d'AWS."
+  },
+  {
+    "id": "AWS-SAA-242",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "medium",
+    "question": "Où sont situés les edge locations ?",
+    "options": [
+      "Partout dans le monde",
+      "Seulement aux USA",
+      "Seulement en Europe",
+      "Seulement en Asie"
+    ],
+    "correct": 0,
+    "explanation": "Les edge locations sont répartis mondialement."
+  },
+  {
+    "id": "AWS-SAA-243",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un CloudFront Origin ?",
+    "options": [
+      "Source des contenus (S3, ALB, EC2, etc.)",
+      "Edge location",
+      "Cache",
+      "Distribution"
+    ],
+    "correct": 0,
+    "explanation": "L'origine est l'endpoint qui fournit le contenu à CloudFront."
+  },
+  {
+    "id": "AWS-SAA-244",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudFront Signed URL / Signed Cookies ?",
+    "options": [
+      "Accès restreint à du contenu privé",
+      "Cache",
+      "Compression",
+      "Logging"
+    ],
+    "correct": 0,
+    "explanation": "Signed URL/Cookies permettent de sécuriser l'accès au contenu."
+  },
+  {
+    "id": "AWS-SAA-245",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudFront Field-Level Encryption ?",
+    "options": [
+      "Chiffrement de champs spécifiques dans les formulaires",
+      "Chiffrement global",
+      "Chiffrement en transit",
+      "Chiffrement au repos"
+    ],
+    "correct": 0,
+    "explanation": "Field-Level Encryption protège les données sensibles (ex: mots de passe)."
+  },
+  {
+    "id": "AWS-SAA-246",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudFront Lambda@Edge ?",
+    "options": [
+      "Lambda exécuté aux edge locations",
+      "Lambda standard",
+      "Lambda régional",
+      "Lambda global"
+    ],
+    "correct": 0,
+    "explanation": "Lambda@Edge personnalise le contenu au plus proche de l'utilisateur."
+  },
+  {
+    "id": "AWS-SAA-247",
+    "theme": "Networking",
+    "theme_label": "CloudFront",
+    "difficulty": "hard",
+    "question": "Quels sont les déclencheurs Lambda@Edge ?",
+    "options": [
+      "viewer-request, origin-request, origin-response, viewer-response",
+      "request seulement",
+      "response seulement",
+      "origin seulement"
+    ],
+    "correct": 0,
+    "explanation": "Quatre types de déclencheurs à différentes étapes."
+  },
+  {
+    "id": "AWS-SAA-248",
+    "theme": "Networking",
+    "theme_label": "Global Accelerator",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Global Accelerator ?",
+    "options": [
+      "Accélère le trafic via le réseau AWS global",
+      "CDN",
+      "DNS",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explanation": "Global Accelerator utilise le réseau AWS pour améliorer les performances."
+  },
+  {
+    "id": "AWS-SAA-249",
+    "theme": "Networking",
+    "theme_label": "Global Accelerator vs CloudFront",
+    "difficulty": "hard",
+    "question": "Différence entre Global Accelerator et CloudFront ?",
+    "options": [
+      "CloudFront cache du contenu, Global Accelerator accélère le trafic TCP/UDP",
+      "Identiques",
+      "CloudFront pour les applications, Global Accelerator pour le cache",
+      "Global Accelerator pour les API, CloudFront pour les sites"
+    ],
+    "correct": 0,
+    "explanation": "CloudFront est un CDN avec cache, Global Accelerator optimise le chemin réseau."
+  },
+  {
+    "id": "AWS-SAA-250",
+    "theme": "Networking",
+    "theme_label": "ELB",
+    "difficulty": "easy",
+    "question": "Quels types de load balancers existent dans AWS ?",
+    "options": [
+      "Application Load Balancer (ALB), Network Load Balancer (NLB), Gateway Load Balancer (GWLB), Classic Load Balancer (CLB)",
+      "ALB seulement",
+      "NLB seulement",
+      "CLB seulement"
+    ],
+    "correct": 0,
+    "explanation": "Quatre types de load balancers."
+  },
+  {
+    "id": "AWS-SAA-251",
+    "theme": "Networking",
+    "theme_label": "ALB",
+    "difficulty": "medium",
+    "question": "À quel niveau fonctionne ALB ?",
+    "options": ["Couche 7 (application)", "Couche 4 (transport)", "Couche 3 (réseau)", "Couche 2 (liaison)"],
+    "correct": 0,
+    "explanation": "ALB est un load balancer de couche 7 (HTTP/HTTPS)."
+  },
+  {
+    "id": "AWS-SAA-252",
+    "theme": "Networking",
+    "theme_label": "ALB",
+    "difficulty": "hard",
+    "question": "Quelles fonctionnalités propose ALB ?",
+    "options": [
+      "Host-based routing, Path-based routing, Query string routing, Header routing",
+      "Seulement host-based",
+      "Seulement path-based",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explanation": "ALB supporte le routage avancé basé sur host, path, query, headers."
+  },
+  {
+    "id": "AWS-SAA-253",
+    "theme": "Networking",
+    "theme_label": "NLB",
+    "difficulty": "medium",
+    "question": "À quel niveau fonctionne NLB ?",
+    "options": ["Couche 4 (transport)", "Couche 7 (application)", "Couche 3", "Couche 2"],
+    "correct": 0,
+    "explanation": "NLB est un load balancer de couche 4 (TCP/UDP/TLS)."
+  },
+  {
+    "id": "AWS-SAA-254",
+    "theme": "Networking",
+    "theme_label": "NLB",
+    "difficulty": "hard",
+    "question": "Avantage de NLB sur ALB ?",
+    "options": [
+      "Ultra haute performance (millions de requêtes), IP statique, TLS passthrough",
+      "Moins cher",
+      "Plus simple",
+      "Plus de fonctionnalités"
+    ],
+    "correct": 0,
+    "explanation": "NLB offre des performances très élevées et une IP statique."
+  },
+  {
+    "id": "AWS-SAA-255",
+    "theme": "Networking",
+    "theme_label": "GWLB",
+    "difficulty": "hard",
+    "question": "À quoi sert Gateway Load Balancer ?",
+    "options": [
+      "Déployer des appliances réseau (firewalls, IPS/IDS) en mode transparent",
+      "Load balancing HTTP",
+      "Load balancing TCP",
+      "Load balancing UDP"
+    ],
+    "correct": 0,
+    "explanation": "GWLB distribue le trafic vers des appliances de sécurité."
+  },
+  {
+    "id": "AWS-SAA-256",
+    "theme": "Networking",
+    "theme_label": "Sticky sessions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les sticky sessions (session affinity) ?",
+    "options": [
+      "Dirige les requêtes d'un même utilisateur vers la même instance",
+      "Répartition équitable",
+      "Cache",
+      "Compression"
+    ],
+    "correct": 0,
+    "explanation": "Les sticky sessions maintiennent l'affinité de session."
+  },
+  {
+    "id": "AWS-SAA-257",
+    "theme": "Networking",
+    "theme_label": "Cross-Zone Load Balancing",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le cross-zone load balancing ?",
+    "options": [
+      "Répartit le trafic également entre toutes les instances, toutes AZ",
+      "Répartition par AZ",
+      "Répartition par instance",
+      "Répartition par région"
+    ],
+    "correct": 0,
+    "explanation": "Cross-zone permet une distribution équitable entre toutes les instances, quelle que soit l'AZ."
+  },
+  {
+    "id": "AWS-SAA-258",
+    "theme": "Networking",
+    "theme_label": "VPC Endpoints",
+    "difficulty": "hard",
+    "question": "À quoi servent les VPC Endpoints ?",
+    "options": [
+      "Connecter privément aux services AWS sans Internet",
+      "Connecter à Internet",
+      "Connecter à on-premise",
+      "Connecter à d'autres VPC"
+    ],
+    "correct": 0,
+    "explanation": "Les VPC Endpoints permettent d'accéder aux services AWS via le réseau privé."
+  },
+  {
+    "id": "AWS-SAA-259",
+    "theme": "Networking",
+    "theme_label": "VPC Endpoints",
+    "difficulty": "hard",
+    "question": "Quels sont les types de VPC Endpoints ?",
+    "options": [
+      "Gateway Endpoints (S3, DynamoDB) et Interface Endpoints (autres services)",
+      "Interface seulement",
+      "Gateway seulement",
+      "PrivateLink seulement"
+    ],
+    "correct": 0,
+    "explanation": "Gateway endpoints pour S3/DynamoDB, Interface pour les autres."
+  },
+  {
+    "id": "AWS-SAA-260",
+    "theme": "Networking",
+    "theme_label": "PrivateLink",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS PrivateLink ?",
+    "options": [
+      "Expose des services dans un VPC de manière privée",
+      "VPN",
+      "Direct Connect",
+      "Peering"
+    ],
+    "correct": 0,
+    "explanation": "PrivateLink permet d'exposer des services via des interface endpoints."
+  },
+  {
+    "id": "AWS-SAA-261",
+    "theme": "Networking",
+    "theme_label": "VPC Flow Logs",
+    "difficulty": "hard",
+    "question": "À quoi servent les VPC Flow Logs ?",
+    "options": [
+      "Capturer les métadonnées du trafic IP",
+      "Logs d'application",
+      "Logs DNS",
+      "Logs système"
+    ],
+    "correct": 0,
+    "explanation": "Flow Logs enregistrent les informations de trafic (source, destination, ports, etc.)."
+  },
+  {
+    "id": "AWS-SAA-262",
+    "theme": "Networking",
+    "theme_label": "VPC Flow Logs",
+    "difficulty": "hard",
+    "question": "Où peuvent être envoyés les VPC Flow Logs ?",
+    "options": [
+      "CloudWatch Logs, S3, Kinesis Data Firehose",
+      "S3 seulement",
+      "CloudWatch seulement",
+      "Kinesis seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les destinations supportées sont CloudWatch Logs, S3, Firehose."
+  },
+  {
+    "id": "AWS-SAA-263",
+    "theme": "Networking",
+    "theme_label": "Network ACL vs Security Group",
+    "difficulty": "hard",
+    "question": "Différence entre Network ACL et Security Group ?",
+    "options": [
+      "NACL stateless (règles aller/retour séparées), SG stateful",
+      "NACL stateful, SG stateless",
+      "Identiques",
+      "NACL au niveau instance, SG au niveau subnet"
+    ],
+    "correct": 0,
+    "explanation": "NACL est stateless (évalue les règles de flux entrant et sortant séparément)."
+  },
+  {
+    "id": "AWS-SAA-264",
+    "theme": "Networking",
+    "theme_label": "Network ACL",
+    "difficulty": "hard",
+    "question": "Quelle est la règle par défaut d'une NACL ?",
+    "options": [
+      "Tout trafic entrant/sortant est autorisé",
+      "Tout trafic est bloqué",
+      "Tout trafic entrant bloqué, sortant autorisé",
+      "Tout trafic entrant autorisé, sortant bloqué"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, une NACL personnalisée bloque tout, mais la NACL par défaut autorise tout."
+  },
+  {
+    "id": "AWS-SAA-265",
+    "theme": "Networking",
+    "theme_label": "Security Group",
+    "difficulty": "hard",
+    "question": "Quelle est la règle par défaut d'un Security Group ?",
+    "options": [
+      "Trafic entrant bloqué, trafic sortant autorisé",
+      "Tout autorisé",
+      "Tout bloqué",
+      "Trafic entrant autorisé, sortant bloqué"
+    ],
+    "correct": 0,
+    "explanation": "Security Group par défaut bloque inbound, autorise outbound."
+  },
+  {
+    "id": "AWS-SAA-266",
+    "theme": "Networking",
+    "theme_label": "Egress-Only Internet Gateway",
+    "difficulty": "hard",
+    "question": "À quoi sert Egress-Only Internet Gateway ?",
+    "options": [
+      "Permet aux instances IPv6 d'accéder à Internet (sortant uniquement)",
+      "Permet l'accès entrant",
+      "Permet l'accès bidirectionnel",
+      "Permet l'accès privé"
+    ],
+    "correct": 0,
+    "explanation": "Egress-Only IGW est pour IPv6 seulement, permet sortie vers Internet."
+  },
+  {
+    "id": "AWS-SAA-267",
+    "theme": "Networking",
+    "theme_label": "VPC sharing",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le VPC sharing ?",
+    "options": [
+      "Partage d'un VPC entre plusieurs comptes",
+      "Partage d'un subnet",
+      "Partage d'une AZ",
+      "Partage d'une région"
+    ],
+    "correct": 0,
+    "explanation": "VPC sharing permet à plusieurs comptes AWS d'utiliser le même VPC."
+  },
+  {
+    "id": "AWS-SAA-268",
+    "theme": "Networking",
+    "theme_label": "AWS Network Firewall",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Network Firewall ?",
+    "options": [
+      "Firewall managé pour VPC",
+      "Security Group",
+      "NACL",
+      "WAF"
+    ],
+    "correct": 0,
+    "explanation": "Network Firewall est un service de firewall managé pour VPC."
+  },
+  {
+    "id": "AWS-SAA-269",
+    "theme": "Networking",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS WAF ?",
+    "options": [
+      "Protège les applications web contre les attaques (SQL injection, XSS)",
+      "Firewall réseau",
+      "VPN",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "WAF filtre les requêtes HTTP/HTTPS."
+  },
+  {
+    "id": "AWS-SAA-270",
+    "theme": "Networking",
+    "theme_label": "AWS Shield",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Shield ?",
+    "options": [
+      "Protection contre les attaques DDoS",
+      "WAF",
+      "Firewall",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "Shield protège contre les DDoS (Standard gratuit, Advanced payant)."
+  },
+  {
+    "id": "AWS-SAA-271",
+    "theme": "Networking",
+    "theme_label": "AWS Shield Advanced",
+    "difficulty": "hard",
+    "question": "Quels sont les avantages de Shield Advanced ?",
+    "options": [
+      "Protection avancée, accès à l'équipe DDoS Response Team (DRT), couverture des coûts",
+      "Protection basique",
+      "Gratuit",
+      "Uniquement pour ELB"
+    ],
+    "correct": 0,
+    "explanation": "Shield Advanced offre des protections supplémentaires et un support spécialisé."
+  },
+  {
+    "id": "AWS-SAA-272",
+    "theme": "Networking",
+    "theme_label": "Transit VPC",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un Transit VPC ?",
+    "options": [
+      "Architecture avec VPN entre VPC et on-premise via un VPC central",
+      "VPC partagé",
+      "VPC peering",
+      "Transit Gateway"
+    ],
+    "correct": 0,
+    "explanation": "Le Transit VPC est une architecture pré-TGW pour connecter plusieurs VPC."
+  },
+  {
+    "id": "AWS-SAA-273",
+    "theme": "Networking",
+    "theme_label": "VPN CloudHub",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que VPN CloudHub ?",
+    "options": [
+      "Connecte plusieurs sites on-premise via VPN vers un même VPC",
+      "Hub de transit",
+      "Peering",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "CloudHub permet de connecter plusieurs branches via VPN."
+  },
+  {
+    "id": "AWS-SAA-274",
+    "theme": "Networking",
+    "theme_label": "Accelerated Site-to-Site VPN",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Accelerated Site-to-Site VPN ?",
+    "options": [
+      "Utilise Global Accelerator pour améliorer les performances VPN",
+      "VPN plus rapide",
+      "VPN plus sécurisé",
+      "VPN plus simple"
+    ],
+    "correct": 0,
+    "explanation": "Accelerated VPN utilise Global Accelerator pour optimiser le chemin."
+  },
+  {
+    "id": "AWS-SAA-275",
+    "theme": "Networking",
+    "theme_label": "IPv6 in VPC",
+    "difficulty": "hard",
+    "question": "VPC supporte-t-il IPv6 ?",
+    "options": [
+      "Oui, dual-stack possible",
+      "Non",
+      "Uniquement IPv4",
+      "Uniquement IPv6"
+    ],
+    "correct": 0,
+    "explanation": "Les VPC supportent IPv4, IPv6, ou dual-stack."
+  },
+  {
+    "id": "AWS-SAA-276",
+    "theme": "Networking",
+    "theme_label": "VPC Endpoint Services (PrivateLink)",
+    "difficulty": "hard",
+    "question": "Comment exposer un service dans un VPC via PrivateLink ?",
+    "options": [
+      "Créer un VPC Endpoint Service (Network Load Balancer + PrivateLink)",
+      "Créer un VPC Peering",
+      "Créer un Transit Gateway",
+      "Créer un VPN"
+    ],
+    "correct": 0,
+    "explanation": "PrivateLink permet d'exposer des services via NLB et VPC Endpoint Service."
+  },
+  {
+    "id": "AWS-SAA-277",
+    "theme": "Networking",
+    "theme_label": "VPC Reachability Analyzer",
+    "difficulty": "hard",
+    "question": "À quoi sert Reachability Analyzer ?",
+    "options": [
+      "Tester la connectivité réseau entre ressources",
+      "Monitorer les performances",
+      "Logs de trafic",
+      "Analyser les routes"
+    ],
+    "correct": 0,
+    "explanation": "Reachability Analyzer vérifie si deux ressources peuvent communiquer."
+  },
+  {
+    "id": "AWS-SAA-278",
+    "theme": "Networking",
+    "theme_label": "Network Manager",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Network Manager ?",
+    "options": [
+      "Gestion centralisée des réseaux AWS et on-premise",
+      "VPC",
+      "Transit Gateway",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "Network Manager offre une vue d'ensemble des réseaux."
+  },
+  {
+    "id": "AWS-SAA-279",
+    "theme": "Networking",
+    "theme_label": "Cloud WAN",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Cloud WAN ?",
+    "options": [
+      "Service de réseau étendu (WAN) managé",
+      "VPC",
+      "Transit Gateway",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "Cloud WAN simplifie la gestion des réseaux entre sites et régions."
+  },
+  {
+    "id": "AWS-SAA-280",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment isoler des environnements (dev, prod) ?",
+    "options": [
+      "VPC séparés ou subnets avec NACL",
+      "Même VPC",
+      "Même subnet",
+      "Même AZ"
+    ],
+    "correct": 0,
+    "explanation": "Utiliser des VPC distincts ou des subnets avec contrôles d'accès."
+  },
+  {
+    "id": "AWS-SAA-281",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment améliorer la sécurité réseau ?",
+    "options": [
+      "Security Groups, NACL, VPC Flow Logs, WAF, Shield",
+      "Uniquement Security Groups",
+      "Uniquement NACL",
+      "Uniquement WAF"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs couches de sécurité réseau."
+  },
+  {
+    "id": "AWS-SAA-282",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment améliorer les performances réseau ?",
+    "options": [
+      "Placement groups, enhanced networking, ENA, EFA",
+      "Plus d'instances",
+      "Plus de mémoire",
+      "Plus de CPU"
+    ],
+    "correct": 0,
+    "explanation": "Utiliser des options d'optimisation réseau."
+  },
+  {
+    "id": "AWS-SAA-283",
+    "theme": "Networking",
+    "theme_label": "Enhanced Networking",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Enhanced Networking ?",
+    "options": [
+      "Utilise SR-IOV pour de meilleures performances",
+      "Plus de bande passante",
+      "Moins de latence",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Enhanced Networking (SR-IOV) améliore la performance réseau."
+  },
+  {
+    "id": "AWS-SAA-284",
+    "theme": "Networking",
+    "theme_label": "ENA vs EFA",
+    "difficulty": "hard",
+    "question": "Différence entre ENA et EFA ?",
+    "options": [
+      "EFA pour HPC (bypass OS), ENA pour usage général",
+      "Identiques",
+      "ENA plus rapide",
+      "EFA plus simple"
+    ],
+    "correct": 0,
+    "explanation": "EFA offre une latence ultra-faible pour les applications HPC."
+  },
+  {
+    "id": "AWS-SAA-285",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quand utiliser un Network Load Balancer ?",
+    "options": [
+      "Haute performance, IP statique, TCP/UDP, TLS passthrough",
+      "Applications web",
+      "Microservices",
+      "API REST"
+    ],
+    "correct": 0,
+    "explanation": "NLB est adapté aux workloads TCP/UDP haute performance."
+  },
+  {
+    "id": "AWS-SAA-286",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quand utiliser un Application Load Balancer ?",
+    "options": [
+      "Applications HTTP/HTTPS, routage avancé, WebSocket",
+      "TCP",
+      "UDP",
+      "TLS passthrough"
+    ],
+    "correct": 0,
+    "explanation": "ALB est optimisé pour les applications web."
+  },
+  {
+    "id": "AWS-SAA-287",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quand utiliser CloudFront plutôt que Global Accelerator ?",
+    "options": [
+      "Contenu statique, cache, edge computing (Lambda@Edge)",
+      "Applications dynamiques",
+      "TCP/UDP",
+      "IP statique"
+    ],
+    "correct": 0,
+    "explanation": "CloudFront pour le cache et la distribution de contenu."
+  },
+  {
+    "id": "AWS-SAA-288",
+    "theme": "Networking",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quand utiliser Global Accelerator plutôt que CloudFront ?",
+    "options": [
+      "Applications dynamiques, TCP/UDP, performances réseau",
+      "Contenu statique",
+      "Cache",
+      "Edge computing"
+    ],
+    "correct": 0,
+    "explanation": "Global Accelerator pour améliorer les performances d'applications non-cachables."
+  },
+  {
+    "id": "AWS-SAA-289",
+    "theme": "Networking",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "Comment diagnostiquer des problèmes de connectivité ?",
+    "options": [
+      "VPC Flow Logs, Reachability Analyzer, Network Manager",
+      "CloudWatch",
+      "CloudTrail",
+      "S3"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs outils pour analyser la connectivité."
+  },
+  {
+    "id": "AWS-SAA-290",
+    "theme": "Networking",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "Que faire si une instance n'a pas d'accès Internet ?",
+    "options": [
+      "Vérifier IGW, route table, security group, NACL",
+      "Redémarrer l'instance",
+      "Changer d'AZ",
+      "Augmenter la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Vérifier la configuration réseau (IGW, route, SG, NACL)."
+  }
+]

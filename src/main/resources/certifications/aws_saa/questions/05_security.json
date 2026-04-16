@@ -1,0 +1,982 @@
+[
+  {
+    "id": "AWS-SAA-291",
+    "theme": "Security & IAM",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Que signifie IAM ?",
+    "options": [
+      "Identity and Access Management",
+      "Integrated Access Management",
+      "Identity and Authentication Management",
+      "Internet Access Management"
+    ],
+    "correct": 0,
+    "explanation": "IAM est le service de gestion des identités et des accès."
+  },
+  {
+    "id": "AWS-SAA-292",
+    "theme": "Security & IAM",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Quels sont les composants principaux d'IAM ?",
+    "options": [
+      "Utilisateurs, Groupes, Rôles, Politiques",
+      "Utilisateurs seulement",
+      "Groupes seulement",
+      "Rôles seulement"
+    ],
+    "correct": 0,
+    "explanation": "IAM comprend utilisateurs, groupes, rôles et politiques."
+  },
+  {
+    "id": "AWS-SAA-293",
+    "theme": "Security & IAM",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une politique IAM ?",
+    "options": [
+      "Document JSON définissant les permissions",
+      "Utilisateur",
+      "Groupe",
+      "Rôle"
+    ],
+    "correct": 0,
+    "explanation": "Les politiques IAM sont des documents JSON qui définissent les autorisations."
+  },
+  {
+    "id": "AWS-SAA-294",
+    "theme": "Security & IAM",
+    "theme_label": "IAM",
+    "difficulty": "medium",
+    "question": "Quelle est la meilleure pratique pour les permissions ?",
+    "options": [
+      "Principe du moindre privilège",
+      "Donner toutes les permissions",
+      "Donner des permissions admin",
+      "Aucune permission"
+    ],
+    "correct": 0,
+    "explanation": "Le principe du moindre privilège accorde uniquement les permissions nécessaires."
+  },
+  {
+    "id": "AWS-SAA-295",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "medium",
+    "question": "À quoi servent les rôles IAM ?",
+    "options": [
+      "Donner des permissions à des services AWS",
+      "Authentifier des utilisateurs",
+      "Créer des groupes",
+      "Gérer les mots de passe"
+    ],
+    "correct": 0,
+    "explanation": "Les rôles IAM sont assumés par des services AWS (EC2, Lambda, etc.)."
+  },
+  {
+    "id": "AWS-SAA-296",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "hard",
+    "question": "Peut-on assumer un rôle IAM depuis un compte différent ?",
+    "options": ["Oui", "Non", "Uniquement avec organisations", "Uniquement avec identity center"],
+    "correct": 0,
+    "explanation": "Les rôles IAM peuvent être assumés cross-compte avec une politique de confiance."
+  },
+  {
+    "id": "AWS-SAA-297",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "hard",
+    "question": "Quels sont les types de politiques IAM ?",
+    "options": [
+      "Identity-based, Resource-based, Permissions boundaries, Service control policies (SCP)",
+      "Identity-based seulement",
+      "Resource-based seulement",
+      "Permissions boundaries seulement"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs types de politiques IAM."
+  },
+  {
+    "id": "AWS-SAA-298",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une politique resource-based ?",
+    "options": [
+      "Politique attachée à une ressource (bucket S3, queue SQS)",
+      "Politique attachée à un utilisateur",
+      "Politique attachée à un groupe",
+      "Politique attachée à un rôle"
+    ],
+    "correct": 0,
+    "explanation": "Les politiques resource-based sont attachées directement aux ressources AWS."
+  },
+  {
+    "id": "AWS-SAA-299",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une condition IAM ?",
+    "options": [
+      "Restriction supplémentaire dans une politique",
+      "Action autorisée",
+      "Ressource ciblée",
+      "Principal"
+    ],
+    "correct": 0,
+    "explanation": "Les conditions restreignent les permissions (IP, MFA, date, etc.)."
+  },
+  {
+    "id": "AWS-SAA-300",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "question": "Quelle condition restreint l'accès par adresse IP ?",
+    "options": [
+      "aws:SourceIp",
+      "aws:RequestedRegion",
+      "aws:MultiFactorAuthPresent",
+      "aws:PrincipalArn"
+    ],
+    "correct": 0,
+    "explanation": "aws:SourceIp restreint l'accès à une plage d'adresses IP."
+  },
+  {
+    "id": "AWS-SAA-301",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "question": "Quelle condition exige l'authentification MFA ?",
+    "options": [
+      "aws:MultiFactorAuthPresent",
+      "aws:SourceIp",
+      "aws:RequestedRegion",
+      "aws:PrincipalArn"
+    ],
+    "correct": 0,
+    "explanation": "aws:MultiFactorAuthPresent vérifie que MFA a été utilisé."
+  },
+  {
+    "id": "AWS-SAA-302",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Access Analyzer",
+    "difficulty": "hard",
+    "question": "À quoi sert IAM Access Analyzer ?",
+    "options": [
+      "Analyser les politiques pour détecter les accès non intentionnels",
+      "Créer des politiques",
+      "Gérer les utilisateurs",
+      "Auditer les logs"
+    ],
+    "correct": 0,
+    "explanation": "Access Analyzer identifie les ressources partagées publiquement ou cross-compte."
+  },
+  {
+    "id": "AWS-SAA-303",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Access Advisor",
+    "difficulty": "hard",
+    "question": "À quoi sert IAM Access Advisor ?",
+    "options": [
+      "Montre les services et actions utilisés par un utilisateur/rôle",
+      "Analyse les politiques",
+      "Gère les mots de passe",
+      "Audite les connexions"
+    ],
+    "correct": 0,
+    "explanation": "Access Advisor aide à affiner les politiques en montrant les permissions réellement utilisées."
+  },
+  {
+    "id": "AWS-SAA-304",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Password Policy",
+    "difficulty": "hard",
+    "question": "Peut-on configurer une politique de mot de passe IAM ?",
+    "options": ["Oui", "Non", "Uniquement pour les comptes root", "Uniquement pour les utilisateurs fédérés"],
+    "correct": 0,
+    "explanation": "On peut configurer la complexité, l'expiration, l'historique des mots de passe."
+  },
+  {
+    "id": "AWS-SAA-305",
+    "theme": "Security & IAM",
+    "theme_label": "Multi-Factor Authentication (MFA)",
+    "difficulty": "hard",
+    "question": "Quels types de MFA sont supportés par AWS ?",
+    "options": [
+      "Virtual MFA, Hardware MFA, FIDO2, SMS",
+      "Virtual MFA seulement",
+      "Hardware MFA seulement",
+      "SMS seulement"
+    ],
+    "correct": 0,
+    "explanation": "AWS supporte plusieurs types de MFA."
+  },
+  {
+    "id": "AWS-SAA-306",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Organizations",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Organizations ?",
+    "options": [
+      "Gestion centralisée de plusieurs comptes AWS",
+      "Service de sécurité",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Organizations permet de gérer plusieurs comptes AWS de manière centralisée."
+  },
+  {
+    "id": "AWS-SAA-307",
+    "theme": "Security & IAM",
+    "theme_label": "Service Control Policies (SCP)",
+    "difficulty": "hard",
+    "question": "À quoi servent les SCP ?",
+    "options": [
+      "Restreindre les permissions au niveau de l'organisation",
+      "Donner des permissions",
+      "Auditer les comptes",
+      "Gérer les mots de passe"
+    ],
+    "correct": 0,
+    "explanation": "Les SCP définissent les permissions maximales pour les comptes de l'organisation."
+  },
+  {
+    "id": "AWS-SAA-308",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Control Tower",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Control Tower ?",
+    "options": [
+      "Gouvernance automatisée pour multi-comptes",
+      "Service de sécurité",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Control Tower simplifie la configuration et la gouvernance de plusieurs comptes."
+  },
+  {
+    "id": "AWS-SAA-309",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Identity Center (SSO)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS IAM Identity Center ?",
+    "options": [
+      "Authentification unique (SSO) pour plusieurs comptes et applications",
+      "Service d'identité",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Identity Center (ex-AWS SSO) centralise l'authentification pour plusieurs comptes AWS et applications."
+  },
+  {
+    "id": "AWS-SAA-310",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS KMS ?",
+    "options": [
+      "Service de gestion de clés de chiffrement",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "KMS (Key Management Service) gère les clés de chiffrement."
+  },
+  {
+    "id": "AWS-SAA-311",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "question": "Quels types de clés KMS existent ?",
+    "options": [
+      "Clés AWS gérées, clés clientes (Customer Managed Keys), clés CloudHSM",
+      "Clés AWS seulement",
+      "Clés clientes seulement",
+      "Clés CloudHSM seulement"
+    ],
+    "correct": 0,
+    "explanation": "Trois types de clés KMS."
+  },
+  {
+    "id": "AWS-SAA-312",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le key rotation dans KMS ?",
+    "options": [
+      "Remplacement automatique des clés chaque année",
+      "Suppression des clés",
+      "Copie des clés",
+      "Export des clés"
+    ],
+    "correct": 0,
+    "explanation": "La rotation automatique des clés KMS se fait chaque année (clés clientes)."
+  },
+  {
+    "id": "AWS-SAA-313",
+    "theme": "Security & IAM",
+    "theme_label": "AWS CloudHSM",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS CloudHSM ?",
+    "options": [
+      "Hardware Security Module (HSM) dédié",
+      "Service KMS",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "CloudHSM fournit un HSM dédié (conformité FIPS 140-2 niveau 3)."
+  },
+  {
+    "id": "AWS-SAA-314",
+    "theme": "Security & IAM",
+    "theme_label": "AWS CloudHSM vs KMS",
+    "difficulty": "hard",
+    "question": "Différence principale entre CloudHSM et KMS ?",
+    "options": [
+      "CloudHSM = matériel dédié (single-tenant), KMS = multi-tenant",
+      "Identiques",
+      "KMS plus sécurisé",
+      "CloudHSM moins cher"
+    ],
+    "correct": 0,
+    "explanation": "CloudHSM est un HSM dédié, KMS est un service partagé."
+  },
+  {
+    "id": "AWS-SAA-315",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Secrets Manager",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Secrets Manager ?",
+    "options": [
+      "Gestion des secrets (mots de passe, clés API)",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "Secrets Manager stocke et gère les secrets avec rotation automatique."
+  },
+  {
+    "id": "AWS-SAA-316",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Systems Manager Parameter Store",
+    "difficulty": "hard",
+    "question": "Différence entre Parameter Store et Secrets Manager ?",
+    "options": [
+      "Parameter Store gratuit, Secrets Manager payant avec rotation intégrée",
+      "Identiques",
+      "Parameter Store plus cher",
+      "Secrets Manager gratuit"
+    ],
+    "correct": 0,
+    "explanation": "Parameter Store offre des fonctionnalités de base (gratuit), Secrets Manager gère la rotation automatique."
+  },
+  {
+    "id": "AWS-SAA-317",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Certificate Manager (ACM)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Certificate Manager ?",
+    "options": [
+      "Gestion de certificats SSL/TLS",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "ACM fournit et gère des certificats SSL/TLS pour les services AWS."
+  },
+  {
+    "id": "AWS-SAA-318",
+    "theme": "Security & IAM",
+    "theme_label": "ACM",
+    "difficulty": "hard",
+    "question": "Où peut-on utiliser les certificats ACM ?",
+    "options": [
+      "CloudFront, ALB, NLB, API Gateway",
+      "EC2 seulement",
+      "S3 seulement",
+      "RDS seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les certificats ACM sont utilisables avec plusieurs services AWS."
+  },
+  {
+    "id": "AWS-SAA-319",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS WAF ?",
+    "options": [
+      "Protège les applications web contre les attaques",
+      "Firewall réseau",
+      "VPN",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "WAF filtre les requêtes HTTP/HTTPS."
+  },
+  {
+    "id": "AWS-SAA-320",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "question": "Quelles sont les règles WAF prédéfinies ?",
+    "options": [
+      "Managed rule groups (SQL injection, XSS, IP reputation, etc.)",
+      "Aucune",
+      "Uniquement SQL injection",
+      "Uniquement XSS"
+    ],
+    "correct": 0,
+    "explanation": "AWS propose des managed rule groups pour les attaques courantes."
+  },
+  {
+    "id": "AWS-SAA-321",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Shield",
+    "difficulty": "hard",
+    "question": "AWS Shield Standard est-il gratuit ?",
+    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour CloudFront"],
+    "correct": 0,
+    "explanation": "Shield Standard est inclus gratuitement pour tous les clients AWS."
+  },
+  {
+    "id": "AWS-SAA-322",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Shield Advanced",
+    "difficulty": "hard",
+    "question": "Quel est le coût mensuel de Shield Advanced ?",
+    "options": ["3 000 $ par mois", "1 000 $", "5 000 $", "10 000 $"],
+    "correct": 0,
+    "explanation": "Shield Advanced coûte 3 000 $ par mois + frais d'utilisation."
+  },
+  {
+    "id": "AWS-SAA-323",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Firewall Manager",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Firewall Manager ?",
+    "options": [
+      "Gestion centralisée des règles de sécurité (WAF, Shield, SG) sur plusieurs comptes",
+      "Firewall réseau",
+      "VPN",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "Firewall Manager applique des règles de sécurité à travers l'organisation."
+  },
+  {
+    "id": "AWS-SAA-324",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Network Firewall",
+    "difficulty": "hard",
+    "question": "À quel niveau fonctionne AWS Network Firewall ?",
+    "options": ["Couche 3/4 (réseau)", "Couche 7 (application)", "Couche 2", "Toutes les couches"],
+    "correct": 0,
+    "explanation": "Network Firewall protège au niveau réseau (VPC)."
+  },
+  {
+    "id": "AWS-SAA-325",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Network Firewall",
+    "difficulty": "hard",
+    "question": "Quelles fonctionnalités offre Network Firewall ?",
+    "options": [
+      "Filtrage étatique, inspection TLS, intrusion prevention",
+      "Seulement filtrage",
+      "Seulement inspection",
+      "Seulement IPS"
+    ],
+    "correct": 0,
+    "explanation": "Network Firewall combine plusieurs fonctionnalités avancées."
+  },
+  {
+    "id": "AWS-SAA-326",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon GuardDuty",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon GuardDuty ?",
+    "options": [
+      "Détection de menaces (threat detection)",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "GuardDuty analyse les logs (CloudTrail, VPC Flow Logs, DNS) pour détecter des comportements malveillants."
+  },
+  {
+    "id": "AWS-SAA-327",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon GuardDuty",
+    "difficulty": "hard",
+    "question": "GuardDuty est-il un service payant ?",
+    "options": ["Oui (30 jours d'essai)", "Non, gratuit", "Uniquement pour les comptes enterprise", "Uniquement pour Organizations"],
+    "correct": 0,
+    "explanation": "GuardDuty offre 30 jours d'essai gratuit, puis est payant."
+  },
+  {
+    "id": "AWS-SAA-328",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Security Hub",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Security Hub ?",
+    "options": [
+      "Centralisation des alertes de sécurité",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "Security Hub agrège les findings de GuardDuty, Inspector, Macie, etc."
+  },
+  {
+    "id": "AWS-SAA-329",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon Inspector",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Inspector ?",
+    "options": [
+      "Analyse de vulnérabilités sur EC2 et conteneurs",
+      "Détection de menaces",
+      "Firewall",
+      "WAF"
+    ],
+    "correct": 0,
+    "explanation": "Inspector scanne les instances EC2 et les conteneurs pour des vulnérabilités."
+  },
+  {
+    "id": "AWS-SAA-330",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon Macie",
+    "difficulty": "hard",
+    "question": "À quoi sert Amazon Macie ?",
+    "options": [
+      "Détection de données sensibles dans S3",
+      "Analyse de vulnérabilités",
+      "Firewall",
+      "WAF"
+    ],
+    "correct": 0,
+    "explanation": "Macie utilise le machine learning pour identifier les données sensibles (PII, etc.)."
+  },
+  {
+    "id": "AWS-SAA-331",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Config",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Config ?",
+    "options": [
+      "Évalue la conformité des ressources aux règles",
+      "Logs",
+      "Monitoring",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "AWS Config enregistre les changements de configuration et évalue la conformité."
+  },
+  {
+    "id": "AWS-SAA-332",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Config Rules",
+    "difficulty": "hard",
+    "question": "Peut-on créer des règles personnalisées AWS Config ?",
+    "options": ["Oui", "Non", "Uniquement des règles managées", "Uniquement avec Lambda"],
+    "correct": 0,
+    "explanation": "On peut créer des règles personnalisées via Lambda."
+  },
+  {
+    "id": "AWS-SAA-333",
+    "theme": "Security & IAM",
+    "theme_label": "AWS CloudTrail",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS CloudTrail ?",
+    "options": [
+      "Journalisation des appels API",
+      "Monitoring",
+      "Logging d'applications",
+      "Audit de sécurité"
+    ],
+    "correct": 0,
+    "explanation": "CloudTrail enregistre tous les appels API AWS."
+  },
+  {
+    "id": "AWS-SAA-334",
+    "theme": "Security & IAM",
+    "theme_label": "CloudTrail",
+    "difficulty": "hard",
+    "question": "Où sont stockés les logs CloudTrail ?",
+    "options": [
+      "S3 (par défaut), CloudWatch Logs",
+      "CloudWatch seulement",
+      "DynamoDB",
+      "RDS"
+    ],
+    "correct": 0,
+    "explanation": "Les logs CloudTrail sont envoyés vers S3 et/ou CloudWatch Logs."
+  },
+  {
+    "id": "AWS-SAA-335",
+    "theme": "Security & IAM",
+    "theme_label": "CloudTrail",
+    "difficulty": "hard",
+    "question": "Quelle est la rétention par défaut des événements CloudTrail ?",
+    "options": ["90 jours (management events)", "7 jours", "30 jours", "1 an"],
+    "correct": 0,
+    "explanation": "CloudTrail conserve les événements management pendant 90 jours."
+  },
+  {
+    "id": "AWS-SAA-336",
+    "theme": "Security & IAM",
+    "theme_label": "CloudTrail Insights",
+    "difficulty": "hard",
+    "question": "À quoi sert CloudTrail Insights ?",
+    "options": [
+      "Détecte des comportements anormaux d'appels API",
+      "Logs",
+      "Monitoring",
+      "Audit"
+    ],
+    "correct": 0,
+    "explanation": "Insights identifie les pics d'activité API inhabituels."
+  },
+  {
+    "id": "AWS-SAA-337",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Trusted Advisor",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Trusted Advisor ?",
+    "options": [
+      "Conseils sur les bonnes pratiques (sécurité, performance, coûts)",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "Trusted Advisor fournit des recommandations pour optimiser votre environnement AWS."
+  },
+  {
+    "id": "AWS-SAA-338",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Artifact",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Artifact ?",
+    "options": [
+      "Accès aux rapports de conformité (SOC, PCI, ISO)",
+      "Stockage de secrets",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Artifact fournit des rapports de conformité et des accords (NDA, BAA)."
+  },
+  {
+    "id": "AWS-SAA-339",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Audit Manager",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Audit Manager ?",
+    "options": [
+      "Automatisation des audits",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "Audit Manager aide à préparer des audits en collectant des preuves automatiquement."
+  },
+  {
+    "id": "AWS-SAA-340",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices",
+    "difficulty": "hard",
+    "question": "Que recommande AWS pour la sécurité des comptes root ?",
+    "options": [
+      "MFA, ne pas utiliser de clés d'accès, ne pas partager",
+      "Utiliser des clés d'accès",
+      "Partager avec l'équipe",
+      "Désactiver MFA"
+    ],
+    "correct": 0,
+    "explanation": "Les bonnes pratiques incluent MFA et ne jamais utiliser les clés root."
+  },
+  {
+    "id": "AWS-SAA-341",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les clés d'accès IAM ?",
+    "options": [
+      "Rotation régulière, ne pas les coder en dur, utiliser Secrets Manager",
+      "Les partager",
+      "Les coder dans l'application",
+      "Ne jamais les changer"
+    ],
+    "correct": 0,
+    "explanation": "Les clés d'accès doivent être tournées et protégées."
+  },
+  {
+    "id": "AWS-SAA-342",
+    "theme": "Security & IAM",
+    "theme_label": "Encryption best practices",
+    "difficulty": "hard",
+    "question": "Doit-on chiffrer les données au repos ?",
+    "options": ["Oui", "Non", "Seulement les données sensibles", "Uniquement pour S3"],
+    "correct": 0,
+    "explanation": "Le chiffrement au repos est recommandé pour toutes les données."
+  },
+  {
+    "id": "AWS-SAA-343",
+    "theme": "Security & IAM",
+    "theme_label": "Encryption best practices",
+    "difficulty": "hard",
+    "question": "Doit-on chiffrer les données en transit ?",
+    "options": ["Oui", "Non", "Seulement pour Internet", "Seulement pour les API"],
+    "correct": 0,
+    "explanation": "Le chiffrement en transit (TLS) est recommandé pour toutes les communications."
+  },
+  {
+    "id": "AWS-SAA-344",
+    "theme": "Security & IAM",
+    "theme_label": "VPC security best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour les Security Groups ?",
+    "options": [
+      "Règles les plus restrictives, par IP ou SG",
+      "Ouvrir toutes les ports",
+      "Ouvrir 0.0.0.0/0",
+      "Pas de règles"
+    ],
+    "correct": 0,
+    "explanation": "Les Security Groups doivent être restrictifs (moindre privilège)."
+  },
+  {
+    "id": "AWS-SAA-345",
+    "theme": "Security & IAM",
+    "theme_label": "VPC security best practices",
+    "difficulty": "hard",
+    "question": "Doit-on utiliser des VPC Flow Logs ?",
+    "options": ["Oui, pour l'audit", "Non", "Optionnel", "Uniquement pour les VPC publics"],
+    "correct": 0,
+    "explanation": "Les Flow Logs aident à diagnostiquer et auditer le trafic réseau."
+  },
+  {
+    "id": "AWS-SAA-346",
+    "theme": "Security & IAM",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "hard",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DU cloud ?",
+    "options": ["AWS", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "AWS est responsable de la sécurité DU cloud (matériel, réseau, hyperviseur)."
+  },
+  {
+    "id": "AWS-SAA-347",
+    "theme": "Security & IAM",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "hard",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DANS le cloud ?",
+    "options": ["Le client", "AWS", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "Le client est responsable de la sécurité DANS le cloud (données, OS, applications)."
+  },
+  {
+    "id": "AWS-SAA-348",
+    "theme": "Security & IAM",
+    "theme_label": "PCI DSS compliance",
+    "difficulty": "hard",
+    "question": "Quels services AWS sont certifiés PCI DSS ?",
+    "options": [
+      "Beaucoup de services (EC2, S3, RDS, Lambda, etc.)",
+      "Aucun",
+      "Seulement S3",
+      "Seulement RDS"
+    ],
+    "correct": 0,
+    "explanation": "De nombreux services AWS sont certifiés PCI DSS."
+  },
+  {
+    "id": "AWS-SAA-349",
+    "theme": "Security & IAM",
+    "theme_label": "HIPAA compliance",
+    "difficulty": "hard",
+    "question": "Quels services AWS sont éligibles HIPAA ?",
+    "options": [
+      "Plusieurs services avec BAA",
+      "Aucun",
+      "Seulement S3",
+      "Seulement RDS"
+    ],
+    "correct": 0,
+    "explanation": "AWS propose un Business Associate Agreement (BAA) pour les services éligibles HIPAA."
+  },
+  {
+    "id": "AWS-SAA-350",
+    "theme": "Security & IAM",
+    "theme_label": "GDPR compliance",
+    "difficulty": "hard",
+    "question": "AWS est-il conforme GDPR ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "correct": 0,
+    "explanation": "AWS est conforme GDPR avec des engagements contractuels."
+  },
+  {
+    "id": "AWS-SAA-351",
+    "theme": "Security & IAM",
+    "theme_label": "Incident response",
+    "difficulty": "hard",
+    "question": "Quel service aide à la réponse aux incidents de sécurité ?",
+    "options": [
+      "GuardDuty, Security Hub, Detective, CloudTrail",
+      "EC2",
+      "S3",
+      "RDS"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs services aident à détecter et répondre aux incidents."
+  },
+  {
+    "id": "AWS-SAA-352",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon Detective",
+    "difficulty": "hard",
+    "question": "À quoi sert Amazon Detective ?",
+    "options": [
+      "Analyse de findings pour trouver la cause racine",
+      "Détection de menaces",
+      "Firewall",
+      "WAF"
+    ],
+    "correct": 0,
+    "explanation": "Detective aide à investiguer les findings de GuardDuty et Security Hub."
+  },
+  {
+    "id": "AWS-SAA-353",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Security Lake",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Security Lake ?",
+    "options": [
+      "Data lake centralisé pour les logs de sécurité",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "Security Lake collecte et normalise les logs de sécurité de plusieurs sources."
+  },
+  {
+    "id": "AWS-SAA-354",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Audit Manager evidence",
+    "difficulty": "hard",
+    "question": "Quels types de preuves collecte Audit Manager ?",
+    "options": [
+      "CloudTrail logs, Config snapshots, Security Hub findings",
+      "Seulement CloudTrail",
+      "Seulement Config",
+      "Seulement Security Hub"
+    ],
+    "correct": 0,
+    "explanation": "Audit Manager collecte des preuves à partir de plusieurs sources."
+  },
+  {
+    "id": "AWS-SAA-355",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Access Analyzer policy generation",
+    "difficulty": "hard",
+    "question": "Que peut générer IAM Access Analyzer ?",
+    "options": [
+      "Politiques IAM basées sur les logs CloudTrail",
+      "Rapports",
+      "Alertes",
+      "Clés"
+    ],
+    "correct": 0,
+    "explanation": "Access Analyzer peut générer des politiques à partir des accès observés."
+  },
+  {
+    "id": "AWS-SAA-356",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policy Simulator",
+    "difficulty": "hard",
+    "question": "À quoi sert IAM Policy Simulator ?",
+    "options": [
+      "Tester les politiques avant de les appliquer",
+      "Créer des politiques",
+      "Supprimer des politiques",
+      "Auditer des politiques"
+    ],
+    "correct": 0,
+    "explanation": "Policy Simulator permet de valider l'effet d'une politique."
+  },
+  {
+    "id": "AWS-SAA-357",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles Anywhere",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que IAM Roles Anywhere ?",
+    "options": [
+      "Permet d'utiliser des rôles IAM sur des serveurs on-premise",
+      "Rôles pour Lambda",
+      "Rôles pour EC2",
+      "Rôles pour S3"
+    ],
+    "correct": 0,
+    "explanation": "Roles Anywhere étend les rôles IAM à des workloads on-premise."
+  },
+  {
+    "id": "AWS-SAA-358",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Verified Access",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Verified Access ?",
+    "options": [
+      "Accès aux applications sans VPN (zero trust)",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "Verified Access permet un accès sécurisé aux applications internes sans VPN."
+  },
+  {
+    "id": "AWS-SAA-359",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices for S3",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un bucket S3 ?",
+    "options": [
+      "Bloquer les accès publics, chiffrement, bucket policies, MFA Delete",
+      "Rendre public",
+      "Pas de chiffrement",
+      "Désactiver les logs"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs mesures de sécurité pour S3."
+  },
+  {
+    "id": "AWS-SAA-360",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices for RDS",
+    "difficulty": "hard",
+    "question": "Comment sécuriser RDS ?",
+    "options": [
+      "Chiffrement au repos, en transit, VPC privé, Security Groups, IAM auth",
+      "Public IP",
+      "Pas de chiffrement",
+      "Accès public"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs couches de sécurité pour RDS."
+  }
+]

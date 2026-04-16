@@ -1,0 +1,512 @@
+[
+  {
+    "id": "AWS-SAA-461",
+    "theme": "Pricing & Support",
+    "theme_label": "Modèles de tarification",
+    "difficulty": "easy",
+    "question": "Quels sont les modèles de tarification AWS ?",
+    "options": [
+      "Pay-as-you-go, Reserved, Spot, Savings Plans",
+      "Uniquement pay-as-you-go",
+      "Uniquement Reserved",
+      "Uniquement Spot"
+    ],
+    "correct": 0,
+    "explanation": "AWS propose plusieurs modèles pour optimiser les coûts."
+  },
+  {
+    "id": "AWS-SAA-462",
+    "theme": "Pricing & Support",
+    "theme_label": "On-Demand",
+    "difficulty": "easy",
+    "question": "Quel est le modèle de paiement On-Demand ?",
+    "options": [
+      "Payer à l'heure ou à la seconde",
+      "Paiement anticipé",
+      "Engagement 1 an",
+      "Engagement 3 ans"
+    ],
+    "correct": 0,
+    "explanation": "On-Demand ne nécessite aucun engagement et facture à l'usage."
+  },
+  {
+    "id": "AWS-SAA-463",
+    "theme": "Pricing & Support",
+    "theme_label": "Reserved Instances",
+    "difficulty": "medium",
+    "question": "Quelles sont les options de paiement pour Reserved Instances ?",
+    "options": [
+      "All Upfront, Partial Upfront, No Upfront",
+      "Mensuel, Trimestriel, Annuel",
+      "À la demande uniquement",
+      "Pay as you go"
+    ],
+    "correct": 0,
+    "explanation": "Trois options de paiement pour les RI."
+  },
+  {
+    "id": "AWS-SAA-464",
+    "theme": "Pricing & Support",
+    "theme_label": "Reserved Instances",
+    "difficulty": "hard",
+    "question": "Quel est le plus grand rabais pour les RI ?",
+    "options": ["All Upfront 3 ans", "No Upfront 1 an", "Partial Upfront 3 ans", "All Upfront 1 an"],
+    "correct": 0,
+    "explanation": "All Upfront 3 ans offre le plus grand rabais (jusqu'à 75%)."
+  },
+  {
+    "id": "AWS-SAA-465",
+    "theme": "Pricing & Support",
+    "theme_label": "Spot Instances",
+    "difficulty": "medium",
+    "question": "Quel est l'inconvénient des instances Spot ?",
+    "options": [
+      "Peuvent être interrompues avec préavis de 2 minutes",
+      "Plus chères",
+      "Pas de Linux",
+      "Pas de Windows"
+    ],
+    "correct": 0,
+    "explanation": "Les instances Spot peuvent être reprises par AWS avec un préavis."
+  },
+  {
+    "id": "AWS-SAA-466",
+    "theme": "Pricing & Support",
+    "theme_label": "Spot Instances",
+    "difficulty": "hard",
+    "question": "Quel est le rabais typique des instances Spot ?",
+    "options": ["Jusqu'à 90%", "Jusqu'à 50%", "Jusqu'à 30%", "Jusqu'à 10%"],
+    "correct": 0,
+    "explanation": "Les instances Spot peuvent offrir jusqu'à 90% de réduction."
+  },
+  {
+    "id": "AWS-SAA-467",
+    "theme": "Pricing & Support",
+    "theme_label": "Spot Instances",
+    "difficulty": "hard",
+    "question": "Quel service AWS permet de gérer des pools d'instances Spot ?",
+    "options": [
+      "Spot Fleet",
+      "ASG avec mixed instances",
+      "EC2 Fleet",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs options pour gérer les instances Spot."
+  },
+  {
+    "id": "AWS-SAA-468",
+    "theme": "Pricing & Support",
+    "theme_label": "Savings Plans",
+    "difficulty": "hard",
+    "question": "Savings Plans s'applique-t-il à Lambda ?",
+    "options": ["Oui", "Non", "Uniquement à EC2", "Uniquement à Fargate"],
+    "correct": 0,
+    "explanation": "Savings Plans couvre EC2, Fargate et Lambda."
+  },
+  {
+    "id": "AWS-SAA-469",
+    "theme": "Pricing & Support",
+    "theme_label": "Savings Plans",
+    "difficulty": "hard",
+    "question": "Quels sont les types de Savings Plans ?",
+    "options": [
+      "Compute Savings Plans, EC2 Instance Savings Plans, SageMaker Savings Plans",
+      "EC2 seulement",
+      "Lambda seulement",
+      "Fargate seulement"
+    ],
+    "correct": 0,
+    "explanation": "Trois types de Savings Plans."
+  },
+  {
+    "id": "AWS-SAA-470",
+    "theme": "Pricing & Support",
+    "theme_label": "Free Tier",
+    "difficulty": "easy",
+    "question": "Quels services sont inclus dans le Free Tier ?",
+    "options": [
+      "EC2 (750h), S3 (5GB), Lambda (1M requests), etc.",
+      "Tous les services",
+      "Aucun",
+      "Seulement EC2"
+    ],
+    "correct": 0,
+    "explanation": "Le Free Tier offre des limites sur plusieurs services."
+  },
+  {
+    "id": "AWS-SAA-471",
+    "theme": "Pricing & Support",
+    "theme_label": "Free Tier",
+    "difficulty": "hard",
+    "question": "Combien de temps dure le Free Tier ?",
+    "options": ["12 mois", "6 mois", "24 mois", "Toujours"],
+    "correct": 0,
+    "explanation": "Le Free Tier dure 12 mois pour les nouveaux comptes AWS."
+  },
+  {
+    "id": "AWS-SAA-472",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Pricing Calculator",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Pricing Calculator ?",
+    "options": [
+      "Estimer les coûts avant de déployer",
+      "Facturer les clients",
+      "Gérer les budgets",
+      "Suivre les dépenses"
+    ],
+    "correct": 0,
+    "explanation": "Le calculateur aide à estimer les coûts des services."
+  },
+  {
+    "id": "AWS-SAA-473",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Cost Explorer",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Cost Explorer ?",
+    "options": [
+      "Analyser les coûts passés et prévoir les futurs",
+      "Facturer",
+      "Budgéter",
+      "Payer"
+    ],
+    "correct": 0,
+    "explanation": "Cost Explorer permet d'analyser les tendances des coûts."
+  },
+  {
+    "id": "AWS-SAA-474",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Budgets",
+    "difficulty": "hard",
+    "question": "Les budgets AWS peuvent-ils déclencher des alarmes ?",
+    "options": ["Oui", "Non", "Uniquement des notifications", "Uniquement des actions"],
+    "correct": 0,
+    "explanation": "Les budgets peuvent envoyer des alertes SNS."
+  },
+  {
+    "id": "AWS-SAA-475",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Cost Anomaly Detection",
+    "difficulty": "hard",
+    "question": "À quoi sert Cost Anomaly Detection ?",
+    "options": [
+      "Détecter les pics de dépenses inhabituels",
+      "Prévoir les coûts",
+      "Budgéter",
+      "Optimiser"
+    ],
+    "correct": 0,
+    "explanation": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
+  },
+  {
+    "id": "AWS-SAA-476",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Support Plans",
+    "difficulty": "easy",
+    "question": "Quels sont les plans de support AWS ?",
+    "options": [
+      "Basic, Developer, Business, Enterprise",
+      "Basic seulement",
+      "Premium seulement",
+      "Standard, Premium"
+    ],
+    "correct": 0,
+    "explanation": "AWS propose quatre plans de support."
+  },
+  {
+    "id": "AWS-SAA-477",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Support",
+    "difficulty": "hard",
+    "question": "Le plan Basic est-il gratuit ?",
+    "options": ["Oui", "Non", "Uniquement pour les comptes de moins d'un an", "Uniquement pour les comptes éducatifs"],
+    "correct": 0,
+    "explanation": "Le plan Basic est inclus gratuitement."
+  },
+  {
+    "id": "AWS-SAA-478",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Support",
+    "difficulty": "hard",
+    "question": "Quel plan supporte le Technical Account Manager (TAM) ?",
+    "options": ["Enterprise", "Business", "Developer", "Basic"],
+    "correct": 0,
+    "explanation": "Le plan Enterprise inclut un TAM dédié."
+  },
+  {
+    "id": "AWS-SAA-479",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Support",
+    "difficulty": "hard",
+    "question": "Quel plan offre un temps de réponse de 15 minutes pour les cas de production ?",
+    "options": ["Enterprise", "Business", "Developer", "Basic"],
+    "correct": 0,
+    "explanation": "Enterprise offre une réponse critique en 15 minutes."
+  },
+  {
+    "id": "AWS-SAA-480",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Organizations",
+    "difficulty": "hard",
+    "question": "Organizations permet-il une facturation consolidée ?",
+    "options": ["Oui", "Non", "Uniquement avec Control Tower", "Uniquement avec AWS Config"],
+    "correct": 0,
+    "explanation": "Organizations consolide la facturation des comptes membres."
+  },
+  {
+    "id": "AWS-SAA-481",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Organizations",
+    "difficulty": "hard",
+    "question": "Organizations permet-il des réductions sur les RI partagées ?",
+    "options": ["Oui", "Non", "Uniquement pour les Savings Plans", "Uniquement pour les comptes master"],
+    "correct": 0,
+    "explanation": "Les RI et Savings Plans sont partagés entre les comptes de l'organisation."
+  },
+  {
+    "id": "AWS-SAA-482",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts S3 ?",
+    "options": [
+      "Lifecycle policies, classes de stockage, compression",
+      "Plus de réplication",
+      "Plus de versions",
+      "Chiffrement"
+    ],
+    "correct": 0,
+    "explanation": "Les lifecycle policies et le choix de classe de stockage réduisent les coûts."
+  },
+  {
+    "id": "AWS-SAA-483",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts EC2 ?",
+    "options": [
+      "RI, Savings Plans, Spot, auto-scaling",
+      "Plus d'instances",
+      "Plus de mémoire",
+      "Plus de CPU"
+    ],
+    "correct": 0,
+    "explanation": "Utiliser des modèles de tarification économiques et ajuster la capacité."
+  },
+  {
+    "id": "AWS-SAA-484",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le tagging pour les coûts ?",
+    "options": [
+      "Assigner des métadonnées pour attribuer les coûts",
+      "Étiqueter les ressources",
+      "Grouper les ressources",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Le tagging aide à analyser les coûts par projet, équipe, environnement."
+  },
+  {
+    "id": "AWS-SAA-485",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "hard",
+    "question": "À quoi sert Trusted Advisor pour les coûts ?",
+    "options": [
+      "Identifier les ressources sous-utilisées",
+      "Augmenter les coûts",
+      "Facturer",
+      "Budgéter"
+    ],
+    "correct": 0,
+    "explanation": "Trusted Advisor recommande de supprimer les ressources inutilisées."
+  },
+  {
+    "id": "AWS-SAA-486",
+    "theme": "Pricing & Support",
+    "theme_label": "Compute Optimizer",
+    "difficulty": "hard",
+    "question": "Compute Optimizer aide-t-il à réduire les coûts ?",
+    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour Lambda"],
+    "correct": 0,
+    "explanation": "Compute Optimizer recommande des types d'instance plus adaptés."
+  },
+  {
+    "id": "AWS-SAA-487",
+    "theme": "Pricing & Support",
+    "theme_label": "S3 Storage Lens",
+    "difficulty": "hard",
+    "question": "Storage Lens aide-t-il à optimiser les coûts S3 ?",
+    "options": ["Oui", "Non", "Uniquement pour les métriques", "Uniquement pour la sécurité"],
+    "correct": 0,
+    "explanation": "Storage Lens fournit des recommandations d'optimisation des coûts."
+  },
+  {
+    "id": "AWS-SAA-488",
+    "theme": "Pricing & Support",
+    "theme_label": "RDS cost optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts RDS ?",
+    "options": [
+      "RI, instances burstable, arrêt des dev",
+      "Plus de réplicas",
+      "Multi-AZ",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "RI, instances t3, et arrêt des environnements non productifs."
+  },
+  {
+    "id": "AWS-SAA-489",
+    "theme": "Pricing & Support",
+    "theme_label": "Lambda cost optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts Lambda ?",
+    "options": [
+      "Ajuster la mémoire (CPU proportionnel)",
+      "Provisioned concurrency",
+      "Durée d'exécution",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Réduire la mémoire et le temps d'exécution baisse les coûts."
+  },
+  {
+    "id": "AWS-SAA-490",
+    "theme": "Pricing & Support",
+    "theme_label": "Data transfer costs",
+    "difficulty": "hard",
+    "question": "Le transfert de données entre services dans la même AZ est-il facturé ?",
+    "options": ["Non", "Oui", "Uniquement pour les grands volumes", "Uniquement pour les régions"],
+    "correct": 0,
+    "explanation": "Le trafic entre services dans la même AZ via IP privée est gratuit."
+  },
+  {
+    "id": "AWS-SAA-491",
+    "theme": "Pricing & Support",
+    "theme_label": "Data transfer costs",
+    "difficulty": "hard",
+    "question": "Le transfert de données sortant d'Internet est-il facturé ?",
+    "options": ["Oui", "Non", "Seulement au-delà d'un seuil", "Uniquement pour EC2"],
+    "correct": 0,
+    "explanation": "Le trafic sortant vers Internet est facturé."
+  },
+  {
+    "id": "AWS-SAA-492",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Price List API",
+    "difficulty": "hard",
+    "question": "Peut-on obtenir les prix AWS via API ?",
+    "options": ["Oui", "Non", "Uniquement via le console", "Uniquement via le calculateur"],
+    "correct": 0,
+    "explanation": "L'API AWS Price List permet d'obtenir les tarifs par programme."
+  },
+  {
+    "id": "AWS-SAA-493",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Billing Conductor",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Billing Conductor ?",
+    "options": [
+      "Créer des factures personnalisées pour les clients internes",
+      "Facturer AWS",
+      "Budgéter",
+      "Optimiser"
+    ],
+    "correct": 0,
+    "explanation": "Billing Conductor permet de regrouper et facturer des comptes internes."
+  },
+  {
+    "id": "AWS-SAA-494",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Marketplace",
+    "difficulty": "hard",
+    "question": "AWS Marketplace permet-il d'acheter des logiciels tiers ?",
+    "options": ["Oui", "Non", "Uniquement des AMI", "Uniquement des SaaS"],
+    "correct": 0,
+    "explanation": "Marketplace propose des AMI, SaaS, conteneurs, etc."
+  },
+  {
+    "id": "AWS-SAA-495",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Savings Plans vs RI",
+    "difficulty": "hard",
+    "question": "Quel est l'avantage des Savings Plans sur les RI ?",
+    "options": [
+      "Plus de flexibilité (famille d'instances, région, services)",
+      "Plus de réduction",
+      "Engagement plus court",
+      "Aucun"
+    ],
+    "correct": 0,
+    "explanation": "Savings Plans sont plus flexibles que les RI."
+  },
+  {
+    "id": "AWS-SAA-496",
+    "theme": "Pricing & Support",
+    "theme_label": "Consolidated billing",
+    "difficulty": "hard",
+    "question": "La facturation consolidée est-elle disponible sans Organizations ?",
+    "options": ["Non", "Oui", "Uniquement avec Control Tower", "Uniquement avec AWS Config"],
+    "correct": 0,
+    "explanation": "La facturation consolidée nécessite AWS Organizations."
+  },
+  {
+    "id": "AWS-SAA-497",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Credits",
+    "difficulty": "hard",
+    "question": "Les crédits AWS peuvent-ils être appliqués à tous les services ?",
+    "options": ["Oui", "Non, certains services exclus", "Uniquement EC2", "Uniquement S3"],
+    "correct": 1,
+    "explanation": "Certains services (ex: Marketplace) peuvent être exclus."
+  },
+  {
+    "id": "AWS-SAA-498",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Activate",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Activate ?",
+    "options": [
+      "Crédits et support pour startups",
+      "Facturation",
+      "Budgéter",
+      "Optimisation"
+    ],
+    "correct": 0,
+    "explanation": "AWS Activate offre des crédits et du support aux startups."
+  },
+  {
+    "id": "AWS-SAA-499",
+    "theme": "Pricing & Support",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la meilleure pratique pour suivre les coûts ?",
+    "options": [
+      "Tagging, budgets, alertes, Cost Explorer",
+      "Ignorer les coûts",
+      "Uniquement les factures",
+      "Uniquement les RI"
+    ],
+    "correct": 0,
+    "explanation": "Combiner plusieurs outils pour une visibilité complète."
+  },
+  {
+    "id": "AWS-SAA-500",
+    "theme": "Pricing & Support",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment éviter les surprises de facturation ?",
+    "options": [
+      "Budgets, alertes, analyse régulière",
+      "Ne pas utiliser AWS",
+      "Utiliser uniquement le Free Tier",
+      "RI seulement"
+    ],
+    "correct": 0,
+    "explanation": "Configurer des budgets et des alarmes pour surveiller les coûts."
+  }
+]

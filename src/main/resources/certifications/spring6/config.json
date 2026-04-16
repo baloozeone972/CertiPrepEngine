@@ -1,0 +1,36 @@
+{
+  "id": "spring6",
+  "name": "Spring Professional 6 (VMware)",
+  "version": "1.0",
+  "description": "Certification Spring Framework 6 - Développement d'applications d'entreprise avec Spring",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Spring Core et IoC",
+      "count": 70
+    },
+    {
+      "name": "Spring MVC",
+      "count": 60
+    },
+    {
+      "name": "Spring Data et JPA",
+      "count": 60
+    },
+    {
+      "name": "Spring Security",
+      "count": 50
+    },
+    {
+      "name": "Spring Boot",
+      "count": 70
+    },
+    {
+      "name": "Spring Cloud",
+      "count": 40
+    }
+  ]
+}

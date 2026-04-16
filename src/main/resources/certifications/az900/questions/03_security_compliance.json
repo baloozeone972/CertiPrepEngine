@@ -1,0 +1,712 @@
+[
+  {
+    "id": "AZ-900-081",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Azure Active Directory (Azure AD) ?",
+    "options": [
+      "Service d'annuaire et de gestion des identités",
+      "Service de base de données",
+      "Service de stockage",
+      "Service de calcul"
+    ],
+    "correct": 0,
+    "explanation": "Azure AD est le service d'annuaire pour les identités et l'accès."
+  },
+  {
+    "id": "AZ-900-082",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD",
+    "difficulty": "easy",
+    "question": "Azure AD est-il la même chose qu'Active Directory on-premise ?",
+    "options": ["Non, c'est un service cloud différent", "Oui", "Partiellement", "C'est une copie"],
+    "correct": 0,
+    "explanation": "Azure AD est un service cloud, bien qu'il puisse se synchroniser avec AD on-premise."
+  },
+  {
+    "id": "AZ-900-083",
+    "theme": "Security & Compliance",
+    "theme_label": "MFA",
+    "difficulty": "easy",
+    "question": "Que signifie MFA (Multi-Factor Authentication) ?",
+    "options": [
+      "Authentification multi-facteurs",
+      "Authentification multi-fonctions",
+      "Autorisation multi-facteurs",
+      "Autorisation multi-fonctions"
+    ],
+    "correct": 0,
+    "explanation": "MFA exige deux ou plusieurs formes d'authentification."
+  },
+  {
+    "id": "AZ-900-084",
+    "theme": "Security & Compliance",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "question": "Que signifie RBAC ?",
+    "options": [
+      "Role-Based Access Control",
+      "Resource-Based Access Control",
+      "Rule-Based Access Control",
+      "Region-Based Access Control"
+    ],
+    "correct": 0,
+    "explanation": "RBAC contrôle l'accès en fonction des rôles."
+  },
+  {
+    "id": "AZ-900-085",
+    "theme": "Security & Compliance",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "question": "Quels sont les rôles RBAC intégrés ?",
+    "options": [
+      "Owner, Contributor, Reader",
+      "Admin, User, Guest",
+      "Full, Write, Read",
+      "Super, Standard, Limited"
+    ],
+    "correct": 0,
+    "explanation": "Les rôles de base sont Owner, Contributor, Reader."
+  },
+  {
+    "id": "AZ-900-086",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Policy ?",
+    "options": [
+      "Appliquer des règles de conformité",
+      "Gérer les identités",
+      "Sécuriser les réseaux",
+      "Surveiller les applications"
+    ],
+    "correct": 0,
+    "explanation": "Azure Policy évalue et applique des règles de conformité sur les ressources."
+  },
+  {
+    "id": "AZ-900-087",
+    "theme": "Security & Compliance",
+    "theme_label": "Blueprints",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Blueprints ?",
+    "options": [
+      "Définir et déployer un ensemble de ressources conformes",
+      "Créer des modèles de déploiement",
+      "Documenter l'architecture",
+      "Sauvegarder les ressources"
+    ],
+    "correct": 0,
+    "explanation": "Blueprints permettent de déployer un environnement complet conforme aux normes."
+  },
+  {
+    "id": "AZ-900-088",
+    "theme": "Security & Compliance",
+    "theme_label": "Security Center",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Security Center ?",
+    "options": [
+      "Gestion unifiée de la sécurité et des menaces",
+      "Gestion des identités",
+      "Gestion des coûts",
+      "Gestion des performances"
+    ],
+    "correct": 0,
+    "explanation": "Security Center fournit une visibilité et un contrôle sur la sécurité."
+  },
+  {
+    "id": "AZ-900-089",
+    "theme": "Security & Compliance",
+    "theme_label": "Sentinel",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Sentinel ?",
+    "options": [
+      "SIEM (Security Information and Event Management)",
+      "Firewall",
+      "Anti-DDoS",
+      "Gestion des identités"
+    ],
+    "correct": 0,
+    "explanation": "Sentinel est un SIEM/SOAR cloud."
+  },
+  {
+    "id": "AZ-900-090",
+    "theme": "Security & Compliance",
+    "theme_label": "Key Vault",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Key Vault ?",
+    "options": [
+      "Stocker des secrets, clés et certificats",
+      "Stocker des mots de passe",
+      "Stocker des données",
+      "Stocker des logs"
+    ],
+    "correct": 0,
+    "explanation": "Key Vault centralise la gestion des secrets."
+  },
+  {
+    "id": "AZ-900-091",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Information Protection",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Information Protection (AIP) ?",
+    "options": [
+      "Classifier et protéger les documents",
+      "Chiffrer les bases de données",
+      "Sécuriser les réseaux",
+      "Surveiller les accès"
+    ],
+    "correct": 0,
+    "explanation": "AIP aide à classifier et protéger les données sensibles."
+  },
+  {
+    "id": "AZ-900-092",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Privileged Identity Management (PIM)",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure AD PIM ?",
+    "options": [
+      "Gérer l'accès privilégié juste-à-temps",
+      "Gérer les identités",
+      "Gérer les rôles RBAC",
+      "Gérer les mots de passe"
+    ],
+    "correct": 0,
+    "explanation": "PIM permet d'activer les rôles privilégiés temporairement."
+  },
+  {
+    "id": "AZ-900-093",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Identity Protection",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure AD Identity Protection ?",
+    "options": [
+      "Détecter les risques liés aux identités",
+      "Protéger les identités",
+      "Gérer les mots de passe",
+      "Gérer les rôles"
+    ],
+    "correct": 0,
+    "explanation": "Identity Protection détecte les comportements suspects et les risques."
+  },
+  {
+    "id": "AZ-900-094",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Firewall",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Firewall ?",
+    "options": [
+      "Firewall managé avec haute disponibilité",
+      "NSG",
+      "Application Gateway",
+      "WAF"
+    ],
+    "correct": 0,
+    "explication": "Azure Firewall est un service de sécurité réseau managé."
+  },
+  {
+    "id": "AZ-900-095",
+    "theme": "Security & Compliance",
+    "theme_label": "Network Security Group (NSG)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un NSG ?",
+    "options": [
+      "Filtrage du trafic réseau au niveau du sous-réseau ou de la carte réseau",
+      "Firewall managé",
+      "WAF",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explication": "NSG contient des règles de filtrage du trafic."
+  },
+  {
+    "id": "AZ-900-096",
+    "theme": "Security & Compliance",
+    "theme_label": "DDoS Protection",
+    "difficulty": "easy",
+    "question": "Azure DDoS Protection est-il disponible en deux niveaux ?",
+    "options": ["Basic (gratuit) et Standard", "Seulement Standard", "Seulement Basic", "Premium"],
+    "correct": 0,
+    "explication": "DDoS Protection Basic est inclus, Standard est payant avec plus de fonctionnalités."
+  },
+  {
+    "id": "AZ-900-097",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Quel service Azure donne accès aux rapports de conformité ?",
+    "options": ["Azure Compliance Documentation", "Azure Security Center", "Azure Policy", "Azure Blueprints"],
+    "correct": 0,
+    "explication": "Azure Compliance Documentation fournit les rapports de conformité."
+  },
+  {
+    "id": "AZ-900-098",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Azure est-il certifié ISO 27001 ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement pour certains services"],
+    "correct": 0,
+    "explication": "Azure est certifié ISO 27001."
+  },
+  {
+    "id": "AZ-900-099",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Azure est-il conforme GDPR ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "correct": 0,
+    "explication": "Azure est conforme GDPR."
+  },
+  {
+    "id": "AZ-900-100",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Azure est-il certifié HIPAA ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement aux USA"],
+    "correct": 0,
+    "explication": "Azure est certifié HIPAA (Business Associate Agreement)."
+  },
+  {
+    "id": "AZ-900-101",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Azure est-il certifié SOC 1, 2, 3 ?",
+    "options": ["Oui", "Non", "Seulement SOC 2", "Seulement SOC 1"],
+    "correct": 0,
+    "explication": "Azure a les certifications SOC 1, 2, 3."
+  },
+  {
+    "id": "AZ-900-102",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Azure Government est-il destiné aux agences gouvernementales américaines ?",
+    "options": ["Oui", "Non", "Uniquement aux agences fédérales", "Uniquement aux agences locales"],
+    "correct": 0,
+    "explication": "Azure Government répond aux exigences de sécurité des agences américaines."
+  },
+  {
+    "id": "AZ-900-103",
+    "theme": "Security & Compliance",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Azure China est-il opéré par 21Vianet ?",
+    "options": ["Oui", "Non", "Par Microsoft", "Par un partenaire local"],
+    "correct": 0,
+    "explication": "Azure China est opéré par 21Vianet pour se conformer aux régulations chinoises."
+  },
+  {
+    "id": "AZ-900-104",
+    "theme": "Security & Compliance",
+    "theme_label": "Encryption at rest",
+    "difficulty": "easy",
+    "question": "Les données dans Azure Storage sont-elles chiffrées par défaut ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement pour certains types"],
+    "correct": 0,
+    "explication": "Azure Storage chiffre les données au repos par défaut (SSE)."
+  },
+  {
+    "id": "AZ-900-105",
+    "theme": "Security & Compliance",
+    "theme_label": "Encryption in transit",
+    "difficulty": "easy",
+    "question": "Azure supporte-t-il TLS pour les communications ?",
+    "options": ["Oui", "Non", "Uniquement pour certaines régions", "Uniquement pour certains services"],
+    "correct": 0,
+    "explication": "Azure utilise TLS pour le chiffrement en transit."
+  },
+  {
+    "id": "AZ-900-106",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Connect",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure AD Connect ?",
+    "options": [
+      "Synchroniser Active Directory on-premise avec Azure AD",
+      "Connecter des ressources Azure",
+      "Configurer le VPN",
+      "Gérer les identités"
+    ],
+    "correct": 0,
+    "explication": "Azure AD Connect synchronise les identités entre AD local et Azure AD."
+  },
+  {
+    "id": "AZ-900-107",
+    "theme": "Security & Compliance",
+    "theme_label": "Conditional Access",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'accès conditionnel dans Azure AD ?",
+    "options": [
+      "Règles basées sur le contexte pour l'accès",
+      "Authentification multi-facteurs",
+      "RBAC",
+      "PIM"
+    ],
+    "correct": 0,
+    "explication": "Conditional Access prend des décisions d'accès en fonction de conditions (emplacement, appareil, etc.)."
+  },
+  {
+    "id": "AZ-900-108",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD B2B",
+    "difficulty": "easy",
+    "question": "Azure AD B2B permet-il d'inviter des utilisateurs externes ?",
+    "options": ["Oui", "Non", "Uniquement pour les partenaires", "Uniquement pour les fournisseurs"],
+    "correct": 0,
+    "explication": "Azure AD B2B permet de partager des applications avec des utilisateurs externes."
+  },
+  {
+    "id": "AZ-900-109",
+    "theme": "Security & Compliance",
+    "theme_label": "Just-in-Time (JIT)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'accès Just-in-Time (JIT) dans Security Center ?",
+    "options": [
+      "Ouvrir des ports uniquement quand nécessaire",
+      "Authentification temporaire",
+      "Rôles temporaires",
+      "Mots de passe temporaires"
+    ],
+    "correct": 0,
+    "explication": "JIT restreint l'accès aux ports de gestion et les ouvre à la demande."
+  },
+  {
+    "id": "AZ-900-110",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Bastion",
+    "difficulty": "easy",
+    "question": "À quoi sert Azure Bastion ?",
+    "options": [
+      "Accès RDP/SSH sécurisé aux VMs sans IP publique",
+      "Firewall",
+      "VPN",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explication": "Bastion fournit un accès RDP/SSH via le navigateur."
+  },
+  {
+    "id": "AZ-900-111",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure DDoS Protection Standard",
+    "difficulty": "easy",
+    "question": "Azure DDoS Protection Standard offre-t-il une protection contre les attaques DDoS ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les applications web"],
+    "correct": 0,
+    "explication": "DDoS Protection Standard protège les ressources VNet."
+  },
+  {
+    "id": "AZ-900-112",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy initiatives",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une initiative dans Azure Policy ?",
+    "options": [
+      "Groupe de politiques pour un objectif commun",
+      "Une seule politique",
+      "Un blueprint",
+      "Une ressource"
+    ],
+    "correct": 0,
+    "explication": "Une initiative regroupe plusieurs politiques pour atteindre un objectif de conformité."
+  },
+  {
+    "id": "AZ-900-113",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy effects",
+    "difficulty": "easy",
+    "question": "Quels sont les effets possibles d'Azure Policy ?",
+    "options": [
+      "Deny, Audit, Append, DeployIfNotExists, etc.",
+      "Allow, Block, Log",
+      "Enable, Disable, Warn",
+      "Pass, Fail, Skip"
+    ],
+    "correct": 0,
+    "explication": "Les effets incluent Deny, Audit, Append, DeployIfNotExists, etc."
+  },
+  {
+    "id": "AZ-900-114",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Blueprints artifacts",
+    "difficulty": "easy",
+    "question": "Quels sont les artefacts d'un blueprint ?",
+    "options": [
+      "Role assignments, policy assignments, ARM templates, resource groups",
+      "Seulement les templates",
+      "Seulement les politiques",
+      "Seulement les rôles"
+    ],
+    "correct": 0,
+    "explication": "Un blueprint peut contenir plusieurs types d'artefacts."
+  },
+  {
+    "id": "AZ-900-115",
+    "theme": "Security & Compliance",
+    "theme_label": "Security Center tiers",
+    "difficulty": "easy",
+    "question": "Azure Security Center a-t-il des niveaux gratuits et payants ?",
+    "options": ["Oui (Free et Standard)", "Non", "Uniquement payant", "Uniquement gratuit"],
+    "correct": 0,
+    "explication": "Le niveau gratuit offre une évaluation de base, le niveau Standard (ou Defender) des protections avancées."
+  },
+  {
+    "id": "AZ-900-116",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Defender",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Defender (anciennement Security Center Standard) ?",
+    "options": [
+      "Protection avancée contre les menaces",
+      "Firewall",
+      "WAF",
+      "Anti-DDoS"
+    ],
+    "correct": 0,
+    "explication": "Azure Defender offre des protections avancées pour divers services."
+  },
+  {
+    "id": "AZ-900-117",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Sentinel pricing",
+    "difficulty": "easy",
+    "question": "Azure Sentinel est-il payant ?",
+    "options": ["Oui (basé sur le volume de données)", "Non", "Gratuit pour les premiers Go", "Inclus dans Security Center"],
+    "correct": 0,
+    "explication": "Sentinel facture le volume de données ingérées et analysées."
+  },
+  {
+    "id": "AZ-900-118",
+    "theme": "Security & Compliance",
+    "theme_label": "Key Vault soft-delete",
+    "difficulty": "easy",
+    "question": "Key Vault supporte-t-il la suppression réversible (soft-delete) ?",
+    "options": ["Oui", "Non", "Uniquement pour les secrets", "Uniquement pour les clés"],
+    "correct": 0,
+    "explication": "Key Vault a une fonction de suppression réversible pour récupérer les ressources supprimées."
+  },
+  {
+    "id": "AZ-900-119",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Information Protection labels",
+    "difficulty": "easy",
+    "question": "AIP permet-il d'appliquer des labels de classification ?",
+    "options": ["Oui", "Non", "Uniquement pour les emails", "Uniquement pour les documents Office"],
+    "correct": 0,
+    "explication": "AIP permet de classer et protéger les documents avec des labels."
+  },
+  {
+    "id": "AZ-900-120",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Domain Services",
+    "difficulty": "easy",
+    "question": "Azure AD Domain Services fournit-il des services de domaine (LDAP, Kerberos) ?",
+    "options": ["Oui", "Non", "Uniquement avec synchronisation", "Uniquement pour les VMs Windows"],
+    "correct": 0,
+    "explication": "Azure AD DS offre des services de domaine managés."
+  },
+  {
+    "id": "AZ-900-121",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD B2C",
+    "difficulty": "easy",
+    "question": "Azure AD B2C est-il destiné aux applications clientes ?",
+    "options": ["Oui", "Non", "Uniquement pour les employés", "Uniquement pour les partenaires"],
+    "correct": 0,
+    "explication": "B2C est pour l'authentification des clients (Consumer)."
+  },
+  {
+    "id": "AZ-900-122",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Privileged Identity Management",
+    "difficulty": "easy",
+    "question": "PIM nécessite-t-il une licence Azure AD Premium P2 ?",
+    "options": ["Oui", "Non", "Gratuit", "Inclus dans P1"],
+    "correct": 0,
+    "explication": "PIM est disponible avec Azure AD Premium P2."
+  },
+  {
+    "id": "AZ-900-123",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Identity Protection",
+    "difficulty": "easy",
+    "question": "Identity Protection nécessite-t-il une licence Premium P2 ?",
+    "options": ["Oui", "Non", "Gratuit", "Inclus dans P1"],
+    "correct": 0,
+    "explication": "Identity Protection est disponible avec Azure AD Premium P2."
+  },
+  {
+    "id": "AZ-900-124",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Firewall vs NSG",
+    "difficulty": "easy",
+    "question": "Azure Firewall est-il plus complet qu'un NSG ?",
+    "options": ["Oui (FQDN, threat intelligence, etc.)", "Non", "Identiques", "NSG plus complet"],
+    "correct": 0,
+    "explication": "Azure Firewall offre des fonctionnalités avancées (FQDN, threat intelligence)."
+  },
+  {
+    "id": "AZ-900-125",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure WAF",
+    "difficulty": "easy",
+    "question": "Le WAF d'Azure peut-il être associé à Application Gateway ?",
+    "options": ["Oui", "Non", "Uniquement à Front Door", "Uniquement à CDN"],
+    "correct": 0,
+    "explication": "Application Gateway peut intégrer un WAF."
+  },
+  {
+    "id": "AZ-900-126",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure DDoS Protection tiers",
+    "difficulty": "easy",
+    "question": "Azure DDoS Protection Standard nécessite-t-il un abonnement ?",
+    "options": ["Oui", "Non", "Inclus dans le support", "Inclus dans Azure AD Premium"],
+    "correct": 0,
+    "explication": "DDoS Protection Standard est un service payant."
+  },
+  {
+    "id": "AZ-900-127",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy compliance",
+    "difficulty": "easy",
+    "question": "Azure Policy peut-il évaluer la conformité des ressources existantes ?",
+    "options": ["Oui", "Non", "Uniquement pour les nouvelles ressources", "Uniquement pour les ressources modifiées"],
+    "correct": 0,
+    "explication": "Azure Policy évalue les ressources existantes et nouvelles."
+  },
+  {
+    "id": "AZ-900-128",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Blueprints versioning",
+    "difficulty": "easy",
+    "question": "Les blueprints supportent-ils le versioning ?",
+    "options": ["Oui", "Non", "Uniquement avec des étiquettes", "Uniquement avec des snapshots"],
+    "correct": 0,
+    "explication": "Les blueprints ont des versions pour suivre les modifications."
+  },
+  {
+    "id": "AZ-900-129",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Security Center secure score",
+    "difficulty": "easy",
+    "question": "Security Center fournit-il un score de sécurité ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "correct": 0,
+    "explication": "Le secure score évalue la posture de sécurité."
+  },
+  {
+    "id": "AZ-900-130",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Security Center recommendations",
+    "difficulty": "easy",
+    "question": "Security Center donne-t-il des recommandations de sécurité ?",
+    "options": ["Oui", "Non", "Uniquement pour les machines", "Uniquement pour les réseaux"],
+    "correct": 0,
+    "explication": "Security Center propose des recommandations pour améliorer la sécurité."
+  },
+  {
+    "id": "AZ-900-131",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Sentinel connectors",
+    "difficulty": "easy",
+    "question": "Sentinel peut-il se connecter à des sources de données tierces ?",
+    "options": ["Oui (via connecteurs)", "Non", "Uniquement aux services Azure", "Uniquement à Office 365"],
+    "correct": 0,
+    "explication": "Sentinel a de nombreux connecteurs pour les sources tierces."
+  },
+  {
+    "id": "AZ-900-132",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Key Vault logging",
+    "difficulty": "easy",
+    "question": "Key Vault peut-il envoyer des logs à Log Analytics ?",
+    "options": ["Oui", "Non", "Uniquement via Event Hub", "Uniquement via Storage"],
+    "correct": 0,
+    "explication": "Key Vault peut envoyer les logs de diagnostic à Log Analytics."
+  },
+  {
+    "id": "AZ-900-133",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Connect health",
+    "difficulty": "easy",
+    "question": "Azure AD Connect Health surveille-t-il l'état de synchronisation ?",
+    "options": ["Oui", "Non", "Uniquement pour AD FS", "Uniquement pour les domain controllers"],
+    "correct": 0,
+    "explication": "Connect Health surveille la santé de la synchronisation."
+  },
+  {
+    "id": "AZ-900-134",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD application proxy",
+    "difficulty": "easy",
+    "question": "Azure AD Application Proxy permet-il d'accéder à des applications on-premise ?",
+    "options": ["Oui", "Non", "Uniquement aux applications cloud", "Uniquement aux applications SaaS"],
+    "correct": 0,
+    "explication": "Application Proxy donne un accès sécurisé aux applications internes."
+  },
+  {
+    "id": "AZ-900-135",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD self-service password reset",
+    "difficulty": "easy",
+    "question": "Azure AD permet-il la réinitialisation de mot de passe en libre-service ?",
+    "options": ["Oui", "Non", "Uniquement avec licence Premium", "Uniquement avec AD on-premise"],
+    "correct": 0,
+    "explication": "La réinitialisation de mot de passe en libre-service est disponible avec certaines licences."
+  },
+  {
+    "id": "AZ-900-136",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD dynamic groups",
+    "difficulty": "easy",
+    "question": "Azure AD supporte-t-il des groupes dynamiques basés sur des attributs ?",
+    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "correct": 0,
+    "explication": "Les groupes dynamiques sont disponibles avec Azure AD Premium P1."
+  },
+  {
+    "id": "AZ-900-137",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD administrative units",
+    "difficulty": "easy",
+    "question": "Azure AD permet-il de déléguer l'administration par unités administratives ?",
+    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "correct": 0,
+    "explication": "Les unités administratives permettent une délégation granulaire."
+  },
+  {
+    "id": "AZ-900-138",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD access reviews",
+    "difficulty": "easy",
+    "question": "Azure AD Access Reviews permet-il de vérifier les accès ?",
+    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "correct": 0,
+    "explication": "Access Reviews permet de vérifier et de révoquer les accès."
+  },
+  {
+    "id": "AZ-900-139",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD terms of use",
+    "difficulty": "easy",
+    "question": "Azure AD permet-il d'exiger l'acceptation des conditions d'utilisation ?",
+    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "correct": 0,
+    "explication": "Les conditions d'utilisation peuvent être présentées aux utilisateurs."
+  },
+  {
+    "id": "AZ-900-140",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD identity governance",
+    "difficulty": "easy",
+    "question": "Azure AD Identity Governance inclut-il des fonctionnalités de gestion des accès ?",
+    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "correct": 0,
+    "explication": "Identity Governance offre des fonctionnalités avancées de gestion des accès."
+  }
+]

@@ -1,0 +1,687 @@
+[
+  {
+    "id": "GCP-DL-001",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud computing ?",
+    "options": [
+      "Livraison de ressources informatiques à la demande",
+      "Des serveurs physiques",
+      "Un type de base de données",
+      "Un langage de programmation"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud computing fournit des ressources informatiques via Internet."
+  },
+  {
+    "id": "GCP-DL-002",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "question": "Quels sont les trois modèles de service cloud ?",
+    "options": [
+      "IaaS, PaaS, SaaS",
+      "IaaS, CaaS, FaaS",
+      "PaaS, SaaS, DaaS",
+      "IaaS, PaaS, DaaS"
+    ],
+    "correct": 0,
+    "explanation": "Infrastructure as a Service, Platform as a Service, Software as a Service."
+  },
+  {
+    "id": "GCP-DL-003",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'IaaS ?",
+    "options": [
+      "Infrastructure as a Service",
+      "Infrastructure as a Software",
+      "Internet as a Service",
+      "Integration as a Service"
+    ],
+    "correct": 0,
+    "explication": "IaaS fournit des serveurs, stockage et réseaux virtualisés."
+  },
+  {
+    "id": "GCP-DL-004",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le PaaS ?",
+    "options": [
+      "Platform as a Service",
+      "Platform as a Software",
+      "Product as a Service",
+      "Process as a Service"
+    ],
+    "correct": 0,
+    "explication": "PaaS fournit une plateforme pour développer et déployer des applications."
+  },
+  {
+    "id": "GCP-DL-005",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le SaaS ?",
+    "options": [
+      "Software as a Service",
+      "Software as a System",
+      "Service as a Software",
+      "Security as a Service"
+    ],
+    "correct": 0,
+    "explication": "SaaS fournit des applications logicielles via Internet."
+  },
+  {
+    "id": "GCP-DL-006",
+    "theme": "Digital Transformation",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud public ?",
+    "options": [
+      "Ressources partagées via Internet",
+      "Ressources privées",
+      "Ressources sur site",
+      "Ressources hybrides"
+    ],
+    "correct": 0,
+    "explication": "Le cloud public est accessible à tous via Internet."
+  },
+  {
+    "id": "GCP-DL-007",
+    "theme": "Digital Transformation",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud privé ?",
+    "options": [
+      "Ressources dédiées à une organisation",
+      "Ressources partagées",
+      "Ressources publiques",
+      "Ressources temporaires"
+    ],
+    "correct": 0,
+    "explication": "Le cloud privé est dédié à une seule organisation."
+  },
+  {
+    "id": "GCP-DL-008",
+    "theme": "Digital Transformation",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud hybride ?",
+    "options": [
+      "Combinaison de cloud public et privé",
+      "Un seul type de cloud",
+      "Un cloud régional",
+      "Un cloud local"
+    ],
+    "correct": 0,
+    "explication": "Le cloud hybride combine cloud public et privé."
+  },
+  {
+    "id": "GCP-DL-009",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'élasticité dans le cloud ?",
+    "options": [
+      "Capacité à s'adapter à la charge",
+      "Capacité à stocker des données",
+      "Capacité à sécuriser",
+      "Capacité à sauvegarder"
+    ],
+    "correct": 0,
+    "explication": "L'élasticité permet d'ajuster les ressources automatiquement."
+  },
+  {
+    "id": "GCP-DL-010",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le pay-as-you-go ?",
+    "options": [
+      "Payer uniquement ce qu'on utilise",
+      "Payer à l'avance",
+      "Payer un abonnement fixe",
+      "Payer à l'année"
+    ],
+    "correct": 0,
+    "explication": "Pay-as-you-go signifie payer uniquement pour les ressources consommées."
+  },
+  {
+    "id": "GCP-DL-011",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'économie d'échelle ?",
+    "options": [
+      "Coût réduit par unité avec le volume",
+      "Coût augmenté avec le volume",
+      "Coût fixe",
+      "Coût variable"
+    ],
+    "correct": 0,
+    "explication": "Plus on utilise de ressources, plus le coût unitaire diminue."
+  },
+  {
+    "id": "GCP-DL-012",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la haute disponibilité ?",
+    "options": [
+      "Système accessible sans interruption",
+      "Système rapide",
+      "Système économique",
+      "Système sécurisé"
+    ],
+    "correct": 0,
+    "explication": "La haute disponibilité garantit l'accès continu aux applications."
+  },
+  {
+    "id": "GCP-DL-013",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la tolérance aux pannes ?",
+    "options": [
+      "Capacité à continuer malgré les pannes",
+      "Absence de pannes",
+      "Prévention des pannes",
+      "Correction automatique"
+    ],
+    "correct": 0,
+    "explication": "La tolérance aux pannes permet de fonctionner malgré des défaillances."
+  },
+  {
+    "id": "GCP-DL-014",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la scalabilité horizontale ?",
+    "options": [
+      "Ajouter plus d'instances",
+      "Augmenter la puissance des instances",
+      "Ajouter du stockage",
+      "Augmenter la mémoire"
+    ],
+    "correct": 0,
+    "explication": "La scalabilité horizontale ajoute des instances supplémentaires."
+  },
+  {
+    "id": "GCP-DL-015",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la scalabilité verticale ?",
+    "options": [
+      "Augmenter la puissance des instances",
+      "Ajouter plus d'instances",
+      "Ajouter des zones",
+      "Ajouter des régions"
+    ],
+    "correct": 0,
+    "explication": "La scalabilité verticale augmente la taille des instances."
+  },
+  {
+    "id": "GCP-DL-016",
+    "theme": "Digital Transformation",
+    "theme_label": "GCP régions et zones",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une région GCP ?",
+    "options": [
+      "Ensemble de centres de données dans une zone géographique",
+      "Un centre de données",
+      "Un serveur",
+      "Un réseau"
+    ],
+    "correct": 0,
+    "explication": "Une région GCP est un regroupement géographique de zones."
+  },
+  {
+    "id": "GCP-DL-017",
+    "theme": "Digital Transformation",
+    "theme_label": "GCP régions et zones",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une zone GCP ?",
+    "options": [
+      "Centre de données distinct dans une région",
+      "Région",
+      "Serveur",
+      "Réseau"
+    ],
+    "correct": 0,
+    "explication": "Une zone est un centre de données distinct (isolation des pannes)."
+  },
+  {
+    "id": "GCP-DL-018",
+    "theme": "Digital Transformation",
+    "theme_label": "GCP régions et zones",
+    "difficulty": "easy",
+    "question": "Combien de zones minimum par région GCP ?",
+    "options": ["3", "1", "2", "4"],
+    "correct": 0,
+    "explication": "Chaque région GCP a au moins 3 zones."
+  },
+  {
+    "id": "GCP-DL-019",
+    "theme": "Digital Transformation",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable du matériel ?",
+    "options": ["Le fournisseur cloud", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explication": "Le fournisseur cloud est responsable du matériel, des centres de données."
+  },
+  {
+    "id": "GCP-DL-020",
+    "theme": "Digital Transformation",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable des données ?",
+    "options": ["Le client", "Le fournisseur cloud", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explication": "Le client est responsable de ses données."
+  },
+  {
+    "id": "GCP-DL-021",
+    "theme": "Digital Transformation",
+    "theme_label": "Transformation digitale",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la transformation digitale ?",
+    "options": [
+      "Utilisation des technologies numériques pour changer les processus",
+      "Migration vers le cloud",
+      "Achat de nouveaux logiciels",
+      "Formation des employés"
+    ],
+    "correct": 0,
+    "explication": "La transformation digitale repense les modèles d'affaires avec les technologies."
+  },
+  {
+    "id": "GCP-DL-022",
+    "theme": "Digital Transformation",
+    "theme_label": "Innovation",
+    "difficulty": "easy",
+    "question": "Comment le cloud accélère-t-il l'innovation ?",
+    "options": [
+      "Déploiement rapide, expérimentation à faible coût",
+      "Processus plus lents",
+      "Coûts fixes",
+      "Matériel dédié"
+    ],
+    "correct": 0,
+    "explication": "Le cloud permet de tester des idées rapidement sans investissement initial."
+  },
+  {
+    "id": "GCP-DL-023",
+    "theme": "Digital Transformation",
+    "theme_label": "Data-driven",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une organisation data-driven ?",
+    "options": [
+      "Prendre des décisions basées sur les données",
+      "Stocker beaucoup de données",
+      "Collecter toutes les données",
+      "Ignorer les données"
+    ],
+    "correct": 0,
+    "explication": "Les décisions sont guidées par l'analyse des données."
+  },
+  {
+    "id": "GCP-DL-024",
+    "theme": "Digital Transformation",
+    "theme_label": "Modernisation",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la modernisation des applications ?",
+    "options": [
+      "Mettre à jour les applications vers des architectures cloud-native",
+      "Recompiler les applications",
+      "Migrer sans changement",
+      "Arrêter les applications"
+    ],
+    "correct": 0,
+    "explication": "La modernisation utilise des microservices, conteneurs, serverless."
+  },
+  {
+    "id": "GCP-DL-025",
+    "theme": "Digital Transformation",
+    "theme_label": "DevOps",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que DevOps ?",
+    "options": [
+      "Combinaison de développement et opérations",
+      "Méthodologie de test",
+      "Framework de sécurité",
+      "Processus de base de données"
+    ],
+    "correct": 0,
+    "explication": "DevOps améliore la collaboration entre les équipes de développement et d'exploitation."
+  },
+  {
+    "id": "GCP-DL-026",
+    "theme": "Digital Transformation",
+    "theme_label": "CI/CD",
+    "difficulty": "easy",
+    "question": "Que signifie CI/CD ?",
+    "options": [
+      "Continuous Integration / Continuous Delivery",
+      "Continuous Innovation / Continuous Deployment",
+      "Centralized Integration / Centralized Deployment",
+      "Code Integration / Code Deployment"
+    ],
+    "correct": 0,
+    "explication": "CI/CD automatise l'intégration et la livraison des logiciels."
+  },
+  {
+    "id": "GCP-DL-027",
+    "theme": "Digital Transformation",
+    "theme_label": "SRE",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le SRE (Site Reliability Engineering) ?",
+    "options": [
+      "Discipline pour maintenir la fiabilité des systèmes",
+      "Ingénierie réseau",
+      "Ingénierie de sécurité",
+      "Ingénierie des bases de données"
+    ],
+    "correct": 0,
+    "explication": "SRE applique des principes d'ingénierie aux opérations."
+  },
+  {
+    "id": "GCP-DL-028",
+    "theme": "Digital Transformation",
+    "theme_label": "SLI/SLO/SLA",
+    "difficulty": "easy",
+    "question": "Que signifie SLO ?",
+    "options": [
+      "Service Level Objective (objectif de niveau de service)",
+      "Service Level Agreement",
+      "Service Level Indicator",
+      "Security Level Objective"
+    ],
+    "correct": 0,
+    "explication": "SLO est l'objectif de performance cible pour un service."
+  },
+  {
+    "id": "GCP-DL-029",
+    "theme": "Digital Transformation",
+    "theme_label": "SLI/SLO/SLA",
+    "difficulty": "easy",
+    "question": "Que signifie SLI ?",
+    "options": [
+      "Service Level Indicator (indicateur de niveau de service)",
+      "Service Level Objective",
+      "Service Level Agreement",
+      "Security Level Indicator"
+    ],
+    "correct": 0,
+    "explication": "SLI est une mesure quantifiable de la performance du service."
+  },
+  {
+    "id": "GCP-DL-030",
+    "theme": "Digital Transformation",
+    "theme_label": "SLI/SLO/SLA",
+    "difficulty": "easy",
+    "question": "Que signifie SLA ?",
+    "options": [
+      "Service Level Agreement (accord de niveau de service)",
+      "Service Level Objective",
+      "Service Level Indicator",
+      "Security Level Agreement"
+    ],
+    "correct": 0,
+    "explication": "SLA est l'accord contractuel entre le fournisseur et le client."
+  },
+  {
+    "id": "GCP-DL-031",
+    "theme": "Digital Transformation",
+    "theme_label": "Gestion des coûts",
+    "difficulty": "easy",
+    "question": "Comment GCP aide à gérer les coûts ?",
+    "options": [
+      "Budgets, alertes, recommandations",
+      "Facturation fixe",
+      "Aucun outil",
+      "Uniquement des devis"
+    ],
+    "correct": 0,
+    "explication": "GCP fournit des outils de gestion des coûts (Budgets, Recommandations)."
+  },
+  {
+    "id": "GCP-DL-032",
+    "theme": "Digital Transformation",
+    "theme_label": "Souveraineté des données",
+    "difficulty": "easy",
+    "question": "Pourquoi GCP a-t-il des régions ?",
+    "options": [
+      "Conformité légale, latence, résilience",
+      "Uniquement pour la conformité",
+      "Uniquement pour la latence",
+      "Uniquement pour la résilience"
+    ],
+    "correct": 0,
+    "explication": "Les régions permettent de respecter la souveraineté des données."
+  },
+  {
+    "id": "GCP-DL-033",
+    "theme": "Digital Transformation",
+    "theme_label": "Migration",
+    "difficulty": "easy",
+    "question": "Quelles sont les stratégies de migration (les 6 R) ?",
+    "options": [
+      "Rehost, Replatform, Refactor, Repurchase, Retire, Retain",
+      "Rehost, Rebuild, Recreate, Remove, Replace, Return",
+      "Rehost, Replatform, Refactor, Re-architect, Retire, Retain",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les 6 R sont les stratégies de migration courantes."
+  },
+  {
+    "id": "GCP-DL-034",
+    "theme": "Digital Transformation",
+    "theme_label": "Migration",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le lift & shift (rehost) ?",
+    "options": [
+      "Migrer les applications telles quelles vers le cloud",
+      "Refactoriser complètement",
+      "Remplacer par du SaaS",
+      "Arrêter l'application"
+    ],
+    "correct": 0,
+    "explication": "Lift & shift déplace les applications sans modification."
+  },
+  {
+    "id": "GCP-DL-035",
+    "theme": "Digital Transformation",
+    "theme_label": "Migration",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le refactor (re-architect) ?",
+    "options": [
+      "Modifier l'application pour tirer parti du cloud (microservices)",
+      "Migrer sans changement",
+      "Remplacer par SaaS",
+      "Arrêter l'application"
+    ],
+    "correct": 0,
+    "explication": "Le refactoring modernise l'application pour le cloud."
+  },
+  {
+    "id": "GCP-DL-036",
+    "theme": "Digital Transformation",
+    "theme_label": "Google Cloud offerings",
+    "difficulty": "easy",
+    "question": "Quels sont les services principaux de GCP ?",
+    "options": [
+      "Compute, Storage, Databases, Networking, AI/ML",
+      "Seulement Compute",
+      "Seulement Storage",
+      "Seulement AI/ML"
+    ],
+    "correct": 0,
+    "explication": "GCP propose une large gamme de services."
+  },
+  {
+    "id": "GCP-DL-037",
+    "theme": "Digital Transformation",
+    "theme_label": "Google Cloud Pricing",
+    "difficulty": "easy",
+    "question": "Quel est le modèle de tarification de GCP ?",
+    "options": [
+      "Pay-as-you-go, engagements (committed use discounts), spots",
+      "Forfait fixe",
+      "Gratuit",
+      "Licences perpétuelles"
+    ],
+    "correct": 0,
+    "explication": "GCP offre plusieurs modèles pour optimiser les coûts."
+  },
+  {
+    "id": "GCP-DL-038",
+    "theme": "Digital Transformation",
+    "theme_label": "Google Cloud Free Tier",
+    "difficulty": "easy",
+    "question": "GCP propose-t-il un niveau gratuit ?",
+    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour Cloud Storage"],
+    "correct": 0,
+    "explication": "GCP a un niveau gratuit avec des limites mensuelles."
+  },
+  {
+    "id": "GCP-DL-039",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud Sustainability",
+    "difficulty": "easy",
+    "question": "Google Cloud s'engage-t-il à utiliser de l'énergie renouvelable ?",
+    "options": ["Oui", "Non", "Uniquement dans certaines régions", "Uniquement pour les centres de données"],
+    "correct": 0,
+    "explication": "Google Cloud est neutre en carbone et utilise de l'énergie renouvelable."
+  },
+  {
+    "id": "GCP-DL-040",
+    "theme": "Digital Transformation",
+    "theme_label": "Open source",
+    "difficulty": "easy",
+    "question": "Google Cloud supporte-t-il les technologies open source ?",
+    "options": ["Oui (Kubernetes, TensorFlow, etc.)", "Non", "Uniquement pour les bases de données", "Uniquement pour le calcul"],
+    "correct": 0,
+    "explication": "Google est un contributeur majeur à l'open source."
+  },
+  {
+    "id": "GCP-DL-041",
+    "theme": "Digital Transformation",
+    "theme_label": "Partner ecosystem",
+    "difficulty": "easy",
+    "question": "GCP a-t-il des partenaires technologiques ?",
+    "options": ["Oui", "Non", "Uniquement pour le support", "Uniquement pour la formation"],
+    "correct": 0,
+    "explication": "GCP a un vaste écosystème de partenaires (ISV, SI, etc.)."
+  },
+  {
+    "id": "GCP-DL-042",
+    "theme": "Digital Transformation",
+    "theme_label": "Certifications GCP",
+    "difficulty": "easy",
+    "question": "Quelles sont les certifications GCP ?",
+    "options": [
+      "Digital Leader, Associate Cloud Engineer, Professional Cloud Architect, etc.",
+      "Seulement Digital Leader",
+      "Seulement Cloud Engineer",
+      "Seulement Cloud Architect"
+    ],
+    "correct": 0,
+    "explication": "GCP propose plusieurs certifications."
+  },
+  {
+    "id": "GCP-DL-043",
+    "theme": "Digital Transformation",
+    "theme_label": "Training",
+    "difficulty": "easy",
+    "question": "Google propose-t-il des formations gratuites sur le cloud ?",
+    "options": ["Oui (Google Cloud Skills Boost)", "Non", "Uniquement payantes", "Uniquement pour les partenaires"],
+    "correct": 0,
+    "explication": "Google Cloud Skills Boost offre des cours gratuits et des labs."
+  },
+  {
+    "id": "GCP-DL-044",
+    "theme": "Digital Transformation",
+    "theme_label": "Innovation culture",
+    "difficulty": "easy",
+    "question": "Comment GCP aide-t-il à changer la culture d'entreprise ?",
+    "options": [
+      "En encourageant l'expérimentation et l'autonomie",
+      "En imposant des processus rigides",
+      "En réduisant les budgets",
+      "En augmentant la bureaucratie"
+    ],
+    "correct": 0,
+    "explication": "Le cloud permet une culture d'innovation et d'agilité."
+  },
+  {
+    "id": "GCP-DL-045",
+    "theme": "Digital Transformation",
+    "theme_label": "Multi-cloud",
+    "difficulty": "easy",
+    "question": "GCP supporte-t-il le multi-cloud ?",
+    "options": ["Oui (Anthos, Cloud Interconnect)", "Non", "Uniquement pour le stockage", "Uniquement pour le calcul"],
+    "correct": 0,
+    "explication": "Anthos permet de gérer des applications sur GCP et d'autres clouds."
+  },
+  {
+    "id": "GCP-DL-046",
+    "theme": "Digital Transformation",
+    "theme_label": "Hybrid cloud",
+    "difficulty": "easy",
+    "question": "GCP offre-t-il des solutions pour le cloud hybride ?",
+    "options": ["Oui (Anthos, Cloud Run for Anthos)", "Non", "Uniquement via VPN", "Uniquement via Interconnect"],
+    "correct": 0,
+    "explication": "Anthos permet d'exécuter des conteneurs sur GCP et sur site."
+  },
+  {
+    "id": "GCP-DL-047",
+    "theme": "Digital Transformation",
+    "theme_label": "Edge computing",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'edge computing dans GCP ?",
+    "options": [
+      "Google Distributed Cloud, Edge TPU",
+      "Compute Engine",
+      "Cloud Run",
+      "App Engine"
+    ],
+    "correct": 0,
+    "explication": "L'edge computing traite les données près de la source (IoT, retail)."
+  },
+  {
+    "id": "GCP-DL-048",
+    "theme": "Digital Transformation",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "GCP est-il certifié ISO 27001 ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement pour certains services"],
+    "correct": 0,
+    "explication": "GCP est certifié ISO 27001."
+  },
+  {
+    "id": "GCP-DL-049",
+    "theme": "Digital Transformation",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "GCP est-il conforme GDPR ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "correct": 0,
+    "explication": "GCP est conforme GDPR."
+  },
+  {
+    "id": "GCP-DL-050",
+    "theme": "Digital Transformation",
+    "theme_label": "Compliance",
+    "difficulty": "easy",
+    "question": "Quel service GCP donne accès aux rapports de conformité ?",
+    "options": ["Cloud Compliance", "Assured Workloads", "Security Command Center", "IAM"],
+    "correct": 0,
+    "explication": "Assured Workloads aide à répondre aux exigences réglementaires."
+  }
+]

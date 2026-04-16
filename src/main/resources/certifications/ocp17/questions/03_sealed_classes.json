@@ -1,0 +1,722 @@
+[
+  {
+    "id": "OCP17-SEA-001",
+    "theme": "Sealed Classes",
+    "theme_label": "Déclaration",
+    "difficulty": "easy",
+    "question": "Quel mot-clé permet de déclarer une classe scellée ?",
+    "options": ["sealed", "closed", "final", "restricted"],
+    "correct": 0,
+    "explanation": "Le mot-clé 'sealed' déclare une classe scellée."
+  },
+  {
+    "id": "OCP17-SEA-002",
+    "theme": "Sealed Classes",
+    "theme_label": "Déclaration",
+    "difficulty": "easy",
+    "question": "Quel mot-clé liste les sous-classes autorisées d'une classe scellée ?",
+    "options": ["permits", "allows", "extends", "subclasses"],
+    "correct": 0,
+    "explanation": "Le mot-clé 'permits' liste les sous-classes autorisées."
+  },
+  {
+    "id": "OCP17-SEA-003",
+    "theme": "Sealed Classes",
+    "theme_label": "Déclaration",
+    "difficulty": "easy",
+    "question": "Quelle est la syntaxe correcte pour une classe scellée ?",
+    "options": [
+      "sealed class Shape permits Circle, Rectangle {}",
+      "sealed class Shape extends Circle, Rectangle {}",
+      "class sealed Shape permits Circle, Rectangle {}",
+      "sealed class Shape subclasses Circle, Rectangle {}"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe correcte est 'sealed class Nom permits SousClasse1, SousClasse2 {}'"
+  },
+  {
+    "id": "OCP17-SEA-004",
+    "theme": "Sealed Classes",
+    "theme_label": "Modificateurs",
+    "difficulty": "easy",
+    "question": "Quel modificateur permet à une sous-classe d'être étendue librement ?",
+    "options": ["non-sealed", "open", "extensible", "public"],
+    "correct": 0,
+    "explanation": "'non-sealed' permet à une sous-classe d'une sealed class d'être étendue sans restriction."
+  },
+  {
+    "id": "OCP17-SEA-005",
+    "theme": "Sealed Classes",
+    "theme_label": "Modificateurs",
+    "difficulty": "easy",
+    "question": "Quel modificateur empêche toute extension d'une sous-classe ?",
+    "options": ["final", "sealed", "non-sealed", "closed"],
+    "correct": 0,
+    "explanation": "'final' empêche toute extension d'une classe."
+  },
+  {
+    "id": "OCP17-SEA-006",
+    "theme": "Sealed Classes",
+    "theme_label": "Modificateurs",
+    "difficulty": "medium",
+    "question": "Quel modificateur permet à une sous-classe de continuer à être scellée ?",
+    "options": ["sealed", "final", "non-sealed", "extends"],
+    "correct": 0,
+    "explanation": "Une sous-classe peut être déclarée 'sealed' pour continuer la restriction."
+  },
+  {
+    "id": "OCP17-SEA-007",
+    "theme": "Sealed Classes",
+    "theme_label": "Interfaces scellées",
+    "difficulty": "medium",
+    "question": "Une interface peut-elle être scellée ?",
+    "options": ["Oui", "Non", "Uniquement avec permits", "Uniquement les classes"],
+    "correct": 0,
+    "explanation": "Les interfaces peuvent également être déclarées sealed."
+  },
+  {
+    "id": "OCP17-SEA-008",
+    "theme": "Sealed Classes",
+    "theme_label": "Interfaces scellées",
+    "difficulty": "medium",
+    "question": "Une interface scellée peut-elle être étendue par des interfaces ?",
+    "options": [
+      "Oui, par les interfaces listées dans permits",
+      "Non, seulement par des classes",
+      "Oui, par toutes les interfaces",
+      "Non, les interfaces ne peuvent être scellées"
+    ],
+    "correct": 0,
+    "explanation": "Une interface sealed peut être étendue par les interfaces listées dans permits."
+  },
+  {
+    "id": "OCP17-SEA-009",
+    "theme": "Sealed Classes",
+    "theme_label": "Restrictions",
+    "difficulty": "medium",
+    "question": "Où doivent se trouver les sous-classes d'une classe scellée ?",
+    "options": [
+      "Dans le même module ou package",
+      "N'importe où",
+      "Dans le même fichier",
+      "Dans le même package seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-classes doivent être dans le même module ou le même package."
+  },
+  {
+    "id": "OCP17-SEA-010",
+    "theme": "Sealed Classes",
+    "theme_label": "Restrictions",
+    "difficulty": "medium",
+    "question": "Une classe scellée peut-elle être instanciée directement ?",
+    "options": [
+      "Oui, comme une classe normale",
+      "Non, seulement les sous-classes",
+      "Oui, si elle n'est pas abstraite",
+      "Non, jamais"
+    ],
+    "correct": 2,
+    "explanation": "Une classe scellée non abstraite peut être instanciée directement."
+  },
+  {
+    "id": "OCP17-SEA-011",
+    "theme": "Sealed Classes",
+    "theme_label": "Enums et sealed",
+    "difficulty": "hard",
+    "question": "Une enum peut-elle être sealed ?",
+    "options": [
+      "Non, enum est implicitement final",
+      "Oui, avec sealed",
+      "Oui, avec permits",
+      "Non, enum ne peut être sealed"
+    ],
+    "correct": 0,
+    "explanation": "Les enums sont implicitement final et ne peuvent pas être sealed."
+  },
+  {
+    "id": "OCP17-SEA-012",
+    "theme": "Sealed Classes",
+    "theme_label": "Records et sealed",
+    "difficulty": "hard",
+    "question": "Un record peut-il être une sous-classe d'une sealed class ?",
+    "options": [
+      "Oui, un record peut être permitted",
+      "Non, record ne peut hériter",
+      "Oui, mais seulement si le record est sealed",
+      "Non, les records sont final"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut être déclaré comme sous-classe permise d'une sealed class."
+  },
+  {
+    "id": "OCP17-SEA-013",
+    "theme": "Sealed Classes",
+    "theme_label": "Pattern matching",
+    "difficulty": "hard",
+    "question": "Pourquoi sealed classes améliorent-elles le pattern matching ?",
+    "options": [
+      "Permet l'exhaustivité des switch",
+      "Ajoute de nouvelles syntaxes",
+      "Remplace instanceof",
+      "Optimise les performances"
+    ],
+    "correct": 0,
+    "explanation": "Sealed classes permettent au compilateur de vérifier l'exhaustivité des switch expressions."
+  },
+  {
+    "id": "OCP17-SEA-014",
+    "theme": "Sealed Classes",
+    "theme_label": "Pattern matching",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un switch sur une sealed class n'est pas exhaustif ?",
+    "options": [
+      "Erreur de compilation",
+      "Warning",
+      "Exception à l'exécution",
+      "Case par défaut implicite"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur génère une erreur si le switch n'est pas exhaustif."
+  },
+  {
+    "id": "OCP17-SEA-015",
+    "theme": "Sealed Classes",
+    "theme_label": "Héritage",
+    "difficulty": "hard",
+    "question": "Une classe non-sealed peut-elle être étendue par n'importe quelle classe ?",
+    "options": [
+      "Oui, sans restriction",
+      "Non, seulement par les classes du même package",
+      "Oui, mais avec permission",
+      "Non, seulement par les classes du même module"
+    ],
+    "correct": 0,
+    "explanation": "Une classe non-sealed peut être étendue par n'importe quelle classe."
+  },
+  {
+    "id": "OCP17-SEA-016",
+    "theme": "Sealed Classes",
+    "theme_label": "Héritage multiple",
+    "difficulty": "hard",
+    "question": "Une classe peut-elle être à la fois sealed et étendre une autre classe ?",
+    "options": [
+      "Oui, sealed class Child extends Parent permits ...",
+      "Non, sealed ne peut pas hériter",
+      "Oui, mais seulement d'une classe sealed",
+      "Non, sealed classes sont toujours au sommet"
+    ],
+    "correct": 0,
+    "explanation": "Une sealed class peut étendre une autre classe normalement."
+  },
+  {
+    "id": "OCP17-SEA-017",
+    "theme": "Sealed Classes",
+    "theme_label": "Permits",
+    "difficulty": "hard",
+    "question": "Le mot-clé permits est-il obligatoire pour une sealed class ?",
+    "options": [
+      "Oui, toujours",
+      "Non, si les sous-classes sont dans le même fichier",
+      "Non, jamais",
+      "Oui, sauf pour les interfaces"
+    ],
+    "correct": 1,
+    "explanation": "Si les sous-classes sont dans le même fichier, permits peut être omis."
+  },
+  {
+    "id": "OCP17-SEA-018",
+    "theme": "Sealed Classes",
+    "theme_label": "Permits",
+    "difficulty": "hard",
+    "question": "Combien de sous-classes peut avoir une sealed class ?",
+    "options": [
+      "Sans limite",
+      "Maximum 10",
+      "Maximum 5",
+      "Maximum 3"
+    ],
+    "correct": 0,
+    "explanation": "Il n'y a pas de limite au nombre de sous-classes permises."
+  },
+  {
+    "id": "OCP17-SEA-019",
+    "theme": "Sealed Classes",
+    "theme_label": "Permits",
+    "difficulty": "hard",
+    "question": "Les sous-classes doivent-elles être déclarées dans permits ?",
+    "options": [
+      "Oui, toutes doivent être listées",
+      "Non, seulement les plus importantes",
+      "Oui, mais pas les classes internes",
+      "Non, c'est optionnel"
+    ],
+    "correct": 0,
+    "explanation": "Toutes les sous-classes directes doivent être listées dans permits."
+  },
+  {
+    "id": "OCP17-SEA-020",
+    "theme": "Sealed Classes",
+    "theme_label": "Permits",
+    "difficulty": "hard",
+    "question": "Une classe peut-elle être dans permits sans être dans le même package ?",
+    "options": [
+      "Non, même package ou module",
+      "Oui, n'importe où",
+      "Oui, mais avec import",
+      "Non, même fichier"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-classes doivent être dans le même module ou package."
+  },
+  {
+    "id": "OCP17-SEA-021",
+    "theme": "Sealed Classes",
+    "theme_label": "Conversion",
+    "difficulty": "hard",
+    "question": "Peut-on convertir une classe existante en sealed class ?",
+    "options": [
+      "Oui, en ajoutant sealed et permits",
+      "Non, cassage de compatibilité",
+      "Oui, avec des annotations",
+      "Non, trop de changements"
+    ],
+    "correct": 0,
+    "explanation": "On peut ajouter sealed et permits à une classe existante."
+  },
+  {
+    "id": "OCP17-SEA-022",
+    "theme": "Sealed Classes",
+    "theme_label": "Conversion",
+    "difficulty": "hard",
+    "question": "Que devient une classe final quand on la convertit en sealed ?",
+    "options": [
+      "Devient sealed avec permits vide",
+      "Ne peut pas être convertie",
+      "Devient non-sealed",
+      "Devient abstract"
+    ],
+    "correct": 0,
+    "explanation": "Une classe final peut devenir sealed avec une liste permits vide."
+  },
+  {
+    "id": "OCP17-SEA-023",
+    "theme": "Sealed Classes",
+    "theme_label": "Reflection",
+    "difficulty": "hard",
+    "question": "Comment savoir si une classe est sealed par reflection ?",
+    "options": [
+      "Class.isSealed()",
+      "Class.isSealedClass()",
+      "Modifier.isSealed()",
+      "Annotation.isSealed()"
+    ],
+    "correct": 0,
+    "explanation": "La méthode isSealed() de Class retourne true pour une classe scellée."
+  },
+  {
+    "id": "OCP17-SEA-024",
+    "theme": "Sealed Classes",
+    "theme_label": "Reflection",
+    "difficulty": "hard",
+    "question": "Comment obtenir les sous-classes permises d'une sealed class ?",
+    "options": [
+      "Class.getPermittedSubclasses()",
+      "Class.getSubclasses()",
+      "Class.getAllowedSubclasses()",
+      "Class.getSealedSubclasses()"
+    ],
+    "correct": 0,
+    "explanation": "getPermittedSubclasses() retourne un tableau des sous-classes permises."
+  },
+  {
+    "id": "OCP17-SEA-025",
+    "theme": "Sealed Classes",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quand utiliser sealed classes ?",
+    "options": [
+      "Pour des hiérarchies fermées connues à l'avance",
+      "Pour toutes les hiérarchies",
+      "Pour les interfaces seulement",
+      "Pour les classes de données"
+    ],
+    "correct": 0,
+    "explanation": "Sealed classes sont idéales pour les hiérarchies fermées et connues."
+  },
+  {
+    "id": "OCP17-SEA-026",
+    "theme": "Sealed Classes",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Peut-on combiner sealed avec abstract ?",
+    "options": [
+      "Oui, sealed abstract class",
+      "Non, incompatible",
+      "Oui, mais sans permits",
+      "Non, abstract ne peut être sealed"
+    ],
+    "correct": 0,
+    "explanation": "Une classe sealed peut être abstraite si elle ne fournit pas d'implémentation."
+  },
+  {
+    "id": "OCP17-SEA-027",
+    "theme": "Sealed Classes",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre sealed et final ?",
+    "options": [
+      "final bloque tout héritage, sealed limite l'héritage",
+      "Identiques",
+      "sealed bloque tout héritage",
+      "final limite l'héritage"
+    ],
+    "correct": 0,
+    "explanation": "final interdit tout héritage, sealed autorise un ensemble défini de sous-classes."
+  },
+  {
+    "id": "OCP17-SEA-028",
+    "theme": "Sealed Classes",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Une sealed class doit-elle être dans une API publique ?",
+    "options": [
+      "Oui, c'est le cas d'usage principal",
+      "Non, usage interne uniquement",
+      "Oui, pour la sécurité",
+      "Non, seulement privée"
+    ],
+    "correct": 0,
+    "explanation": "Sealed classes sont utiles dans les APIs pour contrôler l'extension."
+  },
+  {
+    "id": "OCP17-SEA-029",
+    "theme": "Sealed Classes",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les sealed classes ont-elles un impact sur les performances ?",
+    "options": [
+      "Impact minimal, surtout à la compilation",
+      "Impact négatif important",
+      "Impact positif sur l'exécution",
+      "Aucun impact"
+    ],
+    "correct": 0,
+    "explanation": "L'impact est principalement à la compilation pour la vérification d'exhaustivité."
+  },
+  {
+    "id": "OCP17-SEA-030",
+    "theme": "Sealed Classes",
+    "theme_label": "Sérialisation",
+    "difficulty": "hard",
+    "question": "La sérialisation fonctionne-t-elle avec les sealed classes ?",
+    "options": [
+      "Oui, normalement",
+      "Non, incompatible",
+      "Oui, avec précautions",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation fonctionne normalement avec les sealed classes."
+  },
+  {
+    "id": "OCP17-SEA-031",
+    "theme": "Sealed Classes",
+    "theme_label": "Records et sealed",
+    "difficulty": "hard",
+    "question": "Un record peut-il être une sealed class ?",
+    "options": [
+      "Non, records sont final",
+      "Oui, sealed record",
+      "Oui, mais sans permits",
+      "Non, incompatible"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont implicitement final, ne peuvent pas être sealed."
+  },
+  {
+    "id": "OCP17-SEA-032",
+    "theme": "Sealed Classes",
+    "theme_label": "Enums et sealed",
+    "difficulty": "hard",
+    "question": "Une enum peut-elle être une sous-classe d'une sealed class ?",
+    "options": [
+      "Non, enum ne peut hériter",
+      "Oui, enum peut être permitted",
+      "Oui, avec restrictions",
+      "Non, enum est final"
+    ],
+    "correct": 1,
+    "explanation": "Une enum peut être déclarée comme sous-classe permise d'une sealed class."
+  },
+  {
+    "id": "OCP17-SEA-033",
+    "theme": "Sealed Classes",
+    "theme_label": "Permis de sous-classe",
+    "difficulty": "hard",
+    "question": "Une sous-classe peut-elle être dans un package différent ?",
+    "options": [
+      "Non, même package ou module",
+      "Oui, avec import",
+      "Oui, avec fully qualified name",
+      "Non, même fichier"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-classes doivent être dans le même module ou package."
+  },
+  {
+    "id": "OCP17-SEA-034",
+    "theme": "Sealed Classes",
+    "theme_label": "Permis de sous-classe",
+    "difficulty": "hard",
+    "question": "Une sous-classe peut-elle être dans un module différent ?",
+    "options": [
+      "Oui, si le module exporte le package",
+      "Non, même module requis",
+      "Oui, avec requires",
+      "Non, même package"
+    ],
+    "correct": 1,
+    "explanation": "Les sous-classes doivent être dans le même module."
+  },
+  {
+    "id": "OCP17-SEA-035",
+    "theme": "Sealed Classes",
+    "theme_label": "Compilation",
+    "difficulty": "hard",
+    "question": "Que vérifie le compilateur pour une sealed class ?",
+    "options": [
+      "Toutes les sous-classes sont déclarées",
+      "Les sous-classes sont accessibles",
+      "Les modificateurs sont cohérents",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Le compilateur vérifie l'exhaustivité, l'accessibilité et la cohérence."
+  },
+  {
+    "id": "OCP17-SEA-036",
+    "theme": "Sealed Classes",
+    "theme_label": "Erreurs courantes",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une sous-classe n'est pas dans permits ?",
+    "options": [
+      "Erreur de compilation",
+      "Warning",
+      "La classe n'est pas considérée",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur génère une erreur si une sous-classe n'est pas déclarée."
+  },
+  {
+    "id": "OCP17-SEA-037",
+    "theme": "Sealed Classes",
+    "theme_label": "Erreurs courantes",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une sous-classe n'est pas dans le même package ?",
+    "options": [
+      "Erreur de compilation",
+      "Warning",
+      "Accepté avec import",
+      "Exception à l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-classes hors package génèrent une erreur de compilation."
+  },
+  {
+    "id": "OCP17-SEA-038",
+    "theme": "Sealed Classes",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Ajouter sealed à une classe existante est-il rétrocompatible ?",
+    "options": [
+      "Non, peut casser du code",
+      "Oui, complètement",
+      "Partiellement",
+      "Oui, avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Ajouter sealed peut casser du code qui étend la classe."
+  },
+  {
+    "id": "OCP17-SEA-039",
+    "theme": "Sealed Classes",
+    "theme_label": "Test",
+    "difficulty": "hard",
+    "question": "Comment tester l'exhaustivité d'un switch sur sealed class ?",
+    "options": [
+      "Le compilateur le garantit",
+      "Tests unitaires",
+      "Reflection",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur garantit l'exhaustivité des switch sur sealed classes."
+  },
+  {
+    "id": "OCP17-SEA-040",
+    "theme": "Sealed Classes",
+    "theme_label": "Documentation",
+    "difficulty": "hard",
+    "question": "Comment documenter l'intention d'une sealed class ?",
+    "options": [
+      "JavaDoc expliquant les sous-classes",
+      "Nécessite des annotations",
+      "Pas de documentation spécifique",
+      "Fichier séparé"
+    ],
+    "correct": 0,
+    "explanation": "La JavaDoc doit expliquer quelles sont les sous-classes autorisées."
+  },
+  {
+    "id": "OCP17-SEA-041",
+    "theme": "Sealed Classes",
+    "theme_label": "Refactoring",
+    "difficulty": "hard",
+    "question": "Ajouter une nouvelle sous-classe nécessite-t-il de modifier la sealed class ?",
+    "options": [
+      "Oui, modifier permits",
+      "Non, automatique",
+      "Oui, mais avec annotation",
+      "Non, si dans même fichier"
+    ],
+    "correct": 0,
+    "explanation": "Toute nouvelle sous-classe doit être ajoutée dans permits."
+  },
+  {
+    "id": "OCP17-SEA-042",
+    "theme": "Sealed Classes",
+    "theme_label": "Versioning",
+    "difficulty": "hard",
+    "question": "Comment gérer l'ajout d'une sous-classe dans une nouvelle version ?",
+    "options": [
+      "Ajouter dans permits, casser code existant",
+      "Rendre la classe non-sealed",
+      "Créer une nouvelle sealed class",
+      "Impossible"
+    ],
+    "correct": 1,
+    "explanation": "Pour ajouter une sous-classe, on peut rendre la classe non-sealed."
+  },
+  {
+    "id": "OCP17-SEA-043",
+    "theme": "Sealed Classes",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Les sealed classes améliorent-elles la sécurité ?",
+    "options": [
+      "Oui, contrôlent l'héritage",
+      "Non, pas d'impact",
+      "Oui, empêchent la réflexion",
+      "Non, contournables"
+    ],
+    "correct": 0,
+    "explanation": "Les sealed classes permettent de contrôler l'héritage, améliorant la sécurité."
+  },
+  {
+    "id": "OCP17-SEA-044",
+    "theme": "Sealed Classes",
+    "theme_label": "Framework",
+    "difficulty": "hard",
+    "question": "Les frameworks comme Spring supportent-ils les sealed classes ?",
+    "options": [
+      "Oui, partiellement",
+      "Non, pas encore",
+      "Oui, complètement",
+      "Dépend de la version"
+    ],
+    "correct": 0,
+    "explanation": "Le support varie selon les frameworks et versions."
+  },
+  {
+    "id": "OCP17-SEA-045",
+    "theme": "Sealed Classes",
+    "theme_label": "Proxies",
+    "difficulty": "hard",
+    "question": "Peut-on créer des proxies dynamiques sur des sealed classes ?",
+    "options": [
+      "Oui, comme les classes normales",
+      "Non, impossible",
+      "Oui, avec restrictions",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les proxies dynamiques fonctionnent normalement avec les sealed classes."
+  },
+  {
+    "id": "OCP17-SEA-046",
+    "theme": "Sealed Classes",
+    "theme_label": "Génériques",
+    "difficulty": "hard",
+    "question": "Une sealed class peut-elle être générique ?",
+    "options": [
+      "Oui, sealed class Container<T> permits ...",
+      "Non, génériques incompatibles",
+      "Oui, avec restrictions",
+      "Non, sealed ne supporte pas"
+    ],
+    "correct": 0,
+    "explanation": "Les sealed classes peuvent être génériques comme les classes normales."
+  },
+  {
+    "id": "OCP17-SEA-047",
+    "theme": "Sealed Classes",
+    "theme_label": "Génériques",
+    "difficulty": "hard",
+    "question": "Les sous-classes doivent-elles avoir les mêmes paramètres génériques ?",
+    "options": [
+      "Oui, type identique",
+      "Non, peuvent spécialiser",
+      "Oui, paramètres identiques",
+      "Non, type différent"
+    ],
+    "correct": 1,
+    "explanation": "Les sous-classes peuvent spécialiser les paramètres génériques."
+  },
+  {
+    "id": "OCP17-SEA-048",
+    "theme": "Sealed Classes",
+    "theme_label": "Annotations",
+    "difficulty": "hard",
+    "question": "Peut-on annoter une sealed class ?",
+    "options": [
+      "Oui, comme une classe normale",
+      "Non, annotations non supportées",
+      "Oui, mais seulement @Deprecated",
+      "Non, sealed ne peut être annotée"
+    ],
+    "correct": 0,
+    "explanation": "Les sealed classes peuvent être annotées comme les classes normales."
+  },
+  {
+    "id": "OCP17-SEA-049",
+    "theme": "Sealed Classes",
+    "theme_label": "Performance JVM",
+    "difficulty": "hard",
+    "question": "La JVM a-t-elle un traitement spécial pour les sealed classes ?",
+    "options": [
+      "Optimisations possibles pour les switch",
+      "Aucun traitement spécial",
+      "Désoptimisations",
+      "Chargement plus lent"
+    ],
+    "correct": 0,
+    "explanation": "La JVM peut optimiser les switch sur sealed classes."
+  },
+  {
+    "id": "OCP17-SEA-050",
+    "theme": "Sealed Classes",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quelle est l'évolution prévue pour sealed classes ?",
+    "options": [
+      "Intégration avec pattern matching avancé",
+      "Dépréciation future",
+      "Remplacement par records",
+      "Aucune évolution"
+    ],
+    "correct": 0,
+    "explanation": "Les sealed classes seront de plus en plus intégrées avec le pattern matching."
+  }
+]

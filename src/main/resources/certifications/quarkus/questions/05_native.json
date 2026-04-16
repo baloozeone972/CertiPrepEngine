@@ -1,0 +1,752 @@
+[
+  {
+    "id": "QRK-NAT-001",
+    "theme": "Native",
+    "theme_label": "GraalVM",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que GraalVM ?",
+    "options": [
+      "Machine virtuelle avec support natif",
+      "Version de Java",
+      "Framework web",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "GraalVM permet la compilation native."
+  },
+  {
+    "id": "QRK-NAT-002",
+    "theme": "Native",
+    "theme_label": "Native Image",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Native Image ?",
+    "options": [
+      "Compilation en exécutable natif",
+      "Image Docker",
+      "Archive JAR",
+      "Conteneur"
+    ],
+    "correct": 0,
+    "explanation": "Native Image génère un exécutable natif."
+  },
+  {
+    "id": "QRK-NAT-003",
+    "theme": "Native",
+    "theme_label": "Avantages",
+    "difficulty": "hard",
+    "question": "Quel est l'avantage principal de la compilation native ?",
+    "options": [
+      "Démarrage ultra-rapide",
+      "Meilleure mémoire",
+      "Plus de sécurité",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Démarrage, mémoire et sécurité sont améliorés."
+  },
+  {
+    "id": "QRK-NAT-004",
+    "theme": "Native",
+    "theme_label": "Avantages",
+    "difficulty": "hard",
+    "question": "Quel est le temps de démarrage typique ?",
+    "options": [
+      "Quelques millisecondes",
+      "Quelques secondes",
+      "Quelques minutes",
+      "Identique à la JVM"
+    ],
+    "correct": 0,
+    "explanation": "Les exécutables natifs démarrent en ms."
+  },
+  {
+    "id": "QRK-NAT-005",
+    "theme": "Native",
+    "theme_label": "Inconvénients",
+    "difficulty": "hard",
+    "question": "Quel est l'inconvénient principal ?",
+    "options": [
+      "Temps de compilation long",
+      "Performance exécution",
+      "Compatibilité",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Compilation longue et limitations de compatibilité."
+  },
+  {
+    "id": "QRK-NAT-006",
+    "theme": "Native",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qui n'est pas supporté en natif ?",
+    "options": [
+      "Reflection dynamique",
+      "JNI",
+      "Class loading dynamique",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La réflexion dynamique et le chargement de classes sont limités."
+  },
+  {
+    "id": "QRK-NAT-007",
+    "theme": "Native",
+    "theme_label": "Reflection",
+    "difficulty": "hard",
+    "question": "Comment configurer la réflexion pour natif ?",
+    "options": [
+      "@RegisterForReflection",
+      "reflect-config.json",
+      "quarkus.native.resources.includes",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Annotation ou fichier de configuration."
+  },
+  {
+    "id": "QRK-NAT-008",
+    "theme": "Native",
+    "theme_label": "Reflection",
+    "difficulty": "hard",
+    "question": "Que fait @RegisterForReflection ?",
+    "options": [
+      "Marque les classes pour la réflexion",
+      "Ignore la réflexion",
+      "Désactive la réflexion",
+      "Optimise la réflexion"
+    ],
+    "correct": 0,
+    "explanation": "Indique à GraalVM de garder la classe pour la réflexion."
+  },
+  {
+    "id": "QRK-NAT-009",
+    "theme": "Native",
+    "theme_label": "Reflection",
+    "difficulty": "hard",
+    "question": "Peut-on enregistrer des méthodes spécifiques ?",
+    "options": [
+      "@RegisterForReflection(methods = \"methodName\")",
+      "@RegisterForReflection(targets = {MyClass.class})",
+      "@RegisterForReflection(ignoreNested = true)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs attributs pour personnaliser."
+  },
+  {
+    "id": "QRK-NAT-010",
+    "theme": "Native",
+    "theme_label": "Resources",
+    "difficulty": "hard",
+    "question": "Comment inclure des ressources dans le natif ?",
+    "options": [
+      "quarkus.native.resources.includes",
+      "quarkus.native.resources.excludes",
+      "src/main/resources",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration des ressources incluses/exclues."
+  },
+  {
+    "id": "QRK-NAT-011",
+    "theme": "Native",
+    "theme_label": "Resources",
+    "difficulty": "hard",
+    "question": "Où sont stockées les ressources dans le natif ?",
+    "options": [
+      "Dans l'exécutable",
+      "Dans un fichier séparé",
+      "Dans le classpath",
+      "En mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Les ressources sont intégrées à l'exécutable."
+  },
+  {
+    "id": "QRK-NAT-012",
+    "theme": "Native",
+    "theme_label": "Dynamic proxies",
+    "difficulty": "hard",
+    "question": "Comment configurer les proxies dynamiques ?",
+    "options": [
+      "@RegisterForReflection(proxy = true)",
+      "proxy-config.json",
+      "quarkus.native.proxy",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration des interfaces à proxyfier."
+  },
+  {
+    "id": "QRK-NAT-013",
+    "theme": "Native",
+    "theme_label": "JNI",
+    "difficulty": "hard",
+    "question": "JNI est-il supporté en natif ?",
+    "options": [
+      "Oui, avec configuration",
+      "Non",
+      "Partiellement",
+      "Déconseillé"
+    ],
+    "correct": 0,
+    "explanation": "JNI est supporté mais nécessite configuration."
+  },
+  {
+    "id": "QRK-NAT-014",
+    "theme": "Native",
+    "theme_label": "JNI",
+    "difficulty": "hard",
+    "question": "Comment configurer JNI pour natif ?",
+    "options": [
+      "jni-config.json",
+      "@RegisterForReflection(jni = true)",
+      "quarkus.native.jni",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration des appels JNI."
+  },
+  {
+    "id": "QRK-NAT-015",
+    "theme": "Native",
+    "theme_label": "Compilation",
+    "difficulty": "hard",
+    "question": "Quelle commande génère l'exécutable natif ?",
+    "options": [
+      "./mvnw package -Pnative",
+      "quarkus build --native",
+      "gradle build -Pnative",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Le profil native active la compilation native."
+  },
+  {
+    "id": "QRK-NAT-016",
+    "theme": "Native",
+    "theme_label": "Compilation",
+    "difficulty": "hard",
+    "question": "Où est généré l'exécutable ?",
+    "options": [
+      "target/",
+      "target/native-image/",
+      "build/",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "L'exécutable est dans target/ ou target/native-image/."
+  },
+  {
+    "id": "QRK-NAT-017",
+    "theme": "Native",
+    "theme_label": "Compilation",
+    "difficulty": "hard",
+    "question": "Quel est le nom de l'exécutable ?",
+    "options": [
+      "nom-projet-runner",
+      "application",
+      "app",
+      "quarkus-app"
+    ],
+    "correct": 0,
+    "explanation": "Le nom par défaut est nom-projet-runner."
+  },
+  {
+    "id": "QRK-NAT-018",
+    "theme": "Native",
+    "theme_label": "Docker",
+    "difficulty": "hard",
+    "question": "Comment générer une image Docker native ?",
+    "options": [
+      "./mvnw package -Pnative -Dquarkus.native.container-build=true",
+      "-Dquarkus.container-image.build=true",
+      "-Dquarkus.native.container-runtime=docker",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Container-build construit dans un conteneur."
+  },
+  {
+    "id": "QRK-NAT-019",
+    "theme": "Native",
+    "theme_label": "Docker",
+    "difficulty": "hard",
+    "question": "Quelle image de base est utilisée ?",
+    "options": [
+      "registry.access.redhat.com/ubi8/ubi-minimal",
+      "alpine",
+      "ubuntu",
+      "debian"
+    ],
+    "correct": 0,
+    "explanation": "UBI minimal est l'image par défaut."
+  },
+  {
+    "id": "QRK-NAT-020",
+    "theme": "Native",
+    "theme_label": "Docker",
+    "difficulty": "hard",
+    "question": "Comment utiliser une image de base différente ?",
+    "options": [
+      "quarkus.native.builder-image",
+      "Dockerfile.native",
+      "quarkus.docker.native-base-image",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration de l'image builder."
+  },
+  {
+    "id": "QRK-NAT-021",
+    "theme": "Native",
+    "theme_label": "Memory",
+    "difficulty": "hard",
+    "question": "Quelle est la mémoire requise pour compiler ?",
+    "options": [
+      "8-16 Go",
+      "2-4 Go",
+      "32 Go",
+      "64 Go"
+    ],
+    "correct": 0,
+    "explanation": "La compilation native nécessite beaucoup de mémoire."
+  },
+  {
+    "id": "QRK-NAT-022",
+    "theme": "Native",
+    "theme_label": "Memory",
+    "difficulty": "hard",
+    "question": "Comment limiter la mémoire utilisée ?",
+    "options": [
+      "-Dquarkus.native.native-image-xmx=8g",
+      "quarkus.native.native-image-xmx",
+      "-J-Xmx8g",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration de la mémoire pour native-image."
+  },
+  {
+    "id": "QRK-NAT-023",
+    "theme": "Native",
+    "theme_label": "Build time",
+    "difficulty": "hard",
+    "question": "Pourquoi la compilation native est-elle longue ?",
+    "options": [
+      "Analyse statique complète",
+      "Optimisations agressives",
+      "Génération de code",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs facteurs ralentissent la compilation."
+  },
+  {
+    "id": "QRK-NAT-024",
+    "theme": "Native",
+    "theme_label": "Build time",
+    "difficulty": "hard",
+    "question": "Temps typique de compilation native ?",
+    "options": [
+      "1-5 minutes",
+      "10-30 secondes",
+      "30-60 secondes",
+      "5-10 minutes"
+    ],
+    "correct": 0,
+    "explanation": "1 à 5 minutes selon la taille de l'application."
+  },
+  {
+    "id": "QRK-NAT-025",
+    "theme": "Native",
+    "theme_label": "JVM mode",
+    "difficulty": "hard",
+    "question": "Peut-on exécuter la même application en mode JVM ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Avec modifications",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "La même base de code fonctionne en JVM et natif."
+  },
+  {
+    "id": "QRK-NAT-026",
+    "theme": "Native",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester l'exécutable natif ?",
+    "options": [
+      "@QuarkusIntegrationTest",
+      "@NativeImageTest",
+      "@QuarkusTest avec native",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@QuarkusIntegrationTest teste l'exécutable natif."
+  },
+  {
+    "id": "QRK-NAT-027",
+    "theme": "Native",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Quand exécuter les tests natifs ?",
+    "options": [
+      "Après compilation native",
+      "Pendant la compilation",
+      "Avant compilation",
+      "Uniquement en CI"
+    ],
+    "correct": 0,
+    "explanation": "Les tests natifs s'exécutent après la compilation."
+  },
+  {
+    "id": "QRK-NAT-028",
+    "theme": "Native",
+    "theme_label": "SSL",
+    "difficulty": "hard",
+    "question": "Le support SSL est-il inclus ?",
+    "options": [
+      "Oui, automatiquement",
+      "Non, configuration requise",
+      "Oui, avec extension",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "SSL est supporté nativement."
+  },
+  {
+    "id": "QRK-NAT-029",
+    "theme": "Native",
+    "theme_label": "Logging",
+    "difficulty": "hard",
+    "question": "Le logging fonctionne-t-il en natif ?",
+    "options": [
+      "Oui, normalement",
+      "Non",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Le logging fonctionne normalement en natif."
+  },
+  {
+    "id": "QRK-NAT-030",
+    "theme": "Native",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Les métriques fonctionnent-elles en natif ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les métriques sont supportées en natif."
+  },
+  {
+    "id": "QRK-NAT-031",
+    "theme": "Native",
+    "theme_label": "Health checks",
+    "difficulty": "hard",
+    "question": "Les health checks fonctionnent-ils ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Configuration requise"
+    ],
+    "correct": 0,
+    "explanation": "Health checks supportés en natif."
+  },
+  {
+    "id": "QRK-NAT-032",
+    "theme": "Native",
+    "theme_label": "Tracing",
+    "difficulty": "hard",
+    "question": "Le tracing distribué fonctionne-t-il ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Configuration requise"
+    ],
+    "correct": 0,
+    "explanation": "Le tracing est supporté en natif."
+  },
+  {
+    "id": "QRK-NAT-033",
+    "theme": "Native",
+    "theme_label": "REST Client",
+    "difficulty": "hard",
+    "question": "Le client REST fonctionne-t-il en natif ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Configuration requise"
+    ],
+    "correct": 0,
+    "explanation": "Le client REST est supporté en natif."
+  },
+  {
+    "id": "QRK-NAT-034",
+    "theme": "Native",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "La génération OpenAPI fonctionne-t-elle ?",
+    "options": [
+      "Oui",
+      "Non",
+      "À la compilation",
+      "À l'exécution"
+    ],
+    "correct": 2,
+    "explanation": "OpenAPI est généré à la compilation pour le natif."
+  },
+  {
+    "id": "QRK-NAT-035",
+    "theme": "Native",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment déboguer un exécutable natif ?",
+    "options": [
+      "GDB",
+      "LLDB",
+      "Logs",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Outils natifs et logs pour le debugging."
+  },
+  {
+    "id": "QRK-NAT-036",
+    "theme": "Native",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment générer des symboles de debug ?",
+    "options": [
+      "-Dquarkus.native.debug.enabled=true",
+      "quarkus.native.debug.enabled=true",
+      "-g",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Debug enabled ajoute les symboles."
+  },
+  {
+    "id": "QRK-NAT-037",
+    "theme": "Native",
+    "theme_label": "Class initialization",
+    "difficulty": "hard",
+    "question": "Quand les classes sont-elles initialisées ?",
+    "options": [
+      "À la compilation (build time)",
+      "À l'exécution (runtime)",
+      "Les deux",
+      "Dépend de l'annotation"
+    ],
+    "correct": 2,
+    "explanation": "Certaines classes sont initialisées à la compilation."
+  },
+  {
+    "id": "QRK-NAT-038",
+    "theme": "Native",
+    "theme_label": "Class initialization",
+    "difficulty": "hard",
+    "question": "Comment forcer l'initialisation à l'exécution ?",
+    "options": [
+      "@InitAtRuntime",
+      "quarkus.native.initialize-at-run-time",
+      "BuildTime",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration pour l'initialisation à l'exécution."
+  },
+  {
+    "id": "QRK-NAT-039",
+    "theme": "Native",
+    "theme_label": "Substrate VM",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Substrate VM ?",
+    "options": [
+      "Machine virtuelle native de GraalVM",
+      "Version de Java",
+      "Framework",
+      "Compilateur"
+    ],
+    "correct": 0,
+    "explanation": "Substrate VM est le runtime natif."
+  },
+  {
+    "id": "QRK-NAT-040",
+    "theme": "Native",
+    "theme_label": "Profile Guided Optimization",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que PGO ?",
+    "options": [
+      "Optimisation guidée par profiling",
+      "Compilation plus rapide",
+      "Debugging",
+      "Tests"
+    ],
+    "correct": 0,
+    "explanation": "PGO améliore les performances du code natif."
+  },
+  {
+    "id": "QRK-NAT-041",
+    "theme": "Native",
+    "theme_label": "PGO",
+    "difficulty": "hard",
+    "question": "Comment activer PGO ?",
+    "options": [
+      "-Dquarkus.native.pgo=true",
+      "quarkus.native.pgo-instrument",
+      "quarkus.native.pgo-optimize",
+      "B et C"
+    ],
+    "correct": 3,
+    "explanation": "Instrumentation puis optimisation."
+  },
+  {
+    "id": "QRK-NAT-042",
+    "theme": "Native",
+    "theme_label": "GraalVM versions",
+    "difficulty": "hard",
+    "question": "Quelle version de GraalVM est recommandée ?",
+    "options": [
+      "22.3+",
+      "21.0+",
+      "20.0+",
+      "19.0+"
+    ],
+    "correct": 0,
+    "explanation": "GraalVM 22.3+ est recommandé."
+  },
+  {
+    "id": "QRK-NAT-043",
+    "theme": "Native",
+    "theme_label": "Mandrel",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Mandrel ?",
+    "options": [
+      "Distribution GraalVM pour Quarkus",
+      "Version de Java",
+      "Framework",
+      "Compilateur"
+    ],
+    "correct": 0,
+    "explanation": "Mandrel est optimisé pour Quarkus."
+  },
+  {
+    "id": "QRK-NAT-044",
+    "theme": "Native",
+    "theme_label": "Mandrel",
+    "difficulty": "hard",
+    "question": "Quel est l'avantage de Mandrel ?",
+    "options": [
+      "Plus petite taille",
+      "Support de Java 11+",
+      "OpenJDK",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Mandrel est basé sur OpenJDK."
+  },
+  {
+    "id": "QRK-NAT-045",
+    "theme": "Native",
+    "theme_label": "Cross compilation",
+    "difficulty": "hard",
+    "question": "Peut-on compiler pour Windows depuis Linux ?",
+    "options": [
+      "Oui, avec conteneur",
+      "Non",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "La compilation croisée est possible via conteneur."
+  },
+  {
+    "id": "QRK-NAT-046",
+    "theme": "Native",
+    "theme_label": "Cross compilation",
+    "difficulty": "hard",
+    "question": "Quelle option pour compiler pour Windows ?",
+    "options": [
+      "-Dquarkus.native.container-build=true -Dquarkus.native.builder-image=...",
+      "-Dquarkus.native.target-os=windows",
+      "-Dquarkus.native.windows=true",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Target-os et container-build."
+  },
+  {
+    "id": "QRK-NAT-047",
+    "theme": "Native",
+    "theme_label": "CI/CD",
+    "difficulty": "hard",
+    "question": "Comment intégrer la compilation native en CI ?",
+    "options": [
+      "GitHub Actions avec setup-graalvm",
+      "GitLab CI avec image Mandrel",
+      "Jenkins avec plugin",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Toutes les plateformes CI supportent GraalVM."
+  },
+  {
+    "id": "QRK-NAT-048",
+    "theme": "Native",
+    "theme_label": "Dépannage",
+    "difficulty": "hard",
+    "question": "Erreur 'Image build request failed' ?",
+    "options": [
+      "Manque mémoire",
+      "Version GraalVM incorrecte",
+      "Dépendance incompatible",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs causes possibles."
+  },
+  {
+    "id": "QRK-NAT-049",
+    "theme": "Native",
+    "theme_label": "Dépannage",
+    "difficulty": "hard",
+    "question": "Comment voir les détails de l'erreur ?",
+    "options": [
+      "-Dquarkus.native.native-image-args=--verbose",
+      "-Dquarkus.native.verbose=true",
+      "--stacktrace",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Verbose pour plus de détails."
+  },
+  {
+    "id": "QRK-NAT-050",
+    "theme": "Native",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quand utiliser le mode natif ?",
+    "options": [
+      "Microservices, Serverless, CLI",
+      "Applications desktop",
+      "Grandes applications monolithiques",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Natif idéal pour microservices et serverless."
+  }
+]

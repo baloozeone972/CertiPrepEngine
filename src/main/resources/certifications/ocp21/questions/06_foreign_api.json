@@ -1,0 +1,747 @@
+[
+  {
+    "id": "OCP21-FM-001",
+    "theme": "Foreign API",
+    "theme_label": "Foreign Function & Memory API",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la Foreign Function & Memory API (Panama) ?",
+    "options": [
+      "API pour appeler du code natif",
+      "API pour la mémoire hors heap",
+      "API pour les fonctions étrangères",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Panama remplace JNI avec plus de sécurité et performance."
+  },
+  {
+    "id": "OCP21-FM-002",
+    "theme": "Foreign API",
+    "theme_label": "Foreign Function & Memory API",
+    "difficulty": "hard",
+    "question": "Quel problème résout la Foreign API ?",
+    "options": [
+      "Complexité de JNI",
+      "Sécurité de JNI",
+      "Performance de JNI",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Panama offre une alternative plus sûre et plus simple à JNI."
+  },
+  {
+    "id": "OCP21-FM-003",
+    "theme": "Foreign API",
+    "theme_label": "Arena",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une Arena ?",
+    "options": [
+      "Gestionnaire de mémoire",
+      "Un thread",
+      "Une fonction",
+      "Une bibliothèque"
+    ],
+    "correct": 0,
+    "explanation": "Arena gère le cycle de vie de la mémoire native."
+  },
+  {
+    "id": "OCP21-FM-004",
+    "theme": "Foreign API",
+    "theme_label": "Arena",
+    "difficulty": "hard",
+    "question": "Comment créer une Arena ?",
+    "options": [
+      "Arena.ofAuto() / Arena.ofConfined()",
+      "MemoryArena.create()",
+      "new Arena()",
+      "Arena.newInstance()"
+    ],
+    "correct": 0,
+    "explanation": "ofAuto() crée une arena automatique, ofConfined() une arena confinée."
+  },
+  {
+    "id": "OCP21-FM-005",
+    "theme": "Foreign API",
+    "theme_label": "Arena",
+    "difficulty": "hard",
+    "question": "Que fait Arena.ofAuto() ?",
+    "options": [
+      "Libération automatique par GC",
+      "Libération manuelle",
+      "Libération immédiate",
+      "Pas de libération"
+    ],
+    "correct": 0,
+    "explanation": "ofAuto() utilise le garbage collector pour libérer la mémoire."
+  },
+  {
+    "id": "OCP21-FM-006",
+    "theme": "Foreign API",
+    "theme_label": "Arena",
+    "difficulty": "hard",
+    "question": "Que fait Arena.ofConfined() ?",
+    "options": [
+      "Libération à la fermeture",
+      "Libération automatique",
+      "Libération immédiate",
+      "Pas de libération"
+    ],
+    "correct": 0,
+    "explanation": "ofConfined() nécessite un close() explicite."
+  },
+  {
+    "id": "OCP21-FM-007",
+    "theme": "Foreign API",
+    "theme_label": "MemorySegment",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un MemorySegment ?",
+    "options": [
+      "Une région de mémoire native",
+      "Un thread",
+      "Une fonction",
+      "Un fichier"
+    ],
+    "correct": 0,
+    "explanation": "MemorySegment représente une région de mémoire native."
+  },
+  {
+    "id": "OCP21-FM-008",
+    "theme": "Foreign API",
+    "theme_label": "MemorySegment",
+    "difficulty": "hard",
+    "question": "Comment créer un MemorySegment ?",
+    "options": [
+      "Arena.allocate(100)",
+      "MemorySegment.allocate(100)",
+      "new MemorySegment(100)",
+      "Segment.ofSize(100)"
+    ],
+    "correct": 0,
+    "explanation": "Arena.allocate() crée un segment de mémoire."
+  },
+  {
+    "id": "OCP21-FM-009",
+    "theme": "Foreign API",
+    "theme_label": "MemorySegment",
+    "difficulty": "hard",
+    "question": "Comment accéder aux données d'un MemorySegment ?",
+    "options": [
+      "segment.get(ValueLayout.JAVA_INT, 0)",
+      "segment.readInt(0)",
+      "segment.getInt(0)",
+      "segment.fetchInt(0)"
+    ],
+    "correct": 0,
+    "explanation": "get() avec ValueLayout spécifie le type et l'offset."
+  },
+  {
+    "id": "OCP21-FM-010",
+    "theme": "Foreign API",
+    "theme_label": "MemorySegment",
+    "difficulty": "hard",
+    "question": "Comment écrire dans un MemorySegment ?",
+    "options": [
+      "segment.set(ValueLayout.JAVA_INT, 0, 42)",
+      "segment.writeInt(0, 42)",
+      "segment.setInt(0, 42)",
+      "segment.storeInt(0, 42)"
+    ],
+    "correct": 0,
+    "explanation": "set() avec ValueLayout écrit la valeur à l'offset spécifié."
+  },
+  {
+    "id": "OCP21-FM-011",
+    "theme": "Foreign API",
+    "theme_label": "ValueLayout",
+    "difficulty": "hard",
+    "question": "Que représente ValueLayout ?",
+    "options": [
+      "Le format des données en mémoire",
+      "Une valeur",
+      "Un segment",
+      "Une arena"
+    ],
+    "correct": 0,
+    "explanation": "ValueLayout définit comment les données sont représentées en mémoire."
+  },
+  {
+    "id": "OCP21-FM-012",
+    "theme": "Foreign API",
+    "theme_label": "ValueLayout",
+    "difficulty": "hard",
+    "question": "Quel ValueLayout pour un int ?",
+    "options": [
+      "ValueLayout.JAVA_INT",
+      "ValueLayout.INT",
+      "ValueLayout.JAVA_INT32",
+      "ValueLayout.INT32"
+    ],
+    "correct": 0,
+    "explanation": "JAVA_INT est le layout pour les entiers 32 bits."
+  },
+  {
+    "id": "OCP21-FM-013",
+    "theme": "Foreign API",
+    "theme_label": "ValueLayout",
+    "difficulty": "hard",
+    "question": "Quel ValueLayout pour un long ?",
+    "options": [
+      "ValueLayout.JAVA_LONG",
+      "ValueLayout.LONG",
+      "ValueLayout.JAVA_INT64",
+      "ValueLayout.INT64"
+    ],
+    "correct": 0,
+    "explanation": "JAVA_LONG est le layout pour les entiers 64 bits."
+  },
+  {
+    "id": "OCP21-FM-014",
+    "theme": "Foreign API",
+    "theme_label": "ValueLayout",
+    "difficulty": "hard",
+    "question": "Quel ValueLayout pour un byte ?",
+    "options": [
+      "ValueLayout.JAVA_BYTE",
+      "ValueLayout.BYTE",
+      "ValueLayout.JAVA_INT8",
+      "ValueLayout.INT8"
+    ],
+    "correct": 0,
+    "explanation": "JAVA_BYTE est le layout pour les octets."
+  },
+  {
+    "id": "OCP21-FM-015",
+    "theme": "Foreign API",
+    "theme_label": "Linker",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Linker ?",
+    "options": [
+      "Permet d'appeler des fonctions natives",
+      "Lie des segments",
+      "Connecte des arenas",
+      "Assemble du code"
+    ],
+    "correct": 0,
+    "explanation": "Linker permet de lier et d'appeler des fonctions natives."
+  },
+  {
+    "id": "OCP21-FM-016",
+    "theme": "Foreign API",
+    "theme_label": "Linker",
+    "difficulty": "hard",
+    "question": "Comment obtenir un Linker ?",
+    "options": [
+      "Linker.nativeLinker()",
+      "Linker.getInstance()",
+      "Linker.getNative()",
+      "new Linker()"
+    ],
+    "correct": 0,
+    "explanation": "nativeLinker() retourne le linker pour la plateforme courante."
+  },
+  {
+    "id": "OCP21-FM-017",
+    "theme": "Foreign API",
+    "theme_label": "SymbolLookup",
+    "difficulty": "hard",
+    "question": "Que fait SymbolLookup ?",
+    "options": [
+      "Cherche des symboles natifs",
+      "Cherche des classes",
+      "Cherche des méthodes",
+      "Cherche des fichiers"
+    ],
+    "correct": 0,
+    "explanation": "SymbolLookup permet de trouver des symboles dans les bibliothèques natives."
+  },
+  {
+    "id": "OCP21-FM-018",
+    "theme": "Foreign API",
+    "theme_label": "SymbolLookup",
+    "difficulty": "hard",
+    "question": "Comment chercher une fonction native ?",
+    "options": [
+      "SymbolLookup.loaderLookup().find(\"function\")",
+      "Linker.find(\"function\")",
+      "NativeLookup.find(\"function\")",
+      "Symbol.find(\"function\")"
+    ],
+    "correct": 0,
+    "explanation": "loaderLookup() cherche dans les bibliothèques chargées."
+  },
+  {
+    "id": "OCP21-FM-019",
+    "theme": "Foreign API",
+    "theme_label": "FunctionDescriptor",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que FunctionDescriptor ?",
+    "options": [
+      "Décrit la signature d'une fonction native",
+      "Décrit une fonction Java",
+      "Décrit un segment",
+      "Décrit une arena"
+    ],
+    "correct": 0,
+    "explanation": "FunctionDescriptor décrit les paramètres et le retour d'une fonction native."
+  },
+  {
+    "id": "OCP21-FM-020",
+    "theme": "Foreign API",
+    "theme_label": "FunctionDescriptor",
+    "difficulty": "hard",
+    "question": "Comment créer un FunctionDescriptor ?",
+    "options": [
+      "FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT)",
+      "FunctionDescriptor.create(ValueLayout.JAVA_INT)",
+      "new FunctionDescriptor()",
+      "Descriptor.of(ValueLayout.JAVA_INT)"
+    ],
+    "correct": 0,
+    "explanation": "of() prend le retour puis les paramètres."
+  },
+  {
+    "id": "OCP21-FM-021",
+    "theme": "Foreign API",
+    "theme_label": "Appel de fonction",
+    "difficulty": "hard",
+    "question": "Comment appeler une fonction native ?",
+    "options": [
+      "MethodHandle handle = linker.downcallHandle(addr, desc)",
+      "linker.call(addr, desc)",
+      "nativeFunction.invoke()",
+      "Function.call(addr)"
+    ],
+    "correct": 0,
+    "explanation": "downcallHandle() retourne un MethodHandle pour appeler la fonction."
+  },
+  {
+    "id": "OCP21-FM-022",
+    "theme": "Foreign API",
+    "theme_label": "MemoryLayout",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que MemoryLayout ?",
+    "options": [
+      "Décrit la structure de mémoire",
+      "Un segment mémoire",
+      "Une arena",
+      "Un pointeur"
+    ],
+    "correct": 0,
+    "explanation": "MemoryLayout décrit l'agencement des données en mémoire."
+  },
+  {
+    "id": "OCP21-FM-023",
+    "theme": "Foreign API",
+    "theme_label": "StructLayout",
+    "difficulty": "hard",
+    "question": "Comment définir une structure C en Java ?",
+    "options": [
+      "MemoryLayout.structLayout(...)",
+      "MemoryLayout.ofStruct(...)",
+      "StructLayout.create(...)",
+      "Layout.struct(...)"
+    ],
+    "correct": 0,
+    "explanation": "structLayout() permet de définir une structure C."
+  },
+  {
+    "id": "OCP21-FM-024",
+    "theme": "Foreign API",
+    "theme_label": "UnionLayout",
+    "difficulty": "hard",
+    "question": "Comment définir une union C en Java ?",
+    "options": [
+      "MemoryLayout.unionLayout(...)",
+      "MemoryLayout.ofUnion(...)",
+      "UnionLayout.create(...)",
+      "Layout.union(...)"
+    ],
+    "correct": 0,
+    "explanation": "unionLayout() permet de définir une union C."
+  },
+  {
+    "id": "OCP21-FM-025",
+    "theme": "Foreign API",
+    "theme_label": "SegmentAllocator",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que SegmentAllocator ?",
+    "options": [
+      "Alloue des segments mémoire",
+      "Alloue des threads",
+      "Alloue des fonctions",
+      "Alloue des bibliothèques"
+    ],
+    "correct": 0,
+    "explanation": "SegmentAllocator est un allocateur de mémoire native."
+  },
+  {
+    "id": "OCP21-FM-026",
+    "theme": "Foreign API",
+    "theme_label": "SegmentAllocator",
+    "difficulty": "hard",
+    "question": "Comment obtenir un SegmentAllocator ?",
+    "options": [
+      "Arena : l'arena est un allocator",
+      "SegmentAllocator.newAllocator()",
+      "MemoryAllocator.create()",
+      "new SegmentAllocator()"
+    ],
+    "correct": 0,
+    "explanation": "Une Arena implémente SegmentAllocator."
+  },
+  {
+    "id": "OCP21-FM-027",
+    "theme": "Foreign API",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "La Foreign API est-elle plus sûre que JNI ?",
+    "options": [
+      "Oui, vérifications à l'exécution",
+      "Non, moins sûre",
+      "Identique",
+      "Dépend de l'usage"
+    ],
+    "correct": 0,
+    "explanation": "La Foreign API offre des vérifications de sécurité à l'exécution."
+  },
+  {
+    "id": "OCP21-FM-028",
+    "theme": "Foreign API",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "La Foreign API est-elle plus performante que JNI ?",
+    "options": [
+      "Oui, généralement",
+      "Non, moins performante",
+      "Identique",
+      "Dépend de l'opération"
+    ],
+    "correct": 0,
+    "explanation": "La Foreign API peut être plus performante grâce à des optimisations."
+  },
+  {
+    "id": "OCP21-FM-029",
+    "theme": "Foreign API",
+    "theme_label": "JNI vs Foreign API",
+    "difficulty": "hard",
+    "question": "Quel est l'avantage principal sur JNI ?",
+    "options": [
+      "Pas de code C à écrire",
+      "Plus rapide",
+      "Plus sécurisé",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La Foreign API élimine le besoin d'écrire du code C."
+  },
+  {
+    "id": "OCP21-FM-030",
+    "theme": "Foreign API",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\ntry (Arena arena = Arena.ofConfined()) {\n    MemorySegment segment = arena.allocate(100);\n    segment.set(ValueLayout.JAVA_INT, 0, 42);\n    int value = segment.get(ValueLayout.JAVA_INT, 0);\n}",
+    "options": [
+      "Alloue, écrit et lit un int",
+      "Alloue seulement",
+      "Écrit seulement",
+      "Lit seulement"
+    ],
+    "correct": 0,
+    "explanation": "Le code alloue 100 bytes, écrit 42 à l'offset 0, puis le lit."
+  },
+  {
+    "id": "OCP21-FM-031",
+    "theme": "Foreign API",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nLinker linker = Linker.nativeLinker();\nSymbolLookup lookup = SymbolLookup.loaderLookup();\nOptional<MemorySegment> symbol = lookup.find(\"printf\");",
+    "options": [
+      "Cherche la fonction printf",
+      "Appelle printf",
+      "Définit printf",
+      "Supprime printf"
+    ],
+    "correct": 0,
+    "explanation": "find() cherche le symbole 'printf' dans les bibliothèques chargées."
+  },
+  {
+    "id": "OCP21-FM-032",
+    "theme": "Foreign API",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nFunctionDescriptor desc = FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT);",
+    "options": [
+      "Décrit une fonction (int -> int)",
+      "Appelle une fonction",
+      "Définit une fonction",
+      "Alloue de la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "La fonction prend un int et retourne un int."
+  },
+  {
+    "id": "OCP21-FM-033",
+    "theme": "Foreign API",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code ?\nMethodHandle handle = linker.downcallHandle(symbol, desc);",
+    "options": [
+      "Crée un MethodHandle pour la fonction",
+      "Appelle la fonction",
+      "Définit la fonction",
+      "Supprime la fonction"
+    ],
+    "correct": 0,
+    "explanation": "downcallHandle() crée un handle pour appeler la fonction native."
+  },
+  {
+    "id": "OCP21-FM-034",
+    "theme": "Foreign API",
+    "theme_label": "JEP",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit la Foreign API ?",
+    "options": ["JEP 454", "JEP 440", "JEP 441", "JEP 442"],
+    "correct": 0,
+    "explanation": "JEP 454: Foreign Function & Memory API (finalized in Java 22)."
+  },
+  {
+    "id": "OCP21-FM-035",
+    "theme": "Foreign API",
+    "theme_label": "Finalisation",
+    "difficulty": "hard",
+    "question": "La Foreign API est-elle finalisée en Java 21 ?",
+    "options": [
+      "Non, preview",
+      "Oui, finalisé",
+      "Non, supprimé",
+      "Oui, depuis Java 20"
+    ],
+    "correct": 0,
+    "explanation": "La Foreign API est en preview en Java 21, finalisée en Java 22."
+  },
+  {
+    "id": "OCP21-FM-036",
+    "theme": "Foreign API",
+    "theme_label": "Activation",
+    "difficulty": "hard",
+    "question": "Comment activer la Foreign API ?",
+    "options": [
+      "--enable-preview",
+      "--enable-native-access",
+      "--preview",
+      "Automatique"
+    ],
+    "correct": 0,
+    "explanation": "Il faut utiliser --enable-preview."
+  },
+  {
+    "id": "OCP21-FM-037",
+    "theme": "Foreign API",
+    "theme_label": "Memory access",
+    "difficulty": "hard",
+    "question": "Comment lire un tableau d'int depuis la mémoire native ?",
+    "options": [
+      "segment.asSlice(0, length).toArray(ValueLayout.JAVA_INT)",
+      "segment.getIntArray(0, length)",
+      "segment.readInts(0, length)",
+      "segment.fetchInts(0, length)"
+    ],
+    "correct": 0,
+    "explanation": "asSlice() puis toArray() convertit le segment en tableau Java."
+  },
+  {
+    "id": "OCP21-FM-038",
+    "theme": "Foreign API",
+    "theme_label": "String conversion",
+    "difficulty": "hard",
+    "question": "Comment convertir une String en mémoire native ?",
+    "options": [
+      "segment.setUtf8String(0, \"Hello\")",
+      "segment.writeString(0, \"Hello\")",
+      "segment.putString(0, \"Hello\")",
+      "segment.setString(0, \"Hello\")"
+    ],
+    "correct": 0,
+    "explanation": "setUtf8String() écrit une chaîne en UTF-8 dans le segment."
+  },
+  {
+    "id": "OCP21-FM-039",
+    "theme": "Foreign API",
+    "theme_label": "String conversion",
+    "difficulty": "hard",
+    "question": "Comment lire une String depuis la mémoire native ?",
+    "options": [
+      "segment.getUtf8String(0)",
+      "segment.readString(0)",
+      "segment.getString(0)",
+      "segment.fetchString(0)"
+    ],
+    "correct": 0,
+    "explanation": "getUtf8String() lit une chaîne UTF-8 depuis le segment."
+  },
+  {
+    "id": "OCP21-FM-040",
+    "theme": "Foreign API",
+    "theme_label": "Upcall",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un upcall ?",
+    "options": [
+      "Appeler Java depuis du code natif",
+      "Appeler du code natif depuis Java",
+      "Allouer de la mémoire",
+      "Lier des fonctions"
+    ],
+    "correct": 0,
+    "explanation": "Un upcall permet au code natif d'appeler du code Java."
+  },
+  {
+    "id": "OCP21-FM-041",
+    "theme": "Foreign API",
+    "theme_label": "Upcall",
+    "difficulty": "hard",
+    "question": "Comment créer un upcall ?",
+    "options": [
+      "linker.upcallStub(methodHandle, desc, arena)",
+      "linker.upcall(methodHandle, desc)",
+      "Function.upcall(methodHandle)",
+      "Native.upcall(methodHandle)"
+    ],
+    "correct": 0,
+    "explanation": "upcallStub() crée un stub que le code natif peut appeler."
+  },
+  {
+    "id": "OCP21-FM-042",
+    "theme": "Foreign API",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "La Foreign API supporte-t-elle tous les types C ?",
+    "options": [
+      "Types principaux supportés",
+      "Tous les types",
+      "Types simples seulement",
+      "Aucun type"
+    ],
+    "correct": 0,
+    "explanation": "Les types principaux (int, long, float, double, pointer) sont supportés."
+  },
+  {
+    "id": "OCP21-FM-043",
+    "theme": "Foreign API",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on appeler des fonctions C++ avec la Foreign API ?",
+    "options": [
+      "Non, C seulement",
+      "Oui, C++ aussi",
+      "Oui, avec des wrappers",
+      "Non, impossible"
+    ],
+    "correct": 0,
+    "explanation": "La Foreign API est conçue pour C, pas pour C++ (mangling)."
+  },
+  {
+    "id": "OCP21-FM-044",
+    "theme": "Foreign API",
+    "theme_label": "VarHandle",
+    "difficulty": "hard",
+    "question": "Quel est le rôle de VarHandle dans la Foreign API ?",
+    "options": [
+      "Accès mémoire atomique",
+      "Création de segments",
+      "Gestion des arenas",
+      "Liaison de fonctions"
+    ],
+    "correct": 0,
+    "explanation": "VarHandle permet des accès mémoire atomiques et ordonnés."
+  },
+  {
+    "id": "OCP21-FM-045",
+    "theme": "Foreign API",
+    "theme_label": "Memory ordering",
+    "difficulty": "hard",
+    "question": "Quels ordres mémoire sont supportés ?",
+    "options": [
+      "Plain, Opaque, Acquire, Release",
+      "Seulement Plain",
+      "Seulement Acquire/Release",
+      "Tous les ordres"
+    ],
+    "correct": 0,
+    "explanation": "Les ordres mémoire standards sont supportés."
+  },
+  {
+    "id": "OCP21-FM-046",
+    "theme": "Foreign API",
+    "theme_label": "Synchronisation",
+    "difficulty": "hard",
+    "question": "Les accès mémoire sont-ils thread-safe ?",
+    "options": [
+      "Oui, avec les bons ordres",
+      "Non, jamais",
+      "Oui, automatiquement",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Avec les ordres mémoire appropriés, les accès peuvent être thread-safe."
+  },
+  {
+    "id": "OCP21-FM-047",
+    "theme": "Foreign API",
+    "theme_label": "Panama project",
+    "difficulty": "hard",
+    "question": "Le projet Panama inclut-il d'autres fonctionnalités ?",
+    "options": [
+      "Vector API",
+      "Only Foreign API",
+      "Loom",
+      "Valhalla"
+    ],
+    "correct": 0,
+    "explanation": "Le projet Panama inclut aussi la Vector API."
+  },
+  {
+    "id": "OCP21-FM-048",
+    "theme": "Foreign API",
+    "theme_label": "Migration depuis JNI",
+    "difficulty": "hard",
+    "question": "Peut-on migrer progressivement de JNI à Panama ?",
+    "options": [
+      "Oui, coexistent",
+      "Non, migration totale",
+      "Oui, avec wrappers",
+      "Non, incompatible"
+    ],
+    "correct": 0,
+    "explanation": "JNI et Panama peuvent coexister dans la même application."
+  },
+  {
+    "id": "OCP21-FM-049",
+    "theme": "Foreign API",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quand la Foreign API sera-t-elle standard ?",
+    "options": [
+      "Java 22",
+      "Java 21",
+      "Java 23",
+      "Déjà standard"
+    ],
+    "correct": 0,
+    "explanation": "La Foreign API est finalisée en Java 22."
+  },
+  {
+    "id": "OCP21-FM-050",
+    "theme": "Foreign API",
+    "theme_label": "Résumé",
+    "difficulty": "hard",
+    "question": "Quel est le principal bénéfice de la Foreign API ?",
+    "options": [
+      "Interopérabilité native simplifiée",
+      "Performance mémoire",
+      "Sécurité accrue",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La Foreign API combine simplicité, performance et sécurité."
+  }
+]

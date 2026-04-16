@@ -1,0 +1,562 @@
+[
+  {
+    "id": "KOT-OOP-001",
+    "theme": "Object-oriented",
+    "theme_label": "Classes",
+    "difficulty": "easy",
+    "question": "Quelle est la visibilité par défaut en Kotlin ?",
+    "options": ["public", "private", "internal", "protected"],
+    "correct": 0,
+    "explanation": "Par défaut, les membres sont public."
+  },
+  {
+    "id": "KOT-OOP-002",
+    "theme": "Object-oriented",
+    "theme_label": "Inheritance",
+    "difficulty": "easy",
+    "question": "Quel mot-clé est utilisé pour l'héritage ?",
+    "options": [":", "extends", "implements", "inherits"],
+    "correct": 0,
+    "explanation": "class B : A()"
+  },
+  {
+    "id": "KOT-OOP-003",
+    "theme": "Object-oriented",
+    "theme_label": "Inheritance",
+    "difficulty": "easy",
+    "question": "Les classes sont-elles final par défaut ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les data classes",
+      "Uniquement les sealed classes"
+    ],
+    "correct": 0,
+    "explanation": "Les classes sont final par défaut, il faut open pour hériter."
+  },
+  {
+    "id": "KOT-OOP-004",
+    "theme": "Object-oriented",
+    "theme_label": "Inheritance",
+    "difficulty": "medium",
+    "question": "Quel mot-clé rend une classe héritable ?",
+    "options": ["open", "public", "abstract", "final"],
+    "correct": 0,
+    "explanation": "open permet l'héritage."
+  },
+  {
+    "id": "KOT-OOP-005",
+    "theme": "Object-oriented",
+    "theme_label": "Inheritance",
+    "difficulty": "medium",
+    "question": "Comment appeler le constructeur parent ?",
+    "options": [
+      "super()",
+      "parent()",
+      "superClass()",
+      "superConstructor()"
+    ],
+    "correct": 0,
+    "explanation": "super() dans le constructeur secondaire."
+  },
+  {
+    "id": "KOT-OOP-006",
+    "theme": "Object-oriented",
+    "theme_label": "Interfaces",
+    "difficulty": "easy",
+    "question": "Une interface peut-elle avoir des propriétés ?",
+    "options": [
+      "Oui, abstraites ou avec getter",
+      "Non",
+      "Oui, avec champs",
+      "Oui, seulement des constantes"
+    ],
+    "correct": 0,
+    "explanation": "Les interfaces peuvent avoir des propriétés abstraites ou avec implémentation."
+  },
+  {
+    "id": "KOT-OOP-007",
+    "theme": "Object-oriented",
+    "theme_label": "Interfaces",
+    "difficulty": "medium",
+    "question": "Une interface peut-elle avoir des méthodes avec corps ?",
+    "options": [
+      "Oui, depuis Kotlin",
+      "Non",
+      "Oui, avec default",
+      "Oui, avec static"
+    ],
+    "correct": 0,
+    "explanation": "Kotlin permet les méthodes par défaut dans les interfaces."
+  },
+  {
+    "id": "KOT-OOP-008",
+    "theme": "Object-oriented",
+    "theme_label": "Abstract classes",
+    "difficulty": "easy",
+    "question": "Quel mot-clé pour une classe abstraite ?",
+    "options": ["abstract", "open", "sealed", "interface"],
+    "correct": 0,
+    "explanation": "abstract class MyClass"
+  },
+  {
+    "id": "KOT-OOP-009",
+    "theme": "Object-oriented",
+    "theme_label": "Abstract classes",
+    "difficulty": "medium",
+    "question": "Une classe abstraite peut-elle avoir un constructeur ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement primaire",
+      "Uniquement secondaire"
+    ],
+    "correct": 0,
+    "explanation": "Les classes abstraites peuvent avoir des constructeurs."
+  },
+  {
+    "id": "KOT-OOP-010",
+    "theme": "Object-oriented",
+    "theme_label": "Sealed classes",
+    "difficulty": "hard",
+    "question": "Une sealed class peut-elle avoir plusieurs instances ?",
+    "options": [
+      "Oui, via ses sous-classes",
+      "Non, singleton",
+      "Oui, directement",
+      "Non, une seule"
+    ],
+    "correct": 0,
+    "explanation": "Les sealed classes ont des sous-classes multiples."
+  },
+  {
+    "id": "KOT-OOP-011",
+    "theme": "Object-oriented",
+    "theme_label": "Sealed classes",
+    "difficulty": "hard",
+    "question": "Les sous-classes d'une sealed class doivent être où ?",
+    "options": [
+      "Dans le même fichier",
+      "Dans le même package",
+      "N'importe où",
+      "Dans le même module"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-classes doivent être dans le même fichier."
+  },
+  {
+    "id": "KOT-OOP-012",
+    "theme": "Object-oriented",
+    "theme_label": "Data classes",
+    "difficulty": "easy",
+    "question": "Quelles méthodes une data class génère-t-elle ?",
+    "options": [
+      "equals, hashCode, toString, copy, componentN",
+      "equals, hashCode seulement",
+      "toString seulement",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explanation": "Data class génère toutes ces méthodes."
+  },
+  {
+    "id": "KOT-OOP-013",
+    "theme": "Object-oriented",
+    "theme_label": "Data classes",
+    "difficulty": "medium",
+    "question": "Une data class peut-elle être open ?",
+    "options": [
+      "Non, final par défaut",
+      "Oui, avec open",
+      "Oui, avec abstract",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Les data classes sont final, ne peuvent pas être open."
+  },
+  {
+    "id": "KOT-OOP-014",
+    "theme": "Object-oriented",
+    "theme_label": "Object declaration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un object declaration ?",
+    "options": [
+      "Singleton",
+      "Classe anonyme",
+      "Companion object",
+      "Objet normal"
+    ],
+    "correct": 0,
+    "explanation": "object MySingleton { } crée un singleton."
+  },
+  {
+    "id": "KOT-OOP-015",
+    "theme": "Object-oriented",
+    "theme_label": "Companion object",
+    "difficulty": "hard",
+    "question": "À quoi sert companion object ?",
+    "options": [
+      "Membres statiques",
+      "Singleton",
+      "Factory",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "companion object remplace les statiques Java."
+  },
+  {
+    "id": "KOT-OOP-016",
+    "theme": "Object-oriented",
+    "theme_label": "Companion object",
+    "difficulty": "hard",
+    "question": "Peut-on nommer un companion object ?",
+    "options": [
+      "Oui, companion object Named { }",
+      "Non",
+      "Oui, avec @Named",
+      "Oui, avec name"
+    ],
+    "correct": 0,
+    "explanation": "companion object Factory { }"
+  },
+  {
+    "id": "KOT-OOP-017",
+    "theme": "Object-oriented",
+    "theme_label": "Visibility modifiers",
+    "difficulty": "medium",
+    "question": "Que signifie internal ?",
+    "options": [
+      "Visible dans le module",
+      "Visible dans le package",
+      "Visible partout",
+      "Visible dans la classe"
+    ],
+    "correct": 0,
+    "explanation": "internal est visible dans le même module."
+  },
+  {
+    "id": "KOT-OOP-018",
+    "theme": "Object-oriented",
+    "theme_label": "Visibility modifiers",
+    "difficulty": "hard",
+    "question": "protected dans un fichier top-level ?",
+    "options": [
+      "Non autorisé",
+      "Autorisé",
+      "Équivalent à internal",
+      "Équivalent à private"
+    ],
+    "correct": 0,
+    "explanation": "protected n'est pas autorisé pour les déclarations top-level."
+  },
+  {
+    "id": "KOT-OOP-019",
+    "theme": "Object-oriented",
+    "theme_label": "Property vs field",
+    "difficulty": "hard",
+    "question": "En Kotlin, une propriété a-t-elle un champ par défaut ?",
+    "options": [
+      "Oui, backing field",
+      "Non",
+      "Oui, si getter/setter par défaut",
+      "Uniquement pour val"
+    ],
+    "correct": 0,
+    "explanation": "Les propriétés ont un backing field si aucun getter personnalisé."
+  },
+  {
+    "id": "KOT-OOP-020",
+    "theme": "Object-oriented",
+    "theme_label": "Backing field",
+    "difficulty": "hard",
+    "question": "Comment accéder au backing field dans un setter ?",
+    "options": ["field", "value", "this.field", "backingField"],
+    "correct": 0,
+    "explanation": "field représente le champ de stockage."
+  },
+  {
+    "id": "KOT-OOP-021",
+    "theme": "Object-oriented",
+    "theme_label": "Delegate properties",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une propriété déléguée ?",
+    "options": [
+      "Délègue son getter/setter",
+      "Propriété déléguée à un autre objet",
+      "Pattern de délégation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Delegation using 'by'."
+  },
+  {
+    "id": "KOT-OOP-022",
+    "theme": "Object-oriented",
+    "theme_label": "Delegate properties",
+    "difficulty": "hard",
+    "question": "Quels sont les délégués standards ?",
+    "options": [
+      "lazy, observable, vetoable",
+      "lazy, lateinit, by map",
+      "lazy, notNull, by Delegates",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "lazy, observable, vetoable, etc."
+  },
+  {
+    "id": "KOT-OOP-023",
+    "theme": "Object-oriented",
+    "theme_label": "lazy",
+    "difficulty": "hard",
+    "question": "Que fait by lazy ?",
+    "options": [
+      "Initialisation paresseuse",
+      "Initialisation immédiate",
+      "Thread-safe par défaut",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "lazy n'initialise qu'à la première lecture."
+  },
+  {
+    "id": "KOT-OOP-024",
+    "theme": "Object-oriented",
+    "theme_label": "lazy",
+    "difficulty": "hard",
+    "question": "Quels sont les modes de lazy ?",
+    "options": [
+      "SYNCHRONIZED, PUBLICATION, NONE",
+      "LAZY, EAGER, DEFAULT",
+      "THREAD_SAFE, NOT_THREAD_SAFE",
+      "DEFAULT, ATOMIC"
+    ],
+    "correct": 0,
+    "explanation": "LazyThreadSafetyMode.SYNCHRONIZED par défaut."
+  },
+  {
+    "id": "KOT-OOP-025",
+    "theme": "Object-oriented",
+    "theme_label": "Delegation pattern",
+    "difficulty": "hard",
+    "question": "Comment implémenter la délégation en Kotlin ?",
+    "options": [
+      "class Derived(b: Base) : Base by b",
+      "class Derived extends Base",
+      "class Derived implements Base",
+      "class Derived : Base"
+    ],
+    "correct": 0,
+    "explanation": "by délègue l'implémentation à l'objet."
+  },
+  {
+    "id": "KOT-OOP-026",
+    "theme": "Object-oriented",
+    "theme_label": "Delegation pattern",
+    "difficulty": "hard",
+    "question": "Peut-on surcharger une méthode déléguée ?",
+    "options": [
+      "Oui, redéfinir dans la classe",
+      "Non",
+      "Oui, avec override",
+      "Oui, mais attention"
+    ],
+    "correct": 0,
+    "explanation": "La classe peut surcharger les méthodes déléguées."
+  },
+  {
+    "id": "KOT-OOP-027",
+    "theme": "Object-oriented",
+    "theme_label": "Nested classes",
+    "difficulty": "hard",
+    "question": "Par défaut, une classe interne est-elle statique ?",
+    "options": [
+      "Oui, static par défaut",
+      "Non, non-static",
+      "Oui, avec inner",
+      "Non, avec static"
+    ],
+    "correct": 0,
+    "explanation": "Les classes internes sont static par défaut (nested)."
+  },
+  {
+    "id": "KOT-OOP-028",
+    "theme": "Object-oriented",
+    "theme_label": "Inner classes",
+    "difficulty": "hard",
+    "question": "Comment créer une classe interne non-statique ?",
+    "options": [
+      "inner class Inner",
+      "class Inner",
+      "static class Inner",
+      "nonstatic class Inner"
+    ],
+    "correct": 0,
+    "explanation": "inner class accède aux membres de la classe externe."
+  },
+  {
+    "id": "KOT-OOP-029",
+    "theme": "Object-oriented",
+    "theme_label": "This in inner class",
+    "difficulty": "hard",
+    "question": "Comment accéder à this de la classe externe ?",
+    "options": [
+      "this@Outer",
+      "super@Outer",
+      "outer.this",
+      "Outer.this"
+    ],
+    "correct": 0,
+    "explanation": "this@Outer qualifié."
+  },
+  {
+    "id": "KOT-OOP-030",
+    "theme": "Object-oriented",
+    "theme_label": "Enum classes",
+    "difficulty": "hard",
+    "question": "Une enum class peut-elle avoir des propriétés ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Oui, seulement des constantes",
+      "Oui, avec constructeur"
+    ],
+    "correct": 0,
+    "explanation": "enum class Direction { NORTH, SOUTH; val degrees: Int }"
+  },
+  {
+    "id": "KOT-OOP-031",
+    "theme": "Object-oriented",
+    "theme_label": "Enum classes",
+    "difficulty": "hard",
+    "question": "Peut-on ajouter des méthodes à une enum ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Oui, avec abstract",
+      "Oui, mais seulement des fonctions d'extension"
+    ],
+    "correct": 0,
+    "explanation": "Les enums peuvent avoir des méthodes."
+  },
+  {
+    "id": "KOT-OOP-032",
+    "theme": "Object-oriented",
+    "theme_label": "Inline classes",
+    "difficulty": "hard",
+    "question": "À quoi sert une inline class ?",
+    "options": [
+      "Wrapper sans overhead",
+      "Classe immuable",
+      "Data class",
+      "Sealed class"
+    ],
+    "correct": 0,
+    "explanation": "Inline class (value class) évite l'allocation."
+  },
+  {
+    "id": "KOT-OOP-033",
+    "theme": "Object-oriented",
+    "theme_label": "Inline classes",
+    "difficulty": "hard",
+    "question": "Quelle annotation pour une inline class ?",
+    "options": ["@JvmInline", "@Inline", "@Value", "@Data"],
+    "correct": 0,
+    "explanation": "@JvmInline value class Password(val value: String)"
+  },
+  {
+    "id": "KOT-OOP-034",
+    "theme": "Object-oriented",
+    "theme_label": "Sealed interface",
+    "difficulty": "hard",
+    "question": "Une interface peut-elle être sealed ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Oui, avec restrictions",
+      "Uniquement avec permits"
+    ],
+    "correct": 0,
+    "explanation": "sealed interface Result"
+  },
+  {
+    "id": "KOT-OOP-035",
+    "theme": "Object-oriented",
+    "theme_label": "Type aliases",
+    "difficulty": "hard",
+    "question": "À quoi sert typealias ?",
+    "options": [
+      "Donner un nom alternatif à un type",
+      "Créer un nouveau type",
+      "Étendre un type",
+      "Réduire un type"
+    ],
+    "correct": 0,
+    "explanation": "typealias UserMap = Map<String, User>"
+  },
+  {
+    "id": "KOT-OOP-036",
+    "theme": "Object-oriented",
+    "theme_label": "Destructuring in classes",
+    "difficulty": "hard",
+    "question": "Comment supporter la déstructuration pour une classe ?",
+    "options": [
+      "operator fun componentN()",
+      "data class automatique",
+      "A et B",
+      "Aucune"
+    ],
+    "correct": 2,
+    "explanation": "Data class ou componentN manuels."
+  },
+  {
+    "id": "KOT-OOP-037",
+    "theme": "Object-oriented",
+    "theme_label": "Operator overloading",
+    "difficulty": "hard",
+    "question": "Quel mot-clé pour surcharger + ?",
+    "options": ["plus", "add", "sum", "concat"],
+    "correct": 0,
+    "explanation": "operator fun plus(other: T): T"
+  },
+  {
+    "id": "KOT-OOP-038",
+    "theme": "Object-oriented",
+    "theme_label": "Operator overloading",
+    "difficulty": "hard",
+    "question": "Quel mot-clé pour surcharger [] ?",
+    "options": ["get", "set", "index", "access"],
+    "correct": 0,
+    "explanation": "operator fun get(index: Int): T"
+  },
+  {
+    "id": "KOT-OOP-039",
+    "theme": "Object-oriented",
+    "theme_label": "Equals/hashCode",
+    "difficulty": "hard",
+    "question": "Quelle est la relation entre equals et hashCode ?",
+    "options": [
+      "Si equals true, hashCode doit être égal",
+      "Si hashCode égal, equals doit être true",
+      "Aucune relation",
+      "A et B"
+    ],
+    "correct": 0,
+    "explanation": "Contrat standard de hashCode."
+  },
+  {
+    "id": "KOT-OOP-040",
+    "theme": "Object-oriented",
+    "theme_label": "Data class copy",
+    "difficulty": "hard",
+    "question": "La méthode copy générée est-elle shallow ou deep ?",
+    "options": [
+      "Shallow (copie superficielle)",
+      "Deep (copie profonde)",
+      "Les deux",
+      "Configurable"
+    ],
+    "correct": 0,
+    "explanation": "copy fait une copie superficielle des propriétés."
+  }
+]

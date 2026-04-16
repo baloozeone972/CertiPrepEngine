@@ -1,0 +1,977 @@
+[
+  {
+    "id": "AWS-SAA-081",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "easy",
+    "question": "Que signifie S3 ?",
+    "options": [
+      "Simple Storage Service",
+      "Secure Storage Service",
+      "Simple Storage System",
+      "Standard Storage Service"
+    ],
+    "correct": 0,
+    "explanation": "S3 est le stockage objet d'AWS."
+  },
+  {
+    "id": "AWS-SAA-082",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "easy",
+    "question": "Quelle est la taille maximale d'un objet S3 ?",
+    "options": ["5 To", "1 To", "500 Go", "10 To"],
+    "correct": 0,
+    "explanation": "La taille maximale d'un objet S3 est 5 To."
+  },
+  {
+    "id": "AWS-SAA-083",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "easy",
+    "question": "Quelle est la taille maximale d'un PUT unique sur S3 ?",
+    "options": ["5 Go", "1 Go", "500 Mo", "10 Go"],
+    "correct": 0,
+    "explanation": "Un PUT unique est limité à 5 Go. Au-delà, utiliser le multipart upload."
+  },
+  {
+    "id": "AWS-SAA-084",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "medium",
+    "question": "Quelle classe de stockage S3 est la moins chère ?",
+    "options": [
+      "S3 Glacier Deep Archive",
+      "S3 Glacier Flexible Retrieval",
+      "S3 Standard-IA",
+      "S3 One Zone-IA"
+    ],
+    "correct": 0,
+    "explanation": "Glacier Deep Archive est la classe la moins chère (récupération en 12-48h)."
+  },
+  {
+    "id": "AWS-SAA-085",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "medium",
+    "question": "Quelle classe de stockage est pour les données consultées rarement ?",
+    "options": [
+      "S3 Standard-IA",
+      "S3 Standard",
+      "S3 Glacier",
+      "S3 Intelligent-Tiering"
+    ],
+    "correct": 0,
+    "explanation": "Standard-IA (Infrequent Access) pour accès peu fréquents."
+  },
+  {
+    "id": "AWS-SAA-086",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "medium",
+    "question": "Quelle classe de stockage réplique les données sur une seule AZ ?",
+    "options": [
+      "S3 One Zone-IA",
+      "S3 Standard",
+      "S3 Standard-IA",
+      "S3 Intelligent-Tiering"
+    ],
+    "correct": 0,
+    "explanation": "One Zone-IA stocke uniquement dans une AZ (moins chère mais moins résiliente)."
+  },
+  {
+    "id": "AWS-SAA-087",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Quelle classe de stockage déplace automatiquement les données entre niveaux ?",
+    "options": [
+      "S3 Intelligent-Tiering",
+      "S3 Standard",
+      "S3 Glacier",
+      "S3 One Zone-IA"
+    ],
+    "correct": 0,
+    "explanation": "Intelligent-Tiering surveille les accès et déplace automatiquement les données."
+  },
+  {
+    "id": "AWS-SAA-088",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Combien de temps faut-il pour récupérer des données depuis Glacier Deep Archive ?",
+    "options": ["12-48 heures", "1-5 minutes", "1-5 heures", "1-2 jours"],
+    "correct": 0,
+    "explanation": "Le délai de récupération standard pour Deep Archive est de 12 à 48 heures."
+  },
+  {
+    "id": "AWS-SAA-089",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Transfer Acceleration ?",
+    "options": [
+      "Accélère les transferts via edge locations",
+      "Compresse les fichiers",
+      "Chiffre les données",
+      "Versionne les objets"
+    ],
+    "correct": 0,
+    "explanation": "Transfer Acceleration utilise CloudFront edge locations pour accélérer les uploads."
+  },
+  {
+    "id": "AWS-SAA-090",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Multipart Upload ?",
+    "options": [
+      "Upload d'objets en plusieurs parties",
+      "Upload en parallèle",
+      "Upload de gros fichiers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Multipart upload divise les gros fichiers en parties uploadées en parallèle."
+  },
+  {
+    "id": "AWS-SAA-091",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Pre-signed URL ?",
+    "options": [
+      "URL temporaire pour accès privé",
+      "URL permanente",
+      "URL publique",
+      "URL chiffrée"
+    ],
+    "correct": 0,
+    "explanation": "Pre-signed URL donne un accès temporaire à un objet privé."
+  },
+  {
+    "id": "AWS-SAA-092",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Quelle est la durée de validité maximale d'une Pre-signed URL ?",
+    "options": ["7 jours", "1 jour", "12 heures", "30 jours"],
+    "correct": 0,
+    "explanation": "La durée maximale est de 7 jours (par défaut 1 heure)."
+  },
+  {
+    "id": "AWS-SAA-093",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Versioning ?",
+    "options": [
+      "Conserve plusieurs versions d'un objet",
+      "Supprime les anciennes versions",
+      "Archive les versions",
+      "Chiffre les versions"
+    ],
+    "correct": 0,
+    "explanation": "Le versioning conserve toutes les versions d'un objet pour restauration."
+  },
+  {
+    "id": "AWS-SAA-094",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Peut-on désactiver le versioning après l'avoir activé ?",
+    "options": [
+      "Non, seulement suspendre",
+      "Oui",
+      "Oui, avec délai",
+      "Uniquement après suppression du bucket"
+    ],
+    "correct": 0,
+    "explanation": "Une fois activé, on ne peut que suspendre, pas désactiver."
+  },
+  {
+    "id": "AWS-SAA-095",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 MFA Delete ?",
+    "options": [
+      "Suppression nécessitant MFA",
+      "Suppression automatique",
+      "Suppression en masse",
+      "Suppression définitive"
+    ],
+    "correct": 0,
+    "explanation": "MFA Delete exige une authentification MFA pour supprimer des versions."
+  },
+  {
+    "id": "AWS-SAA-096",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Object Lock ?",
+    "options": [
+      "Empêche la suppression/modification pendant une période",
+      "Verrouille l'objet",
+      "Chiffre l'objet",
+      "Versionne l'objet"
+    ],
+    "correct": 0,
+    "explanation": "Object Lock protège contre les suppressions (WORM)."
+  },
+  {
+    "id": "AWS-SAA-097",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Quels sont les modes d'Object Lock ?",
+    "options": [
+      "Governance, Compliance",
+      "Governance seulement",
+      "Compliance seulement",
+      "Retention seulement"
+    ],
+    "correct": 0,
+    "explanation": "Governance (peut être contourné par certains utilisateurs), Compliance (strict)."
+  },
+  {
+    "id": "AWS-SAA-098",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une S3 Lifecycle Policy ?",
+    "options": [
+      "Déplace automatiquement les objets entre classes de stockage",
+      "Supprime les objets",
+      "Archive les objets",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les lifecycle policies automatisent le cycle de vie des objets."
+  },
+  {
+    "id": "AWS-SAA-099",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Quels sont les types d'actions dans une Lifecycle Policy ?",
+    "options": [
+      "Transition et Expiration",
+      "Transition seulement",
+      "Expiration seulement",
+      "Replication"
+    ],
+    "correct": 0,
+    "explanation": "Transition (changement de classe) et Expiration (suppression)."
+  },
+  {
+    "id": "AWS-SAA-100",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Replication ?",
+    "options": [
+      "Réplique les objets vers un autre bucket",
+      "Copie les objets",
+      "Sauvegarde les objets",
+      "Archive les objets"
+    ],
+    "correct": 0,
+    "explanation": "La réplication copie automatiquement les objets vers un bucket de destination."
+  },
+  {
+    "id": "AWS-SAA-101",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Quels sont les types de réplication S3 ?",
+    "options": [
+      "Cross-Region (CRR) et Same-Region (SRR)",
+      "Cross-Region seulement",
+      "Same-Region seulement",
+      "Multi-Region"
+    ],
+    "correct": 0,
+    "explanation": "CRR vers une autre région, SRR dans la même région."
+  },
+  {
+    "id": "AWS-SAA-102",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Event Notifications ?",
+    "options": [
+      "Notifications sur événements (création, suppression)",
+      "Logs",
+      "Monitoring",
+      "Alertes"
+    ],
+    "correct": 0,
+    "explanation": "S3 peut envoyer des notifications vers SNS, SQS, Lambda."
+  },
+  {
+    "id": "AWS-SAA-103",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Quelles sont les destinations possibles pour S3 Event Notifications ?",
+    "options": [
+      "SNS, SQS, Lambda",
+      "S3 seulement",
+      "CloudWatch",
+      "EventBridge"
+    ],
+    "correct": 0,
+    "explanation": "Les destinations supportées sont SNS, SQS, Lambda (et EventBridge)."
+  },
+  {
+    "id": "AWS-SAA-104",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Access Points ?",
+    "options": [
+      "Points d'accès avec politiques spécifiques",
+      "Endpoints VPC",
+      "URLs personnalisées",
+      "Load balancers"
+    ],
+    "correct": 0,
+    "explanation": "Les Access Points simplifient la gestion des permissions par application."
+  },
+  {
+    "id": "AWS-SAA-105",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Object Lambda ?",
+    "options": [
+      "Transforme les données à la volée",
+      "Lambda sur S3",
+      "Traitement batch",
+      "Streaming"
+    ],
+    "correct": 0,
+    "explanation": "Object Lambda modifie les données retournées par S3 GET."
+  },
+  {
+    "id": "AWS-SAA-106",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Storage Lens ?",
+    "options": [
+      "Analyse d'utilisation et métriques",
+      "Lentille de stockage",
+      "Outil de monitoring",
+      "Dashboard"
+    ],
+    "correct": 0,
+    "explanation": "Storage Lens fournit des métriques agrégées sur l'utilisation S3."
+  },
+  {
+    "id": "AWS-SAA-107",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Batch Operations ?",
+    "options": [
+      "Opérations en masse sur des objets",
+      "Traitement batch",
+      "Copy, tag, restore",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Batch Operations exécute des actions sur de grands ensembles d'objets."
+  },
+  {
+    "id": "AWS-SAA-108",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Select ?",
+    "options": [
+      "Interroge des données dans S3 sans les télécharger",
+      "Sélectionne des objets",
+      "Filtre des objets",
+      "Jointure"
+    ],
+    "correct": 0,
+    "explanation": "S3 Select permet d'extraire des sous-ensembles de données (CSV, JSON)."
+  },
+  {
+    "id": "AWS-SAA-109",
+    "theme": "Storage",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Glacier Select ?",
+    "options": [
+      "Interroge des données dans Glacier",
+      "Sélectionne des archives",
+      "Restauration partielle",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Glacier Select permet d'interroger des données sans restaurer l'objet entier."
+  },
+  {
+    "id": "AWS-SAA-110",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "easy",
+    "question": "Que signifie EBS ?",
+    "options": [
+      "Elastic Block Store",
+      "Elastic Bulk Storage",
+      "Elastic Backup Storage",
+      "Elastic Byte Storage"
+    ],
+    "correct": 0,
+    "explanation": "EBS est le stockage bloc pour EC2."
+  },
+  {
+    "id": "AWS-SAA-111",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "easy",
+    "question": "Quel type de volume EBS est SSD généraliste ?",
+    "options": ["gp2/gp3", "io1/io2", "st1", "sc1"],
+    "correct": 0,
+    "explanation": "gp2/gp3 sont les volumes SSD à usage général."
+  },
+  {
+    "id": "AWS-SAA-112",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "medium",
+    "question": "Quel type de volume EBS est optimisé IOPS ?",
+    "options": ["io1/io2", "gp2/gp3", "st1", "sc1"],
+    "correct": 0,
+    "explanation": "io1/io2 sont les volumes SSD provisioned IOPS."
+  },
+  {
+    "id": "AWS-SAA-113",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "medium",
+    "question": "Quel type de volume EBS est optimisé pour le débit (HDD) ?",
+    "options": ["st1", "sc1", "gp2", "io1"],
+    "correct": 0,
+    "explanation": "st1 est optimisé pour le débit (Throughput Optimized HDD)."
+  },
+  {
+    "id": "AWS-SAA-114",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Quel type de volume EBS est pour les charges froides (HDD) ?",
+    "options": ["sc1", "st1", "gp2", "io1"],
+    "correct": 0,
+    "explanation": "sc1 est le Cold HDD, le moins cher."
+  },
+  {
+    "id": "AWS-SAA-115",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre gp2 et gp3 ?",
+    "options": [
+      "gp3 a des IOPS de base sans provisionnement",
+      "gp2 est plus récent",
+      "gp3 plus cher",
+      "Identiques"
+    ],
+    "correct": 0,
+    "explanation": "gp3 offre 3000 IOPS de base sans provisionnement (gp2 dépend de la taille)."
+  },
+  {
+    "id": "AWS-SAA-116",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un snapshot EBS ?",
+    "options": [
+      "Sauvegarde incrémentale",
+      "Copie complète",
+      "Archive",
+      "Clone"
+    ],
+    "correct": 0,
+    "explanation": "Les snapshots EBS sont incrémentaux (seuls les blocs modifiés sont sauvegardés)."
+  },
+  {
+    "id": "AWS-SAA-117",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Peut-on créer une instance EC2 à partir d'un snapshot EBS ?",
+    "options": [
+      "Oui, via AMI",
+      "Non",
+      "Oui, directement",
+      "Uniquement avec EBS direct"
+    ],
+    "correct": 0,
+    "explanation": "Il faut d'abord créer une AMI à partir du snapshot."
+  },
+  {
+    "id": "AWS-SAA-118",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que EBS Encryption ?",
+    "options": [
+      "Chiffrement au repos",
+      "Chiffrement en transit",
+      "Chiffrement des snapshots",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Le chiffrement EBS couvre les volumes et snapshots au repos."
+  },
+  {
+    "id": "AWS-SAA-119",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que EBS Multi-Attach ?",
+    "options": [
+      "Attachement à plusieurs instances",
+      "Attachement unique",
+      "Réplication",
+      "Snapshot"
+    ],
+    "correct": 0,
+    "explanation": "Multi-Attach permet d'attacher un même volume à plusieurs instances (io1/io2)."
+  },
+  {
+    "id": "AWS-SAA-120",
+    "theme": "Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Quels types de volumes supportent Multi-Attach ?",
+    "options": ["io1/io2", "gp2/gp3", "st1", "sc1"],
+    "correct": 0,
+    "explanation": "Seuls les volumes provisioned IOPS (io1/io2) supportent Multi-Attach."
+  },
+  {
+    "id": "AWS-SAA-121",
+    "theme": "Storage",
+    "theme_label": "EFS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'EFS ?",
+    "options": [
+      "Elastic File System (NFS)",
+      "Elastic Block Store",
+      "Elastic Container Service",
+      "Elastic Compute Service"
+    ],
+    "correct": 0,
+    "explanation": "EFS est un système de fichiers NFS partagé."
+  },
+  {
+    "id": "AWS-SAA-122",
+    "theme": "Storage",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "Combien d'instances EC2 peuvent monter un EFS ?",
+    "options": ["Illimité", "1", "10", "100"],
+    "correct": 0,
+    "explanation": "EFS peut être monté par un grand nombre d'instances."
+  },
+  {
+    "id": "AWS-SAA-123",
+    "theme": "Storage",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "Quels sont les classes de stockage EFS ?",
+    "options": [
+      "Standard, Infrequent Access, Archive",
+      "Standard seulement",
+      "Infrequent Access seulement",
+      "Archive seulement"
+    ],
+    "correct": 0,
+    "explanation": "EFS Standard, EFS-IA (Infrequent Access), EFS Archive."
+  },
+  {
+    "id": "AWS-SAA-124",
+    "theme": "Storage",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "EFS peut-il être monté sur-premise ?",
+    "options": [
+      "Oui, via Direct Connect ou VPN",
+      "Non",
+      "Oui, via Internet",
+      "Oui, via VPC peering"
+    ],
+    "correct": 0,
+    "explanation": "EFS est accessible via VPC, donc via Direct Connect ou VPN."
+  },
+  {
+    "id": "AWS-SAA-125",
+    "theme": "Storage",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "EFS supporte-t-il les modes de montage NFSv4 ?",
+    "options": ["Oui", "Non", "NFSv3 seulement", "SMB seulement"],
+    "correct": 0,
+    "explanation": "EFS supporte NFSv4.0 et NFSv4.1."
+  },
+  {
+    "id": "AWS-SAA-126",
+    "theme": "Storage",
+    "theme_label": "FSx",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon FSx ?",
+    "options": [
+      "Systèmes de fichiers managés",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "FSx propose des systèmes de fichiers managés (Windows, Lustre, NetApp, OpenZFS)."
+  },
+  {
+    "id": "AWS-SAA-127",
+    "theme": "Storage",
+    "theme_label": "FSx",
+    "difficulty": "hard",
+    "question": "Quels types de FSx existent ?",
+    "options": [
+      "FSx for Windows, FSx for Lustre, FSx for NetApp, FSx for OpenZFS",
+      "FSx for Windows seulement",
+      "FSx for Lustre seulement",
+      "FSx for NetApp seulement"
+    ],
+    "correct": 0,
+    "explanation": "Quatre types : Windows File Server, Lustre, NetApp ONTAP, OpenZFS."
+  },
+  {
+    "id": "AWS-SAA-128",
+    "theme": "Storage",
+    "theme_label": "Storage Gateway",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Storage Gateway ?",
+    "options": [
+      "Passerelle entre on-premise et AWS",
+      "Service de stockage",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Storage Gateway intègre le stockage on-premise avec AWS."
+  },
+  {
+    "id": "AWS-SAA-129",
+    "theme": "Storage",
+    "theme_label": "Storage Gateway",
+    "difficulty": "hard",
+    "question": "Quels sont les types de Storage Gateway ?",
+    "options": [
+      "S3 File Gateway, FSx File Gateway, Volume Gateway, Tape Gateway",
+      "S3 Gateway seulement",
+      "Volume Gateway seulement",
+      "Tape Gateway seulement"
+    ],
+    "correct": 0,
+    "explanation": "Quatre types pour différents cas d'usage."
+  },
+  {
+    "id": "AWS-SAA-130",
+    "theme": "Storage",
+    "theme_label": "Storage Gateway",
+    "difficulty": "hard",
+    "question": "À quoi sert Tape Gateway ?",
+    "options": [
+      "Remplace les bibliothèques de bandes virtuelles",
+      "Backup disque",
+      "Archive",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Tape Gateway virtualise des bandes vers S3/Glacier."
+  },
+  {
+    "id": "AWS-SAA-131",
+    "theme": "Storage",
+    "theme_label": "AWS Backup",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Backup ?",
+    "options": [
+      "Service centralisé de sauvegarde",
+      "Snapshot EBS",
+      "Backup S3",
+      "Archive"
+    ],
+    "correct": 0,
+    "explanation": "AWS Backup centralise les sauvegardes de plusieurs services AWS."
+  },
+  {
+    "id": "AWS-SAA-132",
+    "theme": "Storage",
+    "theme_label": "AWS Backup",
+    "difficulty": "hard",
+    "question": "Quels services peuvent être sauvegardés par AWS Backup ?",
+    "options": [
+      "EC2, EBS, RDS, DynamoDB, EFS, FSx, S3",
+      "EC2 seulement",
+      "RDS seulement",
+      "S3 seulement"
+    ],
+    "correct": 0,
+    "explanation": "AWS Backup supporte de nombreux services."
+  },
+  {
+    "id": "AWS-SAA-133",
+    "theme": "Storage",
+    "theme_label": "Snow Family",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Snow Family ?",
+    "options": [
+      "Transfert de données physiques",
+      "Backup",
+      "Archive",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Snow Family (Snowcone, Snowball, Snowmobile) transfère des données physiquement."
+  },
+  {
+    "id": "AWS-SAA-134",
+    "theme": "Storage",
+    "theme_label": "Snow Family",
+    "difficulty": "hard",
+    "question": "Quel est le plus petit appareil Snow Family ?",
+    "options": ["Snowcone", "Snowball Edge", "Snowmobile", "Snowball"],
+    "correct": 0,
+    "explanation": "Snowcone est le plus petit (2,1 kg, 8 To)."
+  },
+  {
+    "id": "AWS-SAA-135",
+    "theme": "Storage",
+    "theme_label": "Snow Family",
+    "difficulty": "hard",
+    "question": "Quel appareil Snow Family est utilisé pour l'Exabyte ?",
+    "options": ["Snowmobile", "Snowball", "Snowcone", "Snowball Edge"],
+    "correct": 0,
+    "explanation": "Snowmobile est un conteneur de 45 pieds pour des pétaoctets/exaoctets."
+  },
+  {
+    "id": "AWS-SAA-136",
+    "theme": "Storage",
+    "theme_label": "S3 vs EBS vs EFS",
+    "difficulty": "hard",
+    "question": "Quand utiliser S3 plutôt que EBS ?",
+    "options": [
+      "Stockage objet illimité",
+      "Base de données",
+      "Système de fichiers partagé",
+      "Volume boot"
+    ],
+    "correct": 0,
+    "explanation": "S3 pour stockage objet scalable, EBS pour volumes attachés à EC2."
+  },
+  {
+    "id": "AWS-SAA-137",
+    "theme": "Storage",
+    "theme_label": "S3 vs EBS vs EFS",
+    "difficulty": "hard",
+    "question": "Quand utiliser EFS plutôt que EBS ?",
+    "options": [
+      "Partage de fichiers entre instances",
+      "Volume boot",
+      "Haute performance",
+      "Faible coût"
+    ],
+    "correct": 0,
+    "explanation": "EFS pour partage NFS entre plusieurs instances."
+  },
+  {
+    "id": "AWS-SAA-138",
+    "theme": "Storage",
+    "theme_label": "S3 vs EBS vs EFS",
+    "difficulty": "hard",
+    "question": "EBS peut-il être partagé entre plusieurs instances ?",
+    "options": [
+      "Oui, avec Multi-Attach (io1/io2)",
+      "Non",
+      "Oui, avec gp2",
+      "Oui, avec st1"
+    ],
+    "correct": 0,
+    "explanation": "Seuls les volumes io1/io2 supportent Multi-Attach (limité à 16 instances)."
+  },
+  {
+    "id": "AWS-SAA-139",
+    "theme": "Storage",
+    "theme_label": "DataSync",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS DataSync ?",
+    "options": [
+      "Service de transfert de données automatisé",
+      "Backup",
+      "Archive",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "DataSync transfère des données entre on-premise et AWS ou entre services AWS."
+  },
+  {
+    "id": "AWS-SAA-140",
+    "theme": "Storage",
+    "theme_label": "DataSync",
+    "difficulty": "hard",
+    "question": "DataSync supporte-t-il la vérification d'intégrité ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement avec chiffrement"],
+    "correct": 0,
+    "explanation": "DataSync vérifie l'intégrité des données pendant le transfert."
+  },
+  {
+    "id": "AWS-SAA-141",
+    "theme": "Storage",
+    "theme_label": "Storage best practices",
+    "difficulty": "hard",
+    "question": "Comment optimiser les coûts S3 ?",
+    "options": [
+      "Lifecycle policies, classes de stockage",
+      "Plus de versions",
+      "Plus de réplication",
+      "Chiffrement"
+    ],
+    "correct": 0,
+    "explanation": "Les lifecycle policies et le choix de classe de stockage réduisent les coûts."
+  },
+  {
+    "id": "AWS-SAA-142",
+    "theme": "Storage",
+    "theme_label": "Storage best practices",
+    "difficulty": "hard",
+    "question": "Comment améliorer les performances S3 ?",
+    "options": [
+      "Utiliser des clés d'objet aléatoires",
+      "Utiliser des préfixes",
+      "Transfer Acceleration",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Des clés aléatoires améliorent la distribution, Transfer Acceleration accélère les uploads."
+  },
+  {
+    "id": "AWS-SAA-143",
+    "theme": "Storage",
+    "theme_label": "Storage best practices",
+    "difficulty": "hard",
+    "question": "Quel est le débit maximum par préfixe S3 ?",
+    "options": ["3 500 PUT/ 5 500 GET par seconde", "100 par seconde", "10 000 par seconde", "Illimité"],
+    "correct": 0,
+    "explanation": "Par préfixe, 3 500 requêtes PUT/POST/DELETE et 5 500 GET/HEAD par seconde."
+  },
+  {
+    "id": "AWS-SAA-144",
+    "theme": "Storage",
+    "theme_label": "Storage security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un bucket S3 ?",
+    "options": [
+      "Bucket policies, ACLs, IAM, chiffrement",
+      "Bucket policies seulement",
+      "IAM seulement",
+      "ACLs seulement"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs couches de sécurité pour S3."
+  },
+  {
+    "id": "AWS-SAA-145",
+    "theme": "Storage",
+    "theme_label": "Storage security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Block Public Access ?",
+    "options": [
+      "Empêche les accès publics au niveau bucket/account",
+      "Bloque les accès privés",
+      "Supprime les politiques publiques",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Block Public Access désactive les politiques et ACLs publiques."
+  },
+  {
+    "id": "AWS-SAA-146",
+    "theme": "Storage",
+    "theme_label": "Storage security",
+    "difficulty": "hard",
+    "question": "Quels sont les types de chiffrement S3 ?",
+    "options": [
+      "SSE-S3, SSE-KMS, SSE-C",
+      "SSE-S3 seulement",
+      "SSE-KMS seulement",
+      "SSE-C seulement"
+    ],
+    "correct": 0,
+    "explanation": "SSE-S3 (clés AWS), SSE-KMS (clés KMS), SSE-C (clés client)."
+  },
+  {
+    "id": "AWS-SAA-147",
+    "theme": "Storage",
+    "theme_label": "Storage security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le chiffrement côté client ?",
+    "options": [
+      "Chiffrement avant upload",
+      "Chiffrement par AWS",
+      "Chiffrement par KMS",
+      "Chiffrement par S3"
+    ],
+    "correct": 0,
+    "explanation": "Client-side encryption : le client chiffre avant d'envoyer à S3."
+  },
+  {
+    "id": "AWS-SAA-148",
+    "theme": "Storage",
+    "theme_label": "Storage security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Access Analyzer ?",
+    "options": [
+      "Analyse les politiques pour accès non intentionnels",
+      "Analyse les performances",
+      "Analyse les coûts",
+      "Analyse les logs"
+    ],
+    "correct": 0,
+    "explanation": "Access Analyzer détecte les politiques qui permettent des accès publics ou croisés."
+  },
+  {
+    "id": "AWS-SAA-149",
+    "theme": "Storage",
+    "theme_label": "Storage migration",
+    "difficulty": "hard",
+    "question": "Quel service pour migrer des données on-premise vers AWS ?",
+    "options": [
+      "Snow Family, DataSync, Storage Gateway",
+      "EC2 seulement",
+      "S3 seulement",
+      "RDS seulement"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs options selon le volume et la bande passante."
+  },
+  {
+    "id": "AWS-SAA-150",
+    "theme": "Storage",
+    "theme_label": "Storage migration",
+    "difficulty": "hard",
+    "question": "Quand utiliser Snowball plutôt que DataSync ?",
+    "options": [
+      "Volume très grand, bande passante limitée",
+      "Petit volume",
+      "Transfert continu",
+      "Transfert en ligne"
+    ],
+    "correct": 0,
+    "explanation": "Snowball pour transferts physiques de grandes quantités (TB/PB)."
+  }
+]

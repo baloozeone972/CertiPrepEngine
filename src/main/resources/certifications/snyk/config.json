@@ -1,0 +1,32 @@
+{
+  "id": "snyk",
+  "name": "Snyk Developer",
+  "version": "1.0",
+  "description": "Certification Snyk - Sécurité des dépendances et conteneurs",
+  "totalQuestions": 150,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Snyk Open Source",
+      "count": 40
+    },
+    {
+      "name": "Snyk Container",
+      "count": 30
+    },
+    {
+      "name": "Snyk Code",
+      "count": 30
+    },
+    {
+      "name": "Snyk Infrastructure as Code",
+      "count": 30
+    },
+    {
+      "name": "Integration",
+      "count": 20
+    }
+  ]
+}

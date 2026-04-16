@@ -1,0 +1,707 @@
+[
+  {
+    "id": "DKR-03-001",
+    "theme": "Networking Docker",
+    "theme_label": "Réseaux par défaut",
+    "difficulty": "easy",
+    "question": "Quels sont les réseaux Docker par défaut ?",
+    "options": [
+      "bridge, host, none",
+      "bridge, overlay, macvlan",
+      "bridge, host, overlay",
+      "bridge, none, ipvlan"
+    ],
+    "correct": 0,
+    "explanation": "bridge (par défaut), host (partage l'hôte), none (aucun réseau)."
+  },
+  {
+    "id": "DKR-03-002",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau bridge",
+    "difficulty": "easy",
+    "question": "Comment lister les réseaux Docker ?",
+    "options": [
+      "docker network ls",
+      "docker net ls",
+      "docker network list",
+      "docker net list"
+    ],
+    "correct": 0,
+    "explanation": "docker network ls affiche tous les réseaux."
+  },
+  {
+    "id": "DKR-03-003",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau bridge",
+    "difficulty": "easy",
+    "question": "Comment créer un réseau bridge personnalisé ?",
+    "options": [
+      "docker network create mynet",
+      "docker network create --driver bridge mynet",
+      "docker network create --bridge mynet",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Par défaut le driver est bridge, on peut l'expliciter."
+  },
+  {
+    "id": "DKR-03-004",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau bridge",
+    "difficulty": "easy",
+    "question": "Comment connecter un conteneur à un réseau ?",
+    "options": [
+      "docker network connect <réseau> <conteneur>",
+      "docker connect <conteneur> <réseau>",
+      "docker run --network <réseau>",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "On peut spécifier le réseau au run ou le connecter après."
+  },
+  {
+    "id": "DKR-03-005",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau bridge",
+    "difficulty": "easy",
+    "question": "Comment inspecter un réseau ?",
+    "options": [
+      "docker network inspect <réseau>",
+      "docker network show <réseau>",
+      "docker inspect <réseau>",
+      "docker net inspect <réseau>"
+    ],
+    "correct": 0,
+    "explication": "docker network inspect donne les détails (sous-réseau, conteneurs connectés)."
+  },
+  {
+    "id": "DKR-03-006",
+    "theme": "Networking Docker",
+    "theme_label": "Bridge par défaut",
+    "difficulty": "easy",
+    "question": "Quelle est la plage d'adresses IP du bridge par défaut ?",
+    "options": [
+      "172.17.0.0/16",
+      "192.168.0.0/16",
+      "10.0.0.0/8",
+      "172.16.0.0/12"
+    ],
+    "correct": 0,
+    "explication": "Le bridge par défaut utilise 172.17.0.0/16."
+  },
+  {
+    "id": "DKR-03-007",
+    "theme": "Networking Docker",
+    "theme_label": "Bridge personnalisé",
+    "difficulty": "easy",
+    "question": "Quel est l'avantage d'un réseau bridge personnalisé par rapport au bridge par défaut ?",
+    "options": [
+      "Résolution DNS automatique entre conteneurs",
+      "Meilleures performances",
+      "Plus de sécurité",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les réseaux personnalisés permettent la découverte de service par nom."
+  },
+  {
+    "id": "DKR-03-008",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau host",
+    "difficulty": "easy",
+    "question": "Que fait le réseau host ?",
+    "options": [
+      "Le conteneur partage la pile réseau de l'hôte",
+      "Le conteneur a sa propre pile",
+      "Le conteneur n'a pas de réseau",
+      "Le conteneur utilise un réseau overlay"
+    ],
+    "correct": 0,
+    "explication": "Avec --net=host, le conteneur utilise directement les interfaces de l'hôte."
+  },
+  {
+    "id": "DKR-03-009",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau none",
+    "difficulty": "easy",
+    "question": "Quand utiliser le réseau none ?",
+    "options": [
+      "Pour des conteneurs qui n'ont pas besoin de réseau",
+      "Pour des conteneurs de base de données",
+      "Pour des conteneurs web",
+      "Pour des conteneurs de cache"
+    ],
+    "correct": 0,
+    "explication": "none isole complètement le conteneur du réseau."
+  },
+  {
+    "id": "DKR-03-010",
+    "theme": "Networking Docker",
+    "theme_label": "Port publishing",
+    "difficulty": "easy",
+    "question": "Comment publier un port du conteneur sur l'hôte ?",
+    "options": [
+      "docker run -p 8080:80 nginx",
+      "docker run -P nginx",
+      "docker run --publish 8080:80 nginx",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "-p ou --publish mappe un port, -P publie tous les ports exposés."
+  },
+  {
+    "id": "DKR-03-011",
+    "theme": "Networking Docker",
+    "theme_label": "Port publishing",
+    "difficulty": "easy",
+    "question": "Que signifie `-p 8080:80` ?",
+    "options": [
+      "Port 8080 de l'hôte mappe au port 80 du conteneur",
+      "Port 80 de l'hôte mappe au port 8080 du conteneur",
+      "Port 8080 du conteneur mappe au port 80 de l'hôte",
+      "Port 80 du conteneur mappe au port 8080 de l'hôte"
+    ],
+    "correct": 0,
+    "explication": "La syntaxe est `hôte:conteneur`."
+  },
+  {
+    "id": "DKR-03-012",
+    "theme": "Networking Docker",
+    "theme_label": "Port publishing",
+    "difficulty": "easy",
+    "question": "Comment publier tous les ports exposés ?",
+    "options": [
+      "docker run -P",
+      "docker run --publish-all",
+      "docker run -p 0:0",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "-P publie tous les ports EXPOSE du Dockerfile."
+  },
+  {
+    "id": "DKR-03-013",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau overlay",
+    "difficulty": "hard",
+    "question": "Quel driver réseau permet la communication entre conteneurs sur différents nœuds Docker ?",
+    "options": ["overlay", "bridge", "host", "macvlan"],
+    "correct": 0,
+    "explication": "Le driver overlay (nécessite Swarm ou Swarm) permet de créer des réseaux multi-hôtes."
+  },
+  {
+    "id": "DKR-03-014",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau overlay",
+    "difficulty": "hard",
+    "question": "Quel est le prérequis pour utiliser un réseau overlay ?",
+    "options": [
+      "Docker Swarm ou SwarmKit",
+      "Docker Compose",
+      "Docker Machine",
+      "Docker Desktop"
+    ],
+    "correct": 0,
+    "explication": "Les réseaux overlay nécessitent un orchestrateur (Swarm) ou un cluster SwarmKit."
+  },
+  {
+    "id": "DKR-03-015",
+    "theme": "Networking Docker",
+    "theme_label": "Réseau overlay",
+    "difficulty": "hard",
+    "question": "Comment créer un réseau overlay attachable ?",
+    "options": [
+      "docker network create --driver overlay --attachable myoverlay",
+      "docker network create --driver overlay myoverlay",
+      "docker network create --attachable myoverlay",
+      "docker network create --driver overlay --scope swarm myoverlay"
+    ],
+    "correct": 0,
+    "explication": "--attachable permet aux conteneurs indépendants (hors Swarm) de se connecter."
+  },
+  {
+    "id": "DKR-03-016",
+    "theme": "Networking Docker",
+    "theme_label": "Macvlan",
+    "difficulty": "hard",
+    "question": "À quoi sert le driver macvlan ?",
+    "options": [
+      "Attribuer une adresse MAC distincte à un conteneur, comme une interface physique",
+      "Créer un réseau overlay",
+      "Créer un pont virtuel",
+      "Isoler le réseau"
+    ],
+    "correct": 0,
+    "explication": "macvlan permet aux conteneurs d'apparaître comme des périphériques physiques sur le réseau."
+  },
+  {
+    "id": "DKR-03-017",
+    "theme": "Networking Docker",
+    "theme_label": "Ipvlan",
+    "difficulty": "hard",
+    "question": "Différence entre macvlan et ipvlan ?",
+    "options": [
+      "ipvlan partage la même adresse MAC, macvlan crée des MAC uniques",
+      "ipvlan est plus rapide",
+      "macvlan est plus sécurisé",
+      "ipvlan nécessite un switch compatible"
+    ],
+    "correct": 0,
+    "explication": "Ipvlan évite la limitation du nombre d'adresses MAC."
+  },
+  {
+    "id": "DKR-03-018",
+    "theme": "Networking Docker",
+    "theme_label": "Network drivers",
+    "difficulty": "easy",
+    "question": "Quels sont les drivers réseau intégrés à Docker ?",
+    "options": [
+      "bridge, host, overlay, macvlan, none, ipvlan",
+      "bridge, overlay, host",
+      "bridge, overlay, macvlan",
+      "bridge, host, none"
+    ],
+    "correct": 0,
+    "explication": "Il y a plusieurs drivers intégrés (d'autres peuvent être installés via plugins)."
+  },
+  {
+    "id": "DKR-03-019",
+    "theme": "Networking Docker",
+    "theme_label": "DNS interne",
+    "difficulty": "medium",
+    "question": "Comment Docker résout-il les noms entre conteneurs sur un réseau personnalisé ?",
+    "options": [
+      "DNS intégré (127.0.0.11)",
+      "/etc/hosts",
+      "Utilise les serveurs DNS de l'hôte",
+      "Utilise un serveur DNS externe"
+    ],
+    "correct": 0,
+    "explication": "Docker fournit un serveur DNS interne sur l'adresse 127.0.0.11."
+  },
+  {
+    "id": "DKR-03-020",
+    "theme": "Networking Docker",
+    "theme_label": "DNS interne",
+    "difficulty": "medium",
+    "question": "Comment désactiver le DNS intégré ?",
+    "options": [
+      "docker run --dns 8.8.8.8",
+      "docker run --dns-search example.com",
+      "docker run --dns-opt ndots:2",
+      "docker run --no-dns"
+    ],
+    "correct": 0,
+    "explication": "Spécifier un serveur DNS externe remplace le DNS interne."
+  },
+  {
+    "id": "DKR-03-021",
+    "theme": "Networking Docker",
+    "theme_label": "Network aliases",
+    "difficulty": "medium",
+    "question": "Comment ajouter un alias réseau à un conteneur ?",
+    "options": [
+      "docker run --network-alias myalias",
+      "docker network connect --alias myalias mynet container",
+      "docker run --add-host myalias:172.17.0.2",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les alias permettent à d'autres conteneurs de joindre par ce nom."
+  },
+  {
+    "id": "DKR-03-022",
+    "theme": "Networking Docker",
+    "theme_label": "Network security",
+    "difficulty": "medium",
+    "question": "Comment isoler des conteneurs sur le même hôte ?",
+    "options": [
+      "Les mettre sur des réseaux différents",
+      "Utiliser le réseau none",
+      "Utiliser des règles iptables",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Des réseaux différents empêchent la communication (sauf exposition de ports)."
+  },
+  {
+    "id": "DKR-03-023",
+    "theme": "Networking Docker",
+    "theme_label": "Network troubleshooting",
+    "difficulty": "medium",
+    "question": "Comment vérifier la connectivité entre deux conteneurs ?",
+    "options": [
+      "docker exec conteneur1 ping conteneur2",
+      "docker exec conteneur1 curl http://conteneur2:80",
+      "docker run --rm busybox ping conteneur2",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Utiliser des outils comme ping, curl, netcat depuis les conteneurs."
+  },
+  {
+    "id": "DKR-03-024",
+    "theme": "Networking Docker",
+    "theme_label": "Network troubleshooting",
+    "difficulty": "medium",
+    "question": "Comment voir les règles iptables créées par Docker ?",
+    "options": [
+      "iptables -L -n",
+      "docker network inspect",
+      "docker run --privileged iptables -L",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Docker manipule iptables pour NAT et isolation."
+  },
+  {
+    "id": "DKR-03-025",
+    "theme": "Networking Docker",
+    "theme_label": "Network troubleshooting",
+    "difficulty": "medium",
+    "question": "Que montre la commande `docker network ls` ?",
+    "options": [
+      "La liste des réseaux avec leurs drivers et scope",
+      "Les conteneurs connectés",
+      "Les adresses IP",
+      "Les règles de pare-feu"
+    ],
+    "correct": 0,
+    "explication": "Affiche le nom, le driver, la portée (local, swarm)."
+  },
+  {
+    "id": "DKR-03-026",
+    "theme": "Networking Docker",
+    "theme_label": "Network driver bridge",
+    "difficulty": "easy",
+    "question": "Quelle est l'IP par défaut du bridge sur l'hôte ?",
+    "options": ["172.17.0.1", "172.18.0.1", "192.168.0.1", "10.0.0.1"],
+    "correct": 0,
+    "explication": "L'interface bridge (docker0) a l'adresse 172.17.0.1."
+  },
+  {
+    "id": "DKR-03-027",
+    "theme": "Networking Docker",
+    "theme_label": "Network driver bridge",
+    "difficulty": "easy",
+    "question": "Comment changer la plage IP du bridge par défaut ?",
+    "options": [
+      "Modifier daemon.json (bip: 192.168.1.1/24)",
+      "docker network create --subnet",
+      "Impossible",
+      "Utiliser un autre driver"
+    ],
+    "correct": 0,
+    "explication": "Dans /etc/docker/daemon.json, définir bip (bridge IP)."
+  },
+  {
+    "id": "DKR-03-028",
+    "theme": "Networking Docker",
+    "theme_label": "Network driver bridge",
+    "difficulty": "easy",
+    "question": "Comment désactiver le bridge par défaut ?",
+    "options": [
+      "daemon.json: \"bridge\": \"none\"",
+      "docker network rm bridge",
+      "docker stop bridge",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explication": "Désactiver le bridge par défaut en spécifiant none."
+  },
+  {
+    "id": "DKR-03-029",
+    "theme": "Networking Docker",
+    "theme_label": "User-defined bridge",
+    "difficulty": "easy",
+    "question": "Quel est l'avantage d'un réseau bridge défini par l'utilisateur par rapport au bridge par défaut ?",
+    "options": [
+      "Résolution DNS automatique",
+      "Isolation entre conteneurs",
+      "Meilleure performance",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les réseaux personnalisés offrent la découverte de service par nom."
+  },
+  {
+    "id": "DKR-03-030",
+    "theme": "Networking Docker",
+    "theme_label": "User-defined bridge",
+    "difficulty": "easy",
+    "question": "Peut-on connecter un conteneur en cours d'exécution à un réseau bridge personnalisé ?",
+    "options": ["Oui", "Non", "Uniquement si le conteneur est arrêté", "Uniquement si le réseau est bridge"],
+    "correct": 0,
+    "explication": "docker network connect <réseau> <conteneur>."
+  },
+  {
+    "id": "DKR-03-031",
+    "theme": "Networking Docker",
+    "theme_label": "Network cleanup",
+    "difficulty": "easy",
+    "question": "Comment supprimer un réseau inutilisé ?",
+    "options": [
+      "docker network prune",
+      "docker network rm <réseau>",
+      "docker system prune",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "prune supprime tous les réseaux non utilisés."
+  },
+  {
+    "id": "DKR-03-032",
+    "theme": "Networking Docker",
+    "theme_label": "Host network on Windows",
+    "difficulty": "hard",
+    "question": "Le réseau host est-il disponible sur Docker Desktop Windows ?",
+    "options": ["Non", "Oui", "Uniquement avec Hyper-V", "Uniquement avec WSL2"],
+    "correct": 0,
+    "explication": "Le driver host n'est pas supporté sur Windows (sauf Linux)."
+  },
+  {
+    "id": "DKR-03-033",
+    "theme": "Networking Docker",
+    "theme_label": "IPv6",
+    "difficulty": "hard",
+    "question": "Comment activer IPv6 dans Docker ?",
+    "options": [
+      "daemon.json: \"ipv6\": true",
+      "docker run --ipv6",
+      "docker network create --ipv6",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Il faut activer IPv6 au niveau du daemon et éventuellement au niveau du réseau."
+  },
+  {
+    "id": "DKR-03-034",
+    "theme": "Networking Docker",
+    "theme_label": "Network plugins",
+    "difficulty": "hard",
+    "question": "Peut-on installer des plugins réseau tiers ?",
+    "options": ["Oui (ex: calico, weave)", "Non", "Uniquement les drivers intégrés", "Avec Enterprise Edition"],
+    "correct": 0,
+    "explication": "Docker supporte les plugins réseau conformes à l'API (libnetwork)."
+  },
+  {
+    "id": "DKR-03-035",
+    "theme": "Networking Docker",
+    "theme_label": "Network performance",
+    "difficulty": "hard",
+    "question": "Quel driver réseau offre les meilleures performances ?",
+    "options": ["host", "bridge", "overlay", "macvlan"],
+    "correct": 0,
+    "explication": "host n'a pas de virtualisation réseau, donc pas de surcoût."
+  },
+  {
+    "id": "DKR-03-036",
+    "theme": "Networking Docker",
+    "theme_label": "Network performance",
+    "difficulty": "hard",
+    "question": "Quel driver réseau ajoute une latence supplémentaire ?",
+    "options": ["overlay (chiffrement)", "bridge", "macvlan", "host"],
+    "correct": 0,
+    "explication": "overlay encapsule les paquets, surtout avec chiffrement."
+  },
+  {
+    "id": "DKR-03-037",
+    "theme": "Networking Docker",
+    "theme_label": "Network namespaces",
+    "difficulty": "hard",
+    "question": "Quelle technologie Linux isole le réseau des conteneurs ?",
+    "options": ["Network namespace", "Cgroup", "Seccomp", "SELinux"],
+    "correct": 0,
+    "explication": "Chaque conteneur a son propre network namespace."
+  },
+  {
+    "id": "DKR-03-038",
+    "theme": "Networking Docker",
+    "theme_label": "Network namespaces",
+    "difficulty": "hard",
+    "question": "Comment entrer dans le network namespace d'un conteneur ?",
+    "options": [
+      "nsenter -t <PID> -n",
+      "docker exec",
+      "ip netns exec",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "nsenter ou ip netns exec (avec le lien /var/run/docker/netns)."
+  },
+  {
+    "id": "DKR-03-039",
+    "theme": "Networking Docker",
+    "theme_label": "Network bridge vs overlay",
+    "difficulty": "hard",
+    "question": "Quand utiliser overlay plutôt que bridge ?",
+    "options": [
+      "Lorsque les conteneurs sont sur différents hôtes",
+      "Pour des conteneurs sur le même hôte",
+      "Pour des performances maximales",
+      "Pour l'isolation"
+    ],
+    "correct": 0,
+    "explication": "overlay permet la communication multi-hôtes."
+  },
+  {
+    "id": "DKR-03-040",
+    "theme": "Networking Docker",
+    "theme_label": "Network bridge vs overlay",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser overlay sans Swarm ?",
+    "options": ["Non", "Oui, avec SwarmKit", "Oui, avec Kubernetes", "Oui, avec Docker Compose"],
+    "correct": 0,
+    "explication": "Overlay nécessite un cluster Swarm ou SwarmKit."
+  },
+  {
+    "id": "DKR-03-041",
+    "theme": "Networking Docker",
+    "theme_label": "Network options",
+    "difficulty": "easy",
+    "question": "Que fait l'option `--link` (dépréciée) ?",
+    "options": [
+      "Permet la communication entre conteneurs",
+      "Ajoute une entrée dans /etc/hosts",
+      "Dépréciée au profit des réseaux personnalisés",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "--link est obsolète, utiliser les réseaux user-defined."
+  },
+  {
+    "id": "DKR-03-042",
+    "theme": "Networking Docker",
+    "theme_label": "Network options",
+    "difficulty": "easy",
+    "question": "Que fait l'option `--add-host` ?",
+    "options": [
+      "Ajoute une entrée dans /etc/hosts",
+      "Ajoute un serveur DNS",
+      "Ajoute une route",
+      "Ajoute une interface"
+    ],
+    "correct": 0,
+    "explication": "docker run --add-host monhote:192.168.1.100."
+  },
+  {
+    "id": "DKR-03-043",
+    "theme": "Networking Docker",
+    "theme_label": "Network options",
+    "difficulty": "easy",
+    "question": "Comment spécifier un serveur DNS personnalisé ?",
+    "options": [
+      "docker run --dns 8.8.8.8",
+      "docker run --dns-search example.com",
+      "docker run --dns-opt ndots:2",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs options pour configurer la résolution DNS."
+  },
+  {
+    "id": "DKR-03-044",
+    "theme": "Networking Docker",
+    "theme_label": "Network options",
+    "difficulty": "easy",
+    "question": "Comment partager le network namespace d'un autre conteneur ?",
+    "options": [
+      "docker run --network container:<conteneur>",
+      "docker run --net container:<conteneur>",
+      "docker run --net=container:<conteneur>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Permet à deux conteneurs de partager la même stack réseau."
+  },
+  {
+    "id": "DKR-03-045",
+    "theme": "Networking Docker",
+    "theme_label": "Network options",
+    "difficulty": "easy",
+    "question": "Que fait l'option `--network-alias` ?",
+    "options": [
+      "Ajoute un alias DNS pour le conteneur",
+      "Définit le nom du réseau",
+      "Alias pour la commande docker network",
+      "Alias pour le conteneur"
+    ],
+    "correct": 0,
+    "explication": "Permet aux autres conteneurs de joindre ce conteneur par cet alias."
+  },
+  {
+    "id": "DKR-03-046",
+    "theme": "Networking Docker",
+    "theme_label": "Network troubleshooting",
+    "difficulty": "medium",
+    "question": "Comment voir les ports publiés d'un conteneur ?",
+    "options": [
+      "docker port <conteneur>",
+      "docker inspect <conteneur> | grep Port",
+      "docker ps",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "docker port affiche les mappages de ports."
+  },
+  {
+    "id": "DKR-03-047",
+    "theme": "Networking Docker",
+    "theme_label": "Network troubleshooting",
+    "difficulty": "medium",
+    "question": "Pourquoi un conteneur ne peut-il pas accéder à un service sur l'hôte via localhost ?",
+    "options": [
+      "localhost dans le conteneur pointe vers le conteneur lui-même",
+      "Utiliser l'adresse IP de l'hôte (172.17.0.1) ou host.docker.internal",
+      "Le réseau bridge isole",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "host.docker.internal (Mac/Windows) ou l'IP du bridge (Linux)."
+  },
+  {
+    "id": "DKR-03-048",
+    "theme": "Networking Docker",
+    "theme_label": "Network troubleshooting",
+    "difficulty": "medium",
+    "question": "Comment accéder à un service sur l'hôte depuis un conteneur Linux ?",
+    "options": [
+      "Utiliser l'IP de l'interface docker0 (172.17.0.1)",
+      "host.docker.internal",
+      "localhost",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Sur Linux, l'IP du bridge fonctionne; host.docker.internal aussi (Docker Desktop)."
+  },
+  {
+    "id": "DKR-03-049",
+    "theme": "Networking Docker",
+    "theme_label": "Network security",
+    "difficulty": "medium",
+    "question": "Comment restreindre la communication entre conteneurs sur le même réseau ?",
+    "options": [
+      "Utiliser des règles iptables",
+      "Utiliser le driver bridge avec --icc=false",
+      "Mettre les conteneurs sur des réseaux séparés",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "--icc=false (inter-container communication) désactive la communication entre conteneurs du même bridge."
+  },
+  {
+    "id": "DKR-03-050",
+    "theme": "Networking Docker",
+    "theme_label": "Network security",
+    "difficulty": "medium",
+    "question": "Comment empêcher un conteneur d'accéder à Internet ?",
+    "options": [
+      "docker run --network none",
+      "docker run --network bridge --dns none",
+      "Désactiver le NAT iptables",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "none ou supprimer les routes par défaut."
+  }
+]

@@ -1,0 +1,927 @@
+[
+  {
+    "id": "AWS-DEV-001",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet d'exécuter du code sans provisionner de serveurs ?",
+    "options": ["Lambda", "EC2", "ECS", "Fargate"],
+    "correct": 0,
+    "explanation": "Lambda est le service serverless d'AWS."
+  },
+  {
+    "id": "AWS-DEV-002",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "easy",
+    "question": "Quel est le timeout maximum d'une fonction Lambda ?",
+    "options": ["15 minutes", "5 minutes", "30 minutes", "1 heure"],
+    "correct": 0,
+    "explanation": "Le timeout maximum est 15 minutes (900 secondes)."
+  },
+  {
+    "id": "AWS-DEV-003",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "easy",
+    "question": "Quelle est la mémoire maximale pour Lambda ?",
+    "options": ["10 Go", "5 Go", "3 Go", "1 Go"],
+    "correct": 0,
+    "explanation": "La mémoire maximale est 10 Go (et jusqu'à 6 vCPU)."
+  },
+  {
+    "id": "AWS-DEV-004",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "medium",
+    "question": "Quelle est la taille maximale du code déployé pour Lambda ?",
+    "options": ["50 Mo (zip), 250 Mo (non compressé)", "100 Mo", "250 Mo", "500 Mo"],
+    "correct": 0,
+    "explanation": "50 Mo compressé, 250 Mo non compressé."
+  },
+  {
+    "id": "AWS-DEV-005",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "medium",
+    "question": "Lambda peut-il être déclenché par un événement S3 ?",
+    "options": ["Oui", "Non", "Uniquement avec SQS", "Uniquement avec SNS"],
+    "correct": 0,
+    "explanation": "Lambda peut être déclenché par des événements S3 (création, suppression)."
+  },
+  {
+    "id": "AWS-DEV-006",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "medium",
+    "question": "Lambda peut-il être déclenché par un événement DynamoDB Streams ?",
+    "options": ["Oui", "Non", "Uniquement avec Kinesis", "Uniquement avec SQS"],
+    "correct": 0,
+    "explanation": "Lambda peut traiter les changements de DynamoDB via Streams."
+  },
+  {
+    "id": "AWS-DEV-007",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "medium",
+    "question": "Lambda peut-il être déclenché par API Gateway ?",
+    "options": ["Oui", "Non", "Uniquement avec REST", "Uniquement avec HTTP"],
+    "correct": 0,
+    "explanation": "API Gateway est un déclencheur courant pour Lambda (REST/HTTP APIs)."
+  },
+  {
+    "id": "AWS-DEV-008",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Lambda@Edge ?",
+    "options": [
+      "Lambda exécuté sur les edge locations CloudFront",
+      "Lambda en Europe",
+      "Lambda global",
+      "Lambda avec plus de mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Lambda@Edge exécute du code près des utilisateurs via CloudFront."
+  },
+  {
+    "id": "AWS-DEV-009",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le provisioned concurrency ?",
+    "options": [
+      "Garde des instances Lambda pré-initialisées",
+      "Limite le nombre d'exécutions",
+      "Augmente le timeout",
+      "Réduit la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Provisioned concurrency maintient des instances chaudes pour réduire la latence."
+  },
+  {
+    "id": "AWS-DEV-010",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Fondamentaux Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le reserved concurrency ?",
+    "options": [
+      "Limite le nombre d'exécutions concurrentes",
+      "Réserve de la capacité",
+      "Augmente la mémoire",
+      "Réduit les coûts"
+    ],
+    "correct": 0,
+    "explanation": "Reserved concurrency limite le nombre d'instances simultanées."
+  },
+  {
+    "id": "AWS-DEV-011",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda layers",
+    "difficulty": "hard",
+    "question": "À quoi servent les Lambda layers ?",
+    "options": [
+      "Partager du code et des dépendances entre fonctions",
+      "Stocker des logs",
+      "Configurer le réseau",
+      "Gérer les permissions"
+    ],
+    "correct": 0,
+    "explanation": "Les layers permettent de factoriser du code commun."
+  },
+  {
+    "id": "AWS-DEV-012",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda layers",
+    "difficulty": "hard",
+    "question": "Combien de layers peut-on attacher à une fonction Lambda ?",
+    "options": ["Jusqu'à 5", "Jusqu'à 10", "Jusqu'à 20", "Illimité"],
+    "correct": 0,
+    "explanation": "Maximum 5 layers par fonction."
+  },
+  {
+    "id": "AWS-DEV-013",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda runtime",
+    "difficulty": "hard",
+    "question": "Quels runtimes sont supportés par Lambda ?",
+    "options": [
+      "Node.js, Python, Java, Go, Ruby, .NET, Rust, etc.",
+      "Seulement Node.js",
+      "Seulement Python",
+      "Seulement Java"
+    ],
+    "correct": 0,
+    "explanation": "Lambda supporte de nombreux langages."
+  },
+  {
+    "id": "AWS-DEV-014",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda runtime",
+    "difficulty": "hard",
+    "question": "Lambda supporte-t-il des runtimes personnalisés ?",
+    "options": ["Oui (Runtime API)", "Non", "Uniquement avec conteneurs", "Uniquement avec ECS"],
+    "correct": 0,
+    "explanation": "Lambda Runtime API permet d'implémenter des runtimes personnalisés."
+  },
+  {
+    "id": "AWS-DEV-015",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda container",
+    "difficulty": "hard",
+    "question": "Peut-on déployer des conteneurs sur Lambda ?",
+    "options": ["Oui", "Non", "Uniquement avec ECS", "Uniquement avec Fargate"],
+    "correct": 0,
+    "explanation": "Lambda supporte les images conteneur (jusqu'à 10 Go)."
+  },
+  {
+    "id": "AWS-DEV-016",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda container",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'une image conteneur Lambda ?",
+    "options": ["10 Go", "5 Go", "1 Go", "500 Mo"],
+    "correct": 0,
+    "explanation": "La taille maximale d'une image est 10 Go."
+  },
+  {
+    "id": "AWS-DEV-017",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda environment variables",
+    "difficulty": "hard",
+    "question": "Peut-on chiffrer les variables d'environnement Lambda ?",
+    "options": ["Oui, avec KMS", "Non", "Uniquement avec Secrets Manager", "Uniquement avec SSM"],
+    "correct": 0,
+    "explanation": "Les variables d'environnement peuvent être chiffrées avec KMS."
+  },
+  {
+    "id": "AWS-DEV-018",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda VPC",
+    "difficulty": "hard",
+    "question": "Peut-on exécuter Lambda dans un VPC ?",
+    "options": ["Oui", "Non", "Uniquement avec NAT", "Uniquement avec PrivateLink"],
+    "correct": 0,
+    "explanation": "Lambda peut être configuré pour accéder à des ressources dans un VPC."
+  },
+  {
+    "id": "AWS-DEV-019",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda VPC",
+    "difficulty": "hard",
+    "question": "Quelle est la conséquence de placer Lambda dans un VPC ?",
+    "options": [
+      "Perte d'accès Internet par défaut (sauf NAT)",
+      "Améliore les performances",
+      "Réduit les coûts",
+      "Augmente la sécurité"
+    ],
+    "correct": 0,
+    "explanation": "Lambda dans un VPC perd l'accès Internet natif."
+  },
+  {
+    "id": "AWS-DEV-020",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda destinations",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une destination Lambda ?",
+    "options": [
+      "Envoie le résultat (succès/échec) vers SQS, SNS, EventBridge, etc.",
+      "Stockage des logs",
+      "Configuration réseau",
+      "Déclencheur"
+    ],
+    "correct": 0,
+    "explanation": "Les destinations permettent de traiter les résultats de manière asynchrone."
+  },
+  {
+    "id": "AWS-DEV-021",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda event source mapping",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un event source mapping pour Lambda ?",
+    "options": [
+      "Lit les messages de Kinesis, DynamoDB Streams, SQS",
+      "Déclencheur HTTP",
+      "Schedule",
+      "S3 event"
+    ],
+    "correct": 0,
+    "explanation": "Event source mapping poll les flux pour invoquer Lambda."
+  },
+  {
+    "id": "AWS-DEV-022",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda batch window",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le batch window dans Lambda ?",
+    "options": [
+      "Temps d'attente maximum pour accumuler des messages",
+      "Timeout",
+      "Période de silence",
+      "Fenêtre de maintenance"
+    ],
+    "correct": 0,
+    "explanation": "Le batch window (max 300s) accumule les messages avant d'invoquer."
+  },
+  {
+    "id": "AWS-DEV-023",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda DLQ",
+    "difficulty": "hard",
+    "question": "Lambda peut-il envoyer des événements échoués vers une DLQ ?",
+    "options": ["Oui (SQS ou SNS)", "Non", "Uniquement SQS", "Uniquement SNS"],
+    "correct": 0,
+    "explanation": "Lambda peut configurer une DLQ pour les invocations asynchrones."
+  },
+  {
+    "id": "AWS-DEV-024",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda retries",
+    "difficulty": "hard",
+    "question": "Combien de tentatives Lambda effectue-t-il par défaut ?",
+    "options": ["2", "0", "3", "5"],
+    "correct": 0,
+    "explanation": "Par défaut, 2 tentatives pour les invocations asynchrones."
+  },
+  {
+    "id": "AWS-DEV-025",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda versions",
+    "difficulty": "hard",
+    "question": "À quoi servent les versions Lambda ?",
+    "options": [
+      "Immuabilité du code et configuration",
+      "Déploiement progressif",
+      "Alias",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les versions créent un snapshot immuable de la fonction."
+  },
+  {
+    "id": "AWS-DEV-026",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda aliases",
+    "difficulty": "hard",
+    "question": "À quoi servent les alias Lambda ?",
+    "options": [
+      "Pointeurs vers des versions, routage pondéré",
+      "Versions",
+      "Environnements",
+      "Tags"
+    ],
+    "correct": 0,
+    "explanation": "Les alias permettent un déploiement progressif (weighted aliases)."
+  },
+  {
+    "id": "AWS-DEV-027",
+    "theme": "Lambda & Serverless",
+    "theme_label": "Lambda environment",
+    "difficulty": "hard",
+    "question": "Lambda expose-t-il des variables d'environnement AWS_* ?",
+    "options": ["Oui", "Non", "Uniquement pour les régions", "Uniquement pour les runtimes"],
+    "correct": 0,
+    "explanation": "AWS Lambda met automatiquement à disposition plusieurs variables d’environnement commençant par AWS_ dans l’environnement d’exécution de la fonction. Parmi les plus courantes : AWS_REGION, AWS_LAMBDA_FUNCTION_NAME, AWS_LAMBDA_FUNCTION_MEMORY_SIZE, AWS_LAMBDA_LOG_GROUP_NAME, AWS_LAMBDA_LOG_STREAM_NAME, etc. Ces variables sont accessibles directement depuis le code (par exemple via process.env en Node.js ou os.environ en Python) et ne dépendent ni de la région ni du runtime spécifique – elles sont systématiquement présentes pour toute fonction Lambda. "
+  },
+
+
+
+
+
+    {
+      "id": "AWS-DEV-028",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda execution model",
+      "difficulty": "hard",
+      "question": "Combien de temps une instance Lambda reste-t-elle chaude après exécution ?",
+      "options": ["5-15 minutes", "1 minute", "30 minutes", "1 heure"],
+      "correct": 0,
+      "explanation": "Une instance Lambda reste généralement chaude pendant 5 à 15 minutes."
+    },
+    {
+      "id": "AWS-DEV-029",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda logging",
+      "difficulty": "hard",
+      "question": "Où Lambda envoie-t-il les logs par défaut ?",
+      "options": ["CloudWatch Logs", "S3", "CloudTrail", "Kinesis"],
+      "correct": 0,
+      "explanation": "Lambda envoie automatiquement les logs vers CloudWatch Logs."
+    },
+    {
+      "id": "AWS-DEV-030",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda logging",
+      "difficulty": "hard",
+      "question": "Quel est le format de log par défaut de Lambda ?",
+      "options": ["JSON", "Texte", "XML", "CSV"],
+      "correct": 0,
+      "explanation": "Lambda utilise le format JSON pour les logs structurés."
+    },
+    {
+      "id": "AWS-DEV-031",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda monitoring",
+      "difficulty": "hard",
+      "question": "Quelles métriques Lambda sont disponibles dans CloudWatch ?",
+      "options": [
+        "Invocations, Duration, Errors, Throttles, ConcurrentExecutions",
+        "Seulement invocations",
+        "Seulement duration",
+        "Seulement errors"
+      ],
+      "correct": 0,
+      "explanation": "CloudWatch fournit plusieurs métriques Lambda."
+    },
+    {
+      "id": "AWS-DEV-032",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda monitoring",
+      "difficulty": "hard",
+      "question": "Lambda fournit-il des métriques personnalisées ?",
+      "options": ["Oui (via CloudWatch Embedded Metric Format)", "Non", "Uniquement avec X-Ray", "Uniquement avec CloudTrail"],
+      "correct": 0,
+      "explanation": "Lambda peut émettre des métriques personnalisées via EMF."
+    },
+    {
+      "id": "AWS-DEV-033",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda X-Ray",
+      "difficulty": "hard",
+      "question": "Comment activer X-Ray pour Lambda ?",
+      "options": [
+        "Activer tracing dans la configuration Lambda",
+        "Ajouter un layer",
+        "Modifier le code",
+        "A et B"
+      ],
+      "correct": 3,
+      "explanation": "Activer le tracing et éventuellement ajouter le SDK."
+    },
+    {
+      "id": "AWS-DEV-034",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda IAM",
+      "difficulty": "hard",
+      "question": "Quel rôle IAM est nécessaire pour Lambda ?",
+      "options": [
+        "Rôle d'exécution (execution role)",
+        "Rôle d'invocation",
+        "Rôle de gestion",
+        "Aucun"
+      ],
+      "correct": 0,
+      "explanation": "Lambda nécessite un rôle d'exécution avec les permissions appropriées."
+    },
+    {
+      "id": "AWS-DEV-035",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda IAM",
+      "difficulty": "hard",
+      "question": "Le rôle d'exécution Lambda doit-il avoir des permissions CloudWatch Logs ?",
+      "options": ["Oui", "Non", "Optionnel", "Uniquement pour les logs d'erreur"],
+      "correct": 0,
+      "explanation": "Pour écrire les logs, le rôle nécessite logs:CreateLogGroup, CreateLogStream, PutLogEvents."
+    },
+    {
+      "id": "AWS-DEV-036",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda limits",
+      "difficulty": "hard",
+      "question": "Quelle est la taille maximale de la requête d'invocation (payload) ?",
+      "options": ["6 Mo (sync), 256 Ko (async)", "1 Mo", "10 Mo", "256 Ko"],
+      "correct": 0,
+      "explanation": "6 Mo pour les invocations synchrones, 256 Ko pour asynchrones (API Gateway: 10 Mo)."
+    },
+    {
+      "id": "AWS-DEV-037",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda limits",
+      "difficulty": "hard",
+      "question": "Quelle est la limite de mémoire temporaire (/tmp) pour Lambda ?",
+      "options": ["512 Mo à 10 240 Mo (configurable)", "1 Go", "512 Mo", "5 Go"],
+      "correct": 0,
+      "explanation": "L'espace /tmp est de 512 Mo à 10 Go (même taille que la mémoire configurée)."
+    },
+    {
+      "id": "AWS-DEV-038",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda best practices",
+      "difficulty": "hard",
+      "question": "Pourquoi réutiliser les connexions SDK dans Lambda ?",
+      "options": [
+        "Améliore les performances (keep-alive)",
+        "Réduit les coûts",
+        "Sécurité",
+        "Compatibilité"
+      ],
+      "correct": 0,
+      "explanation": "Réutiliser les connexions évite de recréer des clients à chaque invocation."
+    },
+    {
+      "id": "AWS-DEV-039",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda best practices",
+      "difficulty": "hard",
+      "question": "Les variables globales sont-elles conservées entre invocations ?",
+      "options": ["Oui (dans la même instance chaude)", "Non", "Parfois", "Dépend du runtime"],
+      "correct": 0,
+      "explanation": "Dans une instance chaude, les variables globales persistent."
+    },
+    {
+      "id": "AWS-DEV-040",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda deployment",
+      "difficulty": "hard",
+      "question": "Comment déployer une fonction Lambda ?",
+      "options": [
+        "AWS CLI, SAM, CloudFormation, CDK, Console",
+        "Uniquement CLI",
+        "Uniquement Console",
+        "Uniquement CloudFormation"
+      ],
+      "correct": 0,
+      "explanation": "Plusieurs outils de déploiement sont disponibles."
+    },
+    {
+      "id": "AWS-DEV-041",
+      "theme": "Lambda & Serverless",
+      "theme_label": "AWS SAM",
+      "difficulty": "hard",
+      "question": "Qu'est-ce qu'AWS SAM (Serverless Application Model) ?",
+      "options": [
+        "Framework pour définir des applications serverless",
+        "Service de monitoring",
+        "Base de données",
+        "CDN"
+      ],
+      "correct": 0,
+      "explanation": "SAM étend CloudFormation pour les applications serverless."
+    },
+    {
+      "id": "AWS-DEV-042",
+      "theme": "Lambda & Serverless",
+      "theme_label": "AWS SAM",
+      "difficulty": "hard",
+      "question": "SAM peut-il exécuter Lambda localement ?",
+      "options": ["Oui (sam local)", "Non", "Uniquement avec Docker", "Uniquement avec emulation"],
+      "correct": 0,
+      "explanation": "sam local invoke permet de tester Lambda localement."
+    },
+    {
+      "id": "AWS-DEV-043",
+      "theme": "Lambda & Serverless",
+      "theme_label": "AWS CDK",
+      "difficulty": "hard",
+      "question": "Qu'est-ce qu'AWS CDK (Cloud Development Kit) ?",
+      "options": [
+        "Infrastructure as Code avec des langages de programmation",
+        "CLI",
+        "Service de monitoring",
+        "Base de données"
+      ],
+      "correct": 0,
+      "explanation": "CDK permet de définir l'infrastructure en TypeScript, Python, Java, etc."
+    },
+    {
+      "id": "AWS-DEV-044",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with Step Functions",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être orchestré par Step Functions ?",
+      "options": ["Oui", "Non", "Uniquement avec Express Workflows", "Uniquement avec Standard Workflows"],
+      "correct": 0,
+      "explanation": "Step Functions peut appeler Lambda comme tâche."
+    },
+    {
+      "id": "AWS-DEV-045",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with EventBridge",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par un événement EventBridge (cron) ?",
+      "options": ["Oui", "Non", "Uniquement avec des événements custom", "Uniquement avec des événements AWS"],
+      "correct": 0,
+      "explanation": "EventBridge peut déclencher Lambda sur un schedule ou des événements."
+    },
+    {
+      "id": "AWS-DEV-046",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda power tuning",
+      "difficulty": "hard",
+      "question": "Comment optimiser le coût/performance de Lambda ?",
+      "options": [
+        "Ajuster la mémoire (CPU proportionnel)",
+        "Réduire le timeout",
+        "Augmenter la mémoire pour plus de CPU",
+        "A et C"
+      ],
+      "correct": 3,
+      "explanation": "La mémoire contrôle aussi le CPU alloué."
+    },
+    {
+      "id": "AWS-DEV-047",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda power tuning",
+      "difficulty": "hard",
+      "question": "L'outil AWS Lambda Power Tuning est-il open source ?",
+      "options": ["Oui", "Non", "Payant", "Uniquement AWS"],
+      "correct": 0,
+      "explanation": "Lambda Power Tuning (d'Alex Casalboni) est open source."
+    },
+    {
+      "id": "AWS-DEV-048",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda@Edge limitations",
+      "difficulty": "hard",
+      "question": "Quelle est la durée maximale d'exécution de Lambda@Edge ?",
+      "options": ["5 secondes (viewer request) à 30 secondes (origin)", "15 minutes", "1 minute", "30 secondes"],
+      "correct": 0,
+      "explanation": "Les temps limites varient selon le type de déclencheur (max 30s pour origin)."
+    },
+    {
+      "id": "AWS-DEV-049",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda@Edge",
+      "difficulty": "hard",
+      "question": "Lambda@Edge supporte-t-il Node.js et Python ?",
+      "options": ["Oui (Node.js et Python)", "Non", "Uniquement Node.js", "Uniquement Python"],
+      "correct": 0,
+      "explanation": "Lambda@Edge supporte Node.js et Python."
+    },
+    {
+      "id": "AWS-DEV-050",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda@Edge",
+      "difficulty": "hard",
+      "question": "Où sont déployées les fonctions Lambda@Edge ?",
+      "options": ["Edge locations", "Régions", "AZ", "VPC"],
+      "correct": 0,
+      "explanation": "Lambda@Edge est déployé sur les edge locations CloudFront."
+    },
+    {
+      "id": "AWS-DEV-051",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SQS",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par SQS ?",
+      "options": ["Oui", "Non", "Uniquement avec FIFO", "Uniquement avec Standard"],
+      "correct": 0,
+      "explanation": "SQS est un déclencheur Lambda natif."
+    },
+    {
+      "id": "AWS-DEV-052",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SQS",
+      "difficulty": "hard",
+      "question": "Quelle est la taille maximale de batch pour SQS ?",
+      "options": ["10 messages", "100", "5", "20"],
+      "correct": 0,
+      "explanation": "Maximum 10 messages par batch pour SQS."
+    },
+    {
+      "id": "AWS-DEV-053",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SQS",
+      "difficulty": "hard",
+      "question": "Que se passe-t-il si Lambda échoue à traiter un message SQS ?",
+      "options": [
+        "Retourne à la queue après visibility timeout",
+        "Message perdu",
+        "DLQ configurable",
+        "A et C"
+      ],
+      "correct": 3,
+      "explanation": "Les messages non traités sont réessayés ou envoyés à une DLQ."
+    },
+    {
+      "id": "AWS-DEV-054",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SQS FIFO",
+      "difficulty": "hard",
+      "question": "SQS FIFO garantit-il l'ordre avec Lambda ?",
+      "options": ["Oui, traitement séquentiel", "Non", "Uniquement avec groupes de messages", "Optionnel"],
+      "correct": 0,
+      "explanation": "Lambda traite les messages FIFO dans l'ordre."
+    },
+    {
+      "id": "AWS-DEV-055",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with Kinesis",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par Kinesis Data Streams ?",
+      "options": ["Oui", "Non", "Uniquement avec Kinesis Analytics", "Uniquement avec Firehose"],
+      "correct": 0,
+      "explanation": "Kinesis est un déclencheur Lambda natif."
+    },
+    {
+      "id": "AWS-DEV-056",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with Kinesis",
+      "difficulty": "hard",
+      "question": "Quelle est la taille maximale de batch pour Kinesis ?",
+      "options": ["10 000 records ou 10 Mo", "1000 records", "100 records", "1 Mo"],
+      "correct": 0,
+      "explanation": "Kinesis peut batch jusqu'à 10 000 records ou 10 Mo."
+    },
+    {
+      "id": "AWS-DEV-057",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with DynamoDB Streams",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par DynamoDB Streams ?",
+      "options": ["Oui", "Non", "Uniquement avec Kinesis Adapter", "Uniquement avec Lambda@Edge"],
+      "correct": 0,
+      "explanation": "DynamoDB Streams peut invoquer Lambda directement."
+    },
+    {
+      "id": "AWS-DEV-058",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with DynamoDB Streams",
+      "difficulty": "hard",
+      "question": "DynamoDB Streams conserve les données pendant combien de temps ?",
+      "options": ["24 heures", "7 jours", "48 heures", "30 jours"],
+      "correct": 0,
+      "explanation": "La rétention par défaut est 24 heures (max 7 jours)."
+    },
+    {
+      "id": "AWS-DEV-059",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with S3",
+      "difficulty": "hard",
+      "question": "S3 peut-il déclencher Lambda directement ?",
+      "options": ["Oui", "Non", "Uniquement via SNS", "Uniquement via SQS"],
+      "correct": 0,
+      "explanation": "S3 peut envoyer des événements directement à Lambda."
+    },
+    {
+      "id": "AWS-DEV-060",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with S3",
+      "difficulty": "hard",
+      "question": "Quels événements S3 peuvent déclencher Lambda ?",
+      "options": [
+        "s3:ObjectCreated:*, s3:ObjectRemoved:*, etc.",
+        "Seulement Put",
+        "Seulement Delete",
+        "Tous"
+      ],
+      "correct": 0,
+      "explanation": "Plusieurs types d'événements S3 sont supportés."
+    },
+    {
+      "id": "AWS-DEV-061",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with CloudFront",
+      "difficulty": "hard",
+      "question": "CloudFront peut-il déclencher Lambda@Edge ?",
+      "options": ["Oui", "Non", "Uniquement avec origin request", "Uniquement avec viewer request"],
+      "correct": 0,
+      "explanation": "CloudFront a 4 types de déclencheurs Lambda@Edge."
+    },
+    {
+      "id": "AWS-DEV-062",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with CloudFront",
+      "difficulty": "hard",
+      "question": "Lambda@Edge peut-il modifier la réponse ?",
+      "options": ["Oui (origin-response, viewer-response)", "Non", "Uniquement la requête", "Uniquement les headers"],
+      "correct": 0,
+      "explanation": "Les déclencheurs de réponse peuvent modifier le contenu."
+    },
+    {
+      "id": "AWS-DEV-063",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with API Gateway",
+      "difficulty": "hard",
+      "question": "Lambda est-il le backend par défaut pour API Gateway ?",
+      "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+      "correct": 0,
+      "explanation": "API Gateway intègre nativement Lambda comme backend."
+    },
+    {
+      "id": "AWS-DEV-064",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with API Gateway",
+      "difficulty": "hard",
+      "question": "Quel format de réponse Lambda attend API Gateway ?",
+      "options": [
+        "{ statusCode, headers, body }",
+        "String simple",
+        "JSON quelconque",
+        "XML"
+      ],
+      "correct": 0,
+      "explanation": "API Gateway nécessite un objet avec statusCode, headers, body."
+    },
+    {
+      "id": "AWS-DEV-065",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with API Gateway",
+      "difficulty": "hard",
+      "question": "Lambda peut-il retourner des binaires via API Gateway ?",
+      "options": ["Oui (avec isBase64Encoded)", "Non", "Uniquement avec REST API", "Uniquement avec HTTP API"],
+      "correct": 0,
+      "explanation": "Utiliser isBase64Encoded: true pour les binaires."
+    },
+    {
+      "id": "AWS-DEV-066",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with API Gateway",
+      "difficulty": "hard",
+      "question": "Quelle est la limite de taille de réponse Lambda via API Gateway ?",
+      "options": ["10 Mo", "6 Mo", "1 Mo", "256 Ko"],
+      "correct": 0,
+      "explanation": "La taille maximale de réponse pour API Gateway est 10 Mo."
+    },
+    {
+      "id": "AWS-DEV-067",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with API Gateway WebSocket",
+      "difficulty": "hard",
+      "question": "API Gateway WebSocket peut-il déclencher Lambda ?",
+      "options": ["Oui", "Non", "Uniquement pour les connexions", "Uniquement pour les messages"],
+      "correct": 0,
+      "explanation": "WebSocket utilise Lambda pour gérer les connexions et messages."
+    },
+    {
+      "id": "AWS-DEV-068",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with API Gateway WebSocket",
+      "difficulty": "hard",
+      "question": "Comment envoyer un message via WebSocket depuis Lambda ?",
+      "options": ["AWS SDK (ApiGatewayManagementApi)", "API Gateway client", "HTTP", "SQS"],
+      "correct": 0,
+      "explanation": "Utiliser ApiGatewayManagementApi.postToConnection."
+    },
+    {
+      "id": "AWS-DEV-069",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with Cognito",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par Cognito User Pools ?",
+      "options": ["Oui (pre/post authentication, custom message, etc.)", "Non", "Uniquement pour la migration", "Uniquement pour la vérification"],
+      "correct": 0,
+      "explanation": "Cognito supporte plusieurs triggers Lambda."
+    },
+    {
+      "id": "AWS-DEV-070",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with CloudFormation",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être utilisé comme ressource personnalisée CloudFormation ?",
+      "options": ["Oui", "Non", "Uniquement avec SAM", "Uniquement avec CDK"],
+      "correct": 0,
+      "explanation": "Lambda peut implémenter des ressources personnalisées CloudFormation."
+    },
+    {
+      "id": "AWS-DEV-071",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with CloudWatch Events",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par CloudWatch Events sur un schedule ?",
+      "options": ["Oui", "Non", "Uniquement avec EventBridge", "Uniquement avec cron"],
+      "correct": 0,
+      "explanation": "CloudWatch Events (ou EventBridge) peut déclencher Lambda périodiquement."
+    },
+    {
+      "id": "AWS-DEV-072",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with CloudWatch Logs",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être déclenché par des événements CloudWatch Logs ?",
+      "options": ["Oui (subscription filter)", "Non", "Uniquement avec Kinesis", "Uniquement avec S3"],
+      "correct": 0,
+      "explanation": "Les logs peuvent être streamés vers Lambda via subscription filters."
+    },
+    {
+      "id": "AWS-DEV-073",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with CloudWatch Alarms",
+      "difficulty": "hard",
+      "question": "CloudWatch Alarm peut-il déclencher Lambda ?",
+      "options": ["Oui", "Non", "Uniquement via SNS", "Uniquement via SQS"],
+      "correct": 0,
+      "explanation": "Les alarmes CloudWatch peuvent envoyer des notifications directement à Lambda."
+    },
+    {
+      "id": "AWS-DEV-074",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SNS",
+      "difficulty": "hard",
+      "question": "SNS peut-il déclencher Lambda ?",
+      "options": ["Oui", "Non", "Uniquement avec FIFO", "Uniquement avec Standard"],
+      "correct": 0,
+      "explanation": "SNS peut envoyer des messages à Lambda."
+    },
+    {
+      "id": "AWS-DEV-075",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SNS",
+      "difficulty": "hard",
+      "question": "Quelle est la limite de taille de message SNS pour Lambda ?",
+      "options": ["256 Ko", "1 Mo", "6 Mo", "10 Mo"],
+      "correct": 0,
+      "explanation": "La taille maximale d'un message SNS est 256 Ko."
+    },
+    {
+      "id": "AWS-DEV-076",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with SNS",
+      "difficulty": "hard",
+      "question": "Lambda peut-il être abonné à plusieurs sujets SNS ?",
+      "options": ["Oui", "Non", "Uniquement 5", "Uniquement 10"],
+      "correct": 0,
+      "explanation": "Lambda peut avoir plusieurs abonnements SNS."
+    },
+    {
+      "id": "AWS-DEV-077",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with S3 Object Lambda",
+      "difficulty": "hard",
+      "question": "Qu'est-ce que S3 Object Lambda ?",
+      "options": [
+        "Lambda qui transforme les données à la volée lors des GET S3",
+        "Lambda sur S3",
+        "Lambda pour les événements S3",
+        "Lambda pour la réplication"
+      ],
+      "correct": 0,
+      "explanation": "S3 Object Lambda modifie les données retournées par S3 GET."
+    },
+    {
+      "id": "AWS-DEV-078",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with S3 Object Lambda",
+      "difficulty": "hard",
+      "question": "Object Lambda reçoit-il l'objet original de S3 ?",
+      "options": ["Oui (via un presigned URL)", "Non", "Seulement les métadonnées", "Seulement le nom"],
+      "correct": 0,
+      "explanation": "Lambda reçoit une URL pour récupérer l'objet original."
+    },
+    {
+      "id": "AWS-DEV-079",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with EFS",
+      "difficulty": "hard",
+      "question": "Lambda peut-il monter un système de fichiers EFS ?",
+      "options": ["Oui", "Non", "Uniquement pour les fonctions VPC", "Uniquement pour les fonctions avec provisioned concurrency"],
+      "correct": 0,
+      "explanation": "Lambda peut monter EFS pour un partage de fichiers persistant."
+    },
+    {
+      "id": "AWS-DEV-080",
+      "theme": "Lambda & Serverless",
+      "theme_label": "Lambda with EFS",
+      "difficulty": "hard",
+      "question": "Quel est l'avantage de monter EFS dans Lambda ?",
+      "options": [
+        "Partager des fichiers entre invocations",
+        "Réduire la latence",
+        "Augmenter la mémoire",
+        "Améliorer la sécurité"
+      ],
+      "correct": 0,
+      "explanation": "EFS permet un stockage persistant partagé entre invocations."
+    }
+  ]

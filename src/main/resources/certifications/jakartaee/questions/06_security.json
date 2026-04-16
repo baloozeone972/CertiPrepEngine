@@ -1,0 +1,722 @@
+[
+  {
+    "id": "JAK-SEC-001",
+    "theme": "Jakarta Security",
+    "theme_label": "Authentification",
+    "difficulty": "medium",
+    "question": "Quels mécanismes d'authentification sont supportés ?",
+    "options": [
+      "BASIC, FORM, DIGEST, CLIENT-CERT",
+      "BASIC seulement",
+      "FORM seulement",
+      "OAuth2 seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les 4 mécanismes standards du servlet container."
+  },
+  {
+    "id": "JAK-SEC-002",
+    "theme": "Jakarta Security",
+    "theme_label": "Authentification",
+    "difficulty": "medium",
+    "question": "Comment configurer l'authentification BASIC ?",
+    "options": [
+      "<auth-method>BASIC</auth-method> dans web.xml",
+      "@ServletSecurity",
+      "web.xml",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Configuration via web.xml ou annotations."
+  },
+  {
+    "id": "JAK-SEC-003",
+    "theme": "Jakarta Security",
+    "theme_label": "Authentification",
+    "difficulty": "hard",
+    "question": "Comment configurer l'authentification FORM ?",
+    "options": [
+      "login-config avec FORM",
+      "form-login-page",
+      "form-error-page",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Login-config avec FORM et pages personnalisées."
+  },
+  {
+    "id": "JAK-SEC-004",
+    "theme": "Jakarta Security",
+    "theme_label": "Rôles",
+    "difficulty": "easy",
+    "question": "Comment déclarer un rôle ?",
+    "options": [
+      "<security-role> dans web.xml",
+      "@DeclareRoles",
+      "@RolesAllowed",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Déclaration XML ou annotation."
+  },
+  {
+    "id": "JAK-SEC-005",
+    "theme": "Jakarta Security",
+    "theme_label": "Rôles",
+    "difficulty": "medium",
+    "question": "Quelle annotation déclare les rôles sur une servlet ?",
+    "options": ["@ServletSecurity", "@DeclareRoles", "@RolesAllowed", "@SecurityRoles"],
+    "correct": 1,
+    "explanation": "@DeclareRoles déclare les rôles utilisés."
+  },
+  {
+    "id": "JAK-SEC-006",
+    "theme": "Jakarta Security",
+    "theme_label": "Restriction d'accès",
+    "difficulty": "medium",
+    "question": "Comment restreindre l'accès à une URL ?",
+    "options": [
+      "<security-constraint> dans web.xml",
+      "@ServletSecurity",
+      "web.xml",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "XML ou annotations."
+  },
+  {
+    "id": "JAK-SEC-007",
+    "theme": "Jakarta Security",
+    "theme_label": "Restriction d'accès",
+    "difficulty": "hard",
+    "question": "Que signifie <transport-guarantee>CONFIDENTIAL</transport-guarantee> ?",
+    "options": [
+      "Requiert HTTPS",
+      "Requiert HTTP",
+      "Requiert HTTP/2",
+      "Aucune garantie"
+    ],
+    "correct": 0,
+    "explanation": "CONFIDENTIAL force l'utilisation de HTTPS."
+  },
+  {
+    "id": "JAK-SEC-008",
+    "theme": "Jakarta Security",
+    "theme_label": "Programmatic security",
+    "difficulty": "hard",
+    "question": "Comment vérifier un rôle programmatiquement ?",
+    "options": [
+      "request.isUserInRole(\"admin\")",
+      "request.getUserPrincipal()",
+      "session.getUserInRole()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "isUserInRole() vérifie le rôle."
+  },
+  {
+    "id": "JAK-SEC-009",
+    "theme": "Jakarta Security",
+    "theme_label": "Programmatic security",
+    "difficulty": "hard",
+    "question": "Comment obtenir le nom de l'utilisateur courant ?",
+    "options": [
+      "request.getUserPrincipal().getName()",
+      "request.getRemoteUser()",
+      "session.getUser()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "getRemoteUser() ou getUserPrincipal().getName()."
+  },
+  {
+    "id": "JAK-SEC-010",
+    "theme": "Jakarta Security",
+    "theme_label": "Programmatic security",
+    "difficulty": "hard",
+    "question": "Comment savoir si l'utilisateur est authentifié ?",
+    "options": [
+      "request.getUserPrincipal() != null",
+      "request.isUserAuthenticated()",
+      "request.getRemoteUser() != null",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "getRemoteUser() non null indique authentification."
+  },
+  {
+    "id": "JAK-SEC-011",
+    "theme": "Jakarta Security",
+    "theme_label": "Identity Store",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un IdentityStore ?",
+    "options": [
+      "Source d'identités (base, LDAP)",
+      "Cache d'identités",
+      "Store de sessions",
+      "Store de rôles"
+    ],
+    "correct": 0,
+    "explanation": "IdentityStore authentifie et charge les rôles."
+  },
+  {
+    "id": "JAK-SEC-012",
+    "theme": "Jakarta Security",
+    "theme_label": "Identity Store",
+    "difficulty": "hard",
+    "question": "Quelle interface implémenter pour un IdentityStore ?",
+    "options": [
+      "IdentityStore",
+      "AuthenticationMechanism",
+      "CredentialValidation",
+      "SecurityStore"
+    ],
+    "correct": 0,
+    "explanation": "IdentityStore est l'interface Jakarta Security."
+  },
+  {
+    "id": "JAK-SEC-013",
+    "theme": "Jakarta Security",
+    "theme_label": "Authentication Mechanism",
+    "difficulty": "hard",
+    "question": "Quelle interface implémenter pour un mécanisme personnalisé ?",
+    "options": [
+      "HttpAuthenticationMechanism",
+      "AuthenticationMechanism",
+      "AuthMechanism",
+      "LoginModule"
+    ],
+    "correct": 0,
+    "explanation": "HttpAuthenticationMechanism pour le mécanisme HTTP."
+  },
+  {
+    "id": "JAK-SEC-014",
+    "theme": "Jakarta Security",
+    "theme_label": "Authentication Mechanism",
+    "difficulty": "hard",
+    "question": "Quelle méthode est appelée pour authentifier ?",
+    "options": [
+      "validateRequest()",
+      "authenticate()",
+      "login()",
+      "validate()"
+    ],
+    "correct": 0,
+    "explanation": "validateRequest() est la méthode principale."
+  },
+  {
+    "id": "JAK-SEC-015",
+    "theme": "Jakarta Security",
+    "theme_label": "Remember Me",
+    "difficulty": "hard",
+    "question": "Comment implémenter Remember Me ?",
+    "options": [
+      "Cookie avec token",
+      "IdentityStore personnalisé",
+      "AuthenticationMechanism",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Remember Me nécessite une implémentation personnalisée."
+  },
+  {
+    "id": "JAK-SEC-016",
+    "theme": "Jakarta Security",
+    "theme_label": "Logout",
+    "difficulty": "hard",
+    "question": "Comment déconnecter un utilisateur ?",
+    "options": [
+      "request.logout()",
+      "session.invalidate()",
+      "request.getSession().invalidate()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "logout() ou invalidation de session."
+  },
+  {
+    "id": "JAK-SEC-017",
+    "theme": "Jakarta Security",
+    "theme_label": "Security Context",
+    "difficulty": "hard",
+    "question": "Comment injecter le SecurityContext ?",
+    "options": ["@Inject SecurityContext", "@Context SecurityContext", "A et B", "A seulement"],
+    "correct": 2,
+    "explanation": "@Inject ou @Context fonctionnent."
+  },
+  {
+    "id": "JAK-SEC-018",
+    "theme": "Jakarta Security",
+    "theme_label": "Security Context",
+    "difficulty": "hard",
+    "question": "Que permet SecurityContext ?",
+    "options": [
+      "Accès à l'utilisateur",
+      "Vérification des rôles",
+      "Authentification programmatique",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "SecurityContext offre toutes ces fonctionnalités."
+  },
+  {
+    "id": "JAK-SEC-019",
+    "theme": "Jakarta Security",
+    "theme_label": "LDAP",
+    "difficulty": "hard",
+    "question": "Comment configurer l'authentification LDAP ?",
+    "options": [
+      "IdentityStore LDAP",
+      "JNDI Realm",
+      "OpenLDAP",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "LDAP via IdentityStore ou realm JNDI."
+  },
+  {
+    "id": "JAK-SEC-020",
+    "theme": "Jakarta Security",
+    "theme_label": "Database",
+    "difficulty": "hard",
+    "question": "Comment configurer l'authentification par base ?",
+    "options": [
+      "JDBC Realm",
+      "DataSource",
+      "IdentityStore JDBC",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "JDBC realm ou IdentityStore personnalisé."
+  },
+  {
+    "id": "JAK-SEC-021",
+    "theme": "Jakarta Security",
+    "theme_label": "Password hashing",
+    "difficulty": "hard",
+    "question": "Comment hacher les mots de passe ?",
+    "options": [
+      "Pbkdf2PasswordHash",
+      "BCrypt",
+      "Argon2",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs algorithmes supportés."
+  },
+  {
+    "id": "JAK-SEC-022",
+    "theme": "Jakarta Security",
+    "theme_label": "Password hashing",
+    "difficulty": "hard",
+    "question": "Quelle interface pour hacher les mots de passe ?",
+    "options": [
+      "PasswordHash",
+      "HashAlgorithm",
+      "PasswordEncoder",
+      "HashProvider"
+    ],
+    "correct": 0,
+    "explanation": "PasswordHash est l'interface Jakarta Security."
+  },
+  {
+    "id": "JAK-SEC-023",
+    "theme": "Jakarta Security",
+    "theme_label": "CSRF",
+    "difficulty": "hard",
+    "question": "Comment se protéger contre CSRF ?",
+    "options": [
+      "Token synchronizer",
+      "SameSite cookie",
+      "Double submit cookie",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques anti-CSRF."
+  },
+  {
+    "id": "JAK-SEC-024",
+    "theme": "Jakarta Security",
+    "theme_label": "CSRF",
+    "difficulty": "hard",
+    "question": "Quel header protège contre CSRF ?",
+    "options": [
+      "X-CSRF-Token",
+      "X-Requested-With",
+      "Origin",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs en-têtes pour la protection CSRF."
+  },
+  {
+    "id": "JAK-SEC-025",
+    "theme": "Jakarta Security",
+    "theme_label": "XSS",
+    "difficulty": "hard",
+    "question": "Comment se protéger contre XSS ?",
+    "options": [
+      "Échappement des sorties",
+      "CSP (Content Security Policy)",
+      "Validation des entrées",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs couches de protection XSS."
+  },
+  {
+    "id": "JAK-SEC-026",
+    "theme": "Jakarta Security",
+    "theme_label": "XSS",
+    "difficulty": "hard",
+    "question": "Quel header active la CSP ?",
+    "options": [
+      "Content-Security-Policy",
+      "X-XSS-Protection",
+      "X-Content-Type-Options",
+      "X-Frame-Options"
+    ],
+    "correct": 0,
+    "explanation": "Content-Security-Policy est le header standard."
+  },
+  {
+    "id": "JAK-SEC-027",
+    "theme": "Jakarta Security",
+    "theme_label": "Session security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les sessions ?",
+    "options": [
+      "HttpOnly",
+      "Secure flag",
+      "SameSite",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs flags pour les cookies de session."
+  },
+  {
+    "id": "JAK-SEC-028",
+    "theme": "Jakarta Security",
+    "theme_label": "Session security",
+    "difficulty": "hard",
+    "question": "Quel flag empêche l'accès JavaScript au cookie ?",
+    "options": ["HttpOnly", "Secure", "SameSite", "Domain"],
+    "correct": 0,
+    "explanation": "HttpOnly protège contre les XSS."
+  },
+  {
+    "id": "JAK-SEC-029",
+    "theme": "Jakarta Security",
+    "theme_label": "Session security",
+    "difficulty": "hard",
+    "question": "Quel flag force le cookie sur HTTPS ?",
+    "options": ["Secure", "HttpOnly", "SameSite", "Domain"],
+    "correct": 0,
+    "explanation": "Secure limite le cookie aux connexions HTTPS."
+  },
+  {
+    "id": "JAK-SEC-030",
+    "theme": "Jakarta Security",
+    "theme_label": "OAuth2",
+    "difficulty": "hard",
+    "question": "Comment intégrer OAuth2 dans Jakarta EE ?",
+    "options": [
+      "MicroProfile JWT",
+      "Eclipse MicroProfile",
+      "Jakarta Security + OIDC",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "MicroProfile JWT ou Jakarta Security avec OIDC."
+  },
+  {
+    "id": "JAK-SEC-031",
+    "theme": "Jakarta Security",
+    "theme_label": "JWT",
+    "difficulty": "hard",
+    "question": "Comment valider un JWT ?",
+    "options": [
+      "JWTClaimValidator",
+      "JsonWebToken",
+      "JwtParser",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de valider JWT."
+  },
+  {
+    "id": "JAK-SEC-032",
+    "theme": "Jakarta Security",
+    "theme_label": "JWT",
+    "difficulty": "hard",
+    "question": "Quelle annotation injecte un JWT ?",
+    "options": ["@Inject JsonWebToken", "@Inject JWT", "@Inject Token", "@JWT"],
+    "correct": 0,
+    "explanation": "JsonWebToken est injectable avec @Inject."
+  },
+  {
+    "id": "JAK-SEC-033",
+    "theme": "Jakarta Security",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Comment chiffrer les données sensibles ?",
+    "options": [
+      "JCA (Java Cryptography Architecture)",
+      "JCE (Java Cryptography Extension)",
+      "Bouncy Castle",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs API de chiffrement disponibles."
+  },
+  {
+    "id": "JAK-SEC-034",
+    "theme": "Jakarta Security",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Quel algorithme est recommandé pour chiffrer ?",
+    "options": ["AES-GCM", "DES", "RC4", "3DES"],
+    "correct": 0,
+    "explanation": "AES-GCM est recommandé pour le chiffrement authentifié."
+  },
+  {
+    "id": "JAK-SEC-035",
+    "theme": "Jakarta Security",
+    "theme_label": "Audit",
+    "difficulty": "hard",
+    "question": "Comment auditer les événements de sécurité ?",
+    "options": [
+      "ContainerRequestFilter",
+      "SecurityEvent",
+      "AuditListener",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Filtres ou listeners pour l'audit."
+  },
+  {
+    "id": "JAK-SEC-036",
+    "theme": "Jakarta Security",
+    "theme_label": "Rate limiting",
+    "difficulty": "hard",
+    "question": "Comment implémenter le rate limiting ?",
+    "options": [
+      "Filter avec compteur",
+      "Bucket4j",
+      "Resilience4j",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs bibliothèques pour rate limiting."
+  },
+  {
+    "id": "JAK-SEC-037",
+    "theme": "Jakarta Security",
+    "theme_label": "Testing security",
+    "difficulty": "hard",
+    "question": "Comment tester la sécurité ?",
+    "options": [
+      "Mock SecurityContext",
+      "Test avec utilisateur",
+      "Arquillian",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs approches pour tester la sécurité."
+  },
+  {
+    "id": "JAK-SEC-038",
+    "theme": "Jakarta Security",
+    "theme_label": "Testing security",
+    "difficulty": "hard",
+    "question": "Comment simuler un utilisateur dans les tests ?",
+    "options": [
+      "MockHttpServletRequest",
+      "SecurityContext mock",
+      "JUnit avec @WithMockUser",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Mock de la requête ou du SecurityContext."
+  },
+  {
+    "id": "JAK-SEC-039",
+    "theme": "Jakarta Security",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les mots de passe doivent-ils être hachés ?",
+    "options": [
+      "Oui, avec sel",
+      "Non, clairs",
+      "Oui, sans sel",
+      "Non, chiffrés"
+    ],
+    "correct": 0,
+    "explanation": "Hachage avec sel est obligatoire."
+  },
+  {
+    "id": "JAK-SEC-040",
+    "theme": "Jakarta Security",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Le principe de moindre privilège signifie ?",
+    "options": [
+      "Donner le minimum de droits",
+      "Donner tous les droits",
+      "Donner des droits par défaut",
+      "Donner des droits temporaires"
+    ],
+    "correct": 0,
+    "explanation": "Le principe donne le minimum de droits nécessaires."
+  },
+  {
+    "id": "JAK-SEC-041",
+    "theme": "Jakarta Security",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Faut-il utiliser HTTPS en production ?",
+    "options": [
+      "Oui, obligatoire",
+      "Non, optionnel",
+      "Seulement pour les formulaires",
+      "Seulement pour l'admin"
+    ],
+    "correct": 0,
+    "explanation": "HTTPS est obligatoire pour toute application web."
+  },
+  {
+    "id": "JAK-SEC-042",
+    "theme": "Jakarta Security",
+    "theme_label": "Common vulnerabilities",
+    "difficulty": "hard",
+    "question": "Quelle vulnérabilité permet l'injection SQL ?",
+    "options": [
+      "Requêtes non paramétrées",
+      "XSS",
+      "CSRF",
+      "Session fixation"
+    ],
+    "correct": 0,
+    "explanation": "L'injection SQL vient de requêtes non paramétrées."
+  },
+  {
+    "id": "JAK-SEC-043",
+    "theme": "Jakarta Security",
+    "theme_label": "Common vulnerabilities",
+    "difficulty": "hard",
+    "question": "Quelle vulnérabilité permet de voler des sessions ?",
+    "options": [
+      "Session fixation",
+      "XSS",
+      "CSRF",
+      "SQL injection"
+    ],
+    "correct": 0,
+    "explanation": "La fixation de session permet de voler des sessions."
+  },
+  {
+    "id": "JAK-SEC-044",
+    "theme": "Jakarta Security",
+    "theme_label": "OWASP",
+    "difficulty": "hard",
+    "question": "Que signifie OWASP ?",
+    "options": [
+      "Open Web Application Security Project",
+      "Open Web Application Security Protocol",
+      "Open Web Application Standard Project",
+      "Open Web Application Security Program"
+    ],
+    "correct": 0,
+    "explanation": "OWASP est la référence pour la sécurité web."
+  },
+  {
+    "id": "JAK-SEC-045",
+    "theme": "Jakarta Security",
+    "theme_label": "OWASP Top 10",
+    "difficulty": "hard",
+    "question": "Quelle est la vulnérabilité la plus critique ?",
+    "options": [
+      "Broken Access Control",
+      "XSS",
+      "SQL Injection",
+      "CSRF"
+    ],
+    "correct": 0,
+    "explanation": "Broken Access Control est #1 dans OWASP Top 10 2021."
+  },
+  {
+    "id": "JAK-SEC-046",
+    "theme": "Jakarta Security",
+    "theme_label": "Security headers",
+    "difficulty": "hard",
+    "question": "Quel header protège contre le clickjacking ?",
+    "options": [
+      "X-Frame-Options",
+      "X-Content-Type-Options",
+      "X-XSS-Protection",
+      "Strict-Transport-Security"
+    ],
+    "correct": 0,
+    "explanation": "X-Frame-Options empêche l'iframe malveillant."
+  },
+  {
+    "id": "JAK-SEC-047",
+    "theme": "Jakarta Security",
+    "theme_label": "Security headers",
+    "difficulty": "hard",
+    "question": "Quel header force HTTPS ?",
+    "options": [
+      "Strict-Transport-Security",
+      "X-Frame-Options",
+      "X-Content-Type-Options",
+      "Content-Security-Policy"
+    ],
+    "correct": 0,
+    "explanation": "HSTS force HTTPS pour les requêtes futures."
+  },
+  {
+    "id": "JAK-SEC-048",
+    "theme": "Jakarta Security",
+    "theme_label": "Security headers",
+    "difficulty": "hard",
+    "question": "Quel header empêche le MIME sniffing ?",
+    "options": [
+      "X-Content-Type-Options: nosniff",
+      "X-Frame-Options",
+      "X-XSS-Protection",
+      "Content-Security-Policy"
+    ],
+    "correct": 0,
+    "explanation": "X-Content-Type-Options: nosniff désactive le MIME sniffing."
+  },
+  {
+    "id": "JAK-SEC-049",
+    "theme": "Jakarta Security",
+    "theme_label": "Container Security",
+    "difficulty": "hard",
+    "question": "Le serveur d'application doit-il être à jour ?",
+    "options": [
+      "Oui, pour les patchs de sécurité",
+      "Non, optionnel",
+      "Seulement pour les bugs",
+      "Non, déconseillé"
+    ],
+    "correct": 0,
+    "explanation": "Les mises à jour de sécurité sont cruciales."
+  },
+  {
+    "id": "JAK-SEC-050",
+    "theme": "Jakarta Security",
+    "theme_label": "Container Security",
+    "difficulty": "hard",
+    "question": "Quel est le rôle du Security Manager ?",
+    "options": [
+      "Contrôler les permissions du code",
+      "Chiffrer les données",
+      "Authentifier les utilisateurs",
+      "Auditer les accès"
+    ],
+    "correct": 0,
+    "explanation": "Le Security Manager contrôle les permissions des applications."
+  }
+]

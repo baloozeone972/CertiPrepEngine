@@ -1,0 +1,36 @@
+{
+  "id": "devsecops",
+  "name": "DevSecOps Engineer (Linux Foundation)",
+  "version": "1.0",
+  "description": "Certification DevSecOps - Intégration de la sécurité dans le cycle DevOps",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "SAST & DAST",
+      "count": 70
+    },
+    {
+      "name": "Container Security",
+      "count": 60
+    },
+    {
+      "name": "Infrastructure Security",
+      "count": 60
+    },
+    {
+      "name": "Secrets Management",
+      "count": 50
+    },
+    {
+      "name": "Compliance as Code",
+      "count": 60
+    },
+    {
+      "name": "Security Pipelines",
+      "count": 50
+    }
+  ]
+}

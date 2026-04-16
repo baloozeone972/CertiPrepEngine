@@ -1,0 +1,722 @@
+[
+  {
+    "id": "AND-NET-001",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Retrofit ?",
+    "options": [
+      "Client HTTP pour API REST",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "Retrofit est un client HTTP typé."
+  },
+  {
+    "id": "AND-NET-002",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour une requête GET ?",
+    "options": ["@GET", "@HTTP", "@Request", "@Fetch"],
+    "correct": 0,
+    "explanation": "@GET définit une requête HTTP GET."
+  },
+  {
+    "id": "AND-NET-003",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour une requête POST ?",
+    "options": ["@POST", "@PUT", "@PATCH", "@DELETE"],
+    "correct": 0,
+    "explanation": "@POST définit une requête HTTP POST."
+  },
+  {
+    "id": "AND-NET-004",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour le corps de la requête ?",
+    "options": ["@Body", "@Field", "@Query", "@Part"],
+    "correct": 0,
+    "explanation": "@Body envoie un objet dans le corps de la requête."
+  },
+  {
+    "id": "AND-NET-005",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour un paramètre d'URL ?",
+    "options": ["@Path", "@Query", "@Field", "@Body"],
+    "correct": 0,
+    "explanation": "@Path remplace une variable dans l'URL."
+  },
+  {
+    "id": "AND-NET-006",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour un paramètre de requête ?",
+    "options": ["@Query", "@Path", "@Field", "@Body"],
+    "correct": 0,
+    "explanation": "@Query ajoute un paramètre ?key=value."
+  },
+  {
+    "id": "AND-NET-007",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "medium",
+    "question": "Comment créer une instance Retrofit ?",
+    "options": [
+      "Retrofit.Builder().baseUrl(url).build()",
+      "new Retrofit(url)",
+      "Retrofit.create(url)",
+      "RetrofitClient(url)"
+    ],
+    "correct": 0,
+    "explanation": "Builder pattern pour configurer Retrofit."
+  },
+  {
+    "id": "AND-NET-008",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "medium",
+    "question": "Comment créer l'interface API ?",
+    "options": [
+      "retrofit.create(ApiService::class.java)",
+      "retrofit.get(ApiService.class)",
+      "retrofit.build(ApiService.class)",
+      "retrofit.new(ApiService.class)"
+    ],
+    "correct": 0,
+    "explanation": "create() génère l'implémentation de l'interface."
+  },
+  {
+    "id": "AND-NET-009",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "hard",
+    "question": "Comment ajouter un convertisseur JSON ?",
+    "options": [
+      "addConverterFactory(GsonConverterFactory.create())",
+      "addConverter(JsonConverter)",
+      "setConverter(GsonConverter)",
+      "registerConverter(GsonConverter)"
+    ],
+    "correct": 0,
+    "explanation": "addConverterFactory ajoute le convertisseur."
+  },
+  {
+    "id": "AND-NET-010",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "hard",
+    "question": "Comment rendre une méthode Retrofit suspend ?",
+    "options": [
+      "suspend fun getData(): Response",
+      "fun getData(): Deferred<Response>",
+      "fun getData(): Call<Response>",
+      "A ou B"
+    ],
+    "correct": 3,
+    "explanation": "suspend ou Deferred pour coroutines."
+  },
+  {
+    "id": "AND-NET-011",
+    "theme": "Networking",
+    "theme_label": "OkHttp",
+    "difficulty": "hard",
+    "question": "À quoi sert OkHttp ?",
+    "options": [
+      "Client HTTP sous-jacent",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "OkHttp est le client HTTP utilisé par Retrofit."
+  },
+  {
+    "id": "AND-NET-012",
+    "theme": "Networking",
+    "theme_label": "OkHttp",
+    "difficulty": "hard",
+    "question": "Comment ajouter un Interceptor ?",
+    "options": [
+      "OkHttpClient.Builder().addInterceptor(interceptor)",
+      "client.interceptor(interceptor)",
+      "addNetworkInterceptor(interceptor)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "addInterceptor ou addNetworkInterceptor."
+  },
+  {
+    "id": "AND-NET-013",
+    "theme": "Networking",
+    "theme_label": "OkHttp",
+    "difficulty": "hard",
+    "question": "Différence entre Interceptor et NetworkInterceptor ?",
+    "options": [
+      "NetworkInterceptor voit la réponse brute",
+      "Interceptor voit la réponse traitée",
+      "Identiques",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "NetworkInterceptor est plus bas niveau."
+  },
+  {
+    "id": "AND-NET-014",
+    "theme": "Networking",
+    "theme_label": "Moshi",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Moshi ?",
+    "options": [
+      "Parseur JSON",
+      "Base de données",
+      "Cache",
+      "Network"
+    ],
+    "correct": 0,
+    "explanation": "Moshi est un parseur JSON pour Kotlin/Java."
+  },
+  {
+    "id": "AND-NET-015",
+    "theme": "Networking",
+    "theme_label": "Moshi",
+    "difficulty": "hard",
+    "question": "Comment créer un adaptateur personnalisé Moshi ?",
+    "options": [
+      "@Json qualifier",
+      "JsonAdapter",
+      "TypeAdapter",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "@Json ou TypeAdapter personnalisé."
+  },
+  {
+    "id": "AND-NET-016",
+    "theme": "Networking",
+    "theme_label": "Kotlin Serialization",
+    "difficulty": "hard",
+    "question": "Quelle annotation pour la sérialisation Kotlin ?",
+    "options": ["@Serializable", "@Serialize", "@JsonSerializable", "@KSerializable"],
+    "correct": 0,
+    "explanation": "@Serializable de kotlinx.serialization."
+  },
+  {
+    "id": "AND-NET-017",
+    "theme": "Networking",
+    "theme_label": "Kotlin Serialization",
+    "difficulty": "hard",
+    "question": "Comment utiliser Kotlin Serialization avec Retrofit ?",
+    "options": [
+      "addConverterFactory(Json.asConverterFactory())",
+      "setSerializer(Json)",
+      "useKotlinSerialization()",
+      "enableKotlinSerialization()"
+    ],
+    "correct": 0,
+    "explanation": "Json.asConverterFactory() crée le convertisseur."
+  },
+  {
+    "id": "AND-NET-018",
+    "theme": "Networking",
+    "theme_label": "Volley",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Volley ?",
+    "options": [
+      "Bibliothèque réseau Google",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "Volley est une bibliothèque réseau de Google."
+  },
+  {
+    "id": "AND-NET-019",
+    "theme": "Networking",
+    "theme_label": "Volley vs Retrofit",
+    "difficulty": "hard",
+    "question": "Avantage de Retrofit sur Volley ?",
+    "options": [
+      "Typage fort, coroutines",
+      "Plus simple",
+      "Plus rapide",
+      "Moins de code"
+    ],
+    "correct": 0,
+    "explanation": "Retrofit offre un typage fort et coroutines."
+  },
+  {
+    "id": "AND-NET-020",
+    "theme": "Networking",
+    "theme_label": "Ktor",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Ktor ?",
+    "options": [
+      "Client HTTP multiplateforme",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "Ktor est un client HTTP asynchrone pour Kotlin multiplateforme."
+  },
+  {
+    "id": "AND-NET-021",
+    "theme": "Networking",
+    "theme_label": "Ktor",
+    "difficulty": "hard",
+    "question": "Ktor est-il compatible avec Android ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Encore expérimental"
+    ],
+    "correct": 0,
+    "explanation": "Ktor fonctionne sur Android."
+  },
+  {
+    "id": "AND-NET-022",
+    "theme": "Networking",
+    "theme_label": "Image loading",
+    "difficulty": "hard",
+    "question": "Quelle bibliothèque charge des images ?",
+    "options": [
+      "Glide, Coil, Picasso",
+      "Retrofit",
+      "OkHttp",
+      "Moshi"
+    ],
+    "correct": 0,
+    "explanation": "Glide, Coil, Picasso sont les bibliothèques d'images."
+  },
+  {
+    "id": "AND-NET-023",
+    "theme": "Networking",
+    "theme_label": "Coil",
+    "difficulty": "hard",
+    "question": "Comment charger une image avec Coil ?",
+    "options": [
+      "ImageRequest.Builder(context).data(url).build()",
+      "Glide.with(context).load(url)",
+      "Picasso.get().load(url)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs bibliothèques avec syntaxes différentes."
+  },
+  {
+    "id": "AND-NET-024",
+    "theme": "Networking",
+    "theme_label": "Glide",
+    "difficulty": "hard",
+    "question": "Quelle est la particularité de Glide ?",
+    "options": [
+      "GIF et vidéo supportés",
+      "Seulement images",
+      "Seulement PNG",
+      "Seulement JPEG"
+    ],
+    "correct": 0,
+    "explanation": "Glide supporte GIF, vidéo, images."
+  },
+  {
+    "id": "AND-NET-025",
+    "theme": "Networking",
+    "theme_label": "Caching images",
+    "difficulty": "hard",
+    "question": "Comment configurer le cache avec Glide ?",
+    "options": [
+      "diskCacheStrategy()",
+      "skipMemoryCache()",
+      "onlyRetrieveFromCache()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Options de cache disque et mémoire."
+  },
+  {
+    "id": "AND-NET-026",
+    "theme": "Networking",
+    "theme_label": "WebSocket",
+    "difficulty": "hard",
+    "question": "Comment implémenter WebSocket sur Android ?",
+    "options": [
+      "OkHttp WebSocket",
+      "Java WebSocket",
+      "Ktor WebSocket",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs bibliothèques supportent WebSocket."
+  },
+  {
+    "id": "AND-NET-027",
+    "theme": "Networking",
+    "theme_label": "SSE (Server-Sent Events)",
+    "difficulty": "hard",
+    "question": "À quoi servent les SSE ?",
+    "options": [
+      "Notifications unidirectionnelles",
+      "Notifications bidirectionnelles",
+      "Requête HTTP classique",
+      "Upload de fichiers"
+    ],
+    "correct": 0,
+    "explanation": "SSE permet au serveur d'envoyer des événements."
+  },
+  {
+    "id": "AND-NET-028",
+    "theme": "Networking",
+    "theme_label": "Download manager",
+    "difficulty": "hard",
+    "question": "À quoi sert DownloadManager ?",
+    "options": [
+      "Téléchargement de fichiers",
+      "Upload de fichiers",
+      "Streaming",
+      "WebSocket"
+    ],
+    "correct": 0,
+    "explanation": "DownloadManager gère les téléchargements longs."
+  },
+  {
+    "id": "AND-NET-029",
+    "theme": "Networking",
+    "theme_label": "DownloadManager",
+    "difficulty": "hard",
+    "question": "Comment lancer un téléchargement ?",
+    "options": [
+      "DownloadManager.enqueue(request)",
+      "DownloadManager.start(request)",
+      "DownloadManager.download(request)",
+      "DownloadManager.execute(request)"
+    ],
+    "correct": 0,
+    "explanation": "enqueue() met le téléchargement en file."
+  },
+  {
+    "id": "AND-NET-030",
+    "theme": "Networking",
+    "theme_label": "WorkManager network",
+    "difficulty": "hard",
+    "question": "Comment exécuter une tâche réseau avec WorkManager ?",
+    "options": [
+      "setConstraints(NetworkType.CONNECTED)",
+      "NetworkType.UNMETERED",
+      "NetworkType.NOT_ROAMING",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Contraintes réseau pour WorkManager."
+  },
+  {
+    "id": "AND-NET-031",
+    "theme": "Networking",
+    "theme_label": "ConnectivityManager",
+    "difficulty": "hard",
+    "question": "Comment vérifier la connexion internet ?",
+    "options": [
+      "ConnectivityManager",
+      "NetworkCapabilities",
+      "NetworkCallback",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "API Network pour la connectivité."
+  },
+  {
+    "id": "AND-NET-032",
+    "theme": "Networking",
+    "theme_label": "ConnectivityManager",
+    "difficulty": "hard",
+    "question": "Quelle permission pour la connectivité ?",
+    "options": [
+      "ACCESS_NETWORK_STATE",
+      "INTERNET",
+      "ACCESS_WIFI_STATE",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Permissions pour lire l'état réseau."
+  },
+  {
+    "id": "AND-NET-033",
+    "theme": "Networking",
+    "theme_label": "Retry policies",
+    "difficulty": "hard",
+    "question": "Comment implémenter des retries ?",
+    "options": [
+      "Retrofit avec OkHttp interceptor",
+      "Resilience4j",
+      "Coroutines retry",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs approches pour les retries."
+  },
+  {
+    "id": "AND-NET-034",
+    "theme": "Networking",
+    "theme_label": "Timeout",
+    "difficulty": "hard",
+    "question": "Comment configurer les timeouts ?",
+    "options": [
+      "OkHttpClient.Builder().connectTimeout()",
+      "OkHttpClient.Builder().readTimeout()",
+      "OkHttpClient.Builder().writeTimeout()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Trois types de timeouts configurables."
+  },
+  {
+    "id": "AND-NET-035",
+    "theme": "Networking",
+    "theme_label": "Certificate pinning",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le certificate pinning ?",
+    "options": [
+      "Fixer un certificat spécifique",
+      "Accepter tous les certificats",
+      "Ignorer les certificats",
+      "Chiffrer les certificats"
+    ],
+    "correct": 0,
+    "explanation": "Pinning empêche les attaques MITM."
+  },
+  {
+    "id": "AND-NET-036",
+    "theme": "Networking",
+    "theme_label": "Certificate pinning",
+    "difficulty": "hard",
+    "question": "Comment implémenter certificate pinning avec OkHttp ?",
+    "options": [
+      "CertificatePinner",
+      "addCertificatePinner()",
+      "setCertificatePinner()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "CertificatePinner avec les empreintes."
+  },
+  {
+    "id": "AND-NET-037",
+    "theme": "Networking",
+    "theme_label": "Proguard",
+    "difficulty": "hard",
+    "question": "Que faut-il configurer pour Retrofit avec Proguard ?",
+    "options": [
+      "-keep class retrofit2.**",
+      "-keepattributes Signature",
+      "-keepattributes *Annotation*",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Règles Proguard pour Retrofit."
+  },
+  {
+    "id": "AND-NET-038",
+    "theme": "Networking",
+    "theme_label": "Testing network",
+    "difficulty": "hard",
+    "question": "Comment tester les appels réseau ?",
+    "options": [
+      "MockWebServer",
+      "Mockito",
+      "Retrofit mock",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "MockWebServer simule un serveur HTTP."
+  },
+  {
+    "id": "AND-NET-039",
+    "theme": "Networking",
+    "theme_label": "MockWebServer",
+    "difficulty": "hard",
+    "question": "À quoi sert MockWebServer ?",
+    "options": [
+      "Simuler un serveur HTTP",
+      "Simuler une base de données",
+      "Simuler un cache",
+      "Simuler un client"
+    ],
+    "correct": 0,
+    "explanation": "MockWebServer d'OkHttp pour les tests."
+  },
+  {
+    "id": "AND-NET-040",
+    "theme": "Networking",
+    "theme_label": "MockWebServer",
+    "difficulty": "hard",
+    "question": "Comment définir une réponse MockWebServer ?",
+    "options": [
+      "enqueue(MockResponse().setBody(\"{}\"))",
+      "addResponse(MockResponse())",
+      "setResponse(MockResponse())",
+      "sendResponse(MockResponse())"
+    ],
+    "correct": 0,
+    "explanation": "enqueue() ajoute une réponse simulée."
+  },
+  {
+    "id": "AND-NET-041",
+    "theme": "Networking",
+    "theme_label": "Network security config",
+    "difficulty": "hard",
+    "question": "Où configurer la sécurité réseau ?",
+    "options": [
+      "res/xml/network_security_config.xml",
+      "AndroidManifest.xml",
+      "build.gradle",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Fichier XML et référence dans manifest."
+  },
+  {
+    "id": "AND-NET-042",
+    "theme": "Networking",
+    "theme_label": "Cleartext traffic",
+    "difficulty": "hard",
+    "question": "Comment autoriser le trafic HTTP (non HTTPS) ?",
+    "options": [
+      "android:usesCleartextTraffic=\"true\"",
+      "cleartextTrafficPermitted=\"true\"",
+      "httpEnabled=\"true\"",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration dans security config ou manifest."
+  },
+  {
+    "id": "AND-NET-043",
+    "theme": "Networking",
+    "theme_label": "Chucker/Stetho",
+    "difficulty": "hard",
+    "question": "À quoi sert Chucker ?",
+    "options": [
+      "Debugging réseau",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "Chucker est un interceptor de debug pour OkHttp."
+  },
+  {
+    "id": "AND-NET-044",
+    "theme": "Networking",
+    "theme_label": "Chucker",
+    "difficulty": "hard",
+    "question": "Comment intégrer Chucker ?",
+    "options": [
+      "addInterceptor(ChuckerInterceptor(context))",
+      "addNetworkInterceptor(ChuckerInterceptor(context))",
+      "enableChucker()",
+      "A ou B"
+    ],
+    "correct": 3,
+    "explanation": "Interceptor selon le besoin."
+  },
+  {
+    "id": "AND-NET-045",
+    "theme": "Networking",
+    "theme_label": "Stetho",
+    "difficulty": "hard",
+    "question": "À quoi sert Stetho ?",
+    "options": [
+      "Debugging réseau via Chrome",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "Stetho de Facebook pour le debugging."
+  },
+  {
+    "id": "AND-NET-046",
+    "theme": "Networking",
+    "theme_label": "Data compression",
+    "difficulty": "hard",
+    "question": "Comment activer la compression Gzip ?",
+    "options": [
+      "OkHttp le fait automatiquement",
+      "addInterceptor(GzipInterceptor)",
+      "enableGzip()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "OkHttp gère Gzip par défaut."
+  },
+  {
+    "id": "AND-NET-047",
+    "theme": "Networking",
+    "theme_label": "Authentication",
+    "difficulty": "hard",
+    "question": "Comment gérer l'authentification Bearer token ?",
+    "options": [
+      "Interceptor ajoutant Authorization header",
+      "Authenticator",
+      "addHeader()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Interceptor ou Authenticator pour les tokens."
+  },
+  {
+    "id": "AND-NET-048",
+    "theme": "Networking",
+    "theme_label": "Authentication",
+    "difficulty": "hard",
+    "question": "Comment rafraîchir un token expiré ?",
+    "options": [
+      "Authenticator personnalisé",
+      "Interceptor",
+      "Retry",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Authenticator peut retenter avec nouveau token."
+  },
+  {
+    "id": "AND-NET-049",
+    "theme": "Networking",
+    "theme_label": "Offline support",
+    "difficulty": "hard",
+    "question": "Comment gérer le mode hors ligne ?",
+    "options": [
+      "Cache réseau",
+      "Base de données locale",
+      "WorkManager sync",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs stratégies pour l'offline."
+  },
+  {
+    "id": "AND-NET-050",
+    "theme": "Networking",
+    "theme_label": "Offline cache",
+    "difficulty": "hard",
+    "question": "Comment configurer le cache OkHttp ?",
+    "options": [
+      "cache(Cache(directory, size))",
+      "OkHttpClient.Builder().cache(cache)",
+      "setCache(cache)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Cache via OkHttpClient.Builder()."
+  }
+]

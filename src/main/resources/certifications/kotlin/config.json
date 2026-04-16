@@ -1,0 +1,32 @@
+{
+  "id": "kotlin",
+  "name": "Kotlin Developer (JetBrains)",
+  "version": "1.0",
+  "description": "Certification Kotlin - Développement moderne avec Kotlin (JVM, Android, multiplatform)",
+  "totalQuestions": 300,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Kotlin Syntax",
+      "count": 60
+    },
+    {
+      "name": "Null Safety",
+      "count": 50
+    },
+    {
+      "name": "Coroutines",
+      "count": 70
+    },
+    {
+      "name": "Functional Programming",
+      "count": 60
+    },
+    {
+      "name": "Object-oriented",
+      "count": 60
+    }
+  ]
+}

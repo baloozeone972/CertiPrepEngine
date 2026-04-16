@@ -1,0 +1,677 @@
+[
+  {
+    "id": "SB3-ACT-001",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Présentation",
+    "difficulty": "easy",
+    "question": "Quelle dépendance ajoute Actuator ?",
+    "options": [
+      "spring-boot-starter-actuator",
+      "spring-boot-actuator",
+      "spring-actuator-starter",
+      "boot-starter-actuator"
+    ],
+    "correct": 0,
+    "explanation": "Le starter spring-boot-starter-actuator active Actuator."
+  },
+  {
+    "id": "SB3-ACT-002",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Présentation",
+    "difficulty": "easy",
+    "question": "Quels sont les deux endpoints exposés par défaut ?",
+    "options": ["/health et /info", "/metrics et /health", "/info et /metrics", "/health et /env"],
+    "correct": 0,
+    "explanation": "Seuls /health et /info sont exposés par défaut pour des raisons de sécurité."
+  },
+  {
+    "id": "SB3-ACT-003",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "easy",
+    "question": "Quel endpoint donne l'état de santé de l'application ?",
+    "options": ["/health", "/info", "/status", "/ping"],
+    "correct": 0,
+    "explanation": "/health fournit des informations sur la santé de l'application."
+  },
+  {
+    "id": "SB3-ACT-004",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "easy",
+    "question": "Quel endpoint donne des informations sur l'application ?",
+    "options": ["/info", "/health", "/metadata", "/details"],
+    "correct": 0,
+    "explanation": "/info fournit des informations personnalisables sur l'application."
+  },
+  {
+    "id": "SB3-ACT-005",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "question": "Quel endpoint expose les métriques de l'application ?",
+    "options": ["/metrics", "/stats", "/measure", "/counters"],
+    "correct": 0,
+    "explanation": "/metrics expose les métriques comme la mémoire, CPU, etc."
+  },
+  {
+    "id": "SB3-ACT-006",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "question": "Quel endpoint expose les propriétés de configuration ?",
+    "options": ["/env", "/config", "/properties", "/settings"],
+    "correct": 0,
+    "explanation": "/env expose les propriétés d'environnement et de configuration."
+  },
+  {
+    "id": "SB3-ACT-007",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "question": "Quel endpoint expose la liste des beans Spring ?",
+    "options": ["/beans", "/components", "/context", "/instances"],
+    "correct": 0,
+    "explanation": "/beans liste tous les beans du contexte Spring."
+  },
+  {
+    "id": "SB3-ACT-008",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "question": "Quel endpoint expose les mappings des endpoints web ?",
+    "options": ["/mappings", "/routes", "/endpoints", "/apis"],
+    "correct": 0,
+    "explanation": "/mappings montre les routes HTTP et leurs contrôleurs."
+  },
+  {
+    "id": "SB3-ACT-009",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "question": "Quel endpoint expose les threads de l'application ?",
+    "options": ["/threaddump", "/threads", "/dump", "/stack"],
+    "correct": 0,
+    "explanation": "/threaddump retourne un dump des threads."
+  },
+  {
+    "id": "SB3-ACT-010",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "question": "Quel endpoint expose la configuration des logs ?",
+    "options": ["/loggers", "/logs", "/logging", "/logconfig"],
+    "correct": 0,
+    "explanation": "/loggers permet de consulter et modifier les niveaux de log."
+  },
+  {
+    "id": "SB3-ACT-011",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "hard",
+    "question": "Comment exposer tous les endpoints Actuator ?",
+    "options": [
+      "management.endpoints.web.exposure.include=*",
+      "actuator.endpoints.all=true",
+      "spring.actuator.expose-all=true",
+      "management.endpoints.expose-all=true"
+    ],
+    "correct": 0,
+    "explanation": "include=* expose tous les endpoints disponibles."
+  },
+  {
+    "id": "SB3-ACT-012",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "hard",
+    "question": "Comment exposer uniquement health et info ?",
+    "options": [
+      "management.endpoints.web.exposure.include=health,info",
+      "actuator.endpoints=health,info",
+      "spring.actuator.include=health,info",
+      "endpoints.expose=health,info"
+    ],
+    "correct": 0,
+    "explanation": "include=health,info limite l'exposition à ces deux endpoints."
+  },
+  {
+    "id": "SB3-ACT-013",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "hard",
+    "question": "Comment exclure un endpoint spécifique ?",
+    "options": [
+      "management.endpoints.web.exposure.exclude=env",
+      "actuator.endpoints.exclude=env",
+      "spring.actuator.exclude=env",
+      "endpoints.exclude=env"
+    ],
+    "correct": 0,
+    "explanation": "exclude permet de retirer des endpoints de l'exposition."
+  },
+  {
+    "id": "SB3-ACT-014",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "hard",
+    "question": "Comment changer le préfixe des endpoints Actuator ?",
+    "options": [
+      "management.endpoints.web.base-path=/actuator",
+      "actuator.base-path=/actuator",
+      "spring.actuator.path=/actuator",
+      "endpoints.base-path=/actuator"
+    ],
+    "correct": 0,
+    "explanation": "base-path change le préfixe (par défaut /actuator)."
+  },
+  {
+    "id": "SB3-ACT-015",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Comment afficher les détails complets de santé ?",
+    "options": [
+      "management.endpoint.health.show-details=always",
+      "health.show-details=true",
+      "actuator.health.details=always",
+      "endpoint.health.details=always"
+    ],
+    "correct": 0,
+    "explanation": "show-details=always montre les détails de chaque composant."
+  },
+  {
+    "id": "SB3-ACT-016",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Comment créer un HealthIndicator personnalisé ?",
+    "options": [
+      "Implémenter HealthIndicator",
+      "Étendre AbstractHealthIndicator",
+      "Utiliser @HealthIndicator",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "On peut implémenter HealthIndicator ou étendre AbstractHealthIndicator."
+  },
+  {
+    "id": "SB3-ACT-017",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Que retourne un HealthIndicator personnalisé ?",
+    "options": [
+      "Health object",
+      "Status only",
+      "String",
+      "Boolean"
+    ],
+    "correct": 0,
+    "explanation": "health() retourne un objet Health avec status et détails."
+  },
+  {
+    "id": "SB3-ACT-018",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Quels sont les statuts possibles d'un Health ?",
+    "options": [
+      "UP, DOWN, OUT_OF_SERVICE, UNKNOWN",
+      "OK, KO, UNKNOWN",
+      "GREEN, RED, YELLOW",
+      "HEALTHY, UNHEALTHY"
+    ],
+    "correct": 0,
+    "explanation": "Les statuts standards sont UP, DOWN, OUT_OF_SERVICE, UNKNOWN."
+  },
+  {
+    "id": "SB3-ACT-019",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Comment ordonner les HealthIndicator ?",
+    "options": [
+      "@Order",
+      "@Priority",
+      "@HealthOrder",
+      "Ordre alphabétique"
+    ],
+    "correct": 0,
+    "explanation": "@Order permet de définir l'ordre d'exécution des health indicators."
+  },
+  {
+    "id": "SB3-ACT-020",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Comment désactiver un HealthIndicator spécifique ?",
+    "options": [
+      "management.health.indicator.enabled=false",
+      "health.indicator.disabled=true",
+      "actuator.health.ignore=indicator",
+      "endpoint.health.disable=indicator"
+    ],
+    "correct": 0,
+    "explanation": "Ex: management.health.db.enabled=false désactive le health check DB."
+  },
+  {
+    "id": "SB3-ACT-021",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Quelles métriques sont exposées par défaut ?",
+    "options": [
+      "JVM, CPU, HTTP, Logback",
+      "Seulement JVM",
+      "Seulement HTTP",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs métriques sont exposées : JVM, CPU, HTTP, Logback, etc."
+  },
+  {
+    "id": "SB3-ACT-022",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Comment créer un compteur personnalisé ?",
+    "options": [
+      "@Autowired MeterRegistry",
+      "MeterRegistry.counter().increment()",
+      "Counter.builder().register()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de créer des métriques personnalisées."
+  },
+  {
+    "id": "SB3-ACT-023",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Quelle annotation crée automatiquement des métriques ?",
+    "options": [
+      "@Timed",
+      "@Counted",
+      "@Metric",
+      "@Measured"
+    ],
+    "correct": 0,
+    "explanation": "@Timed mesure le temps d'exécution des méthodes."
+  },
+  {
+    "id": "SB3-ACT-024",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Comment taguer une métrique ?",
+    "options": [
+      "MeterRegistry.counter(\"name\", \"tag\", \"value\")",
+      "counter.tags(\"tag\", \"value\")",
+      "metric.tag(\"tag\", \"value\")",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les tags peuvent être ajoutés à la création ou après."
+  },
+  {
+    "id": "SB3-ACT-025",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Comment exporter les métriques vers Prometheus ?",
+    "options": [
+      "Ajouter micrometer-registry-prometheus",
+      "Exporter vers /actuator/prometheus",
+      "Configuration de Prometheus",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Prometheus nécessite la dépendance et la configuration adéquate."
+  },
+  {
+    "id": "SB3-ACT-026",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Info",
+    "difficulty": "hard",
+    "question": "Comment ajouter des informations personnalisées à /info ?",
+    "options": [
+      "info.app.name=MyApp dans application.properties",
+      "@InfoContributor",
+      "InfoContributor personnalisé",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Propriétés ou InfoContributor personnalisé."
+  },
+  {
+    "id": "SB3-ACT-027",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Info",
+    "difficulty": "hard",
+    "question": "Quelle information est automatiquement incluse ?",
+    "options": [
+      "build, git",
+      "application name",
+      "version",
+      "aucune"
+    ],
+    "correct": 0,
+    "explanation": "Les fichiers build-info.properties et git.properties sont inclus automatiquement."
+  },
+  {
+    "id": "SB3-ACT-028",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Info",
+    "difficulty": "hard",
+    "question": "Comment exposer les informations Git ?",
+    "options": [
+      "Plugin git-commit-id",
+      "spring.git.info=true",
+      "git.properties généré",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Le plugin git-commit-id génère git.properties."
+  },
+  {
+    "id": "SB3-ACT-029",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Info",
+    "difficulty": "hard",
+    "question": "Comment exposer les informations de build ?",
+    "options": [
+      "Plugin spring-boot-maven-plugin",
+      "build-info.properties",
+      "spring.build.info=true",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Le plugin Maven peut générer build-info.properties."
+  },
+  {
+    "id": "SB3-ACT-030",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Loggers",
+    "difficulty": "hard",
+    "question": "Comment changer dynamiquement le niveau de log ?",
+    "options": [
+      "POST /actuator/loggers/package",
+      "PUT /actuator/loggers/package",
+      "PATCH /actuator/loggers/package",
+      "GET /actuator/loggers/package"
+    ],
+    "correct": 0,
+    "explanation": "POST avec le nouveau niveau dans le corps de la requête."
+  },
+  {
+    "id": "SB3-ACT-031",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Loggers",
+    "difficulty": "hard",
+    "question": "Quels niveaux de log sont disponibles ?",
+    "options": [
+      "TRACE, DEBUG, INFO, WARN, ERROR, OFF",
+      "ALL, DEBUG, INFO, WARN, ERROR, NONE",
+      "FINE, FINER, FINEST, INFO, WARNING, SEVERE",
+      "DEBUG, INFO, WARN, ERROR"
+    ],
+    "correct": 0,
+    "explanation": "Les niveaux standard sont TRACE, DEBUG, INFO, WARN, ERROR, OFF."
+  },
+  {
+    "id": "SB3-ACT-032",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Loggers",
+    "difficulty": "hard",
+    "question": "Comment obtenir les niveaux de log actuels ?",
+    "options": [
+      "GET /actuator/loggers",
+      "GET /actuator/logs",
+      "GET /actuator/levels",
+      "GET /actuator/logconfig"
+    ],
+    "correct": 0,
+    "explanation": "GET /actuator/loggers retourne tous les loggers."
+  },
+  {
+    "id": "SB3-ACT-033",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Env",
+    "difficulty": "hard",
+    "question": "Quelles informations sont exposées par /env ?",
+    "options": [
+      "Propriétés système, variables d'environnement, properties",
+      "Seulement application.properties",
+      "Seulement les variables système",
+      "Seulement les variables d'environnement"
+    ],
+    "correct": 0,
+    "explanation": "/env expose toutes les sources de configuration."
+  },
+  {
+    "id": "SB3-ACT-034",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Env",
+    "difficulty": "hard",
+    "question": "Comment exposer /env en toute sécurité ?",
+    "options": [
+      "Restreindre l'accès",
+      "Masquer les valeurs sensibles",
+      "Ne pas exposer en production",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "/env peut exposer des secrets, il faut sécuriser."
+  },
+  {
+    "id": "SB3-ACT-035",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les endpoints Actuator ?",
+    "options": [
+      "Spring Security",
+      "management.endpoints.web.exposure.exclude=*",
+      "Changer le port",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour sécuriser les endpoints."
+  },
+  {
+    "id": "SB3-ACT-036",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Comment changer le port d'Actuator ?",
+    "options": [
+      "management.server.port=8081",
+      "actuator.port=8081",
+      "spring.actuator.port=8081",
+      "endpoints.port=8081"
+    ],
+    "correct": 0,
+    "explanation": "management.server.port change le port d'Actuator."
+  },
+  {
+    "id": "SB3-ACT-037",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Comment désactiver Actuator en production ?",
+    "options": [
+      "management.endpoints.enabled-by-default=false",
+      "actuator.enabled=false",
+      "spring.actuator.enabled=false",
+      "endpoints.enabled=false"
+    ],
+    "correct": 0,
+    "explanation": "enabled-by-default=false désactive tous les endpoints."
+  },
+  {
+    "id": "SB3-ACT-038",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "question": "Comment créer un endpoint personnalisé ?",
+    "options": [
+      "@Endpoint",
+      "@WebEndpoint",
+      "@RestController avec @ReadOperation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations pour créer des endpoints."
+  },
+  {
+    "id": "SB3-ACT-039",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une opération de lecture ?",
+    "options": ["@ReadOperation", "@GetMapping", "@Read", "@Query"],
+    "correct": 0,
+    "explanation": "@ReadOperation pour les opérations GET."
+  },
+  {
+    "id": "SB3-ACT-040",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une opération d'écriture ?",
+    "options": ["@WriteOperation", "@PostMapping", "@Write", "@Update"],
+    "correct": 0,
+    "explanation": "@WriteOperation pour les opérations POST/PUT/DELETE."
+  },
+  {
+    "id": "SB3-ACT-041",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une opération de suppression ?",
+    "options": ["@DeleteOperation", "@DeleteMapping", "@WriteOperation", "@Delete"],
+    "correct": 0,
+    "explanation": "@DeleteOperation pour les opérations DELETE."
+  },
+  {
+    "id": "SB3-ACT-042",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "question": "Comment définir l'ID d'un endpoint personnalisé ?",
+    "options": [
+      "@Endpoint(id = \"myendpoint\")",
+      "@WebEndpoint(name = \"myendpoint\")",
+      "@RestController(\"myendpoint\")",
+      "@RequestMapping(\"/myendpoint\")"
+    ],
+    "correct": 0,
+    "explanation": "L'attribut id de @Endpoint définit l'URL."
+  },
+  {
+    "id": "SB3-ACT-043",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "question": "Peut-on sécuriser un endpoint personnalisé ?",
+    "options": [
+      "Oui, avec Spring Security",
+      "Non, endpoints publics",
+      "Oui, avec @PreAuthorize",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Spring Security peut sécuriser les endpoints."
+  },
+  {
+    "id": "SB3-ACT-044",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "MBean",
+    "difficulty": "hard",
+    "question": "Les endpoints Actuator sont-ils exposés via JMX ?",
+    "options": [
+      "Oui, par défaut",
+      "Non",
+      "Oui, si activé",
+      "Uniquement pour les beans"
+    ],
+    "correct": 0,
+    "explanation": "Les endpoints sont exposés via JMX par défaut."
+  },
+  {
+    "id": "SB3-ACT-045",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "MBean",
+    "difficulty": "hard",
+    "question": "Comment désactiver l'exposition JMX ?",
+    "options": [
+      "management.endpoints.jmx.exposure.exclude=*",
+      "jmx.enabled=false",
+      "spring.jmx.enabled=false",
+      "actuator.jmx=false"
+    ],
+    "correct": 0,
+    "explanation": "Exclude=* désactive l'exposition JMX."
+  },
+  {
+    "id": "SB3-ACT-046",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Audit",
+    "difficulty": "hard",
+    "question": "Quel endpoint expose les événements d'audit ?",
+    "options": ["/auditevents", "/audit", "/events", "/logs"],
+    "correct": 0,
+    "explanation": "/auditevents expose les événements d'audit."
+  },
+  {
+    "id": "SB3-ACT-047",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Audit",
+    "difficulty": "hard",
+    "question": "Comment enregistrer un événement d'audit ?",
+    "options": [
+      "AuditEventPublisher.publishEvent()",
+      "EventPublisher.publish()",
+      "AuditLogger.log()",
+      "ApplicationEventPublisher"
+    ],
+    "correct": 0,
+    "explanation": "AuditEventPublisher permet de publier des événements."
+  },
+  {
+    "id": "SB3-ACT-048",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Heapdump",
+    "difficulty": "hard",
+    "question": "Quel endpoint génère un heap dump ?",
+    "options": ["/heapdump", "/dump", "/heap", "/memory"],
+    "correct": 0,
+    "explanation": "/heapdump génère un fichier HPROF."
+  },
+  {
+    "id": "SB3-ACT-049",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Heapdump",
+    "difficulty": "hard",
+    "question": "À quoi sert un heap dump ?",
+    "options": [
+      "Analyser la mémoire",
+      "Trouver des leaks",
+      "Diagnostiquer OOME",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les heap dumps sont essentiels pour le diagnostic mémoire."
+  },
+  {
+    "id": "SB3-ACT-050",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Prometheus",
+    "difficulty": "hard",
+    "question": "Quel endpoint expose les métriques pour Prometheus ?",
+    "options": ["/prometheus", "/metrics/prometheus", "/actuator/prometheus", "/scrape"],
+    "correct": 2,
+    "explanation": "/actuator/prometheus est l'endpoint standard pour Prometheus."
+  }
+]

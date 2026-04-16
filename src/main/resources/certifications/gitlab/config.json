@@ -1,0 +1,32 @@
+{
+  "id": "gitlab",
+  "name": "GitLab Associate",
+  "version": "1.0",
+  "description": "Certification GitLab - CI/CD et DevOps avec GitLab",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "GitLab CI/CD",
+      "count": 80
+    },
+    {
+      "name": "GitLab Runner",
+      "count": 50
+    },
+    {
+      "name": "Git Basics",
+      "count": 50
+    },
+    {
+      "name": "GitLab Security",
+      "count": 40
+    },
+    {
+      "name": "GitLab Packages",
+      "count": 30
+    }
+  ]
+}

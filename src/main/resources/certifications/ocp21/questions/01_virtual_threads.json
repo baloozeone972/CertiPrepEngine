@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "OCP21-VT-001",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "easy",
+    "question": "Comment créer un virtual thread en Java 21 ?",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "Deux façons : startVirtualThread() ou Thread.ofVirtual().start()"
+  },
+  {
+    "id": "OCP21-VT-002",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "easy",
+    "question": "Quelle méthode crée un virtual thread sans le démarrer ?",
+    "options": [
+      "Thread.ofVirtual().unstarted(task)",
+      "Thread.createVirtual(task)",
+      "Thread.newVirtual(task)",
+      "Thread.prepareVirtual(task)"
+    ],
+    "correct": 0,
+    "explanation": "unstarted() crée un virtual thread sans le démarrer."
+  },
+  {
+    "id": "OCP21-VT-003",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "easy",
+    "question": "Quelle est la syntaxe pour nommer un virtual thread ?",
+    "options": [
+      "Thread.ofVirtual().name(\"monThread\").start(task)",
+      "Thread.startVirtualThread(task, \"monThread\")",
+      "new VirtualThread(\"monThread\", task)",
+      "Thread.builder().virtual().name(\"monThread\").start(task)"
+    ],
+    "correct": 0,
+    "explanation": "ofVirtual().name() permet de nommer un virtual thread."
+  },
+  {
+    "id": "OCP21-VT-004",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "question": "Comment créer un virtual thread avec un groupe ?",
+    "options": [
+      "Thread.ofVirtual().group(groupe).start(task)",
+      "Thread.startVirtualThread(task, groupe)",
+      "new VirtualThread(groupe, task)",
+      "Thread.builder().group(groupe).virtual().start(task)"
+    ],
+    "correct": 0,
+    "explanation": "group() permet d'assigner un groupe au virtual thread."
+  },
+  {
+    "id": "OCP21-VT-005",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "question": "Quelle est la classe du builder pour virtual threads ?",
+    "options": [
+      "Thread.Builder.Virtual",
+      "Thread.VirtualBuilder",
+      "VirtualThread.Builder",
+      "ThreadBuilder.Virtual"
+    ],
+    "correct": 0,
+    "explanation": "Thread.Builder.Virtual est l'interface du builder."
+  },
+  {
+    "id": "OCP21-VT-006",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "question": "Comment créer un virtual thread avec une pile d'exécution personnalisée ?",
+    "options": [
+      "Thread.ofVirtual().stackSize(1024).start(task)",
+      "Thread.startVirtualThread(task, 1024)",
+      "new VirtualThread(1024, task)",
+      "Thread.builder().stackSize(1024).virtual().start(task)"
+    ],
+    "correct": 0,
+    "explanation": "stackSize() permet de définir la taille de pile (hint)."
+  },
+  {
+    "id": "OCP21-VT-007",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "hard",
+    "question": "Peut-on créer un virtual thread avec un ThreadFactory ?",
+    "options": [
+      "Oui, Thread.ofVirtual().factory()",
+      "Non, virtual threads incompatibles",
+      "Oui, mais avec restrictions",
+      "Non, utiliser Executors"
+    ],
+    "correct": 0,
+    "explanation": "factory() crée une ThreadFactory pour virtual threads."
+  },
+  {
+    "id": "OCP21-VT-008",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "hard",
+    "question": "Que retourne Thread.ofVirtual() ?",
+    "options": [
+      "Thread.Builder.Virtual",
+      "VirtualThread.Builder",
+      "Thread.Builder",
+      "Thread.VirtualBuilder"
+    ],
+    "correct": 0,
+    "explanation": "ofVirtual() retourne un Thread.Builder.Virtual."
+  },
+  {
+    "id": "OCP21-VT-009",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "hard",
+    "question": "Comment créer un virtual thread avec un handle d'exception ?",
+    "options": [
+      "Thread.ofVirtual().uncaughtExceptionHandler(handler).start(task)",
+      "Thread.startVirtualThread(task, handler)",
+      "new VirtualThread(handler, task)",
+      "Thread.builder().exceptionHandler(handler).virtual().start(task)"
+    ],
+    "correct": 0,
+    "explanation": "uncaughtExceptionHandler() définit le gestionnaire d'exceptions."
+  },
+  {
+    "id": "OCP21-VT-010",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "hard",
+    "question": "Peut-on créer un virtual thread avec une priorité ?",
+    "options": [
+      "Non, priorité ignorée",
+      "Oui, setPriority()",
+      "Oui, withPriority()",
+      "Non, virtual threads non prioritaires"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads ignorent les paramètres de priorité."
+  },
+  {
+    "id": "OCP21-VT-011",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "easy",
+    "question": "Comment créer un ExecutorService pour virtual threads ?",
+    "options": [
+      "Executors.newVirtualThreadPerTaskExecutor()",
+      "Executors.newVirtualThreadExecutor()",
+      "Executors.newThreadExecutor()",
+      "Executors.newCachedVirtualThreadPool()"
+    ],
+    "correct": 0,
+    "explanation": "newVirtualThreadPerTaskExecutor() est la méthode dédiée."
+  },
+  {
+    "id": "OCP21-VT-012",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "easy",
+    "question": "Que fait newVirtualThreadPerTaskExecutor() ?",
+    "options": [
+      "Crée un nouveau virtual thread par tâche",
+      "Crée un pool fixe de virtual threads",
+      "Crée un pool de platform threads",
+      "Crée un thread unique"
+    ],
+    "correct": 0,
+    "explanation": "Chaque tâche reçoit son propre virtual thread."
+  },
+  {
+    "id": "OCP21-VT-013",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "medium",
+    "question": "Comment fermer un ExecutorService de virtual threads ?",
+    "options": [
+      "executor.close()",
+      "executor.shutdown()",
+      "executor.terminate()",
+      "executor.stop()"
+    ],
+    "correct": 0,
+    "explanation": "close() est auto-closeable, recommended."
+  },
+  {
+    "id": "OCP21-VT-014",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "medium",
+    "question": "Un ExecutorService de virtual threads doit-il être fermé ?",
+    "options": [
+      "Oui, comme tout ExecutorService",
+      "Non, auto-géré",
+      "Oui, mais seulement avec close",
+      "Non, les virtual threads se ferment seuls"
+    ],
+    "correct": 0,
+    "explanation": "Il faut fermer l'ExecutorService pour libérer les ressources."
+  },
+  {
+    "id": "OCP21-VT-015",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser try-with-resources avec un ExecutorService ?",
+    "options": [
+      "Oui, il implémente AutoCloseable",
+      "Non, pas supporté",
+      "Oui, mais avec warning",
+      "Non, il faut shutdown()"
+    ],
+    "correct": 0,
+    "explanation": "ExecutorService implémente AutoCloseable depuis Java 19."
+  },
+  {
+    "id": "OCP21-VT-016",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "question": "Quelle est la taille approximative d'un virtual thread ?",
+    "options": [
+      "Quelques KB",
+      "1 MB",
+      "512 KB",
+      "16 KB"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads sont très légers, quelques KB seulement."
+  },
+  {
+    "id": "OCP21-VT-017",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "question": "Combien de virtual threads peut-on créer ?",
+    "options": [
+      "Des millions",
+      "Quelques milliers",
+      "Environ 10 000",
+      "Illimité"
+    ],
+    "correct": 0,
+    "explanation": "On peut créer des millions de virtual threads."
+  },
+  {
+    "id": "OCP21-VT-018",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "question": "Les virtual threads sont-ils des threads daemon ?",
+    "options": [
+      "Oui, par défaut",
+      "Non, par défaut",
+      "Configurable",
+      "Dépend de la JVM"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads sont des threads daemon par défaut."
+  },
+  {
+    "id": "OCP21-VT-019",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "medium",
+    "question": "Quel est le scheduler par défaut des virtual threads ?",
+    "options": [
+      "ForkJoinPool.commonPool()",
+      "WorkStealingPool",
+      "CachedThreadPool",
+      "FixedThreadPool"
+    ],
+    "correct": 0,
+    "explanation": "Le ForkJoinPool.commonPool() est le scheduler par défaut."
+  },
+  {
+    "id": "OCP21-VT-020",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "medium",
+    "question": "Peut-on changer le scheduler des virtual threads ?",
+    "options": [
+      "Oui, avec Thread.Builder.scheduler()",
+      "Non, fixe",
+      "Oui, avec des propriétés système",
+      "Non, seulement par défaut"
+    ],
+    "correct": 0,
+    "explanation": "scheduler() permet de définir un scheduler personnalisé."
+  },
+  {
+    "id": "OCP21-VT-021",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "medium",
+    "question": "Un virtual thread peut-il être interrompu ?",
+    "options": [
+      "Oui, comme les platform threads",
+      "Non, pas supporté",
+      "Oui, mais différemment",
+      "Non, les interruptions sont ignorées"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads supportent l'interruption normalement."
+  },
+  {
+    "id": "OCP21-VT-022",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il quand un virtual thread est bloqué ?",
+    "options": [
+      "Il est unmount du carrier thread",
+      "Il bloque le carrier thread",
+      "Il est terminé",
+      "Il passe en mode attente"
+    ],
+    "correct": 0,
+    "explanation": "Le virtual thread est unmount pour libérer le carrier thread."
+  },
+  {
+    "id": "OCP21-VT-023",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qui peut 'pinner' un virtual thread ?",
+    "options": [
+      "Un bloc synchronized",
+      "Une méthode synchronized",
+      "Un appel natif",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "synchronized, méthodes natives et JNI peuvent piner un virtual thread."
+  },
+  {
+    "id": "OCP21-VT-024",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "hard",
+    "question": "Pourquoi éviter synchronized avec virtual threads ?",
+    "options": [
+      "Cela pinne le virtual thread",
+      "Plus lent",
+      "Non supporté",
+      "Déprécié"
+    ],
+    "correct": 0,
+    "explanation": "synchronized pinne le virtual thread, réduisant le bénéfice."
+  },
+  {
+    "id": "OCP21-VT-025",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "hard",
+    "question": "Quelle alternative à synchronized pour virtual threads ?",
+    "options": [
+      "ReentrantLock",
+      "AtomicReference",
+      "Volatile",
+      "Semaphore"
+    ],
+    "correct": 0,
+    "explanation": "ReentrantLock ne pinne pas les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-026",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "medium",
+    "question": "Les ThreadLocal fonctionnent-ils avec virtual threads ?",
+    "options": [
+      "Oui, mais peuvent causer des memory leaks",
+      "Non, pas supportés",
+      "Oui, normalement",
+      "Oui, mais plus lents"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads étant très nombreux, ThreadLocal peut causer des memory leaks."
+  },
+  {
+    "id": "OCP21-VT-027",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "medium",
+    "question": "Quelle est l'alternative recommandée à ThreadLocal ?",
+    "options": [
+      "Scoped Values",
+      "AtomicReference",
+      "ConcurrentHashMap",
+      "InheritableThreadLocal"
+    ],
+    "correct": 0,
+    "explanation": "Scoped Values est l'alternative moderne pour virtual threads."
+  },
+  {
+    "id": "OCP21-VT-028",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser InheritableThreadLocal avec virtual threads ?",
+    "options": [
+      "Non, déprécié",
+      "Oui, fonctionne",
+      "Oui, mais avec restrictions",
+      "Non, pas supporté"
+    ],
+    "correct": 0,
+    "explanation": "InheritableThreadLocal est déprécié pour les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-029",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "hard",
+    "question": "Comment nettoyer les ThreadLocal après utilisation ?",
+    "options": [
+      "remove()",
+      "clear()",
+      "delete()",
+      "reset()"
+    ],
+    "correct": 0,
+    "explanation": "remove() doit être appelé pour éviter les leaks."
+  },
+  {
+    "id": "OCP21-VT-030",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "hard",
+    "question": "Quelle est la politique par défaut des ThreadLocal pour virtual threads ?",
+    "options": [
+      "Hérités si créés avant",
+      "Toujours hérités",
+      "Jamais hérités",
+      "Configurable"
+    ],
+    "correct": 0,
+    "explanation": "Les valeurs ThreadLocal sont héritées du parent si créées avant."
+  },
+  {
+    "id": "OCP21-VT-031",
+    "theme": "Virtual Threads",
+    "theme_label": "Scoped Values",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ScopedValue ?",
+    "options": [
+      "Une alternative immuable à ThreadLocal",
+      "Un nouveau type de thread",
+      "Un executor spécial",
+      "Une annotation"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est une alternative immuable à ThreadLocal."
+  },
+  {
+    "id": "OCP21-VT-032",
+    "theme": "Virtual Threads",
+    "theme_label": "Scoped Values",
+    "difficulty": "hard",
+    "question": "Comment déclarer un ScopedValue ?",
+    "options": [
+      "private static final ScopedValue<String> SV = ScopedValue.newInstance();",
+      "private static ScopedValue<String> SV = new ScopedValue<>();",
+      "ScopedValue<String> SV = ScopedValue.of();",
+      "private final ScopedValue<String> SV = ScopedValue.create();"
+    ],
+    "correct": 0,
+    "explanation": "newInstance() est la méthode pour créer un ScopedValue."
+  },
+  {
+    "id": "OCP21-VT-033",
+    "theme": "Virtual Threads",
+    "theme_label": "Scoped Values",
+    "difficulty": "hard",
+    "question": "Comment utiliser un ScopedValue ?",
+    "options": [
+      "ScopedValue.where(SV, value).run(() -> use())",
+      "SV.set(value); use(); SV.remove();",
+      "SV.bind(value, () -> use())",
+      "SV.with(value, () -> use())"
+    ],
+    "correct": 0,
+    "explanation": "where().run() est la syntaxe pour utiliser ScopedValue."
+  },
+  {
+    "id": "OCP21-VT-034",
+    "theme": "Virtual Threads",
+    "theme_label": "Scoped Values",
+    "difficulty": "hard",
+    "question": "Les ScopedValues sont-ils mutables ?",
+    "options": [
+      "Non, immuables",
+      "Oui, comme ThreadLocal",
+      "Oui, avec set()",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les ScopedValues sont immuables par conception."
+  },
+  {
+    "id": "OCP21-VT-035",
+    "theme": "Virtual Threads",
+    "theme_label": "Scoped Values",
+    "difficulty": "hard",
+    "question": "Peut-on hériter des ScopedValues ?",
+    "options": [
+      "Oui, dans les threads enfants",
+      "Non, pas d'héritage",
+      "Oui, avec configuration",
+      "Uniquement les virtual threads"
+    ],
+    "correct": 0,
+    "explanation": "Les ScopedValues sont hérités dans les threads enfants."
+  },
+  {
+    "id": "OCP21-VT-036",
+    "theme": "Virtual Threads",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Comment savoir si un thread est un virtual thread ?",
+    "options": [
+      "thread.isVirtual()",
+      "thread.isVirtualThread()",
+      "thread.getType() == ThreadType.VIRTUAL",
+      "thread instanceof VirtualThread"
+    ],
+    "correct": 0,
+    "explanation": "isVirtual() retourne true pour un virtual thread."
+  },
+  {
+    "id": "OCP21-VT-037",
+    "theme": "Virtual Threads",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Thread.sleep() fonctionne-t-il avec virtual threads ?",
+    "options": [
+      "Oui, normalement",
+      "Non, bloquant",
+      "Oui, mais différent",
+      "Non, utiliser park()"
+    ],
+    "correct": 0,
+    "explanation": "sleep() fonctionne normalement avec virtual threads."
+  },
+  {
+    "id": "OCP21-VT-038",
+    "theme": "Virtual Threads",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Thread.join() fonctionne-t-il avec virtual threads ?",
+    "options": [
+      "Oui, normalement",
+      "Non, bloquant",
+      "Oui, mais différent",
+      "Non, utiliser await()"
+    ],
+    "correct": 0,
+    "explanation": "join() fonctionne normalement avec virtual threads."
+  },
+  {
+    "id": "OCP21-VT-039",
+    "theme": "Virtual Threads",
+    "theme_label": "Méthodes",
+    "difficulty": "hard",
+    "question": "Que retourne thread.getStackTrace() pour virtual threads ?",
+    "options": [
+      "La pile d'exécution actuelle",
+      "Une pile vide",
+      "La pile du carrier thread",
+      "Une exception"
+    ],
+    "correct": 0,
+    "explanation": "getStackTrace() retourne la pile du virtual thread."
+  },
+  {
+    "id": "OCP21-VT-040",
+    "theme": "Virtual Threads",
+    "theme_label": "Méthodes",
+    "difficulty": "hard",
+    "question": "thread.getState() fonctionne-t-il ?",
+    "options": [
+      "Oui, comme pour platform threads",
+      "Non, toujours RUNNABLE",
+      "Oui, mais états différents",
+      "Non, indéfini"
+    ],
+    "correct": 0,
+    "explanation": "Les états des virtual threads sont les mêmes que platform threads."
+  },
+  {
+    "id": "OCP21-VT-041",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que StructuredTaskScope ?",
+    "options": [
+      "API pour concurrence structurée",
+      "Type de virtual thread",
+      "ExecutorService spécial",
+      "Outil de debugging"
+    ],
+    "correct": 0,
+    "explanation": "StructuredTaskScope permet la concurrence structurée."
+  },
+  {
+    "id": "OCP21-VT-042",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Quel est le principe de StructuredTaskScope ?",
+    "options": [
+      "Les sous-tâches sont liées au scope",
+      "Les tâches sont indépendantes",
+      "Les threads sont réutilisés",
+      "Les résultats sont ignorés"
+    ],
+    "correct": 0,
+    "explanation": "Les sous-tâches doivent se terminer avant la fin du scope."
+  },
+  {
+    "id": "OCP21-VT-043",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Comment créer un StructuredTaskScope ?",
+    "options": [
+      "new StructuredTaskScope<>()",
+      "StructuredTaskScope.create()",
+      "StructuredTaskScope.newInstance()",
+      "StructuredTaskScope.open()"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur de StructuredTaskScope crée un nouveau scope."
+  },
+  {
+    "id": "OCP21-VT-044",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Quelle méthode fork() retourne-t-elle ?",
+    "options": [
+      "Future<T>",
+      "Subtask<T>",
+      "Task<T>",
+      "Promise<T>"
+    ],
+    "correct": 0,
+    "explanation": "fork() retourne un Future représentant la tâche."
+  },
+  {
+    "id": "OCP21-VT-045",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Que fait join() sur StructuredTaskScope ?",
+    "options": [
+      "Attend toutes les sous-tâches",
+      "Termine le scope",
+      "Annule les tâches",
+      "Ferme le scope"
+    ],
+    "correct": 0,
+    "explanation": "join() attend la fin de toutes les sous-tâches."
+  },
+  {
+    "id": "OCP21-VT-046",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Comment fermer un StructuredTaskScope ?",
+    "options": [
+      "close()",
+      "shutdown()",
+      "terminate()",
+      "stop()"
+    ],
+    "correct": 0,
+    "explanation": "close() ferme le scope et attend les tâches."
+  },
+  {
+    "id": "OCP21-VT-047",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser try-with-resources avec StructuredTaskScope ?",
+    "options": [
+      "Oui, implémente AutoCloseable",
+      "Non, pas supporté",
+      "Oui, mais avec warning",
+      "Non, il faut close() manuel"
+    ],
+    "correct": 0,
+    "explanation": "StructuredTaskScope implémente AutoCloseable."
+  },
+  {
+    "id": "OCP21-VT-048",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une tâche lève une exception ?",
+    "options": [
+      "Propagée via Future.get()",
+      "Le scope ignore",
+      "Le scope s'arrête",
+      "Exception ignorée"
+    ],
+    "correct": 0,
+    "explanation": "L'exception est accessible via Future.get()."
+  },
+  {
+    "id": "OCP21-VT-049",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ShutdownOnSuccess ?",
+    "options": [
+      "Scope qui s'arrête à la première réussite",
+      "Scope qui ignore les erreurs",
+      "Scope qui annule tout",
+      "Scope qui attend tous les résultats"
+    ],
+    "correct": 0,
+    "explanation": "ShutdownOnSuccess est un scope qui s'arrête dès qu'une tâche réussit."
+  },
+  {
+    "id": "OCP21-VT-050",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ShutdownOnFailure ?",
+    "options": [
+      "Scope qui s'arrête à la première erreur",
+      "Scope qui ignore les erreurs",
+      "Scope qui annule tout",
+      "Scope qui attend tous les résultats"
+    ],
+    "correct": 0,
+    "explanation": "ShutdownOnFailure est un scope qui s'arrête dès qu'une tâche échoue."
+  },
+  {
+    "id": "OCP21-VT-051",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Quel est l'overhead de création d'un virtual thread ?",
+    "options": [
+      "Très faible (quelques microsecondes)",
+      "Élevé (millisecondes)",
+      "Similaire aux platform threads",
+      "Dépend de la JVM"
+    ],
+    "correct": 0,
+    "explanation": "La création de virtual threads est très rapide."
+  },
+  {
+    "id": "OCP21-VT-052",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Pour quels workloads les virtual threads sont-ils idéaux ?",
+    "options": [
+      "I/O intensif",
+      "CPU intensif",
+      "Calcul intensif",
+      "Graphiques"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads excellent pour les workloads I/O bound."
+  },
+  {
+    "id": "OCP21-VT-053",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les virtual threads sont-ils adaptés au calcul CPU ?",
+    "options": [
+      "Non, platform threads meilleurs",
+      "Oui, excellents",
+      "Similaires",
+      "Dépend du nombre de cores"
+    ],
+    "correct": 0,
+    "explanation": "Pour le CPU intensif, les platform threads sont préférables."
+  },
+  {
+    "id": "OCP21-VT-054",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Quel est le nombre maximum de carrier threads ?",
+    "options": [
+      "Par défaut, nombre de cores",
+      "Illimité",
+      "1000",
+      "Configurable"
+    ],
+    "correct": 0,
+    "explanation": "Les carrier threads sont limités au nombre de cores CPU."
+  },
+  {
+    "id": "OCP21-VT-055",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Peut-on augmenter le nombre de carrier threads ?",
+    "options": [
+      "Oui, avec system property",
+      "Non, fixe",
+      "Oui, avec scheduler personnalisé",
+      "Non, lié aux cores"
+    ],
+    "correct": 0,
+    "explanation": "On peut configurer le nombre via des propriétés système."
+  },
+  {
+    "id": "OCP21-VT-056",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Quelle est l'impact mémoire d'un virtual thread inactif ?",
+    "options": [
+      "Très faible (quelques centaines d'octets)",
+      "1 MB",
+      "512 KB",
+      "8 KB"
+    ],
+    "correct": 0,
+    "explanation": "Un virtual thread inactif utilise très peu de mémoire."
+  },
+  {
+    "id": "OCP21-VT-057",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "La pile d'appel est-elle conservée pour les virtual threads ?",
+    "options": [
+      "Oui, dans le tas",
+      "Non, perdue",
+      "Partiellement",
+      "Dans la mémoire native"
+    ],
+    "correct": 0,
+    "explanation": "La pile est stockée dans le tas, pas dans la pile native."
+  },
+  {
+    "id": "OCP21-VT-058",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment réduire l'impact mémoire des piles ?",
+    "options": [
+      "stackSize() hint",
+      "Impossible",
+      "Via les propriétés système",
+      "En utilisant moins de méthodes"
+    ],
+    "correct": 0,
+    "explanation": "stackSize() peut donner un hint sur la taille de pile souhaitée."
+  },
+  {
+    "id": "OCP21-VT-059",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les virtual threads sont-ils plus rapides que platform threads ?",
+    "options": [
+      "Pour l'I/O, oui",
+      "Pour le CPU, non",
+      "Globalement, oui",
+      "Globalement, non"
+    ],
+    "correct": 0,
+    "explanation": "Les performances dépendent du type de workload."
+  },
+  {
+    "id": "OCP21-VT-060",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Quel est le coût du mounting/unmounting ?",
+    "options": [
+      "Très faible",
+      "Élevé",
+      "Négligeable",
+      "Similaire à un context switch"
+    ],
+    "correct": 0,
+    "explanation": "Le mounting/unmounting est très rapide."
+  },
+  {
+    "id": "OCP21-VT-061",
+    "theme": "Virtual Threads",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Les virtual threads apparaissent-ils dans jstack ?",
+    "options": [
+      "Oui, avec leur nom",
+      "Non, invisibles",
+      "Oui, comme platform threads",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "jstack montre les virtual threads avec leur pile."
+  },
+  {
+    "id": "OCP21-VT-062",
+    "theme": "Virtual Threads",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment identifier un virtual thread dans un debugger ?",
+    "options": [
+      "Thread.isVirtual()",
+      "Nom commençant par \"Virtual\"",
+      "Thread ID spécial",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "isVirtual() permet d'identifier un virtual thread."
+  },
+  {
+    "id": "OCP21-VT-063",
+    "theme": "Virtual Threads",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Les breakpoints fonctionnent-ils sur virtual threads ?",
+    "options": [
+      "Oui, normalement",
+      "Non, pas supporté",
+      "Oui, mais plus lents",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les breakpoints fonctionnent normalement sur virtual threads."
+  },
+  {
+    "id": "OCP21-VT-064",
+    "theme": "Virtual Threads",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment obtenir la pile de tous les virtual threads ?",
+    "options": [
+      "Thread.getAllStackTraces()",
+      "VirtualThread.dumpAll()",
+      "Thread.dumpVirtual()",
+      "JMX"
+    ],
+    "correct": 0,
+    "explanation": "getAllStackTraces() inclut les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-065",
+    "theme": "Virtual Threads",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Les virtual threads ont-ils un ID unique ?",
+    "options": [
+      "Oui, comme platform threads",
+      "Non",
+      "Oui, mais différent",
+      "Oui, seulement pendant l'exécution"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads ont un ID unique (threadId())."
+  },
+  {
+    "id": "OCP21-VT-066",
+    "theme": "Virtual Threads",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Comment migrer du code existant vers virtual threads ?",
+    "options": [
+      "Remplacer Executors par newVirtualThreadPerTaskExecutor()",
+      "Modifier toutes les classes",
+      "Changer tous les new Thread()",
+      "Utiliser des annotations"
+    ],
+    "correct": 0,
+    "explanation": "La migration principale consiste à changer l'ExecutorService."
+  },
+  {
+    "id": "OCP21-VT-067",
+    "theme": "Virtual Threads",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Les pools de threads existants doivent-ils être modifiés ?",
+    "options": [
+      "Optionnel, bénéfique pour I/O",
+      "Oui, obligatoire",
+      "Non, incompatibles",
+      "Uniquement pour les grands pools"
+    ],
+    "correct": 0,
+    "explanation": "La migration est optionnelle mais bénéfique pour les workloads I/O."
+  },
+  {
+    "id": "OCP21-VT-068",
+    "theme": "Virtual Threads",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Quel est l'impact sur les ThreadLocal existants ?",
+    "options": [
+      "Peuvent causer des memory leaks",
+      "Aucun impact",
+      "Fonctionnent mieux",
+      "Dépréciés"
+    ],
+    "correct": 0,
+    "explanation": "Avec beaucoup de virtual threads, les ThreadLocal peuvent causer des leaks."
+  },
+  {
+    "id": "OCP21-VT-069",
+    "theme": "Virtual Threads",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Les synchronized blocks doivent-ils être remplacés ?",
+    "options": [
+      "Recommandé, pour éviter le pinning",
+      "Obligatoire",
+      "Optionnel",
+      "Non, fonctionnent"
+    ],
+    "correct": 0,
+    "explanation": "Remplacer synchronized par ReentrantLock est recommandé."
+  },
+  {
+    "id": "OCP21-VT-070",
+    "theme": "Virtual Threads",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Comment tester la migration vers virtual threads ?",
+    "options": [
+      "Changer un ExecutorService à la fois",
+      "Tout migrer d'un coup",
+      "En production uniquement",
+      "Avec des benchmarks"
+    ],
+    "correct": 0,
+    "explanation": "Migration incrémentale par ExecutorService est recommandée."
+  },
+  {
+    "id": "OCP21-VT-071",
+    "theme": "Virtual Threads",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quand utiliser virtual threads vs platform threads ?",
+    "options": [
+      "I/O : virtual, CPU : platform",
+      "Toujours virtual",
+      "Toujours platform",
+      "Selon la charge"
+    ],
+    "correct": 0,
+    "explanation": "Virtual pour I/O bound, platform pour CPU bound."
+  },
+  {
+    "id": "OCP21-VT-072",
+    "theme": "Virtual Threads",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Faut-il limiter le nombre de virtual threads ?",
+    "options": [
+      "Non, ils sont très légers",
+      "Oui, comme platform threads",
+      "Oui, à 10 000",
+      "Oui, selon mémoire"
+    ],
+    "correct": 0,
+    "explanation": "On peut créer des millions de virtual threads sans limite."
+  },
+  {
+    "id": "OCP21-VT-073",
+    "theme": "Virtual Threads",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Faut-il nommer les virtual threads ?",
+    "options": [
+      "Recommandé pour le debugging",
+      "Obligatoire",
+      "Optionnel",
+      "Non, inutile"
+    ],
+    "correct": 0,
+    "explanation": "Nommer les threads aide au debugging et monitoring."
+  },
+  {
+    "id": "OCP21-VT-074",
+    "theme": "Virtual Threads",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Doit-on utiliser un ThreadFactory personnalisé ?",
+    "options": [
+      "Utile pour nommer et configurer",
+      "Obligatoire",
+      "Déconseillé",
+      "Inutile"
+    ],
+    "correct": 0,
+    "explanation": "ThreadFactory permet de configurer les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-075",
+    "theme": "Virtual Threads",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Comment gérer les exceptions non capturées ?",
+    "options": [
+      "UncaughtExceptionHandler",
+      "Try-catch dans run()",
+      "Future.get()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour gérer les exceptions."
+  },
+  {
+    "id": "OCP21-VT-076",
+    "theme": "Virtual Threads",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment monitorer les virtual threads ?",
+    "options": [
+      "JFR (Java Flight Recorder)",
+      "JConsole",
+      "VisualVM",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les outils standards supportent les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-077",
+    "theme": "Virtual Threads",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Quelle métrique est importante pour virtual threads ?",
+    "options": [
+      "Nombre de threads créés",
+      "Temps de montage",
+      "Taux de pinning",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Ces métriques aident à diagnostiquer les problèmes."
+  },
+  {
+    "id": "OCP21-VT-078",
+    "theme": "Virtual Threads",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment détecter le pinning des virtual threads ?",
+    "options": [
+      "JFR events",
+      "Thread.isPinned()",
+      "Logs",
+      "Stack traces"
+    ],
+    "correct": 0,
+    "explanation": "JFR peut détecter les événements de pinning."
+  },
+  {
+    "id": "OCP21-VT-079",
+    "theme": "Virtual Threads",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Peut-on voir les virtual threads dans VisualVM ?",
+    "options": [
+      "Oui, depuis Java 21",
+      "Non",
+      "Avec plugin",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "VisualVM supporte les virtual threads depuis Java 21."
+  },
+  {
+    "id": "OCP21-VT-080",
+    "theme": "Virtual Threads",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment obtenir le nombre de virtual threads actifs ?",
+    "options": [
+      "Thread.activeCount()",
+      "VirtualThread.activeCount()",
+      "Thread.getAllStackTraces().size()",
+      "JMX"
+    ],
+    "correct": 0,
+    "explanation": "activeCount() inclut les virtual threads actifs."
+  },
+  {
+    "id": "OCP21-VT-081",
+    "theme": "Virtual Threads",
+    "theme_label": "Conteneurs",
+    "difficulty": "hard",
+    "question": "Les virtual threads fonctionnent-ils dans les conteneurs ?",
+    "options": [
+      "Oui, normalement",
+      "Non",
+      "Oui, avec configuration",
+      "Dépend du conteneur"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads fonctionnent normalement dans les conteneurs."
+  },
+  {
+    "id": "OCP21-VT-082",
+    "theme": "Virtual Threads",
+    "theme_label": "Conteneurs",
+    "difficulty": "hard",
+    "question": "Comment les virtual threads réagissent-ils aux limites CPU ?",
+    "options": [
+      "Respectent les limites",
+      "Les ignorent",
+      "Peuvent les dépasser",
+      "Se bloquent"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads respectent les limites CPU des conteneurs."
+  },
+  {
+    "id": "OCP21-VT-083",
+    "theme": "Virtual Threads",
+    "theme_label": "Conteneurs",
+    "difficulty": "hard",
+    "question": "Faut-il configurer quelque chose pour les conteneurs ?",
+    "options": [
+      "Non, transparent",
+      "Oui, mémoire",
+      "Oui, CPU",
+      "Oui, limites de threads"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads sont transparents pour les conteneurs."
+  },
+  {
+    "id": "OCP21-VT-084",
+    "theme": "Virtual Threads",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Les virtual threads ont-ils des implications de sécurité ?",
+    "options": [
+      "Similaires aux platform threads",
+      "Moins sécurisés",
+      "Plus sécurisés",
+      "Nouvelles vulnérabilités"
+    ],
+    "correct": 0,
+    "explanation": "Les implications de sécurité sont similaires."
+  },
+  {
+    "id": "OCP21-VT-085",
+    "theme": "Virtual Threads",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Les contextes de sécurité sont-ils préservés ?",
+    "options": [
+      "Oui, normalement",
+      "Non",
+      "Partiellement",
+      "Dépend du contexte"
+    ],
+    "correct": 0,
+    "explanation": "Les contextes de sécurité sont préservés lors du mounting."
+  },
+  {
+    "id": "OCP21-VT-086",
+    "theme": "Virtual Threads",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Les virtual threads peuvent-ils être daemon ?",
+    "options": [
+      "Oui, par défaut",
+      "Non",
+      "Configurable",
+      "Uniquement en mode daemon"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads sont daemon par défaut."
+  },
+  {
+    "id": "OCP21-VT-087",
+    "theme": "Virtual Threads",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Les priorités fonctionnent-elles pour virtual threads ?",
+    "options": [
+      "Non, ignorées",
+      "Oui, normalement",
+      "Oui, partiellement",
+      "Configurable"
+    ],
+    "correct": 0,
+    "explanation": "Les priorités sont ignorées pour les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-088",
+    "theme": "Virtual Threads",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "ThreadGroup fonctionne-t-il avec virtual threads ?",
+    "options": [
+      "Oui, supporté",
+      "Non, déprécié",
+      "Oui, avec restrictions",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads supportent ThreadGroup."
+  },
+  {
+    "id": "OCP21-VT-089",
+    "theme": "Virtual Threads",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "setContextClassLoader fonctionne-t-il ?",
+    "options": [
+      "Oui, normalement",
+      "Non",
+      "Oui, avec restrictions",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Le context class loader fonctionne normalement."
+  },
+  {
+    "id": "OCP21-VT-090",
+    "theme": "Virtual Threads",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Les virtual threads peuvent-ils être suspendus ?",
+    "options": [
+      "Automatiquement sur blocage I/O",
+      "Manuellement avec suspend()",
+      "Non",
+      "Avec park()"
+    ],
+    "correct": 0,
+    "explanation": "La suspension est automatique lors des opérations I/O."
+  },
+  {
+    "id": "OCP21-VT-091",
+    "theme": "Virtual Threads",
+    "theme_label": "Frameworks",
+    "difficulty": "hard",
+    "question": "Spring Boot supporte-t-il les virtual threads ?",
+    "options": [
+      "Oui, depuis Spring Boot 3.2",
+      "Non",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Spring Boot 3.2+ supporte les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-092",
+    "theme": "Virtual Threads",
+    "theme_label": "Frameworks",
+    "difficulty": "hard",
+    "question": "Tomcat supporte-t-il les virtual threads ?",
+    "options": [
+      "Oui, depuis Tomcat 11",
+      "Non",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Tomcat 11+ supporte les virtual threads pour les requêtes."
+  },
+  {
+    "id": "OCP21-VT-093",
+    "theme": "Virtual Threads",
+    "theme_label": "Frameworks",
+    "difficulty": "hard",
+    "question": "Netty supporte-t-il les virtual threads ?",
+    "options": [
+      "Oui, avec EventLoop personnalisé",
+      "Non",
+      "Oui, nativement",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Netty peut utiliser des virtual threads via configuration."
+  },
+  {
+    "id": "OCP21-VT-094",
+    "theme": "Virtual Threads",
+    "theme_label": "Frameworks",
+    "difficulty": "hard",
+    "question": "Quarkus supporte-t-il les virtual threads ?",
+    "options": [
+      "Oui, avec @RunOnVirtualThread",
+      "Non",
+      "Oui, nativement",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Quarkus supporte les virtual threads via annotation."
+  },
+  {
+    "id": "OCP21-VT-095",
+    "theme": "Virtual Threads",
+    "theme_label": "Frameworks",
+    "difficulty": "hard",
+    "question": "Micronaut supporte-t-il les virtual threads ?",
+    "options": [
+      "Oui, depuis Micronaut 4",
+      "Non",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Micronaut 4+ supporte les virtual threads."
+  },
+  {
+    "id": "OCP21-VT-096",
+    "theme": "Virtual Threads",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Les platform threads vont-ils disparaître ?",
+    "options": [
+      "Non, toujours nécessaires",
+      "Oui, remplacés",
+      "Oui, dépréciés",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les platform threads restent nécessaires pour CPU intensif."
+  },
+  {
+    "id": "OCP21-VT-097",
+    "theme": "Virtual Threads",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quelle est la prochaine évolution prévue ?",
+    "options": [
+      "Virtual threads pour GPU",
+      "Suppression des limitations",
+      "Remplacement complet",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explanation": "L'extension aux GPUs est une évolution possible."
+  },
+  {
+    "id": "OCP21-VT-098",
+    "theme": "Virtual Threads",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Les virtual threads seront-ils la norme ?",
+    "options": [
+      "Pour I/O, oui",
+      "Pour tout, oui",
+      "Jamais",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les virtual threads deviendront la norme pour I/O bound."
+  },
+  {
+    "id": "OCP21-VT-099",
+    "theme": "Virtual Threads",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quel est le prochain projet après Loom ?",
+    "options": [
+      "Valhalla (value types)",
+      "Panama (foreign API)",
+      "Amber (pattern matching)",
+      "Leyden (static images)"
+    ],
+    "correct": 0,
+    "explanation": "Valhalla est le prochain projet majeur après Loom."
+  },
+  {
+    "id": "OCP21-VT-100",
+    "theme": "Virtual Threads",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quand les virtual threads seront-ils la valeur par défaut ?",
+    "options": [
+      "Quand les frameworks migreront",
+      "Java 25",
+      "Java 30",
+      "Jamais"
+    ],
+    "correct": 0,
+    "explanation": "L'adoption dépendra de la migration des frameworks."
+  }
+]

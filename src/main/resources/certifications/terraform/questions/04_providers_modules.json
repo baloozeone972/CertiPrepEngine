@@ -1,0 +1,707 @@
+[
+  {
+    "id": "TF-04-001",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Où Terraform télécharge-t-il les providers ?",
+    "options": [
+      "Terraform Registry",
+      "GitHub",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le registry est la source par défaut, mais on peut spécifier d'autres sources."
+  },
+  {
+    "id": "TF-04-002",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Comment spécifier la source d'un provider personnalisé ?",
+    "options": [
+      "required_providers { mycloud = { source = 'mycorp/mycloud' version = '1.0' } }",
+      "provider 'mycloud' { source = 'mycorp/mycloud' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La source est définie dans required_providers."
+  },
+  {
+    "id": "TF-04-003",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Un provider peut-il être développé en Go ?",
+    "options": ["Oui", "Non", "Uniquement en HCL", "Uniquement en JSON"],
+    "correct": 0,
+    "explication": "Les providers sont écrits en Go et compilés en binaires."
+  },
+  {
+    "id": "TF-04-004",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Comment mettre à jour les providers ?",
+    "options": [
+      "terraform init -upgrade",
+      "terraform providers update",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "init -upgrade met à jour les providers selon les contraintes."
+  },
+  {
+    "id": "TF-04-005",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Que fait la commande `terraform providers` ?",
+    "options": [
+      "Affiche les providers requis par la configuration",
+      "Installe les providers",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "providers liste les providers et leurs versions."
+  },
+  {
+    "id": "TF-04-006",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Peut-on avoir plusieurs versions d'un même provider dans un projet ?",
+    "options": ["Non", "Oui (avec des alias et configurations séparées)", "Oui, mais déconseillé", "A et B"],
+    "correct": 1,
+    "explication": "C'est possible mais complexe, généralement une seule version par projet."
+  },
+  {
+    "id": "TF-04-007",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Comment spécifier un provider pour une ressource ?",
+    "options": [
+      "resource 'aws_instance' 'web' { provider = aws.west }",
+      "resource aws_instance web { provider = aws.west }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "provider = alias."
+  },
+  {
+    "id": "TF-04-008",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un module Terraform ?",
+    "options": [
+      "Ensemble de ressources regroupées",
+      "Un provider",
+      "Une ressource",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les modules permettent la réutilisation et l'organisation."
+  },
+  {
+    "id": "TF-04-009",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment créer un module local ?",
+    "options": [
+      "Créer un dossier avec des fichiers .tf",
+      "Définir un module dans un fichier",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Un module est simplement un répertoire contenant des fichiers Terraform."
+  },
+  {
+    "id": "TF-04-010",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment appeler un module local ?",
+    "options": [
+      "module 'vpc' { source = './modules/vpc' }",
+      "module vpc { source = './modules/vpc' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "source = chemin relatif."
+  },
+  {
+    "id": "TF-04-011",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Quelles sont les bonnes pratiques pour les modules ?",
+    "options": [
+      "Versionner les modules, documentation, outputs",
+      "Variables en entrée, outputs en sortie",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les modules doivent être bien encapsulés."
+  },
+  {
+    "id": "TF-04-012",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment documenter un module ?",
+    "options": [
+      "Commentaires dans les fichiers, README",
+      "terraform-docs",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "terraform-docs génère automatiquement la documentation."
+  },
+  {
+    "id": "TF-04-013",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment tester un module ?",
+    "options": [
+      "terraform init && terraform plan dans un exemple",
+      "Terratest",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Terratest est un framework de test pour Terraform."
+  },
+  {
+    "id": "TF-04-014",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Que sont les modules du Terraform Registry ?",
+    "options": [
+      "Modules publics partagés",
+      "Modules privés (Terraform Cloud)",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le registry contient des modules publics et privés."
+  },
+  {
+    "id": "TF-04-015",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment publier un module sur le registry ?",
+    "options": [
+      "Suivre la convention de nommage, versionner, push sur GitHub",
+      "Utiliser l'API Terraform Registry",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le registry s'intègre avec GitHub."
+  },
+  {
+    "id": "TF-04-016",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Quelle est la structure minimale d'un module ?",
+    "options": [
+      "main.tf, variables.tf, outputs.tf",
+      "main.tf seulement",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Un seul fichier .tf suffit, mais la séparation est recommandée."
+  },
+  {
+    "id": "TF-04-017",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment versionner un module ?",
+    "options": [
+      "Git tags (v1.0.0)",
+      "Fichier version.tf",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les tags Git sont la méthode standard."
+  },
+  {
+    "id": "TF-04-018",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment utiliser une version spécifique d'un module du registry ?",
+    "options": [
+      "module 'vpc' { source = 'terraform-aws-modules/vpc/aws' version = '3.0.0' }",
+      "module 'vpc' { source = 'terraform-aws-modules/vpc/aws@3.0.0' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "version = '...' est la syntaxe."
+  },
+  {
+    "id": "TF-04-019",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment passer des providers à un module ?",
+    "options": [
+      "Les providers sont hérités par défaut",
+      "provider = aws.west dans le module",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Par défaut, le module utilise les providers du parent."
+  },
+  {
+    "id": "TF-04-020",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment spécifier un provider différent pour un module ?",
+    "options": [
+      "providers = { aws = aws.west }",
+      "provider = aws.west",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "providers = { nom_local = alias } dans l'appel du module."
+  },
+  {
+    "id": "TF-04-021",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Un module peut-il avoir ses propres providers ?",
+    "options": ["Oui", "Non", "Uniquement les providers racine", "Uniquement les providers distants"],
+    "correct": 0,
+    "explication": "Un module peut déclarer required_providers."
+  },
+  {
+    "id": "TF-04-022",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment éviter de répéter les mêmes variables dans plusieurs modules ?",
+    "options": [
+      "Utiliser un fichier variables.tfvars global",
+      "Utiliser des variables d'environnement",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les valeurs peuvent être centralisées."
+  },
+  {
+    "id": "TF-04-023",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment partager des outputs entre modules ?",
+    "options": [
+      "Output du module enfant, utilisé par le parent",
+      "Data sources",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le parent peut accéder aux outputs des modules."
+  },
+  {
+    "id": "TF-04-024",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Que sont les modules nested ?",
+    "options": [
+      "Modules appelant d'autres modules",
+      "Modules imbriqués",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La composition de modules est recommandée."
+  },
+  {
+    "id": "TF-04-025",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment gérer les dépendances entre modules ?",
+    "options": [
+      "Automatiquement via les références d'outputs",
+      "depends_on",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les références créent des dépendances implicites."
+  },
+  {
+    "id": "TF-04-026",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Peut-on avoir des cycles entre modules ?",
+    "options": [
+      "Non, interdit",
+      "Oui, avec depends_on",
+      "Oui, mais déconseillé",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les cycles ne sont pas autorisés."
+  },
+  {
+    "id": "TF-04-027",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment forcer le rechargement d'un module ?",
+    "options": [
+      "terraform get -update",
+      "terraform init -upgrade",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "init -upgrade met à jour les modules."
+  },
+  {
+    "id": "TF-04-028",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Où sont stockés les modules téléchargés ?",
+    "options": [
+      ".terraform/modules",
+      "~/.terraform.d/modules",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les modules sont dans .terraform/modules."
+  },
+  {
+    "id": "TF-04-029",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment utiliser un module depuis un dépôt Git privé ?",
+    "options": [
+      "source = 'git::https://github.com/org/repo.git'",
+      "source = 'git::ssh://git@github.com/org/repo.git'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Utiliser git:: devant l'URL."
+  },
+  {
+    "id": "TF-04-030",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment utiliser un sous-répertoire d'un dépôt Git comme module ?",
+    "options": [
+      "source = 'git::https://github.com/org/repo.git//modules/vpc'",
+      "source = 'git::https://github.com/org/repo.git?ref=v1.0//modules/vpc'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "// après l'URL indique le sous-répertoire."
+  },
+  {
+    "id": "TF-04-031",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Peut-on utiliser un module depuis un registry privé ?",
+    "options": ["Oui (Terraform Cloud/Enterprise)", "Non", "Uniquement public", "A et B"],
+    "correct": 0,
+    "explication": "Terraform Cloud/Enterprise a un registry privé."
+  },
+  {
+    "id": "TF-04-032",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment référencer une ressource d'un module avec count ?",
+    "options": [
+      "module.vpc[0].vpc_id",
+      "module.vpc.0.vpc_id",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La syntaxe avec [index] est correcte."
+  },
+  {
+    "id": "TF-04-033",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment référencer une ressource d'un module avec for_each ?",
+    "options": [
+      "module.vpc['dev'].vpc_id",
+      "module.vpc.dev.vpc_id",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La syntaxe avec ['clé']."
+  },
+  {
+    "id": "TF-04-034",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Un module peut-il contenir des data sources ?",
+    "options": ["Oui", "Non", "Uniquement les modules racine", "Uniquement les modules enfants"],
+    "correct": 0,
+    "explication": "Les data sources sont autorisées dans les modules."
+  },
+  {
+    "id": "TF-04-035",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment rendre un module paramétrable ?",
+    "options": [
+      "Définir des variables d'entrée",
+      "Utiliser des locals",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les variables sont la clé de la flexibilité."
+  },
+  {
+    "id": "TF-04-036",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment valider qu'un module est correct avant de le publier ?",
+    "options": [
+      "terraform validate",
+      "terraform fmt",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "validate vérifie la syntaxe, fmt le style."
+  },
+  {
+    "id": "TF-04-037",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le module registry ?",
+    "options": [
+      "Dépôt public de modules",
+      "Service de stockage",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "registry.terraform.io."
+  },
+  {
+    "id": "TF-04-038",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment trouver des modules existants ?",
+    "options": [
+      "Recherche sur le Terraform Registry",
+      "terraform search",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le registry a une fonction de recherche."
+  },
+  {
+    "id": "TF-04-039",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le module versioning sémantique ?",
+    "options": [
+      "MAJOR.MINOR.PATCH",
+      "v1.0.0",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le versioning sémantique est recommandé."
+  },
+  {
+    "id": "TF-04-040",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Que signifie ~> dans une contrainte de version ?",
+    "options": [
+      "Pessimistic constraint (ex: ~> 1.0 = >=1.0, <2.0)",
+      "Approximative",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Permet les versions compatibles."
+  },
+  {
+    "id": "TF-04-041",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre = et == ?",
+    "options": ["Identiques en HCL", "= est assignation, == est égalité", "A et B", "A seulement"],
+    "correct": 2,
+    "explication": "En HCL, = est pour les attributs, == pour les conditions."
+  },
+  {
+    "id": "TF-04-042",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Peut-on utiliser des providers communautaires ?",
+    "options": ["Oui", "Non", "Uniquement HashiCorp", "Uniquement vérifiés"],
+    "correct": 0,
+    "explication": "Le registry contient des providers communautaires."
+  },
+  {
+    "id": "TF-04-043",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment spécifier un provider avec une version ?",
+    "options": [
+      "required_providers { aws = { source = 'hashicorp/aws' version = '~> 4.0' } }",
+      "provider 'aws' { version = '~> 4.0' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les deux syntaxes sont valides, mais required_providers est préféré."
+  },
+  {
+    "id": "TF-04-044",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si une version de provider n'est pas spécifiée ?",
+    "options": [
+      "La dernière version est utilisée",
+      "Erreur",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Terraform prend la dernière version disponible."
+  },
+  {
+    "id": "TF-04-045",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment verrouiller les versions des providers ?",
+    "options": [
+      "terraform providers lock",
+      "terraform init -lockfile=readonly",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le lock file (.terraform.lock.hcl) enregistre les versions exactes."
+  },
+  {
+    "id": "TF-04-046",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Où est stocké le lock file ?",
+    "options": [".terraform.lock.hcl", "terraform.lock.hcl", "lock.hcl", "A seulement"],
+    "correct": 0,
+    "explication": "Le fichier de verrouillage des providers."
+  },
+  {
+    "id": "TF-04-047",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Doit-on versionner le lock file ?",
+    "options": ["Oui (pour la reproductibilité)", "Non", "Optionnel", "A seulement"],
+    "correct": 0,
+    "explication": "Il est recommandé de le versionner."
+  },
+  {
+    "id": "TF-04-048",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Comment mettre à jour le lock file ?",
+    "options": [
+      "terraform init -upgrade",
+      "terraform providers lock",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "init -upgrade met à jour les providers et le lock file."
+  },
+  {
+    "id": "TF-04-049",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Que signifie le provider 'hashicorp/aws' ?",
+    "options": [
+      "Provider AWS officiel de HashiCorp",
+      "Provider communautaire",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le namespace 'hashicorp' indique un provider officiel."
+  },
+  {
+    "id": "TF-04-050",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "question": "Peut-on créer un provider personnalisé ?",
+    "options": [
+      "Oui, en développant en Go",
+      "Non",
+      "Oui, en HCL",
+      "A et B"
+    ],
+    "correct": 0,
+    "explication": "Les providers personnalisés sont des binaires Go."
+  }
+]

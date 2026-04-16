@@ -1,0 +1,36 @@
+{
+  "id": "quarkus",
+  "name": "Quarkus Developer (Red Hat)",
+  "version": "1.0",
+  "description": "Certification Quarkus - Développement d'applications cloud-native avec Quarkus (supersonic subatomic Java)",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Quarkus Core",
+      "count": 50
+    },
+    {
+      "name": "RESTEasy (JAX-RS)",
+      "count": 50
+    },
+    {
+      "name": "CDI and Arc",
+      "count": 40
+    },
+    {
+      "name": "Panache (Hibernate)",
+      "count": 40
+    },
+    {
+      "name": "Native Image compilation",
+      "count": 40
+    },
+    {
+      "name": "Reactive Programming",
+      "count": 30
+    }
+  ]
+}

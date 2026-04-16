@@ -1,0 +1,852 @@
+[
+  {
+    "id": "CKAD-02-001",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Comment créer un Deployment avec 3 réplicas ?",
+    "options": [
+      "kubectl create deployment monapp --image=nginx --replicas=3",
+      "kubectl create deployment monapp --image=nginx",
+      "kubectl run monapp --image=nginx --replicas=3",
+      "kubectl create deployment monapp --image=nginx --replicas=3"
+    ],
+    "correct": 0,
+    "explication": "create deployment avec --replicas."
+  },
+  {
+    "id": "CKAD-02-002",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Comment exposer un Deployment comme service ?",
+    "options": [
+      "kubectl expose deployment monapp --port=80 --target-port=8080",
+      "kubectl expose pod monapp --port=80",
+      "kubectl create service clusterip monapp --tcp=80:8080",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "expose deployment ou create service."
+  },
+  {
+    "id": "CKAD-02-003",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Comment mettre à jour l'image d'un Deployment ?",
+    "options": [
+      "kubectl set image deployment/monapp monapp=nginx:1.20",
+      "kubectl edit deployment monapp",
+      "kubectl patch deployment monapp -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"monapp\",\"image\":\"nginx:1.20\"}]}}}}'",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs méthodes."
+  },
+  {
+    "id": "CKAD-02-004",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Comment vérifier l'état d'un rollout ?",
+    "options": [
+      "kubectl rollout status deployment monapp",
+      "kubectl get deployment monapp",
+      "kubectl describe deployment monapp",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "rollout status attend la fin du rollout."
+  },
+  {
+    "id": "CKAD-02-005",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Comment annuler un rollout (revenir à la version précédente) ?",
+    "options": [
+      "kubectl rollout undo deployment monapp",
+      "kubectl rollout undo deployment monapp --to-revision=2",
+      "kubectl rollout restart deployment monapp",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "undo sans paramètre revient à la version précédente."
+  },
+  {
+    "id": "CKAD-02-006",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Comment voir l'historique des rollouts ?",
+    "options": [
+      "kubectl rollout history deployment monapp",
+      "kubectl rollout history deployment monapp --revision=2",
+      "kubectl get deployment monapp -o yaml",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "history affiche les révisions."
+  },
+  {
+    "id": "CKAD-02-007",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "easy",
+    "question": "Que fait `kubectl rollout restart deployment monapp` ?",
+    "options": [
+      "Redémarre tous les pods",
+      "Met à jour l'image",
+      "Annule le rollout",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Restart crée un nouveau rollout avec les mêmes spécifications."
+  },
+  {
+    "id": "CKAD-02-008",
+    "theme": "Deployment Configuration",
+    "theme_label": "Scaling",
+    "difficulty": "easy",
+    "question": "Comment mettre à l'échelle un Deployment à 5 réplicas ?",
+    "options": [
+      "kubectl scale deployment monapp --replicas=5",
+      "kubectl scale --replicas=5 deployment monapp",
+      "kubectl edit deployment monapp",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "scale est la commande dédiée."
+  },
+  {
+    "id": "CKAD-02-009",
+    "theme": "Deployment Configuration",
+    "theme_label": "Scaling",
+    "difficulty": "easy",
+    "question": "Quelle ressource permet le scaling automatique ?",
+    "options": ["HorizontalPodAutoscaler", "VerticalPodAutoscaler", "ClusterAutoscaler", "A et B"],
+    "correct": 3,
+    "explication": "HPA (CPU/mémoire), VPA (ressources)."
+  },
+  {
+    "id": "CKAD-02-010",
+    "theme": "Deployment Configuration",
+    "theme_label": "HPA",
+    "difficulty": "easy",
+    "question": "Comment créer un HPA pour un Deployment ?",
+    "options": [
+      "kubectl autoscale deployment monapp --min=2 --max=5 --cpu-percent=80",
+      "kubectl create hpa monapp --min=2 --max=5 --metric=cpu=80",
+      "YAML avec apiVersion: autoscaling/v2",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "autoscale est la commande impérative."
+  },
+  {
+    "id": "CKAD-02-011",
+    "theme": "Deployment Configuration",
+    "theme_label": "Rolling update",
+    "difficulty": "easy",
+    "question": "Quelles sont les stratégies de mise à jour d'un Deployment ?",
+    "options": [
+      "RollingUpdate (par défaut), Recreate",
+      "Blue/Green, Canary",
+      "A seulement",
+      "B seulement"
+    ],
+    "correct": 0,
+    "explication": "RollingUpdate (progressif), Recreate (supprime tout puis recrée)."
+  },
+  {
+    "id": "CKAD-02-012",
+    "theme": "Deployment Configuration",
+    "theme_label": "Rolling update",
+    "difficulty": "easy",
+    "question": "Comment contrôler le nombre de pods indisponibles pendant un rolling update ?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "minReadySeconds",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "maxUnavailable (pods indisponibles), maxSurge (pods supplémentaires)."
+  },
+  {
+    "id": "CKAD-02-013",
+    "theme": "Deployment Configuration",
+    "theme_label": "Rolling update",
+    "difficulty": "easy",
+    "question": "Que fait minReadySeconds ?",
+    "options": [
+      "Attendre que le pod soit prêt pendant N secondes avant de continuer",
+      "Délai avant redémarrage",
+      "Temps de vie minimal",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Augmente la fiabilité des mises à jour."
+  },
+  {
+    "id": "CKAD-02-014",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "easy",
+    "question": "Comment créer un Job qui exécute une tâche une seule fois ?",
+    "options": [
+      "kubectl create job monjob --image=busybox -- echo 'Hello'",
+      "YAML avec apiVersion: batch/v1 kind: Job",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "kubectl create job est simple."
+  },
+  {
+    "id": "CKAD-02-015",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "easy",
+    "question": "Comment créer un Job qui s'exécute plusieurs fois (parallelism) ?",
+    "options": [
+      "spec: parallelism: 3 completions: 6",
+      "kubectl create job monjob --image=busybox --parallelism=3 --completions=6",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "parallelism: nombre de pods simultanés, completions: nombre total de succès."
+  },
+  {
+    "id": "CKAD-02-016",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "easy",
+    "question": "Que signifie backoffLimit dans un Job ?",
+    "options": [
+      "Nombre de tentatives avant de considérer le Job comme échoué",
+      "Délai entre les tentatives",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Par défaut 6 tentatives."
+  },
+  {
+    "id": "CKAD-02-017",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "easy",
+    "question": "Comment créer un CronJob qui s'exécute toutes les heures ?",
+    "options": [
+      "kubectl create cronjob moncron --image=busybox --schedule='0 * * * *' -- echo 'Hourly'",
+      "YAML avec apiVersion: batch/v1 kind: CronJob",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La syntaxe cron est standard."
+  },
+  {
+    "id": "CKAD-02-018",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "easy",
+    "question": "Que fait startingDeadlineSeconds dans un CronJob ?",
+    "options": [
+      "Délai maximum pour démarrer un Job manqué",
+      "Délai avant annulation",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Si le Job n'a pas démarré dans ce délai, il est ignoré."
+  },
+  {
+    "id": "CKAD-02-019",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "easy",
+    "question": "Comment suspendre un CronJob ?",
+    "options": [
+      "kubectl patch cronjob moncron -p '{\"spec\":{\"suspend\":true}}'",
+      "kubectl edit cronjob moncron",
+      "kubectl delete cronjob moncron",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "suspend: true arrête la création de nouveaux Jobs."
+  },
+  {
+    "id": "CKAD-02-020",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "question": "Quelle est la particularité d'un StatefulSet par rapport à un Deployment ?",
+    "options": [
+      "Pods avec identité stable (nom, ordre, stockage persistant)",
+      "Mise à jour rolling inversée",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les StatefulSets sont pour les applications avec état (bases de données)."
+  },
+  {
+    "id": "CKAD-02-021",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "question": "Comment les pods d'un StatefulSet sont-ils nommés ?",
+    "options": [
+      "<statefulset-name>-<ordinal>",
+      "<statefulset-name>-<random>",
+      "<statefulset-name>-<pod-name>",
+      "<statefulset-name>-<index>"
+    ],
+    "correct": 0,
+    "explication": "Ex: mysql-0, mysql-1, mysql-2."
+  },
+  {
+    "id": "CKAD-02-022",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "question": "Quelle ressource permet de créer un PVC par pod dans un StatefulSet ?",
+    "options": [
+      "volumeClaimTemplates",
+      "persistentVolumeClaim",
+      "volumes",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "volumeClaimTemplates crée un PVC pour chaque réplica."
+  },
+  {
+    "id": "CKAD-02-023",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "question": "Les pods d'un StatefulSet sont-ils créés et supprimés dans l'ordre ?",
+    "options": ["Oui (de 0 à N-1)", "Non", "Aléatoire", "Uniquement à la création"],
+    "correct": 0,
+    "explication": "L'ordre est garanti pour les opérations de scaling."
+  },
+  {
+    "id": "CKAD-02-024",
+    "theme": "Deployment Configuration",
+    "theme_label": "DaemonSet",
+    "difficulty": "easy",
+    "question": "Quand utiliser un DaemonSet ?",
+    "options": [
+      "Exécuter un pod sur chaque nœud (ex: logging, monitoring)",
+      "Applications web",
+      "Base de données",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "DaemonSet garantit qu'un pod tourne sur chaque nœud (ou sous-ensemble)."
+  },
+  {
+    "id": "CKAD-02-025",
+    "theme": "Deployment Configuration",
+    "theme_label": "DaemonSet",
+    "difficulty": "easy",
+    "question": "Un DaemonSet peut-il être mis à l'échelle ?",
+    "options": ["Non (c'est un pod par nœud)", "Oui", "Uniquement avec nodeSelector", "Uniquement avec tolerations"],
+    "correct": 0,
+    "explication": "Le nombre de pods est égal au nombre de nœuds sélectionnés."
+  },
+  {
+    "id": "CKAD-02-026",
+    "theme": "Deployment Configuration",
+    "theme_label": "Pod security",
+    "difficulty": "easy",
+    "question": "Comment éviter qu'un pod ne s'exécute en tant que root ?",
+    "options": [
+      "securityContext: runAsNonRoot: true",
+      "securityContext: runAsUser: 1000",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "runAsNonRoot: true est préféré."
+  },
+  {
+    "id": "CKAD-02-027",
+    "theme": "Deployment Configuration",
+    "theme_label": "Pod security",
+    "difficulty": "easy",
+    "question": "Comment limiter les privilèges d'un conteneur ?",
+    "options": [
+      "securityContext: privileged: false",
+      "securityContext: allowPrivilegeEscalation: false",
+      "securityContext: capabilities: drop: [ALL]",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Ces options renforcent la sécurité."
+  },
+  {
+    "id": "CKAD-02-028",
+    "theme": "Deployment Configuration",
+    "theme_label": "ConfigMap",
+    "difficulty": "easy",
+    "question": "Comment créer un ConfigMap à partir d'un répertoire ?",
+    "options": [
+      "kubectl create configmap moncm --from-file=./configs",
+      "kubectl create configmap moncm --from-file=configs/",
+      "kubectl create configmap moncm --from-file=./configs",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "--from-file peut être un répertoire, chaque fichier devient une clé."
+  },
+  {
+    "id": "CKAD-02-029",
+    "theme": "Deployment Configuration",
+    "theme_label": "Secret",
+    "difficulty": "easy",
+    "question": "Comment créer un secret à partir d'un fichier ?",
+    "options": [
+      "kubectl create secret generic monsecret --from-file=./secret.txt",
+      "kubectl create secret generic monsecret --from-file=key=secret.txt",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "--from-file peut spécifier une clé personnalisée."
+  },
+  {
+    "id": "CKAD-02-030",
+    "theme": "Deployment Configuration",
+    "theme_label": "Secret",
+    "difficulty": "easy",
+    "question": "Comment monter un secret comme fichier unique ?",
+    "options": [
+      "volumes: - name: secretvol secret: secretName: monsecret",
+      "volumeMounts: - name: secretvol mountPath: /etc/secrets",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le secret est monté dans un répertoire, chaque clé devient un fichier."
+  },
+  {
+    "id": "CKAD-02-031",
+    "theme": "Deployment Configuration",
+    "theme_label": "Environment variables",
+    "difficulty": "easy",
+    "question": "Comment définir une variable d'environnement statique dans un pod ?",
+    "options": [
+      "env: - name: MY_VAR value: 'ma-valeur'",
+      "envFrom: - configMapRef: name: moncm",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "value définit une valeur littérale."
+  },
+  {
+    "id": "CKAD-02-032",
+    "theme": "Deployment Configuration",
+    "theme_label": "Downward API",
+    "difficulty": "easy",
+    "question": "Comment exposer le namespace du pod via variable d'environnement ?",
+    "options": [
+      "env: - name: MY_NAMESPACE valueFrom: fieldRef: fieldPath: metadata.namespace",
+      "env: - name: MY_NAMESPACE value: $(NAMESPACE)",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "fieldRef sur metadata.namespace."
+  },
+  {
+    "id": "CKAD-02-033",
+    "theme": "Deployment Configuration",
+    "theme_label": "Downward API",
+    "difficulty": "easy",
+    "question": "Comment exposer les labels du pod via volume ?",
+    "options": [
+      "volumes: - name: podinfo downwardAPI: items: - path: labels fieldRef: fieldPath: metadata.labels",
+      "volumeMounts: - name: podinfo mountPath: /etc/podinfo",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Downward API volume expose les métadonnées dans des fichiers."
+  },
+  {
+    "id": "CKAD-02-034",
+    "theme": "Deployment Configuration",
+    "theme_label": "Resource quotas",
+    "difficulty": "easy",
+    "question": "Comment limiter le nombre total de pods dans un namespace ?",
+    "options": [
+      "spec: hard: pods: '10'",
+      "kubectl create quota monquota --hard=pods=10",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "ResourceQuota avec champ pods."
+  },
+  {
+    "id": "CKAD-02-035",
+    "theme": "Deployment Configuration",
+    "theme_label": "LimitRange",
+    "difficulty": "easy",
+    "question": "Comment définir une demande de mémoire par défaut pour les conteneurs ?",
+    "options": [
+      "defaultRequest: memory: 256Mi",
+      "default: memory: 512Mi",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "defaultRequest pour les requests, default pour les limits."
+  },
+  {
+    "id": "CKAD-02-036",
+    "theme": "Deployment Configuration",
+    "theme_label": "Readiness probe",
+    "difficulty": "easy",
+    "question": "Comment définir une readiness probe HTTP ?",
+    "options": [
+      "readinessProbe: httpGet: path: /health port: 8080 initialDelaySeconds: 5 periodSeconds: 10",
+      "readinessProbe: exec: command: ['curl', '-f', 'http://localhost:8080/health']",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "httpGet est plus simple, exec peut exécuter n'importe quelle commande."
+  },
+  {
+    "id": "CKAD-02-037",
+    "theme": "Deployment Configuration",
+    "theme_label": "Liveness probe",
+    "difficulty": "easy",
+    "question": "Comment définir une liveness probe TCP ?",
+    "options": [
+      "livenessProbe: tcpSocket: port: 8080 initialDelaySeconds: 15 periodSeconds: 20",
+      "livenessProbe: exec: command: ['nc', '-z', 'localhost', '8080']",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "tcpSocket vérifie simplement si le port écoute."
+  },
+  {
+    "id": "CKAD-02-038",
+    "theme": "Deployment Configuration",
+    "theme_label": "Startup probe",
+    "difficulty": "easy",
+    "question": "Quand utiliser une startup probe ?",
+    "options": [
+      "Pour les applications avec un temps de démarrage long",
+      "Pour les applications rapides",
+      "Pour les jobs",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La startup probe désactive la liveness probe jusqu'à son succès."
+  },
+  {
+    "id": "CKAD-02-039",
+    "theme": "Deployment Configuration",
+    "theme_label": "Probe failure thresholds",
+    "difficulty": "easy",
+    "question": "Que signifie failureThreshold ?",
+    "options": [
+      "Nombre d'échecs consécutifs avant action",
+      "Seuil d'échec",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Par défaut 3."
+  },
+  {
+    "id": "CKAD-02-040",
+    "theme": "Deployment Configuration",
+    "theme_label": "Probe success threshold",
+    "difficulty": "easy",
+    "question": "Que signifie successThreshold ?",
+    "options": [
+      "Nombre de succès consécutifs pour considérer le probe comme réussi",
+      "Seuil de succès",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Utile pour les readiness probes (minimum 1)."
+  },
+  {
+    "id": "CKAD-02-041",
+    "theme": "Deployment Configuration",
+    "theme_label": "Init containers",
+    "difficulty": "easy",
+    "question": "Les init containers peuvent-ils accéder aux secrets ?",
+    "options": ["Oui", "Non", "Uniquement si montés", "Uniquement via variables"],
+    "correct": 0,
+    "explication": "Ils peuvent monter des secrets comme les conteneurs normaux."
+  },
+  {
+    "id": "CKAD-02-042",
+    "theme": "Deployment Configuration",
+    "theme_label": "Init containers",
+    "difficulty": "easy",
+    "question": "Les init containers partagent-ils les volumes avec les conteneurs principaux ?",
+    "options": ["Oui", "Non", "Uniquement si partagés", "Uniquement les emptyDir"],
+    "correct": 0,
+    "explication": "Ils peuvent préparer des données dans un volume partagé."
+  },
+  {
+    "id": "CKAD-02-043",
+    "theme": "Deployment Configuration",
+    "theme_label": "Sidecar pattern",
+    "difficulty": "easy",
+    "question": "Quel pattern utilise un conteneur auxiliaire pour le logging ?",
+    "options": ["Sidecar", "Adapter", "Ambassador", "Init container"],
+    "correct": 0,
+    "explication": "Le sidecar collecte les logs et les envoie vers une destination centralisée."
+  },
+  {
+    "id": "CKAD-02-044",
+    "theme": "Deployment Configuration",
+    "theme_label": "Adapter pattern",
+    "difficulty": "easy",
+    "question": "À quoi sert le pattern adapter ?",
+    "options": [
+      "Transformer les métriques ou les données d'un conteneur",
+      "Logger",
+      "Proxy",
+      "Initialisation"
+    ],
+    "correct": 0,
+    "explication": "L'adapter normalise les sorties (ex: métriques Prometheus)."
+  },
+  {
+    "id": "CKAD-02-045",
+    "theme": "Deployment Configuration",
+    "theme_label": "Ambassador pattern",
+    "difficulty": "easy",
+    "question": "Quel pattern utilise un conteneur pour proxyfier les connexions externes ?",
+    "options": ["Ambassador", "Sidecar", "Adapter", "Init container"],
+    "correct": 0,
+    "explication": "L'ambassador simplifie la connexion à des services externes."
+  },
+  {
+    "id": "CKAD-02-046",
+    "theme": "Deployment Configuration",
+    "theme_label": "Labels",
+    "difficulty": "easy",
+    "question": "Comment supprimer un label d'une ressource ?",
+    "options": [
+      "kubectl label pod monpod mylabel-",
+      "kubectl label pod monpod mylabel-",
+      "kubectl annotate pod monpod mylabel-",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Le suffixe - supprime le label."
+  },
+  {
+    "id": "CKAD-02-047",
+    "theme": "Deployment Configuration",
+    "theme_label": "Annotations",
+    "difficulty": "easy",
+    "question": "Comment ajouter une annotation à un pod ?",
+    "options": [
+      "kubectl annotate pod monpod description='mon application'",
+      "kubectl label pod monpod description='mon application'",
+      "kubectl patch pod monpod -p '{\"metadata\":{\"annotations\":{\"description\":\"mon application\"}}}'",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "annotate est la commande dédiée."
+  },
+  {
+    "id": "CKAD-02-048",
+    "theme": "Deployment Configuration",
+    "theme_label": "JSON patch",
+    "difficulty": "easy",
+    "question": "Comment ajouter un label avec kubectl patch ?",
+    "options": [
+      "kubectl patch pod monpod -p '{\"metadata\":{\"labels\":{\"env\":\"prod\"}}}'",
+      "kubectl patch pod monpod --type merge -p '{\"metadata\":{\"labels\":{\"env\":\"prod\"}}}'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le type merge (par défaut) fusionne les champs."
+  },
+  {
+    "id": "CKAD-02-049",
+    "theme": "Deployment Configuration",
+    "theme_label": "Strategic merge patch",
+    "difficulty": "easy",
+    "question": "Quel est le type de patch par défaut de kubectl patch ?",
+    "options": ["strategic", "merge", "json", "patch"],
+    "correct": 0,
+    "explication": "Le strategic merge patch est spécifique à Kubernetes."
+  },
+  {
+    "id": "CKAD-02-050",
+    "theme": "Deployment Configuration",
+    "theme_label": "kubectl apply",
+    "difficulty": "easy",
+    "question": "Que fait `kubectl apply -f fichier.yaml` ?",
+    "options": [
+      "Crée ou met à jour une ressource de manière déclarative",
+      "Supprime la ressource",
+      "Affiche les différences",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "apply est la méthode déclarative recommandée."
+  },
+  {
+    "id": "CKAD-02-051",
+    "theme": "Deployment Configuration",
+    "theme_label": "kubectl replace",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre apply et replace ?",
+    "options": [
+      "replace remplace complètement la ressource (nécessite la version complète)",
+      "apply gère les champs manquants",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "replace est impératif et moins sûr."
+  },
+  {
+    "id": "CKAD-02-052",
+    "theme": "Deployment Configuration",
+    "theme_label": "kubectl edit",
+    "difficulty": "easy",
+    "question": "Que fait `kubectl edit deployment monapp` ?",
+    "options": [
+      "Ouvre l'éditeur pour modifier la ressource",
+      "Applique les modifications",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "edit est pratique pour des modifications rapides."
+  },
+  {
+    "id": "CKAD-02-053",
+    "theme": "Deployment Configuration",
+    "theme_label": "kubectl patch",
+    "difficulty": "easy",
+    "question": "Quand utiliser kubectl patch plutôt que edit ?",
+    "options": [
+      "Pour des modifications scriptées",
+      "Pour des modifications simples",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "patch est plus adapté à l'automatisation."
+  },
+  {
+    "id": "CKAD-02-054",
+    "theme": "Deployment Configuration",
+    "theme_label": "Helm basics",
+    "difficulty": "easy",
+    "question": "Quelle commande Helm installe un chart ?",
+    "options": [
+      "helm install <release> <chart>",
+      "helm install --name <release> <chart>",
+      "helm install -n <release> <chart>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "helm install avec un nom de release."
+  },
+  {
+    "id": "CKAD-02-055",
+    "theme": "Deployment Configuration",
+    "theme_label": "Helm upgrade",
+    "difficulty": "easy",
+    "question": "Comment mettre à jour une release Helm ?",
+    "options": [
+      "helm upgrade <release> <chart>",
+      "helm upgrade --set image.tag=v2 <release> <chart>",
+      "helm upgrade -f values.yaml <release> <chart>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "upgrade modifie la release."
+  },
+  {
+    "id": "CKAD-02-056",
+    "theme": "Deployment Configuration",
+    "theme_label": "Helm rollback",
+    "difficulty": "easy",
+    "question": "Comment revenir à la version précédente d'une release Helm ?",
+    "options": [
+      "helm rollback <release>",
+      "helm rollback <release> 1",
+      "helm history <release>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "rollback sans numéro revient à la version précédente."
+  },
+  {
+    "id": "CKAD-02-057",
+    "theme": "Deployment Configuration",
+    "theme_label": "Helm values",
+    "difficulty": "easy",
+    "question": "Comment passer des valeurs à Helm via la ligne de commande ?",
+    "options": [
+      "--set key=value",
+      "-f values.yaml",
+      "--values values.yaml",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "--set pour les valeurs simples, -f pour un fichier."
+  },
+  {
+    "id": "CKAD-02-058",
+    "theme": "Deployment Configuration",
+    "theme_label": "Helm templates",
+    "difficulty": "easy",
+    "question": "Quel langage de template utilise Helm ?",
+    "options": ["Go templates", "Jinja2", "Mustache", "Handlebars"],
+    "correct": 0,
+    "explication": "Go templates avec des fonctions additionnelles de Sprig."
+  },
+  {
+    "id": "CKAD-02-059",
+    "theme": "Deployment Configuration",
+    "theme_label": "Kustomize",
+    "difficulty": "easy",
+    "question": "À quoi sert Kustomize ?",
+    "options": [
+      "Personnaliser des manifests Kubernetes sans templates",
+      "Remplacer Helm",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Kustomize est intégré à kubectl (kubectl apply -k)."
+  },
+  {
+    "id": "CKAD-02-060",
+    "theme": "Deployment Configuration",
+    "theme_label": "Kustomize",
+    "difficulty": "easy",
+    "question": "Quel fichier Kustomize définit la configuration ?",
+    "options": ["kustomization.yaml", "kustomize.yaml", "k8s.yaml", "overlay.yaml"],
+    "correct": 0,
+    "explication": "kustomization.yaml est le fichier de configuration."
+  }
+]

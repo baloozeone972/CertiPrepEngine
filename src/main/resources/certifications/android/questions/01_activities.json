@@ -1,0 +1,267 @@
+[
+  {
+    "id": "AND-ACT-001",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée à la création de l'Activity ?",
+    "options": ["onCreate()", "onStart()", "onResume()", "onRestart()"],
+    "correct": 0,
+    "explanation": "onCreate() est appelé lors de la création de l'Activity."
+  },
+  {
+    "id": "AND-ACT-002",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée quand l'Activity devient visible ?",
+    "options": ["onStart()", "onCreate()", "onResume()", "onRestart()"],
+    "correct": 0,
+    "explanation": "onStart() est appelé quand l'Activity devient visible."
+  },
+  {
+    "id": "AND-ACT-003",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée quand l'Activity prend le focus ?",
+    "options": ["onResume()", "onStart()", "onCreate()", "onRestart()"],
+    "correct": 0,
+    "explanation": "onResume() quand l'Activity interagit avec l'utilisateur."
+  },
+  {
+    "id": "AND-ACT-004",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée quand l'Activity perd le focus ?",
+    "options": ["onPause()", "onStop()", "onDestroy()", "onRestart()"],
+    "correct": 0,
+    "explanation": "onPause() quand l'Activity perd le focus."
+  },
+  {
+    "id": "AND-ACT-005",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée quand l'Activity n'est plus visible ?",
+    "options": ["onStop()", "onPause()", "onDestroy()", "onRestart()"],
+    "correct": 0,
+    "explanation": "onStop() quand l'Activity n'est plus visible."
+  },
+  {
+    "id": "AND-ACT-006",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée avant la destruction ?",
+    "options": ["onDestroy()", "onStop()", "onPause()", "onRestart()"],
+    "correct": 0,
+    "explanation": "onDestroy() avant la destruction de l'Activity."
+  },
+  {
+    "id": "AND-ACT-007",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "medium",
+    "question": "Quelle méthode est appelée après onStop() ?",
+    "options": ["onRestart()", "onStart()", "onResume()", "onCreate()"],
+    "correct": 0,
+    "explanation": "onRestart() puis onStart() pour réafficher."
+  },
+  {
+    "id": "AND-ACT-008",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "medium",
+    "question": "Quelle méthode sauvegarde l'état de l'Activity ?",
+    "options": [
+      "onSaveInstanceState()",
+      "onRestoreInstanceState()",
+      "onPause()",
+      "onStop()"
+    ],
+    "correct": 0,
+    "explanation": "onSaveInstanceState() sauvegarde l'état avant destruction."
+  },
+  {
+    "id": "AND-ACT-009",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "medium",
+    "question": "Où restaurer l'état sauvegardé ?",
+    "options": [
+      "onCreate() ou onRestoreInstanceState()",
+      "onStart()",
+      "onResume()",
+      "onRestart()"
+    ],
+    "correct": 0,
+    "explanation": "Le Bundle est disponible dans onCreate() ou onRestoreInstanceState()."
+  },
+  {
+    "id": "AND-ACT-010",
+    "theme": "Activities et Fragments",
+    "theme_label": "Cycle de vie Activity",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il en mode paysage ?",
+    "options": [
+      "L'Activity est détruite et recréée",
+      "L'Activity est mise en pause",
+      "L'Activity est arrêtée",
+      "Rien ne change"
+    ],
+    "correct": 0,
+    "explanation": "La configuration change, l'Activity est recréée."
+  },
+  {
+    "id": "AND-ACT-011",
+    "theme": "Activities et Fragments",
+    "theme_label": "Intent",
+    "difficulty": "easy",
+    "question": "Comment démarrer une autre Activity ?",
+    "options": [
+      "startActivity(intent)",
+      "start(intent)",
+      "launchActivity(intent)",
+      "beginActivity(intent)"
+    ],
+    "correct": 0,
+    "explanation": "startActivity() démarre une nouvelle Activity."
+  },
+  {
+    "id": "AND-ACT-012",
+    "theme": "Activities et Fragments",
+    "theme_label": "Intent",
+    "difficulty": "easy",
+    "question": "Comment passer des données à une Activity ?",
+    "options": [
+      "intent.putExtra(\"key\", value)",
+      "intent.setData(value)",
+      "intent.addExtra(\"key\", value)",
+      "intent.setExtra(\"key\", value)"
+    ],
+    "correct": 0,
+    "explanation": "putExtra() ajoute des données à l'Intent."
+  },
+  {
+    "id": "AND-ACT-013",
+    "theme": "Activities et Fragments",
+    "theme_label": "Intent",
+    "difficulty": "easy",
+    "question": "Comment récupérer les données d'un Intent ?",
+    "options": [
+      "getIntent().getStringExtra(\"key\")",
+      "getData()",
+      "getExtras()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "getStringExtra() ou getExtras()."
+  },
+  {
+    "id": "AND-ACT-014",
+    "theme": "Activities et Fragments",
+    "theme_label": "Intent",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un Intent explicite ?",
+    "options": [
+      "Nomme la classe cible",
+      "Décrit l'action à effectuer",
+      "Est implicite",
+      "Ne spécifie pas la cible"
+    ],
+    "correct": 0,
+    "explanation": "Intent explicite = new Intent(this, Target.class)."
+  },
+  {
+    "id": "AND-ACT-015",
+    "theme": "Activities et Fragments",
+    "theme_label": "Intent",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un Intent implicite ?",
+    "options": [
+      "Décrit l'action (ACTION_VIEW)",
+      "Nomme la classe",
+      "Est explicite",
+      "Ne fonctionne pas"
+    ],
+    "correct": 0,
+    "explanation": "Intent implicite = new Intent(Intent.ACTION_VIEW, uri)."
+  },
+  {
+    "id": "AND-ACT-016",
+    "theme": "Activities et Fragments",
+    "theme_label": "Intent",
+    "difficulty": "hard",
+    "question": "Comment obtenir un résultat d'une Activity ?",
+    "options": [
+      "startActivityForResult()",
+      "registerForActivityResult()",
+      "onActivityResult()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "API moderne (Activity Result API) ou ancienne."
+  },
+  {
+    "id": "AND-ACT-017",
+    "theme": "Activities et Fragments",
+    "theme_label": "Fragment",
+    "difficulty": "easy",
+    "question": "À quoi sert un Fragment ?",
+    "options": [
+      "UI réutilisable",
+      "Activity alternative",
+      "Service",
+      "BroadcastReceiver"
+    ],
+    "correct": 0,
+    "explanation": "Les Fragments sont des composants UI réutilisables."
+  },
+  {
+    "id": "AND-ACT-018",
+    "theme": "Activities et Fragments",
+    "theme_label": "Fragment",
+    "difficulty": "easy",
+    "question": "Quelle méthode est appelée pour créer la vue d'un Fragment ?",
+    "options": [
+      "onCreateView()",
+      "onCreate()",
+      "onViewCreated()",
+      "onStart()"
+    ],
+    "correct": 0,
+    "explanation": "onCreateView() retourne la vue du Fragment."
+  },
+  {
+    "id": "AND-ACT-019",
+    "theme": "Activities et Fragments",
+    "theme_label": "Fragment",
+    "difficulty": "medium",
+    "question": "Comment ajouter un Fragment dynamiquement ?",
+    "options": [
+      "FragmentTransaction",
+      "add()",
+      "replace()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "FragmentTransaction avec add/replace."
+  },
+  {
+    "id": "AND-ACT-020",
+    "theme": "Activities et Fragments",
+    "theme_label": "Fragment",
+    "difficulty": "hard",
+    "question": "Comment communiquer entre Fragments ?",
+    "options": [
+      "ViewModel partagé",
+      "Activity comme interface",
+      "EventBus",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs patterns de communication."
+  }
+]

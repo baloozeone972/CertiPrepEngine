@@ -1,0 +1,32 @@
+{
+  "id": "prometheus",
+  "name": "Prometheus Associate (CNCF)",
+  "version": "1.0",
+  "description": "Certification Prometheus - Monitoring et observabilité",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Prometheus Architecture",
+      "count": 50
+    },
+    {
+      "name": "Metrics and Exporters",
+      "count": 60
+    },
+    {
+      "name": "PromQL",
+      "count": 70
+    },
+    {
+      "name": "Alerting (Alertmanager)",
+      "count": 50
+    },
+    {
+      "name": "Grafana Integration",
+      "count": 20
+    }
+  ]
+}

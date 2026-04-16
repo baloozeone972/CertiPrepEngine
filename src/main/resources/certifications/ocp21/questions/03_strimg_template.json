@@ -1,0 +1,667 @@
+[
+  {
+    "id": "OCP21-ST-001",
+    "theme": "String Templates",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est la syntaxe d'un String Template ?",
+    "options": [
+      "STR.\"Hello \{name}\"",
+      "\"Hello $name\"",
+      "\"Hello {name}\"",
+      "STR.\"Hello $name\""
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe est STR.\"Hello \{name}\" avec STR processeur."
+  },
+  {
+    "id": "OCP21-ST-002",
+    "theme": "String Templates",
+    "theme_label": "Processeurs",
+    "difficulty": "easy",
+    "question": "Quel est le processeur de template par défaut ?",
+    "options": ["STR", "FMT", "RAW", "TMP"],
+    "correct": 0,
+    "explanation": "STR est le processeur de template par défaut pour interpolation simple."
+  },
+  {
+    "id": "OCP21-ST-003",
+    "theme": "String Templates",
+    "theme_label": "Processeurs",
+    "difficulty": "easy",
+    "question": "À quoi sert le processeur FMT ?",
+    "options": [
+      "Formatage avec spécificateurs",
+      "Interpolation simple",
+      "Template brut",
+      "Template multiligne"
+    ],
+    "correct": 0,
+    "explanation": "FMT permet le formatage avec des spécificateurs comme %d, %s."
+  },
+  {
+    "id": "OCP21-ST-004",
+    "theme": "String Templates",
+    "theme_label": "Processeurs",
+    "difficulty": "easy",
+    "question": "À quoi sert le processeur RAW ?",
+    "options": [
+      "Retourne un StringTemplate sans interpolation",
+      "Interpolation brute",
+      "Formatage brut",
+      "Template littéral"
+    ],
+    "correct": 0,
+    "explanation": "RAW retourne un objet StringTemplate sans interpolation."
+  },
+  {
+    "id": "OCP21-ST-005",
+    "theme": "String Templates",
+    "theme_label": "Expressions",
+    "difficulty": "easy",
+    "question": "Que produit STR.\"Hello \{name}\" avec name='Alice' ?",
+    "options": ["Hello Alice", "Hello {name}", "STR.Hello Alice", "Erreur"],
+    "correct": 0,
+    "explanation": "STR évalue l'expression dans les accolades."
+  },
+  {
+    "id": "OCP21-ST-006",
+    "theme": "String Templates",
+    "theme_label": "Expressions",
+    "difficulty": "medium",
+    "question": "Peut-on mettre des expressions dans les accolades ?",
+    "options": [
+      "Oui, toute expression Java",
+      "Non, seulement variables",
+      "Oui, mais sans opérateurs",
+      "Non, seulement constantes"
+    ],
+    "correct": 0,
+    "explanation": "On peut mettre n'importe quelle expression Java valide."
+  },
+  {
+    "id": "OCP21-ST-007",
+    "theme": "String Templates",
+    "theme_label": "Expressions",
+    "difficulty": "medium",
+    "question": "Que produit STR.\"Somme: \{2 + 3}\" ?",
+    "options": ["Somme: 5", "Somme: {2+3}", "Somme: 2+3", "Erreur"],
+    "correct": 0,
+    "explanation": "L'expression 2+3 est évaluée à 5."
+  },
+  {
+    "id": "OCP21-ST-008",
+    "theme": "String Templates",
+    "theme_label": "Expressions",
+    "difficulty": "medium",
+    "question": "Peut-on appeler des méthodes dans les accolades ?",
+    "options": [
+      "Oui, STR.\"Résultat: \{compute()}\"",
+      "Non",
+      "Oui, mais sans paramètres",
+      "Oui, seulement méthodes statiques"
+    ],
+    "correct": 0,
+    "explanation": "On peut appeler n'importe quelle méthode dans les accolades."
+  },
+  {
+    "id": "OCP21-ST-009",
+    "theme": "String Templates",
+    "theme_label": "Multi-lignes",
+    "difficulty": "medium",
+    "question": "Les String Templates supportent-ils les text blocks ?",
+    "options": [
+      "Oui, STR.\"\"\" ... \"\"\"",
+      "Non",
+      "Oui, mais avec restrictions",
+      "Oui, avec RAW seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les templates peuvent être utilisés avec des text blocks."
+  },
+  {
+    "id": "OCP21-ST-010",
+    "theme": "String Templates",
+    "theme_label": "Multi-lignes",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nSTR.\"\"\"\n    Hello \{name}\n    Welcome\n    \"\"\" avec name='Alice'",
+    "options": [
+      "Hello Alice\\n    Welcome\\n    ",
+      "Hello Alice Welcome",
+      "Erreur",
+      "Hello \\{name}\\n    Welcome"
+    ],
+    "correct": 0,
+    "explanation": "Le text block préserve les retours à la ligne et l'indentation."
+  },
+  {
+    "id": "OCP21-ST-011",
+    "theme": "String Templates",
+    "theme_label": "FMT Processeur",
+    "difficulty": "hard",
+    "question": "Que produit FMT.\"%d\{x} + %d\{y} = %d\{x+y}\" avec x=5, y=3 ?",
+    "options": ["5 + 3 = 8", "%d5 + %d3 = %d8", "Erreur", "5 + 3 = 5+3"],
+    "correct": 0,
+    "explanation": "FMT applique le formatage avec les spécificateurs avant interpolation."
+  },
+  {
+    "id": "OCP21-ST-012",
+    "theme": "String Templates",
+    "theme_label": "FMT Processeur",
+    "difficulty": "hard",
+    "question": "Que produit FMT.\"%.2f\{Math.PI}\" ?",
+    "options": ["3.14", "3.141592653589793", "%.2f3.14", "Erreur"],
+    "correct": 0,
+    "explanation": "FMT formate PI avec 2 décimales."
+  },
+  {
+    "id": "OCP21-ST-013",
+    "theme": "String Templates",
+    "theme_label": "RAW Processeur",
+    "difficulty": "hard",
+    "question": "Que retourne RAW.\"Hello \{name}\" ?",
+    "options": [
+      "StringTemplate objet",
+      "String interpolée",
+      "String brute",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "RAW retourne un objet StringTemplate sans interpolation."
+  },
+  {
+    "id": "OCP21-ST-014",
+    "theme": "String Templates",
+    "theme_label": "StringTemplate objet",
+    "difficulty": "hard",
+    "question": "Que peut-on faire avec un StringTemplate ?",
+    "options": [
+      "Accéder aux fragments et valeurs",
+      "L'interpoler plus tard",
+      "Le transformer",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "StringTemplate donne accès aux fragments et valeurs du template."
+  },
+  {
+    "id": "OCP21-ST-015",
+    "theme": "String Templates",
+    "theme_label": "StringTemplate objet",
+    "difficulty": "hard",
+    "question": "Quelle méthode retourne les fragments d'un StringTemplate ?",
+    "options": ["fragments()", "getFragments()", "parts()", "getParts()"],
+    "correct": 0,
+    "explanation": "fragments() retourne la liste des fragments de texte."
+  },
+  {
+    "id": "OCP21-ST-016",
+    "theme": "String Templates",
+    "theme_label": "StringTemplate objet",
+    "difficulty": "hard",
+    "question": "Quelle méthode retourne les valeurs d'un StringTemplate ?",
+    "options": ["values()", "getValues()", "expressions()", "getExpressions()"],
+    "correct": 0,
+    "explanation": "values() retourne la liste des valeurs évaluées."
+  },
+  {
+    "id": "OCP21-ST-017",
+    "theme": "String Templates",
+    "theme_label": "Processeur personnalisé",
+    "difficulty": "hard",
+    "question": "Comment créer un processeur de template personnalisé ?",
+    "options": [
+      "Implémenter StringTemplate.Processor",
+      "Étendre StringTemplate",
+      "Utiliser @Processor",
+      "Créer une méthode static"
+    ],
+    "correct": 0,
+    "explanation": "Il faut implémenter l'interface StringTemplate.Processor."
+  },
+  {
+    "id": "OCP21-ST-018",
+    "theme": "String Templates",
+    "theme_label": "Processeur personnalisé",
+    "difficulty": "hard",
+    "question": "Quelle méthode doit-on implémenter pour un processeur ?",
+    "options": ["process()", "evaluate()", "interpolate()", "apply()"],
+    "correct": 0,
+    "explanation": "La méthode process(StringTemplate) doit être implémentée."
+  },
+  {
+    "id": "OCP21-ST-019",
+    "theme": "String Templates",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Les String Templates préviennent-ils les injections SQL ?",
+    "options": [
+      "Non, à utiliser avec prudence",
+      "Oui, automatiquement",
+      "Oui, avec FMT",
+      "Oui, avec validation"
+    ],
+    "correct": 0,
+    "explanation": "Les templates n'offrent pas de protection contre les injections."
+  },
+  {
+    "id": "OCP21-ST-020",
+    "theme": "String Templates",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Comment créer un processeur sécurisé pour SQL ?",
+    "options": [
+      "Processeur personnalisé avec échappement",
+      "Utiliser STR",
+      "Utiliser FMT",
+      "Utiliser RAW"
+    ],
+    "correct": 0,
+    "explanation": "Un processeur personnalisé peut échapper les valeurs pour SQL."
+  },
+  {
+    "id": "OCP21-ST-021",
+    "theme": "String Templates",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les String Templates sont-ils plus performants que la concaténation ?",
+    "options": [
+      "Comparables",
+      "Beaucoup plus lents",
+      "Beaucoup plus rapides",
+      "Dépend du nombre d'expressions"
+    ],
+    "correct": 0,
+    "explanation": "Les performances sont comparables à la concaténation."
+  },
+  {
+    "id": "OCP21-ST-022",
+    "theme": "String Templates",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les templates sont-ils évalués à la compilation ?",
+    "options": [
+      "Non, à l'exécution",
+      "Oui, complètement",
+      "Partiellement",
+      "Dépend du processeur"
+    ],
+    "correct": 0,
+    "explanation": "L'évaluation a lieu à l'exécution, pas à la compilation."
+  },
+  {
+    "id": "OCP21-ST-023",
+    "theme": "String Templates",
+    "theme_label": "Nested templates",
+    "difficulty": "hard",
+    "question": "Peut-on imbriquer des templates ?",
+    "options": [
+      "Oui, STR.\"Hello \{STR.\"Mr \{name}\"}\"",
+      "Non",
+      "Oui, avec RAW seulement",
+      "Oui, mais avec FMT"
+    ],
+    "correct": 0,
+    "explanation": "Les templates peuvent être imbriqués."
+  },
+  {
+    "id": "OCP21-ST-024",
+    "theme": "String Templates",
+    "theme_label": "Nested templates",
+    "difficulty": "hard",
+    "question": "Que produit STR.\"Bonjour \{STR.\"M. \{nom}\"}\" avec nom='Alice' ?",
+    "options": ["Bonjour M. Alice", "Bonjour M. {nom}", "Erreur", "Bonjour STR.M. Alice"],
+    "correct": 0,
+    "explanation": "Le template imbriqué est évalué en premier."
+  },
+  {
+    "id": "OCP21-ST-025",
+    "theme": "String Templates",
+    "theme_label": "JSON templates",
+    "difficulty": "hard",
+    "question": "Comment créer un processeur JSON ?",
+    "options": [
+      "Processeur personnalisé qui échappe les guillemets",
+      "Utiliser STR",
+      "Utiliser FMT",
+      "Utiliser JSON.process()"
+    ],
+    "correct": 0,
+    "explanation": "Un processeur personnalisé peut échapper les caractères JSON."
+  },
+  {
+    "id": "OCP21-ST-026",
+    "theme": "String Templates",
+    "theme_label": "XML templates",
+    "difficulty": "hard",
+    "question": "Comment créer un processeur XML sécurisé ?",
+    "options": [
+      "Processeur personnalisé qui échappe <>&",
+      "Utiliser STR",
+      "Utiliser FMT",
+      "Utiliser XML.process()"
+    ],
+    "correct": 0,
+    "explanation": "Un processeur personnalisé peut échapper les caractères XML."
+  },
+  {
+    "id": "OCP21-ST-027",
+    "theme": "String Templates",
+    "theme_label": "HTML templates",
+    "difficulty": "hard",
+    "question": "Comment créer un processeur HTML ?",
+    "options": [
+      "Processeur personnalisé qui échappe HTML",
+      "Utiliser STR",
+      "Utiliser FMT",
+      "Utiliser HTML.process()"
+    ],
+    "correct": 0,
+    "explanation": "Un processeur personnalisé peut échapper les caractères HTML."
+  },
+  {
+    "id": "OCP21-ST-028",
+    "theme": "String Templates",
+    "theme_label": "JEP",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit les String Templates ?",
+    "options": [
+      "JEP 430",
+      "JEP 431",
+      "JEP 441",
+      "JEP 451"
+    ],
+    "correct": 0,
+    "explanation": "JEP 430: String Templates (Preview)."
+  },
+  {
+    "id": "OCP21-ST-029",
+    "theme": "String Templates",
+    "theme_label": "Preview",
+    "difficulty": "hard",
+    "question": "Les String Templates sont-ils en preview en Java 21 ?",
+    "options": [
+      "Oui",
+      "Non, final",
+      "Non, supprimés",
+      "Oui, depuis Java 20"
+    ],
+    "correct": 0,
+    "explanation": "String Templates sont en preview en Java 21."
+  },
+  {
+    "id": "OCP21-ST-030",
+    "theme": "String Templates",
+    "theme_label": "Preview",
+    "difficulty": "hard",
+    "question": "Comment activer les String Templates ?",
+    "options": [
+      "--enable-preview",
+      "--enable-string-templates",
+      "--preview",
+      "Automatique"
+    ],
+    "correct": 0,
+    "explanation": "Il faut utiliser --enable-preview pour utiliser les templates."
+  },
+  {
+    "id": "OCP21-ST-031",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit STR.\"a = \{a}, b = \{b}\" avec a=1, b=2 ?",
+    "options": ["a = 1, b = 2", "a = {a}, b = {b}", "a = 1, b = 2, ", "Erreur"],
+    "correct": 0,
+    "explanation": "Les valeurs sont interpolées correctement."
+  },
+  {
+    "id": "OCP21-ST-032",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit STR.\"Hello \{name.toUpperCase()}\" avec name='Alice' ?",
+    "options": ["Hello ALICE", "Hello Alice", "Hello {name.toUpperCase()}", "Erreur"],
+    "correct": 0,
+    "explanation": "La méthode toUpperCase() est appelée dans l'expression."
+  },
+  {
+    "id": "OCP21-ST-033",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit STR.\"Résultat: \{x > 0 ? \"positif\" : \"négatif\"}\" avec x=5 ?",
+    "options": ["Résultat: positif", "Résultat: {x > 0 ? \"positif\" : \"négatif\"}", "Erreur", "Résultat: 5"],
+    "correct": 0,
+    "explanation": "L'opérateur ternaire est évalué dans l'expression."
+  },
+  {
+    "id": "OCP21-ST-034",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit FMT.\"PI = %.2f\{Math.PI}\" ?",
+    "options": ["PI = 3.14", "PI = 3.141592653589793", "PI = %.2f3.14", "Erreur"],
+    "correct": 0,
+    "explanation": "FMT formate PI avec 2 décimales."
+  },
+  {
+    "id": "OCP21-ST-035",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit FMT.\"%d\{x} + %d\{y} = %d\{x + y}\" avec x=10, y=20 ?",
+    "options": ["10 + 20 = 30", "%d10 + %d20 = %d30", "10 + 20 = 10+20", "Erreur"],
+    "correct": 0,
+    "explanation": "FMT applique le formatage avant interpolation."
+  },
+  {
+    "id": "OCP21-ST-036",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit RAW.\"Hello \{name}\" avec name='Alice' ?",
+    "options": [
+      "StringTemplate objet",
+      "Hello Alice",
+      "Hello {name}",
+      "Erreur"
+    ],
+    "correct": 0,
+    "explanation": "RAW retourne un objet StringTemplate, pas une String."
+  },
+  {
+    "id": "OCP21-ST-037",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar st = RAW.\"Hello \{name}\";\nSystem.out.println(st.fragments());",
+    "options": ["[Hello , ]", "[Hello {name}]", "[Hello, name]", "[Hello]"],
+    "correct": 0,
+    "explanation": "fragments() retourne les parties textuelles du template."
+  },
+  {
+    "id": "OCP21-ST-038",
+    "theme": "String Templates",
+    "theme_label": "Exemple",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nvar st = RAW.\"Hello \{name}\";\nSystem.out.println(st.values());",
+    "options": ["[Alice]", "[name]", "[Hello]", "[]"],
+    "correct": 0,
+    "explanation": "values() retourne les valeurs des expressions."
+  },
+  {
+    "id": "OCP21-ST-039",
+    "theme": "String Templates",
+    "theme_label": "Processeur personnalisé",
+    "difficulty": "hard",
+    "question": "Quelle interface permet de créer un processeur de template ?",
+    "options": [
+      "StringTemplate.Processor",
+      "TemplateProcessor",
+      "StringProcessor",
+      "Interpolator"
+    ],
+    "correct": 0,
+    "explanation": "StringTemplate.Processor est l'interface à implémenter."
+  },
+  {
+    "id": "OCP21-ST-040",
+    "theme": "String Templates",
+    "theme_label": "Processeur personnalisé",
+    "difficulty": "hard",
+    "question": "Que retourne la méthode process() d'un processeur ?",
+    "options": [
+      "Un objet de type R",
+      "Une String",
+      "Un StringTemplate",
+      "Un Object"
+    ],
+    "correct": 0,
+    "explanation": "Le type de retour est paramétré par le processeur."
+  },
+  {
+    "id": "OCP21-ST-041",
+    "theme": "String Templates",
+    "theme_label": "Processeur personnalisé",
+    "difficulty": "hard",
+    "question": "Peut-on créer un processeur qui retourne autre chose qu'une String ?",
+    "options": [
+      "Oui, le type est paramétrable",
+      "Non, seulement String",
+      "Oui, mais avec conversion",
+      "Non, R doit être String"
+    ],
+    "correct": 0,
+    "explanation": "Un processeur peut retourner n'importe quel type R."
+  },
+  {
+    "id": "OCP21-ST-042",
+    "theme": "String Templates",
+    "theme_label": "Validation",
+    "difficulty": "hard",
+    "question": "Comment valider les valeurs dans un processeur ?",
+    "options": [
+      "Dans la méthode process()",
+      "Avant l'appel",
+      "Avec des annotations",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "La validation peut être faite dans process()."
+  },
+  {
+    "id": "OCP21-ST-043",
+    "theme": "String Templates",
+    "theme_label": "Échappement",
+    "difficulty": "hard",
+    "question": "Comment échapper une accolade dans un template ?",
+    "options": [
+      "Utiliser \\{",
+      "Doubler l'accolade {{",
+      "Impossible",
+      "Utiliser STR.raw"
+    ],
+    "correct": 1,
+    "explanation": "Pour une accolade littérale, on la double : {{ ou }}."
+  },
+  {
+    "id": "OCP21-ST-044",
+    "theme": "String Templates",
+    "theme_label": "Échappement",
+    "difficulty": "hard",
+    "question": "Que produit STR.\"Accolade: \\{\\}\" ?",
+    "options": ["Accolade: {}", "Accolade: \\{\\}", "Erreur", "Accolade: { }"],
+    "correct": 0,
+    "explanation": "Les doubles accolades produisent des accolades littérales."
+  },
+  {
+    "id": "OCP21-ST-045",
+    "theme": "String Templates",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on mettre des déclarations dans les accolades ?",
+    "options": [
+      "Non, seulement des expressions",
+      "Oui, des déclarations",
+      "Oui, des blocs",
+      "Non, seulement des variables"
+    ],
+    "correct": 0,
+    "explanation": "Seules les expressions sont autorisées, pas les déclarations."
+  },
+  {
+    "id": "OCP21-ST-046",
+    "theme": "String Templates",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des boucles dans les accolades ?",
+    "options": [
+      "Non",
+      "Oui, for",
+      "Oui, while",
+      "Oui, do-while"
+    ],
+    "correct": 0,
+    "explanation": "Les boucles sont des déclarations, non autorisées."
+  },
+  {
+    "id": "OCP21-ST-047",
+    "theme": "String Templates",
+    "theme_label": "Interopérabilité",
+    "difficulty": "hard",
+    "question": "Peut-on mélanger templates et concaténation ?",
+    "options": [
+      "Oui, STR.\"Hello \" + name",
+      "Non",
+      "Oui, mais avec précautions",
+      "Oui, avec FMT"
+    ],
+    "correct": 0,
+    "explanation": "On peut concaténer des templates avec des strings."
+  },
+  {
+    "id": "OCP21-ST-048",
+    "theme": "String Templates",
+    "theme_label": "Interopérabilité",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser un template comme clé de Map ?",
+    "options": [
+      "Oui, le résultat est une String",
+      "Non",
+      "Oui, mais avec RAW",
+      "Non, type incompatible"
+    ],
+    "correct": 0,
+    "explanation": "L'interpolation produit une String utilisable comme clé."
+  },
+  {
+    "id": "OCP21-ST-049",
+    "theme": "String Templates",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quand les String Templates seront-ils finalisés ?",
+    "options": [
+      "Java 22 ou 23",
+      "Java 21",
+      "Java 24",
+      "Pas de date"
+    ],
+    "correct": 0,
+    "explanation": "Prévu pour Java 22 ou 23 selon l'évolution."
+  },
+  {
+    "id": "OCP21-ST-050",
+    "theme": "String Templates",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quelle évolution est prévue pour les templates ?",
+    "options": [
+      "Processeurs pour JSON, XML, SQL",
+      "Suppression",
+      "Stabilisation",
+      "Extension aux nombres"
+    ],
+    "correct": 0,
+    "explanation": "Des processeurs spécialisés sont prévus pour différents formats."
+  }
+]

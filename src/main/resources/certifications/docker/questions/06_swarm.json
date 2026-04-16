@@ -1,0 +1,872 @@
+[
+  {
+    "id": "DKR-06-001",
+    "theme": "Docker Swarm",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Docker Swarm ?",
+    "options": [
+      "Orchestrateur de conteneurs natif de Docker",
+      "Alternative à Kubernetes",
+      "Outil de build",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Swarm est l'orchestrateur intégré à Docker."
+  },
+  {
+    "id": "DKR-06-002",
+    "theme": "Docker Swarm",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quelle commande initialise un cluster Swarm ?",
+    "options": [
+      "docker swarm init",
+      "docker swarm create",
+      "docker swarm start",
+      "docker swarm new"
+    ],
+    "correct": 0,
+    "explication": "docker swarm init sur le nœud manager."
+  },
+  {
+    "id": "DKR-06-003",
+    "theme": "Docker Swarm",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quelle commande affiche l'état du Swarm ?",
+    "options": [
+      "docker info",
+      "docker swarm inspect",
+      "docker node ls",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "docker info montre le statut, docker node ls liste les nœuds."
+  },
+  {
+    "id": "DKR-06-004",
+    "theme": "Docker Swarm",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Comment ajouter un worker au Swarm ?",
+    "options": [
+      "docker swarm join --token <token> <manager-ip>:2377",
+      "docker swarm join-worker",
+      "docker node join",
+      "docker swarm add"
+    ],
+    "correct": 0,
+    "explication": "Utiliser le token fourni par docker swarm join-token worker."
+  },
+  {
+    "id": "DKR-06-005",
+    "theme": "Docker Swarm",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quels sont les types de nœuds dans Swarm ?",
+    "options": [
+      "Manager et worker",
+      "Master et slave",
+      "Leader et follower",
+      "Primary et secondary"
+    ],
+    "correct": 0,
+    "explication": "Les managers contrôlent le cluster, les workers exécutent les tâches."
+  },
+  {
+    "id": "DKR-06-006",
+    "theme": "Docker Swarm",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Combien de managers sont recommandés en production ?",
+    "options": ["3,5,7 (nombre impair)", "1", "2", "4"],
+    "correct": 0,
+    "explication": "Nombre impair pour le quorum (tolérance de pannes)."
+  },
+  {
+    "id": "DKR-06-007",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment créer un service dans Swarm ?",
+    "options": [
+      "docker service create --name web -p 80:80 nginx",
+      "docker service create --replicas 3 nginx",
+      "docker service create --name web nginx",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "docker service create avec diverses options."
+  },
+  {
+    "id": "DKR-06-008",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment lister les services Swarm ?",
+    "options": [
+      "docker service ls",
+      "docker service list",
+      "docker service ps",
+      "docker service show"
+    ],
+    "correct": 0,
+    "explication": "docker service ls affiche les services."
+  },
+  {
+    "id": "DKR-06-009",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment mettre à l'échelle un service ?",
+    "options": [
+      "docker service scale <service>=5",
+      "docker service update --replicas 5 <service>",
+      "docker service scale --replicas 5",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "scale ou update --replicas."
+  },
+  {
+    "id": "DKR-06-010",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment inspecter un service ?",
+    "options": [
+      "docker service inspect <service>",
+      "docker service ps <service>",
+      "docker service logs <service>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "inspect donne la configuration, ps liste les tâches."
+  },
+  {
+    "id": "DKR-06-011",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment supprimer un service ?",
+    "options": [
+      "docker service rm <service>",
+      "docker service remove <service>",
+      "docker service delete <service>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "rm ou remove."
+  },
+  {
+    "id": "DKR-06-012",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Que sont les tâches (tasks) dans Swarm ?",
+    "options": [
+      "Instances de conteneurs d'un service",
+      "Jobs ponctuels",
+      "Commandes",
+      "Volumes"
+    ],
+    "correct": 0,
+    "explication": "Chaque réplica est une tâche."
+  },
+  {
+    "id": "DKR-06-013",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "question": "Quel type de réseau est utilisé pour les services Swarm ?",
+    "options": ["overlay", "bridge", "host", "macvlan"],
+    "correct": 0,
+    "explication": "Le driver overlay permet la communication multi-hôtes."
+  },
+  {
+    "id": "DKR-06-014",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "question": "Comment créer un réseau overlay pour Swarm ?",
+    "options": [
+      "docker network create --driver overlay monoverlay",
+      "docker network create --driver overlay --attachable monoverlay",
+      "docker network create --driver overlay --scope swarm monoverlay",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "--attachable permet aux conteneurs indépendants de se connecter."
+  },
+  {
+    "id": "DKR-06-015",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "question": "Les réseaux overlay sont-ils chiffrés par défaut ?",
+    "options": ["Non", "Oui", "Optionnel avec --opt encrypted", "Uniquement pour le trafic de gestion"],
+    "correct": 2,
+    "explication": "Il faut spécifier --opt encrypted lors de la création."
+  },
+  {
+    "id": "DKR-06-016",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "question": "Comment publier un port pour un service Swarm ?",
+    "options": [
+      "docker service create -p 80:80 nginx",
+      "docker service create --publish 80:80 nginx",
+      "docker service create --publish mode=host,target=80,published=8080",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs syntaxes pour la publication de ports."
+  },
+  {
+    "id": "DKR-06-017",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre `--publish mode=host` et `mode=ingress` ?",
+    "options": [
+      "ingress utilise le mesh routing, host publie sur chaque nœud",
+      "host utilise le mesh, ingress est local",
+      "Identiques",
+      "host est déprécié"
+    ],
+    "correct": 0,
+    "explication": "Le mode ingress (par défaut) équilibre le trafic, host publie directement sur le nœud."
+  },
+  {
+    "id": "DKR-06-018",
+    "theme": "Docker Swarm",
+    "theme_label": "Secrets",
+    "difficulty": "hard",
+    "question": "Comment créer un secret dans Swarm ?",
+    "options": [
+      "echo 'mypass' | docker secret create db_pass -",
+      "docker secret create db_pass mypass.txt",
+      "docker secret create db_pass --from-literal=mypass",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les secrets sont stockés chiffrés dans le cluster."
+  },
+  {
+    "id": "DKR-06-019",
+    "theme": "Docker Swarm",
+    "theme_label": "Secrets",
+    "difficulty": "hard",
+    "question": "Comment utiliser un secret dans un service ?",
+    "options": [
+      "docker service create --secret db_pass nginx",
+      "docker service create --secret source=db_pass,target=/run/secrets/db_pass",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le secret est monté dans /run/secrets/<nom>."
+  },
+  {
+    "id": "DKR-06-020",
+    "theme": "Docker Swarm",
+    "theme_label": "Secrets",
+    "difficulty": "hard",
+    "question": "Où sont stockés les secrets sur les nœuds ?",
+    "options": [
+      "Chiffrés dans le Raft log",
+      "En clair sur le disque",
+      "Dans un volume",
+      "Dans un fichier temporaire"
+    ],
+    "correct": 0,
+    "explication": "Les secrets sont chiffrés et stockés dans le Raft log."
+  },
+  {
+    "id": "DKR-06-021",
+    "theme": "Docker Swarm",
+    "theme_label": "Configs",
+    "difficulty": "hard",
+    "question": "À quoi servent les configs (config) dans Swarm ?",
+    "options": [
+      "Stocker des fichiers de configuration non sensibles",
+      "Stocker des secrets",
+      "Stocker des variables d'environnement",
+      "Stocker des volumes"
+    ],
+    "correct": 0,
+    "explication": "Les configs sont similaires aux secrets mais non chiffrés."
+  },
+  {
+    "id": "DKR-06-022",
+    "theme": "Docker Swarm",
+    "theme_label": "Configs",
+    "difficulty": "hard",
+    "question": "Comment créer une config ?",
+    "options": [
+      "docker config create nginx.conf ./nginx.conf",
+      "docker config create nginx.conf - < ./nginx.conf",
+      "docker config create nginx.conf --from-file",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "La syntaxe est similaire à celle des secrets."
+  },
+  {
+    "id": "DKR-06-023",
+    "theme": "Docker Swarm",
+    "theme_label": "Rolling updates",
+    "difficulty": "hard",
+    "question": "Comment mettre à jour un service avec une nouvelle image ?",
+    "options": [
+      "docker service update --image nginx:latest web",
+      "docker service update --image nginx:1.20 web",
+      "docker service update --force web",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Update l'image et redéploie les tâches progressivement."
+  },
+  {
+    "id": "DKR-06-024",
+    "theme": "Docker Swarm",
+    "theme_label": "Rolling updates",
+    "difficulty": "hard",
+    "question": "Quelle option contrôle le parallélisme des mises à jour ?",
+    "options": [
+      "--update-parallelism",
+      "--parallelism",
+      "--update-parallel",
+      "--max-parallel"
+    ],
+    "correct": 0,
+    "explication": "--update-parallelism définit combien de tâches sont mises à jour en même temps."
+  },
+  {
+    "id": "DKR-06-025",
+    "theme": "Docker Swarm",
+    "theme_label": "Rolling updates",
+    "difficulty": "hard",
+    "question": "Quelle option définit le délai entre les mises à jour ?",
+    "options": [
+      "--update-delay",
+      "--delay",
+      "--update-interval",
+      "--wait-time"
+    ],
+    "correct": 0,
+    "explication": "--update-delay spécifie le temps d'attente entre les lots."
+  },
+  {
+    "id": "DKR-06-026",
+    "theme": "Docker Swarm",
+    "theme_label": "Health checks",
+    "difficulty": "hard",
+    "question": "Comment définir un healthcheck dans un service Swarm ?",
+    "options": [
+      "--health-cmd='curl -f http://localhost/'",
+      "--health-interval=30s",
+      "--health-retries=3",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les options sont les mêmes que pour docker run."
+  },
+  {
+    "id": "DKR-06-027",
+    "theme": "Docker Swarm",
+    "theme_label": "Health checks",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un healthcheck échoue ?",
+    "options": [
+      "La tâche est considérée comme défaillante et remplacée",
+      "Le service est arrêté",
+      "Rien",
+      "Un log est enregistré"
+    ],
+    "correct": 0,
+    "explication": "Les tâches défaillantes sont recréées."
+  },
+  {
+    "id": "DKR-06-028",
+    "theme": "Docker Swarm",
+    "theme_label": "Constraints",
+    "difficulty": "hard",
+    "question": "Comment forcer un service à s'exécuter sur un nœud spécifique ?",
+    "options": [
+      "docker service create --constraint node.hostname==node1 nginx",
+      "docker service create --constraint node.labels.zone==prod nginx",
+      "docker service create --placement-pref",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les contraintes utilisent des labels ou le hostname."
+  },
+  {
+    "id": "DKR-06-029",
+    "theme": "Docker Swarm",
+    "theme_label": "Labels",
+    "difficulty": "hard",
+    "question": "Comment ajouter un label à un nœud ?",
+    "options": [
+      "docker node update --label-add zone=prod node1",
+      "docker node label add node1 zone=prod",
+      "docker node update --label zone=prod node1",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "docker node update --label-add est la bonne syntaxe."
+  },
+  {
+    "id": "DKR-06-030",
+    "theme": "Docker Swarm",
+    "theme_label": "Labels",
+    "difficulty": "hard",
+    "question": "Comment lister les labels des nœuds ?",
+    "options": [
+      "docker node inspect node1 | grep Labels",
+      "docker node ls -q | xargs docker node inspect -f '{{.Description.Hostname}} {{.Spec.Labels}}'",
+      "docker node ls --format",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs façons d'afficher les labels."
+  },
+  {
+    "id": "DKR-06-031",
+    "theme": "Docker Swarm",
+    "theme_label": "Stack",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une stack dans Swarm ?",
+    "options": [
+      "Ensemble de services définis dans un fichier Compose",
+      "Un service unique",
+      "Un réseau",
+      "Un volume"
+    ],
+    "correct": 0,
+    "explication": "docker stack deploy utilise un fichier compose.yml."
+  },
+  {
+    "id": "DKR-06-032",
+    "theme": "Docker Swarm",
+    "theme_label": "Stack",
+    "difficulty": "easy",
+    "question": "Comment déployer une stack ?",
+    "options": [
+      "docker stack deploy -c docker-compose.yml mystack",
+      "docker stack deploy --compose-file docker-compose.yml mystack",
+      "docker compose up",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "docker stack deploy est la commande."
+  },
+  {
+    "id": "DKR-06-033",
+    "theme": "Docker Swarm",
+    "theme_label": "Stack",
+    "difficulty": "easy",
+    "question": "Comment lister les stacks ?",
+    "options": [
+      "docker stack ls",
+      "docker stack list",
+      "docker stack ps",
+      "docker stack services"
+    ],
+    "correct": 0,
+    "explication": "docker stack ls affiche les stacks déployées."
+  },
+  {
+    "id": "DKR-06-034",
+    "theme": "Docker Swarm",
+    "theme_label": "Stack",
+    "difficulty": "easy",
+    "question": "Comment supprimer une stack ?",
+    "options": [
+      "docker stack rm mystack",
+      "docker stack down mystack",
+      "docker stack remove mystack",
+      "docker stack delete mystack"
+    ],
+    "correct": 0,
+    "explication": "rm supprime les services, réseaux, etc."
+  },
+  {
+    "id": "DKR-06-035",
+    "theme": "Docker Swarm",
+    "theme_label": "Routing mesh",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le routing mesh dans Swarm ?",
+    "options": [
+      "Distribution du trafic entrant vers les tâches du service",
+      "Load balancing entre nœuds",
+      "A et B",
+      "Un type de réseau"
+    ],
+    "correct": 2,
+    "explication": "Le routing mesh permet d'accéder à un service via n'importe quel nœud."
+  },
+  {
+    "id": "DKR-06-036",
+    "theme": "Docker Swarm",
+    "theme_label": "Routing mesh",
+    "difficulty": "hard",
+    "question": "Le routing mesh utilise-t-il iptables ?",
+    "options": ["Oui", "Non", "Uniquement sur Linux", "Uniquement avec overlay"],
+    "correct": 0,
+    "explication": "Le routing mesh est implémenté avec iptables et ipvs."
+  },
+  {
+    "id": "DKR-06-037",
+    "theme": "Docker Swarm",
+    "theme_label": "Logs",
+    "difficulty": "hard",
+    "question": "Comment voir les logs d'un service Swarm ?",
+    "options": [
+      "docker service logs <service>",
+      "docker service logs -f <service>",
+      "docker service logs --tail 100 <service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "docker service logs collecte les logs de toutes les tâches."
+  },
+  {
+    "id": "DKR-06-038",
+    "theme": "Docker Swarm",
+    "theme_label": "Logs",
+    "difficulty": "hard",
+    "question": "Les logs des services Swarm sont-ils persistants par défaut ?",
+    "options": [
+      "Non, seulement le driver json-file (local)",
+      "Oui, stockés dans le Raft",
+      "Uniquement avec un driver externe",
+      "Oui, sur chaque nœud"
+    ],
+    "correct": 0,
+    "explication": "Les logs sont stockés localement sur chaque nœud avec le driver json-file."
+  },
+  {
+    "id": "DKR-06-039",
+    "theme": "Docker Swarm",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "Comment diagnostiquer un problème de quorum ?",
+    "options": [
+      "docker swarm init --force-new-cluster",
+      "docker node ls",
+      "docker swarm leave --force",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "--force-new-cluster réinitialise le cluster en cas de perte de quorum."
+  },
+  {
+    "id": "DKR-06-040",
+    "theme": "Docker Swarm",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "Comment retirer un nœud manager défaillant ?",
+    "options": [
+      "docker node rm --force <node>",
+      "docker node demote <node> puis rm",
+      "docker swarm leave --force sur le nœud",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Il faut d'abord le rétrograder en worker si possible."
+  },
+  {
+    "id": "DKR-06-041",
+    "theme": "Docker Swarm",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Comment renouveler les tokens Swarm ?",
+    "options": [
+      "docker swarm join-token --rotate",
+      "docker swarm update --token",
+      "docker swarm token --rotate",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "docker swarm join-token --rotate génère de nouveaux tokens."
+  },
+  {
+    "id": "DKR-06-042",
+    "theme": "Docker Swarm",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Quel port doit être ouvert entre les nœuds Swarm ?",
+    "options": [
+      "2377 (TCP) pour la gestion, 7946 (TCP/UDP) pour la communication, 4789 (UDP) pour overlay",
+      "80 et 443",
+      "22",
+      "8080"
+    ],
+    "correct": 0,
+    "explication": "Les ports spécifiques sont nécessaires pour le fonctionnement."
+  },
+  {
+    "id": "DKR-06-043",
+    "theme": "Docker Swarm",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "question": "Le chiffrement du trafic overlay est-il activé par défaut ?",
+    "options": ["Non", "Oui", "Uniquement pour le trafic de gestion", "Uniquement pour les services publiés"],
+    "correct": 0,
+    "explication": "Il faut ajouter --opt encrypted lors de la création du réseau."
+  },
+  {
+    "id": "DKR-06-044",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker Swarm vs Kubernetes",
+    "difficulty": "medium",
+    "question": "Swarm est-il plus simple que Kubernetes ?",
+    "options": [
+      "Oui, plus facile à configurer",
+      "Non, aussi complexe",
+      "Identique",
+      "Dépend du cas"
+    ],
+    "correct": 0,
+    "explication": "Swarm est intégré à Docker et plus simple pour les petits déploiements."
+  },
+  {
+    "id": "DKR-06-045",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker Swarm vs Kubernetes",
+    "difficulty": "medium",
+    "question": "Swarm supporte-t-il les DaemonSets (pods sur chaque nœud) ?",
+    "options": [
+      "Oui, avec les services global (--mode global)",
+      "Non",
+      "Uniquement avec les contraintes",
+      "Oui, avec placement"
+    ],
+    "correct": 0,
+    "explication": "--mode global exécute une tâche par nœud."
+  },
+  {
+    "id": "DKR-06-046",
+    "theme": "Docker Swarm",
+    "theme_label": "Services global",
+    "difficulty": "easy",
+    "question": "Comment créer un service global (un conteneur par nœud) ?",
+    "options": [
+      "docker service create --mode global nginx",
+      "docker service create --replicas 1 --constraint node.hostname=*",
+      "docker service create --global",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "--mode global est l'option correcte."
+  },
+  {
+    "id": "DKR-06-047",
+    "theme": "Docker Swarm",
+    "theme_label": "Services global",
+    "difficulty": "easy",
+    "question": "Les services global sont-ils affectés par les mises à jour rolling ?",
+    "options": ["Oui", "Non", "Uniquement si --update-parallelism=1", "Oui, mais sans délai"],
+    "correct": 0,
+    "explication": "Les mises à jour s'appliquent à tous les nœuds."
+  },
+  {
+    "id": "DKR-06-048",
+    "theme": "Docker Swarm",
+    "theme_label": "Volumes",
+    "difficulty": "hard",
+    "question": "Comment utiliser un volume partagé entre nœuds dans Swarm ?",
+    "options": [
+      "Utiliser un driver de volume distribué (ex: NFS, Rex-Ray)",
+      "Utiliser un bind mount (ne fonctionne pas)",
+      "Utiliser un volume local",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explication": "Les volumes doivent être accessibles depuis tous les nœuds."
+  },
+  {
+    "id": "DKR-06-049",
+    "theme": "Docker Swarm",
+    "theme_label": "Volumes",
+    "difficulty": "hard",
+    "question": "Les volumes nommés créés par un service Swarm sont-ils partagés entre les nœuds ?",
+    "options": [
+      "Non, chaque nœud a son propre volume",
+      "Oui",
+      "Uniquement si driver distribué",
+      "Uniquement avec le driver local"
+    ],
+    "correct": 2,
+    "explication": "Le driver local crée un volume local à chaque nœud."
+  },
+  {
+    "id": "DKR-06-050",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker stack vs docker-compose",
+    "difficulty": "medium",
+    "question": "Quelle commande utilise un fichier Compose pour Swarm ?",
+    "options": [
+      "docker stack deploy",
+      "docker compose up",
+      "docker service create --compose-file",
+      "docker swarm deploy"
+    ],
+    "correct": 0,
+    "explication": "docker stack déploie une stack en utilisant un fichier compose."
+  },
+  {
+    "id": "DKR-06-051",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker stack vs docker-compose",
+    "difficulty": "medium",
+    "question": "Quelle directive du fichier Compose est ignorée par stack deploy ?",
+    "options": [
+      "build",
+      "depends_on",
+      "cpus",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "build n'est pas supporté, depends_on est ignoré, cpus est utilisé pour Swarm."
+  },
+  {
+    "id": "DKR-06-052",
+    "theme": "Docker Swarm",
+    "theme_label": "Mise à l'échelle",
+    "difficulty": "hard",
+    "question": "Comment configurer l'autoscaling dans Swarm ?",
+    "options": [
+      "Utiliser des outils tiers (ex: Docker Swarm Autoscaler)",
+      "Swarm ne supporte pas l'autoscaling natif",
+      "docker service update --replicas",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Swarm n'a pas d'autoscaling intégré, contrairement à Kubernetes."
+  },
+  {
+    "id": "DKR-06-053",
+    "theme": "Docker Swarm",
+    "theme_label": "Resource management",
+    "difficulty": "hard",
+    "question": "Comment réserver des ressources pour un service ?",
+    "options": [
+      "--reserve-cpu 0.5 --reserve-memory 256M",
+      "--limit-cpu 1 --limit-memory 512M",
+      "--cpu-reservation --memory-reservation",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "--reserve-cpu et --reserve-memory pour les réservations."
+  },
+  {
+    "id": "DKR-06-054",
+    "theme": "Docker Swarm",
+    "theme_label": "Resource management",
+    "difficulty": "hard",
+    "question": "La réservation garantit-elle les ressources ?",
+    "options": [
+      "Oui (scheduling)",
+      "Non (suggestion)",
+      "Uniquement sur les workers",
+      "Uniquement sur les managers"
+    ],
+    "correct": 0,
+    "explication": "Le scheduler ne place les tâches que si les ressources sont disponibles."
+  },
+  {
+    "id": "DKR-06-055",
+    "theme": "Docker Swarm",
+    "theme_label": "Placement preferences",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une préférence de placement (placement preference) ?",
+    "options": [
+      "Répartir les tâches de manière équitable",
+      "Contrainte dure",
+      "Optimisation de la distribution",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les préférences (ex: spread) aident à répartir les tâches."
+  },
+  {
+    "id": "DKR-06-056",
+    "theme": "Docker Swarm",
+    "theme_label": "Placement preferences",
+    "difficulty": "hard",
+    "question": "Comment répartir les tâches sur plusieurs zones ?",
+    "options": [
+      "--placement-pref spread=node.labels.zone",
+      "--placement-pref spread=node.hostname",
+      "--constraint node.labels.zone!=*",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "spread répartit uniformément selon une clé."
+  },
+  {
+    "id": "DKR-06-057",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker swarm leave",
+    "difficulty": "easy",
+    "question": "Que fait `docker swarm leave` ?",
+    "options": [
+      "Retire le nœud du cluster",
+      "Supprime le cluster",
+      "Désactive le Swarm",
+      "Met le nœud en pause"
+    ],
+    "correct": 0,
+    "explication": "Le nœud quitte le Swarm. Sur un manager, il faut --force."
+  },
+  {
+    "id": "DKR-06-058",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker swarm leave",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si un manager quitte le Swarm ?",
+    "options": [
+      "Le quorum peut être perdu",
+      "Rien, il est remplacé",
+      "Le cluster s'arrête",
+      "Un worker devient manager"
+    ],
+    "correct": 0,
+    "explication": "Le nombre de managers doit rester impair pour maintenir le quorum."
+  },
+  {
+    "id": "DKR-06-059",
+    "theme": "Docker Swarm",
+    "theme_label": "Docker swarm update",
+    "difficulty": "hard",
+    "question": "Que fait `docker swarm update` ?",
+    "options": [
+      "Modifie les paramètres du cluster",
+      "Met à jour les nœuds",
+      "Change le token",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Permet de changer le délai de snapshot, le nombre d'historiques, etc."
+  },
+  {
+    "id": "DKR-06-060",
+    "theme": "Docker Swarm",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne pratique pour la haute disponibilité ?",
+    "options": [
+      "Avoir au moins 3 managers",
+      "Répartir les managers sur différentes zones",
+      "Utiliser des services avec replicas > 1",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "La haute disponibilité nécessite redondance et répartition."
+  }
+]

@@ -1,0 +1,1127 @@
+[
+  {
+    "id": "AZ-204-001",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "easy",
+    "question": "Quel service Azure est un PaaS pour héberger des applications web ?",
+    "options": ["Azure App Service", "Azure Virtual Machines", "Azure Functions", "Azure Container Instances"],
+    "correct": 0,
+    "explanation": "App Service héberge des applications web, API, et mobile backends."
+  },
+  {
+    "id": "AZ-204-002",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "easy",
+    "question": "Quels langages sont supportés par App Service ?",
+    "options": [
+      ".NET, Java, Node.js, Python, PHP, Ruby",
+      ".NET seulement",
+      "Java seulement",
+      "Node.js seulement"
+    ],
+    "correct": 0,
+    "explanation": "App Service supporte de nombreux langages."
+  },
+  {
+    "id": "AZ-204-003",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un plan App Service ?",
+    "options": [
+      "Ensemble de ressources de calcul pour les applications",
+      "Type d'application",
+      "Région",
+      "Groupe de ressources"
+    ],
+    "correct": 0,
+    "explication": "Le plan définit la région, le nombre de VMs, la taille des instances."
+  },
+  {
+    "id": "AZ-204-004",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Quels sont les niveaux (SKU) du plan App Service ?",
+    "options": [
+      "Free, Shared, Basic, Standard, Premium, Isolated",
+      "Free seulement",
+      "Basic seulement",
+      "Premium seulement"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs niveaux avec différentes capacités et fonctionnalités."
+  },
+  {
+    "id": "AZ-204-005",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un slot de déploiement ?",
+    "options": [
+      "Environnement de staging pour tester avant production",
+      "Instance de base de données",
+      "Région",
+      "Groupe de sécurité"
+    ],
+    "correct": 0,
+    "explication": "Les slots permettent le déploiement sans temps d'arrêt (swap)."
+  },
+  {
+    "id": "AZ-204-006",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Combien de slots de déploiement peut-on avoir par application ?",
+    "options": ["Jusqu'à 20 (selon le SKU)", "5", "10", "Illimité"],
+    "correct": 0,
+    "explication": "Le nombre de slots dépend du niveau du plan App Service."
+  },
+  {
+    "id": "AZ-204-007",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le swap de slots ?",
+    "options": [
+      "Échanger le slot de staging avec le slot de production",
+      "Copier les fichiers",
+      "Redémarrer l'application",
+      "Changer de région"
+    ],
+    "correct": 0,
+    "explication": "Le swap permet de mettre en production un nouveau déploiement sans interruption."
+  },
+  {
+    "id": "AZ-204-008",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les paramètres d'application (app settings) ?",
+    "options": [
+      "Variables d'environnement pour l'application",
+      "Paramètres de build",
+      "Configuration réseau",
+      "Règles de sécurité"
+    ],
+    "correct": 0,
+    "explication": "Les paramètres d'application sont injectés comme variables d'environnement."
+  },
+  {
+    "id": "AZ-204-009",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Les paramètres d'application peuvent-ils être marqués comme 'slot setting' ?",
+    "options": ["Oui (collés au slot)", "Non", "Uniquement pour les connexions", "Uniquement pour les chaînes"],
+    "correct": 0,
+    "explication": "Les slot settings restent associés à un slot lors du swap."
+  },
+  {
+    "id": "AZ-204-010",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'authentification intégrée App Service ?",
+    "options": [
+      "Authentification facile avec AAD, Facebook, Google, etc.",
+      "Authentification personnalisée",
+      "Firewall",
+      "SSL"
+    ],
+    "correct": 0,
+    "explication": "App Service fournit une couche d'authentification intégrée (Easy Auth)."
+  },
+  {
+    "id": "AZ-204-011",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que App Service Managed Certificates ?",
+    "options": [
+      "Certificats SSL gratuits pour les domaines personnalisés",
+      "Certificats payants",
+      "Certificats auto-signés",
+      "Certificats pour les slots"
+    ],
+    "correct": 0,
+    "explication": "App Service peut fournir des certificats SSL gratuits pour les domaines personnalisés."
+  },
+  {
+    "id": "AZ-204-012",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'auto-scaling dans App Service ?",
+    "options": [
+      "Ajuster automatiquement le nombre d'instances",
+      "Redimensionner la VM",
+      "Changer de région",
+      "Mettre à jour le plan"
+    ],
+    "correct": 0,
+    "explication": "L'auto-scaling ajuste les instances en fonction des métriques (CPU, mémoire, requêtes)."
+  },
+  {
+    "id": "AZ-204-013",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les diagnostics d'application ?",
+    "options": [
+      "Collecte des journaux et des traces",
+      "Redémarrage",
+      "Sauvegarde",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "App Service peut enregistrer les logs d'application, du serveur web, etc."
+  },
+  {
+    "id": "AZ-204-014",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Où sont stockés les journaux d'App Service ?",
+    "options": [
+      "Système de fichiers, Blob Storage, Log Analytics",
+      "Seulement le système de fichiers",
+      "Seulement Blob Storage",
+      "Seulement Log Analytics"
+    ],
+    "correct": 0,
+    "explication": "Les logs peuvent être envoyés vers plusieurs destinations."
+  },
+  {
+    "id": "AZ-204-015",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la fonctionnalité 'Always On' ?",
+    "options": [
+      "Garder l'application chargée en mémoire",
+      "Redémarrer automatiquement",
+      "Mise à l'échelle",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Always On empêche l'application de se décharger en cas d'inactivité."
+  },
+  {
+    "id": "AZ-204-016",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que WebJobs ?",
+    "options": [
+      "Tâches en arrière-plan dans App Service",
+      "Jobs de base de données",
+      "Jobs de stockage",
+      "Jobs de réseau"
+    ],
+    "correct": 0,
+    "explication": "WebJobs permet d'exécuter des scripts en arrière-plan (continu ou déclenché)."
+  },
+  {
+    "id": "AZ-204-017",
+    "theme": "Azure Compute",
+    "theme_label": "App Service",
+    "difficulty": "hard",
+    "question": "WebJobs peut-il être déclenché par une file d'attente ?",
+    "options": ["Oui", "Non", "Uniquement par timer", "Uniquement par blob"],
+    "correct": 0,
+    "explication": "WebJobs peut être déclenché par des messages de files d'attente (Azure Queue)."
+  },
+  {
+    "id": "AZ-204-018",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Functions ?",
+    "options": [
+      "Service serverless pour exécuter du code",
+      "Service de base de données",
+      "Service de stockage",
+      "Service de réseau"
+    ],
+    "correct": 0,
+    "explication": "Azure Functions est le FaaS (Function as a Service) d'Azure."
+  },
+  {
+    "id": "AZ-204-019",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "easy",
+    "question": "Quels langages sont supportés par Azure Functions ?",
+    "options": [
+      "C#, JavaScript, Python, Java, PowerShell, TypeScript",
+      "C# seulement",
+      "JavaScript seulement",
+      "Python seulement"
+    ],
+    "correct": 0,
+    "explication": "Azure Functions supporte plusieurs langages."
+  },
+  {
+    "id": "AZ-204-020",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un déclencheur (trigger) de fonction ?",
+    "options": [
+      "Événement qui déclenche l'exécution de la fonction",
+      "Sortie de la fonction",
+      "Paramètre de la fonction",
+      "Configuration"
+    ],
+    "correct": 0,
+    "explication": "Les déclencheurs sont des événements (HTTP, timer, queue, blob, etc.) qui démarrent la fonction."
+  },
+  {
+    "id": "AZ-204-021",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Quels sont les déclencheurs supportés ?",
+    "options": [
+      "HTTP, Timer, Blob, Queue, Event Hub, Cosmos DB, etc.",
+      "HTTP seulement",
+      "Timer seulement",
+      "Blob seulement"
+    ],
+    "correct": 0,
+    "explication": "Azure Functions a de nombreux déclencheurs."
+  },
+  {
+    "id": "AZ-204-022",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le plan de consommation (Consumption plan) ?",
+    "options": [
+      "Facturation par exécution, mise à l'échelle automatique",
+      "Instance dédiée",
+      "Plan premium",
+      "Plan dédié"
+    ],
+    "correct": 0,
+    "explication": "Le plan de consommation facture l'exécution et le temps CPU."
+  },
+  {
+    "id": "AZ-204-023",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le plan Premium pour Functions ?",
+    "options": [
+      "Instances toujours prêtes, VNet, plus longue durée",
+      "Facturation par exécution",
+      "Instance dédiée",
+      "Gratuit"
+    ],
+    "correct": 0,
+    "explication": "Le plan Premium offre des fonctionnalités supplémentaires (VNet, préchauffage)."
+  },
+  {
+    "id": "AZ-204-024",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Durable Functions ?",
+    "options": [
+      "Orchestration d'un workflow stateful",
+      "Fonctions durables",
+      "Fonctions longues",
+      "Fonctions récurrentes"
+    ],
+    "correct": 0,
+    "explication": "Durable Functions permet d'écrire des workflows avec état."
+  },
+  {
+    "id": "AZ-204-025",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Quels sont les types de fonctions durables ?",
+    "options": [
+      "Client, Orchestrator, Activity, Entity",
+      "Client seulement",
+      "Orchestrator seulement",
+      "Activity seulement"
+    ],
+    "correct": 0,
+    "explication": "Durable Functions a plusieurs types de fonctions."
+  },
+  {
+    "id": "AZ-204-026",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la liaison de sortie (output binding) ?",
+    "options": [
+      "Permet d'écrire des données dans un service sans code",
+      "Entrée de la fonction",
+      "Paramètre",
+      "Configuration"
+    ],
+    "correct": 0,
+    "explication": "Les liaisons de sortie simplifient l'écriture vers des services (Blob, Queue, etc.)."
+  },
+  {
+    "id": "AZ-204-027",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le fichier host.json ?",
+    "options": [
+      "Configuration globale de l'application Functions",
+      "Fichier de code",
+      "Fichier de déclencheur",
+      "Fichier de liaison"
+    ],
+    "correct": 0,
+    "explication": "host.json configure les paramètres du runtime (timeout, logging, extensions)."
+  },
+  {
+    "id": "AZ-204-028",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le fichier local.settings.json ?",
+    "options": [
+      "Configuration locale pour le développement",
+      "Configuration de production",
+      "Fichier de code",
+      "Fichier de build"
+    ],
+    "correct": 0,
+    "explication": "local.settings.json contient les paramètres pour l'exécution locale."
+  },
+  {
+    "id": "AZ-204-029",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Comment sont gérés les secrets dans Functions ?",
+    "options": [
+      "Key Vault, paramètres d'application",
+      "Fichier de configuration",
+      "Variables d'environnement locales",
+      "Code"
+    ],
+    "correct": 0,
+    "explication": "Les secrets doivent être stockés dans Key Vault ou les paramètres d'application."
+  },
+  {
+    "id": "AZ-204-030",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le Cold Start dans Functions ?",
+    "options": [
+      "Délai de démarrage d'une fonction inactive",
+      "Arrêt de la fonction",
+      "Erreur de démarrage",
+      "Redémarrage"
+    ],
+    "correct": 0,
+    "explication": "Le cold start est le temps de chargement d'une fonction qui n'a pas été utilisée récemment."
+  },
+  {
+    "id": "AZ-204-031",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Comment réduire le cold start ?",
+    "options": [
+      "Plan Premium avec Always Ready",
+      "Plan Consommation",
+      "Réduire le code",
+      "Augmenter la mémoire"
+    ],
+    "correct": 0,
+    "explication": "Le plan Premium maintient des instances préchauffées pour réduire le cold start."
+  },
+  {
+    "id": "AZ-204-032",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Quelle est la durée maximale d'une fonction dans le plan Consommation ?",
+    "options": ["10 minutes", "5 minutes", "30 minutes", "1 heure"],
+    "correct": 0,
+    "explication": "Le timeout maximum est de 10 minutes (configurable, par défaut 5 min)."
+  },
+  {
+    "id": "AZ-204-033",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Quelle est la durée maximale dans le plan Premium ?",
+    "options": ["30 minutes", "10 minutes", "1 heure", "Illimité"],
+    "correct": 2,
+    "explication": "Le plan Premium peut aller jusqu'à 1 heure (60 minutes)."
+  },
+  {
+    "id": "AZ-204-034",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la mise à l'échelle des Functions ?",
+    "options": [
+      "Ajout automatique d'instances en fonction des événements",
+      "Redimensionnement manuel",
+      "Augmentation de la mémoire",
+      "Changement de région"
+    ],
+    "correct": 0,
+    "explication": "Les Functions se mettent à l'échelle automatiquement selon le nombre d'événements."
+  },
+  {
+    "id": "AZ-204-035",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur Timer ?",
+    "options": [
+      "Exécute la fonction selon un planning CRON",
+      "Déclencheur HTTP",
+      "Déclencheur blob",
+      "Déclencheur queue"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur timer utilise une expression CRON."
+  },
+  {
+    "id": "AZ-204-036",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur HTTP ?",
+    "options": [
+      "Déclenche la fonction via une requête HTTP",
+      "Timer",
+      "Queue",
+      "Blob"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur HTTP permet d'appeler la fonction via une URL."
+  },
+  {
+    "id": "AZ-204-037",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur Blob ?",
+    "options": [
+      "Déclenche la fonction lors de la création/modification d'un blob",
+      "Timer",
+      "Queue",
+      "HTTP"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur blob réagit aux événements dans un conteneur blob."
+  },
+  {
+    "id": "AZ-204-038",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur Queue ?",
+    "options": [
+      "Déclenche la fonction lors de l'arrivée d'un message dans une file",
+      "Timer",
+      "Blob",
+      "HTTP"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur queue traite les messages d'une file Azure Queue."
+  },
+  {
+    "id": "AZ-204-039",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur Cosmos DB ?",
+    "options": [
+      "Déclenche la fonction sur les changements dans Cosmos DB (Change Feed)",
+      "Timer",
+      "Queue",
+      "Blob"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur Cosmos DB réagit au flux de modifications (change feed)."
+  },
+  {
+    "id": "AZ-204-040",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur Event Hub ?",
+    "options": [
+      "Traite des événements en streaming",
+      "Timer",
+      "Queue",
+      "Blob"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur Event Hub ingère des flux de données à grande échelle."
+  },
+  {
+    "id": "AZ-204-041",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déclencheur Service Bus ?",
+    "options": [
+      "Traite des messages de Service Bus (Queue/Topic)",
+      "Timer",
+      "Queue",
+      "Blob"
+    ],
+    "correct": 0,
+    "explication": "Le déclencheur Service Bus lit les messages des files ou abonnements."
+  },
+  {
+    "id": "AZ-204-042",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Comment gérer les connexions dans Functions ?",
+    "options": [
+      "Réutiliser les clients statiques",
+      "Créer un nouveau client à chaque appel",
+      "Utiliser des singletons",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Il est recommandé de réutiliser les clients HTTP, Cosmos, etc., pour éviter l'épuisement des ports."
+  },
+  {
+    "id": "AZ-204-043",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le mode d'exécution synchrone des fonctions ?",
+    "options": [
+      "La fonction s'exécute et retourne une réponse",
+      "La fonction s'exécute en arrière-plan",
+      "La fonction est asynchrone",
+      "La fonction est planifiée"
+    ],
+    "correct": 0,
+    "explication": "Les fonctions peuvent être synchrones (attendre le résultat) ou asynchrones."
+  },
+  {
+    "id": "AZ-204-044",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les dépendances injectées dans Functions ?",
+    "options": [
+      "Injection de dépendances via le constructeur",
+      "Variables globales",
+      "Paramètres",
+      "Configuration"
+    ],
+    "correct": 0,
+    "explication": "Azure Functions prend en charge l'injection de dépendances (comme ASP.NET Core)."
+  },
+  {
+    "id": "AZ-204-045",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le middleware dans Functions ?",
+    "options": [
+      "Pipeline de traitement des requêtes HTTP",
+      "Déclencheur",
+      "Liaison",
+      "Configuration"
+    ],
+    "correct": 0,
+    "explication": "Le middleware permet d'intercepter et de traiter les requêtes HTTP avant qu'elles n'atteignent la fonction."
+  },
+  {
+    "id": "AZ-204-046",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Comment déployer une fonction depuis Visual Studio ?",
+    "options": [
+      "Publier vers Azure",
+      "Copier les fichiers",
+      "FTP",
+      "CLI"
+    ],
+    "correct": 0,
+    "explication": "Visual Studio a une option 'Publier' pour déployer directement sur Azure."
+  },
+  {
+    "id": "AZ-204-047",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Comment déployer une fonction avec Azure CLI ?",
+    "options": [
+      "func azure functionapp publish",
+      "az function deploy",
+      "az webapp deploy",
+      "az functionapp start"
+    ],
+    "correct": 0,
+    "explication": "La commande 'func azure functionapp publish' déploie l'application de fonction."
+  },
+  {
+    "id": "AZ-204-048",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'intégration continue pour Functions ?",
+    "options": [
+      "Déploiement automatique depuis GitHub, Azure DevOps, etc.",
+      "Déploiement manuel",
+      "Mise à jour manuelle",
+      "Backup"
+    ],
+    "correct": 0,
+    "explication": "Functions peut être configuré pour se déployer automatiquement à partir d'un dépôt Git."
+  },
+  {
+    "id": "AZ-204-049",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le monitorage des fonctions avec Application Insights ?",
+    "options": [
+      "Collecte des métriques, logs, traces, et dépendances",
+      "Seulement les logs",
+      "Seulement les métriques",
+      "Seulement les traces"
+    ],
+    "correct": 0,
+    "explication": "Application Insights s'intègre aux Functions pour la surveillance."
+  },
+  {
+    "id": "AZ-204-050",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le niveau de journalisation (log level) dans Functions ?",
+    "options": [
+      "Trace, Debug, Information, Warning, Error, Critical",
+      "Seulement Error",
+      "Seulement Information",
+      "Seulement Warning"
+    ],
+    "correct": 0,
+    "explication": "Les fonctions supportent plusieurs niveaux de log."
+  },
+  {
+    "id": "AZ-204-051",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Comment configurer les variables d'environnement pour Functions ?",
+    "options": [
+      "Paramètres d'application dans le portail ou local.settings.json",
+      "Fichier .env",
+      "Fichier config",
+      "Variables système"
+    ],
+    "correct": 0,
+    "explication": "Les paramètres d'application sont la méthode recommandée."
+  },
+  {
+    "id": "AZ-204-052",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les extensions de liaison (binding extensions) ?",
+    "options": [
+      "Extensions qui ajoutent des déclencheurs et des liaisons",
+      "Extensions de code",
+      "Extensions de build",
+      "Extensions de logging"
+    ],
+    "correct": 0,
+    "explication": "Les extensions sont nécessaires pour utiliser certains déclencheurs (Cosmos DB, Event Hub, etc.)."
+  },
+  {
+    "id": "AZ-204-053",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le plan Elastic Premium ?",
+    "options": [
+      "Plan avec instances préchauffées, VNet, etc.",
+      "Plan Consommation",
+      "Plan Dédié",
+      "Plan Gratuit"
+    ],
+    "correct": 0,
+    "explication": "Le plan Premium (anciennement Elastic Premium) offre des fonctionnalités intermédiaires."
+  },
+  {
+    "id": "AZ-204-054",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Quelle est la limite de mémoire pour une fonction dans le plan Consommation ?",
+    "options": ["1.5 Go", "2 Go", "512 Mo", "4 Go"],
+    "correct": 0,
+    "explication": "La mémoire maximale est de 1.5 Go dans le plan Consommation."
+  },
+  {
+    "id": "AZ-204-055",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Quelle est la limite de mémoire pour une fonction dans le plan Premium ?",
+    "options": ["4 Go", "8 Go", "2 Go", "16 Go"],
+    "correct": 0,
+    "explication": "Le plan Premium peut aller jusqu'à 4 Go de mémoire."
+  },
+  {
+    "id": "AZ-204-056",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Functions",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la fonction proxy dans Functions ?",
+    "options": [
+      "Redirige les requêtes vers d'autres endpoints",
+      "Proxy HTTP",
+      "Déclencheur",
+      "Liaison"
+    ],
+    "correct": 0,
+    "explication": "Les proxies permettent de réécrire les URLs et de rediriger les requêtes."
+  },
+  {
+    "id": "AZ-204-057",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Instances",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure Container Instances (ACI) ?",
+    "options": [
+      "Exécution de conteneurs sans gestion de serveurs",
+      "Service Kubernetes",
+      "Registry de conteneurs",
+      "Orchestration"
+    ],
+    "correct": 0,
+    "explication": "ACI permet d'exécuter des conteneurs de manière serverless."
+  },
+  {
+    "id": "AZ-204-058",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Instances",
+    "difficulty": "hard",
+    "question": "ACI peut-il monter des volumes Azure Files ?",
+    "options": ["Oui", "Non", "Uniquement des volumes vides", "Uniquement des volumes secrets"],
+    "correct": 0,
+    "explication": "ACI peut monter des partages Azure Files."
+  },
+  {
+    "id": "AZ-204-059",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Instances",
+    "difficulty": "hard",
+    "question": "ACI peut-il avoir une IP publique ?",
+    "options": ["Oui", "Non", "Uniquement IP privée", "Uniquement avec load balancer"],
+    "correct": 0,
+    "explication": "ACI peut attribuer une IP publique au conteneur."
+  },
+  {
+    "id": "AZ-204-060",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Instances",
+    "difficulty": "hard",
+    "question": "ACI est-il facturé à la seconde ?",
+    "options": ["Oui", "Non", "À la minute", "À l'heure"],
+    "correct": 0,
+    "explication": "ACI facture à la seconde de temps d'exécution."
+  },
+  {
+    "id": "AZ-204-061",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Registry",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure Container Registry (ACR) ?",
+    "options": [
+      "Registre privé pour les images Docker",
+      "Orchestration de conteneurs",
+      "Service de conteneurs serverless",
+      "Kubernetes"
+    ],
+    "correct": 0,
+    "explication": "ACR stocke les images de conteneurs privées."
+  },
+  {
+    "id": "AZ-204-062",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Registry",
+    "difficulty": "hard",
+    "question": "ACR peut-il être intégré à AKS pour le déploiement ?",
+    "options": ["Oui", "Non", "Uniquement avec ACI", "Uniquement avec App Service"],
+    "correct": 0,
+    "explication": "AKS peut s'authentifier auprès d'ACR pour tirer les images."
+  },
+  {
+    "id": "AZ-204-063",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Registry",
+    "difficulty": "hard",
+    "question": "ACR supporte-t-il la réplication géographique ?",
+    "options": ["Oui", "Non", "Uniquement dans la même région", "Uniquement avec Premium"],
+    "correct": 0,
+    "explication": "La réplication géographique est disponible dans le niveau Premium."
+  },
+  {
+    "id": "AZ-204-064",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Container Registry",
+    "difficulty": "hard",
+    "question": "Quelles sont les tâches ACR (ACR Tasks) ?",
+    "options": [
+      "Construction et correction d'images dans le cloud",
+      "Scan des vulnérabilités",
+      "Nettoyage",
+      "Réplication"
+    ],
+    "correct": 0,
+    "explication": "ACR Tasks permet de construire des images dans le cloud sans Docker Engine local."
+  },
+  {
+    "id": "AZ-204-065",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Kubernetes Service (AKS)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AKS ?",
+    "options": [
+      "Service Kubernetes managé",
+      "Service de conteneurs serverless",
+      "Registre de conteneurs",
+      "Service de fonctions"
+    ],
+    "correct": 0,
+    "explication": "AKS est le service Kubernetes managé d'Azure."
+  },
+  {
+    "id": "AZ-204-066",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Kubernetes Service",
+    "difficulty": "hard",
+    "question": "AKS gère-t-il le plan de contrôle ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement les nœuds"],
+    "correct": 0,
+    "explication": "AKS gère le plan de contrôle (API server, etcd) gratuitement."
+  },
+  {
+    "id": "AZ-204-067",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Kubernetes Service",
+    "difficulty": "hard",
+    "question": "Comment se connecter à AKS ?",
+    "options": [
+      "kubectl avec az aks get-credentials",
+      "SSH",
+      "RDP",
+      "Portail"
+    ],
+    "correct": 0,
+    "explication": "La commande 'az aks get-credentials' configure kubectl."
+  },
+  {
+    "id": "AZ-204-068",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Kubernetes Service",
+    "difficulty": "hard",
+    "question": "AKS peut-il mettre à l'échelle automatiquement les nœuds ?",
+    "options": ["Oui (cluster autoscaler)", "Non", "Uniquement manuel", "Uniquement horizontal"],
+    "correct": 0,
+    "explication": "Le cluster autoscaler ajuste le nombre de nœuds en fonction de la charge."
+  },
+  {
+    "id": "AZ-204-069",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Kubernetes Service",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le module de mise à l'échelle horizontale des pods (HPA) ?",
+    "options": [
+      "Ajuste le nombre de pods en fonction des métriques",
+      "Ajuste le nombre de nœuds",
+      "Redimensionne les pods",
+      "Redéploie les pods"
+    ],
+    "correct": 0,
+    "explication": "HPA ajuste les réplicas de pods en fonction de l'utilisation du CPU, de la mémoire, ou de métriques personnalisées."
+  },
+  {
+    "id": "AZ-204-070",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un groupe de disponibilité pour VMs ?",
+    "options": [
+      "Ensemble de VMs dans des domaines d'erreur et de mise à jour distincts",
+      "Groupe de sécurité",
+      "Groupe de ressources",
+      "Groupe de mise à l'échelle"
+    ],
+    "correct": 0,
+    "explication": "Les groupes de disponibilité améliorent la disponibilité des VMs."
+  },
+  {
+    "id": "AZ-204-071",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un scale set de machines virtuelles (VMSS) ?",
+    "options": [
+      "Groupe de VMs identiques avec mise à l'échelle automatique",
+      "Groupe de disponibilité",
+      "Groupe de sécurité",
+      "Groupe de ressources"
+    ],
+    "correct": 0,
+    "explication": "VMSS permet de créer et gérer un ensemble de VMs identiques avec mise à l'échelle automatique."
+  },
+  {
+    "id": "AZ-204-072",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une image de machine virtuelle (managed image) ?",
+    "options": [
+      "Snapshot d'une VM utilisable pour créer d'autres VMs",
+      "Disque de VM",
+      "Sauvegarde",
+      "Snapshot de disque"
+    ],
+    "correct": 0,
+    "explication": "Une image gérée contient le système d'exploitation et les disques de données."
+  },
+  {
+    "id": "AZ-204-073",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les extensions de VM ?",
+    "options": [
+      "Logiciels installés sur la VM après déploiement (ex: Custom Script)",
+      "Disques supplémentaires",
+      "Interfaces réseau",
+      "Groupes de sécurité"
+    ],
+    "correct": 0,
+    "explication": "Les extensions permettent de configurer ou d'installer des logiciels sur les VMs."
+  },
+  {
+    "id": "AZ-204-074",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'extension Custom Script ?",
+    "options": [
+      "Exécute un script au démarrage de la VM",
+      "Installe un logiciel",
+      "Configure le réseau",
+      "Sauvegarde la VM"
+    ],
+    "correct": 0,
+    "explication": "Custom Script exécute un script PowerShell ou Bash."
+  },
+  {
+    "id": "AZ-204-075",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'extension DSC (Desired State Configuration) ?",
+    "options": [
+      "Applique une configuration DSC",
+      "Exécute un script",
+      "Installe des mises à jour",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "L'extension DSC applique une configuration DSC pour maintenir l'état souhaité."
+  },
+  {
+    "id": "AZ-204-076",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'extension d'accès à la VM (VMAccess) ?",
+    "options": [
+      "Réinitialiser le mot de passe ou la clé SSH",
+      "Exécuter un script",
+      "Installer un logiciel",
+      "Configurer le réseau"
+    ],
+    "correct": 0,
+    "explication": "VMAccess permet de réinitialiser les identifiants d'accès à la VM."
+  },
+  {
+    "id": "AZ-204-077",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le diagnostic de VM ?",
+    "options": [
+      "Collecte des métriques de performance et des logs",
+      "Redémarrage",
+      "Sauvegarde",
+      "Monitoring"
+    ],
+    "correct": 0,
+    "explication": "Les diagnostics de VM envoient les données de performance vers Azure Monitor."
+  },
+  {
+    "id": "AZ-204-078",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la gestion des mises à jour pour les VMs ?",
+    "options": [
+      "Gérer les mises à jour du système d'exploitation via Azure Automation",
+      "Mises à jour manuelles",
+      "Mises à jour automatiques",
+      "Désactiver les mises à jour"
+    ],
+    "correct": 0,
+    "explication": "Azure Automation peut gérer les mises à jour des VMs Windows et Linux."
+  },
+  {
+    "id": "AZ-204-079",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le redimensionnement d'une VM ?",
+    "options": [
+      "Changer la taille (SKU) de la VM",
+      "Ajouter des disques",
+      "Ajouter des interfaces réseau",
+      "Ajouter des extensions"
+    ],
+    "correct": 0,
+    "explication": "Le redimensionnement nécessite généralement un arrêt de la VM."
+  },
+  {
+    "id": "AZ-204-080",
+    "theme": "Azure Compute",
+    "theme_label": "Azure Virtual Machines",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la capture d'une VM ?",
+    "options": [
+      "Créer une image généralisée à partir de la VM",
+      "Faire un snapshot",
+      "Sauvegarder",
+      "Arrêter"
+    ],
+    "correct": 0,
+    "explication": "La capture (sysprep) prépare la VM pour créer une image réutilisable."
+  }
+]

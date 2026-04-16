@@ -1,0 +1,847 @@
+[
+  {
+    "id": "AWS-DEV-341",
+    "theme": "Security & IAM",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une politique IAM ?",
+    "options": [
+      "Document JSON définissant les permissions",
+      "Utilisateur",
+      "Groupe",
+      "Rôle"
+    ],
+    "correct": 0,
+    "explanation": "Les politiques IAM sont des documents JSON qui définissent les autorisations."
+  },
+  {
+    "id": "AWS-DEV-342",
+    "theme": "Security & IAM",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Quelle est la meilleure pratique pour les permissions ?",
+    "options": [
+      "Principe du moindre privilège",
+      "Donner toutes les permissions",
+      "Donner des permissions admin",
+      "Aucune permission"
+    ],
+    "correct": 0,
+    "explanation": "Le principe du moindre privilège accorde uniquement les permissions nécessaires."
+  },
+  {
+    "id": "AWS-DEV-343",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "medium",
+    "question": "À quoi servent les rôles IAM ?",
+    "options": [
+      "Donner des permissions à des services AWS",
+      "Authentifier des utilisateurs",
+      "Créer des groupes",
+      "Gérer les mots de passe"
+    ],
+    "correct": 0,
+    "explanation": "Les rôles IAM sont assumés par des services AWS (EC2, Lambda, etc.)."
+  },
+  {
+    "id": "AWS-DEV-344",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "hard",
+    "question": "Peut-on assumer un rôle IAM depuis un compte différent ?",
+    "options": ["Oui", "Non", "Uniquement avec organisations", "Uniquement avec identity center"],
+    "correct": 0,
+    "explanation": "Les rôles IAM peuvent être assumés cross-compte avec une politique de confiance."
+  },
+  {
+    "id": "AWS-DEV-345",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "hard",
+    "question": "Quels sont les types de politiques IAM ?",
+    "options": [
+      "Identity-based, Resource-based, Permissions boundaries, Service control policies (SCP)",
+      "Identity-based seulement",
+      "Resource-based seulement",
+      "Permissions boundaries seulement"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs types de politiques IAM."
+  },
+  {
+    "id": "AWS-DEV-346",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une politique resource-based ?",
+    "options": [
+      "Politique attachée à une ressource (bucket S3, queue SQS)",
+      "Politique attachée à un utilisateur",
+      "Politique attachée à un groupe",
+      "Politique attachée à un rôle"
+    ],
+    "correct": 0,
+    "explanation": "Les politiques resource-based sont attachées directement aux ressources AWS."
+  },
+  {
+    "id": "AWS-DEV-347",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "question": "Quelle condition restreint l'accès par adresse IP ?",
+    "options": [
+      "aws:SourceIp",
+      "aws:RequestedRegion",
+      "aws:MultiFactorAuthPresent",
+      "aws:PrincipalArn"
+    ],
+    "correct": 0,
+    "explanation": "aws:SourceIp restreint l'accès à une plage d'adresses IP."
+  },
+  {
+    "id": "AWS-DEV-348",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "question": "Quelle condition exige l'authentification MFA ?",
+    "options": [
+      "aws:MultiFactorAuthPresent",
+      "aws:SourceIp",
+      "aws:RequestedRegion",
+      "aws:PrincipalArn"
+    ],
+    "correct": 0,
+    "explanation": "aws:MultiFactorAuthPresent vérifie que MFA a été utilisé."
+  },
+  {
+    "id": "AWS-DEV-349",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Access Analyzer",
+    "difficulty": "hard",
+    "question": "À quoi sert IAM Access Analyzer ?",
+    "options": [
+      "Analyser les politiques pour détecter les accès non intentionnels",
+      "Créer des politiques",
+      "Gérer les utilisateurs",
+      "Auditer les logs"
+    ],
+    "correct": 0,
+    "explanation": "Access Analyzer identifie les ressources partagées publiquement ou cross-compte."
+  },
+  {
+    "id": "AWS-DEV-350",
+    "theme": "Security & IAM",
+    "theme_label": "Multi-Factor Authentication (MFA)",
+    "difficulty": "hard",
+    "question": "Quels types de MFA sont supportés par AWS ?",
+    "options": [
+      "Virtual MFA, Hardware MFA, FIDO2, SMS",
+      "Virtual MFA seulement",
+      "Hardware MFA seulement",
+      "SMS seulement"
+    ],
+    "correct": 0,
+    "explanation": "AWS supporte plusieurs types de MFA."
+  },
+  {
+    "id": "AWS-DEV-351",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS KMS ?",
+    "options": [
+      "Service de gestion de clés de chiffrement",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "KMS (Key Management Service) gère les clés de chiffrement."
+  },
+  {
+    "id": "AWS-DEV-352",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "question": "Quels types de clés KMS existent ?",
+    "options": [
+      "Clés AWS gérées, clés clientes (Customer Managed Keys), clés CloudHSM",
+      "Clés AWS seulement",
+      "Clés clientes seulement",
+      "Clés CloudHSM seulement"
+    ],
+    "correct": 0,
+    "explanation": "Trois types de clés KMS."
+  },
+  {
+    "id": "AWS-DEV-353",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le key rotation dans KMS ?",
+    "options": [
+      "Remplacement automatique des clés chaque année",
+      "Suppression des clés",
+      "Copie des clés",
+      "Export des clés"
+    ],
+    "correct": 0,
+    "explanation": "La rotation automatique des clés KMS se fait chaque année (clés clientes)."
+  },
+  {
+    "id": "AWS-DEV-354",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Secrets Manager",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Secrets Manager ?",
+    "options": [
+      "Gestion des secrets (mots de passe, clés API)",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "Secrets Manager stocke et gère les secrets avec rotation automatique."
+  },
+  {
+    "id": "AWS-DEV-355",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Systems Manager Parameter Store",
+    "difficulty": "hard",
+    "question": "Différence entre Parameter Store et Secrets Manager ?",
+    "options": [
+      "Parameter Store gratuit, Secrets Manager payant avec rotation intégrée",
+      "Identiques",
+      "Parameter Store plus cher",
+      "Secrets Manager gratuit"
+    ],
+    "correct": 0,
+    "explanation": "Parameter Store offre des fonctionnalités de base (gratuit), Secrets Manager gère la rotation automatique."
+  },
+  {
+    "id": "AWS-DEV-356",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Certificate Manager (ACM)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Certificate Manager ?",
+    "options": [
+      "Gestion de certificats SSL/TLS",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explanation": "ACM fournit et gère des certificats SSL/TLS pour les services AWS."
+  },
+  {
+    "id": "AWS-DEV-357",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS WAF ?",
+    "options": [
+      "Protège les applications web contre les attaques",
+      "Firewall réseau",
+      "VPN",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explanation": "WAF filtre les requêtes HTTP/HTTPS."
+  },
+  {
+    "id": "AWS-DEV-358",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Shield",
+    "difficulty": "hard",
+    "question": "AWS Shield Standard est-il gratuit ?",
+    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour CloudFront"],
+    "correct": 0,
+    "explanation": "Shield Standard est inclus gratuitement pour tous les clients AWS."
+  },
+  {
+    "id": "AWS-DEV-359",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon GuardDuty",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon GuardDuty ?",
+    "options": [
+      "Détection de menaces (threat detection)",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explanation": "GuardDuty analyse les logs (CloudTrail, VPC Flow Logs, DNS) pour détecter des comportements malveillants."
+  },
+  {
+    "id": "AWS-DEV-360",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon Inspector",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Inspector ?",
+    "options": [
+      "Analyse de vulnérabilités sur EC2 et conteneurs",
+      "Détection de menaces",
+      "Firewall",
+      "WAF"
+    ],
+    "correct": 0,
+    "explanation": "Inspector scanne les instances EC2 et les conteneurs pour des vulnérabilités."
+  },
+  {
+    "id": "AWS-DEV-361",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Config",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Config ?",
+    "options": [
+      "Évalue la conformité des ressources aux règles",
+      "Logs",
+      "Monitoring",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "AWS Config enregistre les changements de configuration et évalue la conformité."
+  },
+  {
+    "id": "AWS-DEV-362",
+    "theme": "Security & IAM",
+    "theme_label": "AWS CloudTrail",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS CloudTrail ?",
+    "options": [
+      "Journalisation des appels API",
+      "Monitoring",
+      "Logging d'applications",
+      "Audit de sécurité"
+    ],
+    "correct": 0,
+    "explanation": "CloudTrail enregistre tous les appels API AWS."
+  },
+  {
+    "id": "AWS-DEV-363",
+    "theme": "Security & IAM",
+    "theme_label": "CloudTrail",
+    "difficulty": "hard",
+    "question": "Où sont stockés les logs CloudTrail ?",
+    "options": [
+      "S3 (par défaut), CloudWatch Logs",
+      "CloudWatch seulement",
+      "DynamoDB",
+      "RDS"
+    ],
+    "correct": 0,
+    "explanation": "Les logs CloudTrail sont envoyés vers S3 et/ou CloudWatch Logs."
+  },
+  {
+    "id": "AWS-DEV-364",
+    "theme": "Security & IAM",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "hard",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DU cloud ?",
+    "options": ["AWS", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "AWS est responsable de la sécurité DU cloud (matériel, réseau, hyperviseur)."
+  },
+  {
+    "id": "AWS-DEV-365",
+    "theme": "Security & IAM",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "hard",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DANS le cloud ?",
+    "options": ["Le client", "AWS", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "Le client est responsable de la sécurité DANS le cloud (données, OS, applications)."
+  },
+  {
+    "id": "AWS-DEV-366",
+    "theme": "Security & IAM",
+    "theme_label": "Encryption best practices",
+    "difficulty": "hard",
+    "question": "Doit-on chiffrer les données au repos ?",
+    "options": ["Oui", "Non", "Seulement les données sensibles", "Uniquement pour S3"],
+    "correct": 0,
+    "explanation": "Le chiffrement au repos est recommandé pour toutes les données."
+  },
+  {
+    "id": "AWS-DEV-367",
+    "theme": "Security & IAM",
+    "theme_label": "Encryption best practices",
+    "difficulty": "hard",
+    "question": "Doit-on chiffrer les données en transit ?",
+    "options": ["Oui", "Non", "Seulement pour Internet", "Seulement pour les API"],
+    "correct": 0,
+    "explanation": "Le chiffrement en transit (TLS) est recommandé pour toutes les communications."
+  },
+  {
+    "id": "AWS-DEV-368",
+    "theme": "Security & IAM",
+    "theme_label": "VPC security best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour les Security Groups ?",
+    "options": [
+      "Règles les plus restrictives, par IP ou SG",
+      "Ouvrir toutes les ports",
+      "Ouvrir 0.0.0.0/0",
+      "Pas de règles"
+    ],
+    "correct": 0,
+    "explanation": "Les Security Groups doivent être restrictifs (moindre privilège)."
+  },
+  {
+    "id": "AWS-DEV-369",
+    "theme": "Security & IAM",
+    "theme_label": "IAM best practices",
+    "difficulty": "hard",
+    "question": "Que recommande AWS pour la sécurité des comptes root ?",
+    "options": [
+      "MFA, ne pas utiliser de clés d'accès, ne pas partager",
+      "Utiliser des clés d'accès",
+      "Partager avec l'équipe",
+      "Désactiver MFA"
+    ],
+    "correct": 0,
+    "explanation": "Les bonnes pratiques incluent MFA et ne jamais utiliser les clés root."
+  },
+  {
+    "id": "AWS-DEV-370",
+    "theme": "Security & IAM",
+    "theme_label": "IAM best practices",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les clés d'accès IAM ?",
+    "options": [
+      "Rotation régulière, ne pas les coder en dur, utiliser Secrets Manager",
+      "Les partager",
+      "Les coder dans l'application",
+      "Ne jamais les changer"
+    ],
+    "correct": 0,
+    "explanation": "Les clés d'accès doivent être tournées et protégées."
+  },
+  {
+    "id": "AWS-DEV-371",
+    "theme": "Security & IAM",
+    "theme_label": "S3 security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un bucket S3 ?",
+    "options": [
+      "Bloquer les accès publics, chiffrement, bucket policies, MFA Delete",
+      "Rendre public",
+      "Pas de chiffrement",
+      "Désactiver les logs"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs mesures de sécurité pour S3."
+  },
+  {
+    "id": "AWS-DEV-372",
+    "theme": "Security & IAM",
+    "theme_label": "RDS security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser RDS ?",
+    "options": [
+      "Chiffrement au repos, en transit, VPC privé, Security Groups, IAM auth",
+      "Public IP",
+      "Pas de chiffrement",
+      "Accès public"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs couches de sécurité pour RDS."
+  },
+  {
+    "id": "AWS-DEV-373",
+    "theme": "Security & IAM",
+    "theme_label": "Lambda security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser une fonction Lambda ?",
+    "options": [
+      "Rôle IAM minimal, VPC, chiffrement des variables d'environnement",
+      "Rôle admin",
+      "Pas de VPC",
+      "Variables non chiffrées"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs mesures de sécurité pour Lambda."
+  },
+  {
+    "id": "AWS-DEV-374",
+    "theme": "Security & IAM",
+    "theme_label": "API Gateway security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser API Gateway ?",
+    "options": [
+      "IAM, Lambda authorizer, Cognito, API keys, WAF",
+      "Aucune sécurité",
+      "Uniquement API keys",
+      "Uniquement IAM"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs mécanismes d'authentification et d'autorisation."
+  },
+  {
+    "id": "AWS-DEV-375",
+    "theme": "Security & IAM",
+    "theme_label": "Cognito",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Amazon Cognito ?",
+    "options": [
+      "Service d'identité et d'authentification",
+      "Base de données",
+      "CDN",
+      "Compute"
+    ],
+    "correct": 0,
+    "explication": "Cognito gère l'authentification des utilisateurs (User Pools) et la fédération (Identity Pools)."
+  },
+  {
+    "id": "AWS-DEV-376",
+    "theme": "Security & IAM",
+    "theme_label": "Cognito User Pools",
+    "difficulty": "hard",
+    "question": "Cognito User Pools permet-il la connexion via des fournisseurs sociaux ?",
+    "options": ["Oui", "Non", "Uniquement via email", "Uniquement via SMS"],
+    "correct": 0,
+    "explication": "Cognito supporte Facebook, Google, Amazon, Apple, SAML, OIDC."
+  },
+  {
+    "id": "AWS-DEV-377",
+    "theme": "Security & IAM",
+    "theme_label": "Cognito Identity Pools",
+    "difficulty": "hard",
+    "question": "À quoi servent les Identity Pools (Federated Identities) ?",
+    "options": [
+      "Donner des credentials AWS temporaires",
+      "Authentifier les utilisateurs",
+      "Stocker les profils",
+      "Gérer les mots de passe"
+    ],
+    "correct": 0,
+    "explication": "Identity Pools permettent d'assumer des rôles IAM pour accéder aux services AWS."
+  },
+  {
+    "id": "AWS-DEV-378",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "question": "Quelles sont les règles WAF prédéfinies ?",
+    "options": [
+      "Managed rule groups (SQL injection, XSS, IP reputation, etc.)",
+      "Aucune",
+      "Uniquement SQL injection",
+      "Uniquement XSS"
+    ],
+    "correct": 0,
+    "explication": "AWS propose des managed rule groups pour les attaques courantes."
+  },
+  {
+    "id": "AWS-DEV-379",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Shield Advanced",
+    "difficulty": "hard",
+    "question": "Quel est le coût mensuel de Shield Advanced ?",
+    "options": ["3 000 $ par mois", "1 000 $", "5 000 $", "10 000 $"],
+    "correct": 0,
+    "explication": "Shield Advanced coûte 3 000 $ par mois + frais d'utilisation."
+  },
+  {
+    "id": "AWS-DEV-380",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Network Firewall",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Network Firewall ?",
+    "options": [
+      "Filtrage du trafic réseau (couche 3/4)",
+      "WAF",
+      "VPN",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explication": "Network Firewall protège au niveau réseau (VPC)."
+  },
+  {
+    "id": "AWS-DEV-381",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Firewall Manager",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Firewall Manager ?",
+    "options": [
+      "Gestion centralisée des règles de sécurité (WAF, Shield, SG) sur plusieurs comptes",
+      "Firewall réseau",
+      "VPN",
+      "Direct Connect"
+    ],
+    "correct": 0,
+    "explication": "Firewall Manager applique des règles de sécurité à travers l'organisation."
+  },
+  {
+    "id": "AWS-DEV-382",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Security Hub",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Security Hub ?",
+    "options": [
+      "Centralisation des alertes de sécurité",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Security Hub agrège les findings de GuardDuty, Inspector, Macie, etc."
+  },
+  {
+    "id": "AWS-DEV-383",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon Macie",
+    "difficulty": "hard",
+    "question": "À quoi sert Amazon Macie ?",
+    "options": [
+      "Détection de données sensibles dans S3",
+      "Analyse de vulnérabilités",
+      "Firewall",
+      "WAF"
+    ],
+    "correct": 0,
+    "explication": "Macie utilise le machine learning pour identifier les données sensibles (PII, etc.)."
+  },
+  {
+    "id": "AWS-DEV-384",
+    "theme": "Security & IAM",
+    "theme_label": "Amazon Detective",
+    "difficulty": "hard",
+    "question": "À quoi sert Amazon Detective ?",
+    "options": [
+      "Analyse de findings pour trouver la cause racine",
+      "Détection de menaces",
+      "Firewall",
+      "WAF"
+    ],
+    "correct": 0,
+    "explication": "Detective aide à investiguer les findings de GuardDuty et Security Hub."
+  },
+  {
+    "id": "AWS-DEV-385",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Trusted Advisor",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Trusted Advisor ?",
+    "options": [
+      "Conseils sur les bonnes pratiques (sécurité, performance, coûts)",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Trusted Advisor fournit des recommandations pour optimiser votre environnement AWS."
+  },
+  {
+    "id": "AWS-DEV-386",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Artifact",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Artifact ?",
+    "options": [
+      "Accès aux rapports de conformité (SOC, PCI, ISO)",
+      "Stockage de secrets",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explication": "Artifact fournit des rapports de conformité et des accords (NDA, BAA)."
+  },
+  {
+    "id": "AWS-DEV-387",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Audit Manager",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Audit Manager ?",
+    "options": [
+      "Automatisation des audits",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Audit Manager aide à préparer des audits en collectant des preuves automatiquement."
+  },
+  {
+    "id": "AWS-DEV-388",
+    "theme": "Security & IAM",
+    "theme_label": "PCI DSS compliance",
+    "difficulty": "hard",
+    "question": "Quels services AWS sont certifiés PCI DSS ?",
+    "options": [
+      "Beaucoup de services (EC2, S3, RDS, Lambda, etc.)",
+      "Aucun",
+      "Seulement S3",
+      "Seulement RDS"
+    ],
+    "correct": 0,
+    "explication": "De nombreux services AWS sont certifiés PCI DSS."
+  },
+  {
+    "id": "AWS-DEV-389",
+    "theme": "Security & IAM",
+    "theme_label": "HIPAA compliance",
+    "difficulty": "hard",
+    "question": "Quels services AWS sont éligibles HIPAA ?",
+    "options": [
+      "Plusieurs services avec BAA",
+      "Aucun",
+      "Seulement S3",
+      "Seulement RDS"
+    ],
+    "correct": 0,
+    "explication": "AWS propose un Business Associate Agreement (BAA) pour les services éligibles HIPAA."
+  },
+  {
+    "id": "AWS-DEV-390",
+    "theme": "Security & IAM",
+    "theme_label": "GDPR compliance",
+    "difficulty": "hard",
+    "question": "AWS est-il conforme GDPR ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "correct": 0,
+    "explication": "AWS est conforme GDPR avec des engagements contractuels."
+  },
+  {
+    "id": "AWS-DEV-391",
+    "theme": "Security & IAM",
+    "theme_label": "Incident response",
+    "difficulty": "hard",
+    "question": "Quel service aide à la réponse aux incidents de sécurité ?",
+    "options": [
+      "GuardDuty, Security Hub, Detective, CloudTrail",
+      "EC2",
+      "S3",
+      "RDS"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs services aident à détecter et répondre aux incidents."
+  },
+  {
+    "id": "AWS-DEV-392",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policy Simulator",
+    "difficulty": "hard",
+    "question": "À quoi sert IAM Policy Simulator ?",
+    "options": [
+      "Tester les politiques avant de les appliquer",
+      "Créer des politiques",
+      "Supprimer des politiques",
+      "Auditer des politiques"
+    ],
+    "correct": 0,
+    "explication": "Policy Simulator permet de valider l'effet d'une politique."
+  },
+  {
+    "id": "AWS-DEV-393",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles Anywhere",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que IAM Roles Anywhere ?",
+    "options": [
+      "Permet d'utiliser des rôles IAM sur des serveurs on-premise",
+      "Rôles pour Lambda",
+      "Rôles pour EC2",
+      "Rôles pour S3"
+    ],
+    "correct": 0,
+    "explication": "Roles Anywhere étend les rôles IAM à des workloads on-premise."
+  },
+  {
+    "id": "AWS-DEV-394",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Verified Access",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Verified Access ?",
+    "options": [
+      "Accès aux applications sans VPN (zero trust)",
+      "Firewall",
+      "WAF",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Verified Access permet un accès sécurisé aux applications internes sans VPN."
+  },
+  {
+    "id": "AWS-DEV-395",
+    "theme": "Security & IAM",
+    "theme_label": "VPC security",
+    "difficulty": "hard",
+    "question": "Doit-on utiliser des VPC Flow Logs ?",
+    "options": ["Oui, pour l'audit", "Non", "Optionnel", "Uniquement pour les VPC publics"],
+    "correct": 0,
+    "explication": "Les Flow Logs aident à diagnostiquer et auditer le trafic réseau."
+  },
+  {
+    "id": "AWS-DEV-396",
+    "theme": "Security & IAM",
+    "theme_label": "Encryption at rest",
+    "difficulty": "hard",
+    "question": "Quels services AWS supportent le chiffrement au repos ?",
+    "options": [
+      "S3, EBS, RDS, DynamoDB, EFS, etc.",
+      "Aucun",
+      "Seulement S3",
+      "Seulement EBS"
+    ],
+    "correct": 0,
+    "explication": "La plupart des services AWS supportent le chiffrement au repos."
+  },
+  {
+    "id": "AWS-DEV-397",
+    "theme": "Security & IAM",
+    "theme_label": "Encryption in transit",
+    "difficulty": "hard",
+    "question": "Quels services supportent TLS ?",
+    "options": [
+      "Tous les services AWS",
+      "Seulement S3",
+      "Seulement API Gateway",
+      "Seulement CloudFront"
+    ],
+    "correct": 0,
+    "explication": "Tous les services AWS supportent TLS pour les communications."
+  },
+  {
+    "id": "AWS-DEV-398",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour les logs ?",
+    "options": [
+      "Centraliser les logs, rétention appropriée, chiffrement",
+      "Supprimer les logs",
+      "Logs publics",
+      "Pas de logs"
+    ],
+    "correct": 0,
+    "explication": "Les logs doivent être centralisés et protégés."
+  },
+  {
+    "id": "AWS-DEV-399",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices",
+    "difficulty": "hard",
+    "question": "Faut-il activer CloudTrail dans toutes les régions ?",
+    "options": ["Oui", "Non", "Uniquement dans la région principale", "Uniquement dans les régions actives"],
+    "correct": 0,
+    "explication": "CloudTrail multi-région capture tous les appels API, même dans les régions non utilisées."
+  },
+  {
+    "id": "AWS-DEV-400",
+    "theme": "Security & IAM",
+    "theme_label": "Security best practices",
+    "difficulty": "hard",
+    "question": "Que recommande AWS pour les mots de passe IAM ?",
+    "options": [
+      "Politique de mot de passe forte, MFA, rotation",
+      "Pas de mot de passe",
+      "Mot de passe simple",
+      "Rotation annuelle"
+    ],
+    "correct": 0,
+    "explication": "Des politiques de mot de passe fortes et la MFA sont essentielles."
+  }
+]

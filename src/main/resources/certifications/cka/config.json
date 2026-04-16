@@ -1,0 +1,41 @@
+{
+  "id": "cka",
+  "name": "Certified Kubernetes Administrator (CKA)",
+  "version": "1.0",
+  "description": "Administration de clusters Kubernetes - Certification CNCF (pratique)",
+  "totalQuestions": 300,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 17,
+  "passingScore": 66,
+  "examType": "practical",
+  "themes": [
+    {
+      "name": "Cluster Architecture",
+      "count": 40
+    },
+    {
+      "name": "Workloads & Scheduling",
+      "count": 50
+    },
+    {
+      "name": "Services & Networking",
+      "count": 50
+    },
+    {
+      "name": "Storage",
+      "count": 40
+    },
+    {
+      "name": "Troubleshooting",
+      "count": 50
+    },
+    {
+      "name": "Security",
+      "count": 40
+    },
+    {
+      "name": "Helm & Operators",
+      "count": 30
+    }
+  ]
+}

@@ -1,0 +1,842 @@
+[
+  {
+    "id": "AZ-204-081",
+    "theme": "Azure Storage",
+    "theme_label": "Comptes de stockage",
+    "difficulty": "easy",
+    "question": "Quels sont les types de comptes de stockage Azure ?",
+    "options": [
+      "General-purpose v2, BlobStorage, FileStorage, BlockBlobStorage",
+      "General-purpose seulement",
+      "BlobStorage seulement",
+      "FileStorage seulement"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs types de comptes pour différents cas d'usage."
+  },
+  {
+    "id": "AZ-204-082",
+    "theme": "Azure Storage",
+    "theme_label": "Services de stockage",
+    "difficulty": "easy",
+    "question": "Quels sont les services de stockage Azure ?",
+    "options": [
+      "Blob, File, Queue, Table, Disk",
+      "Blob seulement",
+      "File seulement",
+      "Queue seulement"
+    ],
+    "correct": 0,
+    "explanation": "Le compte de stockage expose plusieurs services."
+  },
+  {
+    "id": "AZ-204-083",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "easy",
+    "question": "Quels sont les types de blobs ?",
+    "options": [
+      "Block blob, Append blob, Page blob",
+      "Block blob seulement",
+      "Append blob seulement",
+      "Page blob seulement"
+    ],
+    "correct": 0,
+    "explication": "Block blob pour les fichiers, Append blob pour les logs, Page blob pour les disques VHD."
+  },
+  {
+    "id": "AZ-204-084",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un conteneur de blobs ?",
+    "options": [
+      "Groupement logique de blobs (comme un dossier)",
+      "Type de blob",
+      "Compte de stockage",
+      "Service"
+    ],
+    "correct": 0,
+    "explication": "Les conteneurs organisent les blobs et contrôlent l'accès."
+  },
+  {
+    "id": "AZ-204-085",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un block blob ?",
+    "options": ["Environ 4.75 To", "1 To", "5 To", "2 To"],
+    "correct": 0,
+    "explication": "La taille maximale est d'environ 4.75 To (50 000 blocs de 100 Mo)."
+  },
+  {
+    "id": "AZ-204-086",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le niveau d'accès pour un blob ?",
+    "options": [
+      "Hot, Cool, Cold, Archive",
+      "Standard, Premium",
+      "Basic, Advanced",
+      "LRS, ZRS, GRS"
+    ],
+    "correct": 0,
+    "explication": "Les niveaux Hot, Cool, Cold, Archive optimisent les coûts selon la fréquence d'accès."
+  },
+  {
+    "id": "AZ-204-087",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Quel est le temps de réhydratation d'un blob depuis Archive ?",
+    "options": ["Jusqu'à 15 heures", "1 heure", "24 heures", "48 heures"],
+    "correct": 0,
+    "explication": "La réhydratation depuis le niveau Archive peut prendre jusqu'à 15 heures."
+  },
+  {
+    "id": "AZ-204-088",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le chargement par blocs (block upload) ?",
+    "options": [
+      "Diviser un fichier en plusieurs blocs pour l'upload",
+      "Upload en parallèle",
+      "Upload de gros fichiers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Le chargement par blocs permet d'uploader des fichiers de grande taille de manière fiable."
+  },
+  {
+    "id": "AZ-204-089",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le service SAS (Shared Access Signature) ?",
+    "options": [
+      "URI donnant un accès limité dans le temps et en permissions",
+      "Clé d'accès complète",
+      "Token OAuth",
+      "Certificat"
+    ],
+    "correct": 0,
+    "explication": "Une SAS permet un accès délégué sécurisé aux ressources."
+  },
+  {
+    "id": "AZ-204-090",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Quels sont les types de SAS ?",
+    "options": [
+      "Account SAS, Service SAS, User Delegation SAS",
+      "Account SAS seulement",
+      "Service SAS seulement",
+      "User Delegation SAS seulement"
+    ],
+    "correct": 0,
+    "explication": "Il existe trois types de SAS selon la portée et l'authentification."
+  },
+  {
+    "id": "AZ-204-091",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la User Delegation SAS ?",
+    "options": [
+      "SAS basée sur Azure AD, pas sur les clés",
+      "SAS au niveau du compte",
+      "SAS au niveau du service",
+      "SAS au niveau du conteneur"
+    ],
+    "correct": 0,
+    "explication": "La User Delegation SAS utilise un jeton Azure AD pour déléguer l'accès."
+  },
+  {
+    "id": "AZ-204-092",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la politique d'accès stockée (stored access policy) ?",
+    "options": [
+      "Définition réutilisable des permissions SAS",
+      "Politique IAM",
+      "Politique de cycle de vie",
+      "Politique de chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les politiques stockées permettent de gérer et révoquer des SAS facilement."
+  },
+  {
+    "id": "AZ-204-093",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le chiffrement côté serveur (SSE) ?",
+    "options": [
+      "Chiffrement automatique au repos",
+      "Chiffrement côté client",
+      "Chiffrement en transit",
+      "Chiffrement des clés"
+    ],
+    "correct": 0,
+    "explication": "Azure Storage chiffre automatiquement les données au repos avec SSE."
+  },
+  {
+    "id": "AZ-204-094",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le chiffrement côté client ?",
+    "options": [
+      "Chiffrement avant envoi à Azure",
+      "Chiffrement par Azure",
+      "Chiffrement par KMS",
+      "Chiffrement par SSL"
+    ],
+    "correct": 0,
+    "explication": "Le client chiffre les données localement avant de les envoyer à Azure."
+  },
+  {
+    "id": "AZ-204-095",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le journal d'activité (access logs) ?",
+    "options": [
+      "Enregistrement des requêtes réussies ou échouées",
+      "Journal des erreurs",
+      "Journal des performances",
+      "Journal des modifications"
+    ],
+    "correct": 0,
+    "explication": "Les logs d'accès peuvent être activés pour le dépannage."
+  },
+  {
+    "id": "AZ-204-096",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Files ?",
+    "options": [
+      "Partage de fichiers SMB dans le cloud",
+      "Stockage objet",
+      "Base de données",
+      "File d'attente"
+    ],
+    "correct": 0,
+    "explication": "Azure Files offre des partages de fichiers accessibles via SMB."
+  },
+  {
+    "id": "AZ-204-097",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "hard",
+    "question": "Azure Files peut-il être monté sur une VM Windows ?",
+    "options": ["Oui", "Non", "Uniquement Linux", "Uniquement avec AD"],
+    "correct": 0,
+    "explication": "Les partages Azure Files peuvent être montés sur Windows, Linux, et macOS."
+  },
+  {
+    "id": "AZ-204-098",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "hard",
+    "question": "Quels sont les niveaux pour Azure Files ?",
+    "options": [
+      "Transaction optimised, Premium, Cool",
+      "Hot, Cool, Cold",
+      "Standard, Premium",
+      "LRS, ZRS, GRS"
+    ],
+    "correct": 0,
+    "explication": "Les niveaux Transaction optimised (général), Premium (faible latence), Cool (archivage)."
+  },
+  {
+    "id": "AZ-204-099",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le snapshot d'un partage de fichiers ?",
+    "options": [
+      "Copie ponctuelle en lecture seule",
+      "Sauvegarde",
+      "Versioning",
+      "Réplication"
+    ],
+    "correct": 0,
+    "explication": "Les snapshots permettent de restaurer des versions antérieures."
+  },
+  {
+    "id": "AZ-204-100",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "hard",
+    "question": "Azure Files peut-il être utilisé avec Azure AD ?",
+    "options": ["Oui (identités AD)", "Non", "Uniquement avec clés", "Uniquement avec SAS"],
+    "correct": 0,
+    "explication": "Azure Files peut s'intégrer à Active Directory pour l'authentification."
+  },
+  {
+    "id": "AZ-204-101",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Queue Storage ?",
+    "options": [
+      "File d'attente de messages simple",
+      "File d'attente complexe",
+      "Bus de messages",
+      "Topic de messages"
+    ],
+    "correct": 0,
+    "explication": "Queue Storage est une file d'attente pour le découplage d'applications."
+  },
+  {
+    "id": "AZ-204-102",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un message dans Queue Storage ?",
+    "options": ["64 Ko", "256 Ko", "1 Mo", "8 Ko"],
+    "correct": 0,
+    "explication": "La taille maximale est 64 Ko (256 Ko avec encodage base64)."
+  },
+  {
+    "id": "AZ-204-103",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le visibility timeout ?",
+    "options": [
+      "Période pendant laquelle un message est invisible après lecture",
+      "Durée de vie du message",
+      "Délai de livraison",
+      "Timeout de la file"
+    ],
+    "correct": 0,
+    "explication": "Le visibility timeout empêche d'autres consommateurs de traiter le même message."
+  },
+  {
+    "id": "AZ-204-104",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le TTL (Time To Live) d'un message ?",
+    "options": [
+      "Durée de validité du message dans la file",
+      "Temps de visibilité",
+      "Temps de traitement",
+      "Temps d'inactivité"
+    ],
+    "correct": 0,
+    "explication": "Le TTL détermine combien de temps un message reste dans la file avant suppression."
+  },
+  {
+    "id": "AZ-204-105",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "hard",
+    "question": "Comment ajouter un message à une file ?",
+    "options": [
+      "CloudQueue.AddMessage()",
+      "QueueClient.SendMessage()",
+      "Queue.CreateMessage()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les API .NET (CloudQueue) et .NET Core (QueueClient) existent."
+  },
+  {
+    "id": "AZ-204-106",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "hard",
+    "question": "Comment traiter un message d'une file ?",
+    "options": [
+      "CloudQueue.GetMessage() puis DeleteMessage()",
+      "QueueClient.ReceiveMessage() puis DeleteMessage()",
+      "Queue.Dequeue()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "La réception rend le message invisible, il faut le supprimer après traitement."
+  },
+  {
+    "id": "AZ-204-107",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Table Storage ?",
+    "options": [
+      "Base NoSQL clé-valeur",
+      "Base relationnelle",
+      "Base document",
+      "Base graphe"
+    ],
+    "correct": 0,
+    "explication": "Table Storage est une base NoSQL clé-valeur (comme Cosmos DB Table API)."
+  },
+  {
+    "id": "AZ-204-108",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "hard",
+    "question": "Quelles sont les clés dans Table Storage ?",
+    "options": [
+      "PartitionKey et RowKey",
+      "Id seulement",
+      "Name seulement",
+      "Key seulement"
+    ],
+    "correct": 0,
+    "explication": "PartitionKey partitionne les données, RowKey identifie l'entité dans la partition."
+  },
+  {
+    "id": "AZ-204-109",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "hard",
+    "question": "Les requêtes sans PartitionKey sont-elles efficaces ?",
+    "options": [
+      "Non (scan de toutes les partitions)",
+      "Oui",
+      "Oui avec RowKey",
+      "Oui avec index"
+    ],
+    "correct": 0,
+    "explication": "Il est recommandé d'inclure PartitionKey pour des requêtes efficaces."
+  },
+  {
+    "id": "AZ-204-110",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la Table Storage API vs Cosmos DB Table API ?",
+    "options": [
+      "Cosmos DB Table API est plus performant et globalement distribué",
+      "Identiques",
+      "Table Storage plus performant",
+      "Cosmos DB Table API moins cher"
+    ],
+    "correct": 0,
+    "explication": "Cosmos DB Table API offre des performances plus élevées et une distribution mondiale."
+  },
+  {
+    "id": "AZ-204-111",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "question": "Quels sont les types de redondance pour Azure Storage ?",
+    "options": [
+      "LRS, ZRS, GRS, GZRS, RA-GRS, RA-GZRS",
+      "LRS seulement",
+      "ZRS seulement",
+      "GRS seulement"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs options de redondance (local, zone, géographique, avec accès en lecture)."
+  },
+  {
+    "id": "AZ-204-112",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que LRS (Locally Redundant Storage) ?",
+    "options": [
+      "Réplication dans un même centre de données",
+      "Réplication dans une zone",
+      "Réplication dans une région",
+      "Réplication géographique"
+    ],
+    "correct": 0,
+    "explication": "LRS réplique les données 3 fois dans un même centre de données."
+  },
+  {
+    "id": "AZ-204-113",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ZRS (Zone-Redundant Storage) ?",
+    "options": [
+      "Réplication sur 3 zones de disponibilité",
+      "Réplication sur 2 centres",
+      "Réplication géographique",
+      "Réplication locale"
+    ],
+    "correct": 0,
+    "explication": "ZRS réplique les données sur 3 zones de disponibilité dans une région."
+  },
+  {
+    "id": "AZ-204-114",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que GRS (Geo-Redundant Storage) ?",
+    "options": [
+      "Réplication dans une région secondaire",
+      "Réplication locale",
+      "Réplication en zone",
+      "Réplication en ligne"
+    ],
+    "correct": 0,
+    "explication": "GRS réplique les données dans une région secondaire distante."
+  },
+  {
+    "id": "AZ-204-115",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que RA-GRS (Read-Access Geo-Redundant Storage) ?",
+    "options": [
+      "GRS avec accès en lecture à la région secondaire",
+      "GRS seulement",
+      "ZRS avec accès en lecture",
+      "LRS avec accès en lecture"
+    ],
+    "correct": 0,
+    "explication": "RA-GRS permet de lire les données depuis la région secondaire."
+  },
+  {
+    "id": "AZ-204-116",
+    "theme": "Azure Storage",
+    "theme_label": "Lifecycle management",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la gestion du cycle de vie (lifecycle management) ?",
+    "options": [
+      "Règles automatiques pour déplacer ou supprimer des blobs",
+      "Sauvegarde automatique",
+      "Réplication automatique",
+      "Chiffrement automatique"
+    ],
+    "correct": 0,
+    "explication": "Les règles de cycle de vie automatisent le passage entre les niveaux d'accès."
+  },
+  {
+    "id": "AZ-204-117",
+    "theme": "Azure Storage",
+    "theme_label": "Static website",
+    "difficulty": "hard",
+    "question": "Azure Storage peut-il héberger un site web statique ?",
+    "options": ["Oui", "Non", "Uniquement avec CDN", "Uniquement avec App Service"],
+    "correct": 0,
+    "explication": "Le stockage Blob peut héberger des sites web statiques (HTML, CSS, JS)."
+  },
+  {
+    "id": "AZ-204-118",
+    "theme": "Azure Storage",
+    "theme_label": "Static website",
+    "difficulty": "hard",
+    "question": "Quel est l'endpoint pour un site statique ?",
+    "options": [
+      "https://account.z6.web.core.windows.net",
+      "https://account.blob.core.windows.net",
+      "https://account.file.core.windows.net",
+      "https://account.queue.core.windows.net"
+    ],
+    "correct": 0,
+    "explication": "L'endpoint de site statique est différent de l'endpoint blob."
+  },
+  {
+    "id": "AZ-204-119",
+    "theme": "Azure Storage",
+    "theme_label": "Data Lake Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure Data Lake Storage (ADLS) Gen2 ?",
+    "options": [
+      "Stockage hiérarchique pour big data",
+      "Stockage objet",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "ADLS Gen2 combine le stockage blob avec un système de fichiers hiérarchique."
+  },
+  {
+    "id": "AZ-204-120",
+    "theme": "Azure Storage",
+    "theme_label": "Data Lake Storage",
+    "difficulty": "hard",
+    "question": "ADLS Gen2 supporte-t-il les ACL POSIX ?",
+    "options": ["Oui", "Non", "Uniquement les ACL Windows", "Uniquement les RBAC"],
+    "correct": 0,
+    "explication": "ADLS Gen2 supporte les ACL POSIX pour le contrôle d'accès granulaire."
+  },
+  {
+    "id": "AZ-204-121",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Storage Explorer",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure Storage Explorer ?",
+    "options": [
+      "Outil graphique pour gérer le stockage",
+      "CLI",
+      "API",
+      "Portail"
+    ],
+    "correct": 0,
+    "explication": "Storage Explorer est une application de bureau multiplateforme."
+  },
+  {
+    "id": "AZ-204-122",
+    "theme": "Azure Storage",
+    "theme_label": "AzCopy",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AzCopy ?",
+    "options": [
+      "Outil en ligne de commande pour copier des données",
+      "Outil graphique",
+      "API",
+      "Service"
+    ],
+    "correct": 0,
+    "explication": "AzCopy est un utilitaire de copie de données performant."
+  },
+  {
+    "id": "AZ-204-123",
+    "theme": "Azure Storage",
+    "theme_label": "AzCopy",
+    "difficulty": "hard",
+    "question": "AzCopy peut-il synchroniser des dossiers locaux avec un conteneur blob ?",
+    "options": ["Oui", "Non", "Uniquement l'upload", "Uniquement le download"],
+    "correct": 0,
+    "explication": "AzCopy supporte la synchronisation (upload, download, copie)."
+  },
+  {
+    "id": "AZ-204-124",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Storage SDK",
+    "difficulty": "hard",
+    "question": "Azure Storage SDK existe-t-il pour .NET ?",
+    "options": ["Oui", "Non", "Uniquement pour Java", "Uniquement pour Python"],
+    "correct": 0,
+    "explication": "Azure SDK est disponible pour .NET, Java, Python, JavaScript, Go, etc."
+  },
+  {
+    "id": "AZ-204-125",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Storage SDK",
+    "difficulty": "hard",
+    "question": "Comment se connecter au stockage avec le SDK .NET ?",
+    "options": [
+      "Utiliser la chaîne de connexion ou DefaultAzureCredential",
+      "Mot de passe",
+      "Certificat",
+      "Token"
+    ],
+    "correct": 0,
+    "explication": "Le SDK supporte les chaînes de connexion et l'authentification Azure AD."
+  },
+  {
+    "id": "AZ-204-126",
+    "theme": "Azure Storage",
+    "theme_label": "Soft delete",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la suppression réversible (soft delete) dans Blob Storage ?",
+    "options": [
+      "Conservation des blobs supprimés pendant une période récupérable",
+      "Suppression définitive",
+      "Archivage",
+      "Snapshot"
+    ],
+    "correct": 0,
+    "explication": "Soft delete permet de récupérer des blobs supprimés accidentellement."
+  },
+  {
+    "id": "AZ-204-127",
+    "theme": "Azure Storage",
+    "theme_label": "Versioning",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le versioning des blobs ?",
+    "options": [
+      "Conserve les versions antérieures des blobs",
+      "Supprime les versions",
+      "Snapshot",
+      "Soft delete"
+    ],
+    "correct": 0,
+    "explication": "Le versioning crée automatiquement une nouvelle version à chaque modification."
+  },
+  {
+    "id": "AZ-204-128",
+    "theme": "Azure Storage",
+    "theme_label": "Change feed",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le change feed (flux de modifications) ?",
+    "options": [
+      "Journal des modifications des blobs",
+      "Snapshot",
+      "Versioning",
+      "Soft delete"
+    ],
+    "correct": 0,
+    "explication": "Le change feed enregistre les événements de création, modification, suppression de blobs."
+  },
+  {
+    "id": "AZ-204-129",
+    "theme": "Azure Storage",
+    "theme_label": "Object replication",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la réplication d'objets ?",
+    "options": [
+      "Réplique les blobs asynchrone entre comptes",
+      "Réplication synchrone",
+      "Réplication locale",
+      "Réplication de zones"
+    ],
+    "correct": 0,
+    "explication": "La réplication d'objets copie les blobs vers un autre compte pour la DR ou la proximité."
+  },
+  {
+    "id": "AZ-204-130",
+    "theme": "Azure Storage",
+    "theme_label": "Event Grid integration",
+    "difficulty": "hard",
+    "question": "Azure Storage peut-il envoyer des événements à Event Grid ?",
+    "options": ["Oui", "Non", "Uniquement pour les blobs", "Uniquement pour les files"],
+    "correct": 0,
+    "explication": "Les événements de stockage (création, suppression) peuvent être envoyés à Event Grid."
+  },
+  {
+    "id": "AZ-204-131",
+    "theme": "Azure Storage",
+    "theme_label": "Storage metrics",
+    "difficulty": "hard",
+    "question": "Quelles métriques sont disponibles pour le stockage ?",
+    "options": [
+      "Capacité, transactions, latence, disponibilité",
+      "Seulement capacité",
+      "Seulement transactions",
+      "Seulement latence"
+    ],
+    "correct": 0,
+    "explication": "Azure Monitor collecte des métriques détaillées pour le stockage."
+  },
+  {
+    "id": "AZ-204-132",
+    "theme": "Azure Storage",
+    "theme_label": "Storage logs",
+    "difficulty": "hard",
+    "question": "Où sont envoyés les journaux de diagnostic de stockage ?",
+    "options": [
+      "Log Analytics, Storage Account, Event Hub",
+      "Seulement Log Analytics",
+      "Seulement Storage Account",
+      "Seulement Event Hub"
+    ],
+    "correct": 0,
+    "explication": "Les paramètres de diagnostic peuvent envoyer les logs vers plusieurs destinations."
+  },
+  {
+    "id": "AZ-204-133",
+    "theme": "Azure Storage",
+    "theme_label": "Azure AD authentication",
+    "difficulty": "hard",
+    "question": "Azure Storage peut-il utiliser Azure AD pour l'authentification ?",
+    "options": ["Oui (pour Blob, Queue, Table)", "Non", "Uniquement pour Files", "Uniquement pour Blob"],
+    "correct": 0,
+    "explication": "Azure AD est supporté pour Blob, Queue, Table (pas encore pour Files)."
+  },
+  {
+    "id": "AZ-204-134",
+    "theme": "Azure Storage",
+    "theme_label": "Shared Key authentication",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'authentification par clé partagée ?",
+    "options": [
+      "Utilisation des clés d'accès du compte de stockage",
+      "Azure AD",
+      "SAS",
+      "Certificat"
+    ],
+    "correct": 0,
+    "explication": "Les clés d'accès donnent un accès complet au compte."
+  },
+  {
+    "id": "AZ-204-135",
+    "theme": "Azure Storage",
+    "theme_label": "Firewalls and virtual networks",
+    "difficulty": "hard",
+    "question": "Peut-on restreindre l'accès au stockage à des réseaux spécifiques ?",
+    "options": ["Oui", "Non", "Uniquement à des IP publiques", "Uniquement à des VNet"],
+    "correct": 0,
+    "explication": "Les pare-feu et les règles de réseau virtuel limitent l'accès."
+  },
+  {
+    "id": "AZ-204-136",
+    "theme": "Azure Storage",
+    "theme_label": "Private endpoints",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un point de terminaison privé (private endpoint) ?",
+    "options": [
+      "IP privée dans un VNet pour accéder au stockage",
+      "IP publique",
+      "Service endpoint",
+      "VPN"
+    ],
+    "correct": 0,
+    "explication": "Les points de terminaison privés permettent un accès sécurisé via le réseau privé."
+  },
+  {
+    "id": "AZ-204-137",
+    "theme": "Azure Storage",
+    "theme_label": "Service endpoints",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un service endpoint ?",
+    "options": [
+      "Permet d'accéder au stockage depuis un VNet via Azure backbone",
+      "IP privée",
+      "VPN",
+      "ExpressRoute"
+    ],
+    "correct": 0,
+    "explication": "Les service endpoints étendent l'identité du VNet au service Azure."
+  },
+  {
+    "id": "AZ-204-138",
+    "theme": "Azure Storage",
+    "theme_label": "Storage cost optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts de stockage ?",
+    "options": [
+      "Utiliser les niveaux d'accès appropriés, lifecycle policies, suppression des données inutiles",
+      "Augmenter la redondance",
+      "Utiliser le stockage premium",
+      "Désactiver le chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les lifecycle policies et le choix du niveau d'accès sont clés."
+  },
+  {
+    "id": "AZ-204-139",
+    "theme": "Azure Storage",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour les clés d'accès ?",
+    "options": [
+      "Rotation régulière, ne pas les coder en dur",
+      "Les partager largement",
+      "Les coder dans l'application",
+      "Ne jamais les changer"
+    ],
+    "correct": 0,
+    "explication": "Les clés d'accès doivent être tournées et protégées (Key Vault)."
+  },
+  {
+    "id": "AZ-204-140",
+    "theme": "Azure Storage",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Pour les charges lourdes, comment améliorer les performances ?",
+    "options": [
+      "Utiliser des noms de blobs aléatoires pour éviter les goulots d'étranglement",
+      "Noms séquentiels",
+      "Petits blobs",
+      "Beaucoup de conteneurs"
+    ],
+    "correct": 0,
+    "explication": "Les noms aléatoires répartissent la charge sur les partitions."
+  }
+]

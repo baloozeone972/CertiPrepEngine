@@ -1,0 +1,602 @@
+[
+  {
+    "id": "GCP-DL-161",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que BigQuery ?",
+    "options": [
+      "Data warehouse serverless",
+      "Base de données relationnelle",
+      "Base NoSQL",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "BigQuery est un data warehouse analytique (SQL)."
+  },
+  {
+    "id": "GCP-DL-162",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "easy",
+    "question": "BigQuery supporte-t-il le SQL standard ?",
+    "options": ["Oui", "Non", "Uniquement un dialecte propriétaire", "Uniquement des requêtes NoSQL"],
+    "correct": 0,
+    "explication": "BigQuery utilise le SQL standard (ANSI 2011)."
+  },
+  {
+    "id": "GCP-DL-163",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "easy",
+    "question": "BigQuery peut-il interroger directement des données dans Cloud Storage ?",
+    "options": ["Oui (tables externes)", "Non", "Uniquement après import", "Uniquement via Dataflow"],
+    "correct": 0,
+    "explication": "BigQuery peut lire des fichiers dans Cloud Storage (CSV, JSON, Parquet, Avro)."
+  },
+  {
+    "id": "GCP-DL-164",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "easy",
+    "question": "BigQuery supporte-t-il le partitionnement et le clustering ?",
+    "options": ["Oui", "Non", "Uniquement le partitionnement", "Uniquement le clustering"],
+    "correct": 0,
+    "explication": "Le partitionnement (par date) et le clustering (par colonne) améliorent les performances et réduisent les coûts."
+  },
+  {
+    "id": "GCP-DL-165",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que BigQuery BI Engine ?",
+    "options": [
+      "Cache en mémoire pour accélérer les requêtes BI",
+      "Moteur d'exportation",
+      "Moteur de streaming",
+      "Moteur de transformation"
+    ],
+    "correct": 0,
+    "explication": "BI Engine accélère les requêtes de visualisation (Looker, Tableau)."
+  },
+  {
+    "id": "GCP-DL-166",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "easy",
+    "question": "BigQuery Omni permet-il d'interroger des données dans AWS et Azure ?",
+    "options": ["Oui", "Non", "Uniquement AWS", "Uniquement Azure"],
+    "correct": 0,
+    "explication": "BigQuery Omni interroge les données dans AWS S3 et Azure Blob."
+  },
+  {
+    "id": "GCP-DL-167",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataflow",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Dataflow ?",
+    "options": [
+      "Service de traitement de flux (streaming et batch)",
+      "Base de données",
+      "Data warehouse",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Dataflow exécute des pipelines Apache Beam."
+  },
+  {
+    "id": "GCP-DL-168",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataflow",
+    "difficulty": "easy",
+    "question": "Dataflow supporte-t-il les modèles prédéfinis (templates) ?",
+    "options": ["Oui", "Non", "Uniquement pour le batch", "Uniquement pour le streaming"],
+    "correct": 0,
+    "explication": "Dataflow propose des templates pour des transformations courantes (Cloud Storage to BigQuery)."
+  },
+  {
+    "id": "GCP-DL-169",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataproc",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Dataproc ?",
+    "options": [
+      "Service Hadoop/Spark managé",
+      "Data warehouse",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Dataproc crée rapidement des clusters Hadoop/Spark."
+  },
+  {
+    "id": "GCP-DL-170",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataproc",
+    "difficulty": "easy",
+    "question": "Dataproc facture-t-il à la minute les clusters ?",
+    "options": ["Oui", "Non", "À l'heure", "Au mois"],
+    "correct": 0,
+    "explication": "Dataproc facture les nœuds de cluster à la minute (minimum 1 minute)."
+  },
+  {
+    "id": "GCP-DL-171",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataproc Serverless",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Dataproc Serverless ?",
+    "options": [
+      "Exécution de jobs Spark sans gestion de cluster",
+      "Dataproc classique",
+      "Dataflow",
+      "BigQuery"
+    ],
+    "correct": 0,
+    "explication": "Dataproc Serverless permet d'exécuter des jobs Spark sans provisionner de cluster."
+  },
+  {
+    "id": "GCP-DL-172",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataprep",
+    "difficulty": "easy",
+    "question": "À quoi sert Dataprep ?",
+    "options": [
+      "Nettoyage et transformation de données visuellement",
+      "Data warehouse",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Dataprep est un service de préparation de données sans code (basé sur Trifacta)."
+  },
+  {
+    "id": "GCP-DL-173",
+    "theme": "Data & Analytics",
+    "theme_label": "Pub/Sub",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Pub/Sub ?",
+    "options": [
+      "Service de messagerie asynchrone (pub/sub)",
+      "Base de données",
+      "Data warehouse",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Pub/Sub est un service de messagerie pour l'ingestion d'événements."
+  },
+  {
+    "id": "GCP-DL-174",
+    "theme": "Data & Analytics",
+    "theme_label": "Pub/Sub",
+    "difficulty": "easy",
+    "question": "Pub/Sub supporte-t-il les messages avec accusé de réception ?",
+    "options": ["Oui", "Non", "Uniquement au moins une fois", "Uniquement exactement une fois"],
+    "correct": 0,
+    "explication": "Pub/Sub offre une livraison au moins une fois (avec accusé)."
+  },
+  {
+    "id": "GCP-DL-175",
+    "theme": "Data & Analytics",
+    "theme_label": "Data Catalog",
+    "difficulty": "easy",
+    "question": "À quoi sert Data Catalog ?",
+    "options": [
+      "Catalogue de métadonnées pour les actifs de données",
+      "Base de données",
+      "Data warehouse",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Data Catalog permet de rechercher et gérer les métadonnées des ressources GCP."
+  },
+  {
+    "id": "GCP-DL-176",
+    "theme": "Data & Analytics",
+    "theme_label": "Looker",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Looker ?",
+    "options": [
+      "Plateforme de BI et d'analytique",
+      "Base de données",
+      "Data warehouse",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Looker (intégré à Google Cloud) permet de créer des dashboards et des explorations de données."
+  },
+  {
+    "id": "GCP-DL-177",
+    "theme": "Data & Analytics",
+    "theme_label": "Looker Studio",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Looker Studio (anciennement Data Studio) ?",
+    "options": [
+      "Outil de visualisation de données gratuit",
+      "Data warehouse",
+      "Base de données",
+      "ETL"
+    ],
+    "correct": 0,
+    "explication": "Looker Studio crée des rapports interactifs à partir de nombreuses sources."
+  },
+  {
+    "id": "GCP-DL-178",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Composer",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Composer ?",
+    "options": [
+      "Service Apache Airflow managé",
+      "Data warehouse",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Cloud Composer orchestre les pipelines de données avec Airflow."
+  },
+  {
+    "id": "GCP-DL-179",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataplex",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Dataplex ?",
+    "options": [
+      "Plateforme de gouvernance des données",
+      "Data warehouse",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Dataplex fournit une gestion unifiée des données (lacs, catalogues, qualité)."
+  },
+  {
+    "id": "GCP-DL-180",
+    "theme": "Data & Analytics",
+    "theme_label": "Data Fusion",
+    "difficulty": "easy",
+    "question": "À quoi sert Data Fusion ?",
+    "options": [
+      "Intégration de données (ETL) sans code",
+      "Data warehouse",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Data Fusion est un service ETL/ELT visuel."
+  },
+  {
+    "id": "GCP-DL-181",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Logging",
+    "difficulty": "easy",
+    "question": "Cloud Logging collecte-t-il les logs des services GCP ?",
+    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour App Engine"],
+    "correct": 0,
+    "explication": "Cloud Logging centralise les logs de toutes les ressources GCP."
+  },
+  {
+    "id": "GCP-DL-182",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Monitoring",
+    "difficulty": "easy",
+    "question": "Cloud Monitoring fournit-il des métriques et des alertes ?",
+    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour GKE"],
+    "correct": 0,
+    "explication": "Cloud Monitoring (anciennement Stackdriver) surveille les performances."
+  },
+  {
+    "id": "GCP-DL-183",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Trace",
+    "difficulty": "easy",
+    "question": "À quoi sert Cloud Trace ?",
+    "options": [
+      "Analyse de latence des applications",
+      "Collecte de logs",
+      "Métriques",
+      "Alertes"
+    ],
+    "correct": 0,
+    "explication": "Cloud Trace suit les requêtes pour identifier les goulots d'étranglement."
+  },
+  {
+    "id": "GCP-DL-184",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Profiler",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Cloud Profiler ?",
+    "options": [
+      "Analyse des performances du code (profiling)",
+      "Collecte de logs",
+      "Métriques",
+      "Alertes"
+    ],
+    "correct": 0,
+    "explication": "Cloud Profiler montre où le temps CPU est passé (profilage en continu)."
+  },
+  {
+    "id": "GCP-DL-185",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Debugger",
+    "difficulty": "easy",
+    "question": "Cloud Debugger permet-il de déboguer sans arrêter l'application ?",
+    "options": ["Oui", "Non", "Uniquement pour les applications Java", "Uniquement pour les applications Python"],
+    "correct": 0,
+    "explication": "Cloud Debugger capture l'état des variables sans interrompre l'exécution."
+  },
+  {
+    "id": "GCP-DL-186",
+    "theme": "Data & Analytics",
+    "theme_label": "Error Reporting",
+    "difficulty": "easy",
+    "question": "À quoi sert Error Reporting ?",
+    "options": [
+      "Regroupe et analyse les erreurs d'application",
+      "Collecte de logs",
+      "Métriques",
+      "Alertes"
+    ],
+    "correct": 0,
+    "explication": "Error Reporting regroupe les erreurs par type et fournit des statistiques."
+  },
+  {
+    "id": "GCP-DL-187",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Audit Logs",
+    "difficulty": "easy",
+    "question": "Cloud Audit Logs enregistre-t-il les activités administratives ?",
+    "options": ["Oui", "Non", "Uniquement pour les données sensibles", "Uniquement pour les accès à l'API"],
+    "correct": 0,
+    "explication": "Les audit logs (Admin Activity, Data Access) aident à la conformité."
+  },
+  {
+    "id": "GCP-DL-188",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery reservations",
+    "difficulty": "easy",
+    "question": "Les réservations BigQuery permettent-elles d'allouer des slots dédiés ?",
+    "options": ["Oui", "Non", "Uniquement pour le stockage", "Uniquement pour les requêtes"],
+    "correct": 0,
+    "explication": "Les réservations garantissent des ressources de calcul (slots)."
+  },
+  {
+    "id": "GCP-DL-189",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery materialized views",
+    "difficulty": "easy",
+    "question": "Les vues matérialisées BigQuery améliorent-elles les performances des requêtes ?",
+    "options": ["Oui", "Non", "Seulement pour les données en temps réel", "Seulement pour les données historiques"],
+    "correct": 0,
+    "explication": "Les vues matérialisées pré-calculent les résultats des requêtes complexes."
+  },
+  {
+    "id": "GCP-DL-190",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery ML",
+    "difficulty": "easy",
+    "question": "BigQuery ML permet-il de créer des modèles ML avec SQL ?",
+    "options": ["Oui", "Non", "Uniquement pour la régression", "Uniquement pour la classification"],
+    "correct": 0,
+    "explication": "BigQuery ML entraîne des modèles (régression, classification, clustering) avec SQL."
+  },
+  {
+    "id": "GCP-DL-191",
+    "theme": "Data & Analytics",
+    "theme_label": "Vertex AI",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Vertex AI ?",
+    "options": [
+      "Plateforme unifiée pour le ML (entraînement, déploiement)",
+      "Data warehouse",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Vertex AI regroupe les services de ML de GCP (AutoML, entraînement personnalisé)."
+  },
+  {
+    "id": "GCP-DL-192",
+    "theme": "Data & Analytics",
+    "theme_label": "Vertex AI Workbench",
+    "difficulty": "easy",
+    "question": "Vertex AI Workbench est-il un service de notebooks gérés (Jupyter) ?",
+    "options": ["Oui", "Non", "Uniquement pour les modèles pré-entraînés", "Uniquement pour les données tabulaires"],
+    "correct": 0,
+    "explication": "Vertex AI Workbench fournit des environnements JupyterLab entièrement gérés."
+  },
+  {
+    "id": "GCP-DL-193",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Natural Language API",
+    "difficulty": "easy",
+    "question": "L'API Cloud Natural Language analyse-t-elle le texte (entités, sentiments) ?",
+    "options": ["Oui", "Non", "Uniquement pour l'anglais", "Uniquement pour le français"],
+    "correct": 0,
+    "explication": "L'API Natural Language supporte plusieurs langues pour l'analyse sémantique."
+  },
+  {
+    "id": "GCP-DL-194",
+    "theme": "Data & Analytics",
+    "theme_label": "Vision API",
+    "difficulty": "easy",
+    "question": "L'API Vision permet-elle la détection d'objets dans les images ?",
+    "options": ["Oui", "Non", "Uniquement l'OCR", "Uniquement la détection de visages"],
+    "correct": 0,
+    "explication": "Vision API supporte la détection d'étiquettes, d'objets, de texte, etc."
+  },
+  {
+    "id": "GCP-DL-195",
+    "theme": "Data & Analytics",
+    "theme_label": "Speech-to-Text",
+    "difficulty": "easy",
+    "question": "L'API Speech-to-Text convertit-elle l'audio en texte ?",
+    "options": ["Oui", "Non", "Uniquement pour l'anglais", "Uniquement pour les fichiers courts"],
+    "correct": 0,
+    "explication": "Speech-to-Text supporte de nombreuses langues et reconnaît la parole en temps réel ou sur fichiers."
+  },
+  {
+    "id": "GCP-DL-196",
+    "theme": "Data & Analytics",
+    "theme_label": "Translation API",
+    "difficulty": "easy",
+    "question": "L'API Translation supporte-t-elle la traduction automatique entre plus de 100 langues ?",
+    "options": ["Oui", "Non", "Uniquement l'anglais", "Uniquement les langues européennes"],
+    "correct": 0,
+    "explication": "Translation API offre une traduction neuronale pour de nombreuses langues."
+  },
+  {
+    "id": "GCP-DL-197",
+    "theme": "Data & Analytics",
+    "theme_label": "Document AI",
+    "difficulty": "easy",
+    "question": "Document AI permet-il d'extraire des données de documents (factures, formulaires) ?",
+    "options": ["Oui", "Non", "Uniquement pour les PDF", "Uniquement pour les images"],
+    "correct": 0,
+    "explication": "Document AI utilise le ML pour traiter des documents structurés et non structurés."
+  },
+  {
+    "id": "GCP-DL-198",
+    "theme": "Data & Analytics",
+    "theme_label": "Recommender",
+    "difficulty": "easy",
+    "question": "Recommender fournit-il des recommandations d'optimisation (coûts, sécurité) ?",
+    "options": ["Oui", "Non", "Uniquement pour les coûts", "Uniquement pour la sécurité"],
+    "correct": 0,
+    "explication": "Recommender analyse les ressources et propose des actions (ex: redimensionner des VMs)."
+  },
+  {
+    "id": "GCP-DL-199",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Scheduler for data pipelines",
+    "difficulty": "easy",
+    "question": "Cloud Scheduler peut-il déclencher des pipelines Dataflow ou Dataproc ?",
+    "options": ["Oui", "Non", "Uniquement via Cloud Functions", "Uniquement via Pub/Sub"],
+    "correct": 0,
+    "explication": "Cloud Scheduler peut appeler des endpoints HTTP (API Dataflow, etc.)."
+  },
+  {
+    "id": "GCP-DL-200",
+    "theme": "Data & Analytics",
+    "theme_label": "Eventarc for data events",
+    "difficulty": "easy",
+    "question": "Eventarc peut-il déclencher des workflows à partir d'événements Cloud Storage ?",
+    "options": ["Oui", "Non", "Uniquement pour Pub/Sub", "Uniquement pour Firestore"],
+    "correct": 0,
+    "explication": "Eventarc peut recevoir des événements Cloud Storage et les router vers Cloud Run ou Cloud Functions."
+  },
+  {
+    "id": "GCP-DL-201",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Storage Transfer for data lakes",
+    "difficulty": "easy",
+    "question": "Storage Transfer Service est-il adapté pour charger des données dans Cloud Storage ?",
+    "options": ["Oui", "Non", "Uniquement pour les sauvegardes", "Uniquement pour les archives"],
+    "correct": 0,
+    "explication": "Storage Transfer Service automatise les transferts depuis des sources variées vers GCS."
+  },
+  {
+    "id": "GCP-DL-202",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery Partitioning",
+    "difficulty": "easy",
+    "question": "Le partitionnement par colonne de date dans BigQuery réduit-il les coûts des requêtes ?",
+    "options": ["Oui", "Non", "Uniquement pour les requêtes groupées", "Uniquement pour les jointures"],
+    "correct": 0,
+    "explication": "Le partitionnement permet aux requêtes de ne scanner que les partitions nécessaires."
+  },
+  {
+    "id": "GCP-DL-203",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery clustering",
+    "difficulty": "easy",
+    "question": "Le clustering améliore-t-il les performances des requêtes avec filtres sur colonnes ?",
+    "options": ["Oui", "Non", "Uniquement pour les colonnes de partition", "Uniquement pour les colonnes de date"],
+    "correct": 0,
+    "explication": "Le clustering trie les données, accélérant les requêtes avec des conditions sur les colonnes clusterisées."
+  },
+  {
+    "id": "GCP-DL-204",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataflow streaming engine",
+    "difficulty": "easy",
+    "question": "Le moteur de streaming Dataflow améliore-t-il les performances des pipelines en streaming ?",
+    "options": ["Oui", "Non", "Uniquement pour le batch", "Uniquement pour les petits volumes"],
+    "correct": 0,
+    "explication": "Le streaming engine sépare le traitement de l'état, améliorant la scalabilité."
+  },
+  {
+    "id": "GCP-DL-205",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Spanner to BigQuery",
+    "difficulty": "easy",
+    "question": "Comment exporter des données de Cloud Spanner vers BigQuery ?",
+    "options": [
+      "Dataflow, Datastream",
+      "gcloud export",
+      "Console",
+      "API"
+    ],
+    "correct": 0,
+    "explication": "Datastream capture les changements de Cloud Spanner pour les envoyer à BigQuery."
+  },
+  {
+    "id": "GCP-DL-206",
+    "theme": "Data & Analytics",
+    "theme_label": "Datastream",
+    "difficulty": "easy",
+    "question": "Datastream permet-il la réplication en temps réel de bases de données vers BigQuery ?",
+    "options": ["Oui", "Non", "Uniquement pour les bases Oracle", "Uniquement pour les bases MySQL"],
+    "correct": 0,
+    "explication": "Datastream capture les changements (CDC) des bases de données et les envoie vers Cloud Storage ou BigQuery."
+  },
+  {
+    "id": "GCP-DL-207",
+    "theme": "Data & Analytics",
+    "theme_label": "Change Data Capture (CDC)",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la capture de données modifiées (CDC) ?",
+    "options": [
+      "Enregistrement des modifications de données en temps réel",
+      "Sauvegarde",
+      "Chiffrement",
+      "Compression"
+    ],
+    "correct": 0,
+    "explication": "CDC permet la réplication en continu des modifications vers un data warehouse."
+  },
+  {
+    "id": "GCP-DL-208",
+    "theme": "Data & Analytics",
+    "theme_label": "Pub/Sub ordering",
+    "difficulty": "easy",
+    "question": "Pub/Sub garantit-il l'ordre des messages ?",
+    "options": [
+      "Non (ordre non garanti)",
+      "Oui",
+      "Uniquement avec des clés de classement",
+      "Uniquement pour les abonnements push"
+    ],
+    "correct": 2,
+    "explication": "Pub/Sub peut garantir l'ordre avec les clés de classement (ordering keys)."
+  },
+  {
+    "id": "GCP-DL-209",
+    "theme": "Data & Analytics",
+    "theme_label": "Data Catalog tagging",
+    "difficulty": "easy",
+    "question": "Data Catalog permet-il d'ajouter des tags de métadonnées aux actifs ?",
+    "options": ["Oui", "Non", "Uniquement pour BigQuery", "Uniquement pour Cloud Storage"],
+    "correct": 0,
+    "explication": "Data Catalog supporte les tags pour organiser les données (PII, domaine, etc.)."
+  },
+  {
+    "id": "GCP-DL-210",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery data lineage",
+    "difficulty": "easy",
+    "question": "BigQuery peut-il tracer la lignée des données (d'où viennent les résultats) ?",
+    "options": ["Oui (via Data Catalog)", "Non", "Uniquement avec Dataflow", "Uniquement avec Dataproc"],
+    "correct": 0,
+    "explication": "Data Catalog capture la lignée des données pour BigQuery et autres services."
+  }
+]

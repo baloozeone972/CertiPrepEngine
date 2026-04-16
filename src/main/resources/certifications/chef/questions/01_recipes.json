@@ -1,0 +1,32 @@
+[
+  {
+    "id": "CHF-01-001",
+    "theme": "Recipes",
+    "theme_label": "Recettes Chef",
+    "difficulty": "easy",
+    "question": "Quelle ressource Chef installe un package ?",
+    "options": [
+      "package",
+      "yum_package",
+      "apt_package",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "package est générique, yum_package/apt_package sont spécifiques."
+  },
+  {
+    "id": "CHF-01-002",
+    "theme": "Cookbooks",
+    "theme_label": "Cookbooks",
+    "difficulty": "easy",
+    "question": "Quel fichier définit les métadonnées d'un cookbook ?",
+    "options": [
+      "metadata.rb",
+      "attributes.rb",
+      "recipes/default.rb",
+      "Berksfile"
+    ],
+    "correct": 0,
+    "explanation": "metadata.rb contient le nom, version, dépendances du cookbook."
+  }
+]

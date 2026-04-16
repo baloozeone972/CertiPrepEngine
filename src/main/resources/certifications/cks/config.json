@@ -1,0 +1,37 @@
+{
+  "id": "cks",
+  "name": "Certified Kubernetes Security Specialist (CKS)",
+  "version": "1.0",
+  "description": "Certification CKS - Sécurité avancée des clusters Kubernetes",
+  "totalQuestions": 200,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 16,
+  "passingScore": 67,
+  "examType": "practical",
+  "themes": [
+    {
+      "name": "Cluster Hardening",
+      "count": 30
+    },
+    {
+      "name": "System Hardening",
+      "count": 30
+    },
+    {
+      "name": "Supply Chain Security",
+      "count": 30
+    },
+    {
+      "name": "Monitoring & Logging",
+      "count": 30
+    },
+    {
+      "name": "Runtime Security",
+      "count": 30
+    },
+    {
+      "name": "Compliance",
+      "count": 50
+    }
+  ]
+}

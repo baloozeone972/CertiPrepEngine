@@ -1,0 +1,32 @@
+[
+  {
+    "id": "OCP-01-001",
+    "theme": "Java Modules (JPMS)",
+    "theme_label": "Déclaration et utilisation des modules",
+    "difficulty": "medium",
+    "question": "Que signifie 'exports' dans un fichier module-info.java ?",
+    "options": [
+      "Rend un package accessible aux autres modules",
+      "Déclare une dépendance vers un autre module",
+      "Ouvre un package à la réflexion",
+      "Déclare un service fourni"
+    ],
+    "correct": 0,
+    "explanation": "exports permet à un module de rendre un package accessible aux autres modules qui le requièrent."
+  },
+  {
+    "id": "OCP-01-002",
+    "theme": "Java Modules (JPMS)",
+    "theme_label": "Déclaration et utilisation des modules",
+    "difficulty": "hard",
+    "question": "Que signifie 'requires static' dans module-info.java ?",
+    "options": [
+      "Dépendance obligatoire à la compilation seulement",
+      "Dépendance optionnelle à la compilation seulement",
+      "Dépendance obligatoire à l'exécution seulement",
+      "Dépendance transitive"
+    ],
+    "correct": 1,
+    "explanation": "requires static indique une dépendance optionnelle, nécessaire à la compilation mais pas à l'exécution."
+  }
+]

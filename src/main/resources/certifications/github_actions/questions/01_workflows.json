@@ -1,0 +1,32 @@
+[
+  {
+    "id": "GA-01-001",
+    "theme": "Workflows",
+    "theme_label": "Configuration workflows",
+    "difficulty": "easy",
+    "question": "Quel fichier contient la configuration GitHub Actions ?",
+    "options": [
+      ".github/workflows/*.yml",
+      ".github/actions.yml",
+      ".github/config.yml",
+      "actions.yml"
+    ],
+    "correct": 0,
+    "explanation": "Les workflows sont définis dans .github/workflows/*.yml"
+  },
+  {
+    "id": "GA-01-002",
+    "theme": "Workflows",
+    "theme_label": "Configuration workflows",
+    "difficulty": "medium",
+    "question": "Quelle syntaxe déclenche un workflow sur push sur main ?",
+    "options": [
+      "on: push: branches: [ main ]",
+      "trigger: push: branch: main",
+      "on: [push]",
+      "push: main"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe correcte est 'on: push: branches: [ main ]'"
+  }
+]

@@ -1,0 +1,822 @@
+[
+  {
+    "id": "AWS-DEV-211",
+    "theme": "S3 & Storage",
+    "theme_label": "Fondamentaux S3",
+    "difficulty": "easy",
+    "question": "Quelle est la taille maximale d'un objet S3 ?",
+    "options": ["5 To", "1 To", "500 Go", "10 To"],
+    "correct": 0,
+    "explanation": "La taille maximale d'un objet S3 est 5 To."
+  },
+  {
+    "id": "AWS-DEV-212",
+    "theme": "S3 & Storage",
+    "theme_label": "Fondamentaux S3",
+    "difficulty": "easy",
+    "question": "Quelle est la taille maximale d'un PUT unique sur S3 ?",
+    "options": ["5 Go", "1 Go", "500 Mo", "10 Go"],
+    "correct": 0,
+    "explanation": "Un PUT unique est limité à 5 Go. Au-delà, utiliser le multipart upload."
+  },
+  {
+    "id": "AWS-DEV-213",
+    "theme": "S3 & Storage",
+    "theme_label": "Fondamentaux S3",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que le multipart upload ?",
+    "options": [
+      "Upload d'objets en plusieurs parties",
+      "Upload en parallèle",
+      "Upload de gros fichiers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Multipart upload divise les gros fichiers en parties uploadées en parallèle."
+  },
+  {
+    "id": "AWS-DEV-214",
+    "theme": "S3 & Storage",
+    "theme_label": "Fondamentaux S3",
+    "difficulty": "medium",
+    "question": "Combien de parties maximum pour un multipart upload ?",
+    "options": ["10 000", "1000", "100", "50 000"],
+    "correct": 0,
+    "explanation": "Maximum 10 000 parties par objet (chaque partie entre 5 Mo et 5 Go)."
+  },
+  {
+    "id": "AWS-DEV-215",
+    "theme": "S3 & Storage",
+    "theme_label": "Classes de stockage",
+    "difficulty": "easy",
+    "question": "Quelle classe de stockage S3 est la moins chère ?",
+    "options": [
+      "S3 Glacier Deep Archive",
+      "S3 Glacier Flexible Retrieval",
+      "S3 Standard-IA",
+      "S3 One Zone-IA"
+    ],
+    "correct": 0,
+    "explanation": "Glacier Deep Archive est la classe la moins chère (récupération en 12-48h)."
+  },
+  {
+    "id": "AWS-DEV-216",
+    "theme": "S3 & Storage",
+    "theme_label": "Classes de stockage",
+    "difficulty": "medium",
+    "question": "Quelle classe de stockage est pour les données consultées rarement ?",
+    "options": [
+      "S3 Standard-IA",
+      "S3 Standard",
+      "S3 Glacier",
+      "S3 Intelligent-Tiering"
+    ],
+    "correct": 0,
+    "explanation": "Standard-IA (Infrequent Access) pour accès peu fréquents."
+  },
+  {
+    "id": "AWS-DEV-217",
+    "theme": "S3 & Storage",
+    "theme_label": "Classes de stockage",
+    "difficulty": "hard",
+    "question": "Quelle classe de stockage réplique les données sur une seule AZ ?",
+    "options": [
+      "S3 One Zone-IA",
+      "S3 Standard",
+      "S3 Standard-IA",
+      "S3 Intelligent-Tiering"
+    ],
+    "correct": 0,
+    "explanation": "One Zone-IA stocke uniquement dans une AZ (moins chère mais moins résiliente)."
+  },
+  {
+    "id": "AWS-DEV-218",
+    "theme": "S3 & Storage",
+    "theme_label": "Versioning",
+    "difficulty": "hard",
+    "question": "Peut-on désactiver le versioning après l'avoir activé ?",
+    "options": [
+      "Non, seulement suspendre",
+      "Oui",
+      "Oui, avec délai",
+      "Uniquement après suppression du bucket"
+    ],
+    "correct": 0,
+    "explanation": "Une fois activé, on ne peut que suspendre, pas désactiver."
+  },
+  {
+    "id": "AWS-DEV-219",
+    "theme": "S3 & Storage",
+    "theme_label": "Versioning",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 MFA Delete ?",
+    "options": [
+      "Suppression nécessitant MFA",
+      "Suppression automatique",
+      "Suppression en masse",
+      "Suppression définitive"
+    ],
+    "correct": 0,
+    "explanation": "MFA Delete exige une authentification MFA pour supprimer des versions."
+  },
+  {
+    "id": "AWS-DEV-220",
+    "theme": "S3 & Storage",
+    "theme_label": "Object Lock",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Object Lock ?",
+    "options": [
+      "Empêche la suppression/modification pendant une période",
+      "Verrouille l'objet",
+      "Chiffre l'objet",
+      "Versionne l'objet"
+    ],
+    "correct": 0,
+    "explanation": "Object Lock protège contre les suppressions (WORM)."
+  },
+  {
+    "id": "AWS-DEV-221",
+    "theme": "S3 & Storage",
+    "theme_label": "Pre-signed URLs",
+    "difficulty": "hard",
+    "question": "À quoi sert une pre-signed URL S3 ?",
+    "options": [
+      "Accès temporaire à un objet privé",
+      "Accès permanent",
+      "Accès public",
+      "Accès chiffré"
+    ],
+    "correct": 0,
+    "explanation": "Pre-signed URL donne un accès temporaire à un objet privé."
+  },
+  {
+    "id": "AWS-DEV-222",
+    "theme": "S3 & Storage",
+    "theme_label": "Pre-signed URLs",
+    "difficulty": "hard",
+    "question": "Quelle est la durée de validité maximale d'une pre-signed URL ?",
+    "options": ["7 jours", "1 jour", "12 heures", "30 jours"],
+    "correct": 0,
+    "explanation": "La durée maximale est de 7 jours (par défaut 1 heure)."
+  },
+  {
+    "id": "AWS-DEV-223",
+    "theme": "S3 & Storage",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Quels sont les types de chiffrement S3 ?",
+    "options": [
+      "SSE-S3, SSE-KMS, SSE-C",
+      "SSE-S3 seulement",
+      "SSE-KMS seulement",
+      "SSE-C seulement"
+    ],
+    "correct": 0,
+    "explanation": "SSE-S3 (clés AWS), SSE-KMS (clés KMS), SSE-C (clés client)."
+  },
+  {
+    "id": "AWS-DEV-224",
+    "theme": "S3 & Storage",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le chiffrement côté client ?",
+    "options": [
+      "Chiffrement avant upload",
+      "Chiffrement par AWS",
+      "Chiffrement par KMS",
+      "Chiffrement par S3"
+    ],
+    "correct": 0,
+    "explanation": "Client-side encryption : le client chiffre avant d'envoyer à S3."
+  },
+  {
+    "id": "AWS-DEV-225",
+    "theme": "S3 & Storage",
+    "theme_label": "Bucket policies",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une bucket policy S3 ?",
+    "options": [
+      "Politique IAM attachée au bucket",
+      "Politique attachée à l'utilisateur",
+      "Politique attachée au rôle",
+      "Politique attachée à l'objet"
+    ],
+    "correct": 0,
+    "explanation": "Les bucket policies sont des politiques resource-based pour S3."
+  },
+  {
+    "id": "AWS-DEV-226",
+    "theme": "S3 & Storage",
+    "theme_label": "Bucket policies",
+    "difficulty": "hard",
+    "question": "Quelle condition restreint l'accès à une adresse IP ?",
+    "options": [
+      "aws:SourceIp",
+      "aws:SourceVpc",
+      "aws:SourceArn",
+      "s3:x-amz-server-side-encryption"
+    ],
+    "correct": 0,
+    "explanation": "aws:SourceIp restreint l'accès à une plage d'adresses IP."
+  },
+  {
+    "id": "AWS-DEV-227",
+    "theme": "S3 & Storage",
+    "theme_label": "Bucket policies",
+    "difficulty": "hard",
+    "question": "Comment rendre un bucket public ?",
+    "options": [
+      "Bucket policy avec Principal: '*' et Action: 's3:GetObject'",
+      "ACL publique",
+      "Block Public Access désactivé",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs conditions nécessaires pour rendre un bucket public."
+  },
+  {
+    "id": "AWS-DEV-228",
+    "theme": "S3 & Storage",
+    "theme_label": "Cross-origin resource sharing (CORS)",
+    "difficulty": "hard",
+    "question": "Pourquoi configurer CORS sur un bucket S3 ?",
+    "options": [
+      "Permettre des requêtes cross-origin depuis un site web",
+      "Augmenter la sécurité",
+      "Accélérer les transferts",
+      "Compresser les données"
+    ],
+    "correct": 0,
+    "explication": "CORS permet à des sites web de différents domaines d'accéder aux ressources S3."
+  },
+  {
+    "id": "AWS-DEV-229",
+    "theme": "S3 & Storage",
+    "theme_label": "Static website hosting",
+    "difficulty": "hard",
+    "question": "S3 peut-il héberger un site web statique ?",
+    "options": ["Oui", "Non", "Uniquement avec CloudFront", "Uniquement avec Route53"],
+    "correct": 0,
+    "explication": "S3 supporte l'hébergement de sites web statiques (HTML, CSS, JS)."
+  },
+  {
+    "id": "AWS-DEV-230",
+    "theme": "S3 & Storage",
+    "theme_label": "Static website hosting",
+    "difficulty": "hard",
+    "question": "Quel est le endpoint pour un site web statique S3 ?",
+    "options": [
+      "bucket-name.s3-website-region.amazonaws.com",
+      "bucket-name.s3.amazonaws.com",
+      "bucket-name.cloudfront.net",
+      "bucket-name.s3-website.amazonaws.com"
+    ],
+    "correct": 0,
+    "explication": "Le endpoint de site web est différent du endpoint REST."
+  },
+  {
+    "id": "AWS-DEV-231",
+    "theme": "S3 & Storage",
+    "theme_label": "Event notifications",
+    "difficulty": "hard",
+    "question": "S3 peut-il envoyer des notifications à Lambda ?",
+    "options": ["Oui", "Non", "Uniquement à SNS", "Uniquement à SQS"],
+    "correct": 0,
+    "explication": "S3 Event Notifications peut cibler Lambda, SNS, SQS, EventBridge."
+  },
+  {
+    "id": "AWS-DEV-232",
+    "theme": "S3 & Storage",
+    "theme_label": "Event notifications",
+    "difficulty": "hard",
+    "question": "Quels types d'événements S3 peuvent déclencher des notifications ?",
+    "options": [
+      "s3:ObjectCreated:*, s3:ObjectRemoved:*, s3:ObjectRestore:*",
+      "Seulement Put",
+      "Seulement Delete",
+      "Tous"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs types d'événements S3 sont supportés."
+  },
+  {
+    "id": "AWS-DEV-233",
+    "theme": "S3 & Storage",
+    "theme_label": "Replication",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Replication ?",
+    "options": [
+      "Réplique les objets vers un autre bucket",
+      "Copie les objets",
+      "Sauvegarde les objets",
+      "Archive les objets"
+    ],
+    "correct": 0,
+    "explication": "La réplication copie automatiquement les objets vers un bucket de destination."
+  },
+  {
+    "id": "AWS-DEV-234",
+    "theme": "S3 & Storage",
+    "theme_label": "Replication",
+    "difficulty": "hard",
+    "question": "Quels sont les types de réplication S3 ?",
+    "options": [
+      "Cross-Region (CRR) et Same-Region (SRR)",
+      "Cross-Region seulement",
+      "Same-Region seulement",
+      "Multi-Region"
+    ],
+    "correct": 0,
+    "explication": "CRR vers une autre région, SRR dans la même région."
+  },
+  {
+    "id": "AWS-DEV-235",
+    "theme": "S3 & Storage",
+    "theme_label": "Replication",
+    "difficulty": "hard",
+    "question": "S3 CRR réplique-t-il les objets existants par défaut ?",
+    "options": ["Non", "Oui", "Optionnel", "Uniquement avec Versioning"],
+    "correct": 0,
+    "explication": "CRR réplique uniquement les nouveaux objets, pas les existants."
+  },
+  {
+    "id": "AWS-DEV-236",
+    "theme": "S3 & Storage",
+    "theme_label": "Lifecycle policies",
+    "difficulty": "hard",
+    "question": "À quoi servent les S3 Lifecycle policies ?",
+    "options": [
+      "Transition et expiration des objets",
+      "Réplication",
+      "Versioning",
+      "Chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les lifecycle policies automatisent le cycle de vie des objets."
+  },
+  {
+    "id": "AWS-DEV-237",
+    "theme": "S3 & Storage",
+    "theme_label": "Lifecycle policies",
+    "difficulty": "hard",
+    "question": "Quels sont les types d'actions dans une Lifecycle Policy ?",
+    "options": [
+      "Transition et Expiration",
+      "Transition seulement",
+      "Expiration seulement",
+      "Replication"
+    ],
+    "correct": 0,
+    "explication": "Transition (changement de classe) et Expiration (suppression)."
+  },
+  {
+    "id": "AWS-DEV-238",
+    "theme": "S3 & Storage",
+    "theme_label": "Access Points",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un S3 Access Point ?",
+    "options": [
+      "Point d'accès avec politique spécifique",
+      "Endpoint VPC",
+      "URL personnalisée",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explication": "Les Access Points simplifient la gestion des permissions par application."
+  },
+  {
+    "id": "AWS-DEV-239",
+    "theme": "S3 & Storage",
+    "theme_label": "Access Points",
+    "difficulty": "hard",
+    "question": "Un Access Point peut-il être restreint à un VPC ?",
+    "options": ["Oui (VPC-only)", "Non", "Uniquement avec PrivateLink", "Uniquement avec Endpoint"],
+    "correct": 0,
+    "explication": "On peut configurer un Access Point pour qu'il ne soit accessible que depuis un VPC spécifique."
+  },
+  {
+    "id": "AWS-DEV-240",
+    "theme": "S3 & Storage",
+    "theme_label": "Object Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Object Lambda ?",
+    "options": [
+      "Transforme les données à la volée lors des GET S3",
+      "Lambda sur S3",
+      "Lambda pour les événements S3",
+      "Lambda pour la réplication"
+    ],
+    "correct": 0,
+    "explication": "S3 Object Lambda modifie les données retournées par S3 GET."
+  },
+  {
+    "id": "AWS-DEV-241",
+    "theme": "S3 & Storage",
+    "theme_label": "Object Lambda",
+    "difficulty": "hard",
+    "question": "Object Lambda reçoit-il l'objet original de S3 ?",
+    "options": ["Oui (via un presigned URL)", "Non", "Seulement les métadonnées", "Seulement le nom"],
+    "correct": 0,
+    "explication": "Lambda reçoit une URL pour récupérer l'objet original."
+  },
+  {
+    "id": "AWS-DEV-242",
+    "theme": "S3 & Storage",
+    "theme_label": "Select",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Select ?",
+    "options": [
+      "Interroge des données dans S3 sans les télécharger",
+      "Sélectionne des objets",
+      "Filtre des objets",
+      "Jointure"
+    ],
+    "correct": 0,
+    "explication": "S3 Select permet d'extraire des sous-ensembles de données (CSV, JSON)."
+  },
+  {
+    "id": "AWS-DEV-243",
+    "theme": "S3 & Storage",
+    "theme_label": "Select",
+    "difficulty": "hard",
+    "question": "Quels formats sont supportés par S3 Select ?",
+    "options": [
+      "CSV, JSON, Parquet",
+      "CSV seulement",
+      "JSON seulement",
+      "XML seulement"
+    ],
+    "correct": 0,
+    "explication": "S3 Select supporte CSV, JSON et Parquet."
+  },
+  {
+    "id": "AWS-DEV-244",
+    "theme": "S3 & Storage",
+    "theme_label": "Batch Operations",
+    "difficulty": "hard",
+    "question": "À quoi servent les S3 Batch Operations ?",
+    "options": [
+      "Opérations en masse sur des objets",
+      "Traitement batch",
+      "Copy, tag, restore",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Batch Operations exécute des actions sur de grands ensembles d'objets."
+  },
+  {
+    "id": "AWS-DEV-245",
+    "theme": "S3 & Storage",
+    "theme_label": "Batch Operations",
+    "difficulty": "hard",
+    "question": "S3 Batch Operations utilise-t-il Lambda ?",
+    "options": ["Oui (invocation optionnelle)", "Non", "Uniquement pour les tâches personnalisées", "Uniquement pour les rapports"],
+    "correct": 0,
+    "explication": "Les tâches personnalisées peuvent invoquer Lambda."
+  },
+  {
+    "id": "AWS-DEV-246",
+    "theme": "S3 & Storage",
+    "theme_label": "Transfer Acceleration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Transfer Acceleration ?",
+    "options": [
+      "Accélère les transferts via edge locations",
+      "Compresse les fichiers",
+      "Chiffre les données",
+      "Versionne les objets"
+    ],
+    "correct": 0,
+    "explication": "Transfer Acceleration utilise CloudFront edge locations pour accélérer les uploads."
+  },
+  {
+    "id": "AWS-DEV-247",
+    "theme": "S3 & Storage",
+    "theme_label": "Storage Lens",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Storage Lens ?",
+    "options": [
+      "Analyse d'utilisation et métriques",
+      "Lentille de stockage",
+      "Outil de monitoring",
+      "Dashboard"
+    ],
+    "correct": 0,
+    "explication": "Storage Lens fournit des métriques agrégées sur l'utilisation S3."
+  },
+  {
+    "id": "AWS-DEV-248",
+    "theme": "S3 & Storage",
+    "theme_label": "Storage Lens",
+    "difficulty": "hard",
+    "question": "Storage Lens propose-t-il des recommandations ?",
+    "options": ["Oui", "Non", "Uniquement pour les coûts", "Uniquement pour la sécurité"],
+    "correct": 0,
+    "explication": "Storage Lens fournit des recommandations d'optimisation."
+  },
+  {
+    "id": "AWS-DEV-249",
+    "theme": "S3 & Storage",
+    "theme_label": "Multi-Region Access Points",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un Multi-Region Access Point ?",
+    "options": [
+      "Point d'accès unique pour plusieurs régions",
+      "Bucket multi-région",
+      "Réplication globale",
+      "CDN"
+    ],
+    "correct": 0,
+    "explication": "Multi-Region Access Points simplifient l'accès aux données répliquées."
+  },
+  {
+    "id": "AWS-DEV-250",
+    "theme": "S3 & Storage",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Quel est le débit maximum par préfixe S3 ?",
+    "options": [
+      "3 500 PUT/ 5 500 GET par seconde",
+      "100 par seconde",
+      "10 000 par seconde",
+      "Illimité"
+    ],
+    "correct": 0,
+    "explication": "Par préfixe, 3 500 requêtes PUT/POST/DELETE et 5 500 GET/HEAD par seconde."
+  },
+  {
+    "id": "AWS-DEV-251",
+    "theme": "S3 & Storage",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment améliorer les performances S3 ?",
+    "options": [
+      "Utiliser des clés d'objet aléatoires",
+      "Utiliser des préfixes",
+      "Transfer Acceleration",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Des clés aléatoires améliorent la distribution, Transfer Acceleration accélère les uploads."
+  },
+  {
+    "id": "AWS-DEV-252",
+    "theme": "S3 & Storage",
+    "theme_label": "EBS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'EBS ?",
+    "options": [
+      "Elastic Block Store",
+      "Elastic Bulk Storage",
+      "Elastic Backup Storage",
+      "Elastic Byte Storage"
+    ],
+    "correct": 0,
+    "explication": "EBS est le stockage bloc pour EC2."
+  },
+  {
+    "id": "AWS-DEV-253",
+    "theme": "S3 & Storage",
+    "theme_label": "EBS",
+    "difficulty": "medium",
+    "question": "Quel type de volume EBS est SSD généraliste ?",
+    "options": ["gp2/gp3", "io1/io2", "st1", "sc1"],
+    "correct": 0,
+    "explication": "gp2/gp3 sont les volumes SSD à usage général."
+  },
+  {
+    "id": "AWS-DEV-254",
+    "theme": "S3 & Storage",
+    "theme_label": "EBS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un snapshot EBS ?",
+    "options": [
+      "Sauvegarde incrémentale",
+      "Copie complète",
+      "Archive",
+      "Clone"
+    ],
+    "correct": 0,
+    "explication": "Les snapshots EBS sont incrémentaux (seuls les blocs modifiés sont sauvegardés)."
+  },
+  {
+    "id": "AWS-DEV-255",
+    "theme": "S3 & Storage",
+    "theme_label": "EFS",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'EFS ?",
+    "options": [
+      "Elastic File System (NFS)",
+      "Elastic Block Store",
+      "Elastic Container Service",
+      "Elastic Compute Service"
+    ],
+    "correct": 0,
+    "explication": "EFS est un système de fichiers NFS partagé."
+  },
+  {
+    "id": "AWS-DEV-256",
+    "theme": "S3 & Storage",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "EFS peut-il être monté sur plusieurs instances EC2 ?",
+    "options": ["Oui", "Non", "Uniquement avec EFS Multi-AZ", "Uniquement avec EFS One Zone"],
+    "correct": 0,
+    "explication": "EFS est conçu pour être partagé entre plusieurs instances."
+  },
+  {
+    "id": "AWS-DEV-257",
+    "theme": "S3 & Storage",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "Quels sont les classes de stockage EFS ?",
+    "options": [
+      "Standard, Infrequent Access, Archive",
+      "Standard seulement",
+      "Infrequent Access seulement",
+      "Archive seulement"
+    ],
+    "correct": 0,
+    "explication": "EFS Standard, EFS-IA (Infrequent Access), EFS Archive."
+  },
+  {
+    "id": "AWS-DEV-258",
+    "theme": "S3 & Storage",
+    "theme_label": "Storage Gateway",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Storage Gateway ?",
+    "options": [
+      "Passerelle entre on-premise et AWS",
+      "Service de stockage",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "Storage Gateway intègre le stockage on-premise avec AWS."
+  },
+  {
+    "id": "AWS-DEV-259",
+    "theme": "S3 & Storage",
+    "theme_label": "Storage Gateway",
+    "difficulty": "hard",
+    "question": "Quels sont les types de Storage Gateway ?",
+    "options": [
+      "S3 File Gateway, FSx File Gateway, Volume Gateway, Tape Gateway",
+      "S3 Gateway seulement",
+      "Volume Gateway seulement",
+      "Tape Gateway seulement"
+    ],
+    "correct": 0,
+    "explication": "Quatre types pour différents cas d'usage."
+  },
+  {
+    "id": "AWS-DEV-260",
+    "theme": "S3 & Storage",
+    "theme_label": "AWS Backup",
+    "difficulty": "hard",
+    "question": "AWS Backup peut-il sauvegarder des volumes EBS ?",
+    "options": ["Oui", "Non", "Uniquement pour RDS", "Uniquement pour S3"],
+    "correct": 0,
+    "explication": "AWS Backup supporte EBS, RDS, DynamoDB, EFS, FSx, S3."
+  },
+  {
+    "id": "AWS-DEV-261",
+    "theme": "S3 & Storage",
+    "theme_label": "Snow Family",
+    "difficulty": "hard",
+    "question": "À quoi sert AWS Snow Family ?",
+    "options": [
+      "Transfert de données physiques",
+      "Backup",
+      "Archive",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "Snow Family (Snowcone, Snowball, Snowmobile) transfère des données physiquement."
+  },
+  {
+    "id": "AWS-DEV-262",
+    "theme": "S3 & Storage",
+    "theme_label": "Snow Family",
+    "difficulty": "hard",
+    "question": "Quel est le plus petit appareil Snow Family ?",
+    "options": ["Snowcone", "Snowball Edge", "Snowmobile", "Snowball"],
+    "correct": 0,
+    "explication": "Snowcone est le plus petit (2,1 kg, 8 To)."
+  },
+  {
+    "id": "AWS-DEV-263",
+    "theme": "S3 & Storage",
+    "theme_label": "S3 vs EBS vs EFS",
+    "difficulty": "hard",
+    "question": "Quand utiliser S3 plutôt que EBS ?",
+    "options": [
+      "Stockage objet illimité",
+      "Base de données",
+      "Système de fichiers partagé",
+      "Volume boot"
+    ],
+    "correct": 0,
+    "explication": "S3 pour stockage objet scalable, EBS pour volumes attachés à EC2."
+  },
+  {
+    "id": "AWS-DEV-264",
+    "theme": "S3 & Storage",
+    "theme_label": "S3 vs EBS vs EFS",
+    "difficulty": "hard",
+    "question": "Quand utiliser EFS plutôt que EBS ?",
+    "options": [
+      "Partage de fichiers entre instances",
+      "Volume boot",
+      "Haute performance",
+      "Faible coût"
+    ],
+    "correct": 0,
+    "explication": "EFS pour partage NFS entre plusieurs instances."
+  },
+  {
+    "id": "AWS-DEV-265",
+    "theme": "S3 & Storage",
+    "theme_label": "DataSync",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS DataSync ?",
+    "options": [
+      "Service de transfert de données automatisé",
+      "Backup",
+      "Archive",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "DataSync transfère des données entre on-premise et AWS ou entre services AWS."
+  },
+  {
+    "id": "AWS-DEV-266",
+    "theme": "S3 & Storage",
+    "theme_label": "DataSync",
+    "difficulty": "hard",
+    "question": "DataSync supporte-t-il la vérification d'intégrité ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement avec chiffrement"],
+    "correct": 0,
+    "explication": "DataSync vérifie l'intégrité des données pendant le transfert."
+  },
+  {
+    "id": "AWS-DEV-267",
+    "theme": "S3 & Storage",
+    "theme_label": "Cost optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts S3 ?",
+    "options": [
+      "Lifecycle policies, classes de stockage",
+      "Plus de versions",
+      "Plus de réplication",
+      "Chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les lifecycle policies et le choix de classe de stockage réduisent les coûts."
+  },
+  {
+    "id": "AWS-DEV-268",
+    "theme": "S3 & Storage",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un bucket S3 ?",
+    "options": [
+      "Bucket policies, ACLs, IAM, chiffrement",
+      "Bucket policies seulement",
+      "IAM seulement",
+      "ACLs seulement"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs couches de sécurité pour S3."
+  },
+  {
+    "id": "AWS-DEV-269",
+    "theme": "S3 & Storage",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Block Public Access ?",
+    "options": [
+      "Empêche les accès publics au niveau bucket/account",
+      "Bloque les accès privés",
+      "Supprime les politiques publiques",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Block Public Access désactive les politiques et ACLs publiques."
+  },
+  {
+    "id": "AWS-DEV-270",
+    "theme": "S3 & Storage",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que S3 Access Analyzer ?",
+    "options": [
+      "Analyse les politiques pour accès non intentionnels",
+      "Analyse les performances",
+      "Analyse les coûts",
+      "Analyse les logs"
+    ],
+    "correct": 0,
+    "explication": "Access Analyzer détecte les politiques qui permettent des accès publics ou croisés."
+  }
+]

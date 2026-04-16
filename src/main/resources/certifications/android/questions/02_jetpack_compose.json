@@ -1,0 +1,867 @@
+[
+  {
+    "id": "AND-CMP-001",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Jetpack Compose ?",
+    "options": [
+      "UI toolkit déclaratif pour Android",
+      "Base de données",
+      "Bibliothèque réseau",
+      "Framework de test"
+    ],
+    "correct": 0,
+    "explanation": "Jetpack Compose est le nouveau toolkit UI déclaratif d'Android."
+  },
+  {
+    "id": "AND-CMP-002",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque une fonction composable ?",
+    "options": ["@Composable", "@Compose", "@UI", "@Component"],
+    "correct": 0,
+    "explanation": "@Composable est l'annotation pour les fonctions UI Compose."
+  },
+  {
+    "id": "AND-CMP-003",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "easy",
+    "question": "Comment afficher du texte avec Compose ?",
+    "options": ["Text(\"Hello\")", "TextView(\"Hello\")", "Label(\"Hello\")", "Paragraph(\"Hello\")"],
+    "correct": 0,
+    "explanation": "Text() est le composable pour afficher du texte."
+  },
+  {
+    "id": "AND-CMP-004",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "easy",
+    "question": "Comment créer un bouton avec Compose ?",
+    "options": ["Button(onClick = {}) { Text(\"Click\") }", "Button(text = \"Click\")", "Clickable(text = \"Click\")", "Touchable(\"Click\")"],
+    "correct": 0,
+    "explanation": "Button() prend un onClick lambda et un contenu."
+  },
+  {
+    "id": "AND-CMP-005",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "medium",
+    "question": "Comment organiser des éléments verticalement ?",
+    "options": ["Column", "Row", "Box", "LinearLayout"],
+    "correct": 0,
+    "explanation": "Column arrange les enfants verticalement."
+  },
+  {
+    "id": "AND-CMP-006",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "medium",
+    "question": "Comment organiser des éléments horizontalement ?",
+    "options": ["Row", "Column", "Box", "LinearLayout"],
+    "correct": 0,
+    "explanation": "Row arrange les enfants horizontalement."
+  },
+  {
+    "id": "AND-CMP-007",
+    "theme": "Jetpack Compose",
+    "theme_label": "Fondamentaux Compose",
+    "difficulty": "medium",
+    "question": "À quoi sert Box ?",
+    "options": [
+      "Superposer des éléments",
+      "Organiser verticalement",
+      "Organiser horizontalement",
+      "Scroll"
+    ],
+    "correct": 0,
+    "explanation": "Box superpose ses enfants les uns sur les autres."
+  },
+  {
+    "id": "AND-CMP-008",
+    "theme": "Jetpack Compose",
+    "theme_label": "État",
+    "difficulty": "medium",
+    "question": "Comment déclarer un état mutable dans Compose ?",
+    "options": [
+      "var text by remember { mutableStateOf(\"\") }",
+      "var text = mutableStateOf(\"\")",
+      "val text = remember { \"\" }",
+      "var text = stateOf(\"\")"
+    ],
+    "correct": 0,
+    "explanation": "remember { mutableStateOf() } préserve l'état à travers les recompositions."
+  },
+  {
+    "id": "AND-CMP-009",
+    "theme": "Jetpack Compose",
+    "theme_label": "État",
+    "difficulty": "hard",
+    "question": "Que fait rememberSaveable ?",
+    "options": [
+      "Sauvegarde l'état après rotation",
+      "Cache l'état",
+      "Optimise les performances",
+      "Partage l'état"
+    ],
+    "correct": 0,
+    "explanation": "rememberSaveable survit aux changements de configuration."
+  },
+  {
+    "id": "AND-CMP-010",
+    "theme": "Jetpack Compose",
+    "theme_label": "État",
+    "difficulty": "hard",
+    "question": "Comment déclencher une recomposition ?",
+    "options": [
+      "Modifier une variable State",
+      "Appeler invalidate()",
+      "Recompose()",
+      "refresh()"
+    ],
+    "correct": 0,
+    "explanation": "La modification d'une variable State déclenche la recomposition."
+  },
+  {
+    "id": "AND-CMP-011",
+    "theme": "Jetpack Compose",
+    "theme_label": "Modificateurs",
+    "difficulty": "medium",
+    "question": "À quoi sert Modifier ?",
+    "options": [
+      "Personnaliser l'apparence et le comportement",
+      "Créer des animations",
+      "Gérer l'état",
+      "Naviguer"
+    ],
+    "correct": 0,
+    "explanation": "Modifier permet de configurer padding, taille, clic, etc."
+  },
+  {
+    "id": "AND-CMP-012",
+    "theme": "Jetpack Compose",
+    "theme_label": "Modificateurs",
+    "difficulty": "easy",
+    "question": "Comment ajouter un padding à un composable ?",
+    "options": [
+      "Modifier.padding(16.dp)",
+      "Modifier.padding(16)",
+      "Modifier.offset(16.dp)",
+      "Modifier.margin(16.dp)"
+    ],
+    "correct": 0,
+    "explanation": "padding() ajoute un espacement intérieur."
+  },
+  {
+    "id": "AND-CMP-013",
+    "theme": "Jetpack Compose",
+    "theme_label": "Modificateurs",
+    "difficulty": "easy",
+    "question": "Comment rendre un élément cliquable ?",
+    "options": [
+      "Modifier.clickable { }",
+      "Modifier.onClick { }",
+      "Modifier.tap { }",
+      "Modifier.press { }"
+    ],
+    "correct": 0,
+    "explanation": "clickable() rend l'élément cliquable."
+  },
+  {
+    "id": "AND-CMP-014",
+    "theme": "Jetpack Compose",
+    "theme_label": "Modificateurs",
+    "difficulty": "hard",
+    "question": "Comment chaîner plusieurs modificateurs ?",
+    "options": [
+      "Modifier.padding(16.dp).clickable { }",
+      "Modifier.padding(16.dp) then Modifier.clickable { }",
+      "Modifier(padding = 16.dp, clickable = true)",
+      "Modifier.combine(padding(16.dp), clickable { })"
+    ],
+    "correct": 0,
+    "explanation": "Les modificateurs se chaînent avec l'opérateur point."
+  },
+  {
+    "id": "AND-CMP-015",
+    "theme": "Jetpack Compose",
+    "theme_label": "Thème",
+    "difficulty": "easy",
+    "question": "Comment définir le thème d'une application Compose ?",
+    "options": [
+      "MaterialTheme { }",
+      "ComposeTheme { }",
+      "AndroidTheme { }",
+      "DesignTheme { }"
+    ],
+    "correct": 0,
+    "explanation": "MaterialTheme est le composable de thème Material Design."
+  },
+  {
+    "id": "AND-CMP-016",
+    "theme": "Jetpack Compose",
+    "theme_label": "Thème",
+    "difficulty": "hard",
+    "question": "Comment accéder aux couleurs du thème ?",
+    "options": [
+      "MaterialTheme.colors.primary",
+      "LocalColors.current.primary",
+      "Theme.colors.primary",
+      "Colors.primary"
+    ],
+    "correct": 0,
+    "explanation": "MaterialTheme.colors donne accès aux couleurs."
+  },
+  {
+    "id": "AND-CMP-017",
+    "theme": "Jetpack Compose",
+    "theme_label": "Thème",
+    "difficulty": "hard",
+    "question": "Comment créer un thème personnalisé ?",
+    "options": [
+      "MaterialTheme(colors = customColors)",
+      "ComposeTheme(colors = customColors)",
+      "Theme(colors = customColors)",
+      "CustomTheme(colors = customColors)"
+    ],
+    "correct": 0,
+    "explanation": "MaterialTheme accepte un paramètre colors personnalisé."
+  },
+  {
+    "id": "AND-CMP-018",
+    "theme": "Jetpack Compose",
+    "theme_label": "Navigation",
+    "difficulty": "hard",
+    "question": "Quelle bibliothèque utilise-t-on pour la navigation Compose ?",
+    "options": [
+      "navigation-compose",
+      "compose-navigation",
+      "androidx.navigation.compose",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "androidx.navigation.compose est la bibliothèque officielle."
+  },
+  {
+    "id": "AND-CMP-019",
+    "theme": "Jetpack Compose",
+    "theme_label": "Navigation",
+    "difficulty": "hard",
+    "question": "Comment créer un NavController ?",
+    "options": [
+      "rememberNavController()",
+      "NavController()",
+      "createNavController()",
+      "getNavController()"
+    ],
+    "correct": 0,
+    "explanation": "rememberNavController() crée un NavController pour la navigation."
+  },
+  {
+    "id": "AND-CMP-020",
+    "theme": "Jetpack Compose",
+    "theme_label": "Navigation",
+    "difficulty": "hard",
+    "question": "Comment naviguer vers un écran ?",
+    "options": [
+      "navController.navigate(\"screen\")",
+      "navController.goTo(\"screen\")",
+      "navController.push(\"screen\")",
+      "navController.forward(\"screen\")"
+    ],
+    "correct": 0,
+    "explanation": "navigate() change l'écran courant."
+  },
+  {
+    "id": "AND-CMP-021",
+    "theme": "Jetpack Compose",
+    "theme_label": "Listes",
+    "difficulty": "medium",
+    "question": "Quel composable affiche une liste verticale ?",
+    "options": ["LazyColumn", "Column", "ListView", "VerticalList"],
+    "correct": 0,
+    "explanation": "LazyColumn affiche une liste avec chargement paresseux."
+  },
+  {
+    "id": "AND-CMP-022",
+    "theme": "Jetpack Compose",
+    "theme_label": "Listes",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre Column et LazyColumn ?",
+    "options": [
+      "LazyColumn charge paresseusement",
+      "Column est plus rapide",
+      "LazyColumn est déprécié",
+      "Column charge paresseusement"
+    ],
+    "correct": 0,
+    "explanation": "LazyColumn ne compose que les éléments visibles."
+  },
+  {
+    "id": "AND-CMP-023",
+    "theme": "Jetpack Compose",
+    "theme_label": "Listes",
+    "difficulty": "hard",
+    "question": "Comment itérer sur une liste avec LazyColumn ?",
+    "options": [
+      "items(list) { item -> Text(item) }",
+      "for (item in list) { Text(item) }",
+      "list.forEach { Text(it) }",
+      "LazyColumn(list) { Text(it) }"
+    ],
+    "correct": 0,
+    "explanation": "items() est la DSL pour itérer dans LazyColumn."
+  },
+  {
+    "id": "AND-CMP-024",
+    "theme": "Jetpack Compose",
+    "theme_label": "Animations",
+    "difficulty": "hard",
+    "question": "Comment créer une animation de fondu ?",
+    "options": [
+      "AnimatedVisibility { }",
+      "FadeAnimation { }",
+      "Transition { }",
+      "animateFade { }"
+    ],
+    "correct": 0,
+    "explanation": "AnimatedVisibility anime l'apparition/disparition."
+  },
+  {
+    "id": "AND-CMP-025",
+    "theme": "Jetpack Compose",
+    "theme_label": "Animations",
+    "difficulty": "hard",
+    "question": "Comment animer une valeur ?",
+    "options": [
+      "animateFloatAsState()",
+      "animateFloat()",
+      "floatAnimation()",
+      "animValue()"
+    ],
+    "correct": 0,
+    "explanation": "animateFloatAsState() anime un Float vers une cible."
+  },
+  {
+    "id": "AND-CMP-026",
+    "theme": "Jetpack Compose",
+    "theme_label": "Dialogs",
+    "difficulty": "hard",
+    "question": "Comment afficher une boîte de dialogue ?",
+    "options": [
+      "AlertDialog { }",
+      "Dialog { }",
+      "Popup { }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "AlertDialog et Dialog sont disponibles."
+  },
+  {
+    "id": "AND-CMP-027",
+    "theme": "Jetpack Compose",
+    "theme_label": "Scaffold",
+    "difficulty": "hard",
+    "question": "À quoi sert Scaffold ?",
+    "options": [
+      "Structure d'écran (TopBar, BottomBar, FAB)",
+      "Base de données",
+      "Gestion d'état",
+      "Navigation"
+    ],
+    "correct": 0,
+    "explanation": "Scaffold implémente la structure Material Design."
+  },
+  {
+    "id": "AND-CMP-028",
+    "theme": "Jetpack Compose",
+    "theme_label": "Scaffold",
+    "difficulty": "hard",
+    "question": "Comment ajouter un TopAppBar ?",
+    "options": [
+      "Scaffold(topBar = { TopAppBar(title = { Text(\"Title\") }) })",
+      "Scaffold(topBar = TopAppBar(\"Title\"))",
+      "TopAppBar(title = \"Title\")",
+      "AppBar(title = \"Title\")"
+    ],
+    "correct": 0,
+    "explanation": "topBar est un paramètre de Scaffold."
+  },
+  {
+    "id": "AND-CMP-029",
+    "theme": "Jetpack Compose",
+    "theme_label": "ViewModel",
+    "difficulty": "hard",
+    "question": "Comment injecter un ViewModel dans Compose ?",
+    "options": [
+      "viewModel()",
+      "ViewModel()",
+      "rememberViewModel()",
+      "getViewModel()"
+    ],
+    "correct": 0,
+    "explanation": "viewModel() de androidx.lifecycle:lifecycle-viewmodel-compose."
+  },
+  {
+    "id": "AND-CMP-030",
+    "theme": "Jetpack Compose",
+    "theme_label": "ViewModel",
+    "difficulty": "hard",
+    "question": "Comment observer un LiveData dans Compose ?",
+    "options": [
+      "observeAsState()",
+      "toState()",
+      "asState()",
+      "collectAsState()"
+    ],
+    "correct": 0,
+    "explanation": "observeAsState() convertit LiveData en State Compose."
+  },
+  {
+    "id": "AND-CMP-031",
+    "theme": "Jetpack Compose",
+    "theme_label": "ViewModel",
+    "difficulty": "hard",
+    "question": "Comment observer un Flow dans Compose ?",
+    "options": [
+      "collectAsState()",
+      "observeAsState()",
+      "flowAsState()",
+      "toState()"
+    ],
+    "correct": 0,
+    "explanation": "collectAsState() collecte un Flow en State."
+  },
+  {
+    "id": "AND-CMP-032",
+    "theme": "Jetpack Compose",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "À quoi sert remember ?",
+    "options": [
+      "Mémoriser une valeur entre recompositions",
+      "Créer un état",
+      "Optimiser les performances",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "remember évite de recalculer à chaque recomposition."
+  },
+  {
+    "id": "AND-CMP-033",
+    "theme": "Jetpack Compose",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "À quoi sert derivedStateOf ?",
+    "options": [
+      "Créer un état dérivé optimisé",
+      "Créer un état mutable",
+      "Créer un état immuable",
+      "Créer un état global"
+    ],
+    "correct": 0,
+    "explanation": "derivedStateOf réduit les recompositions inutiles."
+  },
+  {
+    "id": "AND-CMP-034",
+    "theme": "Jetpack Compose",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Que fait @Stable ?",
+    "options": [
+      "Indique qu'un type est stable",
+      "Optimise les recompositions",
+      "Évite les recalculs",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "@Stable aide le compilateur à optimiser les recompositions."
+  },
+  {
+    "id": "AND-CMP-035",
+    "theme": "Jetpack Compose",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester un composable ?",
+    "options": [
+      "ComposeTestRule",
+      "createComposeRule()",
+      "AndroidComposeTestRule",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs règles de test pour Compose."
+  },
+  {
+    "id": "AND-CMP-036",
+    "theme": "Jetpack Compose",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment vérifier qu'un texte est affiché ?",
+    "options": [
+      "onNodeWithText(\"Hello\").assertExists()",
+      "findText(\"Hello\").assertExists()",
+      "checkText(\"Hello\")",
+      "assertText(\"Hello\")"
+    ],
+    "correct": 0,
+    "explanation": "onNodeWithText trouve un nœud par son texte."
+  },
+  {
+    "id": "AND-CMP-037",
+    "theme": "Jetpack Compose",
+    "theme_label": "Preview",
+    "difficulty": "hard",
+    "question": "Quelle annotation affiche un aperçu ?",
+    "options": ["@Preview", "@Show", "@Display", "@View"],
+    "correct": 0,
+    "explanation": "@Preview génère un aperçu dans l'IDE."
+  },
+  {
+    "id": "AND-CMP-038",
+    "theme": "Jetpack Compose",
+    "theme_label": "Preview",
+    "difficulty": "hard",
+    "question": "Comment prévisualiser plusieurs thèmes ?",
+    "options": [
+      "@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)",
+      "@Preview(theme = \"dark\")",
+      "@Preview(darkMode = true)",
+      "@Preview(night = true)"
+    ],
+    "correct": 0,
+    "explanation": "uiMode permet de prévisualiser le mode nuit."
+  },
+  {
+    "id": "AND-CMP-039",
+    "theme": "Jetpack Compose",
+    "theme_label": "Interopérabilité",
+    "difficulty": "hard",
+    "question": "Comment utiliser une vue Android dans Compose ?",
+    "options": [
+      "AndroidView { context -> TextView(context) }",
+      "ComposeView { TextView(context) }",
+      "ViewBinding { TextView() }",
+      "LegacyView { TextView() }"
+    ],
+    "correct": 0,
+    "explanation": "AndroidView intègre des vues traditionnelles."
+  },
+  {
+    "id": "AND-CMP-040",
+    "theme": "Jetpack Compose",
+    "theme_label": "Interopérabilité",
+    "difficulty": "hard",
+    "question": "Comment utiliser Compose dans une vue traditionnelle ?",
+    "options": [
+      "ComposeView",
+      "AndroidComposeView",
+      "ComposeViewHolder",
+      "ComposeLayout"
+    ],
+    "correct": 0,
+    "explanation": "ComposeView contient du contenu Compose."
+  },
+  {
+    "id": "AND-CMP-041",
+    "theme": "Jetpack Compose",
+    "theme_label": "Window Insets",
+    "difficulty": "hard",
+    "question": "Comment gérer les encoches (notch) ?",
+    "options": [
+      "WindowInsets",
+      "DisplayCutout",
+      "EdgeInsets",
+      "SafeArea"
+    ],
+    "correct": 0,
+    "explanation": "WindowInsets gère les zones système (barre d'état, navigation)."
+  },
+  {
+    "id": "AND-CMP-042",
+    "theme": "Jetpack Compose",
+    "theme_label": "Window Insets",
+    "difficulty": "hard",
+    "question": "Comment ignorer les insets système ?",
+    "options": [
+      "Modifier.systemBarsPadding()",
+      "Modifier.ignoreInsets()",
+      "Modifier.noInsets()",
+      "Modifier.fullScreen()"
+    ],
+    "correct": 0,
+    "explanation": "systemBarsPadding() ajoute le padding des barres système."
+  },
+  {
+    "id": "AND-CMP-043",
+    "theme": "Jetpack Compose",
+    "theme_label": "Gestures",
+    "difficulty": "hard",
+    "question": "Comment détecter un tap ?",
+    "options": [
+      "Modifier.pointerInput(Unit) { detectTapGestures { } }",
+      "Modifier.clickable { }",
+      "Modifier.tap { }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "clickable ou pointerInput avec detectTapGestures."
+  },
+  {
+    "id": "AND-CMP-044",
+    "theme": "Jetpack Compose",
+    "theme_label": "Gestures",
+    "difficulty": "hard",
+    "question": "Comment détecter un swipe ?",
+    "options": [
+      "Modifier.swipeable()",
+      "Modifier.draggable()",
+      "Modifier.pointerInput { detectDragGestures { } }",
+      "B et C"
+    ],
+    "correct": 3,
+    "explanation": "draggable ou detectDragGestures pour le glisser."
+  },
+  {
+    "id": "AND-CMP-045",
+    "theme": "Jetpack Compose",
+    "theme_label": "Graphics",
+    "difficulty": "hard",
+    "question": "Comment dessiner des formes personnalisées ?",
+    "options": [
+      "Canvas",
+      "DrawScope",
+      "GraphicsLayer",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Canvas avec DrawScope permet le dessin personnalisé."
+  },
+  {
+    "id": "AND-CMP-046",
+    "theme": "Jetpack Compose",
+    "theme_label": "Graphics",
+    "difficulty": "hard",
+    "question": "Comment appliquer un coin arrondi ?",
+    "options": [
+      "Modifier.clip(RoundedCornerShape(8.dp))",
+      "Modifier.rounded(8.dp)",
+      "Modifier.corner(8.dp)",
+      "Modifier.borderRadius(8.dp)"
+    ],
+    "correct": 0,
+    "explanation": "clip() avec RoundedCornerShape arrondit les coins."
+  },
+  {
+    "id": "AND-CMP-047",
+    "theme": "Jetpack Compose",
+    "theme_label": "Accessibility",
+    "difficulty": "hard",
+    "question": "Comment ajouter une description pour l'accessibilité ?",
+    "options": [
+      "Modifier.semantics { contentDescription = \"...\" }",
+      "Modifier.accessibility(\"...\")",
+      "Modifier.describe(\"...\")",
+      "Modifier.contentDescription(\"...\")"
+    ],
+    "correct": 0,
+    "explanation": "semantics avec contentDescription pour TalkBack."
+  },
+  {
+    "id": "AND-CMP-048",
+    "theme": "Jetpack Compose",
+    "theme_label": "Accessibility",
+    "difficulty": "hard",
+    "question": "Comment rendre un élément focusable ?",
+    "options": [
+      "Modifier.focusable()",
+      "Modifier.canFocus()",
+      "Modifier.focus()",
+      "Modifier.tabIndex()"
+    ],
+    "correct": 0,
+    "explanation": "focusable() permet la navigation au clavier/D-pad."
+  },
+  {
+    "id": "AND-CMP-049",
+    "theme": "Jetpack Compose",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les fonctions composables doivent-elles être suspend ?",
+    "options": [
+      "Non, elles sont synchrones",
+      "Oui, toujours",
+      "Oui, pour les effets",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Les composables sont synchrones, pour les async utiliser LaunchedEffect."
+  },
+  {
+    "id": "AND-CMP-050",
+    "theme": "Jetpack Compose",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Où placer les side-effects ?",
+    "options": [
+      "LaunchedEffect, DisposableEffect",
+      "Dans le composable directement",
+      "Dans ViewModel",
+      "Dans un Flow"
+    ],
+    "correct": 0,
+    "explanation": "Les effets doivent être dans LaunchedEffect ou DisposableEffect."
+  },
+  {
+    "id": "AND-CMP-051",
+    "theme": "Jetpack Compose",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la convention de nommage pour les composables ?",
+    "options": [
+      "PascalCase",
+      "camelCase",
+      "snake_case",
+      "UPPER_CASE"
+    ],
+    "correct": 0,
+    "explanation": "Les fonctions composables utilisent PascalCase."
+  },
+  {
+    "id": "AND-CMP-052",
+    "theme": "Jetpack Compose",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Peut-on migrer progressivement vers Compose ?",
+    "options": [
+      "Oui, composable par composable",
+      "Non, migration totale",
+      "Oui, écran par écran",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Migration progressive possible (écran ou composant)."
+  },
+  {
+    "id": "AND-CMP-053",
+    "theme": "Jetpack Compose",
+    "theme_label": "State hoisting",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le state hoisting ?",
+    "options": [
+      "Remonter l'état au parent",
+      "Descendre l'état",
+      "Partager l'état",
+      "Cacher l'état"
+    ],
+    "correct": 0,
+    "explanation": "Le state hoisting place l'état dans le parent pour le rendre réutilisable."
+  },
+  {
+    "id": "AND-CMP-054",
+    "theme": "Jetpack Compose",
+    "theme_label": "State hoisting",
+    "difficulty": "hard",
+    "question": "Quel pattern utilise le state hoisting ?",
+    "options": [
+      "Unidirectional Data Flow",
+      "MVP",
+      "MVC",
+      "MVVM"
+    ],
+    "correct": 0,
+    "explanation": "Le state hoisting est un pattern UDF (Unidirectional Data Flow)."
+  },
+  {
+    "id": "AND-CMP-055",
+    "theme": "Jetpack Compose",
+    "theme_label": "Recomposition",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la recomposition ?",
+    "options": [
+      "Re-exécution des composables",
+      "Re-création de l'Activity",
+      "Re-chargement du thème",
+      "Re-démarrage de l'app"
+    ],
+    "correct": 0,
+    "explanation": "La recomposition ré-exécute les composables quand l'état change."
+  },
+  {
+    "id": "AND-CMP-056",
+    "theme": "Jetpack Compose",
+    "theme_label": "Recomposition",
+    "difficulty": "hard",
+    "question": "Quand la recomposition se déclenche-t-elle ?",
+    "options": [
+      "Quand une variable State change",
+      "À intervalle régulier",
+      "Au redémarrage",
+      "À la création"
+    ],
+    "correct": 0,
+    "explanation": "La recomposition est déclenchée par les changements d'état."
+  },
+  {
+    "id": "AND-CMP-057",
+    "theme": "Jetpack Compose",
+    "theme_label": "Modifier.composed",
+    "difficulty": "hard",
+    "question": "À quoi sert Modifier.composed ?",
+    "options": [
+      "Créer des modificateurs avec état",
+      "Composer plusieurs modificateurs",
+      "Optimiser les performances",
+      "Debugger les modificateurs"
+    ],
+    "correct": 0,
+    "explanation": "composed permet de créer des modificateurs qui dépendent de l'état."
+  },
+  {
+    "id": "AND-CMP-058",
+    "theme": "Jetpack Compose",
+    "theme_label": "Layout",
+    "difficulty": "hard",
+    "question": "Comment créer un layout personnalisé ?",
+    "options": [
+      "Layout composable",
+      "CustomLayout",
+      "MeasurePolicy",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Layout avec MeasurePolicy permet des layouts personnalisés."
+  },
+  {
+    "id": "AND-CMP-059",
+    "theme": "Jetpack Compose",
+    "theme_label": "Layout",
+    "difficulty": "hard",
+    "question": "Quelle fonction mesure et place les enfants ?",
+    "options": [
+      "MeasureScope.measure",
+      "Layout.measure",
+      "SubcomposeLayout",
+      "BoxWithConstraints"
+    ],
+    "correct": 0,
+    "explanation": "MeasureScope fournit les méthodes de mesure et placement."
+  },
+  {
+    "id": "AND-CMP-060",
+    "theme": "Jetpack Compose",
+    "theme_label": "SubcomposeLayout",
+    "difficulty": "hard",
+    "question": "À quoi sert SubcomposeLayout ?",
+    "options": [
+      "Composition paresseuse des enfants",
+      "Layout imbriqué",
+      "Animation",
+      "Optimisation mémoire"
+    ],
+    "correct": 0,
+    "explanation": "SubcomposeLayout permet de composer les enfants paresseusement."
+  }
+]

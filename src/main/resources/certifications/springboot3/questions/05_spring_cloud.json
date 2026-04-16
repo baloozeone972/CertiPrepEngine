@@ -1,0 +1,752 @@
+[
+  {
+    "id": "SB3-CLD-001",
+    "theme": "Spring Cloud",
+    "theme_label": "Présentation",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que Spring Cloud ?",
+    "options": [
+      "Framework pour microservices",
+      "Serveur web",
+      "Base de données",
+      "ORM"
+    ],
+    "correct": 0,
+    "explanation": "Spring Cloud fournit des outils pour les architectures microservices."
+  },
+  {
+    "id": "SB3-CLD-002",
+    "theme": "Spring Cloud",
+    "theme_label": "Service Discovery",
+    "difficulty": "easy",
+    "question": "Quel service est utilisé pour la découverte de services ?",
+    "options": [
+      "Eureka",
+      "Consul",
+      "Zookeeper",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs options de service discovery existent."
+  },
+  {
+    "id": "SB3-CLD-003",
+    "theme": "Spring Cloud",
+    "theme_label": "Eureka Server",
+    "difficulty": "medium",
+    "question": "Quelle annotation active un serveur Eureka ?",
+    "options": [
+      "@EnableEurekaServer",
+      "@EnableDiscoveryServer",
+      "@EurekaServer",
+      "@EnableServiceRegistry"
+    ],
+    "correct": 0,
+    "explanation": "@EnableEurekaServer transforme l'application en serveur Eureka."
+  },
+  {
+    "id": "SB3-CLD-004",
+    "theme": "Spring Cloud",
+    "theme_label": "Eureka Client",
+    "difficulty": "medium",
+    "question": "Quelle annotation active un client Eureka ?",
+    "options": [
+      "@EnableEurekaClient",
+      "@EnableDiscoveryClient",
+      "@EurekaClient",
+      "@EnableServiceDiscovery"
+    ],
+    "correct": 1,
+    "explanation": "@EnableDiscoveryClient est générique pour plusieurs implémentations."
+  },
+  {
+    "id": "SB3-CLD-005",
+    "theme": "Spring Cloud",
+    "theme_label": "Load Balancing",
+    "difficulty": "hard",
+    "question": "Quel client HTTP supporte le load balancing ?",
+    "options": [
+      "RestTemplate avec @LoadBalanced",
+      "WebClient.Builder avec @LoadBalanced",
+      "FeignClient",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs clients supportent le load balancing."
+  },
+  {
+    "id": "SB3-CLD-006",
+    "theme": "Spring Cloud",
+    "theme_label": "Feign Client",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un client Feign ?",
+    "options": [
+      "@FeignClient",
+      "@RestClient",
+      "@HttpClient",
+      "@ServiceClient"
+    ],
+    "correct": 0,
+    "explanation": "@FeignClient déclare un client HTTP déclaratif."
+  },
+  {
+    "id": "SB3-CLD-007",
+    "theme": "Spring Cloud",
+    "theme_label": "Feign Client",
+    "difficulty": "hard",
+    "question": "Comment activer les clients Feign ?",
+    "options": [
+      "@EnableFeignClients",
+      "@FeignClients",
+      "@EnableFeign",
+      "@FeignAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "@EnableFeignClients active la détection des clients Feign."
+  },
+  {
+    "id": "SB3-CLD-008",
+    "theme": "Spring Cloud",
+    "theme_label": "Circuit Breaker",
+    "difficulty": "hard",
+    "question": "Quelle annotation active un circuit breaker ?",
+    "options": [
+      "@CircuitBreaker",
+      "@HystrixCommand",
+      "@Resilience4j",
+      "@Retryable"
+    ],
+    "correct": 1,
+    "explanation": "@HystrixCommand (ancien) ou l'API Resilience4j moderne."
+  },
+  {
+    "id": "SB3-CLD-009",
+    "theme": "Spring Cloud",
+    "theme_label": "Resilience4j",
+    "difficulty": "hard",
+    "question": "Quels patterns sont supportés par Resilience4j ?",
+    "options": [
+      "Circuit Breaker, Retry, Rate Limiter",
+      "Time Limiter, Bulkhead",
+      "Cache, Fallback",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Resilience4j supporte de nombreux patterns de résilience."
+  },
+  {
+    "id": "SB3-CLD-010",
+    "theme": "Spring Cloud",
+    "theme_label": "Circuit Breaker States",
+    "difficulty": "hard",
+    "question": "Quels sont les états d'un circuit breaker ?",
+    "options": [
+      "CLOSED, OPEN, HALF_OPEN",
+      "ON, OFF, TEST",
+      "ACTIVE, INACTIVE, PENDING",
+      "RUNNING, STOPPED, PAUSED"
+    ],
+    "correct": 0,
+    "explanation": "CLOSED (normal), OPEN (coupé), HALF_OPEN (test)."
+  },
+  {
+    "id": "SB3-CLD-011",
+    "theme": "Spring Cloud",
+    "theme_label": "API Gateway",
+    "difficulty": "hard",
+    "question": "Quel projet Spring Cloud est un API Gateway ?",
+    "options": [
+      "Spring Cloud Gateway",
+      "Spring Cloud Zuul",
+      "Spring Cloud Router",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Gateway (WebFlux) et Zuul (Servlet) sont les deux gateways."
+  },
+  {
+    "id": "SB3-CLD-012",
+    "theme": "Spring Cloud",
+    "theme_label": "Spring Cloud Gateway",
+    "difficulty": "hard",
+    "question": "Comment définir une route dans Gateway ?",
+    "options": [
+      "spring.cloud.gateway.routes",
+      "@Bean RouteLocator",
+      "Configuration Java",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de configurer les routes."
+  },
+  {
+    "id": "SB3-CLD-013",
+    "theme": "Spring Cloud",
+    "theme_label": "Gateway Filters",
+    "difficulty": "hard",
+    "question": "Quels types de filtres existent dans Gateway ?",
+    "options": [
+      "Pre et Post filters",
+      "Global filters",
+      "Route filters",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Gateway supporte plusieurs types de filtres."
+  },
+  {
+    "id": "SB3-CLD-014",
+    "theme": "Spring Cloud",
+    "theme_label": "Configuration Server",
+    "difficulty": "hard",
+    "question": "Quel service centralise la configuration ?",
+    "options": [
+      "Spring Cloud Config Server",
+      "Spring Cloud Vault",
+      "Spring Cloud Configuration",
+      "Spring Config"
+    ],
+    "correct": 0,
+    "explanation": "Config Server centralise la configuration externe."
+  },
+  {
+    "id": "SB3-CLD-015",
+    "theme": "Spring Cloud",
+    "theme_label": "Config Server",
+    "difficulty": "hard",
+    "question": "Quelle annotation active un Config Server ?",
+    "options": [
+      "@EnableConfigServer",
+      "@ConfigurationServer",
+      "@ConfigServer",
+      "@EnableConfigurationServer"
+    ],
+    "correct": 0,
+    "explanation": "@EnableConfigServer transforme l'application en serveur de configuration."
+  },
+  {
+    "id": "SB3-CLD-016",
+    "theme": "Spring Cloud",
+    "theme_label": "Config Server Backends",
+    "difficulty": "hard",
+    "question": "Quels backends sont supportés par Config Server ?",
+    "options": [
+      "Git, Vault, JDBC",
+      "Filesystem, S3",
+      "Consul, Etcd",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "De nombreux backends sont supportés."
+  },
+  {
+    "id": "SB3-CLD-017",
+    "theme": "Spring Cloud",
+    "theme_label": "Config Client",
+    "difficulty": "hard",
+    "question": "Comment un client charge la configuration ?",
+    "options": [
+      "spring.config.import=configserver:",
+      "@RefreshScope",
+      "@ConfigurationProperties",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Le client charge la configuration au démarrage."
+  },
+  {
+    "id": "SB3-CLD-018",
+    "theme": "Spring Cloud",
+    "theme_label": "Refresh Scope",
+    "difficulty": "hard",
+    "question": "À quoi sert @RefreshScope ?",
+    "options": [
+      "Recharger la configuration dynamiquement",
+      "Créer un scope personnalisé",
+      "Gérer le cycle de vie",
+      "Optimiser les performances"
+    ],
+    "correct": 0,
+    "explanation": "@RefreshScope permet de recharger les beans après un refresh."
+  },
+  {
+    "id": "SB3-CLD-019",
+    "theme": "Spring Cloud",
+    "theme_label": "Bus",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Spring Cloud Bus ?",
+    "options": [
+      "Propagation d'événements entre services",
+      "Message broker",
+      "API Gateway",
+      "Service discovery"
+    ],
+    "correct": 0,
+    "explanation": "Bus propage les événements (refresh, etc.) à travers les services."
+  },
+  {
+    "id": "SB3-CLD-020",
+    "theme": "Spring Cloud",
+    "theme_label": "Sleuth",
+    "difficulty": "hard",
+    "question": "À quoi sert Spring Cloud Sleuth ?",
+    "options": [
+      "Tracing distribué",
+      "Logging",
+      "Monitoring",
+      "Sécurité"
+    ],
+    "correct": 0,
+    "explanation": "Sleuth ajoute des identifiants de trace pour le debugging distribué."
+  },
+  {
+    "id": "SB3-CLD-021",
+    "theme": "Spring Cloud",
+    "theme_label": "Sleuth",
+    "difficulty": "hard",
+    "question": "Quels identifiants ajoute Sleuth ?",
+    "options": [
+      "traceId, spanId",
+      "requestId, sessionId",
+      "correlationId, messageId",
+      "userId, transactionId"
+    ],
+    "correct": 0,
+    "explanation": "Sleuth ajoute traceId et spanId aux logs."
+  },
+  {
+    "id": "SB3-CLD-022",
+    "theme": "Spring Cloud",
+    "theme_label": "Zipkin",
+    "difficulty": "hard",
+    "question": "À quoi sert Zipkin ?",
+    "options": [
+      "Visualisation des traces",
+      "Stockage des logs",
+      "Métriques",
+      "Alerting"
+    ],
+    "correct": 0,
+    "explanation": "Zipkin collecte et visualise les données de tracing."
+  },
+  {
+    "id": "SB3-CLD-023",
+    "theme": "Spring Cloud",
+    "theme_label": "Spring Cloud Stream",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Spring Cloud Stream ?",
+    "options": [
+      "Framework pour messaging",
+      "Stream processing",
+      "Message broker",
+      "API Gateway"
+    ],
+    "correct": 0,
+    "explanation": "Stream simplifie le développement d'applications événementielles."
+  },
+  {
+    "id": "SB3-CLD-024",
+    "theme": "Spring Cloud",
+    "theme_label": "Binders",
+    "difficulty": "hard",
+    "question": "Quels binders sont supportés par Stream ?",
+    "options": [
+      "Kafka, RabbitMQ",
+      "AWS Kinesis, Azure Event Hubs",
+      "Google Pub/Sub",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "De nombreux binders sont disponibles."
+  },
+  {
+    "id": "SB3-CLD-025",
+    "theme": "Spring Cloud",
+    "theme_label": "Stream Annotations",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un supplier de messages ?",
+    "options": [
+      "@Supplier",
+      "@Source",
+      "@Producer",
+      "@Publisher"
+    ],
+    "correct": 1,
+    "explanation": "@Source (ancien) ou java.util.function.Supplier (moderne)."
+  },
+  {
+    "id": "SB3-CLD-026",
+    "theme": "Spring Cloud",
+    "theme_label": "Stream Annotations",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un consumer de messages ?",
+    "options": [
+      "@Consumer",
+      "@Sink",
+      "@Processor",
+      "@Subscriber"
+    ],
+    "correct": 1,
+    "explanation": "@Sink (ancien) ou java.util.function.Consumer (moderne)."
+  },
+  {
+    "id": "SB3-CLD-027",
+    "theme": "Spring Cloud",
+    "theme_label": "Stream Functions",
+    "difficulty": "hard",
+    "question": "Quel type de fonction traite et produit des messages ?",
+    "options": [
+      "Function<I, O>",
+      "Supplier<O>",
+      "Consumer<I>",
+      "Processor<I, O>"
+    ],
+    "correct": 0,
+    "explanation": "Function transforme un message d'entrée en sortie."
+  },
+  {
+    "id": "SB3-CLD-028",
+    "theme": "Spring Cloud",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les communications entre services ?",
+    "options": [
+      "Spring Cloud Security",
+      "OAuth2",
+      "mTLS",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs options de sécurité sont disponibles."
+  },
+  {
+    "id": "SB3-CLD-029",
+    "theme": "Spring Cloud",
+    "theme_label": "Vault",
+    "difficulty": "hard",
+    "question": "À quoi sert Spring Cloud Vault ?",
+    "options": [
+      "Gestion des secrets",
+      "Configuration",
+      "Service discovery",
+      "Load balancing"
+    ],
+    "correct": 0,
+    "explanation": "Vault gère les secrets (mots de passe, clés API, etc.)."
+  },
+  {
+    "id": "SB3-CLD-030",
+    "theme": "Spring Cloud",
+    "theme_label": "Kubernetes",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Spring Cloud Kubernetes ?",
+    "options": [
+      "Intégration avec Kubernetes",
+      "Service discovery via K8s",
+      "Configuration via ConfigMaps",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Spring Cloud Kubernetes s'intègre avec les primitives K8s."
+  },
+  {
+    "id": "SB3-CLD-031",
+    "theme": "Spring Cloud",
+    "theme_label": "Kubernetes Discovery",
+    "difficulty": "hard",
+    "question": "Comment activer la découverte Kubernetes ?",
+    "options": [
+      "@EnableDiscoveryClient",
+      "spring.cloud.kubernetes.discovery.enabled=true",
+      "spring.cloud.discovery.enabled=true",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "La découverte nécessite l'activation explicite."
+  },
+  {
+    "id": "SB3-CLD-032",
+    "theme": "Spring Cloud",
+    "theme_label": "Kubernetes Config",
+    "difficulty": "hard",
+    "question": "Comment charger une ConfigMap ?",
+    "options": [
+      "spring.cloud.kubernetes.config.enabled=true",
+      "spring.cloud.kubernetes.config.name=my-config",
+      "@ConfigurationProperties",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de charger les ConfigMaps."
+  },
+  {
+    "id": "SB3-CLD-033",
+    "theme": "Spring Cloud",
+    "theme_label": "Function Catalog",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Function Catalog ?",
+    "options": [
+      "Registre de fonctions",
+      "Message broker",
+      "API Gateway",
+      "Service discovery"
+    ],
+    "correct": 0,
+    "explanation": "Function Catalog permet de découvrir et d'invoquer des fonctions."
+  },
+  {
+    "id": "SB3-CLD-034",
+    "theme": "Spring Cloud",
+    "theme_label": "Deployer",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Spring Cloud Deployer ?",
+    "options": [
+      "Déploiement d'applications",
+      "Orchestration",
+      "Service discovery",
+      "Load balancing"
+    ],
+    "correct": 0,
+    "explanation": "Deployer permet de déployer des applications sur différentes plateformes."
+  },
+  {
+    "id": "SB3-CLD-035",
+    "theme": "Spring Cloud",
+    "theme_label": "Task",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Spring Cloud Task ?",
+    "options": [
+      "Applications batch",
+      "Microservices",
+      "API Gateway",
+      "Service discovery"
+    ],
+    "correct": 0,
+    "explanation": "Task permet de développer des applications batch qui s'exécutent et se terminent."
+  },
+  {
+    "id": "SB3-CLD-036",
+    "theme": "Spring Cloud",
+    "theme_label": "Data Flow",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Spring Cloud Data Flow ?",
+    "options": [
+      "Orchestration de pipelines de données",
+      "Stream processing",
+      "Batch processing",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Data Flow orchestre des pipelines de données stream et batch."
+  },
+  {
+    "id": "SB3-CLD-037",
+    "theme": "Spring Cloud",
+    "theme_label": "Contract",
+    "difficulty": "hard",
+    "question": "À quoi sert Spring Cloud Contract ?",
+    "options": [
+      "Consumer-driven contracts",
+      "Tests de contrats",
+      "API versioning",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Contract permet de tester l'API des microservices via des contrats."
+  },
+  {
+    "id": "SB3-CLD-038",
+    "theme": "Spring Cloud",
+    "theme_label": "Contract Stubs",
+    "difficulty": "hard",
+    "question": "Que sont les stubs dans Contract ?",
+    "options": [
+      "Simulation du provider",
+      "Simulation du consumer",
+      "Données de test",
+      "Configuration"
+    ],
+    "correct": 0,
+    "explanation": "Les stubs simulent le comportement du provider pour les tests."
+  },
+  {
+    "id": "SB3-CLD-039",
+    "theme": "Spring Cloud",
+    "theme_label": "Zookeeper",
+    "difficulty": "hard",
+    "question": "À quoi sert Zookeeper dans Spring Cloud ?",
+    "options": [
+      "Service discovery",
+      "Configuration distribuée",
+      "Leadership election",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Zookeeper offre plusieurs services de coordination."
+  },
+  {
+    "id": "SB3-CLD-040",
+    "theme": "Spring Cloud",
+    "theme_label": "Consul",
+    "difficulty": "hard",
+    "question": "À quoi sert Consul dans Spring Cloud ?",
+    "options": [
+      "Service discovery",
+      "Configuration",
+      "Health checking",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Consul fournit discovery, config et health checks."
+  },
+  {
+    "id": "SB3-CLD-041",
+    "theme": "Spring Cloud",
+    "theme_label": "Nacos",
+    "difficulty": "hard",
+    "question": "À quoi sert Nacos ?",
+    "options": [
+      "Service discovery",
+      "Configuration management",
+      "Dynamic DNS",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Nacos est une plateforme de discovery et config d'Alibaba."
+  },
+  {
+    "id": "SB3-CLD-042",
+    "theme": "Spring Cloud",
+    "theme_label": "Gateway vs Zuul",
+    "difficulty": "hard",
+    "question": "Quelle est la principale différence ?",
+    "options": [
+      "Gateway est non-bloquant (WebFlux)",
+      "Zuul est bloquant (Servlet)",
+      "Gateway est plus moderne",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Gateway utilise WebFlux, Zuul utilise Servlet."
+  },
+  {
+    "id": "SB3-CLD-043",
+    "theme": "Spring Cloud",
+    "theme_label": "Hystrix",
+    "difficulty": "hard",
+    "question": "Hystrix est-il encore maintenu ?",
+    "options": [
+      "Non, en maintenance mode",
+      "Oui, activement",
+      "Oui, mais déprécié",
+      "Non, remplacé par Resilience4j"
+    ],
+    "correct": 3,
+    "explanation": "Hystrix est en mode maintenance, Resilience4j est recommandé."
+  },
+  {
+    "id": "SB3-CLD-044",
+    "theme": "Spring Cloud",
+    "theme_label": "Bootstrap Context",
+    "difficulty": "hard",
+    "question": "À quoi sert le bootstrap context ?",
+    "options": [
+      "Configuration externe",
+      "Démarrage des services",
+      "Logging initial",
+      "Security"
+    ],
+    "correct": 0,
+    "explanation": "Le bootstrap context charge la configuration externe (Config Server)."
+  },
+  {
+    "id": "SB3-CLD-045",
+    "theme": "Spring Cloud",
+    "theme_label": "Bootstrap Properties",
+    "difficulty": "hard",
+    "question": "Dans quel fichier sont les propriétés bootstrap ?",
+    "options": [
+      "bootstrap.yml / bootstrap.properties",
+      "application.yml",
+      "config.yml",
+      "cloud.yml"
+    ],
+    "correct": 0,
+    "explanation": "bootstrap.yml est chargé avant application.yml."
+  },
+  {
+    "id": "SB3-CLD-046",
+    "theme": "Spring Cloud",
+    "theme_label": "Spring Cloud CLI",
+    "difficulty": "hard",
+    "question": "À quoi sert Spring Cloud CLI ?",
+    "options": [
+      "Ligne de commande pour Spring Cloud",
+      "Déploiement rapide",
+      "Encryption/decryption",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La CLI offre des commandes utiles pour Spring Cloud."
+  },
+  {
+    "id": "SB3-CLD-047",
+    "theme": "Spring Cloud",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Comment chiffrer les propriétés dans Config Server ?",
+    "options": [
+      "{cipher}...",
+      "encrypt.key",
+      "@Encrypted",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les propriétés chiffrées utilisent le préfixe {cipher}."
+  },
+  {
+    "id": "SB3-CLD-048",
+    "theme": "Spring Cloud",
+    "theme_label": "Bus Refresh",
+    "difficulty": "hard",
+    "question": "Comment propager un refresh à tous les services ?",
+    "options": [
+      "POST /actuator/busrefresh",
+      "POST /actuator/bus-refresh",
+      "POST /actuator/refresh/bus",
+      "POST /actuator/bus/refresh"
+    ],
+    "correct": 0,
+    "explanation": "busrefresh propage l'événement à tous les services."
+  },
+  {
+    "id": "SB3-CLD-049",
+    "theme": "Spring Cloud",
+    "theme_label": "Gateway Circuit Breaker",
+    "difficulty": "hard",
+    "question": "Comment ajouter un circuit breaker à Gateway ?",
+    "options": [
+      "filters: - CircuitBreaker",
+      "spring.cloud.gateway.circuitbreaker",
+      "filters: - name: CircuitBreaker",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "CircuitBreaker est un filtre Gateway."
+  },
+  {
+    "id": "SB3-CLD-050",
+    "theme": "Spring Cloud",
+    "theme_label": "Best Practices",
+    "difficulty": "hard",
+    "question": "Quelle est une bonne pratique pour les microservices ?",
+    "options": [
+      "Separate data per service",
+      "API Gateway",
+      "Circuit Breakers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les bonnes pratiques incluent isolation des données, gateway et résilience."
+  }
+]

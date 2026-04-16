@@ -1,0 +1,32 @@
+{
+  "id": "podman",
+  "name": "Podman Professional (Red Hat)",
+  "version": "1.0",
+  "description": "Certification Podman - Conteneurisation sans daemon avec Podman",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Podman Basics",
+      "count": 50
+    },
+    {
+      "name": "Images & Containers",
+      "count": 60
+    },
+    {
+      "name": "Pods",
+      "count": 50
+    },
+    {
+      "name": "Networking",
+      "count": 40
+    },
+    {
+      "name": "Volumes",
+      "count": 50
+    }
+  ]
+}

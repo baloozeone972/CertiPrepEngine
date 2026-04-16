@@ -1,0 +1,292 @@
+[
+  {
+    "id": "AZ-900-001",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud computing ?",
+    "options": [
+      "Livraison de ressources informatiques à la demande",
+      "Des serveurs physiques",
+      "Un type de base de données",
+      "Un langage de programmation"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud computing fournit des ressources informatiques via Internet."
+  },
+  {
+    "id": "AZ-900-002",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'IaaS ?",
+    "options": [
+      "Infrastructure as a Service",
+      "Infrastructure as a Software",
+      "Internet as a Service",
+      "Integration as a Service"
+    ],
+    "correct": 0,
+    "explanation": "IaaS fournit des serveurs, stockage et réseaux virtualisés."
+  },
+  {
+    "id": "AZ-900-003",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le PaaS ?",
+    "options": [
+      "Platform as a Service",
+      "Platform as a Software",
+      "Product as a Service",
+      "Process as a Service"
+    ],
+    "correct": 0,
+    "explanation": "PaaS fournit une plateforme pour développer et déployer des applications."
+  },
+  {
+    "id": "AZ-900-004",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le SaaS ?",
+    "options": [
+      "Software as a Service",
+      "Software as a System",
+      "Service as a Software",
+      "Security as a Service"
+    ],
+    "correct": 0,
+    "explanation": "SaaS fournit des applications logicielles via Internet."
+  },
+  {
+    "id": "AZ-900-005",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud public ?",
+    "options": [
+      "Ressources partagées via Internet",
+      "Ressources privées",
+      "Ressources sur site",
+      "Ressources hybrides"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud public est accessible à tous via Internet."
+  },
+  {
+    "id": "AZ-900-006",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud privé ?",
+    "options": [
+      "Ressources dédiées à une organisation",
+      "Ressources partagées",
+      "Ressources publiques",
+      "Ressources temporaires"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud privé est dédié à une seule organisation."
+  },
+  {
+    "id": "AZ-900-007",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud hybride ?",
+    "options": [
+      "Combinaison de cloud public et privé",
+      "Un seul type de cloud",
+      "Un cloud régional",
+      "Un cloud local"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud hybride combine cloud public et privé."
+  },
+  {
+    "id": "AZ-900-008",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'élasticité dans le cloud ?",
+    "options": [
+      "Capacité à s'adapter à la charge",
+      "Capacité à stocker des données",
+      "Capacité à sécuriser",
+      "Capacité à sauvegarder"
+    ],
+    "correct": 0,
+    "explanation": "L'élasticité permet d'ajuster les ressources automatiquement."
+  },
+  {
+    "id": "AZ-900-009",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le pay-as-you-go ?",
+    "options": [
+      "Payer uniquement ce qu'on utilise",
+      "Payer à l'avance",
+      "Payer un abonnement fixe",
+      "Payer à l'année"
+    ],
+    "correct": 0,
+    "explanation": "Pay-as-you-go signifie payer uniquement pour les ressources consommées."
+  },
+  {
+    "id": "AZ-900-010",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'économie d'échelle ?",
+    "options": [
+      "Coût réduit par unité avec le volume",
+      "Coût augmenté avec le volume",
+      "Coût fixe",
+      "Coût variable"
+    ],
+    "correct": 0,
+    "explanation": "Plus on utilise de ressources, plus le coût unitaire diminue."
+  },
+  {
+    "id": "AZ-900-011",
+    "theme": "Cloud Concepts",
+    "theme_label": "Haute disponibilité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la haute disponibilité ?",
+    "options": [
+      "Système accessible sans interruption",
+      "Système rapide",
+      "Système économique",
+      "Système sécurisé"
+    ],
+    "correct": 0,
+    "explanation": "La haute disponibilité garantit l'accès continu aux applications."
+  },
+  {
+    "id": "AZ-900-012",
+    "theme": "Cloud Concepts",
+    "theme_label": "Tolérance aux pannes",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la tolérance aux pannes ?",
+    "options": [
+      "Capacité à continuer malgré les pannes",
+      "Absence de pannes",
+      "Prévention des pannes",
+      "Correction automatique"
+    ],
+    "correct": 0,
+    "explanation": "La tolérance aux pannes permet de fonctionner malgré des défaillances."
+  },
+  {
+    "id": "AZ-900-013",
+    "theme": "Cloud Concepts",
+    "theme_label": "Scalabilité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la scalabilité horizontale ?",
+    "options": [
+      "Ajouter plus d'instances",
+      "Augmenter la puissance des instances",
+      "Ajouter du stockage",
+      "Augmenter la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "La scalabilité horizontale ajoute des instances supplémentaires."
+  },
+  {
+    "id": "AZ-900-014",
+    "theme": "Cloud Concepts",
+    "theme_label": "Scalabilité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la scalabilité verticale ?",
+    "options": [
+      "Augmenter la puissance des instances",
+      "Ajouter plus d'instances",
+      "Ajouter des zones",
+      "Ajouter des régions"
+    ],
+    "correct": 0,
+    "explanation": "La scalabilité verticale augmente la taille des instances."
+  },
+  {
+    "id": "AZ-900-015",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable du matériel ?",
+    "options": ["Le fournisseur cloud", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "Le fournisseur cloud est responsable du matériel, des centres de données."
+  },
+  {
+    "id": "AZ-900-016",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable des données ?",
+    "options": ["Le client", "Le fournisseur cloud", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "Le client est responsable de ses données."
+  },
+  {
+    "id": "AZ-900-017",
+    "theme": "Cloud Concepts",
+    "theme_label": "Régions Azure",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une région Azure ?",
+    "options": [
+      "Ensemble de centres de données dans une zone géographique",
+      "Un centre de données",
+      "Un serveur",
+      "Un réseau"
+    ],
+    "correct": 0,
+    "explanation": "Une région Azure regroupe plusieurs centres de données."
+  },
+  {
+    "id": "AZ-900-018",
+    "theme": "Cloud Concepts",
+    "theme_label": "Zones de disponibilité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une zone de disponibilité (Availability Zone) ?",
+    "options": [
+      "Centre de données distinct dans une région",
+      "Région",
+      "Serveur",
+      "Réseau"
+    ],
+    "correct": 0,
+    "explanation": "Une zone de disponibilité est un centre de données distinct."
+  },
+  {
+    "id": "AZ-900-019",
+    "theme": "Cloud Concepts",
+    "theme_label": "Paires de régions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une paire de régions Azure ?",
+    "options": [
+      "Deux régions géographiquement proches pour la réplication",
+      "Deux zones de disponibilité",
+      "Deux centres de données",
+      "Deux clouds"
+    ],
+    "correct": 0,
+    "explication": "Les paires de régions assurent la réplication des données."
+  },
+  {
+    "id": "AZ-900-020",
+    "theme": "Cloud Concepts",
+    "theme_label": "Souveraineté des données",
+    "difficulty": "easy",
+    "question": "Pourquoi Azure a-t-il des régions ?",
+    "options": [
+      "Conformité légale, latence, résilience",
+      "Uniquement pour la conformité",
+      "Uniquement pour la latence",
+      "Uniquement pour la résilience"
+    ],
+    "correct": 0,
+    "explication": "Les régions permettent de répondre aux exigences de souveraineté des données."
+  }
+]

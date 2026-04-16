@@ -1,0 +1,957 @@
+[
+  {
+    "id": "KOT-COR-001",
+    "theme": "Coroutines",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une coroutine en Kotlin ?",
+    "options": [
+      "Instance de calcul suspendable",
+      "Thread léger",
+      "Alternative aux threads",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les coroutines sont des instances de calcul suspendable, plus légères que les threads."
+  },
+  {
+    "id": "KOT-COR-002",
+    "theme": "Coroutines",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quelle bibliothèque ajoute le support des coroutines ?",
+    "options": [
+      "kotlinx.coroutines",
+      "kotlin.coroutines",
+      "kotlinx.async",
+      "kotlin.concurrent"
+    ],
+    "correct": 0,
+    "explanation": "kotlinx.coroutines est la bibliothèque officielle."
+  },
+  {
+    "id": "KOT-COR-003",
+    "theme": "Coroutines",
+    "theme_label": "Suspend functions",
+    "difficulty": "easy",
+    "question": "Quel mot-clé marque une fonction suspendable ?",
+    "options": ["suspend", "async", "await", "delay"],
+    "correct": 0,
+    "explanation": "suspend est le mot-clé pour les fonctions pouvant suspendre l'exécution."
+  },
+  {
+    "id": "KOT-COR-004",
+    "theme": "Coroutines",
+    "theme_label": "Suspend functions",
+    "difficulty": "medium",
+    "question": "Peut-on appeler une fonction suspend depuis une fonction normale ?",
+    "options": [
+      "Non, seulement depuis une autre suspend",
+      "Oui",
+      "Oui, avec runBlocking",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Une fonction suspend doit être appelée depuis une coroutine ou runBlocking."
+  },
+  {
+    "id": "KOT-COR-005",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "easy",
+    "question": "Quel builder lance une nouvelle coroutine sans retour ?",
+    "options": ["launch", "async", "runBlocking", "withContext"],
+    "correct": 0,
+    "explanation": "launch lance une coroutine et retourne un Job."
+  },
+  {
+    "id": "KOT-COR-006",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "easy",
+    "question": "Quel builder lance une coroutine et retourne un résultat ?",
+    "options": ["async", "launch", "runBlocking", "produce"],
+    "correct": 0,
+    "explanation": "async retourne Deferred<T> pour récupérer le résultat."
+  },
+  {
+    "id": "KOT-COR-007",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "medium",
+    "question": "Que fait runBlocking ?",
+    "options": [
+      "Bloque le thread jusqu'à fin de la coroutine",
+      "Lance une coroutine non-bloquante",
+      "Crée un scope",
+      "Annule les coroutines"
+    ],
+    "correct": 0,
+    "explanation": "runBlocking est un pont entre code synchrone et asynchrone."
+  },
+  {
+    "id": "KOT-COR-008",
+    "theme": "Coroutines",
+    "theme_label": "CoroutineScope",
+    "difficulty": "medium",
+    "question": "À quoi sert CoroutineScope ?",
+    "options": [
+      "Gérer le cycle de vie des coroutines",
+      "Créer des coroutines",
+      "Annuler des coroutines",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CoroutineScope fournit un contexte pour les coroutines."
+  },
+  {
+    "id": "KOT-COR-009",
+    "theme": "Coroutines",
+    "theme_label": "CoroutineScope",
+    "difficulty": "hard",
+    "question": "Comment créer un CoroutineScope personnalisé ?",
+    "options": [
+      "CoroutineScope(context)",
+      "GlobalScope",
+      "MainScope()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "CoroutineScope(Dispatchers.IO) ou MainScope() pour Android."
+  },
+  {
+    "id": "KOT-COR-010",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "easy",
+    "question": "Quels sont les dispatchers principaux ?",
+    "options": [
+      "Default, IO, Main, Unconfined",
+      "Default, IO, UI, Background",
+      "Default, Network, Disk, Main",
+      "CPU, IO, UI, Common"
+    ],
+    "correct": 0,
+    "explanation": "Dispatchers.Default (CPU), IO (réseau/fichier), Main (UI), Unconfined."
+  },
+  {
+    "id": "KOT-COR-011",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "medium",
+    "question": "Quel dispatcher est optimisé pour les opérations CPU intensives ?",
+    "options": ["Dispatchers.Default", "Dispatchers.IO", "Dispatchers.Main", "Dispatchers.Unconfined"],
+    "correct": 0,
+    "explanation": "Default utilise le pool commun pour les calculs."
+  },
+  {
+    "id": "KOT-COR-012",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "medium",
+    "question": "Quel dispatcher est adapté aux opérations réseau/fichier ?",
+    "options": ["Dispatchers.IO", "Dispatchers.Default", "Dispatchers.Main", "Dispatchers.Unconfined"],
+    "correct": 0,
+    "explanation": "IO est conçu pour les opérations bloquantes I/O."
+  },
+  {
+    "id": "KOT-COR-013",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Dispatchers.Unconfined ?",
+    "options": [
+      "Coroutine non confinée, s'exécute dans le thread appelant",
+      "Thread dédié",
+      "Pool illimité",
+      "UI thread"
+    ],
+    "correct": 0,
+    "explanation": "Unconfined commence dans le thread appelant, puis change selon suspension."
+  },
+  {
+    "id": "KOT-COR-014",
+    "theme": "Coroutines",
+    "theme_label": "withContext",
+    "difficulty": "medium",
+    "question": "À quoi sert withContext ?",
+    "options": [
+      "Changer le dispatcher d'une coroutine",
+      "Lancer une nouvelle coroutine",
+      "Attendre un résultat",
+      "Annuler une coroutine"
+    ],
+    "correct": 0,
+    "explanation": "withContext(Dispatchers.IO) change le contexte d'exécution."
+  },
+  {
+    "id": "KOT-COR-015",
+    "theme": "Coroutines",
+    "theme_label": "withContext",
+    "difficulty": "hard",
+    "question": "withContext est-il suspend ?",
+    "options": ["Oui", "Non", "Parfois", "Dépend du dispatcher"],
+    "correct": 0,
+    "explanation": "withContext est une fonction suspend qui retourne le résultat."
+  },
+  {
+    "id": "KOT-COR-016",
+    "theme": "Coroutines",
+    "theme_label": "Job",
+    "difficulty": "medium",
+    "question": "Que retourne launch ?",
+    "options": ["Job", "Deferred<T>", "Unit", "CoroutineScope"],
+    "correct": 0,
+    "explanation": "launch retourne un Job pour gérer la coroutine."
+  },
+  {
+    "id": "KOT-COR-017",
+    "theme": "Coroutines",
+    "theme_label": "Job",
+    "difficulty": "hard",
+    "question": "Comment attendre la fin d'un Job ?",
+    "options": ["job.join()", "job.await()", "job.wait()", "job.complete()"],
+    "correct": 0,
+    "explanation": "join() suspend la coroutine jusqu'à la fin du Job."
+  },
+  {
+    "id": "KOT-COR-018",
+    "theme": "Coroutines",
+    "theme_label": "Job",
+    "difficulty": "hard",
+    "question": "Comment annuler une coroutine ?",
+    "options": ["job.cancel()", "job.stop()", "job.interrupt()", "job.kill()"],
+    "correct": 0,
+    "explanation": "cancel() annule la coroutine et ses enfants."
+  },
+  {
+    "id": "KOT-COR-019",
+    "theme": "Coroutines",
+    "theme_label": "Deferred",
+    "difficulty": "medium",
+    "question": "Que retourne async ?",
+    "options": ["Deferred<T>", "Job", "Unit", "CoroutineScope"],
+    "correct": 0,
+    "explanation": "async retourne Deferred<T> qui étend Job."
+  },
+  {
+    "id": "KOT-COR-020",
+    "theme": "Coroutines",
+    "theme_label": "Deferred",
+    "difficulty": "hard",
+    "question": "Comment obtenir le résultat d'un Deferred ?",
+    "options": ["deferred.await()", "deferred.get()", "deferred.result()", "deferred.value()"],
+    "correct": 0,
+    "explanation": "await() suspend la coroutine jusqu'au résultat."
+  },
+  {
+    "id": "KOT-COR-021",
+    "theme": "Coroutines",
+    "theme_label": "Cancellation",
+    "difficulty": "hard",
+    "question": "Les coroutines sont-elles coopératives pour l'annulation ?",
+    "options": [
+      "Oui, vérifient l'état d'annulation",
+      "Non, annulation forcée",
+      "Oui, automatiquement",
+      "Non, ne peuvent pas être annulées"
+    ],
+    "correct": 0,
+    "explanation": "L'annulation est coopérative : il faut vérifier isActive."
+  },
+  {
+    "id": "KOT-COR-022",
+    "theme": "Coroutines",
+    "theme_label": "Cancellation",
+    "difficulty": "hard",
+    "question": "Comment rendre une coroutine annulable ?",
+    "options": [
+      "ensureActive()",
+      "yield()",
+      "check(isActive)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour vérifier l'état d'annulation."
+  },
+  {
+    "id": "KOT-COR-023",
+    "theme": "Coroutines",
+    "theme_label": "NonCancellable",
+    "difficulty": "hard",
+    "question": "À quoi sert NonCancellable ?",
+    "options": [
+      "Exécuter du code non annulable",
+      "Empêcher l'annulation",
+      "Nettoyage après annulation",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "withContext(NonCancellable) pour les opérations de nettoyage."
+  },
+  {
+    "id": "KOT-COR-024",
+    "theme": "Coroutines",
+    "theme_label": "Timeout",
+    "difficulty": "hard",
+    "question": "Comment limiter la durée d'une coroutine ?",
+    "options": [
+      "withTimeout",
+      "withTimeoutOrNull",
+      "timeout",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "withTimeout lance TimeoutCancellationException, withTimeoutOrNull retourne null."
+  },
+  {
+    "id": "KOT-COR-025",
+    "theme": "Coroutines",
+    "theme_label": "Timeout",
+    "difficulty": "hard",
+    "question": "Que fait withTimeoutOrNull ?",
+    "options": [
+      "Retourne null si timeout",
+      "Lance exception",
+      "Ignore timeout",
+      "Retry"
+    ],
+    "correct": 0,
+    "explanation": "withTimeoutOrNull retourne null au lieu de lancer une exception."
+  },
+  {
+    "id": "KOT-COR-026",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "hard",
+    "question": "À quoi sert Channel ?",
+    "options": [
+      "Communication entre coroutines",
+      "File d'attente",
+      "Streaming",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Channel permet l'envoi et la réception de données entre coroutines."
+  },
+  {
+    "id": "KOT-COR-027",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "hard",
+    "question": "Comment envoyer un message sur un Channel ?",
+    "options": ["channel.send(value)", "channel.offer(value)", "channel.put(value)", "A et B"],
+    "correct": 3,
+    "explanation": "send (suspend) ou offer (non-suspend)."
+  },
+  {
+    "id": "KOT-COR-028",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "hard",
+    "question": "Comment recevoir un message d'un Channel ?",
+    "options": ["channel.receive()", "channel.poll()", "channel.take()", "A et B"],
+    "correct": 3,
+    "explanation": "receive (suspend) ou poll (non-suspend)."
+  },
+  {
+    "id": "KOT-COR-029",
+    "theme": "Coroutines",
+    "theme_label": "Channel types",
+    "difficulty": "hard",
+    "question": "Quel type de Channel a une capacité illimitée ?",
+    "options": [
+      "Channel.UNLIMITED",
+      "Channel.RENDEZVOUS",
+      "Channel.CONFLATED",
+      "Channel.BUFFERED"
+    ],
+    "correct": 0,
+    "explanation": "UNLIMITED crée un channel sans limite de taille."
+  },
+  {
+    "id": "KOT-COR-030",
+    "theme": "Coroutines",
+    "theme_label": "Channel types",
+    "difficulty": "hard",
+    "question": "Quel type de Channel a une capacité de 0 (rendez-vous) ?",
+    "options": [
+      "Channel.RENDEZVOUS",
+      "Channel.UNLIMITED",
+      "Channel.CONFLATED",
+      "Channel.BUFFERED"
+    ],
+    "correct": 0,
+    "explanation": "RENDEZVOUS : le send bloque jusqu'à receive."
+  },
+  {
+    "id": "KOT-COR-031",
+    "theme": "Coroutines",
+    "theme_label": "Channel types",
+    "difficulty": "hard",
+    "question": "Que fait Channel.CONFLATED ?",
+    "options": [
+      "Ne garde que le dernier élément",
+      "Capacité infinie",
+      "Capacité 0",
+      "Buffer par défaut"
+    ],
+    "correct": 0,
+    "explanation": "CONFLATED conserve seulement le dernier élément envoyé."
+  },
+  {
+    "id": "KOT-COR-032",
+    "theme": "Coroutines",
+    "theme_label": "Flow",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Flow ?",
+    "options": [
+      "Stream asynchrone",
+      "Cold stream",
+      "Collection reactive",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Flow est un stream asynchrone qui émet plusieurs valeurs."
+  },
+  {
+    "id": "KOT-COR-033",
+    "theme": "Coroutines",
+    "theme_label": "Flow",
+    "difficulty": "hard",
+    "question": "Comment créer un Flow simple ?",
+    "options": [
+      "flow { emit(value) }",
+      "flowOf(values)",
+      "asFlow()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de créer des flows."
+  },
+  {
+    "id": "KOT-COR-034",
+    "theme": "Coroutines",
+    "theme_label": "Flow operators",
+    "difficulty": "hard",
+    "question": "Quel opérateur transforme chaque élément ?",
+    "options": ["map", "filter", "transform", "collect"],
+    "correct": 0,
+    "explanation": "map applique une transformation à chaque élément."
+  },
+  {
+    "id": "KOT-COR-035",
+    "theme": "Coroutines",
+    "theme_label": "Flow operators",
+    "difficulty": "hard",
+    "question": "Comment collecter les valeurs d'un Flow ?",
+    "options": ["collect", "launchIn", "onEach", "A et B"],
+    "correct": 3,
+    "explanation": "collect est l'opérateur terminal principal."
+  },
+  {
+    "id": "KOT-COR-036",
+    "theme": "Coroutines",
+    "theme_label": "Flow backpressure",
+    "difficulty": "hard",
+    "question": "Comment gérer la backpressure dans Flow ?",
+    "options": [
+      "buffer",
+      "conflate",
+      "collectLatest",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs stratégies pour gérer les émissions rapides."
+  },
+  {
+    "id": "KOT-COR-037",
+    "theme": "Coroutines",
+    "theme_label": "Flow context",
+    "difficulty": "hard",
+    "question": "Sur quel dispatcher s'exécute un Flow ?",
+    "options": [
+      "Celui du collecteur",
+      "Celui du producteur",
+      "Dispatchers.Default",
+      "Dispatchers.IO"
+    ],
+    "correct": 0,
+    "explanation": "Flow conserve le contexte du collecteur (pas de conservation)."
+  },
+  {
+    "id": "KOT-COR-038",
+    "theme": "Coroutines",
+    "theme_label": "Flow context",
+    "difficulty": "hard",
+    "question": "Comment changer le contexte d'un Flow ?",
+    "options": ["flowOn", "withContext", "launchOn", "contextOn"],
+    "correct": 0,
+    "explanation": "flowOn change le contexte pour les opérations upstream."
+  },
+  {
+    "id": "KOT-COR-039",
+    "theme": "Coroutines",
+    "theme_label": "SharedFlow",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que SharedFlow ?",
+    "options": [
+      "Flow chaud (hot)",
+      "Flow froid (cold)",
+      "StateFlow",
+      "CallbackFlow"
+    ],
+    "correct": 0,
+    "explanation": "SharedFlow est un hot flow partagé entre plusieurs collecteurs."
+  },
+  {
+    "id": "KOT-COR-040",
+    "theme": "Coroutines",
+    "theme_label": "SharedFlow",
+    "difficulty": "hard",
+    "question": "Comment créer un SharedFlow ?",
+    "options": [
+      "MutableSharedFlow",
+      "SharedFlow()",
+      "flow.shareIn",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "MutableSharedFlow ou shareIn sur un Flow existant."
+  },
+  {
+    "id": "KOT-COR-041",
+    "theme": "Coroutines",
+    "theme_label": "StateFlow",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que StateFlow ?",
+    "options": [
+      "SharedFlow avec état",
+      "Flow froid",
+      "Channel",
+      "CallbackFlow"
+    ],
+    "correct": 0,
+    "explanation": "StateFlow est un SharedFlow qui conserve la dernière valeur."
+  },
+  {
+    "id": "KOT-COR-042",
+    "theme": "Coroutines",
+    "theme_label": "StateFlow",
+    "difficulty": "hard",
+    "question": "Comment créer un StateFlow ?",
+    "options": [
+      "MutableStateFlow(initial)",
+      "StateFlow()",
+      "flow.stateIn",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "MutableStateFlow ou stateIn sur un Flow."
+  },
+  {
+    "id": "KOT-COR-043",
+    "theme": "Coroutines",
+    "theme_label": "StateFlow vs LiveData",
+    "difficulty": "hard",
+    "question": "Avantage de StateFlow sur LiveData ?",
+    "options": [
+      "Pas besoin de cycle de vie",
+      "Plus d'opérateurs",
+      "Coroutines natives",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "StateFlow est plus puissant et flexible."
+  },
+  {
+    "id": "KOT-COR-044",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine exception handling",
+    "difficulty": "hard",
+    "question": "Comment gérer les exceptions dans une coroutine ?",
+    "options": [
+      "try/catch",
+      "CoroutineExceptionHandler",
+      "SupervisorJob",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs mécanismes selon le besoin."
+  },
+  {
+    "id": "KOT-COR-045",
+    "theme": "Coroutines",
+    "theme_label": "CoroutineExceptionHandler",
+    "difficulty": "hard",
+    "question": "Comment ajouter un CoroutineExceptionHandler ?",
+    "options": [
+      "CoroutineExceptionHandler { _, throwable -> }",
+      "lancer avec handler",
+      "scope + handler",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Le handler est ajouté dans le contexte de la coroutine."
+  },
+  {
+    "id": "KOT-COR-046",
+    "theme": "Coroutines",
+    "theme_label": "SupervisorJob",
+    "difficulty": "hard",
+    "question": "À quoi sert SupervisorJob ?",
+    "options": [
+      "Isoler les échecs entre coroutines",
+      "Accélérer l'exécution",
+      "Annuler tout",
+      "Limiter les threads"
+    ],
+    "correct": 0,
+    "explanation": "SupervisorJob permet aux coroutines enfants de continuer après échec d'une autre."
+  },
+  {
+    "id": "KOT-COR-047",
+    "theme": "Coroutines",
+    "theme_label": "SupervisorScope",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre coroutineScope et supervisorScope ?",
+    "options": [
+      "supervisorScope ne propage pas les échecs",
+      "coroutineScope propage les échecs",
+      "Identiques",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "supervisorScope isole les échecs, coroutineScope les propage."
+  },
+  {
+    "id": "KOT-COR-048",
+    "theme": "Coroutines",
+    "theme_label": "Structured concurrency",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la concurrence structurée ?",
+    "options": [
+      "Les coroutines enfants sont liées au parent",
+      "Les coroutines sont indépendantes",
+      "Les threads sont liés",
+      "Aucune"
+    ],
+    "correct": 0,
+    "explanation": "Les enfants sont automatiquement annulés avec le parent."
+  },
+  {
+    "id": "KOT-COR-049",
+    "theme": "Coroutines",
+    "theme_label": "Structured concurrency",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une coroutine enfant échoue ?",
+    "options": [
+      "Annulation du parent et des autres enfants",
+      "Rien",
+      "Seul l'enfant est annulé",
+      "Retry automatique"
+    ],
+    "correct": 0,
+    "explanation": "Dans coroutineScope, un échec annule tout."
+  },
+  {
+    "id": "KOT-COR-050",
+    "theme": "Coroutines",
+    "theme_label": "Android integration",
+    "difficulty": "hard",
+    "question": "Quelle dépendance pour les coroutines sur Android ?",
+    "options": [
+      "kotlinx-coroutines-android",
+      "kotlinx-coroutines-core",
+      "androidx.lifecycle:lifecycle-viewmodel-ktx",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs dépendances pour l'intégration Android."
+  },
+  {
+    "id": "KOT-COR-051",
+    "theme": "Coroutines",
+    "theme_label": "Android ViewModel",
+    "difficulty": "hard",
+    "question": "Quel scope est lié au ViewModel ?",
+    "options": ["viewModelScope", "lifecycleScope", "coroutineScope", "mainScope"],
+    "correct": 0,
+    "explanation": "viewModelScope est annulé quand le ViewModel est détruit."
+  },
+  {
+    "id": "KOT-COR-052",
+    "theme": "Coroutines",
+    "theme_label": "Android Lifecycle",
+    "difficulty": "hard",
+    "question": "Quel scope est lié au cycle de vie ?",
+    "options": ["lifecycleScope", "viewModelScope", "coroutineScope", "globalScope"],
+    "correct": 0,
+    "explanation": "lifecycleScope est annulé quand le Lifecycle se termine."
+  },
+  {
+    "id": "KOT-COR-053",
+    "theme": "Coroutines",
+    "theme_label": "Android Lifecycle",
+    "difficulty": "hard",
+    "question": "Comment lancer une coroutine pendant le cycle de vie ?",
+    "options": [
+      "lifecycleScope.launch",
+      "repeatOnLifecycle",
+      "launchWhenStarted",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs APIs selon la version."
+  },
+  {
+    "id": "KOT-COR-054",
+    "theme": "Coroutines",
+    "theme_label": "Testing coroutines",
+    "difficulty": "hard",
+    "question": "Comment tester des coroutines ?",
+    "options": [
+      "runTest",
+      "TestCoroutineDispatcher",
+      "StandardTestDispatcher",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "kotlinx-coroutines-test fournit ces outils."
+  },
+  {
+    "id": "KOT-COR-055",
+    "theme": "Coroutines",
+    "theme_label": "Testing coroutines",
+    "difficulty": "hard",
+    "question": "Que fait runTest ?",
+    "options": [
+      "Exécute les coroutines en temps virtuel",
+      "Accélère le temps",
+      "Ignore les délais",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "runTest avance le temps automatiquement."
+  },
+  {
+    "id": "KOT-COR-056",
+    "theme": "Coroutines",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment déboguer les coroutines ?",
+    "options": [
+      "-Dkotlinx.coroutines.debug",
+      "DebugProbes",
+      "Logging",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Propriété système ou DebugProbes pour les noms."
+  },
+  {
+    "id": "KOT-COR-057",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine naming",
+    "difficulty": "hard",
+    "question": "Comment nommer une coroutine pour le debug ?",
+    "options": [
+      "CoroutineName(\"name\")",
+      "launch(CoroutineName(\"name\"))",
+      "withContext(CoroutineName(\"name\"))",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "CoroutineName dans le contexte."
+  },
+  {
+    "id": "KOT-COR-058",
+    "theme": "Coroutines",
+    "theme_label": "Mutex",
+    "difficulty": "hard",
+    "question": "À quoi sert Mutex ?",
+    "options": [
+      "Exclusion mutuelle dans les coroutines",
+      "Thread-safe",
+      "Synchronisation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Mutex évite les accès concurrents."
+  },
+  {
+    "id": "KOT-COR-059",
+    "theme": "Coroutines",
+    "theme_label": "Mutex",
+    "difficulty": "hard",
+    "question": "Comment acquérir un Mutex ?",
+    "options": ["mutex.lock()", "mutex.withLock { }", "mutex.acquire()", "A et B"],
+    "correct": 3,
+    "explanation": "lock() suspend, withLock est la forme recommandée."
+  },
+  {
+    "id": "KOT-COR-060",
+    "theme": "Coroutines",
+    "theme_label": "Semaphore",
+    "difficulty": "hard",
+    "question": "À quoi sert Semaphore ?",
+    "options": [
+      "Limiter le nombre d'accès concurrents",
+      "Exclusion mutuelle",
+      "File d'attente",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Semaphore gère plusieurs permits."
+  },
+  {
+    "id": "KOT-COR-061",
+    "theme": "Coroutines",
+    "theme_label": "Semaphore",
+    "difficulty": "hard",
+    "question": "Comment utiliser un Semaphore ?",
+    "options": [
+      "semaphore.withPermit { }",
+      "semaphore.acquire() / release()",
+      "semaphore.take() / give()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "withPermit est la forme recommandée."
+  },
+  {
+    "id": "KOT-COR-062",
+    "theme": "Coroutines",
+    "theme_label": "Select expression",
+    "difficulty": "hard",
+    "question": "À quoi sert select ?",
+    "options": [
+      "Attendre le premier résultat de plusieurs canaux",
+      "Choisir entre plusieurs opérations",
+      "Pattern matching",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "select attend la première opération prête."
+  },
+  {
+    "id": "KOT-COR-063",
+    "theme": "Coroutines",
+    "theme_label": "Select expression",
+    "difficulty": "hard",
+    "question": "Comment utiliser select avec des channels ?",
+    "options": [
+      "select<Int> { channel1.onReceive { it } }",
+      "select { channel1.onReceive { } }",
+      "select { channel1.receive { } }",
+      "select(channel1) { }"
+    ],
+    "correct": 0,
+    "explanation": "onReceive ou onSend dans le bloc select."
+  },
+  {
+    "id": "KOT-COR-064",
+    "theme": "Coroutines",
+    "theme_label": "Actor",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un actor ?",
+    "options": [
+      "Coroutine avec mailbox",
+      "Pattern de concurrence",
+      "Channel avec traitement",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Actor encapsule un état et un channel de messages."
+  },
+  {
+    "id": "KOT-COR-065",
+    "theme": "Coroutines",
+    "theme_label": "Actor",
+    "difficulty": "hard",
+    "question": "Comment créer un actor ?",
+    "options": [
+      "actor { }",
+      "launch avec channel",
+      "CoroutineScope.actor",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "actor est un builder (expérimental)."
+  },
+  {
+    "id": "KOT-COR-066",
+    "theme": "Coroutines",
+    "theme_label": "CallbackFlow",
+    "difficulty": "hard",
+    "question": "À quoi sert callbackFlow ?",
+    "options": [
+      "Convertir des callbacks en Flow",
+      "API asynchrone",
+      "Listener",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "callbackFlow transforme les callbacks en Flow."
+  },
+  {
+    "id": "KOT-COR-067",
+    "theme": "Coroutines",
+    "theme_label": "CallbackFlow",
+    "difficulty": "hard",
+    "question": "Comment utiliser callbackFlow ?",
+    "options": [
+      "callbackFlow { send(value); awaitClose { } }",
+      "flow { emit(value) }",
+      "channelFlow { }",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "callbackFlow utilise send et awaitClose."
+  },
+  {
+    "id": "KOT-COR-068",
+    "theme": "Coroutines",
+    "theme_label": "ChannelFlow",
+    "difficulty": "hard",
+    "question": "Différence entre channelFlow et flow ?",
+    "options": [
+      "channelFlow peut être collecté par plusieurs",
+      "flow est cold, channelFlow hot",
+      "Identiques",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "channelFlow produit un hot flow partagé."
+  },
+  {
+    "id": "KOT-COR-069",
+    "theme": "Coroutines",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les coroutines sont-elles plus performantes que les threads ?",
+    "options": [
+      "Oui, beaucoup plus légères",
+      "Non, plus lourdes",
+      "Identiques",
+      "Pour l'I/O, oui"
+    ],
+    "correct": 0,
+    "explanation": "Les coroutines ont un overhead mémoire bien plus faible."
+  },
+  {
+    "id": "KOT-COR-070",
+    "theme": "Coroutines",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Faut-il éviter GlobalScope ?",
+    "options": [
+      "Oui, difficile à gérer",
+      "Non, pratique",
+      "Oui, sauf pour les singletons",
+      "Non, recommandé"
+    ],
+    "correct": 0,
+    "explanation": "GlobalScope est déconseillé sauf cas très particuliers."
+  }
+]

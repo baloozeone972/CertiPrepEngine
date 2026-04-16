@@ -1,0 +1,1497 @@
+[
+  {
+    "id": "SB3-AC-001",
+    "theme": "Auto-configuration",
+    "theme_label": "Principe",
+    "difficulty": "easy",
+    "question": "Quelle annotation active l'auto-configuration de Spring Boot ?",
+    "options": [
+      "@EnableAutoConfiguration",
+      "@SpringBootApplication",
+      "@Configuration",
+      "@ComponentScan"
+    ],
+    "correct": 0,
+    "explanation": "@EnableAutoConfiguration active le mécanisme d'auto-configuration."
+  },
+  {
+    "id": "SB3-AC-002",
+    "theme": "Auto-configuration",
+    "theme_label": "Principe",
+    "difficulty": "easy",
+    "question": "Quelles annotations compose @SpringBootApplication ?",
+    "options": [
+      "@Configuration, @EnableAutoConfiguration, @ComponentScan",
+      "@Configuration, @EnableAutoConfiguration",
+      "@SpringBootConfiguration, @ComponentScan",
+      "@Configuration, @ComponentScan"
+    ],
+    "correct": 0,
+    "explanation": "@SpringBootApplication est composée de ces trois annotations."
+  },
+  {
+    "id": "SB3-AC-003",
+    "theme": "Auto-configuration",
+    "theme_label": "Principe",
+    "difficulty": "easy",
+    "question": "Quand Spring Boot applique-t-il l'auto-configuration ?",
+    "options": [
+      "À la compilation",
+      "Au démarrage",
+      "À la première requête",
+      "À la création du contexte"
+    ],
+    "correct": 1,
+    "explanation": "L'auto-configuration est appliquée au démarrage de l'application."
+  },
+  {
+    "id": "SB3-AC-004",
+    "theme": "Auto-configuration",
+    "theme_label": "Principe",
+    "difficulty": "medium",
+    "question": "Quel est l'ordre d'exécution des auto-configurations ?",
+    "options": [
+      "Défini par @AutoConfigureOrder",
+      "Aléatoire",
+      "Ordre alphabétique",
+      "Ordre de déclaration"
+    ],
+    "correct": 0,
+    "explanation": "@AutoConfigureOrder permet de définir l'ordre d'exécution."
+  },
+  {
+    "id": "SB3-AC-005",
+    "theme": "Auto-configuration",
+    "theme_label": "Principe",
+    "difficulty": "medium",
+    "question": "Que signifie 'condition' dans l'auto-configuration ?",
+    "options": [
+      "Configuration appliquée si condition remplie",
+      "Configuration obligatoire",
+      "Configuration ignorée",
+      "Configuration conditionnelle"
+    ],
+    "correct": 0,
+    "explanation": "Les auto-configurations sont conditionnées par des annotations @Conditional."
+  },
+  {
+    "id": "SB3-AC-006",
+    "theme": "Auto-configuration",
+    "theme_label": "Exclusion",
+    "difficulty": "easy",
+    "question": "Comment exclure une auto-configuration spécifique ?",
+    "options": [
+      "@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)",
+      "@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)",
+      "@ExcludeAutoConfiguration(DataSourceAutoConfiguration.class)",
+      "@AutoConfiguration(exclude = DataSourceAutoConfiguration.class)"
+    ],
+    "correct": 0,
+    "explanation": "L'attribut exclude de @EnableAutoConfiguration permet d'exclure des classes."
+  },
+  {
+    "id": "SB3-AC-007",
+    "theme": "Auto-configuration",
+    "theme_label": "Exclusion",
+    "difficulty": "medium",
+    "question": "Comment exclure une auto-configuration par nom ?",
+    "options": [
+      "@EnableAutoConfiguration(excludeName = \"org...\")",
+      "@SpringBootApplication(excludeName = \"org...\")",
+      "@ExcludeAutoConfiguration(name = \"org...\")",
+      "@AutoConfiguration(excludeClass = \"org...\")"
+    ],
+    "correct": 0,
+    "explanation": "excludeName permet d'exclure par nom complet de classe."
+  },
+  {
+    "id": "SB3-AC-008",
+    "theme": "Auto-configuration",
+    "theme_label": "Exclusion",
+    "difficulty": "medium",
+    "question": "Comment exclure des auto-configurations via properties ?",
+    "options": [
+      "spring.autoconfigure.exclude",
+      "spring.boot.autoconfigure.exclude",
+      "auto.configuration.exclude",
+      "spring.exclude.autoconfigure"
+    ],
+    "correct": 0,
+    "explanation": "La propriété spring.autoconfigure.exclude liste les exclusions."
+  },
+  {
+    "id": "SB3-AC-009",
+    "theme": "Auto-configuration",
+    "theme_label": "Exclusion",
+    "difficulty": "hard",
+    "question": "Peut-on exclure plusieurs auto-configurations ?",
+    "options": [
+      "Oui, séparées par des virgules",
+      "Non, une seule",
+      "Oui, avec excludeAll",
+      "Oui, avec excludes[]"
+    ],
+    "correct": 0,
+    "explanation": "On peut lister plusieurs classes séparées par des virgules."
+  },
+  {
+    "id": "SB3-AC-010",
+    "theme": "Auto-configuration",
+    "theme_label": "Fichier de configuration",
+    "difficulty": "hard",
+    "question": "Dans quel fichier sont déclarées les auto-configurations ?",
+    "options": [
+      "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "META-INF/spring.factories",
+      "META-INF/autoconfigure",
+      "spring-autoconfigure-metadata.properties"
+    ],
+    "correct": 0,
+    "explanation": "Depuis Spring Boot 2.7, le fichier AutoConfiguration.imports est utilisé."
+  },
+  {
+    "id": "SB3-AC-011",
+    "theme": "Auto-configuration",
+    "theme_label": "Fichier de configuration",
+    "difficulty": "hard",
+    "question": "Quel était le fichier avant Spring Boot 2.7 ?",
+    "options": [
+      "META-INF/spring.factories",
+      "META-INF/autoconfigure",
+      "META-INF/spring-autoconfigure",
+      "META-INF/spring-configuration"
+    ],
+    "correct": 0,
+    "explanation": "Avant 2.7, spring.factories était utilisé pour déclarer les auto-configurations."
+  },
+  {
+    "id": "SB3-AC-012",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnClass",
+    "difficulty": "easy",
+    "question": "Que vérifie @ConditionalOnClass ?",
+    "options": [
+      "Présence d'une classe dans le classpath",
+      "Absence d'une classe",
+      "Présence d'un bean",
+      "Valeur d'une propriété"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnClass active la configuration si une classe est présente."
+  },
+  {
+    "id": "SB3-AC-013",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnClass",
+    "difficulty": "medium",
+    "question": "Que vérifie @ConditionalOnMissingClass ?",
+    "options": [
+      "Absence d'une classe",
+      "Présence d'une classe",
+      "Absence d'un bean",
+      "Présence d'un bean"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnMissingClass active si la classe est absente."
+  },
+  {
+    "id": "SB3-AC-014",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnBean",
+    "difficulty": "easy",
+    "question": "Que vérifie @ConditionalOnBean ?",
+    "options": [
+      "Présence d'un bean",
+      "Absence d'un bean",
+      "Présence d'une classe",
+      "Valeur d'une propriété"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnBean active si un bean du type donné existe."
+  },
+  {
+    "id": "SB3-AC-015",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnBean",
+    "difficulty": "medium",
+    "question": "Que vérifie @ConditionalOnMissingBean ?",
+    "options": [
+      "Absence d'un bean",
+      "Présence d'un bean",
+      "Absence d'une classe",
+      "Présence d'une propriété"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnMissingBean crée un bean seulement s'il n'existe pas."
+  },
+  {
+    "id": "SB3-AC-016",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnProperty",
+    "difficulty": "easy",
+    "question": "Que vérifie @ConditionalOnProperty ?",
+    "options": [
+      "Valeur d'une propriété",
+      "Présence d'un bean",
+      "Présence d'une classe",
+      "Absence d'une classe"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnProperty active si une propriété a la bonne valeur."
+  },
+  {
+    "id": "SB3-AC-017",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnProperty",
+    "difficulty": "medium",
+    "question": "Comment spécifier la valeur attendue d'une propriété ?",
+    "options": [
+      "havingValue = \"valeur\"",
+      "value = \"valeur\"",
+      "expected = \"valeur\"",
+      "match = \"valeur\""
+    ],
+    "correct": 0,
+    "explanation": "L'attribut havingValue définit la valeur attendue."
+  },
+  {
+    "id": "SB3-AC-018",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnProperty",
+    "difficulty": "hard",
+    "question": "Que signifie havingValue = \"true\" ?",
+    "options": [
+      "Propriété doit être true",
+      "Propriété doit exister",
+      "Propriété doit être false",
+      "Propriété ignorée"
+    ],
+    "correct": 0,
+    "explanation": "La propriété doit avoir la valeur true."
+  },
+  {
+    "id": "SB3-AC-019",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnWebApplication",
+    "difficulty": "medium",
+    "question": "Quand @ConditionalOnWebApplication s'applique-t-elle ?",
+    "options": [
+      "Aux applications web",
+      "Aux applications non web",
+      "Aux applications Servlet",
+      "Aux applications Reactive"
+    ],
+    "correct": 0,
+    "explanation": "La condition est vraie pour les applications web."
+  },
+  {
+    "id": "SB3-AC-020",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnWebApplication",
+    "difficulty": "hard",
+    "question": "Comment cibler uniquement les applications Servlet ?",
+    "options": [
+      "type = Type.SERVLET",
+      "webType = SERVLET",
+      "applicationType = SERVLET",
+      "serverType = SERVLET"
+    ],
+    "correct": 0,
+    "explanation": "L'attribut type permet de spécifier le type d'application web."
+  },
+  {
+    "id": "SB3-AC-021",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnExpression",
+    "difficulty": "hard",
+    "question": "Que permet @ConditionalOnExpression ?",
+    "options": [
+      "Expression SpEL",
+      "Vérification de classe",
+      "Vérification de bean",
+      "Vérification de propriété"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnExpression utilise une expression SpEL."
+  },
+  {
+    "id": "SB3-AC-022",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnExpression",
+    "difficulty": "hard",
+    "question": "Exemple d'expression SpEL valide ?",
+    "options": [
+      "'${property}'.equals('value')",
+      "${property} == 'value'",
+      "#{property == 'value'}",
+      "@property == 'value'"
+    ],
+    "correct": 0,
+    "explanation": "L'expression doit être une expression SpEL valide entre guillemets."
+  },
+  {
+    "id": "SB3-AC-023",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnResource",
+    "difficulty": "hard",
+    "question": "Que vérifie @ConditionalOnResource ?",
+    "options": [
+      "Présence d'une ressource",
+      "Présence d'une classe",
+      "Présence d'un bean",
+      "Présence d'une propriété"
+    ],
+    "correct": 0,
+    "explanation": "@ConditionalOnResource active si une ressource est présente."
+  },
+  {
+    "id": "SB3-AC-024",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnResource",
+    "difficulty": "hard",
+    "question": "Comment spécifier plusieurs ressources ?",
+    "options": [
+      "resources = {\"file1\", \"file2\"}",
+      "value = {\"file1\", \"file2\"}",
+      "names = {\"file1\", \"file2\"}",
+      "paths = {\"file1\", \"file2\"}"
+    ],
+    "correct": 0,
+    "explanation": "L'attribut resources prend un tableau de chemins."
+  },
+  {
+    "id": "SB3-AC-025",
+    "theme": "Auto-configuration",
+    "theme_label": "Order",
+    "difficulty": "hard",
+    "question": "Quelle annotation définit l'ordre d'exécution ?",
+    "options": [
+      "@AutoConfigureOrder",
+      "@Order",
+      "@Priority",
+      "@AutoOrder"
+    ],
+    "correct": 0,
+    "explanation": "@AutoConfigureOrder est spécifique aux auto-configurations."
+  },
+  {
+    "id": "SB3-AC-026",
+    "theme": "Auto-configuration",
+    "theme_label": "Order",
+    "difficulty": "hard",
+    "question": "Quelle annotation exécute après d'autres configurations ?",
+    "options": [
+      "@AutoConfigureAfter",
+      "@After",
+      "@PostConfiguration",
+      "@AutoOrderAfter"
+    ],
+    "correct": 0,
+    "explanation": "@AutoConfigureAfter garantit l'exécution après les configurations spécifiées."
+  },
+  {
+    "id": "SB3-AC-027",
+    "theme": "Auto-configuration",
+    "theme_label": "Order",
+    "difficulty": "hard",
+    "question": "Quelle annotation exécute avant d'autres configurations ?",
+    "options": [
+      "@AutoConfigureBefore",
+      "@Before",
+      "@PreConfiguration",
+      "@AutoOrderBefore"
+    ],
+    "correct": 0,
+    "explanation": "@AutoConfigureBefore garantit l'exécution avant les configurations spécifiées."
+  },
+  {
+    "id": "SB3-AC-028",
+    "theme": "Auto-configuration",
+    "theme_label": "Debug",
+    "difficulty": "easy",
+    "question": "Comment afficher le rapport d'auto-configuration ?",
+    "options": [
+      "--debug",
+      "--trace",
+      "--auto-config-report",
+      "--spring.debug"
+    ],
+    "correct": 0,
+    "explanation": "L'option --debug affiche le rapport d'auto-configuration."
+  },
+  {
+    "id": "SB3-AC-029",
+    "theme": "Auto-configuration",
+    "theme_label": "Debug",
+    "difficulty": "hard",
+    "question": "Que montre le rapport d'auto-configuration ?",
+    "options": [
+      "Configurations appliquées et ignorées",
+      "Toutes les configurations",
+      "Seules les erreurs",
+      "Les beans créés"
+    ],
+    "correct": 0,
+    "explanation": "Le rapport montre quelles configurations sont appliquées et pourquoi certaines sont ignorées."
+  },
+  {
+    "id": "SB3-AC-030",
+    "theme": "Auto-configuration",
+    "theme_label": "ConfigurationProperties",
+    "difficulty": "easy",
+    "question": "Quelle annotation lie des propriétés à un bean ?",
+    "options": [
+      "@ConfigurationProperties",
+      "@Value",
+      "@PropertySource",
+      "@ConfigurationBinding"
+    ],
+    "correct": 0,
+    "explanation": "@ConfigurationProperties lie les propriétés d'un préfixe à un bean."
+  },
+  {
+    "id": "SB3-AC-031",
+    "theme": "Auto-configuration",
+    "theme_label": "ConfigurationProperties",
+    "difficulty": "medium",
+    "question": "Comment spécifier le préfixe des propriétés ?",
+    "options": [
+      "prefix = \"app\"",
+      "value = \"app\"",
+      "name = \"app\"",
+      "key = \"app\""
+    ],
+    "correct": 0,
+    "explanation": "L'attribut prefix définit le préfixe des propriétés."
+  },
+  {
+    "id": "SB3-AC-032",
+    "theme": "Auto-configuration",
+    "theme_label": "ConfigurationProperties",
+    "difficulty": "medium",
+    "question": "Quelle annotation enregistre les @ConfigurationProperties ?",
+    "options": [
+      "@EnableConfigurationProperties",
+      "@ConfigurationPropertiesScan",
+      "@PropertySource",
+      "@Component"
+    ],
+    "correct": 0,
+    "explanation": "@EnableConfigurationProperties enregistre les beans @ConfigurationProperties."
+  },
+  {
+    "id": "SB3-AC-033",
+    "theme": "Auto-configuration",
+    "theme_label": "ConfigurationProperties",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser @ConfigurationProperties sans @EnableConfigurationProperties ?",
+    "options": [
+      "Oui, avec @Component",
+      "Non, obligatoire",
+      "Oui, avec @Bean",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Si la classe est annotée @Component, elle est automatiquement détectée."
+  },
+  {
+    "id": "SB3-AC-034",
+    "theme": "Auto-configuration",
+    "theme_label": "ConfigurationProperties",
+    "difficulty": "hard",
+    "question": "Comment valider les propriétés ?",
+    "options": [
+      "Annotations JSR-303",
+      "@Validated",
+      "@NotNull, @Min, @Max",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "On peut utiliser les annotations de validation JSR-303."
+  },
+  {
+    "id": "SB3-AC-035",
+    "theme": "Auto-configuration",
+    "theme_label": "Désactivation",
+    "difficulty": "medium",
+    "question": "Comment désactiver complètement l'auto-configuration ?",
+    "options": [
+      "spring.boot.enableautoconfiguration=false",
+      "spring.autoconfigure.exclude=*",
+      "@EnableAutoConfiguration(excludeName = \"*\")",
+      "spring.boot.autoconfigure.enabled=false"
+    ],
+    "correct": 0,
+    "explanation": "La propriété spring.boot.enableautoconfiguration=false désactive l'auto-configuration."
+  },
+  {
+    "id": "SB3-AC-036",
+    "theme": "Auto-configuration",
+    "theme_label": "Désactivation",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si auto-configuration est désactivée ?",
+    "options": [
+      "Plus aucune configuration automatique",
+      "Seulement les configurations de base",
+      "Erreur au démarrage",
+      "Les beans doivent être déclarés manuellement"
+    ],
+    "correct": 0,
+    "explanation": "Toutes les auto-configurations sont désactivées."
+  },
+  {
+    "id": "SB3-AC-037",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnSingleCandidate",
+    "difficulty": "hard",
+    "question": "Que vérifie @ConditionalOnSingleCandidate ?",
+    "options": [
+      "Un seul bean du type existe",
+      "Au moins un bean existe",
+      "Aucun bean n'existe",
+      "Plusieurs beans existent"
+    ],
+    "correct": 0,
+    "explanation": "Vérifie qu'un seul bean du type donné est présent."
+  },
+  {
+    "id": "SB3-AC-038",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnCloudPlatform",
+    "difficulty": "hard",
+    "question": "Que vérifie @ConditionalOnCloudPlatform ?",
+    "options": [
+      "Plateforme cloud spécifique",
+      "Présence d'un cloud",
+      "Version du cloud",
+      "Provider cloud"
+    ],
+    "correct": 0,
+    "explanation": "Active la configuration sur une plateforme cloud spécifique (AWS, GCP, Azure)."
+  },
+  {
+    "id": "SB3-AC-039",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnNotWebApplication",
+    "difficulty": "hard",
+    "question": "Quand @ConditionalOnNotWebApplication s'applique-t-elle ?",
+    "options": [
+      "Aux applications non web",
+      "Aux applications web",
+      "Aux applications batch",
+      "Aux applications console"
+    ],
+    "correct": 0,
+    "explanation": "La condition est vraie pour les applications non web."
+  },
+  {
+    "id": "SB3-AC-040",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnJava",
+    "difficulty": "hard",
+    "question": "Que vérifie @ConditionalOnJava ?",
+    "options": [
+      "Version de Java",
+      "Fournisseur Java",
+      "Architecture JVM",
+      "Java EE"
+    ],
+    "correct": 0,
+    "explanation": "Active la configuration pour une version spécifique de Java."
+  },
+  {
+    "id": "SB3-AC-041",
+    "theme": "Auto-configuration",
+    "theme_label": "ConditionalOnJndi",
+    "difficulty": "hard",
+    "question": "Que vérifie @ConditionalOnJndi ?",
+    "options": [
+      "Présence d'une ressource JNDI",
+      "Présence d'un serveur JNDI",
+      "Configuration JNDI",
+      "Support JNDI"
+    ],
+    "correct": 0,
+    "explanation": "Active si une ressource JNDI spécifique est disponible."
+  },
+  {
+    "id": "SB3-AC-042",
+    "theme": "Auto-configuration",
+    "theme_label": "SpringBootConfiguration",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre @SpringBootConfiguration et @Configuration ?",
+    "options": [
+      "@SpringBootConfiguration indique la classe principale",
+      "Identiques",
+      "@SpringBootConfiguration est plus spécifique",
+      "@SpringBootConfiguration active auto-configuration"
+    ],
+    "correct": 0,
+    "explanation": "@SpringBootConfiguration marque la classe de configuration principale."
+  },
+  {
+    "id": "SB3-AC-043",
+    "theme": "Auto-configuration",
+    "theme_label": "ImportAutoConfiguration",
+    "difficulty": "hard",
+    "question": "Que fait @ImportAutoConfiguration ?",
+    "options": [
+      "Importe des auto-configurations spécifiques",
+      "Importe toutes les auto-configurations",
+      "Désactive des auto-configurations",
+      "Remplace @EnableAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "@ImportAutoConfiguration permet d'importer des auto-configurations spécifiques."
+  },
+  {
+    "id": "SB3-AC-044",
+    "theme": "Auto-configuration",
+    "theme_label": "AutoConfigurationPackage",
+    "difficulty": "hard",
+    "question": "Que fait @AutoConfigurationPackage ?",
+    "options": [
+      "Enregistre le package pour le scan",
+      "Configure le package racine",
+      "Définit le package d'auto-configuration",
+      "Scanne les composants"
+    ],
+    "correct": 0,
+    "explanation": "@AutoConfigurationPackage enregistre le package pour les scans ultérieurs."
+  },
+  {
+    "id": "SB3-AC-045",
+    "theme": "Auto-configuration",
+    "theme_label": "Failure analysis",
+    "difficulty": "hard",
+    "question": "Comment Spring Boot analyse les échecs d'auto-configuration ?",
+    "options": [
+      "FailureAnalyzer",
+      "ErrorHandler",
+      "ExceptionAnalyzer",
+      "ProblemReporter"
+    ],
+    "correct": 0,
+    "explanation": "Les FailureAnalyzer fournissent des messages d'erreur explicites."
+  },
+  {
+    "id": "SB3-AC-046",
+    "theme": "Auto-configuration",
+    "theme_label": "Failure analysis",
+    "difficulty": "hard",
+    "question": "Comment créer un FailureAnalyzer personnalisé ?",
+    "options": [
+      "Implémenter FailureAnalyzer",
+      "Étendre AbstractFailureAnalyzer",
+      "Utiliser @FailureAnalyzer",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "On peut implémenter FailureAnalyzer ou étendre AbstractFailureAnalyzer."
+  },
+  {
+    "id": "SB3-AC-047",
+    "theme": "Auto-configuration",
+    "theme_label": "Configuration metadata",
+    "difficulty": "hard",
+    "question": "Où sont stockées les métadonnées de configuration ?",
+    "options": [
+      "META-INF/spring-configuration-metadata.json",
+      "META-INF/configuration-metadata.json",
+      "META-INF/spring-metadata.json",
+      "META-INF/config-metadata.json"
+    ],
+    "correct": 0,
+    "explanation": "Le fichier spring-configuration-metadata.json contient les métadonnées."
+  },
+  {
+    "id": "SB3-AC-048",
+    "theme": "Auto-configuration",
+    "theme_label": "Configuration metadata",
+    "difficulty": "hard",
+    "question": "Quel plugin génère les métadonnées ?",
+    "options": [
+      "spring-boot-configuration-processor",
+      "spring-boot-metadata-processor",
+      "spring-configuration-processor",
+      "boot-configuration-processor"
+    ],
+    "correct": 0,
+    "explanation": "Le processor spring-boot-configuration-processor génère les métadonnées."
+  },
+  {
+    "id": "SB3-AC-049",
+    "theme": "Auto-configuration",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Comment migrer de spring.factories vers AutoConfiguration.imports ?",
+    "options": [
+      "Déplacer les entrées dans le nouveau fichier",
+      "Garder les deux",
+      "Supprimer spring.factories",
+      "Utiliser un script"
+    ],
+    "correct": 0,
+    "explanation": "Les entrées de spring.factories doivent être déplacées dans AutoConfiguration.imports."
+  },
+  {
+    "id": "SB3-AC-050",
+    "theme": "Auto-configuration",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Une auto-configuration doit-elle être légère ?",
+    "options": [
+      "Oui, utiliser @Conditional",
+      "Non, peut être lourde",
+      "Oui, éviter les opérations coûteuses",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Les auto-configurations doivent être légères et conditionnées."
+  },
+  {
+    "id": "SB3-AC-051",
+    "theme": "Auto-configuration",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Doit-on documenter les conditions d'une auto-configuration ?",
+    "options": [
+      "Oui, pour comprendre pourquoi elle s'applique",
+      "Non, automatique",
+      "Oui, avec @ConditionalReport",
+      "Non, inutile"
+    ],
+    "correct": 0,
+    "explanation": "La documentation aide à comprendre quand la configuration s'applique."
+  },
+  {
+    "id": "SB3-AC-052",
+    "theme": "Auto-configuration",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Une auto-configuration doit-elle être dans un package séparé ?",
+    "options": [
+      "Oui, pour éviter les conflits",
+      "Non, n'importe où",
+      "Oui, dans un package dédié",
+      "Non, dans le package principal"
+    ],
+    "correct": 0,
+    "explanation": "Il est recommandé de regrouper les auto-configurations dans un package dédié."
+  },
+  {
+    "id": "SB3-AC-053",
+    "theme": "Auto-configuration",
+    "theme_label": "Test",
+    "difficulty": "hard",
+    "question": "Comment tester une auto-configuration ?",
+    "options": [
+      "@SpringBootTest",
+      "@AutoConfigureTest",
+      "@TestAutoConfiguration",
+      "@AutoConfigurationTest"
+    ],
+    "correct": 0,
+    "explanation": "@SpringBootTest permet de tester l'application avec auto-configuration."
+  },
+  {
+    "id": "SB3-AC-054",
+    "theme": "Auto-configuration",
+    "theme_label": "Test",
+    "difficulty": "hard",
+    "question": "Comment isoler une auto-configuration dans les tests ?",
+    "options": [
+      "@ImportAutoConfiguration",
+      "@TestAutoConfiguration",
+      "@AutoConfigurationTest",
+      "@TestConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "@ImportAutoConfiguration permet d'importer uniquement les auto-configurations nécessaires."
+  },
+  {
+    "id": "SB3-AC-055",
+    "theme": "Auto-configuration",
+    "theme_label": "Test",
+    "difficulty": "hard",
+    "question": "Comment désactiver l'auto-configuration dans les tests ?",
+    "options": [
+      "@SpringBootTest(classes = {...}) avec configuration manuelle",
+      "@DisableAutoConfiguration",
+      "@TestAutoConfiguration(false)",
+      "@NoAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "En spécifiant des classes de configuration, l'auto-configuration est désactivée."
+  },
+  {
+    "id": "SB3-AC-056",
+    "theme": "Auto-configuration",
+    "theme_label": "Débogage",
+    "difficulty": "hard",
+    "question": "Comment savoir pourquoi une configuration est ignorée ?",
+    "options": [
+      "--debug affiche les conditions",
+      "--trace",
+      "--auto-config-report",
+      "--spring.debug"
+    ],
+    "correct": 0,
+    "explanation": "L'option --debug montre les conditions et pourquoi les configurations sont ignorées."
+  },
+  {
+    "id": "SB3-AC-057",
+    "theme": "Auto-configuration",
+    "theme_label": "Débogage",
+    "difficulty": "hard",
+    "question": "Que montre la condition négative ?",
+    "options": [
+      "Pourquoi une configuration n'est pas appliquée",
+      "Les configurations appliquées",
+      "Les erreurs",
+      "Les beans créés"
+    ],
+    "correct": 0,
+    "explanation": "Les conditions négatives expliquent pourquoi une configuration est ignorée."
+  },
+  {
+    "id": "SB3-AC-058",
+    "theme": "Auto-configuration",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les auto-configurations ralentissent-elles le démarrage ?",
+    "options": [
+      "Oui, légèrement",
+      "Non, optimisées",
+      "Oui, beaucoup",
+      "Non, au contraire"
+    ],
+    "correct": 0,
+    "explanation": "L'évaluation des conditions a un coût, mais reste acceptable."
+  },
+  {
+    "id": "SB3-AC-059",
+    "theme": "Auto-configuration",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment améliorer le temps de démarrage ?",
+    "options": [
+      "Désactiver les auto-configurations inutiles",
+      "Utiliser @Conditional efficacement",
+      "Exclure les classes inutiles",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques peuvent accélérer le démarrage."
+  },
+  {
+    "id": "SB3-AC-060",
+    "theme": "Auto-configuration",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Spring Security a-t-il une auto-configuration ?",
+    "options": [
+      "Oui, SecurityAutoConfiguration",
+      "Non",
+      "Oui, mais désactivée par défaut",
+      "Oui, WebSecurityConfigurerAdapter"
+    ],
+    "correct": 0,
+    "explanation": "SecurityAutoConfiguration configure la sécurité par défaut."
+  },
+  {
+    "id": "SB3-AC-061",
+    "theme": "Auto-configuration",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment désactiver l'auto-configuration de sécurité ?",
+    "options": [
+      "@EnableAutoConfiguration(exclude = SecurityAutoConfiguration.class)",
+      "spring.security.enabled=false",
+      "@DisableSecurityAutoConfiguration",
+      "security.auto=false"
+    ],
+    "correct": 0,
+    "explanation": "On peut exclure SecurityAutoConfiguration."
+  },
+  {
+    "id": "SB3-AC-062",
+    "theme": "Auto-configuration",
+    "theme_label": "JPA",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure JPA ?",
+    "options": [
+      "HibernateJpaAutoConfiguration",
+      "JpaAutoConfiguration",
+      "DataJpaAutoConfiguration",
+      "JpaRepositoriesAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "HibernateJpaAutoConfiguration configure Hibernate et JPA."
+  },
+  {
+    "id": "SB3-AC-063",
+    "theme": "Auto-configuration",
+    "theme_label": "JPA",
+    "difficulty": "hard",
+    "question": "Comment configurer le dialecte Hibernate ?",
+    "options": [
+      "spring.jpa.properties.hibernate.dialect",
+      "spring.jpa.dialect",
+      "hibernate.dialect",
+      "jpa.dialect"
+    ],
+    "correct": 0,
+    "explanation": "La propriété spring.jpa.properties.hibernate.dialect définit le dialecte."
+  },
+  {
+    "id": "SB3-AC-064",
+    "theme": "Auto-configuration",
+    "theme_label": "DataSource",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure la DataSource ?",
+    "options": [
+      "DataSourceAutoConfiguration",
+      "JdbcAutoConfiguration",
+      "ConnectionPoolAutoConfiguration",
+      "DatabaseAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "DataSourceAutoConfiguration configure la source de données."
+  },
+  {
+    "id": "SB3-AC-065",
+    "theme": "Auto-configuration",
+    "theme_label": "DataSource",
+    "difficulty": "hard",
+    "question": "Quel pool de connexion est utilisé par défaut ?",
+    "options": [
+      "HikariCP",
+      "Tomcat JDBC",
+      "Apache DBCP2",
+      "C3P0"
+    ],
+    "correct": 0,
+    "explanation": "HikariCP est le pool de connexion par défaut depuis Spring Boot 2."
+  },
+  {
+    "id": "SB3-AC-066",
+    "theme": "Auto-configuration",
+    "theme_label": "Web",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure le conteneur web ?",
+    "options": [
+      "ServletWebServerFactoryAutoConfiguration",
+      "WebServerAutoConfiguration",
+      "TomcatAutoConfiguration",
+      "ServletContainerAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "ServletWebServerFactoryAutoConfiguration configure le serveur web."
+  },
+  {
+    "id": "SB3-AC-067",
+    "theme": "Auto-configuration",
+    "theme_label": "Web",
+    "difficulty": "hard",
+    "question": "Comment changer le port du serveur ?",
+    "options": [
+      "server.port=8081",
+      "spring.server.port=8081",
+      "web.port=8081",
+      "http.port=8081"
+    ],
+    "correct": 0,
+    "explanation": "La propriété server.port définit le port d'écoute."
+  },
+  {
+    "id": "SB3-AC-068",
+    "theme": "Auto-configuration",
+    "theme_label": "Jackson",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure Jackson ?",
+    "options": [
+      "JacksonAutoConfiguration",
+      "JsonAutoConfiguration",
+      "ObjectMapperAutoConfiguration",
+      "SerializationAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "JacksonAutoConfiguration configure l'ObjectMapper."
+  },
+  {
+    "id": "SB3-AC-069",
+    "theme": "Auto-configuration",
+    "theme_label": "Jackson",
+    "difficulty": "hard",
+    "question": "Comment personnaliser l'ObjectMapper ?",
+    "options": [
+      "Définir un @Bean ObjectMapper",
+      "spring.jackson.* properties",
+      "Jackson2ObjectMapperBuilder",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes permettent de personnaliser l'ObjectMapper."
+  },
+  {
+    "id": "SB3-AC-070",
+    "theme": "Auto-configuration",
+    "theme_label": "Cache",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure le cache ?",
+    "options": [
+      "CacheAutoConfiguration",
+      "CachingAutoConfiguration",
+      "CacheManagerAutoConfiguration",
+      "SpringCacheAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "CacheAutoConfiguration configure le cache avec @EnableCaching."
+  },
+  {
+    "id": "SB3-AC-071",
+    "theme": "Auto-configuration",
+    "theme_label": "Cache",
+    "difficulty": "hard",
+    "question": "Quel cache provider est utilisé par défaut ?",
+    "options": [
+      "ConcurrentMapCache",
+      "EhCache",
+      "Caffeine",
+      "RedisCache"
+    ],
+    "correct": 0,
+    "explanation": "ConcurrentMapCache est le provider par défaut."
+  },
+  {
+    "id": "SB3-AC-072",
+    "theme": "Auto-configuration",
+    "theme_label": "Transaction",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure les transactions ?",
+    "options": [
+      "TransactionAutoConfiguration",
+      "JtaAutoConfiguration",
+      "DataSourceTransactionManagerAutoConfiguration",
+      "TxAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "TransactionAutoConfiguration configure le gestionnaire de transactions."
+  },
+  {
+    "id": "SB3-AC-073",
+    "theme": "Auto-configuration",
+    "theme_label": "Transaction",
+    "difficulty": "hard",
+    "question": "Comment activer la gestion des transactions ?",
+    "options": [
+      "@EnableTransactionManagement",
+      "@Transactional",
+      "@EnableTx",
+      "@TransactionManagement"
+    ],
+    "correct": 0,
+    "explanation": "@EnableTransactionManagement active la gestion des transactions."
+  },
+  {
+    "id": "SB3-AC-074",
+    "theme": "Auto-configuration",
+    "theme_label": "Reactive",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure WebFlux ?",
+    "options": [
+      "WebFluxAutoConfiguration",
+      "ReactiveWebServerAutoConfiguration",
+      "WebReactiveAutoConfiguration",
+      "FluxAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "WebFluxAutoConfiguration configure l'environnement réactif."
+  },
+  {
+    "id": "SB3-AC-075",
+    "theme": "Auto-configuration",
+    "theme_label": "Reactive",
+    "difficulty": "hard",
+    "question": "Comment détecter automatiquement WebFlux vs MVC ?",
+    "options": [
+      "Spring Boot choisit selon les dépendances",
+      "À configurer manuellement",
+      "Par propriété spring.web.type",
+      "Par annotation"
+    ],
+    "correct": 0,
+    "explanation": "Spring Boot détecte la présence de spring-webflux ou spring-webmvc."
+  },
+  {
+    "id": "SB3-AC-076",
+    "theme": "Auto-configuration",
+    "theme_label": "Actuator",
+    "difficulty": "hard",
+    "question": "Quelle dépendance active l'actuator ?",
+    "options": [
+      "spring-boot-starter-actuator",
+      "spring-boot-actuator",
+      "spring-actuator-starter",
+      "boot-starter-actuator"
+    ],
+    "correct": 0,
+    "explanation": "Le starter spring-boot-starter-actuator active l'actuator."
+  },
+  {
+    "id": "SB3-AC-077",
+    "theme": "Auto-configuration",
+    "theme_label": "Actuator",
+    "difficulty": "hard",
+    "question": "Quels endpoints sont exposés par défaut ?",
+    "options": [
+      "health, info",
+      "health, metrics, info",
+      "health seulement",
+      "tous"
+    ],
+    "correct": 0,
+    "explanation": "Seuls health et info sont exposés par défaut."
+  },
+  {
+    "id": "SB3-AC-078",
+    "theme": "Auto-configuration",
+    "theme_label": "Actuator",
+    "difficulty": "hard",
+    "question": "Comment exposer tous les endpoints ?",
+    "options": [
+      "management.endpoints.web.exposure.include=*",
+      "actuator.endpoints.all=true",
+      "spring.actuator.expose-all=true",
+      "management.endpoints.expose-all=true"
+    ],
+    "correct": 0,
+    "explanation": "La propriété management.endpoints.web.exposure.include=* expose tous les endpoints."
+  },
+  {
+    "id": "SB3-AC-079",
+    "theme": "Auto-configuration",
+    "theme_label": "DevTools",
+    "difficulty": "hard",
+    "question": "Quelle dépendance active DevTools ?",
+    "options": [
+      "spring-boot-devtools",
+      "spring-devtools",
+      "boot-devtools",
+      "spring-boot-dev-tools"
+    ],
+    "correct": 0,
+    "explanation": "spring-boot-devtools active les outils de développement."
+  },
+  {
+    "id": "SB3-AC-080",
+    "theme": "Auto-configuration",
+    "theme_label": "DevTools",
+    "difficulty": "hard",
+    "question": "Que fait DevTools automatiquement ?",
+    "options": [
+      "Redémarrage automatique",
+      "Rechargement live",
+      "Cache désactivé",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "DevTools fournit plusieurs fonctionnalités de développement."
+  },
+  {
+    "id": "SB3-AC-081",
+    "theme": "Auto-configuration",
+    "theme_label": "DevTools",
+    "difficulty": "hard",
+    "question": "Comment exclure des ressources du redémarrage ?",
+    "options": [
+      "spring.devtools.restart.exclude",
+      "devtools.restart.ignore",
+      "spring.restart.exclude",
+      "devtools.exclude"
+    ],
+    "correct": 0,
+    "explanation": "La propriété spring.devtools.restart.exclude liste les ressources exclues."
+  },
+  {
+    "id": "SB3-AC-082",
+    "theme": "Auto-configuration",
+    "theme_label": "Batch",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure Spring Batch ?",
+    "options": [
+      "BatchAutoConfiguration",
+      "SpringBatchAutoConfiguration",
+      "JobAutoConfiguration",
+      "BatchConfig"
+    ],
+    "correct": 0,
+    "explanation": "BatchAutoConfiguration configure l'environnement batch."
+  },
+  {
+    "id": "SB3-AC-083",
+    "theme": "Auto-configuration",
+    "theme_label": "Batch",
+    "difficulty": "hard",
+    "question": "Comment désactiver l'exécution automatique des jobs ?",
+    "options": [
+      "spring.batch.job.enabled=false",
+      "batch.jobs.enabled=false",
+      "spring.batch.enabled=false",
+      "batch.enabled=false"
+    ],
+    "correct": 0,
+    "explanation": "spring.batch.job.enabled=false empêche l'exécution automatique des jobs."
+  },
+  {
+    "id": "SB3-AC-084",
+    "theme": "Auto-configuration",
+    "theme_label": "Mail",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure l'envoi de mails ?",
+    "options": [
+      "MailSenderAutoConfiguration",
+      "EmailAutoConfiguration",
+      "MailAutoConfiguration",
+      "SendMailAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "MailSenderAutoConfiguration configure le JavaMailSender."
+  },
+  {
+    "id": "SB3-AC-085",
+    "theme": "Auto-configuration",
+    "theme_label": "Mail",
+    "difficulty": "hard",
+    "question": "Quelles propriétés sont nécessaires pour le mail ?",
+    "options": [
+      "spring.mail.host, spring.mail.port",
+      "mail.host, mail.port",
+      "email.host, email.port",
+      "smtp.host, smtp.port"
+    ],
+    "correct": 0,
+    "explanation": "Les propriétés spring.mail.host et spring.mail.port sont obligatoires."
+  },
+  {
+    "id": "SB3-AC-086",
+    "theme": "Auto-configuration",
+    "theme_label": "Validation",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure la validation ?",
+    "options": [
+      "ValidationAutoConfiguration",
+      "ValidatorAutoConfiguration",
+      "Jsr303AutoConfiguration",
+      "BeanValidationAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "ValidationAutoConfiguration configure le Validator."
+  },
+  {
+    "id": "SB3-AC-087",
+    "theme": "Auto-configuration",
+    "theme_label": "Validation",
+    "difficulty": "hard",
+    "question": "Comment activer la validation automatique des paramètres ?",
+    "options": [
+      "@Validated sur la classe",
+      "@Valid sur les paramètres",
+      "@EnableValidation",
+      "@ValidationEnabled"
+    ],
+    "correct": 0,
+    "explanation": "@Validated sur la classe active la validation des méthodes."
+  },
+  {
+    "id": "SB3-AC-088",
+    "theme": "Auto-configuration",
+    "theme_label": "Quartz",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure Quartz ?",
+    "options": [
+      "QuartzAutoConfiguration",
+      "SchedulerAutoConfiguration",
+      "JobSchedulerAutoConfiguration",
+      "CronAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "QuartzAutoConfiguration configure le scheduler Quartz."
+  },
+  {
+    "id": "SB3-AC-089",
+    "theme": "Auto-configuration",
+    "theme_label": "Quartz",
+    "difficulty": "hard",
+    "question": "Comment persister les jobs Quartz ?",
+    "options": [
+      "spring.quartz.job-store-type=jdbc",
+      "quartz.store=jdbc",
+      "spring.quartz.persist=true",
+      "quartz.jdbc=true"
+    ],
+    "correct": 0,
+    "explanation": "spring.quartz.job-store-type=jdbc active la persistance JDBC."
+  },
+  {
+    "id": "SB3-AC-090",
+    "theme": "Auto-configuration",
+    "theme_label": "RSocket",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure RSocket ?",
+    "options": [
+      "RSocketAutoConfiguration",
+      "SocketAutoConfiguration",
+      "ReactiveSocketAutoConfiguration",
+      "MessagingAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "RSocketAutoConfiguration configure le support RSocket."
+  },
+  {
+    "id": "SB3-AC-091",
+    "theme": "Auto-configuration",
+    "theme_label": "RSocket",
+    "difficulty": "hard",
+    "question": "Sur quel port RSocket écoute par défaut ?",
+    "options": ["7000", "8080", "9090", "8888"],
+    "correct": 0,
+    "explanation": "Le port par défaut pour RSocket est 7000."
+  },
+  {
+    "id": "SB3-AC-092",
+    "theme": "Auto-configuration",
+    "theme_label": "WebSocket",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure WebSocket ?",
+    "options": [
+      "WebSocketAutoConfiguration",
+      "SocketAutoConfiguration",
+      "WsAutoConfiguration",
+      "MessageBrokerAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "WebSocketAutoConfiguration configure le support WebSocket."
+  },
+  {
+    "id": "SB3-AC-093",
+    "theme": "Auto-configuration",
+    "theme_label": "WebSocket",
+    "difficulty": "hard",
+    "question": "Comment activer STOMP sur WebSocket ?",
+    "options": [
+      "@EnableWebSocketMessageBroker",
+      "@EnableStomp",
+      "@EnableWebSocketStomp",
+      "@MessageBroker"
+    ],
+    "correct": 0,
+    "explanation": "@EnableWebSocketMessageBroker active le broker STOMP."
+  },
+  {
+    "id": "SB3-AC-094",
+    "theme": "Auto-configuration",
+    "theme_label": "GraphQL",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure GraphQL ?",
+    "options": [
+      "GraphQlAutoConfiguration",
+      "GraphQLAutoConfiguration",
+      "ApiAutoConfiguration",
+      "SchemaAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "GraphQlAutoConfiguration configure le support GraphQL."
+  },
+  {
+    "id": "SB3-AC-095",
+    "theme": "Auto-configuration",
+    "theme_label": "GraphQL",
+    "difficulty": "hard",
+    "question": "Où placer les fichiers schema.graphqls ?",
+    "options": [
+      "src/main/resources/graphql/",
+      "src/main/resources/schema/",
+      "src/main/graphql/",
+      "src/main/resources/"
+    ],
+    "correct": 0,
+    "explanation": "Les fichiers schema sont dans src/main/resources/graphql/ par défaut."
+  },
+  {
+    "id": "SB3-AC-096",
+    "theme": "Auto-configuration",
+    "theme_label": "WebServices",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure les web services SOAP ?",
+    "options": [
+      "WebServicesAutoConfiguration",
+      "SoapAutoConfiguration",
+      "WsAutoConfiguration",
+      "JaxWsAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "WebServicesAutoConfiguration configure le support SOAP."
+  },
+  {
+    "id": "SB3-AC-097",
+    "theme": "Auto-configuration",
+    "theme_label": "WebServices",
+    "difficulty": "hard",
+    "question": "Comment exposer un endpoint SOAP ?",
+    "options": [
+      "@Endpoint",
+      "@WebService",
+      "@SoapEndpoint",
+      "@WsEndpoint"
+    ],
+    "correct": 0,
+    "explanation": "@Endpoint marque une classe comme endpoint SOAP."
+  },
+  {
+    "id": "SB3-AC-098",
+    "theme": "Auto-configuration",
+    "theme_label": "Integration",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure Spring Integration ?",
+    "options": [
+      "IntegrationAutoConfiguration",
+      "MessageAutoConfiguration",
+      "FlowAutoConfiguration",
+      "ChannelAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "IntegrationAutoConfiguration configure Spring Integration."
+  },
+  {
+    "id": "SB3-AC-099",
+    "theme": "Auto-configuration",
+    "theme_label": "Integration",
+    "difficulty": "hard",
+    "question": "Comment activer les intégrations avec @EnableIntegration ?",
+    "options": [
+      "Automatique avec starter",
+      "Manuel uniquement",
+      "@EnableIntegration required",
+      "Par configuration XML"
+    ],
+    "correct": 0,
+    "explanation": "Le starter spring-boot-starter-integration active automatiquement."
+  },
+  {
+    "id": "SB3-AC-100",
+    "theme": "Auto-configuration",
+    "theme_label": "AOP",
+    "difficulty": "hard",
+    "question": "Quelle auto-configuration configure Spring AOP ?",
+    "options": [
+      "AopAutoConfiguration",
+      "AspectAutoConfiguration",
+      "ProxyAutoConfiguration",
+      "AdviceAutoConfiguration"
+    ],
+    "correct": 0,
+    "explanation": "AopAutoConfiguration configure le support AOP."
+  }
+]

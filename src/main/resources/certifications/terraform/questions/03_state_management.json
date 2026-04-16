@@ -1,0 +1,702 @@
+[
+  {
+    "id": "TF-03-001",
+    "theme": "State Management",
+    "theme_label": "Fichier d'état",
+    "difficulty": "easy",
+    "question": "Quel est le nom par défaut du fichier d'état local ?",
+    "options": ["terraform.tfstate", "state.tf", "terraform.state", "tfstate.json"],
+    "correct": 0,
+    "explication": "terraform.tfstate est le fichier d'état par défaut."
+  },
+  {
+    "id": "TF-03-002",
+    "theme": "State Management",
+    "theme_label": "Fichier d'état",
+    "difficulty": "easy",
+    "question": "À quoi sert le fichier terraform.tfstate.backup ?",
+    "options": [
+      "Sauvegarde de l'état précédent avant modification",
+      "Fichier d'état principal",
+      "Fichier de verrouillage",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Terraform crée automatiquement une sauvegarde avant de modifier l'état."
+  },
+  {
+    "id": "TF-03-003",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Pourquoi utiliser un backend distant pour l'état ?",
+    "options": [
+      "Collaboration en équipe, sécurité, verrouillage",
+      "Performance",
+      "Simplicité",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les backends distants permettent le partage et la sécurisation de l'état."
+  },
+  {
+    "id": "TF-03-004",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Quels sont des backends distants courants ?",
+    "options": [
+      "S3, GCS, AzureRM, HTTP, Terraform Cloud",
+      "Seulement S3",
+      "Seulement Terraform Cloud",
+      "Seulement HTTP"
+    ],
+    "correct": 0,
+    "explication": "De nombreux backends sont disponibles."
+  },
+  {
+    "id": "TF-03-005",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Comment configurer un backend S3 ?",
+    "options": [
+      "terraform { backend 's3' { bucket = 'mybucket' key = 'terraform.tfstate' region = 'us-east-1' } }",
+      "backend 's3' { bucket = 'mybucket' }",
+      "terraform backend s3 { }",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le bloc terraform avec backend."
+  },
+  {
+    "id": "TF-03-006",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si le backend n'est pas configuré ?",
+    "options": [
+      "L'état est stocké localement",
+      "Erreur",
+      "L'état est stocké dans un fichier temporaire",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Par défaut, l'état est local."
+  },
+  {
+    "id": "TF-03-007",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Comment migrer d'un état local vers un backend distant ?",
+    "options": [
+      "terraform init -migrate-state",
+      "terraform apply -migrate-state",
+      "terraform state migrate",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "init -migrate-state copie l'état local vers le backend."
+  },
+  {
+    "id": "TF-03-008",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Le verrouillage d'état (state locking) est-il supporté par S3 ?",
+    "options": ["Oui (via DynamoDB)", "Non", "Uniquement avec Terraform Cloud", "Uniquement avec GCS"],
+    "correct": 0,
+    "explication": "S3 nécessite une table DynamoDB pour le verrouillage."
+  },
+  {
+    "id": "TF-03-009",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Comment configurer le verrouillage pour S3 ?",
+    "options": [
+      "dynamodb_table = 'terraform-lock'",
+      "lock_table = 'terraform-lock'",
+      "locking = true",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "L'option dynamodb_table active le verrouillage."
+  },
+  {
+    "id": "TF-03-010",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si le verrouillage échoue ?",
+    "options": [
+      "terraform attend que le verrou soit libéré",
+      "terraform force l'opération",
+      "terraform annule",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Terraform attend et réessaie périodiquement."
+  },
+  {
+    "id": "TF-03-011",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Quelle commande liste les ressources dans l'état ?",
+    "options": [
+      "terraform state list",
+      "terraform show",
+      "terraform state show",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "state list et show (avec fichier) listent les ressources."
+  },
+  {
+    "id": "TF-03-012",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Comment afficher les détails d'une ressource dans l'état ?",
+    "options": [
+      "terraform state show 'aws_instance.web'",
+      "terraform show -state=terraform.tfstate",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "state show affiche une ressource spécifique."
+  },
+  {
+    "id": "TF-03-013",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Comment supprimer une ressource de l'état sans la détruire ?",
+    "options": [
+      "terraform state rm 'aws_instance.web'",
+      "terraform destroy -target=aws_instance.web",
+      "terraform state remove",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "state rm retire la ressource de l'état."
+  },
+  {
+    "id": "TF-03-014",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Comment renommer une ressource dans l'état ?",
+    "options": [
+      "terraform state mv 'aws_instance.web' 'aws_instance.app'",
+      "terraform state rename",
+      "terraform state move",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "state mv déplace/renomme une ressource."
+  },
+  {
+    "id": "TF-03-015",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Comment importer une ressource existante dans l'état ?",
+    "options": [
+      "terraform import aws_instance.web i-12345",
+      "terraform state import aws_instance.web i-12345",
+      "terraform import aws_instance.web",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "terraform import <ressource> <id>."
+  },
+  {
+    "id": "TF-03-016",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Que fait `terraform refresh` ?",
+    "options": [
+      "Met à jour l'état avec la réalité du cloud",
+      "Replanifie l'infrastructure",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "refresh synchronise l'état sans modifier l'infrastructure."
+  },
+  {
+    "id": "TF-03-017",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "question": "Comment afficher l'état au format JSON ?",
+    "options": [
+      "terraform show -json",
+      "terraform state show -json",
+      "terraform output -json",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "show -json produit un JSON complet."
+  },
+  {
+    "id": "TF-03-018",
+    "theme": "State Management",
+    "theme_label": "État sensible",
+    "difficulty": "easy",
+    "question": "Comment marquer une valeur comme sensible dans l'état ?",
+    "options": [
+      "output 'password' { value = random_password.password.result sensitive = true }",
+      "sensitive = true dans la variable",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "sensitive = true masque la valeur dans les logs."
+  },
+  {
+    "id": "TF-03-019",
+    "theme": "State Management",
+    "theme_label": "État sensible",
+    "difficulty": "easy",
+    "question": "Les valeurs sensibles sont-elles stockées en clair dans le fichier d'état ?",
+    "options": ["Oui", "Non (chiffrées)", "Seulement si backend distant", "A seulement"],
+    "correct": 0,
+    "explication": "Le fichier d'état contient les valeurs en clair, donc il faut le sécuriser."
+  },
+  {
+    "id": "TF-03-020",
+    "theme": "State Management",
+    "theme_label": "État sensible",
+    "difficulty": "easy",
+    "question": "Comment chiffrer l'état local ?",
+    "options": [
+      "Non possible, utiliser un backend distant chiffré (S3 avec KMS)",
+      "terraform state encrypt",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "L'état local n'est pas chiffré, il faut passer à un backend distant chiffré."
+  },
+  {
+    "id": "TF-03-021",
+    "theme": "State Management",
+    "theme_label": "État et workspaces",
+    "difficulty": "easy",
+    "question": "Chaque workspace a-t-il son propre fichier d'état ?",
+    "options": ["Oui", "Non", "Uniquement pour les backends distants", "Uniquement pour les backends locaux"],
+    "correct": 0,
+    "explication": "Chaque workspace a son propre fichier d'état (terraform.tfstate.d/<workspace>)."
+  },
+  {
+    "id": "TF-03-022",
+    "theme": "State Management",
+    "theme_label": "État et workspaces",
+    "difficulty": "easy",
+    "question": "Comment voir l'état du workspace actuel ?",
+    "options": [
+      "terraform show",
+      "terraform state show",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "show affiche l'état du workspace actif."
+  },
+  {
+    "id": "TF-03-023",
+    "theme": "State Management",
+    "theme_label": "État et workspaces",
+    "difficulty": "easy",
+    "question": "Peut-on lister les ressources de tous les workspaces ?",
+    "options": [
+      "Non, un workspace à la fois",
+      "Oui, avec terraform state list --all",
+      "Oui, avec terraform workspace show",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Il faut basculer sur chaque workspace."
+  },
+  {
+    "id": "TF-03-024",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "easy",
+    "question": "L'état d'un module est-il inclus dans l'état racine ?",
+    "options": ["Oui", "Non", "Uniquement pour les modules locaux", "Uniquement pour les modules du registry"],
+    "correct": 0,
+    "explication": "L'état est unifié : toutes les ressources, y compris celles des modules."
+  },
+  {
+    "id": "TF-03-025",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "easy",
+    "question": "Comment référencer une ressource d'un module dans l'état ?",
+    "options": [
+      "module.vpc.aws_vpc.main.id",
+      "aws_vpc.main.id",
+      "module.vpc.id",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La ressource est préfixée par module.nom."
+  },
+  {
+    "id": "TF-03-026",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "easy",
+    "question": "Peut-on importer une ressource dans un module ?",
+    "options": [
+      "Oui, avec terraform import module.vpc.aws_vpc.main vpc-123",
+      "Non, impossible",
+      "Oui, mais seulement si le module n'a pas de count",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le chemin de la ressource inclut le module."
+  },
+  {
+    "id": "TF-03-027",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "easy",
+    "question": "Comment renommer un module dans l'état ?",
+    "options": [
+      "terraform state mv 'module.old' 'module.new'",
+      "terraform state rename-module",
+      "Impossible",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "state mv peut déplacer des modules."
+  },
+  {
+    "id": "TF-03-028",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le backend 'remote' ?",
+    "options": [
+      "Backend pour Terraform Cloud/Enterprise",
+      "Backend distant générique",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le backend 'remote' est spécifique à Terraform Cloud."
+  },
+  {
+    "id": "TF-03-029",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "easy",
+    "question": "Quel backend supporte les workspaces natifs ?",
+    "options": ["remote", "s3", "gcs", "azure"],
+    "correct": 0,
+    "explication": "Le backend remote est intégré à Terraform Cloud/Enterprise."
+  },
+  {
+    "id": "TF-03-030",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "easy",
+    "question": "Comment configurer le backend 'remote' ?",
+    "options": [
+      "terraform { backend 'remote' { hostname = 'app.terraform.io' organization = 'monorg' workspaces { name = 'monworkspace' } } }",
+      "backend 'remote' { }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La configuration nécessite l'organisation et le workspace."
+  },
+  {
+    "id": "TF-03-031",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "easy",
+    "question": "Le backend 'remote' supporte-t-il le verrouillage ?",
+    "options": ["Oui", "Non", "Uniquement avec Terraform Enterprise", "Uniquement avec Terraform Cloud"],
+    "correct": 0,
+    "explication": "Le verrouillage est intégré."
+  },
+  {
+    "id": "TF-03-032",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "easy",
+    "question": "Peut-on utiliser le backend 'remote' sans Terraform Cloud ?",
+    "options": ["Non", "Oui, avec Terraform Enterprise", "Oui, avec un serveur HTTP", "A et B"],
+    "correct": 3,
+    "explication": "Remote nécessite TFC ou TFE."
+  },
+  {
+    "id": "TF-03-033",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Dans une pipeline CI/CD, où stocker l'état ?",
+    "options": [
+      "Backend distant (S3, GCS, etc.)",
+      "Localement (dans le workspace CI)",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "L'état doit être partagé entre les exécutions, donc backend distant."
+  },
+  {
+    "id": "TF-03-034",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment éviter les conflits d'état en CI/CD ?",
+    "options": [
+      "Utiliser un backend avec verrouillage",
+      "Exécuter les pipelines en série",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Verrouillage et sérialisation."
+  },
+  {
+    "id": "TF-03-035",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Quelle variable d'environnement permet de passer des variables à Terraform ?",
+    "options": ["TF_VAR_name", "TF_VAR_name", "VAR_name", "A et B"],
+    "correct": 3,
+    "explication": "TF_VAR_<nom> définit une variable."
+  },
+  {
+    "id": "TF-03-036",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment spécifier le chemin du fichier d'état ?",
+    "options": [
+      "terraform plan -state=chemin.tfstate",
+      "TF_STATE=chemin.tfstate",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "L'option -state est disponible sur plusieurs commandes."
+  },
+  {
+    "id": "TF-03-037",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment utiliser des workspaces en CI/CD ?",
+    "options": [
+      "terraform workspace select dev",
+      "terraform workspace new dev",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Sélectionner ou créer le workspace avant apply."
+  },
+  {
+    "id": "TF-03-038",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment savoir si l'état a changé après un apply ?",
+    "options": [
+      "terraform plan -detailed-exitcode",
+      "terraform apply -auto-approve -detailed-exitcode",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "L'option -detailed-exitcode retourne 2 si des changements sont nécessaires."
+  },
+  {
+    "id": "TF-03-039",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Que fait l'option -auto-approve ?",
+    "options": [
+      "Applique sans demander confirmation",
+      "Planifie automatiquement",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Utile pour l'automatisation."
+  },
+  {
+    "id": "TF-03-040",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment passer une variable de type map en CI/CD ?",
+    "options": [
+      "TF_VAR_tags='{\"env\":\"prod\"}'",
+      "TF_VAR_tags='{\"env\":\"prod\"}'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La valeur doit être une chaîne JSON."
+  },
+  {
+    "id": "TF-03-041",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment utiliser un fichier .tfvars en CI/CD ?",
+    "options": [
+      "-var-file=prod.tfvars",
+      "-var-file prod.tfvars",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "-var-file est l'option."
+  },
+  {
+    "id": "TF-03-042",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment intégrer Terraform dans GitHub Actions ?",
+    "options": [
+      "hashicorp/setup-terraform@v2",
+      "terraform apply",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "L'action setup-terraform installe Terraform."
+  },
+  {
+    "id": "TF-03-043",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le backend 'http' ?",
+    "options": [
+      "Backend utilisant une API HTTP REST",
+      "Backend pour Terraform Cloud",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le backend HTTP permet de stocker l'état via une API."
+  },
+  {
+    "id": "TF-03-044",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment configurer le backend HTTP ?",
+    "options": [
+      "backend 'http' { address = 'https://example.com/state' update_method = 'PUT' }",
+      "backend 'http' { url = 'https://example.com/state' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "address et update_method sont requis."
+  },
+  {
+    "id": "TF-03-045",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Le backend HTTP supporte-t-il le verrouillage ?",
+    "options": ["Oui (via lock_address)", "Non", "Uniquement avec Terraform Enterprise", "Uniquement avec Terraform Cloud"],
+    "correct": 0,
+    "explication": "lock_address et unlock_address sont optionnels."
+  },
+  {
+    "id": "TF-03-046",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment stocker l'état dans Git ?",
+    "options": [
+      "Déconseillé (fichier binaire, secrets, conflits)",
+      "Possible avec -state",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Il est déconseillé de versionner l'état dans Git."
+  },
+  {
+    "id": "TF-03-047",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment partager l'état entre équipes sans backend distant ?",
+    "options": [
+      "Impossible, utiliser un backend distant",
+      "Partager le fichier via un stockage partagé (NFS)",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 1,
+    "explication": "Un backend distant est la solution recommandée."
+  },
+  {
+    "id": "TF-03-048",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment sécuriser l'état stocké dans S3 ?",
+    "options": [
+      "Bucket privé, chiffrement KMS, bucket policies",
+      "Bucket public",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le bucket doit être privé et chiffré."
+  },
+  {
+    "id": "TF-03-049",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si deux personnes appliquent en même temps sans verrouillage ?",
+    "options": [
+      "Corruption de l'état, conflits",
+      "Terraform gère automatiquement",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le verrouillage est essentiel pour éviter la corruption."
+  },
+  {
+    "id": "TF-03-050",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "question": "Comment forcer le déverrouillage de l'état ?",
+    "options": [
+      "terraform force-unlock <ID>",
+      "terraform state unlock <ID>",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "force-unlock déverrouille manuellement (danger)."
+  }
+]

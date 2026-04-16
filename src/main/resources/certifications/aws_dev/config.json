@@ -1,0 +1,36 @@
+{
+  "id": "aws_dev",
+  "name": "AWS Certified Developer - Associate (DVA-C02)",
+  "version": "1.0",
+  "description": "Certification AWS Developer - Développement d'applications cloud-native sur AWS",
+  "totalQuestions": 400,
+  "examDurationMinutes": 130,
+  "examQuestionCount": 65,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Lambda & Serverless",
+      "count": 80
+    },
+    {
+      "name": "API Gateway",
+      "count": 60
+    },
+    {
+      "name": "DynamoDB",
+      "count": 70
+    },
+    {
+      "name": "S3 & Storage",
+      "count": 60
+    },
+    {
+      "name": "CI/CD (CodeSuite)",
+      "count": 70
+    },
+    {
+      "name": "Security & IAM",
+      "count": 60
+    }
+  ]
+}

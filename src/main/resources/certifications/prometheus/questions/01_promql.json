@@ -1,0 +1,32 @@
+[
+  {
+    "id": "PRM-01-001",
+    "theme": "PromQL",
+    "theme_label": "Requêtes PromQL",
+    "difficulty": "medium",
+    "question": "Que retourne la requête 'rate(http_requests_total[5m])' ?",
+    "options": [
+      "Le nombre total de requêtes sur 5 minutes",
+      "Le taux de requêtes par seconde sur 5 minutes",
+      "La moyenne des requêtes",
+      "Le maximum des requêtes"
+    ],
+    "correct": 1,
+    "explanation": "rate() calcule le taux de croissance par seconde d'un compteur sur l'intervalle spécifié."
+  },
+  {
+    "id": "PRM-01-002",
+    "theme": "PromQL",
+    "theme_label": "Requêtes PromQL",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre 'sum' et 'sum by' en PromQL ?",
+    "options": [
+      "sum agrège toutes les séries, sum by agrège par labels spécifiés",
+      "sum by est plus rapide que sum",
+      "sum calcule une moyenne, sum by une somme",
+      "Pas de différence"
+    ],
+    "correct": 0,
+    "explanation": "sum agrège toutes les séries, sum by (label) agrège en conservant les labels spécifiés."
+  }
+]

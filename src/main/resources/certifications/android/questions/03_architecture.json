@@ -1,0 +1,872 @@
+[
+  {
+    "id": "AND-ARCH-001",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "MVVM",
+    "difficulty": "medium",
+    "question": "Que signifie MVVM ?",
+    "options": [
+      "Model-View-ViewModel",
+      "Model-View-ViewManager",
+      "Model-View-ViewModule",
+      "Model-View-VirtualMachine"
+    ],
+    "correct": 0,
+    "explanation": "MVVM est le pattern d'architecture recommandé par Google."
+  },
+  {
+    "id": "AND-ARCH-002",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "MVVM",
+    "difficulty": "medium",
+    "question": "Quel est le rôle du ViewModel dans MVVM ?",
+    "options": [
+      "Préparer et gérer les données pour l'UI",
+      "Afficher l'interface",
+      "Accéder à la base de données",
+      "Gérer les permissions"
+    ],
+    "correct": 0,
+    "explanation": "Le ViewModel expose les données à l'UI et survit aux changements de configuration."
+  },
+  {
+    "id": "AND-ARCH-003",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "ViewModel",
+    "difficulty": "easy",
+    "question": "Quelle classe étendre pour créer un ViewModel ?",
+    "options": ["ViewModel", "AndroidViewModel", "LifecycleViewModel", "A ou B"],
+    "correct": 3,
+    "explanation": "ViewModel ou AndroidViewModel (avec Context)."
+  },
+  {
+    "id": "AND-ARCH-004",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "ViewModel",
+    "difficulty": "easy",
+    "question": "Comment obtenir un ViewModel dans une Activity ?",
+    "options": [
+      "ViewModelProvider(this).get(MyViewModel::class.java)",
+      "ViewModel(this).get(MyViewModel.class)",
+      "getViewModel(MyViewModel.class)",
+      "createViewModel(MyViewModel.class)"
+    ],
+    "correct": 0,
+    "explanation": "ViewModelProvider avec le propriétaire (Activity/Fragment)."
+  },
+  {
+    "id": "AND-ARCH-005",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "ViewModel",
+    "difficulty": "hard",
+    "question": "Un ViewModel survit-il à la rotation de l'écran ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec SavedState",
+      "Uniquement si configuré"
+    ],
+    "correct": 0,
+    "explanation": "Le ViewModel survit aux changements de configuration."
+  },
+  {
+    "id": "AND-ARCH-006",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "ViewModel",
+    "difficulty": "hard",
+    "question": "Quand un ViewModel est-il détruit ?",
+    "options": [
+      "Quand l'Activity est finie",
+      "À la rotation",
+      "À la pause",
+      "À l'arrêt"
+    ],
+    "correct": 0,
+    "explanation": "Le ViewModel est détruit quand l'Activity est finie (finish())."
+  },
+  {
+    "id": "AND-ARCH-007",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "LiveData",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que LiveData ?",
+    "options": [
+      "Observateur de données lifecycle-aware",
+      "Base de données",
+      "Cache",
+      "Service"
+    ],
+    "correct": 0,
+    "explanation": "LiveData est un observable qui respecte le cycle de vie."
+  },
+  {
+    "id": "AND-ARCH-008",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "LiveData",
+    "difficulty": "easy",
+    "question": "Comment observer une LiveData ?",
+    "options": [
+      "liveData.observe(this) { value -> }",
+      "liveData.subscribe(this) { value -> }",
+      "liveData.watch(this) { value -> }",
+      "liveData.listen(this) { value -> }"
+    ],
+    "correct": 0,
+    "explanation": "observe() attache un observateur respectueux du cycle de vie."
+  },
+  {
+    "id": "AND-ARCH-009",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "LiveData",
+    "difficulty": "medium",
+    "question": "Que se passe-t-il si on observe LiveData depuis une Activity détruite ?",
+    "options": [
+      "Pas de notification",
+      "Exception",
+      "Notification quand même",
+      "Crash"
+    ],
+    "correct": 0,
+    "explanation": "LiveData ne notifie pas les observateurs avec un Lifecycle détruit."
+  },
+  {
+    "id": "AND-ARCH-010",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "LiveData",
+    "difficulty": "hard",
+    "question": "Comment mettre à jour une LiveData depuis un background thread ?",
+    "options": [
+      "postValue()",
+      "setValue()",
+      "updateValue()",
+      "changeValue()"
+    ],
+    "correct": 0,
+    "explanation": "postValue() est thread-safe, setValue() doit être appelé sur main thread."
+  },
+  {
+    "id": "AND-ARCH-011",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "LiveData",
+    "difficulty": "hard",
+    "question": "Différence entre setValue() et postValue() ?",
+    "options": [
+      "setValue() sur main thread, postValue() sur n'importe quel thread",
+      "Identiques",
+      "setValue() sur background, postValue() sur main",
+      "postValue() déprécié"
+    ],
+    "correct": 0,
+    "explanation": "postValue() peut être appelé depuis un thread background."
+  },
+  {
+    "id": "AND-ARCH-012",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "StateFlow",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que StateFlow ?",
+    "options": [
+      "Flow avec état initial",
+      "LiveData alternative",
+      "Flow sans état",
+      "SharedFlow"
+    ],
+    "correct": 0,
+    "explanation": "StateFlow est un Flow qui expose un état courant."
+  },
+  {
+    "id": "AND-ARCH-013",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "StateFlow",
+    "difficulty": "hard",
+    "question": "Comment créer un StateFlow ?",
+    "options": [
+      "MutableStateFlow(initialValue)",
+      "StateFlow.of(initialValue)",
+      "flowOf(initialValue)",
+      "stateFlow(initialValue)"
+    ],
+    "correct": 0,
+    "explanation": "MutableStateFlow prend une valeur initiale."
+  },
+  {
+    "id": "AND-ARCH-014",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "StateFlow vs LiveData",
+    "difficulty": "hard",
+    "question": "Avantage de StateFlow sur LiveData ?",
+    "options": [
+      "Plus d'opérateurs (map, filter)",
+      "Meilleure intégration coroutines",
+      "Testable",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "StateFlow offre plus de flexibilité avec les coroutines."
+  },
+  {
+    "id": "AND-ARCH-015",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Repository pattern",
+    "difficulty": "medium",
+    "question": "Quel est le rôle du Repository ?",
+    "options": [
+      "Centraliser l'accès aux données",
+      "Afficher l'interface",
+      "Gérer le cycle de vie",
+      "Naviguer entre écrans"
+    ],
+    "correct": 0,
+    "explanation": "Le Repository est une source unique de vérité pour les données."
+  },
+  {
+    "id": "AND-ARCH-016",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Repository pattern",
+    "difficulty": "hard",
+    "question": "Que doit faire un Repository ?",
+    "options": [
+      "Décider source (cache/network)",
+      "Exposer des Flow/LiveData",
+      "Gérer les erreurs",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Le Repository gère les sources de données."
+  },
+  {
+    "id": "AND-ARCH-017",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "UseCase",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un UseCase ?",
+    "options": [
+      "Encapsule une action métier",
+      "Base de données",
+      "ViewModel",
+      "Fragment"
+    ],
+    "correct": 0,
+    "explanation": "Un UseCase représente une seule action métier."
+  },
+  {
+    "id": "AND-ARCH-018",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "UseCase",
+    "difficulty": "hard",
+    "question": "Où placer la logique métier ?",
+    "options": [
+      "Dans les UseCases",
+      "Dans le ViewModel",
+      "Dans le Repository",
+      "Dans l'Activity"
+    ],
+    "correct": 0,
+    "explanation": "La logique métier va dans les UseCases."
+  },
+  {
+    "id": "AND-ARCH-019",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Coroutines",
+    "difficulty": "hard",
+    "question": "Comment lancer une coroutine dans un ViewModel ?",
+    "options": [
+      "viewModelScope.launch { }",
+      "GlobalScope.launch { }",
+      "lifecycleScope.launch { }",
+      "coroutineScope.launch { }"
+    ],
+    "correct": 0,
+    "explanation": "viewModelScope est lié au cycle de vie du ViewModel."
+  },
+  {
+    "id": "AND-ARCH-020",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Coroutines",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si viewModelScope est annulé ?",
+    "options": [
+      "Toutes les coroutines enfants sont annulées",
+      "Rien",
+      "Erreur",
+      "Redémarrage"
+    ],
+    "correct": 0,
+    "explanation": "viewModelScope annule ses coroutines quand le ViewModel est détruit."
+  },
+  {
+    "id": "AND-ARCH-021",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Dependency Injection",
+    "difficulty": "hard",
+    "question": "Quelle bibliothèque d'injection est recommandée par Google ?",
+    "options": [
+      "Hilt",
+      "Dagger 2",
+      "Koin",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Hilt (basé sur Dagger) est recommandé pour Android."
+  },
+  {
+    "id": "AND-ARCH-022",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Hilt",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une classe pour injection Hilt ?",
+    "options": ["@Inject", "@Provides", "@Binds", "@HiltViewModel"],
+    "correct": 3,
+    "explanation": "@HiltViewModel marque un ViewModel pour injection."
+  },
+  {
+    "id": "AND-ARCH-023",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Hilt",
+    "difficulty": "hard",
+    "question": "Quelle annotation active Hilt dans l'application ?",
+    "options": [
+      "@HiltAndroidApp",
+      "@EnableHilt",
+      "@HiltApplication",
+      "@AndroidEntryPoint"
+    ],
+    "correct": 0,
+    "explanation": "@HiltAndroidApp sur la classe Application active Hilt."
+  },
+  {
+    "id": "AND-ARCH-024",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Navigation",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Navigation Component ?",
+    "options": [
+      "Bibliothèque de navigation",
+      "Base de données",
+      "Cache",
+      "Service"
+    ],
+    "correct": 0,
+    "explanation": "Navigation Component simplifie la navigation entre écrans."
+  },
+  {
+    "id": "AND-ARCH-025",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Navigation",
+    "difficulty": "hard",
+    "question": "Où sont définies les destinations de navigation ?",
+    "options": [
+      "nav_graph.xml",
+      "navigation.xml",
+      "destinations.xml",
+      "routes.xml"
+    ],
+    "correct": 0,
+    "explanation": "Le graphe de navigation est défini dans un fichier XML."
+  },
+  {
+    "id": "AND-ARCH-026",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "WorkManager",
+    "difficulty": "hard",
+    "question": "À quoi sert WorkManager ?",
+    "options": [
+      "Tâches asynchrones garanties",
+      "Navigation",
+      "Base de données",
+      "UI"
+    ],
+    "correct": 0,
+    "explanation": "WorkManager exécute des tâches différées garanties."
+  },
+  {
+    "id": "AND-ARCH-027",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "WorkManager",
+    "difficulty": "hard",
+    "question": "Quand utiliser WorkManager plutôt que Coroutines ?",
+    "options": [
+      "Tâches garanties (même après redémarrage)",
+      "Tâches UI",
+      "Tâches rapides",
+      "Tâches réactives"
+    ],
+    "correct": 0,
+    "explanation": "WorkManager garantit l'exécution même en cas d'arrêt de l'app."
+  },
+  {
+    "id": "AND-ARCH-028",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "WorkManager",
+    "difficulty": "hard",
+    "question": "Comment créer un worker ?",
+    "options": [
+      "class MyWorker : Worker()",
+      "class MyWorker : CoroutineWorker()",
+      "class MyWorker : ListenableWorker()",
+      "A ou B"
+    ],
+    "correct": 3,
+    "explanation": "Worker (thread Java) ou CoroutineWorker (Kotlin)."
+  },
+  {
+    "id": "AND-ARCH-029",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "DataBinding",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DataBinding ?",
+    "options": [
+      "Liaison déclarative UI/data",
+      "Base de données",
+      "Service",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "DataBinding lie directement les données aux vues XML."
+  },
+  {
+    "id": "AND-ARCH-030",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "DataBinding vs ViewBinding",
+    "difficulty": "hard",
+    "question": "Différence entre DataBinding et ViewBinding ?",
+    "options": [
+      "DataBinding supporte les expressions",
+      "ViewBinding plus rapide",
+      "DataBinding plus complet",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "DataBinding est plus puissant, ViewBinding plus simple et rapide."
+  },
+  {
+    "id": "AND-ARCH-031",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "SavedStateHandle",
+    "difficulty": "hard",
+    "question": "À quoi sert SavedStateHandle ?",
+    "options": [
+      "Sauvegarder l'état du ViewModel",
+      "Naviguer",
+      "Injecter",
+      "Logger"
+    ],
+    "correct": 0,
+    "explanation": "SavedStateHandle sauvegarde l'état du ViewModel après destruction."
+  },
+  {
+    "id": "AND-ARCH-032",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "SavedStateHandle",
+    "difficulty": "hard",
+    "question": "Comment injecter SavedStateHandle ?",
+    "options": [
+      "ViewModel(savedStateHandle)",
+      "@Inject constructor(handle: SavedStateHandle)",
+      "SavedStateHandleProvider",
+      "getSavedStateHandle()"
+    ],
+    "correct": 1,
+    "explanation": "SavedStateHandle peut être injecté via le constructeur."
+  },
+  {
+    "id": "AND-ARCH-033",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Testing ViewModel",
+    "difficulty": "hard",
+    "question": "Comment tester un ViewModel ?",
+    "options": [
+      "InstantTaskExecutorRule",
+      "MainDispatcherRule",
+      "Un test JUnit classique",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les règles pour coroutines et LiveData sont nécessaires."
+  },
+  {
+    "id": "AND-ARCH-034",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Testing ViewModel",
+    "difficulty": "hard",
+    "question": "Comment observer une LiveData dans un test ?",
+    "options": [
+      "Observer",
+      "getValue()",
+      "observeForever",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "observeForever() ou l'API Observer."
+  },
+  {
+    "id": "AND-ARCH-035",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Clean Architecture",
+    "difficulty": "hard",
+    "question": "Quelles sont les couches de Clean Architecture ?",
+    "options": [
+      "Data, Domain, Presentation",
+      "Model, View, Controller",
+      "UI, Business, Data",
+      "Entity, UseCase, Repository"
+    ],
+    "correct": 0,
+    "explanation": "Clean Architecture sépare en couches Data, Domain, Presentation."
+  },
+  {
+    "id": "AND-ARCH-036",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Clean Architecture",
+    "difficulty": "hard",
+    "question": "Que contient la couche Domain ?",
+    "options": [
+      "UseCases et Entities",
+      "UI",
+      "Base de données",
+      "API"
+    ],
+    "correct": 0,
+    "explanation": "La couche Domain contient la logique métier."
+  },
+  {
+    "id": "AND-ARCH-037",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "MVI",
+    "difficulty": "hard",
+    "question": "Que signifie MVI ?",
+    "options": [
+      "Model-View-Intent",
+      "Model-View-Interface",
+      "Model-View-Interaction",
+      "Model-View-Input"
+    ],
+    "correct": 0,
+    "explanation": "MVI est un pattern avec des intents unidirectionnels."
+  },
+  {
+    "id": "AND-ARCH-038",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "MVI vs MVVM",
+    "difficulty": "hard",
+    "question": "Différence principale MVI vs MVVM ?",
+    "options": [
+      "MVI a un état unique",
+      "MVVM a un état unique",
+      "MVI a plusieurs états",
+      "Identiques"
+    ],
+    "correct": 0,
+    "explanation": "MVI a un seul état immuable (State)."
+  },
+  {
+    "id": "AND-ARCH-039",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Paging",
+    "difficulty": "hard",
+    "question": "À quoi sert Paging 3 ?",
+    "options": [
+      "Pagination des données",
+      "Base de données",
+      "Cache",
+      "Network"
+    ],
+    "correct": 0,
+    "explanation": "Paging 3 simplifie le chargement paginé des données."
+  },
+  {
+    "id": "AND-ARCH-040",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Paging",
+    "difficulty": "hard",
+    "question": "Quel type retourne un PagingSource ?",
+    "options": ["LoadResult", "PagingData", "PagingSourceResult", "Page"],
+    "correct": 0,
+    "explanation": "LoadResult.Page ou LoadResult.Error."
+  },
+  {
+    "id": "AND-ARCH-041",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Room",
+    "difficulty": "hard",
+    "question": "Room est une abstraction sur quelle API ?",
+    "options": ["SQLite", "Realm", "ObjectBox", "Firebase"],
+    "correct": 0,
+    "explanation": "Room est une couche d'abstraction sur SQLite."
+  },
+  {
+    "id": "AND-ARCH-042",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Room",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une base de données Room ?",
+    "options": ["@Database", "@RoomDatabase", "@DB", "@EntityDatabase"],
+    "correct": 0,
+    "explanation": "@Database sur une classe abstraite étendant RoomDatabase."
+  },
+  {
+    "id": "AND-ARCH-043",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Room",
+    "difficulty": "hard",
+    "question": "Comment migrer une base Room ?",
+    "options": [
+      "Migration",
+      "AddMigrations",
+      "fallbackToDestructiveMigration",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs options pour les migrations."
+  },
+  {
+    "id": "AND-ARCH-044",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Retrofit",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Retrofit ?",
+    "options": [
+      "Client HTTP pour API REST",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "Retrofit est un client HTTP typé pour les API REST."
+  },
+  {
+    "id": "AND-ARCH-045",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Retrofit",
+    "difficulty": "hard",
+    "question": "Comment définir une API Retrofit ?",
+    "options": [
+      "interface ApiService { @GET(\"path\") suspend fun get(): Response }",
+      "class ApiService { @GET }",
+      "abstract class ApiService",
+      "object ApiService"
+    ],
+    "correct": 0,
+    "explanation": "Les APIs sont définies dans des interfaces avec des annotations."
+  },
+  {
+    "id": "AND-ARCH-046",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Retrofit",
+    "difficulty": "hard",
+    "question": "Comment créer une instance Retrofit ?",
+    "options": [
+      "Retrofit.Builder().baseUrl().build()",
+      "Retrofit.create()",
+      "new Retrofit()",
+      "RetrofitClient()"
+    ],
+    "correct": 0,
+    "explanation": "Builder pattern pour configurer Retrofit."
+  },
+  {
+    "id": "AND-ARCH-047",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "OkHttp",
+    "difficulty": "hard",
+    "question": "À quoi sert OkHttp ?",
+    "options": [
+      "Client HTTP sous-jacent",
+      "Base de données",
+      "Cache",
+      "Sérialisation"
+    ],
+    "correct": 0,
+    "explanation": "OkHttp est le client HTTP utilisé par Retrofit."
+  },
+  {
+    "id": "AND-ARCH-048",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "OkHttp Interceptor",
+    "difficulty": "hard",
+    "question": "Comment ajouter un header à toutes les requêtes ?",
+    "options": [
+      "Interceptor",
+      "addHeader()",
+      "HeaderInterceptor",
+      "NetworkInterceptor"
+    ],
+    "correct": 0,
+    "explanation": "Un Interceptor personnalisé peut ajouter des headers."
+  },
+  {
+    "id": "AND-ARCH-049",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Moshi",
+    "difficulty": "hard",
+    "question": "À quoi sert Moshi ?",
+    "options": [
+      "JSON parsing",
+      "Base de données",
+      "Cache",
+      "Network"
+    ],
+    "correct": 0,
+    "explanation": "Moshi est un parseur JSON pour Kotlin/Java."
+  },
+  {
+    "id": "AND-ARCH-050",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Kotlin Serialization",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une classe pour Kotlin Serialization ?",
+    "options": ["@Serializable", "@Serialize", "@JsonSerializable", "@KSerializable"],
+    "correct": 0,
+    "explanation": "@Serializable est l'annotation de kotlinx.serialization."
+  },
+  {
+    "id": "AND-ARCH-051",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "DataStore",
+    "difficulty": "hard",
+    "question": "À quoi sert Preferences DataStore ?",
+    "options": [
+      "Stockage de paires clé-valeur",
+      "Base de données",
+      "Cache réseau",
+      "Logs"
+    ],
+    "correct": 0,
+    "explanation": "Preferences DataStore remplace SharedPreferences."
+  },
+  {
+    "id": "AND-ARCH-052",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "DataStore",
+    "difficulty": "hard",
+    "question": "Comment lire une valeur depuis DataStore ?",
+    "options": [
+      "dataStore.data.map { it[KEY] }",
+      "dataStore.getValue(KEY)",
+      "dataStore.get(KEY)",
+      "dataStore.read(KEY)"
+    ],
+    "correct": 0,
+    "explanation": "dataStore.data retourne un Flow avec les données."
+  },
+  {
+    "id": "AND-ARCH-053",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Proto DataStore",
+    "difficulty": "hard",
+    "question": "Différence entre Preferences et Proto DataStore ?",
+    "options": [
+      "Proto utilise des protobufs",
+      "Preferences plus rapide",
+      "Proto plus lent",
+      "Identiques"
+    ],
+    "correct": 0,
+    "explanation": "Proto DataStore utilise des schémas protobuf."
+  },
+  {
+    "id": "AND-ARCH-054",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "LeakCanary",
+    "difficulty": "hard",
+    "question": "À quoi sert LeakCanary ?",
+    "options": [
+      "Détection de memory leaks",
+      "Base de données",
+      "Cache",
+      "Logging"
+    ],
+    "correct": 0,
+    "explanation": "LeakCanary détecte automatiquement les fuites mémoire."
+  },
+  {
+    "id": "AND-ARCH-055",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Timber",
+    "difficulty": "hard",
+    "question": "À quoi sert Timber ?",
+    "options": [
+      "Logging moderne",
+      "Base de données",
+      "Cache",
+      "Network"
+    ],
+    "correct": 0,
+    "explanation": "Timber est une API de logging avec plantage des arbres."
+  },
+  {
+    "id": "AND-ARCH-056",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Coil",
+    "difficulty": "hard",
+    "question": "À quoi sert Coil ?",
+    "options": [
+      "Chargement d'images",
+      "Base de données",
+      "Cache",
+      "Network"
+    ],
+    "correct": 0,
+    "explanation": "Coil charge des images depuis des URLs."
+  },
+  {
+    "id": "AND-ARCH-057",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Glide",
+    "difficulty": "hard",
+    "question": "Glide vs Coil, quelle différence ?",
+    "options": [
+      "Coil est écrit en Kotlin",
+      "Glide plus ancien",
+      "Coil plus moderne",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Coil est natif Kotlin, plus moderne."
+  },
+  {
+    "id": "AND-ARCH-058",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Room migrations",
+    "difficulty": "hard",
+    "question": "Comment ajouter une colonne à une table Room ?",
+    "options": [
+      "@Entity modification + Migration",
+      "Recreate database",
+      "ALTER TABLE manuel",
+      "A ou C"
+    ],
+    "correct": 3,
+    "explanation": "Migration ou fallbackToDestructiveMigration."
+  },
+  {
+    "id": "AND-ARCH-059",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Room relations",
+    "difficulty": "hard",
+    "question": "Comment définir une relation one-to-many dans Room ?",
+    "options": [
+      "@Relation",
+      "@ForeignKey",
+      "@Embedded",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@Relation avec @ForeignKey pour les contraintes."
+  },
+  {
+    "id": "AND-ARCH-060",
+    "theme": "Architecture (MVVM, ViewModel)",
+    "theme_label": "Room transactions",
+    "difficulty": "hard",
+    "question": "Comment exécuter une transaction Room ?",
+    "options": [
+      "@Transaction",
+      "runInTransaction",
+      "transaction { }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@Transaction sur méthode DAO ou runInTransaction."
+  }
+]

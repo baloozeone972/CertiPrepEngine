@@ -1,0 +1,47 @@
+[
+  {
+    "id": "OCA-02-001",
+    "theme": "Types de données et opérateurs",
+    "theme_label": "Types primitifs et wrappers",
+    "difficulty": "easy",
+    "question": "Quelle est la taille en bits d'un int en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "explanation": "int est un entier signé sur 32 bits en Java."
+  },
+  {
+    "id": "OCA-02-002",
+    "theme": "Types de données et opérateurs",
+    "theme_label": "Types primitifs et wrappers",
+    "difficulty": "medium",
+    "question": "Que produit le code suivant ?\nInteger a = 127;\nInteger b = 127;\nSystem.out.println(a == b);\nInteger c = 128;\nInteger d = 128;\nSystem.out.println(c == d);",
+    "options": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ],
+    "correct": 1,
+    "explanation": "Integer cache les valeurs entre -128 et 127. 127 est dans le cache (même objet), 128 non."
+  },
+  {
+    "id": "OCA-02-003",
+    "theme": "Types de données et opérateurs",
+    "theme_label": "Types primitifs et wrappers",
+    "difficulty": "medium",
+    "question": "Que vaut l'expression 'a' + 1 en Java ?",
+    "options": [
+      "'b'",
+      "\"a1\"",
+      "98",
+      "Erreur compilation"
+    ],
+    "correct": 2,
+    "explanation": "Le char 'a' a la valeur Unicode 97, additionné à 1 donne 98 de type int."
+  }
+]

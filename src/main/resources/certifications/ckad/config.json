@@ -1,0 +1,33 @@
+{
+  "id": "ckad",
+  "name": "Certified Kubernetes Application Developer (CKAD)",
+  "version": "1.0",
+  "description": "Certification CKAD - Développement d'applications cloud-native sur Kubernetes",
+  "totalQuestions": 250,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 19,
+  "passingScore": 66,
+  "examType": "practical",
+  "themes": [
+    {
+      "name": "Application Design",
+      "count": 40
+    },
+    {
+      "name": "Deployment Configuration",
+      "count": 60
+    },
+    {
+      "name": "Observability",
+      "count": 40
+    },
+    {
+      "name": "Services & Networking",
+      "count": 60
+    },
+    {
+      "name": "State Persistence",
+      "count": 50
+    }
+  ]
+}

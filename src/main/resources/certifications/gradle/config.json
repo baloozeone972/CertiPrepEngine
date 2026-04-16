@@ -1,0 +1,32 @@
+{
+  "id": "gradle",
+  "name": "Gradle Professional",
+  "version": "1.0",
+  "description": "Certification Gradle - Build automation et gestion de projet avec Gradle",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Gradle Build Script",
+      "count": 60
+    },
+    {
+      "name": "Task Configuration",
+      "count": 50
+    },
+    {
+      "name": "Dependency Management",
+      "count": 50
+    },
+    {
+      "name": "Multi-project Builds",
+      "count": 50
+    },
+    {
+      "name": "Plugins",
+      "count": 40
+    }
+  ]
+}

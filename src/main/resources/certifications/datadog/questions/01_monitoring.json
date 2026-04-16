@@ -1,0 +1,32 @@
+[
+  {
+    "id": "DD-01-001",
+    "theme": "Infrastructure",
+    "theme_label": "Monitoring infrastructure",
+    "difficulty": "easy",
+    "question": "Quel agent Datadog collecte les métriques ?",
+    "options": [
+      "Datadog Agent",
+      "Datadog Collector",
+      "Datadog Forwarder",
+      "Datadog Exporter"
+    ],
+    "correct": 0,
+    "explanation": "L'agent Datadog est installé sur les hôtes pour collecter les métriques."
+  },
+  {
+    "id": "DD-01-002",
+    "theme": "APM",
+    "theme_label": "Application Performance Monitoring",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une trace Datadog APM ?",
+    "options": [
+      "Une représentation d'une requête à travers les services",
+      "Un log d'erreur",
+      "Une métrique d'application",
+      "Un dashboard"
+    ],
+    "correct": 0,
+    "explanation": "Une trace suit une requête à travers l'ensemble des services."
+  }
+]

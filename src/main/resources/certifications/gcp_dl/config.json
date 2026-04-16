@@ -1,0 +1,28 @@
+{
+  "id": "gcp_dl",
+  "name": "Google Cloud Digital Leader",
+  "version": "1.0",
+  "description": "Certification Google Cloud Digital Leader - Concepts fondamentaux du cloud Google Cloud Platform",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Digital Transformation",
+      "count": 50
+    },
+    {
+      "name": "GCP Core Services",
+      "count": 80
+    },
+    {
+      "name": "Data & Analytics",
+      "count": 60
+    },
+    {
+      "name": "Security & Compliance",
+      "count": 60
+    }
+  ]
+}

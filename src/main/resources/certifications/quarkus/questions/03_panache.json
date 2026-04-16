@@ -1,0 +1,752 @@
+[
+  {
+    "id": "QRK-PAN-001",
+    "theme": "Panache",
+    "theme_label": "Présentation",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Panache ?",
+    "options": [
+      "ORM simplifié pour Quarkus",
+      "Serveur web",
+      "Client REST",
+      "Message broker"
+    ],
+    "correct": 0,
+    "explanation": "Panache simplifie l'utilisation de Hibernate ORM."
+  },
+  {
+    "id": "QRK-PAN-002",
+    "theme": "Panache",
+    "theme_label": "Entity",
+    "difficulty": "easy",
+    "question": "Quelle classe étendre pour une entité Panache ?",
+    "options": [
+      "PanacheEntity",
+      "PanacheEntityBase",
+      "HibernateEntity",
+      "JpaEntity"
+    ],
+    "correct": 0,
+    "explanation": "PanacheEntity ajoute un id Long automatiquement."
+  },
+  {
+    "id": "QRK-PAN-003",
+    "theme": "Panache",
+    "theme_label": "Entity",
+    "difficulty": "medium",
+    "question": "Quand utiliser PanacheEntityBase ?",
+    "options": [
+      "Pour un id personnalisé",
+      "Pour une entité sans id",
+      "Pour une entité avec composite key",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "PanacheEntityBase ne force pas de type d'id."
+  },
+  {
+    "id": "QRK-PAN-004",
+    "theme": "Panache",
+    "theme_label": "Repository",
+    "difficulty": "medium",
+    "question": "Quelle classe étendre pour un repository ?",
+    "options": [
+      "PanacheRepository",
+      "PanacheRepositoryBase",
+      "HibernateRepository",
+      "JpaRepository"
+    ],
+    "correct": 0,
+    "explanation": "PanacheRepository ajoute des méthodes CRUD."
+  },
+  {
+    "id": "QRK-PAN-005",
+    "theme": "Panache",
+    "theme_label": "Repository",
+    "difficulty": "hard",
+    "question": "Quand utiliser PanacheRepositoryBase ?",
+    "options": [
+      "Pour un type d'id personnalisé",
+      "Pour une entité sans PanacheEntity",
+      "Pour une interface",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "PanacheRepositoryBase est plus flexible sur le type d'id."
+  },
+  {
+    "id": "QRK-PAN-006",
+    "theme": "Panache",
+    "theme_label": "Query",
+    "difficulty": "easy",
+    "question": "Comment trouver tous les enregistrements ?",
+    "options": [
+      "Entity.listAll()",
+      "Entity.findAll()",
+      "Entity.all()",
+      "Entity.getList()"
+    ],
+    "correct": 0,
+    "explanation": "listAll() retourne tous les enregistrements."
+  },
+  {
+    "id": "QRK-PAN-007",
+    "theme": "Panache",
+    "theme_label": "Query",
+    "difficulty": "easy",
+    "question": "Comment trouver par id ?",
+    "options": [
+      "Entity.findById(id)",
+      "Entity.get(id)",
+      "Entity.find(id)",
+      "Entity.byId(id)"
+    ],
+    "correct": 0,
+    "explanation": "findById() est la méthode pour chercher par id."
+  },
+  {
+    "id": "QRK-PAN-008",
+    "theme": "Panache",
+    "theme_label": "Query",
+    "difficulty": "easy",
+    "question": "Comment trouver par champ ?",
+    "options": [
+      "Entity.find(\"name\", name)",
+      "Entity.findByName(name)",
+      "Entity.find(\"name = ?1\", name)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs syntaxes pour les requêtes simples."
+  },
+  {
+    "id": "QRK-PAN-009",
+    "theme": "Panache",
+    "theme_label": "Query",
+    "difficulty": "medium",
+    "question": "Comment utiliser des paramètres nommés ?",
+    "options": [
+      "Entity.find(\"name = :name\", Parameters.with(\"name\", name))",
+      "Entity.find(\"name = :name\", Map.of(\"name\", name))",
+      "Entity.find(\"name = :name\", name)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Parameters ou Map pour les paramètres nommés."
+  },
+  {
+    "id": "QRK-PAN-010",
+    "theme": "Panache",
+    "theme_label": "Pagination",
+    "difficulty": "medium",
+    "question": "Comment paginer les résultats ?",
+    "options": [
+      "Entity.findAll().page(0, 10).list()",
+      "Entity.find(...).page(0, 10).list()",
+      "Entity.page(0, 10).list()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "page() sur PanacheQuery."
+  },
+  {
+    "id": "QRK-PAN-011",
+    "theme": "Panache",
+    "theme_label": "Pagination",
+    "difficulty": "hard",
+    "question": "Comment connaître le nombre total de pages ?",
+    "options": [
+      "query.pageCount()",
+      "query.totalPages()",
+      "query.getTotalPages()",
+      "query.pages()"
+    ],
+    "correct": 0,
+    "explanation": "pageCount() retourne le nombre de pages."
+  },
+  {
+    "id": "QRK-PAN-012",
+    "theme": "Panache",
+    "theme_label": "Projections",
+    "difficulty": "hard",
+    "question": "Comment créer une projection ?",
+    "options": [
+      "Entity.find(\"...\").project(MyProjection.class)",
+      "Entity.project(MyProjection.class)",
+      "Entity.find(...).select(MyProjection.class)",
+      "Entity.query(...).as(MyProjection.class)"
+    ],
+    "correct": 0,
+    "explanation": "project() sur PanacheQuery."
+  },
+  {
+    "id": "QRK-PAN-013",
+    "theme": "Panache",
+    "theme_label": "Projections",
+    "difficulty": "hard",
+    "question": "Quels types peuvent être utilisés pour les projections ?",
+    "options": [
+      "Interfaces avec getters",
+      "Records",
+      "Classes avec constructeur",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs types supportés pour les projections."
+  },
+  {
+    "id": "QRK-PAN-014",
+    "theme": "Panache",
+    "theme_label": "Update",
+    "difficulty": "medium",
+    "question": "Comment mettre à jour des enregistrements ?",
+    "options": [
+      "Entity.update(\"name = ?1\", name)",
+      "Entity.update(\"name = :name\", Parameters.with(\"name\", name))",
+      "entity.name = newName; entity.persist()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Update en masse ou via l'entité."
+  },
+  {
+    "id": "QRK-PAN-015",
+    "theme": "Panache",
+    "theme_label": "Delete",
+    "difficulty": "medium",
+    "question": "Comment supprimer des enregistrements ?",
+    "options": [
+      "Entity.delete(\"name\", name)",
+      "Entity.delete(\"name = ?1\", name)",
+      "entity.delete()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Delete en masse ou via l'entité."
+  },
+  {
+    "id": "QRK-PAN-016",
+    "theme": "Panache",
+    "theme_label": "Count",
+    "difficulty": "medium",
+    "question": "Comment compter les enregistrements ?",
+    "options": [
+      "Entity.count()",
+      "Entity.find().count()",
+      "Entity.getCount()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "count() sur l'entité ou la query."
+  },
+  {
+    "id": "QRK-PAN-017",
+    "theme": "Panache",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Comment gérer les transactions ?",
+    "options": [
+      "@Transactional",
+      "entity.persist()",
+      "Panache.getEntityManager().getTransaction()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "@Transactional est recommandé."
+  },
+  {
+    "id": "QRK-PAN-018",
+    "theme": "Panache",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle est la propagation par défaut ?",
+    "options": [
+      "REQUIRED",
+      "REQUIRES_NEW",
+      "SUPPORTS",
+      "MANDATORY"
+    ],
+    "correct": 0,
+    "explanation": "@Transactional utilise REQUIRED par défaut."
+  },
+  {
+    "id": "QRK-PAN-019",
+    "theme": "Panache",
+    "theme_label": "Lazy loading",
+    "difficulty": "hard",
+    "question": "Comment gérer le lazy loading ?",
+    "options": [
+      "@Transactional pour la session",
+      "Fetch join en requête",
+      "Panache.getSession().fetch(entity)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Session active ou fetch join."
+  },
+  {
+    "id": "QRK-PAN-020",
+    "theme": "Panache",
+    "theme_label": "N+1 problem",
+    "difficulty": "hard",
+    "question": "Comment éviter le problème N+1 ?",
+    "options": [
+      "Fetch join",
+      "Entity Graph",
+      "Batch fetching",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques pour éviter N+1."
+  },
+  {
+    "id": "QRK-PAN-021",
+    "theme": "Panache",
+    "theme_label": "Fetch join",
+    "difficulty": "hard",
+    "question": "Comment faire un fetch join ?",
+    "options": [
+      "Entity.find(\"from User u join fetch u.address\")",
+      "Entity.find(\"from User u left join fetch u.address\")",
+      "@NamedEntityGraph",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Fetch join dans la requête JPQL."
+  },
+  {
+    "id": "QRK-PAN-022",
+    "theme": "Panache",
+    "theme_label": "PanacheQuery",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que PanacheQuery ?",
+    "options": [
+      "Objet de requête fluent",
+      "Builder de requête",
+      "Résultat de requête",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "PanacheQuery permet de chaîner les opérations."
+  },
+  {
+    "id": "QRK-PAN-023",
+    "theme": "Panache",
+    "theme_label": "PanacheQuery",
+    "difficulty": "hard",
+    "question": "Comment exécuter une PanacheQuery ?",
+    "options": [
+      ".list()",
+      ".firstResult()",
+      ".singleResult()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes terminales."
+  },
+  {
+    "id": "QRK-PAN-024",
+    "theme": "Panache",
+    "theme_label": "Native queries",
+    "difficulty": "hard",
+    "question": "Comment exécuter une requête SQL native ?",
+    "options": [
+      "Entity.find(\"SELECT * FROM user\", NativeQuery)",
+      "Entity.getEntityManager().createNativeQuery()",
+      "Entity.find(\"SELECT * FROM user\").nativeQuery()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons pour les requêtes natives."
+  },
+  {
+    "id": "QRK-PAN-025",
+    "theme": "Panache",
+    "theme_label": "Named queries",
+    "difficulty": "hard",
+    "question": "Comment définir une named query ?",
+    "options": [
+      "@NamedQuery",
+      "@NamedQueries",
+      "META-INF/orm.xml",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Named queries par annotation ou XML."
+  },
+  {
+    "id": "QRK-PAN-026",
+    "theme": "Panache",
+    "theme_label": "Named queries",
+    "difficulty": "hard",
+    "question": "Comment utiliser une named query ?",
+    "options": [
+      "Entity.find(\"#queryName\", params)",
+      "Entity.getEntityManager().createNamedQuery()",
+      "Entity.getNamedQuery(\"queryName\")",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "#nom ou createNamedQuery."
+  },
+  {
+    "id": "QRK-PAN-027",
+    "theme": "Panache",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Comment activer le cache de second niveau ?",
+    "options": [
+      "quarkus.hibernate-orm.second-level-caching-enabled=true",
+      "@Cacheable",
+      "@Cache",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@Cacheable marque les entités pour le cache L2."
+  },
+  {
+    "id": "QRK-PAN-028",
+    "theme": "Panache",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Quel cache provider est utilisé par défaut ?",
+    "options": [
+      "Caffeine",
+      "Ehcache",
+      "Hazelcast",
+      "Infinispan"
+    ],
+    "correct": 0,
+    "explanation": "Caffeine est le cache par défaut."
+  },
+  {
+    "id": "QRK-PAN-029",
+    "theme": "Panache",
+    "theme_label": "Auditing",
+    "difficulty": "hard",
+    "question": "Comment implémenter l'auditing ?",
+    "options": [
+      "@PrePersist, @PreUpdate",
+      "Entity listeners",
+      "Hibernate Envers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs approches pour l'auditing."
+  },
+  {
+    "id": "QRK-PAN-030",
+    "theme": "Panache",
+    "theme_label": "Soft delete",
+    "difficulty": "hard",
+    "question": "Comment implémenter la suppression logique ?",
+    "options": [
+      "@SQLDelete",
+      "@Where",
+      "@FilterDef",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@SQLDelete et @Where pour soft delete."
+  },
+  {
+    "id": "QRK-PAN-031",
+    "theme": "Panache",
+    "theme_label": "MongoDB Panache",
+    "difficulty": "hard",
+    "question": "Quelle classe étendre pour MongoDB ?",
+    "options": [
+      "PanacheMongoEntity",
+      "MongoEntity",
+      "PanacheDocument",
+      "MongoPanacheEntity"
+    ],
+    "correct": 0,
+    "explanation": "PanacheMongoEntity pour MongoDB avec Panache."
+  },
+  {
+    "id": "QRK-PAN-032",
+    "theme": "Panache",
+    "theme_label": "MongoDB Panache",
+    "difficulty": "hard",
+    "question": "Comment créer un repository MongoDB ?",
+    "options": [
+      "PanacheMongoRepository",
+      "MongoRepository",
+      "PanacheMongoRepositoryBase",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "PanacheMongoRepository ou Base avec id personnalisé."
+  },
+  {
+    "id": "QRK-PAN-033",
+    "theme": "Panache",
+    "theme_label": "Reactive Panache",
+    "difficulty": "hard",
+    "question": "Quelle classe pour une entité réactive ?",
+    "options": [
+      "PanacheReactiveEntity",
+      "ReactivePanacheEntity",
+      "PanacheReactive",
+      "ReactiveEntity"
+    ],
+    "correct": 0,
+    "explanation": "PanacheReactiveEntity pour Hibernate Reactive."
+  },
+  {
+    "id": "QRK-PAN-034",
+    "theme": "Panache",
+    "theme_label": "Reactive Panache",
+    "difficulty": "hard",
+    "question": "Quels types de retour pour les requêtes réactives ?",
+    "options": [
+      "Uni<T>, Multi<T>",
+      "CompletionStage<T>",
+      "Publisher<T>",
+      "Flux<T>"
+    ],
+    "correct": 0,
+    "explanation": "Uni et Multi de Mutiny sont utilisés."
+  },
+  {
+    "id": "QRK-PAN-035",
+    "theme": "Panache",
+    "theme_label": "Reactive query",
+    "difficulty": "hard",
+    "question": "Comment exécuter une requête réactive ?",
+    "options": [
+      "entity.persist().await().indefinitely()",
+      "entity.persist().subscribe().with(...)",
+      "entity.persist().onItem().transform(...)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs patterns pour gérer les résultats réactifs."
+  },
+  {
+    "id": "QRK-PAN-036",
+    "theme": "Panache",
+    "theme_label": "Reactive transaction",
+    "difficulty": "hard",
+    "question": "Comment gérer les transactions réactives ?",
+    "options": [
+      "@ReactiveTransactional",
+      "@Transactional avec types réactifs",
+      "Panache.withTransaction()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "@ReactiveTransactional pour les transactions réactives."
+  },
+  {
+    "id": "QRK-PAN-037",
+    "theme": "Panache",
+    "theme_label": "Database migration",
+    "difficulty": "hard",
+    "question": "Quel outil de migration est supporté ?",
+    "options": [
+      "Flyway",
+      "Liquibase",
+      "Hibernate ddl-auto",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Flyway, Liquibase et Hibernate sont supportés."
+  },
+  {
+    "id": "QRK-PAN-038",
+    "theme": "Panache",
+    "theme_label": "Flyway",
+    "difficulty": "hard",
+    "question": "Où placer les scripts Flyway ?",
+    "options": [
+      "src/main/resources/db/migration",
+      "src/main/resources/flyway",
+      "src/main/resources/migrations",
+      "src/main/resources/sql"
+    ],
+    "correct": 0,
+    "explanation": "db/migration est l'emplacement par défaut."
+  },
+  {
+    "id": "QRK-PAN-039",
+    "theme": "Panache",
+    "theme_label": "Liquibase",
+    "difficulty": "hard",
+    "question": "Où placer les changelogs Liquibase ?",
+    "options": [
+      "src/main/resources/db/changelog",
+      "src/main/resources/liquibase",
+      "src/main/resources/migrations",
+      "src/main/resources/db/migration"
+    ],
+    "correct": 0,
+    "explanation": "db/changelog est l'emplacement par défaut."
+  },
+  {
+    "id": "QRK-PAN-040",
+    "theme": "Panache",
+    "theme_label": "Multiple datasources",
+    "difficulty": "hard",
+    "question": "Comment configurer plusieurs datasources ?",
+    "options": [
+      "quarkus.datasource.db1",
+      "@DataSource(\"db1\")",
+      "PanacheEntityBase avec @DataSource",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration par properties et annotations."
+  },
+  {
+    "id": "QRK-PAN-041",
+    "theme": "Panache",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester Panache ?",
+    "options": [
+      "@QuarkusTest",
+      "@TestTransaction",
+      "@TestReactiveTransaction",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations pour les tests."
+  },
+  {
+    "id": "QRK-PAN-042",
+    "theme": "Panache",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment isoler les données de test ?",
+    "options": [
+      "@TestTransaction",
+      "@QuarkusTestResource",
+      "Dev Services",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Dev Services fournit une base temporaire."
+  },
+  {
+    "id": "QRK-PAN-043",
+    "theme": "Panache",
+    "theme_label": "Batch operations",
+    "difficulty": "hard",
+    "question": "Comment optimiser les opérations batch ?",
+    "options": [
+      "quarkus.hibernate-orm.jdbc.batch-size",
+      "@BatchSize",
+      "Entity.persist(collection)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Batch size et persist de collections."
+  },
+  {
+    "id": "QRK-PAN-044",
+    "theme": "Panache",
+    "theme_label": "Stateless session",
+    "difficulty": "hard",
+    "question": "Quand utiliser une session stateless ?",
+    "options": [
+      "Pour les lectures seules",
+      "Pour les batchs",
+      "Pour les rapports",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Session stateless pour les lectures uniquement."
+  },
+  {
+    "id": "QRK-PAN-045",
+    "theme": "Panache",
+    "theme_label": "DTO projections",
+    "difficulty": "hard",
+    "question": "Comment créer une projection DTO ?",
+    "options": [
+      "Constructor expression",
+      "Interface projection",
+      "Record projection",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs types de projections."
+  },
+  {
+    "id": "QRK-PAN-046",
+    "theme": "Panache",
+    "theme_label": "Enum mapping",
+    "difficulty": "hard",
+    "question": "Comment mapper un enum ?",
+    "options": [
+      "@Enumerated",
+      "Ordinal ou String",
+      "AttributeConverter",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs options pour les enums."
+  },
+  {
+    "id": "QRK-PAN-047",
+    "theme": "Panache",
+    "theme_label": "JSON mapping",
+    "difficulty": "hard",
+    "question": "Comment mapper un champ JSON ?",
+    "options": [
+      "@JdbcTypeCode(SqlTypes.JSON)",
+      "@Type(JsonType.class)",
+      "io.vertx.core.json.JsonObject",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Support des types JSON en base."
+  },
+  {
+    "id": "QRK-PAN-048",
+    "theme": "Panache",
+    "theme_label": "Custom types",
+    "difficulty": "hard",
+    "question": "Comment créer un type personnalisé ?",
+    "options": [
+      "UserType",
+      "AttributeConverter",
+      "BasicType",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "UserType ou AttributeConverter pour les types personnalisés."
+  },
+  {
+    "id": "QRK-PAN-049",
+    "theme": "Panache",
+    "theme_label": "Performance tips",
+    "difficulty": "hard",
+    "question": "Comment améliorer les performances ?",
+    "options": [
+      "Fetch join",
+      "Batch fetching",
+      "Cache L2",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques d'optimisation."
+  },
+  {
+    "id": "QRK-PAN-050",
+    "theme": "Panache",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment monitorer les requêtes ?",
+    "options": [
+      "quarkus.hibernate-orm.log.sql",
+      "quarkus.datasource.jdbc.log-slow-queries",
+      "Metrics",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Logs et métriques pour le monitoring."
+  }
+]

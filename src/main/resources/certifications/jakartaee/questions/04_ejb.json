@@ -1,0 +1,627 @@
+[
+  {
+    "id": "JAK-EJB-001",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Types d'EJB",
+    "difficulty": "easy",
+    "question": "Quels sont les types d'EJB ?",
+    "options": [
+      "Session, Message-driven, Entity",
+      "Stateless, Stateful, Singleton",
+      "Local, Remote, Web",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Session beans (3 types) et Message-driven beans."
+  },
+  {
+    "id": "JAK-EJB-002",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Session beans",
+    "difficulty": "easy",
+    "question": "Quelle annotation déclare un EJB sans état ?",
+    "options": ["@Stateless", "@Stateful", "@Singleton", "@MessageDriven"],
+    "correct": 0,
+    "explanation": "@Stateless pour les EJBs sans état."
+  },
+  {
+    "id": "JAK-EJB-003",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Session beans",
+    "difficulty": "easy",
+    "question": "Quelle annotation déclare un EJB avec état ?",
+    "options": ["@Stateful", "@Stateless", "@Singleton", "@MessageDriven"],
+    "correct": 0,
+    "explanation": "@Stateful pour les EJBs avec état."
+  },
+  {
+    "id": "JAK-EJB-004",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Session beans",
+    "difficulty": "easy",
+    "question": "Quelle annotation déclare un EJB singleton ?",
+    "options": ["@Singleton", "@Stateless", "@Stateful", "@MessageDriven"],
+    "correct": 0,
+    "explanation": "@Singleton pour une instance unique."
+  },
+  {
+    "id": "JAK-EJB-005",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Session beans",
+    "difficulty": "medium",
+    "question": "Combien d'instances d'un EJB @Stateless sont créées ?",
+    "options": [
+      "Pool d'instances",
+      "Une seule instance",
+      "Une instance par client",
+      "Une instance par requête"
+    ],
+    "correct": 0,
+    "explanation": "Les EJBs stateless sont poolés."
+  },
+  {
+    "id": "JAK-EJB-006",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Session beans",
+    "difficulty": "medium",
+    "question": "Combien d'instances d'un EJB @Stateful sont créées ?",
+    "options": [
+      "Une instance par client",
+      "Une seule instance",
+      "Pool d'instances",
+      "Une instance par requête"
+    ],
+    "correct": 0,
+    "explanation": "Chaque client a sa propre instance stateful."
+  },
+  {
+    "id": "JAK-EJB-007",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Session beans",
+    "difficulty": "medium",
+    "question": "Combien d'instances d'un EJB @Singleton sont créées ?",
+    "options": [
+      "Une seule instance",
+      "Pool d'instances",
+      "Une par client",
+      "Une par requête"
+    ],
+    "correct": 0,
+    "explanation": "Singleton a une instance unique pour l'application."
+  },
+  {
+    "id": "JAK-EJB-008",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Interfaces",
+    "difficulty": "hard",
+    "question": "Quelle interface est optionnelle pour un EJB ?",
+    "options": [
+      "Toutes sont optionnelles",
+      "Interface locale",
+      "Interface remote",
+      "Interface business"
+    ],
+    "correct": 0,
+    "explanation": "Les EJBs peuvent être sans interface (no-interface view)."
+  },
+  {
+    "id": "JAK-EJB-009",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Interfaces",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une interface locale ?",
+    "options": ["@Local", "@Remote", "@LocalBean", "@Interface"],
+    "correct": 0,
+    "explanation": "@Local pour les interfaces locales."
+  },
+  {
+    "id": "JAK-EJB-010",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Interfaces",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une interface distante ?",
+    "options": ["@Remote", "@Local", "@LocalBean", "@Interface"],
+    "correct": 0,
+    "explanation": "@Remote pour les interfaces distantes."
+  },
+  {
+    "id": "JAK-EJB-011",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Injection",
+    "difficulty": "medium",
+    "question": "Comment injecter un EJB ?",
+    "options": ["@EJB", "@Inject", "@Resource", "A et B"],
+    "correct": 3,
+    "explanation": "@EJB ou @Inject fonctionnent."
+  },
+  {
+    "id": "JAK-EJB-012",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Injection",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre @EJB et @Inject ?",
+    "options": [
+      "@EJB spécifique EJB, @Inject générique",
+      "Identiques",
+      "@Inject plus rapide",
+      "@EJB déprécié"
+    ],
+    "correct": 0,
+    "explanation": "@EJB est spécifique aux EJBs, @Inject est CDI."
+  },
+  {
+    "id": "JAK-EJB-013",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Lifecycle",
+    "difficulty": "hard",
+    "question": "Quelle annotation est appelée après création d'un EJB ?",
+    "options": ["@PostConstruct", "@PreDestroy", "@Init", "@PostActivate"],
+    "correct": 0,
+    "explanation": "@PostConstruct après construction."
+  },
+  {
+    "id": "JAK-EJB-014",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Lifecycle",
+    "difficulty": "hard",
+    "question": "Quelle annotation est appelée avant destruction ?",
+    "options": ["@PreDestroy", "@PostConstruct", "@PrePassivate", "@PostActivate"],
+    "correct": 0,
+    "explanation": "@PreDestroy avant destruction."
+  },
+  {
+    "id": "JAK-EJB-015",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Stateful lifecycle",
+    "difficulty": "hard",
+    "question": "Quelle annotation est appelée avant passivation ?",
+    "options": ["@PrePassivate", "@PostActivate", "@PreDestroy", "@PostConstruct"],
+    "correct": 0,
+    "explanation": "@PrePassivate avant passivation pour stateful."
+  },
+  {
+    "id": "JAK-EJB-016",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Stateful lifecycle",
+    "difficulty": "hard",
+    "question": "Quelle annotation est appelée après activation ?",
+    "options": ["@PostActivate", "@PrePassivate", "@PostConstruct", "@PreDestroy"],
+    "correct": 0,
+    "explanation": "@PostActivate après activation d'un stateful."
+  },
+  {
+    "id": "JAK-EJB-017",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle annotation gère les transactions sur EJB ?",
+    "options": ["@Transactional", "@TransactionManagement", "@Tx", "@Transact"],
+    "correct": 0,
+    "explanation": "@Transactional (JTA) gère les transactions."
+  },
+  {
+    "id": "JAK-EJB-018",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle est la valeur par défaut de @Transactional ?",
+    "options": [
+      "REQUIRED",
+      "REQUIRES_NEW",
+      "SUPPORTS",
+      "MANDATORY"
+    ],
+    "correct": 0,
+    "explanation": "REQUIRED est la valeur par défaut."
+  },
+  {
+    "id": "JAK-EJB-019",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle annotation force une nouvelle transaction ?",
+    "options": [
+      "@Transactional(REQUIRES_NEW)",
+      "@Transactional(NEW)",
+      "@Transactional(REQUIRED_NEW)",
+      "@Transactional(CREATE_NEW)"
+    ],
+    "correct": 0,
+    "explanation": "REQUIRES_NEW suspend la transaction courante."
+  },
+  {
+    "id": "JAK-EJB-020",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle valeur ne nécessite pas de transaction ?",
+    "options": [
+      "SUPPORTS",
+      "REQUIRED",
+      "MANDATORY",
+      "REQUIRES_NEW"
+    ],
+    "correct": 0,
+    "explanation": "SUPPORTS utilise une transaction si présente."
+  },
+  {
+    "id": "JAK-EJB-021",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "question": "Quelle annotation annule la transaction en cas d'exception ?",
+    "options": ["@Rollback", "@RollbackOn", "@ApplicationException(rollback = true)", "@TxRollback"],
+    "correct": 2,
+    "explanation": "@ApplicationException(rollback=true) marque une exception comme rollback."
+  },
+  {
+    "id": "JAK-EJB-022",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Message-driven beans",
+    "difficulty": "hard",
+    "question": "Quelle annotation déclare un MDB ?",
+    "options": ["@MessageDriven", "@MDB", "@MessageBean", "@JMSBean"],
+    "correct": 0,
+    "explanation": "@MessageDriven pour les beans message-driven."
+  },
+  {
+    "id": "JAK-EJB-023",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Message-driven beans",
+    "difficulty": "hard",
+    "question": "Quelle interface implémentent les MDB ?",
+    "options": [
+      "MessageListener",
+      "JMSListener",
+      "MessageDrivenBean",
+      "MessageConsumer"
+    ],
+    "correct": 0,
+    "explanation": "MessageListener avec méthode onMessage()."
+  },
+  {
+    "id": "JAK-EJB-024",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Message-driven beans",
+    "difficulty": "hard",
+    "question": "Où est configurée la destination JMS d'un MDB ?",
+    "options": [
+      "@ActivationConfigProperty",
+      "@JMSDestination",
+      "@MessageDestination",
+      "@Destination"
+    ],
+    "correct": 0,
+    "explanation": "@ActivationConfigProperty configure la destination."
+  },
+  {
+    "id": "JAK-EJB-025",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Timer service",
+    "difficulty": "hard",
+    "question": "Comment créer un timer programmatique ?",
+    "options": [
+      "TimerService.createTimer()",
+      "@Schedule",
+      "TimerService.createIntervalTimer()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "TimerService avec createTimer ou createIntervalTimer."
+  },
+  {
+    "id": "JAK-EJB-026",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Timer service",
+    "difficulty": "hard",
+    "question": "Quelle annotation crée un timer automatique ?",
+    "options": ["@Schedule", "@Timer", "@Scheduled", "@Timeout"],
+    "correct": 0,
+    "explanation": "@Schedule crée un timer déclaratif."
+  },
+  {
+    "id": "JAK-EJB-027",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Timer service",
+    "difficulty": "hard",
+    "question": "Quelle méthode est appelée par un timer ?",
+    "options": ["@Timeout", "@TimerMethod", "@OnTimeout", "@ScheduleMethod"],
+    "correct": 0,
+    "explanation": "@Timeout marque la méthode appelée par le timer."
+  },
+  {
+    "id": "JAK-EJB-028",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Asynchronous",
+    "difficulty": "hard",
+    "question": "Quelle annotation rend une méthode asynchrone ?",
+    "options": ["@Asynchronous", "@Async", "@Future", "@NonBlocking"],
+    "correct": 0,
+    "explanation": "@Asynchronous exécute la méthode dans un thread séparé."
+  },
+  {
+    "id": "JAK-EJB-029",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Asynchronous",
+    "difficulty": "hard",
+    "question": "Quel type de retour pour une méthode asynchrone ?",
+    "options": [
+      "Future<T>, void",
+      "CompletableFuture<T>",
+      "AsyncResult<T>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs types pour les résultats asynchrones."
+  },
+  {
+    "id": "JAK-EJB-030",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation restreint l'accès à un rôle ?",
+    "options": ["@RolesAllowed", "@PermitAll", "@DenyAll", "@RunAs"],
+    "correct": 0,
+    "explanation": "@RolesAllowed spécifie les rôles autorisés."
+  },
+  {
+    "id": "JAK-EJB-031",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation permet tous les accès ?",
+    "options": ["@PermitAll", "@RolesAllowed", "@DenyAll", "@RunAs"],
+    "correct": 0,
+    "explanation": "@PermitAll autorise tous les utilisateurs."
+  },
+  {
+    "id": "JAK-EJB-032",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation interdit tous les accès ?",
+    "options": ["@DenyAll", "@PermitAll", "@RolesAllowed", "@RunAs"],
+    "correct": 0,
+    "explanation": "@DenyAll interdit tous les accès."
+  },
+  {
+    "id": "JAK-EJB-033",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation exécute avec un rôle spécifique ?",
+    "options": ["@RunAs", "@RolesAllowed", "@PermitAll", "@DenyAll"],
+    "correct": 0,
+    "explanation": "@RunAs spécifie le rôle pour l'exécution."
+  },
+  {
+    "id": "JAK-EJB-034",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Interceptors",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un interceptor EJB ?",
+    "options": ["@Interceptor", "@AroundInvoke", "@Interceptors", "@Around"],
+    "correct": 0,
+    "explanation": "@Interceptor déclare un interceptor."
+  },
+  {
+    "id": "JAK-EJB-035",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Interceptors",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque la méthode d'interception ?",
+    "options": ["@AroundInvoke", "@InterceptorMethod", "@Around", "@Invoke"],
+    "correct": 0,
+    "explanation": "@AroundInvoke sur la méthode interceptor."
+  },
+  {
+    "id": "JAK-EJB-036",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Interceptors",
+    "difficulty": "hard",
+    "question": "Comment attacher un interceptor à un EJB ?",
+    "options": [
+      "@Interceptors(MyInterceptor.class)",
+      "@InterceptorBinding",
+      "@AroundInvoke",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@Interceptors ou binding pour attacher."
+  },
+  {
+    "id": "JAK-EJB-037",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Singleton concurrency",
+    "difficulty": "hard",
+    "question": "Quel est le type de lock par défaut pour singleton ?",
+    "options": ["@Lock(WRITE)", "@Lock(READ)", "@Lock(NONE)", "@Lock(CONCURRENT)"],
+    "correct": 0,
+    "explanation": "WRITE est le lock par défaut."
+  },
+  {
+    "id": "JAK-EJB-038",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Singleton concurrency",
+    "difficulty": "hard",
+    "question": "Quelle annotation permet l'accès concurrent en lecture ?",
+    "options": ["@Lock(READ)", "@Lock(WRITE)", "@Concurrent", "@ReadLock"],
+    "correct": 0,
+    "explanation": "READ permet accès concurrent en lecture."
+  },
+  {
+    "id": "JAK-EJB-039",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Singleton concurrency",
+    "difficulty": "hard",
+    "question": "Quel type de lock permet l'accès exclusif ?",
+    "options": ["@Lock(WRITE)", "@Lock(READ)", "@Exclusive", "@WriteLock"],
+    "correct": 0,
+    "explanation": "WRITE bloque l'accès aux autres threads."
+  },
+  {
+    "id": "JAK-EJB-040",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "EJB vs CDI",
+    "difficulty": "hard",
+    "question": "Quand utiliser EJB plutôt que CDI ?",
+    "options": [
+      "Transactions, sécurité, timers",
+      "Injections simples",
+      "Observateurs d'événements",
+      "Intercepteurs"
+    ],
+    "correct": 0,
+    "explanation": "EJB offre transactions, sécurité, timers intégrés."
+  },
+  {
+    "id": "JAK-EJB-041",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "EJB vs CDI",
+    "difficulty": "hard",
+    "question": "Les EJBs peuvent-ils utiliser CDI ?",
+    "options": [
+      "Oui, complètement intégrés",
+      "Non, incompatibles",
+      "Oui, partiellement",
+      "Non, séparés"
+    ],
+    "correct": 0,
+    "explanation": "EJB et CDI sont intégrés dans Jakarta EE."
+  },
+  {
+    "id": "JAK-EJB-042",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Packaging",
+    "difficulty": "hard",
+    "question": "Où sont placés les EJBs dans un EAR ?",
+    "options": [
+      "Dans ejb-jar",
+      "Dans war",
+      "Dans lib",
+      "Dans META-INF"
+    ],
+    "correct": 0,
+    "explanation": "Les EJBs sont dans le module ejb-jar."
+  },
+  {
+    "id": "JAK-EJB-043",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "ejb-jar.xml",
+    "difficulty": "hard",
+    "question": "Où se trouve ejb-jar.xml ?",
+    "options": [
+      "META-INF/ejb-jar.xml",
+      "WEB-INF/ejb-jar.xml",
+      "META-INF/ejb.xml",
+      "WEB-INF/ejb.xml"
+    ],
+    "correct": 0,
+    "explanation": "ejb-jar.xml est dans META-INF."
+  },
+  {
+    "id": "JAK-EJB-044",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester des EJBs ?",
+    "options": [
+      "Embedded EJB container",
+      "Arquillian",
+      "MockEJB",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs frameworks pour tester EJBs."
+  },
+  {
+    "id": "JAK-EJB-045",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Embedded EJB",
+    "difficulty": "hard",
+    "question": "Comment démarrer un conteneur EJB embarqué ?",
+    "options": [
+      "EJBContainer.createEJBContainer()",
+      "EmbeddedEJBContainer.start()",
+      "EJBContainer.getEJBContainer()",
+      "EJBContainerFactory.create()"
+    ],
+    "correct": 0,
+    "explanation": "EJBContainer.createEJBContainer() crée un conteneur embarqué."
+  },
+  {
+    "id": "JAK-EJB-046",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Exceptions",
+    "difficulty": "hard",
+    "question": "Quelles exceptions causent un rollback ?",
+    "options": [
+      "RuntimeException",
+      "ApplicationException avec rollback",
+      "Exception",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "RuntimeException et exceptions annotées rollback."
+  },
+  {
+    "id": "JAK-EJB-047",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Exceptions",
+    "difficulty": "hard",
+    "question": "Les exceptions applicatives provoquent-elles un rollback ?",
+    "options": [
+      "Non, sauf annotation",
+      "Oui, toujours",
+      "Oui, par défaut",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "@ApplicationException(rollback=true) pour rollback."
+  },
+  {
+    "id": "JAK-EJB-048",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les EJBs doivent-ils être fine-grained ?",
+    "options": [
+      "Oui, services métier",
+      "Non, gros composants",
+      "Oui, petites méthodes",
+      "Non, grandes méthodes"
+    ],
+    "correct": 0,
+    "explanation": "Les EJBs doivent encapsuler la logique métier."
+  },
+  {
+    "id": "JAK-EJB-049",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Faut-il éviter les EJBs stateful ?",
+    "options": [
+      "Oui, préférer stateless",
+      "Non, utiles",
+      "Oui, sauf exceptions",
+      "Non, recommandés"
+    ],
+    "correct": 0,
+    "explanation": "Les stateful sont plus lourds, à éviter si possible."
+  },
+  {
+    "id": "JAK-EJB-050",
+    "theme": "Jakarta Enterprise Beans",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Migration de Java EE vers Jakarta EE ?",
+    "options": [
+      "Changer javax -> jakarta",
+      "Mettre à jour ejb-jar.xml",
+      "Recompiler",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La migration principale est le changement de namespace."
+  }
+]

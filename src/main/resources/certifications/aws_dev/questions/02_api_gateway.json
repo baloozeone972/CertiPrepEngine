@@ -1,0 +1,732 @@
+[
+  {
+    "id": "AWS-DEV-081",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "easy",
+    "question": "Quels types d'API Gateway existent ?",
+    "options": [
+      "REST API, HTTP API, WebSocket API",
+      "REST API seulement",
+      "HTTP API seulement",
+      "WebSocket seulement"
+    ],
+    "correct": 0,
+    "explanation": "API Gateway propose trois types d'API."
+  },
+  {
+    "id": "AWS-DEV-082",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "easy",
+    "question": "Quel type d'API est le plus économique et rapide pour les proxys ?",
+    "options": ["HTTP API", "REST API", "WebSocket API", "SOAP API"],
+    "correct": 0,
+    "explanation": "HTTP API est plus simple, moins cher et plus rapide que REST API."
+  },
+  {
+    "id": "AWS-DEV-083",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "medium",
+    "question": "Quel type d'API supporte les transformations de requêtes/réponses complexes ?",
+    "options": ["REST API", "HTTP API", "WebSocket API", "Aucun"],
+    "correct": 0,
+    "explanation": "REST API offre plus de fonctionnalités (modèles de mapping, validation, etc.)."
+  },
+  {
+    "id": "AWS-DEV-084",
+    "theme": "API Gateway",
+    "theme_label": "REST API",
+    "difficulty": "medium",
+    "question": "Quelle est la limite de taille de requête pour REST API ?",
+    "options": ["10 Mo", "1 Mo", "6 Mo", "256 Ko"],
+    "correct": 0,
+    "explanation": "La taille maximale de requête est 10 Mo."
+  },
+  {
+    "id": "AWS-DEV-085",
+    "theme": "API Gateway",
+    "theme_label": "REST API",
+    "difficulty": "hard",
+    "question": "Quelle est la limite de temps d'exécution pour REST API (intégration Lambda) ?",
+    "options": ["29 secondes", "15 minutes", "30 secondes", "60 secondes"],
+    "correct": 0,
+    "explanation": "API Gateway a un timeout de 29 secondes pour les intégrations."
+  },
+  {
+    "id": "AWS-DEV-086",
+    "theme": "API Gateway",
+    "theme_label": "REST API",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un modèle de mapping (mapping template) ?",
+    "options": [
+      "Transforme le corps de la requête/réponse (Velocity)",
+      "Filtre les requêtes",
+      "Authentifie",
+      "Rate limit"
+    ],
+    "correct": 0,
+    "explanation": "Les modèles de mapping (VTL) transforment les payloads."
+  },
+  {
+    "id": "AWS-DEV-087",
+    "theme": "API Gateway",
+    "theme_label": "REST API",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une ressource proxy (proxy resource) ?",
+    "options": [
+      "Capture tout le chemin (/{proxy+})",
+      "Proxy HTTP",
+      "Endpoint proxy",
+      "Passerelle"
+    ],
+    "correct": 0,
+    "explanation": "La ressource proxy {proxy+} capture tous les chemins restants."
+  },
+  {
+    "id": "AWS-DEV-088",
+    "theme": "API Gateway",
+    "theme_label": "HTTP API",
+    "difficulty": "hard",
+    "question": "HTTP API supporte-t-il les modèles de mapping ?",
+    "options": ["Non (limité)", "Oui", "Partiellement", "Uniquement pour les réponses"],
+    "correct": 0,
+    "explanation": "HTTP API a des capacités de transformation limitées."
+  },
+  {
+    "id": "AWS-DEV-089",
+    "theme": "API Gateway",
+    "theme_label": "HTTP API",
+    "difficulty": "hard",
+    "question": "HTTP API supporte-t-il JWT autorisation ?",
+    "options": ["Oui (intégré)", "Non", "Uniquement via Lambda authorizer", "Uniquement via IAM"],
+    "correct": 0,
+    "explanation": "HTTP API a un authorizer JWT intégré."
+  },
+  {
+    "id": "AWS-DEV-090",
+    "theme": "API Gateway",
+    "theme_label": "WebSocket API",
+    "difficulty": "hard",
+    "question": "Quels sont les événements de connexion WebSocket ?",
+    "options": ["$connect, $disconnect, $default", "open, close, message", "onOpen, onClose, onMessage", "connect, disconnect, error"],
+    "correct": 0,
+    "explanation": "API Gateway utilise les routes $connect, $disconnect, $default."
+  },
+  {
+    "id": "AWS-DEV-091",
+    "theme": "API Gateway",
+    "theme_label": "WebSocket API",
+    "difficulty": "hard",
+    "question": "Combien de temps une connexion WebSocket peut-elle rester ouverte ?",
+    "options": ["2 heures", "1 heure", "30 minutes", "Illimité"],
+    "correct": 0,
+    "explanation": "La durée maximale de connexion est de 2 heures."
+  },
+  {
+    "id": "AWS-DEV-092",
+    "theme": "API Gateway",
+    "theme_label": "Authorizers",
+    "difficulty": "hard",
+    "question": "Quels types d'authorizers sont supportés ?",
+    "options": [
+      "IAM, Lambda, JWT (HTTP API), Cognito User Pools",
+      "Seulement IAM",
+      "Seulement Lambda",
+      "Seulement Cognito"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs mécanismes d'autorisation."
+  },
+  {
+    "id": "AWS-DEV-093",
+    "theme": "API Gateway",
+    "theme_label": "Authorizers",
+    "difficulty": "hard",
+    "question": "Un Lambda authorizer peut-il mettre en cache les politiques ?",
+    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "Le cache réduit les appels à l'authorizer."
+  },
+  {
+    "id": "AWS-DEV-094",
+    "theme": "API Gateway",
+    "theme_label": "Usage plans & API keys",
+    "difficulty": "hard",
+    "question": "À quoi servent les usage plans ?",
+    "options": [
+      "Rate limiting et quota par client",
+      "Authentification",
+      "Monitoring",
+      "Logging"
+    ],
+    "correct": 0,
+    "explanation": "Les usage plans gèrent les limites de débit et de quota."
+  },
+  {
+    "id": "AWS-DEV-095",
+    "theme": "API Gateway",
+    "theme_label": "Usage plans & API keys",
+    "difficulty": "hard",
+    "question": "Les API keys sont-elles obligatoires pour les usage plans ?",
+    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "Les API keys identifient le client pour appliquer les limites."
+  },
+  {
+    "id": "AWS-DEV-096",
+    "theme": "API Gateway",
+    "theme_label": "Stage variables",
+    "difficulty": "hard",
+    "question": "À quoi servent les stage variables ?",
+    "options": [
+      "Configurer les intégrations par environnement (dev, prod)",
+      "Variables d'environnement",
+      "Paramètres de stage",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les stage variables permettent de paramétrer les endpoints par stage."
+  },
+  {
+    "id": "AWS-DEV-097",
+    "theme": "API Gateway",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il mettre en cache les réponses ?",
+    "options": ["Oui (cache API)", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "Le cache API réduit la charge sur les backends."
+  },
+  {
+    "id": "AWS-DEV-098",
+    "theme": "API Gateway",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Comment invalider le cache API Gateway ?",
+    "options": [
+      "Header Cache-Control: max-age=0",
+      "Flush manuel",
+      "TTL configurable",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Cache invalidation via header ou TTL."
+  },
+  {
+    "id": "AWS-DEV-099",
+    "theme": "API Gateway",
+    "theme_label": "CORS",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il gérer automatiquement CORS ?",
+    "options": ["Oui (configuration)", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "CORS peut être activé dans la configuration de l'API."
+  },
+  {
+    "id": "AWS-DEV-100",
+    "theme": "API Gateway",
+    "theme_label": "CORS",
+    "difficulty": "hard",
+    "question": "Quels headers CORS sont nécessaires pour les requêtes avec credentials ?",
+    "options": [
+      "Access-Control-Allow-Origin, Allow-Credentials",
+      "Access-Control-Allow-Origin seulement",
+      "Access-Control-Allow-Methods",
+      "Access-Control-Allow-Headers"
+    ],
+    "correct": 0,
+    "explanation": "Il faut aussi Access-Control-Allow-Credentials: true."
+  },
+  {
+    "id": "AWS-DEV-101",
+    "theme": "API Gateway",
+    "theme_label": "Logging & Monitoring",
+    "difficulty": "hard",
+    "question": "Comment activer les logs d'exécution pour API Gateway ?",
+    "options": [
+      "CloudWatch Logs (stage settings)",
+      "CloudTrail",
+      "S3",
+      "Kinesis"
+    ],
+    "correct": 0,
+    "explanation": "Les logs d'exécution sont envoyés vers CloudWatch Logs."
+  },
+  {
+    "id": "AWS-DEV-102",
+    "theme": "API Gateway",
+    "theme_label": "Logging & Monitoring",
+    "difficulty": "hard",
+    "question": "Quels niveaux de détail pour les logs API Gateway ?",
+    "options": ["ERROR, INFO", "DEBUG, INFO", "ERROR seulement", "INFO seulement"],
+    "correct": 0,
+    "explanation": "Les niveaux ERROR et INFO sont disponibles."
+  },
+  {
+    "id": "AWS-DEV-103",
+    "theme": "API Gateway",
+    "theme_label": "X-Ray tracing",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il activer X-Ray tracing ?",
+    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "X-Ray tracing peut être activé au niveau du stage."
+  },
+  {
+    "id": "AWS-DEV-104",
+    "theme": "API Gateway",
+    "theme_label": "Throttling",
+    "difficulty": "hard",
+    "question": "Quels sont les niveaux de throttling ?",
+    "options": [
+      "Account-level, API-level, stage-level, route-level",
+      "Seulement account-level",
+      "Seulement API-level",
+      "Seulement route-level"
+    ],
+    "correct": 0,
+    "explanation": "Le throttling peut être configuré à plusieurs niveaux."
+  },
+  {
+    "id": "AWS-DEV-105",
+    "theme": "API Gateway",
+    "theme_label": "Throttling",
+    "difficulty": "hard",
+    "question": "Quelle est la limite par défaut au niveau du compte ?",
+    "options": ["10 000 requêtes/seconde", "1000", "100", "50 000"],
+    "correct": 0,
+    "explanation": "La limite par défaut est 10 000 requêtes/seconde par région."
+  },
+  {
+    "id": "AWS-DEV-106",
+    "theme": "API Gateway",
+    "theme_label": "Custom domain names",
+    "difficulty": "hard",
+    "question": "API Gateway supporte-t-il des noms de domaine personnalisés ?",
+    "options": ["Oui (avec ACM)", "Non", "Uniquement avec CloudFront", "Uniquement avec Route53"],
+    "correct": 0,
+    "explanation": "Les domaines personnalisés nécessitent un certificat ACM."
+  },
+  {
+    "id": "AWS-DEV-107",
+    "theme": "API Gateway",
+    "theme_label": "Custom domain names",
+    "difficulty": "hard",
+    "question": "Combien de domaines personnalisés peut-on avoir par API ?",
+    "options": ["Illimité", "1", "5", "10"],
+    "correct": 0,
+    "explanation": "On peut associer plusieurs domaines à une API."
+  },
+  {
+    "id": "AWS-DEV-108",
+    "theme": "API Gateway",
+    "theme_label": "Mapping templates (VTL)",
+    "difficulty": "hard",
+    "question": "Quel langage est utilisé pour les modèles de mapping ?",
+    "options": ["Apache Velocity (VTL)", "JSONPath", "JMESPath", "XPath"],
+    "correct": 0,
+    "explanation": "VTL (Velocity Template Language) est utilisé."
+  },
+  {
+    "id": "AWS-DEV-109",
+    "theme": "API Gateway",
+    "theme_label": "Mapping templates",
+    "difficulty": "hard",
+    "question": "Comment accéder au corps de la requête dans un modèle ?",
+    "options": ["$input.body", "$request.body", "$context.body", "$event.body"],
+    "correct": 0,
+    "explanation": "$input.body donne accès au corps de la requête."
+  },
+  {
+    "id": "AWS-DEV-110",
+    "theme": "API Gateway",
+    "theme_label": "Mapping templates",
+    "difficulty": "hard",
+    "question": "Comment accéder à un paramètre de chemin ?",
+    "options": ["$input.params('path').parameterName", "$context.path.parameterName", "$request.path.parameterName", "$event.path.parameterName"],
+    "correct": 0,
+    "explanation": "$input.params('path') retourne les paramètres de chemin."
+  },
+  {
+    "id": "AWS-DEV-111",
+    "theme": "API Gateway",
+    "theme_label": "Request validation",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il valider les requêtes ?",
+    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "La validation de requête est supportée (paramètres, corps)."
+  },
+  {
+    "id": "AWS-DEV-112",
+    "theme": "API Gateway",
+    "theme_label": "Request validation",
+    "difficulty": "hard",
+    "question": "Quels schémas de validation sont supportés ?",
+    "options": ["JSON Schema", "XML Schema", "Avro", "Protobuf"],
+    "correct": 0,
+    "explanation": "JSON Schema est utilisé pour valider le corps."
+  },
+  {
+    "id": "AWS-DEV-113",
+    "theme": "API Gateway",
+    "theme_label": "Binary support",
+    "difficulty": "hard",
+    "question": "Comment API Gateway gère-t-il les médias binaires ?",
+    "options": [
+      "Configurer binaryMediaTypes",
+      "Base64 encoding",
+      "Content-Type spécifique",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les types binaires sont configurés et convertis en base64."
+  },
+  {
+    "id": "AWS-DEV-114",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "hard",
+    "question": "Quels sont les types d'intégration API Gateway ?",
+    "options": [
+      "AWS (Lambda), HTTP, Mock, AWS_PROXY, HTTP_PROXY",
+      "Lambda seulement",
+      "HTTP seulement",
+      "Mock seulement"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs types d'intégration sont disponibles."
+  },
+  {
+    "id": "AWS-DEV-115",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'intégration AWS_PROXY (Lambda proxy) ?",
+    "options": [
+      "Passe la requête entière à Lambda",
+      "Transforme la requête",
+      "Mock",
+      "HTTP proxy"
+    ],
+    "correct": 0,
+    "explanation": "Lambda proxy simplifie l'intégration (Lambda reçoit l'événement brut)."
+  },
+  {
+    "id": "AWS-DEV-116",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "hard",
+    "question": "Avec l'intégration Lambda proxy, qui formate la réponse ?",
+    "options": ["Lambda", "API Gateway", "Les deux", "Aucun"],
+    "correct": 0,
+    "explanation": "Lambda doit retourner le format spécifique (statusCode, headers, body)."
+  },
+  {
+    "id": "AWS-DEV-117",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'intégration AWS (non-proxy) ?",
+    "options": [
+      "Nécessite des modèles de mapping",
+      "Transparent",
+      "Plus simple",
+      "Plus rapide"
+    ],
+    "correct": 0,
+    "explanation": "L'intégration non-proxy nécessite de transformer la requête/réponse."
+  },
+  {
+    "id": "AWS-DEV-118",
+    "theme": "API Gateway",
+    "theme_label": "HTTP integration",
+    "difficulty": "hard",
+    "question": "HTTP integration peut-elle appeler des endpoints externes ?",
+    "options": ["Oui", "Non", "Uniquement AWS", "Uniquement privés"],
+    "correct": 0,
+    "explanation": "HTTP integration peut appeler n'importe quel endpoint HTTP/HTTPS."
+  },
+  {
+    "id": "AWS-DEV-119",
+    "theme": "API Gateway",
+    "theme_label": "HTTP integration",
+    "difficulty": "hard",
+    "question": "Quel est le timeout pour une intégration HTTP ?",
+    "options": ["29 secondes", "15 minutes", "30 secondes", "60 secondes"],
+    "correct": 0,
+    "explanation": "Le timeout est de 29 secondes (50 ms pour les appels privés via VPC Link)."
+  },
+  {
+    "id": "AWS-DEV-120",
+    "theme": "API Gateway",
+    "theme_label": "VPC Link",
+    "difficulty": "hard",
+    "question": "À quoi sert un VPC Link ?",
+    "options": [
+      "Connecter API Gateway à des ressources privées dans un VPC",
+      "Connecter deux VPC",
+      "Connecter à Internet",
+      "Connecter à on-premise"
+    ],
+    "correct": 0,
+    "explanation": "VPC Link permet d'accéder à des endpoints privés dans un VPC."
+  },
+  {
+    "id": "AWS-DEV-121",
+    "theme": "API Gateway",
+    "theme_label": "VPC Link",
+    "difficulty": "hard",
+    "question": "Quel service est utilisé derrière un VPC Link ?",
+    "options": [
+      "NLB (Network Load Balancer)",
+      "ALB",
+      "EC2",
+      "Lambda"
+    ],
+    "correct": 0,
+    "explanation": "VPC Link s'intègre avec NLB pour accéder aux ressources privées."
+  },
+  {
+    "id": "AWS-DEV-122",
+    "theme": "API Gateway",
+    "theme_label": "API Gateway endpoints",
+    "difficulty": "hard",
+    "question": "Quels types d'endpoints API Gateway existent ?",
+    "options": [
+      "Edge-optimized, Regional, Private",
+      "Edge-optimized seulement",
+      "Regional seulement",
+      "Private seulement"
+    ],
+    "correct": 0,
+    "explanation": "Trois types d'endpoints selon l'emplacement."
+  },
+  {
+    "id": "AWS-DEV-123",
+    "theme": "API Gateway",
+    "theme_label": "API Gateway endpoints",
+    "difficulty": "hard",
+    "question": "Quel endpoint est recommandé pour les utilisateurs mondiaux ?",
+    "options": ["Edge-optimized (CloudFront)", "Regional", "Private", "Aucun"],
+    "correct": 0,
+    "explanation": "Edge-optimized utilise CloudFront pour la latence mondiale."
+  },
+  {
+    "id": "AWS-DEV-124",
+    "theme": "API Gateway",
+    "theme_label": "Private API",
+    "difficulty": "hard",
+    "question": "Comment accéder à une API Gateway privée ?",
+    "options": ["VPC Endpoint (interface endpoint)", "Internet", "VPN", "Direct Connect"],
+    "correct": 0,
+    "explication": "Les API privées sont accessibles via des VPC Endpoints."
+  },
+  {
+    "id": "AWS-DEV-125",
+    "theme": "API Gateway",
+    "theme_label": "OpenAPI/Swagger",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il importer une définition OpenAPI ?",
+    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "Les définitions OpenAPI peuvent être importées pour créer ou mettre à jour une API."
+  },
+  {
+    "id": "AWS-DEV-126",
+    "theme": "API Gateway",
+    "theme_label": "OpenAPI/Swagger",
+    "difficulty": "hard",
+    "question": "Quelles extensions OpenAPI sont spécifiques à API Gateway ?",
+    "options": [
+      "x-amazon-apigateway-*",
+      "x-aws-*",
+      "x-api-*",
+      "x-gateway-*"
+    ],
+    "correct": 0,
+    "explanation": "Les extensions x-amazon-apigateway-* configurent les fonctionnalités API Gateway."
+  },
+  {
+    "id": "AWS-DEV-127",
+    "theme": "API Gateway",
+    "theme_label": "Deployment",
+    "difficulty": "hard",
+    "question": "Comment déployer une API Gateway ?",
+    "options": [
+      "Créer un déploiement (deployment) sur un stage",
+      "Mettre à jour directement",
+      "Redémarrer le service",
+      "Utiliser CloudFormation seulement"
+    ],
+    "correct": 0,
+    "explanation": "Les modifications sont déployées via un déploiement associé à un stage."
+  },
+  {
+    "id": "AWS-DEV-128",
+    "theme": "API Gateway",
+    "theme_label": "Deployment",
+    "difficulty": "hard",
+    "question": "Un stage peut-il avoir plusieurs déploiements ?",
+    "options": ["Non, un seul actif", "Oui", "Uniquement avec canary", "Uniquement avec alias"],
+    "correct": 0,
+    "explanation": "Un stage pointe vers un seul déploiement à la fois."
+  },
+  {
+    "id": "AWS-DEV-129",
+    "theme": "API Gateway",
+    "theme_label": "Canary deployment",
+    "difficulty": "hard",
+    "question": "API Gateway supporte-t-il les déploiements canary ?",
+    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "correct": 0,
+    "explanation": "Les canary deployments permettent de tester un nouveau déploiement avec un pourcentage de trafic."
+  },
+  {
+    "id": "AWS-DEV-130",
+    "theme": "API Gateway",
+    "theme_label": "Canary deployment",
+    "difficulty": "hard",
+    "question": "Comment promouvoir un déploiement canary en production ?",
+    "options": [
+      "Promouvoir via console ou CLI",
+      "Attendre",
+      "Redéployer",
+      "Changer de stage"
+    ],
+    "correct": 0,
+    "explanation": "La promotion rend le canary le déploiement principal."
+  },
+  {
+    "id": "AWS-DEV-131",
+    "theme": "API Gateway",
+    "theme_label": "Documentation",
+    "difficulty": "hard",
+    "question": "API Gateway peut-il générer automatiquement la documentation ?",
+    "options": ["Oui", "Non", "Uniquement avec OpenAPI", "Uniquement avec Swagger"],
+    "correct": 0,
+    "explanation": "API Gateway peut générer une documentation interactive pour les développeurs."
+  },
+  {
+    "id": "AWS-DEV-132",
+    "theme": "API Gateway",
+    "theme_label": "Documentation",
+    "difficulty": "hard",
+    "question": "La documentation peut-elle être exportée ?",
+    "options": ["Oui (OpenAPI)", "Non", "Uniquement en PDF", "Uniquement en HTML"],
+    "correct": 0,
+    "explanation": "La documentation peut être exportée au format OpenAPI."
+  },
+  {
+    "id": "AWS-DEV-133",
+    "theme": "API Gateway",
+    "theme_label": "Response caching",
+    "difficulty": "hard",
+    "question": "Où est stocké le cache API Gateway ?",
+    "options": [
+      "Dans la mémoire d'API Gateway",
+      "Dans S3",
+      "Dans DynamoDB",
+      "Dans ElastiCache"
+    ],
+    "correct": 0,
+    "explanation": "Le cache est géré directement par API Gateway."
+  },
+  {
+    "id": "AWS-DEV-134",
+    "theme": "API Gateway",
+    "theme_label": "Response caching",
+    "difficulty": "hard",
+    "question": "Quelles sont les tailles de cache disponibles ?",
+    "options": [
+      "0.5 Go, 1.6 Go, 6.1 Go, 13.5 Go, 28.4 Go, 58.2 Go, 118 Go, 237 Go",
+      "1 Go seulement",
+      "512 Mo seulement",
+      "Illimité"
+    ],
+    "correct": 0,
+    "explanation": "Plusieurs tailles de cache sont disponibles."
+  },
+  {
+    "id": "AWS-DEV-135",
+    "theme": "API Gateway",
+    "theme_label": "API keys",
+    "difficulty": "hard",
+    "question": "Les API keys sont-elles sécurisées ?",
+    "options": [
+      "Non, ce n'est pas une authentification forte",
+      "Oui, chiffrées",
+      "Oui, avec HMAC",
+      "Non, facile à voler"
+    ],
+    "correct": 0,
+    "explanation": "Les API keys ne sont pas destinées à l'authentification, mais à l'identification des clients."
+  },
+  {
+    "id": "AWS-DEV-136",
+    "theme": "API Gateway",
+    "theme_label": "Usage plans",
+    "difficulty": "hard",
+    "question": "Peut-on associer plusieurs API keys à un usage plan ?",
+    "options": ["Oui", "Non", "Une seule", "Illimité"],
+    "correct": 0,
+    "explanation": "Un usage plan peut avoir plusieurs API keys."
+  },
+  {
+    "id": "AWS-DEV-137",
+    "theme": "API Gateway",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Quelles métriques API Gateway sont disponibles dans CloudWatch ?",
+    "options": [
+      "Count, Latency, IntegrationLatency, 4XXError, 5XXError",
+      "Seulement Count",
+      "Seulement Latency",
+      "Seulement Errors"
+    ],
+    "correct": 0,
+    "explanation": "CloudWatch fournit plusieurs métriques pour API Gateway."
+  },
+  {
+    "id": "AWS-DEV-138",
+    "theme": "API Gateway",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "La métrique IntegrationLatency mesure quoi ?",
+    "options": [
+      "Temps passé par le backend à répondre",
+      "Temps total de la requête",
+      "Temps de transformation",
+      "Temps de cache"
+    ],
+    "correct": 0,
+    "explanation": "IntegrationLatency est le temps entre l'envoi au backend et la réception de la réponse."
+  },
+  {
+    "id": "AWS-DEV-139",
+    "theme": "API Gateway",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "Comment déboguer les erreurs API Gateway ?",
+    "options": [
+      "CloudWatch Logs, X-Ray, étapes de test",
+      "Seulement les logs",
+      "Seulement X-Ray",
+      "Seulement les tests"
+    ],
+    "correct": 0,
+    "explanation": "Combiner logs et X-Ray pour analyser les erreurs."
+  },
+  {
+    "id": "AWS-DEV-140",
+    "theme": "API Gateway",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Doit-on utiliser les stages pour séparer les environnements ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement pour les API REST"],
+    "correct": 0,
+    "explanation": "Les stages permettent de gérer dev, test, prod avec des configurations différentes."
+  }
+]

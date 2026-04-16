@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SONAR-01-001",
+    "theme": "Quality Gates",
+    "theme_label": "Quality Gates",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un Quality Gate dans SonarQube ?",
+    "options": [
+      "Un ensemble de conditions pour valider un projet",
+      "Une règle d'analyse",
+      "Un profil de qualité",
+      "Un rapport de bugs"
+    ],
+    "correct": 0,
+    "explanation": "Un Quality Gate définit les critères pour qu'un projet soit validé."
+  },
+  {
+    "id": "SONAR-01-002",
+    "theme": "Issues",
+    "theme_label": "Types d'issues",
+    "difficulty": "easy",
+    "question": "Quel type d'issue n'est pas un bug mais une violation de bonne pratique ?",
+    "options": [
+      "Code Smell",
+      "Bug",
+      "Vulnerability",
+      "Hotspot"
+    ],
+    "correct": 0,
+    "explanation": "Code Smell indique un problème de maintenabilité, pas un bug."
+  }
+]

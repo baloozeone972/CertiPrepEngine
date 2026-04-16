@@ -1,0 +1,32 @@
+{
+  "id": "sonarqube",
+  "name": "SonarQube Professional (SonarSource)",
+  "version": "1.0",
+  "description": "Certification SonarQube - Qualité et sécurité du code",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "SonarQube Architecture",
+      "count": 40
+    },
+    {
+      "name": "Quality Gates",
+      "count": 50
+    },
+    {
+      "name": "Rules & Profiles",
+      "count": 50
+    },
+    {
+      "name": "Security Analysis",
+      "count": 60
+    },
+    {
+      "name": "Integration CI/CD",
+      "count": 50
+    }
+  ]
+}

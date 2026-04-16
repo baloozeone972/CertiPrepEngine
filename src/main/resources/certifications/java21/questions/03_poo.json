@@ -1,876 +1,902 @@
 [
-{
-"id": "J21-03-001",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce que l'héritage en Java ?",
-"options": [
-  "Une classe peut hériter de plusieurs classes parentes",
-  "Une classe peut hériter d'une seule classe parente",
-  "Une classe peut hériter d'une interface uniquement",
-  "L'héritage n'existe pas en Java"
-],
-"correct": 1,
-"explanation": "Java supporte l'héritage simple de classes (une seule classe parente) mais l'héritage multiple d'interfaces."
-},
-
-{
-"id": "J21-03-002",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Que signifie 'extends' en Java ?",
-"options": [
-  "Implémente une interface",
-  "Hérite d'une classe parente",
-  "Crée une nouvelle instance",
-  "Déclare une méthode abstraite"
-],
-"correct": 1,
-"explanation": "extends est utilisé pour l'héritage de classes. Une classe étend une autre classe avec 'extends'."
-},
-
-{
-"id": "J21-03-003",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Que signifie 'implements' en Java ?",
-"options": [
-  "Hérite d'une classe",
-  "Implémente une ou plusieurs interfaces",
-  "Crée une méthode abstraite",
-  "Déclare une variable"
-],
-"correct": 1,
-"explanation": "implements permet à une classe d'implémenter une ou plusieurs interfaces. La classe doit fournir le corps de toutes les méthodes abstraites."
-},
-
-{
-"id": "J21-03-004",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce que le polymorphisme en Java ?",
-"options": [
-  "La capacité d'une classe à avoir plusieurs constructeurs",
-  "La capacité d'un objet à prendre plusieurs formes",
-  "La capacité d'une méthode à s'appeler elle-même",
-  "La capacité d'une variable à changer de type"
-],
-"correct": 1,
-"explanation": "Le polymorphisme permet à une référence de type parent de désigner un objet de type enfant. Ex: Animal a = new Chien();"
-},
-
-{
-"id": "J21-03-005",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce que l'encapsulation ?",
-"options": [
-  "Cacher les détails d'implémentation et exposer une interface publique",
-  "Mettre toutes les méthodes dans une seule classe",
-  "Utiliser des classes internes",
-  "Créer des objets immuables"
-],
-"correct": 0,
-"explanation": "L'encapsulation consiste à déclarer les champs private et fournir des méthodes public (getters/setters) pour y accéder."
-},
-
-{
-"id": "J21-03-006",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Que produit 'super()' dans un constructeur ?",
-"options": [
-  "Appelle le constructeur de la classe courante",
-  "Appelle le constructeur de la classe parente",
-  "Appelle une méthode statique",
-  "Crée une nouvelle instance"
-],
-"correct": 1,
-"explanation": "super() appelle le constructeur de la classe parente. Si non spécifié, le constructeur par défaut du parent est appelé automatiquement."
-},
-
-{
-"id": "J21-03-007",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Que produit 'this()' dans un constructeur ?",
-"options": [
-  "Appelle un autre constructeur de la même classe",
-  "Appelle le constructeur parent",
-  "Retourne l'instance courante",
-  "Crée une copie de l'objet"
-],
-"correct": 0,
-"explanation": "this() permet d'appeler un autre constructeur de la même classe. Doit être la première instruction du constructeur."
-},
-
-{
-"id": "J21-03-008",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce qu'une classe abstraite ?",
-"options": [
-  "Une classe qui ne peut pas être étendue",
-  "Une classe qui ne peut pas être instanciée directement",
-  "Une classe qui n'a pas de méthodes",
-  "Une classe qui est automatiquement final"
-],
-"correct": 1,
-"explanation": "Une classe abstraite ne peut pas être instanciée avec 'new'. Elle peut contenir des méthodes abstraites et concrètes."
-},
-
-{
-"id": "J21-03-009",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce qu'une méthode abstraite ?",
-"options": [
-  "Une méthode sans corps (implémentation)",
-  "Une méthode avec le mot-clé 'abstract'",
-  "Une méthode qui doit être implémentée par les sous-classes",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Une méthode abstraite n'a pas de corps (seulement signature) et doit être implémentée par les classes concrètes qui étendent la classe abstraite."
-},
-
-{
-"id": "J21-03-010",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce qu'une interface en Java ?",
-"options": [
-  "Une classe qui ne peut pas avoir de méthodes",
-  "Un contrat définissant des méthodes qu'une classe doit implémenter",
-  "Une classe qui ne peut pas être instanciée",
-  "Un type de variable spécial"
-],
-"correct": 1,
-"explanation": "Une interface définit un ensemble de méthodes (par défaut abstract) qu'une classe implémentant l'interface doit fournir."
-},
-
-{
-"id": "J21-03-011",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Une interface peut-elle contenir des champs ?",
-"options": [
-  "Non, seulement des méthodes",
-  "Oui, mais ils sont automatiquement public static final",
-  "Oui, comme n'importe quelle classe",
-  "Oui, mais uniquement des constantes primitives"
-],
-"correct": 1,
-"explanation": "Les champs d'une interface sont implicitement public, static et final (constantes)."
-},
-
-{
-"id": "J21-03-012",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Depuis Java 8, une interface peut contenir des méthodes avec implémentation. Comment s'appellent-elles ?",
-"options": [
-  "Méthodes abstraites",
-  "Méthodes statiques et méthodes default",
-  "Méthodes privées",
-  "Méthodes final"
-],
-"correct": 1,
-"explanation": "Java 8 a introduit les méthodes default (avec mot-clé default) et les méthodes static dans les interfaces. Java 9 a ajouté les méthodes private."
-},
-
-{
-"id": "J21-03-013",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Parent { void show() { System.out.print(\"Parent\"); } }\nclass Child extends Parent { void show() { System.out.print(\"Child\"); } }\nParent p = new Child();\np.show();\n```",
-"options": ["Parent", "Child", "Erreur compilation", "ClassCastException"],
-"correct": 1,
-"explanation": "C'est du polymorphisme. La méthode appelée est celle de l'objet réel (Child), pas celle du type de référence (Parent)."
-},
-
-{
-"id": "J21-03-014",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Parent { static void show() { System.out.print(\"Parent\"); } }\nclass Child extends Parent { static void show() { System.out.print(\"Child\"); } }\nParent p = new Child();\np.show();\n```",
-"options": ["Parent", "Child", "Erreur compilation", "ClassCastException"],
-"correct": 0,
-"explanation": "Les méthodes static sont liées à la compilation (early binding). C'est la méthode de la classe du type de référence (Parent) qui est appelée, pas celle de l'objet."
-},
-
-{
-"id": "J21-03-015",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass A { int x = 5; }\nclass B extends A { int x = 10; }\nA obj = new B();\nSystem.out.println(obj.x);\n```",
-"options": ["5", "10", "Erreur", "0"],
-"correct": 0,
-"explanation": "Les variables (champs) n'ont pas de polymorphisme. C'est la variable du type de référence (A.x) qui est utilisée, même si l'objet est de type B."
-},
-
-{
-"id": "J21-03-016",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Animal {}\nclass Chien extends Animal {}\nAnimal a = new Chien();\nChien c = (Chien) a;\nSystem.out.println(c instanceof Chien);\n```",
-"options": ["true", "false", "Erreur compilation", "ClassCastException"],
-"correct": 0,
-"explanation": "Le cast est valide car a est bien un Chien. instanceof retourne true."
-},
-
-{
-"id": "J21-03-017",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Animal {}\nclass Chien extends Animal {}\nAnimal a = new Animal();\nChien c = (Chien) a;\n```",
-"options": [
-  "Compilation OK, runtime ClassCastException",
-  "Erreur de compilation",
-  "Compilation OK, runtime OK",
-  "ClassNotFoundException"
-],
-"correct": 0,
-"explanation": "Le cast est syntaxiquement valide (compilation OK). Mais a n'est pas un Chien, donc ClassCastException à l'exécution."
-},
-
-{
-"id": "J21-03-018",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que fait 'instanceof' ?",
-"options": [
-  "Crée une nouvelle instance",
-  "Vérifie si un objet est d'un certain type",
-  "Convertit un objet en un autre type",
-  "Compare deux objets"
-],
-"correct": 1,
-"explanation": "instanceof retourne true si l'objet est une instance de la classe ou implémente l'interface spécifiée. Ex: obj instanceof String."
-},
-
-{
-"id": "J21-03-019",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Quel modificateur permet à une classe d'être héritée mais pas instanciée directement ?",
-"options": ["abstract", "final", "static", "private"],
-"correct": 0,
-"explanation": "abstract permet l'héritage mais empêche l'instanciation directe. final fait l'inverse : empêche l'héritage."
-},
-
-{
-"id": "J21-03-020",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Quel modificateur empêche une méthode d'être surchargée (override) ?",
-"options": ["static", "final", "private", "abstract"],
-"correct": 1,
-"explanation": "final empêche la surcharge (override). Une méthode final ne peut pas être redéfinie dans les sous-classes."
-},
-
-{
-"id": "J21-03-021",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Parent {\n    final void show() { System.out.print(\"Parent\"); }\n}\nclass Child extends Parent {\n    void show() { System.out.print(\"Child\"); }\n}\n```",
-"options": [
-  "Compilation OK, affiche Child",
-  "Erreur compilation : ne peut pas override méthode final",
-  "Compilation OK, affiche Parent",
-  "Runtime error"
-],
-"correct": 1,
-"explanation": "Une méthode déclarée final dans la classe parente ne peut pas être surchargée (override) par la classe enfant."
-},
-
-{
-"id": "J21-03-022",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Une classe peut-elle implémenter plusieurs interfaces ?",
-"options": [
-  "Non, seulement une",
-  "Oui, sans limite",
-  "Oui, mais uniquement si elles n'ont pas de conflits",
-  "Oui, jusqu'à 3 interfaces"
-],
-"correct": 1,
-"explanation": "Java permet l'héritage multiple d'interfaces. Une classe peut implémenter autant d'interfaces que nécessaire."
-},
-
-{
-"id": "J21-03-023",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Que se passe-t-il si une classe implémente deux interfaces avec la même méthode default ?",
-"options": [
-  "Erreur de compilation automatique",
-  "La classe doit override la méthode",
-  "La première interface gagne",
-  "La méthode est ignorée"
-],
-"correct": 1,
-"explanation": "Conflit de méthode default : la classe doit fournir sa propre implémentation pour lever l'ambiguïté, ou utiliser super pour choisir."
-},
-
-{
-"id": "J21-03-024",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Comment appeler une méthode default spécifique d'une interface en cas de conflit ?",
-"options": [
-  "InterfaceName.super.method()",
-  "super.InterfaceName.method()",
-  "InterfaceName.method()",
-  "C'est impossible"
-],
-"correct": 0,
-"explanation": "Syntaxe : InterfaceName.super.method() permet d'appeler la méthode default spécifique d'une interface en cas de conflit."
-},
-
-{
-"id": "J21-03-025",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Quelle est la classe parente de toutes les classes en Java ?",
-"options": ["Main", "Class", "Object", "Root"],
-"correct": 2,
-"explanation": "Object est la classe racine de toute la hiérarchie Java. Toute classe étend implicitement Object (ou explicitement via extends)."
-},
-
-{
-"id": "J21-03-026",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Quelles méthodes la classe Object fournit-elle ?",
-"options": [
-  "toString(), equals(), hashCode()",
-  "clone(), finalize(), wait(), notify()",
-  "getClass()",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Object fournit : toString(), equals(), hashCode(), clone(), finalize(), getClass(), wait(), notify(), notifyAll()."
-},
-
-{
-"id": "J21-03-027",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass A {}\nclass B extends A {}\nSystem.out.println(new B() instanceof A);\n```",
-"options": ["true", "false", "Erreur compilation", "ClassCastException"],
-"correct": 0,
-"explanation": "B est une sous-classe de A, donc une instance de B est aussi une instance de A. instanceof retourne true."
-},
-
-{
-"id": "J21-03-028",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nString s = null;\nSystem.out.println(s instanceof String);\n```",
-"options": ["true", "false", "Erreur compilation", "NullPointerException"],
-"correct": 1,
-"explanation": "instanceof retourne false pour une référence null. Aucune exception n'est levée."
-},
-
-{
-"id": "J21-03-029",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Quelle est la règle de visibilité pour override une méthode ?",
-"options": [
-  "Le modificateur doit être identique",
-  "Le modificateur peut être plus accessible (moins restrictif)",
-  "Le modificateur peut être moins accessible (plus restrictif)",
-  "Le modificateur n'a pas d'importance"
-],
-"correct": 1,
-"explanation": "Une méthode override peut avoir une accessibilité plus large (ex: protected → public) mais pas plus restrictive (public → private)."
-},
-
-{
-"id": "J21-03-030",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Quelle est la règle pour les types de retour lors d'un override ?",
-"options": [
-  "Doit être identique",
-  "Peut être un sous-type (covariant return type)",
-  "Peut être un super-type",
-  "Peut être différent si méthodes static"
-],
-"correct": 1,
-"explanation": "Java supporte les types de retour covariants. Une méthode override peut retourner un sous-type du type de retour de la méthode parente."
-},
-
-{
-"id": "J21-03-031",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Quelle annotation recommande-t-on pour indiquer qu'une méthode override une méthode parente ?",
-"options": ["@Override", "@Overload", "@Inherit", "@Extends"],
-"correct": 0,
-"explanation": "@Override est une annotation qui indique qu'une méthode override une méthode de la superclasse. Le compilateur vérifie que c'est bien le cas."
-},
-
-{
-"id": "J21-03-032",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Une classe interne (inner class) peut-elle accéder aux membres private de sa classe englobante ?",
-"options": [
-  "Non, jamais",
-  "Oui, toujours",
-  "Oui, uniquement si déclarée static",
-  "Oui, uniquement si la classe englobante est public"
-],
-"correct": 1,
-"explanation": "Les classes internes non-static ont accès à tous les membres (y compris private) de leur classe englobante."
-},
-
-{
-"id": "J21-03-033",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Qu'est-ce qu'une classe anonyme en Java ?",
-"options": [
-  "Une classe sans nom, définie à l'instanciation",
-  "Une classe qui ne peut pas être instanciée",
-  "Une classe dont le nom est inconnu à la compilation",
-  "Une classe qui n'a pas de constructeur"
-],
-"correct": 0,
-"explanation": "Une classe anonyme est déclarée et instanciée en une seule expression. Elle est souvent utilisée pour implémenter des interfaces ou étendre des classes à la volée."
-},
-
-{
-"id": "J21-03-034",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Outer {\n    private int x = 10;\n    class Inner {\n        void show() { System.out.println(x); }\n    }\n}\nnew Outer().new Inner().show();\n```",
-"options": ["10", "Erreur compilation", "0", "null"],
-"correct": 0,
-"explanation": "La classe interne non-static accède au champ private x de la classe englobante. L'instanciation nécessite une instance d'Outer."
-},
-
-{
-"id": "J21-03-035",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Comment instancier une classe interne static (nested static class) ?",
-"options": [
-  "new Outer.Inner()",
-  "new Outer().new Inner()",
-  "new Outer.Inner() sans instance d'Outer",
-  "A et C sont correctes"
-],
-"correct": 3,
-"explanation": "Une classe interne static (nested class) s'instancie comme une classe normale : new Outer.Inner(). Pas besoin d'instance d'Outer."
-},
-
-{
-"id": "J21-03-036",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Que sont les 'sealed classes' introduites en Java 17 ?",
-"options": [
-  "Des classes qui ne peuvent pas être étendues",
-  "Des classes qui restreignent quelles sous-classes peuvent les étendre",
-  "Des classes qui sont automatiquement final",
-  "Des classes qui ne peuvent être utilisées que dans un module"
-],
-"correct": 1,
-"explanation": "Les sealed classes (Java 17) permettent de spécifier explicitement quelles classes peuvent les étendre, avec permits. Ex: sealed class A permits B, C {}"
-},
-
-{
-"id": "J21-03-037",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Quel mot-clé est utilisé avec les sealed classes pour autoriser l'héritage ?",
-"options": ["extends", "implements", "permits", "allows"],
-"correct": 2,
-"explanation": "permits est utilisé dans la déclaration d'une sealed class pour lister les classes autorisées à l'étendre."
-},
-
-{
-"id": "J21-03-038",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Quelles sont les trois permissions pour une sous-classe d'une sealed class ?",
-"options": [
-  "final, sealed, non-sealed",
-  "public, private, protected",
-  "static, final, abstract",
-  "extends, implements, permits"
-],
-"correct": 0,
-"explanation": "Une sous-classe d'une sealed class doit être : final (ne peut plus être étendue), sealed (continue la restriction), ou non-sealed (permet l'héritage libre)."
-},
-
-{
-"id": "J21-03-039",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Qu'est-ce qu'un constructeur en Java ?",
-"options": [
-  "Une méthode qui s'appelle comme la classe et n'a pas de type de retour",
-  "Une méthode qui initialise l'objet lors de sa création",
-  "Une méthode appelée automatiquement par new",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Un constructeur a le même nom que la classe, pas de type de retour, et est appelé automatiquement lors de l'instanciation avec new."
-},
-
-{
-"id": "J21-03-040",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass A {\n    A() { System.out.print(\"A\"); }\n}\nclass B extends A {\n    B() { System.out.print(\"B\"); }\n}\nnew B();\n```",
-"options": ["AB", "BA", "A", "B"],
-"correct": 0,
-"explanation": "Le constructeur de B appelle d'abord implicitement super() (constructeur de A), puis exécute son corps. Donc A puis B."
-},
-
-{
-"id": "J21-03-041",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass Parent {\n    Parent(int x) { System.out.print(x); }\n}\nclass Child extends Parent {\n    Child() { System.out.print(\"Child\"); }\n}\n```",
-"options": [
-  "Compilation OK, affiche Child",
-  "Erreur compilation : constructeur par défaut Parent inexistant",
-  "Runtime error",
-  "Affiche 0Child"
-],
-"correct": 1,
-"explanation": "Parent n'a pas de constructeur par défaut (sans paramètre). Child tente d'appeler super() implicitement → erreur de compilation."
-},
-
-{
-"id": "J21-03-042",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Comment corriger l'erreur précédente ?",
-"options": [
-  "Ajouter Parent() {} dans la classe Parent",
-  "Appeler super(x) dans le constructeur de Child",
-  "A ou B",
-  "Rendre Parent abstract"
-],
-"correct": 2,
-"explanation": "Soit ajouter un constructeur sans paramètre à Parent, soit appeler explicitement super(x) dans le constructeur de Child."
-},
-
-{
-"id": "J21-03-043",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Un constructeur peut-il être private ?",
-"options": [
-  "Non, jamais",
-  "Oui, pour le pattern Singleton",
-  "Oui, mais seulement dans les enums",
-  "Oui, mais la classe devient abstraite"
-],
-"correct": 1,
-"explanation": "Un constructeur private empêche l'instanciation depuis l'extérieur de la classe, utilisé dans le pattern Singleton ou les classes utilitaires."
-},
-
-{
-"id": "J21-03-044",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "easy",
-"question": "Que sont les records en Java (introduits en Java 14/16) ?",
-"options": [
-  "Des classes immuables pour le transport de données",
-  "Des classes avec des constructeurs automatiques",
-  "Des classes avec equals(), hashCode(), toString() générés",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Les records sont des classes immuables qui génèrent automatiquement constructeur, accesseurs, equals(), hashCode() et toString(). Ex: record Point(int x, int y) {}"
-},
-
-{
-"id": "J21-03-045",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Quelle est la syntaxe correcte pour déclarer un record ?",
-"options": [
-  "record Point(int x, int y) {}",
-  "public record Point(int x, int y) {}",
-  "record Point { int x; int y; }",
-  "A et B sont correctes"
-],
-"correct": 3,
-"explanation": "Un record se déclare avec 'record Nom(composants)'. Les modificateurs d'accès sont autorisés. Les composants sont automatiquement des champs final."
-},
-
-{
-"id": "J21-03-046",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Un record peut-il étendre une autre classe ?",
-"options": [
-  "Oui, comme une classe normale",
-  "Non, les records étendent implicitement java.lang.Record",
-  "Oui, uniquement des classes abstraites",
-  "Oui, avec le mot-clé extends"
-],
-"correct": 1,
-"explanation": "Les records étendent implicitement java.lang.Record et ne peuvent pas étendre d'autre classe. Ils peuvent implémenter des interfaces."
-},
-
-{
-"id": "J21-03-047",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Que sont les 'pattern matching for instanceof' (Java 16/17) ?",
-"options": [
-  "instanceof avec déclaration de variable",
-  "if (obj instanceof String s) { s.length(); }",
-  "Simplifie le cast après instanceof",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Pattern matching permet de déclarer une variable directement dans l'instanceof. Ex: if (obj instanceof String s) utilise s directement sans cast."
-},
-
-{
-"id": "J21-03-048",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code avec Java 21 ?\n```java\nObject obj = \"Hello\";\nif (obj instanceof String s && s.length() > 0) {\n    System.out.println(s.toLowerCase());\n}\n```",
-"options": ["hello", "Hello", "Erreur compilation", "NullPointerException"],
-"correct": 0,
-"explanation": "Pattern matching : s est déclarée et utilisable dans l'expression. La variable s est en scope dans la clause && et le bloc if."
-},
-
-{
-"id": "J21-03-049",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Que sont les 'switch pattern matching' (Java 21) ?",
-"options": [
-  "Switch avec des patterns au lieu de constantes",
-  "Switch sur le type d'un objet",
-  "Permet de déstructurer des records",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Java 21 généralise switch pour utiliser des patterns : case String s -> s.length(), case Integer i -> i, case Point(int x, int y) -> x+y."
-},
-
-{
-"id": "J21-03-050",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Qu'est-ce qu'une 'enum' en Java ?",
-"options": [
-  "Un type spécial pour des constantes nommées",
-  "Une classe qui étend Enum",
-  "Peut avoir des champs et méthodes",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "enum est un type spécial pour définir un ensemble fixe de constantes. C'est une classe qui étend java.lang.Enum, peut avoir des champs, constructeurs et méthodes."
-},
-
-{
-"id": "J21-03-051",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Peut-on ajouter des méthodes à une enum ?",
-"options": [
-  "Non, les enums ne peuvent avoir que des constantes",
-  "Oui, comme une classe normale",
-  "Oui, mais seulement des méthodes abstraites",
-  "Oui, mais seulement des méthodes static"
-],
-"correct": 1,
-"explanation": "Les enums peuvent avoir des constructeurs, des champs et des méthodes. Chaque constante peut même avoir sa propre implémentation de méthode."
-},
-
-{
-"id": "J21-03-052",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit 'DayOfWeek.MONDAY.ordinal()' ?",
-"options": [
-  "Le nom de la constante",
-  "La position de la constante (0 pour la première)",
-  "Un hashcode",
-  "La valeur numérique associée"
-],
-"correct": 1,
-"explanation": "ordinal() retourne la position de la constante dans la déclaration (commence à 0). À utiliser avec précaution car l'ordre peut changer."
-},
-
-{
-"id": "J21-03-053",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit 'DayOfWeek.MONDAY.name()' ?",
-"options": ["\"MONDAY\"", "monday", "1", "L'instance elle-même"],
-"correct": 0,
-"explanation": "name() retourne le nom exact de la constante tel que déclaré. La méthode toString() peut être override pour un affichage différent."
-},
-
-{
-"id": "J21-03-054",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Comment obtenir toutes les constantes d'une enum ?",
-"options": [
-  "Enum.values()",
-  "Enum.constants()",
-  "Enum.list()",
-  "Enum.all()"
-],
-"correct": 0,
-"explanation": "La méthode statique values() retourne un tableau contenant toutes les constantes de l'enum dans l'ordre de déclaration."
-},
-
-{
-"id": "J21-03-055",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Qu'est-ce que le 'method overloading' ?",
-"options": [
-  "Plusieurs méthodes avec le même nom mais des paramètres différents",
-  "Redéfinir une méthode dans une sous-classe",
-  "Une méthode qui s'appelle elle-même",
-  "Une méthode avec trop de paramètres"
-],
-"correct": 0,
-"explanation": "La surcharge (overloading) permet d'avoir plusieurs méthodes avec le même nom mais des signatures différentes (type, nombre, ordre des paramètres)."
-},
-
-{
-"id": "J21-03-056",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Qu'est-ce que le 'method overriding' ?",
-"options": [
-  "Redéfinir une méthode dans une sous-classe avec la même signature",
-  "Créer plusieurs méthodes avec le même nom",
-  "Appeler une méthode depuis une autre classe",
-  "Définir une méthode comme static"
-],
-"correct": 0,
-"explanation": "La surcharge (overriding) permet à une sous-classe de fournir une implémentation spécifique d'une méthode déjà définie dans la classe parente."
-},
-
-{
-"id": "J21-03-057",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "medium",
-"question": "Que produit ce code ?\n```java\nclass A { void m(int x) { System.out.print(\"A\"); } }\nclass B extends A { void m(long x) { System.out.print(\"B\"); } }\nB b = new B();\nb.m(5);\n```",
-"options": ["A", "B", "Erreur compilation", "AB"],
-"correct": 1,
-"explanation": "Ce n'est pas un override (signature différente : int vs long). C'est un overload. Le compilateur choisit la méthode la plus spécifique : m(long) avec promotion de int à long."
-},
-
-{
-"id": "J21-03-058",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Que produit ce code ?\n```java\nclass Parent { void m(int... x) { System.out.print(\"Parent\"); } }\nclass Child extends Parent { void m(int x) { System.out.print(\"Child\"); } }\nParent p = new Child();\np.m(5);\n```",
-"options": ["Parent", "Child", "Erreur compilation", "ChildParent"],
-"correct": 0,
-"explanation": "La signature est différente : varargs vs int. Ce n'est pas un override mais un overload. La méthode appelée dépend du type de référence (Parent)."
-},
-
-{
-"id": "J21-03-059",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Que sont les 'value classes' (projet Valhalla, prévisualisation Java 21) ?",
-"options": [
-  "Des classes avec sémantique par valeur plutôt que par référence",
-  "Des classes immuables",
-  "Des classes qui ne peuvent pas être null",
-  "Toutes ces réponses"
-],
-"correct": 3,
-"explanation": "Les value classes (prévisualisation Java 21) permettent de créer des types personnalisés avec sémantique par valeur, sans allocation sur le tas dans certains cas."
-},
-
-{
-"id": "J21-03-060",
-"theme": "POO - Classes, Héritage, Polymorphisme",
-"theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
-"difficulty": "hard",
-"question": "Qu'est-ce qu'un 'sealed interface' ?",
-"options": [
-  "Une interface qui ne peut être implémentée que par certaines classes",
-  "Une interface sans méthodes",
-  "Une interface qui étend seulement des interfaces sealed",
-  "Une interface avec une seule méthode"
-],
-"correct": 0,
-"explanation": "Comme les sealed classes, une sealed interface restreint quelles classes ou interfaces peuvent l'implémenter/étendre, avec le mot-clé permits."
-}
+  {
+    "id": "J21-03-001",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'héritage en Java ?",
+    "options": [
+      "Une classe peut hériter de plusieurs classes parentes",
+      "Une classe peut hériter d'une seule classe parente",
+      "Une classe peut hériter d'une interface uniquement",
+      "L'héritage n'existe pas en Java"
+    ],
+    "correct": 1,
+    "explanation": "Java supporte l'héritage simple de classes (une seule classe parente) mais l'héritage multiple d'interfaces."
+  },
+  {
+    "id": "J21-03-002",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Que signifie 'extends' en Java ?",
+    "options": [
+      "Implémente une interface",
+      "Hérite d'une classe parente",
+      "Crée une nouvelle instance",
+      "Déclare une méthode abstraite"
+    ],
+    "correct": 1,
+    "explanation": "extends est utilisé pour l'héritage de classes. Une classe étend une autre classe avec 'extends'."
+  },
+  {
+    "id": "J21-03-003",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Que signifie 'implements' en Java ?",
+    "options": [
+      "Hérite d'une classe",
+      "Implémente une ou plusieurs interfaces",
+      "Crée une méthode abstraite",
+      "Déclare une variable"
+    ],
+    "correct": 1,
+    "explanation": "implements permet à une classe d'implémenter une ou plusieurs interfaces. La classe doit fournir le corps de toutes les méthodes abstraites."
+  },
+  {
+    "id": "J21-03-004",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le polymorphisme en Java ?",
+    "options": [
+      "La capacité d'une classe à avoir plusieurs constructeurs",
+      "La capacité d'un objet à prendre plusieurs formes",
+      "La capacité d'une méthode à s'appeler elle-même",
+      "La capacité d'une variable à changer de type"
+    ],
+    "correct": 1,
+    "explanation": "Le polymorphisme permet à une référence de type parent de désigner un objet de type enfant. Ex: Animal a = new Chien();"
+  },
+  {
+    "id": "J21-03-005",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'encapsulation ?",
+    "options": [
+      "Cacher les détails d'implémentation et exposer une interface publique",
+      "Mettre toutes les méthodes dans une seule classe",
+      "Utiliser des classes internes",
+      "Créer des objets immuables"
+    ],
+    "correct": 0,
+    "explanation": "L'encapsulation consiste à déclarer les champs private et fournir des méthodes public (getters/setters) pour y accéder."
+  },
+  {
+    "id": "J21-03-006",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Que produit 'super()' dans un constructeur ?",
+    "options": [
+      "Appelle le constructeur de la classe courante",
+      "Appelle le constructeur de la classe parente",
+      "Appelle une méthode statique",
+      "Crée une nouvelle instance"
+    ],
+    "correct": 1,
+    "explanation": "super() appelle le constructeur de la classe parente. Si non spécifié, le constructeur par défaut du parent est appelé automatiquement."
+  },
+  {
+    "id": "J21-03-007",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Que produit 'this()' dans un constructeur ?",
+    "options": [
+      "Appelle un autre constructeur de la même classe",
+      "Appelle le constructeur parent",
+      "Retourne l'instance courante",
+      "Crée une copie de l'objet"
+    ],
+    "correct": 0,
+    "explanation": "this() permet d'appeler un autre constructeur de la même classe. Doit être la première instruction du constructeur."
+  },
+  {
+    "id": "J21-03-008",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une classe abstraite ?",
+    "options": [
+      "Une classe qui ne peut pas être étendue",
+      "Une classe qui ne peut pas être instanciée directement",
+      "Une classe qui n'a pas de méthodes",
+      "Une classe qui est automatiquement final"
+    ],
+    "correct": 1,
+    "explanation": "Une classe abstraite ne peut pas être instanciée avec 'new'. Elle peut contenir des méthodes abstraites et concrètes."
+  },
+  {
+    "id": "J21-03-009",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une méthode abstraite ?",
+    "options": [
+      "Une méthode sans corps (implémentation)",
+      "Une méthode avec le mot-clé 'abstract'",
+      "Une méthode qui doit être implémentée par les sous-classes",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Une méthode abstraite n'a pas de corps (seulement signature) et doit être implémentée par les classes concrètes qui étendent la classe abstraite."
+  },
+  {
+    "id": "J21-03-010",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une interface en Java ?",
+    "options": [
+      "Une classe qui ne peut pas avoir de méthodes",
+      "Un contrat définissant des méthodes qu'une classe doit implémenter",
+      "Une classe qui ne peut pas être instanciée",
+      "Un type de variable spécial"
+    ],
+    "correct": 1,
+    "explanation": "Une interface définit un ensemble de méthodes (par défaut abstract) qu'une classe implémentant l'interface doit fournir."
+  },
+  {
+    "id": "J21-03-011",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Une interface peut-elle contenir des champs ?",
+    "options": [
+      "Non, seulement des méthodes",
+      "Oui, mais ils sont automatiquement public static final",
+      "Oui, comme n'importe quelle classe",
+      "Oui, mais uniquement des constantes primitives"
+    ],
+    "correct": 1,
+    "explanation": "Les champs d'une interface sont implicitement public, static et final (constantes)."
+  },
+  {
+    "id": "J21-03-012",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Depuis Java 8, une interface peut contenir des méthodes avec implémentation. Comment s'appellent-elles ?",
+    "options": [
+      "Méthodes abstraites",
+      "Méthodes statiques et méthodes default",
+      "Méthodes privées",
+      "Méthodes final"
+    ],
+    "correct": 1,
+    "explanation": "Java 8 a introduit les méthodes default (avec mot-clé default) et les méthodes static dans les interfaces. Java 9 a ajouté les méthodes private."
+  },
+  {
+    "id": "J21-03-013",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Parent { void show() { System.out.print(\"Parent\"); } }\nclass Child extends Parent { void show() { System.out.print(\"Child\"); } }\nParent p = new Child();\np.show();\n```",
+    "options": [
+      "Parent",
+      "Child",
+      "Erreur compilation",
+      "ClassCastException"
+    ],
+    "correct": 1,
+    "explanation": "C'est du polymorphisme. La méthode appelée est celle de l'objet réel (Child), pas celle du type de référence (Parent)."
+  },
+  {
+    "id": "J21-03-014",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Parent { static void show() { System.out.print(\"Parent\"); } }\nclass Child extends Parent { static void show() { System.out.print(\"Child\"); } }\nParent p = new Child();\np.show();\n```",
+    "options": [
+      "Parent",
+      "Child",
+      "Erreur compilation",
+      "ClassCastException"
+    ],
+    "correct": 0,
+    "explanation": "Les méthodes static sont liées à la compilation (early binding). C'est la méthode de la classe du type de référence (Parent) qui est appelée, pas celle de l'objet."
+  },
+  {
+    "id": "J21-03-015",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass A { int x = 5; }\nclass B extends A { int x = 10; }\nA obj = new B();\nSystem.out.println(obj.x);\n```",
+    "options": [
+      "5",
+      "10",
+      "Erreur",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "Les variables (champs) n'ont pas de polymorphisme. C'est la variable du type de référence (A.x) qui est utilisée, même si l'objet est de type B."
+  },
+  {
+    "id": "J21-03-016",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Animal {}\nclass Chien extends Animal {}\nAnimal a = new Chien();\nChien c = (Chien) a;\nSystem.out.println(c instanceof Chien);\n```",
+    "options": [
+      "true",
+      "false",
+      "Erreur compilation",
+      "ClassCastException"
+    ],
+    "correct": 0,
+    "explanation": "Le cast est valide car a est bien un Chien. instanceof retourne true."
+  },
+  {
+    "id": "J21-03-017",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Animal {}\nclass Chien extends Animal {}\nAnimal a = new Animal();\nChien c = (Chien) a;\n```",
+    "options": [
+      "Compilation OK, runtime ClassCastException",
+      "Erreur de compilation",
+      "Compilation OK, runtime OK",
+      "ClassNotFoundException"
+    ],
+    "correct": 0,
+    "explanation": "Le cast est syntaxiquement valide (compilation OK). Mais a n'est pas un Chien, donc ClassCastException à l'exécution."
+  },
+  {
+    "id": "J21-03-018",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que fait 'instanceof' ?",
+    "options": [
+      "Crée une nouvelle instance",
+      "Vérifie si un objet est d'un certain type",
+      "Convertit un objet en un autre type",
+      "Compare deux objets"
+    ],
+    "correct": 1,
+    "explanation": "instanceof retourne true si l'objet est une instance de la classe ou implémente l'interface spécifiée. Ex: obj instanceof String."
+  },
+  {
+    "id": "J21-03-019",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Quel modificateur permet à une classe d'être héritée mais pas instanciée directement ?",
+    "options": [
+      "abstract",
+      "final",
+      "static",
+      "private"
+    ],
+    "correct": 0,
+    "explanation": "abstract permet l'héritage mais empêche l'instanciation directe. final fait l'inverse : empêche l'héritage."
+  },
+  {
+    "id": "J21-03-020",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Quel modificateur empêche une méthode d'être surchargée (override) ?",
+    "options": [
+      "static",
+      "final",
+      "private",
+      "abstract"
+    ],
+    "correct": 1,
+    "explanation": "final empêche la surcharge (override). Une méthode final ne peut pas être redéfinie dans les sous-classes."
+  },
+  {
+    "id": "J21-03-021",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Parent {\n    final void show() { System.out.print(\"Parent\"); }\n}\nclass Child extends Parent {\n    void show() { System.out.print(\"Child\"); }\n}\n```",
+    "options": [
+      "Compilation OK, affiche Child",
+      "Erreur compilation : ne peut pas override méthode final",
+      "Compilation OK, affiche Parent",
+      "Runtime error"
+    ],
+    "correct": 1,
+    "explanation": "Une méthode déclarée final dans la classe parente ne peut pas être surchargée (override) par la classe enfant."
+  },
+  {
+    "id": "J21-03-022",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Une classe peut-elle implémenter plusieurs interfaces ?",
+    "options": [
+      "Non, seulement une",
+      "Oui, sans limite",
+      "Oui, mais uniquement si elles n'ont pas de conflits",
+      "Oui, jusqu'à 3 interfaces"
+    ],
+    "correct": 1,
+    "explanation": "Java permet l'héritage multiple d'interfaces. Une classe peut implémenter autant d'interfaces que nécessaire."
+  },
+  {
+    "id": "J21-03-023",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une classe implémente deux interfaces avec la même méthode default ?",
+    "options": [
+      "Erreur de compilation automatique",
+      "La classe doit override la méthode",
+      "La première interface gagne",
+      "La méthode est ignorée"
+    ],
+    "correct": 1,
+    "explanation": "Conflit de méthode default : la classe doit fournir sa propre implémentation pour lever l'ambiguïté, ou utiliser super pour choisir."
+  },
+  {
+    "id": "J21-03-024",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Comment appeler une méthode default spécifique d'une interface en cas de conflit ?",
+    "options": [
+      "InterfaceName.super.method()",
+      "super.InterfaceName.method()",
+      "InterfaceName.method()",
+      "C'est impossible"
+    ],
+    "correct": 0,
+    "explanation": "Syntaxe : InterfaceName.super.method() permet d'appeler la méthode default spécifique d'une interface en cas de conflit."
+  },
+  {
+    "id": "J21-03-025",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Quelle est la classe parente de toutes les classes en Java ?",
+    "options": [
+      "Main",
+      "Class",
+      "Object",
+      "Root"
+    ],
+    "correct": 2,
+    "explanation": "Object est la classe racine de toute la hiérarchie Java. Toute classe étend implicitement Object (ou explicitement via extends)."
+  },
+  {
+    "id": "J21-03-026",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Quelles méthodes la classe Object fournit-elle ?",
+    "options": [
+      "toString(), equals(), hashCode()",
+      "clone(), finalize(), wait(), notify()",
+      "getClass()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Object fournit : toString(), equals(), hashCode(), clone(), finalize(), getClass(), wait(), notify(), notifyAll()."
+  },
+  {
+    "id": "J21-03-027",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass A {}\nclass B extends A {}\nSystem.out.println(new B() instanceof A);\n```",
+    "options": [
+      "true",
+      "false",
+      "Erreur compilation",
+      "ClassCastException"
+    ],
+    "correct": 0,
+    "explanation": "B est une sous-classe de A, donc une instance de B est aussi une instance de A. instanceof retourne true."
+  },
+  {
+    "id": "J21-03-028",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nString s = null;\nSystem.out.println(s instanceof String);\n```",
+    "options": [
+      "true",
+      "false",
+      "Erreur compilation",
+      "NullPointerException"
+    ],
+    "correct": 1,
+    "explanation": "instanceof retourne false pour une référence null. Aucune exception n'est levée."
+  },
+  {
+    "id": "J21-03-029",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Quelle est la règle de visibilité pour override une méthode ?",
+    "options": [
+      "Le modificateur doit être identique",
+      "Le modificateur peut être plus accessible (moins restrictif)",
+      "Le modificateur peut être moins accessible (plus restrictif)",
+      "Le modificateur n'a pas d'importance"
+    ],
+    "correct": 1,
+    "explanation": "Une méthode override peut avoir une accessibilité plus large (ex: protected → public) mais pas plus restrictive (public → private)."
+  },
+  {
+    "id": "J21-03-030",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Quelle est la règle pour les types de retour lors d'un override ?",
+    "options": [
+      "Doit être identique",
+      "Peut être un sous-type (covariant return type)",
+      "Peut être un super-type",
+      "Peut être différent si méthodes static"
+    ],
+    "correct": 1,
+    "explanation": "Java supporte les types de retour covariants. Une méthode override peut retourner un sous-type du type de retour de la méthode parente."
+  },
+  {
+    "id": "J21-03-031",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Quelle annotation recommande-t-on pour indiquer qu'une méthode override une méthode parente ?",
+    "options": [
+      "@Override",
+      "@Overload",
+      "@Inherit",
+      "@Extends"
+    ],
+    "correct": 0,
+    "explanation": "@Override est une annotation qui indique qu'une méthode override une méthode de la superclasse. Le compilateur vérifie que c'est bien le cas."
+  },
+  {
+    "id": "J21-03-032",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Une classe interne (inner class) peut-elle accéder aux membres private de sa classe englobante ?",
+    "options": [
+      "Non, jamais",
+      "Oui, toujours",
+      "Oui, uniquement si déclarée static",
+      "Oui, uniquement si la classe englobante est public"
+    ],
+    "correct": 1,
+    "explanation": "Les classes internes non-static ont accès à tous les membres (y compris private) de leur classe englobante."
+  },
+  {
+    "id": "J21-03-033",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une classe anonyme en Java ?",
+    "options": [
+      "Une classe sans nom, définie à l'instanciation",
+      "Une classe qui ne peut pas être instanciée",
+      "Une classe dont le nom est inconnu à la compilation",
+      "Une classe qui n'a pas de constructeur"
+    ],
+    "correct": 0,
+    "explanation": "Une classe anonyme est déclarée et instanciée en une seule expression. Elle est souvent utilisée pour implémenter des interfaces ou étendre des classes à la volée."
+  },
+  {
+    "id": "J21-03-034",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Outer {\n    private int x = 10;\n    class Inner {\n        void show() { System.out.println(x); }\n    }\n}\nnew Outer().new Inner().show();\n```",
+    "options": [
+      "10",
+      "Erreur compilation",
+      "0",
+      "null"
+    ],
+    "correct": 0,
+    "explanation": "La classe interne non-static accède au champ private x de la classe englobante. L'instanciation nécessite une instance d'Outer."
+  },
+  {
+    "id": "J21-03-035",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Comment instancier une classe interne static (nested static class) ?",
+    "options": [
+      "new Outer.Inner()",
+      "new Outer().new Inner()",
+      "new Outer.Inner() sans instance d'Outer",
+      "A et C sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "Une classe interne static (nested class) s'instancie comme une classe normale : new Outer.Inner(). Pas besoin d'instance d'Outer."
+  },
+  {
+    "id": "J21-03-036",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Que sont les 'sealed classes' introduites en Java 17 ?",
+    "options": [
+      "Des classes qui ne peuvent pas être étendues",
+      "Des classes qui restreignent quelles sous-classes peuvent les étendre",
+      "Des classes qui sont automatiquement final",
+      "Des classes qui ne peuvent être utilisées que dans un module"
+    ],
+    "correct": 1,
+    "explanation": "Les sealed classes (Java 17) permettent de spécifier explicitement quelles classes peuvent les étendre, avec permits. Ex: sealed class A permits B, C {}"
+  },
+  {
+    "id": "J21-03-037",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Quel mot-clé est utilisé avec les sealed classes pour autoriser l'héritage ?",
+    "options": [
+      "extends",
+      "implements",
+      "permits",
+      "allows"
+    ],
+    "correct": 2,
+    "explanation": "permits est utilisé dans la déclaration d'une sealed class pour lister les classes autorisées à l'étendre."
+  },
+  {
+    "id": "J21-03-038",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Quelles sont les trois permissions pour une sous-classe d'une sealed class ?",
+    "options": [
+      "final, sealed, non-sealed",
+      "public, private, protected",
+      "static, final, abstract",
+      "extends, implements, permits"
+    ],
+    "correct": 0,
+    "explanation": "Une sous-classe d'une sealed class doit être : final (ne peut plus être étendue), sealed (continue la restriction), ou non-sealed (permet l'héritage libre)."
+  },
+  {
+    "id": "J21-03-039",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un constructeur en Java ?",
+    "options": [
+      "Une méthode qui s'appelle comme la classe et n'a pas de type de retour",
+      "Une méthode qui initialise l'objet lors de sa création",
+      "Une méthode appelée automatiquement par new",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Un constructeur a le même nom que la classe, pas de type de retour, et est appelé automatiquement lors de l'instanciation avec new."
+  },
+  {
+    "id": "J21-03-040",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass A {\n    A() { System.out.print(\"A\"); }\n}\nclass B extends A {\n    B() { System.out.print(\"B\"); }\n}\nnew B();\n```",
+    "options": [
+      "AB",
+      "BA",
+      "A",
+      "B"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur de B appelle d'abord implicitement super() (constructeur de A), puis exécute son corps. Donc A puis B."
+  },
+  {
+    "id": "J21-03-041",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass Parent {\n    Parent(int x) { System.out.print(x); }\n}\nclass Child extends Parent {\n    Child() { System.out.print(\"Child\"); }\n}\n```",
+    "options": [
+      "Compilation OK, affiche Child",
+      "Erreur compilation : constructeur par défaut Parent inexistant",
+      "Runtime error",
+      "Affiche 0Child"
+    ],
+    "correct": 1,
+    "explanation": "Parent n'a pas de constructeur par défaut (sans paramètre). Child tente d'appeler super() implicitement → erreur de compilation."
+  },
+  {
+    "id": "J21-03-042",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Comment corriger l'erreur précédente ?",
+    "options": [
+      "Ajouter Parent() {} dans la classe Parent",
+      "Appeler super(x) dans le constructeur de Child",
+      "A ou B",
+      "Rendre Parent abstract"
+    ],
+    "correct": 2,
+    "explanation": "Soit ajouter un constructeur sans paramètre à Parent, soit appeler explicitement super(x) dans le constructeur de Child."
+  },
+  {
+    "id": "J21-03-043",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Un constructeur peut-il être private ?",
+    "options": [
+      "Non, jamais",
+      "Oui, pour le pattern Singleton",
+      "Oui, mais seulement dans les enums",
+      "Oui, mais la classe devient abstraite"
+    ],
+    "correct": 1,
+    "explanation": "Un constructeur private empêche l'instanciation depuis l'extérieur de la classe, utilisé dans le pattern Singleton ou les classes utilitaires."
+  },
+  {
+    "id": "J21-03-044",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "question": "Que sont les records en Java (introduits en Java 14/16) ?",
+    "options": [
+      "Des classes immuables pour le transport de données",
+      "Des classes avec des constructeurs automatiques",
+      "Des classes avec equals(), hashCode(), toString() générés",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les records sont des classes immuables qui génèrent automatiquement constructeur, accesseurs, equals(), hashCode() et toString(). Ex: record Point(int x, int y) {}"
+  },
+  {
+    "id": "J21-03-045",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Quelle est la syntaxe correcte pour déclarer un record ?",
+    "options": [
+      "record Point(int x, int y) {}",
+      "public record Point(int x, int y) {}",
+      "record Point { int x; int y; }",
+      "A et B sont correctes"
+    ],
+    "correct": 3,
+    "explanation": "Un record se déclare avec 'record Nom(composants)'. Les modificateurs d'accès sont autorisés. Les composants sont automatiquement des champs final."
+  },
+  {
+    "id": "J21-03-046",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Un record peut-il étendre une autre classe ?",
+    "options": [
+      "Oui, comme une classe normale",
+      "Non, les records étendent implicitement java.lang.Record",
+      "Oui, uniquement des classes abstraites",
+      "Oui, avec le mot-clé extends"
+    ],
+    "correct": 1,
+    "explanation": "Les records étendent implicitement java.lang.Record et ne peuvent pas étendre d'autre classe. Ils peuvent implémenter des interfaces."
+  },
+  {
+    "id": "J21-03-047",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Que sont les 'pattern matching for instanceof' (Java 16/17) ?",
+    "options": [
+      "instanceof avec déclaration de variable",
+      "if (obj instanceof String s) { s.length(); }",
+      "Simplifie le cast après instanceof",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Pattern matching permet de déclarer une variable directement dans l'instanceof. Ex: if (obj instanceof String s) utilise s directement sans cast."
+  },
+  {
+    "id": "J21-03-048",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code avec Java 21 ?\n```java\nObject obj = \"Hello\";\nif (obj instanceof String s && s.length() > 0) {\n    System.out.println(s.toLowerCase());\n}\n```",
+    "options": [
+      "hello",
+      "Hello",
+      "Erreur compilation",
+      "NullPointerException"
+    ],
+    "correct": 0,
+    "explanation": "Pattern matching : s est déclarée et utilisable dans l'expression. La variable s est en scope dans la clause && et le bloc if."
+  },
+  {
+    "id": "J21-03-049",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Que sont les 'switch pattern matching' (Java 21) ?",
+    "options": [
+      "Switch avec des patterns au lieu de constantes",
+      "Switch sur le type d'un objet",
+      "Permet de déstructurer des records",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Java 21 généralise switch pour utiliser des patterns : case String s -> s.length(), case Integer i -> i, case Point(int x, int y) -> x+y."
+  },
+  {
+    "id": "J21-03-050",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une 'enum' en Java ?",
+    "options": [
+      "Un type spécial pour des constantes nommées",
+      "Une classe qui étend Enum",
+      "Peut avoir des champs et méthodes",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "enum est un type spécial pour définir un ensemble fixe de constantes. C'est une classe qui étend java.lang.Enum, peut avoir des champs, constructeurs et méthodes."
+  },
+  {
+    "id": "J21-03-051",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Peut-on ajouter des méthodes à une enum ?",
+    "options": [
+      "Non, les enums ne peuvent avoir que des constantes",
+      "Oui, comme une classe normale",
+      "Oui, mais seulement des méthodes abstraites",
+      "Oui, mais seulement des méthodes static"
+    ],
+    "correct": 1,
+    "explanation": "Les enums peuvent avoir des constructeurs, des champs et des méthodes. Chaque constante peut même avoir sa propre implémentation de méthode."
+  },
+  {
+    "id": "J21-03-052",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit 'DayOfWeek.MONDAY.ordinal()' ?",
+    "options": [
+      "Le nom de la constante",
+      "La position de la constante (0 pour la première)",
+      "Un hashcode",
+      "La valeur numérique associée"
+    ],
+    "correct": 1,
+    "explanation": "ordinal() retourne la position de la constante dans la déclaration (commence à 0). À utiliser avec précaution car l'ordre peut changer."
+  },
+  {
+    "id": "J21-03-053",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit 'DayOfWeek.MONDAY.name()' ?",
+    "options": [
+      "\"MONDAY\"",
+      "monday",
+      "1",
+      "L'instance elle-même"
+    ],
+    "correct": 0,
+    "explanation": "name() retourne le nom exact de la constante tel que déclaré. La méthode toString() peut être override pour un affichage différent."
+  },
+  {
+    "id": "J21-03-054",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Comment obtenir toutes les constantes d'une enum ?",
+    "options": [
+      "Enum.values()",
+      "Enum.constants()",
+      "Enum.list()",
+      "Enum.all()"
+    ],
+    "correct": 0,
+    "explanation": "La méthode statique values() retourne un tableau contenant toutes les constantes de l'enum dans l'ordre de déclaration."
+  },
+  {
+    "id": "J21-03-055",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que le 'method overloading' ?",
+    "options": [
+      "Plusieurs méthodes avec le même nom mais des paramètres différents",
+      "Redéfinir une méthode dans une sous-classe",
+      "Une méthode qui s'appelle elle-même",
+      "Une méthode avec trop de paramètres"
+    ],
+    "correct": 0,
+    "explanation": "La surcharge (overloading) permet d'avoir plusieurs méthodes avec le même nom mais des signatures différentes (type, nombre, ordre des paramètres)."
+  },
+  {
+    "id": "J21-03-056",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que le 'method overriding' ?",
+    "options": [
+      "Redéfinir une méthode dans une sous-classe avec la même signature",
+      "Créer plusieurs méthodes avec le même nom",
+      "Appeler une méthode depuis une autre classe",
+      "Définir une méthode comme static"
+    ],
+    "correct": 0,
+    "explanation": "La surcharge (overriding) permet à une sous-classe de fournir une implémentation spécifique d'une méthode déjà définie dans la classe parente."
+  },
+  {
+    "id": "J21-03-057",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "question": "Que produit ce code ?\n```java\nclass A { void m(int x) { System.out.print(\"A\"); } }\nclass B extends A { void m(long x) { System.out.print(\"B\"); } }\nB b = new B();\nb.m(5);\n```",
+    "options": [
+      "A",
+      "B",
+      "Erreur compilation",
+      "AB"
+    ],
+    "correct": 1,
+    "explanation": "Ce n'est pas un override (signature différente : int vs long). C'est un overload. Le compilateur choisit la méthode la plus spécifique : m(long) avec promotion de int à long."
+  },
+  {
+    "id": "J21-03-058",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\n```java\nclass Parent { void m(int... x) { System.out.print(\"Parent\"); } }\nclass Child extends Parent { void m(int x) { System.out.print(\"Child\"); } }\nParent p = new Child();\np.m(5);\n```",
+    "options": [
+      "Parent",
+      "Child",
+      "Erreur compilation",
+      "ChildParent"
+    ],
+    "correct": 0,
+    "explanation": "La signature est différente : varargs vs int. Ce n'est pas un override mais un overload. La méthode appelée dépend du type de référence (Parent)."
+  },
+  {
+    "id": "J21-03-059",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Que sont les 'value classes' (projet Valhalla, prévisualisation Java 21) ?",
+    "options": [
+      "Des classes avec sémantique par valeur plutôt que par référence",
+      "Des classes immuables",
+      "Des classes qui ne peuvent pas être null",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les value classes (prévisualisation Java 21) permettent de créer des types personnalisés avec sémantique par valeur, sans allocation sur le tas dans certains cas."
+  },
+  {
+    "id": "J21-03-060",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un 'sealed interface' ?",
+    "options": [
+      "Une interface qui ne peut être implémentée que par certaines classes",
+      "Une interface sans méthodes",
+      "Une interface qui étend seulement des interfaces sealed",
+      "Une interface avec une seule méthode"
+    ],
+    "correct": 0,
+    "explanation": "Comme les sealed classes, une sealed interface restreint quelles classes ou interfaces peuvent l'implémenter/étendre, avec le mot-clé permits."
+  }
 ]

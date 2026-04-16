@@ -1,0 +1,32 @@
+{
+  "id": "maven",
+  "name": "Maven Professional (Apache)",
+  "version": "1.0",
+  "description": "Certification Apache Maven - Gestion de projet et build Java avec Maven",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 50,
+  "passingScore": 65,
+  "themes": [
+    {
+      "name": "POM Configuration",
+      "count": 60
+    },
+    {
+      "name": "Build Lifecycle",
+      "count": 50
+    },
+    {
+      "name": "Dependencies",
+      "count": 50
+    },
+    {
+      "name": "Plugins",
+      "count": 50
+    },
+    {
+      "name": "Multi-module Projects",
+      "count": 40
+    }
+  ]
+}

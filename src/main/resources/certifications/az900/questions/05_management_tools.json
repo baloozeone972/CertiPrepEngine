@@ -1,0 +1,547 @@
+[
+  {
+    "id": "AZ-900-201",
+    "theme": "Azure Management Tools",
+    "theme_label": "Portail Azure",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le portail Azure ?",
+    "options": [
+      "Interface web pour gérer les ressources Azure",
+      "Interface en ligne de commande",
+      "API",
+      "Application mobile"
+    ],
+    "correct": 0,
+    "explication": "Le portail Azure est une interface web graphique."
+  },
+  {
+    "id": "AZ-900-202",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure CLI",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure CLI ?",
+    "options": [
+      "Interface en ligne de commande multiplateforme",
+      "Portail web",
+      "API REST",
+      "PowerShell"
+    ],
+    "correct": 0,
+    "explication": "Azure CLI est un outil en ligne de commande pour gérer Azure."
+  },
+  {
+    "id": "AZ-900-203",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure PowerShell",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure PowerShell ?",
+    "options": [
+      "Modules PowerShell pour gérer Azure",
+      "Interface web",
+      "CLI",
+      "API"
+    ],
+    "correct": 0,
+    "explication": "Azure PowerShell est un ensemble de cmdlets pour gérer Azure."
+  },
+  {
+    "id": "AZ-900-204",
+    "theme": "Azure Management Tools",
+    "theme_label": "ARM Templates",
+    "difficulty": "easy",
+    "question": "Que sont les modèles ARM (Azure Resource Manager) ?",
+    "options": [
+      "Fichiers JSON pour déployer l'infrastructure",
+      "Scripts PowerShell",
+      "Commandes CLI",
+      "Applications"
+    ],
+    "correct": 0,
+    "explication": "Les modèles ARM sont des définitions IaC (Infrastructure as Code)."
+  },
+  {
+    "id": "AZ-900-205",
+    "theme": "Azure Management Tools",
+    "theme_label": "Bicep",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Bicep ?",
+    "options": [
+      "Langage DSL pour les modèles ARM (plus simple que JSON)",
+      "CLI",
+      "PowerShell",
+      "Portail"
+    ],
+    "correct": 0,
+    "explication": "Bicep est un langage déclaratif qui compile en modèles ARM."
+  },
+  {
+    "id": "AZ-900-206",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Cloud Shell",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Cloud Shell ?",
+    "options": [
+      "Shell accessible depuis le portail (bash/PowerShell)",
+      "CLI locale",
+      "PowerShell local",
+      "Terminal distant"
+    ],
+    "correct": 0,
+    "explication": "Cloud Shell est un shell intégré au portail Azure."
+  },
+  {
+    "id": "AZ-900-207",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Resource Manager (ARM)",
+    "difficulty": "easy",
+    "question": "Quel est le rôle d'Azure Resource Manager ?",
+    "options": [
+      "Couche de gestion unifiée pour toutes les ressources",
+      "Base de données",
+      "Stockage",
+      "Calcul"
+    ],
+    "correct": 0,
+    "explication": "ARM est la couche de gestion qui permet de déployer, gérer et surveiller les ressources."
+  },
+  {
+    "id": "AZ-900-208",
+    "theme": "Azure Management Tools",
+    "theme_label": "Resource Groups",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un groupe de ressources ?",
+    "options": [
+      "Conteneur logique pour les ressources Azure",
+      "Type de ressource",
+      "Région",
+      "Abonnement"
+    ],
+    "correct": 0,
+    "explication": "Un groupe de ressources regroupe des ressources partageant un cycle de vie."
+  },
+  {
+    "id": "AZ-900-209",
+    "theme": "Azure Management Tools",
+    "theme_label": "Tags",
+    "difficulty": "easy",
+    "question": "À quoi servent les tags Azure ?",
+    "options": [
+      "Métadonnées pour organiser les ressources",
+      "Sécurité",
+      "Performances",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Les tags sont des paires clé-valeur pour organiser les ressources."
+  },
+  {
+    "id": "AZ-900-210",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Policy",
+    "difficulty": "easy",
+    "question": "Azure Policy peut-il empêcher la création de ressources non conformes ?",
+    "options": ["Oui (effet Deny)", "Non", "Uniquement en audit", "Uniquement après création"],
+    "correct": 0,
+    "explication": "Azure Policy peut bloquer la création de ressources non conformes avec l'effet Deny."
+  },
+  {
+    "id": "AZ-900-211",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Blueprints",
+    "difficulty": "easy",
+    "question": "Azure Blueprints peut-il déployer un ensemble de ressources en une seule fois ?",
+    "options": ["Oui", "Non", "Uniquement via ARM", "Uniquement via CLI"],
+    "correct": 0,
+    "explication": "Les blueprints permettent de déployer un ensemble cohérent de ressources."
+  },
+  {
+    "id": "AZ-900-212",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Monitor",
+    "difficulty": "easy",
+    "question": "Azure Monitor collecte-t-il des métriques et des logs ?",
+    "options": ["Oui", "Non", "Seulement des métriques", "Seulement des logs"],
+    "correct": 0,
+    "explication": "Azure Monitor collecte les métriques, les logs, et les traces."
+  },
+  {
+    "id": "AZ-900-213",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Log Analytics",
+    "difficulty": "easy",
+    "question": "Azure Log Analytics est-il un service d'analyse de logs ?",
+    "options": ["Oui", "Non", "Seulement pour les VMs", "Seulement pour le réseau"],
+    "correct": 0,
+    "explication": "Log Analytics permet d'interroger les logs avec KQL."
+  },
+  {
+    "id": "AZ-900-214",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Application Insights",
+    "difficulty": "easy",
+    "question": "Application Insights est-il destiné à la surveillance des applications ?",
+    "options": ["Oui", "Non", "Seulement pour les applications web", "Seulement pour les API"],
+    "correct": 0,
+    "explication": "Application Insights surveille les performances des applications."
+  },
+  {
+    "id": "AZ-900-215",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Alerts",
+    "difficulty": "easy",
+    "question": "Azure Monitor peut-il envoyer des alertes ?",
+    "options": ["Oui", "Non", "Uniquement via e-mail", "Uniquement via SMS"],
+    "correct": 0,
+    "explication": "Azure Monitor peut déclencher des alertes sur les métriques et les logs."
+  },
+  {
+    "id": "AZ-900-216",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Dashboards",
+    "difficulty": "easy",
+    "question": "Azure Dashboards permettent-ils de créer des tableaux de bord personnalisés ?",
+    "options": ["Oui", "Non", "Uniquement dans le portail", "Uniquement dans Power BI"],
+    "correct": 0,
+    "explication": "Les tableaux de bord Azure sont personnalisables avec des métriques et des graphiques."
+  },
+  {
+    "id": "AZ-900-217",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Advisor",
+    "difficulty": "easy",
+    "question": "Azure Advisor fournit-il des recommandations personnalisées ?",
+    "options": ["Oui", "Non", "Uniquement pour les coûts", "Uniquement pour la sécurité"],
+    "correct": 0,
+    "explication": "Advisor donne des recommandations sur les coûts, la sécurité, les performances, etc."
+  },
+  {
+    "id": "AZ-900-218",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Service Health",
+    "difficulty": "easy",
+    "question": "Service Health surveille-t-il les incidents Azure ?",
+    "options": ["Oui", "Non", "Seulement pour les régions", "Seulement pour les services"],
+    "correct": 0,
+    "explication": "Service Health donne des informations sur les incidents et les maintenances."
+  },
+  {
+    "id": "AZ-900-219",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Resource Graph",
+    "difficulty": "easy",
+    "question": "Azure Resource Graph permet-il d'interroger les ressources à grande échelle ?",
+    "options": ["Oui", "Non", "Uniquement via KQL", "Uniquement via SQL"],
+    "correct": 0,
+    "explication": "Resource Graph permet des requêtes efficaces sur les ressources avec KQL."
+  },
+  {
+    "id": "AZ-900-220",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Automation",
+    "difficulty": "easy",
+    "question": "Azure Automation permet-il d'automatiser les tâches ?",
+    "options": ["Oui", "Non", "Uniquement les runbooks", "Uniquement la gestion des mises à jour"],
+    "correct": 0,
+    "explication": "Azure Automation offre des runbooks, la gestion des mises à jour, etc."
+  },
+  {
+    "id": "AZ-900-221",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Automation runbooks",
+    "difficulty": "easy",
+    "question": "Les runbooks Automation peuvent-ils être écrits en PowerShell ?",
+    "options": ["Oui", "Non", "Uniquement en Python", "Uniquement en JavaScript"],
+    "correct": 0,
+    "explication": "Les runbooks peuvent être en PowerShell, Python, Graphique."
+  },
+  {
+    "id": "AZ-900-222",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Automation Update Management",
+    "difficulty": "easy",
+    "question": "Azure Automation peut-il gérer les mises à jour des VMs ?",
+    "options": ["Oui", "Non", "Uniquement pour Windows", "Uniquement pour Linux"],
+    "correct": 0,
+    "explication": "Update Management gère les mises à jour pour Windows et Linux."
+  },
+  {
+    "id": "AZ-900-223",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Automation State Configuration",
+    "difficulty": "easy",
+    "question": "State Configuration permet-il la gestion de configuration DSC ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "correct": 0,
+    "explication": "State Configuration utilise DSC (Desired State Configuration) pour maintenir l'état des VMs."
+  },
+  {
+    "id": "AZ-900-224",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Logic Apps",
+    "difficulty": "easy",
+    "question": "Logic Apps est-il un outil d'intégration low-code ?",
+    "options": ["Oui", "Non", "Uniquement pour les développeurs", "Uniquement pour les administrateurs"],
+    "correct": 0,
+    "explication": "Logic Apps permet de créer des workflows d'intégration sans code."
+  },
+  {
+    "id": "AZ-900-225",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure API Management",
+    "difficulty": "easy",
+    "question": "API Management est-il un service de gestion d'API ?",
+    "options": ["Oui", "Non", "Uniquement pour les API REST", "Uniquement pour les API SOAP"],
+    "correct": 0,
+    "explication": "API Management publie, sécurise et analyse les API."
+  },
+  {
+    "id": "AZ-900-226",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure DevTest Labs",
+    "difficulty": "easy",
+    "question": "DevTest Labs permet-il de créer des environnements de développement/test ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "correct": 0,
+    "explication": "DevTest Labs facilite la création et la gestion d'environnements de développement."
+  },
+  {
+    "id": "AZ-900-227",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Migrate",
+    "difficulty": "easy",
+    "question": "Azure Migrate est-il un outil d'évaluation et de migration ?",
+    "options": ["Oui", "Non", "Uniquement pour les serveurs", "Uniquement pour les bases de données"],
+    "correct": 0,
+    "explication": "Azure Migrate évalue et migre les serveurs, les bases, etc."
+  },
+  {
+    "id": "AZ-900-228",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Site Recovery",
+    "difficulty": "easy",
+    "question": "Azure Site Recovery est-il un service de reprise après sinistre (DR) ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les bases"],
+    "correct": 0,
+    "explication": "Site Recovery orchestre la réplication et le basculement pour la DR."
+  },
+  {
+    "id": "AZ-900-229",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Backup",
+    "difficulty": "easy",
+    "question": "Azure Backup est-il un service de sauvegarde ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les fichiers"],
+    "correct": 0,
+    "explication": "Azure Backup sauvegarde les VMs, les fichiers, les bases de données, etc."
+  },
+  {
+    "id": "AZ-900-230",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Cost Management",
+    "difficulty": "easy",
+    "question": "Cost Management permet-il de suivre les coûts ?",
+    "options": ["Oui", "Non", "Uniquement pour les abonnements", "Uniquement pour les groupes de ressources"],
+    "correct": 0,
+    "explication": "Cost Management offre une vue complète des coûts."
+  },
+  {
+    "id": "AZ-900-231",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Advisor cost",
+    "difficulty": "easy",
+    "question": "Advisor donne-t-il des recommandations d'optimisation des coûts ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour le stockage"],
+    "correct": 0,
+    "explication": "Advisor a une catégorie 'Cost' pour les recommandations d'optimisation des coûts."
+  },
+  {
+    "id": "AZ-900-232",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Advisor security",
+    "difficulty": "easy",
+    "question": "Advisor donne-t-il des recommandations de sécurité ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les réseaux"],
+    "correct": 0,
+    "explication": "Advisor a une catégorie 'Security'."
+  },
+  {
+    "id": "AZ-900-233",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Advisor performance",
+    "difficulty": "easy",
+    "question": "Advisor donne-t-il des recommandations de performance ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les bases de données"],
+    "correct": 0,
+    "explication": "Advisor a une catégorie 'Performance'."
+  },
+  {
+    "id": "AZ-900-234",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Advisor reliability",
+    "difficulty": "easy",
+    "question": "Advisor donne-t-il des recommandations de fiabilité ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les bases de données"],
+    "correct": 0,
+    "explication": "Advisor a une catégorie 'Reliability'."
+  },
+  {
+    "id": "AZ-900-235",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Resource Graph Explorer",
+    "difficulty": "easy",
+    "question": "Resource Graph Explorer est-il un outil pour exécuter des requêtes KQL ?",
+    "options": ["Oui", "Non", "Uniquement dans le portail", "Uniquement en CLI"],
+    "correct": 0,
+    "explication": "Resource Graph Explorer est disponible dans le portail."
+  },
+  {
+    "id": "AZ-900-236",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure REST API",
+    "difficulty": "easy",
+    "question": "Azure expose-t-il une API REST pour la gestion des ressources ?",
+    "options": ["Oui", "Non", "Uniquement pour certaines ressources", "Uniquement pour le calcul"],
+    "correct": 0,
+    "explication": "Azure Resource Manager fournit une API REST complète."
+  },
+  {
+    "id": "AZ-900-237",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure SDKs",
+    "difficulty": "easy",
+    "question": "Azure propose-t-il des SDK pour différents langages (Python, .NET, Java, etc.) ?",
+    "options": ["Oui", "Non", "Uniquement pour .NET", "Uniquement pour Python"],
+    "correct": 0,
+    "explication": "Azure fournit des SDK pour plusieurs langages."
+  },
+  {
+    "id": "AZ-900-238",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Terraform",
+    "difficulty": "easy",
+    "question": "Terraform peut-il être utilisé pour gérer Azure ?",
+    "options": ["Oui", "Non", "Uniquement via ARM", "Uniquement via CLI"],
+    "correct": 0,
+    "explication": "Terraform a un provider Azure pour l'IaC."
+  },
+  {
+    "id": "AZ-900-239",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Ansible",
+    "difficulty": "easy",
+    "question": "Ansible peut-il être utilisé pour configurer Azure ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les réseaux"],
+    "correct": 0,
+    "explication": "Ansible a des modules pour Azure."
+  },
+  {
+    "id": "AZ-900-240",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Chef",
+    "difficulty": "easy",
+    "question": "Chef peut-il être utilisé pour Azure ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "correct": 0,
+    "explication": "Chef a des intégrations avec Azure."
+  },
+  {
+    "id": "AZ-900-241",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Puppet",
+    "difficulty": "easy",
+    "question": "Puppet peut-il être utilisé pour Azure ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "correct": 0,
+    "explication": "Puppet a des modules pour Azure."
+  },
+  {
+    "id": "AZ-900-242",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Bastion",
+    "difficulty": "easy",
+    "question": "Azure Bastion est-il un outil de gestion de l'accès sécurisé ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs Windows", "Uniquement pour les VMs Linux"],
+    "correct": 0,
+    "explication": "Bastion permet l'accès RDP/SSH sans IP publique."
+  },
+  {
+    "id": "AZ-900-243",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Monitor Workbooks",
+    "difficulty": "easy",
+    "question": "Azure Monitor Workbooks permettent-ils de créer des rapports interactifs ?",
+    "options": ["Oui", "Non", "Uniquement pour les métriques", "Uniquement pour les logs"],
+    "correct": 0,
+    "explication": "Workbooks combinent des visualisations, du texte, et des requêtes."
+  },
+  {
+    "id": "AZ-900-244",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Monitor Metrics Explorer",
+    "difficulty": "easy",
+    "question": "Metrics Explorer permet-il d'explorer les métriques ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour le stockage"],
+    "correct": 0,
+    "explication": "Metrics Explorer est un outil pour visualiser les métriques."
+  },
+  {
+    "id": "AZ-900-245",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Log Analytics Workspace",
+    "difficulty": "easy",
+    "question": "Un espace de travail Log Analytics est-il nécessaire pour collecter des logs ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les applications"],
+    "correct": 0,
+    "explication": "Les logs sont envoyés vers un espace de travail Log Analytics."
+  },
+  {
+    "id": "AZ-900-246",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Diagnostic Settings",
+    "difficulty": "easy",
+    "question": "Les paramètres de diagnostic permettent-ils d'envoyer des logs vers Log Analytics ?",
+    "options": ["Oui", "Non", "Uniquement vers Storage", "Uniquement vers Event Hub"],
+    "correct": 0,
+    "explication": "Les paramètres de diagnostic peuvent envoyer les logs vers plusieurs destinations."
+  },
+  {
+    "id": "AZ-900-247",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Activity Log",
+    "difficulty": "easy",
+    "question": "Le journal d'activité Azure enregistre-t-il les opérations de gestion ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les réseaux"],
+    "correct": 0,
+    "explication": "Le journal d'activité contient toutes les opérations de gestion sur les ressources."
+  },
+  {
+    "id": "AZ-900-248",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Resource Locks",
+    "difficulty": "easy",
+    "question": "Les verrous de ressources empêchent-ils la suppression accidentelle ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les groupes de ressources"],
+    "correct": 0,
+    "explication": "Les verrous (CanNotDelete, ReadOnly) protègent les ressources."
+  },
+  {
+    "id": "AZ-900-249",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Policy compliance",
+    "difficulty": "easy",
+    "question": "Azure Policy peut-il signaler les ressources non conformes ?",
+    "options": ["Oui", "Non", "Uniquement en audit", "Uniquement en deny"],
+    "correct": 0,
+    "explication": "Azure Policy évalue la conformité et peut signaler les non-conformités."
+  },
+  {
+    "id": "AZ-900-250",
+    "theme": "Azure Management Tools",
+    "theme_label": "Azure Blueprints",
+    "difficulty": "easy",
+    "question": "Azure Blueprints peut-il être versionné ?",
+    "options": ["Oui", "Non", "Uniquement avec des étiquettes", "Uniquement avec des snapshots"],
+    "correct": 0,
+    "explication": "Les blueprints supportent le versioning."
+  }
+]

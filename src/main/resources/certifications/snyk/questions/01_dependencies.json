@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SNYK-01-001",
+    "theme": "Open Source",
+    "theme_label": "Sécurité des dépendances",
+    "difficulty": "easy",
+    "question": "Que scanne Snyk Open Source ?",
+    "options": [
+      "Les vulnérabilités des dépendances",
+      "Le code source personnalisé",
+      "Les conteneurs",
+      "L'infrastructure as code"
+    ],
+    "correct": 0,
+    "explanation": "Snyk Open Source scanne les vulnérabilités dans les dépendances open source."
+  },
+  {
+    "id": "SNYK-01-002",
+    "theme": "Container",
+    "theme_label": "Sécurité des conteneurs",
+    "difficulty": "medium",
+    "question": "Quel fichier Snyk peut corriger automatiquement les vulnérabilités ?",
+    "options": [
+      "Dockerfile",
+      "pom.xml",
+      "package.json",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Snyk peut proposer des corrections via PRs pour ces fichiers."
+  }
+]

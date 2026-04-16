@@ -1,0 +1,32 @@
+[
+  {
+    "id": "DSO-01-001",
+    "theme": "SAST",
+    "theme_label": "Static Analysis",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que le SAST (Static Application Security Testing) ?",
+    "options": [
+      "Analyse du code source sans exécution",
+      "Analyse de l'application en cours d'exécution",
+      "Scan des dépendances",
+      "Test de pénétration"
+    ],
+    "correct": 0,
+    "explanation": "SAST analyse le code source pour trouver des vulnérabilités."
+  },
+  {
+    "id": "DSO-01-002",
+    "theme": "Secrets Management",
+    "theme_label": "Gestion des secrets",
+    "difficulty": "easy",
+    "question": "Quel outil HashiCorp est dédié à la gestion des secrets ?",
+    "options": [
+      "Vault",
+      "Consul",
+      "Nomad",
+      "Terraform"
+    ],
+    "correct": 0,
+    "explanation": "Vault est l'outil HashiCorp pour la gestion des secrets."
+  }
+]

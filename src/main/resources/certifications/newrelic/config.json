@@ -1,0 +1,32 @@
+{
+  "id": "newrelic",
+  "name": "New Relic Associate",
+  "version": "1.0",
+  "description": "Certification New Relic - Observabilité et performance des applications",
+  "totalQuestions": 200,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "New Relic Platform",
+      "count": 50
+    },
+    {
+      "name": "APM",
+      "count": 50
+    },
+    {
+      "name": "Browser Monitoring",
+      "count": 30
+    },
+    {
+      "name": "Mobile Monitoring",
+      "count": 30
+    },
+    {
+      "name": "Alerts",
+      "count": 40
+    }
+  ]
+}

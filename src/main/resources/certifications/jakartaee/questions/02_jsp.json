@@ -1,0 +1,647 @@
+[
+  {
+    "id": "JAK-JSP-001",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quelle est l'extension d'un fichier JSP ?",
+    "options": [".jsp", ".jspx", ".jspf", ".jspc"],
+    "correct": 0,
+    "explanation": "Les fichiers JSP ont l'extension .jsp."
+  },
+  {
+    "id": "JAK-JSP-002",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel délimiteur pour les scriptlets ?",
+    "options": ["<% ... %>", "${...}", "<%= ... %>", "<%! ... %>"],
+    "correct": 0,
+    "explanation": "<% ... %> est la syntaxe des scriptlets."
+  },
+  {
+    "id": "JAK-JSP-003",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel délimiteur pour les expressions ?",
+    "options": ["<%= ... %>", "${...}", "<% ... %>", "<%! ... %>"],
+    "correct": 0,
+    "explanation": "<%= ... %> affiche le résultat de l'expression."
+  },
+  {
+    "id": "JAK-JSP-004",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "easy",
+    "question": "Quel délimiteur pour les déclarations ?",
+    "options": ["<%! ... %>", "${...}", "<% ... %>", "<%= ... %>"],
+    "correct": 0,
+    "explanation": "<%! ... %> déclare des variables ou méthodes de classe."
+  },
+  {
+    "id": "JAK-JSP-005",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Syntaxe de base",
+    "difficulty": "medium",
+    "question": "Quel délimiteur pour EL (Expression Language) ?",
+    "options": ["${...}", "<%= ... %>", "<% ... %>", "#{...}"],
+    "correct": 0,
+    "explanation": "${...} est la syntaxe EL."
+  },
+  {
+    "id": "JAK-JSP-006",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Directives",
+    "difficulty": "easy",
+    "question": "Quelle directive importe une classe ?",
+    "options": [
+      "<%@ page import=\"java.util.List\" %>",
+      "<%@ include file=\"...\" %>",
+      "<%@ taglib uri=\"...\" prefix=\"...\" %>",
+      "<%@ page contentType=\"text/html\" %>"
+    ],
+    "correct": 0,
+    "explanation": "page import importe des classes Java."
+  },
+  {
+    "id": "JAK-JSP-007",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Directives",
+    "difficulty": "medium",
+    "question": "Quelle directive inclut un autre fichier ?",
+    "options": [
+      "<%@ include file=\"header.jsp\" %>",
+      "<jsp:include page=\"header.jsp\" />",
+      "<%@ page include=\"header.jsp\" %>",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "include directive (statique) et jsp:include (dynamique)."
+  },
+  {
+    "id": "JAK-JSP-008",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Directives",
+    "difficulty": "medium",
+    "question": "Quelle directive déclare une bibliothèque de tags ?",
+    "options": [
+      "<%@ taglib uri=\"...\" prefix=\"...\" %>",
+      "<%@ page taglib=\"...\" %>",
+      "<%@ taglib prefix=\"...\" %>",
+      "<%@ include taglib=\"...\" %>"
+    ],
+    "correct": 0,
+    "explanation": "taglib importe une bibliothèque de tags personnalisés."
+  },
+  {
+    "id": "JAK-JSP-009",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Directives",
+    "difficulty": "hard",
+    "question": "Que fait <%@ page isErrorPage=\"true\" %> ?",
+    "options": [
+      "Déclare une page d'erreur",
+      "Ignore les erreurs",
+      "Affiche les erreurs",
+      "Redirige les erreurs"
+    ],
+    "correct": 0,
+    "explanation": "isErrorPage=true permet d'accéder à l'exception via exception."
+  },
+  {
+    "id": "JAK-JSP-010",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Actions JSP",
+    "difficulty": "medium",
+    "question": "Que fait <jsp:useBean> ?",
+    "options": [
+      "Crée ou récupère un bean",
+      "Affiche un bean",
+      "Supprime un bean",
+      "Modifie un bean"
+    ],
+    "correct": 0,
+    "explanation": "jsp:useBean instancie ou récupère un bean."
+  },
+  {
+    "id": "JAK-JSP-011",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Actions JSP",
+    "difficulty": "hard",
+    "question": "Que fait <jsp:setProperty> ?",
+    "options": [
+      "Définit une propriété d'un bean",
+      "Lit une propriété",
+      "Supprime une propriété",
+      "Affiche une propriété"
+    ],
+    "correct": 0,
+    "explanation": "setProperty définit les propriétés d'un bean."
+  },
+  {
+    "id": "JAK-JSP-012",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Actions JSP",
+    "difficulty": "hard",
+    "question": "Que fait <jsp:getProperty> ?",
+    "options": [
+      "Affiche une propriété d'un bean",
+      "Définit une propriété",
+      "Supprime une propriété",
+      "Crée une propriété"
+    ],
+    "correct": 0,
+    "explanation": "getProperty affiche la valeur d'une propriété."
+  },
+  {
+    "id": "JAK-JSP-013",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Actions JSP",
+    "difficulty": "hard",
+    "question": "Différence entre <jsp:include> et <%@ include %> ?",
+    "options": [
+      "jsp:include dynamique, include directive statique",
+      "jsp:include statique, include directive dynamique",
+      "Identiques",
+      "jsp:include pour les pages, include pour les fragments"
+    ],
+    "correct": 0,
+    "explanation": "jsp:include est évalué à chaque requête, include directive à la compilation."
+  },
+  {
+    "id": "JAK-JSP-014",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "EL",
+    "difficulty": "medium",
+    "question": "Comment accéder à un attribut de requête en EL ?",
+    "options": ["${param.name}", "${requestScope.name}", "${name}", "${request.name}"],
+    "correct": 1,
+    "explanation": "requestScope.name accède à l'attribut de requête."
+  },
+  {
+    "id": "JAK-JSP-015",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "EL",
+    "difficulty": "medium",
+    "question": "Comment accéder à un paramètre de requête en EL ?",
+    "options": ["${param.name}", "${requestScope.name}", "${name}", "${request.name}"],
+    "correct": 0,
+    "explanation": "param.name accède aux paramètres de requête."
+  },
+  {
+    "id": "JAK-JSP-016",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "EL",
+    "difficulty": "medium",
+    "question": "Comment accéder à un attribut de session en EL ?",
+    "options": ["${sessionScope.name}", "${session.name}", "${name}", "${requestScope.name}"],
+    "correct": 0,
+    "explanation": "sessionScope.name accède aux attributs de session."
+  },
+  {
+    "id": "JAK-JSP-017",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "EL",
+    "difficulty": "medium",
+    "question": "Comment accéder à un attribut d'application en EL ?",
+    "options": ["${applicationScope.name}", "${app.name}", "${name}", "${context.name}"],
+    "correct": 0,
+    "explanation": "applicationScope.name accède aux attributs d'application."
+  },
+  {
+    "id": "JAK-JSP-018",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "EL",
+    "difficulty": "hard",
+    "question": "Que signifie ${empty var} ?",
+    "options": [
+      "Vérifie si var est null ou vide",
+      "Vérifie si var est null",
+      "Vérifie si var est vide",
+      "Vérifie si var existe"
+    ],
+    "correct": 0,
+    "explanation": "empty vérifie null, chaîne vide, collection vide."
+  },
+  {
+    "id": "JAK-JSP-019",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "EL",
+    "difficulty": "hard",
+    "question": "Comment faire une condition en EL ?",
+    "options": [
+      "${condition ? valeur1 : valeur2}",
+      "${if condition then valeur1 else valeur2}",
+      "${condition then valeur1 else valeur2}",
+      "${condition ? valeur1 : valeur2}"
+    ],
+    "correct": 0,
+    "explanation": "L'opérateur ternaire fonctionne en EL."
+  },
+  {
+    "id": "JAK-JSP-020",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Quelle URI pour JSTL core ?",
+    "options": [
+      "http://java.sun.com/jsp/jstl/core",
+      "http://java.sun.com/jsp/jstl/fmt",
+      "http://java.sun.com/jsp/jstl/sql",
+      "http://java.sun.com/jsp/jstl/xml"
+    ],
+    "correct": 0,
+    "explanation": "JSTL core utilise l'URI /jstl/core."
+  },
+  {
+    "id": "JAK-JSP-021",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Que fait <c:forEach> ?",
+    "options": [
+      "Itère sur une collection",
+      "Condition if",
+      "Définit une variable",
+      "Affiche du texte"
+    ],
+    "correct": 0,
+    "explanation": "c:forEach itère sur une collection."
+  },
+  {
+    "id": "JAK-JSP-022",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Que fait <c:if> ?",
+    "options": [
+      "Condition simple",
+      "Condition avec else",
+      "Boucle",
+      "Définit une variable"
+    ],
+    "correct": 0,
+    "explanation": "c:if exécute le corps si la condition est vraie."
+  },
+  {
+    "id": "JAK-JSP-023",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Que fait <c:choose> ?",
+    "options": [
+      "Switch/case",
+      "Boucle",
+      "Définit une variable",
+      "Affiche du texte"
+    ],
+    "correct": 0,
+    "explanation": "c:choose avec c:when et c:otherwise implémente switch."
+  },
+  {
+    "id": "JAK-JSP-024",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Que fait <c:set> ?",
+    "options": [
+      "Définit une variable",
+      "Supprime une variable",
+      "Affiche une variable",
+      "Teste une variable"
+    ],
+    "correct": 0,
+    "explanation": "c:set définit une variable dans un scope."
+  },
+  {
+    "id": "JAK-JSP-025",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Que fait <c:out> ?",
+    "options": [
+      "Affiche du texte échappé",
+      "Affiche du texte brut",
+      "Définit du texte",
+      "Supprime du texte"
+    ],
+    "correct": 0,
+    "explanation": "c:out échappe les caractères HTML par défaut."
+  },
+  {
+    "id": "JAK-JSP-026",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSTL",
+    "difficulty": "hard",
+    "question": "Que fait <c:url> ?",
+    "options": [
+      "Construit une URL encodée",
+      "Redirige",
+      "Forward",
+      "Inclut une page"
+    ],
+    "correct": 0,
+    "explanation": "c:url construit une URL avec encodage de session."
+  },
+  {
+    "id": "JAK-JSP-027",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Implicit objects",
+    "difficulty": "medium",
+    "question": "Quel objet implicite donne accès à la requête ?",
+    "options": ["request", "response", "session", "out"],
+    "correct": 0,
+    "explanation": "request est l'objet HttpServletRequest."
+  },
+  {
+    "id": "JAK-JSP-028",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Implicit objects",
+    "difficulty": "medium",
+    "question": "Quel objet implicite donne accès à la session ?",
+    "options": ["session", "request", "application", "pageContext"],
+    "correct": 0,
+    "explanation": "session est l'objet HttpSession."
+  },
+  {
+    "id": "JAK-JSP-029",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Implicit objects",
+    "difficulty": "medium",
+    "question": "Quel objet implicite donne accès à la sortie ?",
+    "options": ["out", "response", "writer", "print"],
+    "correct": 0,
+    "explanation": "out est le JspWriter pour écrire la réponse."
+  },
+  {
+    "id": "JAK-JSP-030",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Implicit objects",
+    "difficulty": "hard",
+    "question": "Quel objet donne accès au contexte de la page ?",
+    "options": ["pageContext", "context", "application", "config"],
+    "correct": 0,
+    "explanation": "pageContext donne accès à tous les autres objets implicites."
+  },
+  {
+    "id": "JAK-JSP-031",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Implicit objects",
+    "difficulty": "hard",
+    "question": "Quel objet donne accès à la configuration de la servlet ?",
+    "options": ["config", "page", "application", "context"],
+    "correct": 0,
+    "explanation": "config est l'objet ServletConfig."
+  },
+  {
+    "id": "JAK-JSP-032",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Implicit objects",
+    "difficulty": "hard",
+    "question": "Quel objet donne accès à l'instance de la page ?",
+    "options": ["page", "this", "pageContext", "self"],
+    "correct": 0,
+    "explanation": "page est une référence à l'instance de la servlet JSP."
+  },
+  {
+    "id": "JAK-JSP-033",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Expression Language",
+    "difficulty": "hard",
+    "question": "EL est-il activé par défaut ?",
+    "options": ["Oui", "Non", "Uniquement dans les JSP 2.0+", "Uniquement dans les JSP 3.0+"],
+    "correct": 0,
+    "explanation": "EL est activé par défaut depuis JSP 2.0."
+  },
+  {
+    "id": "JAK-JSP-034",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Expression Language",
+    "difficulty": "hard",
+    "question": "Comment désactiver EL dans une page ?",
+    "options": [
+      "<%@ page isELIgnored=\"true\" %>",
+      "<%@ page elIgnored=\"true\" %>",
+      "<%@ page disableEL=\"true\" %>",
+      "<%@ page noEL=\"true\" %>"
+    ],
+    "correct": 0,
+    "explanation": "isELIgnored=true désactive l'évaluation EL."
+  },
+  {
+    "id": "JAK-JSP-035",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Error handling",
+    "difficulty": "hard",
+    "question": "Comment déclarer une page d'erreur ?",
+    "options": [
+      "<%@ page errorPage=\"error.jsp\" %>",
+      "<%@ page error-page=\"error.jsp\" %>",
+      "<%@ page errorHandler=\"error.jsp\" %>",
+      "<%@ page onError=\"error.jsp\" %>"
+    ],
+    "correct": 0,
+    "explanation": "errorPage spécifie la page d'erreur."
+  },
+  {
+    "id": "JAK-JSP-036",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Error handling",
+    "difficulty": "hard",
+    "question": "Comment accéder à l'exception dans une page d'erreur ?",
+    "options": ["${exception}", "${error}", "${pageContext.exception}", "${exception.message}"],
+    "correct": 2,
+    "explanation": "exception est accessible via pageContext ou variable implicite."
+  },
+  {
+    "id": "JAK-JSP-037",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Custom tags",
+    "difficulty": "hard",
+    "question": "Quels fichiers sont nécessaires pour un tag personnalisé ?",
+    "options": [
+      "Tag handler et TLD",
+      "Tag handler seulement",
+      "TLD seulement",
+      "JSP seulement"
+    ],
+    "correct": 0,
+    "explanation": "Un tag nécessite un handler Java et une déclaration TLD."
+  },
+  {
+    "id": "JAK-JSP-038",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Custom tags",
+    "difficulty": "hard",
+    "question": "Où placer le fichier TLD ?",
+    "options": [
+      "WEB-INF/",
+      "META-INF/",
+      "WEB-INF/tlds/",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les TLD peuvent être dans WEB-INF ou META-INF."
+  },
+  {
+    "id": "JAK-JSP-039",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Tag files",
+    "difficulty": "hard",
+    "question": "Quelle est l'extension d'un fichier de tag ?",
+    "options": [".tag", ".tagx", ".jsp", ".jspf"],
+    "correct": 0,
+    "explanation": "Les fichiers de tag ont l'extension .tag."
+  },
+  {
+    "id": "JAK-JSP-040",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Tag files",
+    "difficulty": "hard",
+    "question": "Où placer les fichiers .tag ?",
+    "options": [
+      "WEB-INF/tags/",
+      "META-INF/tags/",
+      "WEB-INF/classes/",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les tags files sont dans WEB-INF/tags ou META-INF/tags."
+  },
+  {
+    "id": "JAK-JSP-041",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Tag files",
+    "difficulty": "hard",
+    "question": "Comment déclarer un attribut de tag ?",
+    "options": [
+      "<%@ attribute name=\"...\" required=\"...\" %>",
+      "<%@ param name=\"...\" %>",
+      "<%@ variable name=\"...\" %>",
+      "<%@ property name=\"...\" %>"
+    ],
+    "correct": 0,
+    "explanation": "attribute déclare un attribut pour le tag."
+  },
+  {
+    "id": "JAK-JSP-042",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les JSP sont-ils compilés en servlets ?",
+    "options": [
+      "Oui, une seule fois",
+      "Non, interprétés",
+      "Oui, à chaque requête",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les JSP sont compilés en servlets au premier accès."
+  },
+  {
+    "id": "JAK-JSP-043",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment précompiler les JSP ?",
+    "options": [
+      "Option du conteneur",
+      "Maven plugin",
+      "Ant task",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes de précompilation."
+  },
+  {
+    "id": "JAK-JSP-044",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "JSP vs Facelets",
+    "difficulty": "hard",
+    "question": "Quelle technologie JSF utilise pour les vues ?",
+    "options": ["Facelets", "JSP", "HTML", "XHTML"],
+    "correct": 0,
+    "explanation": "Facelets est la technologie de vue par défaut pour JSF 2.0+."
+  },
+  {
+    "id": "JAK-JSP-045",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Les scriptlets sont-ils recommandés ?",
+    "options": [
+      "Non, préférer EL et JSTL",
+      "Oui, pratiques",
+      "Oui, plus rapides",
+      "Non, obsolètes"
+    ],
+    "correct": 0,
+    "explanation": "Les scriptlets sont déconseillés, préférer EL et tags."
+  },
+  {
+    "id": "JAK-JSP-046",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Où placer la logique Java ?",
+    "options": [
+      "Dans des servlets ou beans",
+      "Dans les scriptlets",
+      "Dans les expressions EL",
+      "Dans les tags"
+    ],
+    "correct": 0,
+    "explanation": "La logique métier doit être séparée des vues."
+  },
+  {
+    "id": "JAK-JSP-047",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "MVC",
+    "difficulty": "hard",
+    "question": "Quel rôle jouent les JSP dans MVC ?",
+    "options": ["Vue", "Contrôleur", "Modèle", "Vue et contrôleur"],
+    "correct": 0,
+    "explanation": "Les JSP sont la couche Vue dans le pattern MVC."
+  },
+  {
+    "id": "JAK-JSP-048",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "MVC",
+    "difficulty": "hard",
+    "question": "Quel composant envoie les données à la JSP ?",
+    "options": ["Servlet (contrôleur)", "JSP elle-même", "Bean (modèle)", "Tag library"],
+    "correct": 0,
+    "explanation": "Le contrôleur (servlet) prépare les données pour la vue."
+  },
+  {
+    "id": "JAK-JSP-049",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code JSP ?\n<%= new java.util.Date() %>",
+    "options": [
+      "Affiche la date courante",
+      "Affiche une erreur",
+      "Crée une variable date",
+      "Redirige"
+    ],
+    "correct": 0,
+    "explanation": "L'expression affiche le résultat de la date."
+  },
+  {
+    "id": "JAK-JSP-050",
+    "theme": "Jakarta Server Pages",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que fait ce code JSP ?\n<c:forEach items=\"${list}\" var=\"item\">\n    ${item}\n</c:forEach>",
+    "options": [
+      "Affiche chaque élément de la liste",
+      "Affiche le premier élément",
+      "Affiche le dernier élément",
+      "Ne fait rien"
+    ],
+    "correct": 0,
+    "explanation": "c:forEach itère et affiche chaque élément."
+  }
+]

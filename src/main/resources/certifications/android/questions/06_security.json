@@ -1,0 +1,892 @@
+[
+  {
+    "id": "AND-SEC-001",
+    "theme": "Security",
+    "theme_label": "Android Keystore",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'Android Keystore ?",
+    "options": [
+      "Stockage sécurisé de clés cryptographiques",
+      "Base de données",
+      "Cache",
+      "SharedPreferences"
+    ],
+    "correct": 0,
+    "explanation": "Keystore protège les clés cryptographiques."
+  },
+  {
+    "id": "AND-SEC-002",
+    "theme": "Security",
+    "theme_label": "Android Keystore",
+    "difficulty": "hard",
+    "question": "Comment générer une clé dans Keystore ?",
+    "options": [
+      "KeyGenerator",
+      "KeyPairGenerator",
+      "KeyStore.setEntry()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "KeyGenerator pour symétrique, KeyPairGenerator pour asymétrique."
+  },
+  {
+    "id": "AND-SEC-003",
+    "theme": "Security",
+    "theme_label": "Android Keystore",
+    "difficulty": "hard",
+    "question": "Quand utiliser le Keystore ?",
+    "options": [
+      "Clés de chiffrement",
+      "Tokens d'authentification",
+      "Certificats",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Keystore pour toute donnée cryptographique sensible."
+  },
+  {
+    "id": "AND-SEC-004",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "hard",
+    "question": "À quoi sert BiometricPrompt ?",
+    "options": [
+      "Authentification biométrique",
+      "Base de données",
+      "Cache",
+      "Network"
+    ],
+    "correct": 0,
+    "explanation": "BiometricPrompt pour empreinte digitale, visage, etc."
+  },
+  {
+    "id": "AND-SEC-005",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "hard",
+    "question": "Comment vérifier si la biométrie est disponible ?",
+    "options": [
+      "BiometricManager.from(context).canAuthenticate()",
+      "BiometricManager.canAuthenticate()",
+      "isBiometricAvailable()",
+      "hasBiometric()"
+    ],
+    "correct": 0,
+    "explanation": "canAuthenticate() retourne l'état de disponibilité."
+  },
+  {
+    "id": "AND-SEC-006",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "hard",
+    "question": "Quelles sont les erreurs possibles de canAuthenticate ?",
+    "options": [
+      "BIOMETRIC_SUCCESS",
+      "BIOMETRIC_ERROR_NONE_ENROLLED",
+      "BIOMETRIC_ERROR_HW_UNAVAILABLE",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs codes d'erreur possibles."
+  },
+  {
+    "id": "AND-SEC-007",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Quel algorithme est recommandé pour le chiffrement ?",
+    "options": ["AES/GCM/NoPadding", "DES", "RC4", "Blowfish"],
+    "correct": 0,
+    "explanation": "AES/GCM est l'algorithme recommandé."
+  },
+  {
+    "id": "AND-SEC-008",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Comment générer une clé AES ?",
+    "options": [
+      "KeyGenerator.getInstance(\"AES\")",
+      "SecretKeySpec",
+      "KeyPairGenerator",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "KeyGenerator ou SecretKeySpec."
+  },
+  {
+    "id": "AND-SEC-009",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'IV (Initialization Vector) ?",
+    "options": [
+      "Vecteur d'initialisation pour AES",
+      "Clé de chiffrement",
+      "Tag d'authentification",
+      "Hash"
+    ],
+    "correct": 0,
+    "explanation": "IV assure l'unicité du chiffrement."
+  },
+  {
+    "id": "AND-SEC-010",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "hard",
+    "question": "L'IV doit-il être secret ?",
+    "options": [
+      "Non, mais doit être unique",
+      "Oui, absolument",
+      "Oui, partiellement",
+      "Non, pas important"
+    ],
+    "correct": 0,
+    "explanation": "L'IV doit être unique mais pas nécessairement secret."
+  },
+  {
+    "id": "AND-SEC-011",
+    "theme": "Security",
+    "theme_label": "ProGuard/R8",
+    "difficulty": "hard",
+    "question": "À quoi sert ProGuard/R8 ?",
+    "options": [
+      "Obfuscation et optimisation",
+      "Chiffrement",
+      "Authentification",
+      "Logging"
+    ],
+    "correct": 0,
+    "explanation": "ProGuard/R8 obfusque et optimise le code."
+  },
+  {
+    "id": "AND-SEC-012",
+    "theme": "Security",
+    "theme_label": "ProGuard/R8",
+    "difficulty": "hard",
+    "question": "Que faut-il conserver avec ProGuard ?",
+    "options": [
+      "Classes utilisées par reflection",
+      "Entités Room",
+      "Modèles JSON",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Règles pour reflection, Room, sérialisation."
+  },
+  {
+    "id": "AND-SEC-013",
+    "theme": "Security",
+    "theme_label": "SSL/TLS",
+    "difficulty": "hard",
+    "question": "Android exige-t-il HTTPS par défaut ?",
+    "options": [
+      "Oui, depuis Android 9 (API 28)",
+      "Non",
+      "Uniquement pour les apps ciblant API 28+",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "HTTPS est exigé par défaut pour les apps ciblant API 28+."
+  },
+  {
+    "id": "AND-SEC-014",
+    "theme": "Security",
+    "theme_label": "SSL/TLS",
+    "difficulty": "hard",
+    "question": "Comment autoriser le trafic HTTP ?",
+    "options": [
+      "network_security_config.xml",
+      "android:usesCleartextTraffic=\"true\"",
+      "android:allowHttp=\"true\"",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration de sécurité réseau."
+  },
+  {
+    "id": "AND-SEC-015",
+    "theme": "Security",
+    "theme_label": "Root detection",
+    "difficulty": "hard",
+    "question": "Pourquoi détecter les appareils rootés ?",
+    "options": [
+      "Prévenir les attaques",
+      "Protéger les données sensibles",
+      "Sécurité accrue",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les appareils rootés sont plus vulnérables."
+  },
+  {
+    "id": "AND-SEC-016",
+    "theme": "Security",
+    "theme_label": "Root detection",
+    "difficulty": "hard",
+    "question": "Comment détecter un appareil rooté ?",
+    "options": [
+      "Vérifier les fichiers su",
+      "Vérifier les applications root",
+      "Vérifier les propriétés système",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes de détection root."
+  },
+  {
+    "id": "AND-SEC-017",
+    "theme": "Security",
+    "theme_label": "SafetyNet",
+    "difficulty": "hard",
+    "question": "À quoi sert SafetyNet ?",
+    "options": [
+      "Vérifier l'intégrité de l'appareil",
+      "Chiffrer les données",
+      "Authentifier les utilisateurs",
+      "Logger"
+    ],
+    "correct": 0,
+    "explanation": "SafetyNet atteste de l'intégrité de l'appareil."
+  },
+  {
+    "id": "AND-SEC-018",
+    "theme": "Security",
+    "theme_label": "SafetyNet",
+    "difficulty": "hard",
+    "question": "SafetyNet a été remplacé par quoi ?",
+    "options": [
+      "Play Integrity API",
+      "Firebase App Check",
+      "Android VTS",
+      "Samsung Knox"
+    ],
+    "correct": 0,
+    "explanation": "Play Integrity API remplace SafetyNet."
+  },
+  {
+    "id": "AND-SEC-019",
+    "theme": "Security",
+    "theme_label": "Play Integrity API",
+    "difficulty": "hard",
+    "question": "Que vérifie Play Integrity API ?",
+    "options": [
+      "Intégrité de l'app",
+      "Intégrité de l'appareil",
+      "Licence Google Play",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Vérifications complètes d'intégrité."
+  },
+  {
+    "id": "AND-SEC-020",
+    "theme": "Security",
+    "theme_label": "Code obfuscation",
+    "difficulty": "hard",
+    "question": "Pourquoi obfusquer le code ?",
+    "options": [
+      "Rendre le reverse engineering difficile",
+      "Réduire la taille",
+      "Optimiser",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Obfuscation pour sécurité et optimisation."
+  },
+  {
+    "id": "AND-SEC-021",
+    "theme": "Security",
+    "theme_label": "String obfuscation",
+    "difficulty": "hard",
+    "question": "Pourquoi obfusquer les chaînes sensibles ?",
+    "options": [
+      "Cacher clés API, URLs",
+      "Performance",
+      "Compatibilité",
+      "Debug"
+    ],
+    "correct": 0,
+    "explanation": "Protéger les informations sensibles."
+  },
+  {
+    "id": "AND-SEC-022",
+    "theme": "Security",
+    "theme_label": "DexGuard",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que DexGuard ?",
+    "options": [
+      "Obfuscateur commercial avancé",
+      "Alternative à ProGuard",
+      "Outil de chiffrement",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "DexGuard est une solution de protection avancée."
+  },
+  {
+    "id": "AND-SEC-023",
+    "theme": "Security",
+    "theme_label": "Secure SharedPreferences",
+    "difficulty": "hard",
+    "question": "Comment sécuriser SharedPreferences ?",
+    "options": [
+      "EncryptedSharedPreferences",
+      "Android Keystore",
+      "Chiffrement manuel",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "EncryptedSharedPreferences chiffre les données."
+  },
+  {
+    "id": "AND-SEC-024",
+    "theme": "Security",
+    "theme_label": "EncryptedSharedPreferences",
+    "difficulty": "hard",
+    "question": "Comment créer EncryptedSharedPreferences ?",
+    "options": [
+      "EncryptedSharedPreferences.create()",
+      "new EncryptedSharedPreferences()",
+      "SharedPreferences.createEncrypted()",
+      "getEncryptedSharedPreferences()"
+    ],
+    "correct": 0,
+    "explanation": "create() avec masterKey et schéma."
+  },
+  {
+    "id": "AND-SEC-025",
+    "theme": "Security",
+    "theme_label": "EncryptedFile",
+    "difficulty": "hard",
+    "question": "À quoi sert EncryptedFile ?",
+    "options": [
+      "Chiffrer des fichiers",
+      "Chiffrer des préférences",
+      "Chiffrer des bases",
+      "Chiffrer le réseau"
+    ],
+    "correct": 0,
+    "explanation": "EncryptedFile pour chiffrer des fichiers."
+  },
+  {
+    "id": "AND-SEC-026",
+    "theme": "Security",
+    "theme_label": "Hashing",
+    "difficulty": "hard",
+    "question": "Quel algorithme de hash est recommandé ?",
+    "options": ["SHA-256", "MD5", "SHA-1", "CRC32"],
+    "correct": 0,
+    "explanation": "SHA-256 est l'algorithme de hash recommandé."
+  },
+  {
+    "id": "AND-SEC-027",
+    "theme": "Security",
+    "theme_label": "Salting",
+    "difficulty": "hard",
+    "question": "Pourquoi ajouter un sel (salt) au hash ?",
+    "options": [
+      "Prévenir les attaques par tables arc-en-ciel",
+      "Augmenter la performance",
+      "Réduire la taille",
+      "Compatibilité"
+    ],
+    "correct": 0,
+    "explanation": "Le sel rend les hash uniques même pour mots de passe identiques."
+  },
+  {
+    "id": "AND-SEC-028",
+    "theme": "Security",
+    "theme_label": "SecureRandom",
+    "difficulty": "hard",
+    "question": "À quoi sert SecureRandom ?",
+    "options": [
+      "Générer des nombres aléatoires cryptographiquement sûrs",
+      "Générer des nombres aléatoires simples",
+      "Chiffrer des données",
+      "Hacher des données"
+    ],
+    "correct": 0,
+    "explanation": "SecureRandom pour la génération de clés, IV, sels."
+  },
+  {
+    "id": "AND-SEC-029",
+    "theme": "Security",
+    "theme_label": "WebView security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser une WebView ?",
+    "options": [
+      "setJavaScriptEnabled(false)",
+      "setAllowFileAccess(false)",
+      "setSavePassword(false)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Désactiver les fonctionnalités dangereuses."
+  },
+  {
+    "id": "AND-SEC-030",
+    "theme": "Security",
+    "theme_label": "WebView security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'addJavaScriptInterface ?",
+    "options": [
+      "Expose un objet Java à JavaScript",
+      "Danger de sécurité",
+      "Permet l'injection de code",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Peut être dangereux si mal utilisé."
+  },
+  {
+    "id": "AND-SEC-031",
+    "theme": "Security",
+    "theme_label": "Intent security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les Intents ?",
+    "options": [
+      "PendingIntent immuables",
+      "Vérifier les Intent",
+      "Utiliser des permissions",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs pratiques pour sécuriser les Intents."
+  },
+  {
+    "id": "AND-SEC-032",
+    "theme": "Security",
+    "theme_label": "PendingIntent",
+    "difficulty": "hard",
+    "question": "Pourquoi PendingIntent doit être immuable ?",
+    "options": [
+      "Prévenir les modifications malveillantes",
+      "Performance",
+      "Compatibilité",
+      "Debug"
+    ],
+    "correct": 0,
+    "explanation": "Immuable depuis Android 12 (flag)."
+  },
+  {
+    "id": "AND-SEC-033",
+    "theme": "Security",
+    "theme_label": "ContentProvider security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un ContentProvider ?",
+    "options": [
+      "android:exported=\"false\"",
+      "android:permission",
+      "android:readPermission",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration des permissions d'accès."
+  },
+  {
+    "id": "AND-SEC-034",
+    "theme": "Security",
+    "theme_label": "BroadcastReceiver security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un BroadcastReceiver ?",
+    "options": [
+      "android:exported=\"false\"",
+      "Permissions",
+      "LocalBroadcastManager",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Protection contre les broadcasts malveillants."
+  },
+  {
+    "id": "AND-SEC-035",
+    "theme": "Security",
+    "theme_label": "Service security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un Service ?",
+    "options": [
+      "android:exported=\"false\"",
+      "android:permission",
+      "bind avec permission",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Protection des services exposés."
+  },
+  {
+    "id": "AND-SEC-036",
+    "theme": "Security",
+    "theme_label": "Deep links security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les deep links ?",
+    "options": [
+      "Digital Asset Links",
+      "Vérification des URLs",
+      "Validation des paramètres",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Vérifier que les deep links sont légitimes."
+  },
+  {
+    "id": "AND-SEC-037",
+    "theme": "Security",
+    "theme_label": "App signing",
+    "difficulty": "hard",
+    "question": "Comment vérifier la signature de l'app ?",
+    "options": [
+      "PackageManager.getPackageInfo()",
+      "Vérifier le certificat",
+      "SignatureInfo",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Vérification de la signature de l'app."
+  },
+  {
+    "id": "AND-SEC-038",
+    "theme": "Security",
+    "theme_label": "Google Play signing",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Google Play signing ?",
+    "options": [
+      "Signature gérée par Google",
+      "Signature locale",
+      "Pas de signature",
+      "Signature double"
+    ],
+    "correct": 0,
+    "explanation": "Google Play gère la signature des apps."
+  },
+  {
+    "id": "AND-SEC-039",
+    "theme": "Security",
+    "theme_label": "App integrity",
+    "difficulty": "hard",
+    "question": "Comment vérifier l'intégrité de l'app ?",
+    "options": [
+      "Play Integrity API",
+      "SafetyNet",
+      "Signature",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Vérifier que l'app n'a pas été modifiée."
+  },
+  {
+    "id": "AND-SEC-040",
+    "theme": "Security",
+    "theme_label": "Code tampering",
+    "difficulty": "hard",
+    "question": "Comment détecter la modification du code ?",
+    "options": [
+      "Vérifier la signature",
+      "Hash du code",
+      "Dex checksum",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Détecter si le code a été modifié."
+  },
+  {
+    "id": "AND-SEC-041",
+    "theme": "Security",
+    "theme_label": "Emulator detection",
+    "difficulty": "hard",
+    "question": "Pourquoi détecter les émulateurs ?",
+    "options": [
+      "Prévenir la fraude",
+      "Protéger les données",
+      "Analyse malveillante",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les émulateurs sont souvent utilisés pour analyser les apps."
+  },
+  {
+    "id": "AND-SEC-042",
+    "theme": "Security",
+    "theme_label": "Emulator detection",
+    "difficulty": "hard",
+    "question": "Comment détecter un émulateur ?",
+    "options": [
+      "Propriétés système (ro.kernel.qemu)",
+      "Caractéristiques matérielles",
+      "Fichiers spécifiques",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes de détection d'émulateur."
+  },
+  {
+    "id": "AND-SEC-043",
+    "theme": "Security",
+    "theme_label": "Debug detection",
+    "difficulty": "hard",
+    "question": "Comment détecter le mode debug ?",
+    "options": [
+      "android.os.Debug.isDebuggerConnected()",
+      "android.os.Debug.waitingForDebugger()",
+      "ApplicationInfo.FLAG_DEBUGGABLE",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Détecter si l'app est debuguée."
+  },
+  {
+    "id": "AND-SEC-044",
+    "theme": "Security",
+    "theme_label": "Certificate pinning",
+    "difficulty": "hard",
+    "question": "Avantage du certificate pinning ?",
+    "options": [
+      "Prévenir les attaques MITM",
+      "Accélérer les connexions",
+      "Réduire la bande passante",
+      "Compatibilité"
+    ],
+    "correct": 0,
+    "explanation": "Pinning empêche les certificats frauduleux."
+  },
+  {
+    "id": "AND-SEC-045",
+    "theme": "Security",
+    "theme_label": "Certificate pinning",
+    "difficulty": "hard",
+    "question": "Inconvénient du certificate pinning ?",
+    "options": [
+      "Expiration des certificats",
+      "Complexité",
+      "Maintenance",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Nécessite une mise à jour régulière."
+  },
+  {
+    "id": "AND-SEC-046",
+    "theme": "Security",
+    "theme_label": "Firebase App Check",
+    "difficulty": "hard",
+    "question": "À quoi sert Firebase App Check ?",
+    "options": [
+      "Vérifier que les requêtes viennent de l'app",
+      "Authentifier les utilisateurs",
+      "Chiffrer les données",
+      "Logger"
+    ],
+    "correct": 0,
+    "explanation": "App Check protège les ressources backend."
+  },
+  {
+    "id": "AND-SEC-047",
+    "theme": "Security",
+    "theme_label": "Firebase App Check",
+    "difficulty": "hard",
+    "question": "Quels fournisseurs App Check supporte-t-il ?",
+    "options": [
+      "Play Integrity, SafetyNet, DeviceCheck",
+      "ReCaptcha",
+      "Auth0",
+      "Firebase Auth"
+    ],
+    "correct": 0,
+    "explanation": "Attestation d'intégrité de l'app."
+  },
+  {
+    "id": "AND-SEC-048",
+    "theme": "Security",
+    "theme_label": "OAuth2 on Android",
+    "difficulty": "hard",
+    "question": "Comment implémenter OAuth2 sur Android ?",
+    "options": [
+      "AppAuth",
+      "Google Sign-In",
+      "Facebook Login",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs bibliothèques OAuth2."
+  },
+  {
+    "id": "AND-SEC-049",
+    "theme": "Security",
+    "theme_label": "OAuth2 security",
+    "difficulty": "hard",
+    "question": "Où stocker les tokens OAuth ?",
+    "options": [
+      "EncryptedSharedPreferences",
+      "Keystore",
+      "DataStore chiffré",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Stockage sécurisé des tokens."
+  },
+  {
+    "id": "AND-SEC-050",
+    "theme": "Security",
+    "theme_label": "App permissions",
+    "difficulty": "hard",
+    "question": "Quel est le principe de moindre privilège ?",
+    "options": [
+      "Demander uniquement les permissions nécessaires",
+      "Demander toutes les permissions",
+      "Ignorer les permissions",
+      "Forcer les permissions"
+    ],
+    "correct": 0,
+    "explanation": "Ne demander que les permissions strictement nécessaires."
+  },
+  {
+    "id": "AND-SEC-051",
+    "theme": "Security",
+    "theme_label": "Runtime permissions",
+    "difficulty": "hard",
+    "question": "Comment demander une permission runtime ?",
+    "options": [
+      "requestPermissions()",
+      "ActivityResultContracts.RequestPermission",
+      "checkSelfPermission()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "API moderne (Activity Result) ou legacy."
+  },
+  {
+    "id": "AND-SEC-052",
+    "theme": "Security",
+    "theme_label": "Runtime permissions",
+    "difficulty": "hard",
+    "question": "Que faire si l'utilisateur refuse définitivement ?",
+    "options": [
+      "Expliquer pourquoi la permission est nécessaire",
+      "Désactiver la fonctionnalité",
+      "Rediriger vers les paramètres",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Gérer le refus permanent (shouldShowRequestPermissionRationale)."
+  },
+  {
+    "id": "AND-SEC-053",
+    "theme": "Security",
+    "theme_label": "Logging security",
+    "difficulty": "hard",
+    "question": "Pourquoi éviter de logger les données sensibles ?",
+    "options": [
+      "Les logs sont lisibles",
+      "Les logs persistent",
+      "Risque de fuite",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Ne jamais logger mots de passe, tokens, données personnelles."
+  },
+  {
+    "id": "AND-SEC-054",
+    "theme": "Security",
+    "theme_label": "Logging security",
+    "difficulty": "hard",
+    "question": "Comment désactiver les logs en production ?",
+    "options": [
+      "BuildConfig.DEBUG",
+      "ProGuard supprime les logs",
+      "Timber.plant(Timber.DebugTree()) conditionnel",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Désactiver logs en production."
+  },
+  {
+    "id": "AND-SEC-055",
+    "theme": "Security",
+    "theme_label": "Crash reporting security",
+    "difficulty": "hard",
+    "question": "Les crash reports peuvent-ils contenir des données sensibles ?",
+    "options": [
+      "Oui, les logs et variables",
+      "Non, automatiquement filtrés",
+      "Oui, si mal configuré",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Éviter d'inclure des données sensibles dans les crash reports."
+  },
+  {
+    "id": "AND-SEC-056",
+    "theme": "Security",
+    "theme_label": "Analytics security",
+    "difficulty": "hard",
+    "question": "Comment anonymiser les données analytics ?",
+    "options": [
+      "Ne pas envoyer d'identifiants",
+      "Hacher les IDs",
+      "Aggréger les données",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Protéger la vie privée des utilisateurs."
+  },
+  {
+    "id": "AND-SEC-057",
+    "theme": "Security",
+    "theme_label": "GDPR compliance",
+    "difficulty": "hard",
+    "question": "Que faut-il pour être conforme GDPR ?",
+    "options": [
+      "Consentement utilisateur",
+      "Droit à l'oubli",
+      "Portabilité des données",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Respecter les droits des utilisateurs européens."
+  },
+  {
+    "id": "AND-SEC-058",
+    "theme": "Security",
+    "theme_label": "Data retention",
+    "difficulty": "hard",
+    "question": "Combien de temps conserver les données ?",
+    "options": [
+      "Uniquement le temps nécessaire",
+      "Indéfiniment",
+      "5 ans",
+      "1 an"
+    ],
+    "correct": 0,
+    "explanation": "Principe de minimisation des données."
+  },
+  {
+    "id": "AND-SEC-059",
+    "theme": "Security",
+    "theme_label": "Security testing",
+    "difficulty": "hard",
+    "question": "Quels outils pour tester la sécurité ?",
+    "options": [
+      "MobSF (Mobile Security Framework)",
+      "Drozer",
+      "Qark",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Outils d'analyse de sécurité Android."
+  },
+  {
+    "id": "AND-SEC-060",
+    "theme": "Security",
+    "theme_label": "Penetration testing",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un pentest ?",
+    "options": [
+      "Test d'intrusion",
+      "Test unitaire",
+      "Test fonctionnel",
+      "Test de performance"
+    ],
+    "correct": 0,
+    "explanation": "Simulation d'attaque pour trouver des vulnérabilités."
+  }
+]

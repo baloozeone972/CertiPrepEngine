@@ -1,0 +1,702 @@
+[
+  {
+    "id": "CKAD-04-001",
+    "theme": "Services & Networking",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Quels sont les types de services Kubernetes ?",
+    "options": [
+      "ClusterIP, NodePort, LoadBalancer, ExternalName",
+      "ClusterIP seulement",
+      "NodePort seulement",
+      "LoadBalancer seulement"
+    ],
+    "correct": 0,
+    "explication": "ClusterIP (interne), NodePort (externe via port), LoadBalancer (cloud), ExternalName (alias DNS)."
+  },
+  {
+    "id": "CKAD-04-002",
+    "theme": "Services & Networking",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment exposer un déploiement en tant que service NodePort ?",
+    "options": [
+      "kubectl expose deployment monapp --type=NodePort --port=80",
+      "kubectl create service nodeport monapp --tcp=80:8080",
+      "YAML avec type: NodePort",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "expose est la commande la plus simple."
+  },
+  {
+    "id": "CKAD-04-003",
+    "theme": "Services & Networking",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Comment obtenir l'URL externe d'un service LoadBalancer (minikube) ?",
+    "options": [
+      "minikube service monapp --url",
+      "kubectl get svc monapp -o jsonpath='{.status.loadBalancer.ingress[0].ip}'",
+      "kubectl get svc monapp",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "minikube service donne l'URL."
+  },
+  {
+    "id": "CKAD-04-004",
+    "theme": "Services & Networking",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "question": "Quel service expose un nom DNS externe ?",
+    "options": ["ExternalName", "ClusterIP", "NodePort", "LoadBalancer"],
+    "correct": 0,
+    "explication": "ExternalName crée un enregistrement CNAME."
+  },
+  {
+    "id": "CKAD-04-005",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un Ingress ?",
+    "options": [
+      "Routage HTTP/HTTPS basé sur l'hôte et le chemin",
+      "Load balancer de couche 4",
+      "Service DNS",
+      "Proxy TCP"
+    ],
+    "correct": 0,
+    "explication": "Ingress expose des services HTTP avec des règles."
+  },
+  {
+    "id": "CKAD-04-006",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "question": "Quel contrôleur Ingress est le plus courant ?",
+    "options": ["nginx-ingress", "traefik", "haproxy", "kong"],
+    "correct": 0,
+    "explication": "nginx-ingress est le plus répandu."
+  },
+  {
+    "id": "CKAD-04-007",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "question": "Comment créer une règle Ingress pour un hôte et un chemin ?",
+    "options": [
+      "spec: rules: - host: example.com http: paths: - path: /api backend: serviceName: api servicePort: 80",
+      "spec: rules: - host: example.com - http: paths: - path: /api backend: service: name: api port: 80",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La syntaxe exacte dépend de la version (v1)."
+  },
+  {
+    "id": "CKAD-04-008",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress TLS",
+    "difficulty": "easy",
+    "question": "Comment activer TLS sur un Ingress ?",
+    "options": [
+      "spec: tls: - hosts: - example.com secretName: mon-tls",
+      "metadata: annotations: kubernetes.io/tls: mon-tls",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "La section tls est la bonne méthode."
+  },
+  {
+    "id": "CKAD-04-009",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "easy",
+    "question": "À quoi sert une NetworkPolicy ?",
+    "options": [
+      "Contrôler le trafic réseau entre pods",
+      "Gérer les services",
+      "Configurer Ingress",
+      "Gérer les secrets"
+    ],
+    "correct": 0,
+    "explication": "NetworkPolicy est un firewall au niveau du pod."
+  },
+  {
+    "id": "CKAD-04-010",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "easy",
+    "question": "Par défaut, le trafic entre pods est-il autorisé ?",
+    "options": ["Oui", "Non", "Dépend du CNI", "Autorisé uniquement dans le même namespace"],
+    "correct": 0,
+    "explication": "Sans NetworkPolicy, tout le trafic est autorisé."
+  },
+  {
+    "id": "CKAD-04-011",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "easy",
+    "question": "Comment bloquer tout le trafic entrant vers un pod ?",
+    "options": [
+      "policyTypes: - Ingress",
+      "ingress: []",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "ingress: [] avec policyTypes: - Ingress bloque tout."
+  },
+  {
+    "id": "CKAD-04-012",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "easy",
+    "question": "Comment autoriser le trafic entrant uniquement depuis un pod avec un label ?",
+    "options": [
+      "ingress: - from: - podSelector: matchLabels: app: frontend",
+      "ingress: - from: - namespaceSelector: ...",
+      "ingress: - from: - ipBlock: ...",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "podSelector sélectionne les pods par label."
+  },
+  {
+    "id": "CKAD-04-013",
+    "theme": "Services & Networking",
+    "theme_label": "DNS",
+    "difficulty": "easy",
+    "question": "Quel est le nom DNS d'un service dans le même namespace ?",
+    "options": ["<service-name>", "<service-name>.<namespace>.svc.cluster.local", "A et B", "B seulement"],
+    "correct": 2,
+    "explication": "Le nom court suffit dans le même namespace."
+  },
+  {
+    "id": "CKAD-04-014",
+    "theme": "Services & Networking",
+    "theme_label": "DNS",
+    "difficulty": "easy",
+    "question": "Comment accéder à un service depuis un autre namespace ?",
+    "options": [
+      "<service-name>.<namespace>.svc.cluster.local",
+      "<service-name>.<namespace>",
+      "<service-name>.svc.cluster.local",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le FQDN inclut le namespace."
+  },
+  {
+    "id": "CKAD-04-015",
+    "theme": "Services & Networking",
+    "theme_label": "Headless service",
+    "difficulty": "easy",
+    "question": "Comment créer un service headless ?",
+    "options": [
+      "clusterIP: None",
+      "spec: clusterIP: None",
+      "type: Headless",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "clusterIP: None rend le service headless."
+  },
+  {
+    "id": "CKAD-04-016",
+    "theme": "Services & Networking",
+    "theme_label": "Headless service",
+    "difficulty": "easy",
+    "question": "Un service headless est-il utilisé avec un StatefulSet ?",
+    "options": ["Oui", "Non", "Uniquement pour les Deployments", "Uniquement pour les DaemonSets"],
+    "correct": 0,
+    "explication": "Headless service permet de découvrir chaque pod individuellement."
+  },
+  {
+    "id": "CKAD-04-017",
+    "theme": "Services & Networking",
+    "theme_label": "Service endpoints",
+    "difficulty": "easy",
+    "question": "Comment lister les endpoints d'un service ?",
+    "options": [
+      "kubectl get endpoints <service>",
+      "kubectl describe service <service>",
+      "kubectl get ep <service>",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Les endpoints doivent correspondre aux pods."
+  },
+  {
+    "id": "CKAD-04-018",
+    "theme": "Services & Networking",
+    "theme_label": "Service selector",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si le sélecteur d'un service ne correspond à aucun pod ?",
+    "options": [
+      "Les endpoints sont vides, le service ne fonctionne pas",
+      "Le service échoue",
+      "Le service utilise un default backend",
+      "Rien"
+    ],
+    "correct": 0,
+    "explication": "Le service ne peut pas acheminer le trafic."
+  },
+  {
+    "id": "CKAD-04-019",
+    "theme": "Services & Networking",
+    "theme_label": "Service session affinity",
+    "difficulty": "easy",
+    "question": "Comment activer la session affinity pour un service ?",
+    "options": [
+      "sessionAffinity: ClientIP",
+      "sessionAffinity: ClientIP",
+      "service.spec.sessionAffinity: ClientIP",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "ClientIP dirige les requêtes d'une même IP vers le même pod."
+  },
+  {
+    "id": "CKAD-04-020",
+    "theme": "Services & Networking",
+    "theme_label": "Service externalTrafficPolicy",
+    "difficulty": "easy",
+    "question": "Que fait externalTrafficPolicy: Local ?",
+    "options": [
+      "Conserve l'IP source du client",
+      "Équilibrage local",
+      "Meilleures performances",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Local conserve l'IP source mais peut déséquilibrer."
+  },
+  {
+    "id": "CKAD-04-021",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress annotations",
+    "difficulty": "easy",
+    "question": "Comment forcer le HTTPS avec nginx-ingress ?",
+    "options": [
+      "nginx.ingress.kubernetes.io/force-ssl-redirect: 'true'",
+      "nginx.ingress.kubernetes.io/ssl-redirect: 'true'",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Les deux annotations sont courantes."
+  },
+  {
+    "id": "CKAD-04-022",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress rewrite",
+    "difficulty": "easy",
+    "question": "Comment réécrire le chemin avec nginx-ingress ?",
+    "options": [
+      "nginx.ingress.kubernetes.io/rewrite-target: /",
+      "nginx.ingress.kubernetes.io/rewrite-target: /$2",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "rewrite-target peut utiliser des captures."
+  },
+  {
+    "id": "CKAD-04-023",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress path types",
+    "difficulty": "easy",
+    "question": "Quels sont les types de chemin (pathType) dans Ingress ?",
+    "options": [
+      "Exact, Prefix, ImplementationSpecific",
+      "Exact seulement",
+      "Prefix seulement",
+      "ImplementationSpecific seulement"
+    ],
+    "correct": 0,
+    "explication": "Exact correspond exactement, Prefix correspond au préfixe."
+  },
+  {
+    "id": "CKAD-04-024",
+    "theme": "Services & Networking",
+    "theme_label": "Network policy egress",
+    "difficulty": "easy",
+    "question": "Comment bloquer tout le trafic sortant d'un pod ?",
+    "options": [
+      "egress: []",
+      "policyTypes: - Egress",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "egress: [] avec policyTypes: - Egress bloque tout."
+  },
+  {
+    "id": "CKAD-04-025",
+    "theme": "Services & Networking",
+    "theme_label": "Network policy egress to DNS",
+    "difficulty": "easy",
+    "question": "Comment autoriser le trafic sortant vers le serveur DNS (kube-dns) ?",
+    "options": [
+      "egress: - to: - namespaceSelector: matchLabels: kubernetes.io/metadata.name: kube-system podSelector: matchLabels: k8s-app: kube-dns ports: - port: 53 protocol: UDP",
+      "egress: - to: - namespace: kube-system",
+      "egress: - to: - podSelector: k8s-app: kube-dns",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Il faut autoriser les requêtes DNS (port 53 UDP/TCP) vers le service kube-dns."
+  },
+  {
+    "id": "CKAD-04-026",
+    "theme": "Services & Networking",
+    "theme_label": "Service mesh",
+    "difficulty": "easy",
+    "question": "Quel est un exemple de service mesh ?",
+    "options": ["Istio", "Linkerd", "Consul", "Toutes ces réponses"],
+    "correct": 3,
+    "explication": "Istio, Linkerd, Consul sont des service meshes."
+  },
+  {
+    "id": "CKAD-04-027",
+    "theme": "Services & Networking",
+    "theme_label": "Gateway API",
+    "difficulty": "easy",
+    "question": "Quelle ressource de Gateway API remplace Ingress ?",
+    "options": ["HTTPRoute", "Gateway", "TCPRoute", "A et B"],
+    "correct": 3,
+    "explication": "Gateway API introduit Gateway, HTTPRoute, etc."
+  },
+  {
+    "id": "CKAD-04-028",
+    "theme": "Services & Networking",
+    "theme_label": "Network policy namespaceSelector",
+    "difficulty": "easy",
+    "question": "Comment autoriser le trafic depuis tous les pods d'un namespace spécifique ?",
+    "options": [
+      "from: - namespaceSelector: matchLabels: name: production",
+      "from: - podSelector: {}",
+      "from: - namespace: production",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "namespaceSelector sélectionne les namespaces par label."
+  },
+  {
+    "id": "CKAD-04-029",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress default backend",
+    "difficulty": "easy",
+    "question": "À quoi sert le default backend dans un Ingress ?",
+    "options": [
+      "Trafic vers les requêtes ne correspondant à aucune règle",
+      "Backend par défaut",
+      "Fallback",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Le default backend reçoit les requêtes non correspondantes."
+  },
+  {
+    "id": "CKAD-04-030",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress path priority",
+    "difficulty": "easy",
+    "question": "Si deux chemins Ingress correspondent, lequel est utilisé ?",
+    "options": [
+      "Le plus long (plus spécifique) d'abord",
+      "Le premier défini",
+      "Ordre alphabétique",
+      "Aléatoire"
+    ],
+    "correct": 0,
+    "explication": "Les chemins sont évalués du plus spécifique au moins spécifique."
+  },
+  {
+    "id": "CKAD-04-031",
+    "theme": "Services & Networking",
+    "theme_label": "Service health check",
+    "difficulty": "easy",
+    "question": "Comment Kubernetes vérifie-t-il la santé des pods pour un service ?",
+    "options": [
+      "Readiness probes",
+      "Liveness probes",
+      "Health checks du service",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les readiness probes déterminent si le pod reçoit du trafic."
+  },
+  {
+    "id": "CKAD-04-032",
+    "theme": "Services & Networking",
+    "theme_label": "Service troubleshooting",
+    "difficulty": "easy",
+    "question": "Comment vérifier si un service atteint ses pods ?",
+    "options": [
+      "kubectl get endpoints <service>",
+      "kubectl describe service <service>",
+      "kubectl exec -it <pod> -- curl http://<service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les endpoints doivent contenir les IP des pods."
+  },
+  {
+    "id": "CKAD-04-033",
+    "theme": "Services & Networking",
+    "theme_label": "Service troubleshooting",
+    "difficulty": "easy",
+    "question": "Les endpoints d'un service sont vides. Quelle pourrait être la cause ?",
+    "options": [
+      "Le sélecteur ne correspond à aucun pod",
+      "Les pods sont dans un autre namespace",
+      "Les pods ne sont pas prêts",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier le selector, les labels des pods, et les readiness probes."
+  },
+  {
+    "id": "CKAD-04-034",
+    "theme": "Services & Networking",
+    "theme_label": "DNS troubleshooting",
+    "difficulty": "easy",
+    "question": "Comment tester la résolution DNS depuis un pod ?",
+    "options": [
+      "kubectl exec -it <pod> -- nslookup kubernetes.default",
+      "kubectl exec -it <pod> -- cat /etc/resolv.conf",
+      "kubectl exec -it <pod> -- ping <service>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Vérifier que le pod utilise le serveur DNS du cluster (kube-dns)."
+  },
+  {
+    "id": "CKAD-04-035",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress annotations rate limiting",
+    "difficulty": "easy",
+    "question": "Comment configurer le rate limiting avec nginx-ingress ?",
+    "options": [
+      "nginx.ingress.kubernetes.io/limit-rps: 10",
+      "nginx.ingress.kubernetes.io/rate-limit: 10",
+      "nginx.org/rate-limit: 10",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "limit-rps et limit-rpm sont des annotations courantes."
+  },
+  {
+    "id": "CKAD-04-036",
+    "theme": "Services & Networking",
+    "theme_label": "Service topology aware routing",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le topology aware routing (anciennement topology aware hints) ?",
+    "options": [
+      "Préfère les endpoints dans la même zone",
+      "Répartition aléatoire",
+      "Load balancing global",
+      "Affinité de session"
+    ],
+    "correct": 0,
+    "explication": "Améliore la latence et réduit les coûts de transfert de données."
+  },
+  {
+    "id": "CKAD-04-037",
+    "theme": "Services & Networking",
+    "theme_label": "Service endpoint slices",
+    "difficulty": "easy",
+    "question": "Quel est l'avantage des EndpointSlices par rapport aux Endpoints ?",
+    "options": [
+      "Meilleure scalabilité (plus de 1000 endpoints)",
+      "Plus de fonctionnalités",
+      "Plus simple",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les EndpointSlices découpent les endpoints en morceaux pour éviter les limites d'étiquette."
+  },
+  {
+    "id": "CKAD-04-038",
+    "theme": "Services & Networking",
+    "theme_label": "Network policy multi-namespace",
+    "difficulty": "easy",
+    "question": "Une NetworkPolicy peut-elle cibler plusieurs namespaces ?",
+    "options": [
+      "Oui, avec namespaceSelector",
+      "Non",
+      "Oui, avec podSelector uniquement",
+      "Oui, avec ipBlock"
+    ],
+    "correct": 0,
+    "explication": "namespaceSelector sélectionne des namespaces par label."
+  },
+  {
+    "id": "CKAD-04-039",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress controller deployment",
+    "difficulty": "easy",
+    "question": "Où est généralement déployé un contrôleur Ingress ?",
+    "options": [
+      "Dans le namespace ingress-nginx (ou similaire)",
+      "Dans kube-system",
+      "Dans default",
+      "N'importe où"
+    ],
+    "correct": 0,
+    "explication": "Les contrôleurs sont souvent déployés dans un namespace dédié."
+  },
+  {
+    "id": "CKAD-04-040",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress TLS",
+    "difficulty": "easy",
+    "question": "Comment créer un secret TLS pour Ingress ?",
+    "options": [
+      "kubectl create secret tls mon-tls --cert=cert.pem --key=key.pem",
+      "kubectl create secret generic mon-tls --from-file=cert.pem --from-file=key.pem",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "create secret tls est la commande spécifique."
+  },
+  {
+    "id": "CKAD-04-041",
+    "theme": "Services & Networking",
+    "theme_label": "Network policy ipBlock",
+    "difficulty": "easy",
+    "question": "Comment autoriser le trafic depuis une plage IP externe ?",
+    "options": [
+      "ingress: - from: - ipBlock: cidr: 192.168.1.0/24",
+      "ingress: - from: - ipBlock: 192.168.1.0/24",
+      "ingress: - ipBlock: 192.168.1.0/24",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "ipBlock spécifie une plage CIDR."
+  },
+  {
+    "id": "CKAD-04-042",
+    "theme": "Services & Networking",
+    "theme_label": "Service type ExternalName",
+    "difficulty": "easy",
+    "question": "ExternalName fonctionne-t-il avec un service headless ?",
+    "options": ["Non", "Oui", "Uniquement avec clusterIP", "Uniquement avec NodePort"],
+    "correct": 0,
+    "explication": "ExternalName ne crée pas d'endpoints, juste un enregistrement CNAME."
+  },
+  {
+    "id": "CKAD-04-043",
+    "theme": "Services & Networking",
+    "theme_label": "Network policy default deny",
+    "difficulty": "easy",
+    "question": "Comment créer une NetworkPolicy qui bloque tout le trafic (ingress et egress) ?",
+    "options": [
+      "policyTypes: - Ingress - Egress",
+      "ingress: [] egress: []",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Il faut spécifier les deux policyTypes et des règles vides."
+  },
+  {
+    "id": "CKAD-04-044",
+    "theme": "Services & Networking",
+    "theme_label": "Service topologyKeys (déprécié)",
+    "difficulty": "easy",
+    "question": "Quelle fonctionnalité a remplacé topologyKeys ?",
+    "options": [
+      "Topology Aware Routing (Service) et topologySpreadConstraints",
+      "Rien",
+      "Affinity",
+      "NodeSelector"
+    ],
+    "correct": 0,
+    "explication": "Topology Aware Routing permet de préférer les endpoints locaux."
+  },
+  {
+    "id": "CKAD-04-045",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress API versions",
+    "difficulty": "easy",
+    "question": "Quelle est l'API stable actuelle pour Ingress ?",
+    "options": ["networking.k8s.io/v1", "extensions/v1beta1", "networking.k8s.io/v1beta1", "ingress/v1"],
+    "correct": 0,
+    "explication": "networking.k8s.io/v1 est la version stable depuis Kubernetes 1.19."
+  },
+  {
+    "id": "CKAD-04-046",
+    "theme": "Services & Networking",
+    "theme_label": "Service mesh vs Ingress",
+    "difficulty": "easy",
+    "question": "Un service mesh remplace-t-il Ingress ?",
+    "options": [
+      "Non, ils sont complémentaires",
+      "Oui, le service mesh inclut Ingress",
+      "Oui, Ingress est obsolète",
+      "Non, Ingress est pour les entrées, service mesh pour l'intérieur"
+    ],
+    "correct": 0,
+    "explication": "Ingress gère le trafic entrant, service mesh gère la communication entre services."
+  },
+  {
+    "id": "CKAD-04-047",
+    "theme": "Services & Networking",
+    "theme_label": "Gateway API",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la Gateway API ?",
+    "options": [
+      "Successeur plus puissant d'Ingress",
+      "API pour les load balancers",
+      "API pour les services",
+      "API pour les network policies"
+    ],
+    "correct": 0,
+    "explication": "Gateway API (v1beta1) offre plus de fonctionnalités qu'Ingress."
+  },
+  {
+    "id": "CKAD-04-048",
+    "theme": "Services & Networking",
+    "theme_label": "Gateway API resources",
+    "difficulty": "easy",
+    "question": "Quelles sont les ressources de la Gateway API ?",
+    "options": [
+      "Gateway, HTTPRoute, TCPRoute, etc.",
+      "Ingress, Service",
+      "NetworkPolicy, EndpointSlice",
+      "Pod, Deployment"
+    ],
+    "correct": 0,
+    "explication": "Gateway API introduit de nouveaux types de ressources."
+  },
+  {
+    "id": "CKAD-04-049",
+    "theme": "Services & Networking",
+    "theme_label": "Multus CNI",
+    "difficulty": "easy",
+    "question": "À quoi sert Multus ?",
+    "options": [
+      "Attacher plusieurs interfaces réseau à un pod",
+      "Remplacer Calico",
+      "Gérer les network policies",
+      "Configurer le DNS"
+    ],
+    "correct": 0,
+    "explication": "Multus est un méta-CNI qui permet d'attacher plusieurs CNI à un pod."
+  },
+  {
+    "id": "CKAD-04-050",
+    "theme": "Services & Networking",
+    "theme_label": "Kube-proxy modes",
+    "difficulty": "easy",
+    "question": "Quel mode kube-proxy offre les meilleures performances ?",
+    "options": ["ipvs", "iptables", "userspace", "kernelspace"],
+    "correct": 0,
+    "explication": "ipvs utilise le noyau Linux pour un forwarding plus efficace."
+  }
+]

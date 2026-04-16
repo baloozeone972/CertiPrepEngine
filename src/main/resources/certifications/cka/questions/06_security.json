@@ -1,0 +1,562 @@
+[
+  {
+    "id": "CKA-06-001",
+    "theme": "Security",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "question": "Quels sont les composants de RBAC ?",
+    "options": [
+      "Role, ClusterRole, RoleBinding, ClusterRoleBinding",
+      "User, Group, ServiceAccount",
+      "Policy, Binding",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "RBAC utilise des rôles et des liaisons."
+  },
+  {
+    "id": "CKA-06-002",
+    "theme": "Security",
+    "theme_label": "Role vs ClusterRole",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre un Role et un ClusterRole ?",
+    "options": [
+      "Role est namespace-scoped, ClusterRole est cluster-scoped",
+      "Role pour les ressources namespace, ClusterRole pour les ressources cluster",
+      "A et B",
+      "Role est plus restrictif"
+    ],
+    "correct": 2,
+    "explication": "ClusterRole peut être utilisé pour des ressources non-namespace ou lié à un namespace."
+  },
+  {
+    "id": "CKA-06-003",
+    "theme": "Security",
+    "theme_label": "RoleBinding vs ClusterRoleBinding",
+    "difficulty": "easy",
+    "question": "Un ClusterRoleBinding peut-il lier un ClusterRole à des sujets dans un namespace spécifique ?",
+    "options": [
+      "Non (ClusterRoleBinding est cluster-wide)",
+      "Oui, en spécifiant le namespace",
+      "Oui, mais seulement pour les utilisateurs",
+      "Non, utiliser RoleBinding"
+    ],
+    "correct": 0,
+    "explication": "ClusterRoleBinding s'applique à tout le cluster."
+  },
+  {
+    "id": "CKA-06-004",
+    "theme": "Security",
+    "theme_label": "ServiceAccount",
+    "difficulty": "easy",
+    "question": "À quoi sert un ServiceAccount ?",
+    "options": [
+      "Identité pour les pods",
+      "Authentification auprès de l'API",
+      "Gérer les permissions",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les pods utilisent le ServiceAccount par défaut de leur namespace."
+  },
+  {
+    "id": "CKA-06-005",
+    "theme": "Security",
+    "theme_label": "ServiceAccount",
+    "difficulty": "easy",
+    "question": "Quel est le ServiceAccount par défaut dans un namespace ?",
+    "options": ["default", "kubernetes", "system:default", "A seulement"],
+    "correct": 0,
+    "explication": "Chaque namespace a un ServiceAccount nommé 'default'."
+  },
+  {
+    "id": "CKA-06-006",
+    "theme": "Security",
+    "theme_label": "Secrets",
+    "difficulty": "easy",
+    "question": "Comment créer un secret générique (Opaque) ?",
+    "options": [
+      "kubectl create secret generic monsecret --from-literal=password=123",
+      "kubectl create secret generic monsecret --from-file=./fichier",
+      "kubectl create secret generic monsecret --from-env-file=env.txt",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs sources pour créer un secret."
+  },
+  {
+    "id": "CKA-06-007",
+    "theme": "Security",
+    "theme_label": "Secrets",
+    "difficulty": "easy",
+    "question": "Comment monter un secret comme volume dans un pod ?",
+    "options": [
+      "volumes: - name: monvol secret: secretName: monsecret",
+      "volumeMounts: - name: monvol mountPath: /etc/secrets",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Déclarer le volume secret puis le monter."
+  },
+  {
+    "id": "CKA-06-008",
+    "theme": "Security",
+    "theme_label": "Secrets",
+    "difficulty": "easy",
+    "question": "Les secrets sont-ils chiffrés par défaut dans etcd ?",
+    "options": ["Non", "Oui", "Uniquement si configuré", "Uniquement pour les secrets TLS"],
+    "correct": 0,
+    "explication": "Par défaut, les secrets sont stockés en base64 (non chiffrés). Il faut activer le chiffrement etcd."
+  },
+  {
+    "id": "CKA-06-009",
+    "theme": "Security",
+    "theme_label": "Network Policies",
+    "difficulty": "easy",
+    "question": "Quelle ressource contrôle le trafic réseau entre les pods ?",
+    "options": ["NetworkPolicy", "Ingress", "Service", "Endpoint"],
+    "correct": 0,
+    "explication": "NetworkPolicy définit des règles de pare-feu."
+  },
+  {
+    "id": "CKA-06-010",
+    "theme": "Security",
+    "theme_label": "PodSecurityPolicy (déprécié)",
+    "difficulty": "easy",
+    "question": "Quelle ressource a remplacé PodSecurityPolicy ?",
+    "options": ["Pod Security Admission (PSA)", "SecurityContext", "OPA Gatekeeper", "A et C"],
+    "correct": 3,
+    "explication": "PSA est intégré à Kubernetes, d'autres alternatives existent."
+  },
+  {
+    "id": "CKA-06-011",
+    "theme": "Security",
+    "theme_label": "Pod Security Standards",
+    "difficulty": "easy",
+    "question": "Quels sont les niveaux de Pod Security Standards ?",
+    "options": ["Privileged, Baseline, Restricted", "High, Medium, Low", "Secure, Normal, Lax", "Enforce, Audit, Warn"],
+    "correct": 0,
+    "explication": "Privileged (aucune restriction), Baseline (restrictions minimales), Restricted (strict)."
+  },
+  {
+    "id": "CKA-06-012",
+    "theme": "Security",
+    "theme_label": "Pod Security Admission",
+    "difficulty": "easy",
+    "question": "Comment configurer PSA sur un namespace ?",
+    "options": [
+      "Labels: pod-security.kubernetes.io/enforce: baseline",
+      "Annotations: pod-security.kubernetes.io/enforce: baseline",
+      "PodSecurityPolicy",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les labels de namespace contrôlent PSA."
+  },
+  {
+    "id": "CKA-06-013",
+    "theme": "Security",
+    "theme_label": "SecurityContext",
+    "difficulty": "easy",
+    "question": "Comment exécuter un conteneur en tant qu'utilisateur non root ?",
+    "options": [
+      "securityContext: runAsUser: 1000",
+      "securityContext: runAsNonRoot: true",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "runAsNonRoot: true empêche l'exécution en root."
+  },
+  {
+    "id": "CKA-06-014",
+    "theme": "Security",
+    "theme_label": "SecurityContext",
+    "difficulty": "easy",
+    "question": "Comment empêcher l'escalade de privilèges ?",
+    "options": [
+      "securityContext: allowPrivilegeEscalation: false",
+      "securityContext: privileged: false",
+      "securityContext: capabilities: drop: [ALL]",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "allowPrivilegeEscalation: false est crucial pour la sécurité."
+  },
+  {
+    "id": "CKA-06-015",
+    "theme": "Security",
+    "theme_label": "Capabilities",
+    "difficulty": "easy",
+    "question": "Comment supprimer toutes les capabilities Linux d'un conteneur ?",
+    "options": [
+      "securityContext: capabilities: drop: [ALL]",
+      "securityContext: capabilities: drop: [\"ALL\"]",
+      "securityContext: capabilities: add: []",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Dropping ALL est une bonne pratique."
+  },
+  {
+    "id": "CKA-06-016",
+    "theme": "Security",
+    "theme_label": "ReadOnlyRootFilesystem",
+    "difficulty": "easy",
+    "question": "Que fait securityContext: readOnlyRootFilesystem: true ?",
+    "options": [
+      "Monte le système de fichiers racine en lecture seule",
+      "Empêche les écritures dans le conteneur",
+      "Améliore la sécurité",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les écritures doivent se faire sur des volumes montés."
+  },
+  {
+    "id": "CKA-06-017",
+    "theme": "Security",
+    "theme_label": "AppArmor",
+    "difficulty": "easy",
+    "question": "Comment appliquer un profil AppArmor à un pod ?",
+    "options": [
+      "annotations: container.apparmor.security.beta.kubernetes.io/<container>: localhost/<profil>",
+      "securityContext: apparmor: <profil>",
+      "A seulement",
+      "B seulement"
+    ],
+    "correct": 2,
+    "explication": "L'annotation est utilisée (beta)."
+  },
+  {
+    "id": "CKA-06-018",
+    "theme": "Security",
+    "theme_label": "Seccomp",
+    "difficulty": "easy",
+    "question": "Comment restreindre les appels système avec seccomp ?",
+    "options": [
+      "securityContext: seccompProfile: type: RuntimeDefault",
+      "securityContext: seccompProfile: type: Localhost localhostProfile: profiles/audit.json",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "RuntimeDefault est le profil par défaut."
+  },
+  {
+    "id": "CKA-06-019",
+    "theme": "Security",
+    "theme_label": "TLS certificates",
+    "difficulty": "easy",
+    "question": "Comment créer un secret TLS pour Ingress ?",
+    "options": [
+      "kubectl create secret tls mon-tls --cert=cert.pem --key=key.pem",
+      "kubectl create secret generic mon-tls --from-file=tls.crt=cert.pem --from-file=tls.key=key.pem",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "create secret tls est la méthode recommandée."
+  },
+  {
+    "id": "CKA-06-020",
+    "theme": "Security",
+    "theme_label": "ImagePullSecrets",
+    "difficulty": "easy",
+    "question": "Comment configurer un secret pour tirer des images d'un registre privé ?",
+    "options": [
+      "kubectl create secret docker-registry regcred --docker-server=... --docker-username=...",
+      "imagePullSecrets: - name: regcred",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Créer le secret puis le référencer dans le pod."
+  },
+  {
+    "id": "CKA-06-021",
+    "theme": "Security",
+    "theme_label": "ServiceAccount token",
+    "difficulty": "easy",
+    "question": "Comment accéder à l'API depuis un pod avec le ServiceAccount ?",
+    "options": [
+      "Utiliser le token monté dans /var/run/secrets/kubernetes.io/serviceaccount/token",
+      "kubectl proxy",
+      "curl -H 'Authorization: Bearer $(cat /var/run/secrets/.../token)' https://kubernetes.default/api",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Le token est automatiquement monté si automountServiceAccountToken: true (par défaut)."
+  },
+  {
+    "id": "CKA-06-022",
+    "theme": "Security",
+    "theme_label": "API aggregation",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un APIService ?",
+    "options": [
+      "Enregistrement d'une API étendue",
+      "Service pour l'API server",
+      "Load balancer",
+      "Proxy"
+    ],
+    "correct": 0,
+    "explication": "APIService permet d'ajouter des API personnalisées (ex: metrics.k8s.io)."
+  },
+  {
+    "id": "CKA-06-023",
+    "theme": "Security",
+    "theme_label": "Authentication",
+    "difficulty": "easy",
+    "question": "Quels sont les modes d'authentification supportés par Kubernetes ?",
+    "options": [
+      "Client certificates, bearer tokens, OIDC, webhook, etc.",
+      "Seulement client certificates",
+      "Seulement tokens",
+      "Seulement OIDC"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs mécanismes peuvent être activés en même temps."
+  },
+  {
+    "id": "CKA-06-024",
+    "theme": "Security",
+    "theme_label": "Authorization",
+    "difficulty": "easy",
+    "question": "Quels sont les modes d'autorisation ?",
+    "options": [
+      "RBAC, ABAC, Webhook, Node",
+      "RBAC seulement",
+      "ABAC seulement",
+      "Webhook seulement"
+    ],
+    "correct": 0,
+    "explication": "RBAC est le mode par défaut et recommandé."
+  },
+  {
+    "id": "CKA-06-025",
+    "theme": "Security",
+    "theme_label": "Node authorization",
+    "difficulty": "easy",
+    "question": "À quoi sert le mode Node authorization ?",
+    "options": [
+      "Autoriser les kubelets à lire les secrets et pods de leurs nœuds",
+      "Authentifier les utilisateurs",
+      "Gérer les RBAC",
+      "Rien"
+    ],
+    "correct": 0,
+    "explication": "Node authorization est utilisé par le kubelet pour interagir avec l'API."
+  },
+  {
+    "id": "CKA-06-026",
+    "theme": "Security",
+    "theme_label": "Admission Controllers",
+    "difficulty": "easy",
+    "question": "À quoi servent les admission controllers ?",
+    "options": [
+      "Intercepter les requêtes avant persistance",
+      "Valider ou muter les ressources",
+      "A et B",
+      "Remplacer RBAC"
+    ],
+    "correct": 2,
+    "explication": "MutatingAdmissionWebhook et ValidatingAdmissionWebhook sont courants."
+  },
+  {
+    "id": "CKA-06-027",
+    "theme": "Security",
+    "theme_label": "OPA Gatekeeper",
+    "difficulty": "easy",
+    "question": "Que permet OPA Gatekeeper ?",
+    "options": [
+      "Politiques de validation avancées (Rego)",
+      "Remplacer RBAC",
+      "Gérer les secrets",
+      "Audit des logs"
+    ],
+    "correct": 0,
+    "explication": "Gatekeeper est un admission controller basé sur OPA."
+  },
+  {
+    "id": "CKA-06-028",
+    "theme": "Security",
+    "theme_label": "Audit logs",
+    "difficulty": "easy",
+    "question": "Comment activer les audit logs ?",
+    "options": [
+      "Spécifier --audit-policy-file et --audit-log-path dans l'API server",
+      "kubectl enable audit",
+      "ConfigMap",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les flags sont dans le manifeste de l'API server."
+  },
+  {
+    "id": "CKA-06-029",
+    "theme": "Security",
+    "theme_label": "Encryption at rest",
+    "difficulty": "easy",
+    "question": "Comment chiffrer les secrets dans etcd ?",
+    "options": [
+      "Configuration EncryptionConfiguration",
+      "--encryption-provider-config",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Définir un fichier de configuration et passer le flag à l'API server."
+  },
+  {
+    "id": "CKA-06-030",
+    "theme": "Security",
+    "theme_label": "kubeconfig",
+    "difficulty": "easy",
+    "question": "Où se trouve le fichier kubeconfig par défaut ?",
+    "options": [
+      "$HOME/.kube/config",
+      "/etc/kubernetes/admin.conf",
+      "/var/lib/kubelet/kubeconfig",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "L'utilisateur a ~/.kube/config, l'admin peut avoir /etc/kubernetes/admin.conf."
+  },
+  {
+    "id": "CKA-06-031",
+    "theme": "Security",
+    "theme_label": "kubeconfig contexts",
+    "difficulty": "easy",
+    "question": "Comment ajouter un contexte pour un autre cluster ?",
+    "options": [
+      "kubectl config set-context mon-context --cluster=moncluster --user=monuser --namespace=monnamespace",
+      "kubectl config use-context mon-context",
+      "kubectl config set-cluster",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Il faut d'abord définir le cluster et l'utilisateur."
+  },
+  {
+    "id": "CKA-06-032",
+    "theme": "Security",
+    "theme_label": "CertificateSigningRequest (CSR)",
+    "difficulty": "easy",
+    "question": "Comment approuver un CSR ?",
+    "options": [
+      "kubectl certificate approve <nom-csr>",
+      "kubectl approve csr <nom>",
+      "kubectl csr approve <nom>",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "kubectl certificate approve est la commande."
+  },
+  {
+    "id": "CKA-06-033",
+    "theme": "Security",
+    "theme_label": "CSR",
+    "difficulty": "easy",
+    "question": "Comment créer un CSR pour un utilisateur ?",
+    "options": [
+      "Générer une clé privée et une requête CSR, puis kubectl create -f csr.yaml",
+      "openssl req -new -key user.key -out user.csr",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le CSR est créé manuellement puis soumis à Kubernetes."
+  },
+  {
+    "id": "CKA-06-034",
+    "theme": "Security",
+    "theme_label": "kubelet authentication",
+    "difficulty": "easy",
+    "question": "Comment le kubelet s'authentifie-t-il auprès de l'API server ?",
+    "options": [
+      "Client certificate (kubelet.crt)",
+      "Token",
+      "ServiceAccount",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Le kubelet utilise un certificat client par défaut."
+  },
+  {
+    "id": "CKA-06-035",
+    "theme": "Security",
+    "theme_label": "kubelet authorization",
+    "difficulty": "easy",
+    "question": "Quel mode d'autorisation utilise le kubelet ?",
+    "options": [
+      "Node authorization",
+      "RBAC",
+      "ABAC",
+      "Webhook"
+    ],
+    "correct": 0,
+    "explication": "Le mode Node autorise le kubelet à lire ses propres ressources."
+  },
+  {
+    "id": "CKA-06-036",
+    "theme": "Security",
+    "theme_label": "Static pods security",
+    "difficulty": "easy",
+    "question": "Les manifestes des static pods sont stockés où ?",
+    "options": [
+      "/etc/kubernetes/manifests",
+      "/var/lib/kubelet/config",
+      "/etc/kubernetes/static",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le kubelet surveille ce répertoire pour les static pods (API server, controller manager, etc.)."
+  },
+  {
+    "id": "CKA-06-037",
+    "theme": "Security",
+    "theme_label": "Security context constraints",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le securityContext au niveau du pod vs conteneur ?",
+    "options": [
+      "Pod securityContext s'applique à tous les conteneurs, conteneur securityContext est plus spécifique",
+      "Ils se combinent",
+      "A et B",
+      "Pod securityContext n'existe pas"
+    ],
+    "correct": 2,
+    "explication": "Le pod spec peut avoir un securityContext (ex: fsGroup)."
+  },
+  {
+    "id": "CKA-06-038",
+    "theme": "Security",
+    "theme_label": "Windows security",
+    "difficulty": "easy",
+    "question": "Les Windows containers supportent-ils les securityContext ?",
+    "options": ["Partiellement", "Oui complètement", "Non", "Uniquement runAsUser"],
+    "correct": 0,
+    "explication": "Windows a des limitations (ex: pas de runAsNonRoot)."
+  },
+  {
+    "id": "CKA-06-039",
+    "theme": "Security",
+    "theme_label": "Mutating webhook",
+    "difficulty": "easy",
+    "question": "Un mutating webhook peut-il modifier les ressources avant création ?",
+    "options": ["Oui", "Non", "Seulement pour les pods", "Seulement pour les services"],
+    "correct": 0,
+    "explication": "Les mutating webhooks peuvent ajouter des sidecars, des labels, etc."
+  },
+  {
+    "id": "CKA-06-040",
+    "theme": "Security",
+    "theme_label": "Validating webhook",
+    "difficulty": "easy",
+    "question": "Un validating webhook peut-il bloquer une ressource ?",
+    "options": ["Oui", "Non", "Seulement avertir", "Uniquement en audit"],
+    "correct": 0,
+    "explication": "Un validating webhook peut rejeter la requête."
+  }
+]

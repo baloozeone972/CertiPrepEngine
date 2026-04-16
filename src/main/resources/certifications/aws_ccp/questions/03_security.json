@@ -1,0 +1,657 @@
+[
+  {
+    "id": "AWS-CCP-151",
+    "theme": "Security",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet de gérer les utilisateurs et leurs permissions ?",
+    "options": ["IAM", "Cognito", "Directory Service", "Organizations"],
+    "correct": 0,
+    "explanation": "IAM (Identity and Access Management) gère les identités et les accès."
+  },
+  {
+    "id": "AWS-CCP-152",
+    "theme": "Security",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une politique IAM ?",
+    "options": [
+      "Document JSON définissant les autorisations",
+      "Utilisateur",
+      "Groupe",
+      "Rôle"
+    ],
+    "correct": 0,
+    "explanation": "Les politiques IAM sont des documents JSON qui définissent les autorisations."
+  },
+  {
+    "id": "AWS-CCP-153",
+    "theme": "Security",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Quelle est la meilleure pratique pour les permissions IAM ?",
+    "options": [
+      "Principe du moindre privilège",
+      "Donner toutes les permissions",
+      "Donner des permissions admin",
+      "Aucune permission"
+    ],
+    "correct": 0,
+    "explanation": "Le principe du moindre privilège accorde uniquement les permissions nécessaires."
+  },
+  {
+    "id": "AWS-CCP-154",
+    "theme": "Security",
+    "theme_label": "IAM",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un rôle IAM ?",
+    "options": [
+      "Identité avec permissions, assumable par des services",
+      "Utilisateur",
+      "Groupe",
+      "Politique"
+    ],
+    "correct": 0,
+    "explanation": "Un rôle IAM est une identité qui peut être assumée par des services AWS."
+  },
+  {
+    "id": "AWS-CCP-155",
+    "theme": "Security",
+    "theme_label": "MFA",
+    "difficulty": "easy",
+    "question": "Que signifie MFA ?",
+    "options": [
+      "Multi-Factor Authentication",
+      "Multi-Function Authentication",
+      "Multi-Factor Authorization",
+      "Multi-Function Authorization"
+    ],
+    "correct": 0,
+    "explanation": "MFA ajoute une couche de sécurité supplémentaire."
+  },
+  {
+    "id": "AWS-CCP-156",
+    "theme": "Security",
+    "theme_label": "MFA",
+    "difficulty": "easy",
+    "question": "Quels types de MFA sont supportés par AWS ?",
+    "options": [
+      "Virtual MFA, Hardware MFA, FIDO2, SMS",
+      "Virtual MFA seulement",
+      "Hardware MFA seulement",
+      "SMS seulement"
+    ],
+    "correct": 0,
+    "explanation": "AWS supporte plusieurs types de MFA."
+  },
+  {
+    "id": "AWS-CCP-157",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "easy",
+    "question": "Quel service AWS gère les clés de chiffrement ?",
+    "options": ["KMS", "CloudHSM", "Secrets Manager", "ACM"],
+    "correct": 0,
+    "explanation": "KMS (Key Management Service) gère les clés de chiffrement."
+  },
+  {
+    "id": "AWS-CCP-158",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le chiffrement au repos (at rest) ?",
+    "options": [
+      "Données chiffrées lorsqu'elles sont stockées",
+      "Données chiffrées pendant le transfert",
+      "Données chiffrées en mémoire",
+      "Données non chiffrées"
+    ],
+    "correct": 0,
+    "explanation": "Le chiffrement au repos protège les données stockées."
+  },
+  {
+    "id": "AWS-CCP-159",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le chiffrement en transit (in transit) ?",
+    "options": [
+      "Données chiffrées pendant le transfert (TLS)",
+      "Données chiffrées au repos",
+      "Données chiffrées en mémoire",
+      "Données non chiffrées"
+    ],
+    "correct": 0,
+    "explanation": "Le chiffrement en transit utilise TLS/SSL pour sécuriser les communications."
+  },
+  {
+    "id": "AWS-CCP-160",
+    "theme": "Security",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "easy",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DU cloud ?",
+    "options": ["AWS", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "AWS est responsable de la sécurité DU cloud (matériel, réseau, hyperviseur)."
+  },
+  {
+    "id": "AWS-CCP-161",
+    "theme": "Security",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "easy",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DANS le cloud ?",
+    "options": ["Le client", "AWS", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "Le client est responsable de la sécurité DANS le cloud (données, OS, applications)."
+  },
+  {
+    "id": "AWS-CCP-162",
+    "theme": "Security",
+    "theme_label": "Shared Responsibility Model",
+    "difficulty": "easy",
+    "question": "Qui est responsable de la gestion des données dans S3 ?",
+    "options": ["Le client", "AWS", "Les deux", "Ni l'un ni l'autre"],
+    "correct": 0,
+    "explanation": "Le client est responsable de ses données, y compris le chiffrement et la gestion des accès."
+  },
+  {
+    "id": "AWS-CCP-163",
+    "theme": "Security",
+    "theme_label": "CloudTrail",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS CloudTrail ?",
+    "options": [
+      "Journalisation des appels API",
+      "Monitoring des métriques",
+      "Analyse des logs d'application",
+      "Détection de menaces"
+    ],
+    "correct": 0,
+    "explanation": "CloudTrail enregistre tous les appels API AWS pour l'audit."
+  },
+  {
+    "id": "AWS-CCP-164",
+    "theme": "Security",
+    "theme_label": "AWS Config",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Config ?",
+    "options": [
+      "Évaluer la conformité des ressources",
+      "Journaliser les appels API",
+      "Surveiller les métriques",
+      "Détecter les menaces"
+    ],
+    "correct": 0,
+    "explanation": "AWS Config enregistre les changements de configuration et évalue la conformité."
+  },
+  {
+    "id": "AWS-CCP-165",
+    "theme": "Security",
+    "theme_label": "GuardDuty",
+    "difficulty": "easy",
+    "question": "À quoi sert Amazon GuardDuty ?",
+    "options": [
+      "Détection de menaces",
+      "Journalisation des appels API",
+      "Conformité des ressources",
+      "Analyse des vulnérabilités"
+    ],
+    "correct": 0,
+    "explanation": "GuardDuty analyse les logs pour détecter des comportements malveillants."
+  },
+  {
+    "id": "AWS-CCP-166",
+    "theme": "Security",
+    "theme_label": "Inspector",
+    "difficulty": "easy",
+    "question": "À quoi sert Amazon Inspector ?",
+    "options": [
+      "Analyse de vulnérabilités sur EC2",
+      "Détection de menaces",
+      "Conformité des ressources",
+      "Journalisation des appels API"
+    ],
+    "correct": 0,
+    "explanation": "Amazon Inspector scanne les instances EC2 pour des vulnérabilités."
+  },
+  {
+    "id": "AWS-CCP-167",
+    "theme": "Security",
+    "theme_label": "Macie",
+    "difficulty": "easy",
+    "question": "À quoi sert Amazon Macie ?",
+    "options": [
+      "Détection de données sensibles dans S3",
+      "Analyse de vulnérabilités",
+      "Détection de menaces",
+      "Conformité des ressources"
+    ],
+    "correct": 0,
+    "explanation": "Macie utilise le machine learning pour identifier les données sensibles."
+  },
+  {
+    "id": "AWS-CCP-168",
+    "theme": "Security",
+    "theme_label": "WAF",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS WAF ?",
+    "options": [
+      "Protection contre les attaques web (SQL injection, XSS)",
+      "Protection DDoS",
+      "Filtrage réseau",
+      "Gestion des certificats"
+    ],
+    "correct": 0,
+    "explanation": "AWS WAF filtre les requêtes HTTP/HTTPS."
+  },
+  {
+    "id": "AWS-CCP-169",
+    "theme": "Security",
+    "theme_label": "Shield",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Shield ?",
+    "options": [
+      "Protection DDoS",
+      "Protection contre les injections SQL",
+      "Filtrage réseau",
+      "Gestion des certificats"
+    ],
+    "correct": 0,
+    "explanation": "AWS Shield protège contre les attaques DDoS."
+  },
+  {
+    "id": "AWS-CCP-170",
+    "theme": "Security",
+    "theme_label": "Secrets Manager",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Secrets Manager ?",
+    "options": [
+      "Gestion des secrets (mots de passe, clés API)",
+      "Gestion des clés de chiffrement",
+      "Gestion des certificats",
+      "Gestion des identités"
+    ],
+    "correct": 0,
+    "explanation": "Secrets Manager stocke et gère les secrets avec rotation automatique."
+  },
+  {
+    "id": "AWS-CCP-171",
+    "theme": "Security",
+    "theme_label": "Certificate Manager",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Certificate Manager (ACM) ?",
+    "options": [
+      "Gestion de certificats SSL/TLS",
+      "Gestion des secrets",
+      "Gestion des clés de chiffrement",
+      "Gestion des identités"
+    ],
+    "correct": 0,
+    "explanation": "ACM fournit et gère des certificats SSL/TLS pour les services AWS."
+  },
+  {
+    "id": "AWS-CCP-172",
+    "theme": "Security",
+    "theme_label": "Security Groups",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un Security Group ?",
+    "options": [
+      "Firewall virtuel pour instances EC2",
+      "Liste de contrôle d'accès réseau",
+      "Politique IAM",
+      "Rôle IAM"
+    ],
+    "correct": 0,
+    "explanation": "Les Security Groups contrôlent le trafic entrant/sortant des instances."
+  },
+  {
+    "id": "AWS-CCP-173",
+    "theme": "Security",
+    "theme_label": "Network ACL",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une Network ACL ?",
+    "options": [
+      "Firewall stateless au niveau du subnet",
+      "Firewall stateful au niveau de l'instance",
+      "Politique IAM",
+      "Liste de contrôle d'accès S3"
+    ],
+    "correct": 0,
+    "explanation": "Les NACL sont stateless et agissent au niveau des subnets."
+  },
+  {
+    "id": "AWS-CCP-174",
+    "theme": "Security",
+    "theme_label": "Key difference SG vs NACL",
+    "difficulty": "easy",
+    "question": "Différence entre Security Group et Network ACL ?",
+    "options": [
+      "SG stateful, NACL stateless",
+      "SG stateless, NACL stateful",
+      "Identiques",
+      "SG au niveau subnet, NACL au niveau instance"
+    ],
+    "correct": 0,
+    "explanation": "Les Security Groups sont stateful, les NACL sont stateless."
+  },
+  {
+    "id": "AWS-CCP-175",
+    "theme": "Security",
+    "theme_label": "AWS Organizations",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Organizations ?",
+    "options": [
+      "Gestion centralisée de plusieurs comptes AWS",
+      "Gestion des identités",
+      "Gestion des secrets",
+      "Gestion des certificats"
+    ],
+    "correct": 0,
+    "explanation": "Organizations permet de gérer plusieurs comptes AWS de manière centralisée."
+  },
+  {
+    "id": "AWS-CCP-176",
+    "theme": "Security",
+    "theme_label": "SCP",
+    "difficulty": "easy",
+    "question": "Que sont les Service Control Policies (SCP) ?",
+    "options": [
+      "Restrictions de permissions au niveau de l'organisation",
+      "Politiques de mots de passe",
+      "Politiques de chiffrement",
+      "Politiques de logging"
+    ],
+    "correct": 0,
+    "explanation": "Les SCP définissent les permissions maximales pour les comptes de l'organisation."
+  },
+  {
+    "id": "AWS-CCP-177",
+    "theme": "Security",
+    "theme_label": "Cognito",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Amazon Cognito ?",
+    "options": [
+      "Service d'authentification et de gestion d'utilisateurs",
+      "Service de base de données",
+      "Service de stockage",
+      "Service de calcul"
+    ],
+    "correct": 0,
+    "explanation": "Cognito gère l'authentification des utilisateurs (User Pools) et la fédération (Identity Pools)."
+  },
+  {
+    "id": "AWS-CCP-178",
+    "theme": "Security",
+    "theme_label": "PCI DSS",
+    "difficulty": "easy",
+    "question": "AWS est-il certifié PCI DSS ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement pour certains services"],
+    "correct": 0,
+    "explanation": "AWS est certifié PCI DSS (paiement par carte)."
+  },
+  {
+    "id": "AWS-CCP-179",
+    "theme": "Security",
+    "theme_label": "HIPAA",
+    "difficulty": "easy",
+    "question": "AWS est-il conforme HIPAA ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement aux USA"],
+    "correct": 0,
+    "explanation": "AWS propose un Business Associate Agreement (BAA) pour les services éligibles HIPAA."
+  },
+  {
+    "id": "AWS-CCP-180",
+    "theme": "Security",
+    "theme_label": "GDPR",
+    "difficulty": "easy",
+    "question": "AWS est-il conforme GDPR ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "correct": 0,
+    "explanation": "AWS est conforme GDPR avec des engagements contractuels."
+  },
+  {
+    "id": "AWS-CCP-181",
+    "theme": "Security",
+    "theme_label": "Artifact",
+    "difficulty": "easy",
+    "question": "Quel service AWS donne accès aux rapports de conformité ?",
+    "options": ["AWS Artifact", "AWS Config", "AWS Security Hub", "AWS Audit Manager"],
+    "correct": 0,
+    "explanation": "Artifact fournit des rapports de conformité (SOC, PCI, ISO)."
+  },
+  {
+    "id": "AWS-CCP-182",
+    "theme": "Security",
+    "theme_label": "Security Hub",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Security Hub ?",
+    "options": [
+      "Centralisation des alertes de sécurité",
+      "Détection de menaces",
+      "Analyse de vulnérabilités",
+      "Journalisation des appels API"
+    ],
+    "correct": 0,
+    "explanation": "Security Hub agrège les findings de GuardDuty, Inspector, Macie, etc."
+  },
+  {
+    "id": "AWS-CCP-183",
+    "theme": "Security",
+    "theme_label": "Detective",
+    "difficulty": "easy",
+    "question": "À quoi sert Amazon Detective ?",
+    "options": [
+      "Analyse des findings pour trouver la cause racine",
+      "Détection de menaces",
+      "Conformité",
+      "Journalisation"
+    ],
+    "correct": 0,
+    "explanation": "Detective aide à investiguer les findings de GuardDuty et Security Hub."
+  },
+  {
+    "id": "AWS-CCP-184",
+    "theme": "Security",
+    "theme_label": "Firewall Manager",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Firewall Manager ?",
+    "options": [
+      "Gestion centralisée des règles de sécurité sur plusieurs comptes",
+      "Firewall réseau",
+      "Protection DDoS",
+      "Filtrage web"
+    ],
+    "correct": 0,
+    "explanation": "Firewall Manager applique des règles de sécurité à travers l'organisation."
+  },
+  {
+    "id": "AWS-CCP-185",
+    "theme": "Security",
+    "theme_label": "Network Firewall",
+    "difficulty": "easy",
+    "question": "À quoi sert AWS Network Firewall ?",
+    "options": [
+      "Filtrage du trafic réseau (couche 3/4)",
+      "Protection DDoS",
+      "Filtrage web",
+      "Gestion des certificats"
+    ],
+    "correct": 0,
+    "explanation": "Network Firewall protège au niveau réseau (VPC)."
+  },
+  {
+    "id": "AWS-CCP-186",
+    "theme": "Security",
+    "theme_label": "Trusted Advisor",
+    "difficulty": "easy",
+    "question": "Quel service AWS fournit des conseils sur la sécurité ?",
+    "options": ["Trusted Advisor", "Well-Architected Tool", "Config", "Security Hub"],
+    "correct": 0,
+    "explanation": "Trusted Advisor donne des recommandations de sécurité (checks)."
+  },
+  {
+    "id": "AWS-CCP-187",
+    "theme": "Security",
+    "theme_label": "Well-Architected",
+    "difficulty": "easy",
+    "question": "Quel pilier du Well-Architected Framework traite de la sécurité ?",
+    "options": ["Security", "Reliability", "Performance Efficiency", "Cost Optimization"],
+    "correct": 0,
+    "explanation": "Le pilier Security couvre la protection des données et de l'infrastructure."
+  },
+  {
+    "id": "AWS-CCP-188",
+    "theme": "Security",
+    "theme_label": "IAM Password Policy",
+    "difficulty": "easy",
+    "question": "Peut-on configurer une politique de mot de passe IAM ?",
+    "options": ["Oui", "Non", "Uniquement pour les comptes root", "Uniquement pour les utilisateurs fédérés"],
+    "correct": 0,
+    "explanation": "On peut configurer la complexité, l'expiration, l'historique des mots de passe."
+  },
+  {
+    "id": "AWS-CCP-189",
+    "theme": "Security",
+    "theme_label": "Root user",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne pratique pour le compte root AWS ?",
+    "options": [
+      "Activer MFA, ne pas utiliser pour les tâches quotidiennes",
+      "Utiliser pour toutes les tâches",
+      "Partager les identifiants",
+      "Désactiver MFA"
+    ],
+    "correct": 0,
+    "explanation": "Le compte root doit être protégé par MFA et utilisé uniquement pour les tâches critiques."
+  },
+  {
+    "id": "AWS-CCP-190",
+    "theme": "Security",
+    "theme_label": "Access keys",
+    "difficulty": "easy",
+    "question": "Comment sécuriser les clés d'accès IAM ?",
+    "options": [
+      "Rotation régulière, ne pas les coder en dur",
+      "Les partager",
+      "Les coder dans l'application",
+      "Ne jamais les changer"
+    ],
+    "correct": 0,
+    "explanation": "Les clés d'accès doivent être tournées et protégées."
+  },
+  {
+    "id": "AWS-CCP-191",
+    "theme": "Security",
+    "theme_label": "VPC Flow Logs",
+    "difficulty": "easy",
+    "question": "À quoi servent les VPC Flow Logs ?",
+    "options": [
+      "Capturer les métadonnées du trafic IP",
+      "Journaliser les appels API",
+      "Surveiller les performances",
+      "Détecter les menaces"
+    ],
+    "correct": 0,
+    "explanation": "Flow Logs enregistrent les informations de trafic (source, destination, ports, etc.)."
+  },
+  {
+    "id": "AWS-CCP-192",
+    "theme": "Security",
+    "theme_label": "AWS Shield Advanced",
+    "difficulty": "easy",
+    "question": "AWS Shield Advanced offre-t-il une protection supplémentaire par rapport à Standard ?",
+    "options": ["Oui", "Non", "Uniquement pour les applications web", "Uniquement pour les réseaux"],
+    "correct": 0,
+    "explanation": "Shield Advanced offre des protections supplémentaires et un accès à l'équipe DRT."
+  },
+  {
+    "id": "AWS-CCP-193",
+    "theme": "Security",
+    "theme_label": "AWS WAF",
+    "difficulty": "easy",
+    "question": "WAF peut-il être associé à CloudFront ?",
+    "options": ["Oui", "Non", "Uniquement à ALB", "Uniquement à API Gateway"],
+    "correct": 0,
+    "explication": "WAF peut être associé à CloudFront, ALB, API Gateway."
+  },
+  {
+    "id": "AWS-CCP-194",
+    "theme": "Security",
+    "theme_label": "KMS key rotation",
+    "difficulty": "easy",
+    "question": "La rotation automatique des clés KMS est-elle disponible pour les clés clientes ?",
+    "options": ["Oui (annuelle)", "Non", "Uniquement pour les clés AWS gérées", "Uniquement pour les clés CloudHSM"],
+    "correct": 0,
+    "explication": "La rotation automatique annuelle est disponible pour les Customer Managed Keys."
+  },
+  {
+    "id": "AWS-CCP-195",
+    "theme": "Security",
+    "theme_label": "Secrets Manager rotation",
+    "difficulty": "easy",
+    "question": "Secrets Manager peut-il automatiquement rotater les secrets RDS ?",
+    "options": ["Oui", "Non", "Uniquement pour les mots de passe génériques", "Uniquement pour les clés API"],
+    "correct": 0,
+    "explication": "Secrets Manager peut rotater automatiquement les secrets pour RDS, Redshift, DocumentDB."
+  },
+  {
+    "id": "AWS-CCP-196",
+    "theme": "Security",
+    "theme_label": "CloudHSM",
+    "difficulty": "easy",
+    "question": "CloudHSM est-il conforme FIPS 140-2 niveau 3 ?",
+    "options": ["Oui", "Non", "Niveau 1", "Niveau 2"],
+    "correct": 0,
+    "explication": "CloudHSM est certifié FIPS 140-2 niveau 3."
+  },
+  {
+    "id": "AWS-CCP-197",
+    "theme": "Security",
+    "theme_label": "Cognito User Pools",
+    "difficulty": "easy",
+    "question": "Cognito User Pools peut-il fédérer avec des fournisseurs sociaux ?",
+    "options": ["Oui", "Non", "Uniquement avec SAML", "Uniquement avec OIDC"],
+    "correct": 0,
+    "explication": "Cognito supporte Facebook, Google, Amazon, Apple, SAML, OIDC."
+  },
+  {
+    "id": "AWS-CCP-198",
+    "theme": "Security",
+    "theme_label": "Cognito Identity Pools",
+    "difficulty": "easy",
+    "question": "À quoi servent les Identity Pools ?",
+    "options": [
+      "Donner des credentials AWS temporaires",
+      "Authentifier les utilisateurs",
+      "Stocker les profils",
+      "Gérer les mots de passe"
+    ],
+    "correct": 0,
+    "explication": "Identity Pools permettent d'assumer des rôles IAM pour accéder aux services AWS."
+  },
+  {
+    "id": "AWS-CCP-199",
+    "theme": "Security",
+    "theme_label": "AWS Directory Service",
+    "difficulty": "easy",
+    "question": "Quel service AWS peut intégrer Active Directory ?",
+    "options": ["AWS Directory Service", "Cognito", "IAM", "Organizations"],
+    "correct": 0,
+    "explication": "Directory Service permet d'utiliser Microsoft AD ou de se connecter à un AD existant."
+  },
+  {
+    "id": "AWS-CCP-200",
+    "theme": "Security",
+    "theme_label": "Security best practices",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne pratique pour les buckets S3 publics ?",
+    "options": [
+      "Ne pas créer de buckets publics sans nécessité",
+      "Toujours les rendre publics",
+      "Ignorer les avertissements",
+      "Désactiver le chiffrement"
+    ],
+    "correct": 0,
+    "explication": "Les buckets publics doivent être évités sauf cas spécifiques (sites web statiques)."
+  }
+]

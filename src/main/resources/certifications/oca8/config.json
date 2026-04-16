@@ -1,0 +1,44 @@
+{
+  "id": "oca8",
+  "name": "Oracle Certified Associate Java 8 (1Z0-808)",
+  "version": "1.0",
+  "description": "Certification de base Java 8 - Fondamentaux de la programmation Java. Valide les compétences de base en développement Java.",
+  "totalQuestions": 400,
+  "examDurationMinutes": 150,
+  "examQuestionCount": 80,
+  "passingScore": 65,
+  "themes": [
+    {
+      "name": "Fondamentaux Java",
+      "count": 60
+    },
+    {
+      "name": "Types de données et opérateurs",
+      "count": 50
+    },
+    {
+      "name": "Structures de contrôle",
+      "count": 50
+    },
+    {
+      "name": "POO - Héritage et polymorphisme",
+      "count": 70
+    },
+    {
+      "name": "Exceptions",
+      "count": 40
+    },
+    {
+      "name": "API de base (String, ArrayList)",
+      "count": 60
+    },
+    {
+      "name": "Lambda et Streams",
+      "count": 40
+    },
+    {
+      "name": "Date et Time API",
+      "count": 30
+    }
+  ]
+}

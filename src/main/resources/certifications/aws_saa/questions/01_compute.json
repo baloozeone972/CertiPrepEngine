@@ -1,0 +1,1097 @@
+[
+  {
+    "id": "AWS-SAA-001",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Quel type d'adresse IP est associé à une instance EC2 et change à chaque arrêt/démarrage ?",
+    "options": ["Elastic IP", "Public IP", "Private IP", "Static IP"],
+    "correct": 1,
+    "explanation": "L'adresse IP publique d'une instance EC2 change à chaque arrêt/démarrage. L'Elastic IP est statique."
+  },
+  {
+    "id": "AWS-SAA-002",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une Elastic IP ?",
+    "options": [
+      "Adresse IP statique publique",
+      "Adresse IP privée",
+      "Adresse IP changeante",
+      "Adresse IP de loopback"
+    ],
+    "correct": 0,
+    "explanation": "Une Elastic IP est une adresse IPv4 publique statique que vous pouvez associer à une instance EC2."
+  },
+  {
+    "id": "AWS-SAA-003",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Quel type d'instance EC2 est optimisé pour le calcul (compute optimized) ?",
+    "options": ["c5", "m5", "r5", "i3"],
+    "correct": 0,
+    "explanation": "c5 est optimisé pour le calcul (Compute optimized)."
+  },
+  {
+    "id": "AWS-SAA-004",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "easy",
+    "question": "Quel type d'instance EC2 est optimisé pour la mémoire ?",
+    "options": ["r5", "m5", "c5", "i3"],
+    "correct": 0,
+    "explanation": "r5 est optimisé pour la mémoire (Memory optimized)."
+  },
+  {
+    "id": "AWS-SAA-005",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "medium",
+    "question": "Quel type d'instance EC2 est à usage général ?",
+    "options": ["m5", "c5", "r5", "i3"],
+    "correct": 0,
+    "explanation": "m5 est à usage général (General purpose)."
+  },
+  {
+    "id": "AWS-SAA-006",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre un Security Group et un Network ACL ?",
+    "options": [
+      "Security Group est stateful, NACL est stateless",
+      "Security Group est stateless, NACL est stateful",
+      "Les deux sont stateful",
+      "Les deux sont stateless"
+    ],
+    "correct": 0,
+    "explanation": "Security Group est stateful (retour automatique), NACL est stateless (règles aller/retour séparées)."
+  },
+  {
+    "id": "AWS-SAA-007",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "medium",
+    "question": "Combien de Security Groups peut-on associer à une instance EC2 ?",
+    "options": ["Jusqu'à 5", "Jusqu'à 10", "Jusqu'à 20", "Illimité"],
+    "correct": 0,
+    "explanation": "Jusqu'à 5 Security Groups par interface réseau (par défaut)."
+  },
+  {
+    "id": "AWS-SAA-008",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quelle est la règle par défaut d'un Security Group ?",
+    "options": [
+      "Tout le trafic entrant est bloqué, tout le trafic sortant est autorisé",
+      "Tout le trafic entrant est autorisé, tout le trafic sortant est bloqué",
+      "Tout le trafic est bloqué",
+      "Tout le trafic est autorisé"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, inbound est bloqué, outbound est autorisé."
+  },
+  {
+    "id": "AWS-SAA-009",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un placement group ?",
+    "options": [
+      "Groupement d'instances EC2",
+      "Type d'instance",
+      "Région AWS",
+      "Zone de disponibilité"
+    ],
+    "correct": 0,
+    "explanation": "Un placement group détermine comment les instances sont placées physiquement."
+  },
+  {
+    "id": "AWS-SAA-010",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quel placement group est utilisé pour une faible latence réseau ?",
+    "options": [
+      "Cluster",
+      "Spread",
+      "Partition",
+      "Default"
+    ],
+    "correct": 0,
+    "explanation": "Cluster Placement Group regroupe les instances dans une même AZ pour une faible latence."
+  },
+  {
+    "id": "AWS-SAA-011",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quel placement group répartit les instances sur du matériel distinct ?",
+    "options": ["Spread", "Cluster", "Partition", "Distributed"],
+    "correct": 0,
+    "explanation": "Spread Placement Group place chaque instance sur du matériel distinct."
+  },
+  {
+    "id": "AWS-SAA-012",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Combien d'instances maximum dans un Spread Placement Group ?",
+    "options": ["7", "10", "20", "Illimité"],
+    "correct": 0,
+    "explanation": "Maximum 7 instances par AZ dans un Spread Placement Group."
+  },
+  {
+    "id": "AWS-SAA-013",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une AMI ?",
+    "options": [
+      "Amazon Machine Image (template d'instance)",
+      "AWS Management Interface",
+      "Amazon Memory Instance",
+      "Application Management Image"
+    ],
+    "correct": 0,
+    "explanation": "Une AMI est un template contenant le système d'exploitation et les logiciels."
+  },
+  {
+    "id": "AWS-SAA-014",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "medium",
+    "question": "Peut-on partager une AMI avec un autre compte AWS ?",
+    "options": ["Oui", "Non", "Uniquement avec AWS Organizations", "Uniquement si publique"],
+    "correct": 0,
+    "explanation": "On peut partager une AMI avec des comptes spécifiques ou la rendre publique."
+  },
+  {
+    "id": "AWS-SAA-015",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un EC2 User Data ?",
+    "options": [
+      "Script exécuté au démarrage de l'instance",
+      "Données utilisateur chiffrées",
+      "Métadonnées de l'instance",
+      "Configuration réseau"
+    ],
+    "correct": 0,
+    "explanation": "User Data permet d'exécuter des scripts au premier démarrage de l'instance."
+  },
+  {
+    "id": "AWS-SAA-016",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quelle est la limite de taille des User Data ?",
+    "options": ["16 KB", "64 KB", "256 KB", "1 MB"],
+    "correct": 0,
+    "explanation": "Les User Data sont limités à 16 KB."
+  },
+  {
+    "id": "AWS-SAA-017",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le EC2 Instance Metadata Service (IMDS) ?",
+    "options": [
+      "Service fournissant des informations sur l'instance",
+      "Service de monitoring",
+      "Service de logging",
+      "Service de backup"
+    ],
+    "correct": 0,
+    "explanation": "IMDS donne accès aux métadonnées de l'instance (IP, AMI, rôle IAM, etc.)."
+  },
+  {
+    "id": "AWS-SAA-018",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quelle version d'IMDS est recommandée pour la sécurité ?",
+    "options": ["IMDSv2", "IMDSv1", "Les deux", "Aucune"],
+    "correct": 0,
+    "explanation": "IMDSv2 est plus sécurisé (requiert un token)."
+  },
+  {
+    "id": "AWS-SAA-019",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le EC2 Instance Recovery ?",
+    "options": [
+      "Redémarrage automatique sur un nouveau matériel",
+      "Backup automatique",
+      "Snapshot automatique",
+      "Migration vers une autre région"
+    ],
+    "correct": 0,
+    "explanation": "Instance Recovery redémarre l'instance sur un nouveau matériel en cas de défaillance."
+  },
+  {
+    "id": "AWS-SAA-020",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une instance spot ?",
+    "options": [
+      "Instance à prix réduit avec risque d'interruption",
+      "Instance dédiée",
+      "Instance réservée",
+      "Instance à la demande"
+    ],
+    "correct": 0,
+    "explanation": "Les instances spot utilisent la capacité excédentaire à prix réduit, mais peuvent être interrompues."
+  },
+  {
+    "id": "AWS-SAA-021",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quel est le préavis avant interruption d'une instance spot ?",
+    "options": ["2 minutes", "5 minutes", "10 minutes", "30 minutes"],
+    "correct": 0,
+    "explanation": "AWS donne un préavis de 2 minutes avant l'interruption d'une instance spot."
+  },
+  {
+    "id": "AWS-SAA-022",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Que sont les instances réservées ?",
+    "options": [
+      "Engagement de 1 ou 3 ans pour une réduction de prix",
+      "Instances gratuites",
+      "Instances à la demande",
+      "Instances spot"
+    ],
+    "correct": 0,
+    "explanation": "Les instances réservées offrent des réductions en échange d'un engagement."
+  },
+  {
+    "id": "AWS-SAA-023",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quelles sont les options de paiement pour les instances réservées ?",
+    "options": [
+      "All Upfront, Partial Upfront, No Upfront",
+      "Mensuel, Trimestriel, Annuel",
+      "À la demande uniquement",
+      "Pay as you go"
+    ],
+    "correct": 0,
+    "explanation": "Trois options de paiement : tout upfront, partiel upfront, sans upfront."
+  },
+  {
+    "id": "AWS-SAA-024",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Que sont les instances dédiées (Dedicated Instances) ?",
+    "options": [
+      "Instances sur matériel dédié",
+      "Instances partagées",
+      "Instances réservées",
+      "Instances spot"
+    ],
+    "correct": 0,
+    "explanation": "Les instances dédiées s'exécutent sur du matériel dédié à votre compte."
+  },
+  {
+    "id": "AWS-SAA-025",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un hôte dédié (Dedicated Host) ?",
+    "options": [
+      "Serveur physique complet dédié",
+      "Instance dédiée",
+      "Matériel partagé",
+      "Zone de disponibilité"
+    ],
+    "correct": 0,
+    "explanation": "Un hôte dédié vous donne un serveur physique entier."
+  },
+  {
+    "id": "AWS-SAA-026",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre Dedicated Host et Dedicated Instance ?",
+    "options": [
+      "Dedicated Host donne contrôle sur le placement des instances",
+      "Identiques",
+      "Dedicated Instance donne contrôle sur le matériel",
+      "Dedicated Host moins cher"
+    ],
+    "correct": 0,
+    "explanation": "Dedicated Host permet de voir et contrôler le placement des instances sur le serveur."
+  },
+  {
+    "id": "AWS-SAA-027",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un Auto Scaling Group ?",
+    "options": [
+      "Groupe d'instances qui s'ajustent automatiquement",
+      "Groupe de sécurité",
+      "Placement group",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explanation": "Auto Scaling Group ajuste le nombre d'instances selon la charge."
+  },
+  {
+    "id": "AWS-SAA-028",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Quels sont les trois composants d'un Auto Scaling Group ?",
+    "options": [
+      "Launch template, Scaling policies, Size",
+      "Launch template, VPC, Subnet",
+      "Launch template, Security Group, IAM",
+      "Launch template, AMI, Instance type"
+    ],
+    "correct": 0,
+    "explanation": "Les composants sont : template de lancement, politiques de scaling, taille min/max/désirée."
+  },
+  {
+    "id": "AWS-SAA-029",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une politique de scaling dynamique ?",
+    "options": [
+      "Ajuste le nombre d'instances en fonction des métriques",
+      "Planification fixe",
+      "Scaling manuel",
+      "Scaling prédictif"
+    ],
+    "correct": 0,
+    "explanation": "Le scaling dynamique utilise des métriques CloudWatch (CPU, réseau, etc.)."
+  },
+  {
+    "id": "AWS-SAA-030",
+    "theme": "Compute",
+    "theme_label": "EC2",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un scheduled scaling ?",
+    "options": [
+      "Scaling à heures fixes",
+      "Scaling basé sur métriques",
+      "Scaling manuel",
+      "Scaling prédictif"
+    ],
+    "correct": 0,
+    "explanation": "Scheduled scaling planifie des changements à des moments prévus."
+  },
+  {
+    "id": "AWS-SAA-031",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "easy",
+    "question": "Quel service AWS permet d'exécuter du code sans provisionner de serveurs ?",
+    "options": ["Lambda", "EC2", "ECS", "Fargate"],
+    "correct": 0,
+    "explanation": "Lambda est le service serverless d'AWS."
+  },
+  {
+    "id": "AWS-SAA-032",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "medium",
+    "question": "Quel est le timeout maximum pour une fonction Lambda ?",
+    "options": ["15 minutes", "5 minutes", "30 minutes", "1 heure"],
+    "correct": 0,
+    "explanation": "Le timeout maximum est 15 minutes (900 secondes)."
+  },
+  {
+    "id": "AWS-SAA-033",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "medium",
+    "question": "Quelle est la mémoire maximale pour Lambda ?",
+    "options": ["10 Go", "5 Go", "3 Go", "1 Go"],
+    "correct": 0,
+    "explanation": "La mémoire maximale est 10 Go (et jusqu'à 6 vCPU)."
+  },
+  {
+    "id": "AWS-SAA-034",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale du code déployé pour Lambda ?",
+    "options": ["50 Mo (zip), 250 Mo (non compressé)", "100 Mo", "250 Mo", "500 Mo"],
+    "correct": 0,
+    "explanation": "50 Mo compressé, 250 Mo non compressé."
+  },
+  {
+    "id": "AWS-SAA-035",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Lambda peut-il être déclenché par un événement S3 ?",
+    "options": ["Oui", "Non", "Uniquement avec SQS", "Uniquement avec SNS"],
+    "correct": 0,
+    "explanation": "Lambda peut être déclenché par des événements S3 (création, suppression)."
+  },
+  {
+    "id": "AWS-SAA-036",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Lambda peut-il être déclenché par un événement DynamoDB Streams ?",
+    "options": ["Oui", "Non", "Uniquement avec Kinesis", "Uniquement avec SQS"],
+    "correct": 0,
+    "explanation": "Lambda peut traiter les changements de DynamoDB via Streams."
+  },
+  {
+    "id": "AWS-SAA-037",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Lambda peut-il être déclenché par API Gateway ?",
+    "options": ["Oui", "Non", "Uniquement avec REST", "Uniquement avec HTTP"],
+    "correct": 0,
+    "explanation": "API Gateway est un déclencheur courant pour Lambda (REST/HTTP APIs)."
+  },
+  {
+    "id": "AWS-SAA-038",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Lambda@Edge ?",
+    "options": [
+      "Lambda exécuté sur les edge locations CloudFront",
+      "Lambda en Europe",
+      "Lambda global",
+      "Lambda avec plus de mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Lambda@Edge exécute du code près des utilisateurs via CloudFront."
+  },
+  {
+    "id": "AWS-SAA-039",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le provisionned concurrency ?",
+    "options": [
+      "Garde des instances Lambda pré-initialisées",
+      "Limite le nombre d'exécutions",
+      "Augmente le timeout",
+      "Réduit la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Provisioned concurrency maintient des instances chaudes pour réduire la latence."
+  },
+  {
+    "id": "AWS-SAA-040",
+    "theme": "Compute",
+    "theme_label": "Lambda",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le reserved concurrency ?",
+    "options": [
+      "Limite le nombre d'exécutions concurrentes",
+      "Réserve de la capacité",
+      "Augmente la mémoire",
+      "Réduit les coûts"
+    ],
+    "correct": 0,
+    "explanation": "Reserved concurrency limite le nombre d'instances simultanées."
+  },
+  {
+    "id": "AWS-SAA-041",
+    "theme": "Compute",
+    "theme_label": "ECS",
+    "difficulty": "easy",
+    "question": "Que signifie ECS ?",
+    "options": [
+      "Elastic Container Service",
+      "Elastic Compute Service",
+      "Elastic Container System",
+      "Elastic Compute System"
+    ],
+    "correct": 0,
+    "explanation": "ECS est le service d'orchestration de conteneurs d'AWS."
+  },
+  {
+    "id": "AWS-SAA-042",
+    "theme": "Compute",
+    "theme_label": "ECS",
+    "difficulty": "medium",
+    "question": "Quels sont les modes de lancement ECS ?",
+    "options": [
+      "Fargate et EC2",
+      "Fargate seulement",
+      "EC2 seulement",
+      "Lambda et EC2"
+    ],
+    "correct": 0,
+    "explanation": "ECS peut s'exécuter sur Fargate (serverless) ou sur EC2 (géré par client)."
+  },
+  {
+    "id": "AWS-SAA-043",
+    "theme": "Compute",
+    "theme_label": "ECS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Fargate ?",
+    "options": [
+      "Moteur serverless pour conteneurs",
+      "Type d'instance EC2",
+      "Service de stockage",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Fargate exécute des conteneurs sans gérer les serveurs."
+  },
+  {
+    "id": "AWS-SAA-044",
+    "theme": "Compute",
+    "theme_label": "ECS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une task definition ECS ?",
+    "options": [
+      "Configuration d'un conteneur",
+      "Instance EC2",
+      "Service",
+      "Cluster"
+    ],
+    "correct": 0,
+    "explanation": "La task definition décrit les conteneurs (image, CPU, mémoire, etc.)."
+  },
+  {
+    "id": "AWS-SAA-045",
+    "theme": "Compute",
+    "theme_label": "ECS",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un service ECS ?",
+    "options": [
+      "Maintient un nombre de tâches en cours d'exécution",
+      "Task definition",
+      "Cluster",
+      "Load balancer"
+    ],
+    "correct": 0,
+    "explanation": "Un service ECS garantit qu'un certain nombre de tâches tournent."
+  },
+  {
+    "id": "AWS-SAA-046",
+    "theme": "Compute",
+    "theme_label": "ECS",
+    "difficulty": "hard",
+    "question": "Quel service AWS est utilisé pour stocker les images Docker ?",
+    "options": ["ECR", "S3", "EFS", "EBS"],
+    "correct": 0,
+    "explanation": "ECR (Elastic Container Registry) stocke les images Docker."
+  },
+  {
+    "id": "AWS-SAA-047",
+    "theme": "Compute",
+    "theme_label": "EKS",
+    "difficulty": "easy",
+    "question": "Que signifie EKS ?",
+    "options": [
+      "Elastic Kubernetes Service",
+      "Elastic Kinesis Service",
+      "Elastic Key Service",
+      "Elastic Knowledge Service"
+    ],
+    "correct": 0,
+    "explanation": "EKS est le service Kubernetes managé d'AWS."
+  },
+  {
+    "id": "AWS-SAA-048",
+    "theme": "Compute",
+    "theme_label": "EKS",
+    "difficulty": "hard",
+    "question": "EKS est-il compatible avec Kubernetes upstream ?",
+    "options": ["Oui", "Non", "Partiellement", "Version modifiée"],
+    "correct": 0,
+    "explanation": "EKS est certifié Kubernetes conforme."
+  },
+  {
+    "id": "AWS-SAA-049",
+    "theme": "Compute",
+    "theme_label": "EKS",
+    "difficulty": "hard",
+    "question": "Quel plan de contrôle EKS est géré par AWS ?",
+    "options": [
+      "Control plane (API server, etcd)",
+      "Worker nodes",
+      "Les deux",
+      "Aucun"
+    ],
+    "correct": 0,
+    "explanation": "AWS gère le control plane, le client gère les worker nodes."
+  },
+  {
+    "id": "AWS-SAA-050",
+    "theme": "Compute",
+    "theme_label": "EKS",
+    "difficulty": "hard",
+    "question": "Quelles sont les options pour les worker nodes EKS ?",
+    "options": [
+      "EC2, Fargate",
+      "EC2 seulement",
+      "Fargate seulement",
+      "Lambda"
+    ],
+    "correct": 0,
+    "explanation": "Les worker nodes peuvent être EC2 ou Fargate."
+  },
+  {
+    "id": "AWS-SAA-051",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Batch ?",
+    "options": [
+      "Service de traitement par lots",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Batch exécute des jobs de calcul par lots."
+  },
+  {
+    "id": "AWS-SAA-052",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Outposts ?",
+    "options": [
+      "Matériel AWS déployé sur site",
+      "Service cloud",
+      "Zone de disponibilité",
+      "Région"
+    ],
+    "correct": 0,
+    "explanation": "Outposts permet d'exécuter des services AWS dans votre datacenter."
+  },
+  {
+    "id": "AWS-SAA-053",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Wavelength ?",
+    "options": [
+      "Infrastructure aux edge des réseaux 5G",
+      "Service de calcul",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Wavelength déploie des applications aux abords des réseaux 5G."
+  },
+  {
+    "id": "AWS-SAA-054",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Local Zones ?",
+    "options": [
+      "Infrastructure AWS proche des grandes villes",
+      "Région",
+      "Zone de disponibilité",
+      "Edge location"
+    ],
+    "correct": 0,
+    "explanation": "Local Zones placent l'infrastructure près des utilisateurs finaux."
+  },
+  {
+    "id": "AWS-SAA-055",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Quel service AWS est utilisé pour les applications serverless basées sur des événements ?",
+    "options": ["EventBridge", "Lambda", "SQS", "SNS"],
+    "correct": 1,
+    "explanation": "Lambda exécute du code en réponse à des événements."
+  },
+  {
+    "id": "AWS-SAA-056",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'EventBridge ?",
+    "options": [
+      "Bus d'événements serverless",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "EventBridge connecte des applications via des événements."
+  },
+  {
+    "id": "AWS-SAA-057",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Step Functions ?",
+    "options": [
+      "Orchestration de workflows",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Step Functions orchestre plusieurs services AWS."
+  },
+  {
+    "id": "AWS-SAA-058",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Quels types de workflows Step Functions supporte-t-il ?",
+    "options": [
+      "Standard et Express",
+      "Standard seulement",
+      "Express seulement",
+      "Premium"
+    ],
+    "correct": 0,
+    "explanation": "Standard pour long running, Express pour haute fréquence."
+  },
+  {
+    "id": "AWS-SAA-059",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS App Runner ?",
+    "options": [
+      "Service pour déployer des applications conteneurisées",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "App Runner déploie des applications conteneurisées sans gestion d'infrastructure."
+  },
+  {
+    "id": "AWS-SAA-060",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Copilot ?",
+    "options": [
+      "CLI pour déployer des applications sur ECS",
+      "Service de calcul",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Copilot simplifie le déploiement d'applications conteneurisées."
+  },
+  {
+    "id": "AWS-SAA-061",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Proton ?",
+    "options": [
+      "Service de gestion d'infrastructure as code",
+      "Base de données",
+      "Cache",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Proton automatise le déploiement d'infrastructure pour les microservices."
+  },
+  {
+    "id": "AWS-SAA-062",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Compute Optimizer ?",
+    "options": [
+      "Recommande des types d'instance optimaux",
+      "Service de calcul",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "Compute Optimizer analyse les métriques pour recommander des instances."
+  },
+  {
+    "id": "AWS-SAA-063",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une instance graviton ?",
+    "options": [
+      "Instance basée sur des processeurs ARM",
+      "Instance x86",
+      "Instance GPU",
+      "Instance spot"
+    ],
+    "correct": 0,
+    "explanation": "Les instances Graviton utilisent des processeurs ARM personnalisés d'AWS."
+  },
+  {
+    "id": "AWS-SAA-064",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Quel est l'avantage des instances Graviton ?",
+    "options": [
+      "Meilleur rapport performance/prix",
+      "Plus rapides",
+      "Plus sécurisées",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les instances Graviton offrent jusqu'à 40% de meilleur rapport performance/prix."
+  },
+  {
+    "id": "AWS-SAA-065",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Elastic Beanstalk ?",
+    "options": [
+      "PaaS pour déployer des applications",
+      "IaaS",
+      "SaaS",
+      "FaaS"
+    ],
+    "correct": 0,
+    "explanation": "Elastic Beanstalk est un PaaS qui gère l'infrastructure automatiquement."
+  },
+  {
+    "id": "AWS-SAA-066",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Elastic Beanstalk supporte-t-il plusieurs langages ?",
+    "options": [
+      "Oui (Java, .NET, Python, Node.js, etc.)",
+      "Non, seulement Java",
+      "Oui, mais avec conteneurs",
+      "Non, seulement Node.js"
+    ],
+    "correct": 0,
+    "explanation": "Beanstalk supporte de nombreux langages et environnements."
+  },
+  {
+    "id": "AWS-SAA-067",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Lightsail ?",
+    "options": [
+      "Service simplifié pour petites applications",
+      "Compute optimisé",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Lightsail offre des VPS simples à prix fixe."
+  },
+  {
+    "id": "AWS-SAA-068",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS ParallelCluster ?",
+    "options": [
+      "Outil pour clusters HPC",
+      "Service de calcul",
+      "Base de données",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "ParallelCluster simplifie le déploiement de clusters HPC."
+  },
+  {
+    "id": "AWS-SAA-069",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Compute Savings Plans ?",
+    "options": [
+      "Engagement de réduction de coûts sur le calcul",
+      "Instance spot",
+      "Instance réservée",
+      "Instance dédiée"
+    ],
+    "correct": 0,
+    "explanation": "Savings Plans offre des réductions en échange d'un engagement d'utilisation."
+  },
+  {
+    "id": "AWS-SAA-070",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Différence entre Savings Plans et Reserved Instances ?",
+    "options": [
+      "Savings Plans sont plus flexibles (famille d'instances)",
+      "Identiques",
+      "Reserved Instances plus flexibles",
+      "Savings Plans uniquement pour EC2"
+    ],
+    "correct": 0,
+    "explanation": "Savings Plans couvrent EC2, Fargate, Lambda avec plus de flexibilité."
+  },
+  {
+    "id": "AWS-SAA-071",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le scaling prédictif ?",
+    "options": [
+      "Utilise le machine learning pour prévoir la charge",
+      "Scaling basé sur métriques",
+      "Scaling manuel",
+      "Scaling planifié"
+    ],
+    "correct": 0,
+    "explanation": "Predictive scaling utilise ML pour anticiper les pics."
+  },
+  {
+    "id": "AWS-SAA-072",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un launch template vs launch configuration ?",
+    "options": [
+      "Launch template est plus récent et plus flexible",
+      "Identiques",
+      "Launch configuration plus récent",
+      "Launch template moins cher"
+    ],
+    "correct": 0,
+    "explanation": "Launch template supporte les versions et plus de paramètres."
+  },
+  {
+    "id": "AWS-SAA-073",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le hibernation d'instance EC2 ?",
+    "options": [
+      "Met l'instance en pause, préserve la RAM",
+      "Arrête l'instance",
+      "Redémarre l'instance",
+      "Termine l'instance"
+    ],
+    "correct": 0,
+    "explanation": "Hibernation sauvegarde la RAM sur EBS pour reprendre plus tard."
+  },
+  {
+    "id": "AWS-SAA-074",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Quelles instances supportent l'hibernation ?",
+    "options": [
+      "Instances avec RAM <= 16 Go",
+      "Toutes les instances",
+      "Aucune",
+      "Uniquement les instances graviton"
+    ],
+    "correct": 0,
+    "explanation": "L'hibernation est supportée pour les instances avec RAM <= 16 Go."
+  },
+  {
+    "id": "AWS-SAA-075",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le Nitro System ?",
+    "options": [
+      "Plateforme matérielle sous-jacente d'EC2",
+      "Service de calcul",
+      "Base de données",
+      "CDN"
+    ],
+    "correct": 0,
+    "explanation": "Nitro System est la plateforme de virtualisation d'AWS."
+  },
+  {
+    "id": "AWS-SAA-076",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Quel est l'avantage du Nitro System ?",
+    "options": [
+      "Meilleures performances, plus de sécurité",
+      "Moins cher",
+      "Plus de mémoire",
+      "Plus de CPU"
+    ],
+    "correct": 0,
+    "explanation": "Nitro offre des performances quasi-natives et une isolation renforcée."
+  },
+  {
+    "id": "AWS-SAA-077",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une instance bare metal ?",
+    "options": [
+      "Accès direct au matériel physique",
+      "Instance virtualisée",
+      "Instance conteneur",
+      "Instance spot"
+    ],
+    "correct": 0,
+    "explanation": "Les instances bare metal (type *.metal) donnent accès au matériel physique."
+  },
+  {
+    "id": "AWS-SAA-078",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS Elastic Fabric Adapter (EFA) ?",
+    "options": [
+      "Réseau haute performance pour HPC",
+      "Type d'instance",
+      "Service de stockage",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "EFA améliore les performances réseau pour les applications HPC."
+  },
+  {
+    "id": "AWS-SAA-079",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS Elastic Graphics ?",
+    "options": [
+      "Attache des GPU à des instances",
+      "Type d'instance",
+      "Service de stockage",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explanation": "Elastic Graphics ajoute des GPU à des instances EC2."
+  },
+  {
+    "id": "AWS-SAA-080",
+    "theme": "Compute",
+    "theme_label": "Compute",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une instance convertible Reserved Instance ?",
+    "options": [
+      "Peut changer de type d'instance",
+      "Non convertible",
+      "Moins chère",
+      "Plus chère"
+    ],
+    "correct": 0,
+    "explanation": "Les instances réservées convertibles permettent de changer de type/famille."
+  }
+]

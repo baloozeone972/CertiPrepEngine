@@ -1,0 +1,44 @@
+{
+  "id": "ocp17",
+  "name": "Oracle Certified Professional Java 17 (1Z0-829)",
+  "version": "1.0",
+  "description": "Certification professionnelle Java 17 - Développement avancé avec les dernières fonctionnalités LTS",
+  "totalQuestions": 450,
+  "examDurationMinutes": 180,
+  "examQuestionCount": 80,
+  "passingScore": 68,
+  "themes": [
+    {
+      "name": "Java Modules (JPMS)",
+      "count": 50
+    },
+    {
+      "name": "Collections et Génériques",
+      "count": 60
+    },
+    {
+      "name": "Lambda et Streams API",
+      "count": 70
+    },
+    {
+      "name": "Concurrence",
+      "count": 60
+    },
+    {
+      "name": "NIO.2 et I/O",
+      "count": 50
+    },
+    {
+      "name": "JDBC et Bases de données",
+      "count": 50
+    },
+    {
+      "name": "Pattern Matching (instanceof, switch)",
+      "count": 60
+    },
+    {
+      "name": "Records et Sealed Classes",
+      "count": 50
+    }
+  ]
+}

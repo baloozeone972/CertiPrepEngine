@@ -1,0 +1,722 @@
+[
+  {
+    "id": "AND-DS-001",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "easy",
+    "question": "À quoi sert SharedPreferences ?",
+    "options": [
+      "Stocker des paires clé-valeur simples",
+      "Stocker des fichiers",
+      "Stocker des images",
+      "Stocker des vidéos"
+    ],
+    "correct": 0,
+    "explanation": "SharedPreferences est pour les données simples (préférences utilisateur)."
+  },
+  {
+    "id": "AND-DS-002",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "easy",
+    "question": "Comment obtenir une instance de SharedPreferences ?",
+    "options": [
+      "getSharedPreferences(\"name\", MODE_PRIVATE)",
+      "PreferenceManager.getDefaultSharedPreferences(this)",
+      "SharedPreferences.getInstance()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Deux méthodes : nommée ou par défaut."
+  },
+  {
+    "id": "AND-DS-003",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "medium",
+    "question": "Comment écrire dans SharedPreferences ?",
+    "options": [
+      "edit().putString(\"key\", \"value\").apply()",
+      "putString(\"key\", \"value\")",
+      "writeString(\"key\", \"value\")",
+      "setString(\"key\", \"value\")"
+    ],
+    "correct": 0,
+    "explanation": "edit() puis apply() ou commit()."
+  },
+  {
+    "id": "AND-DS-004",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "medium",
+    "question": "Différence entre apply() et commit() ?",
+    "options": [
+      "apply() asynchrone, commit() synchrone",
+      "apply() synchrone, commit() asynchrone",
+      "Identiques",
+      "apply() déprécié"
+    ],
+    "correct": 0,
+    "explanation": "apply() est asynchrone et plus rapide."
+  },
+  {
+    "id": "AND-DS-005",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "hard",
+    "question": "SharedPreferences est-il thread-safe ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement en mode multi-process",
+      "Uniquement en mode single-process"
+    ],
+    "correct": 0,
+    "explanation": "SharedPreferences est thread-safe."
+  },
+  {
+    "id": "AND-DS-006",
+    "theme": "Data Storage",
+    "theme_label": "Preferences DataStore",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Preferences DataStore ?",
+    "options": [
+      "Alternative moderne à SharedPreferences",
+      "Base de données",
+      "Cache",
+      "File storage"
+    ],
+    "correct": 0,
+    "explanation": "DataStore utilise Kotlin coroutines et Flow."
+  },
+  {
+    "id": "AND-DS-007",
+    "theme": "Data Storage",
+    "theme_label": "Preferences DataStore",
+    "difficulty": "hard",
+    "question": "Comment créer un Preferences DataStore ?",
+    "options": [
+      "preferencesDataStore(name)",
+      "DataStore.preferences(name)",
+      "PreferencesDataStore.create(name)",
+      "createDataStore(name)"
+    ],
+    "correct": 0,
+    "explanation": "preferencesDataStore délégué pour créer l'instance."
+  },
+  {
+    "id": "AND-DS-008",
+    "theme": "Data Storage",
+    "theme_label": "Preferences DataStore",
+    "difficulty": "hard",
+    "question": "Comment lire des données depuis DataStore ?",
+    "options": [
+      "dataStore.data.map { it[KEY] }",
+      "dataStore.getValue(KEY)",
+      "dataStore.get(KEY)",
+      "dataStore.read(KEY)"
+    ],
+    "correct": 0,
+    "explanation": "dataStore.data retourne un Flow avec les données."
+  },
+  {
+    "id": "AND-DS-009",
+    "theme": "Data Storage",
+    "theme_label": "Preferences DataStore",
+    "difficulty": "hard",
+    "question": "Comment écrire dans DataStore ?",
+    "options": [
+      "dataStore.edit { it[KEY] = value }",
+      "dataStore.put(KEY, value)",
+      "dataStore.write(KEY, value)",
+      "dataStore.set(KEY, value)"
+    ],
+    "correct": 0,
+    "explanation": "edit() est la méthode pour modifier les données."
+  },
+  {
+    "id": "AND-DS-010",
+    "theme": "Data Storage",
+    "theme_label": "Proto DataStore",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Proto DataStore ?",
+    "options": [
+      "DataStore avec schémas protobuf",
+      "Base de données relationnelle",
+      "Cache mémoire",
+      "File storage"
+    ],
+    "correct": 0,
+    "explanation": "Proto DataStore utilise des messages protobuf typés."
+  },
+  {
+    "id": "AND-DS-011",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Room ?",
+    "options": [
+      "ORM pour SQLite",
+      "Base de données NoSQL",
+      "Cache",
+      "File storage"
+    ],
+    "correct": 0,
+    "explanation": "Room est une couche d'abstraction sur SQLite."
+  },
+  {
+    "id": "AND-DS-012",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque une entité Room ?",
+    "options": ["@Entity", "@Table", "@Database", "@Column"],
+    "correct": 0,
+    "explanation": "@Entity définit une table dans la base."
+  },
+  {
+    "id": "AND-DS-013",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque la clé primaire ?",
+    "options": ["@PrimaryKey", "@Id", "@Key", "@Primary"],
+    "correct": 0,
+    "explanation": "@PrimaryKey définit la clé primaire."
+  },
+  {
+    "id": "AND-DS-014",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "question": "Quelle annotation marque une colonne ?",
+    "options": ["@ColumnInfo", "@Column", "@Field", "@Property"],
+    "correct": 0,
+    "explanation": "@ColumnInfo personnalise le nom de colonne."
+  },
+  {
+    "id": "AND-DS-015",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "question": "Quelle annotation marque un DAO ?",
+    "options": ["@Dao", "@Repository", "@Database", "@Query"],
+    "correct": 0,
+    "explanation": "@Dao définit les méthodes d'accès aux données."
+  },
+  {
+    "id": "AND-DS-016",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "question": "Quelle annotation marque une requête SQL ?",
+    "options": ["@Query", "@SQL", "@Select", "@RawQuery"],
+    "correct": 0,
+    "explanation": "@Query exécute une requête SQL."
+  },
+  {
+    "id": "AND-DS-017",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "hard",
+    "question": "Comment Room gère-t-il les migrations ?",
+    "options": [
+      "Migration class",
+      "addMigrations()",
+      "fallbackToDestructiveMigration()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs options pour les migrations."
+  },
+  {
+    "id": "AND-DS-018",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "hard",
+    "question": "Que fait @Transaction ?",
+    "options": [
+      "Exécute en une seule transaction",
+      "Annule la transaction",
+      "Crée une transaction",
+      "Ferme la transaction"
+    ],
+    "correct": 0,
+    "explanation": "@Transaction garantit l'atomicité des opérations."
+  },
+  {
+    "id": "AND-DS-019",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "hard",
+    "question": "Comment définir une relation one-to-many dans Room ?",
+    "options": [
+      "@Relation",
+      "@ForeignKey",
+      "@Embedded",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@Relation avec @ForeignKey pour les contraintes."
+  },
+  {
+    "id": "AND-DS-020",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "hard",
+    "question": "Que fait @Embedded ?",
+    "options": [
+      "Inclut les champs d'un objet",
+      "Crée une relation",
+      "Définit une clé",
+      "Crée un index"
+    ],
+    "correct": 0,
+    "explanation": "@Embedded décompose un objet en plusieurs colonnes."
+  },
+  {
+    "id": "AND-DS-021",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "hard",
+    "question": "Comment Room gère-t-il les types complexes ?",
+    "options": [
+      "TypeConverter",
+      "TypeAdapter",
+      "TypeMapper",
+      "TypeSerializer"
+    ],
+    "correct": 0,
+    "explanation": "TypeConverter convertit les types personnalisés."
+  },
+  {
+    "id": "AND-DS-022",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "hard",
+    "question": "Comment observer les changements en base ?",
+    "options": [
+      "LiveData ou Flow",
+      "RxJava",
+      "Callback",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Room supporte LiveData, Flow et RxJava."
+  },
+  {
+    "id": "AND-DS-023",
+    "theme": "Data Storage",
+    "theme_label": "SQLite",
+    "difficulty": "hard",
+    "question": "Room utilise quelle base de données sous-jacente ?",
+    "options": ["SQLite", "MySQL", "PostgreSQL", "Realm"],
+    "correct": 0,
+    "explanation": "Room est une abstraction sur SQLite."
+  },
+  {
+    "id": "AND-DS-024",
+    "theme": "Data Storage",
+    "theme_label": "Internal Storage",
+    "difficulty": "easy",
+    "question": "Où sont stockés les fichiers internes ?",
+    "options": [
+      "getFilesDir()",
+      "getExternalFilesDir()",
+      "getCacheDir()",
+      "getDataDir()"
+    ],
+    "correct": 0,
+    "explanation": "getFilesDir() pour les fichiers privés de l'app."
+  },
+  {
+    "id": "AND-DS-025",
+    "theme": "Data Storage",
+    "theme_label": "Internal Storage",
+    "difficulty": "medium",
+    "question": "Les fichiers internes sont-ils accessibles par d'autres apps ?",
+    "options": [
+      "Non, privés",
+      "Oui",
+      "Uniquement en root",
+      "Uniquement si partagés"
+    ],
+    "correct": 0,
+    "explanation": "Les fichiers internes sont privés à l'application."
+  },
+  {
+    "id": "AND-DS-026",
+    "theme": "Data Storage",
+    "theme_label": "External Storage",
+    "difficulty": "easy",
+    "question": "Comment accéder au stockage externe ?",
+    "options": [
+      "getExternalFilesDir()",
+      "getExternalStorageDirectory()",
+      "getExternalCacheDir()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "getExternalFilesDir() et getExternalCacheDir() sont recommandés."
+  },
+  {
+    "id": "AND-DS-027",
+    "theme": "Data Storage",
+    "theme_label": "External Storage",
+    "difficulty": "hard",
+    "question": "Quelle permission est nécessaire pour le stockage externe ?",
+    "options": [
+      "READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE",
+      "ACCESS_EXTERNAL_STORAGE",
+      "STORAGE_PERMISSION",
+      "FILE_ACCESS"
+    ],
+    "correct": 0,
+    "explanation": "Permissions pour accéder aux fichiers externes."
+  },
+  {
+    "id": "AND-DS-028",
+    "theme": "Data Storage",
+    "theme_label": "Scoped Storage",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le Scoped Storage ?",
+    "options": [
+      "Accès limité au stockage externe",
+      "Accès complet au stockage",
+      "Suppression du stockage",
+      "Stockage chiffré"
+    ],
+    "correct": 0,
+    "explanation": "Scoped Storage limite l'accès aux fichiers de l'app."
+  },
+  {
+    "id": "AND-DS-029",
+    "theme": "Data Storage",
+    "theme_label": "Cache",
+    "difficulty": "easy",
+    "question": "Comment accéder au cache de l'application ?",
+    "options": [
+      "cacheDir",
+      "getCacheDir()",
+      "externalCacheDir",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "cacheDir pour cache interne, externalCacheDir pour externe."
+  },
+  {
+    "id": "AND-DS-030",
+    "theme": "Data Storage",
+    "theme_label": "Cache",
+    "difficulty": "medium",
+    "question": "Le cache est-il automatiquement supprimé ?",
+    "options": [
+      "Oui, par le système",
+      "Non, manuellement",
+      "Uniquement au redémarrage",
+      "Uniquement si espace faible"
+    ],
+    "correct": 3,
+    "explanation": "Le système peut vider le cache en cas d'espace faible."
+  },
+  {
+    "id": "AND-DS-031",
+    "theme": "Data Storage",
+    "theme_label": "DataStore vs Room",
+    "difficulty": "hard",
+    "question": "Quand utiliser DataStore plutôt que Room ?",
+    "options": [
+      "Données simples, petites quantités",
+      "Données complexes, grandes quantités",
+      "Relations entre données",
+      "Requêtes complexes"
+    ],
+    "correct": 0,
+    "explanation": "DataStore pour les préférences, Room pour les données structurées."
+  },
+  {
+    "id": "AND-DS-032",
+    "theme": "Data Storage",
+    "theme_label": "Realm",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Realm ?",
+    "options": [
+      "Base de données mobile",
+      "ORM",
+      "Alternative à SQLite",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Realm est une base de données mobile objet."
+  },
+  {
+    "id": "AND-DS-033",
+    "theme": "Data Storage",
+    "theme_label": "ObjectBox",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ObjectBox ?",
+    "options": [
+      "Base de données NoSQL",
+      "ORM",
+      "Alternative à Room",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ObjectBox est une base de données NoSQL haute performance."
+  },
+  {
+    "id": "AND-DS-034",
+    "theme": "Data Storage",
+    "theme_label": "File Storage",
+    "difficulty": "medium",
+    "question": "Comment écrire un fichier ?",
+    "options": [
+      "FileOutputStream",
+      "writeText()",
+      "Files.write()",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "FileOutputStream ou Files.write() en Kotlin."
+  },
+  {
+    "id": "AND-DS-035",
+    "theme": "Data Storage",
+    "theme_label": "File Storage",
+    "difficulty": "medium",
+    "question": "Comment lire un fichier ?",
+    "options": [
+      "FileInputStream",
+      "readText()",
+      "Files.readAllBytes()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour lire des fichiers."
+  },
+  {
+    "id": "AND-DS-036",
+    "theme": "Data Storage",
+    "theme_label": "Assets",
+    "difficulty": "hard",
+    "question": "Où placer les fichiers assets ?",
+    "options": [
+      "src/main/assets",
+      "src/main/res/raw",
+      "src/main/resources",
+      "src/main/files"
+    ],
+    "correct": 0,
+    "explanation": "Les assets sont dans le dossier assets."
+  },
+  {
+    "id": "AND-DS-037",
+    "theme": "Data Storage",
+    "theme_label": "Assets",
+    "difficulty": "hard",
+    "question": "Comment lire un fichier asset ?",
+    "options": [
+      "assets.open(\"file.txt\")",
+      "getAssets().open(\"file.txt\")",
+      "openAsset(\"file.txt\")",
+      "readAsset(\"file.txt\")"
+    ],
+    "correct": 1,
+    "explanation": "getAssets().open() donne un InputStream."
+  },
+  {
+    "id": "AND-DS-038",
+    "theme": "Data Storage",
+    "theme_label": "Raw resources",
+    "difficulty": "hard",
+    "question": "Où placer les fichiers raw ?",
+    "options": [
+      "res/raw",
+      "res/assets",
+      "res/files",
+      "res/data"
+    ],
+    "correct": 0,
+    "explanation": "Les fichiers raw sont dans res/raw."
+  },
+  {
+    "id": "AND-DS-039",
+    "theme": "Data Storage",
+    "theme_label": "Raw resources",
+    "difficulty": "hard",
+    "question": "Comment accéder à un fichier raw ?",
+    "options": [
+      "R.raw.filename",
+      "getResources().openRawResource(R.raw.filename)",
+      "openRawResource(R.raw.filename)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "L'ID et la méthode openRawResource."
+  },
+  {
+    "id": "AND-DS-040",
+    "theme": "Data Storage",
+    "theme_label": "ContentProvider",
+    "difficulty": "hard",
+    "question": "À quoi sert un ContentProvider ?",
+    "options": [
+      "Partager des données entre apps",
+      "Stocker des données",
+      "Cacher des données",
+      "Chiffrer des données"
+    ],
+    "correct": 0,
+    "explanation": "ContentProvider permet le partage de données."
+  },
+  {
+    "id": "AND-DS-041",
+    "theme": "Data Storage",
+    "theme_label": "ContentProvider",
+    "difficulty": "hard",
+    "question": "Quelles méthodes doit implémenter un ContentProvider ?",
+    "options": [
+      "query, insert, update, delete, getType",
+      "select, insert, update, delete",
+      "read, write, update, delete",
+      "get, set, update, delete"
+    ],
+    "correct": 0,
+    "explanation": "Les 5 méthodes CRUD de base."
+  },
+  {
+    "id": "AND-DS-042",
+    "theme": "Data Storage",
+    "theme_label": "MediaStore",
+    "difficulty": "hard",
+    "question": "À quoi sert MediaStore ?",
+    "options": [
+      "Accéder aux médias (images, vidéos, audio)",
+      "Stocker des médias",
+      "Supprimer des médias",
+      "Encoder des médias"
+    ],
+    "correct": 0,
+    "explanation": "MediaStore donne accès aux médias de l'appareil."
+  },
+  {
+    "id": "AND-DS-043",
+    "theme": "Data Storage",
+    "theme_label": "MediaStore",
+    "difficulty": "hard",
+    "question": "Quelle permission est nécessaire pour MediaStore ?",
+    "options": [
+      "READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "ACCESS_MEDIA",
+      "MEDIA_PERMISSION"
+    ],
+    "correct": 0,
+    "explanation": "Permissions granulaires selon le type de média."
+  },
+  {
+    "id": "AND-DS-044",
+    "theme": "Data Storage",
+    "theme_label": "SAF (Storage Access Framework)",
+    "difficulty": "hard",
+    "question": "À quoi sert SAF ?",
+    "options": [
+      "Accès aux documents via un sélecteur",
+      "Accès direct aux fichiers",
+      "Stockage chiffré",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "SAF permet à l'utilisateur de choisir des documents."
+  },
+  {
+    "id": "AND-DS-045",
+    "theme": "Data Storage",
+    "theme_label": "SAF",
+    "difficulty": "hard",
+    "question": "Comment lancer le sélecteur SAF ?",
+    "options": [
+      "Intent(ACTION_OPEN_DOCUMENT)",
+      "Intent(ACTION_GET_CONTENT)",
+      "Intent(ACTION_PICK)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "ACTION_OPEN_DOCUMENT ou ACTION_GET_CONTENT."
+  },
+  {
+    "id": "AND-DS-046",
+    "theme": "Data Storage",
+    "theme_label": "Database encryption",
+    "difficulty": "hard",
+    "question": "Comment chiffrer une base Room ?",
+    "options": [
+      "SQLCipher",
+      "Room avec support SQLCipher",
+      "Android Keystore",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "SQLCipher avec Room pour base chiffrée."
+  },
+  {
+    "id": "AND-DS-047",
+    "theme": "Data Storage",
+    "theme_label": "Backup",
+    "difficulty": "hard",
+    "question": "Comment activer le backup Auto Backup ?",
+    "options": [
+      "android:allowBackup=\"true\"",
+      "android:fullBackupContent",
+      "BackupAgent",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "allowBackup et fullBackupContent."
+  },
+  {
+    "id": "AND-DS-048",
+    "theme": "Data Storage",
+    "theme_label": "Backup",
+    "difficulty": "hard",
+    "question": "Quelles données sont sauvegardées automatiquement ?",
+    "options": [
+      "SharedPreferences, fichiers internes, base Room",
+      "Fichiers externes",
+      "Cache",
+      "Assets"
+    ],
+    "correct": 0,
+    "explanation": "Les données internes sont sauvegardées."
+  },
+  {
+    "id": "AND-DS-049",
+    "theme": "Data Storage",
+    "theme_label": "Testing database",
+    "difficulty": "hard",
+    "question": "Comment tester une base Room ?",
+    "options": [
+      "InMemoryDatabase",
+      "createDatabaseBuilder",
+      "Room.inMemoryDatabaseBuilder",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "inMemoryDatabaseBuilder pour base en mémoire."
+  },
+  {
+    "id": "AND-DS-050",
+    "theme": "Data Storage",
+    "theme_label": "Testing database",
+    "difficulty": "hard",
+    "question": "Comment tester les migrations Room ?",
+    "options": [
+      "MigrationTestHelper",
+      "testMigrations()",
+      "runMigrationsTest()",
+      "verifyMigrations()"
+    ],
+    "correct": 0,
+    "explanation": "MigrationTestHelper de androidx.room.testing."
+  }
+]

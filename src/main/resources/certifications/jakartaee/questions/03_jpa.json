@@ -1,0 +1,902 @@
+[
+  {
+    "id": "JAK-JPA-001",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque une classe comme entité JPA ?",
+    "options": ["@Entity", "@Table", "@Column", "@Id"],
+    "correct": 0,
+    "explanation": "@Entity déclare une classe comme entité JPA."
+  },
+  {
+    "id": "JAK-JPA-002",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque la clé primaire ?",
+    "options": ["@Id", "@PrimaryKey", "@Key", "@Pk"],
+    "correct": 0,
+    "explanation": "@Id déclare la clé primaire de l'entité."
+  },
+  {
+    "id": "JAK-JPA-003",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Annotations de base",
+    "difficulty": "easy",
+    "question": "Quelle annotation spécifie le nom de la table ?",
+    "options": ["@Table", "@Entity", "@Column", "@Schema"],
+    "correct": 0,
+    "explanation": "@Table(name = \"ma_table\") définit le nom de la table."
+  },
+  {
+    "id": "JAK-JPA-004",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Annotations de base",
+    "difficulty": "medium",
+    "question": "Quelle annotation spécifie le nom de la colonne ?",
+    "options": ["@Column", "@Table", "@JoinColumn", "@Attribute"],
+    "correct": 0,
+    "explanation": "@Column(name = \"ma_colonne\") définit le nom de la colonne."
+  },
+  {
+    "id": "JAK-JPA-005",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Génération d'ID",
+    "difficulty": "medium",
+    "question": "Quelle annotation génère un ID auto-incrémenté ?",
+    "options": [
+      "@GeneratedValue(strategy = GenerationType.IDENTITY)",
+      "@GeneratedValue(strategy = GenerationType.AUTO)",
+      "@GeneratedValue(strategy = GenerationType.SEQUENCE)",
+      "@GeneratedValue(strategy = GenerationType.TABLE)"
+    ],
+    "correct": 0,
+    "explanation": "IDENTITY utilise l'auto-incrémentation de la base."
+  },
+  {
+    "id": "JAK-JPA-006",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Génération d'ID",
+    "difficulty": "medium",
+    "question": "Quelle stratégie utilise une séquence ?",
+    "options": [
+      "@GeneratedValue(strategy = GenerationType.SEQUENCE)",
+      "@GeneratedValue(strategy = GenerationType.IDENTITY)",
+      "@GeneratedValue(strategy = GenerationType.AUTO)",
+      "@GeneratedValue(strategy = GenerationType.TABLE)"
+    ],
+    "correct": 0,
+    "explanation": "SEQUENCE utilise une séquence de base de données."
+  },
+  {
+    "id": "JAK-JPA-007",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Génération d'ID",
+    "difficulty": "hard",
+    "question": "Comment spécifier le nom de la séquence ?",
+    "options": [
+      "@SequenceGenerator(name = \"seq\", sequenceName = \"my_seq\")",
+      "@GeneratedValue(generator = \"seq\")",
+      "@Id @GeneratedValue(generator = \"seq\")",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Il faut déclarer le générateur et l'utiliser."
+  },
+  {
+    "id": "JAK-JPA-008",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Relations",
+    "difficulty": "medium",
+    "question": "Quelle annotation définit une relation Many-to-One ?",
+    "options": ["@ManyToOne", "@OneToMany", "@OneToOne", "@ManyToMany"],
+    "correct": 0,
+    "explanation": "@ManyToOne est pour les relations plusieurs-vers-un."
+  },
+  {
+    "id": "JAK-JPA-009",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Relations",
+    "difficulty": "medium",
+    "question": "Quelle annotation définit une relation One-to-Many ?",
+    "options": ["@OneToMany", "@ManyToOne", "@OneToOne", "@ManyToMany"],
+    "correct": 0,
+    "explanation": "@OneToMany est pour les relations un-vers-plusieurs."
+  },
+  {
+    "id": "JAK-JPA-010",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Relations",
+    "difficulty": "medium",
+    "question": "Quelle annotation définit une relation One-to-One ?",
+    "options": ["@OneToOne", "@ManyToOne", "@OneToMany", "@ManyToMany"],
+    "correct": 0,
+    "explanation": "@OneToOne est pour les relations un-à-un."
+  },
+  {
+    "id": "JAK-JPA-011",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Relations",
+    "difficulty": "medium",
+    "question": "Quelle annotation définit une relation Many-to-Many ?",
+    "options": ["@ManyToMany", "@OneToMany", "@ManyToOne", "@OneToOne"],
+    "correct": 0,
+    "explanation": "@ManyToMany est pour les relations plusieurs-à-plusieurs."
+  },
+  {
+    "id": "JAK-JPA-012",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Relations",
+    "difficulty": "hard",
+    "question": "Quelle annotation définit la clé étrangère ?",
+    "options": ["@JoinColumn", "@ForeignKey", "@Column", "@JoinTable"],
+    "correct": 0,
+    "explanation": "@JoinColumn spécifie la colonne de clé étrangère."
+  },
+  {
+    "id": "JAK-JPA-013",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Relations",
+    "difficulty": "hard",
+    "question": "Quelle annotation est utilisée pour une relation ManyToMany ?",
+    "options": ["@JoinTable", "@JoinColumn", "@Table", "@JoinColumns"],
+    "correct": 0,
+    "explanation": "@JoinTable spécifie la table de jointure."
+  },
+  {
+    "id": "JAK-JPA-014",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Fetch types",
+    "difficulty": "hard",
+    "question": "Quel est le fetch type par défaut pour @ManyToOne ?",
+    "options": ["FetchType.EAGER", "FetchType.LAZY", "FetchType.DEFAULT", "FetchType.JOIN"],
+    "correct": 0,
+    "explanation": "@ManyToOne est EAGER par défaut."
+  },
+  {
+    "id": "JAK-JPA-015",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Fetch types",
+    "difficulty": "hard",
+    "question": "Quel est le fetch type par défaut pour @OneToMany ?",
+    "options": ["FetchType.LAZY", "FetchType.EAGER", "FetchType.DEFAULT", "FetchType.JOIN"],
+    "correct": 0,
+    "explanation": "@OneToMany est LAZY par défaut."
+  },
+  {
+    "id": "JAK-JPA-016",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Fetch types",
+    "difficulty": "hard",
+    "question": "Comment forcer un fetch EAGER sur une relation LAZY ?",
+    "options": [
+      "@OneToMany(fetch = FetchType.EAGER)",
+      "@OneToMany(eager = true)",
+      "@OneToMany(lazy = false)",
+      "@OneToMany(immediate = true)"
+    ],
+    "correct": 0,
+    "explanation": "fetch = FetchType.EAGER force le chargement immédiat."
+  },
+  {
+    "id": "JAK-JPA-017",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Cascade",
+    "difficulty": "hard",
+    "question": "Quelle cascade persiste les entités liées ?",
+    "options": ["CascadeType.PERSIST", "CascadeType.MERGE", "CascadeType.REMOVE", "CascadeType.ALL"],
+    "correct": 0,
+    "explanation": "PERSIST propage l'opération persist aux entités liées."
+  },
+  {
+    "id": "JAK-JPA-018",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Cascade",
+    "difficulty": "hard",
+    "question": "Quelle cascade supprime les entités liées ?",
+    "options": ["CascadeType.REMOVE", "CascadeType.PERSIST", "CascadeType.MERGE", "CascadeType.ALL"],
+    "correct": 0,
+    "explanation": "REMOVE propage la suppression aux entités liées."
+  },
+  {
+    "id": "JAK-JPA-019",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Cascade",
+    "difficulty": "hard",
+    "question": "Quelle cascade inclut toutes les opérations ?",
+    "options": ["CascadeType.ALL", "CascadeType.PERSIST", "CascadeType.REMOVE", "CascadeType.MERGE"],
+    "correct": 0,
+    "explanation": "ALL inclut toutes les cascades."
+  },
+  {
+    "id": "JAK-JPA-020",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "medium",
+    "question": "Quelle méthode rend une entité persistante ?",
+    "options": ["persist()", "merge()", "save()", "update()"],
+    "correct": 0,
+    "explanation": "persist() rend une entité gérée et planifie l'insertion."
+  },
+  {
+    "id": "JAK-JPA-021",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "medium",
+    "question": "Quelle méthode fusionne une entité détachée ?",
+    "options": ["merge()", "persist()", "save()", "update()"],
+    "correct": 0,
+    "explanation": "merge() retourne une entité gérée à partir d'une entité détachée."
+  },
+  {
+    "id": "JAK-JPA-022",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "medium",
+    "question": "Quelle méthode supprime une entité ?",
+    "options": ["remove()", "delete()", "erase()", "drop()"],
+    "correct": 0,
+    "explanation": "remove() supprime l'entité de la base."
+  },
+  {
+    "id": "JAK-JPA-023",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "hard",
+    "question": "Quelle méthode recherche une entité par sa clé primaire ?",
+    "options": ["find()", "get()", "load()", "retrieve()"],
+    "correct": 0,
+    "explanation": "find() retourne l'entité ou null si non trouvée."
+  },
+  {
+    "id": "JAK-JPA-024",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "hard",
+    "question": "Différence entre find() et getReference() ?",
+    "options": [
+      "getReference() retourne un proxy, find() charge l'entité",
+      "find() retourne un proxy, getReference() charge",
+      "Identiques",
+      "getReference() lance exception si non trouvée"
+    ],
+    "correct": 0,
+    "explanation": "getReference() retourne un proxy sans accès base."
+  },
+  {
+    "id": "JAK-JPA-025",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "hard",
+    "question": "Que fait flush() ?",
+    "options": [
+      "Synchronise le contexte avec la base",
+      "Ferme le contexte",
+      "Annule les changements",
+      "Vide le cache"
+    ],
+    "correct": 0,
+    "explanation": "flush() exécute les requêtes SQL en attente."
+  },
+  {
+    "id": "JAK-JPA-026",
+    "theme": "Jakarta Persistence",
+    "theme_label": "EntityManager",
+    "difficulty": "hard",
+    "question": "Que fait clear() sur EntityManager ?",
+    "options": [
+      "Détache toutes les entités",
+      "Supprime toutes les entités",
+      "Ferme le contexte",
+      "Vide la base"
+    ],
+    "correct": 0,
+    "explanation": "clear() rend toutes les entités détachées."
+  },
+  {
+    "id": "JAK-JPA-027",
+    "theme": "Jakarta Persistence",
+    "theme_label": "JPQL",
+    "difficulty": "medium",
+    "question": "Quelle méthode exécute une requête JPQL ?",
+    "options": ["createQuery()", "createNativeQuery()", "createNamedQuery()", "createJPQL()"],
+    "correct": 0,
+    "explanation": "createQuery() crée une requête JPQL."
+  },
+  {
+    "id": "JAK-JPA-028",
+    "theme": "Jakarta Persistence",
+    "theme_label": "JPQL",
+    "difficulty": "hard",
+    "question": "Comment lier un paramètre dans JPQL ?",
+    "options": [
+      "query.setParameter(\"name\", value)",
+      "query.setParam(1, value)",
+      "query.setParameter(1, value)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Paramètres nommés (:name) ou positionnels (?1)."
+  },
+  {
+    "id": "JAK-JPA-029",
+    "theme": "Jakarta Persistence",
+    "theme_label": "JPQL",
+    "difficulty": "hard",
+    "question": "Comment obtenir la liste des résultats ?",
+    "options": ["getResultList()", "getSingleResult()", "getList()", "getResults()"],
+    "correct": 0,
+    "explanation": "getResultList() retourne une liste de résultats."
+  },
+  {
+    "id": "JAK-JPA-030",
+    "theme": "Jakarta Persistence",
+    "theme_label": "JPQL",
+    "difficulty": "hard",
+    "question": "Quand utiliser getSingleResult() ?",
+    "options": [
+      "Pour un résultat unique",
+      "Pour plusieurs résultats",
+      "Pour aucun résultat",
+      "Pour des mises à jour"
+    ],
+    "correct": 0,
+    "explanation": "getSingleResult() suppose exactement un résultat."
+  },
+  {
+    "id": "JAK-JPA-031",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Named queries",
+    "difficulty": "hard",
+    "question": "Comment définir une named query ?",
+    "options": [
+      "@NamedQuery(name = \"findAll\", query = \"SELECT u FROM User u\")",
+      "@Query(name = \"findAll\", value = \"SELECT u FROM User u\")",
+      "@Named(name = \"findAll\", query = \"SELECT u FROM User u\")",
+      "@Query(name = \"findAll\", query = \"SELECT u FROM User u\")"
+    ],
+    "correct": 0,
+    "explanation": "@NamedQuery définit une requête nommée."
+  },
+  {
+    "id": "JAK-JPA-032",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Named queries",
+    "difficulty": "hard",
+    "question": "Comment exécuter une named query ?",
+    "options": [
+      "em.createNamedQuery(\"findAll\", User.class)",
+      "em.createQuery(\"findAll\", User.class)",
+      "em.getNamedQuery(\"findAll\")",
+      "em.find(\"findAll\")"
+    ],
+    "correct": 0,
+    "explanation": "createNamedQuery() exécute une requête nommée."
+  },
+  {
+    "id": "JAK-JPA-033",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Native queries",
+    "difficulty": "hard",
+    "question": "Comment exécuter une requête SQL native ?",
+    "options": [
+      "em.createNativeQuery(\"SELECT * FROM user\")",
+      "em.createQuery(\"SELECT * FROM user\")",
+      "em.nativeQuery(\"SELECT * FROM user\")",
+      "em.sqlQuery(\"SELECT * FROM user\")"
+    ],
+    "correct": 0,
+    "explanation": "createNativeQuery() exécute du SQL natif."
+  },
+  {
+    "id": "JAK-JPA-034",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Native queries",
+    "difficulty": "hard",
+    "question": "Comment mapper une native query à une entité ?",
+    "options": [
+      "em.createNativeQuery(\"SELECT * FROM user\", User.class)",
+      "em.createNativeQuery(\"SELECT * FROM user\").addEntity(User.class)",
+      "em.createQuery(\"SELECT * FROM user\", User.class)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Le second paramètre spécifie la classe de résultat."
+  },
+  {
+    "id": "JAK-JPA-035",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Quel est le cache L1 dans JPA ?",
+    "options": [
+      "Cache du contexte de persistance",
+      "Cache de second niveau",
+      "Cache de requête",
+      "Cache de base"
+    ],
+    "correct": 0,
+    "explanation": "Le cache L1 est le cache transactionnel (persistence context)."
+  },
+  {
+    "id": "JAK-JPA-036",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Quelle annotation active le cache L2 ?",
+    "options": ["@Cacheable", "@Cachable", "@Cache", "@SecondLevelCache"],
+    "correct": 0,
+    "explanation": "@Cacheable marque une entité comme cachable en L2."
+  },
+  {
+    "id": "JAK-JPA-037",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Inheritance",
+    "difficulty": "hard",
+    "question": "Quelle stratégie d'héritage utilise une seule table ?",
+    "options": [
+      "SINGLE_TABLE",
+      "TABLE_PER_CLASS",
+      "JOINED",
+      "MAPPED_SUPERCLASS"
+    ],
+    "correct": 0,
+    "explanation": "SINGLE_TABLE stocke toute la hiérarchie dans une table."
+  },
+  {
+    "id": "JAK-JPA-038",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Inheritance",
+    "difficulty": "hard",
+    "question": "Quelle stratégie d'héritage utilise une table par classe ?",
+    "options": [
+      "TABLE_PER_CLASS",
+      "SINGLE_TABLE",
+      "JOINED",
+      "MAPPED_SUPERCLASS"
+    ],
+    "correct": 0,
+    "explanation": "TABLE_PER_CLASS a une table par classe concrète."
+  },
+  {
+    "id": "JAK-JPA-039",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Inheritance",
+    "difficulty": "hard",
+    "question": "Quelle stratégie d'héritage utilise des tables jointes ?",
+    "options": [
+      "JOINED",
+      "SINGLE_TABLE",
+      "TABLE_PER_CLASS",
+      "MAPPED_SUPERCLASS"
+    ],
+    "correct": 0,
+    "explanation": "JOINED a une table principale et des tables filles."
+  },
+  {
+    "id": "JAK-JPA-040",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Embeddable",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque une classe embeddable ?",
+    "options": ["@Embeddable", "@Embedded", "@EmbeddedId", "@Embed"],
+    "correct": 0,
+    "explanation": "@Embeddable marque une classe pouvant être incorporée."
+  },
+  {
+    "id": "JAK-JPA-041",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Embeddable",
+    "difficulty": "hard",
+    "question": "Quelle annotation inclut un embeddable ?",
+    "options": ["@Embedded", "@Embeddable", "@EmbeddedId", "@Embed"],
+    "correct": 0,
+    "explanation": "@Embedded inclut une instance embeddable."
+  },
+  {
+    "id": "JAK-JPA-042",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Composite key",
+    "difficulty": "hard",
+    "question": "Comment définir une clé composite ?",
+    "options": [
+      "@EmbeddedId",
+      "@IdClass",
+      "@CompositeId",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@EmbeddedId ou @IdClass pour les clés composites."
+  },
+  {
+    "id": "JAK-JPA-043",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Lifecycle callbacks",
+    "difficulty": "hard",
+    "question": "Quelle annotation est appelée avant persist ?",
+    "options": ["@PrePersist", "@PostPersist", "@PreUpdate", "@PostLoad"],
+    "correct": 0,
+    "explanation": "@PrePersist avant l'insertion."
+  },
+  {
+    "id": "JAK-JPA-044",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Lifecycle callbacks",
+    "difficulty": "hard",
+    "question": "Quelle annotation est appelée après la suppression ?",
+    "options": ["@PostRemove", "@PreRemove", "@PostPersist", "@PostLoad"],
+    "correct": 0,
+    "explanation": "@PostRemove après suppression."
+  },
+  {
+    "id": "JAK-JPA-045",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Locking",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le locking optimiste ?",
+    "options": [
+      "Utilise une version pour détecter les conflits",
+      "Verrouille les tables",
+      "Verrouille les lignes",
+      "Verrouille le cache"
+    ],
+    "correct": 0,
+    "explanation": "Le locking optimiste utilise @Version."
+  },
+  {
+    "id": "JAK-JPA-046",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Locking",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un champ de version ?",
+    "options": ["@Version", "@OptimisticLock", "@Lock", "@RowVersion"],
+    "correct": 0,
+    "explanation": "@Version active le locking optimiste."
+  },
+  {
+    "id": "JAK-JPA-047",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Locking",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le locking pessimiste ?",
+    "options": [
+      "Verrouille la ligne en base",
+      "Utilise une version",
+      "Détecte les conflits",
+      "Annule les transactions"
+    ],
+    "correct": 0,
+    "explanation": "Le locking pessimiste verrouille la ligne immédiatement."
+  },
+  {
+    "id": "JAK-JPA-048",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Criteria API",
+    "difficulty": "hard",
+    "question": "À quoi sert la Criteria API ?",
+    "options": [
+      "Requêtes dynamiques type-safe",
+      "Requêtes statiques",
+      "Requêtes natives",
+      "Requêtes JPQL"
+    ],
+    "correct": 0,
+    "explanation": "La Criteria API permet des requêtes programmatiques."
+  },
+  {
+    "id": "JAK-JPA-049",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Criteria API",
+    "difficulty": "hard",
+    "question": "Comment créer une CriteriaBuilder ?",
+    "options": [
+      "em.getCriteriaBuilder()",
+      "CriteriaBuilder.create(em)",
+      "new CriteriaBuilder(em)",
+      "em.createCriteriaBuilder()"
+    ],
+    "correct": 0,
+    "explanation": "getCriteriaBuilder() retourne le builder."
+  },
+  {
+    "id": "JAK-JPA-050",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Metamodel",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le metamodel JPA ?",
+    "options": [
+      "Classes générées pour accès type-safe",
+      "Métadonnées de base",
+      "Configuration JPA",
+      "Cache des entités"
+    ],
+    "correct": 0,
+    "explanation": "Le metamodel génère des classes pour les requêtes type-safe."
+  },
+  {
+    "id": "JAK-JPA-051",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Entity Graph",
+    "difficulty": "hard",
+    "question": "À quoi sert Entity Graph ?",
+    "options": [
+      "Contrôler les chargements de relations",
+      "Définir les tables",
+      "Gérer les index",
+      "Configurer le cache"
+    ],
+    "correct": 0,
+    "explanation": "Entity Graph spécifie quelles relations charger."
+  },
+  {
+    "id": "JAK-JPA-052",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Entity Graph",
+    "difficulty": "hard",
+    "question": "Quelle annotation définit un Entity Graph ?",
+    "options": ["@NamedEntityGraph", "@EntityGraph", "@Graph", "@FetchGraph"],
+    "correct": 0,
+    "explanation": "@NamedEntityGraph définit un graph nommé."
+  },
+  {
+    "id": "JAK-JPA-053",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Persistence Unit",
+    "difficulty": "hard",
+    "question": "Où est défini persistence.xml ?",
+    "options": [
+      "META-INF/persistence.xml",
+      "WEB-INF/persistence.xml",
+      "META-INF/classes/persistence.xml",
+      "WEB-INF/classes/persistence.xml"
+    ],
+    "correct": 0,
+    "explanation": "persistence.xml est dans META-INF."
+  },
+  {
+    "id": "JAK-JPA-054",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Persistence Unit",
+    "difficulty": "hard",
+    "question": "Comment créer un EntityManagerFactory ?",
+    "options": [
+      "Persistence.createEntityManagerFactory(\"unit\")",
+      "EntityManagerFactory.create(\"unit\")",
+      "Persistence.getEntityManagerFactory(\"unit\")",
+      "EntityManager.createFactory(\"unit\")"
+    ],
+    "correct": 0,
+    "explanation": "Persistence.createEntityManagerFactory() crée la factory."
+  },
+  {
+    "id": "JAK-JPA-055",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Transaction",
+    "difficulty": "hard",
+    "question": "Comment démarrer une transaction ?",
+    "options": [
+      "em.getTransaction().begin()",
+      "em.beginTransaction()",
+      "em.startTransaction()",
+      "em.transaction().start()"
+    ],
+    "correct": 0,
+    "explanation": "getTransaction().begin() démarre la transaction."
+  },
+  {
+    "id": "JAK-JPA-056",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Transaction",
+    "difficulty": "hard",
+    "question": "Comment valider une transaction ?",
+    "options": ["em.getTransaction().commit()", "em.commit()", "em.flush()", "em.getTransaction().flush()"],
+    "correct": 0,
+    "explanation": "commit() valide la transaction."
+  },
+  {
+    "id": "JAK-JPA-057",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Transaction",
+    "difficulty": "hard",
+    "question": "Comment annuler une transaction ?",
+    "options": ["em.getTransaction().rollback()", "em.rollback()", "em.cancel()", "em.getTransaction().cancel()"],
+    "correct": 0,
+    "explanation": "rollback() annule la transaction."
+  },
+  {
+    "id": "JAK-JPA-058",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Exceptions",
+    "difficulty": "hard",
+    "question": "Quelle exception est levée pour une entité non trouvée ?",
+    "options": [
+      "EntityNotFoundException",
+      "NoResultException",
+      "PersistenceException",
+      "IllegalArgumentException"
+    ],
+    "correct": 0,
+    "explanation": "EntityNotFoundException pour getReference()."
+  },
+  {
+    "id": "JAK-JPA-059",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Exceptions",
+    "difficulty": "hard",
+    "question": "Quelle exception est levée pour getSingleResult() sans résultat ?",
+    "options": [
+      "NoResultException",
+      "EntityNotFoundException",
+      "NonUniqueResultException",
+      "PersistenceException"
+    ],
+    "correct": 0,
+    "explanation": "NoResultException pour aucun résultat."
+  },
+  {
+    "id": "JAK-JPA-060",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Exceptions",
+    "difficulty": "hard",
+    "question": "Quelle exception pour plusieurs résultats avec getSingleResult() ?",
+    "options": [
+      "NonUniqueResultException",
+      "NoResultException",
+      "EntityNotFoundException",
+      "PersistenceException"
+    ],
+    "correct": 0,
+    "explanation": "NonUniqueResultException pour résultats multiples."
+  },
+  {
+    "id": "JAK-JPA-061",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment éviter le problème N+1 ?",
+    "options": [
+      "Fetch join",
+      "Entity Graph",
+      "Batch fetching",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs techniques évitent N+1."
+  },
+  {
+    "id": "JAK-JPA-062",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Comment faire un fetch join en JPQL ?",
+    "options": [
+      "SELECT u FROM User u JOIN FETCH u.address",
+      "SELECT u FROM User u LEFT JOIN FETCH u.address",
+      "SELECT u FROM User u FETCH JOIN u.address",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "JOIN FETCH ou LEFT JOIN FETCH."
+  },
+  {
+    "id": "JAK-JPA-063",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Batch fetching",
+    "difficulty": "hard",
+    "question": "Comment configurer le batch fetching ?",
+    "options": [
+      "@BatchSize(size = 10)",
+      "hibernate.default_batch_fetch_size=10",
+      "spring.jpa.properties.hibernate.default_batch_fetch_size=10",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Batch size via annotation ou propriété."
+  },
+  {
+    "id": "JAK-JPA-064",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Second level cache",
+    "difficulty": "hard",
+    "question": "Comment activer le cache L2 ?",
+    "options": [
+      "persistence.xml: <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>",
+      "@Cacheable",
+      "hibernate.cache.use_second_level_cache=true",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration XML et annotations."
+  },
+  {
+    "id": "JAK-JPA-065",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Query cache",
+    "difficulty": "hard",
+    "question": "Comment activer le cache de requêtes ?",
+    "options": [
+      "query.setHint(\"org.hibernate.cacheable\", true)",
+      "hibernate.cache.use_query_cache=true",
+      "@Cacheable sur la requête",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Configuration et hint pour les requêtes."
+  },
+  {
+    "id": "JAK-JPA-066",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Spring Data JPA",
+    "difficulty": "hard",
+    "question": "Quelle interface étendre pour un repository Spring Data JPA ?",
+    "options": [
+      "JpaRepository<T, ID>",
+      "CrudRepository<T, ID>",
+      "PagingAndSortingRepository<T, ID>",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs interfaces selon les besoins."
+  },
+  {
+    "id": "JAK-JPA-067",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Spring Data JPA",
+    "difficulty": "hard",
+    "question": "Quelle annotation active les repositories ?",
+    "options": [
+      "@EnableJpaRepositories",
+      "@EnableRepositories",
+      "@JpaRepositories",
+      "@EnableSpringData"
+    ],
+    "correct": 0,
+    "explanation": "@EnableJpaRepositories active les repositories JPA."
+  },
+  {
+    "id": "JAK-JPA-068",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Spring Data JPA",
+    "difficulty": "hard",
+    "question": "Comment définir une méthode de recherche par nom ?",
+    "options": [
+      "findByName(String name)",
+      "findByNameAndAge(String name, int age)",
+      "findByAgeGreaterThan(int age)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Spring Data JPA génère les requêtes par convention."
+  },
+  {
+    "id": "JAK-JPA-069",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester JPA ?",
+    "options": [
+      "@DataJpaTest",
+      "@SpringBootTest avec EntityManager",
+      "Testcontainers",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs approches pour tester JPA."
+  },
+  {
+    "id": "JAK-JPA-070",
+    "theme": "Jakarta Persistence",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Quelle base est utilisée par @DataJpaTest ?",
+    "options": [
+      "H2 (embarquée)",
+      "MySQL",
+      "PostgreSQL",
+      "Oracle"
+    ],
+    "correct": 0,
+    "explanation": "@DataJpaTest utilise H2 par défaut."
+  }
+]

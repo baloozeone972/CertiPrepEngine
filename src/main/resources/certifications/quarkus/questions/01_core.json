@@ -1,0 +1,732 @@
+[
+  {
+    "id": "QRK-CORE-001",
+    "theme": "Quarkus Core",
+    "theme_label": "Présentation",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Quarkus ?",
+    "options": [
+      "Un framework Java pour cloud-native",
+      "Un serveur d'application",
+      "Une base de données",
+      "Un IDE Java"
+    ],
+    "correct": 0,
+    "explanation": "Quarkus est un framework Java optimisé pour le cloud-native."
+  },
+  {
+    "id": "QRK-CORE-002",
+    "theme": "Quarkus Core",
+    "theme_label": "Présentation",
+    "difficulty": "easy",
+    "question": "Quelle est la particularité de Quarkus ?",
+    "options": [
+      "Compilation native avec GraalVM",
+      "Serveur d'application lourd",
+      "Framework JavaScript",
+      "Base de données NoSQL"
+    ],
+    "correct": 0,
+    "explanation": "Quarkus supporte la compilation native avec GraalVM."
+  },
+  {
+    "id": "QRK-CORE-003",
+    "theme": "Quarkus Core",
+    "theme_label": "Commandes",
+    "difficulty": "easy",
+    "question": "Quelle commande démarre Quarkus en mode développement ?",
+    "options": [
+      "./mvnw quarkus:dev",
+      "./mvnw quarkus:run",
+      "./mvnw quarkus:start",
+      "./mvnw quarkus:live"
+    ],
+    "correct": 0,
+    "explanation": "quarkus:dev active le mode développement avec live reload."
+  },
+  {
+    "id": "QRK-CORE-004",
+    "theme": "Quarkus Core",
+    "theme_label": "Commandes",
+    "difficulty": "easy",
+    "question": "Quelle commande génère un exécutable natif ?",
+    "options": [
+      "./mvnw package -Pnative",
+      "./mvnw native:compile",
+      "./mvnw quarkus:native",
+      "./mvnw build -native"
+    ],
+    "correct": 0,
+    "explanation": "package -Pnative active le profil native pour GraalVM."
+  },
+  {
+    "id": "QRK-CORE-005",
+    "theme": "Quarkus Core",
+    "theme_label": "Commandes",
+    "difficulty": "medium",
+    "question": "Quelle commande crée un nouveau projet Quarkus ?",
+    "options": [
+      "mvn io.quarkus.platform:quarkus-maven-plugin:create",
+      "quarkus create project",
+      "mvn quarkus:init",
+      "quarkus new"
+    ],
+    "correct": 0,
+    "explanation": "Le plugin Maven permet de créer un projet Quarkus."
+  },
+  {
+    "id": "QRK-CORE-006",
+    "theme": "Quarkus Core",
+    "theme_label": "Commandes",
+    "difficulty": "medium",
+    "question": "Quelle commande ajoute une extension à Quarkus ?",
+    "options": [
+      "./mvnw quarkus:add-extension -Dextensions=resteasy",
+      "quarkus extension add resteasy",
+      "./mvnw quarkus:extension -Dadd=resteasy",
+      "mvn quarkus:install resteasy"
+    ],
+    "correct": 0,
+    "explanation": "quarkus:add-extension ajoute des extensions au projet."
+  },
+  {
+    "id": "QRK-CORE-007",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque un bean CDI ?",
+    "options": ["@ApplicationScoped", "@Component", "@Service", "@Bean"],
+    "correct": 0,
+    "explanation": "@ApplicationScoped est l'annotation CDI standard pour les beans."
+  },
+  {
+    "id": "QRK-CORE-008",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "easy",
+    "question": "Comment injecter un bean dans Quarkus ?",
+    "options": ["@Inject", "@Autowired", "@Resource", "@Bean"],
+    "correct": 0,
+    "explanation": "@Inject est l'annotation CDI standard pour l'injection."
+  },
+  {
+    "id": "QRK-CORE-009",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "medium",
+    "question": "Quelle est la portée par défaut d'un bean Quarkus ?",
+    "options": [
+      "@Dependent",
+      "@ApplicationScoped",
+      "@RequestScoped",
+      "@Singleton"
+    ],
+    "correct": 0,
+    "explanation": "La portée par défaut est @Dependent."
+  },
+  {
+    "id": "QRK-CORE-010",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "medium",
+    "question": "Quelle portée correspond au cycle de vie de l'application ?",
+    "options": [
+      "@ApplicationScoped",
+      "@Singleton",
+      "@RequestScoped",
+      "@SessionScoped"
+    ],
+    "correct": 0,
+    "explanation": "@ApplicationScoped pour la durée de vie de l'application."
+  },
+  {
+    "id": "QRK-CORE-011",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "medium",
+    "question": "Quelle portée correspond à une requête HTTP ?",
+    "options": [
+      "@RequestScoped",
+      "@ApplicationScoped",
+      "@Dependent",
+      "@SessionScoped"
+    ],
+    "correct": 0,
+    "explanation": "@RequestScoped pour la durée d'une requête HTTP."
+  },
+  {
+    "id": "QRK-CORE-012",
+    "theme": "Quarkus Core",
+    "theme_label": "Configuration",
+    "difficulty": "easy",
+    "question": "Quelle annotation lie des propriétés à un bean ?",
+    "options": [
+      "@ConfigProperty",
+      "@Value",
+      "@ConfigurationProperties",
+      "@Property"
+    ],
+    "correct": 0,
+    "explanation": "@ConfigProperty injecte les propriétés de configuration."
+  },
+  {
+    "id": "QRK-CORE-013",
+    "theme": "Quarkus Core",
+    "theme_label": "Configuration",
+    "difficulty": "medium",
+    "question": "Quel fichier contient la configuration de Quarkus ?",
+    "options": [
+      "application.properties",
+      "quarkus.properties",
+      "config.properties",
+      "settings.properties"
+    ],
+    "correct": 0,
+    "explanation": "application.properties est le fichier de configuration standard."
+  },
+  {
+    "id": "QRK-CORE-014",
+    "theme": "Quarkus Core",
+    "theme_label": "Configuration",
+    "difficulty": "hard",
+    "question": "Comment définir une valeur par défaut pour @ConfigProperty ?",
+    "options": [
+      "@ConfigProperty(name = \"prop\", defaultValue = \"valeur\")",
+      "@ConfigProperty(\"prop:valeur\")",
+      "@ConfigProperty(defaultValue = \"valeur\")",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs syntaxes pour définir une valeur par défaut."
+  },
+  {
+    "id": "QRK-CORE-015",
+    "theme": "Quarkus Core",
+    "theme_label": "Configuration",
+    "difficulty": "hard",
+    "question": "Comment utiliser le profil de configuration ?",
+    "options": [
+      "%dev.prop=valeur",
+      "quarkus.profile=dev",
+      "@Profile(\"dev\")",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les profils sont définis par préfixe ou par propriété."
+  },
+  {
+    "id": "QRK-CORE-016",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "medium",
+    "question": "Quelle est l'image de base recommandée pour Docker ?",
+    "options": [
+      "quarkus/ubi-quarkus-native-image",
+      "openjdk:11",
+      "alpine:latest",
+      "ubuntu:latest"
+    ],
+    "correct": 0,
+    "explanation": "L'image UBI de Red Hat est optimisée pour Quarkus."
+  },
+  {
+    "id": "QRK-CORE-017",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "hard",
+    "question": "Quelles sont les limitations de la compilation native ?",
+    "options": [
+      "Reflection limitée",
+      "Pas de JNI",
+      "Pas de chargement dynamique",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "GraalVM a plusieurs limitations pour la compilation native."
+  },
+  {
+    "id": "QRK-CORE-018",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "hard",
+    "question": "Comment configurer la réflexion pour GraalVM ?",
+    "options": [
+      "reflect-config.json",
+      "@RegisterForReflection",
+      "quarkus.native.reflection",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour configurer la réflexion."
+  },
+  {
+    "id": "QRK-CORE-019",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "hard",
+    "question": "À quoi sert l'annotation @RegisterForReflection ?",
+    "options": [
+      "Marquer les classes pour la réflexion",
+      "Optimiser les performances",
+      "Activer le caching",
+      "Désactiver la compilation"
+    ],
+    "correct": 0,
+    "explanation": "@RegisterForReflection indique à GraalVM de garder la classe pour la réflexion."
+  },
+  {
+    "id": "QRK-CORE-020",
+    "theme": "Quarkus Core",
+    "theme_label": "Dev Services",
+    "difficulty": "hard",
+    "question": "Que sont les Dev Services ?",
+    "options": [
+      "Conteneurs automatiques pour le développement",
+      "Services de production",
+      "Outils de debugging",
+      "APIs externes"
+    ],
+    "correct": 0,
+    "explanation": "Dev Services lance automatiquement des conteneurs (DB, Kafka, etc.)."
+  },
+  {
+    "id": "QRK-CORE-021",
+    "theme": "Quarkus Core",
+    "theme_label": "Dev Services",
+    "difficulty": "hard",
+    "question": "Quel conteneur est démarré par Dev Services par défaut ?",
+    "options": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis"
+    ],
+    "correct": 0,
+    "explanation": "PostgreSQL est le conteneur par défaut pour les tests."
+  },
+  {
+    "id": "QRK-CORE-022",
+    "theme": "Quarkus Core",
+    "theme_label": "Dev Services",
+    "difficulty": "hard",
+    "question": "Comment désactiver Dev Services ?",
+    "options": [
+      "quarkus.devservices.enabled=false",
+      "devservices.enabled=false",
+      "testcontainers.enabled=false",
+      "quarkus.test.devservices=false"
+    ],
+    "correct": 0,
+    "explanation": "La propriété quarkus.devservices.enabled=false désactive Dev Services."
+  },
+  {
+    "id": "QRK-CORE-023",
+    "theme": "Quarkus Core",
+    "theme_label": "Hot reload",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le hot reload dans Quarkus ?",
+    "options": [
+      "Rechargement automatique du code",
+      "Redémarrage du serveur",
+      "Recompilation manuelle",
+      "Déploiement à chaud"
+    ],
+    "correct": 0,
+    "explanation": "Le hot reload recharge automatiquement les changements de code."
+  },
+  {
+    "id": "QRK-CORE-024",
+    "theme": "Quarkus Core",
+    "theme_label": "Hot reload",
+    "difficulty": "hard",
+    "question": "Quand le hot reload recharge-t-il ?",
+    "options": [
+      "À chaque sauvegarde",
+      "À chaque requête",
+      "Manuellement",
+      "Toutes les secondes"
+    ],
+    "correct": 0,
+    "explanation": "Le rechargement se déclenche lors de la sauvegarde des fichiers."
+  },
+  {
+    "id": "QRK-CORE-025",
+    "theme": "Quarkus Core",
+    "theme_label": "Extensions",
+    "difficulty": "medium",
+    "question": "Comment lister les extensions disponibles ?",
+    "options": [
+      "./mvnw quarkus:list-extensions",
+      "quarkus extensions list",
+      "./mvnw quarkus:extensions",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs commandes pour lister les extensions."
+  },
+  {
+    "id": "QRK-CORE-026",
+    "theme": "Quarkus Core",
+    "theme_label": "Extensions",
+    "difficulty": "medium",
+    "question": "Où sont stockées les extensions Quarkus ?",
+    "options": [
+      "Maven Central",
+      "Quarkus Registry",
+      "GitHub",
+      "Maven Local"
+    ],
+    "correct": 0,
+    "explanation": "Les extensions sont sur Maven Central."
+  },
+  {
+    "id": "QRK-CORE-027",
+    "theme": "Quarkus Core",
+    "theme_label": "Extensions",
+    "difficulty": "hard",
+    "question": "Comment créer une extension personnalisée ?",
+    "options": [
+      "Quarkus extension create",
+      "Maven archetype",
+      "Template manuel",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes pour créer une extension."
+  },
+  {
+    "id": "QRK-CORE-028",
+    "theme": "Quarkus Core",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester une application Quarkus ?",
+    "options": [
+      "@QuarkusTest",
+      "@SpringBootTest",
+      "@Test",
+      "@IntegrationTest"
+    ],
+    "correct": 0,
+    "explanation": "@QuarkusTest est l'annotation principale pour les tests."
+  },
+  {
+    "id": "QRK-CORE-029",
+    "theme": "Quarkus Core",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Que fait @QuarkusIntegrationTest ?",
+    "options": [
+      "Teste l'application native",
+      "Teste l'application JVM",
+      "Teste les composants",
+      "Teste l'intégration"
+    ],
+    "correct": 0,
+    "explanation": "@QuarkusIntegrationTest teste l'exécutable natif."
+  },
+  {
+    "id": "QRK-CORE-030",
+    "theme": "Quarkus Core",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment injecter un client REST dans les tests ?",
+    "options": [
+      "@RestClient",
+      "@Inject RestClient",
+      "@TestRestClient",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@RestClient avec @Inject pour les clients REST."
+  },
+  {
+    "id": "QRK-CORE-031",
+    "theme": "Quarkus Core",
+    "theme_label": "Logging",
+    "difficulty": "medium",
+    "question": "Comment configurer les logs dans Quarkus ?",
+    "options": [
+      "quarkus.log.level=INFO",
+      "logging.level=INFO",
+      "log.level=INFO",
+      "quarkus.logging.level=INFO"
+    ],
+    "correct": 0,
+    "explanation": "quarkus.log.level définit le niveau de log global."
+  },
+  {
+    "id": "QRK-CORE-032",
+    "theme": "Quarkus Core",
+    "theme_label": "Logging",
+    "difficulty": "medium",
+    "question": "Quel est le format de log par défaut ?",
+    "options": [
+      "JSON",
+      "Texte",
+      "XML",
+      "YAML"
+    ],
+    "correct": 0,
+    "explanation": "Le format JSON est par défaut pour les logs structurés."
+  },
+  {
+    "id": "QRK-CORE-033",
+    "theme": "Quarkus Core",
+    "theme_label": "Logging",
+    "difficulty": "hard",
+    "question": "Comment changer le format de log ?",
+    "options": [
+      "quarkus.log.console.format=%d{HH:mm:ss} %-5p [%c] %s%e%n",
+      "logging.pattern.console",
+      "log.format",
+      "quarkus.log.pattern"
+    ],
+    "correct": 0,
+    "explanation": "quarkus.log.console.format définit le motif de log."
+  },
+  {
+    "id": "QRK-CORE-034",
+    "theme": "Quarkus Core",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute les health checks ?",
+    "options": [
+      "quarkus-smallrye-health",
+      "quarkus-health",
+      "quarkus-micrometer",
+      "quarkus-opentelemetry"
+    ],
+    "correct": 0,
+    "explanation": "smallrye-health fournit les endpoints /health."
+  },
+  {
+    "id": "QRK-CORE-035",
+    "theme": "Quarkus Core",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "question": "Comment créer un health check personnalisé ?",
+    "options": [
+      "Implémenter HealthCheck",
+      "@Health",
+      "@Liveness",
+      "@Readiness"
+    ],
+    "correct": 0,
+    "explanation": "Il faut implémenter l'interface HealthCheck."
+  },
+  {
+    "id": "QRK-CORE-036",
+    "theme": "Quarkus Core",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Quelle extension expose les métriques ?",
+    "options": [
+      "quarkus-micrometer",
+      "quarkus-metrics",
+      "quarkus-smallrye-metrics",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Micrometer ou SmallRye Metrics exposent les métriques."
+  },
+  {
+    "id": "QRK-CORE-037",
+    "theme": "Quarkus Core",
+    "theme_label": "Metrics",
+    "difficulty": "hard",
+    "question": "Quel endpoint expose les métriques ?",
+    "options": ["/metrics", "/q/metrics", "/actuator/metrics", "/metrics/prometheus"],
+    "correct": 1,
+    "explanation": "/q/metrics est l'endpoint par défaut dans Quarkus."
+  },
+  {
+    "id": "QRK-CORE-038",
+    "theme": "Quarkus Core",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "Quelle extension génère la documentation OpenAPI ?",
+    "options": [
+      "quarkus-smallrye-openapi",
+      "quarkus-openapi",
+      "quarkus-swagger",
+      "quarkus-docs"
+    ],
+    "correct": 0,
+    "explanation": "smallrye-openapi génère la documentation OpenAPI."
+  },
+  {
+    "id": "QRK-CORE-039",
+    "theme": "Quarkus Core",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "Quel endpoint expose la documentation OpenAPI ?",
+    "options": ["/openapi", "/q/openapi", "/api/openapi", "/docs"],
+    "correct": 1,
+    "explanation": "/q/openapi est l'endpoint par défaut."
+  },
+  {
+    "id": "QRK-CORE-040",
+    "theme": "Quarkus Core",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "Comment personnaliser la documentation OpenAPI ?",
+    "options": [
+      "@OpenAPIDefinition",
+      "@Operation",
+      "@Parameter",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations pour personnaliser l'OpenAPI."
+  },
+  {
+    "id": "QRK-CORE-041",
+    "theme": "Quarkus Core",
+    "theme_label": "GraphQL",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute GraphQL ?",
+    "options": [
+      "quarkus-smallrye-graphql",
+      "quarkus-graphql",
+      "quarkus-federation",
+      "quarkus-schema"
+    ],
+    "correct": 0,
+    "explanation": "smallrye-graphql fournit le support GraphQL."
+  },
+  {
+    "id": "QRK-CORE-042",
+    "theme": "Quarkus Core",
+    "theme_label": "GraphQL",
+    "difficulty": "hard",
+    "question": "Comment créer un resolver GraphQL ?",
+    "options": [
+      "@GraphQLApi",
+      "@Query",
+      "@Mutation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations pour les resolvers GraphQL."
+  },
+  {
+    "id": "QRK-CORE-043",
+    "theme": "Quarkus Core",
+    "theme_label": "gRPC",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute gRPC ?",
+    "options": [
+      "quarkus-grpc",
+      "quarkus-grpc-stub",
+      "quarkus-grpc-client",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs extensions pour gRPC."
+  },
+  {
+    "id": "QRK-CORE-044",
+    "theme": "Quarkus Core",
+    "theme_label": "gRPC",
+    "difficulty": "hard",
+    "question": "Où placer les fichiers .proto ?",
+    "options": [
+      "src/main/proto",
+      "src/main/resources/proto",
+      "src/proto",
+      "proto/"
+    ],
+    "correct": 0,
+    "explanation": "Les fichiers .proto sont dans src/main/proto par défaut."
+  },
+  {
+    "id": "QRK-CORE-045",
+    "theme": "Quarkus Core",
+    "theme_label": "Kafka",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute Kafka ?",
+    "options": [
+      "quarkus-smallrye-reactive-messaging-kafka",
+      "quarkus-kafka",
+      "quarkus-messaging",
+      "quarkus-streams"
+    ],
+    "correct": 0,
+    "explanation": "L'extension reactive-messaging-kafka intègre Kafka."
+  },
+  {
+    "id": "QRK-CORE-046",
+    "theme": "Quarkus Core",
+    "theme_label": "Kafka",
+    "difficulty": "hard",
+    "question": "Comment consommer des messages Kafka ?",
+    "options": [
+      "@Incoming(\"channel\")",
+      "@KafkaListener",
+      "@Consumer",
+      "@Subscribe"
+    ],
+    "correct": 0,
+    "explanation": "@Incoming marque une méthode consommatrice."
+  },
+  {
+    "id": "QRK-CORE-047",
+    "theme": "Quarkus Core",
+    "theme_label": "Kafka",
+    "difficulty": "hard",
+    "question": "Comment produire des messages Kafka ?",
+    "options": [
+      "@Outgoing(\"channel\")",
+      "@KafkaProducer",
+      "@Producer",
+      "@Publish"
+    ],
+    "correct": 0,
+    "explanation": "@Outgoing marque une méthode productrice."
+  },
+  {
+    "id": "QRK-CORE-048",
+    "theme": "Quarkus Core",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute le caching ?",
+    "options": [
+      "quarkus-cache",
+      "quarkus-caffeine",
+      "quarkus-redis-cache",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs extensions de cache disponibles."
+  },
+  {
+    "id": "QRK-CORE-049",
+    "theme": "Quarkus Core",
+    "theme_label": "Caching",
+    "difficulty": "hard",
+    "question": "Comment cacher le résultat d'une méthode ?",
+    "options": [
+      "@CacheResult",
+      "@Cacheable",
+      "@Cached",
+      "@Cache"
+    ],
+    "correct": 0,
+    "explanation": "@CacheResult met en cache le résultat de la méthode."
+  },
+  {
+    "id": "QRK-CORE-050",
+    "theme": "Quarkus Core",
+    "theme_label": "Scheduling",
+    "difficulty": "hard",
+    "question": "Comment scheduler une tâche ?",
+    "options": [
+      "@Scheduled",
+      "@Schedule",
+      "@Cron",
+      "@Periodic"
+    ],
+    "correct": 0,
+    "explanation": "@Scheduled permet de scheduler des méthodes."
+  }
+]

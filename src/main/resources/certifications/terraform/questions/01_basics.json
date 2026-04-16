@@ -1,0 +1,682 @@
+[
+  {
+    "id": "TF-01-001",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que Terraform ?",
+    "options": [
+      "Outil d'infrastructure as code (IaC)",
+      "Orchestrateur de conteneurs",
+      "Base de données",
+      "Langage de programmation"
+    ],
+    "correct": 0,
+    "explication": "Terraform permet de provisionner et gérer l'infrastructure de manière déclarative."
+  },
+  {
+    "id": "TF-01-002",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quelle commande initialise un répertoire de travail Terraform ?",
+    "options": [
+      "terraform init",
+      "terraform start",
+      "terraform setup",
+      "terraform begin"
+    ],
+    "correct": 0,
+    "explication": "terraform init initialise le répertoire, télécharge les providers et modules."
+  },
+  {
+    "id": "TF-01-003",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quel fichier contient par défaut l'état (state) de Terraform ?",
+    "options": ["terraform.tfstate", "state.tf", "terraform.json", ".terraform/state"],
+    "correct": 0,
+    "explication": "terraform.tfstate est le fichier d'état par défaut qui stocke les ressources provisionnées."
+  },
+  {
+    "id": "TF-01-004",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Que fait la commande 'terraform plan' ?",
+    "options": [
+      "Affiche les changements à appliquer sans les exécuter",
+      "Applique les changements",
+      "Détruit les ressources",
+      "Formate les fichiers"
+    ],
+    "correct": 0,
+    "explication": "terraform plan montre les actions que Terraform va effectuer, sans les appliquer."
+  },
+  {
+    "id": "TF-01-005",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Que fait la commande 'terraform apply' ?",
+    "options": [
+      "Applique les changements pour atteindre l'état désiré",
+      "Affiche le plan",
+      "Détruit les ressources",
+      "Initialise le répertoire"
+    ],
+    "correct": 0,
+    "explication": "terraform apply exécute les actions nécessaires pour créer/mettre à jour les ressources."
+  },
+  {
+    "id": "TF-01-006",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Que fait la commande 'terraform destroy' ?",
+    "options": [
+      "Supprime toutes les ressources gérées par Terraform",
+      "Supprime le fichier d'état",
+      "Supprime les providers",
+      "Supprime le répertoire .terraform"
+    ],
+    "correct": 0,
+    "explication": "terraform destroy détruit l'infrastructure provisionnée."
+  },
+  {
+    "id": "TF-01-007",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Quel est le langage de configuration de Terraform ?",
+    "options": [
+      "HCL (HashiCorp Configuration Language)",
+      "JSON",
+      "YAML",
+      "Python"
+    ],
+    "correct": 0,
+    "explication": "HCL est le langage déclaratif de Terraform (fichiers .tf)."
+  },
+  {
+    "id": "TF-01-008",
+    "theme": "Terraform Basics",
+    "theme_label": "Fondamentaux",
+    "difficulty": "easy",
+    "question": "Terraform peut-il gérer plusieurs providers (AWS, Azure, GCP) dans le même projet ?",
+    "options": ["Oui", "Non", "Uniquement avec des workspaces", "Uniquement avec des modules"],
+    "correct": 0,
+    "explication": "Terraform est multi-cloud et peut utiliser plusieurs providers simultanément."
+  },
+  {
+    "id": "TF-01-009",
+    "theme": "Terraform Basics",
+    "theme_label": "Fichiers de configuration",
+    "difficulty": "easy",
+    "question": "Quelle est l'extension des fichiers de configuration Terraform ?",
+    "options": [".tf", ".tf.json", ".hcl", "A et B"],
+    "correct": 3,
+    "explication": "Les fichiers peuvent être en HCL (.tf) ou en JSON (.tf.json)."
+  },
+  {
+    "id": "TF-01-010",
+    "theme": "Terraform Basics",
+    "theme_label": "Fichiers de configuration",
+    "difficulty": "easy",
+    "question": "À quoi sert le fichier terraform.tfvars ?",
+    "options": [
+      "Définir les valeurs des variables",
+      "Définir les providers",
+      "Définir les resources",
+      "Définir les outputs"
+    ],
+    "correct": 0,
+    "explication": "terraform.tfvars permet de passer des valeurs aux variables."
+  },
+  {
+    "id": "TF-01-011",
+    "theme": "Terraform Basics",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Où sont stockés les providers téléchargés ?",
+    "options": [
+      ".terraform/providers",
+      "~/.terraform.d/plugins",
+      "terraform.d/plugins",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les providers sont stockés dans le répertoire .terraform du projet ou globalement."
+  },
+  {
+    "id": "TF-01-012",
+    "theme": "Terraform Basics",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "question": "Comment spécifier la version d'un provider ?",
+    "options": [
+      "required_providers { aws = { source = 'hashicorp/aws' version = '~> 4.0' } }",
+      "provider 'aws' { version = '4.0' }",
+      "terraform { required_providers { aws = '4.0' } }",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La syntaxe required_providers avec version est la bonne."
+  },
+  {
+    "id": "TF-01-013",
+    "theme": "Terraform Basics",
+    "theme_label": "Resources",
+    "difficulty": "easy",
+    "question": "Quelle est la syntaxe pour déclarer une ressource AWS EC2 ?",
+    "options": [
+      "resource 'aws_instance' 'web' { ami = 'ami-123' instance_type = 't2.micro' }",
+      "resource aws_instance web { ami = 'ami-123' instance_type = 't2.micro' }",
+      "resource 'aws_instance' 'web' { }",
+      "A et B"
+    ],
+    "correct": 1,
+    "explication": "resource TYPE NAME { ... } est la syntaxe correcte."
+  },
+  {
+    "id": "TF-01-014",
+    "theme": "Terraform Basics",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment déclarer une variable d'entrée ?",
+    "options": [
+      "variable 'instance_type' { type = string default = 't2.micro' }",
+      "var instance_type = 't2.micro'",
+      "input variable instance_type { }",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "variable 'nom' { ... } déclare une variable."
+  },
+  {
+    "id": "TF-01-015",
+    "theme": "Terraform Basics",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment référencer une variable dans une ressource ?",
+    "options": ["var.instance_type", "${var.instance_type}", "$var.instance_type", "A et B"],
+    "correct": 3,
+    "explication": "var.nom ou ${var.nom} dans les anciennes versions."
+  },
+  {
+    "id": "TF-01-016",
+    "theme": "Terraform Basics",
+    "theme_label": "Outputs",
+    "difficulty": "easy",
+    "question": "À quoi sert un output ?",
+    "options": [
+      "Afficher des informations après un apply",
+      "Exporter des valeurs pour d'autres modules",
+      "A et B",
+      "Définir des variables"
+    ],
+    "correct": 2,
+    "explication": "Les outputs sont utiles pour afficher des informations (IP, ID) et pour la composition."
+  },
+  {
+    "id": "TF-01-017",
+    "theme": "Terraform Basics",
+    "theme_label": "Outputs",
+    "difficulty": "easy",
+    "question": "Comment déclarer un output ?",
+    "options": [
+      "output 'instance_ip' { value = aws_instance.web.public_ip }",
+      "output instance_ip = aws_instance.web.public_ip",
+      "output { value = aws_instance.web.public_ip }",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "output 'nom' { value = ... }."
+  },
+  {
+    "id": "TF-01-018",
+    "theme": "Terraform Basics",
+    "theme_label": "Data sources",
+    "difficulty": "easy",
+    "question": "À quoi sert un data source ?",
+    "options": [
+      "Lire des informations existantes (AMI, VPC, etc.)",
+      "Créer des ressources",
+      "Détruire des ressources",
+      "Stocker des données"
+    ],
+    "correct": 0,
+    "explication": "Les data sources permettent d'interroger l'infrastructure existante."
+  },
+  {
+    "id": "TF-01-019",
+    "theme": "Terraform Basics",
+    "theme_label": "Data sources",
+    "difficulty": "easy",
+    "question": "Syntaxe d'un data source AWS AMI ?",
+    "options": [
+      "data 'aws_ami' 'ubuntu' { most_recent = true owners = ['099720109477'] }",
+      "data aws_ami ubuntu { most_recent = true }",
+      "data 'ami' 'ubuntu' { }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "data TYPE NAME { ... }."
+  },
+  {
+    "id": "TF-01-020",
+    "theme": "Terraform Basics",
+    "theme_label": "Locals",
+    "difficulty": "easy",
+    "question": "À quoi servent les locals ?",
+    "options": [
+      "Définir des valeurs calculées réutilisables",
+      "Définir des variables d'entrée",
+      "Définir des outputs",
+      "Définir des providers"
+    ],
+    "correct": 0,
+    "explication": "locals { common_tags = { Environment = 'prod' } }"
+  },
+  {
+    "id": "TF-01-021",
+    "theme": "Terraform Basics",
+    "theme_label": "Locals",
+    "difficulty": "easy",
+    "question": "Comment référencer un local ?",
+    "options": ["local.common_tags", "${local.common_tags}", "locals.common_tags", "A et B"],
+    "correct": 3,
+    "explication": "local.nom ou ${local.nom}."
+  },
+  {
+    "id": "TF-01-022",
+    "theme": "Terraform Basics",
+    "theme_label": "Dependencies",
+    "difficulty": "easy",
+    "question": "Comment Terraform gère-t-il les dépendances entre ressources ?",
+    "options": [
+      "Automatiquement via les références d'attributs",
+      "Manuellement avec depends_on",
+      "A et B",
+      "Uniquement avec depends_on"
+    ],
+    "correct": 2,
+    "explication": "Terraform analyse les références, depends_on est optionnel pour des dépendances implicites."
+  },
+  {
+    "id": "TF-01-023",
+    "theme": "Terraform Basics",
+    "theme_label": "Dependencies",
+    "difficulty": "easy",
+    "question": "Quand utiliser depends_on ?",
+    "options": [
+      "Quand une ressource dépend d'une autre sans référence directe",
+      "Toujours",
+      "Jamais",
+      "Uniquement pour les modules"
+    ],
+    "correct": 0,
+    "explication": "depends_on crée une dépendance explicite."
+  },
+  {
+    "id": "TF-01-024",
+    "theme": "Terraform Basics",
+    "theme_label": "Meta-arguments",
+    "difficulty": "easy",
+    "question": "Que fait count dans une ressource ?",
+    "options": [
+      "Crée plusieurs instances de la ressource",
+      "Compte les ressources",
+      "Limite le nombre",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "count = 3 crée 3 ressources identiques."
+  },
+  {
+    "id": "TF-01-025",
+    "theme": "Terraform Basics",
+    "theme_label": "Meta-arguments",
+    "difficulty": "easy",
+    "question": "Comment accéder à l'index d'une ressource créée avec count ?",
+    "options": ["count.index", "index", "count", "A seulement"],
+    "correct": 0,
+    "explication": "count.index donne l'index (0,1,2...)."
+  },
+  {
+    "id": "TF-01-026",
+    "theme": "Terraform Basics",
+    "theme_label": "for_each",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre count et for_each ?",
+    "options": [
+      "for_each fonctionne avec des map/set, count avec des nombres",
+      "Identiques",
+      "for_each est plus lent",
+      "count est plus flexible"
+    ],
+    "correct": 0,
+    "explication": "for_each permet d'itérer sur une collection, créant des clés uniques."
+  },
+  {
+    "id": "TF-01-027",
+    "theme": "Terraform Basics",
+    "theme_label": "for_each",
+    "difficulty": "easy",
+    "question": "Comment accéder à la clé et la valeur dans for_each ?",
+    "options": ["each.key, each.value", "key, value", "for_each.key", "A seulement"],
+    "correct": 0,
+    "explication": "each.key et each.value sont disponibles."
+  },
+  {
+    "id": "TF-01-028",
+    "theme": "Terraform Basics",
+    "theme_label": "Lifecycle",
+    "difficulty": "easy",
+    "question": "Quelles sont les règles de cycle de vie (lifecycle) possibles ?",
+    "options": [
+      "create_before_destroy, prevent_destroy, ignore_changes",
+      "create_before_destroy seulement",
+      "prevent_destroy seulement",
+      "ignore_changes seulement"
+    ],
+    "correct": 0,
+    "explication": "Ces meta-arguments contrôlent le comportement lors des modifications."
+  },
+  {
+    "id": "TF-01-029",
+    "theme": "Terraform Basics",
+    "theme_label": "Lifecycle",
+    "difficulty": "easy",
+    "question": "Que fait prevent_destroy ?",
+    "options": [
+      "Empêche la destruction de la ressource",
+      "Empêche la création",
+      "Empêche la modification",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "utile pour les ressources critiques (bases de données)."
+  },
+  {
+    "id": "TF-01-030",
+    "theme": "Terraform Basics",
+    "theme_label": "Lifecycle",
+    "difficulty": "easy",
+    "question": "Que fait create_before_destroy ?",
+    "options": [
+      "Crée la nouvelle ressource avant de détruire l'ancienne",
+      "Détruit avant de créer",
+      "Crée en parallèle",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Évite les temps d'arrêt lors des remplacements."
+  },
+  {
+    "id": "TF-01-031",
+    "theme": "Terraform Basics",
+    "theme_label": "Provisioners",
+    "difficulty": "easy",
+    "question": "À quoi servent les provisioners ?",
+    "options": [
+      "Exécuter des scripts sur les ressources après création",
+      "Configurer les providers",
+      "Définir des outputs",
+      "Gérer l'état"
+    ],
+    "correct": 0,
+    "explication": "Ex: file, remote-exec, local-exec (à utiliser avec précaution)."
+  },
+  {
+    "id": "TF-01-032",
+    "theme": "Terraform Basics",
+    "theme_label": "Provisioners",
+    "difficulty": "easy",
+    "question": "Quel provisioner exécute des commandes sur la machine locale ?",
+    "options": ["local-exec", "remote-exec", "file", "chef"],
+    "correct": 0,
+    "explication": "local-exec exécute des commandes sur la machine exécutant Terraform."
+  },
+  {
+    "id": "TF-01-033",
+    "theme": "Terraform Basics",
+    "theme_label": "Provisioners",
+    "difficulty": "easy",
+    "question": "Pourquoi les provisioners sont-ils déconseillés ?",
+    "options": [
+      "Ils ne sont pas déclaratifs, peuvent échouer et ne sont pas idempotents",
+      "Ils sont lents",
+      "Ils sont payants",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Préférer des outils de configuration comme Ansible ou des images préconfigurées."
+  },
+  {
+    "id": "TF-01-034",
+    "theme": "Terraform Basics",
+    "theme_label": "Workspaces",
+    "difficulty": "easy",
+    "question": "À quoi servent les workspaces ?",
+    "options": [
+      "Gérer plusieurs environnements (dev, prod) avec le même code",
+      "Partager l'état entre équipes",
+      "Stocker des variables",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Chaque workspace a son propre fichier d'état."
+  },
+  {
+    "id": "TF-01-035",
+    "theme": "Terraform Basics",
+    "theme_label": "Workspaces",
+    "difficulty": "easy",
+    "question": "Comment lister les workspaces ?",
+    "options": ["terraform workspace list", "terraform workspace ls", "A et B", "terraform workspace show"],
+    "correct": 2,
+    "explication": "list ou ls."
+  },
+  {
+    "id": "TF-01-036",
+    "theme": "Terraform Basics",
+    "theme_label": "Workspaces",
+    "difficulty": "easy",
+    "question": "Comment créer un nouveau workspace ?",
+    "options": [
+      "terraform workspace new dev",
+      "terraform workspace create dev",
+      "terraform workspace add dev",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "new crée et bascule sur le nouveau workspace."
+  },
+  {
+    "id": "TF-01-037",
+    "theme": "Terraform Basics",
+    "theme_label": "Workspaces",
+    "difficulty": "easy",
+    "question": "Comment basculer vers un workspace existant ?",
+    "options": [
+      "terraform workspace select dev",
+      "terraform workspace switch dev",
+      "terraform workspace use dev",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "select change le workspace actif."
+  },
+  {
+    "id": "TF-01-038",
+    "theme": "Terraform Basics",
+    "theme_label": "Terraform Cloud/Enterprise",
+    "difficulty": "easy",
+    "question": "Terraform Cloud offre-t-il la collaboration d'état ?",
+    "options": ["Oui", "Non", "Uniquement avec Enterprise", "Uniquement avec Open Source"],
+    "correct": 0,
+    "explication": "Terraform Cloud permet le stockage distant de l'état et la collaboration."
+  },
+  {
+    "id": "TF-01-039",
+    "theme": "Terraform Basics",
+    "theme_label": "Backend",
+    "difficulty": "easy",
+    "question": "À quoi sert un backend ?",
+    "options": [
+      "Stocker l'état à distance (S3, GCS, Azure, etc.)",
+      "Stocker les providers",
+      "Stocker les modules",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Les backends distants permettent le travail en équipe."
+  },
+  {
+    "id": "TF-01-040",
+    "theme": "Terraform Basics",
+    "theme_label": "Backend",
+    "difficulty": "easy",
+    "question": "Comment configurer un backend S3 ?",
+    "options": [
+      "terraform { backend 's3' { bucket = 'mybucket' key = 'terraform.tfstate' region = 'us-east-1' } }",
+      "backend 's3' { }",
+      "terraform backend s3 { }",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La configuration se fait dans le bloc terraform."
+  },
+  {
+    "id": "TF-01-041",
+    "theme": "Terraform Basics",
+    "theme_label": "Backend",
+    "difficulty": "easy",
+    "question": "Le backend local est-il le backend par défaut ?",
+    "options": ["Oui", "Non", "Uniquement pour les workspaces", "Uniquement pour les modules"],
+    "correct": 0,
+    "explication": "Par défaut, l'état est stocké localement dans terraform.tfstate."
+  },
+  {
+    "id": "TF-01-042",
+    "theme": "Terraform Basics",
+    "theme_label": "Backend",
+    "difficulty": "easy",
+    "question": "Peut-on migrer d'un backend local à un backend distant ?",
+    "options": ["Oui (terraform init -migrate-state)", "Non", "Uniquement avec Terraform Cloud", "Uniquement avec S3"],
+    "correct": 0,
+    "explication": "terraform init -migrate-state copie l'état local vers le backend distant."
+  },
+  {
+    "id": "TF-01-043",
+    "theme": "Terraform Basics",
+    "theme_label": "Terraform Registry",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le Terraform Registry ?",
+    "options": [
+      "Dépôt public de modules et providers",
+      "Backend distant",
+      "Outil de versioning",
+      "Interface web"
+    ],
+    "correct": 0,
+    "explication": "Le registry héberge des modules réutilisables et des providers."
+  },
+  {
+    "id": "TF-01-044",
+    "theme": "Terraform Basics",
+    "theme_label": "Terraform Registry",
+    "difficulty": "easy",
+    "question": "Comment utiliser un module du registry ?",
+    "options": [
+      "module 'vpc' { source = 'terraform-aws-modules/vpc/aws' version = '3.0.0' }",
+      "module vpc { source = 'terraform-aws-modules/vpc/aws' }",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "source pointe vers le module, version est optionnelle."
+  },
+  {
+    "id": "TF-01-045",
+    "theme": "Terraform Basics",
+    "theme_label": "Formatting",
+    "difficulty": "easy",
+    "question": "Quelle commande formate les fichiers Terraform ?",
+    "options": ["terraform fmt", "terraform format", "terraform tidy", "terraform style"],
+    "correct": 0,
+    "explication": "terraform fmt reformate les fichiers .tf selon le style canonique."
+  },
+  {
+    "id": "TF-01-046",
+    "theme": "Terraform Basics",
+    "theme_label": "Validation",
+    "difficulty": "easy",
+    "question": "Quelle commande valide la syntaxe des fichiers Terraform ?",
+    "options": ["terraform validate", "terraform check", "terraform syntax", "terraform verify"],
+    "correct": 0,
+    "explication": "validate vérifie la syntaxe et la cohérence interne."
+  },
+  {
+    "id": "TF-01-047",
+    "theme": "Terraform Basics",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "question": "Comment activer les logs détaillés (debug) ?",
+    "options": [
+      "export TF_LOG=DEBUG",
+      "terraform --debug",
+      "terraform plan -debug",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "La variable d'environnement TF_LOG contrôle le niveau de log."
+  },
+  {
+    "id": "TF-01-048",
+    "theme": "Terraform Basics",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "question": "Comment enregistrer les logs dans un fichier ?",
+    "options": [
+      "export TF_LOG_PATH=terraform.log",
+      "terraform plan 2> terraform.log",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "TF_LOG_PATH dirige les logs vers un fichier."
+  },
+  {
+    "id": "TF-01-049",
+    "theme": "Terraform Basics",
+    "theme_label": "Terraform version",
+    "difficulty": "easy",
+    "question": "Comment spécifier une version minimale de Terraform dans le code ?",
+    "options": [
+      "terraform { required_version = '>= 1.0' }",
+      "required_version = '1.0'",
+      "version = '1.0'",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le bloc terraform avec required_version."
+  },
+  {
+    "id": "TF-01-050",
+    "theme": "Terraform Basics",
+    "theme_label": "Terraform version",
+    "difficulty": "easy",
+    "question": "Que se passe-t-il si la version de Terraform ne correspond pas à required_version ?",
+    "options": [
+      "Erreur au démarrage",
+      "Warning seulement",
+      "Terraform s'exécute normalement",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Terraform affiche une erreur et s'arrête."
+  }
+]

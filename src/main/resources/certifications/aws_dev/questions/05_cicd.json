@@ -1,0 +1,922 @@
+[
+  {
+    "id": "AWS-DEV-271",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'AWS CodeCommit ?",
+    "options": [
+      "Service de dépôt Git managé",
+      "Service de build",
+      "Service de déploiement",
+      "Service de pipeline"
+    ],
+    "correct": 0,
+    "explanation": "CodeCommit est un service de dépôt Git privé."
+  },
+  {
+    "id": "AWS-DEV-272",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "easy",
+    "question": "CodeCommit supporte-t-il HTTPS et SSH ?",
+    "options": ["Oui", "Non", "HTTPS seulement", "SSH seulement"],
+    "correct": 0,
+    "explanation": "CodeCommit supporte les deux protocoles."
+  },
+  {
+    "id": "AWS-DEV-273",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "medium",
+    "question": "Comment se connecter à CodeCommit ?",
+    "options": [
+      "IAM user avec git-credentials",
+      "IAM role",
+      "HTTPS avec nom d'utilisateur/mot de passe",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes d'authentification sont supportées."
+  },
+  {
+    "id": "AWS-DEV-274",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale d'un dépôt CodeCommit ?",
+    "options": ["100 Go", "50 Go", "25 Go", "200 Go"],
+    "correct": 0,
+    "explanation": "La taille maximale d'un dépôt est 100 Go."
+  },
+  {
+    "id": "AWS-DEV-275",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "hard",
+    "question": "CodeCommit peut-il déclencher des notifications sur les événements Git ?",
+    "options": ["Oui (SNS, Lambda)", "Non", "Uniquement CloudWatch", "Uniquement EventBridge"],
+    "correct": 0,
+    "explication": "CodeCommit peut envoyer des notifications à SNS, Lambda, EventBridge."
+  },
+  {
+    "id": "AWS-DEV-276",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "hard",
+    "question": "CodeCommit supporte-t-il les pull requests ?",
+    "options": ["Oui", "Non", "Uniquement dans la console", "Uniquement via CLI"],
+    "correct": 0,
+    "explication": "CodeCommit a des fonctionnalités de pull request."
+  },
+  {
+    "id": "AWS-DEV-277",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'AWS CodeBuild ?",
+    "options": [
+      "Service de build entièrement managé",
+      "Service de dépôt",
+      "Service de déploiement",
+      "Service de pipeline"
+    ],
+    "correct": 0,
+    "explication": "CodeBuild compile le code et exécute les tests."
+  },
+  {
+    "id": "AWS-DEV-278",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "question": "Où est défini la spécification de build CodeBuild ?",
+    "options": [
+      "buildspec.yml",
+      "codebuild.yml",
+      "build.yml",
+      "codebuild.yaml"
+    ],
+    "correct": 0,
+    "explication": "buildspec.yml est le fichier de configuration par défaut."
+  },
+  {
+    "id": "AWS-DEV-279",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "medium",
+    "question": "Quelles phases de build sont supportées ?",
+    "options": [
+      "install, pre_build, build, post_build",
+      "build seulement",
+      "pre_build, build",
+      "install, build"
+    ],
+    "correct": 0,
+    "explication": "Les phases install, pre_build, build, post_build sont disponibles."
+  },
+  {
+    "id": "AWS-DEV-280",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "question": "CodeBuild peut-il utiliser des images Docker personnalisées ?",
+    "options": ["Oui", "Non", "Uniquement les images AWS", "Uniquement les images publiques"],
+    "correct": 0,
+    "explication": "CodeBuild supporte les images personnalisées (ECR ou Docker Hub)."
+  },
+  {
+    "id": "AWS-DEV-281",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "question": "Quelle est la limite de mémoire pour CodeBuild ?",
+    "options": ["8 Go", "4 Go", "16 Go", "32 Go"],
+    "correct": 0,
+    "explication": "La mémoire maximale est 8 Go (configurable)."
+  },
+  {
+    "id": "AWS-DEV-282",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "question": "Quelle est la durée maximale d'un build ?",
+    "options": ["8 heures", "1 heure", "4 heures", "12 heures"],
+    "correct": 0,
+    "explication": "La durée maximale de build est 8 heures (480 minutes)."
+  },
+  {
+    "id": "AWS-DEV-283",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "question": "CodeBuild peut-il produire des artefacts ?",
+    "options": ["Oui (S3)", "Non", "Uniquement local", "Uniquement CodeDeploy"],
+    "correct": 0,
+    "explication": "Les artefacts de build peuvent être stockés dans S3."
+  },
+  {
+    "id": "AWS-DEV-284",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "question": "CodeBuild supporte-t-il les caches ?",
+    "options": ["Oui (S3)", "Non", "Uniquement local", "Uniquement Docker"],
+    "correct": 0,
+    "explication": "Le cache S3 accélère les builds en réutilisant les dépendances."
+  },
+  {
+    "id": "AWS-DEV-285",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "question": "CodeBuild peut-il exécuter des builds dans un VPC ?",
+    "options": ["Oui", "Non", "Uniquement avec NAT", "Uniquement avec PrivateLink"],
+    "correct": 0,
+    "explication": "CodeBuild peut accéder à des ressources dans un VPC."
+  },
+  {
+    "id": "AWS-DEV-286",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'AWS CodeDeploy ?",
+    "options": [
+      "Service de déploiement automatisé",
+      "Service de build",
+      "Service de dépôt",
+      "Service de pipeline"
+    ],
+    "correct": 0,
+    "explication": "CodeDeploy automatise les déploiements sur EC2, on-premise, Lambda, ECS."
+  },
+  {
+    "id": "AWS-DEV-287",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "easy",
+    "question": "Quels sont les types de déploiement CodeDeploy ?",
+    "options": [
+      "In-place et Blue/Green",
+      "Rolling seulement",
+      "All-at-once seulement",
+      "Canary seulement"
+    ],
+    "correct": 0,
+    "explication": "In-place (mise à jour des instances existantes) et Blue/Green (swap de groupes)."
+  },
+  {
+    "id": "AWS-DEV-288",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "medium",
+    "question": "Où est défini la configuration de déploiement CodeDeploy ?",
+    "options": [
+      "appspec.yml",
+      "codedeploy.yml",
+      "deployment.yml",
+      "deploy.yml"
+    ],
+    "correct": 0,
+    "explication": "appspec.yml est le fichier de configuration CodeDeploy."
+  },
+  {
+    "id": "AWS-DEV-289",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "hard",
+    "question": "Quels hooks sont supportés dans appspec.yml ?",
+    "options": [
+      "ApplicationStop, DownloadBundle, BeforeInstall, AfterInstall, ApplicationStart, ValidateService",
+      "Seulement BeforeInstall",
+      "Seulement AfterInstall",
+      "Seulement ApplicationStart"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs hooks permettent de personnaliser le déploiement."
+  },
+  {
+    "id": "AWS-DEV-290",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le déploiement Blue/Green ?",
+    "options": [
+      "Crée un nouvel environnement puis bascule le trafic",
+      "Met à jour les instances en place",
+      "Redémarre les instances",
+      "Remplace une instance à la fois"
+    ],
+    "correct": 0,
+    "explication": "Blue/Green réduit les temps d'arrêt en basculant entre deux environnements."
+  },
+  {
+    "id": "AWS-DEV-291",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "hard",
+    "question": "CodeDeploy peut-il être utilisé avec des instances on-premise ?",
+    "options": ["Oui", "Non", "Uniquement avec EC2", "Uniquement avec ECS"],
+    "correct": 0,
+    "explication": "CodeDeploy supporte les instances on-premise via des agents."
+  },
+  {
+    "id": "AWS-DEV-292",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "hard",
+    "question": "CodeDeploy supporte-t-il les déploiements sur Lambda ?",
+    "options": ["Oui", "Non", "Uniquement pour les alias", "Uniquement pour les versions"],
+    "correct": 0,
+    "explication": "CodeDeploy peut faire des déploiements progressifs sur Lambda (traffic shifting)."
+  },
+  {
+    "id": "AWS-DEV-293",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'AWS CodePipeline ?",
+    "options": [
+      "Service de pipeline CI/CD",
+      "Service de build",
+      "Service de dépôt",
+      "Service de déploiement"
+    ],
+    "correct": 0,
+    "explication": "CodePipeline orchestre les étapes de livraison continue."
+  },
+  {
+    "id": "AWS-DEV-294",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "medium",
+    "question": "Quels sont les types d'étapes (stages) dans CodePipeline ?",
+    "options": [
+      "Source, Build, Test, Deploy, Approve",
+      "Source, Build seulement",
+      "Source, Deploy seulement",
+      "Build, Test seulement"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs types d'étapes sont disponibles."
+  },
+  {
+    "id": "AWS-DEV-295",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "hard",
+    "question": "CodePipeline peut-il s'intégrer à des fournisseurs tiers ?",
+    "options": [
+      "Oui (GitHub, Bitbucket, Jenkins, etc.)",
+      "Non",
+      "Uniquement AWS",
+      "Uniquement GitHub"
+    ],
+    "correct": 0,
+    "explication": "CodePipeline supporte des intégrations tierces via des actions personnalisées."
+  },
+  {
+    "id": "AWS-DEV-296",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "hard",
+    "question": "Comment ajouter une approbation manuelle dans CodePipeline ?",
+    "options": [
+      "Étape d'approbation (Manual Approval)",
+      "Lambda custom",
+      "SNS",
+      "CloudWatch"
+    ],
+    "correct": 0,
+    "explication": "L'étape d'approbation manuelle nécessite une validation humaine."
+  },
+  {
+    "id": "AWS-DEV-297",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "hard",
+    "question": "CodePipeline peut-il déclencher des pipelines à partir d'événements ?",
+    "options": [
+      "Oui (CloudWatch Events, EventBridge)",
+      "Non",
+      "Uniquement via webhook",
+      "Uniquement via cron"
+    ],
+    "correct": 0,
+    "explication": "CodePipeline peut être déclenché par des événements (push CodeCommit, S3, etc.)."
+  },
+  {
+    "id": "AWS-DEV-298",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeStar",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS CodeStar ?",
+    "options": [
+      "Plateforme de développement intégrée",
+      "Service de build",
+      "Service de déploiement",
+      "Service de dépôt"
+    ],
+    "correct": 0,
+    "explication": "CodeStar fournit des projets CI/CD prêts à l'emploi avec templates."
+  },
+  {
+    "id": "AWS-DEV-299",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CloudFormation",
+    "difficulty": "hard",
+    "question": "Comment intégrer CloudFormation dans un pipeline CI/CD ?",
+    "options": [
+      "CodePipeline action CloudFormation",
+      "AWS CLI",
+      "CDK",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs façons de déployer l'infrastructure via pipeline."
+  },
+  {
+    "id": "AWS-DEV-300",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CloudFormation",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un change set CloudFormation ?",
+    "options": [
+      "Aperçu des modifications avant déploiement",
+      "Journal des modifications",
+      "Liste des ressources",
+      "Rapport de déploiement"
+    ],
+    "correct": 0,
+    "explication": "Les change sets permettent de visualiser l'impact des modifications."
+  },
+  {
+    "id": "AWS-DEV-301",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CDK",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS CDK (Cloud Development Kit) ?",
+    "options": [
+      "Infrastructure as Code avec des langages de programmation",
+      "CLI",
+      "Service de monitoring",
+      "Base de données"
+    ],
+    "correct": 0,
+    "explication": "CDK permet de définir l'infrastructure en TypeScript, Python, Java, etc."
+  },
+  {
+    "id": "AWS-DEV-302",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CDK",
+    "difficulty": "hard",
+    "question": "CDK synth génère quoi ?",
+    "options": [
+      "Template CloudFormation",
+      "Code déployable",
+      "Conteneur",
+      "Archive"
+    ],
+    "correct": 0,
+    "explication": "cdk synth produit un template CloudFormation à partir du code CDK."
+  },
+  {
+    "id": "AWS-DEV-303",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CDK",
+    "difficulty": "hard",
+    "question": "CDK deploy déploie directement ?",
+    "options": [
+      "Oui (via CloudFormation)",
+      "Non",
+      "Uniquement en synthèse",
+      "Uniquement avec pipeline"
+    ],
+    "correct": 0,
+    "explication": "cdk deploy crée ou met à jour la stack CloudFormation."
+  },
+  {
+    "id": "AWS-DEV-304",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeArtifact",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'AWS CodeArtifact ?",
+    "options": [
+      "Dépôt de paquets (npm, Maven, PyPI, NuGet)",
+      "Service de build",
+      "Service de déploiement",
+      "Service de pipeline"
+    ],
+    "correct": 0,
+    "explication": "CodeArtifact stocke les artefacts de build."
+  },
+  {
+    "id": "AWS-DEV-305",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeArtifact",
+    "difficulty": "hard",
+    "question": "CodeArtifact peut-il servir de proxy vers des dépôts publics ?",
+    "options": ["Oui", "Non", "Uniquement pour npm", "Uniquement pour Maven"],
+    "correct": 0,
+    "explication": "CodeArtifact peut agir comme proxy pour npm, Maven Central, PyPI, NuGet."
+  },
+  {
+    "id": "AWS-DEV-306",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "X-Ray",
+    "difficulty": "hard",
+    "question": "Comment intégrer X-Ray dans un pipeline ?",
+    "options": [
+      "Décorer le code avec le SDK X-Ray",
+      "Configurer le tracing",
+      "Utiliser X-Ray avec Lambda",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "X-Ray nécessite une instrumentation du code."
+  },
+  {
+    "id": "AWS-DEV-307",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment exécuter des tests dans CodePipeline ?",
+    "options": [
+      "CodeBuild pour les tests",
+      "Test action personnalisée",
+      "Lambda pour les tests",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs options pour exécuter des tests."
+  },
+  {
+    "id": "AWS-DEV-308",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "CodeBuild peut-il générer des rapports de test ?",
+    "options": ["Oui", "Non", "Uniquement JUnit", "Uniquement NUnit"],
+    "correct": 0,
+    "explication": "CodeBuild peut générer des rapports de test dans plusieurs formats."
+  },
+  {
+    "id": "AWS-DEV-309",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Secrets in CI/CD",
+    "difficulty": "hard",
+    "question": "Comment gérer les secrets dans CodeBuild ?",
+    "options": [
+      "AWS Secrets Manager, Parameter Store",
+      "Variables d'environnement non chiffrées",
+      "CodeBuild ne supporte pas les secrets",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les secrets peuvent être stockés dans Secrets Manager ou Parameter Store."
+  },
+  {
+    "id": "AWS-DEV-310",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Secrets in CI/CD",
+    "difficulty": "hard",
+    "question": "Comment accéder à un secret dans buildspec.yml ?",
+    "options": [
+      "secrets-manager: secret-name:key",
+      "${SECRET}",
+      "$SECRET",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "La syntaxe secrets-manager: permet de récupérer un secret."
+  },
+  {
+    "id": "AWS-DEV-311",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Notifications",
+    "difficulty": "hard",
+    "question": "Comment recevoir des notifications sur l'état du pipeline ?",
+    "options": [
+      "SNS, EventBridge",
+      "CloudWatch",
+      "Lambda",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "CodePipeline peut envoyer des notifications via SNS ou EventBridge."
+  },
+  {
+    "id": "AWS-DEV-312",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "EventBridge",
+    "difficulty": "hard",
+    "question": "Quel service CodePipeline utilise pour les événements ?",
+    "options": ["EventBridge", "CloudWatch Events", "SNS", "A et B"],
+    "correct": 3,
+    "explication": "CodePipeline émet des événements vers EventBridge (anciennement CloudWatch Events)."
+  },
+  {
+    "id": "AWS-DEV-313",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Doit-on avoir des pipelines séparés par environnement ?",
+    "options": ["Oui", "Non", "Optionnel", "Un seul pipeline"],
+    "correct": 0,
+    "explication": "Des pipelines séparés (dev, staging, prod) permettent un contrôle plus fin."
+  },
+  {
+    "id": "AWS-DEV-314",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment implémenter le blue/green avec CodeDeploy ?",
+    "options": [
+      "Configuration dans appspec.yml",
+      "CloudFormation",
+      "Pipeline avec étape de déploiement",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Le blue/green se configure dans appspec.yml ou dans l'étape de déploiement."
+  },
+  {
+    "id": "AWS-DEV-315",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Comment valider le déploiement après installation ?",
+    "options": [
+      "Hook ValidateService dans appspec.yml",
+      "Étape de test après déploiement",
+      "Health checks",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs méthodes pour valider le déploiement."
+  },
+  {
+    "id": "AWS-DEV-316",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Cross-account",
+    "difficulty": "hard",
+    "question": "CodePipeline peut-il déployer cross-account ?",
+    "options": ["Oui", "Non", "Uniquement avec CloudFormation", "Uniquement avec CodeDeploy"],
+    "correct": 0,
+    "explication": "CodePipeline peut déployer dans plusieurs comptes via des rôles IAM."
+  },
+  {
+    "id": "AWS-DEV-317",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Cross-account",
+    "difficulty": "hard",
+    "question": "Comment configurer un pipeline cross-account ?",
+    "options": [
+      "Rôles IAM avec confiance cross-account",
+      "Artifacts dans S3 avec politique",
+      "KMS pour le chiffrement",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs configurations nécessaires."
+  },
+  {
+    "id": "AWS-DEV-318",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "GitHub Actions",
+    "difficulty": "hard",
+    "question": "AWS s'intègre-t-il avec GitHub Actions ?",
+    "options": ["Oui", "Non", "Uniquement via CodeStar", "Uniquement via CodeBuild"],
+    "correct": 0,
+    "explication": "GitHub Actions peut déployer sur AWS via des actions personnalisées."
+  },
+  {
+    "id": "AWS-DEV-319",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "GitLab CI",
+    "difficulty": "hard",
+    "question": "GitLab CI peut-il déployer sur AWS ?",
+    "options": ["Oui", "Non", "Uniquement via CodeDeploy", "Uniquement via CodeBuild"],
+    "correct": 0,
+    "explication": "GitLab CI peut utiliser AWS CLI ou des intégrations."
+  },
+  {
+    "id": "AWS-DEV-320",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Bitbucket Pipelines",
+    "difficulty": "hard",
+    "question": "Bitbucket Pipelines supporte-t-il AWS ?",
+    "options": ["Oui", "Non", "Uniquement avec OIDC", "Uniquement avec IAM"],
+    "correct": 0,
+    "explication": "Bitbucket Pipelines peut déployer sur AWS via des rôles OIDC."
+  },
+  {
+    "id": "AWS-DEV-321",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Artifact management",
+    "difficulty": "hard",
+    "question": "Où sont stockés les artefacts CodePipeline ?",
+    "options": ["S3", "CodeArtifact", "EFS", "EBS"],
+    "correct": 0,
+    "explication": "Les artefacts de pipeline sont stockés dans un bucket S3."
+  },
+  {
+    "id": "AWS-DEV-322",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Artifact management",
+    "difficulty": "hard",
+    "question": "Comment sécuriser les artefacts S3 ?",
+    "options": [
+      "Chiffrement, bucket policies, versioning",
+      "Accès public",
+      "Pas de chiffrement",
+      "ACL publiques"
+    ],
+    "correct": 0,
+    "explication": "Les artefacts doivent être protégés."
+  },
+  {
+    "id": "AWS-DEV-323",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "Comment déboguer un build CodeBuild qui échoue ?",
+    "options": [
+      "Logs CloudWatch, phase détaillée",
+      "Mode debug",
+      "Exécution locale",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs méthodes pour analyser les échecs."
+  },
+  {
+    "id": "AWS-DEV-324",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "question": "CodeBuild peut-il exécuter un shell interactif pour debug ?",
+    "options": ["Oui (phase post_build)", "Non", "Uniquement avec session-manager", "Uniquement avec SSH"],
+    "correct": 0,
+    "explication": "On peut ajouter des commandes de debug dans post_build."
+  },
+  {
+    "id": "AWS-DEV-325",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Cost optimization",
+    "difficulty": "hard",
+    "question": "Comment réduire les coûts CodeBuild ?",
+    "options": [
+      "Utiliser des instances spot",
+      "Réduire la taille des builds",
+      "Cache S3",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs stratégies pour optimiser les coûts."
+  },
+  {
+    "id": "AWS-DEV-326",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Cost optimization",
+    "difficulty": "hard",
+    "question": "CodeBuild facture-t-il à la minute ?",
+    "options": ["Oui", "Non (à la seconde)", "Uniquement pour les builds longs", "Uniquement pour les builds réussis"],
+    "correct": 1,
+    "explication": "CodeBuild facture à la seconde (minimum 1 minute)."
+  },
+  {
+    "id": "AWS-DEV-327",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Serverless CI/CD",
+    "difficulty": "hard",
+    "question": "Comment faire du CI/CD pour des applications serverless ?",
+    "options": [
+      "SAM pipeline",
+      "CodePipeline + CodeBuild + Lambda",
+      "AWS CDK",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs approches pour déployer des applications serverless."
+  },
+  {
+    "id": "AWS-DEV-328",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "SAM",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que AWS SAM ?",
+    "options": [
+      "Serverless Application Model",
+      "Security Assessment Model",
+      "Storage Access Management",
+      "Service Application Monitoring"
+    ],
+    "correct": 0,
+    "explication": "SAM est un framework pour définir des applications serverless."
+  },
+  {
+    "id": "AWS-DEV-329",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "SAM",
+    "difficulty": "hard",
+    "question": "SAM peut-il générer un pipeline CI/CD ?",
+    "options": ["Oui (sam pipeline)", "Non", "Uniquement avec CodeStar", "Uniquement avec CodePipeline"],
+    "correct": 0,
+    "explication": "sam pipeline init génère un pipeline pour CodePipeline."
+  },
+  {
+    "id": "AWS-DEV-330",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Comment surveiller les pipelines ?",
+    "options": [
+      "CloudWatch, EventBridge, X-Ray",
+      "Seulement CloudWatch",
+      "Seulement X-Ray",
+      "Seulement SNS"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs services pour monitorer les pipelines."
+  },
+  {
+    "id": "AWS-DEV-331",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Monitoring",
+    "difficulty": "hard",
+    "question": "Quelles métriques sont importantes pour CodeBuild ?",
+    "options": [
+      "Duration, Builds, FailedBuilds",
+      "Seulement Duration",
+      "Seulement FailedBuilds",
+      "Seulement Builds"
+    ],
+    "correct": 0,
+    "explication": "Surveiller la durée, le nombre de builds et les échecs."
+  },
+  {
+    "id": "AWS-DEV-332",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un pipeline CI/CD ?",
+    "options": [
+      "IAM minimal, chiffrement, VPC",
+      "Accès public",
+      "Pas de chiffrement",
+      "Rôles trop permissifs"
+    ],
+    "correct": 0,
+    "explication": "Les pipelines doivent suivre le principe du moindre privilège."
+  },
+  {
+    "id": "AWS-DEV-333",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le scanning de code (CodeGuru) ?",
+    "options": [
+      "Analyse statique et recommandations",
+      "Scan de vulnérabilités",
+      "Revue de code automatique",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Amazon CodeGuru Reviewer analyse le code pour détecter des problèmes."
+  },
+  {
+    "id": "AWS-DEV-334",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeGuru",
+    "difficulty": "hard",
+    "question": "CodeGuru peut-il être intégré dans CodePipeline ?",
+    "options": ["Oui", "Non", "Uniquement pour les pull requests", "Uniquement pour les builds"],
+    "correct": 0,
+    "explication": "CodePipeline peut avoir une étape CodeGuru pour l'analyse."
+  },
+  {
+    "id": "AWS-DEV-335",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour les branches ?",
+    "options": [
+      "Pipeline pour main, branches de fonctionnalités",
+      "Un seul pipeline",
+      "Pipeline pour chaque commit",
+      "Pas de pipeline"
+    ],
+    "correct": 0,
+    "explication": "Avoir des pipelines séparés pour la branche principale et les fonctionnalités."
+  },
+  {
+    "id": "AWS-DEV-336",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Doit-on versionner les fichiers de pipeline ?",
+    "options": ["Oui (avec le code)", "Non", "Optionnel", "Uniquement les templates"],
+    "correct": 0,
+    "explication": "La configuration CI/CD doit être versionnée (buildspec, appspec, template)."
+  },
+  {
+    "id": "AWS-DEV-337",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Disaster recovery",
+    "difficulty": "hard",
+    "question": "Comment sauvegarder la configuration des pipelines ?",
+    "options": [
+      "CloudFormation, CDK, CLI",
+      "Export manuel",
+      "Snapshot",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Les pipelines doivent être définis comme code (IaC)."
+  },
+  {
+    "id": "AWS-DEV-338",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Rollback",
+    "difficulty": "hard",
+    "question": "Comment implémenter un rollback automatique ?",
+    "options": [
+      "Deployer la version précédente",
+      "Pipeline avec étape de rollback",
+      "CloudFormation change set",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs stratégies de rollback existent."
+  },
+  {
+    "id": "AWS-DEV-339",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Multi-region",
+    "difficulty": "hard",
+    "question": "Comment gérer des déploiements multi-région ?",
+    "options": [
+      "Pipeline avec actions parallèles",
+      "CloudFormation StackSets",
+      "CodeDeploy multi-region",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs approches pour déployer dans plusieurs régions."
+  },
+  {
+    "id": "AWS-DEV-340",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne pratique pour les secrets ?",
+    "options": [
+      "Jamais dans le code, utiliser Secrets Manager",
+      "Dans les variables d'environnement",
+      "Dans le fichier de configuration",
+      "Dans le dépôt"
+    ],
+    "correct": 0,
+    "explication": "Les secrets ne doivent jamais être versionnés."
+  }
+]

@@ -1,0 +1,2212 @@
+[
+  {
+    "id": "OCP17-REC-001",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne déclaration d'un record ?",
+    "options": [
+      "record Point(int x, int y) {}",
+      "record Point { int x; int y; }",
+      "data class Point(int x, int y) {}",
+      "value class Point(int x, int y) {}"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe correcte est 'record Point(int x, int y) {}'"
+  },
+  {
+    "id": "OCP17-REC-002",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "easy",
+    "question": "Un record peut-il être générique ?",
+    "options": [
+      "Oui, record Point<T>(T x, T y) {}",
+      "Non, les records ne supportent pas les génériques",
+      "Oui, mais avec des restrictions",
+      "Uniquement pour les types primitifs"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent être génériques comme les classes."
+  },
+  {
+    "id": "OCP17-REC-003",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "easy",
+    "question": "Où un record peut-il être déclaré ?",
+    "options": [
+      "Au niveau top-level ou nested",
+      "Uniquement au niveau top-level",
+      "Uniquement dans une classe",
+      "Uniquement dans une méthode"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut être déclaré au niveau top-level ou comme membre d'une classe."
+  },
+  {
+    "id": "OCP17-REC-004",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "medium",
+    "question": "Quel est le nom du constructeur généré automatiquement pour un record ?",
+    "options": [
+      "Constructeur canonique",
+      "Constructeur par défaut",
+      "Constructeur de copie",
+      "Constructeur statique"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur canonique prend tous les composants en paramètres."
+  },
+  {
+    "id": "OCP17-REC-005",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "medium",
+    "question": "Quelle est la portée des composants d'un record ?",
+    "options": [
+      "Private final",
+      "Public final",
+      "Private static final",
+      "Public static final"
+    ],
+    "correct": 1,
+    "explanation": "Les composants d'un record sont private final avec des accesseurs publics."
+  },
+  {
+    "id": "OCP17-REC-006",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "medium",
+    "question": "Un record peut-il avoir des champs statiques ?",
+    "options": [
+      "Oui, des champs statiques sont autorisés",
+      "Non, aucun champ statique",
+      "Oui, mais seulement final",
+      "Oui, mais seulement private"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent avoir des champs statiques comme les classes normales."
+  },
+  {
+    "id": "OCP17-REC-007",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "medium",
+    "question": "Un record peut-il être abstrait ?",
+    "options": [
+      "Non, les records sont implicitement final",
+      "Oui, avec le mot-clé abstract",
+      "Oui, mais sans composants",
+      "Non, seulement les classes normales"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont implicitement final et ne peuvent être abstraits."
+  },
+  {
+    "id": "OCP17-REC-008",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "hard",
+    "question": "Quelle est la superclasse de tous les records ?",
+    "options": [
+      "java.lang.Record",
+      "java.lang.Object",
+      "java.lang.Comparable",
+      "java.io.Serializable"
+    ],
+    "correct": 0,
+    "explanation": "Tous les records étendent implicitement java.lang.Record."
+  },
+  {
+    "id": "OCP17-REC-009",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "hard",
+    "question": "Peut-on étendre un record ?",
+    "options": [
+      "Non, les records sont final",
+      "Oui, avec le mot-clé extends",
+      "Oui, mais seulement par des records",
+      "Oui, mais seulement par des classes"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont final et ne peuvent être étendus."
+  },
+  {
+    "id": "OCP17-REC-010",
+    "theme": "Records",
+    "theme_label": "Déclaration de records",
+    "difficulty": "hard",
+    "question": "Un record peut-il implémenter des interfaces ?",
+    "options": [
+      "Oui, comme une classe normale",
+      "Non, les records ne peuvent pas",
+      "Oui, mais seulement Serializable",
+      "Oui, mais seulement Cloneable"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent implémenter des interfaces comme les classes."
+  },
+  {
+    "id": "OCP17-REC-011",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un constructeur compact dans un record ?",
+    "options": [
+      "Un constructeur sans paramètres",
+      "Un constructeur avec validation avant affectation",
+      "Un constructeur privé",
+      "Un constructeur statique"
+    ],
+    "correct": 1,
+    "explanation": "Le constructeur compact permet de valider les paramètres avant l'affectation aux champs."
+  },
+  {
+    "id": "OCP17-REC-012",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "medium",
+    "question": "Quelle est la syntaxe d'un constructeur compact ?",
+    "options": [
+      "Point { if (x < 0) throw new IllegalArgumentException(); }",
+      "Point(x, y) { if (x < 0) throw new IllegalArgumentException(); }",
+      "new Point { if (x < 0) throw new IllegalArgumentException(); }",
+      "Point() { if (x < 0) throw new IllegalArgumentException(); }"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur compact utilise le nom du record sans paramètres."
+  },
+  {
+    "id": "OCP17-REC-013",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "medium",
+    "question": "Peut-on définir un constructeur personnalisé dans un record ?",
+    "options": [
+      "Oui, en plus du constructeur canonique",
+      "Non, un seul constructeur",
+      "Oui, mais seulement privé",
+      "Oui, mais seulement public"
+    ],
+    "correct": 0,
+    "explanation": "On peut définir des constructeurs personnalisés qui doivent appeler le constructeur canonique."
+  },
+  {
+    "id": "OCP17-REC-014",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Quel est l'ordre d'exécution des constructeurs ?",
+    "options": [
+      "Compact → Canonique → Personnalisé",
+      "Canonique → Compact → Personnalisé",
+      "Personnalisé → Compact → Canonique",
+      "Seul le canonique existe"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur compact s'exécute d'abord, puis le canonique, puis les personnalisés."
+  },
+  {
+    "id": "OCP17-REC-015",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Peut-on avoir plusieurs constructeurs compacts ?",
+    "options": [
+      "Non, un seul constructeur compact",
+      "Oui, avec surcharge",
+      "Oui, mais avec des signatures différentes",
+      "Non, seulement le canonique"
+    ],
+    "correct": 0,
+    "explanation": "Un record ne peut avoir qu'un seul constructeur compact."
+  },
+  {
+    "id": "OCP17-REC-016",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Dans un constructeur compact, peut-on modifier les paramètres ?",
+    "options": [
+      "Oui, on peut les valider ou les normaliser",
+      "Non, ils sont immuables",
+      "Oui, mais seulement les lire",
+      "Non, seulement les valider"
+    ],
+    "correct": 0,
+    "explanation": "Le constructeur compact peut valider et normaliser les paramètres."
+  },
+  {
+    "id": "OCP17-REC-017",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si on ne définit pas de constructeur ?",
+    "options": [
+      "Un constructeur canonique est généré",
+      "Erreur de compilation",
+      "Un constructeur par défaut est généré",
+      "Le record est inutilisable"
+    ],
+    "correct": 0,
+    "explanation": "Le compilateur génère automatiquement le constructeur canonique."
+  },
+  {
+    "id": "OCP17-REC-018",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Peut-on avoir un constructeur privé dans un record ?",
+    "options": [
+      "Oui, pour des factory methods",
+      "Non, tous les constructeurs sont public",
+      "Oui, mais seulement si public existe",
+      "Non, privé interdit"
+    ],
+    "correct": 0,
+    "explanation": "Les constructeurs privés sont autorisés pour des patterns de création."
+  },
+  {
+    "id": "OCP17-REC-019",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Un constructeur personnalisé doit-il appeler this() ?",
+    "options": [
+      "Oui, doit appeler le constructeur canonique",
+      "Non, peut initialiser directement",
+      "Oui, mais seulement si validation",
+      "Non, optionnel"
+    ],
+    "correct": 0,
+    "explanation": "Les constructeurs personnalisés doivent appeler le constructeur canonique avec this()."
+  },
+  {
+    "id": "OCP17-REC-020",
+    "theme": "Records",
+    "theme_label": "Constructeurs",
+    "difficulty": "hard",
+    "question": "Peut-on avoir un constructeur avec des paramètres supplémentaires ?",
+    "options": [
+      "Oui, avec appel au constructeur canonique",
+      "Non, seulement les composants",
+      "Oui, mais seulement un",
+      "Non, signature fixe"
+    ],
+    "correct": 0,
+    "explanation": "On peut avoir des constructeurs avec paramètres supplémentaires qui appellent le constructeur canonique."
+  },
+  {
+    "id": "OCP17-REC-021",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Quelles méthodes sont générées automatiquement par un record ?",
+    "options": [
+      "equals(), hashCode(), toString()",
+      "equals(), toString() seulement",
+      "equals(), hashCode(), toString(), clone()",
+      "Seulement les accesseurs"
+    ],
+    "correct": 0,
+    "explanation": "Un record génère equals(), hashCode(), toString() et les accesseurs."
+  },
+  {
+    "id": "OCP17-REC-022",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Peut-on redéfinir equals() dans un record ?",
+    "options": [
+      "Oui, en fournissant une implémentation",
+      "Non, equals() est final",
+      "Oui, mais avec restrictions",
+      "Non, généré automatiquement"
+    ],
+    "correct": 0,
+    "explanation": "On peut redéfinir equals() comme dans une classe normale."
+  },
+  {
+    "id": "OCP17-REC-023",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Peut-on redéfinir hashCode() dans un record ?",
+    "options": [
+      "Oui, en fournissant une implémentation",
+      "Non, hashCode() est final",
+      "Oui, mais avec restrictions",
+      "Non, généré automatiquement"
+    ],
+    "correct": 0,
+    "explanation": "On peut redéfinir hashCode() comme dans une classe normale."
+  },
+  {
+    "id": "OCP17-REC-024",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "easy",
+    "question": "Peut-on redéfinir toString() dans un record ?",
+    "options": [
+      "Oui, en fournissant une implémentation",
+      "Non, toString() est final",
+      "Oui, mais avec restrictions",
+      "Non, généré automatiquement"
+    ],
+    "correct": 0,
+    "explanation": "On peut redéfinir toString() comme dans une classe normale."
+  },
+  {
+    "id": "OCP17-REC-025",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Un record peut-il avoir des méthodes d'instance personnalisées ?",
+    "options": [
+      "Oui, des méthodes non mutatrices",
+      "Non, seulement les accesseurs",
+      "Oui, mais seulement static",
+      "Oui, mais seulement abstract"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut avoir des méthodes d'instance personnalisées (non mutatrices)."
+  },
+  {
+    "id": "OCP17-REC-026",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Un record peut-il avoir des méthodes statiques ?",
+    "options": [
+      "Oui, comme une classe normale",
+      "Non, les records ne supportent pas static",
+      "Oui, mais seulement private",
+      "Oui, mais seulement public"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent avoir des méthodes statiques comme les classes normales."
+  },
+  {
+    "id": "OCP17-REC-027",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "question": "Une méthode personnalisée peut-elle modifier un record ?",
+    "options": [
+      "Non, les records sont immuables",
+      "Oui, en créant une nouvelle instance",
+      "Oui, en modifiant les champs",
+      "Non, aucune méthode personnalisée"
+    ],
+    "correct": 1,
+    "explanation": "Les méthodes peuvent retourner une nouvelle instance modifiée (pattern wither)."
+  },
+  {
+    "id": "OCP17-REC-028",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "hard",
+    "question": "Peut-on surcharger les accesseurs d'un record ?",
+    "options": [
+      "Oui, en fournissant une implémentation",
+      "Non, ils sont final",
+      "Oui, mais avec le même nom",
+      "Non, générés automatiquement"
+    ],
+    "correct": 0,
+    "explanation": "On peut fournir une implémentation personnalisée pour les accesseurs."
+  },
+  {
+    "id": "OCP17-REC-029",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "hard",
+    "question": "Que retourne l'accesseur par défaut d'un record ?",
+    "options": [
+      "La valeur du champ",
+      "Une copie du champ",
+      "Une référence au champ",
+      "Un Optional"
+    ],
+    "correct": 0,
+    "explanation": "L'accesseur par défaut retourne la valeur du champ (immutable)."
+  },
+  {
+    "id": "OCP17-REC-030",
+    "theme": "Records",
+    "theme_label": "Méthodes",
+    "difficulty": "hard",
+    "question": "Une méthode dans un record peut-elle être synchronized ?",
+    "options": [
+      "Oui, comme une classe normale",
+      "Non, les records ne supportent pas synchronized",
+      "Oui, mais avec restrictions",
+      "Non, car records immuables"
+    ],
+    "correct": 0,
+    "explanation": "Les méthodes d'un record peuvent être synchronized comme dans une classe."
+  },
+  {
+    "id": "OCP17-REC-031",
+    "theme": "Records",
+    "theme_label": "Sérialisation",
+    "difficulty": "hard",
+    "question": "Les records sont-ils sérialisables par défaut ?",
+    "options": [
+      "Oui, si tous les composants sont sérialisables",
+      "Non, jamais",
+      "Oui, toujours",
+      "Uniquement avec @Serializable"
+    ],
+    "correct": 0,
+    "explanation": "Un record est sérialisable si tous ses composants le sont."
+  },
+  {
+    "id": "OCP17-REC-032",
+    "theme": "Records",
+    "theme_label": "Sérialisation",
+    "difficulty": "hard",
+    "question": "Comment fonctionne la désérialisation d'un record ?",
+    "options": [
+      "Utilise le constructeur canonique",
+      "Utilise un constructeur spécial",
+      "Utilise la réflexion",
+      "Utilise readObject()"
+    ],
+    "correct": 0,
+    "explanation": "La désérialisation d'un record utilise son constructeur canonique."
+  },
+  {
+    "id": "OCP17-REC-033",
+    "theme": "Records",
+    "theme_label": "Sérialisation",
+    "difficulty": "hard",
+    "question": "Peut-on personnaliser la sérialisation d'un record ?",
+    "options": [
+      "Oui, avec readObject/writeObject",
+      "Non, la sérialisation est automatique",
+      "Oui, avec des annotations",
+      "Non, impossible"
+    ],
+    "correct": 1,
+    "explanation": "La sérialisation des records est automatique et ne peut être personnalisée."
+  },
+  {
+    "id": "OCP17-REC-034",
+    "theme": "Records",
+    "theme_label": "Records locaux",
+    "difficulty": "hard",
+    "question": "Peut-on déclarer un record à l'intérieur d'une méthode ?",
+    "options": [
+      "Oui, record local",
+      "Non, seulement au niveau classe",
+      "Oui, mais seulement static",
+      "Oui, mais seulement final"
+    ],
+    "correct": 0,
+    "explanation": "Java 16+ permet de déclarer des records locaux dans les méthodes."
+  },
+  {
+    "id": "OCP17-REC-035",
+    "theme": "Records",
+    "theme_label": "Records locaux",
+    "difficulty": "hard",
+    "question": "Un record local peut-il capturer des variables de la méthode ?",
+    "options": [
+      "Oui, si elles sont effectively final",
+      "Non, jamais",
+      "Oui, toujours",
+      "Oui, avec des restrictions"
+    ],
+    "correct": 0,
+    "explanation": "Les records locaux peuvent capturer des variables effectively final."
+  },
+  {
+    "id": "OCP17-REC-036",
+    "theme": "Records",
+    "theme_label": "Records locaux",
+    "difficulty": "hard",
+    "question": "Un record local peut-il être générique ?",
+    "options": [
+      "Oui, comme un record normal",
+      "Non, les records locaux ne supportent pas les génériques",
+      "Oui, mais avec restrictions",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Les records locaux peuvent être génériques comme les records normaux."
+  },
+  {
+    "id": "OCP17-REC-037",
+    "theme": "Records",
+    "theme_label": "Annotations",
+    "difficulty": "medium",
+    "question": "Où peut-on placer des annotations sur les composants d'un record ?",
+    "options": [
+      "Sur le type ou le nom du composant",
+      "Seulement sur le type",
+      "Seulement sur le nom",
+      "Aucune annotation possible"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations peuvent être placées sur le type ou sur le nom du composant."
+  },
+  {
+    "id": "OCP17-REC-038",
+    "theme": "Records",
+    "theme_label": "Annotations",
+    "difficulty": "hard",
+    "question": "Les annotations sur les composants sont-elles propagées aux accesseurs ?",
+    "options": [
+      "Oui, selon la cible de l'annotation",
+      "Non, jamais",
+      "Oui, toujours",
+      "Uniquement pour @NotNull"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations sont propagées selon leur cible (FIELD, METHOD, etc.)."
+  },
+  {
+    "id": "OCP17-REC-039",
+    "theme": "Records",
+    "theme_label": "Pattern matching",
+    "difficulty": "hard",
+    "question": "Comment déconstruire un record avec pattern matching ?",
+    "options": [
+      "Point(int x, int y)",
+      "Point(x, y)",
+      "record Point(x, y)",
+      "Point(x: x, y: y)"
+    ],
+    "correct": 0,
+    "explanation": "La syntaxe est 'Point(int x, int y)' pour déconstruire un record."
+  },
+  {
+    "id": "OCP17-REC-040",
+    "theme": "Records",
+    "theme_label": "Pattern matching",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser var dans un record pattern ?",
+    "options": [
+      "Oui, var Point(var x, var y)",
+      "Non, types explicites requis",
+      "Oui, mais avec restrictions",
+      "Non, var interdit"
+    ],
+    "correct": 0,
+    "explanation": "On peut utiliser var pour l'inférence de type dans les record patterns."
+  },
+  {
+    "id": "OCP17-REC-041",
+    "theme": "Records",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les records sont-ils plus performants que les classes ?",
+    "options": [
+      "Généralement oui, pour les données simples",
+      "Non, moins performants",
+      "Identiques en performance",
+      "Dépend de l'utilisation"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent être plus performants pour les classes de données simples."
+  },
+  {
+    "id": "OCP17-REC-042",
+    "theme": "Records",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les records utilisent-ils moins de mémoire que les classes ?",
+    "options": [
+      "Oui, représentation compacte",
+      "Non, plus de mémoire",
+      "Identique",
+      "Dépend des champs"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont une représentation mémoire plus compacte."
+  },
+  {
+    "id": "OCP17-REC-043",
+    "theme": "Records",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "medium",
+    "question": "Quand utiliser un record plutôt qu'une classe ?",
+    "options": [
+      "Pour des objets de données immuables",
+      "Pour des objets avec comportement complexe",
+      "Pour des objets mutables",
+      "Pour des singletons"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont idéaux pour les objets de données immuables (DTO, Value Objects)."
+  },
+  {
+    "id": "OCP17-REC-044",
+    "theme": "Records",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Un record doit-il avoir des méthodes complexes ?",
+    "options": [
+      "Non, privilégier la simplicité",
+      "Oui, comme une classe normale",
+      "Oui, mais avec précaution",
+      "Non, seulement des getters"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont conçus pour être simples, éviter les comportements complexes."
+  },
+  {
+    "id": "OCP17-REC-045",
+    "theme": "Records",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des records comme clés de Map ?",
+    "options": [
+      "Oui, equals/hashCode bien définis",
+      "Non, records non comparables",
+      "Oui, mais avec précautions",
+      "Non, risque de collision"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont equals/hashCode basés sur les composants, excellents comme clés."
+  },
+  {
+    "id": "OCP17-REC-046",
+    "theme": "Records",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quelle est la taille maximale recommandée pour un record ?",
+    "options": [
+      "Quelques composants (4-6)",
+      "Jusqu'à 10 composants",
+      "Jusqu'à 20 composants",
+      "Pas de limite"
+    ],
+    "correct": 0,
+    "explanation": "Il est recommandé de garder les records petits pour une meilleure lisibilité."
+  },
+  {
+    "id": "OCP17-REC-047",
+    "theme": "Records",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Peut-on migrer une classe existante vers un record ?",
+    "options": [
+      "Oui, si la classe est immutable",
+      "Non, cassage de compatibilité",
+      "Oui, avec des annotations",
+      "Non, trop de différences"
+    ],
+    "correct": 0,
+    "explanation": "Une classe immutable peut souvent être migrée vers un record."
+  },
+  {
+    "id": "OCP17-REC-048",
+    "theme": "Records",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Que devient la sérialisation après migration vers record ?",
+    "options": [
+      "Incompatible, besoin de migration",
+      "Compatible automatiquement",
+      "Partiellement compatible",
+      "Indépendant"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records diffère des classes, nécessite une migration."
+  },
+  {
+    "id": "OCP17-REC-049",
+    "theme": "Records",
+    "theme_label": "Cas particuliers",
+    "difficulty": "hard",
+    "question": "Un record peut-il être utilisé comme annotation ?",
+    "options": [
+      "Non, seulement interfaces",
+      "Oui, avec @interface",
+      "Oui, mais avec restrictions",
+      "Non, records non supportés"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations doivent être déclarées avec @interface, pas avec record."
+  },
+  {
+    "id": "OCP17-REC-050",
+    "theme": "Records",
+    "theme_label": "Cas particuliers",
+    "difficulty": "hard",
+    "question": "Un record peut-il contenir des enum ?",
+    "options": [
+      "Oui, comme champ",
+      "Non, enum incompatibles",
+      "Oui, mais seulement static",
+      "Non, records immuables"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut avoir des enum comme composants ou champs statiques."
+  }.,  {
+  "id": "OCP17-REC-051",
+  "theme": "Records Suite",
+  "theme_label": "Records avancés",
+  "difficulty": "hard",
+  "question": "Un record peut-il être générique avec des bornes ?",
+  "options": [
+    "Oui, record Box<T extends Number>(T value) {}",
+    "Non, pas de bornes",
+    "Oui, mais sans extends",
+    "Uniquement avec des interfaces"
+  ],
+  "correct": 0,
+  "explanation": "Les records supportent les bornes génériques comme les classes."
+},
+  {
+    "id": "OCP17-REC-052",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des annotations sur les composants de record ?",
+    "options": [
+      "Oui, sur le type ou le nom",
+      "Non, pas supporté",
+      "Oui, seulement sur le type",
+      "Oui, seulement sur le nom"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations peuvent être placées sur le type ou le nom du composant."
+  },
+  {
+    "id": "OCP17-REC-053",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Point(@NotNull int x, @NotNull int y) {}\nvar p = new Point(0, 0);",
+    "options": [
+      "Point créé normalement",
+      "Erreur à l'exécution",
+      "Warning",
+      "NullPointerException"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations de validation nécessitent un framework externe."
+  },
+  {
+    "id": "OCP17-REC-054",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Les annotations sur les composants sont-elles propagées aux accesseurs ?",
+    "options": [
+      "Oui, selon la cible",
+      "Non, jamais",
+      "Oui, toujours",
+      "Uniquement pour @NotNull"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations sont propagées selon leur cible (FIELD, METHOD)."
+  },
+  {
+    "id": "OCP17-REC-055",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Un record peut-il implémenter une interface fonctionnelle ?",
+    "options": [
+      "Oui, comme une classe",
+      "Non, records incompatibles",
+      "Oui, mais sans méthodes",
+      "Uniquement avec @FunctionalInterface"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut implémenter une interface fonctionnelle."
+  },
+  {
+    "id": "OCP17-REC-056",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Person(String name) implements Runnable {\n    public void run() { System.out.println(name); }\n}\nnew Person(\"Alice\").run();",
+    "options": ["Alice", "null", "Erreur", "Rien"],
+    "correct": 0,
+    "explanation": "Le record implémente Runnable et la méthode run() est appelée."
+  },
+  {
+    "id": "OCP17-REC-057",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des records comme clés dans une Map ?",
+    "options": [
+      "Oui, excellentes clés",
+      "Non, non recommandé",
+      "Oui, mais avec précautions",
+      "Non, records non comparables"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont equals/hashCode basés sur les composants, excellentes clés."
+  },
+  {
+    "id": "OCP17-REC-058",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Point(int x, int y) {}\nMap<Point, String> map = new HashMap<>();\nmap.put(new Point(1, 2), \"A\");\nSystem.out.println(map.get(new Point(1, 2)));",
+    "options": ["A", "null", "Erreur", "Point(1,2)"],
+    "correct": 0,
+    "explanation": "Les records ont equals basé sur les composants, la clé est trouvée."
+  },
+  {
+    "id": "OCP17-REC-059",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Les records sont-ils thread-safe ?",
+    "options": [
+      "Oui, immuables",
+      "Non, mutables",
+      "Oui, avec synchronized",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont immuables donc thread-safe."
+  },
+  {
+    "id": "OCP17-REC-060",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Peut-on partager un record entre threads sans synchronisation ?",
+    "options": [
+      "Oui, immuable",
+      "Non, besoin de lock",
+      "Oui, avec volatile",
+      "Non, thread-unsafe"
+    ],
+    "correct": 0,
+    "explanation": "L'immuabilité des records permet un partage sans synchronisation."
+  },
+  {
+    "id": "OCP17-REC-061",
+    "theme": "Records Suite",
+    "theme_label": "Records et sérialisation",
+    "difficulty": "hard",
+    "question": "Comment sont sérialisés les records ?",
+    "options": [
+      "Par leurs composants",
+      "Comme des classes",
+      "Différemment",
+      "Non sérialisables"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records utilise leurs composants."
+  },
+  {
+    "id": "OCP17-REC-062",
+    "theme": "Records Suite",
+    "theme_label": "Records et sérialisation",
+    "difficulty": "hard",
+    "question": "Peut-on personnaliser la sérialisation d'un record ?",
+    "options": [
+      "Non, automatique",
+      "Oui, avec writeObject",
+      "Oui, avec des annotations",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records est automatique et ne peut être personnalisée."
+  },
+  {
+    "id": "OCP17-REC-063",
+    "theme": "Records Suite",
+    "theme_label": "Records et sérialisation",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un composant n'est pas sérialisable ?",
+    "options": [
+      "Le record n'est pas sérialisable",
+      "Sérialisation partielle",
+      "Exception à l'exécution",
+      "Ignoré"
+    ],
+    "correct": 0,
+    "explanation": "Un record n'est sérialisable que si tous ses composants le sont."
+  },
+  {
+    "id": "OCP17-REC-064",
+    "theme": "Records Suite",
+    "theme_label": "Records et réflexion",
+    "difficulty": "hard",
+    "question": "Comment accéder aux composants d'un record par réflexion ?",
+    "options": [
+      "getRecordComponents()",
+      "getFields()",
+      "getDeclaredFields()",
+      "getComponents()"
+    ],
+    "correct": 0,
+    "explanation": "getRecordComponents() retourne les composants du record."
+  },
+  {
+    "id": "OCP17-REC-065",
+    "theme": "Records Suite",
+    "theme_label": "Records et réflexion",
+    "difficulty": "hard",
+    "question": "Que retourne Class.isRecord() ?",
+    "options": [
+      "true pour un record",
+      "true pour toute classe",
+      "false toujours",
+      "true pour les enums"
+    ],
+    "correct": 0,
+    "explanation": "isRecord() retourne true pour les records."
+  },
+  {
+    "id": "OCP17-REC-066",
+    "theme": "Records Suite",
+    "theme_label": "Records et réflexion",
+    "difficulty": "hard",
+    "question": "Peut-on créer un record par réflexion ?",
+    "options": [
+      "Oui, via le constructeur",
+      "Non, impossible",
+      "Oui, avec des hacks",
+      "Uniquement avec Unsafe"
+    ],
+    "correct": 0,
+    "explanation": "On peut instancier un record par réflexion comme une classe normale."
+  },
+  {
+    "id": "OCP17-REC-067",
+    "theme": "Records Suite",
+    "theme_label": "Records vs classes",
+    "difficulty": "hard",
+    "question": "Quand utiliser un record plutôt qu'une classe ?",
+    "options": [
+      "Pour des objets de données immuables",
+      "Pour des objets avec comportement complexe",
+      "Pour des singletons",
+      "Pour des factories"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont idéaux pour les objets de données immuables (DTO)."
+  },
+  {
+    "id": "OCP17-REC-068",
+    "theme": "Records Suite",
+    "theme_label": "Records vs classes",
+    "difficulty": "hard",
+    "question": "Un record peut-il remplacer une classe avec getters/setters ?",
+    "options": [
+      "Oui, pour les classes immuables",
+      "Non, jamais",
+      "Oui, pour toutes",
+      "Uniquement pour les POJOs"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont parfaits pour remplacer les classes de données immuables."
+  },
+  {
+    "id": "OCP17-REC-069",
+    "theme": "Records Suite",
+    "theme_label": "Records vs classes",
+    "difficulty": "hard",
+    "question": "Quelle est la différence de mémoire entre record et classe ?",
+    "options": [
+      "Record plus compact",
+      "Classe plus compacte",
+      "Identiques",
+      "Dépend des champs"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont une représentation mémoire plus compacte."
+  },
+  {
+    "id": "OCP17-REC-070",
+    "theme": "Records Suite",
+    "theme_label": "Records vs enums",
+    "difficulty": "hard",
+    "question": "Un record peut-il être utilisé comme enum ?",
+    "options": [
+      "Non, finalités différentes",
+      "Oui, avec des constantes",
+      "Oui, avec des champs statiques",
+      "Non, records mutables"
+    ],
+    "correct": 0,
+    "explanation": "Les enums sont pour les constantes, les records pour les données."
+  },
+  {
+    "id": "OCP17-REC-071",
+    "theme": "Records Suite",
+    "theme_label": "Records vs enums",
+    "difficulty": "hard",
+    "question": "Peut-on déclarer des constantes dans un record ?",
+    "options": [
+      "Oui, statiques",
+      "Non, interdit",
+      "Oui, final",
+      "Uniquement dans le constructeur"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut avoir des champs statiques constants."
+  },
+  {
+    "id": "OCP17-REC-072",
+    "theme": "Records Suite",
+    "theme_label": "Records et JPA",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser un record comme entité JPA ?",
+    "options": [
+      "Déconseillé, records immuables",
+      "Oui, normalement",
+      "Oui, avec des annotations",
+      "Non, impossible"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont immuables, ce qui pose problème pour JPA."
+  },
+  {
+    "id": "OCP17-REC-073",
+    "theme": "Records Suite",
+    "theme_label": "Records et JPA",
+    "difficulty": "hard",
+    "question": "Pourquoi éviter les records avec JPA ?",
+    "options": [
+      "Pas de constructeur par défaut",
+      "Immuabilité",
+      "Proxies impossibles",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "JPA a besoin d'un constructeur par défaut et de mutabilité."
+  },
+  {
+    "id": "OCP17-REC-074",
+    "theme": "Records Suite",
+    "theme_label": "Records et JSON",
+    "difficulty": "hard",
+    "question": "Les records sont-ils bien supportés par Jackson ?",
+    "options": [
+      "Oui, depuis Jackson 2.12",
+      "Non, problèmes",
+      "Oui, partiellement",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Jackson supporte les records depuis la version 2.12."
+  },
+  {
+    "id": "OCP17-REC-075",
+    "theme": "Records Suite",
+    "theme_label": "Records et JSON",
+    "difficulty": "hard",
+    "question": "Quelle annotation Jackson est utile pour les records ?",
+    "options": [
+      "@JsonCreator",
+      "@JsonProperty",
+      "@JsonIgnore",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations aident à la sérialisation JSON des records."
+  },
+  {
+    "id": "OCP17-REC-076",
+    "theme": "Records Suite",
+    "theme_label": "Records et Lombok",
+    "difficulty": "hard",
+    "question": "Lombok est-il nécessaire avec les records ?",
+    "options": [
+      "Non, records remplacent @Data",
+      "Oui, toujours",
+      "Partiellement",
+      "Pour les builders"
+    ],
+    "correct": 0,
+    "explanation": "Les records remplacent nativement les fonctionnalités de @Data."
+  },
+  {
+    "id": "OCP17-REC-077",
+    "theme": "Records Suite",
+    "theme_label": "Records et Lombok",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser @Builder avec un record ?",
+    "options": [
+      "Oui, depuis Lombok 1.18.20",
+      "Non, incompatible",
+      "Oui, partiellement",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Lombok supporte @Builder sur les records depuis la version 1.18.20."
+  },
+  {
+    "id": "OCP17-REC-078",
+    "theme": "Records Suite",
+    "theme_label": "Records et Spring",
+    "difficulty": "hard",
+    "question": "Spring supporte-t-il les records comme contrôleurs ?",
+    "options": [
+      "Oui, depuis Spring Boot 2.5",
+      "Non, pas supporté",
+      "Oui, partiellement",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Spring Boot 2.5+ supporte les records comme corps de requête/réponse."
+  },
+  {
+    "id": "OCP17-REC-079",
+    "theme": "Records Suite",
+    "theme_label": "Records et Spring",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser @Valid sur un record ?",
+    "options": [
+      "Oui, normalement",
+      "Non, pas supporté",
+      "Oui, avec @Validated",
+      "Uniquement sur les champs"
+    ],
+    "correct": 0,
+    "explanation": "La validation fonctionne normalement sur les records."
+  },
+  {
+    "id": "OCP17-REC-080",
+    "theme": "Records Suite",
+    "theme_label": "Records et Spring",
+    "difficulty": "hard",
+    "question": "Les records peuvent-ils être des beans Spring ?",
+    "options": [
+      "Oui, avec @Component",
+      "Non, records immuables",
+      "Oui, partiellement",
+      "Uniquement avec @Configuration"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent être des beans Spring comme les classes."
+  },
+  {
+    "id": "OCP17-REC-081",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - pattern",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un record pattern ?",
+    "options": [
+      "Déconstruction d'un record",
+      "Création d'un record",
+      "Pattern de conception",
+      "Motif de record"
+    ],
+    "correct": 0,
+    "explanation": "Un record pattern déconstruit un record en ses composants."
+  },
+  {
+    "id": "OCP17-REC-082",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - pattern",
+    "difficulty": "hard",
+    "question": "Peut-on avoir des record patterns dans un switch ?",
+    "options": [
+      "Oui, normalement",
+      "Non, interdits",
+      "Oui, avec when",
+      "Uniquement dans if"
+    ],
+    "correct": 0,
+    "explanation": "Les record patterns peuvent être utilisés dans les switch expressions."
+  },
+  {
+    "id": "OCP17-REC-083",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - pattern",
+    "difficulty": "hard",
+    "question": "Que signifie 'record pattern exhaustif' ?",
+    "options": [
+      "Couvre tous les cas possibles",
+      "Pattern incomplet",
+      "Pattern partiel",
+      "Pattern générique"
+    ],
+    "correct": 0,
+    "explanation": "Un record pattern est exhaustif s'il couvre toutes les possibilités."
+  },
+  {
+    "id": "OCP17-REC-084",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - performance",
+    "difficulty": "hard",
+    "question": "Les records sont-ils plus rapides à l'exécution ?",
+    "options": [
+      "Légèrement plus rapides",
+      "Plus lents",
+      "Identiques",
+      "Dépend de l'usage"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent être légèrement plus rapides grâce à leur représentation compacte."
+  },
+  {
+    "id": "OCP17-REC-085",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - performance",
+    "difficulty": "hard",
+    "question": "Quel est l'impact mémoire d'un record ?",
+    "options": [
+      "Plus compact",
+      "Plus volumineux",
+      "Identique",
+      "Variable"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont une empreinte mémoire réduite."
+  },
+  {
+    "id": "OCP17-REC-086",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Peut-on avoir un record sans composants ?",
+    "options": [
+      "Oui, record Empty() {}",
+      "Non, au moins un",
+      "Oui, record Empty {}",
+      "Non, record sans composants"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut avoir zéro composant."
+  },
+  {
+    "id": "OCP17-REC-087",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "À quoi sert un record vide ?",
+    "options": [
+      "Singleton ou marqueur",
+      "Rien",
+      "Classe de base",
+      "Pattern"
+    ],
+    "correct": 0,
+    "explanation": "Un record vide peut être utilisé comme singleton ou marqueur."
+  },
+  {
+    "id": "OCP17-REC-088",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Peut-on étendre un record ?",
+    "options": [
+      "Non, final",
+      "Oui, avec extends",
+      "Oui, avec implements",
+      "Non, seulement des interfaces"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont final et ne peuvent être étendus."
+  },
+  {
+    "id": "OCP17-REC-089",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Un record peut-il avoir un constructeur privé ?",
+    "options": [
+      "Oui, pour des factory methods",
+      "Non, public uniquement",
+      "Oui, mais sans validation",
+      "Non, seulement compact"
+    ],
+    "correct": 0,
+    "explanation": "Les constructeurs privés sont autorisés pour des patterns de création."
+  },
+  {
+    "id": "OCP17-REC-090",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Peut-on déclarer un record dans une interface ?",
+    "options": [
+      "Oui, static",
+      "Non, interdit",
+      "Oui, mais non static",
+      "Uniquement dans les classes"
+    ],
+    "correct": 0,
+    "explanation": "Un record dans une interface doit être static."
+  },
+  {
+    "id": "OCP17-REC-091",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - migration",
+    "difficulty": "hard",
+    "question": "Comment migrer une classe vers un record ?",
+    "options": [
+      "Remplacer class par record",
+      "Ajouter des annotations",
+      "Modifier le constructeur",
+      "Changer les getters"
+    ],
+    "correct": 0,
+    "explanation": "La migration principale consiste à remplacer 'class' par 'record'."
+  },
+  {
+    "id": "OCP17-REC-092",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - migration",
+    "difficulty": "hard",
+    "question": "Quelle condition pour migrer vers un record ?",
+    "options": [
+      "La classe doit être immutable",
+      "Toujours possible",
+      "Jamais possible",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Seules les classes immutables peuvent être migrées vers des records."
+  },
+  {
+    "id": "OCP17-REC-093",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - migration",
+    "difficulty": "hard",
+    "question": "La sérialisation est-elle compatible après migration ?",
+    "options": [
+      "Non, incompatible",
+      "Oui, compatible",
+      "Partiellement",
+      "Avec serialVersionUID"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records diffère, incompatible avec les classes."
+  },
+  {
+    "id": "OCP17-REC-094",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quelle est la taille recommandée pour un record ?",
+    "options": [
+      "Quelques composants (4-6)",
+      "Jusqu'à 10",
+      "Jusqu'à 20",
+      "Pas de limite"
+    ],
+    "correct": 0,
+    "explanation": "Il est recommandé de garder les records petits pour la lisibilité."
+  },
+  {
+    "id": "OCP17-REC-095",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Un record doit-il avoir des méthodes complexes ?",
+    "options": [
+      "Non, privilégier la simplicité",
+      "Oui, comme une classe",
+      "Oui, mais avec précaution",
+      "Non, seulement des getters"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont conçus pour être simples, éviter les comportements complexes."
+  },
+  {
+    "id": "OCP17-REC-096",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Doit-on documenter les records ?",
+    "options": [
+      "Oui, comme toute API",
+      "Non, inutile",
+      "Uniquement les composants",
+      "Uniquement les méthodes"
+    ],
+    "correct": 0,
+    "explanation": "La documentation est importante pour expliquer l'usage du record."
+  },
+  {
+    "id": "OCP17-REC-097",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quelle évolution est prévue pour les records ?",
+    "options": [
+      "Records avec état mutable",
+      "Suppression",
+      "Stabilisation",
+      "Extension aux enums"
+    ],
+    "correct": 0,
+    "explanation": "Des records avec état mutable sont en discussion (record avec composants modifiables)."
+  },
+  {
+    "id": "OCP17-REC-098",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quand les records ont-ils été introduits ?",
+    "options": [
+      "Java 16",
+      "Java 14",
+      "Java 17",
+      "Java 21"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont été finalisés en Java 16."
+  },
+  {
+    "id": "OCP17-REC-099",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quel JEP a introduit les records ?",
+    "options": ["JEP 395", "JEP 384", "JEP 359", "JEP 360"],
+    "correct": 0,
+    "explanation": "JEP 395: Records (finalized in Java 16)."
+  },
+  {
+    "id": "OCP17-REC-100",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quelle version a introduit les records en preview ?",
+    "options": ["Java 14", "Java 15", "Java 16", "Java 17"],
+    "correct": 0,
+    "explanation": "Les records ont été introduits en preview dans Java 14."
+  },
+
+  {
+    "id": "OCP17-REC-051",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Un record peut-il être générique avec des bornes ?",
+    "options": [
+      "Oui, record Box<T extends Number>(T value) {}",
+      "Non, pas de bornes",
+      "Oui, mais sans extends",
+      "Uniquement avec des interfaces"
+    ],
+    "correct": 0,
+    "explanation": "Les records supportent les bornes génériques comme les classes."
+  },
+  {
+    "id": "OCP17-REC-052",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des annotations sur les composants de record ?",
+    "options": [
+      "Oui, sur le type ou le nom",
+      "Non, pas supporté",
+      "Oui, seulement sur le type",
+      "Oui, seulement sur le nom"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations peuvent être placées sur le type ou le nom du composant."
+  },
+  {
+    "id": "OCP17-REC-053",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Point(@NotNull int x, @NotNull int y) {}\nvar p = new Point(0, 0);",
+    "options": [
+      "Point créé normalement",
+      "Erreur à l'exécution",
+      "Warning",
+      "NullPointerException"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations de validation nécessitent un framework externe."
+  },
+  {
+    "id": "OCP17-REC-054",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Les annotations sur les composants sont-elles propagées aux accesseurs ?",
+    "options": [
+      "Oui, selon la cible",
+      "Non, jamais",
+      "Oui, toujours",
+      "Uniquement pour @NotNull"
+    ],
+    "correct": 0,
+    "explanation": "Les annotations sont propagées selon leur cible (FIELD, METHOD)."
+  },
+  {
+    "id": "OCP17-REC-055",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Un record peut-il implémenter une interface fonctionnelle ?",
+    "options": [
+      "Oui, comme une classe",
+      "Non, records incompatibles",
+      "Oui, mais sans méthodes",
+      "Uniquement avec @FunctionalInterface"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut implémenter une interface fonctionnelle."
+  },
+  {
+    "id": "OCP17-REC-056",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Person(String name) implements Runnable {\n    public void run() { System.out.println(name); }\n}\nnew Person(\"Alice\").run();",
+    "options": ["Alice", "null", "Erreur", "Rien"],
+    "correct": 0,
+    "explanation": "Le record implémente Runnable et la méthode run() est appelée."
+  },
+  {
+    "id": "OCP17-REC-057",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser des records comme clés dans une Map ?",
+    "options": [
+      "Oui, excellentes clés",
+      "Non, non recommandé",
+      "Oui, mais avec précautions",
+      "Non, records non comparables"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont equals/hashCode basés sur les composants, excellentes clés."
+  },
+  {
+    "id": "OCP17-REC-058",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nrecord Point(int x, int y) {}\nMap<Point, String> map = new HashMap<>();\nmap.put(new Point(1, 2), \"A\");\nSystem.out.println(map.get(new Point(1, 2)));",
+    "options": ["A", "null", "Erreur", "Point(1,2)"],
+    "correct": 0,
+    "explanation": "Les records ont equals basé sur les composants, la clé est trouvée."
+  },
+  {
+    "id": "OCP17-REC-059",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Les records sont-ils thread-safe ?",
+    "options": [
+      "Oui, immuables",
+      "Non, mutables",
+      "Oui, avec synchronized",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont immuables donc thread-safe."
+  },
+  {
+    "id": "OCP17-REC-060",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés",
+    "difficulty": "hard",
+    "question": "Peut-on partager un record entre threads sans synchronisation ?",
+    "options": [
+      "Oui, immuable",
+      "Non, besoin de lock",
+      "Oui, avec volatile",
+      "Non, thread-unsafe"
+    ],
+    "correct": 0,
+    "explanation": "L'immuabilité des records permet un partage sans synchronisation."
+  },
+  {
+    "id": "OCP17-REC-061",
+    "theme": "Records Suite",
+    "theme_label": "Records et sérialisation",
+    "difficulty": "hard",
+    "question": "Comment sont sérialisés les records ?",
+    "options": [
+      "Par leurs composants",
+      "Comme des classes",
+      "Différemment",
+      "Non sérialisables"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records utilise leurs composants."
+  },
+  {
+    "id": "OCP17-REC-062",
+    "theme": "Records Suite",
+    "theme_label": "Records et sérialisation",
+    "difficulty": "hard",
+    "question": "Peut-on personnaliser la sérialisation d'un record ?",
+    "options": [
+      "Non, automatique",
+      "Oui, avec writeObject",
+      "Oui, avec des annotations",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records est automatique et ne peut être personnalisée."
+  },
+  {
+    "id": "OCP17-REC-063",
+    "theme": "Records Suite",
+    "theme_label": "Records et sérialisation",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si un composant n'est pas sérialisable ?",
+    "options": [
+      "Le record n'est pas sérialisable",
+      "Sérialisation partielle",
+      "Exception à l'exécution",
+      "Ignoré"
+    ],
+    "correct": 0,
+    "explanation": "Un record n'est sérialisable que si tous ses composants le sont."
+  },
+  {
+    "id": "OCP17-REC-064",
+    "theme": "Records Suite",
+    "theme_label": "Records et réflexion",
+    "difficulty": "hard",
+    "question": "Comment accéder aux composants d'un record par réflexion ?",
+    "options": [
+      "getRecordComponents()",
+      "getFields()",
+      "getDeclaredFields()",
+      "getComponents()"
+    ],
+    "correct": 0,
+    "explanation": "getRecordComponents() retourne les composants du record."
+  },
+  {
+    "id": "OCP17-REC-065",
+    "theme": "Records Suite",
+    "theme_label": "Records et réflexion",
+    "difficulty": "hard",
+    "question": "Que retourne Class.isRecord() ?",
+    "options": [
+      "true pour un record",
+      "true pour toute classe",
+      "false toujours",
+      "true pour les enums"
+    ],
+    "correct": 0,
+    "explanation": "isRecord() retourne true pour les records."
+  },
+  {
+    "id": "OCP17-REC-066",
+    "theme": "Records Suite",
+    "theme_label": "Records et réflexion",
+    "difficulty": "hard",
+    "question": "Peut-on créer un record par réflexion ?",
+    "options": [
+      "Oui, via le constructeur",
+      "Non, impossible",
+      "Oui, avec des hacks",
+      "Uniquement avec Unsafe"
+    ],
+    "correct": 0,
+    "explanation": "On peut instancier un record par réflexion comme une classe normale."
+  },
+  {
+    "id": "OCP17-REC-067",
+    "theme": "Records Suite",
+    "theme_label": "Records vs classes",
+    "difficulty": "hard",
+    "question": "Quand utiliser un record plutôt qu'une classe ?",
+    "options": [
+      "Pour des objets de données immuables",
+      "Pour des objets avec comportement complexe",
+      "Pour des singletons",
+      "Pour des factories"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont idéaux pour les objets de données immuables (DTO)."
+  },
+  {
+    "id": "OCP17-REC-068",
+    "theme": "Records Suite",
+    "theme_label": "Records vs classes",
+    "difficulty": "hard",
+    "question": "Un record peut-il remplacer une classe avec getters/setters ?",
+    "options": [
+      "Oui, pour les classes immuables",
+      "Non, jamais",
+      "Oui, pour toutes",
+      "Uniquement pour les POJOs"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont parfaits pour remplacer les classes de données immuables."
+  },
+  {
+    "id": "OCP17-REC-069",
+    "theme": "Records Suite",
+    "theme_label": "Records vs classes",
+    "difficulty": "hard",
+    "question": "Quelle est la différence de mémoire entre record et classe ?",
+    "options": [
+      "Record plus compact",
+      "Classe plus compacte",
+      "Identiques",
+      "Dépend des champs"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont une représentation mémoire plus compacte."
+  },
+  {
+    "id": "OCP17-REC-070",
+    "theme": "Records Suite",
+    "theme_label": "Records vs enums",
+    "difficulty": "hard",
+    "question": "Un record peut-il être utilisé comme enum ?",
+    "options": [
+      "Non, finalités différentes",
+      "Oui, avec des constantes",
+      "Oui, avec des champs statiques",
+      "Non, records mutables"
+    ],
+    "correct": 0,
+    "explanation": "Les enums sont pour les constantes, les records pour les données."
+  },
+  {
+    "id": "OCP17-REC-071",
+    "theme": "Records Suite",
+    "theme_label": "Records vs enums",
+    "difficulty": "hard",
+    "question": "Peut-on déclarer des constantes dans un record ?",
+    "options": [
+      "Oui, statiques",
+      "Non, interdit",
+      "Oui, final",
+      "Uniquement dans le constructeur"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut avoir des champs statiques constants."
+  },
+  {
+    "id": "OCP17-REC-072",
+    "theme": "Records Suite",
+    "theme_label": "Records et JPA",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser un record comme entité JPA ?",
+    "options": [
+      "Déconseillé, records immuables",
+      "Oui, normalement",
+      "Oui, avec des annotations",
+      "Non, impossible"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont immuables, ce qui pose problème pour JPA."
+  },
+  {
+    "id": "OCP17-REC-073",
+    "theme": "Records Suite",
+    "theme_label": "Records et JPA",
+    "difficulty": "hard",
+    "question": "Pourquoi éviter les records avec JPA ?",
+    "options": [
+      "Pas de constructeur par défaut",
+      "Immuabilité",
+      "Proxies impossibles",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "JPA a besoin d'un constructeur par défaut et de mutabilité."
+  },
+  {
+    "id": "OCP17-REC-074",
+    "theme": "Records Suite",
+    "theme_label": "Records et JSON",
+    "difficulty": "hard",
+    "question": "Les records sont-ils bien supportés par Jackson ?",
+    "options": [
+      "Oui, depuis Jackson 2.12",
+      "Non, problèmes",
+      "Oui, partiellement",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Jackson supporte les records depuis la version 2.12."
+  },
+  {
+    "id": "OCP17-REC-075",
+    "theme": "Records Suite",
+    "theme_label": "Records et JSON",
+    "difficulty": "hard",
+    "question": "Quelle annotation Jackson est utile pour les records ?",
+    "options": [
+      "@JsonCreator",
+      "@JsonProperty",
+      "@JsonIgnore",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations aident à la sérialisation JSON des records."
+  },
+  {
+    "id": "OCP17-REC-076",
+    "theme": "Records Suite",
+    "theme_label": "Records et Lombok",
+    "difficulty": "hard",
+    "question": "Lombok est-il nécessaire avec les records ?",
+    "options": [
+      "Non, records remplacent @Data",
+      "Oui, toujours",
+      "Partiellement",
+      "Pour les builders"
+    ],
+    "correct": 0,
+    "explanation": "Les records remplacent nativement les fonctionnalités de @Data."
+  },
+  {
+    "id": "OCP17-REC-077",
+    "theme": "Records Suite",
+    "theme_label": "Records et Lombok",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser @Builder avec un record ?",
+    "options": [
+      "Oui, depuis Lombok 1.18.20",
+      "Non, incompatible",
+      "Oui, partiellement",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Lombok supporte @Builder sur les records depuis la version 1.18.20."
+  },
+  {
+    "id": "OCP17-REC-078",
+    "theme": "Records Suite",
+    "theme_label": "Records et Spring",
+    "difficulty": "hard",
+    "question": "Spring supporte-t-il les records comme contrôleurs ?",
+    "options": [
+      "Oui, depuis Spring Boot 2.5",
+      "Non, pas supporté",
+      "Oui, partiellement",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Spring Boot 2.5+ supporte les records comme corps de requête/réponse."
+  },
+  {
+    "id": "OCP17-REC-079",
+    "theme": "Records Suite",
+    "theme_label": "Records et Spring",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser @Valid sur un record ?",
+    "options": [
+      "Oui, normalement",
+      "Non, pas supporté",
+      "Oui, avec @Validated",
+      "Uniquement sur les champs"
+    ],
+    "correct": 0,
+    "explanation": "La validation fonctionne normalement sur les records."
+  },
+  {
+    "id": "OCP17-REC-080",
+    "theme": "Records Suite",
+    "theme_label": "Records et Spring",
+    "difficulty": "hard",
+    "question": "Les records peuvent-ils être des beans Spring ?",
+    "options": [
+      "Oui, avec @Component",
+      "Non, records immuables",
+      "Oui, partiellement",
+      "Uniquement avec @Configuration"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent être des beans Spring comme les classes."
+  },
+  {
+    "id": "OCP17-REC-081",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - pattern",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un record pattern ?",
+    "options": [
+      "Déconstruction d'un record",
+      "Création d'un record",
+      "Pattern de conception",
+      "Motif de record"
+    ],
+    "correct": 0,
+    "explanation": "Un record pattern déconstruit un record en ses composants."
+  },
+  {
+    "id": "OCP17-REC-082",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - pattern",
+    "difficulty": "hard",
+    "question": "Peut-on avoir des record patterns dans un switch ?",
+    "options": [
+      "Oui, normalement",
+      "Non, interdits",
+      "Oui, avec when",
+      "Uniquement dans if"
+    ],
+    "correct": 0,
+    "explanation": "Les record patterns peuvent être utilisés dans les switch expressions."
+  },
+  {
+    "id": "OCP17-REC-083",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - pattern",
+    "difficulty": "hard",
+    "question": "Que signifie 'record pattern exhaustif' ?",
+    "options": [
+      "Couvre tous les cas possibles",
+      "Pattern incomplet",
+      "Pattern partiel",
+      "Pattern générique"
+    ],
+    "correct": 0,
+    "explanation": "Un record pattern est exhaustif s'il couvre toutes les possibilités."
+  },
+  {
+    "id": "OCP17-REC-084",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - performance",
+    "difficulty": "hard",
+    "question": "Les records sont-ils plus rapides à l'exécution ?",
+    "options": [
+      "Légèrement plus rapides",
+      "Plus lents",
+      "Identiques",
+      "Dépend de l'usage"
+    ],
+    "correct": 0,
+    "explanation": "Les records peuvent être légèrement plus rapides grâce à leur représentation compacte."
+  },
+  {
+    "id": "OCP17-REC-085",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - performance",
+    "difficulty": "hard",
+    "question": "Quel est l'impact mémoire d'un record ?",
+    "options": [
+      "Plus compact",
+      "Plus volumineux",
+      "Identique",
+      "Variable"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont une empreinte mémoire réduite."
+  },
+  {
+    "id": "OCP17-REC-086",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Peut-on avoir un record sans composants ?",
+    "options": [
+      "Oui, record Empty() {}",
+      "Non, au moins un",
+      "Oui, record Empty {}",
+      "Non, record sans composants"
+    ],
+    "correct": 0,
+    "explanation": "Un record peut avoir zéro composant."
+  },
+  {
+    "id": "OCP17-REC-087",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "À quoi sert un record vide ?",
+    "options": [
+      "Singleton ou marqueur",
+      "Rien",
+      "Classe de base",
+      "Pattern"
+    ],
+    "correct": 0,
+    "explanation": "Un record vide peut être utilisé comme singleton ou marqueur."
+  },
+  {
+    "id": "OCP17-REC-088",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Peut-on étendre un record ?",
+    "options": [
+      "Non, final",
+      "Oui, avec extends",
+      "Oui, avec implements",
+      "Non, seulement des interfaces"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont final et ne peuvent être étendus."
+  },
+  {
+    "id": "OCP17-REC-089",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Un record peut-il avoir un constructeur privé ?",
+    "options": [
+      "Oui, pour des factory methods",
+      "Non, public uniquement",
+      "Oui, mais sans validation",
+      "Non, seulement compact"
+    ],
+    "correct": 0,
+    "explanation": "Les constructeurs privés sont autorisés pour des patterns de création."
+  },
+  {
+    "id": "OCP17-REC-090",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - cas limites",
+    "difficulty": "hard",
+    "question": "Peut-on déclarer un record dans une interface ?",
+    "options": [
+      "Oui, static",
+      "Non, interdit",
+      "Oui, mais non static",
+      "Uniquement dans les classes"
+    ],
+    "correct": 0,
+    "explanation": "Un record dans une interface doit être static."
+  },
+  {
+    "id": "OCP17-REC-091",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - migration",
+    "difficulty": "hard",
+    "question": "Comment migrer une classe vers un record ?",
+    "options": [
+      "Remplacer class par record",
+      "Ajouter des annotations",
+      "Modifier le constructeur",
+      "Changer les getters"
+    ],
+    "correct": 0,
+    "explanation": "La migration principale consiste à remplacer 'class' par 'record'."
+  },
+  {
+    "id": "OCP17-REC-092",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - migration",
+    "difficulty": "hard",
+    "question": "Quelle condition pour migrer vers un record ?",
+    "options": [
+      "La classe doit être immutable",
+      "Toujours possible",
+      "Jamais possible",
+      "Avec des annotations"
+    ],
+    "correct": 0,
+    "explanation": "Seules les classes immutables peuvent être migrées vers des records."
+  },
+  {
+    "id": "OCP17-REC-093",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - migration",
+    "difficulty": "hard",
+    "question": "La sérialisation est-elle compatible après migration ?",
+    "options": [
+      "Non, incompatible",
+      "Oui, compatible",
+      "Partiellement",
+      "Avec serialVersionUID"
+    ],
+    "correct": 0,
+    "explanation": "La sérialisation des records diffère, incompatible avec les classes."
+  },
+  {
+    "id": "OCP17-REC-094",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quelle est la taille recommandée pour un record ?",
+    "options": [
+      "Quelques composants (4-6)",
+      "Jusqu'à 10",
+      "Jusqu'à 20",
+      "Pas de limite"
+    ],
+    "correct": 0,
+    "explanation": "Il est recommandé de garder les records petits pour la lisibilité."
+  },
+  {
+    "id": "OCP17-REC-095",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Un record doit-il avoir des méthodes complexes ?",
+    "options": [
+      "Non, privilégier la simplicité",
+      "Oui, comme une classe",
+      "Oui, mais avec précaution",
+      "Non, seulement des getters"
+    ],
+    "correct": 0,
+    "explanation": "Les records sont conçus pour être simples, éviter les comportements complexes."
+  },
+  {
+    "id": "OCP17-REC-096",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Doit-on documenter les records ?",
+    "options": [
+      "Oui, comme toute API",
+      "Non, inutile",
+      "Uniquement les composants",
+      "Uniquement les méthodes"
+    ],
+    "correct": 0,
+    "explanation": "La documentation est importante pour expliquer l'usage du record."
+  },
+  {
+    "id": "OCP17-REC-097",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quelle évolution est prévue pour les records ?",
+    "options": [
+      "Records avec état mutable",
+      "Suppression",
+      "Stabilisation",
+      "Extension aux enums"
+    ],
+    "correct": 0,
+    "explanation": "Des records avec état mutable sont en discussion (record avec composants modifiables)."
+  },
+  {
+    "id": "OCP17-REC-098",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quand les records ont-ils été introduits ?",
+    "options": [
+      "Java 16",
+      "Java 14",
+      "Java 17",
+      "Java 21"
+    ],
+    "correct": 0,
+    "explanation": "Les records ont été finalisés en Java 16."
+  },
+  {
+    "id": "OCP17-REC-099",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quel JEP a introduit les records ?",
+    "options": ["JEP 395", "JEP 384", "JEP 359", "JEP 360"],
+    "correct": 0,
+    "explanation": "JEP 395: Records (finalized in Java 16)."
+  },
+  {
+    "id": "OCP17-REC-100",
+    "theme": "Records Suite",
+    "theme_label": "Records avancés - future",
+    "difficulty": "hard",
+    "question": "Quelle version a introduit les records en preview ?",
+    "options": ["Java 14", "Java 15", "Java 16", "Java 17"],
+    "correct": 0,
+    "explanation": "Les records ont été introduits en preview dans Java 14."
+  }
+]

@@ -1,0 +1,742 @@
+[
+  {
+    "id": "AZ-204-201",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD",
+    "difficulty": "easy",
+    "question": "Quel service Azure gère les identités et les accès ?",
+    "options": ["Azure Active Directory", "Azure Key Vault", "Azure Security Center", "Azure Policy"],
+    "correct": 0,
+    "explanation": "Azure AD est le service d'annuaire pour les identités."
+  },
+  {
+    "id": "AZ-204-202",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un locataire (tenant) Azure AD ?",
+    "options": [
+      "Instance dédiée d'Azure AD représentant une organisation",
+      "Utilisateur",
+      "Groupe",
+      "Application"
+    ],
+    "correct": 0,
+    "explanation": "Un locataire est une instance d'Azure AD dédiée à une organisation."
+  },
+  {
+    "id": "AZ-204-203",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD",
+    "difficulty": "medium",
+    "question": "Azure AD peut-il être synchronisé avec Active Directory on-premise ?",
+    "options": ["Oui (Azure AD Connect)", "Non", "Uniquement avec AD FS", "Uniquement avec LDAP"],
+    "correct": 0,
+    "explication": "Azure AD Connect synchronise les identités entre AD local et Azure AD."
+  },
+  {
+    "id": "AZ-204-204",
+    "theme": "Azure Security & Identity",
+    "theme_label": "App registrations",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une inscription d'application (App registration) dans Azure AD ?",
+    "options": [
+      "Identité pour une application (client ID, secrets)",
+      "Application déployée",
+      "Service Azure",
+      "Groupe de sécurité"
+    ],
+    "correct": 0,
+    "explication": "L'inscription crée une identité que l'application peut utiliser pour s'authentifier."
+  },
+  {
+    "id": "AZ-204-205",
+    "theme": "Azure Security & Identity",
+    "theme_label": "App registrations",
+    "difficulty": "hard",
+    "question": "Quels sont les types d'application dans Azure AD ?",
+    "options": [
+      "Application web/API, application native, application démon",
+      "Web seulement",
+      "Native seulement",
+      "Démon seulement"
+    ],
+    "correct": 0,
+    "explication": "Plusieurs types selon le flux d'authentification."
+  },
+  {
+    "id": "AZ-204-206",
+    "theme": "Azure Security & Identity",
+    "theme_label": "OAuth 2.0",
+    "difficulty": "hard",
+    "question": "Quel flux OAuth 2.0 est utilisé pour une application web côté serveur ?",
+    "options": ["Authorization Code Flow", "Implicit Flow", "Client Credentials Flow", "Resource Owner Password"],
+    "correct": 0,
+    "explication": "Le code d'autorisation est le flux recommandé pour les applications web."
+  },
+  {
+    "id": "AZ-204-207",
+    "theme": "Azure Security & Identity",
+    "theme_label": "OAuth 2.0",
+    "difficulty": "hard",
+    "question": "Quel flux OAuth 2.0 est utilisé pour les services (sans utilisateur) ?",
+    "options": ["Client Credentials Flow", "Authorization Code", "Implicit", "Device Code"],
+    "correct": 0,
+    "explication": "Le flux Client Credentials utilise uniquement le client ID et le secret."
+  },
+  {
+    "id": "AZ-204-208",
+    "theme": "Azure Security & Identity",
+    "theme_label": "OAuth 2.0",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un token d'accès (access token) ?",
+    "options": [
+      "Jeton utilisé pour accéder à une ressource protégée",
+      "Jeton pour s'authentifier",
+      "Jeton pour rafraîchir",
+      "Jeton pour se déconnecter"
+    ],
+    "correct": 0,
+    "explication": "Le token d'accès est envoyé dans l'en-tête Authorization des requêtes HTTP."
+  },
+  {
+    "id": "AZ-204-209",
+    "theme": "Azure Security & Identity",
+    "theme_label": "OAuth 2.0",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un refresh token ?",
+    "options": [
+      "Jeton permettant d'obtenir un nouveau token d'accès",
+      "Jeton pour se déconnecter",
+      "Jeton pour s'authentifier",
+      "Jeton pour les API"
+    ],
+    "correct": 0,
+    "explication": "Le refresh token permet d'obtenir un nouvel access token sans redemander l'authentification."
+  },
+  {
+    "id": "AZ-204-210",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Microsoft Authentication Library (MSAL)",
+    "difficulty": "hard",
+    "question": "À quoi sert MSAL (Microsoft Authentication Library) ?",
+    "options": [
+      "Acquérir des tokens auprès d'Azure AD",
+      "Chiffrer des données",
+      "Gérer des secrets",
+      "Configurer des politiques"
+    ],
+    "correct": 0,
+    "explication": "MSAL simplifie l'acquisition de tokens (access, refresh, ID)."
+  },
+  {
+    "id": "AZ-204-211",
+    "theme": "Azure Security & Identity",
+    "theme_label": "MSAL",
+    "difficulty": "hard",
+    "question": "MSAL supporte-t-il .NET, JavaScript, Python, Java, etc. ?",
+    "options": ["Oui", "Non", "Uniquement .NET", "Uniquement JavaScript"],
+    "correct": 0,
+    "explication": "MSAL est disponible dans plusieurs langages."
+  },
+  {
+    "id": "AZ-204-212",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Microsoft Graph",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Microsoft Graph ?",
+    "options": [
+      "API unifiée pour accéder aux services Microsoft 365 et Azure AD",
+      "Base de données",
+      "Service de stockage",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "Microsoft Graph permet d'accéder aux données utilisateur, calendriers, fichiers, etc."
+  },
+  {
+    "id": "AZ-204-213",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Microsoft Graph",
+    "difficulty": "hard",
+    "question": "Comment s'authentifier pour Microsoft Graph ?",
+    "options": [
+      "OAuth 2.0 (Azure AD)",
+      "Clés d'API",
+      "Certificats",
+      "Nom d'utilisateur/mot de passe"
+    ],
+    "correct": 0,
+    "explication": "Microsoft Graph utilise OAuth 2.0 via Azure AD."
+  },
+  {
+    "id": "AZ-204-214",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Key Vault",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'Azure Key Vault ?",
+    "options": [
+      "Service de gestion de secrets, clés et certificats",
+      "Base de données",
+      "Stockage",
+      "Service de calcul"
+    ],
+    "correct": 0,
+    "explication": "Key Vault centralise la gestion des secrets."
+  },
+  {
+    "id": "AZ-204-215",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Key Vault",
+    "difficulty": "hard",
+    "question": "Quels types de secrets peut-on stocker dans Key Vault ?",
+    "options": [
+      "Secrets (chaînes), clés cryptographiques, certificats",
+      "Seulement des chaînes",
+      "Seulement des clés",
+      "Seulement des certificats"
+    ],
+    "correct": 0,
+    "explication": "Key Vault supporte plusieurs types de secrets."
+  },
+  {
+    "id": "AZ-204-216",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Key Vault",
+    "difficulty": "hard",
+    "question": "Comment une application peut-elle accéder à Key Vault ?",
+    "options": [
+      "Managed Identity, certificat, secret client",
+      "Clé d'API",
+      "Token OAuth",
+      "Nom d'utilisateur/mot de passe"
+    ],
+    "correct": 0,
+    "explication": "Key Vault supporte plusieurs méthodes d'authentification."
+  },
+  {
+    "id": "AZ-204-217",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Key Vault",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le soft-delete dans Key Vault ?",
+    "options": [
+      "Conservation des secrets supprimés pendant une période récupérable",
+      "Suppression définitive",
+      "Archivage",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "Le soft-delete permet de récupérer des secrets supprimés accidentellement."
+  },
+  {
+    "id": "AZ-204-218",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Key Vault",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la purge protection ?",
+    "options": [
+      "Empêche la suppression définitive d'un secret",
+      "Protège contre les attaques",
+      "Chiffre les secrets",
+      "Sauvegarde"
+    ],
+    "correct": 0,
+    "explication": "La purge protection désactive la purge définitive pendant une période."
+  },
+  {
+    "id": "AZ-204-219",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Managed Identity",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une identité managée (Managed Identity) ?",
+    "options": [
+      "Identité Azure AD automatiquement gérée pour les services Azure",
+      "Utilisateur",
+      "Groupe",
+      "Application"
+    ],
+    "correct": 0,
+    "explication": "Les identités managées éliminent le besoin de gérer des secrets pour les applications Azure."
+  },
+  {
+    "id": "AZ-204-220",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Managed Identity",
+    "difficulty": "hard",
+    "question": "Quels sont les types d'identités managées ?",
+    "options": [
+      "System-assigned, User-assigned",
+      "System-assigned seulement",
+      "User-assigned seulement",
+      "Service principal"
+    ],
+    "correct": 0,
+    "explication": "System-assigned est liée à une ressource, User-assigned est partagée."
+  },
+  {
+    "id": "AZ-204-221",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Managed Identity",
+    "difficulty": "hard",
+    "question": "Comment une identité managée peut-elle accéder à Key Vault ?",
+    "options": [
+      "Attribuer un rôle (ex: Key Vault Secrets User)",
+      "Utiliser une clé",
+      "Utiliser un certificat",
+      "Utiliser un token"
+    ],
+    "correct": 0,
+    "explication": "Il faut donner à l'identité les permissions RBAC ou une politique d'accès."
+  },
+  {
+    "id": "AZ-204-222",
+    "theme": "Azure Security & Identity",
+    "theme_label": "RBAC",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le RBAC (Role-Based Access Control) ?",
+    "options": [
+      "Contrôle d'accès basé sur les rôles",
+      "Liste de contrôle d'accès",
+      "Politique de sécurité",
+      "Authentification"
+    ],
+    "correct": 0,
+    "explication": "RBAC attribue des rôles aux identités pour définir les permissions."
+  },
+  {
+    "id": "AZ-204-223",
+    "theme": "Azure Security & Identity",
+    "theme_label": "RBAC",
+    "difficulty": "hard",
+    "question": "Quels sont les rôles RBAC intégrés courants ?",
+    "options": [
+      "Owner, Contributor, Reader",
+      "Admin, User, Guest",
+      "Full, Write, Read",
+      "Super, Standard, Limited"
+    ],
+    "correct": 0,
+    "explication": "Les rôles de base sont Owner, Contributor, Reader."
+  },
+  {
+    "id": "AZ-204-224",
+    "theme": "Azure Security & Identity",
+    "theme_label": "RBAC",
+    "difficulty": "hard",
+    "question": "Peut-on créer des rôles RBAC personnalisés ?",
+    "options": ["Oui", "Non", "Uniquement via Azure CLI", "Uniquement via PowerShell"],
+    "correct": 0,
+    "explication": "Les rôles personnalisés permettent des permissions fines."
+  },
+  {
+    "id": "AZ-204-225",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Policy",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre RBAC et Azure Policy ?",
+    "options": [
+      "RBAC contrôle qui peut faire quoi, Policy contrôle ce qui est autorisé",
+      "Identiques",
+      "Policy contrôle les identités",
+      "RBAC contrôle les ressources"
+    ],
+    "correct": 0,
+    "explication": "RBAC gère les permissions, Policy gère la conformité des ressources."
+  },
+  {
+    "id": "AZ-204-226",
+    "theme": "Azure Security & Identity",
+    "theme_label": "App Configuration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure App Configuration ?",
+    "options": [
+      "Service de gestion centralisée des configurations",
+      "Base de données",
+      "Stockage",
+      "Cache"
+    ],
+    "correct": 0,
+    "explication": "App Configuration permet de gérer les paramètres d'application de manière centralisée."
+  },
+  {
+    "id": "AZ-204-227",
+    "theme": "Azure Security & Identity",
+    "theme_label": "App Configuration",
+    "difficulty": "hard",
+    "question": "App Configuration supporte-t-il les étiquettes (labels) ?",
+    "options": ["Oui", "Non", "Uniquement pour les versions", "Uniquement pour les environnements"],
+    "correct": 0,
+    "explication": "Les étiquettes permettent de différencier les configurations (dev, prod, etc.)."
+  },
+  {
+    "id": "AZ-204-228",
+    "theme": "Azure Security & Identity",
+    "theme_label": "App Configuration",
+    "difficulty": "hard",
+    "question": "Comment une application peut-elle accéder à App Configuration ?",
+    "options": [
+      "SDK .NET, Java, etc., avec chaîne de connexion",
+      "Uniquement via le portail",
+      "Uniquement via Azure CLI",
+      "Uniquement via API REST"
+    ],
+    "correct": 0,
+    "explication": "Les SDK sont disponibles pour plusieurs langages."
+  },
+  {
+    "id": "AZ-204-229",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Key Vault references",
+    "difficulty": "hard",
+    "question": "Dans App Configuration, peut-on référencer Key Vault ?",
+    "options": ["Oui", "Non", "Uniquement pour les secrets", "Uniquement pour les certificats"],
+    "correct": 0,
+    "explication": "Les références Key Vault permettent de stocker des secrets dans Key Vault et de les référencer dans App Configuration."
+  },
+  {
+    "id": "AZ-204-230",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Key Vault managed storage accounts",
+    "difficulty": "hard",
+    "question": "Key Vault peut-il gérer les clés des comptes de stockage ?",
+    "options": ["Oui", "Non", "Uniquement pour les blobs", "Uniquement pour les files"],
+    "correct": 0,
+    "explication": "Key Vault peut régénérer les clés des comptes de stockage périodiquement."
+  },
+  {
+    "id": "AZ-204-231",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD Conditional Access",
+    "difficulty": "hard",
+    "question": "Azure AD Conditional Access permet-il de restreindre l'accès basé sur l'emplacement ?",
+    "options": ["Oui", "Non", "Uniquement pour les applications", "Uniquement pour les utilisateurs"],
+    "correct": 0,
+    "explication": "Conditional Access prend en compte l'emplacement, l'appareil, le risque, etc."
+  },
+  {
+    "id": "AZ-204-232",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD Conditional Access",
+    "difficulty": "hard",
+    "question": "Quels sont les signaux possibles pour Conditional Access ?",
+    "options": [
+      "Emplacement, appareil, application, risque utilisateur",
+      "Seulement l'emplacement",
+      "Seulement l'appareil",
+      "Seulement l'application"
+    ],
+    "correct": 0,
+    "explication": "Conditional Access utilise plusieurs signaux pour décider de l'accès."
+  },
+  {
+    "id": "AZ-204-233",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD Privileged Identity Management (PIM)",
+    "difficulty": "hard",
+    "question": "À quoi sert PIM ?",
+    "options": [
+      "Activation juste-à-temps des rôles privilégiés",
+      "Gestion des mots de passe",
+      "Authentification",
+      "RBAC"
+    ],
+    "correct": 0,
+    "explication": "PIM permet d'activer les rôles élevés temporairement."
+  },
+  {
+    "id": "AZ-204-234",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD Identity Protection",
+    "difficulty": "hard",
+    "question": "Quel service Azure AD détecte les risques liés aux identités ?",
+    "options": ["Identity Protection", "PIM", "Conditional Access", "Security Center"],
+    "correct": 0,
+    "explication": "Identity Protection identifie les comportements suspects et les risques."
+  },
+  {
+    "id": "AZ-204-235",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Security Center",
+    "difficulty": "hard",
+    "question": "Azure Security Center fournit-il des recommandations de sécurité pour les applications ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les réseaux"],
+    "correct": 0,
+    "explication": "Security Center donne des recommandations pour les ressources PaaS (App Service, SQL, etc.)."
+  },
+  {
+    "id": "AZ-204-236",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Defender",
+    "difficulty": "hard",
+    "question": "Azure Defender est-il intégré à Security Center ?",
+    "options": ["Oui", "Non", "Service séparé", "Uniquement pour les VMs"],
+    "correct": 0,
+    "explication": "Azure Defender (anciennement Security Center Standard) offre des protections avancées."
+  },
+  {
+    "id": "AZ-204-237",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Just-in-Time (JIT) VM access",
+    "difficulty": "hard",
+    "question": "Le JIT dans Security Center permet-il d'ouvrir des ports temporairement ?",
+    "options": ["Oui", "Non", "Uniquement pour RDP", "Uniquement pour SSH"],
+    "correct": 0,
+    "explication": "JIT restreint l'accès aux ports de gestion et les ouvre à la demande."
+  },
+  {
+    "id": "AZ-204-238",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Bastion",
+    "difficulty": "hard",
+    "question": "Azure Bastion permet-il un accès RDP/SSH sécurisé sans IP publique ?",
+    "options": ["Oui", "Non", "Uniquement pour Windows", "Uniquement pour Linux"],
+    "correct": 0,
+    "explication": "Bastion fournit un accès via le navigateur, sans exposer d'IP publique."
+  },
+  {
+    "id": "AZ-204-239",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Firewall",
+    "difficulty": "hard",
+    "question": "Azure Firewall est-il un service de sécurité réseau managé ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les VNet"],
+    "correct": 0,
+    "explication": "Azure Firewall est un firewall managé avec haute disponibilité."
+  },
+  {
+    "id": "AZ-204-240",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Network Security Group (NSG)",
+    "difficulty": "hard",
+    "question": "Un NSG filtre-t-il le trafic au niveau du sous-réseau ou de la carte réseau ?",
+    "options": ["Oui", "Non", "Uniquement au niveau du sous-réseau", "Uniquement au niveau de la carte réseau"],
+    "correct": 0,
+    "explication": "NSG peut être associé à un sous-réseau ou à une interface réseau."
+  },
+  {
+    "id": "AZ-204-241",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Application Gateway WAF",
+    "difficulty": "hard",
+    "question": "Quel service Azure combine un load balancer de couche 7 et un WAF ?",
+    "options": ["Application Gateway (WAF)", "Azure Firewall", "Front Door", "Load Balancer"],
+    "correct": 0,
+    "explication": "Application Gateway peut intégrer un WAF pour protéger les applications web."
+  },
+  {
+    "id": "AZ-204-242",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Front Door WAF",
+    "difficulty": "hard",
+    "question": "Front Door peut-il intégrer un WAF pour protéger le trafic global ?",
+    "options": ["Oui", "Non", "Uniquement pour les applications web", "Uniquement pour les API"],
+    "correct": 0,
+    "explication": "Front Door supporte le WAF pour une protection globale."
+  },
+  {
+    "id": "AZ-204-243",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure DDoS Protection",
+    "difficulty": "hard",
+    "question": "Quel service Azure protège contre les attaques DDoS ?",
+    "options": ["Azure DDoS Protection", "Azure Firewall", "WAF", "Application Gateway"],
+    "correct": 0,
+    "explication": "DDoS Protection offre une protection contre les attaques volumétriques."
+  },
+  {
+    "id": "AZ-204-244",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "hard",
+    "question": "Azure Sentinel est-il un SIEM (Security Information and Event Management) ?",
+    "options": ["Oui", "Non", "Uniquement pour les logs", "Uniquement pour les alertes"],
+    "correct": 0,
+    "explication": "Sentinel est un SIEM/SOAR cloud."
+  },
+  {
+    "id": "AZ-204-245",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "hard",
+    "question": "Sentinel peut-il ingérer des données depuis des sources tierces ?",
+    "options": ["Oui (connecteurs)", "Non", "Uniquement depuis Azure", "Uniquement depuis Microsoft 365"],
+    "correct": 0,
+    "explication": "Sentinel a de nombreux connecteurs pour les services Azure, AWS, et autres."
+  },
+  {
+    "id": "AZ-204-246",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Microsoft Defender for Cloud",
+    "difficulty": "hard",
+    "question": "Microsoft Defender for Cloud (anciennement Azure Security Center) protège-t-il les ressources multicloud ?",
+    "options": ["Oui (Azure, AWS, GCP, on-premise)", "Non", "Uniquement Azure", "Uniquement Azure et AWS"],
+    "correct": 0,
+    "explication": "Defender for Cloud supporte les environnements hybrides et multicloud."
+  },
+  {
+    "id": "AZ-204-247",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Information Protection",
+    "difficulty": "hard",
+    "question": "Azure Information Protection permet-il de classer et protéger des documents ?",
+    "options": ["Oui", "Non", "Uniquement pour les emails", "Uniquement pour les documents Office"],
+    "correct": 0,
+    "explication": "AIP permet de classer, étiqueter et protéger les données sensibles."
+  },
+  {
+    "id": "AZ-204-248",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Purview",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'Azure Purview ?",
+    "options": [
+      "Service de gouvernance des données (data catalog, lineage, classification)",
+      "Service de sécurité",
+      "Base de données",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explication": "Purview aide à découvrir, comprendre et gouverner les données."
+  },
+  {
+    "id": "AZ-204-249",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Policy for security",
+    "difficulty": "hard",
+    "question": "Azure Policy peut-il appliquer des règles de sécurité (ex: exiger HTTPS) ?",
+    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour le stockage"],
+    "correct": 0,
+    "explication": "Azure Policy peut auditer ou bloquer les ressources qui ne respectent pas les règles de sécurité."
+  },
+  {
+    "id": "AZ-204-250",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Blueprints",
+    "difficulty": "hard",
+    "question": "Azure Blueprints permet-il de déployer des environnements conformes aux normes de sécurité ?",
+    "options": ["Oui", "Non", "Uniquement pour la conformité", "Uniquement pour les ressources"],
+    "correct": 0,
+    "explication": "Les blueprints peuvent inclure des politiques de sécurité, des rôles, et des modèles ARM."
+  },
+  {
+    "id": "AZ-204-251",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Key Vault access policies",
+    "difficulty": "hard",
+    "question": "Quelles sont les deux méthodes pour contrôler l'accès à Key Vault ?",
+    "options": [
+      "Politiques d'accès (legacy) et RBAC (nouveau)",
+      "Seulement les politiques d'accès",
+      "Seulement RBAC",
+      "Seulement les clés"
+    ],
+    "correct": 0,
+    "explication": "Key Vault supporte les deux modèles (préférer RBAC pour les nouveaux déploiements)."
+  },
+  {
+    "id": "AZ-204-252",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Key Vault firewall",
+    "difficulty": "hard",
+    "question": "Peut-on restreindre l'accès à Key Vault à des réseaux spécifiques ?",
+    "options": ["Oui", "Non", "Uniquement à des IP publiques", "Uniquement à des VNet"],
+    "correct": 0,
+    "explication": "Le pare-feu Key Vault peut limiter l'accès à des plages IP ou à des VNet."
+  },
+  {
+    "id": "AZ-204-253",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Key Vault soft-delete",
+    "difficulty": "hard",
+    "question": "Quelle est la période de rétention par défaut du soft-delete ?",
+    "options": ["90 jours", "7 jours", "30 jours", "180 jours"],
+    "correct": 0,
+    "explication": "La période de rétention par défaut est de 90 jours (configurable)."
+  },
+  {
+    "id": "AZ-204-254",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure Key Vault purge protection",
+    "difficulty": "hard",
+    "question": "La purge protection empêche-t-elle la suppression définitive ?",
+    "options": ["Oui", "Non", "Uniquement pour les clés", "Uniquement pour les secrets"],
+    "correct": 0,
+    "explication": "Purge protection désactive la purge définitive jusqu'à la fin de la période de rétention."
+  },
+  {
+    "id": "AZ-204-255",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD service principal",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un service principal dans Azure AD ?",
+    "options": [
+      "Identité pour une application",
+      "Utilisateur",
+      "Groupe",
+      "Rôle"
+    ],
+    "correct": 0,
+    "explication": "Le service principal est l'identité d'une application dans Azure AD."
+  },
+  {
+    "id": "AZ-204-256",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD application permissions",
+    "difficulty": "hard",
+    "question": "Quels sont les types de permissions pour une application ?",
+    "options": [
+      "Déléguées (au nom de l'utilisateur) et application (en tant qu'application)",
+      "Lecture et écriture",
+      "Admin et utilisateur",
+      "Locale et distante"
+    ],
+    "correct": 0,
+    "explication": "Les permissions déléguées nécessitent un utilisateur connecté, les permissions d'application non."
+  },
+  {
+    "id": "AZ-204-257",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD admin consent",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le consentement administrateur (admin consent) ?",
+    "options": [
+      "Approbation par un administrateur des permissions d'une application",
+      "Consentement de l'utilisateur",
+      "Approbation du développeur",
+      "Validation de l'application"
+    ],
+    "correct": 0,
+    "explication": "Certaines permissions nécessitent le consentement d'un administrateur."
+  },
+  {
+    "id": "AZ-204-258",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD B2C",
+    "difficulty": "hard",
+    "question": "Azure AD B2C est-il destiné à l'authentification des clients (Consumer) ?",
+    "options": ["Oui", "Non", "Uniquement pour les employés", "Uniquement pour les partenaires"],
+    "correct": 0,
+    "explication": "Azure AD B2C est conçu pour les applications destinées aux clients."
+  },
+  {
+    "id": "AZ-204-259",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD B2C custom policies",
+    "difficulty": "hard",
+    "question": "Azure AD B2C supporte-t-il des parcours d'authentification personnalisés (custom policies) ?",
+    "options": ["Oui", "Non", "Uniquement via l'interface graphique", "Uniquement via PowerShell"],
+    "correct": 0,
+    "explication": "Les custom policies (Identity Experience Framework) permettent une personnalisation avancée."
+  },
+  {
+    "id": "AZ-204-260",
+    "theme": "Azure Security & Identity",
+    "theme_label": "Azure AD B2C",
+    "difficulty": "hard",
+    "question": "Azure AD B2C peut-il fédérer avec des fournisseurs sociaux ?",
+    "options": ["Oui", "Non", "Uniquement avec Microsoft", "Uniquement avec Google"],
+    "correct": 0,
+    "explication": "B2C supporte Facebook, Google, Amazon, Apple, LinkedIn, etc."
+  }
+]

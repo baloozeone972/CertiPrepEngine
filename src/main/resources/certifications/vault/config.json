@@ -1,0 +1,36 @@
+{
+  "id": "vault",
+  "name": "Vault Associate (HashiCorp)",
+  "version": "1.0",
+  "description": "Certification Vault - Gestion des secrets et chiffrement",
+  "totalQuestions": 250,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 57,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Vault Basics",
+      "count": 40
+    },
+    {
+      "name": "Authentication",
+      "count": 50
+    },
+    {
+      "name": "Secrets Engines",
+      "count": 50
+    },
+    {
+      "name": "Policies",
+      "count": 50
+    },
+    {
+      "name": "Vault Agent",
+      "count": 30
+    },
+    {
+      "name": "Integration",
+      "count": 30
+    }
+  ]
+}

@@ -1,0 +1,557 @@
+[
+  {
+    "id": "CKS-01-001",
+    "theme": "Cluster Hardening",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "question": "Quelle est la meilleure pratique pour les comptes de service ?",
+    "options": [
+      "Créer un ServiceAccount spécifique pour chaque application, avec des permissions minimales",
+      "Utiliser le ServiceAccount par défaut",
+      "Donner les permissions admin",
+      "Désactiver les ServiceAccounts"
+    ],
+    "correct": 0,
+    "explication": "Le principe du moindre privilège s'applique."
+  },
+  {
+    "id": "CKS-01-002",
+    "theme": "Cluster Hardening",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "question": "Comment restreindre l'accès aux secrets ?",
+    "options": [
+      "Role avec verbes 'get', 'list' sur les secrets, lié à un ServiceAccount",
+      "Donner accès à tous",
+      "Désactiver les secrets",
+      "Utiliser des secrets non lisibles"
+    ],
+    "correct": 0,
+    "explication": "Seuls les services qui en ont besoin doivent accéder aux secrets."
+  },
+  {
+    "id": "CKS-01-003",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server flags",
+    "difficulty": "easy",
+    "question": "Quel flag désactive l'autorisation anonyme sur l'API server ?",
+    "options": [
+      "--anonymous-auth=false",
+      "--disable-anonymous",
+      "--no-anonymous",
+      "--secure-port=6443"
+    ],
+    "correct": 0,
+    "explication": "Par défaut, l'accès anonyme est autorisé."
+  },
+  {
+    "id": "CKS-01-004",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server flags",
+    "difficulty": "easy",
+    "question": "Comment limiter les modes d'authentification ?",
+    "options": [
+      "--client-ca-file, --token-auth-file, --oidc-issuer-url, etc.",
+      "--disable-auth-modes",
+      "--auth-mode=RBAC",
+      "--auth-only"
+    ],
+    "correct": 0,
+    "explication": "Activer uniquement les modes nécessaires."
+  },
+  {
+    "id": "CKS-01-005",
+    "theme": "Cluster Hardening",
+    "theme_label": "kubelet authentication",
+    "difficulty": "easy",
+    "question": "Comment désactiver l'accès anonyme au kubelet ?",
+    "options": [
+      "--anonymous-auth=false dans kubelet",
+      "--disable-anonymous",
+      "--no-auth",
+      "--secure-port"
+    ],
+    "correct": 0,
+    "explication": "Le flag --anonymous-auth=false doit être défini dans la configuration du kubelet."
+  },
+  {
+    "id": "CKS-01-006",
+    "theme": "Cluster Hardening",
+    "theme_label": "kubelet authorization",
+    "difficulty": "easy",
+    "question": "Quel mode d'autorisation doit être utilisé pour le kubelet ?",
+    "options": [
+      "--authorization-mode=Webhook",
+      "--authorization-mode=AlwaysAllow",
+      "--authorization-mode=RBAC",
+      "--authorization-mode=Node"
+    ],
+    "correct": 2,
+    "explication": "Webhook délègue l'autorisation à l'API server (RBAC)."
+  },
+  {
+    "id": "CKS-01-007",
+    "theme": "Cluster Hardening",
+    "theme_label": "etcd encryption",
+    "difficulty": "easy",
+    "question": "Comment chiffrer les secrets dans etcd ?",
+    "options": [
+      "EncryptionConfiguration",
+      "--encrypt-etcd",
+      "etcd --encrypt",
+      "kubectl encrypt secrets"
+    ],
+    "correct": 0,
+    "explication": "Il faut créer un fichier EncryptionConfiguration et passer le flag --encryption-provider-config à l'API server."
+  },
+  {
+    "id": "CKS-01-008",
+    "theme": "Cluster Hardening",
+    "theme_label": "etcd encryption",
+    "difficulty": "easy",
+    "question": "Quelles ressources sont chiffrées par défaut dans etcd ?",
+    "options": ["Aucune (base64 seulement)", "Secrets", "ConfigMaps", "Toutes les ressources"],
+    "correct": 0,
+    "explication": "Par défaut, les données sont stockées en base64 (non chiffrées)."
+  },
+  {
+    "id": "CKS-01-009",
+    "theme": "Cluster Hardening",
+    "theme_label": "Audit logs",
+    "difficulty": "easy",
+    "question": "Comment activer les audit logs sur l'API server ?",
+    "options": [
+      "--audit-policy-file et --audit-log-path",
+      "--enable-audit",
+      "--audit-mode",
+      "--log-audit"
+    ],
+    "correct": 0,
+    "explication": "Il faut un fichier de politique d'audit."
+  },
+  {
+    "id": "CKS-01-010",
+    "theme": "Cluster Hardening",
+    "theme_label": "Audit policy",
+    "difficulty": "easy",
+    "question": "Quels niveaux d'audit existent ?",
+    "options": [
+      "None, Metadata, Request, RequestResponse",
+      "Low, Medium, High",
+      "Info, Debug, Trace",
+      "Off, Basic, Detailed"
+    ],
+    "correct": 0,
+    "explication": "Les niveaux déterminent la quantité d'informations journalisées."
+  },
+  {
+    "id": "CKS-01-011",
+    "theme": "Cluster Hardening",
+    "theme_label": "Admission controllers",
+    "difficulty": "easy",
+    "question": "Quel admission controller permet de valider les images ?",
+    "options": [
+      "ImagePolicyWebhook",
+      "ValidatingAdmissionWebhook",
+      "MutatingAdmissionWebhook",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "ImagePolicyWebhook est dédié, mais les webhooks génériques peuvent aussi le faire."
+  },
+  {
+    "id": "CKS-01-012",
+    "theme": "Cluster Hardening",
+    "theme_label": "PodSecurity admission",
+    "difficulty": "easy",
+    "question": "Quels sont les niveaux de Pod Security Standards ?",
+    "options": [
+      "Privileged, Baseline, Restricted",
+      "High, Medium, Low",
+      "Secure, Normal, Lax",
+      "Enforce, Audit, Warn"
+    ],
+    "correct": 0,
+    "explication": "Privileged (aucune restriction), Baseline (restrictions minimales), Restricted (strict)."
+  },
+  {
+    "id": "CKS-01-013",
+    "theme": "Cluster Hardening",
+    "theme_label": "PodSecurity admission",
+    "difficulty": "easy",
+    "question": "Comment appliquer le mode 'enforce' sur un namespace ?",
+    "options": [
+      "pod-security.kubernetes.io/enforce: baseline",
+      "pod-security.kubernetes.io/audit: restricted",
+      "pod-security.kubernetes.io/warn: baseline",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "Le label enforce bloque les pods non conformes."
+  },
+  {
+    "id": "CKS-01-014",
+    "theme": "Cluster Hardening",
+    "theme_label": "OPA Gatekeeper",
+    "difficulty": "easy",
+    "question": "Quel langage utilise OPA Gatekeeper pour définir les politiques ?",
+    "options": ["Rego", "JSON", "YAML", "Python"],
+    "correct": 0,
+    "explication": "Rego est le langage de politique d'Open Policy Agent."
+  },
+  {
+    "id": "CKS-01-015",
+    "theme": "Cluster Hardening",
+    "theme_label": "Network policies",
+    "difficulty": "easy",
+    "question": "Pourquoi les Network Policies sont-elles essentielles pour la sécurité ?",
+    "options": [
+      "Limiter la communication entre pods",
+      "Isoler les namespaces",
+      "Prévenir les mouvements latéraux",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Les Network Policies appliquent le principe de défense en profondeur."
+  },
+  {
+    "id": "CKS-01-016",
+    "theme": "Cluster Hardening",
+    "theme_label": "Service accounts",
+    "difficulty": "easy",
+    "question": "Comment empêcher le montage automatique du token de ServiceAccount ?",
+    "options": [
+      "automountServiceAccountToken: false",
+      "disable-token-mount",
+      "no-token",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "À définir dans le pod spec ou le ServiceAccount."
+  },
+  {
+    "id": "CKS-01-017",
+    "theme": "Cluster Hardening",
+    "theme_label": "Service accounts",
+    "difficulty": "easy",
+    "question": "Par défaut, le token du ServiceAccount est-il monté dans tous les pods ?",
+    "options": ["Oui", "Non", "Uniquement si explicite", "Uniquement dans kube-system"],
+    "correct": 0,
+    "explication": "Par défaut, le token est monté automatiquement."
+  },
+  {
+    "id": "CKS-01-018",
+    "theme": "Cluster Hardening",
+    "theme_label": "Kubeconfig security",
+    "difficulty": "easy",
+    "question": "Où doit-on stocker les fichiers kubeconfig ?",
+    "options": [
+      "Emplacement sécurisé avec permissions restreintes (600)",
+      "Dans le dépôt Git",
+      "Dans le répertoire /tmp",
+      "Partagé entre utilisateurs"
+    ],
+    "correct": 0,
+    "explication": "Les kubeconfig contiennent des secrets (certificats, tokens)."
+  },
+  {
+    "id": "CKS-01-019",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server flags",
+    "difficulty": "easy",
+    "question": "Quel flag limite les requêtes à l'API server ?",
+    "options": [
+      "--max-requests-inflight",
+      "--max-mutating-requests-inflight",
+      "--request-timeout",
+      "A et B"
+    ],
+    "correct": 3,
+    "explication": "Ces flags protègent contre le flooding."
+  },
+  {
+    "id": "CKS-01-020",
+    "theme": "Cluster Hardening",
+    "theme_label": "Kubelet configuration",
+    "difficulty": "easy",
+    "question": "Où se trouve le fichier de configuration du kubelet ?",
+    "options": [
+      "/var/lib/kubelet/config.yaml",
+      "/etc/kubernetes/kubelet.conf",
+      "/etc/kubernetes/kubelet-config.yaml",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Le chemin peut varier selon l'installation."
+  },
+  {
+    "id": "CKS-01-021",
+    "theme": "Cluster Hardening",
+    "theme_label": "Kubelet authorization",
+    "difficulty": "easy",
+    "question": "Que fait le flag --authorization-mode=Webhook sur le kubelet ?",
+    "options": [
+      "Délègue l'autorisation à l'API server",
+      "Autorise tout",
+      "Refuse tout",
+      "Utilise les règles locales"
+    ],
+    "correct": 0,
+    "explication": "Le kubelet interroge l'API server via SubjectAccessReview."
+  },
+  {
+    "id": "CKS-01-022",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server encryption",
+    "difficulty": "easy",
+    "question": "Quel provider de chiffrement est recommandé ?",
+    "options": ["aescbc", "secretbox", "kms", "A et B"],
+    "correct": 3,
+    "explication": "aescbc et secretbox sont des options, kms (Cloud KMS) est recommandé."
+  },
+  {
+    "id": "CKS-01-023",
+    "theme": "Cluster Hardening",
+    "theme_label": "EncryptionConfiguration",
+    "difficulty": "easy",
+    "question": "Où placer le fichier EncryptionConfiguration ?",
+    "options": [
+      "/etc/kubernetes/encryption-config.yaml",
+      "Passé comme flag --encryption-provider-config",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "Le chemin est arbitraire, mais le flag doit pointer vers le fichier."
+  },
+  {
+    "id": "CKS-01-024",
+    "theme": "Cluster Hardening",
+    "theme_label": "Audit policy",
+    "difficulty": "easy",
+    "question": "Quel niveau d'audit enregistre le corps de la requête et de la réponse ?",
+    "options": ["RequestResponse", "Request", "Metadata", "None"],
+    "correct": 0,
+    "explication": "RequestResponse enregistre le plus de détails."
+  },
+  {
+    "id": "CKS-01-025",
+    "theme": "Cluster Hardening",
+    "theme_label": "Audit policy",
+    "difficulty": "easy",
+    "question": "Comment exclure certaines ressources de l'audit ?",
+    "options": [
+      "stage: RequestResponse resources: - group: '' resources: ['configmaps'] omitStages: ['RequestResponse']",
+      "exclude: - resources",
+      "ignore: - resources",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "On peut omettre des stages spécifiques."
+  },
+  {
+    "id": "CKS-01-026",
+    "theme": "Cluster Hardening",
+    "theme_label": "Node restriction",
+    "difficulty": "easy",
+    "question": "Quel admission controller empêche les kubelets de modifier les labels des nœuds ?",
+    "options": ["NodeRestriction", "NodeRestriction", "NodeRestriction", "NodeRestriction"],
+    "correct": 0,
+    "explication": "NodeRestriction limite les opérations du kubelet à ses propres nœuds."
+  },
+  {
+    "id": "CKS-01-027",
+    "theme": "Cluster Hardening",
+    "theme_label": "DenyEscalatingExec",
+    "difficulty": "easy",
+    "question": "Quel admission controller empêche l'exécution de commandes dans les pods privilégiés ?",
+    "options": ["DenyEscalatingExec", "PodSecurityPolicy", "SecurityContextDeny", "A et B"],
+    "correct": 3,
+    "explication": "DenyEscalatingExec et SecurityContextDeny sont des admission controllers de sécurité."
+  },
+  {
+    "id": "CKS-01-028",
+    "theme": "Cluster Hardening",
+    "theme_label": "ImagePolicyWebhook",
+    "difficulty": "easy",
+    "question": "Que fait ImagePolicyWebhook ?",
+    "options": [
+      "Valide les images avant leur déploiement",
+      "Scanne les images",
+      "Bloque les images non signées",
+      "A et C"
+    ],
+    "correct": 3,
+    "explication": "Il interroge un webhook externe pour décider d'accepter ou non l'image."
+  },
+  {
+    "id": "CKS-01-029",
+    "theme": "Cluster Hardening",
+    "theme_label": "RuntimeClass",
+    "difficulty": "easy",
+    "question": "À quoi sert RuntimeClass ?",
+    "options": [
+      "Choisir le runtime (gVisor, Kata) pour les pods",
+      "Définir des classes de ressources",
+      "Gérer les conteneurs",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "RuntimeClass permet d'utiliser des runtimes sécurisés (sandbox)."
+  },
+  {
+    "id": "CKS-01-030",
+    "theme": "Cluster Hardening",
+    "theme_label": "gVisor",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que gVisor ?",
+    "options": [
+      "Runtime de conteneur avec sandbox (sécurité accrue)",
+      "CNI",
+      "CSI",
+      "CRI"
+    ],
+    "correct": 0,
+    "explication": "gVisor fournit une couche d'isolation supplémentaire entre le conteneur et le noyau."
+  },
+  {
+    "id": "CKS-01-031",
+    "theme": "Cluster Hardening",
+    "theme_label": "Kata Containers",
+    "difficulty": "easy",
+    "question": "Kata Containers utilise-t-il des VM légères ?",
+    "options": ["Oui", "Non", "Uniquement avec QEMU", "Uniquement avec Firecracker"],
+    "correct": 0,
+    "explication": "Kata exécute chaque conteneur dans sa propre VM légère."
+  },
+  {
+    "id": "CKS-01-032",
+    "theme": "Cluster Hardening",
+    "theme_label": "PodSecurityPolicy (déprécié)",
+    "difficulty": "easy",
+    "question": "Quelle ressource a remplacé PodSecurityPolicy ?",
+    "options": [
+      "Pod Security Admission",
+      "OPA Gatekeeper",
+      "Kyverno",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "PSP est déprécié, PSA est la solution native, d'autres alternatives existent."
+  },
+  {
+    "id": "CKS-01-033",
+    "theme": "Cluster Hardening",
+    "theme_label": "Security context",
+    "difficulty": "easy",
+    "question": "Comment forcer l'exécution en tant qu'utilisateur non root au niveau du namespace ?",
+    "options": [
+      "Pod Security Admission avec baseline/restricted",
+      "ValidatingAdmissionWebhook",
+      "OPA Gatekeeper",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explication": "Plusieurs mécanismes peuvent imposer runAsNonRoot."
+  },
+  {
+    "id": "CKS-01-034",
+    "theme": "Cluster Hardening",
+    "theme_label": "Seccomp",
+    "difficulty": "easy",
+    "question": "Quel profil seccomp est recommandé pour la sécurité ?",
+    "options": [
+      "RuntimeDefault",
+      "Unconfined",
+      "Localhost",
+      "A seulement"
+    ],
+    "correct": 0,
+    "explication": "RuntimeDefault fournit un ensemble de syscalls par défaut, plus restrictif qu'Unconfined."
+  },
+  {
+    "id": "CKS-01-035",
+    "theme": "Cluster Hardening",
+    "theme_label": "AppArmor",
+    "difficulty": "easy",
+    "question": "Comment appliquer un profil AppArmor à un pod ?",
+    "options": [
+      "annotations: container.apparmor.security.beta.kubernetes.io/<container>: localhost/<profil>",
+      "securityContext: apparmor: <profil>",
+      "A seulement",
+      "B seulement"
+    ],
+    "correct": 2,
+    "explication": "L'annotation est utilisée (beta)."
+  },
+  {
+    "id": "CKS-01-036",
+    "theme": "Cluster Hardening",
+    "theme_label": "SeLinux",
+    "difficulty": "easy",
+    "question": "Comment configurer SELinux pour un pod ?",
+    "options": [
+      "securityContext: seLinuxOptions: level: 's0:c123,c456'",
+      "selinux: enabled: true",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "seLinuxOptions dans securityContext."
+  },
+  {
+    "id": "CKS-01-037",
+    "theme": "Cluster Hardening",
+    "theme_label": "Pod security context",
+    "difficulty": "easy",
+    "question": "Comment définir un fsGroup pour les volumes ?",
+    "options": [
+      "securityContext: fsGroup: 2000",
+      "securityContext: supplementalGroups: [2000]",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "fsGroup définit le GID propriétaire des volumes."
+  },
+  {
+    "id": "CKS-01-038",
+    "theme": "Cluster Hardening",
+    "theme_label": "ReadOnlyRootFilesystem",
+    "difficulty": "easy",
+    "question": "Pourquoi est-il sécuritaire de monter le système de fichiers racine en lecture seule ?",
+    "options": [
+      "Empêche les modifications non autorisées",
+      "Réduit la surface d'attaque",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "readOnlyRootFilesystem: true est une bonne pratique."
+  },
+  {
+    "id": "CKS-01-039",
+    "theme": "Cluster Hardening",
+    "theme_label": "Capabilities",
+    "difficulty": "easy",
+    "question": "Quelle capacité est dangereuse et doit être supprimée ?",
+    "options": ["CAP_SYS_ADMIN", "CAP_NET_ADMIN", "CAP_SYS_PTRACE", "Toutes ces réponses"],
+    "correct": 3,
+    "explication": "Ces capacités permettent des actions privilégiées."
+  },
+  {
+    "id": "CKS-01-040",
+    "theme": "Cluster Hardening",
+    "theme_label": "Capabilities",
+    "difficulty": "easy",
+    "question": "Comment supprimer toutes les capacités d'un conteneur ?",
+    "options": [
+      "securityContext: capabilities: drop: [ALL]",
+      "securityContext: privileged: false",
+      "A et B",
+      "A seulement"
+    ],
+    "correct": 2,
+    "explication": "drop: [ALL] supprime toutes les capacités, puis on peut en ajouter."
+  }
+]

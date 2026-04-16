@@ -1,0 +1,32 @@
+{
+  "id": "trivy",
+  "name": "Trivy Security (Aqua Security)",
+  "version": "1.0",
+  "description": "Certification Trivy - Scan de vulnérabilités pour conteneurs et code",
+  "totalQuestions": 150,
+  "examDurationMinutes": 60,
+  "examQuestionCount": 40,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Trivy Basics",
+      "count": 30
+    },
+    {
+      "name": "Container Scanning",
+      "count": 40
+    },
+    {
+      "name": "Filesystem Scanning",
+      "count": 30
+    },
+    {
+      "name": "Misconfiguration Scanning",
+      "count": 30
+    },
+    {
+      "name": "CI/CD Integration",
+      "count": 20
+    }
+  ]
+}

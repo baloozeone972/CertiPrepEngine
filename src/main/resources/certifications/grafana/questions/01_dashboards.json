@@ -1,0 +1,32 @@
+[
+  {
+    "id": "GRF-01-001",
+    "theme": "Dashboards",
+    "theme_label": "Création de dashboards",
+    "difficulty": "easy",
+    "question": "Quel type de panel Grafana affiche des séries temporelles ?",
+    "options": [
+      "Time series",
+      "Table",
+      "Stat",
+      "Bar chart"
+    ],
+    "correct": 0,
+    "explanation": "Time series est le panel standard pour les métriques temporelles."
+  },
+  {
+    "id": "GRF-01-002",
+    "theme": "Data Sources",
+    "theme_label": "Sources de données",
+    "difficulty": "easy",
+    "question": "Quel langage de requête Grafana est utilisé avec Prometheus ?",
+    "options": [
+      "PromQL",
+      "LogQL",
+      "InfluxQL",
+      "SQL"
+    ],
+    "correct": 0,
+    "explanation": "PromQL est le langage de requête de Prometheus."
+  }
+]

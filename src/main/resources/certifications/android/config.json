@@ -1,0 +1,36 @@
+{
+  "id": "android",
+  "name": "Android Developer (Google)",
+  "version": "1.0",
+  "description": "Certification Android - Développement d'applications mobiles Android avec Kotlin/Java",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Android Architecture",
+      "count": 60
+    },
+    {
+      "name": "Activities and Fragments",
+      "count": 70
+    },
+    {
+      "name": "UI/UX Design",
+      "count": 60
+    },
+    {
+      "name": "Data Storage",
+      "count": 50
+    },
+    {
+      "name": "Networking",
+      "count": 50
+    },
+    {
+      "name": "Security",
+      "count": 60
+    }
+  ]
+}

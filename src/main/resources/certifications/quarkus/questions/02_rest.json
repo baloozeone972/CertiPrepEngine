@@ -1,0 +1,692 @@
+[
+  {
+    "id": "QRK-REST-001",
+    "theme": "Quarkus REST",
+    "theme_label": "RESTEasy Reactive",
+    "difficulty": "easy",
+    "question": "Quelle extension ajoute le support REST ?",
+    "options": [
+      "quarkus-resteasy-reactive",
+      "quarkus-rest",
+      "quarkus-jaxrs",
+      "quarkus-http"
+    ],
+    "correct": 0,
+    "explanation": "resteasy-reactive est l'extension REST recommandée."
+  },
+  {
+    "id": "QRK-REST-002",
+    "theme": "Quarkus REST",
+    "theme_label": "RESTEasy Reactive",
+    "difficulty": "easy",
+    "question": "Quelle annotation marque une ressource REST ?",
+    "options": ["@Path", "@Resource", "@RestController", "@Endpoint"],
+    "correct": 0,
+    "explanation": "@Path définit le chemin de la ressource REST."
+  },
+  {
+    "id": "QRK-REST-003",
+    "theme": "Quarkus REST",
+    "theme_label": "Méthodes HTTP",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour GET ?",
+    "options": ["@GET", "@Get", "@GetMapping", "@Read"],
+    "correct": 0,
+    "explanation": "@GET est l'annotation JAX-RS pour les requêtes GET."
+  },
+  {
+    "id": "QRK-REST-004",
+    "theme": "Quarkus REST",
+    "theme_label": "Méthodes HTTP",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour POST ?",
+    "options": ["@POST", "@Post", "@PostMapping", "@Create"],
+    "correct": 0,
+    "explanation": "@POST est l'annotation JAX-RS pour les requêtes POST."
+  },
+  {
+    "id": "QRK-REST-005",
+    "theme": "Quarkus REST",
+    "theme_label": "Méthodes HTTP",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour PUT ?",
+    "options": ["@PUT", "@Put", "@PutMapping", "@Update"],
+    "correct": 0,
+    "explanation": "@PUT est l'annotation JAX-RS pour les requêtes PUT."
+  },
+  {
+    "id": "QRK-REST-006",
+    "theme": "Quarkus REST",
+    "theme_label": "Méthodes HTTP",
+    "difficulty": "easy",
+    "question": "Quelle annotation pour DELETE ?",
+    "options": ["@DELETE", "@Delete", "@DeleteMapping", "@Remove"],
+    "correct": 0,
+    "explanation": "@DELETE est l'annotation JAX-RS pour les requêtes DELETE."
+  },
+  {
+    "id": "QRK-REST-007",
+    "theme": "Quarkus REST",
+    "theme_label": "Paramètres",
+    "difficulty": "medium",
+    "question": "Quelle annotation capture un paramètre de chemin ?",
+    "options": ["@PathParam", "@PathVariable", "@Param", "@Path"],
+    "correct": 0,
+    "explanation": "@PathParam lie un paramètre à un segment du chemin."
+  },
+  {
+    "id": "QRK-REST-008",
+    "theme": "Quarkus REST",
+    "theme_label": "Paramètres",
+    "difficulty": "medium",
+    "question": "Quelle annotation capture un paramètre de requête ?",
+    "options": ["@QueryParam", "@RequestParam", "@Param", "@Query"],
+    "correct": 0,
+    "explanation": "@QueryParam lie un paramètre de requête (?key=value)."
+  },
+  {
+    "id": "QRK-REST-009",
+    "theme": "Quarkus REST",
+    "theme_label": "Corps de requête",
+    "difficulty": "medium",
+    "question": "Quelle annotation lie le corps de la requête ?",
+    "options": ["@RequestBody", "@Body", "@Payload", "@RestBody"],
+    "correct": 0,
+    "explanation": "@RequestBody (ou absence d'annotation) lie le corps de la requête."
+  },
+  {
+    "id": "QRK-REST-010",
+    "theme": "Quarkus REST",
+    "theme_label": "Réponses",
+    "difficulty": "medium",
+    "question": "Comment spécifier le code HTTP de réponse ?",
+    "options": [
+      "@ResponseStatus",
+      "@Status",
+      "@HttpStatus",
+      "@ResponseCode"
+    ],
+    "correct": 0,
+    "explanation": "@ResponseStatus définit le code HTTP pour la réponse."
+  },
+  {
+    "id": "QRK-REST-011",
+    "theme": "Quarkus REST",
+    "theme_label": "JSON",
+    "difficulty": "medium",
+    "question": "Quelle extension ajoute le support JSON ?",
+    "options": [
+      "quarkus-resteasy-reactive-jackson",
+      "quarkus-json",
+      "quarkus-jackson",
+      "quarkus-jsonb"
+    ],
+    "correct": 0,
+    "explanation": "Jackson est l'implémentation JSON par défaut."
+  },
+  {
+    "id": "QRK-REST-012",
+    "theme": "Quarkus REST",
+    "theme_label": "JSON",
+    "difficulty": "hard",
+    "question": "Comment personnaliser la sérialisation JSON ?",
+    "options": [
+      "@JsonSerialize",
+      "@JsonbProperty",
+      "@JsonProperty",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Les annotations Jackson sont supportées."
+  },
+  {
+    "id": "QRK-REST-013",
+    "theme": "Quarkus REST",
+    "theme_label": "Exception Mapper",
+    "difficulty": "hard",
+    "question": "Comment créer un gestionnaire d'exceptions ?",
+    "options": [
+      "@Provider",
+      "ExceptionMapper<E>",
+      "@ExceptionMapper",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "ExceptionMapper avec @Provider capture les exceptions."
+  },
+  {
+    "id": "QRK-REST-014",
+    "theme": "Quarkus REST",
+    "theme_label": "Client REST",
+    "difficulty": "hard",
+    "question": "Comment créer un client REST ?",
+    "options": [
+      "@RegisterRestClient",
+      "@RestClient",
+      "@HttpClient",
+      "@ServiceClient"
+    ],
+    "correct": 0,
+    "explanation": "@RegisterRestClient marque une interface comme client REST."
+  },
+  {
+    "id": "QRK-REST-015",
+    "theme": "Quarkus REST",
+    "theme_label": "Client REST",
+    "difficulty": "hard",
+    "question": "Comment injecter un client REST ?",
+    "options": [
+      "@RestClient",
+      "@Inject",
+      "@Client",
+      "@InjectRestClient"
+    ],
+    "correct": 0,
+    "explanation": "@RestClient est le qualifier pour l'injection."
+  },
+  {
+    "id": "QRK-REST-016",
+    "theme": "Quarkus REST",
+    "theme_label": "Client REST config",
+    "difficulty": "hard",
+    "question": "Comment configurer l'URL d'un client REST ?",
+    "options": [
+      "quarkus.rest-client.\"com.example.Service\".url",
+      "@RegisterRestClient(configKey = \"service\")",
+      "application.properties",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La configuration se fait via properties."
+  },
+  {
+    "id": "QRK-REST-017",
+    "theme": "Quarkus REST",
+    "theme_label": "Reactive client",
+    "difficulty": "hard",
+    "question": "Comment créer un client réactif ?",
+    "options": [
+      "Retourner Uni<T> ou Multi<T>",
+      "@Reactive",
+      "@AsyncClient",
+      "@NonBlocking"
+    ],
+    "correct": 0,
+    "explanation": "Les types réactifs (Uni/Multi) rendent le client non-bloquant."
+  },
+  {
+    "id": "QRK-REST-018",
+    "theme": "Quarkus REST",
+    "theme_label": "CORS",
+    "difficulty": "hard",
+    "question": "Comment activer CORS ?",
+    "options": [
+      "quarkus.http.cors=true",
+      "@CrossOrigin",
+      "quarkus.http.cors.origins",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "CORS se configure via properties."
+  },
+  {
+    "id": "QRK-REST-019",
+    "theme": "Quarkus REST",
+    "theme_label": "Validation",
+    "difficulty": "hard",
+    "question": "Comment valider les entrées REST ?",
+    "options": [
+      "@Valid",
+      "Bean Validation",
+      "quarkus-hibernate-validator",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Bean Validation est supportée avec l'extension appropriée."
+  },
+  {
+    "id": "QRK-REST-020",
+    "theme": "Quarkus REST",
+    "theme_label": "Static Resources",
+    "difficulty": "hard",
+    "question": "Où placer les ressources statiques ?",
+    "options": [
+      "src/main/resources/META-INF/resources",
+      "src/main/webapp",
+      "src/main/resources/static",
+      "src/main/resources/public"
+    ],
+    "correct": 0,
+    "explanation": "META-INF/resources est l'emplacement standard."
+  },
+  {
+    "id": "QRK-REST-021",
+    "theme": "Quarkus REST",
+    "theme_label": "File Upload",
+    "difficulty": "hard",
+    "question": "Comment recevoir un fichier ?",
+    "options": [
+      "@FormParam + File",
+      "@PartParam",
+      "@RequestBody + byte[]",
+      "@MultipartForm"
+    ],
+    "correct": 0,
+    "explanation": "@FormParam avec type File ou InputStream."
+  },
+  {
+    "id": "QRK-REST-022",
+    "theme": "Quarkus REST",
+    "theme_label": "File Download",
+    "difficulty": "hard",
+    "question": "Comment renvoyer un fichier ?",
+    "options": [
+      "Response.ok(file)",
+      "return File",
+      "return InputStream",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs types de retour sont possibles."
+  },
+  {
+    "id": "QRK-REST-023",
+    "theme": "Quarkus REST",
+    "theme_label": "Streaming",
+    "difficulty": "hard",
+    "question": "Comment streamer une réponse ?",
+    "options": [
+      "return Multi<T>",
+      "return Flux<T>",
+      "@Produces(MediaType.SERVER_SENT_EVENTS)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Multi avec SSE permet le streaming."
+  },
+  {
+    "id": "QRK-REST-024",
+    "theme": "Quarkus REST",
+    "theme_label": "Server Sent Events",
+    "difficulty": "hard",
+    "question": "Quel type de retour pour SSE ?",
+    "options": ["Multi<T>", "Flux<T>", "Publisher<T>", "Observable<T>"],
+    "correct": 0,
+    "explanation": "Multi est le type réactif pour les flux."
+  },
+  {
+    "id": "QRK-REST-025",
+    "theme": "Quarkus REST",
+    "theme_label": "WebSockets",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute les WebSockets ?",
+    "options": [
+      "quarkus-websockets",
+      "quarkus-websocket",
+      "quarkus-vertx-websocket",
+      "quarkus-undertow-websocket"
+    ],
+    "correct": 0,
+    "explanation": "quarkus-websockets est l'extension officielle."
+  },
+  {
+    "id": "QRK-REST-026",
+    "theme": "Quarkus REST",
+    "theme_label": "WebSockets",
+    "difficulty": "hard",
+    "question": "Quelle annotation marque un endpoint WebSocket ?",
+    "options": ["@ServerEndpoint", "@WebSocket", "@Endpoint", "@WebSocketEndpoint"],
+    "correct": 0,
+    "explanation": "@ServerEndpoint est l'annotation JSR 356."
+  },
+  {
+    "id": "QRK-REST-027",
+    "theme": "Quarkus REST",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "Quelle extension génère la documentation OpenAPI ?",
+    "options": [
+      "quarkus-smallrye-openapi",
+      "quarkus-openapi",
+      "quarkus-swagger",
+      "quarkus-docs"
+    ],
+    "correct": 0,
+    "explanation": "smallrye-openapi génère la documentation OpenAPI."
+  },
+  {
+    "id": "QRK-REST-028",
+    "theme": "Quarkus REST",
+    "theme_label": "OpenAPI UI",
+    "difficulty": "hard",
+    "question": "Quel endpoint expose l'interface Swagger UI ?",
+    "options": ["/q/swagger-ui", "/swagger-ui", "/docs", "/api-docs"],
+    "correct": 0,
+    "explanation": "/q/swagger-ui est l'endpoint par défaut."
+  },
+  {
+    "id": "QRK-REST-029",
+    "theme": "Quarkus REST",
+    "theme_label": "OpenAPI",
+    "difficulty": "hard",
+    "question": "Comment personnaliser la documentation ?",
+    "options": [
+      "@OpenAPIDefinition",
+      "@Operation",
+      "@APIResponse",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations pour personnaliser l'OpenAPI."
+  },
+  {
+    "id": "QRK-REST-030",
+    "theme": "Quarkus REST",
+    "theme_label": "Security",
+    "difficulty": "hard",
+    "question": "Comment sécuriser un endpoint REST ?",
+    "options": [
+      "@RolesAllowed",
+      "@PermitAll",
+      "@DenyAll",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les annotations JSR-250 sont supportées."
+  },
+  {
+    "id": "QRK-REST-031",
+    "theme": "Quarkus REST",
+    "theme_label": "JWT",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute JWT ?",
+    "options": [
+      "quarkus-smallrye-jwt",
+      "quarkus-jwt",
+      "quarkus-oidc",
+      "quarkus-security"
+    ],
+    "correct": 0,
+    "explanation": "smallrye-jwt supporte les tokens JWT."
+  },
+  {
+    "id": "QRK-REST-032",
+    "theme": "Quarkus REST",
+    "theme_label": "OIDC",
+    "difficulty": "hard",
+    "question": "Quelle extension ajoute OIDC ?",
+    "options": [
+      "quarkus-oidc",
+      "quarkus-oauth2",
+      "quarkus-keycloak",
+      "quarkus-openid"
+    ],
+    "correct": 0,
+    "explanation": "quarkus-oidc intègre Keycloak et autres providers OIDC."
+  },
+  {
+    "id": "QRK-REST-033",
+    "theme": "Quarkus REST",
+    "theme_label": "Context",
+    "difficulty": "hard",
+    "question": "Comment injecter le contexte de sécurité ?",
+    "options": [
+      "@Inject SecurityContext",
+      "@Context SecurityContext",
+      "@SecurityContext",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@Inject ou @Context fonctionnent."
+  },
+  {
+    "id": "QRK-REST-034",
+    "theme": "Quarkus REST",
+    "theme_label": "Current User",
+    "difficulty": "hard",
+    "question": "Comment obtenir l'utilisateur courant ?",
+    "options": [
+      "securityContext.getUserPrincipal()",
+      "@Inject JsonWebToken",
+      "@Authenticated User",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons selon le mécanisme d'authentification."
+  },
+  {
+    "id": "QRK-REST-035",
+    "theme": "Quarkus REST",
+    "theme_label": "GZip",
+    "difficulty": "hard",
+    "question": "Comment activer la compression GZip ?",
+    "options": [
+      "quarkus.http.enable-compression=true",
+      "@GZip",
+      "@Compress",
+      "quarkus.http.compress=true"
+    ],
+    "correct": 0,
+    "explanation": "enable-compression active la compression automatique."
+  },
+  {
+    "id": "QRK-REST-036",
+    "theme": "Quarkus REST",
+    "theme_label": "Timeouts",
+    "difficulty": "hard",
+    "question": "Comment configurer les timeouts ?",
+    "options": [
+      "quarkus.http.read-timeout",
+      "quarkus.http.idle-timeout",
+      "@Timeout",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les timeouts se configurent via properties."
+  },
+  {
+    "id": "QRK-REST-037",
+    "theme": "Quarkus REST",
+    "theme_label": "Request/Response filters",
+    "difficulty": "hard",
+    "question": "Comment créer un filtre REST ?",
+    "options": [
+      "@Provider + ContainerRequestFilter",
+      "@Provider + ContainerResponseFilter",
+      "@Filter",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les filtres JAX-RS sont supportés."
+  },
+  {
+    "id": "QRK-REST-038",
+    "theme": "Quarkus REST",
+    "theme_label": "Request/Response filters",
+    "difficulty": "hard",
+    "question": "Quelle annotation priorise les filtres ?",
+    "options": ["@Priority", "@Order", "@Precedence", "@Weight"],
+    "correct": 0,
+    "explanation": "@Priority définit l'ordre d'exécution des filtres."
+  },
+  {
+    "id": "QRK-REST-039",
+    "theme": "Quarkus REST",
+    "theme_label": "Interceptors",
+    "difficulty": "hard",
+    "question": "Comment créer un interceptor REST ?",
+    "options": [
+      "@Interceptor + @AroundInvoke",
+      "@InterceptorBinding",
+      "@Interceptor",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les interceptors CDI sont supportés."
+  },
+  {
+    "id": "QRK-REST-040",
+    "theme": "Quarkus REST",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester un endpoint REST ?",
+    "options": [
+      "@QuarkusTest",
+      "@TestHTTPEndpoint",
+      "RestAssured",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "RestAssured avec @QuarkusTest."
+  },
+  {
+    "id": "QRK-REST-041",
+    "theme": "Quarkus REST",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester un client REST ?",
+    "options": [
+      "@QuarkusTest",
+      "@RestClient",
+      "@InjectMock",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Mock des clients REST avec @InjectMock."
+  },
+  {
+    "id": "QRK-REST-042",
+    "theme": "Quarkus REST",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "RESTEasy Reactive est-il non-bloquant ?",
+    "options": [
+      "Oui, basé sur Vert.x",
+      "Non, bloquant",
+      "Oui, avec configuration",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "RESTEasy Reactive est entièrement non-bloquant."
+  },
+  {
+    "id": "QRK-REST-043",
+    "theme": "Quarkus REST",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "Les endpoints sont-ils réactifs par défaut ?",
+    "options": [
+      "Oui, sur le worker pool",
+      "Non, sur le event loop",
+      "Oui, mais configurable",
+      "Non, bloquants par défaut"
+    ],
+    "correct": 1,
+    "explanation": "Les endpoints s'exécutent sur le event loop par défaut."
+  },
+  {
+    "id": "QRK-REST-044",
+    "theme": "Quarkus REST",
+    "theme_label": "Blocking operations",
+    "difficulty": "hard",
+    "question": "Comment marquer un endpoint comme bloquant ?",
+    "options": [
+      "@Blocking",
+      "@NonReactive",
+      "@Sync",
+      "@BlockingOperation"
+    ],
+    "correct": 0,
+    "explanation": "@Blocking déplace l'exécution sur le worker pool."
+  },
+  {
+    "id": "QRK-REST-045",
+    "theme": "Quarkus REST",
+    "theme_label": "Non-blocking",
+    "difficulty": "hard",
+    "question": "Comment marquer un endpoint comme non-bloquant ?",
+    "options": [
+      "@NonBlocking",
+      "@Reactive",
+      "@Async",
+      "@EventLoop"
+    ],
+    "correct": 0,
+    "explanation": "@NonBlocking force l'exécution sur l'event loop."
+  },
+  {
+    "id": "QRK-REST-046",
+    "theme": "Quarkus REST",
+    "theme_label": "Multipart",
+    "difficulty": "hard",
+    "question": "Comment gérer le multipart ?",
+    "options": [
+      "@MultipartForm",
+      "@FormParam",
+      "@Part",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "@MultipartForm lie un objet avec les parties."
+  },
+  {
+    "id": "QRK-REST-047",
+    "theme": "Quarkus REST",
+    "theme_label": "Multipart",
+    "difficulty": "hard",
+    "question": "Comment recevoir un fichier multipart ?",
+    "options": [
+      "@FormParam + FileUpload",
+      "@Part + InputStream",
+      "@Multipart + byte[]",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs types pour recevoir des fichiers."
+  },
+  {
+    "id": "QRK-REST-048",
+    "theme": "Quarkus REST",
+    "theme_label": "REST Client with OIDC",
+    "difficulty": "hard",
+    "question": "Comment configurer un client REST avec OIDC ?",
+    "options": [
+      "quarkus.rest-client.\"service\".oidc",
+      "@RegisterRestClient avec oidc",
+      "@OIDCClient",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "La configuration se fait via properties et annotations."
+  },
+  {
+    "id": "QRK-REST-049",
+    "theme": "Quarkus REST",
+    "theme_label": "Circuit Breaker",
+    "difficulty": "hard",
+    "question": "Comment ajouter un circuit breaker au client REST ?",
+    "options": [
+      "@CircuitBreaker",
+      "@Retry",
+      "@Fallback",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "@CircuitBreaker et @Fallback de SmallRye Fault Tolerance."
+  },
+  {
+    "id": "QRK-REST-050",
+    "theme": "Quarkus REST",
+    "theme_label": "Retry",
+    "difficulty": "hard",
+    "question": "Comment ajouter une politique de retry ?",
+    "options": [
+      "@Retry",
+      "@Retryable",
+      "@RetryOn",
+      "@Repeat"
+    ],
+    "correct": 0,
+    "explanation": "@Retry de SmallRye Fault Tolerance configure les retries."
+  }
+]

@@ -1,0 +1,742 @@
+[
+  {
+    "id": "SB3-SEC-001",
+    "theme": "Spring Security",
+    "theme_label": "Configuration de base",
+    "difficulty": "easy",
+    "question": "Quelle dépendance ajoute Spring Security ?",
+    "options": [
+      "spring-boot-starter-security",
+      "spring-security-core",
+      "spring-security-starter",
+      "spring-boot-security"
+    ],
+    "correct": 0,
+    "explanation": "Le starter spring-boot-starter-security inclut toutes les dépendances nécessaires."
+  },
+  {
+    "id": "SB3-SEC-002",
+    "theme": "Spring Security",
+    "theme_label": "Configuration de base",
+    "difficulty": "easy",
+    "question": "Quel est l'utilisateur par défaut créé par Spring Security ?",
+    "options": ["user", "admin", "spring", "default"],
+    "correct": 0,
+    "explanation": "Spring Security crée un utilisateur 'user' avec un mot de passe généré."
+  },
+  {
+    "id": "SB3-SEC-003",
+    "theme": "Spring Security",
+    "theme_label": "Configuration de base",
+    "difficulty": "easy",
+    "question": "Où est affiché le mot de passe par défaut ?",
+    "options": [
+      "Dans les logs au démarrage",
+      "Dans application.properties",
+      "Dans la console",
+      "Dans un fichier séparé"
+    ],
+    "correct": 0,
+    "explanation": "Le mot de passe est affiché dans les logs au démarrage de l'application."
+  },
+  {
+    "id": "SB3-SEC-004",
+    "theme": "Spring Security",
+    "theme_label": "Configuration de base",
+    "difficulty": "medium",
+    "question": "Comment désactiver la sécurité par défaut ?",
+    "options": [
+      "spring.security.enabled=false",
+      "security.basic.enabled=false",
+      "spring.autoconfigure.exclude=SecurityAutoConfiguration",
+      "spring.security.disabled=true"
+    ],
+    "correct": 2,
+    "explanation": "Exclure SecurityAutoConfiguration désactive la sécurité par défaut."
+  },
+  {
+    "id": "SB3-SEC-005",
+    "theme": "Spring Security",
+    "theme_label": "SecurityFilterChain",
+    "difficulty": "medium",
+    "question": "Quel bean configure la sécurité ?",
+    "options": [
+      "SecurityFilterChain",
+      "WebSecurityConfigurerAdapter",
+      "HttpSecurity",
+      "AuthenticationManager"
+    ],
+    "correct": 0,
+    "explanation": "SecurityFilterChain est le bean de configuration moderne (Spring Security 5.7+)."
+  },
+  {
+    "id": "SB3-SEC-006",
+    "theme": "Spring Security",
+    "theme_label": "SecurityFilterChain",
+    "difficulty": "hard",
+    "question": "Quelle annotation remplace WebSecurityConfigurerAdapter ?",
+    "options": [
+      "@EnableWebSecurity",
+      "@SecurityConfig",
+      "@WebSecurity",
+      "@EnableSecurity"
+    ],
+    "correct": 0,
+    "explanation": "@EnableWebSecurity avec un bean SecurityFilterChain remplace l'ancien adaptateur."
+  },
+  {
+    "id": "SB3-SEC-007",
+    "theme": "Spring Security",
+    "theme_label": "HttpSecurity",
+    "difficulty": "medium",
+    "question": "Comment autoriser toutes les requêtes ?",
+    "options": [
+      "http.authorizeHttpRequests().anyRequest().permitAll()",
+      "http.authorizeRequests().anyRequest().permitAll()",
+      "http.authorizeHttpRequests().allRequests().permitAll()",
+      "http.authorizeRequests().all().permit()"
+    ],
+    "correct": 0,
+    "explanation": "anyRequest().permitAll() autorise toutes les requêtes sans authentification."
+  },
+  {
+    "id": "SB3-SEC-008",
+    "theme": "Spring Security",
+    "theme_label": "HttpSecurity",
+    "difficulty": "hard",
+    "question": "Comment exiger l'authentification pour toutes les requêtes ?",
+    "options": [
+      "http.authorizeHttpRequests().anyRequest().authenticated()",
+      "http.authorizeRequests().anyRequest().authenticated()",
+      "http.authorizeHttpRequests().allRequests().authenticated()",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Les deux syntaxes sont acceptées selon la version."
+  },
+  {
+    "id": "SB3-SEC-009",
+    "theme": "Spring Security",
+    "theme_label": "HttpSecurity",
+    "difficulty": "hard",
+    "question": "Comment définir des règles par URL ?",
+    "options": [
+      "http.authorizeHttpRequests().requestMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+      "http.authorizeRequests().antMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+      "http.authorizeHttpRequests().mvcMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs méthodes existent selon la version et le besoin."
+  },
+  {
+    "id": "SB3-SEC-010",
+    "theme": "Spring Security",
+    "theme_label": "Authentication",
+    "difficulty": "medium",
+    "question": "Quelle interface représente un utilisateur authentifié ?",
+    "options": [
+      "UserDetails",
+      "Authentication",
+      "Principal",
+      "User"
+    ],
+    "correct": 0,
+    "explanation": "UserDetails est l'interface standard pour les utilisateurs."
+  },
+  {
+    "id": "SB3-SEC-011",
+    "theme": "Spring Security",
+    "theme_label": "Authentication",
+    "difficulty": "hard",
+    "question": "Quelle interface charge les utilisateurs ?",
+    "options": [
+      "UserDetailsService",
+      "AuthenticationProvider",
+      "UserDetailsManager",
+      "UserService"
+    ],
+    "correct": 0,
+    "explanation": "UserDetailsService charge les utilisateurs par nom d'utilisateur."
+  },
+  {
+    "id": "SB3-SEC-012",
+    "theme": "Spring Security",
+    "theme_label": "Password Encoding",
+    "difficulty": "medium",
+    "question": "Quel encodeur est recommandé ?",
+    "options": [
+      "BCryptPasswordEncoder",
+      "MD5PasswordEncoder",
+      "ShaPasswordEncoder",
+      "PlainTextPasswordEncoder"
+    ],
+    "correct": 0,
+    "explanation": "BCryptPasswordEncoder est l'encodeur recommandé pour les mots de passe."
+  },
+  {
+    "id": "SB3-SEC-013",
+    "theme": "Spring Security",
+    "theme_label": "Password Encoding",
+    "difficulty": "hard",
+    "question": "Comment déclarer l'encodeur de mots de passe ?",
+    "options": [
+      "@Bean public PasswordEncoder passwordEncoder() { return new BCryptPasswordEncoder(); }",
+      "@Bean public PasswordEncoder encoder() { return PasswordEncoderFactories.createDelegatingPasswordEncoder(); }",
+      "@Bean public BCryptPasswordEncoder bCryptPasswordEncoder() { return new BCryptPasswordEncoder(); }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons de déclarer l'encodeur."
+  },
+  {
+    "id": "SB3-SEC-014",
+    "theme": "Spring Security",
+    "theme_label": "Password Encoding",
+    "difficulty": "hard",
+    "question": "Quel est le format du mot de passe avec DelegatingPasswordEncoder ?",
+    "options": [
+      "{bcrypt}$2a$10$...",
+      "$2a$10$...",
+      "bcrypt:$2a$10$...",
+      "Bcrypt:$2a$10$..."
+    ],
+    "correct": 0,
+    "explanation": "Le préfixe {bcrypt} indique l'algorithme utilisé."
+  },
+  {
+    "id": "SB3-SEC-015",
+    "theme": "Spring Security",
+    "theme_label": "CSRF",
+    "difficulty": "hard",
+    "question": "La protection CSRF est-elle activée par défaut ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les API REST",
+      "Uniquement pour les formulaires"
+    ],
+    "correct": 0,
+    "explanation": "La protection CSRF est activée par défaut pour les applications web."
+  },
+  {
+    "id": "SB3-SEC-016",
+    "theme": "Spring Security",
+    "theme_label": "CSRF",
+    "difficulty": "hard",
+    "question": "Comment désactiver CSRF pour une API REST ?",
+    "options": [
+      "http.csrf().disable()",
+      "http.csrf().disabled()",
+      "http.csrf(csrf -> csrf.disable())",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "La syntaxe a évolué avec les versions."
+  },
+  {
+    "id": "SB3-SEC-017",
+    "theme": "Spring Security",
+    "theme_label": "CORS",
+    "difficulty": "hard",
+    "question": "Comment configurer CORS ?",
+    "options": [
+      "http.cors().configurationSource(corsConfigurationSource())",
+      "http.cors(cors -> cors.configurationSource(corsConfigurationSource()))",
+      "@CrossOrigin",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs niveaux de configuration CORS existent."
+  },
+  {
+    "id": "SB3-SEC-018",
+    "theme": "Spring Security",
+    "theme_label": "Session Management",
+    "difficulty": "hard",
+    "question": "Comment configurer une application stateless (JWT) ?",
+    "options": [
+      "http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)",
+      "http.sessionManagement().stateless()",
+      "http.sessionManagement().sessionPolicy(SessionPolicy.STATELESS)",
+      "http.sessionCreationPolicy(STATELESS)"
+    ],
+    "correct": 0,
+    "explanation": "STATELESS désactive la création de sessions HTTP."
+  },
+  {
+    "id": "SB3-SEC-019",
+    "theme": "Spring Security",
+    "theme_label": "Method Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation active la sécurité au niveau des méthodes ?",
+    "options": [
+      "@EnableMethodSecurity",
+      "@EnableGlobalMethodSecurity",
+      "@MethodSecurity",
+      "@GlobalMethodSecurity"
+    ],
+    "correct": 0,
+    "explanation": "@EnableMethodSecurity est l'annotation moderne pour la sécurité des méthodes."
+  },
+  {
+    "id": "SB3-SEC-020",
+    "theme": "Spring Security",
+    "theme_label": "Method Security",
+    "difficulty": "hard",
+    "question": "Quelle annotation restreint l'accès à une méthode ?",
+    "options": [
+      "@PreAuthorize(\"hasRole('ADMIN')\")",
+      "@Secured(\"ROLE_ADMIN\")",
+      "@RolesAllowed(\"ADMIN\")",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations sont supportées selon la configuration."
+  },
+  {
+    "id": "SB3-SEC-021",
+    "theme": "Spring Security",
+    "theme_label": "Method Security",
+    "difficulty": "hard",
+    "question": "Comment filtrer les résultats d'une méthode ?",
+    "options": [
+      "@PostFilter",
+      "@PreFilter",
+      "@Filter",
+      "@AfterFilter"
+    ],
+    "correct": 0,
+    "explanation": "@PostFilter filtre les résultats retournés par une méthode."
+  },
+  {
+    "id": "SB3-SEC-022",
+    "theme": "Spring Security",
+    "theme_label": "JWT",
+    "difficulty": "hard",
+    "question": "Quelle bibliothèque est recommandée pour JWT ?",
+    "options": [
+      "jjwt (io.jsonwebtoken)",
+      "nimbus-jose-jwt",
+      "java-jwt",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs bibliothèques JWT sont disponibles."
+  },
+  {
+    "id": "SB3-SEC-023",
+    "theme": "Spring Security",
+    "theme_label": "JWT",
+    "difficulty": "hard",
+    "question": "Quel filtre vérifie le token JWT ?",
+    "options": [
+      "OncePerRequestFilter personnalisé",
+      "JwtAuthenticationFilter",
+      "TokenAuthenticationFilter",
+      "BearerTokenAuthenticationFilter"
+    ],
+    "correct": 0,
+    "explanation": "Un filtre OncePerRequestFilter personnalisé vérifie le token."
+  },
+  {
+    "id": "SB3-SEC-024",
+    "theme": "Spring Security",
+    "theme_label": "OAuth2",
+    "difficulty": "hard",
+    "question": "Quelle dépendance ajoute OAuth2 ?",
+    "options": [
+      "spring-boot-starter-oauth2-resource-server",
+      "spring-boot-starter-oauth2-client",
+      "spring-security-oauth2",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Deux starters selon le besoin (client ou resource server)."
+  },
+  {
+    "id": "SB3-SEC-025",
+    "theme": "Spring Security",
+    "theme_label": "OAuth2",
+    "difficulty": "hard",
+    "question": "Comment configurer un resource server JWT ?",
+    "options": [
+      "spring.security.oauth2.resourceserver.jwt.jwk-set-uri",
+      "spring.security.oauth2.resourceserver.jwt.issuer-uri",
+      "http.oauth2ResourceServer().jwt()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration par properties ou Java config."
+  },
+  {
+    "id": "SB3-SEC-026",
+    "theme": "Spring Security",
+    "theme_label": "OAuth2",
+    "difficulty": "hard",
+    "question": "Comment configurer un client OAuth2 ?",
+    "options": [
+      "spring.security.oauth2.client.registration",
+      "spring.security.oauth2.client.provider",
+      "http.oauth2Login()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Configuration par properties et Java config."
+  },
+  {
+    "id": "SB3-SEC-027",
+    "theme": "Spring Security",
+    "theme_label": "AuthenticationManager",
+    "difficulty": "hard",
+    "question": "Comment obtenir l'AuthenticationManager ?",
+    "options": [
+      "@Autowired AuthenticationManager",
+      "AuthenticationManagerBuilder",
+      "http.getSharedObject(AuthenticationManager.class)",
+      "B et C"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons d'obtenir l'AuthenticationManager."
+  },
+  {
+    "id": "SB3-SEC-028",
+    "theme": "Spring Security",
+    "theme_label": "AuthenticationProvider",
+    "difficulty": "hard",
+    "question": "Comment créer un AuthenticationProvider personnalisé ?",
+    "options": [
+      "Implémenter AuthenticationProvider",
+      "Étendre AbstractUserDetailsAuthenticationProvider",
+      "Étendre DaoAuthenticationProvider",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs approches pour créer un provider personnalisé."
+  },
+  {
+    "id": "SB3-SEC-029",
+    "theme": "Spring Security",
+    "theme_label": "Remember Me",
+    "difficulty": "hard",
+    "question": "Comment activer Remember Me ?",
+    "options": [
+      "http.rememberMe()",
+      "http.rememberMe().key(\"uniqueKey\")",
+      "http.rememberMe().tokenValiditySeconds(86400)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "rememberMe() active la fonctionnalité avec configuration optionnelle."
+  },
+  {
+    "id": "SB3-SEC-030",
+    "theme": "Spring Security",
+    "theme_label": "Logout",
+    "difficulty": "hard",
+    "question": "Comment configurer la déconnexion ?",
+    "options": [
+      "http.logout()",
+      "http.logout().logoutUrl(\"/logout\")",
+      "http.logout().logoutSuccessUrl(\"/login?logout\")",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "logout() active la déconnexion avec configuration optionnelle."
+  },
+  {
+    "id": "SB3-SEC-031",
+    "theme": "Spring Security",
+    "theme_label": "Login",
+    "difficulty": "hard",
+    "question": "Comment personnaliser la page de login ?",
+    "options": [
+      "http.formLogin().loginPage(\"/login\")",
+      "http.formLogin().defaultSuccessUrl(\"/home\")",
+      "http.formLogin().failureUrl(\"/login?error\")",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "formLogin() permet de personnaliser la page de connexion."
+  },
+  {
+    "id": "SB3-SEC-032",
+    "theme": "Spring Security",
+    "theme_label": "Exception Handling",
+    "difficulty": "hard",
+    "question": "Comment personnaliser la réponse 403 ?",
+    "options": [
+      "http.exceptionHandling().accessDeniedPage(\"/access-denied\")",
+      "http.exceptionHandling().accessDeniedHandler(handler)",
+      "http.exceptionHandling().authenticationEntryPoint(entryPoint)",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ExceptionHandling permet de personnaliser les réponses d'erreur."
+  },
+  {
+    "id": "SB3-SEC-033",
+    "theme": "Spring Security",
+    "theme_label": "Headers",
+    "difficulty": "hard",
+    "question": "Quels en-têtes de sécurité sont ajoutés par défaut ?",
+    "options": [
+      "X-Content-Type-Options, X-Frame-Options",
+      "Cache-Control",
+      "Strict-Transport-Security",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Spring Security ajoute plusieurs en-têtes de sécurité par défaut."
+  },
+  {
+    "id": "SB3-SEC-034",
+    "theme": "Spring Security",
+    "theme_label": "Headers",
+    "difficulty": "hard",
+    "question": "Comment désactiver les en-têtes de sécurité ?",
+    "options": [
+      "http.headers().disable()",
+      "http.headers(headers -> headers.disable())",
+      "headers.enabled=false",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "headers().disable() désactive tous les en-têtes de sécurité."
+  },
+  {
+    "id": "SB3-SEC-035",
+    "theme": "Spring Security",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester un contrôleur sécurisé ?",
+    "options": [
+      "@WithMockUser",
+      "@WithUserDetails",
+      "@WithAnonymousUser",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs annotations permettent de simuler l'authentification."
+  },
+  {
+    "id": "SB3-SEC-036",
+    "theme": "Spring Security",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "question": "Comment tester avec un utilisateur spécifique ?",
+    "options": [
+      "@WithMockUser(username = \"admin\", roles = {\"ADMIN\"})",
+      "@WithUserDetails(\"admin\")",
+      "@WithSecurityContext",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "WithMockUser et WithUserDetails simulent des utilisateurs."
+  },
+  {
+    "id": "SB3-SEC-037",
+    "theme": "Spring Security",
+    "theme_label": "Method Security Testing",
+    "difficulty": "hard",
+    "question": "Quelle annotation active la sécurité pour les tests ?",
+    "options": [
+      "@EnableMethodSecurity",
+      "@TestSecurity",
+      "@WithSecurityContext",
+      "@MockSecurity"
+    ],
+    "correct": 0,
+    "explanation": "@EnableMethodSecurity doit être activée pour les tests de sécurité."
+  },
+  {
+    "id": "SB3-SEC-038",
+    "theme": "Spring Security",
+    "theme_label": "BCrypt",
+    "difficulty": "hard",
+    "question": "Quel est le facteur de force par défaut de BCrypt ?",
+    "options": ["10", "12", "8", "14"],
+    "correct": 0,
+    "explanation": "Le facteur de force par défaut est 10 (2^10 itérations)."
+  },
+  {
+    "id": "SB3-SEC-039",
+    "theme": "Spring Security",
+    "theme_label": "Password Storage",
+    "difficulty": "hard",
+    "question": "Où sont stockés les mots de passe par défaut ?",
+    "options": [
+      "En mémoire",
+      "En base de données",
+      "Dans un fichier",
+      "Dans le cache"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, les utilisateurs sont stockés en mémoire."
+  },
+  {
+    "id": "SB3-SEC-040",
+    "theme": "Spring Security",
+    "theme_label": "JDBC Authentication",
+    "difficulty": "hard",
+    "question": "Comment configurer l'authentification JDBC ?",
+    "options": [
+      "http.jdbcAuthentication()",
+      "auth.jdbcAuthentication().dataSource(dataSource)",
+      "http.userDetailsService(jdbcUserDetailsManager)",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "jdbcAuthentication() configure l'authentification via JDBC."
+  },
+  {
+    "id": "SB3-SEC-041",
+    "theme": "Spring Security",
+    "theme_label": "LDAP Authentication",
+    "difficulty": "hard",
+    "question": "Comment configurer l'authentification LDAP ?",
+    "options": [
+      "http.ldapAuthentication()",
+      "auth.ldapAuthentication().contextSource()",
+      "http.ldapAuthentication().userDnPatterns()",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ldapAuthentication() configure l'authentification LDAP."
+  },
+  {
+    "id": "SB3-SEC-042",
+    "theme": "Spring Security",
+    "theme_label": "Session Fixation",
+    "difficulty": "hard",
+    "question": "Comment Spring Security protège contre la fixation de session ?",
+    "options": [
+      "Nouvelle session à la connexion",
+      "Migration de session",
+      "Changement d'ID",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Spring Security change l'ID de session à l'authentification."
+  },
+  {
+    "id": "SB3-SEC-043",
+    "theme": "Spring Security",
+    "theme_label": "Concurrent Sessions",
+    "difficulty": "hard",
+    "question": "Comment limiter le nombre de sessions simultanées ?",
+    "options": [
+      "http.sessionManagement().maximumSessions(1)",
+      "http.sessionManagement().maxSessionsPerUser(1)",
+      "http.sessionManagement().concurrentSessions(1)",
+      "http.sessionManagement().sessionConcurrency(1)"
+    ],
+    "correct": 0,
+    "explanation": "maximumSessions(1) limite à une session par utilisateur."
+  },
+  {
+    "id": "SB3-SEC-044",
+    "theme": "Spring Security",
+    "theme_label": "Password History",
+    "difficulty": "hard",
+    "question": "Comment implémenter l'historique des mots de passe ?",
+    "options": [
+      "PasswordEncoder personnalisé",
+      "UserDetailsService personnalisé",
+      "AuthenticationProvider personnalisé",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "L'historique nécessite une implémentation personnalisée."
+  },
+  {
+    "id": "SB3-SEC-045",
+    "theme": "Spring Security",
+    "theme_label": "Account Locking",
+    "difficulty": "hard",
+    "question": "Comment implémenter le verrouillage de compte ?",
+    "options": [
+      "UserDetails.isAccountNonLocked()",
+      "AuthenticationFailureHandler",
+      "UserDetailsService",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Le verrouillage combine UserDetails et gestion des échecs."
+  },
+  {
+    "id": "SB3-SEC-046",
+    "theme": "Spring Security",
+    "theme_label": "Password Expiration",
+    "difficulty": "hard",
+    "question": "Comment gérer l'expiration des mots de passe ?",
+    "options": [
+      "UserDetails.isCredentialsNonExpired()",
+      "PasswordEncoder personnalisé",
+      "AuthenticationProvider",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "L'expiration combine UserDetails et logique personnalisée."
+  },
+  {
+    "id": "SB3-SEC-047",
+    "theme": "Spring Security",
+    "theme_label": "Two Factor Authentication",
+    "difficulty": "hard",
+    "question": "Comment implémenter la 2FA ?",
+    "options": [
+      "AuthenticationProvider personnalisé",
+      "Deuxième facteur avec token",
+      "Spring Security Extension",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La 2FA nécessite une implémentation personnalisée."
+  },
+  {
+    "id": "SB3-SEC-048",
+    "theme": "Spring Security",
+    "theme_label": "Password Reset",
+    "difficulty": "hard",
+    "question": "Comment implémenter la réinitialisation de mot de passe ?",
+    "options": [
+      "Token sécurisé",
+      "Email avec lien",
+      "Formulaire de réinitialisation",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "La réinitialisation combine plusieurs composants."
+  },
+  {
+    "id": "SB3-SEC-049",
+    "theme": "Spring Security",
+    "theme_label": "Security Events",
+    "difficulty": "hard",
+    "question": "Comment écouter les événements de sécurité ?",
+    "options": [
+      "@EventListener",
+      "ApplicationListener<AbstractAuthenticationEvent>",
+      "AuthenticationEventPublisher",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs façons d'écouter les événements d'authentification."
+  },
+  {
+    "id": "SB3-SEC-050",
+    "theme": "Spring Security",
+    "theme_label": "Best Practices",
+    "difficulty": "hard",
+    "question": "Quelle est la meilleure pratique pour les mots de passe ?",
+    "options": [
+      "BCrypt avec force ≥ 10",
+      "Salage individuel",
+      "Longueur minimale 8",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Les bonnes pratiques combinent plusieurs aspects."
+  }
+]

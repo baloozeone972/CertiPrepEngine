@@ -1,0 +1,782 @@
+[
+  {
+    "id": "AWS-SAA-361",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Concepts",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la haute disponibilité (HA) ?",
+    "options": [
+      "Capacité à rester opérationnel malgré des pannes",
+      "Capacité à gérer plus d'utilisateurs",
+      "Capacité à réduire les coûts",
+      "Capacité à accélérer les performances"
+    ],
+    "correct": 0,
+    "explanation": "La HA garantit la continuité de service en cas de défaillance."
+  },
+  {
+    "id": "AWS-SAA-362",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Concepts",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la scalabilité horizontale ?",
+    "options": [
+      "Ajouter plus d'instances",
+      "Augmenter la puissance des instances",
+      "Ajouter du stockage",
+      "Augmenter la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "La scalabilité horizontale ajoute des instances supplémentaires."
+  },
+  {
+    "id": "AWS-SAA-363",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Concepts",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que la scalabilité verticale ?",
+    "options": [
+      "Augmenter la puissance des instances",
+      "Ajouter plus d'instances",
+      "Ajouter des zones",
+      "Ajouter des régions"
+    ],
+    "correct": 0,
+    "explanation": "La scalabilité verticale augmente la taille des instances (CPU, RAM)."
+  },
+  {
+    "id": "AWS-SAA-364",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "medium",
+    "question": "Quels sont les trois composants d'un Auto Scaling Group ?",
+    "options": [
+      "Launch template, Scaling policies, Size (min/max/desired)",
+      "Launch template, VPC, Subnet",
+      "Launch template, Security Group, IAM",
+      "Launch template, AMI, Instance type"
+    ],
+    "correct": 0,
+    "explanation": "Les composants sont : template de lancement, politiques de scaling, taille min/max/désirée."
+  },
+  {
+    "id": "AWS-SAA-365",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'une politique de scaling dynamique ?",
+    "options": [
+      "Ajuste le nombre d'instances en fonction des métriques",
+      "Planification fixe",
+      "Scaling manuel",
+      "Scaling prédictif"
+    ],
+    "correct": 0,
+    "explanation": "Le scaling dynamique utilise des métriques CloudWatch (CPU, réseau, etc.)."
+  },
+  {
+    "id": "AWS-SAA-366",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le scaling prédictif ?",
+    "options": [
+      "Utilise le machine learning pour prévoir la charge",
+      "Scaling basé sur métriques",
+      "Scaling manuel",
+      "Scaling planifié"
+    ],
+    "correct": 0,
+    "explanation": "Predictive scaling utilise ML pour anticiper les pics."
+  },
+  {
+    "id": "AWS-SAA-367",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "hard",
+    "question": "Qu'est-ce qu'un scheduled scaling ?",
+    "options": [
+      "Scaling à heures fixes",
+      "Scaling basé sur métriques",
+      "Scaling manuel",
+      "Scaling prédictif"
+    ],
+    "correct": 0,
+    "explanation": "Scheduled scaling planifie des changements à des moments prévus."
+  },
+  {
+    "id": "AWS-SAA-368",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'équilibrage de zone dans Auto Scaling ?",
+    "options": [
+      "Répartit les instances équitablement entre les AZ",
+      "Met toutes les instances dans une AZ",
+      "Équilibre la charge CPU",
+      "Équilibre la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Auto Scaling peut distribuer les instances uniformément entre les AZ."
+  },
+  {
+    "id": "AWS-SAA-369",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "medium",
+    "question": "Quels sont les types de load balancers AWS ?",
+    "options": [
+      "ALB, NLB, GWLB, CLB",
+      "ALB seulement",
+      "NLB seulement",
+      "CLB seulement"
+    ],
+    "correct": 0,
+    "explanation": "Application Load Balancer, Network Load Balancer, Gateway Load Balancer, Classic Load Balancer."
+  },
+  {
+    "id": "AWS-SAA-370",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "hard",
+    "question": "À quel niveau fonctionne ALB ?",
+    "options": ["Couche 7 (application)", "Couche 4 (transport)", "Couche 3", "Couche 2"],
+    "correct": 0,
+    "explanation": "ALB est un load balancer de couche 7 (HTTP/HTTPS)."
+  },
+  {
+    "id": "AWS-SAA-371",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "hard",
+    "question": "À quel niveau fonctionne NLB ?",
+    "options": ["Couche 4 (transport)", "Couche 7 (application)", "Couche 3", "Couche 2"],
+    "correct": 0,
+    "explanation": "NLB est un load balancer de couche 4 (TCP/UDP/TLS)."
+  },
+  {
+    "id": "AWS-SAA-372",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le cross-zone load balancing ?",
+    "options": [
+      "Répartit le trafic également entre toutes les instances, toutes AZ",
+      "Répartition par AZ",
+      "Répartition par instance",
+      "Répartition par région"
+    ],
+    "correct": 0,
+    "explanation": "Cross-zone permet une distribution équitable entre toutes les instances, quelle que soit l'AZ."
+  },
+  {
+    "id": "AWS-SAA-373",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que les sticky sessions (session affinity) ?",
+    "options": [
+      "Dirige les requêtes d'un même utilisateur vers la même instance",
+      "Répartition équitable",
+      "Cache",
+      "Compression"
+    ],
+    "correct": 0,
+    "explanation": "Les sticky sessions maintiennent l'affinité de session."
+  },
+  {
+    "id": "AWS-SAA-374",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-AZ",
+    "difficulty": "medium",
+    "question": "Pourquoi utiliser plusieurs Availability Zones (AZ) ?",
+    "options": [
+      "Haute disponibilité et tolérance aux pannes",
+      "Réduction des coûts",
+      "Meilleures performances",
+      "Conformité légale"
+    ],
+    "correct": 0,
+    "explanation": "Multi-AZ garantit la continuité de service en cas de panne d'une AZ."
+  },
+  {
+    "id": "AWS-SAA-375",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-AZ",
+    "difficulty": "hard",
+    "question": "Quelle est la latence typique entre deux AZ ?",
+    "options": ["Quelques millisecondes", "Quelques secondes", "Quelques minutes", "Quelques heures"],
+    "correct": 0,
+    "explanation": "La latence entre AZ d'une même région est très faible (ms)."
+  },
+  {
+    "id": "AWS-SAA-376",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-Region",
+    "difficulty": "hard",
+    "question": "Pourquoi utiliser plusieurs régions ?",
+    "options": [
+      "Disaster recovery, latence, conformité",
+      "Réduction des coûts",
+      "Simplicité",
+      "Performances réseau"
+    ],
+    "correct": 0,
+    "explanation": "Multi-region améliore la résilience et la proximité avec les utilisateurs."
+  },
+  {
+    "id": "AWS-SAA-377",
+    "theme": "High Availability & Scalability",
+    "theme_label": "RDS Multi-AZ",
+    "difficulty": "hard",
+    "question": "Comment RDS Multi-AZ assure la haute disponibilité ?",
+    "options": [
+      "Réplication synchrone vers une instance standby dans une autre AZ",
+      "Réplication asynchrone",
+      "Snapshots",
+      "Backup"
+    ],
+    "correct": 0,
+    "explanation": "Multi-AZ réplique synchrone vers une standby pour failover automatique."
+  },
+  {
+    "id": "AWS-SAA-378",
+    "theme": "High Availability & Scalability",
+    "theme_label": "RDS Read Replicas",
+    "difficulty": "hard",
+    "question": "Les Read Replicas RDS améliorent-ils la haute disponibilité ?",
+    "options": [
+      "Non, ils améliorent la scalabilité des lectures",
+      "Oui, HA",
+      "Oui, pour les écritures",
+      "Non, uniquement les performances"
+    ],
+    "correct": 0,
+    "explanation": "Les Read Replicas déchargent les lectures, mais le failover n'est pas automatique."
+  },
+  {
+    "id": "AWS-SAA-379",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Aurora réplique-t-il les données automatiquement ?",
+    "options": [
+      "Oui, sur 3 AZ (6 copies)",
+      "Non",
+      "Uniquement sur 2 AZ",
+      "Uniquement sur 1 AZ"
+    ],
+    "correct": 0,
+    "explanation": "Aurora réplique les données sur 3 AZ (6 copies)."
+  },
+  {
+    "id": "AWS-SAA-380",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "question": "Aurora supporte-t-il les réplicas cross-region ?",
+    "options": ["Oui", "Non", "Uniquement avec Global Database", "Uniquement avec DMS"],
+    "correct": 0,
+    "explanation": "Aurora Global Database permet des réplicas dans d'autres régions."
+  },
+  {
+    "id": "AWS-SAA-381",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DynamoDB",
+    "difficulty": "hard",
+    "question": "DynamoDB est-il hautement disponible par défaut ?",
+    "options": ["Oui", "Non", "Uniquement avec DAX", "Uniquement avec Global Tables"],
+    "correct": 0,
+    "explanation": "DynamoDB réplique automatiquement les données sur 3 AZ."
+  },
+  {
+    "id": "AWS-SAA-382",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DynamoDB Global Tables",
+    "difficulty": "hard",
+    "question": "Que permettent les DynamoDB Global Tables ?",
+    "options": [
+      "Tables multi-région multi-actif",
+      "Backup",
+      "Cache",
+      "Streaming"
+    ],
+    "correct": 0,
+    "explanation": "Global Tables répliquent les données dans plusieurs régions, lecture/écriture partout."
+  },
+  {
+    "id": "AWS-SAA-383",
+    "theme": "High Availability & Scalability",
+    "theme_label": "S3",
+    "difficulty": "hard",
+    "question": "S3 Standard réplique-t-il les données ?",
+    "options": ["Oui, sur 3 AZ", "Non", "Oui, sur 2 AZ", "Oui, sur 1 AZ"],
+    "correct": 0,
+    "explanation": "S3 Standard réplique les données sur au moins 3 AZ."
+  },
+  {
+    "id": "AWS-SAA-384",
+    "theme": "High Availability & Scalability",
+    "theme_label": "S3 Cross-Region Replication (CRR)",
+    "difficulty": "hard",
+    "question": "S3 CRR réplique-t-il les objets existants par défaut ?",
+    "options": ["Non", "Oui", "Optionnel", "Uniquement avec Versioning"],
+    "correct": 0,
+    "explanation": "CRR réplique uniquement les nouveaux objets, pas les existants."
+  },
+  {
+    "id": "AWS-SAA-385",
+    "theme": "High Availability & Scalability",
+    "theme_label": "EFS",
+    "difficulty": "hard",
+    "question": "EFS est-il répliqué sur plusieurs AZ ?",
+    "options": ["Oui", "Non", "Uniquement avec EFS One Zone", "Uniquement avec EFS Standard"],
+    "correct": 0,
+    "explanation": "EFS Standard réplique les données sur plusieurs AZ."
+  },
+  {
+    "id": "AWS-SAA-386",
+    "theme": "High Availability & Scalability",
+    "theme_label": "EFS One Zone",
+    "difficulty": "hard",
+    "question": "EFS One Zone est-il recommandé pour les données critiques ?",
+    "options": ["Non", "Oui", "Oui avec backup", "Uniquement pour les données temporaires"],
+    "correct": 0,
+    "explanation": "EFS One Zone ne résiste pas à une panne d'AZ."
+  },
+  {
+    "id": "AWS-SAA-387",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "ElastiCache Redis supporte-t-il Multi-AZ ?",
+    "options": ["Oui", "Non", "Uniquement avec cluster", "Uniquement avec réplication"],
+    "correct": 0,
+    "explanation": "Redis avec réplication supporte Multi-AZ pour failover automatique."
+  },
+  {
+    "id": "AWS-SAA-388",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ElastiCache",
+    "difficulty": "hard",
+    "question": "ElastiCache Memcached supporte-t-il Multi-AZ ?",
+    "options": ["Non", "Oui", "Uniquement avec cluster", "Uniquement avec réplication"],
+    "correct": 0,
+    "explanation": "Memcached ne supporte pas la persistance ni le Multi-AZ."
+  },
+  {
+    "id": "AWS-SAA-389",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Route53",
+    "difficulty": "hard",
+    "question": "Route53 est-il hautement disponible ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement pour les enregistrements A"],
+    "correct": 0,
+    "explanation": "Route53 est un service global hautement disponible."
+  },
+  {
+    "id": "AWS-SAA-390",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Route53 Failover",
+    "difficulty": "hard",
+    "question": "Comment configurer un failover actif-passif avec Route53 ?",
+    "options": [
+      "Politique de routage Failover avec health check",
+      "Weighted routing",
+      "Latency routing",
+      "Geolocation routing"
+    ],
+    "correct": 0,
+    "explanation": "Failover routing bascule vers un secondary en cas de défaillance du primary."
+  },
+  {
+    "id": "AWS-SAA-391",
+    "theme": "High Availability & Scalability",
+    "theme_label": "CloudFront",
+    "difficulty": "hard",
+    "question": "CloudFront est-il hautement disponible ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement avec origin failover"],
+    "correct": 0,
+    "explanation": "CloudFront est un CDN mondial hautement disponible."
+  },
+  {
+    "id": "AWS-SAA-392",
+    "theme": "High Availability & Scalability",
+    "theme_label": "CloudFront Origin Failover",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que CloudFront Origin Failover ?",
+    "options": [
+      "Bascule vers une origine secondaire en cas d'échec",
+      "Cache",
+      "Compression",
+      "Logging"
+    ],
+    "correct": 0,
+    "explanation": "Origin failover redirige le trafic vers une origine de secours."
+  },
+  {
+    "id": "AWS-SAA-393",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Global Accelerator",
+    "difficulty": "hard",
+    "question": "Global Accelerator est-il hautement disponible ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement avec ALB"],
+    "correct": 0,
+    "explanation": "Global Accelerator utilise le réseau AWS mondial pour une HA naturelle."
+  },
+  {
+    "id": "AWS-SAA-394",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Disaster Recovery (DR)",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le RTO (Recovery Time Objective) ?",
+    "options": [
+      "Temps maximum acceptable d'indisponibilité",
+      "Quantité de données perdues acceptable",
+      "Temps de sauvegarde",
+      "Temps de restauration"
+    ],
+    "correct": 0,
+    "explanation": "RTO est le délai maximal pour restaurer un service après une panne."
+  },
+  {
+    "id": "AWS-SAA-395",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Disaster Recovery",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le RPO (Recovery Point Objective) ?",
+    "options": [
+      "Quantité maximale de données perdues acceptable",
+      "Temps d'indisponibilité",
+      "Temps de sauvegarde",
+      "Temps de restauration"
+    ],
+    "correct": 0,
+    "explanation": "RPO définit la perte de données maximale acceptable (en temps)."
+  },
+  {
+    "id": "AWS-SAA-396",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "question": "Quelle stratégie DR a le RTO/RPO le plus faible ?",
+    "options": [
+      "Multi-site active-active",
+      "Pilot light",
+      "Backup and restore",
+      "Warm standby"
+    ],
+    "correct": 0,
+    "explanation": "Active-active a le meilleur RTO/RPO (presque zéro)."
+  },
+  {
+    "id": "AWS-SAA-397",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la stratégie Pilot Light ?",
+    "options": [
+      "Infrastructure minimale en veille dans une autre région",
+      "Backup and restore",
+      "Active-active",
+      "Warm standby"
+    ],
+    "correct": 0,
+    "explanation": "Pilot light conserve les services critiques en veille pour bascule rapide."
+  },
+  {
+    "id": "AWS-SAA-398",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que Warm Standby ?",
+    "options": [
+      "Environnement réduit en veille dans une autre région",
+      "Backup and restore",
+      "Active-active",
+      "Pilot light"
+    ],
+    "correct": 0,
+    "explanation": "Warm standby a une capacité de production réduite prête à monter en charge."
+  },
+  {
+    "id": "AWS-SAA-399",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "question": "Quelle est la stratégie DR la plus économique ?",
+    "options": [
+      "Backup and restore",
+      "Active-active",
+      "Pilot light",
+      "Warm standby"
+    ],
+    "correct": 0,
+    "explanation": "Backup and restore a le coût le plus bas mais le RTO le plus élevé."
+  },
+  {
+    "id": "AWS-SAA-400",
+    "theme": "High Availability & Scalability",
+    "theme_label": "EC2 Recovery",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que l'EC2 Instance Recovery ?",
+    "options": [
+      "Redémarrage automatique sur un nouveau matériel",
+      "Backup",
+      "Snapshot",
+      "Migration vers une autre région"
+    ],
+    "correct": 0,
+    "explanation": "Instance Recovery redémarre l'instance sur un nouveau matériel en cas de défaillance."
+  },
+  {
+    "id": "AWS-SAA-401",
+    "theme": "High Availability & Scalability",
+    "theme_label": "EC2 Auto Recovery",
+    "difficulty": "hard",
+    "question": "EC2 Auto Recovery peut-il être configuré via CloudWatch ?",
+    "options": ["Oui", "Non", "Uniquement avec ASG", "Uniquement avec ELB"],
+    "correct": 0,
+    "explanation": "On peut configurer une alarme CloudWatch pour déclencher la récupération."
+  },
+  {
+    "id": "AWS-SAA-402",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ASG Lifecycle Hooks",
+    "difficulty": "hard",
+    "question": "À quoi servent les lifecycle hooks dans ASG ?",
+    "options": [
+      "Exécuter des actions avant que l'instance ne soit en service ou terminée",
+      "Scaling",
+      "Load balancing",
+      "Health checks"
+    ],
+    "correct": 0,
+    "explanation": "Les lifecycle hooks permettent de personnaliser le démarrage/arrêt."
+  },
+  {
+    "id": "AWS-SAA-403",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ASG Health Checks",
+    "difficulty": "hard",
+    "question": "Quels types de health checks peut utiliser un ASG ?",
+    "options": [
+      "EC2 status checks et ELB health checks",
+      "Uniquement EC2",
+      "Uniquement ELB",
+      "Uniquement CloudWatch"
+    ],
+    "correct": 0,
+    "explanation": "ASG peut utiliser les checks EC2 et ceux du load balancer."
+  },
+  {
+    "id": "AWS-SAA-404",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ASG Termination Policy",
+    "difficulty": "hard",
+    "question": "Quelle instance est terminée en premier par défaut ?",
+    "options": [
+      "Instance avec la plus ancienne configuration de lancement",
+      "Instance la plus ancienne",
+      "Instance la plus récente",
+      "Instance la moins chère"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, ASG termine d'abord les instances avec la configuration la plus ancienne."
+  },
+  {
+    "id": "AWS-SAA-405",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ELB Health Checks",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si une instance échoue aux health checks ELB ?",
+    "options": [
+      "L'ELB arrête d'envoyer du trafic",
+      "L'ELB la redémarre",
+      "L'ELB la supprime",
+      "L'ELB ignore"
+    ],
+    "correct": 0,
+    "explanation": "ELB retire l'instance du pool de distribution."
+  },
+  {
+    "id": "AWS-SAA-406",
+    "theme": "High Availability & Scalability",
+    "theme_label": "ELB Idle Timeout",
+    "difficulty": "hard",
+    "question": "Quel est le timeout inactivité par défaut pour ALB ?",
+    "options": ["60 secondes", "30 secondes", "120 secondes", "300 secondes"],
+    "correct": 0,
+    "explanation": "Le timeout par défaut d'ALB est 60 secondes."
+  },
+  {
+    "id": "AWS-SAA-407",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Lambda Provisioned Concurrency",
+    "difficulty": "hard",
+    "question": "À quoi sert Provisioned Concurrency dans Lambda ?",
+    "options": [
+      "Garde des instances Lambda pré-initialisées",
+      "Limite le nombre d'exécutions",
+      "Augmente le timeout",
+      "Réduit la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "Provisioned concurrency maintient des instances chaudes pour réduire la latence."
+  },
+  {
+    "id": "AWS-SAA-408",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Lambda Reserved Concurrency",
+    "difficulty": "hard",
+    "question": "À quoi sert Reserved Concurrency dans Lambda ?",
+    "options": [
+      "Limite le nombre d'exécutions concurrentes",
+      "Réserve de la capacité",
+      "Augmente la mémoire",
+      "Réduit les coûts"
+    ],
+    "correct": 0,
+    "explanation": "Reserved concurrency limite le nombre d'instances simultanées."
+  },
+  {
+    "id": "AWS-SAA-409",
+    "theme": "High Availability & Scalability",
+    "theme_label": "SQS FIFO",
+    "difficulty": "hard",
+    "question": "SQS FIFO garantit-il l'ordre des messages ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement avec groupes de messages"],
+    "correct": 0,
+    "explanation": "SQS FIFO (First-In-First-Out) garantit l'ordre des messages."
+  },
+  {
+    "id": "AWS-SAA-410",
+    "theme": "High Availability & Scalability",
+    "theme_label": "SQS Dead Letter Queue",
+    "difficulty": "hard",
+    "question": "À quoi sert une Dead Letter Queue (DLQ) dans SQS ?",
+    "options": [
+      "Recevoir les messages non traités après plusieurs tentatives",
+      "Stockage de secours",
+      "Cache",
+      "Logging"
+    ],
+    "correct": 0,
+    "explanation": "DLQ collecte les messages qui n'ont pas pu être traités."
+  },
+  {
+    "id": "AWS-SAA-411",
+    "theme": "High Availability & Scalability",
+    "theme_label": "SQS Visibility Timeout",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le visibility timeout dans SQS ?",
+    "options": [
+      "Pendant combien de temps un message est invisible après lecture",
+      "Durée de vie du message",
+      "Délai de livraison",
+      "Timeout de la queue"
+    ],
+    "correct": 0,
+    "explanation": "Le visibility timeout empêche d'autres consommateurs de traiter le même message."
+  },
+  {
+    "id": "AWS-SAA-412",
+    "theme": "High Availability & Scalability",
+    "theme_label": "SQS Long Polling",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le long polling dans SQS ?",
+    "options": [
+      "Attend jusqu'à 20 secondes pour des messages",
+      "Polling court",
+      "Polling asynchrone",
+      "Polling batch"
+    ],
+    "correct": 0,
+    "explanation": "Long polling réduit les appels vides et la latence."
+  },
+  {
+    "id": "AWS-SAA-413",
+    "theme": "High Availability & Scalability",
+    "theme_label": "SNS",
+    "difficulty": "hard",
+    "question": "SNS est-il hautement disponible ?",
+    "options": ["Oui", "Non", "Partiellement", "Uniquement avec FIFO"],
+    "correct": 0,
+    "explanation": "SNS est un service managé hautement disponible."
+  },
+  {
+    "id": "AWS-SAA-414",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Kinesis Data Streams",
+    "difficulty": "hard",
+    "question": "Kinesis Data Streams réplique-t-il les données ?",
+    "options": ["Oui, sur 3 AZ", "Non", "Oui, sur 2 AZ", "Oui, sur 1 AZ"],
+    "correct": 0,
+    "explanation": "Kinesis réplique les données sur 3 AZ pour une haute disponibilité."
+  },
+  {
+    "id": "AWS-SAA-415",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Kinesis Data Streams",
+    "difficulty": "hard",
+    "question": "Combien de temps les données sont-elles conservées par défaut ?",
+    "options": ["24 heures", "7 jours", "48 heures", "30 jours"],
+    "correct": 0,
+    "explanation": "La rétention par défaut est 24 heures (configurable jusqu'à 365 jours)."
+  },
+  {
+    "id": "AWS-SAA-416",
+    "theme": "High Availability & Scalability",
+    "theme_label": "EBS Snapshots",
+    "difficulty": "hard",
+    "question": "Les snapshots EBS sont-ils stockés de manière redondante ?",
+    "options": ["Oui", "Non", "Optionnel", "Uniquement dans la même AZ"],
+    "correct": 0,
+    "explanation": "Les snapshots EBS sont stockés dans S3, donc répliqués."
+  },
+  {
+    "id": "AWS-SAA-417",
+    "theme": "High Availability & Scalability",
+    "theme_label": "EBS Snapshots",
+    "difficulty": "hard",
+    "question": "Peut-on copier un snapshot EBS vers une autre région ?",
+    "options": ["Oui", "Non", "Uniquement avec AWS Backup", "Uniquement avec DMS"],
+    "correct": 0,
+    "explanation": "Les snapshots peuvent être copiés entre régions pour DR."
+  },
+  {
+    "id": "AWS-SAA-418",
+    "theme": "High Availability & Scalability",
+    "theme_label": "AWS Backup",
+    "difficulty": "hard",
+    "question": "AWS Backup permet-il des sauvegardes cross-region ?",
+    "options": ["Oui", "Non", "Uniquement pour RDS", "Uniquement pour EC2"],
+    "correct": 0,
+    "explanation": "AWS Backup peut copier automatiquement les sauvegardes vers une autre région."
+  },
+  {
+    "id": "AWS-SAA-419",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Database Migration Service (DMS)",
+    "difficulty": "hard",
+    "question": "DMS peut-il maintenir une réplication continue pour DR ?",
+    "options": ["Oui", "Non", "Uniquement pour la migration initiale", "Uniquement pour les bases Oracle"],
+    "correct": 0,
+    "explanation": "DMS peut effectuer une réplication continue pour la DR."
+  },
+  {
+    "id": "AWS-SAA-420",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "question": "Quelle est la meilleure pratique pour la HA d'une application web ?",
+    "options": [
+      "Multi-AZ, ASG, ELB",
+      "Single AZ",
+      "Single instance",
+      "Pas de load balancer"
+    ],
+    "correct": 0,
+    "explanation": "Combiner Multi-AZ, Auto Scaling et Load Balancer pour une HA optimale."
+  }
+]

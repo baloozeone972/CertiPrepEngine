@@ -1,0 +1,1162 @@
+[
+  {
+    "id": "KOT-SYN-001",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Quelle est la différence entre val et var ?",
+    "options": [
+      "val est immuable (read-only), var est mutable",
+      "val est mutable, var est immuable",
+      "Identiques",
+      "val pour les types primitifs, var pour les objets"
+    ],
+    "correct": 0,
+    "explanation": "val = valeur immuable (final), var = variable mutable."
+  },
+  {
+    "id": "KOT-SYN-002",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Comment déclarer une variable sans initialisation ?",
+    "options": [
+      "lateinit var name: String",
+      "var name: String = null",
+      "val name: String",
+      "var name: String? = null"
+    ],
+    "correct": 0,
+    "explanation": "lateinit pour initialisation différée (non nullable)."
+  },
+  {
+    "id": "KOT-SYN-003",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "question": "Quelle est la portée de lateinit ?",
+    "options": [
+      "Uniquement sur var (non nullable)",
+      "Uniquement sur val",
+      "Sur var et val",
+      "Uniquement sur les types primitifs"
+    ],
+    "correct": 0,
+    "explanation": "lateinit s'utilise uniquement avec var (non nullable, non primitif)."
+  },
+  {
+    "id": "KOT-SYN-004",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Variables",
+    "difficulty": "medium",
+    "question": "Que signifie lazy ?",
+    "options": [
+      "Initialisation paresseuse (à la première utilisation)",
+      "Initialisation immédiate",
+      "Variable volatile",
+      "Variable thread-safe"
+    ],
+    "correct": 0,
+    "explanation": "lazy n'initialise la valeur qu'à la première lecture."
+  },
+  {
+    "id": "KOT-SYN-005",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Variables",
+    "difficulty": "hard",
+    "question": "Différence entre lateinit et lazy ?",
+    "options": [
+      "lateinit pour var, lazy pour val",
+      "lateinit pour val, lazy pour var",
+      "Identiques",
+      "lateinit pour primitifs, lazy pour objets"
+    ],
+    "correct": 0,
+    "explanation": "lateinit sur var mutable, lazy sur val immuable."
+  },
+  {
+    "id": "KOT-SYN-006",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Comment définir une fonction qui retourne un Int ?",
+    "options": [
+      "fun add(a: Int, b: Int): Int = a + b",
+      "fun add(a: Int, b: Int) = a + b",
+      "fun add(a: Int, b: Int): Int { return a + b }",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs syntaxes pour les fonctions."
+  },
+  {
+    "id": "KOT-SYN-007",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Fonctions",
+    "difficulty": "easy",
+    "question": "Comment définir une fonction sans retour ?",
+    "options": [
+      "fun printMessage(msg: String): Unit { println(msg) }",
+      "fun printMessage(msg: String) { println(msg) }",
+      "fun printMessage(msg: String): Void { println(msg) }",
+      "A et B"
+    ],
+    "correct": 3,
+    "explanation": "Unit est optionnel, équivalent à void."
+  },
+  {
+    "id": "KOT-SYN-008",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Fonctions",
+    "difficulty": "medium",
+    "question": "Que sont les paramètres par défaut ?",
+    "options": [
+      "Paramètres avec valeur par défaut",
+      "Paramètres obligatoires",
+      "Paramètres nommés",
+      "Paramètres vararg"
+    ],
+    "correct": 0,
+    "explanation": "fun greet(name: String = \"World\")"
+  },
+  {
+    "id": "KOT-SYN-009",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Fonctions",
+    "difficulty": "medium",
+    "question": "Que sont les paramètres nommés ?",
+    "options": [
+      "Appeler une fonction avec nom des paramètres",
+      "Définir des paramètres avec nom",
+      "Paramètres optionnels",
+      "Paramètres génériques"
+    ],
+    "correct": 0,
+    "explanation": "greet(name = \"Alice\", age = 30)"
+  },
+  {
+    "id": "KOT-SYN-010",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Fonctions",
+    "difficulty": "hard",
+    "question": "Que sont les fonctions d'extension ?",
+    "options": [
+      "Ajouter des fonctions à des classes existantes",
+      "Étendre des classes",
+      "Fonctions de haut niveau",
+      "Fonctions inline"
+    ],
+    "correct": 0,
+    "explanation": "fun String.reverse(): String = this.reversed()"
+  },
+  {
+    "id": "KOT-SYN-011",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Classes",
+    "difficulty": "easy",
+    "question": "Comment définir une classe Kotlin ?",
+    "options": [
+      "class Person(val name: String, var age: Int)",
+      "public class Person { String name; int age; }",
+      "data class Person(val name: String, var age: Int)",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Classe simple ou data class."
+  },
+  {
+    "id": "KOT-SYN-012",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Classes",
+    "difficulty": "easy",
+    "question": "Comment définir un constructeur primaire ?",
+    "options": [
+      "class Person(val name: String)",
+      "class Person constructor(val name: String)",
+      "class Person(val name: String) { constructor() : this(\"\") }",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Plusieurs syntaxes pour le constructeur."
+  },
+  {
+    "id": "KOT-SYN-013",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Classes",
+    "difficulty": "medium",
+    "question": "Que sont les data classes ?",
+    "options": [
+      "Classes avec equals, hashCode, toString générés",
+      "Classes pour les bases de données",
+      "Classes sérialisables",
+      "Classes immuables"
+    ],
+    "correct": 0,
+    "explanation": "data class Person(val name: String, val age: Int)"
+  },
+  {
+    "id": "KOT-SYN-014",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Classes",
+    "difficulty": "hard",
+    "question": "Que génère copy() pour une data class ?",
+    "options": [
+      "Copie avec possibilité de modifier certains champs",
+      "Copie identique",
+      "Copie superficielle",
+      "Copie profonde"
+    ],
+    "correct": 0,
+    "explanation": "person.copy(age = 31)"
+  },
+  {
+    "id": "KOT-SYN-015",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Classes",
+    "difficulty": "hard",
+    "question": "Que sont les sealed classes ?",
+    "options": [
+      "Hiérarchie de classes fermée",
+      "Classes scellées",
+      "Classes immuables",
+      "Classes abstraites"
+    ],
+    "correct": 0,
+    "explanation": "sealed class Result"
+  },
+  {
+    "id": "KOT-SYN-016",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "String templates",
+    "difficulty": "easy",
+    "question": "Comment insérer une variable dans une chaîne ?",
+    "options": [
+      "\"Hello $name\"",
+      "\"Hello {name}\"",
+      "\"Hello %name%\"",
+      "\"Hello \" + name"
+    ],
+    "correct": 0,
+    "explanation": "$name ou ${expression} pour les templates."
+  },
+  {
+    "id": "KOT-SYN-017",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "String templates",
+    "difficulty": "medium",
+    "question": "Comment insérer une expression ?",
+    "options": [
+      "\"Hello ${user.name}\"",
+      "\"Hello $user.name\"",
+      "\"Hello {user.name}\"",
+      "\"Hello (user.name)\""
+    ],
+    "correct": 0,
+    "explanation": "${expression} pour des expressions complexes."
+  },
+  {
+    "id": "KOT-SYN-018",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Control flow",
+    "difficulty": "easy",
+    "question": "if en Kotlin est une expression ?",
+    "options": [
+      "Oui, retourne une valeur",
+      "Non, instruction seulement",
+      "Oui, mais avec restrictions",
+      "Non, comme Java"
+    ],
+    "correct": 0,
+    "explanation": "val max = if (a > b) a else b"
+  },
+  {
+    "id": "KOT-SYN-019",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Control flow",
+    "difficulty": "easy",
+    "question": "Quand utiliser when plutôt que if ?",
+    "options": [
+      "Multiples conditions",
+      "Une seule condition",
+      "Toujours",
+      "Jamais"
+    ],
+    "correct": 0,
+    "explanation": "when remplace switch et peut être utilisé comme expression."
+  },
+  {
+    "id": "KOT-SYN-020",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Control flow",
+    "difficulty": "medium",
+    "question": "when peut-il être utilisé sans argument ?",
+    "options": [
+      "Oui, comme if-else chaîné",
+      "Non",
+      "Oui, avec conditions",
+      "Oui, avec when(true)"
+    ],
+    "correct": 0,
+    "explanation": "when { x > 0 -> \"positif\" x < 0 -> \"negatif\" else -> \"zero\" }"
+  },
+  {
+    "id": "KOT-SYN-021",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Loops",
+    "difficulty": "easy",
+    "question": "Comment itérer de 1 à 10 ?",
+    "options": [
+      "for (i in 1..10)",
+      "for (i = 1; i <= 10; i++)",
+      "for (i in 1 until 10)",
+      "for (i in 1..10 step 1)"
+    ],
+    "correct": 0,
+    "explanation": ".. crée un range inclusif."
+  },
+  {
+    "id": "KOT-SYN-022",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Loops",
+    "difficulty": "easy",
+    "question": "Comment itérer de 1 à 9 (exclu) ?",
+    "options": [
+      "for (i in 1 until 10)",
+      "for (i in 1..9)",
+      "for (i in 1..<10)",
+      "for (i in 1 until 10 step 1)"
+    ],
+    "correct": 0,
+    "explanation": "until est exclusif."
+  },
+  {
+    "id": "KOT-SYN-023",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Loops",
+    "difficulty": "easy",
+    "question": "Comment itérer avec un pas de 2 ?",
+    "options": [
+      "for (i in 1..10 step 2)",
+      "for (i in 1..10 step = 2)",
+      "for (i = 1; i <= 10; i+=2)",
+      "for (i in 1..10 step 2)"
+    ],
+    "correct": 0,
+    "explanation": "step définit l'incrément."
+  },
+  {
+    "id": "KOT-SYN-024",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Loops",
+    "difficulty": "easy",
+    "question": "Comment itérer en ordre décroissant ?",
+    "options": [
+      "for (i in 10 downTo 1)",
+      "for (i = 10; i >= 1; i--)",
+      "for (i in 10..1)",
+      "for (i in 10 downTo 1 step 1)"
+    ],
+    "correct": 0,
+    "explanation": "downTo pour ordre décroissant."
+  },
+  {
+    "id": "KOT-SYN-025",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Collections",
+    "difficulty": "easy",
+    "question": "Comment créer une liste immuable ?",
+    "options": [
+      "listOf(1, 2, 3)",
+      "mutableListOf(1, 2, 3)",
+      "arrayListOf(1, 2, 3)",
+      "List(1, 2, 3)"
+    ],
+    "correct": 0,
+    "explanation": "listOf crée une liste read-only."
+  },
+  {
+    "id": "KOT-SYN-026",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Collections",
+    "difficulty": "easy",
+    "question": "Comment créer une liste mutable ?",
+    "options": [
+      "mutableListOf(1, 2, 3)",
+      "listOf(1, 2, 3)",
+      "ArrayList(1, 2, 3)",
+      "List(1, 2, 3)"
+    ],
+    "correct": 0,
+    "explanation": "mutableListOf crée une liste modifiable."
+  },
+  {
+    "id": "KOT-SYN-027",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Collections",
+    "difficulty": "easy",
+    "question": "Comment créer un set immuable ?",
+    "options": [
+      "setOf(1, 2, 3)",
+      "mutableSetOf(1, 2, 3)",
+      "hashSetOf(1, 2, 3)",
+      "Set(1, 2, 3)"
+    ],
+    "correct": 0,
+    "explanation": "setOf crée un set read-only."
+  },
+  {
+    "id": "KOT-SYN-028",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Collections",
+    "difficulty": "easy",
+    "question": "Comment créer une map immuable ?",
+    "options": [
+      "mapOf(\"a\" to 1, \"b\" to 2)",
+      "mutableMapOf(\"a\" to 1, \"b\" to 2)",
+      "hashMapOf(\"a\" to 1, \"b\" to 2)",
+      "Map(\"a\" to 1, \"b\" to 2)"
+    ],
+    "correct": 0,
+    "explanation": "mapOf crée une map read-only."
+  },
+  {
+    "id": "KOT-SYN-029",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Smart casts",
+    "difficulty": "medium",
+    "question": "Que sont les smart casts ?",
+    "options": [
+      "Cast automatique après vérification de type",
+      "Cast explicite",
+      "Cast sécurisé",
+      "Cast générique"
+    ],
+    "correct": 0,
+    "explanation": "if (obj is String) { obj.length } // cast automatique"
+  },
+  {
+    "id": "KOT-SYN-030",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Smart casts",
+    "difficulty": "hard",
+    "question": "Quand le smart cast ne fonctionne-t-il pas ?",
+    "options": [
+      "Si la variable peut être modifiée entre temps",
+      "Toujours fonctionne",
+      "Uniquement avec val",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Smart cast fonctionne avec val ou var non modifiée."
+  },
+  {
+    "id": "KOT-SYN-031",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Ranges",
+    "difficulty": "easy",
+    "question": "Comment vérifier si une valeur est dans un range ?",
+    "options": [
+      "if (x in 1..10)",
+      "if (x between 1 and 10)",
+      "if (1 <= x <= 10)",
+      "if (x in 1 until 10)"
+    ],
+    "correct": 0,
+    "explanation": "in vérifie l'appartenance à un range."
+  },
+  {
+    "id": "KOT-SYN-032",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Ranges",
+    "difficulty": "medium",
+    "question": "Comment vérifier si une valeur est hors range ?",
+    "options": [
+      "if (x !in 1..10)",
+      "if (x not in 1..10)",
+      "if (!(x in 1..10))",
+      "if (x > 10 || x < 1)"
+    ],
+    "correct": 0,
+    "explanation": "!in vérifie la non-appartenance."
+  },
+  {
+    "id": "KOT-SYN-033",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Type aliases",
+    "difficulty": "hard",
+    "question": "À quoi servent les type aliases ?",
+    "options": [
+      "Donner un nom alternatif à un type",
+      "Créer un nouveau type",
+      "Étendre un type",
+      "Réduire un type"
+    ],
+    "correct": 0,
+    "explanation": "typealias UserMap = Map<String, User>"
+  },
+  {
+    "id": "KOT-SYN-034",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Destructuring",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la déstructuration ?",
+    "options": [
+      "Décomposer un objet en plusieurs variables",
+      "Détruire un objet",
+      "Copier un objet",
+      "Cloner un objet"
+    ],
+    "correct": 0,
+    "explanation": "val (name, age) = person"
+  },
+  {
+    "id": "KOT-SYN-035",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Destructuring",
+    "difficulty": "hard",
+    "question": "Comment fonctionne la déstructuration pour les data classes ?",
+    "options": [
+      "Générée automatiquement",
+      "Manuelle",
+      "Non supportée",
+      "Avec annotation"
+    ],
+    "correct": 0,
+    "explanation": "Les data classes génèrent component1(), component2(), etc."
+  },
+  {
+    "id": "KOT-SYN-036",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Operator overloading",
+    "difficulty": "hard",
+    "question": "Peut-on surcharger les opérateurs en Kotlin ?",
+    "options": [
+      "Oui, avec operator fun",
+      "Non",
+      "Oui, avec override",
+      "Oui, avec extension"
+    ],
+    "correct": 0,
+    "explanation": "operator fun plus() etc."
+  },
+  {
+    "id": "KOT-SYN-037",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Operator overloading",
+    "difficulty": "hard",
+    "question": "Quel mot-clé pour l'opérateur + ?",
+    "options": ["plus", "add", "sum", "concat"],
+    "correct": 0,
+    "explanation": "operator fun plus(other: T): T"
+  },
+  {
+    "id": "KOT-SYN-038",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Operator overloading",
+    "difficulty": "hard",
+    "question": "Quel mot-clé pour l'opérateur [] ?",
+    "options": ["get", "set", "index", "access"],
+    "correct": 0,
+    "explanation": "operator fun get(index: Int): T"
+  },
+  {
+    "id": "KOT-SYN-039",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Companion object",
+    "difficulty": "hard",
+    "question": "À quoi sert companion object ?",
+    "options": [
+      "Membres statiques",
+      "Singleton",
+      "Factory",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "companion object { const val CONST = 1 }"
+  },
+  {
+    "id": "KOT-SYN-040",
+    "theme": "Syntaxe Kotlin",
+    "theme_label": "Companion object",
+    "difficulty": "hard",
+    "question": "Le companion object a-t-il un nom par défaut ?",
+    "options": ["Companion", "Default", "Instance", "Static"],
+    "correct": 0,
+    "explanation": "MyClass.Companion pour y accéder."
+  },
+    {
+      "id": "KOT-SYN-041",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Inline functions",
+      "difficulty": "hard",
+      "question": "Que fait le mot-clé inline ?",
+      "options": [
+        "Copie le corps de la fonction à l'appel",
+        "Définit une fonction en ligne",
+        "Optimise les appels",
+        "A et C"
+      ],
+      "correct": 3,
+      "explanation": "inline réduit l'overhead des lambdas."
+    },
+    {
+      "id": "KOT-SYN-042",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Inline functions",
+      "difficulty": "hard",
+      "question": "Quand utiliser noinline ?",
+      "options": [
+        "Pour éviter l'inlining d'un paramètre lambda",
+        "Pour forcer l'inlining",
+        "Pour les fonctions récursives",
+        "Pour les fonctions suspend"
+      ],
+      "correct": 0,
+      "explanation": "noinline exclut un lambda de l'inlining."
+    },
+    {
+      "id": "KOT-SYN-043",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Inline functions",
+      "difficulty": "hard",
+      "question": "Que signifie crossinline ?",
+      "options": [
+        "Empêche les returns non locaux",
+        "Permet les returns non locaux",
+        "Force l'inlining",
+        "Ignore les returns"
+      ],
+      "correct": 0,
+      "explanation": "crossinline dans les lambdas pour inline."
+    },
+    {
+      "id": "KOT-SYN-044",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "reified",
+      "difficulty": "hard",
+      "question": "À quoi sert reified ?",
+      "options": [
+        "Accéder au type générique à l'exécution",
+        "Spécialiser un type",
+        "Rendre un paramètre final",
+        "Optimiser les génériques"
+      ],
+      "correct": 0,
+      "explanation": "inline fun <reified T> isType(value: Any) = value is T"
+    },
+    {
+      "id": "KOT-SYN-045",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "reified",
+      "difficulty": "hard",
+      "question": "reified nécessite-t-il inline ?",
+      "options": [
+        "Oui",
+        "Non",
+        "Optionnel",
+        "Dépend de la visibilité"
+      ],
+      "correct": 0,
+      "explanation": "reified ne fonctionne qu'avec des fonctions inline."
+    },
+    {
+      "id": "KOT-SYN-046",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Labels",
+      "difficulty": "hard",
+      "question": "À quoi servent les labels ?",
+      "options": [
+        "Sortir d'une boucle imbriquée",
+        "Retourner d'un lambda",
+        "Nommer une boucle",
+        "Toutes ces réponses"
+      ],
+      "correct": 3,
+      "explanation": "outer@ for (i in 1..10) { for (j in 1..10) { break@outer } }"
+    },
+    {
+      "id": "KOT-SYN-047",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Labels",
+      "difficulty": "hard",
+      "question": "Comment retourner d'un lambda avec un label ?",
+      "options": [
+        "return@label",
+        "break@label",
+        "continue@label",
+        "exit@label"
+      ],
+      "correct": 0,
+      "explanation": "list.forEach { if (it == null) return@forEach }"
+    },
+    {
+      "id": "KOT-SYN-048",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Nothing type",
+      "difficulty": "hard",
+      "question": "Que représente le type Nothing ?",
+      "options": [
+        "Fonction qui ne retourne jamais",
+        "Valeur null",
+        "Type vide",
+        "Type générique"
+      ],
+      "correct": 0,
+      "explanation": "fun fail(): Nothing = throw Exception()"
+    },
+    {
+      "id": "KOT-SYN-049",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Nothing type",
+      "difficulty": "hard",
+      "question": "Nothing est un sous-type de tous les types ?",
+      "options": [
+        "Oui",
+        "Non",
+        "Seulement des types non nullables",
+        "Seulement des types nullables"
+      ],
+      "correct": 0,
+      "explanation": "Nothing est le sous-type de tous les types."
+    },
+    {
+      "id": "KOT-SYN-050",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Unit vs Nothing",
+      "difficulty": "hard",
+      "question": "Différence entre Unit et Nothing ?",
+      "options": [
+        "Unit = retour normal, Nothing = jamais de retour",
+        "Unit = void, Nothing = null",
+        "Identiques",
+        "Unit = type, Nothing = valeur"
+      ],
+      "correct": 0,
+      "explanation": "Unit a une valeur (Unit), Nothing n'a aucune valeur."
+    },
+    {
+      "id": "KOT-SYN-051",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Scope functions",
+      "difficulty": "medium",
+      "question": "Quelles sont les fonctions de portée ?",
+      "options": [
+        "let, run, with, apply, also",
+        "map, filter, reduce",
+        "forEach, forEachIndexed",
+        "takeIf, takeUnless"
+      ],
+      "correct": 0,
+      "explanation": "Les 5 fonctions de portée changent le contexte d'exécution."
+    },
+    {
+      "id": "KOT-SYN-052",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "let",
+      "difficulty": "medium",
+      "question": "Que retourne let ?",
+      "options": [
+        "Résultat du lambda",
+        "Le récepteur",
+        "Unit",
+        "Boolean"
+      ],
+      "correct": 0,
+      "explanation": "let retourne le résultat du dernier statement."
+    },
+    {
+      "id": "KOT-SYN-053",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "let",
+      "difficulty": "hard",
+      "question": "Comment accéder à l'objet dans let ?",
+      "options": ["it", "this", "self", "object"],
+      "correct": 0,
+      "explanation": "let utilise it comme paramètre par défaut."
+    },
+    {
+      "id": "KOT-SYN-054",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "run",
+      "difficulty": "medium",
+      "question": "run combine quelle fonctionnalité ?",
+      "options": [
+        "with et let",
+        "apply et also",
+        "let et also",
+        "with et apply"
+      ],
+      "correct": 0,
+      "explanation": "run combine le contexte this (comme with) et le retour lambda (comme let)."
+    },
+    {
+      "id": "KOT-SYN-055",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "apply",
+      "difficulty": "medium",
+      "question": "Que retourne apply ?",
+      "options": [
+        "Le récepteur (l'objet lui-même)",
+        "Résultat du lambda",
+        "Unit",
+        "Boolean"
+      ],
+      "correct": 0,
+      "explanation": "apply retourne this, utile pour l'initialisation."
+    },
+    {
+      "id": "KOT-SYN-056",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "also",
+      "difficulty": "medium",
+      "question": "Que retourne also ?",
+      "options": [
+        "Le récepteur (l'objet lui-même)",
+        "Résultat du lambda",
+        "Unit",
+        "Boolean"
+      ],
+      "correct": 0,
+      "explanation": "also retourne this, similaire à apply mais avec it."
+    },
+    {
+      "id": "KOT-SYN-057",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "with",
+      "difficulty": "medium",
+      "question": "Comment appelle-t-on with ?",
+      "options": [
+        "with(obj) { }",
+        "obj.with { }",
+        "with { } sur objet",
+        "with(obj).invoke { }"
+      ],
+      "correct": 0,
+      "explanation": "with est une fonction prenant l'objet en paramètre."
+    },
+    {
+      "id": "KOT-SYN-058",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "takeIf / takeUnless",
+      "difficulty": "hard",
+      "question": "Que fait takeIf ?",
+      "options": [
+        "Retourne l'objet si condition vraie, sinon null",
+        "Retourne toujours l'objet",
+        "Retourne toujours null",
+        "Lève exception"
+      ],
+      "correct": 0,
+      "explanation": "takeIf { it > 0 } retourne l'objet ou null."
+    },
+    {
+      "id": "KOT-SYN-059",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "takeIf / takeUnless",
+      "difficulty": "hard",
+      "question": "takeUnless est l'inverse de ?",
+      "options": ["takeIf", "apply", "let", "also"],
+      "correct": 0,
+      "explanation": "takeUnless retourne l'objet si condition fausse."
+    },
+    {
+      "id": "KOT-SYN-060",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Elvis operator",
+      "difficulty": "easy",
+      "question": "Que fait l'opérateur Elvis ?",
+      "options": [
+        "Retourne valeur par défaut si null",
+        "Teste null",
+        "Cast sécurisé",
+        "Appel sécurisé"
+      ],
+      "correct": 0,
+      "explanation": "val length = str?.length ?: 0"
+    },
+    {
+      "id": "KOT-SYN-061",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Safe call operator",
+      "difficulty": "easy",
+      "question": "Que fait l'opérateur ?. ?",
+      "options": [
+        "Appelle la méthode seulement si non null",
+        "Lance exception si null",
+        "Ignore l'appel",
+        "Retourne null"
+      ],
+      "correct": 0,
+      "explanation": "str?.length retourne null si str est null."
+    },
+    {
+      "id": "KOT-SYN-062",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Not-null assertion",
+      "difficulty": "easy",
+      "question": "Que fait l'opérateur !! ?",
+      "options": [
+        "Force l'interprétation non-null, lance NPE si null",
+        "Ignore null",
+        "Convertit en nullable",
+        "Teste null"
+      ],
+      "correct": 0,
+      "explanation": "str!!.length lève NullPointerException si str est null."
+    },
+    {
+      "id": "KOT-SYN-063",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Multi-declarations",
+      "difficulty": "hard",
+      "question": "Comment fonctionne la multi-déclaration avec une liste ?",
+      "options": [
+        "val (a, b) = list",
+        "val (a, b) = listOf(1,2)",
+        "val (a, b) = list.component1()",
+        "A et B"
+      ],
+      "correct": 3,
+      "explanation": "List supporte component1, component2, etc."
+    },
+    {
+      "id": "KOT-SYN-064",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Underscore for unused",
+      "difficulty": "hard",
+      "question": "Que signifie _ dans une déstructuration ?",
+      "options": [
+        "Ignorer la variable",
+        "Variable générique",
+        "Variable mutable",
+        "Variable static"
+      ],
+      "correct": 0,
+      "explanation": "val (_, age) = person"
+    },
+    {
+      "id": "KOT-SYN-065",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Backing field",
+      "difficulty": "hard",
+      "question": "À quoi sert field dans un setter personnalisé ?",
+      "options": [
+        "Accéder au champ de stockage",
+        "Accéder à la propriété",
+        "Valeur du paramètre",
+        "Résultat du getter"
+      ],
+      "correct": 0,
+      "explanation": "var name: String = \"\"\n set(value) { field = value.trim() }"
+    },
+    {
+      "id": "KOT-SYN-066",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Tailrec",
+      "difficulty": "hard",
+      "question": "À quoi sert tailrec ?",
+      "options": [
+        "Optimiser la récursion terminale",
+        "Rendre une fonction récursive",
+        "Créer une queue",
+        "Itérer"
+      ],
+      "correct": 0,
+      "explanation": "tailrec fun factorial(n: Int, acc: Int = 1): Int"
+    },
+    {
+      "id": "KOT-SYN-067",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Tailrec",
+      "difficulty": "hard",
+      "question": "Quand tailrec est-il efficace ?",
+      "options": [
+        "Quand le dernier appel est récursif",
+        "Toujours",
+        "Jamais",
+        "Uniquement pour les Int"
+      ],
+      "correct": 0,
+      "explanation": "La fonction doit s'appeler elle-même en dernière instruction."
+    },
+    {
+      "id": "KOT-SYN-068",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Infix functions",
+      "difficulty": "hard",
+      "question": "Qu'est-ce qu'une fonction infix ?",
+      "options": [
+        "Appel sans point ni parenthèses",
+        "Fonction avec opérateur",
+        "Fonction inline",
+        "Fonction suspend"
+      ],
+      "correct": 0,
+      "explanation": "infix fun Int.add(other: Int) = this + other\n 1 add 2"
+    },
+    {
+      "id": "KOT-SYN-069",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Infix functions",
+      "difficulty": "hard",
+      "question": "Quelle condition pour une fonction infix ?",
+      "options": [
+        "Un paramètre, membre ou extension",
+        "Deux paramètres",
+        "Retour Unit",
+        "Sans paramètre"
+      ],
+      "correct": 0,
+      "explanation": "Fonction membre ou extension avec un seul paramètre."
+    },
+    {
+      "id": "KOT-SYN-070",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Operator overloading",
+      "difficulty": "hard",
+      "question": "Quel opérateur est surchargé par la fonction 'unaryMinus' ?",
+      "options": ["-", "+", "!", "++"],
+      "correct": 0,
+      "explanation": "operator fun unaryMinus(): MyClass"
+    },
+    {
+      "id": "KOT-SYN-071",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Operator overloading",
+      "difficulty": "hard",
+      "question": "Quel opérateur est surchargé par 'contains' ?",
+      "options": ["in", "contains", "has", "within"],
+      "correct": 0,
+      "explanation": "operator fun contains(item: T): Boolean"
+    },
+    {
+      "id": "KOT-SYN-072",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Destructuring with componentN",
+      "difficulty": "hard",
+      "question": "Combien de composants maximum sont supportés ?",
+      "options": ["5", "10", "Sans limite", "32"],
+      "correct": 0,
+      "explanation": "Jusqu'à 5 composants sont générés automatiquement."
+    },
+    {
+      "id": "KOT-SYN-073",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "SAM conversions",
+      "difficulty": "hard",
+      "question": "Qu'est-ce que la conversion SAM ?",
+      "options": [
+        "Lambda pour interface à méthode unique",
+        "Conversion de type",
+        "Conversion de primitive",
+        "Conversion de collection"
+      ],
+      "correct": 0,
+      "explanation": "Kotlin peut convertir une lambda en interface Java fonctionnelle."
+    },
+    {
+      "id": "KOT-SYN-074",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "SAM conversions",
+      "difficulty": "hard",
+      "question": "Fonctionne-t-elle pour les interfaces Kotlin ?",
+      "options": [
+        "Non, seulement pour Java",
+        "Oui",
+        "Oui, avec annotation",
+        "Non, jamais"
+      ],
+      "correct": 0,
+      "explanation": "SAM conversions ne fonctionne que pour les interfaces Java."
+    },
+    {
+      "id": "KOT-SYN-075",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Type projection",
+      "difficulty": "hard",
+      "question": "Que signifie Array<out Any> ?",
+      "options": [
+        "Producteur de Any (covariant)",
+        "Consommateur de Any (contravariant)",
+        "Invariant",
+        "Mutable"
+      ],
+      "correct": 0,
+      "explanation": "out T = producteur, in T = consommateur."
+    },
+    {
+      "id": "KOT-SYN-076",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Star projection",
+      "difficulty": "hard",
+      "question": "Que signifie Array<*> ?",
+      "options": [
+        "Type inconnu, mais sûr",
+        "Array de Any?",
+        "Array vide",
+        "Array d'Object"
+      ],
+      "correct": 0,
+      "explanation": "Star projection représente un type inconnu."
+    },
+    {
+      "id": "KOT-SYN-077",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Use-site variance",
+      "difficulty": "hard",
+      "question": "Comment déclarer une variance à l'utilisation ?",
+      "options": [
+        "MutableList<out T>",
+        "MutableList<in T>",
+        "MutableList<*>";
+        "A et B"
+      ],
+      "correct": 3,
+      "explanation": "out pour producteur, in pour consommateur."
+    },
+    {
+      "id": "KOT-SYN-078",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Declaration-site variance",
+      "difficulty": "hard",
+      "question": "Comment déclarer une variance sur le type ?",
+      "options": [
+        "interface Source<out T>",
+        "interface Source<in T>",
+        "interface Source<T>",
+        "A et B"
+      ],
+      "correct": 3,
+      "explanation": "out ou in sur le paramètre de type."
+    },
+    {
+      "id": "KOT-SYN-079",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "Type erasure",
+      "difficulty": "hard",
+      "question": "Kotlin a-t-il l'effacement des types ?",
+      "options": [
+        "Oui, comme Java",
+        "Non, réifié",
+        "Partiellement",
+        "Uniquement pour les génériques"
+      ],
+      "correct": 0,
+      "explanation": "Kotlin a l'effacement des types à l'exécution."
+    },
+    {
+      "id": "KOT-SYN-080",
+      "theme": "Syntaxe Kotlin",
+      "theme_label": "reified bypass",
+      "difficulty": "hard",
+      "question": "Comment contourner l'effacement ?",
+      "options": [
+        "inline + reified",
+        "Utiliser KClass",
+        "Typecasts",
+        "A et B"
+      ],
+      "correct": 3,
+      "explanation": "reified dans une fonction inline préserve le type."
+    }
+  ]

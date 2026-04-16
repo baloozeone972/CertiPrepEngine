@@ -1,0 +1,32 @@
+[
+  {
+    "id": "GRD-01-001",
+    "theme": "Gradle Build",
+    "theme_label": "Script Gradle",
+    "difficulty": "easy",
+    "question": "Quel est le nom du fichier de build Gradle ?",
+    "options": [
+      "build.gradle",
+      "gradle.build",
+      "build.gradle.kts",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "build.gradle (Groovy) ou build.gradle.kts (Kotlin DSL)."
+  },
+  {
+    "id": "GRD-01-002",
+    "theme": "Tasks",
+    "theme_label": "Définition des tâches",
+    "difficulty": "easy",
+    "question": "Comment déclarer une tâche simple en Gradle Groovy DSL ?",
+    "options": [
+      "task hello { doLast { println 'Hello' } }",
+      "task hello << { println 'Hello' }",
+      "Les deux",
+      "task hello() { println 'Hello' }"
+    ],
+    "correct": 2,
+    "explanation": "Les deux syntaxes sont valides pour déclarer une tâche."
+  }
+]

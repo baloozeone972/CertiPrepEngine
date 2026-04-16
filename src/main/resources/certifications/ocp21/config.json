@@ -1,0 +1,48 @@
+{
+  "id": "ocp21",
+  "name": "Oracle Certified Professional Java 21 (1Z0-830)",
+  "version": "1.0",
+  "description": "Certification professionnelle Java 21 - Dernière version LTS avec virtual threads et pattern matching avancé",
+  "totalQuestions": 500,
+  "examDurationMinutes": 180,
+  "examQuestionCount": 80,
+  "passingScore": 68,
+  "themes": [
+    {
+      "name": "Virtual Threads",
+      "count": 60
+    },
+    {
+      "name": "Pattern Matching avancé",
+      "count": 70
+    },
+    {
+      "name": "Records et Sealed Classes",
+      "count": 60
+    },
+    {
+      "name": "Foreign Function & Memory API",
+      "count": 50
+    },
+    {
+      "name": "Vector API",
+      "count": 50
+    },
+    {
+      "name": "Structured Concurrency",
+      "count": 60
+    },
+    {
+      "name": "Scoped Values",
+      "count": 50
+    },
+    {
+      "name": "Sequenced Collections",
+      "count": 50
+    },
+    {
+      "name": "String Templates",
+      "count": 50
+    }
+  ]
+}

@@ -1,0 +1,707 @@
+[
+  {
+    "id": "OCP21-SV-001",
+    "theme": "Scoped Values",
+    "theme_label": "Présentation",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que ScopedValue ?",
+    "options": [
+      "Alternative immuable à ThreadLocal",
+      "Nouveau type de thread",
+      "Executor spécial",
+      "Annotation"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est une alternative immuable à ThreadLocal pour virtual threads."
+  },
+  {
+    "id": "OCP21-SV-002",
+    "theme": "Scoped Values",
+    "theme_label": "Présentation",
+    "difficulty": "hard",
+    "question": "Pourquoi ScopedValue remplace-t-il ThreadLocal ?",
+    "options": [
+      "Évite les memory leaks",
+      "Plus rapide",
+      "Immuable",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "ScopedValue résout les problèmes de ThreadLocal avec virtual threads."
+  },
+  {
+    "id": "OCP21-SV-003",
+    "theme": "Scoped Values",
+    "theme_label": "Déclaration",
+    "difficulty": "hard",
+    "question": "Comment déclarer un ScopedValue ?",
+    "options": [
+      "private static final ScopedValue<String> SV = ScopedValue.newInstance();",
+      "private static ScopedValue<String> SV = new ScopedValue<>();",
+      "ScopedValue<String> SV = ScopedValue.of();",
+      "private final ScopedValue<String> SV = ScopedValue.create();"
+    ],
+    "correct": 0,
+    "explanation": "newInstance() est la méthode pour créer un ScopedValue."
+  },
+  {
+    "id": "OCP21-SV-004",
+    "theme": "Scoped Values",
+    "theme_label": "Déclaration",
+    "difficulty": "hard",
+    "question": "Un ScopedValue doit-il être static ?",
+    "options": [
+      "Recommandé, mais pas obligatoire",
+      "Oui, obligatoire",
+      "Non, jamais",
+      "Uniquement dans les records"
+    ],
+    "correct": 0,
+    "explanation": "static est recommandé mais pas obligatoire."
+  },
+  {
+    "id": "OCP21-SV-005",
+    "theme": "Scoped Values",
+    "theme_label": "Déclaration",
+    "difficulty": "hard",
+    "question": "Un ScopedValue peut-il être final ?",
+    "options": [
+      "Oui, recommandé",
+      "Non, doit être non final",
+      "Oui, mais avec restrictions",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est généralement déclaré final."
+  },
+  {
+    "id": "OCP21-SV-006",
+    "theme": "Scoped Values",
+    "theme_label": "Utilisation",
+    "difficulty": "hard",
+    "question": "Comment utiliser un ScopedValue ?",
+    "options": [
+      "ScopedValue.where(SV, value).run(() -> use())",
+      "SV.set(value); use(); SV.remove();",
+      "SV.bind(value, () -> use())",
+      "SV.with(value, () -> use())"
+    ],
+    "correct": 0,
+    "explanation": "where().run() est la syntaxe pour utiliser ScopedValue."
+  },
+  {
+    "id": "OCP21-SV-007",
+    "theme": "Scoped Values",
+    "theme_label": "Utilisation",
+    "difficulty": "hard",
+    "question": "Comment obtenir la valeur d'un ScopedValue ?",
+    "options": ["SV.get()", "SV.value()", "SV.retrieve()", "SV.fetch()"],
+    "correct": 0,
+    "explanation": "get() retourne la valeur du ScopedValue dans le contexte courant."
+  },
+  {
+    "id": "OCP21-SV-008",
+    "theme": "Scoped Values",
+    "theme_label": "Utilisation",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si on appelle get() sans valeur ?",
+    "options": [
+      "NoSuchElementException",
+      "Retourne null",
+      "Retourne Optional.empty()",
+      "Erreur compilation"
+    ],
+    "correct": 0,
+    "explanation": "get() lance NoSuchElementException si aucune valeur n'est liée."
+  },
+  {
+    "id": "OCP21-SV-009",
+    "theme": "Scoped Values",
+    "theme_label": "Immutabilité",
+    "difficulty": "hard",
+    "question": "Peut-on modifier la valeur d'un ScopedValue ?",
+    "options": [
+      "Non, immuable",
+      "Oui, avec set()",
+      "Oui, avec update()",
+      "Oui, avec modify()"
+    ],
+    "correct": 0,
+    "explanation": "Les ScopedValues sont immuables par conception."
+  },
+  {
+    "id": "OCP21-SV-010",
+    "theme": "Scoped Values",
+    "theme_label": "Immutabilité",
+    "difficulty": "hard",
+    "question": "Comment changer la valeur pour une nouvelle portée ?",
+    "options": [
+      "Créer un nouveau binding avec where()",
+      "Appeler set()",
+      "Modifier la référence",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "where() crée un nouveau binding pour une portée spécifique."
+  },
+  {
+    "id": "OCP21-SV-011",
+    "theme": "Scoped Values",
+    "theme_label": "Héritage",
+    "difficulty": "hard",
+    "question": "Les valeurs ScopedValue sont-elles héritées ?",
+    "options": [
+      "Oui, par les threads enfants",
+      "Non, jamais",
+      "Oui, avec configuration",
+      "Uniquement les virtual threads"
+    ],
+    "correct": 0,
+    "explanation": "Les valeurs ScopedValue sont héritées dans les threads enfants."
+  },
+  {
+    "id": "OCP21-SV-012",
+    "theme": "Scoped Values",
+    "theme_label": "Héritage",
+    "difficulty": "hard",
+    "question": "Les changements dans un thread enfant affectent-ils le parent ?",
+    "options": [
+      "Non, immuables",
+      "Oui, par référence",
+      "Oui, par copie",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "L'immuabilité garantit que les modifications ne sont pas propagées."
+  },
+  {
+    "id": "OCP21-SV-013",
+    "theme": "Scoped Values",
+    "theme_label": "ScopedValue.where",
+    "difficulty": "hard",
+    "question": "Que retourne ScopedValue.where() ?",
+    "options": [
+      "Carrier",
+      "Binding",
+      "Context",
+      "Scope"
+    ],
+    "correct": 0,
+    "explanation": "where() retourne un Carrier qui permet de lier la valeur."
+  },
+  {
+    "id": "OCP21-SV-014",
+    "theme": "Scoped Values",
+    "theme_label": "Carrier",
+    "difficulty": "hard",
+    "question": "Que permet de faire un Carrier ?",
+    "options": [
+      "Lier plusieurs valeurs",
+      "Lier une seule valeur",
+      "Exécuter du code",
+      "A et C"
+    ],
+    "correct": 3,
+    "explanation": "Un Carrier permet de lier plusieurs valeurs et d'exécuter du code."
+  },
+  {
+    "id": "OCP21-SV-015",
+    "theme": "Scoped Values",
+    "theme_label": "Carrier",
+    "difficulty": "hard",
+    "question": "Comment lier plusieurs ScopedValues ?",
+    "options": [
+      "ScopedValue.where(SV1, v1).where(SV2, v2).run(...)",
+      "ScopedValue.bind(Map.of(SV1, v1, SV2, v2)).run(...)",
+      "ScopedValue.multiple().put(SV1, v1).put(SV2, v2).run(...)",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "On peut chaîner where() pour lier plusieurs valeurs."
+  },
+  {
+    "id": "OCP21-SV-016",
+    "theme": "Scoped Values",
+    "theme_label": "run()",
+    "difficulty": "hard",
+    "question": "Que fait la méthode run() sur Carrier ?",
+    "options": [
+      "Exécute le code avec les bindings",
+      "Retourne le binding",
+      "Crée un nouveau thread",
+      "Annule le binding"
+    ],
+    "correct": 0,
+    "explanation": "run() exécute le Runnable avec les valeurs liées."
+  },
+  {
+    "id": "OCP21-SV-017",
+    "theme": "Scoped Values",
+    "theme_label": "call()",
+    "difficulty": "hard",
+    "question": "Que fait la méthode call() sur Carrier ?",
+    "options": [
+      "Exécute un Callable avec les bindings",
+      "Exécute un Runnable",
+      "Retourne le binding",
+      "Crée un nouveau thread"
+    ],
+    "correct": 0,
+    "explanation": "call() exécute un Callable et retourne son résultat."
+  },
+  {
+    "id": "OCP21-SV-018",
+    "theme": "Scoped Values",
+    "theme_label": "Exceptions",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il si le code dans run() lance une exception ?",
+    "options": [
+      "L'exception est propagée",
+      "L'exception est ignorée",
+      "Le binding est annulé",
+      "La valeur est réinitialisée"
+    ],
+    "correct": 0,
+    "explanation": "Les exceptions sont propagées normalement."
+  },
+  {
+    "id": "OCP21-SV-019",
+    "theme": "Scoped Values",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "question": "ScopedValue est-il plus performant que ThreadLocal ?",
+    "options": [
+      "Oui, surtout avec virtual threads",
+      "Non, plus lent",
+      "Identique",
+      "Dépend de l'usage"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est optimisé pour les virtual threads."
+  },
+  {
+    "id": "OCP21-SV-020",
+    "theme": "Scoped Values",
+    "theme_label": "Memory leaks",
+    "difficulty": "hard",
+    "question": "ScopedValue cause-t-il des memory leaks ?",
+    "options": [
+      "Non, nettoyage automatique",
+      "Oui, comme ThreadLocal",
+      "Oui, si mal utilisé",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue évite les memory leaks car les valeurs sont liées à une portée."
+  },
+  {
+    "id": "OCP21-SV-021",
+    "theme": "Scoped Values",
+    "theme_label": "Portée",
+    "difficulty": "hard",
+    "question": "Quelle est la portée d'un binding ScopedValue ?",
+    "options": [
+      "La durée de l'appel run()/call()",
+      "Toute l'application",
+      "Le thread uniquement",
+      "La méthode uniquement"
+    ],
+    "correct": 0,
+    "explanation": "Le binding est actif uniquement pendant l'exécution du Runnable/Callable."
+  },
+  {
+    "id": "OCP21-SV-022",
+    "theme": "Scoped Values",
+    "theme_label": "Portée",
+    "difficulty": "hard",
+    "question": "Que se passe-t-il après la fin de run() ?",
+    "options": [
+      "Les valeurs ne sont plus accessibles",
+      "Les valeurs persistent",
+      "Les valeurs sont sauvegardées",
+      "Les valeurs sont réinitialisées"
+    ],
+    "correct": 0,
+    "explanation": "Après run(), le binding n'existe plus."
+  },
+  {
+    "id": "OCP21-SV-023",
+    "theme": "Scoped Values",
+    "theme_label": "Virtual threads",
+    "difficulty": "hard",
+    "question": "ScopedValue est-il spécialement conçu pour virtual threads ?",
+    "options": [
+      "Oui",
+      "Non, pour tous les threads",
+      "Uniquement pour platform threads",
+      "Uniquement pour les threads daemon"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue a été conçu pour résoudre les problèmes de ThreadLocal avec virtual threads."
+  },
+  {
+    "id": "OCP21-SV-024",
+    "theme": "Scoped Values",
+    "theme_label": "Platform threads",
+    "difficulty": "hard",
+    "question": "ScopedValue fonctionne-t-il avec les platform threads ?",
+    "options": [
+      "Oui, normalement",
+      "Non",
+      "Oui, avec restrictions",
+      "Partiellement"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue fonctionne aussi avec les platform threads."
+  },
+  {
+    "id": "OCP21-SV-025",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison ThreadLocal",
+    "difficulty": "hard",
+    "question": "Quelle est la principale différence avec ThreadLocal ?",
+    "options": [
+      "Immuabilité et portée limitée",
+      "Mutabilité",
+      "Portée globale",
+      "Performance"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est immuable et a une portée limitée."
+  },
+  {
+    "id": "OCP21-SV-026",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison ThreadLocal",
+    "difficulty": "hard",
+    "question": "ThreadLocal est-il déprécié ?",
+    "options": [
+      "Non, toujours utilisable",
+      "Oui, à remplacer",
+      "Oui, depuis Java 21",
+      "Non, mais déconseillé"
+    ],
+    "correct": 0,
+    "explanation": "ThreadLocal n'est pas déprécié mais ScopedValue est recommandé pour virtual threads."
+  },
+  {
+    "id": "OCP21-SV-027",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nScopedValue.where(SV, \"Hello\").run(() -> System.out.println(SV.get()));",
+    "options": ["Hello", "null", "Erreur", "Rien"],
+    "correct": 0,
+    "explanation": "La valeur 'Hello' est liée et accessible dans le run()."
+  },
+  {
+    "id": "OCP21-SV-028",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nSystem.out.println(SV.get());",
+    "options": [
+      "NoSuchElementException",
+      "null",
+      "Erreur compilation",
+      "String vide"
+    ],
+    "correct": 0,
+    "explanation": "get() lance NoSuchElementException si aucune valeur n'est liée."
+  },
+  {
+    "id": "OCP21-SV-029",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nScopedValue.where(SV, \"A\").run(() -> {\n    System.out.println(SV.get());\n    ScopedValue.where(SV, \"B\").run(() -> System.out.println(SV.get()));\n    System.out.println(SV.get());\n});",
+    "options": ["A B A", "A B B", "B B B", "Erreur"],
+    "correct": 0,
+    "explanation": "Le binding interne remplace temporairement la valeur."
+  },
+  {
+    "id": "OCP21-SV-030",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV1 = ScopedValue.newInstance();\nprivate static final ScopedValue<String> SV2 = ScopedValue.newInstance();\nScopedValue.where(SV1, \"A\").where(SV2, \"B\").run(() -> {\n    System.out.println(SV1.get() + SV2.get());\n});",
+    "options": ["AB", "A", "B", "Erreur"],
+    "correct": 0,
+    "explanation": "Les deux ScopedValues sont liés et accessibles."
+  },
+  {
+    "id": "OCP21-SV-031",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<Integer> SV = ScopedValue.newInstance();\nint result = ScopedValue.where(SV, 5).call(() -> SV.get() * 2);\nSystem.out.println(result);",
+    "options": ["10", "5", "0", "Erreur"],
+    "correct": 0,
+    "explanation": "call() retourne le résultat de l'expression."
+  },
+  {
+    "id": "OCP21-SV-032",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nThread.startVirtualThread(() -> {\n    ScopedValue.where(SV, \"Virtual\").run(() -> System.out.println(SV.get()));\n}).join();",
+    "options": ["Virtual", "null", "Erreur", "Rien"],
+    "correct": 0,
+    "explanation": "ScopedValue fonctionne avec les virtual threads."
+  },
+  {
+    "id": "OCP21-SV-033",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nvar result = ScopedValue.where(SV, \"Test\").call(() -> {\n    return SV.get().length();\n});\nSystem.out.println(result);",
+    "options": ["4", "Test", "0", "Erreur"],
+    "correct": 0,
+    "explanation": "call() retourne la longueur de 'Test' (4)."
+  },
+  {
+    "id": "OCP21-SV-034",
+    "theme": "Scoped Values",
+    "theme_label": "Exemples",
+    "difficulty": "hard",
+    "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\ntry {\n    ScopedValue.where(SV, \"Test\").run(() -> { throw new RuntimeException(); });\n} catch (Exception e) {\n    System.out.println(\"Exception\");\n}",
+    "options": ["Exception", "Test", "Erreur", "Rien"],
+    "correct": 0,
+    "explanation": "L'exception est propagée et catchée."
+  },
+  {
+    "id": "OCP21-SV-035",
+    "theme": "Scoped Values",
+    "theme_label": "JEP",
+    "difficulty": "hard",
+    "question": "Quel JEP introduit Scoped Values ?",
+    "options": ["JEP 446", "JEP 440", "JEP 441", "JEP 442"],
+    "correct": 0,
+    "explanation": "JEP 446: Scoped Values (preview)."
+  },
+  {
+    "id": "OCP21-SV-036",
+    "theme": "Scoped Values",
+    "theme_label": "Preview",
+    "difficulty": "hard",
+    "question": "Scoped Values sont-ils finalisés en Java 21 ?",
+    "options": [
+      "Non, preview",
+      "Oui, finalisé",
+      "Non, supprimé",
+      "Oui, depuis Java 20"
+    ],
+    "correct": 0,
+    "explanation": "Scoped Values sont en preview en Java 21."
+  },
+  {
+    "id": "OCP21-SV-037",
+    "theme": "Scoped Values",
+    "theme_label": "Activation",
+    "difficulty": "hard",
+    "question": "Comment activer Scoped Values ?",
+    "options": [
+      "--enable-preview",
+      "--enable-scoped-values",
+      "--preview",
+      "Automatique"
+    ],
+    "correct": 0,
+    "explanation": "Il faut utiliser --enable-preview."
+  },
+  {
+    "id": "OCP21-SV-038",
+    "theme": "Scoped Values",
+    "theme_label": "Structure interne",
+    "difficulty": "hard",
+    "question": "Comment ScopedValue évite-t-il les memory leaks ?",
+    "options": [
+      "Nettoyage automatique après run()",
+      "Garbage collector spécial",
+      "Weak references",
+      "Finalize()"
+    ],
+    "correct": 0,
+    "explanation": "Les bindings sont automatiquement nettoyés après la fin de run()."
+  },
+  {
+    "id": "OCP21-SV-039",
+    "theme": "Scoped Values",
+    "theme_label": "Structure interne",
+    "difficulty": "hard",
+    "question": "Les valeurs sont-elles stockées dans le thread ?",
+    "options": [
+      "Non, dans un contexte séparé",
+      "Oui, comme ThreadLocal",
+      "Oui, dans une map",
+      "Non, dans le tas"
+    ],
+    "correct": 0,
+    "explanation": "Les valeurs sont stockées dans un contexte associé à la portée."
+  },
+  {
+    "id": "OCP21-SV-040",
+    "theme": "Scoped Values",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "Quand utiliser ScopedValue ?",
+    "options": [
+      "Pour des données de contexte immuables",
+      "Pour des données mutables",
+      "Pour des caches",
+      "Pour des compteurs"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est idéal pour le contexte immuable (request ID, user, etc.)."
+  },
+  {
+    "id": "OCP21-SV-041",
+    "theme": "Scoped Values",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "question": "ScopedValue peut-il remplacer tous les ThreadLocal ?",
+    "options": [
+      "Non, seulement pour les données immuables",
+      "Oui, complètement",
+      "Oui, avec adaptation",
+      "Non, jamais"
+    ],
+    "correct": 0,
+    "explanation": "Pour les données mutables, ThreadLocal reste nécessaire."
+  },
+  {
+    "id": "OCP21-SV-042",
+    "theme": "Scoped Values",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "question": "Comment migrer de ThreadLocal à ScopedValue ?",
+    "options": [
+      "Remplacer set()/get() par where().run()",
+      "Remplacer set() par bind()",
+      "Remplacer get() par fetch()",
+      "Changer l'API"
+    ],
+    "correct": 0,
+    "explanation": "La migration nécessite une refonte du code autour de where().run()."
+  },
+  {
+    "id": "OCP21-SV-043",
+    "theme": "Scoped Values",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on utiliser ScopedValue avec des valeurs null ?",
+    "options": [
+      "Oui",
+      "Non, interdit",
+      "Oui, avec Optional",
+      "Oui, avec wrapper"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue accepte les valeurs null."
+  },
+  {
+    "id": "OCP21-SV-044",
+    "theme": "Scoped Values",
+    "theme_label": "Limitations",
+    "difficulty": "hard",
+    "question": "Peut-on avoir un ScopedValue sans valeur par défaut ?",
+    "options": [
+      "Oui, get() lance exception",
+      "Non, valeur par défaut requise",
+      "Oui, retourne null",
+      "Non, impossible"
+    ],
+    "correct": 0,
+    "explanation": "Il n'y a pas de valeur par défaut, get() lance exception."
+  },
+  {
+    "id": "OCP21-SV-045",
+    "theme": "Scoped Values",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "question": "Comment déboguer les ScopedValues ?",
+    "options": [
+      "Stack traces montrent les bindings",
+      "JMX",
+      "Logs",
+      "Impossible"
+    ],
+    "correct": 0,
+    "explanation": "Les stack traces peuvent montrer les bindings actifs."
+  },
+  {
+    "id": "OCP21-SV-046",
+    "theme": "Scoped Values",
+    "theme_label": "Frameworks",
+    "difficulty": "hard",
+    "question": "Les frameworks supportent-ils ScopedValues ?",
+    "options": [
+      "Support croissant",
+      "Non",
+      "Tous supportent",
+      "Uniquement Spring"
+    ],
+    "correct": 0,
+    "explanation": "Le support des frameworks augmente progressivement."
+  },
+  {
+    "id": "OCP21-SV-047",
+    "theme": "Scoped Values",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quand ScopedValues seront-ils finalisés ?",
+    "options": [
+      "Java 22 ou 23",
+      "Java 21",
+      "Java 24",
+      "Déjà finalisés"
+    ],
+    "correct": 0,
+    "explanation": "La finalisation est prévue pour Java 22 ou 23."
+  },
+  {
+    "id": "OCP21-SV-048",
+    "theme": "Scoped Values",
+    "theme_label": "Avenir",
+    "difficulty": "hard",
+    "question": "Quelle évolution est prévue pour ScopedValues ?",
+    "options": [
+      "Bindings persistants",
+      "Suppression",
+      "Stabilisation",
+      "Extension aux records"
+    ],
+    "correct": 0,
+    "explanation": "Des bindings persistants sont en discussion."
+  },
+  {
+    "id": "OCP21-SV-049",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison",
+    "difficulty": "hard",
+    "question": "ScopedValue vs InheritableThreadLocal ?",
+    "options": [
+      "ScopedValue plus sûr",
+      "Identiques",
+      "InheritableThreadLocal plus performant",
+      "ScopedValue plus lent"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue évite les problèmes d'héritage non contrôlé."
+  },
+  {
+    "id": "OCP21-SV-050",
+    "theme": "Scoped Values",
+    "theme_label": "Résumé",
+    "difficulty": "hard",
+    "question": "ScopedValue est-il la solution pour tous les cas ?",
+    "options": [
+      "Non, cas d'usage spécifiques",
+      "Oui, universel",
+      "Non, déprécié",
+      "Oui, recommandé"
+    ],
+    "correct": 0,
+    "explanation": "ScopedValue est idéal pour le contexte immuable, pas pour tout."
+  }
+]

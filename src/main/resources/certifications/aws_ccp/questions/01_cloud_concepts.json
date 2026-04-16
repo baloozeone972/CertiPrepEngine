@@ -1,0 +1,737 @@
+[
+  {
+    "id": "AWS-CCP-001",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud computing ?",
+    "options": [
+      "Livraison de ressources informatiques à la demande",
+      "Des serveurs physiques",
+      "Un type de base de données",
+      "Un langage de programmation"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud computing fournit des ressources informatiques via Internet."
+  },
+  {
+    "id": "AWS-CCP-002",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'IaaS ?",
+    "options": [
+      "Infrastructure as a Service",
+      "Infrastructure as a Software",
+      "Internet as a Service",
+      "Integration as a Service"
+    ],
+    "correct": 0,
+    "explanation": "IaaS fournit des serveurs, stockage et réseaux virtualisés."
+  },
+  {
+    "id": "AWS-CCP-003",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le PaaS ?",
+    "options": [
+      "Platform as a Service",
+      "Platform as a Software",
+      "Product as a Service",
+      "Process as a Service"
+    ],
+    "correct": 0,
+    "explanation": "PaaS fournit une plateforme pour développer et déployer des applications."
+  },
+  {
+    "id": "AWS-CCP-004",
+    "theme": "Cloud Concepts",
+    "theme_label": "Définitions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le SaaS ?",
+    "options": [
+      "Software as a Service",
+      "Software as a System",
+      "Service as a Software",
+      "Security as a Service"
+    ],
+    "correct": 0,
+    "explanation": "SaaS fournit des applications logicielles via Internet."
+  },
+  {
+    "id": "AWS-CCP-005",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud public ?",
+    "options": [
+      "Ressources partagées via Internet",
+      "Ressources privées",
+      "Ressources sur site",
+      "Ressources hybrides"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud public est accessible à tous via Internet."
+  },
+  {
+    "id": "AWS-CCP-006",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud privé ?",
+    "options": [
+      "Ressources dédiées à une organisation",
+      "Ressources partagées",
+      "Ressources publiques",
+      "Ressources temporaires"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud privé est dédié à une seule organisation."
+  },
+  {
+    "id": "AWS-CCP-007",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le cloud hybride ?",
+    "options": [
+      "Combinaison de cloud public et privé",
+      "Un seul type de cloud",
+      "Un cloud régional",
+      "Un cloud local"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud hybride combine cloud public et privé."
+  },
+  {
+    "id": "AWS-CCP-008",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'élasticité dans le cloud ?",
+    "options": [
+      "Capacité à s'adapter à la charge",
+      "Capacité à stocker des données",
+      "Capacité à sécuriser",
+      "Capacité à sauvegarder"
+    ],
+    "correct": 0,
+    "explanation": "L'élasticité permet d'ajuster les ressources automatiquement."
+  },
+  {
+    "id": "AWS-CCP-009",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que le pay-as-you-go ?",
+    "options": [
+      "Payer uniquement ce qu'on utilise",
+      "Payer à l'avance",
+      "Payer un abonnement fixe",
+      "Payer à l'année"
+    ],
+    "correct": 0,
+    "explanation": "Pay-as-you-go signifie payer uniquement pour les ressources consommées."
+  },
+  {
+    "id": "AWS-CCP-010",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'économie d'échelle ?",
+    "options": [
+      "Coût réduit par unité avec le volume",
+      "Coût augmenté avec le volume",
+      "Coût fixe",
+      "Coût variable"
+    ],
+    "correct": 0,
+    "explanation": "Plus on utilise de ressources, plus le coût unitaire diminue."
+  },
+  {
+    "id": "AWS-CCP-011",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que la haute disponibilité ?",
+    "options": [
+      "Système accessible sans interruption",
+      "Système rapide",
+      "Système économique",
+      "Système sécurisé"
+    ],
+    "correct": 0,
+    "explanation": "La haute disponibilité garantit l'accès continu aux applications."
+  },
+  {
+    "id": "AWS-CCP-012",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que la tolérance aux pannes ?",
+    "options": [
+      "Capacité à continuer malgré les pannes",
+      "Absence de pannes",
+      "Prévention des pannes",
+      "Correction automatique"
+    ],
+    "correct": 0,
+    "explanation": "La tolérance aux pannes permet de fonctionner malgré des défaillances."
+  },
+  {
+    "id": "AWS-CCP-013",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que la scalabilité horizontale ?",
+    "options": [
+      "Ajouter plus d'instances",
+      "Augmenter la puissance des instances",
+      "Ajouter du stockage",
+      "Augmenter la mémoire"
+    ],
+    "correct": 0,
+    "explanation": "La scalabilité horizontale ajoute des instances supplémentaires."
+  },
+  {
+    "id": "AWS-CCP-014",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que la scalabilité verticale ?",
+    "options": [
+      "Augmenter la puissance des instances",
+      "Ajouter plus d'instances",
+      "Ajouter des zones",
+      "Ajouter des régions"
+    ],
+    "correct": 0,
+    "explanation": "La scalabilité verticale augmente la taille des instances."
+  },
+  {
+    "id": "AWS-CCP-015",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "question": "De quoi AWS est responsable dans le modèle de responsabilité partagée ?",
+    "options": [
+      "Sécurité du cloud",
+      "Sécurité dans le cloud",
+      "Données des clients",
+      "Applications des clients"
+    ],
+    "correct": 0,
+    "explanation": "AWS est responsable de la sécurité DU cloud (matériel, réseau, hyperviseur)."
+  },
+  {
+    "id": "AWS-CCP-016",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "question": "De quoi le client est responsable dans le modèle de responsabilité partagée ?",
+    "options": [
+      "Sécurité dans le cloud",
+      "Sécurité du cloud",
+      "Matériel AWS",
+      "Réseau AWS"
+    ],
+    "correct": 0,
+    "explanation": "Le client est responsable de la sécurité DANS le cloud (données, OS, applications)."
+  },
+  {
+    "id": "AWS-CCP-017",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "medium",
+    "question": "Qui est responsable des mises à jour du système d'exploitation sur EC2 ?",
+    "options": [
+      "Le client",
+      "AWS",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
+    "correct": 0,
+    "explanation": "Sur EC2 (IaaS), le client gère le système d'exploitation."
+  },
+  {
+    "id": "AWS-CCP-018",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "medium",
+    "question": "Qui est responsable des mises à jour sur RDS ?",
+    "options": [
+      "AWS",
+      "Le client",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
+    "correct": 0,
+    "explanation": "AWS gère les mises à jour de RDS (PaaS)."
+  },
+  {
+    "id": "AWS-CCP-019",
+    "theme": "Cloud Concepts",
+    "theme_label": "Zones de disponibilité",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une Availability Zone (AZ) ?",
+    "options": [
+      "Un centre de données distinct",
+      "Une région",
+      "Un serveur",
+      "Un réseau"
+    ],
+    "correct": 0,
+    "explanation": "Une AZ est un centre de données physique distinct."
+  },
+  {
+    "id": "AWS-CCP-020",
+    "theme": "Cloud Concepts",
+    "theme_label": "Zones de disponibilité",
+    "difficulty": "easy",
+    "question": "À quoi sert d'utiliser plusieurs AZ ?",
+    "options": [
+      "Haute disponibilité",
+      "Économies",
+      "Performance",
+      "Stockage"
+    ],
+    "correct": 0,
+    "explanation": "Multi-AZ garantit la haute disponibilité et la tolérance aux pannes."
+  },
+  {
+    "id": "AWS-CCP-021",
+    "theme": "Cloud Concepts",
+    "theme_label": "Régions",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'une région AWS ?",
+    "options": [
+      "Un regroupement géographique d'AZ",
+      "Un centre de données",
+      "Un serveur",
+      "Un réseau"
+    ],
+    "correct": 0,
+    "explanation": "Une région est un ensemble d'Availability Zones dans une zone géographique."
+  },
+  {
+    "id": "AWS-CCP-022",
+    "theme": "Cloud Concepts",
+    "theme_label": "Régions",
+    "difficulty": "medium",
+    "question": "Pourquoi choisir une région spécifique ?",
+    "options": [
+      "Latence, conformité, coût",
+      "Toujours la même",
+      "Au hasard",
+      "Par défaut"
+    ],
+    "correct": 0,
+    "explanation": "Le choix de la région affecte la latence, la conformité et les coûts."
+  },
+  {
+    "id": "AWS-CCP-023",
+    "theme": "Cloud Concepts",
+    "theme_label": "Edge locations",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un edge location ?",
+    "options": [
+      "Un site de cache CloudFront",
+      "Une région",
+      "Une AZ",
+      "Un centre de données"
+    ],
+    "correct": 0,
+    "explanation": "Les edge locations sont des points de présence pour le cache CloudFront."
+  },
+  {
+    "id": "AWS-CCP-024",
+    "theme": "Cloud Concepts",
+    "theme_label": "Edge locations",
+    "difficulty": "medium",
+    "question": "Quel service utilise les edge locations ?",
+    "options": [
+      "CloudFront",
+      "EC2",
+      "S3",
+      "RDS"
+    ],
+    "correct": 0,
+    "explanation": "CloudFront utilise les edge locations pour le CDN."
+  },
+  {
+    "id": "AWS-CCP-025",
+    "theme": "Cloud Concepts",
+    "theme_label": "Edge locations",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que AWS WAF peut utiliser ?",
+    "options": [
+      "Edge locations",
+      "EC2 instances",
+      "S3 buckets",
+      "RDS databases"
+    ],
+    "correct": 0,
+    "explanation": "WAF peut être déployé sur les edge locations de CloudFront."
+  },
+  {
+    "id": "AWS-CCP-026",
+    "theme": "Cloud Concepts",
+    "theme_label": "Comparaison",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre une région et une AZ ?",
+    "options": [
+      "Région = ensemble d'AZ, AZ = centre de données",
+      "Région = centre de données, AZ = ensemble de régions",
+      "Identiques",
+      "Opposés"
+    ],
+    "correct": 0,
+    "explanation": "Une région contient plusieurs AZ, chaque AZ est un centre de données."
+  },
+  {
+    "id": "AWS-CCP-027",
+    "theme": "Cloud Concepts",
+    "theme_label": "Comparaison",
+    "difficulty": "hard",
+    "question": "Combien d'AZ minimum par région ?",
+    "options": ["2", "1", "3", "4"],
+    "correct": 0,
+    "explanation": "Chaque région AWS a au moins 2 Availability Zones."
+  },
+  {
+    "id": "AWS-CCP-028",
+    "theme": "Cloud Concepts",
+    "theme_label": "Bénéfices",
+    "difficulty": "easy",
+    "question": "Quel est un bénéfice du cloud ?",
+    "options": [
+      "Agilité et rapidité",
+      "Coûts fixes",
+      "Matériel dédié",
+      "Maintenance manuelle"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud permet un déploiement rapide et flexible."
+  },
+  {
+    "id": "AWS-CCP-029",
+    "theme": "Cloud Concepts",
+    "theme_label": "Bénéfices",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que l'innovation accélérée ?",
+    "options": [
+      "Développer plus vite grâce au cloud",
+      "Développer plus lentement",
+      "Ne pas innover",
+      "Innovation matérielle"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud permet d'itérer rapidement sur les idées."
+  },
+  {
+    "id": "AWS-CCP-030",
+    "theme": "Cloud Concepts",
+    "theme_label": "Bénéfices",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que la portée mondiale ?",
+    "options": [
+      "Déployer partout dans le monde",
+      "Déployer localement",
+      "Déployer dans un pays",
+      "Déployer en Europe"
+    ],
+    "correct": 0,
+    "explanation": "AWS permet de déployer des applications dans le monde entier."
+  },
+  {
+    "id": "AWS-CCP-031",
+    "theme": "Cloud Concepts",
+    "theme_label": "Bénéfices",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que l'économie de coûts ?",
+    "options": [
+      "Éviter l'achat de matériel",
+      "Augmenter les coûts",
+      "Achat de licences",
+      "Maintenance coûteuse"
+    ],
+    "correct": 0,
+    "explanation": "Le cloud supprime l'investissement initial en matériel."
+  },
+  {
+    "id": "AWS-CCP-032",
+    "theme": "Cloud Concepts",
+    "theme_label": "Bénéfices",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la résilience ?",
+    "options": [
+      "Capacité à récupérer après un incident",
+      "Capacité à prévenir les incidents",
+      "Capacité à ignorer les incidents",
+      "Capacité à créer des incidents"
+    ],
+    "correct": 0,
+    "explanation": "La résilience est la capacité à se remettre des défaillances."
+  },
+  {
+    "id": "AWS-CCP-033",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cas d'usage",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un exemple de SaaS ?",
+    "options": [
+      "Amazon WorkSpaces",
+      "EC2",
+      "S3",
+      "VPC"
+    ],
+    "correct": 0,
+    "explanation": "WorkSpaces est un bureau virtuel (SaaS)."
+  },
+  {
+    "id": "AWS-CCP-034",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cas d'usage",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un exemple de PaaS ?",
+    "options": [
+      "Elastic Beanstalk",
+      "EC2",
+      "S3",
+      "VPC"
+    ],
+    "correct": 0,
+    "explanation": "Elastic Beanstalk est un PaaS pour déployer des applications."
+  },
+  {
+    "id": "AWS-CCP-035",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cas d'usage",
+    "difficulty": "easy",
+    "question": "Quel service AWS est un exemple d'IaaS ?",
+    "options": [
+      "EC2",
+      "Elastic Beanstalk",
+      "WorkSpaces",
+      "S3"
+    ],
+    "correct": 0,
+    "explanation": "EC2 est un service IaaS (machines virtuelles)."
+  },
+  {
+    "id": "AWS-CCP-036",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cloud Migration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le 'lift and shift' ?",
+    "options": [
+      "Migration sans modification",
+      "Migration avec refonte",
+      "Migration partielle",
+      "Migration annulée"
+    ],
+    "correct": 0,
+    "explanation": "Lift and shift migre les applications telles quelles vers le cloud."
+  },
+  {
+    "id": "AWS-CCP-037",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cloud Migration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la 'replatforming' ?",
+    "options": [
+      "Modifications mineures pour le cloud",
+      "Refonte complète",
+      "Migration sans changement",
+      "Abandon de l'application"
+    ],
+    "correct": 0,
+    "explanation": "Replatforming adapte légèrement l'application pour le cloud."
+  },
+  {
+    "id": "AWS-CCP-038",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cloud Migration",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le 'refactoring' ?",
+    "options": [
+      "Refonte complète pour le cloud",
+      "Migration directe",
+      "Petites modifications",
+      "Abandon"
+    ],
+    "correct": 0,
+    "explanation": "Le refactoring réécrit l'application en natif cloud."
+  },
+  {
+    "id": "AWS-CCP-039",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Combien y a-t-il de piliers dans le Well-Architected Framework ?",
+    "options": ["6", "5", "4", "7"],
+    "correct": 0,
+    "explanation": "6 piliers : Excellence opérationnelle, Sécurité, Fiabilité, Performance, Optimisation des coûts, Durabilité."
+  },
+  {
+    "id": "AWS-CCP-040",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Que couvre le pilier Fiabilité ?",
+    "options": [
+      "Récupération après panne",
+      "Optimisation des coûts",
+      "Sécurité",
+      "Performance"
+    ],
+    "correct": 0,
+    "explanation": "Le pilier Fiabilité traite de la récupération après panne."
+  },
+  {
+    "id": "AWS-CCP-041",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Que couvre le pilier Sécurité ?",
+    "options": [
+      "Protection des données",
+      "Optimisation des coûts",
+      "Performance",
+      "Fiabilité"
+    ],
+    "correct": 0,
+    "explanation": "Le pilier Sécurité couvre la protection des données et l'infrastructure."
+  },
+  {
+    "id": "AWS-CCP-042",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Que couvre le pilier Optimisation des coûts ?",
+    "options": [
+      "Réduction des dépenses",
+      "Sécurité",
+      "Performance",
+      "Fiabilité"
+    ],
+    "correct": 0,
+    "explanation": "Le pilier Optimisation des coûts aide à maîtriser les dépenses."
+  },
+  {
+    "id": "AWS-CCP-043",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Que couvre le pilier Performance ?",
+    "options": [
+      "Efficacité des ressources",
+      "Sécurité",
+      "Coûts",
+      "Fiabilité"
+    ],
+    "correct": 0,
+    "explanation": "Le pilier Performance concerne l'utilisation efficace des ressources."
+  },
+  {
+    "id": "AWS-CCP-044",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Que couvre le pilier Excellence opérationnelle ?",
+    "options": [
+      "Opérations et monitoring",
+      "Sécurité",
+      "Performance",
+      "Coûts"
+    ],
+    "correct": 0,
+    "explanation": "L'excellence opérationnelle couvre le déploiement et la surveillance."
+  },
+  {
+    "id": "AWS-CCP-045",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Well-Architected",
+    "difficulty": "hard",
+    "question": "Quel est le 6ème pilier ajouté récemment ?",
+    "options": [
+      "Durabilité",
+      "Performance",
+      "Fiabilité",
+      "Sécurité"
+    ],
+    "correct": 0,
+    "explanation": "La durabilité est le 6ème pilier (sustainability)."
+  },
+  {
+    "id": "AWS-CCP-046",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Free Tier",
+    "difficulty": "easy",
+    "question": "Quels services sont inclus dans le Free Tier ?",
+    "options": [
+      "EC2, S3, RDS (limités)",
+      "Tous les services",
+      "Aucun",
+      "Seulement EC2"
+    ],
+    "correct": 0,
+    "explanation": "Le Free Tier inclut EC2, S3, RDS, Lambda, etc. avec des limites."
+  },
+  {
+    "id": "AWS-CCP-047",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Free Tier",
+    "difficulty": "medium",
+    "question": "Combien de temps dure le Free Tier ?",
+    "options": ["12 mois", "6 mois", "24 mois", "Toujours"],
+    "correct": 0,
+    "explanation": "Le Free Tier dure 12 mois pour les nouveaux comptes AWS."
+  },
+  {
+    "id": "AWS-CCP-048",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Free Tier",
+    "difficulty": "hard",
+    "question": "Quelle est la limite EC2 du Free Tier ?",
+    "options": [
+      "750 heures/ mois t2.micro",
+      "100 heures/ mois",
+      "Illimité",
+      "500 heures/ mois"
+    ],
+    "correct": 0,
+    "explanation": "750 heures par mois d'instance t2.micro."
+  },
+  {
+    "id": "AWS-CCP-049",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Free Tier",
+    "difficulty": "hard",
+    "question": "Quelle est la limite S3 du Free Tier ?",
+    "options": [
+      "5 Go de stockage",
+      "10 Go",
+      "1 Go",
+      "50 Go"
+    ],
+    "correct": 0,
+    "explanation": "5 Go de stockage S3 standard."
+  },
+  {
+    "id": "AWS-CCP-050",
+    "theme": "Cloud Concepts",
+    "theme_label": "AWS Free Tier",
+    "difficulty": "hard",
+    "question": "Quelle est la limite Lambda du Free Tier ?",
+    "options": [
+      "1 million de requêtes/ mois",
+      "100 000 requêtes/ mois",
+      "10 millions/ mois",
+      "Illimité"
+    ],
+    "correct": 0,
+    "explanation": "1 million de requêtes Lambda par mois."
+  }
+]

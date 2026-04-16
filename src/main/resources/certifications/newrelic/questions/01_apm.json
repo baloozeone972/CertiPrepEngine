@@ -1,0 +1,32 @@
+[
+  {
+    "id": "NR-01-001",
+    "theme": "APM",
+    "theme_label": "APM New Relic",
+    "difficulty": "easy",
+    "question": "Quel langage de requête utilise New Relic ?",
+    "options": [
+      "NRQL",
+      "SQL",
+      "PromQL",
+      "LogQL"
+    ],
+    "correct": 0,
+    "explanation": "NRQL (New Relic Query Language) est le langage de requête New Relic."
+  },
+  {
+    "id": "NR-01-002",
+    "theme": "APM",
+    "theme_label": "APM New Relic",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'une 'transaction' dans New Relic APM ?",
+    "options": [
+      "Une requête web ou une tâche",
+      "Un appel de base de données",
+      "Une erreur applicative",
+      "Un log"
+    ],
+    "correct": 0,
+    "explanation": "Une transaction représente une opération complète (web request, background job)."
+  }
+]
