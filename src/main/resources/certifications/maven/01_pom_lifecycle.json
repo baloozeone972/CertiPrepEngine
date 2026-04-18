@@ -1,0 +1,172 @@
+[
+  {
+    "id": "MAV-PL-001",
+    "theme": "Architecture POM & Modèles",
+    "theme_label": "POM Structure & Inheritance",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage dans Maven :",
+    "options": [
+      "Un projet peut hériter d'un parent via la balise <parent> dans le pom.xml.",
+      "L'héritage et l'agrégation (multi-module) sont strictement identiques dans Maven.",
+      "Les propriétés définies dans le POM parent sont automatiquement disponibles dans les enfants.",
+      "La balise <dependencyManagement> du parent centralise les versions sans les importer directement."
+    ],
+    "correct_multiple": [0, 2, 3],
+    "correct": 0,
+    "explanation": "L'option A est exacte : `<parent>` déclare la relation d'héritage. L'option B est fausse : l'agrégation ( `<modules>` ) orchestre le build, l'héritage partage la config, ce sont des concepts distincts. L'option C est vraie : les `<properties>` sont propagées. L'option D est correcte : `dependencyManagement` fixe les versions/métadonnées sans ajouter la dépendance au classpath des enfants."
+  },
+  {
+    "id": "MAV-PL-002",
+    "theme": "Architecture POM & Modèles",
+    "theme_label": "Coordinates & GAV",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle combinaison identifie un artefact Maven de manière unique dans un repository ?",
+    "options": [
+      "groupId + artifactId",
+      "groupId + artifactId + version",
+      "artifactId + version + packaging",
+      "repositoryUrl + artifactId"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Le triplet GAV (GroupId, ArtifactId, Version) est l'identifiant unique absolu. Le packaging influence l'extension du fichier, mais ne change pas l'identité de l'artefact. Le repository est un lieu de stockage, pas un identifiant."
+  },
+  {
+    "id": "MAV-PL-003",
+    "theme": "Lifecycles & Phases",
+    "theme_label": "Default Lifecycle Binding",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la phase `verify` du lifecycle default ?",
+    "options": [
+      "Elle exécute les tests d'intégration (failsafe:verify par défaut).",
+      "Elle est exécutée avant la phase `install`.",
+      "Elle nettoie le répertoire `target/` automatiquement.",
+      "Elle compile les sources Java principales."
+    ],
+    "correct_multiple": [0, 1],
+    "correct": 0,
+    "explanation": "L'option A est exacte : `verify` valide les résultats des tests d'intégration et des contrôles qualité. L'option B est vraie : l'ordre est `compile → test → package → verify → install`. L'option C est fausse : le nettoyage relève du lifecycle `clean`. L'option D est incorrecte : la compilation se fait dans la phase `compile`."
+  },
+  {
+    "id": "MAV-PL-004",
+    "theme": "Lifecycles & Phases",
+    "theme_label": "Phase Execution Order",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande exécute la compilation, les tests unitaires et empaquette l'artefact sans l'installer localement ?",
+    "options": [
+      "mvn package",
+      "mvn install",
+      "mvn deploy",
+      "mvn compile"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`mvn package` exécute toutes les phases jusqu'à `package` (compile, test, jar/war). `install` copie dans le repo local, `deploy` vers un repo distant, `compile` s'arrête avant les tests."
+  },
+  {
+    "id": "MAV-PL-005",
+    "theme": "Dépendances & Repositories",
+    "theme_label": "Dependency Scope",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes sur le scope `provided` :",
+    "options": [
+      "La dépendance est disponible à la compilation mais pas empaquetée dans l'artefact final.",
+      "Elle est obligatoire pour les artefacts de type `test-jar`.",
+      "Elle est typiquement utilisée pour les APIs de conteneurs (Servlet, Jakarta EE).",
+      "Elle est automatiquement promue au scope `compile` si absente du classpath runtime."
+    ],
+    "correct_multiple": [0, 2],
+    "correct": 0,
+    "explanation": "L'option A est vraie : `provided` indique que le runtime (ex: serveur app) fournira la lib. L'option B est fausse : `test` est le scope des tests. L'option C est exacte : c'est le cas d'usage standard (Servlet API). L'option D est incorrecte : Maven ne promeut jamais les scopes automatiquement."
+  },
+  {
+    "id": "MAV-PL-006",
+    "theme": "Dépendances & Repositories",
+    "theme_label": "Transitive Dependencies",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle règle Maven résout un conflit de version lorsqu'une dépendance transitive apparaît à deux niveaux différents dans le graphe ?",
+    "options": [
+      "La version la plus récente est toujours sélectionnée.",
+      "La première déclaration dans le POM gagne.",
+      "La dépendance la plus proche du projet (shortest path) est retenue.",
+      "Maven lève une erreur de compilation obligatoire."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Maven utilise la règle 'nearest definition' (chemin le plus court). En cas d'égalité de distance, la première déclaration dans le POM est prioritaire. Il ne choisit pas systématiquement la plus récente et ne bloque pas la compilation."
+  },
+  {
+    "id": "MAV-PL-007",
+    "theme": "Plugins & Goals",
+    "theme_label": "Plugin Configuration",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les méthodes valides pour configurer un plugin dans Maven :",
+    "options": [
+      "Via la balise <configuration> dans <build><plugins>.",
+      "En utilisant des propriétés système avec le préfixe du plugin.",
+      "Directement dans la ligne de commande avec -D.",
+      "En modifiant le fichier `settings.xml` global du système."
+    ],
+    "correct_multiple": [0, 1, 2],
+    "correct": 0,
+    "explanation": "L'option A est la méthode standard. L'option B est vraie : Maven mappe les propriétés `plugin.param=value`. L'option C est exacte : `-Dparam=value` override la config. L'option D est fausse : `settings.xml` gère les repos/proxy/auth, pas la config plugin spécifique."
+  },
+  {
+    "id": "MAV-PL-008",
+    "theme": "Profils & Properties",
+    "theme_label": "Profile Activation",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment activer un profil Maven uniquement sur un système d'exploitation Linux ?",
+    "options": [
+      "<activation><os><family>linux</family></os></activation>",
+      "<activation><property><name>os.name</name><value>Linux</value></property></activation>",
+      "<profile id=\"linux-only\" active=\"true\" />",
+      "mvn -P linux activate-os"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La balise `<activation><os>` permet de filtrer par famille, nom, version ou arch. `family` est insensible à la casse et robuste. L'activation par propriété système est moins fiable. `active=\"true\"` l'active partout. La commande CLI n'existe pas sous cette forme."
+  },
+  {
+    "id": "MAV-PL-009",
+    "theme": "Troubleshooting & Debug",
+    "theme_label": "Dependency Tree Analysis",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les commandes utiles pour analyser les conflits de dépendances :",
+    "options": [
+      "mvn dependency:tree -Dverbose",
+      "mvn help:effective-pom",
+      "mvn dependency:analyze",
+      "mvn clean install -X"
+    ],
+    "correct_multiple": [0, 2],
+    "correct": 0,
+    "explanation": "L'option A est exacte : `-Dverbose` montre les dépendances omises et les conflits. L'option C est vraie : `analyze` détecte les dépendances utilisées/non-déclarées et inversement. L'option B affiche le POM résolu, pas les conflits. L'option D active les logs debug, mais n'analyse pas le graphe."
+  },
+  {
+    "id": "MAV-PL-010",
+    "theme": "Best Practices & Modern Maven",
+    "theme_label": "Reproducible Builds",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle pratique garantit qu'un build Maven produit exactement le même artefact binaire sur différentes machines ?",
+    "options": [
+      "Utiliser des versions SNAPSHOT pour toutes les dépendances.",
+      "Configurer le plugin maven-jar-plugin avec une timestamp fixe.",
+      "Supprimer les métadonnées non déterministes et figer toutes les versions.",
+      "Exécuter `mvn package` avec l'option `--offline` uniquement."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Les builds reproductibles exigent de supprimer les timestamps, les IDs de build aléatoires et de figer les versions (pas de SNAPSHOT, pas de `LATEST`). Le plugin jar-plugin avec timestamp fixe n'est pas la solution standard. `--offline` évite les fetchs mais ne garantit pas la reproductibilité si les sources locales diffèrent."
+  }
+]

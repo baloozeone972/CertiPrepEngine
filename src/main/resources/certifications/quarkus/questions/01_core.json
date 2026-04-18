@@ -95,7 +95,12 @@
     "theme_label": "CDI",
     "difficulty": "easy",
     "question": "Quelle annotation marque un bean CDI ?",
-    "options": ["@ApplicationScoped", "@Component", "@Service", "@Bean"],
+    "options": [
+      "@ApplicationScoped",
+      "@Component",
+      "@Service",
+      "@Bean"
+    ],
     "correct": 0,
     "explanation": "@ApplicationScoped est l'annotation CDI standard pour les beans."
   },
@@ -105,7 +110,12 @@
     "theme_label": "CDI",
     "difficulty": "easy",
     "question": "Comment injecter un bean dans Quarkus ?",
-    "options": ["@Inject", "@Autowired", "@Resource", "@Bean"],
+    "options": [
+      "@Inject",
+      "@Autowired",
+      "@Resource",
+      "@Bean"
+    ],
     "correct": 0,
     "explanation": "@Inject est l'annotation CDI standard pour l'injection."
   },
@@ -535,7 +545,12 @@
     "theme_label": "Metrics",
     "difficulty": "hard",
     "question": "Quel endpoint expose les métriques ?",
-    "options": ["/metrics", "/q/metrics", "/actuator/metrics", "/metrics/prometheus"],
+    "options": [
+      "/metrics",
+      "/q/metrics",
+      "/actuator/metrics",
+      "/metrics/prometheus"
+    ],
     "correct": 1,
     "explanation": "/q/metrics est l'endpoint par défaut dans Quarkus."
   },
@@ -560,7 +575,12 @@
     "theme_label": "OpenAPI",
     "difficulty": "hard",
     "question": "Quel endpoint expose la documentation OpenAPI ?",
-    "options": ["/openapi", "/q/openapi", "/api/openapi", "/docs"],
+    "options": [
+      "/openapi",
+      "/q/openapi",
+      "/api/openapi",
+      "/docs"
+    ],
     "correct": 1,
     "explanation": "/q/openapi est l'endpoint par défaut."
   },
@@ -728,5 +748,935 @@
     ],
     "correct": 0,
     "explanation": "@Scheduled permet de scheduler des méthodes."
-  }
-]
+  },
+  {
+    "id": "QRK-QC-001",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant CDI (Contexts and Dependency Injection) dans Quarkus :",
+    "options": [
+      "CDI est nécessaire pour toutes les applications Java.",
+      "Quarkus offre une intégration optimisée de CDI pour un meilleur performances.",
+      "CDI n'est pas compatible avec les applications cloud-native.",
+      "Quarkus permet d'utiliser CDI sans avoir besoin de dépendances supplémentaires."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Quarkus offre une intégration optimisée de CDI pour un meilleur performances. CDI n'est pas nécessaire pour toutes les applications Java. Quarkus permet d'utiliser CDI sans avoir besoin de dépendances supplémentaires."
+  },
+  {
+    "id": "QRK-QC-002",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur de la compilation native dans Quarkus ?",
+    "options": [
+      "Amélioration significative des performances et du démarrage rapide",
+      "Réduction de la taille de l'application",
+      "Compatibilité avec tous les systèmes d'exploitation",
+      "Facilité de mise à jour des dépendances"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Amélioration significative des performances et du démarrage rapide."
+  },
+  {
+    "id": "QRK-QC-004",
+    "theme": "Quarkus Core",
+    "theme_label": "Testing",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le testing dans Quarkus :",
+    "options": [
+      "Quarkus ne supporte que les tests unitaires.",
+      "Le testing est intégré et simplifié dans Quarkus.",
+      "Quarkus nécessite des outils de testing externes.",
+      "Le testing est uniquement possible dans un environnement cloud-native."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Le testing est intégré et simplifié dans Quarkus. Quarkus nécessite des outils de testing externes."
+  },
+  {
+    "id": "QRK-QC-005",
+    "theme": "Quarkus Core",
+    "theme_label": "Kafka",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'intégration de Kafka dans Quarkus ?",
+    "options": [
+      "Intégration native avec des annotations simplifiant la gestion des messages Kafka.",
+      "Aucune intégration particulière, il faut utiliser un client Kafka externe.",
+      "Intégration via une bibliothèque tierce uniquement.",
+      "Intégration avec des outils de gestion Kafka externes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Intégration native avec des annotations simplifiant la gestion des messages Kafka."
+  },
+  {
+    "id": "QRK-QC-005",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le CDI (Contexts and Dependency Injection) dans Quarkus :",
+    "options": [
+      "Le CDI est nécessaire pour toutes les applications Quarkus.",
+      "Les beans CDI peuvent être déclarés en utilisant des annotations spécifiques à Quarkus.",
+      "Le CDI permet de gérer les dépendances entre les composants d'une application.",
+      "Tous les beans CDI doivent être marqués avec l'annotation @ApplicationScoped.",
+      "Le CDI est uniquement disponible dans les applications web Quarkus."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les beans CDI peuvent être déclarés en utilisant des annotations spécifiques à Quarkus (1). Le CDI permet de gérer les dépendances entre les composants d'une application (2). Tous les beans CDI doivent être marqués avec l'annotation @ApplicationScoped n'est pas correct (3). Le CDI est disponible dans toutes les applications Quarkus, pas uniquement les web (4). Le CDI n'est pas nécessaire pour toutes les applications Quarkus (0)."
+  },
+  {
+    "id": "QRK-QC-006",
+    "theme": "Quarkus Core",
+    "theme_label": "Commandes",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Quarkus permet de lancer une application en mode développement ?",
+    "options": [
+      "quarkus dev",
+      "quarkus build",
+      "quarkus run",
+      "quarkus deploy"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande quarkus dev permet de lancer une application en mode développement (0). La commande quarkus build est utilisée pour construire l'application (1). La commande quarkus run est utilisée pour exécuter une application construite (2). La commande quarkus deploy est utilisée pour déployer l'application sur un serveur (3)."
+  },
+  {
+    "id": "QRK-QC-007",
+    "theme": "Quarkus Core",
+    "theme_label": "Configuration",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration de Quarkus :",
+    "options": [
+      "La configuration peut être définie via des fichiers properties.",
+      "Les propriétés peuvent être injectées dans les beans CDI en utilisant l'annotation @ConfigProperty.",
+      "La configuration peut être héritée des applications parentes dans un projet multi-module.",
+      "Toutes les propriétés de configuration doivent être définies dans le fichier application.properties.",
+      "La configuration ne peut pas être modifiée à runtime."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La configuration peut être définie via des fichiers properties (0). Les propriétés peuvent être injectées dans les beans CDI en utilisant l'annotation @ConfigProperty (1). La configuration peut être héritée des applications parentes dans un projet multi-module (2). Toutes les propriétés de configuration doivent être définies dans le fichier application.properties n'est pas correct (3). La configuration peut être modifiée à runtime dans certains cas (4)."
+  },
+  {
+    "id": "QRK-QC-008",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la compilation native de Quarkus :",
+    "options": [
+      "La compilation native est disponible uniquement pour les applications web.",
+      "GraalVM est nécessaire pour la compilation native de Quarkus.",
+      "La compilation native peut améliorer les performances des applications.",
+      "Toutes les dépendances doivent être compilées en mode native pour la compilation native de Quarkus.",
+      "La compilation native n'est pas compatible avec les applications qui utilisent des bibliothèques non natives."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "GraalVM est nécessaire pour la compilation native de Quarkus (1). La compilation native peut améliorer les performances des applications (2). La compilation native n'est pas nécessairement disponible uniquement pour les applications web (0). Toutes les dépendances doivent être compilées en mode native pour la compilation native de Quarkus n'est pas correct (3). La compilation native est compatible avec les applications qui utilisent des bibliothèques non natives (4)."
+  },
+  {
+    "id": "QRK-QC-009",
+    "theme": "Quarkus Core",
+    "theme_label": "Dev Services",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité de Quarkus permet d'automatiser la configuration et le démarrage des services de développement comme la base de données ?",
+    "options": [
+      "Dev Services",
+      "Hot Reload",
+      "Health Checks",
+      "Metrics"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dev Services est la fonctionnalité de Quarkus qui permet d'automatiser la configuration et le démarrage des services de développement comme la base de données (0). Hot Reload permet de recharger automatiquement les modifications du code sans redémarrer l'application (1). Health Checks permettent de vérifier la santé des composants de l'application (2). Metrics permettent de collecter et d'exposer des métriques sur les performances de l'application (3)."
+  },
+  {
+    "id": "QRK-QC-010",
+    "theme": "Quarkus Core",
+    "theme_label": "Logging",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le logging dans Quarkus :",
+    "options": [
+      "Le logging est désactivé par défaut.",
+      "Quarkus utilise SLF4J pour le logging.",
+      "Le logging peut être configuré via un fichier properties.",
+      "Il est possible de personnaliser le format du log.",
+      "Le logging n'est pas compatible avec Kafka."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "SLF4J est utilisé pour le logging dans Quarkus. Le logging peut être configuré via un fichier properties et il est compatible avec Kafka. Le logging n'est pas désactivé par défaut."
+  },
+  {
+    "id": "QRK-QC-011",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la compilation native avec Quarkus ?",
+    "options": [
+      "Amélioration des performances",
+      "Réduction de la taille de l'application",
+      "Compatibilité avec tous les systèmes d'exploitation",
+      "Facilité de déploiement"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La compilation native avec Quarkus améliore les performances de l'application."
+  },
+  {
+    "id": "QRK-QC-012",
+    "theme": "Quarkus Core",
+    "theme_label": "Extensions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les extensions dans Quarkus :",
+    "options": [
+      "Les extensions sont ajoutées via des dépendances Maven.",
+      "Toutes les extensions sont disponibles par défaut.",
+      "Les extensions peuvent être configurées via des fichiers properties.",
+      "Il est possible de créer ses propres extensions.",
+      "Les extensions ne sont pas compatibles avec les autres frameworks Java."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les extensions sont ajoutées via des dépendances Maven. Les extensions peuvent être configurées via des fichiers properties et il est possible de créer ses propres extensions."
+  },
+  {
+    "id": "QRK-QC-013",
+    "theme": "Quarkus Core",
+    "theme_label": "Health",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour vérifier le statut de santé d'une application Quarkus en mode développement ?",
+    "options": [
+      "curl http://localhost:8080/health",
+      "curl http://localhost:8080/q/health/live",
+      "curl http://localhost:8080/q/health/ready",
+      "curl http://localhost:8080/q/dev/live"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "La commande pour vérifier le statut de santé d'une application Quarkus en mode développement est curl http://localhost:8080/q/dev/live."
+  },
+  {
+    "id": "QRK-QC-014",
+    "theme": "Quarkus Core",
+    "theme_label": "Testing",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le testing dans Quarkus :",
+    "options": [
+      "Quarkus utilise JUnit pour les tests unitaires.",
+      "Il est possible de tester des microservices individuellement.",
+      "Les tests peuvent être exécutés en mode développement.",
+      "Il est nécessaire de configurer un serveur d'application pour les tests.",
+      "Les tests ne sont pas compatibles avec le développement en mode native."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Quarkus utilise JUnit pour les tests unitaires. Il est possible de tester des microservices individuellement et les tests peuvent être exécutés en mode développement."
+  },
+  {
+    "id": "QRK-QC-015",
+    "theme": "Quarkus Core",
+    "theme_label": "Native",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la compilation native de Quarkus :",
+    "options": [
+      "Quarkus utilise GraalVM pour la compilation native.",
+      "La compilation native augmente le temps de démarrage de l'application.",
+      "Quarkus génère des images JVM traditionnelles pour la compilation native.",
+      "La compilation native réduit le temps de démarrage de l'application."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "A est correct car Quarkus utilise GraalVM pour la compilation native. B est incorrect car la compilation native réduit le temps de démarrage. C est incorrect car Quarkus génère des images binaires natives, pas des images JVM traditionnelles. D est correct car la compilation native réduit le temps de démarrage."
+  },
+  {
+    "id": "QRK-QC-016",
+    "theme": "Quarkus Core",
+    "theme_label": "CDI",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'annotation CDI utilisée pour déclarer un bean ?",
+    "options": [
+      "@Inject",
+      "@Bean",
+      "@Component",
+      "@Service"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "@Inject est l'annotation CDI utilisée pour déclarer un bean. @Bean, @Component et @Service sont des annotations Spring utilisées pour déclarer des beans."
+  },
+  {
+    "id": "QRK-QC-017",
+    "theme": "Quarkus Core",
+    "theme_label": "Logging",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration du logging dans Quarkus :",
+    "options": [
+      "Quarkus utilise SLF4J pour le logging.",
+      "La configuration du logging est réalisée dans un fichier application.properties.",
+      "Quarkus ne supporte pas le logging personnalisé.",
+      "La configuration du logging peut être réalisée dans un fichier application.yml."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "A est correct car Quarkus utilise SLF4J pour le logging. B est correct car la configuration du logging peut être réalisée dans un fichier application.properties ou application.yml. C est incorrect car Quarkus supporte le logging personnalisé via des loggers spécifiques. D est correct car la configuration du logging peut être réalisée dans un fichier application.yml."
+  },
+    {
+      "id": "QUARK-FND-001",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Injection de dépendances",
+      "difficulty": "easy",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle annotation permet d'injecter un bean CDI dans une ressource JAX‑RS Quarkus ?",
+      "options": ["@Inject", "@Autowired", "@Resource", "@EJB"],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Quarkus utilise CDI (Contexts and Dependency Injection) ; l'annotation standard pour l'injection est @Inject. @Autowired est propre à Spring, @Resource est lié à Java EE, @EJB est pour les EJB."
+    },
+    {
+      "id": "QUARK-FND-002",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Configuration",
+      "difficulty": "medium",
+      "type": "MULTI_CHOICE",
+      "question": "Sélectionnez TOUTES les sources de configuration prises en charge par Quarkus.",
+      "options": [
+        "Fichier application.properties",
+        "Fichier application.yml",
+        "Variables d'environnement",
+        "Paramètres système Java",
+        "Base de données de configuration"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 3],
+      "explanation": "Quarkus accepte la configuration via application.properties (A) et application.yml (B) (via l'extension config-yaml). Il lit également les variables d'environnement (C) et les propriétés système (D). Il n'y a pas de source de configuration native en base de données (E)."
+    },
+    {
+      "id": "QUARK-FND-003",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Profils",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment activer le profil 'dev' dans Quarkus au démarrage via la ligne de commande ?",
+      "options": [
+        "-Dquarkus.profile=dev",
+        "-Dquarkus.profiles.active=dev",
+        "-Dspring.profiles.active=dev",
+        "QUARKUS_PROFILE=dev"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "La propriété système `-Dquarkus.profile=dev` active le profil. La variable d'environnement `QUARKUS_PROFILE` fonctionne aussi mais n'est pas une option de ligne de commande Java (c'est une variable d'environnement). L'option A est la plus directe pour la question posée."
+    },
+    {
+      "id": "QUARK-FND-004",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Extensions",
+      "difficulty": "hard",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles sont les DEUX commandes permettant d'ajouter l'extension 'resteasy-reactive' à un projet Quarkus existant avec Maven ?",
+      "options": [
+        "./mvnw quarkus:add-extension -Dextensions=\"resteasy-reactive\"",
+        "./mvnw quarkus:add-extensions -Dextensions=\"resteasy-reactive\"",
+        "./mvnw quarkus:extension -Dadd=\"resteasy-reactive\"",
+        "Modifier manuellement le pom.xml puis exécuter mvn compile",
+        "./mvnw quarkus:add-extension -Dextensions=\"resteasy-reactive-jackson\""
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 4],
+      "explanation": "La commande correcte est `quarkus:add-extension` (A). L'extension `resteasy-reactive-jackson` (E) inclut déjà `resteasy-reactive` et ajoute le support JSON, ce qui est une pratique courante. L'option B a une faute de frappe (add-extensions). L'option C n'existe pas. La modification manuelle (D) fonctionne mais n'est pas une commande Maven."
+    },
+    {
+      "id": "QUARK-FND-005",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Mode dev",
+      "difficulty": "easy",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle commande Maven démarre Quarkus en mode développement avec rechargement à chaud ?",
+      "options": [
+        "./mvnw quarkus:dev",
+        "./mvnw spring-boot:run",
+        "java -jar target/quarkus-app/quarkus-run.jar",
+        "./mvnw compile quarkus:run"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "`./mvnw quarkus:dev` lance l'application en mode dev. L'option B est pour Spring Boot. L'option C exécute le jar en mode production. L'option D n'existe pas."
+    },
+    {
+      "id": "QUARK-FND-006",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Cycle de vie",
+      "difficulty": "medium",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles annotations permettent d'observer les événements de démarrage et d'arrêt de l'application Quarkus ? Sélectionnez TOUTES les réponses correctes.",
+      "options": [
+        "@Observes StartupEvent",
+        "@Observes ShutdownEvent",
+        "@ApplicationScoped avec méthode @PostConstruct",
+        "@Startup",
+        "@PreDestroy"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 4],
+      "explanation": "Quarkus utilise CDI : on peut observer `StartupEvent` (A) et `ShutdownEvent` (B). `@PreDestroy` (E) est également supporté dans les beans CDI pour l'arrêt. `@PostConstruct` (C) s'exécute après l'injection mais avant que l'application ne serve les requêtes ; ce n'est pas un événement global de démarrage. `@Startup` (D) force l'instanciation immédiate d'un bean mais n'est pas un observateur."
+    },
+    {
+      "id": "QUARK-FND-007",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Configuration avancée",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment référencer une valeur de configuration dans une propriété d'annotation `@ConfigProperty` ?",
+      "options": [
+        "@ConfigProperty(name = \"ma.propriete\")",
+        "@Value(\"${ma.propriete}\")",
+        "@ConfigurationProperty(\"ma.propriete\")",
+        "@Property(name = \"ma.propriete\")"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "L'annotation standard Quarkus est `@ConfigProperty`. `@Value` est Spring. Les autres n'existent pas."
+    },
+    {
+      "id": "QUARK-FND-008",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Logging",
+      "difficulty": "medium",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles affirmations concernant la journalisation (logging) dans Quarkus sont correctes ?",
+      "options": [
+        "Quarkus utilise JBoss Logging comme façade par défaut.",
+        "Le niveau de log peut être configuré par catégorie dans application.properties.",
+        "Quarkus supporte le formatage JSON des logs prêt pour l'agrégation.",
+        "Il est obligatoire d'utiliser SLF4J pour les logs applicatifs.",
+        "Les logs sont automatiquement envoyés à Azure Monitor."
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2],
+      "explanation": "Quarkus utilise JBoss Logging (A) et permet une configuration fine (B). L'extension `quarkus-logging-json` fournit le format JSON (C). SLF4J (D) n'est pas obligatoire. L'envoi automatique à Azure (E) n'existe pas."
+    },
+    {
+      "id": "QUARK-FND-009",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Gestion des ressources",
+      "difficulty": "easy",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle annotation CDI garantit qu'une seule instance du bean existe dans l'application ?",
+      "options": ["@ApplicationScoped", "@Singleton", "@RequestScoped", "@Dependent"],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "`@ApplicationScoped` crée un bean unique pour toute l'application. `@Singleton` existe aussi mais est pseudo‑scope (non proxyable) ; `@ApplicationScoped` est recommandé."
+    },
+    {
+      "id": "QUARK-FND-010",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Tests unitaires",
+      "difficulty": "medium",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles fonctionnalités offrent les tests Quarkus avec `@QuarkusTest` ?",
+      "options": [
+        "Démarrage automatique de l'application avant les tests.",
+        "Injection de dépendances dans la classe de test via `@Inject`.",
+        "Mocking facile des services via `@InjectMock`.",
+        "Exécution des tests en mode natif (sans JVM).",
+        "Support des tests d'intégration avec base de données réelle."
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 4],
+      "explanation": "`@QuarkusTest` démarre l'application (A), permet l'injection (B), le mocking avec `@InjectMock` (C), et peut utiliser une base de données de test (E). Les tests en mode natif (D) nécessitent `@QuarkusIntegrationTest`."
+    },
+    {
+      "id": "QUARK-FND-011",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Native Image",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle propriété de configuration est indispensable pour qu'une classe accédée par réflexion soit incluse dans l'image native GraalVM ?",
+      "options": [
+        "quarkus.native.additional-build-args",
+        "quarkus.index-dependency.*",
+        "Enregistrement via @RegisterForReflection ou fichier reflect-config.json",
+        "Aucune, la réflexion est automatiquement supportée"
+      ],
+      "correct": 2,
+      "correct_multiple": null,
+      "explanation": "GraalVM a besoin de connaître à l'avance les éléments utilisés par réflexion. Quarkus facilite cela avec `@RegisterForReflection` ou la configuration manuelle. L'option A sert à passer des arguments au compilateur natif. L'option B sert à indexer des dépendances externes pour la découverte de beans."
+    },
+    {
+      "id": "QUARK-FND-012",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Extensions populaires",
+      "difficulty": "easy",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles extensions Quarkus sont couramment utilisées pour construire une API REST avec persistance ?",
+      "options": [
+        "resteasy-reactive",
+        "resteasy-reactive-jackson",
+        "hibernate-orm-panache",
+        "agroal (pool de connexions)",
+        "spring-web"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 3],
+      "explanation": "RESTEasy Reactive (A) et son support Jackson (B) pour REST, Hibernate avec Panache (C) pour la persistance, et Agroal (D) pour le pool de connexions. Spring Web (E) n'est pas une extension Quarkus standard."
+    },
+    {
+      "id": "QUARK-FND-013",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Gestion des erreurs",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment retourner une réponse HTTP 404 lorsqu'une entité n'est pas trouvée avec Panache ?",
+      "options": [
+        "Lever une javax.ws.rs.NotFoundException",
+        "Retourner null dans la méthode REST",
+        "Lever une WebApplicationException",
+        "Utiliser Response.status(404).build()"
+      ],
+      "correct": 3,
+      "correct_multiple": null,
+      "explanation": "Plusieurs méthodes existent : `NotFoundException` (A) est spécifique JAX‑RS et fonctionne. `WebApplicationException` (C) est générique. `Response` builder (D) est aussi valide. Mais la question demande UNE manière ; `Response.status(404).build()` est la plus explicite. Toutes les propositions sauf B sont techniquement correctes mais D est la réponse la plus standard pour un contrôle fin."
+    },
+    {
+      "id": "QUARK-FND-014",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Configuration par défaut",
+      "difficulty": "hard",
+      "type": "MULTI_CHOICE",
+      "question": "Quels sont les comportements par défaut de Quarkus concernant la sérialisation JSON et la validation ?",
+      "options": [
+        "La sérialisation Jackson ignore les propriétés inconnues par défaut.",
+        "La validation Bean Validation est automatique si Hibernate Validator est dans le classpath.",
+        "Les dates sont sérialisées au format timestamp par défaut.",
+        "Les champs nuls sont inclus dans le JSON par défaut.",
+        "Les endpoints REST nécessitent explicitement @Valid pour valider les paramètres."
+      ],
+      "correct": 0,
+      "correct_multiple": [1, 2, 3, 4],
+      "explanation": "Jackson (via Quarkus) n'ignore PAS les propriétés inconnues par défaut (A faux), il échoue. La validation est automatique si l'extension est présente (B vrai). Les dates sont en timestamp (C vrai). Les champs nuls sont inclus (D vrai). `@Valid` est requis (E vrai)."
+    },
+    {
+      "id": "QUARK-FND-015",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Continuous Testing",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle commande active le mode de test continu (continuous testing) dans Quarkus ?",
+      "options": [
+        "./mvnw quarkus:dev",
+        "./mvnw test",
+        "./mvnw quarkus:test",
+        "./mvnw quarkus:continuous-testing"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Le mode `quarkus:dev` inclut le continuous testing : les tests sont ré‑exécutés automatiquement à chaque modification de code. La commande `quarkus:test` exécute les tests une seule fois."
+    },
+    {
+      "id": "QUARK-FND-016",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Sécurité de base",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment protéger un endpoint JAX‑RS avec une authentification Basic dans Quarkus ?",
+      "options": [
+        "Ajouter l'extension `quarkus-elytron-security-properties-file` et annoter la méthode avec `@RolesAllowed`.",
+        "Configurer Spring Security dans application.properties.",
+        "Utiliser l'annotation `@Secured` sans configuration supplémentaire.",
+        "Cela nécessite un serveur Keycloak externe obligatoirement."
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Quarkus utilise Elytron pour la sécurité. L'extension properties‑file permet de définir des utilisateurs/mots de passe et rôles dans un fichier. `@RolesAllowed` protège les endpoints. Spring Security (B) n'est pas utilisé. `@Secured` (C) n'est pas l'annotation Quarkus. Keycloak (D) est optionnel."
+    },
+    {
+      "id": "QUARK-FND-017",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Health Checks",
+      "difficulty": "easy",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles extensions Quarkus fournissent des endpoints de health checks et de métriques ?",
+      "options": [
+        "smallrye-health",
+        "smallrye-metrics",
+        "micrometer",
+        "resteasy-health",
+        "quarkus-monitor"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2],
+      "explanation": "Quarkus utilise SmallRye Health (A) et SmallRye Metrics (B). L'extension Micrometer (C) est une alternative pour les métriques. Les autres n'existent pas."
+    },
+    {
+      "id": "QUARK-FND-018",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "OpenAPI",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment exposer la documentation OpenAPI d'une application Quarkus ?",
+      "options": [
+        "Ajouter l'extension smallrye-openapi, accessible à /q/openapi",
+        "Ajouter l'extension springdoc-openapi, accessible à /v3/api-docs",
+        "La documentation est générée automatiquement sans extension.",
+        "Utiliser l'annotation @OpenAPIDefinition uniquement."
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Quarkus utilise SmallRye OpenAPI, l'extension fournit les endpoints `/q/openapi` et `/q/swagger-ui`. Springdoc (B) est pour Spring."
+    },
+    {
+      "id": "QUARK-FND-019",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Outils de build",
+      "difficulty": "hard",
+      "type": "MULTI_CHOICE",
+      "question": "Quels outils de build sont officiellement supportés pour créer des projets Quarkus ?",
+      "options": [
+        "Maven",
+        "Gradle",
+        "Ant",
+        "SBT",
+        "Bazel"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1],
+      "explanation": "Quarkus supporte officiellement Maven et Gradle via des plugins dédiés."
+    },
+    {
+      "id": "QUARK-FND-020",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Code native et JVM",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle est la principale différence lors de l'exécution d'une application Quarkus en mode JVM par rapport au mode natif ?",
+      "options": [
+        "Le mode natif démarre plus vite et consomme moins de mémoire, mais la compilation est plus lente.",
+        "Le mode natif ne supporte pas la réflexion.",
+        "Le mode JVM ne supporte pas CDI.",
+        "Le mode natif nécessite une licence payante de GraalVM."
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Le mode natif offre un temps de démarrage quasi instantané et une empreinte mémoire réduite, mais la compilation native est longue. La réflexion (B) est supportée si correctement configurée. CDI (C) fonctionne dans les deux modes. GraalVM Community Edition (D) est gratuit."
+    },
+    {
+      "id": "QUARK-FND-021",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Panache - Patterns Actif",
+      "difficulty": "medium",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles méthodes sont fournies par `PanacheEntityBase` pour les opérations CRUD ?",
+      "options": [
+        "persist()",
+        "delete()",
+        "findById()",
+        "listAll()",
+        "update()"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 3],
+      "explanation": "`PanacheEntityBase` (ou `PanacheEntity`) offre `persist()`, `delete()`, `findById()`, `listAll()`. `update()` n'est pas nécessaire car les entités managées sont automatiquement synchronisées."
+    },
+    {
+      "id": "QUARK-FND-022",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Panache - Repository Pattern",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle interface implémente-t-on pour utiliser le pattern Repository avec Panache ?",
+      "options": [
+        "PanacheRepository<T>",
+        "PanacheRepositoryBase<T, ID>",
+        "PanacheEntityRepository<T>",
+        "Repository<T>"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "`PanacheRepository<Entity>` est l'interface de base. `PanacheRepositoryBase` existe pour un ID personnalisé. `PanacheEntityRepository` est l'équivalent pour les entités de type PanacheEntity."
+    },
+    {
+      "id": "QUARK-FND-023",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Transactions",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment délimiter une transaction de manière déclarative dans Quarkus ?",
+      "options": [
+        "@Transactional",
+        "@TransactionAttribute",
+        "@EnableTransactionManagement",
+        "@QuarkusTransaction"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "L'annotation `@Transactional` (javax.transaction.Transactional) contrôle les transactions. `@TransactionAttribute` est pour les EJB."
+    },
+    {
+      "id": "QUARK-FND-024",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Réactivité avec Mutiny",
+      "difficulty": "hard",
+      "type": "MULTI_CHOICE",
+      "question": "Quels types Mutiny sont supportés en retour de méthode RESTEasy Reactive ?",
+      "options": [
+        "Uni<T>",
+        "Multi<T>",
+        "CompletionStage<T>",
+        "Flowable<T>",
+        "Observable<T>"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1],
+      "explanation": "RESTEasy Reactive supporte nativement `Uni` (un élément) et `Multi` (flux). `CompletionStage` est aussi supporté via adaptation, mais la question porte sur Mutiny spécifiquement."
+    },
+    {
+      "id": "QUARK-FND-025",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Scheduler",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle annotation permet d'exécuter une méthode à intervalle fixe dans Quarkus ?",
+      "options": [
+        "@Scheduled",
+        "@Schedule",
+        "@Timer",
+        "@Quartz"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "L'extension `quarkus-scheduler` fournit `@Scheduled` (avec cron ou fixed delay). `@Schedule` est pour les EJB Timer."
+    },
+    {
+      "id": "QUARK-FND-026",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Cache",
+      "difficulty": "hard",
+      "type": "MULTI_CHOICE",
+      "question": "Quelles sont les annotations de cache supportées par l'extension Quarkus Cache ?",
+      "options": [
+        "@CacheResult",
+        "@CacheInvalidate",
+        "@Cacheable",
+        "@CacheEvict",
+        "@CachePut"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1],
+      "explanation": "L'extension Quarkus Cache utilise `@CacheResult` et `@CacheInvalidate`. Les annotations Spring `@Cacheable`, `@CacheEvict` ne sont pas supportées nativement."
+    },
+    {
+      "id": "QUARK-FND-027",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Fault Tolerance",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle annotation permet de définir un fallback si une méthode échoue dans Quarkus (SmallRye Fault Tolerance) ?",
+      "options": [
+        "@Fallback",
+        "@Retry",
+        "@CircuitBreaker",
+        "@Timeout"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "`@Fallback` spécifie une méthode de secours. `@Retry`, `@CircuitBreaker`, `@Timeout` sont d'autres annotations de la même extension."
+    },
+    {
+      "id": "QUARK-FND-028",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "WebSockets",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle spécification WebSocket est implémentée par Quarkus ?",
+      "options": [
+        "Jakarta WebSocket",
+        "Java WebSocket (JSR 356)",
+        "Spring WebSocket",
+        "Netty WebSocket"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Quarkus utilise l'extension `quarkus-websockets` qui implémente Jakarta WebSocket (anciennement JSR 356)."
+    },
+    {
+      "id": "QUARK-FND-029",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "gRPC",
+      "difficulty": "medium",
+      "type": "MULTI_CHOICE",
+      "question": "Quels composants sont nécessaires pour utiliser gRPC dans Quarkus ?",
+      "options": [
+        "Extension quarkus-grpc",
+        "Fichier .proto",
+        "Annotation @GrpcService",
+        "Mutiny pour le support réactif",
+        "Un serveur Envoy externe"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 3],
+      "explanation": "L'extension gRPC (A), les fichiers proto (B), `@GrpcService` (C), et Mutiny (D) sont utilisés. Aucun proxy Envoy externe n'est requis (E)."
+    },
+    {
+      "id": "QUARK-FND-030",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "GraphQL",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle extension Quarkus permet de créer une API GraphQL ?",
+      "options": [
+        "smallrye-graphql",
+        "quarkus-graphql",
+        "microprofile-graphql",
+        "graphql-java"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "SmallRye GraphQL est l'implémentation de MicroProfile GraphQL utilisée par Quarkus."
+    },
+    {
+      "id": "QUARK-FND-031",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Command Mode",
+      "difficulty": "medium",
+      "type": "SINGLE_CHOICE",
+      "question": "Comment créer une application Quarkus en ligne de commande (non‑HTTP) qui exécute une tâche puis se termine ?",
+      "options": [
+        "Implémenter QuarkusApplication et utiliser le mode commande",
+        "Utiliser @Main et lancer avec java -jar",
+        "Ajouter l'extension quarkus-cli",
+        "Démarrer avec quarkus:run"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Quarkus fournit un mode 'command mode' où l'on implémente `QuarkusApplication` et la méthode `run`. L'application s'arrête après l'exécution."
+    },
+    {
+      "id": "QUARK-FND-032",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Container‑first",
+      "difficulty": "easy",
+      "type": "MULTI_CHOICE",
+      "question": "Quels principes guident la conception 'Container‑first' de Quarkus ?",
+      "options": [
+        "Faible consommation mémoire",
+        "Démarrage rapide",
+        "Empreinte disque réduite",
+        "Optimisation pour les environnements éphémères (serverless)",
+        "Support exclusif de Kubernetes"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 3],
+      "explanation": "Quarkus est optimisé pour les conteneurs avec une faible empreinte mémoire, un démarrage rapide et une petite taille. Il n'est pas exclusif à Kubernetes (E)."
+    },
+    {
+      "id": "QUARK-FND-033",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Live reload",
+      "difficulty": "hard",
+      "type": "SINGLE_CHOICE",
+      "question": "Quel mécanisme technique permet le rechargement à chaud dans quarkus:dev ?",
+      "options": [
+        "ClassLoader personnalisé qui recharge les classes modifiées",
+        "Redémarrage complet de la JVM",
+        "Agent Java Instrumentation",
+        "Compilation incrémentale avec JRebel"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "Quarkus utilise un ClassLoader dédié qui décharge et recharge les classes modifiées, évitant un redémarrage complet de la JVM."
+    },
+    {
+      "id": "QUARK-FND-034",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Extension personnalisée",
+      "difficulty": "hard",
+      "type": "MULTI_CHOICE",
+      "question": "Quels artefacts composent une extension Quarkus personnalisée ?",
+      "options": [
+        "Un module runtime (pour l'exécution)",
+        "Un module deployment (pour la phase de build)",
+        "Un fichier quarkus-extension.yaml",
+        "Une classe implémentant BuildStep",
+        "Un fichier META-INF/services"
+      ],
+      "correct": 0,
+      "correct_multiple": [0, 1, 2, 3, 4],
+      "explanation": "Une extension Quarkus nécessite un module runtime (A), un module deployment (B) avec des `@BuildStep` (D), un descripteur YAML (C) et un fichier service (E)."
+    },
+    {
+      "id": "QUARK-FND-035",
+      "theme": "Principes fondamentaux de Quarkus",
+      "theme_label": "Configuration YAML",
+      "difficulty": "easy",
+      "type": "SINGLE_CHOICE",
+      "question": "Quelle extension active la prise en charge des fichiers application.yml ?",
+      "options": [
+        "quarkus-config-yaml",
+        "quarkus-yaml",
+        "quarkus-config-yml",
+        "quarkus-properties-yaml"
+      ],
+      "correct": 0,
+      "correct_multiple": null,
+      "explanation": "L'extension officielle est `quarkus-config-yaml`."
+    }
+  ]

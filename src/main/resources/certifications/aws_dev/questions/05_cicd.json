@@ -20,7 +20,12 @@
     "theme_label": "CodeCommit",
     "difficulty": "easy",
     "question": "CodeCommit supporte-t-il HTTPS et SSH ?",
-    "options": ["Oui", "Non", "HTTPS seulement", "SSH seulement"],
+    "options": [
+      "Oui",
+      "Non",
+      "HTTPS seulement",
+      "SSH seulement"
+    ],
     "correct": 0,
     "explanation": "CodeCommit supporte les deux protocoles."
   },
@@ -45,7 +50,12 @@
     "theme_label": "CodeCommit",
     "difficulty": "hard",
     "question": "Quelle est la taille maximale d'un dépôt CodeCommit ?",
-    "options": ["100 Go", "50 Go", "25 Go", "200 Go"],
+    "options": [
+      "100 Go",
+      "50 Go",
+      "25 Go",
+      "200 Go"
+    ],
     "correct": 0,
     "explanation": "La taille maximale d'un dépôt est 100 Go."
   },
@@ -55,9 +65,14 @@
     "theme_label": "CodeCommit",
     "difficulty": "hard",
     "question": "CodeCommit peut-il déclencher des notifications sur les événements Git ?",
-    "options": ["Oui (SNS, Lambda)", "Non", "Uniquement CloudWatch", "Uniquement EventBridge"],
+    "options": [
+      "Oui (SNS, Lambda)",
+      "Non",
+      "Uniquement CloudWatch",
+      "Uniquement EventBridge"
+    ],
     "correct": 0,
-    "explication": "CodeCommit peut envoyer des notifications à SNS, Lambda, EventBridge."
+    "explanation": "CodeCommit peut envoyer des notifications à SNS, Lambda, EventBridge."
   },
   {
     "id": "AWS-DEV-276",
@@ -65,9 +80,14 @@
     "theme_label": "CodeCommit",
     "difficulty": "hard",
     "question": "CodeCommit supporte-t-il les pull requests ?",
-    "options": ["Oui", "Non", "Uniquement dans la console", "Uniquement via CLI"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement dans la console",
+      "Uniquement via CLI"
+    ],
     "correct": 0,
-    "explication": "CodeCommit a des fonctionnalités de pull request."
+    "explanation": "CodeCommit a des fonctionnalités de pull request."
   },
   {
     "id": "AWS-DEV-277",
@@ -82,7 +102,7 @@
       "Service de pipeline"
     ],
     "correct": 0,
-    "explication": "CodeBuild compile le code et exécute les tests."
+    "explanation": "CodeBuild compile le code et exécute les tests."
   },
   {
     "id": "AWS-DEV-278",
@@ -97,7 +117,7 @@
       "codebuild.yaml"
     ],
     "correct": 0,
-    "explication": "buildspec.yml est le fichier de configuration par défaut."
+    "explanation": "buildspec.yml est le fichier de configuration par défaut."
   },
   {
     "id": "AWS-DEV-279",
@@ -112,7 +132,7 @@
       "install, build"
     ],
     "correct": 0,
-    "explication": "Les phases install, pre_build, build, post_build sont disponibles."
+    "explanation": "Les phases install, pre_build, build, post_build sont disponibles."
   },
   {
     "id": "AWS-DEV-280",
@@ -120,9 +140,14 @@
     "theme_label": "CodeBuild",
     "difficulty": "hard",
     "question": "CodeBuild peut-il utiliser des images Docker personnalisées ?",
-    "options": ["Oui", "Non", "Uniquement les images AWS", "Uniquement les images publiques"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les images AWS",
+      "Uniquement les images publiques"
+    ],
     "correct": 0,
-    "explication": "CodeBuild supporte les images personnalisées (ECR ou Docker Hub)."
+    "explanation": "CodeBuild supporte les images personnalisées (ECR ou Docker Hub)."
   },
   {
     "id": "AWS-DEV-281",
@@ -130,9 +155,14 @@
     "theme_label": "CodeBuild",
     "difficulty": "hard",
     "question": "Quelle est la limite de mémoire pour CodeBuild ?",
-    "options": ["8 Go", "4 Go", "16 Go", "32 Go"],
+    "options": [
+      "8 Go",
+      "4 Go",
+      "16 Go",
+      "32 Go"
+    ],
     "correct": 0,
-    "explication": "La mémoire maximale est 8 Go (configurable)."
+    "explanation": "La mémoire maximale est 8 Go (configurable)."
   },
   {
     "id": "AWS-DEV-282",
@@ -140,9 +170,14 @@
     "theme_label": "CodeBuild",
     "difficulty": "hard",
     "question": "Quelle est la durée maximale d'un build ?",
-    "options": ["8 heures", "1 heure", "4 heures", "12 heures"],
+    "options": [
+      "8 heures",
+      "1 heure",
+      "4 heures",
+      "12 heures"
+    ],
     "correct": 0,
-    "explication": "La durée maximale de build est 8 heures (480 minutes)."
+    "explanation": "La durée maximale de build est 8 heures (480 minutes)."
   },
   {
     "id": "AWS-DEV-283",
@@ -150,9 +185,14 @@
     "theme_label": "CodeBuild",
     "difficulty": "hard",
     "question": "CodeBuild peut-il produire des artefacts ?",
-    "options": ["Oui (S3)", "Non", "Uniquement local", "Uniquement CodeDeploy"],
+    "options": [
+      "Oui (S3)",
+      "Non",
+      "Uniquement local",
+      "Uniquement CodeDeploy"
+    ],
     "correct": 0,
-    "explication": "Les artefacts de build peuvent être stockés dans S3."
+    "explanation": "Les artefacts de build peuvent être stockés dans S3."
   },
   {
     "id": "AWS-DEV-284",
@@ -160,9 +200,14 @@
     "theme_label": "CodeBuild",
     "difficulty": "hard",
     "question": "CodeBuild supporte-t-il les caches ?",
-    "options": ["Oui (S3)", "Non", "Uniquement local", "Uniquement Docker"],
+    "options": [
+      "Oui (S3)",
+      "Non",
+      "Uniquement local",
+      "Uniquement Docker"
+    ],
     "correct": 0,
-    "explication": "Le cache S3 accélère les builds en réutilisant les dépendances."
+    "explanation": "Le cache S3 accélère les builds en réutilisant les dépendances."
   },
   {
     "id": "AWS-DEV-285",
@@ -170,9 +215,14 @@
     "theme_label": "CodeBuild",
     "difficulty": "hard",
     "question": "CodeBuild peut-il exécuter des builds dans un VPC ?",
-    "options": ["Oui", "Non", "Uniquement avec NAT", "Uniquement avec PrivateLink"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec NAT",
+      "Uniquement avec PrivateLink"
+    ],
     "correct": 0,
-    "explication": "CodeBuild peut accéder à des ressources dans un VPC."
+    "explanation": "CodeBuild peut accéder à des ressources dans un VPC."
   },
   {
     "id": "AWS-DEV-286",
@@ -187,7 +237,7 @@
       "Service de pipeline"
     ],
     "correct": 0,
-    "explication": "CodeDeploy automatise les déploiements sur EC2, on-premise, Lambda, ECS."
+    "explanation": "CodeDeploy automatise les déploiements sur EC2, on-premise, Lambda, ECS."
   },
   {
     "id": "AWS-DEV-287",
@@ -202,7 +252,7 @@
       "Canary seulement"
     ],
     "correct": 0,
-    "explication": "In-place (mise à jour des instances existantes) et Blue/Green (swap de groupes)."
+    "explanation": "In-place (mise à jour des instances existantes) et Blue/Green (swap de groupes)."
   },
   {
     "id": "AWS-DEV-288",
@@ -217,7 +267,7 @@
       "deploy.yml"
     ],
     "correct": 0,
-    "explication": "appspec.yml est le fichier de configuration CodeDeploy."
+    "explanation": "appspec.yml est le fichier de configuration CodeDeploy."
   },
   {
     "id": "AWS-DEV-289",
@@ -232,7 +282,7 @@
       "Seulement ApplicationStart"
     ],
     "correct": 0,
-    "explication": "Plusieurs hooks permettent de personnaliser le déploiement."
+    "explanation": "Plusieurs hooks permettent de personnaliser le déploiement."
   },
   {
     "id": "AWS-DEV-290",
@@ -247,7 +297,7 @@
       "Remplace une instance à la fois"
     ],
     "correct": 0,
-    "explication": "Blue/Green réduit les temps d'arrêt en basculant entre deux environnements."
+    "explanation": "Blue/Green réduit les temps d'arrêt en basculant entre deux environnements."
   },
   {
     "id": "AWS-DEV-291",
@@ -255,9 +305,14 @@
     "theme_label": "CodeDeploy",
     "difficulty": "hard",
     "question": "CodeDeploy peut-il être utilisé avec des instances on-premise ?",
-    "options": ["Oui", "Non", "Uniquement avec EC2", "Uniquement avec ECS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec EC2",
+      "Uniquement avec ECS"
+    ],
     "correct": 0,
-    "explication": "CodeDeploy supporte les instances on-premise via des agents."
+    "explanation": "CodeDeploy supporte les instances on-premise via des agents."
   },
   {
     "id": "AWS-DEV-292",
@@ -265,9 +320,14 @@
     "theme_label": "CodeDeploy",
     "difficulty": "hard",
     "question": "CodeDeploy supporte-t-il les déploiements sur Lambda ?",
-    "options": ["Oui", "Non", "Uniquement pour les alias", "Uniquement pour les versions"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les alias",
+      "Uniquement pour les versions"
+    ],
     "correct": 0,
-    "explication": "CodeDeploy peut faire des déploiements progressifs sur Lambda (traffic shifting)."
+    "explanation": "CodeDeploy peut faire des déploiements progressifs sur Lambda (traffic shifting)."
   },
   {
     "id": "AWS-DEV-293",
@@ -282,7 +342,7 @@
       "Service de déploiement"
     ],
     "correct": 0,
-    "explication": "CodePipeline orchestre les étapes de livraison continue."
+    "explanation": "CodePipeline orchestre les étapes de livraison continue."
   },
   {
     "id": "AWS-DEV-294",
@@ -297,7 +357,7 @@
       "Build, Test seulement"
     ],
     "correct": 0,
-    "explication": "Plusieurs types d'étapes sont disponibles."
+    "explanation": "Plusieurs types d'étapes sont disponibles."
   },
   {
     "id": "AWS-DEV-295",
@@ -312,7 +372,7 @@
       "Uniquement GitHub"
     ],
     "correct": 0,
-    "explication": "CodePipeline supporte des intégrations tierces via des actions personnalisées."
+    "explanation": "CodePipeline supporte des intégrations tierces via des actions personnalisées."
   },
   {
     "id": "AWS-DEV-296",
@@ -327,7 +387,7 @@
       "CloudWatch"
     ],
     "correct": 0,
-    "explication": "L'étape d'approbation manuelle nécessite une validation humaine."
+    "explanation": "L'étape d'approbation manuelle nécessite une validation humaine."
   },
   {
     "id": "AWS-DEV-297",
@@ -342,7 +402,7 @@
       "Uniquement via cron"
     ],
     "correct": 0,
-    "explication": "CodePipeline peut être déclenché par des événements (push CodeCommit, S3, etc.)."
+    "explanation": "CodePipeline peut être déclenché par des événements (push CodeCommit, S3, etc.)."
   },
   {
     "id": "AWS-DEV-298",
@@ -357,7 +417,7 @@
       "Service de dépôt"
     ],
     "correct": 0,
-    "explication": "CodeStar fournit des projets CI/CD prêts à l'emploi avec templates."
+    "explanation": "CodeStar fournit des projets CI/CD prêts à l'emploi avec templates."
   },
   {
     "id": "AWS-DEV-299",
@@ -372,7 +432,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons de déployer l'infrastructure via pipeline."
+    "explanation": "Plusieurs façons de déployer l'infrastructure via pipeline."
   },
   {
     "id": "AWS-DEV-300",
@@ -387,7 +447,7 @@
       "Rapport de déploiement"
     ],
     "correct": 0,
-    "explication": "Les change sets permettent de visualiser l'impact des modifications."
+    "explanation": "Les change sets permettent de visualiser l'impact des modifications."
   },
   {
     "id": "AWS-DEV-301",
@@ -402,7 +462,7 @@
       "Base de données"
     ],
     "correct": 0,
-    "explication": "CDK permet de définir l'infrastructure en TypeScript, Python, Java, etc."
+    "explanation": "CDK permet de définir l'infrastructure en TypeScript, Python, Java, etc."
   },
   {
     "id": "AWS-DEV-302",
@@ -417,7 +477,7 @@
       "Archive"
     ],
     "correct": 0,
-    "explication": "cdk synth produit un template CloudFormation à partir du code CDK."
+    "explanation": "cdk synth produit un template CloudFormation à partir du code CDK."
   },
   {
     "id": "AWS-DEV-303",
@@ -432,7 +492,7 @@
       "Uniquement avec pipeline"
     ],
     "correct": 0,
-    "explication": "cdk deploy crée ou met à jour la stack CloudFormation."
+    "explanation": "cdk deploy crée ou met à jour la stack CloudFormation."
   },
   {
     "id": "AWS-DEV-304",
@@ -447,7 +507,7 @@
       "Service de pipeline"
     ],
     "correct": 0,
-    "explication": "CodeArtifact stocke les artefacts de build."
+    "explanation": "CodeArtifact stocke les artefacts de build."
   },
   {
     "id": "AWS-DEV-305",
@@ -455,9 +515,14 @@
     "theme_label": "CodeArtifact",
     "difficulty": "hard",
     "question": "CodeArtifact peut-il servir de proxy vers des dépôts publics ?",
-    "options": ["Oui", "Non", "Uniquement pour npm", "Uniquement pour Maven"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour npm",
+      "Uniquement pour Maven"
+    ],
     "correct": 0,
-    "explication": "CodeArtifact peut agir comme proxy pour npm, Maven Central, PyPI, NuGet."
+    "explanation": "CodeArtifact peut agir comme proxy pour npm, Maven Central, PyPI, NuGet."
   },
   {
     "id": "AWS-DEV-306",
@@ -472,7 +537,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "X-Ray nécessite une instrumentation du code."
+    "explanation": "X-Ray nécessite une instrumentation du code."
   },
   {
     "id": "AWS-DEV-307",
@@ -487,7 +552,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs options pour exécuter des tests."
+    "explanation": "Plusieurs options pour exécuter des tests."
   },
   {
     "id": "AWS-DEV-308",
@@ -495,9 +560,14 @@
     "theme_label": "Testing",
     "difficulty": "hard",
     "question": "CodeBuild peut-il générer des rapports de test ?",
-    "options": ["Oui", "Non", "Uniquement JUnit", "Uniquement NUnit"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement JUnit",
+      "Uniquement NUnit"
+    ],
     "correct": 0,
-    "explication": "CodeBuild peut générer des rapports de test dans plusieurs formats."
+    "explanation": "CodeBuild peut générer des rapports de test dans plusieurs formats."
   },
   {
     "id": "AWS-DEV-309",
@@ -512,7 +582,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les secrets peuvent être stockés dans Secrets Manager ou Parameter Store."
+    "explanation": "Les secrets peuvent être stockés dans Secrets Manager ou Parameter Store."
   },
   {
     "id": "AWS-DEV-310",
@@ -527,7 +597,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "La syntaxe secrets-manager: permet de récupérer un secret."
+    "explanation": "La syntaxe secrets-manager: permet de récupérer un secret."
   },
   {
     "id": "AWS-DEV-311",
@@ -542,7 +612,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "CodePipeline peut envoyer des notifications via SNS ou EventBridge."
+    "explanation": "CodePipeline peut envoyer des notifications via SNS ou EventBridge."
   },
   {
     "id": "AWS-DEV-312",
@@ -550,9 +620,14 @@
     "theme_label": "EventBridge",
     "difficulty": "hard",
     "question": "Quel service CodePipeline utilise pour les événements ?",
-    "options": ["EventBridge", "CloudWatch Events", "SNS", "A et B"],
+    "options": [
+      "EventBridge",
+      "CloudWatch Events",
+      "SNS",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "CodePipeline émet des événements vers EventBridge (anciennement CloudWatch Events)."
+    "explanation": "CodePipeline émet des événements vers EventBridge (anciennement CloudWatch Events)."
   },
   {
     "id": "AWS-DEV-313",
@@ -560,9 +635,14 @@
     "theme_label": "Best practices",
     "difficulty": "hard",
     "question": "Doit-on avoir des pipelines séparés par environnement ?",
-    "options": ["Oui", "Non", "Optionnel", "Un seul pipeline"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Un seul pipeline"
+    ],
     "correct": 0,
-    "explication": "Des pipelines séparés (dev, staging, prod) permettent un contrôle plus fin."
+    "explanation": "Des pipelines séparés (dev, staging, prod) permettent un contrôle plus fin."
   },
   {
     "id": "AWS-DEV-314",
@@ -577,7 +657,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Le blue/green se configure dans appspec.yml ou dans l'étape de déploiement."
+    "explanation": "Le blue/green se configure dans appspec.yml ou dans l'étape de déploiement."
   },
   {
     "id": "AWS-DEV-315",
@@ -592,7 +672,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs méthodes pour valider le déploiement."
+    "explanation": "Plusieurs méthodes pour valider le déploiement."
   },
   {
     "id": "AWS-DEV-316",
@@ -600,9 +680,14 @@
     "theme_label": "Cross-account",
     "difficulty": "hard",
     "question": "CodePipeline peut-il déployer cross-account ?",
-    "options": ["Oui", "Non", "Uniquement avec CloudFormation", "Uniquement avec CodeDeploy"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec CloudFormation",
+      "Uniquement avec CodeDeploy"
+    ],
     "correct": 0,
-    "explication": "CodePipeline peut déployer dans plusieurs comptes via des rôles IAM."
+    "explanation": "CodePipeline peut déployer dans plusieurs comptes via des rôles IAM."
   },
   {
     "id": "AWS-DEV-317",
@@ -617,7 +702,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs configurations nécessaires."
+    "explanation": "Plusieurs configurations nécessaires."
   },
   {
     "id": "AWS-DEV-318",
@@ -625,9 +710,14 @@
     "theme_label": "GitHub Actions",
     "difficulty": "hard",
     "question": "AWS s'intègre-t-il avec GitHub Actions ?",
-    "options": ["Oui", "Non", "Uniquement via CodeStar", "Uniquement via CodeBuild"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via CodeStar",
+      "Uniquement via CodeBuild"
+    ],
     "correct": 0,
-    "explication": "GitHub Actions peut déployer sur AWS via des actions personnalisées."
+    "explanation": "GitHub Actions peut déployer sur AWS via des actions personnalisées."
   },
   {
     "id": "AWS-DEV-319",
@@ -635,9 +725,14 @@
     "theme_label": "GitLab CI",
     "difficulty": "hard",
     "question": "GitLab CI peut-il déployer sur AWS ?",
-    "options": ["Oui", "Non", "Uniquement via CodeDeploy", "Uniquement via CodeBuild"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via CodeDeploy",
+      "Uniquement via CodeBuild"
+    ],
     "correct": 0,
-    "explication": "GitLab CI peut utiliser AWS CLI ou des intégrations."
+    "explanation": "GitLab CI peut utiliser AWS CLI ou des intégrations."
   },
   {
     "id": "AWS-DEV-320",
@@ -645,9 +740,14 @@
     "theme_label": "Bitbucket Pipelines",
     "difficulty": "hard",
     "question": "Bitbucket Pipelines supporte-t-il AWS ?",
-    "options": ["Oui", "Non", "Uniquement avec OIDC", "Uniquement avec IAM"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec OIDC",
+      "Uniquement avec IAM"
+    ],
     "correct": 0,
-    "explication": "Bitbucket Pipelines peut déployer sur AWS via des rôles OIDC."
+    "explanation": "Bitbucket Pipelines peut déployer sur AWS via des rôles OIDC."
   },
   {
     "id": "AWS-DEV-321",
@@ -655,9 +755,14 @@
     "theme_label": "Artifact management",
     "difficulty": "hard",
     "question": "Où sont stockés les artefacts CodePipeline ?",
-    "options": ["S3", "CodeArtifact", "EFS", "EBS"],
+    "options": [
+      "S3",
+      "CodeArtifact",
+      "EFS",
+      "EBS"
+    ],
     "correct": 0,
-    "explication": "Les artefacts de pipeline sont stockés dans un bucket S3."
+    "explanation": "Les artefacts de pipeline sont stockés dans un bucket S3."
   },
   {
     "id": "AWS-DEV-322",
@@ -672,7 +777,7 @@
       "ACL publiques"
     ],
     "correct": 0,
-    "explication": "Les artefacts doivent être protégés."
+    "explanation": "Les artefacts doivent être protégés."
   },
   {
     "id": "AWS-DEV-323",
@@ -687,7 +792,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs méthodes pour analyser les échecs."
+    "explanation": "Plusieurs méthodes pour analyser les échecs."
   },
   {
     "id": "AWS-DEV-324",
@@ -695,9 +800,14 @@
     "theme_label": "Troubleshooting",
     "difficulty": "hard",
     "question": "CodeBuild peut-il exécuter un shell interactif pour debug ?",
-    "options": ["Oui (phase post_build)", "Non", "Uniquement avec session-manager", "Uniquement avec SSH"],
+    "options": [
+      "Oui (phase post_build)",
+      "Non",
+      "Uniquement avec session-manager",
+      "Uniquement avec SSH"
+    ],
     "correct": 0,
-    "explication": "On peut ajouter des commandes de debug dans post_build."
+    "explanation": "On peut ajouter des commandes de debug dans post_build."
   },
   {
     "id": "AWS-DEV-325",
@@ -712,7 +822,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Plusieurs stratégies pour optimiser les coûts."
+    "explanation": "Plusieurs stratégies pour optimiser les coûts."
   },
   {
     "id": "AWS-DEV-326",
@@ -720,9 +830,14 @@
     "theme_label": "Cost optimization",
     "difficulty": "hard",
     "question": "CodeBuild facture-t-il à la minute ?",
-    "options": ["Oui", "Non (à la seconde)", "Uniquement pour les builds longs", "Uniquement pour les builds réussis"],
+    "options": [
+      "Oui",
+      "Non (à la seconde)",
+      "Uniquement pour les builds longs",
+      "Uniquement pour les builds réussis"
+    ],
     "correct": 1,
-    "explication": "CodeBuild facture à la seconde (minimum 1 minute)."
+    "explanation": "CodeBuild facture à la seconde (minimum 1 minute)."
   },
   {
     "id": "AWS-DEV-327",
@@ -737,7 +852,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs approches pour déployer des applications serverless."
+    "explanation": "Plusieurs approches pour déployer des applications serverless."
   },
   {
     "id": "AWS-DEV-328",
@@ -752,7 +867,7 @@
       "Service Application Monitoring"
     ],
     "correct": 0,
-    "explication": "SAM est un framework pour définir des applications serverless."
+    "explanation": "SAM est un framework pour définir des applications serverless."
   },
   {
     "id": "AWS-DEV-329",
@@ -760,9 +875,14 @@
     "theme_label": "SAM",
     "difficulty": "hard",
     "question": "SAM peut-il générer un pipeline CI/CD ?",
-    "options": ["Oui (sam pipeline)", "Non", "Uniquement avec CodeStar", "Uniquement avec CodePipeline"],
+    "options": [
+      "Oui (sam pipeline)",
+      "Non",
+      "Uniquement avec CodeStar",
+      "Uniquement avec CodePipeline"
+    ],
     "correct": 0,
-    "explication": "sam pipeline init génère un pipeline pour CodePipeline."
+    "explanation": "sam pipeline init génère un pipeline pour CodePipeline."
   },
   {
     "id": "AWS-DEV-330",
@@ -777,7 +897,7 @@
       "Seulement SNS"
     ],
     "correct": 0,
-    "explication": "Plusieurs services pour monitorer les pipelines."
+    "explanation": "Plusieurs services pour monitorer les pipelines."
   },
   {
     "id": "AWS-DEV-331",
@@ -792,7 +912,7 @@
       "Seulement Builds"
     ],
     "correct": 0,
-    "explication": "Surveiller la durée, le nombre de builds et les échecs."
+    "explanation": "Surveiller la durée, le nombre de builds et les échecs."
   },
   {
     "id": "AWS-DEV-332",
@@ -807,7 +927,7 @@
       "Rôles trop permissifs"
     ],
     "correct": 0,
-    "explication": "Les pipelines doivent suivre le principe du moindre privilège."
+    "explanation": "Les pipelines doivent suivre le principe du moindre privilège."
   },
   {
     "id": "AWS-DEV-333",
@@ -822,7 +942,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Amazon CodeGuru Reviewer analyse le code pour détecter des problèmes."
+    "explanation": "Amazon CodeGuru Reviewer analyse le code pour détecter des problèmes."
   },
   {
     "id": "AWS-DEV-334",
@@ -830,9 +950,14 @@
     "theme_label": "CodeGuru",
     "difficulty": "hard",
     "question": "CodeGuru peut-il être intégré dans CodePipeline ?",
-    "options": ["Oui", "Non", "Uniquement pour les pull requests", "Uniquement pour les builds"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les pull requests",
+      "Uniquement pour les builds"
+    ],
     "correct": 0,
-    "explication": "CodePipeline peut avoir une étape CodeGuru pour l'analyse."
+    "explanation": "CodePipeline peut avoir une étape CodeGuru pour l'analyse."
   },
   {
     "id": "AWS-DEV-335",
@@ -847,7 +972,7 @@
       "Pas de pipeline"
     ],
     "correct": 0,
-    "explication": "Avoir des pipelines séparés pour la branche principale et les fonctionnalités."
+    "explanation": "Avoir des pipelines séparés pour la branche principale et les fonctionnalités."
   },
   {
     "id": "AWS-DEV-336",
@@ -855,9 +980,14 @@
     "theme_label": "Best practices",
     "difficulty": "hard",
     "question": "Doit-on versionner les fichiers de pipeline ?",
-    "options": ["Oui (avec le code)", "Non", "Optionnel", "Uniquement les templates"],
+    "options": [
+      "Oui (avec le code)",
+      "Non",
+      "Optionnel",
+      "Uniquement les templates"
+    ],
     "correct": 0,
-    "explication": "La configuration CI/CD doit être versionnée (buildspec, appspec, template)."
+    "explanation": "La configuration CI/CD doit être versionnée (buildspec, appspec, template)."
   },
   {
     "id": "AWS-DEV-337",
@@ -872,7 +1002,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les pipelines doivent être définis comme code (IaC)."
+    "explanation": "Les pipelines doivent être définis comme code (IaC)."
   },
   {
     "id": "AWS-DEV-338",
@@ -887,7 +1017,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs stratégies de rollback existent."
+    "explanation": "Plusieurs stratégies de rollback existent."
   },
   {
     "id": "AWS-DEV-339",
@@ -902,7 +1032,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs approches pour déployer dans plusieurs régions."
+    "explanation": "Plusieurs approches pour déployer dans plusieurs régions."
   },
   {
     "id": "AWS-DEV-340",
@@ -917,6 +1047,464 @@
       "Dans le dépôt"
     ],
     "correct": 0,
-    "explication": "Les secrets ne doivent jamais être versionnés."
+    "explanation": "Les secrets ne doivent jamais être versionnés."
+  },
+  {
+    "id": "AWS-DEV-C(-001",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodePipeline :",
+    "options": [
+      "Il peut être utilisé pour déployer des applications sur AWS.",
+      "Il nécessite un dépôt Git pour fonctionner.",
+      "Il peut être intégré à d'autres services AWS comme CodeBuild et CodeDeploy.",
+      "Il ne supporte que les déploiements sur des instances EC2."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car CodePipeline peut déployer des applications sur AWS. B est incorrect car il peut fonctionner avec d'autres systèmes de contrôle de version que Git. C est correct car CodePipeline peut être intégré à d'autres services AWS comme CodeBuild et CodeDeploy. D est incorrect car CodePipeline peut déployer des applications sur de nombreux types d'instances et services."
+  },
+  {
+    "id": "AWS-DEV-C(-002",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeArtifact",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité d'AWS CodeArtifact ?",
+    "options": [
+      "Gestion des dépôts de packages",
+      "Déploiement d'applications",
+      "Monitoring des performances",
+      "Intégration continue"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Gestion des dépôts de packages est correct car CodeArtifact permet la gestion centralisée et sécurisée des packages utilisés dans les applications."
+  },
+  {
+    "id": "AWS-DEV-C(-003",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodeBuild :",
+    "options": [
+      "Il peut être utilisé pour construire des applications à partir de sources en code source.",
+      "Il nécessite un environnement virtuel pour exécuter les builds.",
+      "Il peut être intégré à AWS CodePipeline pour automatiser le build et le déploiement.",
+      "Il ne peut être utilisé que pour les projets en Java."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car CodeBuild peut construire des applications à partir de sources en code source. B est correct car CodeBuild nécessite un environnement virtuel pour exécuter les builds. C est correct car CodeBuild peut être intégré à AWS CodePipeline pour automatiser le build et le déploiement. D est incorrect car CodeBuild peut être utilisé pour de nombreux langages de programmation, pas seulement Java."
+  },
+  {
+    "id": "AWS-DEV-C(-004",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Secrets in CI/CD",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour gérer les secrets dans un pipeline CI/CD AWS ?",
+    "options": [
+      "Stocker les secrets directement dans le code source.",
+      "Utiliser AWS Secrets Manager pour stocker et gérer les secrets.",
+      "Stocker les secrets dans un fichier texte en clair sur le serveur de build.",
+      "Utiliser des variables d'environnement non sécurisées."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Utiliser AWS Secrets Manager pour stocker et gérer les secrets est correct car cela offre une gestion sécurisée des secrets avec des politiques d'accès et une historique des modifications."
+  },
+  {
+    "id": "AWS-DEV-C(-005",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Artifact management",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de l'artifact management dans un pipeline CI/CD ?",
+    "options": [
+      "Gestion des dépendances du projet",
+      "Stockage et gestion des artefacts générés par les builds",
+      "Monitoring des performances de l'application",
+      "Intégration continue"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Stockage et gestion des artefacts générés par les builds est correct car l'artifact management permet de conserver et d'accéder aux fichiers générés par les builds, tels que des archives binaires ou des images Docker."
+  },
+  {
+    "id": "AWS-DEV-C(-006",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodePipeline :",
+    "options": [
+      "Il peut intégrer avec d'autres services AWS comme CodeCommit et CodeBuild.",
+      "Il ne permet pas de définir des conditions avant l'exécution d'une étape.",
+      "Il peut déployer des applications sur divers environnements tels que EC2, ECS et Lambda.",
+      "Il ne peut pas gérer les versions des artefacts de build."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car AWS CodePipeline peut intégrer avec d'autres services AWS. B est incorrect car il permet de définir des conditions avant l'exécution d'une étape. C est correct car AWS CodePipeline peut déployer des applications sur divers environnements tels que EC2, ECS et Lambda. D est incorrect car AWS CodePipeline peut gérer les versions des artefacts de build."
+  },
+  {
+    "id": "AWS-DEV-C(-007",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de AWS CodeBuild ?",
+    "options": [
+      "Exécuter des tests unitaires sur le code source.",
+      "Déployer les applications sur divers environnements.",
+      "Gérer les versions des artefacts de build.",
+      "Intégrer le code source avec d'autres services AWS."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Gérer les versions des artefacts de build est la principale fonction de AWS CodeBuild."
+  },
+  {
+    "id": "AWS-DEV-C(-008",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodeDeploy :",
+    "options": [
+      "Il peut déployer des applications sur divers environnements tels que EC2, ECS et Lambda.",
+      "Il ne permet pas de gérer les versions des artefacts de déploiement.",
+      "Il peut exécuter des scripts personnalisés avant et après le déploiement.",
+      "Il ne peut pas déployer des applications sur les instances EC2."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car AWS CodeDeploy peut déployer des applications sur divers environnements tels que EC2, ECS et Lambda. B est incorrect car il peut gérer les versions des artefacts de déploiement. C est correct car AWS CodeDeploy peut exécuter des scripts personnalisés avant et après le déploiement. D est incorrect car AWS CodeDeploy peut déployer des applications sur les instances EC2."
+  },
+  {
+    "id": "AWS-DEV-C(-009",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Artifact management",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour gérer les artefacts de build dans AWS CodePipeline ?",
+    "options": [
+      "Stocker les artefacts localement sur le système d'exploitation.",
+      "Utiliser AWS S3 pour stocker les artefacts de build.",
+      "Stocker les artefacts dans un dépôt Git public.",
+      "Utiliser AWS Lambda pour stocker les artefacts de build."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Utiliser AWS S3 pour stocker les artefacts de build est la meilleure pratique car il offre une haute disponibilité et des capacités de stockage à grande échelle."
+  },
+  {
+    "id": "AWS-DEV-C(-010",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "Troubleshooting",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la première étape à suivre lorsqu'on rencontre un problème avec AWS CodePipeline ?",
+    "options": [
+      "Vérifier les journaux d'erreurs de CodePipeline.",
+      "Modifier le code source directement sur les instances EC2.",
+      "Reconfigurer AWS CodeDeploy.",
+      "Supprimer le pipeline et le recréer."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Vérifier les journaux d'erreurs de CodePipeline est la première étape à suivre lorsqu'on rencontre un problème avec AWS CodePipeline."
+  },
+  {
+    "id": "AWS-DEV-C(-011",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodePipeline :",
+    "options": [
+      "Il peut être utilisé pour déclencher des pipelines à partir de CodeCommit.",
+      "Il nécessite une configuration manuelle pour chaque étape du pipeline.",
+      "Il peut intégrer avec des services AWS tels que CodeBuild et CodeDeploy.",
+      "Il ne peut être utilisé qu'avec des applications serverless."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car CodePipeline peut être déclenché automatiquement à partir de CodeCommit. B est incorrect car il peut être configuré pour automatiser le processus. C est correct car CodePipeline peut intégrer facilement avec d'autres services AWS. D est incorrect car il peut être utilisé pour des applications serverless et plus."
+  },
+  {
+    "id": "AWS-DEV-C(-012",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de AWS CodeBuild ?",
+    "options": [
+      "Créer et exécuter des builds de code",
+      "Déployer des applications",
+      "Gérer les dépôts de code",
+      "Monitorez les performances des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Créer et exécuter des builds de code est la principale fonction de AWS CodeBuild."
+  },
+  {
+    "id": "AWS-DEV-C(-013",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodeDeploy :",
+    "options": [
+      "Il peut déployer des applications sur des instances EC2 et ECS.",
+      "Il nécessite une configuration manuelle pour chaque instance de déploiement.",
+      "Il peut intégrer avec des services AWS tels que CodePipeline et CodeBuild.",
+      "Il ne peut être utilisé qu'avec des applications serverless."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car CodeDeploy peut déployer des applications sur des instances EC2 et ECS. B est incorrect car il peut être configuré pour automatiser le processus. C est correct car CodeDeploy peut intégrer facilement avec d'autres services AWS. D est incorrect car il peut être utilisé pour des applications serverless et plus."
+  },
+  {
+    "id": "AWS-DEV-C(-014",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeArtifact",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité de AWS CodeArtifact ?",
+    "options": [
+      "Gérer les dépôts de code et les packages",
+      "Déployer des applications",
+      "Gérer les configurations d'infrastructure",
+      "Monitorez les performances des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Gérer les dépôts de code et les packages est la principale utilité de AWS CodeArtifact."
+  },
+  {
+    "id": "AWS-DEV-C(-015",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "GitHub Actions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de GitHub Actions ?",
+    "options": [
+      "Créer et exécuter des builds de code",
+      "Déployer des applications",
+      "Gérer les dépôts de code",
+      "Monitorez les performances des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Créer et exécuter des builds de code est la principale fonction de GitHub Actions."
+  },
+  {
+    "id": "AWS-DEV-C(-016",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodePipeline :",
+    "options": [
+      "Il peut être déclenché par des événements AWS",
+      "Il ne peut pas intégrer d'autres services AWS",
+      "Il permet de créer des pipelines CI/CD automatisés",
+      "Il ne peut pas gérer les déploiements de code"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Il peut être déclenché par des événements AWS (correct). Il ne peut pas intégrer d'autres services AWS (incorrect). Il permet de créer des pipelines CI/CD automatisés (correct). Il ne peut pas gérer les déploiements de code (incorrect)"
+  },
+  {
+    "id": "AWS-DEV-C(-017",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de AWS CodeBuild ?",
+    "options": [
+      "Déploiement des applications web",
+      "Construction et test du code source",
+      "Gestion des dépôts Git",
+      "Monitoring des applications"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La principale fonction de AWS CodeBuild est la construction et le test du code source."
+  },
+  {
+    "id": "AWS-DEV-C(-018",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeDeploy",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodeDeploy :",
+    "options": [
+      "Il est utilisé pour déployer des applications sur AWS Elastic Beanstalk",
+      "Il ne peut pas être utilisé pour déployer des applications sur d'autres plateformes",
+      "Il permet de gérer les déploiements en plusieurs régions AWS",
+      "Il ne peut pas automatiser le processus de déploiement"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Il est utilisé pour déployer des applications sur AWS Elastic Beanstalk (correct). Il ne peut pas être utilisé pour déployer des applications sur d'autres plateformes (incorrect). Il permet de gérer les déploiements en plusieurs régions AWS (correct). Il ne peut pas automatiser le processus de déploiement (incorrect)"
+  },
+  {
+    "id": "AWS-DEV-C(-019",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "GitHub Actions",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de GitHub Actions par rapport à d'autres outils de CI/CD ?",
+    "options": [
+      "Intégration native avec GitHub",
+      "Support pour tous les systèmes d'exploitation",
+      "Prix très bas",
+      "Facilité de configuration"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'avantage principal de GitHub Actions est son intégration native avec GitHub."
+  },
+  {
+    "id": "AWS-DEV-C(-020",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "GitLab CI",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant GitLab CI :",
+    "options": [
+      "Il est utilisé pour déployer des applications sur AWS Elastic Beanstalk",
+      "Il ne peut pas être utilisé pour déployer des applications sur d'autres plateformes",
+      "Il permet de gérer les déploiements en plusieurs régions AWS",
+      "Il ne peut pas automatiser le processus de déploiement"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Il est utilisé pour déployer des applications sur AWS Elastic Beanstalk (correct). Il ne peut pas être utilisé pour déployer des applications sur d'autres plateformes (incorrect). Il permet de gérer les déploiements en plusieurs régions AWS (correct). Il ne peut pas automatiser le processus de déploiement (incorrect)"
+  },
+  {
+    "id": "AWS-DEV-C(-021",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodePipeline",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodePipeline :",
+    "options": [
+      "Il peut déclencher des actions en réponse à des événements AWS.",
+      "Il nécessite une configuration manuelle pour chaque étape du pipeline.",
+      "Il peut déployer des applications sur divers environnements AWS.",
+      "Il ne supporte que les déploiements d'applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car CodePipeline peut déclencher des actions en réponse à des événements AWS. B est incorrect car il peut être configuré automatiquement. C est correct car CodePipeline peut déployer des applications sur divers environnements AWS. D est incorrect car il supporte également les déploiements d'applications serverless et d'autres types."
+  },
+  {
+    "id": "AWS-DEV-C(-022",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeBuild",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité d'AWS CodeBuild ?",
+    "options": [
+      "Construire et tester du code source",
+      "Déployer des applications sur AWS",
+      "Gérer les événements AWS",
+      "Moniteur et analyser des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Construire et tester du code source est la principale utilité d'AWS CodeBuild."
+  },
+  {
+    "id": "AWS-DEV-C(-023",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeCommit",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS CodeCommit :",
+    "options": [
+      "Il est un service de dépôt Git privé.",
+      "Il nécessite une configuration manuelle pour chaque dépôt.",
+      "Il peut intégrer avec d'autres services AWS comme CodeBuild et CodeDeploy.",
+      "Il ne supporte que les déploiements d'applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car CodeCommit est un service de dépôt Git privé. B est incorrect car il peut être configuré automatiquement. C est correct car CodeCommit peut intégrer avec d'autres services AWS comme CodeBuild et CodeDeploy. D est incorrect car il supporte également les déploiements d'applications serverless et d'autres types."
+  },
+  {
+    "id": "AWS-DEV-C(-024",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "CodeArtifact",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité d'AWS CodeArtifact ?",
+    "options": [
+      "Construire et tester du code source",
+      "Déployer des applications sur AWS",
+      "Gérer les artefacts de développement et de production",
+      "Moniteur et analyser des applications"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Gérer les artefacts de développement et de production est la principale utilité d'AWS CodeArtifact."
+  },
+  {
+    "id": "AWS-DEV-C(-025",
+    "theme": "CI/CD (CodeSuite)",
+    "theme_label": "GitHub Actions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité d'GitHub Actions ?",
+    "options": [
+      "Construire et tester du code source",
+      "Déployer des applications sur AWS",
+      "Gérer les événements GitHub",
+      "Moniteur et analyser des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Construire et tester du code source est la principale utilité d'GitHub Actions."
   }
 ]

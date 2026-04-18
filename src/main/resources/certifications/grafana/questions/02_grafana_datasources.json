@@ -1,0 +1,545 @@
+[
+  {
+    "id": "GRAF-DS-001",
+    "theme": "Sources de données",
+    "theme_label": "Prometheus",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel langage de requête utilise-t-on avec une source de données Prometheus dans Grafana ?",
+    "options": ["PromQL", "LogQL", "Flux", "SQL"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Prometheus utilise PromQL (Prometheus Query Language). LogQL est pour Loki, Flux pour InfluxDB, SQL pour les bases relationnelles."
+  },
+  {
+    "id": "GRAF-DS-002",
+    "theme": "Sources de données",
+    "theme_label": "Loki",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles fonctionnalités sont disponibles avec une source de données Loki dans Grafana ?",
+    "options": [
+      "Exploration de logs en temps réel (Live tailing)",
+      "Création de métriques à partir de logs (LogQL metric queries)",
+      "Alertes basées sur les logs",
+      "Visualisation de traces distribuées",
+      "Export des logs au format CSV"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "Loki permet le live tailing (A), les métriques via LogQL (B), les alertes (C), et l'export CSV (E). Les traces distribuées (D) relèvent de Tempo ou Jaeger."
+  },
+  {
+    "id": "GRAF-DS-003",
+    "theme": "Sources de données",
+    "theme_label": "MySQL",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle macro Grafana permet de formater une colonne temporelle dans une requête SQL pour respecter la plage de temps sélectionnée ?",
+    "options": ["$__timeFilter(ma_colonne)", "$__timeGroup(ma_colonne, '1h')", "$__time(ma_colonne)", "$__interval"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "$__timeFilter(column) génère la clause WHERE adaptée à la plage de temps. $__timeGroup est pour le regroupement temporel."
+  },
+  {
+    "id": "GRAF-DS-004",
+    "theme": "Sources de données",
+    "theme_label": "Alertes",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX différences entre les alertes Grafana classiques et les alertes Grafana gérées par l'Alertmanager externe ?",
+    "options": [
+      "Les alertes classiques sont évaluées par le moteur de Grafana, l'Alertmanager gère le routage et les notifications.",
+      "Les alertes classiques ne supportent pas le regroupement (grouping) des notifications.",
+      "L'Alertmanager externe permet de créer des silences temporels.",
+      "Les alertes classiques peuvent utiliser des sources de données Loki.",
+      "L'Alertmanager externe nécessite une source de données Prometheus."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "L'Alertmanager apporte le regroupement, l'inhibition et les silences avancés. Les alertes classiques de Grafana sont évaluées en interne et n'ont pas de mécanisme de regroupement natif (A et B). Les silences (C) existent aussi dans l'Alertmanager intégré de Grafana."
+  },
+  {
+    "id": "GRAF-DS-005",
+    "theme": "Sources de données",
+    "theme_label": "Provisioning",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans quel fichier de configuration définit-on le provisioning des sources de données ?",
+    "options": [
+      "provisioning/datasources/*.yaml",
+      "grafana.ini",
+      "datasources.yml",
+      "provisioning/datasources/datasource.yml"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le chemin standard est `provisioning/datasources/*.yaml`."
+  },
+  {
+    "id": "GRAF-DS-006",
+    "theme": "Sources de données",
+    "theme_label": "Mixed",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant les sources de données mixtes (Mixed) dans un panneau sont correctes ?",
+    "options": [
+      "Un panneau peut interroger simultanément Prometheus et MySQL.",
+      "Les résultats des différentes sources peuvent être affichés sur le même graphique.",
+      "Il est impossible de joindre les données entre deux sources différentes.",
+      "Les transformations peuvent être appliquées pour fusionner les résultats de deux sources.",
+      "Les alertes ne peuvent pas être définies sur des panneaux à sources mixtes."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3, 4],
+    "explanation": "Le mode Mixed permet plusieurs sources (A) et de les superposer (B). Les transformations comme 'Merge' ou 'Join by field' permettent de fusionner (D). Les alertes ne sont pas supportées (E). L'option C est incorrecte."
+  },
+  {
+    "id": "GRAF-DS-007",
+    "theme": "Sources de données",
+    "theme_label": "InfluxDB",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel langage de requête est utilisé par InfluxDB v2 dans Grafana ?",
+    "options": ["Flux", "InfluxQL", "SQL", "PromQL"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "InfluxDB v2 utilise Flux comme langage de requête principal. InfluxQL est l'ancien langage d'InfluxDB v1."
+  },
+  {
+    "id": "GRAF-DS-008",
+    "theme": "Sources de données",
+    "theme_label": "Elasticsearch",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels types de requêtes sont supportés par la source de données Elasticsearch dans Grafana ?",
+    "options": [
+      "Lucene query string",
+      "Query DSL (JSON)",
+      "PPL (Piped Processing Language)",
+      "SQL (via Elasticsearch SQL)",
+      "PromQL"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Grafana supporte Lucene (A), Query DSL (B), PPL (C) et Elasticsearch SQL (D). PromQL n'est pas supporté (E)."
+  },
+  {
+    "id": "GRAF-DS-009",
+    "theme": "Sources de données",
+    "theme_label": "PostgreSQL",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle macro est utilisée pour générer automatiquement un intervalle de regroupement temporel adapté à la résolution du graphique ?",
+    "options": ["$__interval", "$__timeGroup", "$__timeFilter", "$__time"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`$__interval` est remplacé par une durée calculée en fonction de la plage de temps et de la largeur du panneau. `$__timeGroup` utilise cette valeur pour faire un GROUP BY time."
+  },
+  {
+    "id": "GRAF-DS-010",
+    "theme": "Sources de données",
+    "theme_label": "CloudWatch",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle configuration est nécessaire pour utiliser Amazon CloudWatch comme source de données dans Grafana ?",
+    "options": [
+      "Fournir des credentials AWS (Access Key / Secret Key) ou utiliser un rôle IAM",
+      "Activer l'API CloudWatch publique",
+      "Installer un agent Grafana sur une EC2",
+      "Configurer un proxy HTTP"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La source de données CloudWatch nécessite des identifiants AWS valides. Grafana les utilise pour appeler les API CloudWatch."
+  },
+  {
+    "id": "GRAF-DS-011",
+    "theme": "Sources de données",
+    "theme_label": "Azure Monitor",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels services Azure peuvent être interrogés via la source de données Azure Monitor dans Grafana ?",
+    "options": [
+      "Azure Monitor Metrics",
+      "Azure Log Analytics",
+      "Application Insights",
+      "Azure Resource Graph",
+      "Azure SQL Database"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Azure Monitor DS supporte Metrics, Log Analytics, Application Insights et Resource Graph. Azure SQL Database (E) est une source de données SQL distincte."
+  },
+  {
+    "id": "GRAF-DS-012",
+    "theme": "Sources de données",
+    "theme_label": "Google BigQuery",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type d'authentification est requis pour connecter Grafana à BigQuery ?",
+    "options": [
+      "Un compte de service Google avec les permissions appropriées",
+      "Nom d'utilisateur / mot de passe Google",
+      "OAuth 2.0 avec consentement utilisateur",
+      "Clé API Google Cloud"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana utilise un compte de service GCP pour s'authentifier de manière serveur‑à‑serveur."
+  },
+  {
+    "id": "GRAF-DS-013",
+    "theme": "Sources de données",
+    "theme_label": "Graphite",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonction Graphite permet de résumer des données sur un intervalle de temps (ex: moyenne sur 5 minutes) ?",
+    "options": ["summarize()", "aggregate()", "groupBy()", "transform()"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonction `summarize()` de Graphite regroupe les points par intervalle et applique une fonction d'agrégation."
+  },
+  {
+    "id": "GRAF-DS-014",
+    "theme": "Sources de données",
+    "theme_label": "Tempo",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité de Tempo permet de passer des logs Loki aux traces distribuées ?",
+    "options": ["TraceID en lien depuis les logs", "Recherche plein texte", "Métriques dérivées", "Service Graph"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "En incluant l'ID de trace dans les logs Loki, Grafana peut créer un lien direct vers la trace correspondante dans Tempo."
+  },
+  {
+    "id": "GRAF-DS-015",
+    "theme": "Sources de données",
+    "theme_label": "Alertmanager",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de source de données permet de visualiser l'état des alertes Prometheus gérées par Alertmanager ?",
+    "options": ["Alertmanager", "Prometheus", "Loki", "Grafana Alerting"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La source de données 'Alertmanager' se connecte à l'API d'Alertmanager pour afficher les alertes actives et leurs silences."
+  },
+  {
+    "id": "GRAF-DS-016",
+    "theme": "Sources de données",
+    "theme_label": "Test & Save",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert le bouton 'Save & Test' lors de la configuration d'une source de données ?",
+    "options": [
+      "Vérifier que la connexion fonctionne avant d'enregistrer la configuration",
+      "Sauvegarder la source de données et exécuter un test de charge",
+      "Tester la requête par défaut",
+      "Créer un dashboard de test"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le bouton 'Save & Test' valide que Grafana peut se connecter à la source de données avec les paramètres fournis."
+  },
+  {
+    "id": "GRAF-DS-017",
+    "theme": "Sources de données",
+    "theme_label": "Custom HTTP Headers",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment ajouter un en‑tête HTTP personnalisé à toutes les requêtes vers une source de données Prometheus ?",
+    "options": [
+      "Dans la section 'Custom HTTP Headers' de la configuration de la source de données",
+      "Dans le fichier grafana.ini",
+      "Via une variable d'environnement GF_DATASOURCE_HEADERS",
+      "Ce n'est pas supporté"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana permet d'ajouter des en‑têtes HTTP personnalisés dans la configuration avancée de la source de données."
+  },
+  {
+    "id": "GRAF-DS-018",
+    "theme": "Sources de données",
+    "theme_label": "Query Inspector",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles informations peut-on obtenir via le Query Inspector d'un panneau ?",
+    "options": [
+      "La requête exacte envoyée à la source de données",
+      "Le temps d'exécution de la requête",
+      "Les données brutes retournées",
+      "Les erreurs éventuelles",
+      "Le plan d'exécution SQL"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Le Query Inspector affiche la requête, les stats, les données brutes et les erreurs. Le plan d'exécution (E) dépend de la source de données et n'est généralement pas exposé."
+  },
+  {
+    "id": "GRAF-DS-019",
+    "theme": "Sources de données",
+    "theme_label": "Data source permissions",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Peut-on restreindre l'utilisation d'une source de données à certaines équipes ou utilisateurs ?",
+    "options": [
+      "Oui, via les permissions de source de données (Enterprise feature ou open source selon version)",
+      "Non, toutes les sources sont accessibles à tous les utilisateurs de l'organisation",
+      "Uniquement en utilisant des organisations séparées",
+      "Oui, en configurant le fichier datasources.yaml"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana OSS permet de restreindre les sources de données aux administrateurs. Grafana Enterprise offre des permissions plus granulaires par équipe/utilisateur."
+  },
+  {
+    "id": "GRAF-DS-020",
+    "theme": "Sources de données",
+    "theme_label": "Prometheus exemplars",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que sont les 'exemplars' dans Prometheus et comment Grafana les affiche-t-il ?",
+    "options": [
+      "Des exemples de traces associées à une métrique, affichés sous forme de points ou d'annotations dans le graphique.",
+      "Des échantillons de données brutes utilisés pour le débogage.",
+      "Des métadonnées sur les séries temporelles.",
+      "Des requêtes pré‑enregistrées."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les exemplars lient une métrique à un ID de trace spécifique, permettant de passer du monitoring à l'observabilité fine."
+  },
+  {
+    "id": "GRAF-DS-021",
+    "theme": "Sources de données",
+    "theme_label": "PostgreSQL SSL",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels modes SSL sont supportés par la source de données PostgreSQL dans Grafana ?",
+    "options": ["disable", "require", "verify-ca", "verify-full", "prefer"],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Grafana supporte les modes SSL standard de PostgreSQL : disable, require, verify-ca, verify-full."
+  },
+  {
+    "id": "GRAF-DS-022",
+    "theme": "Sources de données",
+    "theme_label": "Mimir",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Grafana Mimir est utilisé pour :",
+    "options": [
+      "Le stockage à long terme et l'évolutivité horizontale des métriques Prometheus.",
+      "La gestion des logs.",
+      "La gestion des traces.",
+      "Le load balancing des requêtes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Mimir est un backend de stockage de métriques compatible Prometheus, conçu pour la haute disponibilité et le multi‑tenant."
+  },
+  {
+    "id": "GRAF-DS-023",
+    "theme": "Sources de données",
+    "theme_label": "Synthetic Monitoring",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle source de données Grafana Cloud est dédiée à la surveillance synthétique (tests HTTP, ping, navigation) ?",
+    "options": ["Synthetic Monitoring", "k6", "Prometheus Blackbox", "Uptime"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana Cloud Synthetic Monitoring permet de configurer des tests de disponibilité depuis plusieurs points de présence mondiaux."
+  },
+  {
+    "id": "GRAF-DS-024",
+    "theme": "Sources de données",
+    "theme_label": "Variables de source de données",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Comment utiliser une variable de type 'Data source' dans une requête ?",
+    "options": [
+      "Sélectionner la variable comme source de données du panneau (via '${datasource}')",
+      "Référencer la variable dans le champ 'Data source' avec $nomVariable",
+      "Utiliser $nomVariable dans le corps de la requête",
+      "La variable Data source ne peut être utilisée que pour changer la source du panneau entier",
+      "Cela n'est pas supporté"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Une variable de type Data source permet de changer dynamiquement la source de données du panneau (A, B, D). Elle n'est pas utilisée dans le corps de la requête (C faux)."
+  },
+  {
+    "id": "GRAF-DS-025",
+    "theme": "Sources de données",
+    "theme_label": "Alerting data source",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Peut-on créer une alerte basée sur une requête Elasticsearch dans Grafana ?",
+    "options": [
+      "Oui, si l'alerte utilise une requête de type métrique (réductible à une série temporelle)",
+      "Non, seules les sources de données temporelles sont supportées",
+      "Oui, sur n'importe quelle requête Elasticsearch",
+      "Non, Elasticsearch n'est pas compatible avec le moteur d'alertes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le moteur d'alertes Grafana supporte Elasticsearch à condition que la requête retourne des données numériques temporelles (ex: agrégation par intervalle de temps)."
+  },
+  {
+    "id": "GRAF-DS-026",
+    "theme": "Sources de données",
+    "theme_label": "Time series vs Table",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de format de données une source de données doit-elle retourner pour être utilisée dans un panneau 'Time series' ?",
+    "options": [
+      "Des séries temporelles (timestamp, valeur)",
+      "Une table de données",
+      "Un document JSON",
+      "Du texte brut"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les panneaux de type graphique attendent des données au format série temporelle (au moins un champ time et un champ numérique)."
+  },
+  {
+    "id": "GRAF-DS-027",
+    "theme": "Sources de données",
+    "theme_label": "Private data source connect",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment connecter Grafana Cloud à une source de données interne non exposée sur Internet ?",
+    "options": [
+      "Utiliser Grafana Agent en mode 'private data source connect'",
+      "Ouvrir un port dans le pare‑feu",
+      "Utiliser un VPN site‑à‑site",
+      "Ce n'est pas possible"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Private Data Source Connect (PDSC) permet à Grafana Cloud d'interroger des sources de données sur site via un agent sécurisé sans ouvrir de port entrant."
+  },
+  {
+    "id": "GRAF-DS-028",
+    "theme": "Sources de données",
+    "theme_label": "Provisioning with env vars",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment référencer une variable d'environnement dans un fichier de provisioning de source de données ?",
+    "options": ["${NOM_VARIABLE}", "$NOM_VARIABLE", "{{NOM_VARIABLE}}", "%NOM_VARIABLE%"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dans les fichiers YAML de provisioning, on utilise la syntaxe `${NOM_VARIABLE}` pour injecter une variable d'environnement."
+  },
+  {
+    "id": "GRAF-DS-029",
+    "theme": "Sources de données",
+    "theme_label": "Default data source",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment définir une source de données par défaut pour les nouveaux panneaux ?",
+    "options": [
+      "Dans la liste des sources de données, cliquer sur l'étoile pour la marquer comme 'Default'",
+      "La première source créée devient automatiquement par défaut",
+      "Dans le fichier grafana.ini avec default_datasource",
+      "Dans les paramètres de l'organisation"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'interface permet de définir une source de données par défaut en cliquant sur l'icône étoile."
+  },
+  {
+    "id": "GRAF-DS-030",
+    "theme": "Sources de données",
+    "theme_label": "Expression queries",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que permet de faire une requête de type 'Expression' dans Grafana ?",
+    "options": [
+      "Appliquer des opérations mathématiques ou de réduction sur les résultats d'autres requêtes",
+      "Écrire du code JavaScript pour transformer les données",
+      "Exécuter des expressions régulières sur les logs",
+      "Créer des alertes sans source de données"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le type de requête 'Expression' (ou 'Math') permet de combiner, réduire ou transformer les résultats de plusieurs requêtes (ex: calculer un ratio, un delta)."
+  },
+  {
+    "id": "GRAF-DS-031",
+    "theme": "Sources de données",
+    "theme_label": "Trace to logs",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment configurer le lien automatique d'une span Tempo vers les logs Loki correspondants ?",
+    "options": [
+      "Définir une 'Trace to logs' configuration dans les paramètres de la source de données Loki ou Tempo",
+      "Ajouter un tag 'loki' dans la span",
+      "Utiliser la transformation 'Link to logs'",
+      "Configurer un webhook"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La configuration 'Trace to logs' permet de spécifier comment extraire l'ID de trace ou d'autres champs pour construire un lien vers les logs dans Loki."
+  },
+  {
+    "id": "GRAF-DS-032",
+    "theme": "Sources de données",
+    "theme_label": "Grafana Pyroscope",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de données est visualisé avec Pyroscope dans Grafana ?",
+    "options": ["Profils de performance (CPU, mémoire)", "Métriques d'infrastructure", "Logs applicatifs", "Traces distribuées"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Pyroscope est la solution de profiling continu de Grafana, permettant d'analyser les performances du code (flamegraphs)."
+  },
+  {
+    "id": "GRAF-DS-033",
+    "theme": "Sources de données",
+    "theme_label": "Query caching",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel paramètre active le cache des requêtes pour une source de données ?",
+    "options": [
+      "Dans la configuration de la source de données, activer 'Cache' et définir une TTL",
+      "Ajouter &cache=true dans la requête",
+      "Configurer un proxy de cache externe",
+      "Le cache est automatique pour les requêtes lentes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana peut mettre en cache les résultats des requêtes pour améliorer les performances. L'option se trouve dans l'onglet 'Cache' de la source de données."
+  },
+  {
+    "id": "GRAF-DS-034",
+    "theme": "Sources de données",
+    "theme_label": "Grafana Agent",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels rôles peut jouer Grafana Agent ?",
+    "options": [
+      "Collecte de métriques Prometheus",
+      "Collecte de logs vers Loki",
+      "Collecte de traces vers Tempo",
+      "Proxy pour l'accès aux sources de données internes",
+      "Serveur Grafana lui‑même"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Grafana Agent est un collecteur léger qui peut envoyer des métriques, logs et traces. Il peut aussi servir de proxy PDSC (D). Il ne remplace pas le serveur Grafana (E)."
+  },
+  {
+    "id": "GRAF-DS-035",
+    "theme": "Sources de données",
+    "theme_label": "Plugin development",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans quel langage sont principalement développés les plugins de source de données pour Grafana ?",
+    "options": ["TypeScript / JavaScript", "Go", "Python", "Java"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les plugins Grafana (frontend et backend) sont écrits en TypeScript/JavaScript pour la partie UI, et optionnellement en Go pour un backend de datasource."
+  }
+]

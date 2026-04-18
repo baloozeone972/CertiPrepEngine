@@ -572,7 +572,7 @@
     "question": "WAF peut-il être associé à CloudFront ?",
     "options": ["Oui", "Non", "Uniquement à ALB", "Uniquement à API Gateway"],
     "correct": 0,
-    "explication": "WAF peut être associé à CloudFront, ALB, API Gateway."
+    "explanation": "WAF peut être associé à CloudFront, ALB, API Gateway."
   },
   {
     "id": "AWS-CCP-194",
@@ -582,7 +582,7 @@
     "question": "La rotation automatique des clés KMS est-elle disponible pour les clés clientes ?",
     "options": ["Oui (annuelle)", "Non", "Uniquement pour les clés AWS gérées", "Uniquement pour les clés CloudHSM"],
     "correct": 0,
-    "explication": "La rotation automatique annuelle est disponible pour les Customer Managed Keys."
+    "explanation": "La rotation automatique annuelle est disponible pour les Customer Managed Keys."
   },
   {
     "id": "AWS-CCP-195",
@@ -592,7 +592,7 @@
     "question": "Secrets Manager peut-il automatiquement rotater les secrets RDS ?",
     "options": ["Oui", "Non", "Uniquement pour les mots de passe génériques", "Uniquement pour les clés API"],
     "correct": 0,
-    "explication": "Secrets Manager peut rotater automatiquement les secrets pour RDS, Redshift, DocumentDB."
+    "explanation": "Secrets Manager peut rotater automatiquement les secrets pour RDS, Redshift, DocumentDB."
   },
   {
     "id": "AWS-CCP-196",
@@ -602,7 +602,7 @@
     "question": "CloudHSM est-il conforme FIPS 140-2 niveau 3 ?",
     "options": ["Oui", "Non", "Niveau 1", "Niveau 2"],
     "correct": 0,
-    "explication": "CloudHSM est certifié FIPS 140-2 niveau 3."
+    "explanation": "CloudHSM est certifié FIPS 140-2 niveau 3."
   },
   {
     "id": "AWS-CCP-197",
@@ -612,7 +612,7 @@
     "question": "Cognito User Pools peut-il fédérer avec des fournisseurs sociaux ?",
     "options": ["Oui", "Non", "Uniquement avec SAML", "Uniquement avec OIDC"],
     "correct": 0,
-    "explication": "Cognito supporte Facebook, Google, Amazon, Apple, SAML, OIDC."
+    "explanation": "Cognito supporte Facebook, Google, Amazon, Apple, SAML, OIDC."
   },
   {
     "id": "AWS-CCP-198",
@@ -627,7 +627,7 @@
       "Gérer les mots de passe"
     ],
     "correct": 0,
-    "explication": "Identity Pools permettent d'assumer des rôles IAM pour accéder aux services AWS."
+    "explanation": "Identity Pools permettent d'assumer des rôles IAM pour accéder aux services AWS."
   },
   {
     "id": "AWS-CCP-199",
@@ -637,7 +637,7 @@
     "question": "Quel service AWS peut intégrer Active Directory ?",
     "options": ["AWS Directory Service", "Cognito", "IAM", "Organizations"],
     "correct": 0,
-    "explication": "Directory Service permet d'utiliser Microsoft AD ou de se connecter à un AD existant."
+    "explanation": "Directory Service permet d'utiliser Microsoft AD ou de se connecter à un AD existant."
   },
   {
     "id": "AWS-CCP-200",
@@ -652,6 +652,6 @@
       "Désactiver le chiffrement"
     ],
     "correct": 0,
-    "explication": "Les buckets publics doivent être évités sauf cas spécifiques (sites web statiques)."
+    "explanation": "Les buckets publics doivent être évités sauf cas spécifiques (sites web statiques)."
   }
 ]

@@ -1,32 +1,17 @@
 {
   "id": "podman",
-  "name": "Podman Professional (Red Hat)",
+  "name": "Podman Professional Red Hat",
   "version": "1.0",
-  "description": "Certification Podman - Conteneurisation sans daemon avec Podman",
+  "description": "La certification Podman Professional valide l'expertise dans l'utilisation de Podman pour la gestion de conteneurs, de pods et d'images, en environnement rootless et en intégration avec systemd. Elle couvre également la compatibilité avec Docker et le déploiement sur Kubernetes via Podman.",
   "totalQuestions": 250,
-  "examDurationMinutes": 90,
-  "examQuestionCount": 40,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
   "passingScore": 70,
   "themes": [
-    {
-      "name": "Podman Basics",
-      "count": 50
-    },
-    {
-      "name": "Images & Containers",
-      "count": 60
-    },
-    {
-      "name": "Pods",
-      "count": 50
-    },
-    {
-      "name": "Networking",
-      "count": 40
-    },
-    {
-      "name": "Volumes",
-      "count": 50
-    }
+    {"name": "Fondamentaux de Podman", "count": 50},
+    {"name": "Gestion des conteneurs et pods", "count": 75},
+    {"name": "Gestion des images", "count": 50},
+    {"name": "Réseau et volumes", "count": 50},
+    {"name": "Intégration systemd et Kubernetes", "count": 25}
   ]
 }

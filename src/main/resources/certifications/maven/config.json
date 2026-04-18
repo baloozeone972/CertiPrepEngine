@@ -1,32 +1,22 @@
 {
   "id": "maven",
-  "name": "Maven Professional (Apache)",
+  "name": "Maven Professional Apache Certification",
   "version": "1.0",
-  "description": "Certification Apache Maven - Gestion de projet et build Java avec Maven",
-  "totalQuestions": 250,
-  "examDurationMinutes": 90,
-  "examQuestionCount": 50,
-  "passingScore": 65,
+  "description": "Validation des compétences avancées dans la gestion de cycle de vie, des dépendances, des plugins et de l'orchestration multi-modules avec Apache Maven. Cible les développeurs et architectes Java.",
+  "totalQuestions": 350,
+  "examDurationMinutes": 110,
+  "examQuestionCount": 350,
+  "passingScore": 70,
   "themes": [
-    {
-      "name": "POM Configuration",
-      "count": 60
-    },
-    {
-      "name": "Build Lifecycle",
-      "count": 50
-    },
-    {
-      "name": "Dependencies",
-      "count": 50
-    },
-    {
-      "name": "Plugins",
-      "count": 50
-    },
-    {
-      "name": "Multi-module Projects",
-      "count": 40
-    }
+    {"name": "Architecture POM & Modèles", "count": 35},
+    {"name": "Lifecycles & Phases", "count": 40},
+    {"name": "Dépendances & Repositories", "count": 40},
+    {"name": "Plugins & Goals", "count": 35},
+    {"name": "Profils & Properties", "count": 30},
+    {"name": "Multi-Modules & Aggregation", "count": 30},
+    {"name": "Custom Plugins & Extensions", "content": 25},
+    {"name": "CI/CD & Integration", "count": 25},
+    {"name": "Troubleshooting & Debug", "count": 35},
+    {"name": "Best Practices & Modern Maven", "count": 55}
   ]
 }

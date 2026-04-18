@@ -28,5 +28,27 @@
     ],
     "correct": 3,
     "explanation": "Le module package est générique, apt pour Debian, yum pour RHEL."
+  },
+  {
+    "id": "ANS-PLA-001",
+    "theme": "Playbooks",
+    "theme_label": "Playbooks Ansible",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les playbooks Ansible :",
+    "options": [
+      "Les playbooks sont écrits en YAML.",
+      "Un playbook peut exécuter plusieurs tâches.",
+      "Les playbooks peuvent être lancés avec la commande 'ansible-playbook'.",
+      "Un playbook doit toujours avoir une section 'hosts'.",
+      "Les playbooks ne peuvent être exécutés que sur des serveurs Linux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les playbooks sont écrits en YAML (A correct). Un playbook peut exécuter plusieurs tâches (B correct). Les playbooks peuvent être lancés avec la commande 'ansible-playbook' (C correct). Un playbook doit toujours avoir une section 'hosts' (D correct). Les playbooks ne peuvent être exécutés que sur des serveurs Linux n'est pas toujours vrai (E incorrect)."
   }
 ]

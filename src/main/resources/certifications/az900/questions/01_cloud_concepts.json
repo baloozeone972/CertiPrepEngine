@@ -1,292 +1,698 @@
 [
   {
-    "id": "AZ-900-001",
-    "theme": "Cloud Concepts",
-    "theme_label": "Définitions",
+    "id": "AZ900-CC-001",
+    "theme": "Concepts cloud",
+    "theme_label": "Définition du cloud computing",
     "difficulty": "easy",
-    "question": "Qu'est-ce que le cloud computing ?",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce que le cloud computing selon la définition de Microsoft ?",
     "options": [
-      "Livraison de ressources informatiques à la demande",
-      "Des serveurs physiques",
-      "Un type de base de données",
-      "Un langage de programmation"
+      "La fourniture de services informatiques (serveurs, stockage, bases de données, réseau, logiciels, analytique, intelligence) via Internet (« le cloud ») pour offrir une innovation plus rapide, des ressources flexibles et des économies d'échelle.",
+      "Un ensemble de serveurs physiques localisés dans un datacenter unique et géré par une entreprise.",
+      "Une technologie de virtualisation qui permet d'exécuter plusieurs systèmes d'exploitation sur une même machine physique.",
+      "Un logiciel installé localement sur un ordinateur personnel pour gérer des fichiers en ligne."
     ],
     "correct": 0,
-    "explanation": "Le cloud computing fournit des ressources informatiques via Internet."
+    "correct_multiple": null,
+    "explanation": "Selon Microsoft, le cloud computing consiste à fournir des services informatiques via Internet. L'option B décrit un datacenter traditionnel sur site. L'option C décrit la virtualisation, une technologie sous‑jacente mais pas la définition du cloud. L'option D est une application cliente, non le cloud lui‑même."
   },
   {
-    "id": "AZ-900-002",
-    "theme": "Cloud Concepts",
-    "theme_label": "Définitions",
+    "id": "AZ900-CC-002",
+    "theme": "Concepts cloud",
+    "theme_label": "Modèles de service (IaaS, PaaS, SaaS)",
     "difficulty": "easy",
-    "question": "Qu'est-ce que l'IaaS ?",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans le modèle IaaS (Infrastructure as a Service), quel composant est géré par le client ?",
     "options": [
-      "Infrastructure as a Service",
-      "Infrastructure as a Software",
-      "Internet as a Service",
-      "Integration as a Service"
+      "Le système d'exploitation et les applications",
+      "L'hyperviseur et le matériel physique",
+      "Le réseau physique et le stockage sous‑jacent",
+      "L'infrastructure du datacenter (alimentation, refroidissement)"
     ],
     "correct": 0,
-    "explanation": "IaaS fournit des serveurs, stockage et réseaux virtualisés."
+    "correct_multiple": null,
+    "explanation": "En IaaS, le fournisseur cloud gère l'infrastructure physique (serveurs, réseau, stockage) et l'hyperviseur. Le client est responsable du système d'exploitation, des middlewares, des applications et des données."
   },
   {
-    "id": "AZ-900-003",
-    "theme": "Cloud Concepts",
-    "theme_label": "Définitions",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que le PaaS ?",
-    "options": [
-      "Platform as a Service",
-      "Platform as a Software",
-      "Product as a Service",
-      "Process as a Service"
-    ],
-    "correct": 0,
-    "explanation": "PaaS fournit une plateforme pour développer et déployer des applications."
-  },
-  {
-    "id": "AZ-900-004",
-    "theme": "Cloud Concepts",
-    "theme_label": "Définitions",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que le SaaS ?",
-    "options": [
-      "Software as a Service",
-      "Software as a System",
-      "Service as a Software",
-      "Security as a Service"
-    ],
-    "correct": 0,
-    "explanation": "SaaS fournit des applications logicielles via Internet."
-  },
-  {
-    "id": "AZ-900-005",
-    "theme": "Cloud Concepts",
+    "id": "AZ900-CC-003",
+    "theme": "Concepts cloud",
     "theme_label": "Modèles de déploiement",
     "difficulty": "easy",
-    "question": "Qu'est-ce que le cloud public ?",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUS les modèles de déploiement cloud reconnus.",
     "options": [
-      "Ressources partagées via Internet",
-      "Ressources privées",
-      "Ressources sur site",
-      "Ressources hybrides"
+      "Cloud public",
+      "Cloud privé",
+      "Cloud hybride",
+      "Cloud communautaire",
+      "Cloud exclusif"
     ],
     "correct": 0,
-    "explanation": "Le cloud public est accessible à tous via Internet."
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Les trois principaux modèles sont public, privé et hybride. Le cloud communautaire existe mais n'est pas un modèle standard universellement cité dans le cadre de l'AZ‑900. Le cloud exclusif n'est pas un terme officiel."
   },
   {
-    "id": "AZ-900-006",
-    "theme": "Cloud Concepts",
-    "theme_label": "Modèles de déploiement",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que le cloud privé ?",
-    "options": [
-      "Ressources dédiées à une organisation",
-      "Ressources partagées",
-      "Ressources publiques",
-      "Ressources temporaires"
-    ],
-    "correct": 0,
-    "explanation": "Le cloud privé est dédié à une seule organisation."
-  },
-  {
-    "id": "AZ-900-007",
-    "theme": "Cloud Concepts",
-    "theme_label": "Modèles de déploiement",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que le cloud hybride ?",
-    "options": [
-      "Combinaison de cloud public et privé",
-      "Un seul type de cloud",
-      "Un cloud régional",
-      "Un cloud local"
-    ],
-    "correct": 0,
-    "explanation": "Le cloud hybride combine cloud public et privé."
-  },
-  {
-    "id": "AZ-900-008",
-    "theme": "Cloud Concepts",
+    "id": "AZ900-CC-004",
+    "theme": "Concepts cloud",
     "theme_label": "Avantages du cloud",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que l'élasticité dans le cloud ?",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages du cloud computing selon le modèle de consommation ? Sélectionnez TOUTES les affirmations correctes.",
     "options": [
-      "Capacité à s'adapter à la charge",
-      "Capacité à stocker des données",
-      "Capacité à sécuriser",
-      "Capacité à sauvegarder"
+      "Haute disponibilité",
+      "Scalabilité (verticale et horizontale)",
+      "Élasticité",
+      "Tolérance de panne et reprise après sinistre",
+      "Modèle de dépenses d'investissement (CapEx) uniquement"
     ],
     "correct": 0,
-    "explanation": "L'élasticité permet d'ajuster les ressources automatiquement."
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Les avantages incluent la haute disponibilité, la scalabilité, l'élasticité et la tolérance de panne. L'option E est incorrecte : le cloud privilégie un modèle de dépenses opérationnelles (OpEx) plutôt que CapEx."
   },
   {
-    "id": "AZ-900-009",
-    "theme": "Cloud Concepts",
-    "theme_label": "Avantages du cloud",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que le pay-as-you-go ?",
+    "id": "AZ900-CC-005",
+    "theme": "Concepts cloud",
+    "theme_label": "Élasticité vs Scalabilité",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre scalabilité et élasticité dans le cloud ?",
     "options": [
-      "Payer uniquement ce qu'on utilise",
-      "Payer à l'avance",
-      "Payer un abonnement fixe",
-      "Payer à l'année"
+      "La scalabilité est la capacité à augmenter les ressources de manière planifiée, tandis que l'élasticité est la capacité à ajuster automatiquement les ressources en fonction de la charge en temps réel.",
+      "La scalabilité concerne le stockage, l'élasticité concerne le réseau.",
+      "La scalabilité est manuelle, l'élasticité est uniquement verticale.",
+      "Il n'y a pas de différence ; les deux termes sont synonymes."
     ],
     "correct": 0,
-    "explanation": "Pay-as-you-go signifie payer uniquement pour les ressources consommées."
+    "correct_multiple": null,
+    "explanation": "La scalabilité permet d'augmenter les ressources (souvent manuellement ou selon un planning). L'élasticité ajoute une dimension automatique et dynamique pour répondre aux variations de charge instantanées."
   },
   {
-    "id": "AZ-900-010",
-    "theme": "Cloud Concepts",
-    "theme_label": "Avantages du cloud",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que l'économie d'échelle ?",
-    "options": [
-      "Coût réduit par unité avec le volume",
-      "Coût augmenté avec le volume",
-      "Coût fixe",
-      "Coût variable"
-    ],
-    "correct": 0,
-    "explanation": "Plus on utilise de ressources, plus le coût unitaire diminue."
-  },
-  {
-    "id": "AZ-900-011",
-    "theme": "Cloud Concepts",
+    "id": "AZ900-CC-006",
+    "theme": "Concepts cloud",
     "theme_label": "Haute disponibilité",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que la haute disponibilité ?",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX stratégies Azure qui contribuent à la haute disponibilité d'une application ?",
     "options": [
-      "Système accessible sans interruption",
-      "Système rapide",
-      "Système économique",
-      "Système sécurisé"
+      "Déployer les ressources dans un groupe à haute disponibilité (Availability Set)",
+      "Utiliser des zones de disponibilité (Availability Zones)",
+      "Activer le stockage géo‑redondant (GRS) pour les sauvegardes",
+      "Configurer une seule machine virtuelle avec un disque SSD Premium",
+      "Utiliser un groupe de ressources unique pour toutes les ressources"
     ],
     "correct": 0,
-    "explanation": "La haute disponibilité garantit l'accès continu aux applications."
+    "correct_multiple": [0, 1],
+    "explanation": "Les Availability Sets protègent contre les pannes matérielles et les mises à jour planifiées. Les Availability Zones protègent contre les pannes d'un datacenter entier. Le GRS (C) concerne la reprise d'activité (DR), pas la haute disponibilité au sens strict. Un seul VM (D) n'offre aucune redondance. Le groupe de ressources (E) n'a pas d'impact sur la disponibilité."
   },
   {
-    "id": "AZ-900-012",
-    "theme": "Cloud Concepts",
-    "theme_label": "Tolérance aux pannes",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que la tolérance aux pannes ?",
+    "id": "AZ900-CC-007",
+    "theme": "Concepts cloud",
+    "theme_label": "Modèle de responsabilité partagée",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité physique des datacenters Azure ?",
     "options": [
-      "Capacité à continuer malgré les pannes",
-      "Absence de pannes",
-      "Prévention des pannes",
-      "Correction automatique"
+      "Microsoft (le fournisseur cloud)",
+      "Le client",
+      "Un auditeur tiers",
+      "Responsabilité conjointe"
     ],
     "correct": 0,
-    "explanation": "La tolérance aux pannes permet de fonctionner malgré des défaillances."
+    "correct_multiple": null,
+    "explanation": "La sécurité physique (accès aux bâtiments, alimentation, refroidissement) relève toujours de la responsabilité du fournisseur cloud. Le client est responsable de la sécurité dans le cloud (données, identités, applications)."
   },
   {
-    "id": "AZ-900-013",
-    "theme": "Cloud Concepts",
-    "theme_label": "Scalabilité",
+    "id": "AZ900-CC-008",
+    "theme": "Concepts cloud",
+    "theme_label": "CapEx vs OpEx",
     "difficulty": "easy",
-    "question": "Qu'est-ce que la scalabilité horizontale ?",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment le cloud computing transforme‑t‑il généralement les dépenses informatiques ?",
     "options": [
-      "Ajouter plus d'instances",
-      "Augmenter la puissance des instances",
-      "Ajouter du stockage",
-      "Augmenter la mémoire"
+      "Il fait passer les dépenses d'un modèle CapEx (dépenses d'investissement) à un modèle OpEx (dépenses d'exploitation).",
+      "Il augmente les dépenses CapEx car il faut acheter plus de matériel.",
+      "Il supprime complètement toutes les dépenses OpEx.",
+      "Il n'a aucun impact sur la structure des coûts."
     ],
     "correct": 0,
-    "explanation": "La scalabilité horizontale ajoute des instances supplémentaires."
+    "correct_multiple": null,
+    "explanation": "Le cloud remplace les investissements initiaux lourds (CapEx) par un paiement à l'usage (OpEx)."
   },
   {
-    "id": "AZ-900-014",
-    "theme": "Cloud Concepts",
-    "theme_label": "Scalabilité",
-    "difficulty": "easy",
-    "question": "Qu'est-ce que la scalabilité verticale ?",
+    "id": "AZ900-CC-009",
+    "theme": "Concepts cloud",
+    "theme_label": "Types de cloud public, privé, hybride",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles caractéristiques décrivent le cloud hybride ? Sélectionnez TOUTES les affirmations exactes.",
     "options": [
-      "Augmenter la puissance des instances",
-      "Ajouter plus d'instances",
-      "Ajouter des zones",
-      "Ajouter des régions"
+      "Il combine un cloud public et un cloud privé ou une infrastructure sur site.",
+      "Il permet de conserver des données sensibles sur site tout en profitant de l'élasticité du cloud public.",
+      "Il nécessite une connexion entre les environnements (ex: VPN, ExpressRoute).",
+      "Il est toujours moins cher qu'un cloud public pur.",
+      "Il est identique au cloud communautaire."
     ],
     "correct": 0,
-    "explanation": "La scalabilité verticale augmente la taille des instances."
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Le cloud hybride intègre au moins un cloud public et une infrastructure privée (A). Il permet de répondre à des besoins de conformité ou de latence (B). Une connectivité réseau est indispensable (C). Il n'est pas forcément moins cher (D), et diffère du cloud communautaire (E)."
   },
   {
-    "id": "AZ-900-015",
-    "theme": "Cloud Concepts",
-    "theme_label": "Responsabilité partagée",
+    "id": "AZ900-CC-010",
+    "theme": "Concepts cloud",
+    "theme_label": "Consommation à la demande",
     "difficulty": "easy",
-    "question": "Dans le modèle de responsabilité partagée, qui est responsable du matériel ?",
-    "options": ["Le fournisseur cloud", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "type": "SINGLE_CHOICE",
+    "question": "Quel terme décrit le fait de ne payer que les ressources cloud effectivement utilisées, sans engagement à long terme ?",
+    "options": [
+      "Paiement à l'usage (Pay‑as‑you‑go)",
+      "Réservation d'instance",
+      "Licence perpétuelle",
+      "Abonnement annuel obligatoire"
+    ],
     "correct": 0,
-    "explanation": "Le fournisseur cloud est responsable du matériel, des centres de données."
+    "correct_multiple": null,
+    "explanation": "Le modèle de consommation cloud standard est le paiement à l'usage. Les réservations (B) offrent des réductions contre un engagement."
   },
   {
-    "id": "AZ-900-016",
-    "theme": "Cloud Concepts",
-    "theme_label": "Responsabilité partagée",
-    "difficulty": "easy",
-    "question": "Dans le modèle de responsabilité partagée, qui est responsable des données ?",
-    "options": ["Le client", "Le fournisseur cloud", "Les deux", "Ni l'un ni l'autre"],
+    "id": "AZ900-CC-011",
+    "theme": "Concepts cloud",
+    "theme_label": "SaaS - Exemples",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Parmi les services suivants, lesquels sont des exemples de SaaS (Software as a Service) ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Microsoft 365 (Office 365)",
+      "Dynamics 365",
+      "Azure Virtual Machines",
+      "Azure SQL Database",
+      "Salesforce"
+    ],
     "correct": 0,
-    "explanation": "Le client est responsable de ses données."
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Microsoft 365 et Dynamics 365 sont des applications SaaS prêtes à l'emploi. Salesforce est également un SaaS. Azure Virtual Machines est IaaS, Azure SQL Database est PaaS."
   },
   {
-    "id": "AZ-900-017",
-    "theme": "Cloud Concepts",
+    "id": "AZ900-CC-012",
+    "theme": "Concepts cloud",
+    "theme_label": "PaaS - Responsabilités",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans un modèle PaaS, de quoi le client n'a‑t‑il PAS à se soucier ?",
+    "options": [
+      "Du système d'exploitation et de l'infrastructure sous‑jacente",
+      "Du code de l'application",
+      "De la configuration de l'application",
+      "Des données stockées"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "En PaaS, le fournisseur gère le système d'exploitation, les serveurs, le stockage, le réseau. Le client garde la responsabilité de l'application et de ses données."
+  },
+  {
+    "id": "AZ900-CC-013",
+    "theme": "Concepts cloud",
     "theme_label": "Régions Azure",
     "difficulty": "easy",
-    "question": "Qu'est-ce qu'une région Azure ?",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est‑ce qu'une région Azure ?",
     "options": [
-      "Ensemble de centres de données dans une zone géographique",
-      "Un centre de données",
-      "Un serveur",
-      "Un réseau"
+      "Un ensemble de datacenters déployés dans un périmètre géographique défini, connectés par un réseau à faible latence.",
+      "Un point de présence (PoP) pour la diffusion de contenu (CDN).",
+      "Une zone de disponibilité au sein d'un datacenter.",
+      "Un groupe de ressources logiques."
     ],
     "correct": 0,
-    "explanation": "Une région Azure regroupe plusieurs centres de données."
+    "correct_multiple": null,
+    "explanation": "Une région Azure contient un ou plusieurs datacenters proches géographiquement. Les PoP (B) sont pour le réseau CDN. Les zones de disponibilité (C) sont des entités physiquement séparées au sein d'une région."
   },
   {
-    "id": "AZ-900-018",
-    "theme": "Cloud Concepts",
+    "id": "AZ900-CC-014",
+    "theme": "Concepts cloud",
+    "theme_label": "Régions jumelées",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Pourquoi Azure utilise‑t‑il des régions jumelées (paired regions) ? Sélectionnez TOUTES les raisons valides.",
+    "options": [
+      "Pour permettre la réplication asynchrone des données pour la reprise d'activité.",
+      "Pour garantir qu'au moins une région du couple reste disponible pendant les maintenances planifiées.",
+      "Pour réduire la latence réseau entre les continents.",
+      "Pour respecter les exigences de résidence des données.",
+      "Pour fournir une redondance en cas de sinistre régional majeur."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Les régions jumelées sont séparées d'au moins 300 miles pour assurer la continuité d'activité. Elles servent à la réplication asynchrone (A), à la priorisation des mises à jour (B) et à la reprise après sinistre (E). La latence entre régions jumelées n'est pas réduite (elles sont éloignées) et la résidence des données (D) est garantie au sein d'une même géographie, pas nécessairement par le jumelage."
+  },
+  {
+    "id": "AZ900-CC-015",
+    "theme": "Concepts cloud",
     "theme_label": "Zones de disponibilité",
-    "difficulty": "easy",
-    "question": "Qu'est-ce qu'une zone de disponibilité (Availability Zone) ?",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle affirmation concernant les zones de disponibilité est exacte ?",
     "options": [
-      "Centre de données distinct dans une région",
-      "Région",
-      "Serveur",
-      "Réseau"
+      "Une zone de disponibilité est un emplacement physique unique avec ses propres alimentation, réseau et refroidissement.",
+      "Chaque région Azure possède au moins trois zones de disponibilité.",
+      "Les zones de disponibilité sont disponibles dans toutes les régions Azure.",
+      "Une zone de disponibilité est synonyme de région jumelée."
     ],
     "correct": 0,
-    "explanation": "Une zone de disponibilité est un centre de données distinct."
+    "correct_multiple": null,
+    "explanation": "Une zone de disponibilité est un ou plusieurs datacenters indépendants au sein d'une région (A). Toutes les régions ne proposent pas de zones de disponibilité (B, C faux). Les régions jumelées sont distinctes (D)."
   },
   {
-    "id": "AZ-900-019",
-    "theme": "Cloud Concepts",
-    "theme_label": "Paires de régions",
+    "id": "AZ900-CC-016",
+    "theme": "Concepts cloud",
+    "theme_label": "Groupe de ressources",
     "difficulty": "easy",
-    "question": "Qu'est-ce qu'une paire de régions Azure ?",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est‑ce qu'un groupe de ressources Azure ?",
     "options": [
-      "Deux régions géographiquement proches pour la réplication",
-      "Deux zones de disponibilité",
-      "Deux centres de données",
-      "Deux clouds"
+      "Un conteneur logique qui regroupe des ressources Azure partageant le même cycle de vie.",
+      "Un ensemble de machines virtuelles identiques pour la mise à l'échelle.",
+      "Une collection d'utilisateurs et de leurs permissions.",
+      "Un groupe de sécurité pour le filtrage réseau."
     ],
     "correct": 0,
-    "explication": "Les paires de régions assurent la réplication des données."
+    "correct_multiple": null,
+    "explanation": "Un groupe de ressources est un conteneur logique utilisé pour gérer et organiser les ressources Azure (VM, comptes de stockage, bases de données, etc.)."
   },
   {
-    "id": "AZ-900-020",
-    "theme": "Cloud Concepts",
-    "theme_label": "Souveraineté des données",
-    "difficulty": "easy",
-    "question": "Pourquoi Azure a-t-il des régions ?",
+    "id": "AZ900-CC-017",
+    "theme": "Concepts cloud",
+    "theme_label": "Abonnement Azure",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quel rôle joue un abonnement Azure ? Sélectionnez TOUTES les affirmations correctes.",
     "options": [
-      "Conformité légale, latence, résilience",
-      "Uniquement pour la conformité",
-      "Uniquement pour la latence",
-      "Uniquement pour la résilience"
+      "Il sert de limite de facturation pour les ressources Azure.",
+      "Il définit les limites de quota pour certains services (ex: nombre de VM).",
+      "Il contient un ou plusieurs groupes de ressources.",
+      "Il peut être associé à un compte de facturation unique.",
+      "Il est obligatoirement lié à un locataire Azure AD différent pour chaque abonnement."
     ],
     "correct": 0,
-    "explication": "Les régions permettent de répondre aux exigences de souveraineté des données."
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Un abonnement est une unité de facturation (A), il a des quotas (B), il contient des groupes de ressources (C) et est lié à un compte de facturation (D). Plusieurs abonnements peuvent partager le même locataire Azure AD (E faux)."
+  },
+  {
+    "id": "AZ900-CC-018",
+    "theme": "Concepts cloud",
+    "theme_label": "Hiérarchie d'organisation",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la hiérarchie correcte des étendues de gestion dans Azure (du plus haut niveau au plus bas) ?",
+    "options": [
+      "Groupe d'administration → Abonnement → Groupe de ressources → Ressource",
+      "Abonnement → Groupe d'administration → Groupe de ressources → Ressource",
+      "Groupe de ressources → Abonnement → Groupe d'administration → Ressource",
+      "Ressource → Groupe de ressources → Abonnement → Groupe d'administration"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La hiérarchie est : Management Group (facultatif) → Subscription → Resource Group → Resource."
+  },
+  {
+    "id": "AZ900-CC-019",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Resource Manager (ARM)",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'Azure Resource Manager (ARM) ?",
+    "options": [
+      "C'est le service de déploiement et de gestion pour Azure, qui permet de créer, mettre à jour et supprimer des ressources de manière cohérente.",
+      "C'est un outil de surveillance des performances des machines virtuelles.",
+      "C'est le portail web pour accéder aux services Azure.",
+      "C'est le système d'authentification unique d'Azure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "ARM est la couche de gestion qui traite les demandes provenant du portail, de PowerShell, de la CLI ou des SDK."
+  },
+  {
+    "id": "AZ900-CC-020",
+    "theme": "Concepts cloud",
+    "theme_label": "Modèles de tarification",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels facteurs influencent généralement le coût d'une machine virtuelle Azure ? Sélectionnez TOUTES les réponses exactes.",
+    "options": [
+      "La taille de la VM (vCPU, RAM)",
+      "La région de déploiement",
+      "Le type de disque utilisé (HDD, SSD, Premium SSD)",
+      "La bande passante réseau sortante",
+      "Le système d'exploitation invité (Windows est généralement plus cher que Linux)"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Tous ces éléments impactent le coût d'une VM Azure. Le type de licence du système d'exploitation (E) est particulièrement notable car Windows inclut une licence."
+  },
+  {
+    "id": "AZ900-CC-021",
+    "theme": "Concepts cloud",
+    "theme_label": "Calculatrice de prix",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel outil Azure permet d'estimer le coût mensuel des services que vous envisagez d'utiliser ?",
+    "options": [
+      "Calculatrice de prix Azure",
+      "Calculatrice de coût total de possession (TCO)",
+      "Azure Cost Management",
+      "Azure Advisor"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La calculatrice de prix (A) estime les coûts futurs. La calculatrice TCO (B) compare les coûts sur site vs cloud. Azure Cost Management (C) analyse les dépenses réelles. Azure Advisor (D) donne des recommandations d'optimisation."
+  },
+  {
+    "id": "AZ900-CC-022",
+    "theme": "Concepts cloud",
+    "theme_label": "Calculatrice TCO",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert la calculatrice de coût total de possession (TCO) d'Azure ?",
+    "options": [
+      "Comparer les coûts d'une infrastructure sur site avec ceux d'une solution équivalente sur Azure.",
+      "Calculer le prix exact d'une machine virtuelle sur 3 ans.",
+      "Générer un devis pour un engagement de consommation (MACC).",
+      "Estimer les économies réalisées grâce aux instances réservées."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La TCO calculator aide à estimer les économies potentielles en migrant vers Azure en comparant les coûts totaux (électricité, matériel, licences, main d'œuvre)."
+  },
+  {
+    "id": "AZ900-CC-023",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Cost Management",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles actions peut‑on réaliser avec Azure Cost Management ? Sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Analyser les dépenses par service, par abonnement ou par balise (tag).",
+      "Configurer des budgets et des alertes de dépassement.",
+      "Exporter les données de coût vers un compte de stockage pour analyse personnalisée.",
+      "Modifier automatiquement la taille des VM pour réduire les coûts.",
+      "Voir les recommandations d'optimisation des coûts (ex: ressources inutilisées)."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "Cost Management permet l'analyse (A), les budgets (B), l'export (C) et les recommandations (E). La modification automatique (D) n'est pas une fonctionnalité native de Cost Management (cela relève de l'autoscaling ou d'Azure Automation)."
+  },
+  {
+    "id": "AZ900-CC-024",
+    "theme": "Concepts cloud",
+    "theme_label": "Balises (Tags)",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les usages recommandés des balises (tags) dans Azure ? Sélectionnez TOUTES les propositions valides.",
+    "options": [
+      "Catégoriser les ressources par département ou projet.",
+      "Attribuer des permissions RBAC directement via la balise.",
+      "Suivre les coûts par centre de coût.",
+      "Automatiser l'arrêt des ressources le week‑end.",
+      "Identifier l'environnement (production, développement, test)."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2, 4],
+    "explanation": "Les balises servent à la catégorisation (A), au suivi des coûts (C) et à l'identification de l'environnement (E). Les permissions RBAC (B) se gèrent via les rôles, pas les balises. L'automatisation (D) peut s'appuyer sur des balises mais ce n'est pas une fonction native de la balise elle‑même."
+  },
+  {
+    "id": "AZ900-CC-025",
+    "theme": "Concepts cloud",
+    "theme_label": "SLA (Service Level Agreement)",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Que garantit un contrat de niveau de service (SLA) Microsoft Azure ?",
+    "options": [
+      "La disponibilité minimale d'un service (ex: 99,9 % de temps de fonctionnement).",
+      "La sécurité absolue des données contre toute cyberattaque.",
+      "Un remboursement intégral en cas de panne.",
+      "Une performance constante du réseau sans latence."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le SLA définit le pourcentage de disponibilité garanti. Il prévoit généralement un crédit de service en cas de non‑respect, mais pas un remboursement intégral (C)."
+  },
+  {
+    "id": "AZ900-CC-026",
+    "theme": "Concepts cloud",
+    "theme_label": "Calcul du SLA composite",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Si une application dépend de deux services Azure ayant chacun un SLA de 99,9 %, quel est le SLA composite théorique de l'application ?",
+    "options": [
+      "99,8 %",
+      "99,9 %",
+      "99,99 %",
+      "100 %"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le SLA composite se calcule en multipliant les disponibilités : 0,999 * 0,999 = 0,998001, soit environ 99,8 %. Le SLA global est inférieur au SLA individuel le plus bas."
+  },
+  {
+    "id": "AZ900-CC-027",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Free Account",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Que comprend le compte gratuit Azure (Azure free account) ? Sélectionnez TOUTES les affirmations exactes.",
+    "options": [
+      "Un crédit de 200 $ à dépenser dans les 30 premiers jours.",
+      "L'accès à certains services gratuits pendant 12 mois.",
+      "Un accès permanent à plus de 55 services toujours gratuits.",
+      "Un support technique 24h/24 et 7j/7 inclus.",
+      "Aucune obligation de carte bancaire à l'inscription."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Le compte gratuit inclut un crédit initial (A), des services gratuits 12 mois (B) et des services toujours gratuits (C). Le support technique de base est gratuit, mais pas le support 24/7 (D). Une carte bancaire est requise pour vérification (E)."
+  },
+  {
+    "id": "AZ900-CC-028",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Marketplace",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est‑ce que l'Azure Marketplace ?",
+    "options": [
+      "Un magasin en ligne proposant des applications et services certifiés pour s'exécuter sur Azure (de Microsoft et de partenaires tiers).",
+      "Le portail de gestion des abonnements Azure.",
+      "Un outil de comparaison des prix entre fournisseurs cloud.",
+      "Le forum communautaire officiel d'Azure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'Azure Marketplace permet de déployer facilement des solutions pré‑configurées (ex: WordPress, appliances virtuelles, services managés tiers)."
+  },
+  {
+    "id": "AZ900-CC-029",
+    "theme": "Concepts cloud",
+    "theme_label": "Support Azure",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels plans de support Azure offrent un accès à un gestionnaire technique de compte (Technical Account Manager - TAM) ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Support Professionnel Direct",
+      "Support Standard",
+      "Support Développeur",
+      "Support de base (gratuit)",
+      "Support Premier / Unified"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 4],
+    "explanation": "Le support Professional Direct et le support Premier/Unified incluent un TAM ou un contact dédié. Les plans Standard et Développeur n'en ont pas."
+  },
+  {
+    "id": "AZ900-CC-030",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Advisor",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans quelle catégorie de recommandations Azure Advisor peut‑on trouver des conseils pour réduire les coûts ?",
+    "options": [
+      "Coût",
+      "Sécurité",
+      "Fiabilité",
+      "Performance"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Advisor fournit des recommandations dans cinq catégories : Coût, Sécurité, Fiabilité, Performance opérationnelle et Excellence opérationnelle."
+  },
+  {
+    "id": "AZ900-CC-031",
+    "theme": "Concepts cloud",
+    "theme_label": "Limites d'abonnement",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Vous souhaitez déployer 200 machines virtuelles dans une région, mais vous recevez une erreur indiquant que le quota est dépassé. Quelle action devez‑vous entreprendre ?",
+    "options": [
+      "Créer une demande d'augmentation de quota via le portail Azure.",
+      "Supprimer l'abonnement et en créer un nouveau.",
+      "Utiliser une autre région, car les quotas sont globaux.",
+      "Passer à un compte de support payant pour débloquer automatiquement le quota."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les quotas sont des limites par abonnement et par région. On peut demander une augmentation de quota (gratuitement) via une demande de support."
+  },
+  {
+    "id": "AZ900-CC-032",
+    "theme": "Concepts cloud",
+    "theme_label": "Services en préversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles caractéristiques s'appliquent aux services Azure en préversion publique ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Ils peuvent être utilisés en production sans accord spécifique, mais sans garantie de SLA.",
+      "Ils peuvent faire l'objet de modifications importantes avant la disponibilité générale.",
+      "Leur tarification est généralement réduite ou gratuite.",
+      "Le support technique complet est inclus comme pour les services GA.",
+      "Ils ne sont accessibles qu'aux clients ayant signé un NDA."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Les préversions publiques sont ouvertes à tous, sans SLA (A), peuvent évoluer (B) et sont souvent à prix réduit (C). Le support n'est pas garanti au niveau GA (D faux). Les préversions privées (E) nécessitent une inscription sur invitation, pas les préversions publiques."
+  },
+  {
+    "id": "AZ900-CC-033",
+    "theme": "Concepts cloud",
+    "theme_label": "Résidence des données",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que signifie la résidence des données dans le contexte d'Azure ?",
+    "options": [
+      "Les données client restent stockées dans la région géographique choisie, sauf autorisation explicite.",
+      "Les données sont automatiquement répliquées dans le monde entier pour améliorer les performances.",
+      "Les données sont chiffrées uniquement au repos dans la région d'origine.",
+      "Les données ne peuvent pas être déplacées vers une autre région, même pour une reprise d'activité."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Microsoft s'engage à ne pas déplacer les données client hors de la géographie choisie sans consentement, sauf pour certains services de support ou exigences légales. La réplication mondiale (B) n'est pas automatique."
+  },
+  {
+    "id": "AZ900-CC-034",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Lighthouse",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quel est le principal cas d'usage d'Azure Lighthouse ?",
+    "options": [
+      "Permettre à un fournisseur de services managés de gérer les abonnements de ses clients à grande échelle.",
+      "Fournir une vue unifiée des coûts pour plusieurs locataires Azure AD.",
+      "Automatiser le déploiement de modèles ARM entre régions.",
+      "Activer la délégation d'accès sécurisée sans partage de comptes utilisateurs.",
+      "Surveiller la sécurité de toutes les ressources Azure en un seul endroit."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 3],
+    "explanation": "Azure Lighthouse permet la gestion multi‑locataire (A) via une délégation sécurisée des abonnements (D). Il n'unifie pas les coûts de plusieurs locataires indépendants sans configuration (B faux). Ce n'est pas un outil de déploiement (C) ni de sécurité centralisée native (E) bien qu'il facilite la gestion de la sécurité."
+  },
+  {
+    "id": "AZ900-CC-035",
+    "theme": "Concepts cloud",
+    "theme_label": "Conformité et certifications",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Où peut‑on trouver la liste des certifications de conformité obtenues par Azure (ex: ISO 27001, SOC, HDS) ?",
+    "options": [
+      "Centre de gestion de la confidentialité Microsoft (Microsoft Trust Center)",
+      "Portail Azure dans la section « Conformité »",
+      "Documentation officielle du service spécifique",
+      "Azure Advisor"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le Microsoft Trust Center répertorie toutes les offres de conformité, certifications et rapports d'audit. Le portail Azure contient le gestionnaire de conformité (Compliance Manager) mais la liste exhaustive est au Trust Center."
+  },
+  {
+    "id": "AZ900-CC-036",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Blueprints",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels composants peut‑on inclure dans un blueprint Azure ? Sélectionnez TOUTES les réponses valides.",
+    "options": [
+      "Attributions de rôles RBAC",
+      "Définitions Azure Policy",
+      "Modèles ARM (Azure Resource Manager)",
+      "Groupes de ressources",
+      "Applications logiques pré‑configurées"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Un blueprint peut contenir des artefacts de type RBAC (A), Policy (B), modèles ARM (C) et groupes de ressources (D). Les applications logiques (E) seraient déployées via un modèle ARM, pas comme artefact distinct."
+  },
+  {
+    "id": "AZ900-CC-037",
+    "theme": "Concepts cloud",
+    "theme_label": "Azure Arc",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction d'Azure Arc ?",
+    "options": [
+      "Étendre la gestion et les services Azure à des infrastructures en dehors d'Azure (sur site, autres clouds).",
+      "Créer des connexions réseau privées entre sites distants.",
+      "Générer des graphiques de dépendances entre ressources.",
+      "Fournir une interface en ligne de commande unifiée pour tous les clouds."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Arc permet de projeter des serveurs physiques, des VM ou des clusters Kubernetes hors Azure dans Azure Resource Manager, et d'y appliquer des politiques, de la surveillance, etc."
+  },
+  {
+    "id": "AZ900-CC-038",
+    "theme": "Concepts cloud",
+    "theme_label": "Avantages du cloud pour les startups",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Pourquoi le cloud est‑il particulièrement adapté aux startups ? Sélectionnez TOUS les avantages pertinents.",
+    "options": [
+      "Pas d'investissement initial lourd en matériel.",
+      "Possibilité de faire évoluer les ressources rapidement avec la croissance.",
+      "Accès à des technologies avancées (IA, Big Data) sans expertise interne poussée.",
+      "Contrats de support obligatoires pour toutes les ressources.",
+      "Dépendance à un fournisseur unique impossible à éviter."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Le modèle OpEx (A), l'élasticité (B) et l'accès à des services managés (C) sont des atouts majeurs. Les contrats de support (D) ne sont pas obligatoires. La dépendance (E) est un risque, pas un avantage."
+  },
+  {
+    "id": "AZ900-CC-039",
+    "theme": "Concepts cloud",
+    "theme_label": "Impact environnemental",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel engagement Microsoft a‑t‑il pris concernant l'impact environnemental de ses datacenters Azure ?",
+    "options": [
+      "Être négatif en carbone d'ici 2030 et avoir éliminé toute la dette carbone historique d'ici 2050.",
+      "Utiliser exclusivement des énergies renouvelables pour tous les datacenters depuis 2020.",
+      "Compenser les émissions de carbone par des crédits carbone volontaires.",
+      "Ne plus construire de nouveaux datacenters après 2025."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Microsoft vise la neutralité carbone depuis 2012, mais l'engagement actuel est d'être négatif en carbone d'ici 2030. L'utilisation d'énergies renouvelables est en croissance mais pas encore à 100% (objectif 2025)."
+  },
+  {
+    "id": "AZ900-CC-040",
+    "theme": "Concepts cloud",
+    "theme_label": "Migration vers le cloud",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle stratégie de migration cloud consiste à redévelopper entièrement une application pour tirer parti des fonctionnalités natives du cloud ?",
+    "options": [
+      "Refactorisation (ou Re‑architecting)",
+      "Réhébergement (Lift and Shift)",
+      "Replatforming",
+      "Retirement"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La refactorisation implique de modifier l'application pour utiliser des services PaaS (ex: passer de VM à App Service). Le réhébergement (B) est le simple déplacement sans modification. Le replatforming (C) est une modification mineure (ex: utiliser un service managé de base de données). Le retirement (D) est l'arrêt de l'application."
   }
 ]

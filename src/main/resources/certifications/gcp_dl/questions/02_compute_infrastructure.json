@@ -42,7 +42,7 @@
       "Instance avec SSD"
     ],
     "correct": 0,
-    "explication": "Les instances préemptibles sont jusqu'à 80% moins chères mais peuvent être arrêtées avec un préavis de 30 secondes."
+    "explanation": "Les instances préemptibles sont jusqu'à 80% moins chères mais peuvent être arrêtées avec un préavis de 30 secondes."
   },
   {
     "id": "GCP-DL-054",
@@ -57,7 +57,7 @@
       "Instance dédiée"
     ],
     "correct": 0,
-    "explication": "Les instances spot (anciennement préemptibles) offrent des réductions importantes avec risque d'interruption."
+    "explanation": "Les instances spot (anciennement préemptibles) offrent des réductions importantes avec risque d'interruption."
   },
   {
     "id": "GCP-DL-055",
@@ -72,7 +72,7 @@
       "Disque"
     ],
     "correct": 0,
-    "explication": "Les groupes d'instances permettent la mise à l'échelle et la gestion des mises à jour."
+    "explanation": "Les groupes d'instances permettent la mise à l'échelle et la gestion des mises à jour."
   },
   {
     "id": "GCP-DL-056",
@@ -87,7 +87,7 @@
       "Base de données"
     ],
     "correct": 0,
-    "explication": "GKE est le service Kubernetes managé de Google."
+    "explanation": "GKE est le service Kubernetes managé de Google."
   },
   {
     "id": "GCP-DL-057",
@@ -97,7 +97,7 @@
     "question": "GKE supporte-t-il les modes Standard et Autopilot ?",
     "options": ["Oui", "Non", "Uniquement Standard", "Uniquement Autopilot"],
     "correct": 0,
-    "explication": "Autopilot est serverless (Gère le plan de contrôle et les nœuds), Standard donne plus de contrôle."
+    "explanation": "Autopilot est serverless (Gère le plan de contrôle et les nœuds), Standard donne plus de contrôle."
   },
   {
     "id": "GCP-DL-058",
@@ -112,7 +112,7 @@
       "Mode pour les clusters de développement"
     ],
     "correct": 0,
-    "explication": "Autopilot optimise les coûts et la gestion, facturation par pod."
+    "explanation": "Autopilot optimise les coûts et la gestion, facturation par pod."
   },
   {
     "id": "GCP-DL-059",
@@ -127,7 +127,7 @@
       "Service de stockage"
     ],
     "correct": 0,
-    "explication": "Cloud Run exécute des conteneurs stateless sur un environnement serverless."
+    "explanation": "Cloud Run exécute des conteneurs stateless sur un environnement serverless."
   },
   {
     "id": "GCP-DL-060",
@@ -137,7 +137,7 @@
     "question": "Cloud Run facture-t-il à la demande (par requête) ?",
     "options": ["Oui (facturation à la requête + CPU/mémoire)", "Non (forfait fixe)", "Uniquement pour les requêtes", "Uniquement pour le CPU"],
     "correct": 0,
-    "explication": "Cloud Run facture les ressources consommées pendant le traitement des requêtes."
+    "explanation": "Cloud Run facture les ressources consommées pendant le traitement des requêtes."
   },
   {
     "id": "GCP-DL-061",
@@ -152,7 +152,7 @@
       "Base de données"
     ],
     "correct": 0,
-    "explication": "Cloud Functions est le FaaS (Function as a Service) de GCP."
+    "explanation": "Cloud Functions est le FaaS (Function as a Service) de GCP."
   },
   {
     "id": "GCP-DL-062",
@@ -167,7 +167,7 @@
       "Go seulement"
     ],
     "correct": 0,
-    "explication": "Cloud Functions supporte plusieurs langages."
+    "explanation": "Cloud Functions supporte plusieurs langages."
   },
   {
     "id": "GCP-DL-063",
@@ -182,7 +182,7 @@
       "Pub/Sub seulement"
     ],
     "correct": 0,
-    "explication": "Cloud Functions peut être déclenché par de nombreux événements GCP."
+    "explanation": "Cloud Functions peut être déclenché par de nombreux événements GCP."
   },
   {
     "id": "GCP-DL-064",
@@ -197,7 +197,7 @@
       "CaaS"
     ],
     "correct": 0,
-    "explication": "App Engine est un PaaS qui gère l'infrastructure automatiquement."
+    "explanation": "App Engine est un PaaS qui gère l'infrastructure automatiquement."
   },
   {
     "id": "GCP-DL-065",
@@ -212,7 +212,7 @@
       "Classic et Modern"
     ],
     "correct": 0,
-    "explication": "L'environnement Standard est plus restrictif mais plus économique, Flexible offre plus de contrôle."
+    "explanation": "L'environnement Standard est plus restrictif mais plus économique, Flexible offre plus de contrôle."
   },
   {
     "id": "GCP-DL-066",
@@ -227,7 +227,7 @@
       "App Engine flexible"
     ],
     "correct": 0,
-    "explication": "Cloud Run for Anthos permet d'exécuter des workloads serverless sur des clusters Kubernetes."
+    "explanation": "Cloud Run for Anthos permet d'exécuter des workloads serverless sur des clusters Kubernetes."
   },
   {
     "id": "GCP-DL-067",
@@ -242,7 +242,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Un VPC GCP est un réseau virtuel isolé, global (peut s'étendre sur plusieurs régions)."
+    "explanation": "Un VPC GCP est un réseau virtuel isolé, global (peut s'étendre sur plusieurs régions)."
   },
   {
     "id": "GCP-DL-068",
@@ -252,7 +252,7 @@
     "question": "Les sous-réseaux (subnets) dans GCP sont-ils régionaux ?",
     "options": ["Oui", "Non", "Uniquement globaux", "Uniquement zonaux"],
     "correct": 0,
-    "explication": "Les subnets dans GCP sont régionaux (un subnet par région)."
+    "explanation": "Les subnets dans GCP sont régionaux (un subnet par région)."
   },
   {
     "id": "GCP-DL-069",
@@ -267,7 +267,7 @@
       "Internal seulement"
     ],
     "correct": 0,
-    "explication": "GCP offre plusieurs types de load balancers (global, régional, interne, externe)."
+    "explanation": "GCP offre plusieurs types de load balancers (global, régional, interne, externe)."
   },
   {
     "id": "GCP-DL-070",
@@ -277,7 +277,7 @@
     "question": "Le load balancer HTTP(S) GCP est-il global ?",
     "options": ["Oui", "Non", "Uniquement régional", "Uniquement par zone"],
     "correct": 0,
-    "explication": "Le load balancer HTTP(S) est global, distribue le trafic vers les backends proches des utilisateurs."
+    "explanation": "Le load balancer HTTP(S) est global, distribue le trafic vers les backends proches des utilisateurs."
   },
   {
     "id": "GCP-DL-071",
@@ -292,7 +292,7 @@
       "Base de données"
     ],
     "correct": 0,
-    "explication": "Cloud CDN utilise les edge locations de Google pour mettre en cache le contenu."
+    "explanation": "Cloud CDN utilise les edge locations de Google pour mettre en cache le contenu."
   },
   {
     "id": "GCP-DL-072",
@@ -307,7 +307,7 @@
       "Firewall"
     ],
     "correct": 0,
-    "explication": "Cloud NAT gère la traduction d'adresses réseau pour les instances privées."
+    "explanation": "Cloud NAT gère la traduction d'adresses réseau pour les instances privées."
   },
   {
     "id": "GCP-DL-073",
@@ -322,7 +322,7 @@
       "Firewall"
     ],
     "correct": 0,
-    "explication": "Cloud Interconnect offre une connexion physique privée à haute bande passante."
+    "explanation": "Cloud Interconnect offre une connexion physique privée à haute bande passante."
   },
   {
     "id": "GCP-DL-074",
@@ -332,7 +332,7 @@
     "question": "Cloud VPN permet-il une connexion sécurisée via Internet ?",
     "options": ["Oui", "Non", "Uniquement pour le trafic interne", "Uniquement pour le trafic sortant"],
     "correct": 0,
-    "explication": "Cloud VPN utilise IPsec pour connecter un réseau on-premise à GCP via Internet."
+    "explanation": "Cloud VPN utilise IPsec pour connecter un réseau on-premise à GCP via Internet."
   },
   {
     "id": "GCP-DL-075",
@@ -347,7 +347,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "Cloud DNS fournit un service DNS fiable avec faible latence."
+    "explanation": "Cloud DNS fournit un service DNS fiable avec faible latence."
   },
   {
     "id": "GCP-DL-076",
@@ -362,7 +362,7 @@
       "Fast et Slow"
     ],
     "correct": 0,
-    "explication": "Premium Tier utilise le réseau global de Google, Standard Tier utilise les réseaux de transit."
+    "explanation": "Premium Tier utilise le réseau global de Google, Standard Tier utilise les réseaux de transit."
   },
   {
     "id": "GCP-DL-077",
@@ -377,7 +377,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Cloud Armor protège les applications contre les attaques DDoS et les menaces web."
+    "explanation": "Cloud Armor protège les applications contre les attaques DDoS et les menaces web."
   },
   {
     "id": "GCP-DL-078",
@@ -387,7 +387,7 @@
     "question": "Les règles de pare-feu VPC sont-elles globales ?",
     "options": ["Oui", "Non", "Uniquement régionales", "Uniquement zonales"],
     "correct": 0,
-    "explication": "Les règles de pare-feu VPC s'appliquent à l'ensemble du VPC (global)."
+    "explanation": "Les règles de pare-feu VPC s'appliquent à l'ensemble du VPC (global)."
   },
   {
     "id": "GCP-DL-079",
@@ -402,7 +402,7 @@
       "NAT"
     ],
     "correct": 0,
-    "explication": "Cloud Router permet l'échange de routes BGP pour les connexions hybrides."
+    "explanation": "Cloud Router permet l'échange de routes BGP pour les connexions hybrides."
   },
   {
     "id": "GCP-DL-080",
@@ -417,7 +417,7 @@
       "Firewall"
     ],
     "correct": 0,
-    "explication": "Traffic Director est le plan de contrôle pour les déploiements de mailles de service (Envoy)."
+    "explanation": "Traffic Director est le plan de contrôle pour les déploiements de mailles de service (Envoy)."
   },
   {
     "id": "GCP-DL-081",
@@ -432,7 +432,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Anthos permet la gestion unifiée des applications sur plusieurs environnements."
+    "explanation": "Anthos permet la gestion unifiée des applications sur plusieurs environnements."
   },
   {
     "id": "GCP-DL-082",
@@ -447,7 +447,7 @@
       "Seulement Service Mesh"
     ],
     "correct": 0,
-    "explication": "Anthos inclut plusieurs outils pour la gestion et la sécurité des applications."
+    "explanation": "Anthos inclut plusieurs outils pour la gestion et la sécurité des applications."
   },
   {
     "id": "GCP-DL-083",
@@ -462,7 +462,7 @@
       "Serverless"
     ],
     "correct": 0,
-    "explication": "Bare Metal Solution fournit des serveurs physiques pour des charges de travail spécifiques (ex: bases de données)."
+    "explanation": "Bare Metal Solution fournit des serveurs physiques pour des charges de travail spécifiques (ex: bases de données)."
   },
   {
     "id": "GCP-DL-084",
@@ -477,7 +477,7 @@
       "À l'année"
     ],
     "correct": 0,
-    "explication": "Compute Engine facture à la seconde (minimum 1 minute)."
+    "explanation": "Compute Engine facture à la seconde (minimum 1 minute)."
   },
   {
     "id": "GCP-DL-085",
@@ -492,7 +492,7 @@
       "Instances réservées"
     ],
     "correct": 0,
-    "explication": "Les CUD offrent jusqu'à 70% de réduction pour des engagements."
+    "explanation": "Les CUD offrent jusqu'à 70% de réduction pour des engagements."
   },
   {
     "id": "GCP-DL-086",
@@ -507,7 +507,7 @@
       "Instance spot"
     ],
     "correct": 0,
-    "explication": "Les sole-tenant nodes isolent les instances sur du matériel dédié pour la conformité."
+    "explanation": "Les sole-tenant nodes isolent les instances sur du matériel dédié pour la conformité."
   },
   {
     "id": "GCP-DL-087",
@@ -522,7 +522,7 @@
       "Template d'instance"
     ],
     "correct": 0,
-    "explication": "Les machine images permettent de créer des copies de VMs pour le déploiement ou la reprise."
+    "explanation": "Les machine images permettent de créer des copies de VMs pour le déploiement ou la reprise."
   },
   {
     "id": "GCP-DL-088",
@@ -537,7 +537,7 @@
       "Configurer le réseau"
     ],
     "correct": 0,
-    "explication": "Les templates sont utilisés par les groupes d'instances (managed instance groups)."
+    "explanation": "Les templates sont utilisés par les groupes d'instances (managed instance groups)."
   },
   {
     "id": "GCP-DL-089",
@@ -552,7 +552,7 @@
       "Configurer le réseau"
     ],
     "correct": 0,
-    "explication": "Les MIG offrent des fonctionnalités avancées pour les applications stateless."
+    "explanation": "Les MIG offrent des fonctionnalités avancées pour les applications stateless."
   },
   {
     "id": "GCP-DL-090",
@@ -567,7 +567,7 @@
       "Load balancer"
     ],
     "correct": 0,
-    "explication": "Cloud Build exécute des pipelines de build et de test."
+    "explanation": "Cloud Build exécute des pipelines de build et de test."
   },
   {
     "id": "GCP-DL-091",
@@ -582,7 +582,7 @@
       "Outil de build"
     ],
     "correct": 0,
-    "explication": "Cloud Source Repositories héberge du code source avec intégration à Cloud Build."
+    "explanation": "Cloud Source Repositories héberge du code source avec intégration à Cloud Build."
   },
   {
     "id": "GCP-DL-092",
@@ -597,7 +597,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Cloud Deploy automatise les déploiements avec des stratégies de promotion (canary, blue/green)."
+    "explanation": "Cloud Deploy automatise les déploiements avec des stratégies de promotion (canary, blue/green)."
   },
   {
     "id": "GCP-DL-093",
@@ -612,7 +612,7 @@
       "Conteneur long terme"
     ],
     "correct": 0,
-    "explication": "Cloud Run jobs sont des tâches exécutées une seule fois (batch)."
+    "explanation": "Cloud Run jobs sont des tâches exécutées une seule fois (batch)."
   },
   {
     "id": "GCP-DL-094",
@@ -627,7 +627,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Cloud Workflows permet de chaîner des services (ex: Cloud Functions, Cloud Run)."
+    "explanation": "Cloud Workflows permet de chaîner des services (ex: Cloud Functions, Cloud Run)."
   },
   {
     "id": "GCP-DL-095",
@@ -642,7 +642,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Eventarc simplifie l'ingestion d'événements depuis les services GCP."
+    "explanation": "Eventarc simplifie l'ingestion d'événements depuis les services GCP."
   },
   {
     "id": "GCP-DL-096",
@@ -657,7 +657,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Cloud Scheduler déclenche des tâches périodiques vers des endpoints HTTP ou Pub/Sub."
+    "explanation": "Cloud Scheduler déclenche des tâches périodiques vers des endpoints HTTP ou Pub/Sub."
   },
   {
     "id": "GCP-DL-097",
@@ -672,7 +672,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Cloud Tasks permet de gérer des tâches en file d'attente avec réessais."
+    "explanation": "Cloud Tasks permet de gérer des tâches en file d'attente avec réessais."
   },
   {
     "id": "GCP-DL-098",
@@ -687,7 +687,7 @@
       "Seulement marketplace"
     ],
     "correct": 0,
-    "explication": "GCP fournit des images publiques, permet des images personnalisées et des images du marketplace."
+    "explanation": "GCP fournit des images publiques, permet des images personnalisées et des images du marketplace."
   },
   {
     "id": "GCP-DL-099",
@@ -702,7 +702,7 @@
       "VM avec chiffrement"
     ],
     "correct": 0,
-    "explication": "Les Shielded VMs protègent contre les rootkits et les bootkits."
+    "explanation": "Les Shielded VMs protègent contre les rootkits et les bootkits."
   },
   {
     "id": "GCP-DL-100",
@@ -717,7 +717,7 @@
       "VM avec sauvegarde"
     ],
     "correct": 0,
-    "explication": "Les Confidential VMs chiffrent les données en utilisation (mémoire)."
+    "explanation": "Les Confidential VMs chiffrent les données en utilisation (mémoire)."
   },
   {
     "id": "GCP-DL-101",
@@ -727,7 +727,7 @@
     "question": "Les sole-tenant nodes sont-ils plus chers que les instances normales ?",
     "options": ["Oui", "Non", "Pareil", "Moins cher"],
     "correct": 0,
-    "explication": "Les sole-tenant nodes sont plus chers car le matériel est dédié."
+    "explanation": "Les sole-tenant nodes sont plus chers car le matériel est dédié."
   },
   {
     "id": "GCP-DL-102",
@@ -737,7 +737,7 @@
     "question": "Compute Engine propose-t-il des GPUs ?",
     "options": ["Oui (NVIDIA)", "Non", "Uniquement pour les VMs Windows", "Uniquement pour les VMs Linux"],
     "correct": 0,
-    "explication": "Compute Engine supporte les GPUs NVIDIA pour l'IA/ML et le calcul intensif."
+    "explanation": "Compute Engine supporte les GPUs NVIDIA pour l'IA/ML et le calcul intensif."
   },
   {
     "id": "GCP-DL-103",
@@ -752,7 +752,7 @@
       "FPGA"
     ],
     "correct": 0,
-    "explication": "Les TPU sont des ASICs conçus par Google pour l'apprentissage automatique."
+    "explanation": "Les TPU sont des ASICs conçus par Google pour l'apprentissage automatique."
   },
   {
     "id": "GCP-DL-104",
@@ -767,7 +767,7 @@
       "Monitoring des VMs"
     ],
     "correct": 0,
-    "explication": "VM Manager automatise les tâches d'administration des VMs."
+    "explanation": "VM Manager automatise les tâches d'administration des VMs."
   },
   {
     "id": "GCP-DL-105",
@@ -777,7 +777,7 @@
     "question": "OS Patch Management est-il inclus dans VM Manager ?",
     "options": ["Oui", "Non", "Uniquement pour Windows", "Uniquement pour Linux"],
     "correct": 0,
-    "explication": "OS Patch Management permet de planifier des correctifs de sécurité."
+    "explanation": "OS Patch Management permet de planifier des correctifs de sécurité."
   },
   {
     "id": "GCP-DL-106",
@@ -787,7 +787,7 @@
     "question": "Quel service GCP aide à migrer des VMs depuis on-premise ou d'autres clouds ?",
     "options": ["Migrate to Virtual Machines", "Cloud Run", "Compute Engine", "GKE"],
     "correct": 0,
-    "explication": "Migrate to Virtual Machines (anciennement Velostrata) migre des VMs vers Compute Engine."
+    "explanation": "Migrate to Virtual Machines (anciennement Velostrata) migre des VMs vers Compute Engine."
   },
   {
     "id": "GCP-DL-107",
@@ -802,7 +802,7 @@
       "Service de sauvegarde"
     ],
     "correct": 0,
-    "explication": "Transfer Appliance est un dispositif de transfert de données hors ligne pour les grandes quantités."
+    "explanation": "Transfer Appliance est un dispositif de transfert de données hors ligne pour les grandes quantités."
   },
   {
     "id": "GCP-DL-108",
@@ -817,7 +817,7 @@
       "Transfert de conteneurs"
     ],
     "correct": 0,
-    "explication": "Storage Transfer Service automatise les transferts de données vers Cloud Storage."
+    "explanation": "Storage Transfer Service automatise les transferts de données vers Cloud Storage."
   },
   {
     "id": "GCP-DL-109",
@@ -832,7 +832,7 @@
       "Transfert de conteneurs"
     ],
     "correct": 0,
-    "explication": "BigQuery Transfer Service charge automatiquement des données depuis des sources externes."
+    "explanation": "BigQuery Transfer Service charge automatiquement des données depuis des sources externes."
   },
   {
     "id": "GCP-DL-110",
@@ -847,6 +847,6 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Le Cloud Foundation Toolkit fournit des modules Terraform réutilisables."
+    "explanation": "Le Cloud Foundation Toolkit fournit des modules Terraform réutilisables."
   }
 ]

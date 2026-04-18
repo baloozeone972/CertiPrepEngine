@@ -1,0 +1,59 @@
+Génère la Javadoc Java complète en anglais pour les classes suivantes du module certif-domain du projet CertifApp.
+
+Génère les blocs Javadoc /** */ complets pour chaque classe et méthode.
+Format Oracle standard avec @param, @return, @throws, @since 1.0, @author CertifApp Team.
+
+CLASSE 1 : ScoringService
+```java
+public class ScoringService {
+    public double calculatePercentage(int correctCount, int totalQuestions)
+    public boolean isPassed(double percentage, int passingScore)
+    public Map<String, ThemeStats> calculateThemeStats(List<UserAnswer> answers, List<Question> questions)
+    public Map<String, Double> getDifficultyAnalysis(List<UserAnswer> answers)
+    public List<Question> getIncorrectQuestions(List<UserAnswer> answers, List<Question> questions)
+    public List<Question> getSkippedQuestions(List<UserAnswer> answers, List<Question> questions)
+    public ExamSummary buildExamSummary(ExamSession session, List<Question> questions)
+}
+```
+
+CLASSE 2 : SM2AlgorithmService (algorithme de répétition espacée)
+```java
+public class SM2AlgorithmService {
+    public SM2Result calculateNextReview(int repetitions, double easeFactor, int intervalDays, int quality)
+    public double updateEaseFactor(double easeFactor, int quality)
+    public int calculateNextInterval(int repetitions, int currentInterval, double easeFactor)
+    public boolean isDue(LocalDate nextReviewDate)
+    public List<UUID> getDueQuestions(List<UserSM2Schedule> schedules)
+    public int estimateDaysUntilReady(List<UserSM2Schedule> schedules, int passingScore)
+}
+```
+
+CLASSE 3 : Question (Record Java 21)
+```java
+public record Question(
+    UUID id, String legacyId, String certificationId, String themeId,
+    String statement, DifficultyLevel difficulty, QuestionType type,
+    List<QuestionOption> options, String explanationOriginal,
+    String explanationEnriched, ExplanationStatus explanationStatus
+) {
+    public Optional<QuestionOption> getCorrectOption()
+    public List<QuestionOption> getIncorrectOptions()
+    public boolean hasEnrichedExplanation()
+    public boolean isReadyForProduction()
+}
+```
+
+CLASSE 4 : ExamSession (Record Java 21)
+```java
+public record ExamSession(
+    UUID id, UUID userId, String certificationId, ExamMode mode,
+    LocalDateTime startedAt, LocalDateTime endedAt,
+    int totalQuestions, int correctCount, double percentage,
+    boolean passed, List<UserAnswer> answers
+) {
+    public long getDurationSeconds()
+    public boolean isCompleted()
+    public boolean isAbandoned()
+    public Map<String, Integer> getScoreByTheme()
+}
+```

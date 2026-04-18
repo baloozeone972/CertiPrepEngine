@@ -1,0 +1,107 @@
+Voici le fichier `docker-compose.yml` complet pour le développement local d[1D[K
+du projet CertifApp :
+```yaml
+version: '3'
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: certifapp
+      POSTGRES_USER: certif
+      POSTGRES_PASSWORD: certif_local
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  healthcheck:
+    test: ["CMD", "pg_isready"]
+
+volumes:
+  postgres_data:
+
+services:
+  app:
+    build: ./certif-api-rest
+    command: mvn spring-boot:run
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+      DB_URL: jdbc:postgresql://db:5432/certifapp
+      DB_USERNAME: certif
+      DB_PASSWORD: certif_local
+      SUPABASE_URL: ${SUPABASE_URL}
+      OLLAMA_URL: ${OLLAMA_URL}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://app:8080/actuator/health"]
+
+services:
+  web:
+    build: ./certif-web
+    command: ng serve --host 0.0.0.0
+    ports:
+      - "4200:4200"
+    environment:
+      API_URL: http://app:8080
+    depends_on:
+      - app
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama/models
+    environment:
+      OLLAMA_MAX_RAM: 12G
+    resources:
+      - limit: 12Gi
+        type: memory
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  ollama_models:
+  postgres_data:
+  redis_data:
+
+networks:
+  certifapp-network:
+    driver: bridge
+
+profiles:
+  ollama:
+    services:
+      - ollama
+```
+Voici le fichier `.env.example` avec toutes les variables :
+```makefile
+# DATABASE
+DB_URL=jdbc:postgresql://db:5432/certifapp
+DB_USERNAME=certif
+DB_PASSWORD=certif_local
+
+# SUPABASE
+SUPABASE_URL=https://your-supabase-url.com
+
+# OLLAMA
+OLLAMA_URL=https://your-ollama-url.com
+
+# STRIPE
+STRIPE_SECRET_KEY=your-stripe-secret-key
+```
+Notez que vous devez remplacer les valeurs des variables `SUPABASE_URL`, `O[2D[K
+`OLLAMA_URL` et `STRIPE_SECRET_KEY` par vos propres valeurs.
+

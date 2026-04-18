@@ -42,7 +42,7 @@
       "docker exec <container>"
     ],
     "correct": 0,
-    "explication": "docker start démarre un conteneur existant arrêté."
+    "explanation": "docker start démarre un conteneur existant arrêté."
   },
   {
     "id": "DKR-01-004",
@@ -57,7 +57,7 @@
       "docker rm <container>"
     ],
     "correct": 0,
-    "explication": "docker stop arrête proprement le conteneur (SIGTERM)."
+    "explanation": "docker stop arrête proprement le conteneur (SIGTERM)."
   },
   {
     "id": "DKR-01-005",
@@ -72,7 +72,7 @@
       "docker delete <container>"
     ],
     "correct": 0,
-    "explication": "docker rm supprime un conteneur (doit être arrêté ou utiliser -f)."
+    "explanation": "docker rm supprime un conteneur (doit être arrêté ou utiliser -f)."
   },
   {
     "id": "DKR-01-006",
@@ -87,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs méthodes pour nettoyer les conteneurs arrêtés."
+    "explanation": "Plusieurs méthodes pour nettoyer les conteneurs arrêtés."
   },
   {
     "id": "DKR-01-007",
@@ -102,7 +102,7 @@
       "docker exec -it <container> bash"
     ],
     "correct": 0,
-    "explication": "docker exec exécute une commande dans un conteneur existant."
+    "explanation": "docker exec exécute une commande dans un conteneur existant."
   },
   {
     "id": "DKR-01-008",
@@ -117,7 +117,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "exec pour conteneur existant, run pour nouveau conteneur."
+    "explanation": "exec pour conteneur existant, run pour nouveau conteneur."
   },
   {
     "id": "DKR-01-009",
@@ -132,7 +132,7 @@
       "Install et test"
     ],
     "correct": 0,
-    "explication": "-it combine -i (interactive) et -t (pseudo-TTY) pour une session interactive."
+    "explanation": "-it combine -i (interactive) et -t (pseudo-TTY) pour une session interactive."
   },
   {
     "id": "DKR-01-010",
@@ -147,7 +147,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "docker logs avec options -f (follow) ou --tail."
+    "explanation": "docker logs avec options -f (follow) ou --tail."
   },
   {
     "id": "DKR-01-011",
@@ -162,7 +162,7 @@
       "docker show <container>"
     ],
     "correct": 0,
-    "explication": "docker inspect retourne des informations JSON détaillées."
+    "explanation": "docker inspect retourne des informations JSON détaillées."
   },
   {
     "id": "DKR-01-012",
@@ -177,7 +177,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker images et docker image ls sont équivalents."
+    "explanation": "docker images et docker image ls sont équivalents."
   },
   {
     "id": "DKR-01-013",
@@ -192,7 +192,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker rmi ou docker image rm supprime une image."
+    "explanation": "docker rmi ou docker image rm supprime une image."
   },
   {
     "id": "DKR-01-014",
@@ -207,7 +207,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs méthodes pour nettoyer les images inutilisées."
+    "explanation": "Plusieurs méthodes pour nettoyer les images inutilisées."
   },
   {
     "id": "DKR-01-015",
@@ -222,7 +222,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "docker tag crée un alias pour une image."
+    "explanation": "docker tag crée un alias pour une image."
   },
   {
     "id": "DKR-01-016",
@@ -237,7 +237,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker push envoie l'image vers le registre configuré."
+    "explanation": "docker push envoie l'image vers le registre configuré."
   },
   {
     "id": "DKR-01-017",
@@ -252,7 +252,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker pull télécharge une image depuis un registre."
+    "explanation": "docker pull télécharge une image depuis un registre."
   },
   {
     "id": "DKR-01-018",
@@ -267,7 +267,7 @@
       "docker backup <image>"
     ],
     "correct": 0,
-    "explication": "docker save exporte une image (avec son historique)."
+    "explanation": "docker save exporte une image (avec son historique)."
   },
   {
     "id": "DKR-01-019",
@@ -282,7 +282,7 @@
       "docker restore fichier.tar"
     ],
     "correct": 0,
-    "explication": "docker load importe une image sauvegardée avec save."
+    "explanation": "docker load importe une image sauvegardée avec save."
   },
   {
     "id": "DKR-01-020",
@@ -297,7 +297,7 @@
       "save conserve l'historique, export non"
     ],
     "correct": 0,
-    "explication": "save exporte une image (couches), export exporte un conteneur (système de fichiers)."
+    "explanation": "save exporte une image (couches), export exporte un conteneur (système de fichiers)."
   },
   {
     "id": "DKR-01-021",
@@ -312,7 +312,7 @@
       "Orchestrateur"
     ],
     "correct": 0,
-    "explication": "Le daemon Docker (dockerd) écoute les requêtes de l'API Docker."
+    "explanation": "Le daemon Docker (dockerd) écoute les requêtes de l'API Docker."
   },
   {
     "id": "DKR-01-022",
@@ -327,7 +327,7 @@
       "TCP seulement"
     ],
     "correct": 0,
-    "explication": "Le client Docker communique via l'API REST sur un socket Unix (par défaut) ou TCP."
+    "explanation": "Le client Docker communique via l'API REST sur un socket Unix (par défaut) ou TCP."
   },
   {
     "id": "DKR-01-023",
@@ -342,7 +342,7 @@
       "Client"
     ],
     "correct": 0,
-    "explication": "Docker Hub est le registre par défaut pour partager des images."
+    "explanation": "Docker Hub est le registre par défaut pour partager des images."
   },
   {
     "id": "DKR-01-024",
@@ -350,9 +350,14 @@
     "theme_label": "Conteneurs vs VMs",
     "difficulty": "easy",
     "question": "Les conteneurs partagent-ils le noyau de l'hôte ?",
-    "options": ["Oui", "Non", "Uniquement sur Linux", "Uniquement sur Windows"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement sur Linux",
+      "Uniquement sur Windows"
+    ],
     "correct": 0,
-    "explication": "Les conteneurs utilisent le noyau de l'hôte (isolation via namespaces)."
+    "explanation": "Les conteneurs utilisent le noyau de l'hôte (isolation via namespaces)."
   },
   {
     "id": "DKR-01-025",
@@ -360,9 +365,14 @@
     "theme_label": "Conteneurs vs VMs",
     "difficulty": "easy",
     "question": "Les conteneurs sont-ils plus légers que les VMs ?",
-    "options": ["Oui", "Non", "Pareil", "Dépend du workload"],
+    "options": [
+      "Oui",
+      "Non",
+      "Pareil",
+      "Dépend du workload"
+    ],
     "correct": 0,
-    "explication": "Les conteneurs partagent le noyau, donc démarrage rapide et faible overhead."
+    "explanation": "Les conteneurs partagent le noyau, donc démarrage rapide et faible overhead."
   },
   {
     "id": "DKR-01-026",
@@ -377,7 +387,7 @@
       "docker compile -t myimage ."
     ],
     "correct": 0,
-    "explication": "docker build construit l'image à partir du Dockerfile dans le contexte courant."
+    "explanation": "docker build construit l'image à partir du Dockerfile dans le contexte courant."
   },
   {
     "id": "DKR-01-027",
@@ -385,9 +395,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction Dockerfile définit l'image de base ?",
-    "options": ["FROM", "BASE", "IMAGE", "LAYER"],
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "LAYER"
+    ],
     "correct": 0,
-    "explication": "FROM spécifie l'image parente."
+    "explanation": "FROM spécifie l'image parente."
   },
   {
     "id": "DKR-01-028",
@@ -395,9 +410,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction copie des fichiers depuis l'hôte dans l'image ?",
-    "options": ["COPY", "ADD", "CP", "A et B"],
+    "options": [
+      "COPY",
+      "ADD",
+      "CP",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "COPY et ADD copient des fichiers. ADD supporte les URLs et les archives."
+    "explanation": "COPY et ADD copient des fichiers. ADD supporte les URLs et les archives."
   },
   {
     "id": "DKR-01-029",
@@ -405,9 +425,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction exécute des commandes pendant la construction ?",
-    "options": ["RUN", "CMD", "ENTRYPOINT", "EXEC"],
+    "options": [
+      "RUN",
+      "CMD",
+      "ENTRYPOINT",
+      "EXEC"
+    ],
     "correct": 0,
-    "explication": "RUN exécute des commandes pour créer des couches."
+    "explanation": "RUN exécute des commandes pour créer des couches."
   },
   {
     "id": "DKR-01-030",
@@ -415,9 +440,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit la commande par défaut à exécuter dans le conteneur ?",
-    "options": ["CMD", "ENTRYPOINT", "RUN", "START"],
+    "options": [
+      "CMD",
+      "ENTRYPOINT",
+      "RUN",
+      "START"
+    ],
     "correct": 0,
-    "explication": "CMD fournit les arguments par défaut (peut être remplacé)."
+    "explanation": "CMD fournit les arguments par défaut (peut être remplacé)."
   },
   {
     "id": "DKR-01-031",
@@ -425,9 +455,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit le point d'entrée (ne peut être remplacé facilement) ?",
-    "options": ["ENTRYPOINT", "CMD", "RUN", "START"],
+    "options": [
+      "ENTRYPOINT",
+      "CMD",
+      "RUN",
+      "START"
+    ],
     "correct": 0,
-    "explication": "ENTRYPOINT configure l'exécutable qui ne peut être écrasé."
+    "explanation": "ENTRYPOINT configure l'exécutable qui ne peut être écrasé."
   },
   {
     "id": "DKR-01-032",
@@ -435,9 +470,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction expose un port ?",
-    "options": ["EXPOSE", "PORT", "PUBLISH", "OPEN"],
+    "options": [
+      "EXPOSE",
+      "PORT",
+      "PUBLISH",
+      "OPEN"
+    ],
     "correct": 0,
-    "explication": "EXPOSE documente les ports, mais ne les publie pas (nécessite -p)."
+    "explanation": "EXPOSE documente les ports, mais ne les publie pas (nécessite -p)."
   },
   {
     "id": "DKR-01-033",
@@ -445,9 +485,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit une variable d'environnement ?",
-    "options": ["ENV", "ARG", "SET", "VAR"],
+    "options": [
+      "ENV",
+      "ARG",
+      "SET",
+      "VAR"
+    ],
     "correct": 0,
-    "explication": "ENV définit une variable d'environnement persistante."
+    "explanation": "ENV définit une variable d'environnement persistante."
   },
   {
     "id": "DKR-01-034",
@@ -455,9 +500,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit une variable de build (non persistante) ?",
-    "options": ["ARG", "ENV", "PARAM", "BUILD_ARG"],
+    "options": [
+      "ARG",
+      "ENV",
+      "PARAM",
+      "BUILD_ARG"
+    ],
     "correct": 0,
-    "explication": "ARG est disponible pendant le build seulement, pas dans le conteneur final."
+    "explanation": "ARG est disponible pendant le build seulement, pas dans le conteneur final."
   },
   {
     "id": "DKR-01-035",
@@ -465,9 +515,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction change le répertoire de travail ?",
-    "options": ["WORKDIR", "CD", "DIR", "PWD"],
+    "options": [
+      "WORKDIR",
+      "CD",
+      "DIR",
+      "PWD"
+    ],
     "correct": 0,
-    "explication": "WORKDIR définit le répertoire courant pour les instructions suivantes."
+    "explanation": "WORKDIR définit le répertoire courant pour les instructions suivantes."
   },
   {
     "id": "DKR-01-036",
@@ -475,9 +530,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit l'utilisateur pour exécuter le conteneur ?",
-    "options": ["USER", "RUNAS", "UID", "USERNAME"],
+    "options": [
+      "USER",
+      "RUNAS",
+      "UID",
+      "USERNAME"
+    ],
     "correct": 0,
-    "explication": "USER change l'utilisateur par défaut (UID/GID)."
+    "explanation": "USER change l'utilisateur par défaut (UID/GID)."
   },
   {
     "id": "DKR-01-037",
@@ -485,9 +545,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit un point de montage de volume ?",
-    "options": ["VOLUME", "MOUNT", "VOL", "BIND"],
+    "options": [
+      "VOLUME",
+      "MOUNT",
+      "VOL",
+      "BIND"
+    ],
     "correct": 0,
-    "explication": "VOLUME crée un point de montage pour un volume anonyme."
+    "explanation": "VOLUME crée un point de montage pour un volume anonyme."
   },
   {
     "id": "DKR-01-038",
@@ -495,9 +560,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction indique que le conteneur écoute sur un port ?",
-    "options": ["EXPOSE", "PORT", "LISTEN", "OPEN"],
+    "options": [
+      "EXPOSE",
+      "PORT",
+      "LISTEN",
+      "OPEN"
+    ],
     "correct": 0,
-    "explication": "EXPOSE est informatif (n'ouvre pas réellement le port)."
+    "explanation": "EXPOSE est informatif (n'ouvre pas réellement le port)."
   },
   {
     "id": "DKR-01-039",
@@ -505,9 +575,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction exécute une commande lors de la création du conteneur (juste avant le démarrage) ?",
-    "options": ["ONBUILD", "RUN", "CMD", "ENTRYPOINT"],
+    "options": [
+      "ONBUILD",
+      "RUN",
+      "CMD",
+      "ENTRYPOINT"
+    ],
     "correct": 0,
-    "explication": "ONBUILD ajoute une instruction qui sera exécutée lors de la construction d'une image enfant."
+    "explanation": "ONBUILD ajoute une instruction qui sera exécutée lors de la construction d'une image enfant."
   },
   {
     "id": "DKR-01-040",
@@ -515,9 +590,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit une étiquette (métadonnée) sur l'image ?",
-    "options": ["LABEL", "TAG", "METADATA", "ANNOTATE"],
+    "options": [
+      "LABEL",
+      "TAG",
+      "METADATA",
+      "ANNOTATE"
+    ],
     "correct": 0,
-    "explication": "LABEL ajoute des métadonnées (ex: version, maintainer)."
+    "explanation": "LABEL ajoute des métadonnées (ex: version, maintainer)."
   },
   {
     "id": "DKR-01-041",
@@ -525,9 +605,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction vérifie l'état de santé du conteneur ?",
-    "options": ["HEALTHCHECK", "HEALTH", "CHECK", "STATUS"],
+    "options": [
+      "HEALTHCHECK",
+      "HEALTH",
+      "CHECK",
+      "STATUS"
+    ],
     "correct": 0,
-    "explication": "HEALTHCHECK définit une commande pour vérifier si le conteneur fonctionne."
+    "explanation": "HEALTHCHECK définit une commande pour vérifier si le conteneur fonctionne."
   },
   {
     "id": "DKR-01-042",
@@ -535,9 +620,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction définit le shell par défaut ?",
-    "options": ["SHELL", "CMD", "RUN", "ENTRYPOINT"],
+    "options": [
+      "SHELL",
+      "CMD",
+      "RUN",
+      "ENTRYPOINT"
+    ],
     "correct": 0,
-    "explication": "SHELL change le shell par défaut (ex: powershell)."
+    "explanation": "SHELL change le shell par défaut (ex: powershell)."
   },
   {
     "id": "DKR-01-043",
@@ -545,7 +635,9 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction permet d'optimiser le cache en fusionnant plusieurs commandes ?",
-    "options": ["Chaque instruction crée une couche, donc regrouper avec &&"],
+    "options": [
+      "Chaque instruction crée une couche, donc regrouper avec &&"
+    ],
     "options_list": [
       "Chaque RUN crée une couche, il faut regrouper avec &&",
       "Utiliser --squash",
@@ -553,7 +645,7 @@
       "Impossible"
     ],
     "correct": 0,
-    "explication": "Regrouper les commandes avec && réduit le nombre de couches."
+    "explanation": "Regrouper les commandes avec && réduit le nombre de couches."
   },
   {
     "id": "DKR-01-044",
@@ -561,9 +653,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction crée un utilisateur ?",
-    "options": ["RUN useradd", "USERADD", "ADDUSER", "RUN adduser"],
+    "options": [
+      "RUN useradd",
+      "USERADD",
+      "ADDUSER",
+      "RUN adduser"
+    ],
     "correct": 0,
-    "explication": "Utiliser RUN avec useradd ou adduser."
+    "explanation": "Utiliser RUN avec useradd ou adduser."
   },
   {
     "id": "DKR-01-045",
@@ -571,9 +668,14 @@
     "theme_label": "Dockerfile",
     "difficulty": "easy",
     "question": "Quelle instruction supprime le cache ?",
-    "options": ["--no-cache", "--no-cache=true", "--no-cache-dir", "A et B"],
+    "options": [
+      "--no-cache",
+      "--no-cache=true",
+      "--no-cache-dir",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "L'option --no-cache lors de docker build évite l'utilisation du cache."
+    "explanation": "L'option --no-cache lors de docker build évite l'utilisation du cache."
   },
   {
     "id": "DKR-01-046",
@@ -581,9 +683,14 @@
     "theme_label": "Registre",
     "difficulty": "easy",
     "question": "Quelle commande se connecte à un registre ?",
-    "options": ["docker login", "docker auth", "docker registry login", "docker connect"],
+    "options": [
+      "docker login",
+      "docker auth",
+      "docker registry login",
+      "docker connect"
+    ],
     "correct": 0,
-    "explication": "docker login s'authentifie auprès d'un registre (Docker Hub, privé)."
+    "explanation": "docker login s'authentifie auprès d'un registre (Docker Hub, privé)."
   },
   {
     "id": "DKR-01-047",
@@ -591,9 +698,14 @@
     "theme_label": "Registre",
     "difficulty": "easy",
     "question": "Comment se déconnecter d'un registre ?",
-    "options": ["docker logout", "docker login --logout", "docker auth logout", "docker signout"],
+    "options": [
+      "docker logout",
+      "docker login --logout",
+      "docker auth logout",
+      "docker signout"
+    ],
     "correct": 0,
-    "explication": "docker logout supprime les identifiants stockés."
+    "explanation": "docker logout supprime les identifiants stockés."
   },
   {
     "id": "DKR-01-048",
@@ -601,9 +713,14 @@
     "theme_label": "Registre",
     "difficulty": "easy",
     "question": "Quelle commande recherche des images sur Docker Hub ?",
-    "options": ["docker search <terme>", "docker find <terme>", "docker query <terme>", "docker look <terme>"],
+    "options": [
+      "docker search <terme>",
+      "docker find <terme>",
+      "docker query <terme>",
+      "docker look <terme>"
+    ],
     "correct": 0,
-    "explication": "docker search interroge Docker Hub pour des images publiques."
+    "explanation": "docker search interroge Docker Hub pour des images publiques."
   },
   {
     "id": "DKR-01-049",
@@ -618,7 +735,7 @@
       "docker run --full-access"
     ],
     "correct": 0,
-    "explication": "--privileged donne tous les accès (dangereux)."
+    "explanation": "--privileged donne tous les accès (dangereux)."
   },
   {
     "id": "DKR-01-050",
@@ -633,7 +750,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "--memory ou -m limite la mémoire."
+    "explanation": "--memory ou -m limite la mémoire."
   },
   {
     "id": "DKR-01-051",
@@ -648,7 +765,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs options pour limiter le CPU."
+    "explanation": "Plusieurs options pour limiter le CPU."
   },
   {
     "id": "DKR-01-052",
@@ -663,7 +780,7 @@
       "Ignorer les capabilities"
     ],
     "correct": 0,
-    "explication": "Exécuter les conteneurs en tant qu'utilisateur non root, drop capabilities."
+    "explanation": "Exécuter les conteneurs en tant qu'utilisateur non root, drop capabilities."
   },
   {
     "id": "DKR-01-053",
@@ -678,7 +795,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "--user ou -u définit l'UID/GID."
+    "explanation": "--user ou -u définit l'UID/GID."
   },
   {
     "id": "DKR-01-054",
@@ -693,7 +810,7 @@
       "docker run --drop-all"
     ],
     "correct": 0,
-    "explication": "--cap-drop=ALL supprime toutes les capacités, puis on peut ajouter celles nécessaires."
+    "explanation": "--cap-drop=ALL supprime toutes les capacités, puis on peut ajouter celles nécessaires."
   },
   {
     "id": "DKR-01-055",
@@ -708,7 +825,7 @@
       "docker run --enable-cap=NET_ADMIN"
     ],
     "correct": 0,
-    "explication": "--cap-add ajoute une capacité Linux."
+    "explanation": "--cap-add ajoute une capacité Linux."
   },
   {
     "id": "DKR-01-056",
@@ -723,7 +840,7 @@
       "docker inspect --vuln"
     ],
     "correct": 0,
-    "explication": "docker scan (nécessite un abonnement Snyk ou Docker Scout)."
+    "explanation": "docker scan (nécessite un abonnement Snyk ou Docker Scout)."
   },
   {
     "id": "DKR-01-057",
@@ -738,7 +855,7 @@
       "Contrôle d'accès"
     ],
     "correct": 0,
-    "explication": "DCT utilise des signatures pour garantir l'intégrité des images."
+    "explanation": "DCT utilise des signatures pour garantir l'intégrité des images."
   },
   {
     "id": "DKR-01-058",
@@ -753,7 +870,7 @@
       "docker content-trust on"
     ],
     "correct": 0,
-    "explication": "La variable d'environnement DOCKER_CONTENT_TRUST=1 active la vérification."
+    "explanation": "La variable d'environnement DOCKER_CONTENT_TRUST=1 active la vérification."
   },
   {
     "id": "DKR-01-059",
@@ -768,7 +885,7 @@
       "docker info"
     ],
     "correct": 0,
-    "explication": "docker stats affiche CPU, mémoire, réseau, I/O des conteneurs en cours."
+    "explanation": "docker stats affiche CPU, mémoire, réseau, I/O des conteneurs en cours."
   },
   {
     "id": "DKR-01-060",
@@ -783,6 +900,393 @@
       "docker system clean"
     ],
     "correct": 0,
-    "explication": "docker system prune supprime les ressources non utilisées."
+    "explanation": "docker system prune supprime les ressources non utilisées."
+  },
+  {
+    "id": "DCK-DB-001",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande docker run :",
+    "options": [
+      "docker run -d myimage",
+      "docker run --rm myimage",
+      "docker run -it myimage /bin/bash",
+      "docker run --publish 80:80 myimage"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "-d permet de lancer le conteneur en arrière-plan, --rm supprime automatiquement le conteneur une fois qu'il s'arrête, -it permet d'interagir avec le conteneur en mode terminal, --publish publie un port du conteneur sur l'hôte."
+  },
+  {
+    "id": "DCK-DB-002",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour construire une image à partir d'un Dockerfile ?",
+    "options": [
+      "docker build",
+      "docker create",
+      "docker run",
+      "docker push"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker build est la commande utilisée pour construire une image à partir d'un Dockerfile."
+  },
+  {
+    "id": "DCK-DB-003",
+    "theme": "Docker Basics",
+    "theme_label": "Conteneurs vs VMs",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les différences entre Docker et les VMs :",
+    "options": [
+      "Docker utilise des ressources système partagées, tandis que les VMs ont leurs propres ressources.",
+      "Les VMs sont plus rapides à démarrer que les conteneurs Docker.",
+      "Docker est moins portable que les VMs.",
+      "Les conteneurs Docker partagent le noyau du système hôte."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Docker utilise des ressources système partagées avec le hôte, les VMs ont leurs propres ressources. Les VMs sont généralement plus rapides à démarrer, Docker est plus portable et les conteneurs partagent le noyau du système hôte."
+  },
+  {
+    "id": "DCK-DB-004",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité des conteneurs Docker :",
+    "options": [
+      "Les conteneurs Docker sont moins sécurisés que les VMs.",
+      "Il est recommandé de ne pas exposer des services non nécessaires sur les conteneurs.",
+      "Les images Docker doivent être vérifiées avant leur utilisation pour éviter les vulnérabilités.",
+      "Les conteneurs Docker peuvent être isolés grâce à des groupes de ressources spécifiques."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les conteneurs Docker ne sont pas moins sécurisés que les VMs, il est recommandé de ne pas exposer des services non nécessaires sur les conteneurs, les images Docker doivent être vérifiées pour éviter les vulnérabilités. Les conteneurs Docker peuvent être isolés grâce à des groupes de ressources spécifiques."
+  },
+  {
+    "id": "DCK-DB-005",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les images Docker :",
+    "options": [
+      "Les images sont des fichiers contenant une application et ses dépendances.",
+      "Une image peut être exécutée directement pour créer un conteneur.",
+      "Les images sont stockées localement sur le système hôte.",
+      "Une image peut être construite à partir d'un Dockerfile."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les images sont des fichiers contenant une application et ses dépendances (A). Une image ne peut pas être exécutée directement pour créer un conteneur (B). Les images sont stockées localement sur le système hôte (C) mais aussi dans un registre distant. Une image peut être construite à partir d'un Dockerfile (D)."
+  },
+  {
+    "id": "DCK-DB-006",
+    "theme": "Docker Basics",
+    "theme_label": "Conteneurs vs VMs",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un conteneur Docker et une machine virtuelle (VM) ?",
+    "options": [
+      "Les conteneurs partagent le noyau du système hôte, tandis que les VMs ont leur propre noyau.",
+      "Les conteneurs sont plus lents à démarrer que les VMs.",
+      "Les conteneurs ne peuvent pas partager des ressources avec d'autres conteneurs, contrairement aux VMs.",
+      "Les conteneurs sont moins sécurisés que les VMs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les conteneurs partagent le noyau du système hôte, ce qui les rend plus légers et rapides à démarrer (A). Les VMs ont leur propre noyau, ce qui les rend plus lentes à démarrer (B). Les conteneurs peuvent partager des ressources avec d'autres conteneurs, contrairement aux VMs (C). Les conteneurs sont généralement plus sécurisés que les VMs car ils ont moins d'interface avec le système hôte (D)."
+  },
+  {
+    "id": "DCK-DB-007",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité des conteneurs Docker :",
+    "options": [
+      "Les conteneurs Docker sont moins sécurisés que les VMs.",
+      "Il est recommandé de ne pas exposer des services non nécessaires dans les conteneurs.",
+      "Les conteneurs partagent le noyau du système hôte, ce qui peut entraîner des vulnérabilités.",
+      "Les conteneurs peuvent être isolés en utilisant des namespaces."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Les conteneurs Docker sont généralement plus sécurisés que les VMs (A). Il est recommandé de ne pas exposer des services non nécessaires dans les conteneurs (B). Les conteneurs partagent le noyau du système hôte, ce qui peut entraîner des vulnérabilités (C). Les conteneurs peuvent être isolés en utilisant des namespaces (D)."
+  },
+  {
+    "id": "DCK-DB-008",
+    "theme": "Docker Basics",
+    "theme_label": "Architecture",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale composante de l'architecture Docker ?",
+    "options": [
+      "Docker Engine",
+      "Docker Hub",
+      "Docker Compose",
+      "Docker Registry"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Docker Engine est la principale composante de l'architecture Docker, responsable de la création et gestion des conteneurs (A). Docker Hub est un registre public pour les images Docker (B). Docker Compose est un outil pour définir et gérer des applications multi-conteneurs (C). Docker Registry est un service pour stocker et partager les images Docker (D)."
+  },
+  {
+    "id": "DCK-DB-009",
+    "theme": "Docker Basics",
+    "theme_label": "Docker System",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les commandes de gestion du système Docker :",
+    "options": [
+      "docker system prune -a supprime tous les conteneurs, images et volumes non utilisés.",
+      "docker system df affiche l'utilisation de disque par les images et conteneurs.",
+      "docker system info affiche des informations sur le système Docker.",
+      "docker system prune supprime tous les conteneurs non utilisés."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "docker system prune -a supprime tous les conteneurs, images et volumes non utilisés (A). docker system df affiche l'utilisation de disque par les images et conteneurs (B). docker system info affiche des informations sur le système Docker (C). docker system prune supprime tous les conteneurs non utilisés, mais pas les images et volumes (D)."
+  },
+  {
+    "id": "DCK-DB-010",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les images Docker :",
+    "options": [
+      "Les images sont des fichiers binaires.",
+      "Les images sont immuables.",
+      "Les images peuvent être exécutées directement.",
+      "Les images sont stockées localement sur l'hôte."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les images sont des fichiers binaires (A est correct), immuables (B est correct), mais ne peuvent pas être exécutées directement sans un conteneur (C est incorrect). Les images sont stockées localement sur l'hôte mais peuvent également être partagées via un registre (D est incorrect)."
+  },
+  {
+    "id": "DCK-DB-011",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de lister tous les conteneurs, y compris ceux qui sont arrêtés ?",
+    "options": [
+      "docker ps -a",
+      "docker container ls --all",
+      "docker list -a",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "-a ou --all liste tous les conteneurs, actifs ou arrêtés (A et B sont corrects). docker list -a n'existe pas (C est incorrect). Toutes ces réponses sont correctes (D est correct)."
+  },
+  {
+    "id": "DCK-DB-012",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité des conteneurs Docker :",
+    "options": [
+      "Les conteneurs sont moins sécurisés que les VMs.",
+      "La mise à jour des images peut réduire la vulnérabilité.",
+      "Les volumes sont moins sécurisés que les conteneurs.",
+      "La mise en réseau peut être configurée pour améliorer la sécurité."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les conteneurs sont généralement considérés comme plus sécurisés que les VMs (A est incorrect). La mise à jour des images peut réduire la vulnérabilité (B est correct). Les volumes peuvent être moins sécurisés que les conteneurs en fonction de la configuration (C est incorrect). La mise en réseau peut être configurée pour améliorer la sécurité (D est correct)."
+  },
+  {
+    "id": "DCK-DB-013",
+    "theme": "Docker Basics",
+    "theme_label": "Conteneurs vs VMs",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre les conteneurs Docker et les VMs (Virtual Machines) ?",
+    "options": [
+      "Les conteneurs partagent le noyau du système, tandis que les VMs ont leur propre noyau.",
+      "Les conteneurs sont plus lents à démarrer que les VMs.",
+      "Les conteneurs sont moins flexibles que les VMs.",
+      "Les conteneurs utilisent plus de ressources que les VMs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les conteneurs partagent le noyau du système, tandis que les VMs ont leur propre noyau (A est correct). Les conteneurs sont généralement plus rapides à démarrer que les VMs (B est incorrect). Les conteneurs sont généralement plus flexibles que les VMs (C est incorrect). Les conteneurs utilisent généralement moins de ressources que les VMs (D est incorrect)."
+  },
+  {
+    "id": "DCK-DB-014",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle instruction Docker est utilisée pour spécifier la base d'une image ?",
+    "options": [
+      "FROM",
+      "RUN",
+      "COPY",
+      "ADD"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "FROM est l'instruction utilisée pour spécifier la base d'une image (A est correct). RUN, COPY et ADD sont des instructions utilisées pour exécuter des commandes, copier des fichiers ou ajouter des fichiers respectivement (B, C et D sont incorrects)."
+  },
+  {
+    "id": "DCK-DB-015",
+    "theme": "Docker Basics",
+    "theme_label": "Dockerfile",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création d'une image Docker avec un Dockerfile :",
+    "options": [
+      "Un Dockerfile doit contenir une instruction FROM pour spécifier la base de l'image.",
+      "L'instruction RUN peut être utilisée pour exécuter des commandes dans l'image à la création.",
+      "L'instruction COPY peut être utilisée pour copier des fichiers ou des répertoires dans l'image.",
+      "L'instruction CMD est utilisée pour définir les commandes par défaut à exécuter lors de la création d'un conteneur.",
+      "L'instruction LABEL peut être utilisée pour ajouter des métadonnées à l'image."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Un Dockerfile doit contenir une instruction FROM pour spécifier la base de l'image (A correct). L'instruction RUN peut être utilisée pour exécuter des commandes dans l'image à la création (B correct). L'instruction COPY peut être utilisée pour copier des fichiers ou des répertoires dans l'image (C correct). L'instruction CMD est utilisée pour définir les commandes par défaut à exécuter lors de la création d'un conteneur, mais elle n'est pas obligatoire (D incorrect). L'instruction LABEL peut être utilisée pour ajouter des métadonnées à l'image (E correct)."
+  },
+  {
+    "id": "DCK-DB-016",
+    "theme": "Docker Basics",
+    "theme_label": "Commandes de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de lister tous les conteneurs, y compris ceux qui sont arrêtés ?",
+    "options": [
+      "docker ps -a",
+      "docker container ls --all",
+      "docker list -a",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "-a ou --all liste tous les conteneurs, actifs ou arrêtés (A correct). docker container ls --all est également une commande valide (B correct). docker list -a n'est pas une commande Docker valide (C incorrect). Toutes ces réponses sont correctes (D correct)."
+  },
+  {
+    "id": "DCK-DB-017",
+    "theme": "Docker Basics",
+    "theme_label": "Sécurité",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité des conteneurs Docker :",
+    "options": [
+      "Les conteneurs Docker sont moins sécurisés que les machines virtuelles.",
+      "L'utilisation de l'option --user dans docker run permet de spécifier un utilisateur non root pour exécuter les commandes.",
+      "L'option --cap-drop peut être utilisée pour supprimer des capacités spécifiques du processus dans le conteneur.",
+      "La mise en place de réseau isolé pour les conteneurs est une mesure de sécurité efficace.",
+      "Les images Docker doivent être vérifiées et évaluées pour leur sécurité avant leur utilisation."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "Les conteneurs Docker ne sont pas moins sécurisés que les machines virtuelles (A incorrect). L'utilisation de l'option --user dans docker run permet de spécifier un utilisateur non root pour exécuter les commandes (B correct). L'option --cap-drop peut être utilisée pour supprimer des capacités spécifiques du processus dans le conteneur (C correct). La mise en place de réseau isolé pour les conteneurs est une mesure de sécurité efficace (D correct). Les images Docker doivent être vérifiées et évaluées pour leur sécurité avant leur utilisation (E correct)."
+  },
+  {
+    "id": "DCK-DB-018",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de créer une image Docker à partir d'un Dockerfile ?",
+    "options": [
+      "docker build -t mon_image .",
+      "docker create -t mon_image .",
+      "docker run -t mon_image .",
+      "docker pull -t mon_image ."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker build -t mon_image . permet de créer une image Docker à partir d'un Dockerfile (A correct). docker create -t mon_image . crée un conteneur à partir d'une image existante (B incorrect). docker run -t mon_image . exécute un conteneur à partir d'une image (C incorrect). docker pull -t mon_image . télécharge une image Docker depuis un registre (D incorrect)."
+  },
+  {
+    "id": "DCK-DB-019",
+    "theme": "Docker Basics",
+    "theme_label": "Architecture",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'architecture de Docker :",
+    "options": [
+      "Docker utilise un modèle client-serveur où le serveur est appelé Docker Engine.",
+      "Le Docker Daemon gère les images et les conteneurs sur le système hôte.",
+      "Docker utilise un modèle de stockage basé sur des couches pour optimiser l'espace disque.",
+      "L'interface Docker CLI permet de communiquer avec le Docker Daemon pour exécuter des commandes.",
+      "Docker utilise un système de réseau virtuel pour isoler les conteneurs entre eux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "Docker utilise un modèle client-serveur où le serveur est appelé Docker Engine (A correct). Le Docker Daemon gère les images et les conteneurs sur le système hôte (B correct). Docker utilise un modèle de stockage basé sur des couches pour optimiser l'espace disque (C correct). L'interface Docker CLI permet de communiquer avec le Docker Daemon pour exécuter des commandes (D correct). Docker utilise un système de réseau virtuel pour isoler les conteneurs entre eux (E correct)."
+  },
+  {
+    "id": "DCK-DB-020",
+    "theme": "Docker Basics",
+    "theme_label": "Images",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les images Docker :",
+    "options": [
+      "Les images sont des fichiers compressés contenant une application et ses dépendances.",
+      "Une image peut être exécutée directement sans création de conteneur.",
+      "Les images sont mutables et peuvent être modifiées à tout moment.",
+      "Une image est définie par un Dockerfile qui contient des instructions pour construire l'image."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les images sont des fichiers compressés contenant une application et ses dépendances (A est correct). Une image peut être exécutée directement sans création de conteneur (B est incorrect). Les images sont immutables et ne peuvent pas être modifiées à tout moment (C est incorrect). Une image est définie par un Dockerfile qui contient des instructions pour construire l'image (D est correct)."
   }
 ]

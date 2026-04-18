@@ -1,4 +1,3 @@
-
 [
   {
     "id": "TF-05-001",
@@ -6,9 +5,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande initialise un répertoire Terraform ?",
-    "options": ["terraform init", "terraform start", "terraform setup", "terraform begin"],
+    "options": [
+      "terraform init",
+      "terraform start",
+      "terraform setup",
+      "terraform begin"
+    ],
     "correct": 0,
-    "explication": "init télécharge les providers et initialise les modules."
+    "explanation": "init télécharge les providers et initialise les modules."
   },
   {
     "id": "TF-05-002",
@@ -16,9 +20,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande formate les fichiers ?",
-    "options": ["terraform fmt", "terraform format", "terraform style", "terraform lint"],
+    "options": [
+      "terraform fmt",
+      "terraform format",
+      "terraform style",
+      "terraform lint"
+    ],
     "correct": 0,
-    "explication": "fmt reformate les fichiers .tf selon le style canonique."
+    "explanation": "fmt reformate les fichiers .tf selon le style canonique."
   },
   {
     "id": "TF-05-003",
@@ -26,9 +35,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande valide la configuration ?",
-    "options": ["terraform validate", "terraform check", "terraform verify", "terraform syntax"],
+    "options": [
+      "terraform validate",
+      "terraform check",
+      "terraform verify",
+      "terraform syntax"
+    ],
     "correct": 0,
-    "explication": "validate vérifie la syntaxe et la cohérence."
+    "explanation": "validate vérifie la syntaxe et la cohérence."
   },
   {
     "id": "TF-05-004",
@@ -36,9 +50,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande montre le plan d'exécution ?",
-    "options": ["terraform plan", "terraform show", "terraform graph", "terraform output"],
+    "options": [
+      "terraform plan",
+      "terraform show",
+      "terraform graph",
+      "terraform output"
+    ],
     "correct": 0,
-    "explication": "plan affiche les changements à appliquer."
+    "explanation": "plan affiche les changements à appliquer."
   },
   {
     "id": "TF-05-005",
@@ -46,9 +65,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande applique les changements ?",
-    "options": ["terraform apply", "terraform run", "terraform deploy", "terraform execute"],
+    "options": [
+      "terraform apply",
+      "terraform run",
+      "terraform deploy",
+      "terraform execute"
+    ],
     "correct": 0,
-    "explication": "apply applique le plan."
+    "explanation": "apply applique le plan."
   },
   {
     "id": "TF-05-006",
@@ -56,9 +80,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande détruit l'infrastructure ?",
-    "options": ["terraform destroy", "terraform remove", "terraform delete", "terraform down"],
+    "options": [
+      "terraform destroy",
+      "terraform remove",
+      "terraform delete",
+      "terraform down"
+    ],
     "correct": 0,
-    "explication": "destroy supprime toutes les ressources."
+    "explanation": "destroy supprime toutes les ressources."
   },
   {
     "id": "TF-05-007",
@@ -66,9 +95,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande affiche l'état actuel ?",
-    "options": ["terraform show", "terraform state list", "terraform output", "A et B"],
+    "options": [
+      "terraform show",
+      "terraform state list",
+      "terraform output",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "show et state list affichent l'état."
+    "explanation": "show et state list affichent l'état."
   },
   {
     "id": "TF-05-008",
@@ -76,9 +110,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande affiche les outputs ?",
-    "options": ["terraform output", "terraform show -output", "A et B", "A seulement"],
+    "options": [
+      "terraform output",
+      "terraform show -output",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "output affiche les outputs définis."
+    "explanation": "output affiche les outputs définis."
   },
   {
     "id": "TF-05-009",
@@ -86,9 +125,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Quelle commande affiche le graphe des dépendances ?",
-    "options": ["terraform graph", "terraform dependencies", "terraform diagram", "terraform web"],
+    "options": [
+      "terraform graph",
+      "terraform dependencies",
+      "terraform diagram",
+      "terraform web"
+    ],
     "correct": 0,
-    "explication": "graph produit un DOT pour visualisation."
+    "explanation": "graph produit un DOT pour visualisation."
   },
   {
     "id": "TF-05-010",
@@ -96,9 +140,14 @@
     "theme_label": "Commandes de base",
     "difficulty": "easy",
     "question": "Comment afficher l'aide d'une commande ?",
-    "options": ["terraform <cmd> -h", "terraform help <cmd>", "A et B", "A seulement"],
+    "options": [
+      "terraform <cmd> -h",
+      "terraform help <cmd>",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "-h ou help."
+    "explanation": "-h ou help."
   },
   {
     "id": "TF-05-011",
@@ -113,7 +162,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "version montre la version de Terraform et des providers."
+    "explanation": "version montre la version de Terraform et des providers."
   },
   {
     "id": "TF-05-012",
@@ -128,7 +177,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "workspace est une commande pour gérer les workspaces."
+    "explanation": "workspace est une commande pour gérer les workspaces."
   },
   {
     "id": "TF-05-013",
@@ -136,9 +185,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment spécifier un fichier de variables ?",
-    "options": ["-var-file=dev.tfvars", "-var-file dev.tfvars", "A et B", "A seulement"],
+    "options": [
+      "-var-file=dev.tfvars",
+      "-var-file dev.tfvars",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "-var-file accepte les deux syntaxes."
+    "explanation": "-var-file accepte les deux syntaxes."
   },
   {
     "id": "TF-05-014",
@@ -146,9 +200,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment cibler une ressource spécifique ?",
-    "options": ["-target=aws_instance.web", "-target aws_instance.web", "A et B", "A seulement"],
+    "options": [
+      "-target=aws_instance.web",
+      "-target aws_instance.web",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "-target=ressource ou -target ressource."
+    "explanation": "-target=ressource ou -target ressource."
   },
   {
     "id": "TF-05-015",
@@ -156,9 +215,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment appliquer sans confirmation ?",
-    "options": ["-auto-approve", "-force", "-yes", "A seulement"],
+    "options": [
+      "-auto-approve",
+      "-force",
+      "-yes",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "-auto-approve pour l'automatisation."
+    "explanation": "-auto-approve pour l'automatisation."
   },
   {
     "id": "TF-05-016",
@@ -166,9 +230,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment limiter le nombre de ressources parallèles ?",
-    "options": ["-parallelism=10", "-concurrency=10", "-max-parallel=10", "A seulement"],
+    "options": [
+      "-parallelism=10",
+      "-concurrency=10",
+      "-max-parallel=10",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "-parallelism contrôle le parallélisme."
+    "explanation": "-parallelism contrôle le parallélisme."
   },
   {
     "id": "TF-05-017",
@@ -176,9 +245,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment afficher les logs détaillés ?",
-    "options": ["-debug", "-v", "-verbose", "A et B"],
+    "options": [
+      "-debug",
+      "-v",
+      "-verbose",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "TF_LOG=DEBUG ou -debug (certaines commandes)."
+    "explanation": "TF_LOG=DEBUG ou -debug (certaines commandes)."
   },
   {
     "id": "TF-05-018",
@@ -186,9 +260,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment spécifier le fichier d'état ?",
-    "options": ["-state=chemin", "-state chemin", "A et B", "A seulement"],
+    "options": [
+      "-state=chemin",
+      "-state chemin",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "-state=chemin."
+    "explanation": "-state=chemin."
   },
   {
     "id": "TF-05-019",
@@ -196,9 +275,14 @@
     "theme_label": "Options courantes",
     "difficulty": "easy",
     "question": "Comment générer un plan au format JSON ?",
-    "options": ["terraform plan -json", "terraform plan -out=tfplan -json", "A et B", "A seulement"],
+    "options": [
+      "terraform plan -json",
+      "terraform plan -out=tfplan -json",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "-json produit une sortie JSON."
+    "explanation": "-json produit une sortie JSON."
   },
   {
     "id": "TF-05-020",
@@ -213,7 +297,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "plan -out enregistre le plan binaire."
+    "explanation": "plan -out enregistre le plan binaire."
   },
   {
     "id": "TF-05-021",
@@ -228,7 +312,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "apply tfplan utilise le plan sauvegardé."
+    "explanation": "apply tfplan utilise le plan sauvegardé."
   },
   {
     "id": "TF-05-022",
@@ -243,7 +327,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "refresh et apply -refresh-only synchronisent l'état."
+    "explanation": "refresh et apply -refresh-only synchronisent l'état."
   },
   {
     "id": "TF-05-023",
@@ -251,9 +335,14 @@
     "theme_label": "State commands",
     "difficulty": "easy",
     "question": "Comment lister les ressources dans l'état ?",
-    "options": ["terraform state list", "terraform state list", "terraform show -list", "A et B"],
+    "options": [
+      "terraform state list",
+      "terraform state list",
+      "terraform show -list",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "state list est la commande."
+    "explanation": "state list est la commande."
   },
   {
     "id": "TF-05-024",
@@ -261,9 +350,14 @@
     "theme_label": "State commands",
     "difficulty": "easy",
     "question": "Comment afficher une ressource spécifique ?",
-    "options": ["terraform state show aws_instance.web", "terraform show aws_instance.web", "A et B", "A seulement"],
+    "options": [
+      "terraform state show aws_instance.web",
+      "terraform show aws_instance.web",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "state show affiche la ressource."
+    "explanation": "state show affiche la ressource."
   },
   {
     "id": "TF-05-025",
@@ -271,9 +365,14 @@
     "theme_label": "State commands",
     "difficulty": "easy",
     "question": "Comment supprimer une ressource de l'état ?",
-    "options": ["terraform state rm aws_instance.web", "terraform state remove aws_instance.web", "A et B", "A seulement"],
+    "options": [
+      "terraform state rm aws_instance.web",
+      "terraform state remove aws_instance.web",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "state rm retire la ressource de l'état."
+    "explanation": "state rm retire la ressource de l'état."
   },
   {
     "id": "TF-05-026",
@@ -288,7 +387,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "state mv renomme/déplace."
+    "explanation": "state mv renomme/déplace."
   },
   {
     "id": "TF-05-027",
@@ -303,7 +402,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "import associe une ressource existante à l'état."
+    "explanation": "import associe une ressource existante à l'état."
   },
   {
     "id": "TF-05-028",
@@ -311,9 +410,14 @@
     "theme_label": "Workspace commands",
     "difficulty": "easy",
     "question": "Comment créer un nouveau workspace ?",
-    "options": ["terraform workspace new dev", "terraform workspace create dev", "A et B", "A seulement"],
+    "options": [
+      "terraform workspace new dev",
+      "terraform workspace create dev",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "new crée et bascule."
+    "explanation": "new crée et bascule."
   },
   {
     "id": "TF-05-029",
@@ -321,9 +425,14 @@
     "theme_label": "Workspace commands",
     "difficulty": "easy",
     "question": "Comment lister les workspaces ?",
-    "options": ["terraform workspace list", "terraform workspace ls", "A et B", "A seulement"],
+    "options": [
+      "terraform workspace list",
+      "terraform workspace ls",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "list ou ls."
+    "explanation": "list ou ls."
   },
   {
     "id": "TF-05-030",
@@ -331,9 +440,14 @@
     "theme_label": "Workspace commands",
     "difficulty": "easy",
     "question": "Comment basculer vers un workspace ?",
-    "options": ["terraform workspace select dev", "terraform workspace switch dev", "A et B", "A seulement"],
+    "options": [
+      "terraform workspace select dev",
+      "terraform workspace switch dev",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "select change le workspace actif."
+    "explanation": "select change le workspace actif."
   },
   {
     "id": "TF-05-031",
@@ -341,9 +455,14 @@
     "theme_label": "Workspace commands",
     "difficulty": "easy",
     "question": "Comment afficher le workspace actuel ?",
-    "options": ["terraform workspace show", "terraform workspace current", "A et B", "A seulement"],
+    "options": [
+      "terraform workspace show",
+      "terraform workspace current",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "show affiche le workspace courant."
+    "explanation": "show affiche le workspace courant."
   },
   {
     "id": "TF-05-032",
@@ -351,9 +470,14 @@
     "theme_label": "Provider commands",
     "difficulty": "easy",
     "question": "Comment lister les providers requis ?",
-    "options": ["terraform providers", "terraform providers list", "A et B", "A seulement"],
+    "options": [
+      "terraform providers",
+      "terraform providers list",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "providers affiche les providers nécessaires."
+    "explanation": "providers affiche les providers nécessaires."
   },
   {
     "id": "TF-05-033",
@@ -361,9 +485,14 @@
     "theme_label": "Provider commands",
     "difficulty": "easy",
     "question": "Comment mettre à jour les providers ?",
-    "options": ["terraform init -upgrade", "terraform get -update", "A et B", "A seulement"],
+    "options": [
+      "terraform init -upgrade",
+      "terraform get -update",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "init -upgrade met à jour les providers."
+    "explanation": "init -upgrade met à jour les providers."
   },
   {
     "id": "TF-05-034",
@@ -371,9 +500,14 @@
     "theme_label": "Provider commands",
     "difficulty": "easy",
     "question": "Comment verrouiller les versions exactes des providers ?",
-    "options": ["terraform providers lock", "terraform lock providers", "A et B", "A seulement"],
+    "options": [
+      "terraform providers lock",
+      "terraform lock providers",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "providers lock génère le lock file."
+    "explanation": "providers lock génère le lock file."
   },
   {
     "id": "TF-05-035",
@@ -388,7 +522,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les providers peuvent être dans .terraform ou globalement."
+    "explanation": "Les providers peuvent être dans .terraform ou globalement."
   },
   {
     "id": "TF-05-036",
@@ -403,7 +537,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "TF_LOG et TF_LOG_PATH contrôlent les logs."
+    "explanation": "TF_LOG et TF_LOG_PATH contrôlent les logs."
   },
   {
     "id": "TF-05-037",
@@ -411,9 +545,14 @@
     "theme_label": "Debugging",
     "difficulty": "easy",
     "question": "Quels niveaux de log sont disponibles ?",
-    "options": ["TRACE, DEBUG, INFO, WARN, ERROR", "DEBUG, INFO, ERROR", "INFO, WARN, ERROR", "A seulement"],
+    "options": [
+      "TRACE, DEBUG, INFO, WARN, ERROR",
+      "DEBUG, INFO, ERROR",
+      "INFO, WARN, ERROR",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "TRACE est le plus détaillé."
+    "explanation": "TRACE est le plus détaillé."
   },
   {
     "id": "TF-05-038",
@@ -428,7 +567,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "show -json convertit le plan binaire en JSON."
+    "explanation": "show -json convertit le plan binaire en JSON."
   },
   {
     "id": "TF-05-039",
@@ -443,7 +582,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "plan montre les changements."
+    "explanation": "plan montre les changements."
   },
   {
     "id": "TF-05-040",
@@ -458,6 +597,264 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "taint marque la ressource pour remplacement; -replace est plus récent."
+    "explanation": "taint marque la ressource pour remplacement; -replace est plus récent."
+  },
+  {
+    "id": "TF-CC-001",
+    "theme": "CLI Commands",
+    "theme_label": "State commands",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande 'terraform state rm' :",
+    "options": [
+      "Supprime un enregistrement d'état spécifique.",
+      "Affiche l'état actuel du projet Terraform.",
+      "Restaure un enregistrement d'état à partir d'un fichier.",
+      "Ajoute un enregistrement d'état pour une ressource."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "La commande 'terraform state rm' supprime un enregistrement d'état spécifique. Affiche l'état actuel du projet Terraform avec 'terraform state list'. Restaure un enregistrement d'état à partir d'un fichier avec 'terraform state pull'. Ajoute un enregistrement d'état pour une ressource avec 'terraform state mv'."
+  },
+  {
+    "id": "TF-CC-002",
+    "theme": "CLI Commands",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de déboguer le code Terraform ?",
+    "options": [
+      "terraform debug",
+      "terraform validate",
+      "terraform plan -out=tfplan",
+      "terraform apply"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande 'terraform debug' permet de déboguer le code Terraform. 'terraform validate' vérifie la validité du fichier de configuration Terraform. 'terraform plan -out=tfplan' génère un plan d'exécution sans l'appliquer. 'terraform apply' applique les modifications définies dans le fichier de configuration."
+  },
+  {
+    "id": "TF-CC-003",
+    "theme": "CLI Commands",
+    "theme_label": "Workspace commands",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande 'terraform workspace new' :",
+    "options": [
+      "Crée un nouveau workspace.",
+      "Supprime un workspace existant.",
+      "Affiche la liste des workspaces disponibles.",
+      "Active le workspace spécifié."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "La commande 'terraform workspace new' crée un nouveau workspace. Supprime un workspace existant avec 'terraform workspace delete'. Affiche la liste des workspaces disponibles avec 'terraform workspace list'. Active le workspace spécifié avec 'terraform workspace select'."
+  },
+  {
+    "id": "TF-CC-004",
+    "theme": "CLI Commands",
+    "theme_label": "Provider commands",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de lister tous les providers disponibles dans Terraform ?",
+    "options": [
+      "terraform providers",
+      "terraform list-providers",
+      "terraform show-providers",
+      "terraform describe-provider"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande 'terraform providers' permet de lister tous les providers disponibles dans Terraform. 'terraform list-providers' n'existe pas. 'terraform show-providers' affiche les détails d'un provider spécifique. 'terraform describe-provider' fournit une description détaillée d'un provider."
+  },
+  {
+    "id": "TF-CC-005",
+    "theme": "CLI Commands",
+    "theme_label": "Options courantes",
+    "difficulty": "easy",
+    "-type": "SINGLE_CHOICE",
+    "question": "Quelle option permet d'afficher plus de détails lors de l'exécution d'une commande Terraform ?",
+    "options": [
+      "-v",
+      "-vv",
+      "-vvv",
+      "--verbose"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option '-v' permet d'afficher plus de détails lors de l'exécution d'une commande Terraform. '-vv' et '-vvv' augmentent encore la verbosité. '--verbose' est une alternative valide pour obtenir des détails supplémentaires.",
+    "type": "SINGLE_CHOICE"
+  },
+  {
+    "id": "TF-CC-006",
+    "theme": "CLI Commands",
+    "theme_label": "State commands",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande 'terraform state list' :",
+    "options": [
+      "Liste tous les ressources dans le state.",
+      "Affiche l'état actuel des ressources.",
+      "Montre les différences entre le state et la configuration.",
+      "Supprime une ressource du state."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Liste tous les ressources dans le state (correct). Affiche l'état actuel des ressources (correct). Montre les différences entre le state et la configuration (incorrect). Supprime une ressource du state (incorrect)."
+  },
+  {
+    "id": "TF-CC-007",
+    "theme": "CLI Commands",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet d'exécuter Terraform en mode debug ?",
+    "options": [
+      "terraform plan -debug",
+      "terraform apply --verbose",
+      "terraform validate -debug",
+      "terraform fmt"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "terraform plan -debug permet d'exécuter Terraform en mode debug (correct). terraform apply --verbose affiche des informations détaillées, mais pas en mode debug (incorrect). terraform validate -debug vérifie la configuration et affiche des informations détaillées, mais pas en mode debug (incorrect). terraform fmt reformate les fichiers .tf selon le style canonique (incorrect)."
+  },
+  {
+    "id": "TF-CC-008",
+    "theme": "CLI Commands",
+    "theme_label": "Workspace commands",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande 'terraform workspace list' :",
+    "options": [
+      "Affiche la liste des workspaces disponibles.",
+      "Crée un nouveau workspace.",
+      "Supprime un workspace existant.",
+      "Active le workspace spécifié."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Affiche la liste des workspaces disponibles (correct). Crée un nouveau workspace (correct). Supprime un workspace existant (incorrect). Active le workspace spécifié (incorrect)."
+  },
+  {
+    "id": "TF-CC-009",
+    "theme": "CLI Commands",
+    "theme_label": "Provider commands",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de lister les providers disponibles ?",
+    "options": [
+      "terraform providers",
+      "terraform provider list",
+      "terraform list providers",
+      "terraform show providers"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "terraform providers permet de lister les providers disponibles (correct). terraform provider list affiche la liste des providers installés et disponibles (incorrect). terraform list providers n'existe pas (incorrect). terraform show providers affiche les détails d'un provider spécifique (incorrect)."
+  },
+  {
+    "id": "TF-CC-010",
+    "theme": "CLI Commands",
+    "theme_label": "Options courantes",
+    "difficulty": "easy",
+    "-type": "SINGLE_CHOICE",
+    "question": "Quelle option permet de spécifier le chemin du fichier de configuration Terraform ?",
+    "options": [
+      "-var-file",
+      "-var",
+      "-config",
+      "-state"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "-var-file spécifie le chemin du fichier de variables (correct). -var permet de définir une variable spécifique (incorrect). -config spécifie le chemin du fichier de configuration Terraform (correct). -state spécifie le chemin du fichier state (incorrect).",
+    "type": "SINGLE_CHOICE"
+  },
+  {
+    "id": "TF-CC-011",
+    "theme": "CLI Commands",
+    "theme_label": "State commands",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande 'terraform state list' :",
+    "options": [
+      "Affiche une liste des ressources dans le state file.",
+      "Permet de déplacer une ressource du state file vers un autre fichier.",
+      "Supprime une ressource du state file.",
+      "Affiche les détails d'une seule ressource."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La commande 'terraform state list' affiche une liste des ressources dans le state file. Elle ne permet pas de déplacer une ressource, elle n'affecte pas le state file et elle ne montre pas les détails d'une seule ressource."
+  },
+  {
+    "id": "TF-CC-012",
+    "theme": "CLI Commands",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de voir les détails de l'exécution d'un plan Terraform ?",
+    "options": [
+      "terraform apply -dry-run",
+      "terraform plan --debug",
+      "terraform show",
+      "terraform graph"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La commande 'terraform plan --debug' permet de voir les détails de l'exécution d'un plan Terraform."
+  },
+  {
+    "id": "TF-CC-013",
+    "theme": "CLI Commands",
+    "theme_label": "Workspace commands",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande 'terraform workspace new' :",
+    "options": [
+      "Crée un nouveau workspace avec le nom spécifié.",
+      "Supprime un workspace existant.",
+      "Affiche la liste des workspaces disponibles.",
+      "Active le workspace spécifié."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La commande 'terraform workspace new' crée un nouveau workspace avec le nom spécifié. Elle ne supprime pas de workspace, elle n'affiche pas la liste des workspaces et elle ne active pas le workspace spécifié."
+  },
+  {
+    "id": "TF-CC-014",
+    "theme": "CLI Commands",
+    "theme_label": "Provider commands",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de lister tous les providers disponibles ?",
+    "options": [
+      "terraform providers",
+      "terraform list-providers",
+      "terraform show-providers",
+      "terraform get-providers"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande 'terraform providers' permet de lister tous les providers disponibles."
   }
 ]

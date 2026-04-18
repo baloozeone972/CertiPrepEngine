@@ -12,7 +12,7 @@
       "Système de fichiers"
     ],
     "correct": 0,
-    "explication": "Cloud Storage est le stockage objet de GCP."
+    "explanation": "Cloud Storage est le stockage objet de GCP."
   },
   {
     "id": "GCP-DL-112",
@@ -27,7 +27,7 @@
       "Coldline seulement"
     ],
     "correct": 0,
-    "explication": "Les classes optimisent les coûts selon la fréquence d'accès."
+    "explanation": "Les classes optimisent les coûts selon la fréquence d'accès."
   },
   {
     "id": "GCP-DL-113",
@@ -37,7 +37,7 @@
     "question": "Quelle classe de stockage est la moins chère ?",
     "options": ["Archive", "Coldline", "Nearline", "Standard"],
     "correct": 0,
-    "explication": "Archive est la classe la moins chère (récupération en millisecondes à minutes)."
+    "explanation": "Archive est la classe la moins chère (récupération en millisecondes à minutes)."
   },
   {
     "id": "GCP-DL-114",
@@ -47,7 +47,7 @@
     "question": "Quelle classe de stockage a un temps de récupération le plus long ?",
     "options": ["Archive", "Coldline", "Nearline", "Standard"],
     "correct": 0,
-    "explication": "Archive a un délai de récupération de millisecondes (mais accès moins rapide)."
+    "explanation": "Archive a un délai de récupération de millisecondes (mais accès moins rapide)."
   },
   {
     "id": "GCP-DL-115",
@@ -62,7 +62,7 @@
       "Projet"
     ],
     "correct": 0,
-    "explication": "Les buckets sont des conteneurs globaux pour les objets (nom unique globalement)."
+    "explanation": "Les buckets sont des conteneurs globaux pour les objets (nom unique globalement)."
   },
   {
     "id": "GCP-DL-116",
@@ -72,7 +72,7 @@
     "question": "Les noms de buckets Cloud Storage sont-ils globaux ?",
     "options": ["Oui", "Non", "Uniquement par projet", "Uniquement par région"],
     "correct": 0,
-    "explication": "Les noms de buckets doivent être uniques dans l'ensemble de GCP."
+    "explanation": "Les noms de buckets doivent être uniques dans l'ensemble de GCP."
   },
   {
     "id": "GCP-DL-117",
@@ -87,7 +87,7 @@
       "Chiffrement"
     ],
     "correct": 0,
-    "explication": "Les règles de cycle de vie automatisent le passage entre classes de stockage."
+    "explanation": "Les règles de cycle de vie automatisent le passage entre classes de stockage."
   },
   {
     "id": "GCP-DL-118",
@@ -97,7 +97,7 @@
     "question": "Cloud Storage peut-il héberger un site web statique ?",
     "options": ["Oui", "Non", "Uniquement avec Cloud CDN", "Uniquement avec Load Balancer"],
     "correct": 0,
-    "explication": "Cloud Storage peut servir des fichiers HTML, CSS, JS pour un site statique."
+    "explanation": "Cloud Storage peut servir des fichiers HTML, CSS, JS pour un site statique."
   },
   {
     "id": "GCP-DL-119",
@@ -112,7 +112,7 @@
       "Système de fichiers"
     ],
     "correct": 0,
-    "explication": "Les Persistent Disks sont des volumes de stockage bloc pour Compute Engine."
+    "explanation": "Les Persistent Disks sont des volumes de stockage bloc pour Compute Engine."
   },
   {
     "id": "GCP-DL-120",
@@ -127,7 +127,7 @@
       "Extreme seulement"
     ],
     "correct": 0,
-    "explication": "Plusieurs types pour équilibrer performances et coûts."
+    "explanation": "Plusieurs types pour équilibrer performances et coûts."
   },
   {
     "id": "GCP-DL-121",
@@ -137,7 +137,7 @@
     "question": "Un Persistent Disk peut-il être attaché à plusieurs VMs en lecture seule ?",
     "options": ["Oui", "Non", "Uniquement en lecture/écriture", "Uniquement pour les disques SSD"],
     "correct": 0,
-    "explication": "Les disques peuvent être partagés en lecture seule entre plusieurs VMs."
+    "explanation": "Les disques peuvent être partagés en lecture seule entre plusieurs VMs."
   },
   {
     "id": "GCP-DL-122",
@@ -152,7 +152,7 @@
       "Déploiement"
     ],
     "correct": 0,
-    "explication": "Les snapshots sont incrémentaux et peuvent être utilisés pour créer de nouveaux disques."
+    "explanation": "Les snapshots sont incrémentaux et peuvent être utilisés pour créer de nouveaux disques."
   },
   {
     "id": "GCP-DL-123",
@@ -167,7 +167,7 @@
       "Disque"
     ],
     "correct": 0,
-    "explication": "Filestore fournit un partage de fichiers NFS haute performance."
+    "explanation": "Filestore fournit un partage de fichiers NFS haute performance."
   },
   {
     "id": "GCP-DL-124",
@@ -182,7 +182,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "Cloud SQL est le service de base de données SQL managé."
+    "explanation": "Cloud SQL est le service de base de données SQL managé."
   },
   {
     "id": "GCP-DL-125",
@@ -192,7 +192,7 @@
     "question": "Cloud SQL supporte-t-il la haute disponibilité (HA) ?",
     "options": ["Oui (réplication régionale)", "Non", "Uniquement avec Cloud Spanner", "Uniquement avec BigQuery"],
     "correct": 0,
-    "explication": "Cloud SQL HA utilise une instance standby dans une autre zone."
+    "explanation": "Cloud SQL HA utilise une instance standby dans une autre zone."
   },
   {
     "id": "GCP-DL-126",
@@ -202,7 +202,7 @@
     "question": "Cloud SQL propose-t-il des réplicas de lecture (read replicas) ?",
     "options": ["Oui", "Non", "Uniquement pour PostgreSQL", "Uniquement pour MySQL"],
     "correct": 0,
-    "explication": "Les réplicas de lecture déchargent les requêtes de lecture."
+    "explanation": "Les réplicas de lecture déchargent les requêtes de lecture."
   },
   {
     "id": "GCP-DL-127",
@@ -217,7 +217,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "Cloud Spanner combine les avantages SQL et la scalabilité horizontale."
+    "explanation": "Cloud Spanner combine les avantages SQL et la scalabilité horizontale."
   },
   {
     "id": "GCP-DL-128",
@@ -227,7 +227,7 @@
     "question": "Cloud Spanner offre-t-il une cohérence forte (ACID) à l'échelle mondiale ?",
     "options": ["Oui", "Non", "Seulement cohérence éventuelle", "Seulement pour les lectures"],
     "correct": 0,
-    "explication": "Cloud Spanner garantit la cohérence externe (ACID) même distribué."
+    "explanation": "Cloud Spanner garantit la cohérence externe (ACID) même distribué."
   },
   {
     "id": "GCP-DL-129",
@@ -242,7 +242,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "Firestore est une base de données NoSQL flexible et scalable (en mode natif ou Datastore)."
+    "explanation": "Firestore est une base de données NoSQL flexible et scalable (en mode natif ou Datastore)."
   },
   {
     "id": "GCP-DL-130",
@@ -252,7 +252,7 @@
     "question": "Firestore supporte-t-il les requêtes en temps réel ?",
     "options": ["Oui", "Non", "Uniquement pour les applications web", "Uniquement pour les applications mobiles"],
     "correct": 0,
-    "explication": "Firestore propose des écouteurs en temps réel pour les changements de données."
+    "explanation": "Firestore propose des écouteurs en temps réel pour les changements de données."
   },
   {
     "id": "GCP-DL-131",
@@ -267,7 +267,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "Bigtable est optimisé pour les charges analytiques et de séries temporelles."
+    "explanation": "Bigtable est optimisé pour les charges analytiques et de séries temporelles."
   },
   {
     "id": "GCP-DL-132",
@@ -282,7 +282,7 @@
       "Data warehouse"
     ],
     "correct": 0,
-    "explication": "Memorystore fournit des instances Redis et Memcached entièrement gérées."
+    "explanation": "Memorystore fournit des instances Redis et Memcached entièrement gérées."
   },
   {
     "id": "GCP-DL-133",
@@ -297,7 +297,7 @@
       "Seulement Transfer Appliance"
     ],
     "correct": 0,
-    "explication": "Plusieurs options selon le volume et la connectivité."
+    "explanation": "Plusieurs options selon le volume et la connectivité."
   },
   {
     "id": "GCP-DL-134",
@@ -307,7 +307,7 @@
     "question": "Cloud Storage chiffre-t-il les données au repos par défaut ?",
     "options": ["Oui", "Non", "Uniquement avec CMEK", "Uniquement avec SSE-C"],
     "correct": 0,
-    "explication": "Le chiffrement au repos est activé par défaut (clés gérées par Google)."
+    "explanation": "Le chiffrement au repos est activé par défaut (clés gérées par Google)."
   },
   {
     "id": "GCP-DL-135",
@@ -317,7 +317,7 @@
     "question": "Peut-on utiliser ses propres clés de chiffrement (CMEK) avec Cloud Storage ?",
     "options": ["Oui", "Non", "Uniquement pour les buckets", "Uniquement pour les objets"],
     "correct": 0,
-    "explication": "CMEK permet d'utiliser des clés gérées dans Cloud KMS."
+    "explanation": "CMEK permet d'utiliser des clés gérées dans Cloud KMS."
   },
   {
     "id": "GCP-DL-136",
@@ -327,7 +327,7 @@
     "question": "Cloud Storage supporte-t-il le versioning des objets ?",
     "options": ["Oui", "Non", "Uniquement avec retention policy", "Uniquement avec lifecycle"],
     "correct": 0,
-    "explication": "Le versioning conserve les versions antérieures des objets."
+    "explanation": "Le versioning conserve les versions antérieures des objets."
   },
   {
     "id": "GCP-DL-137",
@@ -342,7 +342,7 @@
       "Archive les objets"
     ],
     "correct": 0,
-    "explication": "La politique de rétention verrouille les objets pour la conformité."
+    "explanation": "La politique de rétention verrouille les objets pour la conformité."
   },
   {
     "id": "GCP-DL-138",
@@ -357,7 +357,7 @@
       "Sauvegarde"
     ],
     "correct": 0,
-    "explication": "Les holds (événementiel ou légal) empêchent la suppression même en dehors de la politique de rétention."
+    "explanation": "Les holds (événementiel ou légal) empêchent la suppression même en dehors de la politique de rétention."
   },
   {
     "id": "GCP-DL-139",
@@ -372,7 +372,7 @@
       "BigQuery"
     ],
     "correct": 0,
-    "explication": "Database Migration Service migre des bases MySQL, PostgreSQL vers Cloud SQL."
+    "explanation": "Database Migration Service migre des bases MySQL, PostgreSQL vers Cloud SQL."
   },
   {
     "id": "GCP-DL-140",
@@ -387,7 +387,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "BigQuery est un data warehouse analytique (SQL)."
+    "explanation": "BigQuery est un data warehouse analytique (SQL)."
   },
   {
     "id": "GCP-DL-141",
@@ -397,7 +397,7 @@
     "question": "BigQuery facture-t-il à la quantité de données traitées (requêtes) ?",
     "options": ["Oui", "Non (forfait)", "Uniquement pour le stockage", "Uniquement pour les requêtes"],
     "correct": 0,
-    "explication": "BigQuery facture le stockage et les données traitées (ou les slots pour les forfaits)."
+    "explanation": "BigQuery facture le stockage et les données traitées (ou les slots pour les forfaits)."
   },
   {
     "id": "GCP-DL-142",
@@ -407,7 +407,7 @@
     "question": "Cloud SQL supporte-t-il PostgreSQL ?",
     "options": ["Oui", "Non", "Uniquement MySQL", "Uniquement SQL Server"],
     "correct": 0,
-    "explication": "Cloud SQL supporte MySQL, PostgreSQL, SQL Server."
+    "explanation": "Cloud SQL supporte MySQL, PostgreSQL, SQL Server."
   },
   {
     "id": "GCP-DL-143",
@@ -422,7 +422,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "AlloyDB est une base de données PostgreSQL compatible, optimisée pour les charges transactionnelles et analytiques."
+    "explanation": "AlloyDB est une base de données PostgreSQL compatible, optimisée pour les charges transactionnelles et analytiques."
   },
   {
     "id": "GCP-DL-144",
@@ -432,7 +432,7 @@
     "question": "AlloyDB est-il conçu pour les applications nécessitant des performances élevées ?",
     "options": ["Oui", "Non", "Pour les petits workloads", "Pour les backups"],
     "correct": 0,
-    "explication": "AlloyDB offre des performances jusqu'à 4x plus rapides que PostgreSQL standard."
+    "explanation": "AlloyDB offre des performances jusqu'à 4x plus rapides que PostgreSQL standard."
   },
   {
     "id": "GCP-DL-145",
@@ -442,7 +442,7 @@
     "question": "Cloud SQL Insights aide-t-il à analyser les performances des requêtes ?",
     "options": ["Oui", "Non", "Uniquement pour les bases MySQL", "Uniquement pour les bases PostgreSQL"],
     "correct": 0,
-    "explication": "Cloud SQL Insights fournit des métriques détaillées sur les requêtes."
+    "explanation": "Cloud SQL Insights fournit des métriques détaillées sur les requêtes."
   },
   {
     "id": "GCP-DL-146",
@@ -452,7 +452,7 @@
     "question": "Cloud Spanner est-il généralement plus cher que Cloud SQL ?",
     "options": ["Oui", "Non", "Moins cher", "Pareil"],
     "correct": 0,
-    "explication": "Cloud Spanner est conçu pour les applications à grande échelle et a un coût plus élevé."
+    "explanation": "Cloud Spanner est conçu pour les applications à grande échelle et a un coût plus élevé."
   },
   {
     "id": "GCP-DL-147",
@@ -462,7 +462,7 @@
     "question": "Firestore facture-t-il les lectures, écritures et suppressions ?",
     "options": ["Oui", "Non", "Seulement le stockage", "Seulement les requêtes"],
     "correct": 0,
-    "explication": "Firestore facture les opérations de base (lectures, écritures, suppressions) et le stockage."
+    "explanation": "Firestore facture les opérations de base (lectures, écritures, suppressions) et le stockage."
   },
   {
     "id": "GCP-DL-148",
@@ -472,7 +472,7 @@
     "question": "Bigtable facture-t-il les nœuds (cluster) et le stockage ?",
     "options": ["Oui", "Non", "Seulement le stockage", "Seulement les nœuds"],
     "correct": 0,
-    "explication": "Bigtable facture les nœuds (processus) et le stockage utilisé."
+    "explanation": "Bigtable facture les nœuds (processus) et le stockage utilisé."
   },
   {
     "id": "GCP-DL-149",
@@ -482,7 +482,7 @@
     "question": "Memorystore facture-t-il la capacité (Go) et le type de nœud ?",
     "options": ["Oui", "Non", "Seulement la capacité", "Seulement le type de nœud"],
     "correct": 0,
-    "explication": "Memorystore facture la capacité provisionnée et le niveau (Basic, Standard)."
+    "explanation": "Memorystore facture la capacité provisionnée et le niveau (Basic, Standard)."
   },
   {
     "id": "GCP-DL-150",
@@ -492,7 +492,7 @@
     "question": "Filestore facture-t-il la capacité provisionnée ?",
     "options": ["Oui", "Non", "Seulement les requêtes", "Seulement les connexions"],
     "correct": 0,
-    "explication": "Filestore facture la capacité (Go) et le niveau de performance."
+    "explanation": "Filestore facture la capacité (Go) et le niveau de performance."
   },
   {
     "id": "GCP-DL-151",
@@ -502,7 +502,7 @@
     "question": "Quelle classe de stockage est recommandée pour les données consultées fréquemment ?",
     "options": ["Standard", "Nearline", "Coldline", "Archive"],
     "correct": 0,
-    "explication": "Standard est optimisé pour les accès fréquents."
+    "explanation": "Standard est optimisé pour les accès fréquents."
   },
   {
     "id": "GCP-DL-152",
@@ -512,7 +512,7 @@
     "question": "Quelle classe de stockage a un délai de récupération le plus bas ?",
     "options": ["Standard", "Nearline", "Coldline", "Archive"],
     "correct": 0,
-    "explication": "Standard offre un accès immédiat."
+    "explanation": "Standard offre un accès immédiat."
   },
   {
     "id": "GCP-DL-153",
@@ -522,7 +522,7 @@
     "question": "Cloud Storage propose-t-il des buckets multi-régionaux ?",
     "options": ["Oui", "Non", "Uniquement régional", "Uniquement dual-region"],
     "correct": 0,
-    "explication": "Les buckets multi-régionaux (ex: US, EU, ASIA) répliquent les données dans plusieurs régions."
+    "explanation": "Les buckets multi-régionaux (ex: US, EU, ASIA) répliquent les données dans plusieurs régions."
   },
   {
     "id": "GCP-DL-154",
@@ -537,7 +537,7 @@
       "Bucket avec deux projets"
     ],
     "correct": 0,
-    "explication": "Les buckets dual-region offrent une haute disponibilité et une faible latence entre deux régions."
+    "explanation": "Les buckets dual-region offrent une haute disponibilité et une faible latence entre deux régions."
   },
   {
     "id": "GCP-DL-155",
@@ -547,7 +547,7 @@
     "question": "Les URL signées (signed URLs) permettent-elles un accès temporaire aux objets ?",
     "options": ["Oui", "Non", "Uniquement pour les buckets publics", "Uniquement pour les buckets privés"],
     "correct": 0,
-    "explication": "Les signed URLs donnent un accès limité dans le temps à des objets privés."
+    "explanation": "Les signed URLs donnent un accès limité dans le temps à des objets privés."
   },
   {
     "id": "GCP-DL-156",
@@ -557,7 +557,7 @@
     "question": "Cloud Storage utilise-t-il IAM pour le contrôle d'accès ?",
     "options": ["Oui", "Non", "Uniquement les ACL", "Uniquement les politiques de bucket"],
     "correct": 0,
-    "explication": "Cloud Storage supporte IAM (au niveau du bucket) et les ACL (hérités)."
+    "explanation": "Cloud Storage supporte IAM (au niveau du bucket) et les ACL (hérités)."
   },
   {
     "id": "GCP-DL-157",
@@ -572,7 +572,7 @@
       "Désactive IAM"
     ],
     "correct": 0,
-    "explication": "L'accès uniforme simplifie la gestion des permissions."
+    "explanation": "L'accès uniforme simplifie la gestion des permissions."
   },
   {
     "id": "GCP-DL-158",
@@ -582,7 +582,7 @@
     "question": "Cloud Storage peut-il notifier les changements d'objets ?",
     "options": ["Oui (via Pub/Sub)", "Non", "Uniquement via Cloud Functions", "Uniquement via Cloud Run"],
     "correct": 0,
-    "explication": "Cloud Storage peut envoyer des notifications à Pub/Sub pour les modifications d'objets."
+    "explanation": "Cloud Storage peut envoyer des notifications à Pub/Sub pour les modifications d'objets."
   },
   {
     "id": "GCP-DL-159",
@@ -597,7 +597,7 @@
       "Backup"
     ],
     "correct": 0,
-    "explication": "Filestore est adapté pour les applications nécessitant un système de fichiers POSIX."
+    "explanation": "Filestore est adapté pour les applications nécessitant un système de fichiers POSIX."
   },
   {
     "id": "GCP-DL-160",
@@ -612,6 +612,6 @@
       "Application régionale"
     ],
     "correct": 0,
-    "explication": "Spanner est conçu pour les applications mondiales à grande échelle."
+    "explanation": "Spanner est conçu pour les applications mondiales à grande échelle."
   }
 ]

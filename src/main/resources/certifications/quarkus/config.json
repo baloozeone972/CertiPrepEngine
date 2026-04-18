@@ -1,36 +1,17 @@
 {
   "id": "quarkus",
-  "name": "Quarkus Developer (Red Hat)",
+  "name": "Quarkus Professional Red Hat",
   "version": "1.0",
-  "description": "Certification Quarkus - Développement d'applications cloud-native avec Quarkus (supersonic subatomic Java)",
+  "description": "La certification Quarkus Professional valide les compétences nécessaires pour développer, optimiser et déployer des applications Java natives dans le cloud avec Quarkus, le framework Kubernetes Native Java de Red Hat. Elle couvre les extensions essentielles, la compilation native, l'intégration avec les bases de données et la messagerie réactive.",
   "totalQuestions": 250,
-  "examDurationMinutes": 90,
-  "examQuestionCount": 40,
+  "examDurationMinutes": 150,
+  "examQuestionCount": 60,
   "passingScore": 70,
   "themes": [
-    {
-      "name": "Quarkus Core",
-      "count": 50
-    },
-    {
-      "name": "RESTEasy (JAX-RS)",
-      "count": 50
-    },
-    {
-      "name": "CDI and Arc",
-      "count": 40
-    },
-    {
-      "name": "Panache (Hibernate)",
-      "count": 40
-    },
-    {
-      "name": "Native Image compilation",
-      "count": 40
-    },
-    {
-      "name": "Reactive Programming",
-      "count": 30
-    }
+    {"name": "Principes fondamentaux de Quarkus", "count": 50},
+    {"name": "Développement d'applications REST", "count": 50},
+    {"name": "Persistance des données (Panache, Hibernate)", "count": 50},
+    {"name": "Messagerie réactive et événements", "count": 50},
+    {"name": "Compilation native et déploiement cloud", "count": 50}
   ]
 }

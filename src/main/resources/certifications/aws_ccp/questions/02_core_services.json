@@ -792,7 +792,7 @@
       "S3 One Zone-IA"
     ],
     "correct": 0,
-    "explication": "Toutes les classes S3 (sauf One Zone-IA) ont 11 9's de durabilité."
+    "explanation": "Toutes les classes S3 (sauf One Zone-IA) ont 11 9's de durabilité."
   },
   {
     "id": "AWS-CCP-104",
@@ -807,7 +807,7 @@
       "Neptune"
     ],
     "correct": 0,
-    "explication": "RDS (Relational Database Service) gère les bases SQL."
+    "explanation": "RDS (Relational Database Service) gère les bases SQL."
   },
   {
     "id": "AWS-CCP-105",
@@ -822,7 +822,7 @@
       "Fargate"
     ],
     "correct": 0,
-    "explication": "Lambda est le service serverless d'AWS."
+    "explanation": "Lambda est le service serverless d'AWS."
   },
   {
     "id": "AWS-CCP-106",
@@ -837,7 +837,7 @@
       "Virtual Private Cluster"
     ],
     "correct": 0,
-    "explication": "VPC est un réseau virtuel isolé dans AWS."
+    "explanation": "VPC est un réseau virtuel isolé dans AWS."
   },
   {
     "id": "AWS-CCP-107",
@@ -852,7 +852,7 @@
       "API Gateway"
     ],
     "correct": 0,
-    "explication": "Route53 est le service DNS d'AWS."
+    "explanation": "Route53 est le service DNS d'AWS."
   },
   {
     "id": "AWS-CCP-108",
@@ -867,7 +867,7 @@
       "Global Accelerator"
     ],
     "correct": 0,
-    "explication": "CloudFront est le CDN d'AWS."
+    "explanation": "CloudFront est le CDN d'AWS."
   },
   {
     "id": "AWS-CCP-109",
@@ -882,7 +882,7 @@
       "Global Accelerator"
     ],
     "correct": 0,
-    "explication": "ELB (Elastic Load Balancing) distribue le trafic."
+    "explanation": "ELB (Elastic Load Balancing) distribue le trafic."
   },
   {
     "id": "AWS-CCP-110",
@@ -897,7 +897,7 @@
       "EC2"
     ],
     "correct": 0,
-    "explication": "Auto Scaling ajuste la capacité en fonction de la charge."
+    "explanation": "Auto Scaling ajuste la capacité en fonction de la charge."
   },
   {
     "id": "AWS-CCP-111",
@@ -912,7 +912,7 @@
       "Instance Store"
     ],
     "correct": 0,
-    "explication": "EBS (Elastic Block Store) est le stockage bloc pour EC2."
+    "explanation": "EBS (Elastic Block Store) est le stockage bloc pour EC2."
   },
   {
     "id": "AWS-CCP-112",
@@ -927,7 +927,7 @@
       "FSx"
     ],
     "correct": 0,
-    "explication": "EFS (Elastic File System) est un système de fichiers NFS partagé."
+    "explanation": "EFS (Elastic File System) est un système de fichiers NFS partagé."
   },
   {
     "id": "AWS-CCP-113",
@@ -942,7 +942,7 @@
       "Aurora"
     ],
     "correct": 0,
-    "explication": "DynamoDB est une base NoSQL clé-valeur."
+    "explanation": "DynamoDB est une base NoSQL clé-valeur."
   },
   {
     "id": "AWS-CCP-114",
@@ -957,7 +957,7 @@
       "Kinesis"
     ],
     "correct": 0,
-    "explication": "SQS (Simple Queue Service) est une file d'attente."
+    "explanation": "SQS (Simple Queue Service) est une file d'attente."
   },
   {
     "id": "AWS-CCP-115",
@@ -972,7 +972,7 @@
       "Kinesis"
     ],
     "correct": 0,
-    "explication": "SNS (Simple Notification Service) envoie des notifications."
+    "explanation": "SNS (Simple Notification Service) envoie des notifications."
   },
   {
     "id": "AWS-CCP-116",
@@ -987,7 +987,7 @@
       "Trusted Advisor"
     ],
     "correct": 0,
-    "explication": "CloudWatch collecte métriques, logs et alarmes."
+    "explanation": "CloudWatch collecte métriques, logs et alarmes."
   },
   {
     "id": "AWS-CCP-117",
@@ -1002,7 +1002,7 @@
       "GuardDuty"
     ],
     "correct": 0,
-    "explication": "CloudTrail enregistre tous les appels API AWS."
+    "explanation": "CloudTrail enregistre tous les appels API AWS."
   },
   {
     "id": "AWS-CCP-118",
@@ -1017,7 +1017,7 @@
       "Organizations"
     ],
     "correct": 0,
-    "explication": "IAM (Identity and Access Management) gère les permissions."
+    "explanation": "IAM (Identity and Access Management) gère les permissions."
   },
   {
     "id": "AWS-CCP-119",
@@ -1032,7 +1032,7 @@
       "ACM"
     ],
     "correct": 0,
-    "explication": "KMS (Key Management Service) gère les clés de chiffrement."
+    "explanation": "KMS (Key Management Service) gère les clés de chiffrement."
   },
   {
     "id": "AWS-CCP-120",
@@ -1047,7 +1047,7 @@
       "IAM"
     ],
     "correct": 0,
-    "explication": "Secrets Manager stocke et gère les secrets."
+    "explanation": "Secrets Manager stocke et gère les secrets."
   },
   {
     "id": "AWS-CCP-121",
@@ -1062,7 +1062,7 @@
       "S3"
     ],
     "correct": 0,
-    "explication": "ECR (Elastic Container Registry) stocke les images Docker."
+    "explanation": "ECR (Elastic Container Registry) stocke les images Docker."
   },
   {
     "id": "AWS-CCP-122",
@@ -1077,7 +1077,7 @@
       "Fargate"
     ],
     "correct": 0,
-    "explication": "ECS (Elastic Container Service) orchestre les conteneurs."
+    "explanation": "ECS (Elastic Container Service) orchestre les conteneurs."
   },
   {
     "id": "AWS-CCP-123",
@@ -1092,7 +1092,7 @@
       "ECR"
     ],
     "correct": 0,
-    "explication": "EKS (Elastic Kubernetes Service) est Kubernetes managé."
+    "explanation": "EKS (Elastic Kubernetes Service) est Kubernetes managé."
   },
   {
     "id": "AWS-CCP-124",
@@ -1107,7 +1107,7 @@
       "Lambda"
     ],
     "correct": 0,
-    "explication": "Fargate est serverless pour les conteneurs."
+    "explanation": "Fargate est serverless pour les conteneurs."
   },
   {
     "id": "AWS-CCP-125",
@@ -1122,7 +1122,7 @@
       "CodePipeline"
     ],
     "correct": 0,
-    "explication": "CodeCommit est un service de dépôt Git privé."
+    "explanation": "CodeCommit est un service de dépôt Git privé."
   },
   {
     "id": "AWS-CCP-126",
@@ -1137,7 +1137,7 @@
       "CodePipeline"
     ],
     "correct": 0,
-    "explication": "CodeBuild compile et teste le code."
+    "explanation": "CodeBuild compile et teste le code."
   },
   {
     "id": "AWS-CCP-127",
@@ -1152,7 +1152,7 @@
       "CodePipeline"
     ],
     "correct": 0,
-    "explication": "CodeDeploy déploie automatiquement les applications."
+    "explanation": "CodeDeploy déploie automatiquement les applications."
   },
   {
     "id": "AWS-CCP-128",
@@ -1167,7 +1167,7 @@
       "CodeCommit"
     ],
     "correct": 0,
-    "explication": "CodePipeline orchestre les étapes de livraison continue."
+    "explanation": "CodePipeline orchestre les étapes de livraison continue."
   },
   {
     "id": "AWS-CCP-129",
@@ -1182,7 +1182,7 @@
       "SAM"
     ],
     "correct": 0,
-    "explication": "CloudFormation est le service IaC d'AWS."
+    "explanation": "CloudFormation est le service IaC d'AWS."
   },
   {
     "id": "AWS-CCP-130",
@@ -1197,7 +1197,7 @@
       "Consolidated Billing"
     ],
     "correct": 0,
-    "explication": "Organizations centralise la gestion multi-comptes."
+    "explanation": "Organizations centralise la gestion multi-comptes."
   },
   {
     "id": "AWS-CCP-131",
@@ -1212,7 +1212,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "Control Tower automatise la configuration de landing zones."
+    "explanation": "Control Tower automatise la configuration de landing zones."
   },
   {
     "id": "AWS-CCP-132",
@@ -1227,7 +1227,7 @@
       "Trusted Advisor"
     ],
     "correct": 0,
-    "explication": "AWS Config enregistre les changements et évalue les règles."
+    "explanation": "AWS Config enregistre les changements et évalue les règles."
   },
   {
     "id": "AWS-CCP-133",
@@ -1242,7 +1242,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "GuardDuty analyse les logs pour détecter des comportements malveillants."
+    "explanation": "GuardDuty analyse les logs pour détecter des comportements malveillants."
   },
   {
     "id": "AWS-CCP-134",
@@ -1257,7 +1257,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "Amazon Inspector scanne les instances pour des vulnérabilités."
+    "explanation": "Amazon Inspector scanne les instances pour des vulnérabilités."
   },
   {
     "id": "AWS-CCP-135",
@@ -1272,7 +1272,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "Amazon Macie utilise ML pour identifier les PII."
+    "explanation": "Amazon Macie utilise ML pour identifier les PII."
   },
   {
     "id": "AWS-CCP-136",
@@ -1287,7 +1287,7 @@
       "Firewall Manager"
     ],
     "correct": 0,
-    "explication": "AWS WAF filtre les requêtes HTTP/HTTPS."
+    "explanation": "AWS WAF filtre les requêtes HTTP/HTTPS."
   },
   {
     "id": "AWS-CCP-137",
@@ -1302,7 +1302,7 @@
       "Firewall Manager"
     ],
     "correct": 0,
-    "explication": "AWS Shield protège contre les DDoS (Standard gratuit, Advanced payant)."
+    "explanation": "AWS Shield protège contre les DDoS (Standard gratuit, Advanced payant)."
   },
   {
     "id": "AWS-CCP-138",
@@ -1317,7 +1317,7 @@
       "ACM"
     ],
     "correct": 0,
-    "explication": "CloudHSM est un Hardware Security Module dédié."
+    "explanation": "CloudHSM est un Hardware Security Module dédié."
   },
   {
     "id": "AWS-CCP-139",
@@ -1332,7 +1332,7 @@
       "Secrets Manager"
     ],
     "correct": 0,
-    "explication": "AWS Certificate Manager fournit des certificats gratuits."
+    "explanation": "AWS Certificate Manager fournit des certificats gratuits."
   },
   {
     "id": "AWS-CCP-140",
@@ -1347,7 +1347,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "Trusted Advisor conseille sur sécurité, performance, coûts, etc."
+    "explanation": "Trusted Advisor conseille sur sécurité, performance, coûts, etc."
   },
   {
     "id": "AWS-CCP-141",
@@ -1362,7 +1362,7 @@
       "CloudFormation"
     ],
     "correct": 0,
-    "explication": "Le Well-Architected Tool évalue les architectures."
+    "explanation": "Le Well-Architected Tool évalue les architectures."
   },
   {
     "id": "AWS-CCP-142",
@@ -1377,7 +1377,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "AWS Artifact fournit des rapports de conformité."
+    "explanation": "AWS Artifact fournit des rapports de conformité."
   },
   {
     "id": "AWS-CCP-143",
@@ -1392,7 +1392,7 @@
       "Security Hub"
     ],
     "correct": 0,
-    "explication": "AWS Audit Manager aide à préparer des audits."
+    "explanation": "AWS Audit Manager aide à préparer des audits."
   },
   {
     "id": "AWS-CCP-144",
@@ -1407,7 +1407,7 @@
       "Cost Anomaly Detection"
     ],
     "correct": 0,
-    "explication": "AWS Cost Explorer visualise et analyse les coûts."
+    "explanation": "AWS Cost Explorer visualise et analyse les coûts."
   },
   {
     "id": "AWS-CCP-145",
@@ -1422,7 +1422,7 @@
       "Cost Anomaly Detection"
     ],
     "correct": 0,
-    "explication": "AWS Budgets surveille les coûts et envoie des alertes."
+    "explanation": "AWS Budgets surveille les coûts et envoie des alertes."
   },
   {
     "id": "AWS-CCP-146",
@@ -1437,7 +1437,7 @@
       "Cost Anomaly Detection"
     ],
     "correct": 0,
-    "explication": "Le calculateur estime les coûts des services AWS."
+    "explanation": "Le calculateur estime les coûts des services AWS."
   },
   {
     "id": "AWS-CCP-147",
@@ -1452,7 +1452,7 @@
       "Pricing Calculator"
     ],
     "correct": 0,
-    "explication": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
+    "explanation": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
   },
   {
     "id": "AWS-CCP-148",
@@ -1467,7 +1467,7 @@
       "On-Demand"
     ],
     "correct": 0,
-    "explication": "Savings Plans offrent des réductions en échange d'un engagement."
+    "explanation": "Savings Plans offrent des réductions en échange d'un engagement."
   },
   {
     "id": "AWS-CCP-149",
@@ -1482,7 +1482,7 @@
       "Basic"
     ],
     "correct": 0,
-    "explication": "Le plan Enterprise inclut un TAM dédié."
+    "explanation": "Le plan Enterprise inclut un TAM dédié."
   },
   {
     "id": "AWS-CCP-150",
@@ -1497,6 +1497,6 @@
       "Enterprise"
     ],
     "correct": 0,
-    "explication": "Le plan Basic est inclus gratuitement."
+    "explanation": "Le plan Basic est inclus gratuitement."
   }
 ]

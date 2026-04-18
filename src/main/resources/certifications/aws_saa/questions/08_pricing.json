@@ -50,7 +50,12 @@
     "theme_label": "Reserved Instances",
     "difficulty": "hard",
     "question": "Quel est le plus grand rabais pour les RI ?",
-    "options": ["All Upfront 3 ans", "No Upfront 1 an", "Partial Upfront 3 ans", "All Upfront 1 an"],
+    "options": [
+      "All Upfront 3 ans",
+      "No Upfront 1 an",
+      "Partial Upfront 3 ans",
+      "All Upfront 1 an"
+    ],
     "correct": 0,
     "explanation": "All Upfront 3 ans offre le plus grand rabais (jusqu'à 75%)."
   },
@@ -75,7 +80,12 @@
     "theme_label": "Spot Instances",
     "difficulty": "hard",
     "question": "Quel est le rabais typique des instances Spot ?",
-    "options": ["Jusqu'à 90%", "Jusqu'à 50%", "Jusqu'à 30%", "Jusqu'à 10%"],
+    "options": [
+      "Jusqu'à 90%",
+      "Jusqu'à 50%",
+      "Jusqu'à 30%",
+      "Jusqu'à 10%"
+    ],
     "correct": 0,
     "explanation": "Les instances Spot peuvent offrir jusqu'à 90% de réduction."
   },
@@ -100,7 +110,12 @@
     "theme_label": "Savings Plans",
     "difficulty": "hard",
     "question": "Savings Plans s'applique-t-il à Lambda ?",
-    "options": ["Oui", "Non", "Uniquement à EC2", "Uniquement à Fargate"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement à EC2",
+      "Uniquement à Fargate"
+    ],
     "correct": 0,
     "explanation": "Savings Plans couvre EC2, Fargate et Lambda."
   },
@@ -140,7 +155,12 @@
     "theme_label": "Free Tier",
     "difficulty": "hard",
     "question": "Combien de temps dure le Free Tier ?",
-    "options": ["12 mois", "6 mois", "24 mois", "Toujours"],
+    "options": [
+      "12 mois",
+      "6 mois",
+      "24 mois",
+      "Toujours"
+    ],
     "correct": 0,
     "explanation": "Le Free Tier dure 12 mois pour les nouveaux comptes AWS."
   },
@@ -180,7 +200,12 @@
     "theme_label": "AWS Budgets",
     "difficulty": "hard",
     "question": "Les budgets AWS peuvent-ils déclencher des alarmes ?",
-    "options": ["Oui", "Non", "Uniquement des notifications", "Uniquement des actions"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement des notifications",
+      "Uniquement des actions"
+    ],
     "correct": 0,
     "explanation": "Les budgets peuvent envoyer des alertes SNS."
   },
@@ -220,7 +245,12 @@
     "theme_label": "AWS Support",
     "difficulty": "hard",
     "question": "Le plan Basic est-il gratuit ?",
-    "options": ["Oui", "Non", "Uniquement pour les comptes de moins d'un an", "Uniquement pour les comptes éducatifs"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les comptes de moins d'un an",
+      "Uniquement pour les comptes éducatifs"
+    ],
     "correct": 0,
     "explanation": "Le plan Basic est inclus gratuitement."
   },
@@ -230,7 +260,12 @@
     "theme_label": "AWS Support",
     "difficulty": "hard",
     "question": "Quel plan supporte le Technical Account Manager (TAM) ?",
-    "options": ["Enterprise", "Business", "Developer", "Basic"],
+    "options": [
+      "Enterprise",
+      "Business",
+      "Developer",
+      "Basic"
+    ],
     "correct": 0,
     "explanation": "Le plan Enterprise inclut un TAM dédié."
   },
@@ -240,7 +275,12 @@
     "theme_label": "AWS Support",
     "difficulty": "hard",
     "question": "Quel plan offre un temps de réponse de 15 minutes pour les cas de production ?",
-    "options": ["Enterprise", "Business", "Developer", "Basic"],
+    "options": [
+      "Enterprise",
+      "Business",
+      "Developer",
+      "Basic"
+    ],
     "correct": 0,
     "explanation": "Enterprise offre une réponse critique en 15 minutes."
   },
@@ -250,7 +290,12 @@
     "theme_label": "AWS Organizations",
     "difficulty": "hard",
     "question": "Organizations permet-il une facturation consolidée ?",
-    "options": ["Oui", "Non", "Uniquement avec Control Tower", "Uniquement avec AWS Config"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec Control Tower",
+      "Uniquement avec AWS Config"
+    ],
     "correct": 0,
     "explanation": "Organizations consolide la facturation des comptes membres."
   },
@@ -260,7 +305,12 @@
     "theme_label": "AWS Organizations",
     "difficulty": "hard",
     "question": "Organizations permet-il des réductions sur les RI partagées ?",
-    "options": ["Oui", "Non", "Uniquement pour les Savings Plans", "Uniquement pour les comptes master"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les Savings Plans",
+      "Uniquement pour les comptes master"
+    ],
     "correct": 0,
     "explanation": "Les RI et Savings Plans sont partagés entre les comptes de l'organisation."
   },
@@ -330,7 +380,12 @@
     "theme_label": "Compute Optimizer",
     "difficulty": "hard",
     "question": "Compute Optimizer aide-t-il à réduire les coûts ?",
-    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour Lambda"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour EC2",
+      "Uniquement pour Lambda"
+    ],
     "correct": 0,
     "explanation": "Compute Optimizer recommande des types d'instance plus adaptés."
   },
@@ -340,7 +395,12 @@
     "theme_label": "S3 Storage Lens",
     "difficulty": "hard",
     "question": "Storage Lens aide-t-il à optimiser les coûts S3 ?",
-    "options": ["Oui", "Non", "Uniquement pour les métriques", "Uniquement pour la sécurité"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les métriques",
+      "Uniquement pour la sécurité"
+    ],
     "correct": 0,
     "explanation": "Storage Lens fournit des recommandations d'optimisation des coûts."
   },
@@ -380,7 +440,12 @@
     "theme_label": "Data transfer costs",
     "difficulty": "hard",
     "question": "Le transfert de données entre services dans la même AZ est-il facturé ?",
-    "options": ["Non", "Oui", "Uniquement pour les grands volumes", "Uniquement pour les régions"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement pour les grands volumes",
+      "Uniquement pour les régions"
+    ],
     "correct": 0,
     "explanation": "Le trafic entre services dans la même AZ via IP privée est gratuit."
   },
@@ -390,7 +455,12 @@
     "theme_label": "Data transfer costs",
     "difficulty": "hard",
     "question": "Le transfert de données sortant d'Internet est-il facturé ?",
-    "options": ["Oui", "Non", "Seulement au-delà d'un seuil", "Uniquement pour EC2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement au-delà d'un seuil",
+      "Uniquement pour EC2"
+    ],
     "correct": 0,
     "explanation": "Le trafic sortant vers Internet est facturé."
   },
@@ -400,7 +470,12 @@
     "theme_label": "AWS Price List API",
     "difficulty": "hard",
     "question": "Peut-on obtenir les prix AWS via API ?",
-    "options": ["Oui", "Non", "Uniquement via le console", "Uniquement via le calculateur"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via le console",
+      "Uniquement via le calculateur"
+    ],
     "correct": 0,
     "explanation": "L'API AWS Price List permet d'obtenir les tarifs par programme."
   },
@@ -425,7 +500,12 @@
     "theme_label": "AWS Marketplace",
     "difficulty": "hard",
     "question": "AWS Marketplace permet-il d'acheter des logiciels tiers ?",
-    "options": ["Oui", "Non", "Uniquement des AMI", "Uniquement des SaaS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement des AMI",
+      "Uniquement des SaaS"
+    ],
     "correct": 0,
     "explanation": "Marketplace propose des AMI, SaaS, conteneurs, etc."
   },
@@ -450,7 +530,12 @@
     "theme_label": "Consolidated billing",
     "difficulty": "hard",
     "question": "La facturation consolidée est-elle disponible sans Organizations ?",
-    "options": ["Non", "Oui", "Uniquement avec Control Tower", "Uniquement avec AWS Config"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement avec Control Tower",
+      "Uniquement avec AWS Config"
+    ],
     "correct": 0,
     "explanation": "La facturation consolidée nécessite AWS Organizations."
   },
@@ -460,7 +545,12 @@
     "theme_label": "AWS Credits",
     "difficulty": "hard",
     "question": "Les crédits AWS peuvent-ils être appliqués à tous les services ?",
-    "options": ["Oui", "Non, certains services exclus", "Uniquement EC2", "Uniquement S3"],
+    "options": [
+      "Oui",
+      "Non, certains services exclus",
+      "Uniquement EC2",
+      "Uniquement S3"
+    ],
     "correct": 1,
     "explanation": "Certains services (ex: Marketplace) peuvent être exclus."
   },
@@ -508,5 +598,264 @@
     ],
     "correct": 0,
     "explanation": "Configurer des budgets et des alarmes pour surveiller les coûts."
+  },
+  {
+    "id": "AWS-SAA-P&S-001",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la stratégie de coûts AWS :",
+    "options": [
+      "Utiliser des instances Spot pour réduire les coûts",
+      "Activer AWS Cost Explorer pour analyser les coûts",
+      "Engager des instances Reserved pour un coût fixe",
+      "Utiliser les Savings Plans pour réduire les coûts à long terme",
+      "Toutes les options sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Toutes les options sont des bonnes stratégies de coûts AWS. Utiliser des instances Spot peut réduire les coûts, Activer AWS Cost Explorer aide à analyser et gérer les coûts, Engager des instances Reserved offre un coût fixe, et utiliser les Savings Plans permet une réduction à long terme des coûts."
+  },
+  {
+    "id": "AWS-SAA-P&S-002",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Support",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre AWS Support Basic et AWS Support Premier ?",
+    "options": [
+      "AWS Support Basic offre un support 24/7, tandis que AWS Support Premier ne le fait pas",
+      "AWS Support Basic offre un support 24/7, tandis que AWS Support Premier offre un support 24/7 avec des délais d'intervention plus courts",
+      "AWS Support Basic offre un support 24/7 avec des délais d'intervention plus courts, tandis que AWS Support Premier ne le fait pas",
+      "AWS Support Basic offre un support 24/7 avec des délais d'intervention plus courts, tandis que AWS Support Premier offre un support 24/7 avec des délais d'intervention plus courts et des avantages supplémentaires"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "AWS Support Premier offre un support 24/7 avec des délais d'intervention plus courts et des avantages supplémentaires par rapport à AWS Support Basic."
+  },
+  {
+    "id": "AWS-SAA-P&S-003",
+    "theme": "Pricing & Support",
+    "theme_label": "Reserved Instances",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les instances Reserved AWS :",
+    "options": [
+      "Les instances Reserved sont moins chères que les instances On-Demand",
+      "Les instances Reserved peuvent être utilisées sur n'importe quel compte AWS",
+      "Les instances Reserved ont un engagement de 1 ou 3 ans",
+      "Les instances Reserved ne peuvent pas être transférées entre comptes AWS",
+      "Toutes les options sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les instances Reserved sont moins chères que les instances On-Demand, et ont un engagement de 1 ou 3 ans. Elles ne peuvent pas être transférées entre comptes AWS, mais les instances On-Demand peuvent être utilisées sur n'importe quel compte AWS."
+  },
+  {
+    "id": "AWS-SAA-P&S-004",
+    "theme": "Pricing & Support",
+    "theme_label": "Savings Plans",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre AWS Savings Plans et AWS Reserved Instances ?",
+    "options": [
+      "AWS Savings Plans offrent un coût fixe, tandis que AWS Reserved Instances ont des coûts variables",
+      "AWS Savings Plans offrent un coût fixe, tandis que AWS Reserved Instances ont des coûts à long terme",
+      "AWS Savings Plans offrent un coût à long terme, tandis que AWS Reserved Instances ont des coûts fixe",
+      "AWS Savings Plans offrent un coût à long terme, tandis que AWS Reserved Instances ont des coûts variables"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "AWS Savings Plans offrent un coût fixe, tandis que AWS Reserved Instances ont des coûts à long terme."
+  },
+  {
+    "id": "AWS-SAA-P&S-005",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des coûts AWS :",
+    "options": [
+      "Les Spot Instances sont gratuites.",
+      "AWS Support est inclus dans le Free Tier.",
+      "Les Reserved Instances offrent un remise fixe sur les coûts.",
+      "Savings Plans peuvent être utilisés pour réduire les coûts en fonction du volume d'utilisation.",
+      "Le Free Tier est illimité pour tous les services AWS."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Les Spot Instances ne sont pas gratuites (0). AWS Support n'est pas inclus dans le Free Tier (1). Les Reserved Instances offrent un remise fixe sur les coûts (2). Savings Plans peuvent être utilisés pour réduire les coûts en fonction du volume d'utilisation (3). Le Free Tier n'est pas illimité pour tous les services AWS (4)."
+  },
+  {
+    "id": "AWS-SAA-P&S-006",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Pricing Calculator",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de AWS Pricing Calculator ?",
+    "options": [
+      "Calculer les coûts des services AWS en fonction de l'utilisation",
+      "Gérer les budgets AWS",
+      "Optimiser les coûts des services AWS",
+      "S'inscrire aux cours d'AWS"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS Pricing Calculator permet de calculer les coûts des services AWS en fonction de l'utilisation (0). Gérer les budgets AWS est fait avec AWS Budgets (1). Optimiser les coûts des services AWS est fait avec Compute Optimizer et d'autres outils (2). S'inscrire aux cours d'AWS est une fonctionnalité de la plateforme AWS (3)."
+  },
+  {
+    "id": "AWS-SAA-P&S-007",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Cost Explorer",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS Cost Explorer :",
+    "options": [
+      "Il permet de visualiser les coûts des services AWS en temps réel.",
+      "Il aide à identifier les coûts inattendus et à optimiser les dépenses.",
+      "Il peut générer des alertes pour les coûts élevés.",
+      "Il offre une interface graphique complète pour le suivi des coûts.",
+      "Il peut être utilisé uniquement pour les comptes AWS Free Tier."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "AWS Cost Explorer permet de visualiser les coûts des services AWS en temps réel (0). Il aide à identifier les coûts inattendus et à optimiser les dépenses (1). Il peut générer des alertes pour les coûts élevés (2). Il offre une interface graphique complète pour le suivi des coûts (3). Il peut être utilisé pour tous les comptes AWS, pas seulement le Free Tier (4)."
+  },
+  {
+    "id": "AWS-SAA-P&S-008",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Budgets",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'AWS Budgets ?",
+    "options": [
+      "Gérer les budgets et recevoir des alertes lorsque les coûts dépassent les seuils définis",
+      "Optimiser les coûts des services AWS en fonction du volume d'utilisation",
+      "Calculer les coûts des services AWS en fonction de l'utilisation",
+      "S'inscrire aux cours d'AWS"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS Budgets permet de gérer les budgets et recevoir des alertes lorsque les coûts dépassent les seuils définis (0). Optimiser les coûts des services AWS est fait avec Compute Optimizer et d'autres outils (1). Calculer les coûts des services AWS en fonction de l'utilisation est fait avec AWS Pricing Calculator et d'autres outils (2). S'inscrire aux cours d'AWS est une fonctionnalité de la plateforme AWS (3)."
+  },
+  {
+    "id": "AWS-SAA-P&S-009",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Cost Anomaly Detection",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS Cost Anomaly Detection :",
+    "options": [
+      "Il détecte automatiquement les anomalies dans les coûts des services AWS.",
+      "Il génère des alertes lorsque les coûts dépassent les seuils définis.",
+      "Il aide à identifier les coûts inattendus et à optimiser les dépenses.",
+      "Il offre une interface graphique complète pour le suivi des coûts.",
+      "Il peut être utilisé uniquement pour les comptes AWS Free Tier."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "AWS Cost Anomaly Detection détecte automatiquement les anomalies dans les coûts des services AWS (0). Il génère des alertes lorsque les coûts dépassent les seuils définis (1). Il aide à identifier les coûts inattendus et à optimiser les dépenses (2). Il offre une interface graphique complète pour le suivi des coûts (3). Il peut être utilisé pour tous les comptes AWS, pas seulement le Free Tier (4)."
+  },
+  {
+    "id": "AWS-SAA-P&S-010",
+    "theme": "Pricing & Support",
+    "theme_label": "Cost Optimization",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la stratégie de coûts AWS :",
+    "options": [
+      "Utiliser des instances Spot pour réduire les coûts",
+      "Activer AWS Cost Explorer pour analyser les coûts",
+      "Offrir des crédits gratuits à tous les nouveaux utilisateurs",
+      "Utiliser des instances Reserved pour éviter les coûts de l'instance On-Demand",
+      "Consolidated billing permet d'unifier les factures de plusieurs comptes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "explanation": "Utiliser des instances Spot et AWS Cost Explorer est une bonne stratégie de coûts. Offrir des crédits gratuits à tous les nouveaux utilisateurs n'est pas une pratique standard. Utiliser des instances Reserved peut réduire significativement les coûts, mais ne garantit pas une réduction totale. Consolidated billing est une fonctionnalité utile pour les grands comptes."
+  },
+  {
+    "id": "AWS-SAA-P&S-011",
+    "theme": "Pricing & Support",
+    "theme_label": "AWS Support",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre le plan AWS Support Basic et le plan AWS Support Enterprise ?",
+    "options": [
+      "Le plan Basic offre une assistance 24/7, tandis que le plan Enterprise ne l'offre pas",
+      "Le plan Basic est gratuit, tandis que le plan Enterprise nécessite un paiement annuel",
+      "Le plan Basic offre une assistance limitée, tandis que le plan Enterprise offre une assistance complète",
+      "Le plan Basic ne peut être utilisé qu'avec des comptes AWS gratuits, tandis que le plan Enterprise est pour tous les comptes"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Le plan Basic offre une assistance limitée, tandis que le plan Enterprise offre une assistance complète et personnalisée."
+  },
+  {
+    "id": "AWS-SAA-P&S-012",
+    "theme": "Pricing & Support",
+    "theme_label": "Reserved Instances",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les instances Reserved AWS :",
+    "options": [
+      "Les instances Reserved sont toujours moins coûteuses que les instances On-Demand",
+      "Les instances Reserved peuvent être utilisées sur n'importe quel compte AWS",
+      "Les instances Reserved sont disponibles pour tous les types d'instances EC2",
+      "Les instances Reserved nécessitent un engagement de 1 an ou 3 ans",
+      "Les instances Reserved peuvent être transférées entre les comptes AWS"
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Les instances Reserved peuvent être moins coûteuses que les instances On-Demand, mais cela dépend de la durée de l'engagement et du type d'instance. Les instances Reserved peuvent être utilisées sur n'importe quel compte AWS, mais les conditions d'utilisation sont strictes. Les instances Reserved sont disponibles pour tous les types d'instances EC2, mais il peut y avoir des restrictions. Les instances Reserved peuvent être transférées entre les comptes AWS, mais cela nécessite une mise en œuvre spécifique."
+  },
+  {
+    "id": "AWS-SAA-P&S-013",
+    "theme": "Pricing & Support",
+    "theme_label": "Savings Plans",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Savings Plans AWS :",
+    "options": [
+      "Les Savings Plans offrent un remise de 30% sur les coûts des instances EC2",
+      "Les Savings Plans peuvent être utilisés pour n'importe quel type d'instance EC2",
+      "Les Savings Plans sont disponibles pour tous les comptes AWS gratuits",
+      "Les Savings Plans nécessitent un engagement de 1 an ou 3 ans",
+      "Les Savings Plans peuvent être transférées entre les comptes AWS"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les Savings Plans offrent un remise de 25% sur les coûts des instances EC2, pas 30%. Les Savings Plans peuvent être utilisés pour n'importe quel type d'instance EC2, mais les conditions d'utilisation sont strictes. Les Savings Plans ne sont pas disponibles pour tous les comptes AWS gratuits, ils nécessitent un engagement minimum. Les Savings Plans peuvent être transférées entre les comptes AWS, mais cela nécessite une mise en œuvre spécifique."
   }
 ]

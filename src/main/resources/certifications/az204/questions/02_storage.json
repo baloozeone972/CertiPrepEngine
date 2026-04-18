@@ -42,7 +42,7 @@
       "Page blob seulement"
     ],
     "correct": 0,
-    "explication": "Block blob pour les fichiers, Append blob pour les logs, Page blob pour les disques VHD."
+    "explanation": "Block blob pour les fichiers, Append blob pour les logs, Page blob pour les disques VHD."
   },
   {
     "id": "AZ-204-084",
@@ -57,7 +57,7 @@
       "Service"
     ],
     "correct": 0,
-    "explication": "Les conteneurs organisent les blobs et contrôlent l'accès."
+    "explanation": "Les conteneurs organisent les blobs et contrôlent l'accès."
   },
   {
     "id": "AZ-204-085",
@@ -65,9 +65,14 @@
     "theme_label": "Blob Storage",
     "difficulty": "hard",
     "question": "Quelle est la taille maximale d'un block blob ?",
-    "options": ["Environ 4.75 To", "1 To", "5 To", "2 To"],
+    "options": [
+      "Environ 4.75 To",
+      "1 To",
+      "5 To",
+      "2 To"
+    ],
     "correct": 0,
-    "explication": "La taille maximale est d'environ 4.75 To (50 000 blocs de 100 Mo)."
+    "explanation": "La taille maximale est d'environ 4.75 To (50 000 blocs de 100 Mo)."
   },
   {
     "id": "AZ-204-086",
@@ -82,7 +87,7 @@
       "LRS, ZRS, GRS"
     ],
     "correct": 0,
-    "explication": "Les niveaux Hot, Cool, Cold, Archive optimisent les coûts selon la fréquence d'accès."
+    "explanation": "Les niveaux Hot, Cool, Cold, Archive optimisent les coûts selon la fréquence d'accès."
   },
   {
     "id": "AZ-204-087",
@@ -90,9 +95,14 @@
     "theme_label": "Blob Storage",
     "difficulty": "hard",
     "question": "Quel est le temps de réhydratation d'un blob depuis Archive ?",
-    "options": ["Jusqu'à 15 heures", "1 heure", "24 heures", "48 heures"],
+    "options": [
+      "Jusqu'à 15 heures",
+      "1 heure",
+      "24 heures",
+      "48 heures"
+    ],
     "correct": 0,
-    "explication": "La réhydratation depuis le niveau Archive peut prendre jusqu'à 15 heures."
+    "explanation": "La réhydratation depuis le niveau Archive peut prendre jusqu'à 15 heures."
   },
   {
     "id": "AZ-204-088",
@@ -107,7 +117,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Le chargement par blocs permet d'uploader des fichiers de grande taille de manière fiable."
+    "explanation": "Le chargement par blocs permet d'uploader des fichiers de grande taille de manière fiable."
   },
   {
     "id": "AZ-204-089",
@@ -122,7 +132,7 @@
       "Certificat"
     ],
     "correct": 0,
-    "explication": "Une SAS permet un accès délégué sécurisé aux ressources."
+    "explanation": "Une SAS permet un accès délégué sécurisé aux ressources."
   },
   {
     "id": "AZ-204-090",
@@ -137,7 +147,7 @@
       "User Delegation SAS seulement"
     ],
     "correct": 0,
-    "explication": "Il existe trois types de SAS selon la portée et l'authentification."
+    "explanation": "Il existe trois types de SAS selon la portée et l'authentification."
   },
   {
     "id": "AZ-204-091",
@@ -152,7 +162,7 @@
       "SAS au niveau du conteneur"
     ],
     "correct": 0,
-    "explication": "La User Delegation SAS utilise un jeton Azure AD pour déléguer l'accès."
+    "explanation": "La User Delegation SAS utilise un jeton Azure AD pour déléguer l'accès."
   },
   {
     "id": "AZ-204-092",
@@ -167,7 +177,7 @@
       "Politique de chiffrement"
     ],
     "correct": 0,
-    "explication": "Les politiques stockées permettent de gérer et révoquer des SAS facilement."
+    "explanation": "Les politiques stockées permettent de gérer et révoquer des SAS facilement."
   },
   {
     "id": "AZ-204-093",
@@ -182,7 +192,7 @@
       "Chiffrement des clés"
     ],
     "correct": 0,
-    "explication": "Azure Storage chiffre automatiquement les données au repos avec SSE."
+    "explanation": "Azure Storage chiffre automatiquement les données au repos avec SSE."
   },
   {
     "id": "AZ-204-094",
@@ -197,7 +207,7 @@
       "Chiffrement par SSL"
     ],
     "correct": 0,
-    "explication": "Le client chiffre les données localement avant de les envoyer à Azure."
+    "explanation": "Le client chiffre les données localement avant de les envoyer à Azure."
   },
   {
     "id": "AZ-204-095",
@@ -212,7 +222,7 @@
       "Journal des modifications"
     ],
     "correct": 0,
-    "explication": "Les logs d'accès peuvent être activés pour le dépannage."
+    "explanation": "Les logs d'accès peuvent être activés pour le dépannage."
   },
   {
     "id": "AZ-204-096",
@@ -227,7 +237,7 @@
       "File d'attente"
     ],
     "correct": 0,
-    "explication": "Azure Files offre des partages de fichiers accessibles via SMB."
+    "explanation": "Azure Files offre des partages de fichiers accessibles via SMB."
   },
   {
     "id": "AZ-204-097",
@@ -235,9 +245,14 @@
     "theme_label": "Azure Files",
     "difficulty": "hard",
     "question": "Azure Files peut-il être monté sur une VM Windows ?",
-    "options": ["Oui", "Non", "Uniquement Linux", "Uniquement avec AD"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement Linux",
+      "Uniquement avec AD"
+    ],
     "correct": 0,
-    "explication": "Les partages Azure Files peuvent être montés sur Windows, Linux, et macOS."
+    "explanation": "Les partages Azure Files peuvent être montés sur Windows, Linux, et macOS."
   },
   {
     "id": "AZ-204-098",
@@ -252,7 +267,7 @@
       "LRS, ZRS, GRS"
     ],
     "correct": 0,
-    "explication": "Les niveaux Transaction optimised (général), Premium (faible latence), Cool (archivage)."
+    "explanation": "Les niveaux Transaction optimised (général), Premium (faible latence), Cool (archivage)."
   },
   {
     "id": "AZ-204-099",
@@ -267,7 +282,7 @@
       "Réplication"
     ],
     "correct": 0,
-    "explication": "Les snapshots permettent de restaurer des versions antérieures."
+    "explanation": "Les snapshots permettent de restaurer des versions antérieures."
   },
   {
     "id": "AZ-204-100",
@@ -275,9 +290,14 @@
     "theme_label": "Azure Files",
     "difficulty": "hard",
     "question": "Azure Files peut-il être utilisé avec Azure AD ?",
-    "options": ["Oui (identités AD)", "Non", "Uniquement avec clés", "Uniquement avec SAS"],
+    "options": [
+      "Oui (identités AD)",
+      "Non",
+      "Uniquement avec clés",
+      "Uniquement avec SAS"
+    ],
     "correct": 0,
-    "explication": "Azure Files peut s'intégrer à Active Directory pour l'authentification."
+    "explanation": "Azure Files peut s'intégrer à Active Directory pour l'authentification."
   },
   {
     "id": "AZ-204-101",
@@ -292,7 +312,7 @@
       "Topic de messages"
     ],
     "correct": 0,
-    "explication": "Queue Storage est une file d'attente pour le découplage d'applications."
+    "explanation": "Queue Storage est une file d'attente pour le découplage d'applications."
   },
   {
     "id": "AZ-204-102",
@@ -300,9 +320,14 @@
     "theme_label": "Queue Storage",
     "difficulty": "hard",
     "question": "Quelle est la taille maximale d'un message dans Queue Storage ?",
-    "options": ["64 Ko", "256 Ko", "1 Mo", "8 Ko"],
+    "options": [
+      "64 Ko",
+      "256 Ko",
+      "1 Mo",
+      "8 Ko"
+    ],
     "correct": 0,
-    "explication": "La taille maximale est 64 Ko (256 Ko avec encodage base64)."
+    "explanation": "La taille maximale est 64 Ko (256 Ko avec encodage base64)."
   },
   {
     "id": "AZ-204-103",
@@ -317,7 +342,7 @@
       "Timeout de la file"
     ],
     "correct": 0,
-    "explication": "Le visibility timeout empêche d'autres consommateurs de traiter le même message."
+    "explanation": "Le visibility timeout empêche d'autres consommateurs de traiter le même message."
   },
   {
     "id": "AZ-204-104",
@@ -332,7 +357,7 @@
       "Temps d'inactivité"
     ],
     "correct": 0,
-    "explication": "Le TTL détermine combien de temps un message reste dans la file avant suppression."
+    "explanation": "Le TTL détermine combien de temps un message reste dans la file avant suppression."
   },
   {
     "id": "AZ-204-105",
@@ -347,7 +372,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les API .NET (CloudQueue) et .NET Core (QueueClient) existent."
+    "explanation": "Les API .NET (CloudQueue) et .NET Core (QueueClient) existent."
   },
   {
     "id": "AZ-204-106",
@@ -362,7 +387,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "La réception rend le message invisible, il faut le supprimer après traitement."
+    "explanation": "La réception rend le message invisible, il faut le supprimer après traitement."
   },
   {
     "id": "AZ-204-107",
@@ -377,7 +402,7 @@
       "Base graphe"
     ],
     "correct": 0,
-    "explication": "Table Storage est une base NoSQL clé-valeur (comme Cosmos DB Table API)."
+    "explanation": "Table Storage est une base NoSQL clé-valeur (comme Cosmos DB Table API)."
   },
   {
     "id": "AZ-204-108",
@@ -392,7 +417,7 @@
       "Key seulement"
     ],
     "correct": 0,
-    "explication": "PartitionKey partitionne les données, RowKey identifie l'entité dans la partition."
+    "explanation": "PartitionKey partitionne les données, RowKey identifie l'entité dans la partition."
   },
   {
     "id": "AZ-204-109",
@@ -407,7 +432,7 @@
       "Oui avec index"
     ],
     "correct": 0,
-    "explication": "Il est recommandé d'inclure PartitionKey pour des requêtes efficaces."
+    "explanation": "Il est recommandé d'inclure PartitionKey pour des requêtes efficaces."
   },
   {
     "id": "AZ-204-110",
@@ -422,7 +447,7 @@
       "Cosmos DB Table API moins cher"
     ],
     "correct": 0,
-    "explication": "Cosmos DB Table API offre des performances plus élevées et une distribution mondiale."
+    "explanation": "Cosmos DB Table API offre des performances plus élevées et une distribution mondiale."
   },
   {
     "id": "AZ-204-111",
@@ -437,7 +462,7 @@
       "GRS seulement"
     ],
     "correct": 0,
-    "explication": "Plusieurs options de redondance (local, zone, géographique, avec accès en lecture)."
+    "explanation": "Plusieurs options de redondance (local, zone, géographique, avec accès en lecture)."
   },
   {
     "id": "AZ-204-112",
@@ -452,7 +477,7 @@
       "Réplication géographique"
     ],
     "correct": 0,
-    "explication": "LRS réplique les données 3 fois dans un même centre de données."
+    "explanation": "LRS réplique les données 3 fois dans un même centre de données."
   },
   {
     "id": "AZ-204-113",
@@ -467,7 +492,7 @@
       "Réplication locale"
     ],
     "correct": 0,
-    "explication": "ZRS réplique les données sur 3 zones de disponibilité dans une région."
+    "explanation": "ZRS réplique les données sur 3 zones de disponibilité dans une région."
   },
   {
     "id": "AZ-204-114",
@@ -482,7 +507,7 @@
       "Réplication en ligne"
     ],
     "correct": 0,
-    "explication": "GRS réplique les données dans une région secondaire distante."
+    "explanation": "GRS réplique les données dans une région secondaire distante."
   },
   {
     "id": "AZ-204-115",
@@ -497,7 +522,7 @@
       "LRS avec accès en lecture"
     ],
     "correct": 0,
-    "explication": "RA-GRS permet de lire les données depuis la région secondaire."
+    "explanation": "RA-GRS permet de lire les données depuis la région secondaire."
   },
   {
     "id": "AZ-204-116",
@@ -512,7 +537,7 @@
       "Chiffrement automatique"
     ],
     "correct": 0,
-    "explication": "Les règles de cycle de vie automatisent le passage entre les niveaux d'accès."
+    "explanation": "Les règles de cycle de vie automatisent le passage entre les niveaux d'accès."
   },
   {
     "id": "AZ-204-117",
@@ -520,9 +545,14 @@
     "theme_label": "Static website",
     "difficulty": "hard",
     "question": "Azure Storage peut-il héberger un site web statique ?",
-    "options": ["Oui", "Non", "Uniquement avec CDN", "Uniquement avec App Service"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec CDN",
+      "Uniquement avec App Service"
+    ],
     "correct": 0,
-    "explication": "Le stockage Blob peut héberger des sites web statiques (HTML, CSS, JS)."
+    "explanation": "Le stockage Blob peut héberger des sites web statiques (HTML, CSS, JS)."
   },
   {
     "id": "AZ-204-118",
@@ -537,7 +567,7 @@
       "https://account.queue.core.windows.net"
     ],
     "correct": 0,
-    "explication": "L'endpoint de site statique est différent de l'endpoint blob."
+    "explanation": "L'endpoint de site statique est différent de l'endpoint blob."
   },
   {
     "id": "AZ-204-119",
@@ -552,7 +582,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "ADLS Gen2 combine le stockage blob avec un système de fichiers hiérarchique."
+    "explanation": "ADLS Gen2 combine le stockage blob avec un système de fichiers hiérarchique."
   },
   {
     "id": "AZ-204-120",
@@ -560,9 +590,14 @@
     "theme_label": "Data Lake Storage",
     "difficulty": "hard",
     "question": "ADLS Gen2 supporte-t-il les ACL POSIX ?",
-    "options": ["Oui", "Non", "Uniquement les ACL Windows", "Uniquement les RBAC"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les ACL Windows",
+      "Uniquement les RBAC"
+    ],
     "correct": 0,
-    "explication": "ADLS Gen2 supporte les ACL POSIX pour le contrôle d'accès granulaire."
+    "explanation": "ADLS Gen2 supporte les ACL POSIX pour le contrôle d'accès granulaire."
   },
   {
     "id": "AZ-204-121",
@@ -577,7 +612,7 @@
       "Portail"
     ],
     "correct": 0,
-    "explication": "Storage Explorer est une application de bureau multiplateforme."
+    "explanation": "Storage Explorer est une application de bureau multiplateforme."
   },
   {
     "id": "AZ-204-122",
@@ -592,7 +627,7 @@
       "Service"
     ],
     "correct": 0,
-    "explication": "AzCopy est un utilitaire de copie de données performant."
+    "explanation": "AzCopy est un utilitaire de copie de données performant."
   },
   {
     "id": "AZ-204-123",
@@ -600,9 +635,14 @@
     "theme_label": "AzCopy",
     "difficulty": "hard",
     "question": "AzCopy peut-il synchroniser des dossiers locaux avec un conteneur blob ?",
-    "options": ["Oui", "Non", "Uniquement l'upload", "Uniquement le download"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement l'upload",
+      "Uniquement le download"
+    ],
     "correct": 0,
-    "explication": "AzCopy supporte la synchronisation (upload, download, copie)."
+    "explanation": "AzCopy supporte la synchronisation (upload, download, copie)."
   },
   {
     "id": "AZ-204-124",
@@ -610,9 +650,14 @@
     "theme_label": "Azure Storage SDK",
     "difficulty": "hard",
     "question": "Azure Storage SDK existe-t-il pour .NET ?",
-    "options": ["Oui", "Non", "Uniquement pour Java", "Uniquement pour Python"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour Java",
+      "Uniquement pour Python"
+    ],
     "correct": 0,
-    "explication": "Azure SDK est disponible pour .NET, Java, Python, JavaScript, Go, etc."
+    "explanation": "Azure SDK est disponible pour .NET, Java, Python, JavaScript, Go, etc."
   },
   {
     "id": "AZ-204-125",
@@ -627,7 +672,7 @@
       "Token"
     ],
     "correct": 0,
-    "explication": "Le SDK supporte les chaînes de connexion et l'authentification Azure AD."
+    "explanation": "Le SDK supporte les chaînes de connexion et l'authentification Azure AD."
   },
   {
     "id": "AZ-204-126",
@@ -642,7 +687,7 @@
       "Snapshot"
     ],
     "correct": 0,
-    "explication": "Soft delete permet de récupérer des blobs supprimés accidentellement."
+    "explanation": "Soft delete permet de récupérer des blobs supprimés accidentellement."
   },
   {
     "id": "AZ-204-127",
@@ -657,7 +702,7 @@
       "Soft delete"
     ],
     "correct": 0,
-    "explication": "Le versioning crée automatiquement une nouvelle version à chaque modification."
+    "explanation": "Le versioning crée automatiquement une nouvelle version à chaque modification."
   },
   {
     "id": "AZ-204-128",
@@ -672,7 +717,7 @@
       "Soft delete"
     ],
     "correct": 0,
-    "explication": "Le change feed enregistre les événements de création, modification, suppression de blobs."
+    "explanation": "Le change feed enregistre les événements de création, modification, suppression de blobs."
   },
   {
     "id": "AZ-204-129",
@@ -687,7 +732,7 @@
       "Réplication de zones"
     ],
     "correct": 0,
-    "explication": "La réplication d'objets copie les blobs vers un autre compte pour la DR ou la proximité."
+    "explanation": "La réplication d'objets copie les blobs vers un autre compte pour la DR ou la proximité."
   },
   {
     "id": "AZ-204-130",
@@ -695,9 +740,14 @@
     "theme_label": "Event Grid integration",
     "difficulty": "hard",
     "question": "Azure Storage peut-il envoyer des événements à Event Grid ?",
-    "options": ["Oui", "Non", "Uniquement pour les blobs", "Uniquement pour les files"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les blobs",
+      "Uniquement pour les files"
+    ],
     "correct": 0,
-    "explication": "Les événements de stockage (création, suppression) peuvent être envoyés à Event Grid."
+    "explanation": "Les événements de stockage (création, suppression) peuvent être envoyés à Event Grid."
   },
   {
     "id": "AZ-204-131",
@@ -712,7 +762,7 @@
       "Seulement latence"
     ],
     "correct": 0,
-    "explication": "Azure Monitor collecte des métriques détaillées pour le stockage."
+    "explanation": "Azure Monitor collecte des métriques détaillées pour le stockage."
   },
   {
     "id": "AZ-204-132",
@@ -727,7 +777,7 @@
       "Seulement Event Hub"
     ],
     "correct": 0,
-    "explication": "Les paramètres de diagnostic peuvent envoyer les logs vers plusieurs destinations."
+    "explanation": "Les paramètres de diagnostic peuvent envoyer les logs vers plusieurs destinations."
   },
   {
     "id": "AZ-204-133",
@@ -735,9 +785,14 @@
     "theme_label": "Azure AD authentication",
     "difficulty": "hard",
     "question": "Azure Storage peut-il utiliser Azure AD pour l'authentification ?",
-    "options": ["Oui (pour Blob, Queue, Table)", "Non", "Uniquement pour Files", "Uniquement pour Blob"],
+    "options": [
+      "Oui (pour Blob, Queue, Table)",
+      "Non",
+      "Uniquement pour Files",
+      "Uniquement pour Blob"
+    ],
     "correct": 0,
-    "explication": "Azure AD est supporté pour Blob, Queue, Table (pas encore pour Files)."
+    "explanation": "Azure AD est supporté pour Blob, Queue, Table (pas encore pour Files)."
   },
   {
     "id": "AZ-204-134",
@@ -752,7 +807,7 @@
       "Certificat"
     ],
     "correct": 0,
-    "explication": "Les clés d'accès donnent un accès complet au compte."
+    "explanation": "Les clés d'accès donnent un accès complet au compte."
   },
   {
     "id": "AZ-204-135",
@@ -760,9 +815,14 @@
     "theme_label": "Firewalls and virtual networks",
     "difficulty": "hard",
     "question": "Peut-on restreindre l'accès au stockage à des réseaux spécifiques ?",
-    "options": ["Oui", "Non", "Uniquement à des IP publiques", "Uniquement à des VNet"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement à des IP publiques",
+      "Uniquement à des VNet"
+    ],
     "correct": 0,
-    "explication": "Les pare-feu et les règles de réseau virtuel limitent l'accès."
+    "explanation": "Les pare-feu et les règles de réseau virtuel limitent l'accès."
   },
   {
     "id": "AZ-204-136",
@@ -777,7 +837,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Les points de terminaison privés permettent un accès sécurisé via le réseau privé."
+    "explanation": "Les points de terminaison privés permettent un accès sécurisé via le réseau privé."
   },
   {
     "id": "AZ-204-137",
@@ -792,7 +852,7 @@
       "ExpressRoute"
     ],
     "correct": 0,
-    "explication": "Les service endpoints étendent l'identité du VNet au service Azure."
+    "explanation": "Les service endpoints étendent l'identité du VNet au service Azure."
   },
   {
     "id": "AZ-204-138",
@@ -807,7 +867,7 @@
       "Désactiver le chiffrement"
     ],
     "correct": 0,
-    "explication": "Les lifecycle policies et le choix du niveau d'accès sont clés."
+    "explanation": "Les lifecycle policies et le choix du niveau d'accès sont clés."
   },
   {
     "id": "AZ-204-139",
@@ -822,7 +882,7 @@
       "Ne jamais les changer"
     ],
     "correct": 0,
-    "explication": "Les clés d'accès doivent être tournées et protégées (Key Vault)."
+    "explanation": "Les clés d'accès doivent être tournées et protégées (Key Vault)."
   },
   {
     "id": "AZ-204-140",
@@ -837,6 +897,404 @@
       "Beaucoup de conteneurs"
     ],
     "correct": 0,
-    "explication": "Les noms aléatoires répartissent la charge sur les partitions."
+    "explanation": "Les noms aléatoires répartissent la charge sur les partitions."
+  },
+  {
+    "id": "AZ204-AS-001",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la réplication des objets dans Blob Storage :",
+    "options": [
+      "La réplication peut être configurée pour les comptes de stockage BlobStorage.",
+      "La réplication est disponible uniquement pour les comptes de stockage General-purpose v2.",
+      "La réplication garantit la disponibilité des données en les stockant sur plusieurs régions.",
+      "La réplication peut être désactivée à tout moment pour économiser des coûts.",
+      "La réplication est disponible pour les comptes de stockage BlobStorage et FileStorage."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "La réplication est effectivement disponible pour les comptes de stockage BlobStorage et garantit la disponibilité en les stockant sur plusieurs régions. La réplication peut être désactivée à tout moment pour économiser des coûts, mais elle n'est pas disponible uniquement pour les comptes de stockage General-purpose v2."
+  },
+  {
+    "id": "AZ204-AS-002",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation de Queue Storage dans Azure ?",
+    "options": [
+      "Stockage de fichiers volumineux",
+      "Communication entre applications et services",
+      "Stockage de données relationnelles",
+      "Traitement en lot de données"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Queue Storage est principalement utilisé pour la communication entre applications et services en utilisant des messages."
+  },
+  {
+    "id": "AZ204-AS-003",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Files :",
+    "options": [
+      "Azure Files permet le stockage de fichiers partagés via SMB.",
+      "Azure Files peut être monté sur des systèmes d'exploitation Windows, Linux et macOS.",
+      "Azure Files est disponible uniquement pour les comptes de stockage BlobStorage.",
+      "Azure Files offre une capacité maximale de 5 TiB par partage.",
+      "Azure Files peut être utilisé pour stocker des fichiers volumineux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Files permet effectivement le stockage de fichiers partagés via SMB et peut être monté sur des systèmes d'exploitation Windows, Linux et macOS. Azure Files n'est pas disponible uniquement pour les comptes de stockage BlobStorage, et sa capacité maximale n'est pas de 5 TiB par partage."
+  },
+  {
+    "id": "AZ204-AS-004",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure stratégie de redondance pour garantir la disponibilité maximale des données dans Azure Storage ?",
+    "options": [
+      "Lecture seule avec réplication géographique (RA-GRS)",
+      "Réplication locale (LRS)",
+      "Réplication géographique avec récupération automatique (RA-GZRS)",
+      "Réplication géographique (GRS)"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La meilleure stratégie de redondance pour garantir la disponibilité maximale des données est RA-GZRS (Réplication géographique avec récupération automatique), qui offre une disponibilité élevée et la possibilité de récupérer les données dans une région secondaire en cas de perte de la région primaire."
+  },
+  {
+    "id": "AZ204-AS-005",
+    "theme": "Azure Storage",
+    "theme_label": "Best practices",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour sécuriser les données dans Azure Storage ?",
+    "options": [
+      "Utiliser des comptes de stockage avec clés d'accès partagées (SAS)",
+      "Activer la réplication géographique avec récupération automatique (RA-GZRS)",
+      "Utiliser des comptes de stockage avec clés d'accès partagées (SAS) et activer la réplication géographique avec récupération automatique (RA-GZRS)",
+      "Ne pas utiliser de comptes de stockage avec clés d'accès partagées (SAS)"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique pour sécuriser les données dans Azure Storage est d'utiliser des comptes de stockage avec clés d'accès partagées (SAS) et d'activer la réplication géographique avec récupération automatique (RA-GZRS) pour garantir la disponibilité et la sécurité des données."
+  },
+  {
+    "id": "AZ204-AS-006",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Blob Storage :",
+    "options": [
+      "Il permet le stockage d'objets binaires de taille illimitée.",
+      "Il est utilisé pour le stockage de fichiers texte et images.",
+      "Il offre une redondance géographique automatique par défaut.",
+      "Il ne prend pas en charge les changements de version des objets."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car Blob Storage peut stocker des objets binaires de taille illimitée. B est correct car il est utilisé pour le stockage de fichiers texte et images. C est incorrect car la redondance géographique automatique n'est pas disponible par défaut. D est incorrect car Blob Storage prend en charge les changements de version des objets."
+  },
+  {
+    "id": "AZ204-AS-007",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation de Queue Storage ?",
+    "options": [
+      "Stockage de fichiers texte et images",
+      "Stockage d'objets binaires de taille illimitée",
+      "Stockage de messages pour une communication asynchrone",
+      "Stockage de données relationnelles"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "C est correct car Queue Storage est principalement utilisé pour stocker des messages pour une communication asynchrone. Les autres options ne sont pas les principales utilisations de Queue Storage."
+  },
+  {
+    "id": "AZ204-AS-008",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Files :",
+    "options": [
+      "Il permet le stockage de fichiers dans le cloud.",
+      "Il offre une redondance géographique automatique par défaut.",
+      "Il peut être monté sur une machine virtuelle Linux via SMB.",
+      "Il ne prend pas en charge les fichiers volumineux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Azure Files permet le stockage de fichiers dans le cloud. B est incorrect car la redondance géographique automatique n'est pas disponible par défaut. C est correct car Azure Files peut être monté sur une machine virtuelle Linux via SMB. D est incorrect car Azure Files prend en charge les fichiers volumineux."
+  },
+  {
+    "id": "AZ204-AS-009",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure option pour une redondance géographique automatique dans Azure Storage ?",
+    "options": [
+      "LRS (Locally-redundant storage)",
+      "GRS (Geo-redundant storage)",
+      "RA-GRS (Read-access geo-redundant storage)",
+      "ZRS (Zone-redundant storage)"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "C est correct car RA-GRS offre une redondance géographique automatique avec accès en lecture. LRS, GRS et ZRS offrent également une redondance géographique automatique, mais RA-GRS est particulièrement adapté pour les applications nécessitant un accès en lecture."
+  },
+  {
+    "id": "AZ204-AS-010",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Table Storage :",
+    "options": [
+      "Il permet le stockage de données structurées sous forme de table.",
+      "Il est utilisé pour le stockage d'objets binaires de taille illimitée.",
+      "Il offre une redondance géographique automatique par défaut.",
+      "Il ne prend pas en charge les changements de version des entités."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Table Storage permet le stockage de données structurées sous forme de table. B est incorrect car il ne s'agit pas du stockage d'objets binaires de taille illimitée. C est correct car Table Storage offre une redondance géographique automatique par défaut. D est incorrect car Table Storage prend en charge les changements de version des entités."
+  },
+  {
+    "id": "AZ204-AS-011",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Blob Storage :",
+    "options": [
+      "Il permet le stockage d'objets binaires de taille illimitée.",
+      "Il est idéal pour le stockage de fichiers volumineux et d'objets de petite taille.",
+      "Il offre une interface REST pour accéder aux données.",
+      "Il ne prend pas en charge le stockage de fichiers."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option A est correcte car Azure Blob Storage peut stocker des objets binaires de taille illimitée. L'option B est incorrecte car il est principalement conçu pour le stockage de fichiers volumineux et d'objets de petite taille. L'option C est correcte car il offre une interface REST pour accéder aux données. L'option D est incorrecte car Azure Blob Storage prend en charge le stockage de fichiers."
+  },
+  {
+    "id": "AZ204-AS-012",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de Azure Queue Storage ?",
+    "options": [
+      "Stockage d'objets binaires de taille illimitée",
+      "Stockage de messages pour la communication entre les applications",
+      "Stockage de fichiers volumineux",
+      "Stockage de données relationnelles"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'option B est correcte car Azure Queue Storage est principalement utilisé pour stocker des messages pour la communication entre les applications. Les autres options ne sont pas correctes."
+  },
+  {
+    "id": "AZ204-AS-013",
+    "theme": "Azure Storage",
+    "theme_label": "Azure Files",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Files :",
+    "options": [
+      "Il permet le stockage de fichiers accessibles via SMB.",
+      "Il est idéal pour les applications nécessitant un accès concurrentiel à des fichiers.",
+      "Il ne prend pas en charge le stockage de données relationnelles.",
+      "Il offre une interface REST pour accéder aux fichiers."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte car Azure Files permet le stockage de fichiers accessibles via SMB. L'option B est correcte car il est idéal pour les applications nécessitant un accès concurrentiel à des fichiers. L'option C est incorrecte car Azure Files prend en charge le stockage de données relationnelles via des fichiers CSV. L'option D est incorrecte car Azure Files ne offre pas une interface REST pour accéder aux fichiers."
+  },
+  {
+    "id": "AZ204-AS-014",
+    "theme": "Azure Storage",
+    "theme_label": "Redondance",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure option pour assurer une redondance géographique complète avec Azure Storage ?",
+    "options": [
+      "Lecture seule réplication géographique (Geo-Replicated Read Access)",
+      "Réplication géographique avec accès en écriture (Geo-Replicated Write Access)",
+      "Réplication géographique avec accès en lecture et écriture (Geo-Replicated Read/Write Access)",
+      "Réplication localement redondante avec accès en lecture et écriture (Locally-redundant Read/Write Access)"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "L'option C est correcte car la réplication géographique avec accès en lecture et écriture (Geo-Replicated Read/Write Access) assure une redondance géographique complète avec les capacités de lecture et d'écriture."
+  },
+  {
+    "id": "AZ204-AS-015",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de Azure Table Storage ?",
+    "options": [
+      "Stockage d'objets binaires de taille illimitée",
+      "Stockage de messages pour la communication entre les applications",
+      "Stockage de données relationnelles sous forme de tables",
+      "Stockage de fichiers volumineux"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "L'option C est correcte car Azure Table Storage est principalement utilisé pour stocker des données relationnelles sous forme de tables. Les autres options ne sont pas correctes."
+  },
+  {
+    "id": "AZ204-AS-016",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Blob Storage :",
+    "options": [
+      "Il permet le stockage de données en blocs.",
+      "Il est utilisé pour le stockage d'objets, y compris les fichiers.",
+      "Il offre une redondance géographique automatique.",
+      "Il ne prend pas en charge les opérations de lecture et d'écriture simultanées.",
+      "Il est utilisé pour le stockage de données relationnelles."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "A est correct car Blob Storage permet le stockage de données en blocs. B est correct car il peut être utilisé pour le stockage d'objets, y compris les fichiers. C est correct car il offre une redondance géographique automatique (RA-GRS). D est incorrect car il prend en charge les opérations de lecture et d'écriture simultanées. E est incorrect car il n'est pas utilisé pour le stockage de données relationnelles."
+  },
+  {
+    "id": "AZ204-AS-017",
+    "theme": "Azure Storage",
+    "theme_label": "Queue Storage",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'unité de mesure utilisée pour mesurer la capacité d'un compte de stockage Azure ?",
+    "options": [
+      "Go",
+      "TiB",
+      "PiB",
+      "EiB"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Go est correct car la capacité d'un compte de stockage Azure est mesurée en Go."
+  },
+  {
+    "id": "AZ204-AS-018",
+    "theme": "Azure Storage",
+    "theme_label": "Table Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Table Storage :",
+    "options": [
+      "Il est utilisé pour le stockage de données structurées.",
+      "Il offre une redondance géographique automatique.",
+      "Il prend en charge les opérations de lecture et d'écriture simultanées.",
+      "Il est utilisé pour le stockage de fichiers volumineux.",
+      "Il ne prend pas en charge les requêtes complexes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "A est correct car Table Storage est utilisé pour le stockage de données structurées. B est correct car il offre une redondance géographique automatique (RA-GRS). C est correct car il prend en charge les opérations de lecture et d'écriture simultanées. D est incorrect car il n'est pas utilisé pour le stockage de fichiers volumineux. E est incorrect car il prend en charge les requêtes complexes."
+  },
+  {
+    "id": "AZ204-AS-019",
+    "theme": "Azure Storage",
+    "theme_label": "Static website",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de Static Website dans Azure Storage ?",
+    "options": [
+      "Stockage de fichiers volumineux",
+      "Hébergement d'applications web statiques",
+      "Stockage de données relationnelles",
+      "Gestion des journaux d'activité"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Hébergement d'applications web statiques est correct car Static Website dans Azure Storage permet de héberger des applications web statiques."
+  },
+  {
+    "id": "AZ204-AS-020",
+    "theme": "Azure Storage",
+    "theme_label": "AzCopy",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AzCopy :",
+    "options": [
+      "Il est utilisé pour la synchronisation et le transfert de données entre des comptes Azure Storage.",
+      "Il offre une interface graphique utilisateur pour les opérations de stockage.",
+      "Il est utilisé uniquement pour le stockage de fichiers texte.",
+      "Il prend en charge les transferts de données entre différents types de comptes de stockage.",
+      "Il ne prend pas en charge les transferts de données entre des comptes Azure Storage et d'autres services cloud."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "A est correct car AzCopy est utilisé pour la synchronisation et le transfert de données entre des comptes Azure Storage. B est incorrect car AzCopy n'offre pas d'interface graphique utilisateur. C est incorrect car AzCopy prend en charge le stockage de fichiers binaires ainsi que texte. D est correct car AzCopy prend en charge les transferts de données entre différents types de comptes de stockage. E est incorrect car AzCopy prend en charge les transferts de données entre des comptes Azure Storage et d'autres services cloud."
+  },
+  {
+    "id": "AZ204-AS-021",
+    "theme": "Azure Storage",
+    "theme_label": "Blob Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la réplication de données dans Blob Storage :",
+    "options": [
+      "La réplication est disponible uniquement pour les comptes de stockage BlobStorage.",
+      "Les données sont répliquées automatiquement entre trois régions pour une haute disponibilité.",
+      "La réplication peut être configurée à l'aide d'AzCopy pour les comptes de stockage standard.",
+      "Les données sont répliquées entre deux régions pour une récupération rapide après un échec.",
+      "La réplication est gratuite pour tous les types de comptes de stockage."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les affirmations 1 et 3 sont correctes. La réplication est disponible pour tous les types de comptes de stockage BlobStorage, et elle peut être configurée à l'aide d'AzCopy. Les affirmations 2 et 4 sont incorrectes car la réplication automatique est disponible entre trois régions pour les comptes de stockage standard, et la réplication n'est pas gratuite."
   }
 ]

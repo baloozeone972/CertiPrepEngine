@@ -748,5 +748,327 @@
     ],
     "correct": 3,
     "explanation": "Race condition : comportement incorrect dû à un timing non contrôlé. Exemple : if(!map.containsKey(key)) map.put(key, value)."
+  },
+  {
+    "id": "JAVA21-MEC-001",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la synchronisation en Java :",
+    "options": [
+      "La méthode synchronized peut être utilisée sur des méthodes et des blocs.",
+      "Le mot-clé volatile garantit l'ordre d'exécution des instructions.",
+      "L'utilisation de Locks offre plus de flexibilité que synchronized.",
+      "Les classes dans java.util.concurrent.locks ne peuvent pas être utilisées pour la synchronisation."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "La méthode synchronized peut être utilisée sur des méthodes et des blocs, donc l'option A est correcte. Le mot-clé volatile ne garantit pas l'ordre d'exécution des instructions, donc l'option B est incorrecte. L'utilisation de Locks offre plus de flexibilité que synchronized, donc l'option C est correcte. Les classes dans java.util.concurrent.locks peuvent être utilisées pour la synchronisation, donc l'option D est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-002",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour attendre que tous les threads d'un ExecutorService aient terminé leur exécution ?",
+    "options": [
+      "shutdown()",
+      "awaitTermination()",
+      "join()",
+      "terminate()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La méthode awaitTermination() est utilisée pour attendre que tous les threads d'un ExecutorService aient terminé leur exécution, donc l'option B est correcte."
+  },
+  {
+    "id": "JAVA21-MEC-003",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation de ReentrantLock :",
+    "options": [
+      "ReentrantLock peut être utilisé comme une alternative à synchronized.",
+      "ReentrantLock permet de bloquer un thread indéfiniment si le lock n'est pas disponible.",
+      "ReentrantLock ne peut pas être utilisé dans des blocs try-with-resources.",
+      "ReentrantLock offre la possibilité de tenter d'acquérir le lock sans attendre."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ReentrantLock peut être utilisé comme une alternative à synchronized, donc l'option A est correcte. ReentrantLock ne permet pas de bloquer un thread indéfiniment si le lock n'est pas disponible, donc l'option B est incorrecte. ReentrantLock peut être utilisé dans des blocs try-with-resources, donc l'option C est incorrecte. ReentrantLock offre la possibilité de tenter d'acquérir le lock sans attendre, donc l'option D est correcte."
+  },
+  {
+    "id": "JAVA21-MEC-004",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle classe est utilisée pour créer un thread en Java ?",
+    "options": [
+      "Thread",
+      "Runnable",
+      "ExecutorService",
+      "Callable"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La classe Thread est utilisée pour créer un thread en Java, donc l'option A est correcte."
+  },
+  {
+    "id": "JAVA21-MEC-005",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe CountDownLatch :",
+    "options": [
+      "CountDownLatch est utilisé pour attendre que plusieurs opérations aient terminé.",
+      "CountDownLatch peut être réinitialisé après son utilisation.",
+      "CountDownLatch est thread-safe.",
+      "CountDownLatch ne peut être utilisé qu'une seule fois."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "CountDownLatch est utilisé pour attendre que plusieurs opérations aient terminé, donc l'option A est correcte. CountDownLatch ne peut pas être réinitialisé après son utilisation, donc l'option B est incorrecte. CountDownLatch est thread-safe, donc l'option C est correcte. CountDownLatch peut être utilisé plusieurs fois, donc l'option D est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-006",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la synchronisation en Java :",
+    "options": [
+      "La méthode synchronized peut être utilisée sur des méthodes et des blocs.",
+      "Le mot-clé volatile garantit que les threads lisent toujours la dernière valeur d'une variable.",
+      "L'utilisation de locks explicites avec ReentrantLock offre plus de flexibilité que synchronized.",
+      "Les classes dans java.util.concurrent ne sont pas thread-safe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La méthode synchronized peut être utilisée sur des méthodes et des blocs, ce qui est correct. Le mot-clé volatile garantit que les threads lisent toujours la dernière valeur d'une variable, ce qui est également correct. L'utilisation de locks explicites avec ReentrantLock offre plus de flexibilité que synchronized, ce qui est correct. Les classes dans java.util.concurrent sont généralement thread-safe, donc cette affirmation est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-007",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour attendre que tous les threads d'un ExecutorService aient terminé leur exécution ?",
+    "options": [
+      "shutdown()",
+      "awaitTermination()",
+      "terminate()",
+      "stop()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La méthode awaitTermination() est utilisée pour attendre que tous les threads d'un ExecutorService aient terminé leur exécution. shutdown() demande à l'ExecutorService de ne plus accepter de nouvelles tâches et d'arrêter les threads en cours, mais ne bloque pas l'appelant jusqu'à ce que tous les threads aient terminé. terminate() et stop() ne sont pas des méthodes valides pour ExecutorService."
+  },
+  {
+    "id": "JAVA21-MEC-008",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant la classe ReentrantLock ?",
+    "options": [
+      "ReentrantLock peut être utilisé pour implémenter des sémaphores.",
+      "ReentrantLock offre une meilleure performance que synchronized dans tous les cas.",
+      "ReentrantLock permet d'essayer d'acquérir un lock sans bloquer.",
+      "ReentrantLock ne supporte pas les conditions."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "ReentrantLock peut être utilisé pour implémenter des sémaphores, ce qui est correct. ReentrantLock offre une meilleure performance que synchronized dans certains cas, mais pas toujours, donc cette affirmation est incorrecte. ReentrantLock permet d'essayer d'acquérir un lock sans bloquer en utilisant tryLock(), ce qui est correct. ReentrantLock supporte les conditions via Condition, donc cette affirmation est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-009",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour signaler à un autre thread qu'une condition a été satisfaite ?",
+    "options": [
+      "notify()",
+      "signal()",
+      "broadcast()",
+      "alert()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La méthode signal() est utilisée pour signaler à un autre thread qu'une condition a été satisfaite. notify() est une méthode de l'objet Object et signal() est une méthode de Condition dans java.util.concurrent.locks. broadcast() n'est pas une méthode standard pour signaler des conditions et alert() n'existe pas dans Java."
+  },
+  {
+    "id": "JAVA21-MEC-010",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe ConcurrentHashMap :",
+    "options": [
+      "ConcurrentHashMap est thread-safe.",
+      "ConcurrentHashMap permet des lectures concurrentes sans verrous.",
+      "ConcurrentHashMap est moins performant que HashMap dans tous les cas.",
+      "ConcurrentHashMap ne supporte pas la méthode putIfAbsent()."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ConcurrentHashMap est thread-safe, ce qui est correct. ConcurrentHashMap permet des lectures concurrentes sans verrous, ce qui est également correct. ConcurrentHashMap n'est généralement pas moins performant que HashMap dans tous les cas, donc cette affirmation est incorrecte. ConcurrentHashMap supporte la méthode putIfAbsent(), donc cette affirmation est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-011",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la synchronisation en Java :",
+    "options": [
+      "La méthode synchronized peut être utilisée sur des méthodes et des blocs.",
+      "Un lock peut être utilisé pour synchroniser l'accès à une section de code.",
+      "L'utilisation de synchronized peut entraîner des deadlocks si pas géré correctement.",
+      "Les locks ne sont pas disponibles dans la bibliothèque java.util.concurrent."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La méthode synchronized peut être utilisée sur des méthodes et des blocs, donc Option A est correcte. Un lock peut être utilisé pour synchroniser l'accès à une section de code, donc Option B est correcte. L'utilisation de synchronized peut entraîner des deadlocks si pas géré correctement, donc Option C est correcte. Les locks sont disponibles dans la bibliothèque java.util.concurrent, donc Option D est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-012",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode permet de créer un thread en Java ?",
+    "options": [
+      "Thread.start()",
+      "Thread.run()",
+      "ExecutorService.execute()",
+      "Runnable.run()"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La méthode ExecutorService.execute() permet de créer un thread en Java, donc Option C est correcte. Thread.start() démarre le thread mais ne crée pas un nouveau, donc Option A est incorrecte. Thread.run() exécute le code dans le même thread, donc Option B est incorrecte. Runnable.run() est une méthode qui doit être implémentée dans la classe Runnable, mais elle ne crée pas un thread, donc Option D est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-014",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour libérer un lock dans ReentrantLock ?",
+    "options": [
+      "ReentrantLock.release()",
+      "ReentrantLock.unlock()",
+      "ReentrantLock.free()",
+      "ReentrantLock.releaseLock()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La méthode unlock() est utilisée pour libérer un lock dans ReentrantLock, donc Option B est correcte. release(), free() et releaseLock() ne sont pas des méthodes valides pour ReentrantLock, donc Options A, C et D sont incorrectes."
+  },
+  {
+    "id": "JAVA21-MEC-015",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface Runnable :",
+    "options": [
+      "Runnable doit être étendu pour créer un thread.",
+      "Runnable doit être implémenté pour créer un thread.",
+      "La méthode run() dans Runnable peut lancer des exceptions.",
+      "Runnable est une classe abstraite."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Runnable doit être implémenté pour créer un thread, donc Option B est correcte. La méthode run() dans Runnable peut lancer des exceptions, donc Option C est correcte. Runnable doit être étendu pour créer un thread, donc Option A est incorrecte. Runnable n'est pas une classe abstraite mais une interface, donc Option D est incorrecte."
+  },
+  {
+    "id": "JAVA21-MEC-015",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la synchronisation en Java :",
+    "options": [
+      "La méthode synchronized peut être utilisée sur des méthodes et des blocs de code.",
+      "L'utilisation du mot-clé volatile garantit que les modifications d'une variable sont visibles par tous les threads.",
+      "L'interface Lock fournit un mécanisme plus flexible que synchronized pour la gestion des verrous.",
+      "Les classes de l'API java.util.concurrent ne sont pas thread-safe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Option A est correcte car la méthode synchronized peut être utilisée sur des méthodes et des blocs de code. Option B est correcte car le mot-clé volatile garantit la visibilité des modifications de variable entre threads. Option C est correcte car java.util.concurrent offre une API plus flexible avec Lock. Option D est incorrecte car de nombreuses classes de java.util.concurrent sont thread-safe."
+  },
+  {
+    "id": "JAVA21-MEC-016",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour attendre que tous les threads d'un ExecutorService aient terminé leur exécution ?",
+    "options": [
+      "shutdown()",
+      "awaitTermination()",
+      "terminate()",
+      "join()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Option B est correcte car awaitTermination() attend que tous les threads aient terminé leur exécution. Option A est incorrecte car shutdown() arrête l'acceptation de nouvelles tâches mais ne bloque pas la terminaison des tâches en cours. Option C est incorrecte car terminate() n'est pas une méthode de l'API ExecutorService. Option D est incorrecte car join() est utilisé pour attendre la fin d'un thread, pas pour un ExecutorService."
+  },
+  {
+    "id": "JAVA21-MEC-017",
+    "theme": "Multithreading et Concurrence",
+    "theme_label": "Threads, synchronisation, locks, concurrent utilities",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe ReentrantLock :",
+    "options": [
+      "ReentrantLock est non-reentrant.",
+      "ReentrantLock peut être utilisé dans un bloc try-with-resources pour s'assurer que le lock est toujours libéré.",
+      "ReentrantLock ne supporte pas les conditions.",
+      "ReentrantLock peut être utilisé avec des timeouts."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Option B est correcte car ReentrantLock peut être utilisé dans un bloc try-with-resources pour s'assurer que le lock est toujours libéré. Option D est correcte car ReentrantLock supporte des timeouts lors de l'acquisition du lock. Option A est incorrecte car ReentrantLock est en fait reentrant. Option C est incorrecte car ReentrantLock supporte les conditions via la méthode newCondition()."
   }
 ]

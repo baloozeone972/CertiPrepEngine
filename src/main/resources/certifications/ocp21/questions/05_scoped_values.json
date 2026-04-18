@@ -95,7 +95,12 @@
     "theme_label": "Utilisation",
     "difficulty": "hard",
     "question": "Comment obtenir la valeur d'un ScopedValue ?",
-    "options": ["SV.get()", "SV.value()", "SV.retrieve()", "SV.fetch()"],
+    "options": [
+      "SV.get()",
+      "SV.value()",
+      "SV.retrieve()",
+      "SV.fetch()"
+    ],
     "correct": 0,
     "explanation": "get() retourne la valeur du ScopedValue dans le contexte courant."
   },
@@ -390,7 +395,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nScopedValue.where(SV, \"Hello\").run(() -> System.out.println(SV.get()));",
-    "options": ["Hello", "null", "Erreur", "Rien"],
+    "options": [
+      "Hello",
+      "null",
+      "Erreur",
+      "Rien"
+    ],
     "correct": 0,
     "explanation": "La valeur 'Hello' est liée et accessible dans le run()."
   },
@@ -415,7 +425,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nScopedValue.where(SV, \"A\").run(() -> {\n    System.out.println(SV.get());\n    ScopedValue.where(SV, \"B\").run(() -> System.out.println(SV.get()));\n    System.out.println(SV.get());\n});",
-    "options": ["A B A", "A B B", "B B B", "Erreur"],
+    "options": [
+      "A B A",
+      "A B B",
+      "B B B",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "Le binding interne remplace temporairement la valeur."
   },
@@ -425,7 +440,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV1 = ScopedValue.newInstance();\nprivate static final ScopedValue<String> SV2 = ScopedValue.newInstance();\nScopedValue.where(SV1, \"A\").where(SV2, \"B\").run(() -> {\n    System.out.println(SV1.get() + SV2.get());\n});",
-    "options": ["AB", "A", "B", "Erreur"],
+    "options": [
+      "AB",
+      "A",
+      "B",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "Les deux ScopedValues sont liés et accessibles."
   },
@@ -435,7 +455,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<Integer> SV = ScopedValue.newInstance();\nint result = ScopedValue.where(SV, 5).call(() -> SV.get() * 2);\nSystem.out.println(result);",
-    "options": ["10", "5", "0", "Erreur"],
+    "options": [
+      "10",
+      "5",
+      "0",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "call() retourne le résultat de l'expression."
   },
@@ -445,7 +470,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nThread.startVirtualThread(() -> {\n    ScopedValue.where(SV, \"Virtual\").run(() -> System.out.println(SV.get()));\n}).join();",
-    "options": ["Virtual", "null", "Erreur", "Rien"],
+    "options": [
+      "Virtual",
+      "null",
+      "Erreur",
+      "Rien"
+    ],
     "correct": 0,
     "explanation": "ScopedValue fonctionne avec les virtual threads."
   },
@@ -455,7 +485,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\nvar result = ScopedValue.where(SV, \"Test\").call(() -> {\n    return SV.get().length();\n});\nSystem.out.println(result);",
-    "options": ["4", "Test", "0", "Erreur"],
+    "options": [
+      "4",
+      "Test",
+      "0",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "call() retourne la longueur de 'Test' (4)."
   },
@@ -465,7 +500,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nprivate static final ScopedValue<String> SV = ScopedValue.newInstance();\ntry {\n    ScopedValue.where(SV, \"Test\").run(() -> { throw new RuntimeException(); });\n} catch (Exception e) {\n    System.out.println(\"Exception\");\n}",
-    "options": ["Exception", "Test", "Erreur", "Rien"],
+    "options": [
+      "Exception",
+      "Test",
+      "Erreur",
+      "Rien"
+    ],
     "correct": 0,
     "explanation": "L'exception est propagée et catchée."
   },
@@ -475,7 +515,12 @@
     "theme_label": "JEP",
     "difficulty": "hard",
     "question": "Quel JEP introduit Scoped Values ?",
-    "options": ["JEP 446", "JEP 440", "JEP 441", "JEP 442"],
+    "options": [
+      "JEP 446",
+      "JEP 440",
+      "JEP 441",
+      "JEP 442"
+    ],
     "correct": 0,
     "explanation": "JEP 446: Scoped Values (preview)."
   },
@@ -703,5 +748,345 @@
     ],
     "correct": 0,
     "explanation": "ScopedValue est idéal pour le contexte immuable, pas pour tout."
+  },
+  {
+    "id": "OCP-SV-001",
+    "theme": "Scoped Values",
+    "theme_label": "Présentation",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant ScopedValue :",
+    "options": [
+      "ScopedValue est une alternative à ThreadLocal pour virtual threads.",
+      "ScopedValue permet de partager des valeurs entre les threads.",
+      "ScopedValue est mutable et peut être modifié à tout moment.",
+      "ScopedValue est utilisé pour gérer les ressources partagées entre les threads."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ScopedValue est effectivement une alternative à ThreadLocal pour virtual threads, ce qui la rend correcte. Elle permet également de partager des valeurs entre les threads, ce qui est aussi correct. Cependant, ScopedValue n'est pas mutable et ne peut pas être modifié à tout moment, ce qui rend cette option incorrecte. Enfin, bien que ScopedValue puisse être utilisé pour gérer les ressources partagées entre les threads, ce n'est pas son but principal."
+  },
+  {
+    "id": "OCP-SV-002",
+    "theme": "Scoped Values",
+    "theme_label": "Immutabilité",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est une caractéristique clé de ScopedValue ?",
+    "options": [
+      "Mutable",
+      "Immutable",
+      "Thread-safe",
+      "Non-thread-safe"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "ScopedValue est immutable, ce qui signifie qu'une fois qu'il a été créé, sa valeur ne peut pas être modifiée. C'est une caractéristique clé qui le distingue des autres mécanismes de partage de valeurs entre les threads."
+  },
+  {
+    "id": "OCP-SV-003",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison ThreadLocal",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales différences entre ScopedValue et ThreadLocal ?",
+    "options": [
+      "ScopedValue est basé sur les virtual threads, ThreadLocal non.",
+      "ThreadLocal permet l'immuabilité des valeurs, ScopedValue non.",
+      "ScopedValue est plus performant que ThreadLocal.",
+      "ThreadLocal ne peut pas être utilisé avec virtual threads."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ScopedValue est conçu pour fonctionner avec virtual threads, ce qui en fait une différence clé par rapport à ThreadLocal. De plus, ThreadLocal ne peut pas être utilisé avec virtual threads, ce qui est également une différence majeure. Bien que ScopedValue puisse être plus performant, cela n'est pas toujours vrai et dépend de la situation. Enfin, ThreadLocal ne garantit pas l'immuabilité des valeurs, ce qui est une caractéristique de ScopedValue."
+  },
+  {
+    "id": "OCP-SV-004",
+    "theme": "Scoped Values",
+    "theme_label": "Structure interne",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour définir une valeur dans ScopedValue ?",
+    "options": [
+      "set()",
+      "put()",
+      "bind()",
+      "assign()"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte pour définir une valeur dans ScopedValue est bind(). Cette méthode permet de lier une valeur à un ScopedValue pour une durée spécifique."
+  },
+  {
+    "id": "OCP-SV-005",
+    "theme": "Scoped Values",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les bonnes pratiques lors de l'utilisation de ScopedValue ?",
+    "options": [
+      "Utiliser bind() pour lier une valeur à un ScopedValue.",
+      "Eviter l'utilisation de ScopedValue dans des scénarios où la valeur peut changer fréquemment.",
+      "Utiliser ThreadLocal à la place de ScopedValue pour des performances optimales.",
+      "ScopedValue doit être utilisé avec des virtual threads."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "L'utilisation de bind() pour lier une valeur à un ScopedValue est une bonne pratique. Il est également recommandé d'éviter l'utilisation de ScopedValue dans des scénarios où la valeur peut changer fréquemment, car cela peut entraîner des erreurs. Utiliser ThreadLocal à la place de ScopedValue pour des performances optimales n'est pas recommandé, car ThreadLocal n'est pas conçu pour virtual threads. Enfin, ScopedValue doit être utilisé avec des virtual threads, car c'est son but principal."
+  },
+  {
+    "id": "OCP-SV-006",
+    "theme": "Scoped Values",
+    "theme_label": "Utilisation",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation de ScopedValue avec des virtual threads ?",
+    "options": [
+      "ScopedValue peut être utilisé pour partager des données entre les virtual threads",
+      "ScopedValue est plus lent que ThreadLocal",
+      "ScopedValue permet de gérer les exceptions globalement",
+      "ScopedValue ne peut pas être utilisé avec des platform threads"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ScopedValue peut être utilisé pour partager des données entre les virtual threads, ce qui est l'une de ses principales fonctionnalités. Cependant, il n'est pas nécessairement plus lent que ThreadLocal et peut être utilisé avec des platform threads. Les exceptions ne sont pas gérées globalement par ScopedValue."
+  },
+  {
+    "id": "OCP-SV-007",
+    "theme": "Scoped Values",
+    "theme_label": "Immutabilité",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale caractéristique de ScopedValue en termes d'immutabilité ?",
+    "options": [
+      "ScopedValue est mutable",
+      "ScopedValue est immuable",
+      "ScopedValue peut être modifié après sa création",
+      "ScopedValue n'a pas de concept d'immutabilité"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "ScopedValue est conçu pour être immuable, ce qui signifie qu'une fois qu'il a été défini, sa valeur ne peut pas être modifiée."
+  },
+  {
+    "id": "OCP-SV-008",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison ThreadLocal",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la différence entre ScopedValue et ThreadLocal :",
+    "options": [
+      "ScopedValue est conçu pour les virtual threads, ThreadLocal pour les platform threads",
+      "ThreadLocal permet des valeurs mutables, ScopedValue est immuable",
+      "ScopedValue offre une meilleure gestion des exceptions",
+      "ThreadLocal est plus performant que ScopedValue"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ScopedValue est spécifiquement conçu pour les virtual threads, tandis que ThreadLocal fonctionne avec les platform threads. De plus, ScopedValue est immuable, contrairement à ThreadLocal qui peut contenir des valeurs mutables. Les performances et la gestion des exceptions ne sont pas les différences principales entre ces deux outils."
+  },
+  {
+    "id": "OCP-SV-009",
+    "theme": "Scoped Values",
+    "theme_label": "Structure interne",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la structure interne principale de ScopedValue ?",
+    "options": [
+      "Une table de hachage",
+      "Un arbre binaire",
+      "Une liste chaînée",
+      "Un tableau statique"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La structure interne principale de ScopedValue est une table de hachage, ce qui permet un accès rapide aux valeurs associées à des scopes spécifiques."
+  },
+  {
+    "id": "OCP-SV-010",
+    "theme": "Scoped Values",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'impact de ScopedValue sur la performance ?",
+    "options": [
+      "ScopedValue peut améliorer les performances avec des virtual threads",
+      "ScopedValue est toujours plus lent que ThreadLocal",
+      "ScopedValue peut entraîner des fuites de mémoire",
+      "ScopedValue offre une meilleure gestion des ressources"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ScopedValue peut améliorer les performances avec des virtual threads en permettant une gestion efficace des scopes. Cependant, il n'est pas toujours plus lent que ThreadLocal et ne provoque pas nécessairement des fuites de mémoire. Sa gestion des ressources est généralement plus efficace."
+  },
+  {
+    "id": "OCP-SV-011",
+    "theme": "Scoped Values",
+    "theme_label": "Utilisation",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de ScopedValue :",
+    "options": [
+      "ScopedValue est utilisé pour stocker des valeurs dans le contexte d'un thread.",
+      "ScopedValue permet de partager des données entre threads sans utiliser ThreadLocal.",
+      "ScopedValue est immuable et peut être utilisé dans des environnements multi-threadés.",
+      "ScopedValue ne peut pas être utilisé avec virtual threads."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ScopedValue est effectivement utilisé pour stocker des valeurs dans le contexte d'un thread et permet de partager des données entre threads sans utiliser ThreadLocal. Cependant, il n'est pas immuable et peut être utilisé avec virtual threads."
+  },
+  {
+    "id": "OCP-SV-012",
+    "theme": "Scoped Values",
+    "theme_label": "Immutabilité",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale caractéristique de ScopedValue ?",
+    "options": [
+      "Mutable",
+      "Immutable",
+      "Thread-safe",
+      "Non thread-safe"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "ScopedValue est immutable, ce qui signifie que sa valeur ne peut pas être modifiée après son initialisation."
+  },
+  {
+    "id": "OCP-SV-013",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison ThreadLocal",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales différences entre ScopedValue et ThreadLocal ?",
+    "options": [
+      "ThreadLocal est mutable tandis que ScopedValue est immutable.",
+      "ScopedValue ne peut pas être utilisé avec virtual threads.",
+      "ThreadLocal permet de partager des données entre threads, mais ScopedValue ne le fait pas.",
+      "ScopedValue est plus performant que ThreadLocal."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ThreadLocal est mutable tandis que ScopedValue est immutable, et ScopedValue ne peut pas être utilisé avec virtual threads. Cependant, ThreadLocal permet de partager des données entre threads et ScopedValue le fait également."
+  },
+  {
+    "id": "OCP-SV-014",
+    "theme": "Scoped Values",
+    "theme_label": "Bonnes pratiques",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique lors de l'utilisation de ScopedValue ?",
+    "options": [
+      "Déclarer des variables ScopedValue globalement.",
+      "Utiliser ScopedValue pour toutes les données partagées entre threads.",
+      "Initialiser des variables ScopedValue à chaque utilisation.",
+      "Utiliser ThreadLocal pour les données partagées entre threads."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique lors de l'utilisation de ScopedValue est d'initialiser des variables ScopedValue à chaque utilisation pour éviter les problèmes de portée et d'immuabilité."
+  },
+  {
+    "id": "OCP-SV-015",
+    "theme": "Scoped Values",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales limites de ScopedValue en termes de performance ?",
+    "options": [
+      "Performance dégradée avec un grand nombre de threads.",
+      "ScopedValue est moins performant que ThreadLocal.",
+      "Problèmes de mémoire avec des threads virtuels.",
+      "Performance impactante lors de l'utilisation intensive."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "ScopedValue peut avoir une performance dégradée avec un grand nombre de threads et des problèmes de mémoire avec des threads virtuels. Bien que ScopedValue puisse être moins performant que ThreadLocal dans certains cas, cela n'est pas une limitation générale."
+  },
+  {
+    "id": "OCP-SV-016",
+    "theme": "Scoped Values",
+    "theme_label": "Utilisation",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de ScopedValue avec des virtual threads :",
+    "options": [
+      "ScopedValue peut être utilisé pour partager des valeurs entre les virtual threads",
+      "ScopedValue est moins performant que ThreadLocal",
+      "ScopedValue ne peut pas être utilisé avec des platform threads",
+      "ScopedValue permet de gérer les exceptions liées aux virtual threads"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ScopedValue peut être utilisé pour partager des valeurs entre les virtual threads, ce qui est une de ses principales fonctionnalités. Cependant, il n'est pas nécessairement moins performant que ThreadLocal; cela dépend de la mise en œuvre spécifique. Bien qu'il soit principalement conçu pour les virtual threads, il est possible d'utiliser ScopedValue avec des platform threads. En ce qui concerne la gestion des exceptions, ScopedValue ne gère pas spécifiquement les exceptions liées aux virtual threads."
+  },
+  {
+    "id": "OCP-SV-017",
+    "theme": "Scoped Values",
+    "theme_label": "Immutabilité",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale caractéristique de ScopedValue en termes d'immutabilité ?",
+    "options": [
+      "ScopedValue est mutable",
+      "ScopedValue est immuable",
+      "ScopedValue peut être modifié après sa création",
+      "ScopedValue n'a pas de concept d'immutabilité"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "ScopedValue est conçu pour être immuable, ce qui signifie qu'une fois qu'une valeur a été définie dans un ScopedValue, elle ne peut pas être modifiée."
+  },
+  {
+    "id": "OCP-SV-018",
+    "theme": "Scoped Values",
+    "theme_label": "Comparaison ThreadLocal",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales différences entre ScopedValue et ThreadLocal ?",
+    "options": [
+      "ThreadLocal est conçu pour les virtual threads, tandis que ScopedValue est conçu pour les platform threads",
+      "ScopedValue permet de partager des valeurs entre les virtual threads, alors que ThreadLocal ne le fait pas",
+      "ThreadLocal est immuable, tandis que ScopedValue n'est pas",
+      "ScopedValue utilise moins de mémoire que ThreadLocal"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "ThreadLocal est conçu pour les platform threads, tandis que ScopedValue est conçu pour les virtual threads. Cependant, cette affirmation est incorrecte car ThreadLocal peut également être utilisé avec des virtual threads. ScopedValue permet de partager des valeurs entre les virtual threads, ce qui n'est pas une fonctionnalité native de ThreadLocal. En outre, ThreadLocal est généralement mutable, tandis que ScopedValue est immuable. Cependant, cette affirmation est incorrecte car ThreadLocal n'est pas nécessairement moins performant que ScopedValue; cela dépend de la mise en œuvre spécifique."
   }
 ]

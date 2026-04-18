@@ -12,7 +12,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "RBAC utilise des rôles et des liaisons."
+    "explanation": "RBAC utilise des rôles et des liaisons."
   },
   {
     "id": "CKA-06-002",
@@ -27,7 +27,7 @@
       "Role est plus restrictif"
     ],
     "correct": 2,
-    "explication": "ClusterRole peut être utilisé pour des ressources non-namespace ou lié à un namespace."
+    "explanation": "ClusterRole peut être utilisé pour des ressources non-namespace ou lié à un namespace."
   },
   {
     "id": "CKA-06-003",
@@ -42,7 +42,7 @@
       "Non, utiliser RoleBinding"
     ],
     "correct": 0,
-    "explication": "ClusterRoleBinding s'applique à tout le cluster."
+    "explanation": "ClusterRoleBinding s'applique à tout le cluster."
   },
   {
     "id": "CKA-06-004",
@@ -57,7 +57,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les pods utilisent le ServiceAccount par défaut de leur namespace."
+    "explanation": "Les pods utilisent le ServiceAccount par défaut de leur namespace."
   },
   {
     "id": "CKA-06-005",
@@ -65,9 +65,14 @@
     "theme_label": "ServiceAccount",
     "difficulty": "easy",
     "question": "Quel est le ServiceAccount par défaut dans un namespace ?",
-    "options": ["default", "kubernetes", "system:default", "A seulement"],
+    "options": [
+      "default",
+      "kubernetes",
+      "system:default",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "Chaque namespace a un ServiceAccount nommé 'default'."
+    "explanation": "Chaque namespace a un ServiceAccount nommé 'default'."
   },
   {
     "id": "CKA-06-006",
@@ -82,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs sources pour créer un secret."
+    "explanation": "Plusieurs sources pour créer un secret."
   },
   {
     "id": "CKA-06-007",
@@ -97,7 +102,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Déclarer le volume secret puis le monter."
+    "explanation": "Déclarer le volume secret puis le monter."
   },
   {
     "id": "CKA-06-008",
@@ -105,9 +110,14 @@
     "theme_label": "Secrets",
     "difficulty": "easy",
     "question": "Les secrets sont-ils chiffrés par défaut dans etcd ?",
-    "options": ["Non", "Oui", "Uniquement si configuré", "Uniquement pour les secrets TLS"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement si configuré",
+      "Uniquement pour les secrets TLS"
+    ],
     "correct": 0,
-    "explication": "Par défaut, les secrets sont stockés en base64 (non chiffrés). Il faut activer le chiffrement etcd."
+    "explanation": "Par défaut, les secrets sont stockés en base64 (non chiffrés). Il faut activer le chiffrement etcd."
   },
   {
     "id": "CKA-06-009",
@@ -115,9 +125,14 @@
     "theme_label": "Network Policies",
     "difficulty": "easy",
     "question": "Quelle ressource contrôle le trafic réseau entre les pods ?",
-    "options": ["NetworkPolicy", "Ingress", "Service", "Endpoint"],
+    "options": [
+      "NetworkPolicy",
+      "Ingress",
+      "Service",
+      "Endpoint"
+    ],
     "correct": 0,
-    "explication": "NetworkPolicy définit des règles de pare-feu."
+    "explanation": "NetworkPolicy définit des règles de pare-feu."
   },
   {
     "id": "CKA-06-010",
@@ -125,9 +140,14 @@
     "theme_label": "PodSecurityPolicy (déprécié)",
     "difficulty": "easy",
     "question": "Quelle ressource a remplacé PodSecurityPolicy ?",
-    "options": ["Pod Security Admission (PSA)", "SecurityContext", "OPA Gatekeeper", "A et C"],
+    "options": [
+      "Pod Security Admission (PSA)",
+      "SecurityContext",
+      "OPA Gatekeeper",
+      "A et C"
+    ],
     "correct": 3,
-    "explication": "PSA est intégré à Kubernetes, d'autres alternatives existent."
+    "explanation": "PSA est intégré à Kubernetes, d'autres alternatives existent."
   },
   {
     "id": "CKA-06-011",
@@ -135,9 +155,14 @@
     "theme_label": "Pod Security Standards",
     "difficulty": "easy",
     "question": "Quels sont les niveaux de Pod Security Standards ?",
-    "options": ["Privileged, Baseline, Restricted", "High, Medium, Low", "Secure, Normal, Lax", "Enforce, Audit, Warn"],
+    "options": [
+      "Privileged, Baseline, Restricted",
+      "High, Medium, Low",
+      "Secure, Normal, Lax",
+      "Enforce, Audit, Warn"
+    ],
     "correct": 0,
-    "explication": "Privileged (aucune restriction), Baseline (restrictions minimales), Restricted (strict)."
+    "explanation": "Privileged (aucune restriction), Baseline (restrictions minimales), Restricted (strict)."
   },
   {
     "id": "CKA-06-012",
@@ -152,7 +177,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les labels de namespace contrôlent PSA."
+    "explanation": "Les labels de namespace contrôlent PSA."
   },
   {
     "id": "CKA-06-013",
@@ -167,7 +192,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "runAsNonRoot: true empêche l'exécution en root."
+    "explanation": "runAsNonRoot: true empêche l'exécution en root."
   },
   {
     "id": "CKA-06-014",
@@ -182,7 +207,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "allowPrivilegeEscalation: false est crucial pour la sécurité."
+    "explanation": "allowPrivilegeEscalation: false est crucial pour la sécurité."
   },
   {
     "id": "CKA-06-015",
@@ -197,7 +222,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Dropping ALL est une bonne pratique."
+    "explanation": "Dropping ALL est une bonne pratique."
   },
   {
     "id": "CKA-06-016",
@@ -212,7 +237,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les écritures doivent se faire sur des volumes montés."
+    "explanation": "Les écritures doivent se faire sur des volumes montés."
   },
   {
     "id": "CKA-06-017",
@@ -227,7 +252,7 @@
       "B seulement"
     ],
     "correct": 2,
-    "explication": "L'annotation est utilisée (beta)."
+    "explanation": "L'annotation est utilisée (beta)."
   },
   {
     "id": "CKA-06-018",
@@ -242,7 +267,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "RuntimeDefault est le profil par défaut."
+    "explanation": "RuntimeDefault est le profil par défaut."
   },
   {
     "id": "CKA-06-019",
@@ -257,7 +282,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "create secret tls est la méthode recommandée."
+    "explanation": "create secret tls est la méthode recommandée."
   },
   {
     "id": "CKA-06-020",
@@ -272,7 +297,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Créer le secret puis le référencer dans le pod."
+    "explanation": "Créer le secret puis le référencer dans le pod."
   },
   {
     "id": "CKA-06-021",
@@ -287,7 +312,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Le token est automatiquement monté si automountServiceAccountToken: true (par défaut)."
+    "explanation": "Le token est automatiquement monté si automountServiceAccountToken: true (par défaut)."
   },
   {
     "id": "CKA-06-022",
@@ -302,7 +327,7 @@
       "Proxy"
     ],
     "correct": 0,
-    "explication": "APIService permet d'ajouter des API personnalisées (ex: metrics.k8s.io)."
+    "explanation": "APIService permet d'ajouter des API personnalisées (ex: metrics.k8s.io)."
   },
   {
     "id": "CKA-06-023",
@@ -317,7 +342,7 @@
       "Seulement OIDC"
     ],
     "correct": 0,
-    "explication": "Plusieurs mécanismes peuvent être activés en même temps."
+    "explanation": "Plusieurs mécanismes peuvent être activés en même temps."
   },
   {
     "id": "CKA-06-024",
@@ -332,7 +357,7 @@
       "Webhook seulement"
     ],
     "correct": 0,
-    "explication": "RBAC est le mode par défaut et recommandé."
+    "explanation": "RBAC est le mode par défaut et recommandé."
   },
   {
     "id": "CKA-06-025",
@@ -347,7 +372,7 @@
       "Rien"
     ],
     "correct": 0,
-    "explication": "Node authorization est utilisé par le kubelet pour interagir avec l'API."
+    "explanation": "Node authorization est utilisé par le kubelet pour interagir avec l'API."
   },
   {
     "id": "CKA-06-026",
@@ -362,7 +387,7 @@
       "Remplacer RBAC"
     ],
     "correct": 2,
-    "explication": "MutatingAdmissionWebhook et ValidatingAdmissionWebhook sont courants."
+    "explanation": "MutatingAdmissionWebhook et ValidatingAdmissionWebhook sont courants."
   },
   {
     "id": "CKA-06-027",
@@ -377,7 +402,7 @@
       "Audit des logs"
     ],
     "correct": 0,
-    "explication": "Gatekeeper est un admission controller basé sur OPA."
+    "explanation": "Gatekeeper est un admission controller basé sur OPA."
   },
   {
     "id": "CKA-06-028",
@@ -392,7 +417,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les flags sont dans le manifeste de l'API server."
+    "explanation": "Les flags sont dans le manifeste de l'API server."
   },
   {
     "id": "CKA-06-029",
@@ -407,7 +432,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Définir un fichier de configuration et passer le flag à l'API server."
+    "explanation": "Définir un fichier de configuration et passer le flag à l'API server."
   },
   {
     "id": "CKA-06-030",
@@ -422,7 +447,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "L'utilisateur a ~/.kube/config, l'admin peut avoir /etc/kubernetes/admin.conf."
+    "explanation": "L'utilisateur a ~/.kube/config, l'admin peut avoir /etc/kubernetes/admin.conf."
   },
   {
     "id": "CKA-06-031",
@@ -437,7 +462,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Il faut d'abord définir le cluster et l'utilisateur."
+    "explanation": "Il faut d'abord définir le cluster et l'utilisateur."
   },
   {
     "id": "CKA-06-032",
@@ -452,7 +477,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "kubectl certificate approve est la commande."
+    "explanation": "kubectl certificate approve est la commande."
   },
   {
     "id": "CKA-06-033",
@@ -467,7 +492,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le CSR est créé manuellement puis soumis à Kubernetes."
+    "explanation": "Le CSR est créé manuellement puis soumis à Kubernetes."
   },
   {
     "id": "CKA-06-034",
@@ -482,7 +507,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le kubelet utilise un certificat client par défaut."
+    "explanation": "Le kubelet utilise un certificat client par défaut."
   },
   {
     "id": "CKA-06-035",
@@ -497,7 +522,7 @@
       "Webhook"
     ],
     "correct": 0,
-    "explication": "Le mode Node autorise le kubelet à lire ses propres ressources."
+    "explanation": "Le mode Node autorise le kubelet à lire ses propres ressources."
   },
   {
     "id": "CKA-06-036",
@@ -512,7 +537,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le kubelet surveille ce répertoire pour les static pods (API server, controller manager, etc.)."
+    "explanation": "Le kubelet surveille ce répertoire pour les static pods (API server, controller manager, etc.)."
   },
   {
     "id": "CKA-06-037",
@@ -527,7 +552,7 @@
       "Pod securityContext n'existe pas"
     ],
     "correct": 2,
-    "explication": "Le pod spec peut avoir un securityContext (ex: fsGroup)."
+    "explanation": "Le pod spec peut avoir un securityContext (ex: fsGroup)."
   },
   {
     "id": "CKA-06-038",
@@ -535,9 +560,14 @@
     "theme_label": "Windows security",
     "difficulty": "easy",
     "question": "Les Windows containers supportent-ils les securityContext ?",
-    "options": ["Partiellement", "Oui complètement", "Non", "Uniquement runAsUser"],
+    "options": [
+      "Partiellement",
+      "Oui complètement",
+      "Non",
+      "Uniquement runAsUser"
+    ],
     "correct": 0,
-    "explication": "Windows a des limitations (ex: pas de runAsNonRoot)."
+    "explanation": "Windows a des limitations (ex: pas de runAsNonRoot)."
   },
   {
     "id": "CKA-06-039",
@@ -545,9 +575,14 @@
     "theme_label": "Mutating webhook",
     "difficulty": "easy",
     "question": "Un mutating webhook peut-il modifier les ressources avant création ?",
-    "options": ["Oui", "Non", "Seulement pour les pods", "Seulement pour les services"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour les pods",
+      "Seulement pour les services"
+    ],
     "correct": 0,
-    "explication": "Les mutating webhooks peuvent ajouter des sidecars, des labels, etc."
+    "explanation": "Les mutating webhooks peuvent ajouter des sidecars, des labels, etc."
   },
   {
     "id": "CKA-06-040",
@@ -555,8 +590,271 @@
     "theme_label": "Validating webhook",
     "difficulty": "easy",
     "question": "Un validating webhook peut-il bloquer une ressource ?",
-    "options": ["Oui", "Non", "Seulement avertir", "Uniquement en audit"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement avertir",
+      "Uniquement en audit"
+    ],
     "correct": 0,
-    "explication": "Un validating webhook peut rejeter la requête."
+    "explanation": "Un validating webhook peut rejeter la requête."
+  },
+  {
+    "id": "CKA-SEC-001",
+    "theme": "Security",
+    "theme_label": "PodSecurityPolicy (déprécié)",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant PodSecurityPolicy :",
+    "options": [
+      "PodSecurityPolicy est utilisé pour définir des politiques de sécurité au niveau du pod",
+      "Il peut contrôler les capacités, le système de fichiers et l'accès réseau",
+      "Il remplace complètement les autres mécanismes de sécurité Kubernetes",
+      "PodSecurityPolicy est déprécié et remplacé par Pod Security Standards"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "PodSecurityPolicy est utilisé pour définir des politiques de sécurité au niveau du pod et peut contrôler les capacités, le système de fichiers et l'accès réseau. Il n'est pas déprécié mais plutôt complété par Pod Security Standards."
+  },
+  {
+    "id": "CKA-SEC-002",
+    "theme": "Security",
+    "theme_label": "TLS certificates",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité des certificats TLS dans Kubernetes ?",
+    "options": [
+      "Pour sécuriser les communications entre le client et le serveur Kubernetes",
+      "Pour définir des politiques de sécurité au niveau du pod",
+      "Pour contrôler les capacités, le système de fichiers et l'accès réseau",
+      "Pour authentifier les utilisateurs et les services"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les certificats TLS sont utilisés pour sécuriser les communications entre le client et le serveur Kubernetes."
+  },
+  {
+    "id": "CKA-SEC-003",
+    "theme": "Security",
+    "theme_label": "RBAC",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant RBAC :",
+    "options": [
+      "RBAC utilise des rôles et des liaisons pour contrôler l'accès aux ressources",
+      "Un Role peut être utilisé à l'échelle du cluster et d'un namespace",
+      "ClusterRoleBinding permet de lier un ClusterRole à un utilisateur ou un groupe",
+      "RBAC remplace complètement les autres mécanismes d'autorisation Kubernetes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "RBAC utilise des rôles et des liaisons pour contrôler l'accès aux ressources. Un Role peut être utilisé à l'échelle du namespace et d'un utilisateur ou d'un groupe. ClusterRoleBinding permet de lier un ClusterRole à un utilisateur ou un groupe. RBAC n'est pas remplacé mais plutôt complété par d'autres mécanismes."
+  },
+  {
+    "id": "CKA-SEC-004",
+    "theme": "Security",
+    "theme_label": "AppArmor",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité d'AppArmor dans Kubernetes ?",
+    "options": [
+      "Pour définir des politiques de sécurité au niveau du pod",
+      "Pour sécuriser les communications entre le client et le serveur Kubernetes",
+      "Pour contrôler les capacités, le système de fichiers et l'accès réseau",
+      "Pour authentifier les utilisateurs et les services"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AppArmor est utilisé pour définir des politiques de sécurité au niveau du pod."
+  },
+  {
+    "id": "CKA-SEC-005",
+    "theme": "Security",
+    "theme_label": "Audit logs",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité des journaux d'audit dans Kubernetes ?",
+    "options": [
+      "Pour enregistrer toutes les actions effectuées sur le cluster",
+      "Pour sécuriser les communications entre le client et le serveur Kubernetes",
+      "Pour contrôler les capacités, le système de fichiers et l'accès réseau",
+      "Pour authentifier les utilisateurs et les services"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les journaux d'audit enregistrent toutes les actions effectuées sur le cluster."
+  },
+  {
+    "id": "CKA-SEC-006",
+    "theme": "Security",
+    "theme_label": "Secrets",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Secrets Kubernetes :",
+    "options": [
+      "Les Secrets sont utilisés pour stocker des informations sensibles comme les mots de passe.",
+      "Les Secrets peuvent être partagés entre différents namespaces.",
+      "Les Secrets sont stockés en clair sur le disque du nœud où ils sont utilisés.",
+      "Les Secrets peuvent être encryptés en utilisant le stockage à clé froid."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les Secrets sont utilisés pour stocker des informations sensibles comme les mots de passe (A est correct). Les Secrets peuvent être partagés entre différents namespaces si le RBAC autorise cela (B est correct). Les Secrets ne sont pas stockés en clair sur le disque du nœud où ils sont utilisés (C est incorrect). Les Secrets peuvent être encryptés en utilisant le stockage à clé froid (D est correct)."
+  },
+  {
+    "id": "CKA-SEC-007",
+    "theme": "Security",
+    "theme_label": "ServiceAccount",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un ServiceAccount et un User dans Kubernetes ?",
+    "options": [
+      "Un ServiceAccount est utilisé pour les applications, tandis qu'un User est utilisé pour les utilisateurs humains.",
+      "Un ServiceAccount peut être utilisé pour des ressources namespace, tandis qu'un User est utilisé pour des ressources cluster.",
+      "Un ServiceAccount est associé à un namespace, tandis qu'un User peut être associé à plusieurs namespaces.",
+      "Un ServiceAccount est utilisé pour les utilisateurs humains, tandis qu'un User est utilisé pour les applications."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un ServiceAccount est utilisé pour les applications (A est correct). Un User peut être utilisé pour des ressources cluster, tandis qu'un ServiceAccount est utilisé pour des ressources namespace (B est incorrect). Un ServiceAccount est associé à un namespace, tandis qu'un User peut être associé à plusieurs namespaces (C est incorrect). Un ServiceAccount est utilisé pour les applications, tandis qu'un User est utilisé pour les utilisateurs humains (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-008",
+    "theme": "Security",
+    "theme_label": "SecurityContext",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le SecurityContext dans Kubernetes :",
+    "options": [
+      "Le SecurityContext peut être défini sur le niveau du pod ou du conteneur.",
+      "Le SecurityContext permet de définir les permissions des fichiers et des répertoires.",
+      "Le SecurityContext peut être utilisé pour définir les utilisateurs et groupes de l'application.",
+      "Le SecurityContext ne peut être défini que sur le niveau du pod."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le SecurityContext peut être défini sur le niveau du pod ou du conteneur (A est correct). Le SecurityContext permet de définir les permissions des fichiers et des répertoires (B est correct). Le SecurityContext peut être utilisé pour définir les utilisateurs et groupes de l'application (C est correct). Le SecurityContext ne peut être défini que sur le niveau du pod (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-009",
+    "theme": "Security",
+    "theme_label": "RBAC",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un Role et un ClusterRole dans le contexte de l'RBAC Kubernetes ?",
+    "options": [
+      "Un Role est utilisé pour les ressources namespace, tandis qu'un ClusterRole est utilisé pour les ressources cluster.",
+      "Un Role peut être utilisé pour des utilisateurs humains, tandis qu'un ClusterRole est utilisé pour les applications.",
+      "Un Role peut être partagé entre différents namespaces, tandis qu'un ClusterRole est spécifique à un namespace.",
+      "Un Role est associé à un utilisateur, tandis qu'un ClusterRole est associé à un groupe."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un Role est utilisé pour les ressources namespace, tandis qu'un ClusterRole est utilisé pour les ressources cluster (A est correct). Un Role peut être utilisé pour des utilisateurs humains, tandis qu'un ClusterRole est utilisé pour les applications (B est incorrect). Un Role peut être partagé entre différents namespaces, tandis qu'un ClusterRole est spécifique à un namespace (C est incorrect). Un Role est associé à un utilisateur, tandis qu'un ClusterRole est associé à un groupe (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-010",
+    "theme": "Security",
+    "theme_label": "Network Policies",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité des Network Policies dans Kubernetes ?",
+    "options": [
+      "Les Network Policies permettent de définir les règles d'accès réseau pour les pods.",
+      "Les Network Policies permettent de définir les politiques de sécurité des applications.",
+      "Les Network Policies permettent de gérer l'accès aux ressources du cluster.",
+      "Les Network Policies permettent de définir les politiques d'authentification."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les Network Policies permettent de définir les règles d'accès réseau pour les pods (A est correct). Les Network Policies permettent de définir les politiques de sécurité des applications (B est incorrect). Les Network Policies permettent de gérer l'accès aux ressources du cluster (C est incorrect). Les Network Policies permettent de définir les politiques d'authentification (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-011",
+    "theme": "Security",
+    "theme_label": "Capabilities",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les capabilities Kubernetes :",
+    "options": [
+      "Les capabilities permettent de définir des permissions spécifiques pour les conteneurs",
+      "Toutes les capabilities sont activées par défaut dans un conteneur Kubernetes",
+      "Les capabilities peuvent être ajoutées ou supprimées pour une meilleure sécurité",
+      "Les capabilities sont liés aux pods plutôt que aux conteneurs",
+      "A et C"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les capabilities permettent de définir des permissions spécifiques pour les conteneurs (A est correct). Toutes les capabilities ne sont pas activées par défaut (B est incorrect). Les capabilities peuvent être ajoutées ou supprimées pour une meilleure sécurité (C est correct). Les capabilities sont liés aux conteneurs, pas aux pods (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-012",
+    "theme": "Security",
+    "theme_label": "ReadOnlyRootFilesystem",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage de configurer un conteneur avec ReadOnlyRootFilesystem ?",
+    "options": [
+      "Permet de modifier les fichiers du système d'exploitation",
+      "Améliore la sécurité en empêchant les modifications des fichiers du système d'exploitation",
+      "Permet de stocker plus de données dans le conteneur",
+      "Aucun avantage"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Améliore la sécurité en empêchant les modifications des fichiers du système d'exploitation (B est correct). Permet de modifier les fichiers du système d'exploitation (A est incorrect). Permet de stocker plus de données dans le conteneur (C est incorrect). Aucun avantage (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-013",
+    "theme": "Security",
+    "theme_label": "AppArmor",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AppArmor dans Kubernetes :",
+    "options": [
+      "AppArmor est un système de contrôle d'accès basé sur les profils",
+      "Les profils AppArmor sont appliqués aux conteneurs Kubernetes",
+      "AppArmor peut être utilisé pour limiter les capacités des processus dans un conteneur",
+      "AppArmor est uniquement disponible sur les systèmes Linux",
+      "A et B"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "AppArmor est un système de contrôle d'accès basé sur les profils (A est correct). Les profils AppArmor sont appliqués aux conteneurs Kubernetes (B est correct). AppArmor peut être utilisé pour limiter les capacités des processus dans un conteneur (C est correct). AppArmor est uniquement disponible sur les systèmes Linux (D est incorrect)."
+  },
+  {
+    "id": "CKA-SEC-014",
+    "theme": "Security",
+    "theme_label": "TLS certificates",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité des certificats TLS dans Kubernetes ?",
+    "options": [
+      "Permettent de chiffrer les communications entre les composants du cluster",
+      "Permettent d'authentifier les utilisateurs et les services dans le cluster",
+      "Permettent de gérer les ressources du cluster",
+      "Permettent de sauvegarder les données du cluster"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Permettent de chiffrer les communications entre les composants du cluster (A est correct). Permettent d'authentifier les utilisateurs et les services dans le cluster (B est correct). Permettent de gérer les ressources du cluster (C est incorrect). Permettent de sauvegarder les données du cluster (D est incorrect)."
   }
 ]

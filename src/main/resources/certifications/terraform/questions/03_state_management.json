@@ -5,9 +5,14 @@
     "theme_label": "Fichier d'état",
     "difficulty": "easy",
     "question": "Quel est le nom par défaut du fichier d'état local ?",
-    "options": ["terraform.tfstate", "state.tf", "terraform.state", "tfstate.json"],
+    "options": [
+      "terraform.tfstate",
+      "state.tf",
+      "terraform.state",
+      "tfstate.json"
+    ],
     "correct": 0,
-    "explication": "terraform.tfstate est le fichier d'état par défaut."
+    "explanation": "terraform.tfstate est le fichier d'état par défaut."
   },
   {
     "id": "TF-03-002",
@@ -22,7 +27,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Terraform crée automatiquement une sauvegarde avant de modifier l'état."
+    "explanation": "Terraform crée automatiquement une sauvegarde avant de modifier l'état."
   },
   {
     "id": "TF-03-003",
@@ -37,7 +42,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les backends distants permettent le partage et la sécurisation de l'état."
+    "explanation": "Les backends distants permettent le partage et la sécurisation de l'état."
   },
   {
     "id": "TF-03-004",
@@ -52,7 +57,7 @@
       "Seulement HTTP"
     ],
     "correct": 0,
-    "explication": "De nombreux backends sont disponibles."
+    "explanation": "De nombreux backends sont disponibles."
   },
   {
     "id": "TF-03-005",
@@ -67,7 +72,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le bloc terraform avec backend."
+    "explanation": "Le bloc terraform avec backend."
   },
   {
     "id": "TF-03-006",
@@ -82,7 +87,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Par défaut, l'état est local."
+    "explanation": "Par défaut, l'état est local."
   },
   {
     "id": "TF-03-007",
@@ -97,7 +102,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "init -migrate-state copie l'état local vers le backend."
+    "explanation": "init -migrate-state copie l'état local vers le backend."
   },
   {
     "id": "TF-03-008",
@@ -105,9 +110,14 @@
     "theme_label": "État distant",
     "difficulty": "easy",
     "question": "Le verrouillage d'état (state locking) est-il supporté par S3 ?",
-    "options": ["Oui (via DynamoDB)", "Non", "Uniquement avec Terraform Cloud", "Uniquement avec GCS"],
+    "options": [
+      "Oui (via DynamoDB)",
+      "Non",
+      "Uniquement avec Terraform Cloud",
+      "Uniquement avec GCS"
+    ],
     "correct": 0,
-    "explication": "S3 nécessite une table DynamoDB pour le verrouillage."
+    "explanation": "S3 nécessite une table DynamoDB pour le verrouillage."
   },
   {
     "id": "TF-03-009",
@@ -122,7 +132,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "L'option dynamodb_table active le verrouillage."
+    "explanation": "L'option dynamodb_table active le verrouillage."
   },
   {
     "id": "TF-03-010",
@@ -137,7 +147,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Terraform attend et réessaie périodiquement."
+    "explanation": "Terraform attend et réessaie périodiquement."
   },
   {
     "id": "TF-03-011",
@@ -152,7 +162,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "state list et show (avec fichier) listent les ressources."
+    "explanation": "state list et show (avec fichier) listent les ressources."
   },
   {
     "id": "TF-03-012",
@@ -167,7 +177,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "state show affiche une ressource spécifique."
+    "explanation": "state show affiche une ressource spécifique."
   },
   {
     "id": "TF-03-013",
@@ -182,7 +192,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "state rm retire la ressource de l'état."
+    "explanation": "state rm retire la ressource de l'état."
   },
   {
     "id": "TF-03-014",
@@ -197,7 +207,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "state mv déplace/renomme une ressource."
+    "explanation": "state mv déplace/renomme une ressource."
   },
   {
     "id": "TF-03-015",
@@ -212,7 +222,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "terraform import <ressource> <id>."
+    "explanation": "terraform import <ressource> <id>."
   },
   {
     "id": "TF-03-016",
@@ -227,7 +237,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "refresh synchronise l'état sans modifier l'infrastructure."
+    "explanation": "refresh synchronise l'état sans modifier l'infrastructure."
   },
   {
     "id": "TF-03-017",
@@ -242,7 +252,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "show -json produit un JSON complet."
+    "explanation": "show -json produit un JSON complet."
   },
   {
     "id": "TF-03-018",
@@ -257,7 +267,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "sensitive = true masque la valeur dans les logs."
+    "explanation": "sensitive = true masque la valeur dans les logs."
   },
   {
     "id": "TF-03-019",
@@ -265,9 +275,14 @@
     "theme_label": "État sensible",
     "difficulty": "easy",
     "question": "Les valeurs sensibles sont-elles stockées en clair dans le fichier d'état ?",
-    "options": ["Oui", "Non (chiffrées)", "Seulement si backend distant", "A seulement"],
+    "options": [
+      "Oui",
+      "Non (chiffrées)",
+      "Seulement si backend distant",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "Le fichier d'état contient les valeurs en clair, donc il faut le sécuriser."
+    "explanation": "Le fichier d'état contient les valeurs en clair, donc il faut le sécuriser."
   },
   {
     "id": "TF-03-020",
@@ -282,7 +297,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "L'état local n'est pas chiffré, il faut passer à un backend distant chiffré."
+    "explanation": "L'état local n'est pas chiffré, il faut passer à un backend distant chiffré."
   },
   {
     "id": "TF-03-021",
@@ -290,9 +305,14 @@
     "theme_label": "État et workspaces",
     "difficulty": "easy",
     "question": "Chaque workspace a-t-il son propre fichier d'état ?",
-    "options": ["Oui", "Non", "Uniquement pour les backends distants", "Uniquement pour les backends locaux"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les backends distants",
+      "Uniquement pour les backends locaux"
+    ],
     "correct": 0,
-    "explication": "Chaque workspace a son propre fichier d'état (terraform.tfstate.d/<workspace>)."
+    "explanation": "Chaque workspace a son propre fichier d'état (terraform.tfstate.d/<workspace>)."
   },
   {
     "id": "TF-03-022",
@@ -307,7 +327,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "show affiche l'état du workspace actif."
+    "explanation": "show affiche l'état du workspace actif."
   },
   {
     "id": "TF-03-023",
@@ -322,7 +342,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Il faut basculer sur chaque workspace."
+    "explanation": "Il faut basculer sur chaque workspace."
   },
   {
     "id": "TF-03-024",
@@ -330,9 +350,14 @@
     "theme_label": "État et modules",
     "difficulty": "easy",
     "question": "L'état d'un module est-il inclus dans l'état racine ?",
-    "options": ["Oui", "Non", "Uniquement pour les modules locaux", "Uniquement pour les modules du registry"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les modules locaux",
+      "Uniquement pour les modules du registry"
+    ],
     "correct": 0,
-    "explication": "L'état est unifié : toutes les ressources, y compris celles des modules."
+    "explanation": "L'état est unifié : toutes les ressources, y compris celles des modules."
   },
   {
     "id": "TF-03-025",
@@ -347,7 +372,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "La ressource est préfixée par module.nom."
+    "explanation": "La ressource est préfixée par module.nom."
   },
   {
     "id": "TF-03-026",
@@ -362,7 +387,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le chemin de la ressource inclut le module."
+    "explanation": "Le chemin de la ressource inclut le module."
   },
   {
     "id": "TF-03-027",
@@ -377,7 +402,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "state mv peut déplacer des modules."
+    "explanation": "state mv peut déplacer des modules."
   },
   {
     "id": "TF-03-028",
@@ -392,7 +417,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le backend 'remote' est spécifique à Terraform Cloud."
+    "explanation": "Le backend 'remote' est spécifique à Terraform Cloud."
   },
   {
     "id": "TF-03-029",
@@ -400,9 +425,14 @@
     "theme_label": "État distant avancé",
     "difficulty": "easy",
     "question": "Quel backend supporte les workspaces natifs ?",
-    "options": ["remote", "s3", "gcs", "azure"],
+    "options": [
+      "remote",
+      "s3",
+      "gcs",
+      "azure"
+    ],
     "correct": 0,
-    "explication": "Le backend remote est intégré à Terraform Cloud/Enterprise."
+    "explanation": "Le backend remote est intégré à Terraform Cloud/Enterprise."
   },
   {
     "id": "TF-03-030",
@@ -417,7 +447,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "La configuration nécessite l'organisation et le workspace."
+    "explanation": "La configuration nécessite l'organisation et le workspace."
   },
   {
     "id": "TF-03-031",
@@ -425,9 +455,14 @@
     "theme_label": "État distant avancé",
     "difficulty": "easy",
     "question": "Le backend 'remote' supporte-t-il le verrouillage ?",
-    "options": ["Oui", "Non", "Uniquement avec Terraform Enterprise", "Uniquement avec Terraform Cloud"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec Terraform Enterprise",
+      "Uniquement avec Terraform Cloud"
+    ],
     "correct": 0,
-    "explication": "Le verrouillage est intégré."
+    "explanation": "Le verrouillage est intégré."
   },
   {
     "id": "TF-03-032",
@@ -435,9 +470,14 @@
     "theme_label": "État distant avancé",
     "difficulty": "easy",
     "question": "Peut-on utiliser le backend 'remote' sans Terraform Cloud ?",
-    "options": ["Non", "Oui, avec Terraform Enterprise", "Oui, avec un serveur HTTP", "A et B"],
+    "options": [
+      "Non",
+      "Oui, avec Terraform Enterprise",
+      "Oui, avec un serveur HTTP",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "Remote nécessite TFC ou TFE."
+    "explanation": "Remote nécessite TFC ou TFE."
   },
   {
     "id": "TF-03-033",
@@ -452,7 +492,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "L'état doit être partagé entre les exécutions, donc backend distant."
+    "explanation": "L'état doit être partagé entre les exécutions, donc backend distant."
   },
   {
     "id": "TF-03-034",
@@ -467,7 +507,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Verrouillage et sérialisation."
+    "explanation": "Verrouillage et sérialisation."
   },
   {
     "id": "TF-03-035",
@@ -475,9 +515,14 @@
     "theme_label": "État et CI/CD",
     "difficulty": "easy",
     "question": "Quelle variable d'environnement permet de passer des variables à Terraform ?",
-    "options": ["TF_VAR_name", "TF_VAR_name", "VAR_name", "A et B"],
+    "options": [
+      "TF_VAR_name",
+      "TF_VAR_name",
+      "VAR_name",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "TF_VAR_<nom> définit une variable."
+    "explanation": "TF_VAR_<nom> définit une variable."
   },
   {
     "id": "TF-03-036",
@@ -492,7 +537,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "L'option -state est disponible sur plusieurs commandes."
+    "explanation": "L'option -state est disponible sur plusieurs commandes."
   },
   {
     "id": "TF-03-037",
@@ -507,7 +552,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Sélectionner ou créer le workspace avant apply."
+    "explanation": "Sélectionner ou créer le workspace avant apply."
   },
   {
     "id": "TF-03-038",
@@ -522,7 +567,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "L'option -detailed-exitcode retourne 2 si des changements sont nécessaires."
+    "explanation": "L'option -detailed-exitcode retourne 2 si des changements sont nécessaires."
   },
   {
     "id": "TF-03-039",
@@ -537,7 +582,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Utile pour l'automatisation."
+    "explanation": "Utile pour l'automatisation."
   },
   {
     "id": "TF-03-040",
@@ -552,7 +597,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "La valeur doit être une chaîne JSON."
+    "explanation": "La valeur doit être une chaîne JSON."
   },
   {
     "id": "TF-03-041",
@@ -567,7 +612,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "-var-file est l'option."
+    "explanation": "-var-file est l'option."
   },
   {
     "id": "TF-03-042",
@@ -582,7 +627,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "L'action setup-terraform installe Terraform."
+    "explanation": "L'action setup-terraform installe Terraform."
   },
   {
     "id": "TF-03-043",
@@ -597,7 +642,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le backend HTTP permet de stocker l'état via une API."
+    "explanation": "Le backend HTTP permet de stocker l'état via une API."
   },
   {
     "id": "TF-03-044",
@@ -612,7 +657,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "address et update_method sont requis."
+    "explanation": "address et update_method sont requis."
   },
   {
     "id": "TF-03-045",
@@ -620,9 +665,14 @@
     "theme_label": "État et CI/CD",
     "difficulty": "easy",
     "question": "Le backend HTTP supporte-t-il le verrouillage ?",
-    "options": ["Oui (via lock_address)", "Non", "Uniquement avec Terraform Enterprise", "Uniquement avec Terraform Cloud"],
+    "options": [
+      "Oui (via lock_address)",
+      "Non",
+      "Uniquement avec Terraform Enterprise",
+      "Uniquement avec Terraform Cloud"
+    ],
     "correct": 0,
-    "explication": "lock_address et unlock_address sont optionnels."
+    "explanation": "lock_address et unlock_address sont optionnels."
   },
   {
     "id": "TF-03-046",
@@ -637,7 +687,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Il est déconseillé de versionner l'état dans Git."
+    "explanation": "Il est déconseillé de versionner l'état dans Git."
   },
   {
     "id": "TF-03-047",
@@ -652,7 +702,7 @@
       "A seulement"
     ],
     "correct": 1,
-    "explication": "Un backend distant est la solution recommandée."
+    "explanation": "Un backend distant est la solution recommandée."
   },
   {
     "id": "TF-03-048",
@@ -667,7 +717,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le bucket doit être privé et chiffré."
+    "explanation": "Le bucket doit être privé et chiffré."
   },
   {
     "id": "TF-03-049",
@@ -682,7 +732,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le verrouillage est essentiel pour éviter la corruption."
+    "explanation": "Le verrouillage est essentiel pour éviter la corruption."
   },
   {
     "id": "TF-03-050",
@@ -697,6 +747,343 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "force-unlock déverrouille manuellement (danger)."
+    "explanation": "force-unlock déverrouille manuellement (danger)."
+  },
+  {
+    "id": "TF-SM-001",
+    "theme": "State Management",
+    "theme_label": "État distant",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'état distant :",
+    "options": [
+      "L'état distant est stocké localement sur le système d'exploitation.",
+      "L'état distant peut être utilisé pour partager l'état entre plusieurs utilisateurs.",
+      "Terraform utilise un backend pour stocker l'état distant.",
+      "L'état distant peut être configuré via le fichier de configuration Terraform."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'état distant peut être utilisé pour partager l'état entre plusieurs utilisateurs (correct). Terraform utilise un backend pour stocker l'état distant (correct). L'état distant n'est pas stocké localement sur le système d'exploitation (incorrect). L'état distant peut être configuré via le fichier de configuration Terraform (correct)."
+  },
+  {
+    "id": "TF-SM-002",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Terraform permet de déplacer les ressources entre différents états ?",
+    "options": [
+      "terraform state mv",
+      "terraform state rm",
+      "terraform state pull",
+      "terraform state push"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "terraform state mv est la commande correcte pour déplacer les ressources entre différents états."
+  },
+  {
+    "id": "TF-SM-003",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'état distant avancé :",
+    "options": [
+      "L'état distant avancé nécessite une configuration spécifique dans le fichier de configuration Terraform.",
+      "Terraform ne prend pas en charge l'état distant avancé pour les backends locaux.",
+      "L'état distant avancé permet de stocker l'état dans un système de gestion de base de données.",
+      "L'état distant avancé peut être utilisé pour des environnements cloud."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "L'état distant avancé nécessite une configuration spécifique dans le fichier de configuration Terraform (correct). Terraform prend en charge l'état distant avancé pour les backends locaux (incorrect). L'état distant avancé permet de stocker l'état dans un système de gestion de base de données (correct). L'état distant avancé peut être utilisé pour des environnements cloud (correct)."
+  },
+  {
+    "id": "TF-SM-004",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'impact de la modification d'un état dans un module sur le reste du projet Terraform ?",
+    "options": [
+      "La modification d'un état dans un module n'affecte pas le reste du projet.",
+      "La modification d'un état dans un module affecte uniquement les ressources du même module.",
+      "La modification d'un état dans un module affecte toutes les ressources du projet.",
+      "La modification d'un état dans un module nécessite une réinitialisation complète du projet."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La modification d'un état dans un module affecte toutes les ressources du projet."
+  },
+  {
+    "id": "TF-SM-005",
+    "theme": "State Management",
+    "theme_label": "État sensible",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande Terraform utilisée pour gérer les états sensibles ?",
+    "options": [
+      "terraform state rm",
+      "terraform state mv",
+      "terraform state list",
+      "terraform state show"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "terraform state rm est la commande correcte pour gérer les états sensibles."
+  },
+  {
+    "id": "TF-SM-006",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de l'état distant avec Terraform :",
+    "options": [
+      "L'état distant peut être utilisé pour stocker l'état de plusieurs environnements Terraform.",
+      "L'état distant nécessite une authentification pour accéder à l'API de stockage.",
+      "L'état distant peut être configuré pour utiliser différents types de backends (ex: S3, Consul).",
+      "L'état distant ne peut être utilisé qu'avec des modules Terraform spécifiques.",
+      "L'état distant est automatiquement synchronisé entre les exécutions Terraform."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'état distant peut effectivement être utilisé pour plusieurs environnements. Il nécessite une authentification pour accéder à l'API de stockage. Différents backends sont supportés. Il n'est pas spécifique aux modules Terraform et l'état distant est généralement synchronisé entre les exécutions."
+  },
+  {
+    "id": "TF-SM-007",
+    "theme": "State Management",
+    "theme_label": "État et CI/CD",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur de stocker l'état Terraform dans un système CI/CD ?",
+    "options": [
+      "Permet de gérer facilement les modifications d'état entre différents environnements.",
+      "Améliore la sécurité en centralisant l'accès à l'état.",
+      "Permet d'automatiser la création et la mise à jour des infrastructures.",
+      "Aide à la gestion des versions de l'état."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Permet de gérer facilement les modifications d'état entre différents environnements."
+  },
+  {
+    "id": "TF-SM-008",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la manipulation de l'état Terraform :",
+    "options": [
+      "Il est possible d'utiliser le sous-commande 'terraform state rm' pour supprimer des ressources spécifiques de l'état.",
+      "L'état peut être importé à partir d'un fichier JSON existant en utilisant 'terraform state import'.",
+      "La commande 'terraform state mv' permet de déplacer des ressources entre différents états.",
+      "Il est impossible de modifier directement l'état JSON sans risque d'erreurs.",
+      "L'état peut être exporté en utilisant le sous-commande 'terraform state pull'."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Il est possible de supprimer des ressources spécifiques. L'état peut être importé à partir d'un fichier JSON existant. La commande 'terraform state mv' permet de déplacer des ressources entre états. Il est possible de modifier l'état JSON mais avec précaution. L'état peut effectivement être exporté."
+  },
+  {
+    "id": "TF-SM-009",
+    "theme": "State Management",
+    "theme_label": "État sensible",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour gérer les états sensibles dans Terraform ?",
+    "options": [
+      "Stocker l'état sensible directement dans le fichier terraform.tfstate.",
+      "Utiliser des variables d'environnement pour stocker les états sensibles.",
+      "Stocker l'état sensible dans un fichier texte séparé et le lier à l'état principal.",
+      "Ignorer les états sensibles dans le contrôle de version."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Utiliser des variables d'environnement pour stocker les états sensibles est la meilleure pratique."
+  },
+  {
+    "id": "TF-SM-010",
+    "theme": "State Management",
+    "theme_label": "État et workspaces",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre les états Terraform et les workspaces ?",
+    "options": [
+      "Les états sont utilisés pour stocker l'état de l'infrastructure, tandis que les workspaces permettent d'avoir plusieurs configurations distinctes de l'infrastructure.",
+      "Les états et les workspaces sont interchangeables et servent à la même chose.",
+      "Les états permettent de gérer les versions de l'infrastructure, tandis que les workspaces sont utilisés pour isoler des environnements de développement et de production.",
+      "Les états sont utilisés pour gérer les permissions d'accès, tandis que les workspaces permettent de stocker l'état de l'infrastructure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les états sont utilisés pour stocker l'état de l'infrastructure, tandis que les workspaces permettent d'avoir plusieurs configurations distinctes de l'infrastructure."
+  },
+  {
+    "id": "TF-SM-011",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion de l'état distant avec Terraform :",
+    "options": [
+      "L'état distant peut être stocké dans un backend S3.",
+      "Il est possible de partager l'état distant entre plusieurs utilisateurs.",
+      "L'état distant ne peut être utilisé que pour des infrastructures publiques.",
+      "La mise à jour de l'état distant est instantanée et synchrone."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'état distant peut effectivement être stocké dans un backend S3 (A). Il est possible de partager l'état distant entre plusieurs utilisateurs (B). L'état distant peut être utilisé pour des infrastructures privées et publiques (C est incorrect). La mise à jour de l'état distant peut être asynchrone selon le backend utilisé (D est incorrect)."
+  },
+  {
+    "id": "TF-SM-012",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Terraform permet de déplacer une ressource d'un état à un autre ?",
+    "options": [
+      "terraform state mv",
+      "terraform state import",
+      "terraform state rm",
+      "terraform state list"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande terraform state mv permet de déplacer une ressource d'un état à un autre (A est correct). terraform state import est utilisé pour importer une ressource existante dans l'état Terraform (B est incorrect). terraform state rm permet de supprimer une ressource de l'état Terraform (C est incorrect). terraform state list permet de lister les ressources dans l'état Terraform (D est incorrect)."
+  },
+  {
+    "id": "TF-SM-013",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'état et les modules en Terraform :",
+    "options": [
+      "Les états des modules sont stockés séparément de l'état principal.",
+      "Il est possible d'utiliser le même état pour plusieurs modules.",
+      "Les états des modules ne peuvent être partagés que via le backend S3.",
+      "La mise à jour de l'état d'un module affecte automatiquement l'état principal."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les états des modules sont effectivement stockés séparément de l'état principal (A). Il est possible d'utiliser le même état pour plusieurs modules (B). Les états des modules peuvent être partagés via différents backends, pas seulement S3 (C est incorrect). La mise à jour de l'état d'un module n'affecte pas automatiquement l'état principal (D est incorrect)."
+  },
+  {
+    "id": "TF-SM-014",
+    "theme": "State Management",
+    "theme_label": "État sensible",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour gérer les données sensibles dans l'état Terraform ?",
+    "options": [
+      "Stocker les données sensibles directement dans l'état.",
+      "Utiliser des variables d'environnement pour stocker les données sensibles.",
+      "Chiffrer l'état Terraform avant de le stocker.",
+      "Utiliser des fichiers YAML pour stocker les données sensibles."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique pour gérer les données sensibles dans l'état Terraform est de chiffrer l'état avant de le stocker (C). Utiliser des variables d'environnement est également une bonne pratique (B). Stocker les données sensibles directement dans l'état ou utiliser des fichiers YAML n'est pas sécurisé (A et D sont incorrects)."
+  },
+  {
+    "id": "TF-SM-015",
+    "theme": "State Management",
+    "theme_label": "État et workspaces",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des workspaces en Terraform :",
+    "options": [
+      "Les workspaces permettent de gérer des infrastructures différentes dans le même état.",
+      "Il est possible d'utiliser les mêmes noms de ressources dans différents workspaces.",
+      "Les workspaces ne peuvent être utilisés que pour des infrastructures privées.",
+      "La mise à jour d'un workspace affecte automatiquement les autres workspaces."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les workspaces permettent effectivement de gérer des infrastructures différentes dans le même état (A). Il est possible d'utiliser les mêmes noms de ressources dans différents workspaces (B). Les workspaces peuvent être utilisés pour des infrastructures privées et publiques (C est incorrect). La mise à jour d'un workspace n'affecte pas automatiquement les autres workspaces (D est incorrect)."
+  },
+  {
+    "id": "TF-SM-016",
+    "theme": "State Management",
+    "theme_label": "État distant avancé",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration de l'état distant avec Terraform :",
+    "options": [
+      "L'état distant peut être configuré à l'aide du backend 'local'.",
+      "Pour utiliser un backend S3, il faut spécifier le nom du bucket et la région.",
+      "L'état distant peut être protégé en utilisant des politiques d'accès AWS.",
+      "Le backend 'consul' nécessite une installation et une configuration supplémentaires."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'état distant peut être configuré avec des backends tels que S3, Consul ou Azure. L'utilisation du backend 'local' est déconseillée pour des environnements de production. L'état distant peut effectivement être protégé avec des politiques d'accès AWS, tandis que le backend 'consul' nécessite une configuration supplémentaire."
+  },
+  {
+    "id": "TF-SM-017",
+    "theme": "State Management",
+    "theme_label": "Manipulation d'état",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Terraform est utilisée pour déplacer des ressources entre différents états ?",
+    "options": [
+      "terraform state mv",
+      "terraform state import",
+      "terraform state rm",
+      "terraform state list"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande 'terraform state mv' permet de déplacer des ressources entre différents états."
+  },
+  {
+    "id": "TF-SM-018",
+    "theme": "State Management",
+    "theme_label": "État et modules",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion de l'état avec des modules Terraform :",
+    "options": [
+      "Les états des modules sont stockés séparément de l'état global.",
+      "Il est possible d'utiliser des états locaux au sein de modules.",
+      "Les états des modules peuvent être partagés entre différents environnements.",
+      "La gestion de l'état des modules nécessite une configuration spécifique."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les états des modules sont généralement stockés séparément de l'état global, mais il est possible d'utiliser des états locaux au sein de modules. Les états des modules peuvent effectivement être partagés entre différents environnements, ce qui nécessite une configuration spécifique. La gestion de l'état des modules peut être simplifiée en utilisant des états locaux et en configurant les backends appropriés."
   }
 ]

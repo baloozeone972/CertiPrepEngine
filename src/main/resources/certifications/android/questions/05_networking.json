@@ -20,7 +20,12 @@
     "theme_label": "Retrofit",
     "difficulty": "easy",
     "question": "Quelle annotation pour une requête GET ?",
-    "options": ["@GET", "@HTTP", "@Request", "@Fetch"],
+    "options": [
+      "@GET",
+      "@HTTP",
+      "@Request",
+      "@Fetch"
+    ],
     "correct": 0,
     "explanation": "@GET définit une requête HTTP GET."
   },
@@ -30,7 +35,12 @@
     "theme_label": "Retrofit",
     "difficulty": "easy",
     "question": "Quelle annotation pour une requête POST ?",
-    "options": ["@POST", "@PUT", "@PATCH", "@DELETE"],
+    "options": [
+      "@POST",
+      "@PUT",
+      "@PATCH",
+      "@DELETE"
+    ],
     "correct": 0,
     "explanation": "@POST définit une requête HTTP POST."
   },
@@ -40,7 +50,12 @@
     "theme_label": "Retrofit",
     "difficulty": "easy",
     "question": "Quelle annotation pour le corps de la requête ?",
-    "options": ["@Body", "@Field", "@Query", "@Part"],
+    "options": [
+      "@Body",
+      "@Field",
+      "@Query",
+      "@Part"
+    ],
     "correct": 0,
     "explanation": "@Body envoie un objet dans le corps de la requête."
   },
@@ -50,7 +65,12 @@
     "theme_label": "Retrofit",
     "difficulty": "easy",
     "question": "Quelle annotation pour un paramètre d'URL ?",
-    "options": ["@Path", "@Query", "@Field", "@Body"],
+    "options": [
+      "@Path",
+      "@Query",
+      "@Field",
+      "@Body"
+    ],
     "correct": 0,
     "explanation": "@Path remplace une variable dans l'URL."
   },
@@ -60,7 +80,12 @@
     "theme_label": "Retrofit",
     "difficulty": "easy",
     "question": "Quelle annotation pour un paramètre de requête ?",
-    "options": ["@Query", "@Path", "@Field", "@Body"],
+    "options": [
+      "@Query",
+      "@Path",
+      "@Field",
+      "@Body"
+    ],
     "correct": 0,
     "explanation": "@Query ajoute un paramètre ?key=value."
   },
@@ -205,7 +230,12 @@
     "theme_label": "Kotlin Serialization",
     "difficulty": "hard",
     "question": "Quelle annotation pour la sérialisation Kotlin ?",
-    "options": ["@Serializable", "@Serialize", "@JsonSerializable", "@KSerializable"],
+    "options": [
+      "@Serializable",
+      "@Serialize",
+      "@JsonSerializable",
+      "@KSerializable"
+    ],
     "correct": 0,
     "explanation": "@Serializable de kotlinx.serialization."
   },
@@ -718,5 +748,288 @@
     ],
     "correct": 3,
     "explanation": "Cache via OkHttpClient.Builder()."
+  },
+  {
+    "id": "AND-NET-051",
+    "theme": "Networking",
+    "theme_label": "Certificate pinning",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Certificate Pinning :",
+    "options": [
+      "Il s'agit d'une méthode de sécurité pour vérifier l'identité du serveur.",
+      "Il permet de protéger contre les attaques man-in-the-middle.",
+      "Il est utilisé pour vérifier l'identité du client.",
+      "Il n'est pas recommandé dans les applications mobiles."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car Certificate Pinning est une méthode de sécurité utilisée pour vérifier l'identité du serveur. Option B est correcte car il protège contre les attaques man-in-the-middle en vérifiant que la réponse provient du serveur attendu. Option C est incorrecte car Certificate Pinning n'est pas utilisé pour vérifier l'identité du client. Option D est incorrecte car Certificate Pinning est recommandé dans les applications mobiles pour améliorer la sécurité."
+  },
+  {
+    "id": "AND-NET-052",
+    "theme": "Networking",
+    "theme_label": "Volley vs Retrofit",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Volley et Retrofit ?",
+    "options": [
+      "Volley utilise des callbacks, tandis que Retrofit utilise des interfaces.",
+      "Retrofit est plus facile à utiliser pour les requêtes complexes.",
+      "Volley prend en charge la gestion des images, tandis que Retrofit ne le fait pas.",
+      "Retrofit est plus performant que Volley."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Option B est correcte car Retrofit est généralement considéré comme plus facile à utiliser pour les requêtes complexes en raison de sa conception basée sur des interfaces. Option A est incorrecte car Volley utilise également des callbacks, mais avec une approche légèrement différente. Option C est incorrecte car Volley prend en charge la gestion des images, mais ce n'est pas une différence clé entre les deux. Option D est incorrecte car la performance peut varier selon le contexte et les configurations utilisées."
+  },
+  {
+    "id": "AND-NET-053",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Retrofit :",
+    "options": [
+      "Retrofit est un client HTTP typé pour Android.",
+      "Retrofit prend en charge uniquement les requêtes GET.",
+      "Retrofit permet la sérialisation et la désérialisation des objets JSON.",
+      "Retrofit ne supporte pas les requêtes asynchrones."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Retrofit est effectivement un client HTTP typé pour Android, ce qui fait de l'option A correcte. L'option B est incorrecte car Retrofit prend en charge plusieurs types de requêtes HTTP, pas seulement GET. L'option C est correcte car Retrofit utilise des convertisseurs pour sérialiser et désérialiser les objets JSON. L'option D est incorrecte car Retrofit supporte les requêtes asynchrones, ce qui permet une communication non bloquante avec le serveur."
+  },
+  {
+    "id": "AND-NET-054",
+    "theme": "Networking",
+    "theme_label": "OkHttp",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction d'OkHttp ?",
+    "options": [
+      "Gérer les requêtes réseau HTTP.",
+      "Sérialiser et désérialiser des objets JSON.",
+      "Gérer les images en cache.",
+      "Authentifier les utilisateurs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "OkHttp est principalement utilisé pour gérer les requêtes réseau HTTP, ce qui rend l'option A la réponse correcte. Les autres options ne sont pas spécifiques à OkHttp : la sérialisation et désérialisation des objets JSON est généralement gérée par d'autres bibliothèques, le cache des images est géré par des bibliothèques comme Glide ou Coil, et l'authentification des utilisateurs est généralement gérée par des bibliothèques d'authentification."
+  },
+  {
+    "id": "AND-NET-055",
+    "theme": "Networking",
+    "theme_label": "Moshi",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant Moshi :",
+    "options": [
+      "Moshi est une bibliothèque de sérialisation/désérialisation JSON.",
+      "Moshi prend en charge la conversion des objets Java en JSON et vice versa.",
+      "Moshi ne supporte pas les annotations Kotlin.",
+      "Moshi est intégré par défaut dans Retrofit."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Moshi est effectivement une bibliothèque de sérialisation/désérialisation JSON, ce qui fait de l'option A correcte. L'option B est également correcte car Moshi permet la conversion des objets Java en JSON et vice versa. L'option C est incorrecte car Moshi supporte les annotations Kotlin, ce qui facilite la conversion des objets en JSON. L'option D est incorrecte car Moshi n'est pas intégré par défaut dans Retrofit, mais il peut être utilisé avec Retrofit pour la sérialisation/désérialisation des données."
+  },
+  {
+    "id": "AND-NET-056",
+    "theme": "Networking",
+    "theme_label": "Certificate pinning",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale raison de l'utilisation du pinning des certificats ?",
+    "options": [
+      "Pour améliorer la performance des requêtes réseau.",
+      "Pour protéger contre les attaques de type man-in-the-middle (MITM).",
+      "Pour gérer l'authentification des utilisateurs.",
+      "Pour réduire la taille du cache."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Le pinning des certificats est principalement utilisé pour protéger contre les attaques de type man-in-the-middle (MITM), ce qui rend l'option B la réponse correcte. Les autres options ne sont pas liées au pinning des certificats : l'amélioration de la performance et la gestion de l'authentification des utilisateurs sont généralement gérées par d'autres mécanismes, et la réduction de la taille du cache est liée à l'optimisation des performances du réseau, pas au pinning des certificats."
+  },
+  {
+    "id": "AND-NET-057",
+    "theme": "Networking",
+    "theme_label": "Chucker/Stetho",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Chucker et Stetho :",
+    "options": [
+      "Chucker est un outil de débogage pour les requêtes réseau.",
+      "Stetho permet d'inspecter les requêtes réseau dans l'application.",
+      "Chucker et Stetho sont des bibliothèques de sérialisation/désérialisation JSON.",
+      "Chucker et Stetho sont intégrés par défaut dans Android Studio."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Chucker est effectivement un outil de débogage pour les requêtes réseau, ce qui fait de l'option A correcte. Stetho permet également d'inspecter les requêtes réseau dans l'application, ce qui rend l'option B correcte. Les autres options ne sont pas spécifiques à Chucker et Stetho : la sérialisation et désérialisation des objets JSON est généralement gérée par d'autres bibliothèques, et Chucker et Stetho ne sont pas intégrés par défaut dans Android Studio."
+  },
+  {
+    "id": "AND-NET-058",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Retrofit :",
+    "options": [
+      "Retrofit est un client HTTP pour API REST.",
+      "Retrofit prend en charge uniquement les requêtes GET.",
+      "Retrofit permet de définir des annotations personnalisées pour les requêtes.",
+      "Retrofit ne supporte pas la sérialisation automatique des objets."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Retrofit est effectivement un client HTTP pour API REST, ce qui fait de l'option A correcte. L'option B est incorrecte car Retrofit prend en charge plusieurs types de requêtes HTTP, pas seulement GET. L'option C est correcte car Retrofit permet de définir des annotations personnalisées pour les requêtes. L'option D est incorrecte car Retrofit supporte la sérialisation automatique des objets grâce à des bibliothèques comme Moshi ou Gson."
+  },
+  {
+    "id": "AND-NET-059",
+    "theme": "Networking",
+    "theme_label": "OkHttp",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction d'OkHttp ?",
+    "options": [
+      "Gérer les requêtes réseau HTTP.",
+      "Sérialiser des objets en JSON.",
+      "Gérer les images dans une application Android.",
+      "Fournir un cache pour les images."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "OkHttp est principalement conçu pour gérer les requêtes réseau HTTP, ce qui fait de l'option A correcte. Les autres options ne sont pas les principales fonctions d'OkHttp."
+  },
+  {
+    "id": "AND-NET-060",
+    "theme": "Networking",
+    "theme_label": "Kotlin Serialization",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales caractéristiques de Kotlin Serialization :",
+    "options": [
+      "Supporte la sérialisation et la désérialisation automatiques.",
+      "Compatible avec tous les formats de données (XML, JSON, etc.).",
+      "Fournit des annotations pour la configuration personnalisée.",
+      "Nécessite l'utilisation de bibliothèques tierces pour les formats spécifiques."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Kotlin Serialization supporte effectivement la sérialisation et la désérialisation automatiques, ce qui fait de l'option A correcte. L'option B est incorrecte car Kotlin Serialization ne prend en charge que JSON par défaut, sans être compatible avec tous les formats de données. L'option C est correcte car Kotlin Serialization fournit des annotations pour la configuration personnalisée. L'option D est incorrecte car Kotlin Serialization ne nécessite pas l'utilisation de bibliothèques tierces pour les formats spécifiques."
+  },
+  {
+    "id": "AND-NET-061",
+    "theme": "Networking",
+    "theme_label": "Certificate Pinning",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité du Certificate Pinning dans une application Android ?",
+    "options": [
+      "Permettre la communication sécurisée avec un serveur en vérifiant le certificat.",
+      "Gérer les mises à jour des images dans l'application.",
+      "Optimiser le chargement des données réseau.",
+      "Crypter les données stockées localement."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le Certificate Pinning permet de sécuriser la communication avec un serveur en vérifiant le certificat, ce qui fait de l'option A correcte. Les autres options ne sont pas directement liées au Certificate Pinning."
+  },
+  {
+    "id": "AND-NET-062",
+    "theme": "Networking",
+    "theme_label": "Chucker",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales fonctions de Chucker :",
+    "options": [
+      "Capturer et afficher les requêtes réseau.",
+      "Gérer le stockage local des données de l'utilisateur.",
+      "Optimiser les images dans l'application.",
+      "Analyser les performances de l'application."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Chucker est principalement conçu pour capturer et afficher les requêtes réseau, ce qui fait de l'option A correcte. L'option B est également correcte car Chucker peut être utilisé pour gérer le stockage local des données de l'utilisateur. Les autres options ne sont pas les principales fonctions de Chucker."
+  },
+  {
+    "id": "AND-NET-063",
+    "theme": "Networking",
+    "theme_label": "Retrofit",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Retrofit :",
+    "options": [
+      "Retrofit est un client HTTP pour API REST.",
+      "Retrofit prend en charge la sérialisation automatique des objets JSON.",
+      "Retrofit permet l'utilisation de méthodes GET, POST et DELETE.",
+      "Retrofit ne supporte pas les requêtes asynchrones."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Retrofit est effectivement un client HTTP pour API REST (Option A). Il prend en charge la sérialisation automatique des objets JSON grâce à des bibliothèques comme Moshi ou Gson (Option B). Retrofit permet l'utilisation de méthodes GET, POST et DELETE (Option C). L'assertion selon laquelle Retrofit ne supporte pas les requêtes asynchrones est fausse, car il fonctionne de manière asynchrone par défaut (Option D)."
+  },
+  {
+    "id": "AND-NET-064",
+    "theme": "Networking",
+    "theme_label": "OkHttp",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction d'OkHttp ?",
+    "options": [
+      "Gérer les requêtes réseau HTTP.",
+      "Sérialiser et désérialiser des objets JSON.",
+      "Gérer la cache en mémoire.",
+      "Fournir une interface utilisateur pour les requêtes réseau."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "OkHttp est principalement utilisé pour gérer les requêtes réseau HTTP (Option A). Bien que OkHttp puisse être utilisé avec des bibliothèques de sérialisation comme Moshi ou Gson, sa fonction principale n'est pas la sérialisation (Option B). La gestion de la cache en mémoire est généralement gérée par des bibliothèques spécifiques comme Volley ou Retrofit (Option C). OkHttp ne fournit pas d'interface utilisateur pour les requêtes réseau (Option D)."
+  },
+  {
+    "id": "AND-NET-065",
+    "theme": "Networking",
+    "theme_label": "Certificate pinning",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales raisons d'utiliser le pinning des certificats ?",
+    "options": [
+      "Pour protéger contre les attaques de type man-in-the-middle.",
+      "Pour améliorer la performance des requêtes réseau.",
+      "Pour simplifier le processus de mise à jour des certificats.",
+      "Pour assurer la confidentialité des données échangées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Le pinning des certificats est utilisé pour protéger contre les attaques de type man-in-the-middle (Option A), car cela assure que la connexion est établie avec un serveur authentique. Il peut également aider à assurer la confidentialité des données échangées (Option D), car cela garantit que les communications sont sécurisées. L'amélioration des performances des requêtes réseau (Option B) n'est pas une raison principale du pinning des certificats, et la simplification de la mise à jour des certificats (Option C) est généralement une tâche manuelle et n'est pas automatisée par le pinning des certificats."
   }
 ]

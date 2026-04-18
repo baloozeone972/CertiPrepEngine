@@ -1,79 +1,62 @@
+```
 # HashiCorp Terraform Associate (003)
 
 ## 📋 Description
-
-La certification Terraform Associate valide les compétences en Infrastructure as Code (IaC) avec Terraform. Elle couvre
-la configuration, l'état, les providers, et les bonnes pratiques.
+La certification HashiCorp Terraform Associate (Terraform 003) est une certification **pratique** qui évalue votre maîtrise de l'infrastructure as code avec Terraform. Cette certification vous permet d'automatiser le provisionnement d'infrastructure multi-cloud, ce qui est essentiel pour les entreprises modernes cherchant à gérer efficacement leur infrastructure de manière scalable et sécurisée.
 
 ## 🏛️ Organisme délivrant
-
-**HashiCorp** - Créateur de Terraform, leader de l'IaC
+**HashiCorp** - Leader mondial dans le domaine de l'infrastructure et des applications en conteneur, HashiCorp propose une gamme complète de solutions pour la gestion et l'automatisation des infrastructures.
 
 ## 📅 Validité
-
 - **Valable 2 ans**
-- Renouvellement par examen (nouvelle version)
+- Renouvellement par examen ou certification supérieure (Terraform Professional)
 
 ## 📚 Programme détaillé
-
 ### Thèmes principaux
-
-| Thème                  | Pourcentage |
-|------------------------|-------------|
-| Terraform Basics       | 20%         |
-| Configuration Language | 25%         |
-| State Management       | 20%         |
-| Providers & Modules    | 15%         |
-| CLI Commands           | 10%         |
-| Best Practices         | 10%         |
+| Thème | Questions |
+|---|---|
+| Terraform Basics | 50 |
+| Configuration Language | 70 |
+| State Management | 50 |
+| Providers & Modules | 50 |
+| CLI Commands | 40 |
+| Best Practices | 40 |
 
 ### Compétences évaluées
-
-- Écrire et exécuter des configurations Terraform
-- Gérer le fichier d'état (local et distant)
-- Utiliser des providers (AWS, Azure, GCP)
-- Créer et utiliser des modules
-- Maîtriser les commandes CLI (init, plan, apply, destroy)
-- Appliquer les bonnes pratiques (formatage, validation)
+- Comprendre les concepts de base de Terraform
+- Utiliser la syntaxe et le langage de configuration de Terraform pour définir des infrastructures
+- Gérer l'état de Terraform et comprendre son importance pour la gestion des infrastructures
+- Utiliser les fournisseurs et les modules de Terraform pour provisionner des ressources dans différents clouds
+- Maîtriser les commandes de ligne de commande Terraform pour automatiser le provisionnement et la gestion des infrastructures
+- Appliquer les meilleures pratiques de Terraform pour garantir la sécurité et l'efficacité des infrastructures
 
 ## 💼 Reconnaissance professionnelle
-
 ### Niveau de reconnaissance
-
-⭐⭐⭐⭐ (Élevé - Leader de l'IaC)
+⭐⭐⭐⭐ (Très élevé - Standard de facto pour l'infrastructure as code)
 
 ### Valeur sur le marché
-
-- **France** : De plus en plus demandée (transformation DevOps)
-- **Europe** : Standard pour l'infrastructure cloud
-- **Monde** : Référence pour Infrastructure as Code
-
-### Salaires indicatifs (France)
-
-| Expérience     | Salaire moyen     |
-|----------------|-------------------|
-| DevOps Junior  | 45 000 - 55 000 € |
-| Cloud Engineer | 55 000 - 75 000 € |
-| IaC Specialist | 70 000 - 95 000 € |
-
-## 🎯 Objectif
-
-Maîtriser Terraform pour automatiser le provisioning d'infrastructure cloud.
-
-## 🚀 Débouchés
-
-- Cloud Engineer
-- DevOps Engineer
-- Platform Engineer
-- Infrastructure Architect
+- **France** : Très recherchée par les entreprises cherchant à moderniser leur infrastructure
+- **Maroc** : Forte demande dans le secteur public et privé
+- **Tunisie** : Augmentation du marché avec l'adoption croissante des technologies cloud
+- **Sénégal** : Développement du marché de l'infrastructure en conteneur
+- **Québec** : Forte demande dans le secteur des entreprises et des startups
+- **Suisse** : Recherchée par les entreprises de technologie et de services
+- **Belgique** : Augmentation du marché avec l'adoption croissante des solutions cloud
 
 ## 📊 Statistiques
-
 - **Taux de réussite** : ~70%
-- **Temps de préparation recommandé** : 40-60 heures
-- **Format examen** : QCM, 57 questions, 60 minutes
+- **Temps de préparation recommandé** : 150-200 heures
+- **Format examen** : Pratique (terminal), 57 questions, 60 minutes
+
+## 🌍 Marchés francophones
+- **France** : Forte demande dans le secteur public et privé, avec une croissance continue
+- **Maroc** : Développement du marché de l'infrastructure en conteneur
+- **Tunisie** : Augmentation du marché avec l'adoption croissante des technologies cloud
+- **Sénégal** : Développement du marché de l'infrastructure en conteneur
+- **Québec** : Forte demande dans le secteur des entreprises et des startups, avec une croissance continue
+- **Suisse** : Recherchée par les entreprises de technologie et de services, avec une croissance continue
+- **Belgique** : Augmentation du marché avec l'adoption croissante des solutions cloud
 
 ## 🔗 Liens utiles
-
-- [HashiCorp Certification](https://www.hashicorp.com/certification)
-- [Terraform Documentation](https://developer.hashicorp.com/terraform)
+- [HashiCorp Terraform Associate](https://www.hashicorp.com/training/certifications/terraform-associate)
+```

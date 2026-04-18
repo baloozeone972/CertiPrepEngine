@@ -12,7 +12,7 @@
       "Deployment, ReplicaSet"
     ],
     "correct": 0,
-    "explication": "Sidecar (ex: logging), adapter (transformer les métriques), ambassador (proxy)."
+    "explanation": "Sidecar (ex: logging), adapter (transformer les métriques), ambassador (proxy)."
   },
   {
     "id": "CKAD-01-002",
@@ -20,9 +20,14 @@
     "theme_label": "Multi-container pods",
     "difficulty": "easy",
     "question": "Les conteneurs d'un pod partagent-ils le même réseau ?",
-    "options": ["Oui", "Non", "Uniquement si configuré", "Uniquement si shareProcessNamespace"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si configuré",
+      "Uniquement si shareProcessNamespace"
+    ],
     "correct": 0,
-    "explication": "Ils partagent la même adresse IP et les mêmes ports."
+    "explanation": "Ils partagent la même adresse IP et les mêmes ports."
   },
   {
     "id": "CKAD-01-003",
@@ -37,7 +42,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Via localhost car ils partagent le network namespace."
+    "explanation": "Via localhost car ils partagent le network namespace."
   },
   {
     "id": "CKAD-01-004",
@@ -45,9 +50,14 @@
     "theme_label": "Init containers",
     "difficulty": "easy",
     "question": "Les init containers s'exécutent-ils avant ou après les conteneurs principaux ?",
-    "options": ["Avant", "Après", "En parallèle", "Séquentiellement entre eux"],
+    "options": [
+      "Avant",
+      "Après",
+      "En parallèle",
+      "Séquentiellement entre eux"
+    ],
     "correct": 0,
-    "explication": "Ils s'exécutent dans l'ordre avant le démarrage des conteneurs principaux."
+    "explanation": "Ils s'exécutent dans l'ordre avant le démarrage des conteneurs principaux."
   },
   {
     "id": "CKAD-01-005",
@@ -62,7 +72,7 @@
       "Rien"
     ],
     "correct": 0,
-    "explication": "Le pod redémarre jusqu'à ce que tous les init containers réussissent."
+    "explanation": "Le pod redémarre jusqu'à ce que tous les init containers réussissent."
   },
   {
     "id": "CKAD-01-006",
@@ -77,7 +87,7 @@
       "Labels sont des clés-valeurs, annotations aussi"
     ],
     "correct": 0,
-    "explication": "Les labels sont utilisés par les sélecteurs, les annotations pour stocker des informations auxiliaires."
+    "explanation": "Les labels sont utilisés par les sélecteurs, les annotations pour stocker des informations auxiliaires."
   },
   {
     "id": "CKAD-01-007",
@@ -92,7 +102,7 @@
       "kubectl get pods --filter app=web"
     ],
     "correct": 2,
-    "explication": "-l ou --selector."
+    "explanation": "-l ou --selector."
   },
   {
     "id": "CKAD-01-008",
@@ -107,7 +117,7 @@
       "Requests pour CPU, limits pour mémoire"
     ],
     "correct": 0,
-    "explication": "Les requests sont utilisées pour le scheduling, les limits pour le throttling/OOM."
+    "explanation": "Les requests sont utilisées pour le scheduling, les limits pour le throttling/OOM."
   },
   {
     "id": "CKAD-01-009",
@@ -115,9 +125,14 @@
     "theme_label": "Resource management",
     "difficulty": "easy",
     "question": "Que se passe-t-il si un conteneur dépasse sa limit de mémoire ?",
-    "options": ["OOM kill", "Throttling", "Pod suspendu", "Redémarrage"],
+    "options": [
+      "OOM kill",
+      "Throttling",
+      "Pod suspendu",
+      "Redémarrage"
+    ],
     "correct": 0,
-    "explication": "Le conteneur est tué par OOM Killer."
+    "explanation": "Le conteneur est tué par OOM Killer."
   },
   {
     "id": "CKAD-01-010",
@@ -125,9 +140,14 @@
     "theme_label": "Resource management",
     "difficulty": "easy",
     "question": "Comment définir une request CPU de 0.5 cœur ?",
-    "options": ["500m", "0.5", "1/2", "A et B"],
+    "options": [
+      "500m",
+      "0.5",
+      "1/2",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "500m (millicores) ou 0.5."
+    "explanation": "500m (millicores) ou 0.5."
   },
   {
     "id": "CKAD-01-011",
@@ -142,7 +162,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "--from-file peut être un fichier, un répertoire, ou une paire clé=chemin."
+    "explanation": "--from-file peut être un fichier, un répertoire, ou une paire clé=chemin."
   },
   {
     "id": "CKAD-01-012",
@@ -157,7 +177,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Déclarer le volume configMap puis le monter."
+    "explanation": "Déclarer le volume configMap puis le monter."
   },
   {
     "id": "CKAD-01-013",
@@ -172,7 +192,7 @@
       "kubectl create secret generic monsecret --from-file=password.txt"
     ],
     "correct": 2,
-    "explication": "--from-literal permet des paires clé-valeur."
+    "explanation": "--from-literal permet des paires clé-valeur."
   },
   {
     "id": "CKAD-01-014",
@@ -187,7 +207,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "envFrom importe toutes les clés, env une seule clé."
+    "explanation": "envFrom importe toutes les clés, env une seule clé."
   },
   {
     "id": "CKAD-01-015",
@@ -202,7 +222,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Via variables d'environnement ou volumes."
+    "explanation": "Via variables d'environnement ou volumes."
   },
   {
     "id": "CKAD-01-016",
@@ -217,7 +237,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "fieldRef sur metadata.name."
+    "explanation": "fieldRef sur metadata.name."
   },
   {
     "id": "CKAD-01-017",
@@ -232,7 +252,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "runAsNonRoot: true est préférable."
+    "explanation": "runAsNonRoot: true est préférable."
   },
   {
     "id": "CKAD-01-018",
@@ -247,7 +267,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Peut limiter CPU, mémoire, nombre de pods, etc."
+    "explanation": "Peut limiter CPU, mémoire, nombre de pods, etc."
   },
   {
     "id": "CKAD-01-019",
@@ -262,7 +282,7 @@
       "A et B"
     ],
     "correct": 0,
-    "explication": "Un LimitRange s'applique au namespace."
+    "explanation": "Un LimitRange s'applique au namespace."
   },
   {
     "id": "CKAD-01-020",
@@ -277,7 +297,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Il faut créer une PriorityClass, puis l'utiliser."
+    "explanation": "Il faut créer une PriorityClass, puis l'utiliser."
   },
   {
     "id": "CKAD-01-021",
@@ -285,9 +305,14 @@
     "theme_label": "Pod priority",
     "difficulty": "easy",
     "question": "Les pods de haute priorité peuvent-ils évincer des pods de basse priorité ?",
-    "options": ["Oui", "Non", "Uniquement si ressources insuffisantes", "A et C"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si ressources insuffisantes",
+      "A et C"
+    ],
     "correct": 3,
-    "explication": "La préemption permet aux pods prioritaires de prendre la place des moins prioritaires."
+    "explanation": "La préemption permet aux pods prioritaires de prendre la place des moins prioritaires."
   },
   {
     "id": "CKAD-01-022",
@@ -302,7 +327,7 @@
       "A et C"
     ],
     "correct": 0,
-    "explication": "podAffinity: co-localisation, podAntiAffinity: séparation."
+    "explanation": "podAffinity: co-localisation, podAntiAffinity: séparation."
   },
   {
     "id": "CKAD-01-023",
@@ -317,7 +342,7 @@
       "Forcer l'affinité"
     ],
     "correct": 2,
-    "explication": "Améliore la haute disponibilité."
+    "explanation": "Améliore la haute disponibilité."
   },
   {
     "id": "CKAD-01-024",
@@ -332,7 +357,7 @@
       "Rien"
     ],
     "correct": 0,
-    "explication": "Le pod n'est pas prêt à recevoir du trafic."
+    "explanation": "Le pod n'est pas prêt à recevoir du trafic."
   },
   {
     "id": "CKAD-01-025",
@@ -347,7 +372,7 @@
       "Le pod est supprimé"
     ],
     "correct": 0,
-    "explication": "Le kubelet redémarre le conteneur."
+    "explanation": "Le kubelet redémarre le conteneur."
   },
   {
     "id": "CKAD-01-026",
@@ -362,7 +387,7 @@
       "Pour les cronjobs"
     ],
     "correct": 0,
-    "explication": "La startup probe désactive la liveness probe jusqu'à son succès."
+    "explanation": "La startup probe désactive la liveness probe jusqu'à son succès."
   },
   {
     "id": "CKAD-01-027",
@@ -377,7 +402,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "httpGet (HTTP), tcpSocket (TCP), exec (commande)."
+    "explanation": "httpGet (HTTP), tcpSocket (TCP), exec (commande)."
   },
   {
     "id": "CKAD-01-028",
@@ -392,7 +417,7 @@
       "Nombre d'échecs avant action"
     ],
     "correct": 0,
-    "explication": "Laisser le temps au conteneur de démarrer."
+    "explanation": "Laisser le temps au conteneur de démarrer."
   },
   {
     "id": "CKAD-01-029",
@@ -400,9 +425,14 @@
     "theme_label": "Graceful termination",
     "difficulty": "easy",
     "question": "Quel signal est envoyé au conteneur lors d'un arrêt gracieux ?",
-    "options": ["SIGTERM", "SIGKILL", "SIGINT", "SIGQUIT"],
+    "options": [
+      "SIGTERM",
+      "SIGKILL",
+      "SIGINT",
+      "SIGQUIT"
+    ],
     "correct": 0,
-    "explication": "SIGTERM donne au conteneur le temps de se terminer proprement."
+    "explanation": "SIGTERM donne au conteneur le temps de se terminer proprement."
   },
   {
     "id": "CKAD-01-030",
@@ -417,7 +447,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le champ est terminationGracePeriodSeconds."
+    "explanation": "Le champ est terminationGracePeriodSeconds."
   },
   {
     "id": "CKAD-01-031",
@@ -432,7 +462,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Le hook preStop est exécuté avant SIGTERM."
+    "explanation": "Le hook preStop est exécuté avant SIGTERM."
   },
   {
     "id": "CKAD-01-032",
@@ -447,7 +477,7 @@
       "A et B"
     ],
     "correct": 0,
-    "explication": "Succeeded pour les jobs terminés avec succès, Failed pour les jobs échoués."
+    "explanation": "Succeeded pour les jobs terminés avec succès, Failed pour les jobs échoués."
   },
   {
     "id": "CKAD-01-033",
@@ -462,7 +492,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les conditions sont des booléens dans le status du pod."
+    "explanation": "Les conditions sont des booléens dans le status du pod."
   },
   {
     "id": "CKAD-01-034",
@@ -477,7 +507,7 @@
       "A et B"
     ],
     "correct": 0,
-    "explication": "Waiting (en attente), Running, Terminated (terminé avec code)."
+    "explanation": "Waiting (en attente), Running, Terminated (terminé avec code)."
   },
   {
     "id": "CKAD-01-035",
@@ -492,7 +522,7 @@
       "OnFailure, Never"
     ],
     "correct": 0,
-    "explication": "Always (par défaut), OnFailure (redémarre si erreur), Never."
+    "explanation": "Always (par défaut), OnFailure (redémarre si erreur), Never."
   },
   {
     "id": "CKAD-01-036",
@@ -507,7 +537,7 @@
       "Rien"
     ],
     "correct": 2,
-    "explication": "Utile pour les sidecars qui doivent surveiller d'autres processus."
+    "explanation": "Utile pour les sidecars qui doivent surveiller d'autres processus."
   },
   {
     "id": "CKAD-01-037",
@@ -522,7 +552,7 @@
       "Services permanents"
     ],
     "correct": 2,
-    "explication": "Ils ne sont pas persistants et utiles pour inspecter un pod."
+    "explanation": "Ils ne sont pas persistants et utiles pour inspecter un pod."
   },
   {
     "id": "CKAD-01-038",
@@ -537,7 +567,7 @@
       "Limiter les ressources"
     ],
     "correct": 2,
-    "explication": "Utile pour les StatefulSets et les applications critiques."
+    "explanation": "Utile pour les StatefulSets et les applications critiques."
   },
   {
     "id": "CKAD-01-039",
@@ -552,7 +582,7 @@
       "Dans le conteneur"
     ],
     "correct": 2,
-    "explication": "Les logs sont capturés par le kubelet et accessibles via kubectl logs."
+    "explanation": "Les logs sont capturés par le kubelet et accessibles via kubectl logs."
   },
   {
     "id": "CKAD-01-040",
@@ -567,6 +597,278 @@
       "kubectl logs --tail=100 <pod>"
     ],
     "correct": 2,
-    "explication": "--previous ou -p."
+    "explanation": "--previous ou -p."
+  },
+  {
+    "id": "CKAD-AD-001",
+    "theme": "Application Design",
+    "theme_label": "Resource management",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des ressources Kubernetes :",
+    "options": [
+      "Un pod peut avoir plusieurs containers.",
+      "La gestion des ressources se fait uniquement à l'échelle du cluster.",
+      "Les ConfigMaps permettent de gérer des configurations et des secrets dans les pods.",
+      "La ResourceQuota limite le nombre de ressources utilisables par un namespace.",
+      "Les LimitRange définit les limites minimales et maximales de ressources pour un pod."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Un pod peut avoir plusieurs containers (A est correct). La gestion des ressources se fait à l'échelle du cluster et au niveau des pods (B est incorrect). Les ConfigMaps permettent de gérer des configurations et des secrets dans les pods (C est correct). La ResourceQuota limite le nombre de ressources utilisables par un namespace (D est correct). Les LimitRange définissent les limites minimales et maximales de ressources pour un pod (E est correct)."
+  },
+  {
+    "id": "CKAD-AD-002",
+    "theme": "Application Design",
+    "theme_label": "Init containers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité des init containers dans Kubernetes ?",
+    "options": [
+      "Exécuter des tâches initiales avant le démarrage du conteneur principal.",
+      "Gérer les ressources réseau des pods.",
+      "Définir les politiques de sécurité pour les pods.",
+      "Gérer les volumes persistentes des pods."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les init containers sont utilisés pour exécuter des tâches initiales avant le démarrage du conteneur principal (A est correct). Gérer les ressources réseau des pods, définir les politiques de sécurité pour les pods et gérer les volumes persistentes des pods ne sont pas les principales utilités des init containers."
+  },
+  {
+    "id": "CKAD-AD-003",
+    "theme": "Application Design",
+    "theme_label": "Pod priority",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la priorité des pods en Kubernetes :",
+    "options": [
+      "La priorité d'un pod est définie par le champ 'priorityClassName'.",
+      "Les pods avec une priorité plus élevée sont toujours exécutés avant ceux avec une priorité inférieure.",
+      "La priorité des pods peut être modifiée en utilisant le champ 'priority' directement.",
+      "La priorité des pods n'affecte pas leur ordre d'exécution sur le cluster.",
+      "Les pods sans priorité définie sont considérés comme ayant une priorité par défaut."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "La priorité d'un pod est définie par le champ 'priorityClassName' (A est correct). Les pods avec une priorité plus élevée ne sont pas toujours exécutés avant ceux avec une priorité inférieure (B est incorrect). La priorité des pods peut être modifiée en utilisant le champ 'priority' directement (C est correct). La priorité des pods peut affecter leur ordre d'exécution sur le cluster (D est incorrect). Les pods sans priorité définie sont considérés comme ayant une priorité par défaut (E est correct)."
+  },
+  {
+    "id": "CKAD-AD-004",
+    "theme": "Application Design",
+    "theme_label": "Graceful termination",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de la terminaison gracieuse dans Kubernetes ?",
+    "options": [
+      "Permet d'arrêter les pods rapidement sans prévenir l'état de l'application.",
+      "Permet d'éviter les pannes en arrêtant les pods de manière progressive.",
+      "Permet d'optimiser la consommation de ressources en arrêtant les pods inutiles.",
+      "Permet d'arrêter les services sans affecter l'accès des utilisateurs."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La terminaison gracieuse permet d'éviter les pannes en arrêtant les pods de manière progressive (B est correct). Permet d'arrêter les pods rapidement sans prévenir l'état de l'application, optimiser la consommation de ressources en arrêtant les pods inutiles et arrêter les services sans affecter l'accès des utilisateurs ne sont pas les principales utilités de la terminaison gracieuse."
+  },
+  {
+    "id": "CKAD-AD-005",
+    "theme": "Application Design",
+    "theme_label": "Container logging",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité de la journalisation des conteneurs dans Kubernetes ?",
+    "options": [
+      "Permet de surveiller les performances des conteneurs.",
+      "Permet d'analyser les erreurs et les défaillances des applications.",
+      "Permet de gérer les ressources réseau des conteneurs.",
+      "Permet de définir les politiques de sécurité pour les conteneurs."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La journalisation des conteneurs permet d'analyser les erreurs et les défaillances des applications (B est correct). Permet de surveiller les performances des conteneurs, gérer les ressources réseau des conteneurs et définir les politiques de sécurité pour les conteneurs ne sont pas les principales utilités de la journalisation des conteneurs."
+  },
+  {
+    "id": "CKAD-AD-006",
+    "theme": "Application Design",
+    "theme_label": "Pod priority",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la priorité des pods :",
+    "options": [
+      "La priorité peut être définie par un champ spécifique dans la configuration du pod.",
+      "Les pods avec une priorité plus élevée sont exécutés avant ceux avec une priorité plus faible.",
+      "La priorité peut être utilisée pour gérer les ressources lors de la surcharge.",
+      "La priorité peut être définie par un champ spécifique dans les nœuds du cluster.",
+      "La priorité peut être utilisée pour éviter la préemption des pods."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La priorité peut être définie par un champ spécifique dans la configuration du pod (A). Les pods avec une priorité plus élevée sont exécutés avant ceux avec une priorité plus faible (B). La priorité peut être utilisée pour gérer les ressources lors de la surcharge (C). La priorité ne peut pas être définie par un champ spécifique dans les nœuds du cluster (D). La priorité peut être utilisée pour éviter la préemption des pods (E)."
+  },
+  {
+    "id": "CKAD-AD-007",
+    "theme": "Application Design",
+    "theme_label": "Graceful termination",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'option qui décrit correctement la terminaison gracieuse d'un pod Kubernetes ?",
+    "options": [
+      "Le pod est immédiatement arrêté sans aucune préparation.",
+      "Le pod est arrêté en exécutant un hook de pré-départ avant d'être complètement arrêté.",
+      "Le pod est arrêté en supprimant son état de configuration du cluster.",
+      "Le pod n'est pas arrêté et continue à fonctionner jusqu'à ce que le cluster soit redémarré."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La terminaison gracieuse d'un pod Kubernetes implique l'exécution d'un hook de pré-départ avant qu'il ne soit complètement arrêté (B). Cette étape permet aux applications en cours d'exécution de terminer leurs tâches et de sauvegarder leur état avant la fermeture."
+  },
+  {
+    "id": "CKAD-AD-008",
+    "theme": "Application Design",
+    "theme_label": "Container logging",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le suivi des journaux de conteneur :",
+    "options": [
+      "Les journaux des conteneurs peuvent être suivis à l'aide de la commande 'kubectl logs'.",
+      "Les journaux des conteneurs sont stockés localement sur le nœud où s'exécute le conteneur.",
+      "Les journaux des conteneurs peuvent être collectés et stockés dans un système de gestion de journaux externe.",
+      "Les journaux des conteneurs ne peuvent être consultés que par le propriétaire du pod.",
+      "Les journaux des conteneurs sont automatiquement archivés et conservés à long terme."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les journaux des conteneurs peuvent être suivis à l'aide de la commande 'kubectl logs' (A). Les journaux des conteneurs peuvent être collectés et stockés dans un système de gestion de journaux externe (C). Les journaux des conteneurs ne sont pas stockés localement sur le nœud où s'exécute le conteneur (B). Les journaux des conteneurs ne peuvent pas être consultés que par le propriétaire du pod (D). Les journaux des conteneurs ne sont pas automatiquement archivés et conservés à long terme (E)."
+  },
+  {
+    "id": "CKAD-AD-009",
+    "theme": "Application Design",
+    "theme_label": "Labels & annotations",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre les labels et les annotations dans Kubernetes ?",
+    "options": [
+      "Les labels sont utilisés pour identifier et sélectionner des groupes de ressources, tandis que les annotations ne sont pas utilisées pour la sélection.",
+      "Les labels et les annotations ont le même but, c'est-à-dire identifier et sélectionner des groupes de ressources.",
+      "Les labels sont utilisés pour stocker des données sensibles, tandis que les annotations sont utilisées pour stocker des métadonnées non sensibles.",
+      "Les labels ne peuvent être utilisés que pour les nœuds, tandis que les annotations peuvent être utilisées pour toutes les ressources."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les labels sont utilisés pour identifier et sélectionner des groupes de ressources, tandis que les annotations ne sont pas utilisées pour la sélection (A). Les labels et les annotations ont le même but, c'est-à-dire identifier et sélectionner des groupes de ressources (B). Les labels ne sont pas utilisés pour stocker des données sensibles, tandis que les annotations peuvent être utilisées pour stocker des métadonnées non sensibles (C). Les labels peuvent être utilisés pour toutes les ressources, y compris les nœuds (D)."
+  },
+  {
+    "id": "CKAD-AD-010",
+    "theme": "Application Design",
+    "theme_label": "Security context",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le contexte de sécurité des conteneurs :",
+    "options": [
+      "Le contexte de sécurité peut être défini pour un pod ou pour un conteneur individuel.",
+      "Le contexte de sécurité peut définir des paramètres tels que le UID, le GID et les permissions.",
+      "Le contexte de sécurité peut être utilisé pour contrôler l'accès aux ressources système.",
+      "Le contexte de sécurité peut être défini uniquement pour les conteneurs basés sur Linux.",
+      "Le contexte de sécurité peut être utilisé pour définir des politiques de confidentialité."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Le contexte de sécurité peut être défini pour un pod ou pour un conteneur individuel (A). Le contexte de sécurité peut définir des paramètres tels que le UID, le GID et les permissions (B). Le contexte de sécurité peut être utilisé pour contrôler l'accès aux ressources système (C). Le contexte de sécurité peut être défini pour les conteneurs basés sur Linux et Windows (D). Le contexte de sécurité peut être utilisé pour définir des politiques de confidentialité (E)."
+  },
+  {
+    "id": "CKAD-AD-011",
+    "theme": "Application Design",
+    "theme_label": "Resource management",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des ressources :",
+    "options": [
+      "Un pod peut avoir plusieurs containers qui partagent les mêmes ressources.",
+      "La gestion des ressources peut être réalisée via ConfigMaps et Secrets.",
+      "Le Downward API permet d'exposer des informations sur le pod au sein du conteneur.",
+      "La priorité des pods peut être définie pour contrôler leur ordre d'exécution.",
+      "Les probes de santé (liveness, readiness) peuvent être utilisés pour gérer la gestion des ressources."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Un pod peut avoir plusieurs containers qui partagent les mêmes ressources (A). La gestion des ressources peut être réalisée via ConfigMaps et Secrets (B). Le Downward API permet d'exposer des informations sur le pod au sein du conteneur (C). La priorité des pods peut être définie pour contrôler leur ordre d'exécution (D). Les probes de santé (liveness, readiness) peuvent être utilisés pour gérer la gestion des ressources, mais elles ne sont pas spécifiquement liées à la gestion des ressources (E)."
+  },
+  {
+    "id": "CKAD-AD-012",
+    "theme": "Application Design",
+    "theme_label": "Pod priority",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de la priorité des pods dans Kubernetes ?",
+    "options": [
+      "Permet d'ordonner l'exécution des pods dans le cluster.",
+      "Aide à la gestion de la consommation de ressources des pods.",
+      "Influence la réplication des pods dans le cluster.",
+      "Aucune utilité particulière."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Permet d'ordonner l'exécution des pods dans le cluster (A). Aide à la gestion de la consommation de ressources des pods (B). Influence la réplication des pods dans le cluster (C). Aucune utilité particulière (D). La priorité des pods est principalement utilisée pour contrôler l'ordre d'exécution des pods dans le cluster, mais elle peut également influencer la réplication en fonction de la disponibilité des ressources."
+  },
+  {
+    "id": "CKAD-AD-013",
+    "theme": "Application Design",
+    "theme_label": "Graceful termination",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la terminaison gracieuse des pods :",
+    "options": [
+      "La terminaison gracieuse permet d'arrêter les pods de manière progressive.",
+      "Les hooks préStop peuvent être utilisés pour effectuer des tâches avant la terminaison.",
+      "La durée de la terminaison gracieuse peut être définie via le champ terminationGracePeriodSeconds.",
+      "La terminaison gracieuse est automatiquement appliquée à tous les pods du cluster.",
+      "La terminaison gracieuse n'affecte que les pods en état de running."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La terminaison gracieuse permet d'arrêter les pods de manière progressive (A). Les hooks préStop peuvent être utilisés pour effectuer des tâches avant la terminaison (B). La durée de la terminaison gracieuse peut être définie via le champ terminationGracePeriodSeconds (C). La terminaison gracieuse est automatiquement appliquée à tous les pods du cluster (D). La terminaison gracieuse n'affecte que les pods en état de running (E). La terminaison gracieuse est une fonctionnalité optionnelle qui peut être activée pour certains pods, mais elle n'est pas appliquée automatiquement à tous les pods du cluster."
+  },
+  {
+    "id": "CKAD-AD-014",
+    "theme": "Application Design",
+    "theme_label": "Container logging",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour le logging des conteneurs dans Kubernetes ?",
+    "options": [
+      "Utiliser un seul fichier de log pour tous les conteneurs du pod.",
+      "Configurer un agent de logging externe comme Fluentd ou Logstash.",
+      "Écrire les logs directement dans le système de fichiers du conteneur.",
+      "Utiliser un volume temporaire pour stocker les logs."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Configurer un agent de logging externe comme Fluentd ou Logstash (B) est la meilleure pratique pour le logging des conteneurs dans Kubernetes. Cela permet de centraliser les logs, d'ajouter des informations supplémentaires et de faciliter l'analyse. Utiliser un seul fichier de log pour tous les conteneurs du pod (A) peut entraîner des problèmes d'espace de stockage et de performance. Écrire les logs directement dans le système de fichiers du conteneur (C) peut rendre la récupération des logs plus difficile. Utiliser un volume temporaire pour stocker les logs (D) peut entraîner la perte des logs en cas de redémarrage du pod."
   }
 ]

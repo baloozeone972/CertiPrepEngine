@@ -1,0 +1,50 @@
+Génère le fichier GitHub Actions .github/workflows/ci.yml complet pour le projet CertifApp.
+
+Contexte technique :
+- Projet Maven multi-module Java 21 : certif-domain, certif-application, certif-infrastructure, certif-api-rest, certif-ai
+- Tests avec Testcontainers (PostgreSQL 16 avec pgvector)
+- Docker build multi-stage
+- Déploiement sur Oracle Cloud VM (SSH)
+- Registry : Docker Hub
+
+Le workflow doit :
+
+TRIGGER :
+- push sur branches : develop, main
+- pull_request vers main
+
+JOBS (dans cet ordre) :
+
+JOB 1 : build-and-test
+- Runner : ubuntu-latest
+- Setup Java 21 (temurin) avec cache Maven
+- mvn clean verify (compile + tests unitaires + tests intégration Testcontainers)
+- Upload rapport de tests JUnit en artifact
+- Upload rapport de couverture Jacoco
+
+JOB 2 : code-quality (dépend de build-and-test)
+- SonarCloud scan
+- Vérification couverture > 80% sinon fail
+
+JOB 3 : docker-build (dépend de build-and-test, seulement sur push main/develop)
+- Build image Docker multi-stage backend (eclipse-temurin:21)
+- Build image Docker Angular (node:20-alpine + nginx:alpine)
+- Tag : {branch}-{sha_court}
+- Push sur Docker Hub
+
+JOB 4 : deploy-staging (dépend de docker-build, seulement sur push develop)
+- SSH vers VM Oracle Cloud staging
+- docker-compose pull + docker-compose up -d
+- Health check : curl http://staging.certifapp.com/actuator/health
+
+JOB 5 : deploy-prod (dépend de docker-build, seulement sur push main, avec approbation manuelle)
+- environment: production (nécessite approbation dans GitHub)
+- SSH vers VM Oracle Cloud production
+- Blue-green deploy : lancer nouveau container → health check → basculer nginx → arrêter ancien
+
+SECRETS à documenter (liste avec description) :
+DOCKER_USERNAME, DOCKER_PASSWORD, SONAR_TOKEN,
+ORACLE_VM_HOST_STAGING, ORACLE_VM_HOST_PROD, ORACLE_VM_SSH_KEY,
+SUPABASE_URL, SUPABASE_KEY, ANTHROPIC_API_KEY, STRIPE_SECRET_KEY
+
+Génère le fichier YAML complet directement utilisable.

@@ -12,7 +12,7 @@
       "Internet Access Management"
     ],
     "correct": 0,
-    "explication": "IAM gère les accès aux ressources GCP."
+    "explanation": "IAM gère les accès aux ressources GCP."
   },
   {
     "id": "GCP-DL-212",
@@ -27,7 +27,7 @@
       "Identités, clés, certificats"
     ],
     "correct": 0,
-    "explication": "Les politiques IAM lient des membres à des rôles."
+    "explanation": "Les politiques IAM lient des membres à des rôles."
   },
   {
     "id": "GCP-DL-213",
@@ -42,7 +42,7 @@
       "Admin, utilisateur, invité"
     ],
     "correct": 0,
-    "explication": "Les rôles primitifs (Owner, Editor, Viewer) sont hérités, les prédéfinis sont spécifiques aux services."
+    "explanation": "Les rôles primitifs (Owner, Editor, Viewer) sont hérités, les prédéfinis sont spécifiques aux services."
   },
   {
     "id": "GCP-DL-214",
@@ -57,7 +57,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "Cloud Identity gère les utilisateurs, groupes et appareils pour GCP et Google Workspace."
+    "explanation": "Cloud Identity gère les utilisateurs, groupes et appareils pour GCP et Google Workspace."
   },
   {
     "id": "GCP-DL-215",
@@ -72,7 +72,7 @@
       "Organization → Projects → Resources"
     ],
     "correct": 0,
-    "explication": "La hiérarchie permet une délégation des politiques et des quotas."
+    "explanation": "La hiérarchie permet une délégation des politiques et des quotas."
   },
   {
     "id": "GCP-DL-216",
@@ -87,7 +87,7 @@
       "Créer des rapports"
     ],
     "correct": 0,
-    "explication": "Les politiques d'organisation (ex: interdire les VMs externes) s'appliquent à toute la hiérarchie."
+    "explanation": "Les politiques d'organisation (ex: interdire les VMs externes) s'appliquent à toute la hiérarchie."
   },
   {
     "id": "GCP-DL-217",
@@ -102,7 +102,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "Cloud KMS permet de créer, utiliser, faire tourner et détruire des clés cryptographiques."
+    "explanation": "Cloud KMS permet de créer, utiliser, faire tourner et détruire des clés cryptographiques."
   },
   {
     "id": "GCP-DL-218",
@@ -112,7 +112,7 @@
     "question": "Cloud KMS supporte-t-il la rotation automatique des clés ?",
     "options": ["Oui", "Non", "Uniquement pour les clés symétriques", "Uniquement pour les clés asymétriques"],
     "correct": 0,
-    "explication": "La rotation automatique peut être programmée (ex: tous les 90 jours)."
+    "explanation": "La rotation automatique peut être programmée (ex: tous les 90 jours)."
   },
   {
     "id": "GCP-DL-219",
@@ -127,7 +127,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Cloud HSM fournit un HSM certifié FIPS 140-2 niveau 3."
+    "explanation": "Cloud HSM fournit un HSM certifié FIPS 140-2 niveau 3."
   },
   {
     "id": "GCP-DL-220",
@@ -142,7 +142,7 @@
       "Stocker des logs"
     ],
     "correct": 0,
-    "explication": "Secret Manager centralise les secrets avec versioning et accès contrôlé."
+    "explanation": "Secret Manager centralise les secrets avec versioning et accès contrôlé."
   },
   {
     "id": "GCP-DL-221",
@@ -157,7 +157,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "Security Command Center offre une vue unifiée des risques de sécurité."
+    "explanation": "Security Command Center offre une vue unifiée des risques de sécurité."
   },
   {
     "id": "GCP-DL-222",
@@ -167,7 +167,7 @@
     "question": "Security Command Center peut-il détecter des anomalies de configuration ?",
     "options": ["Oui", "Non", "Uniquement les vulnérabilités", "Uniquement les menaces"],
     "correct": 0,
-    "explication": "Il inclut la détection de problèmes de configuration (ex: buckets publics)."
+    "explanation": "Il inclut la détection de problèmes de configuration (ex: buckets publics)."
   },
   {
     "id": "GCP-DL-223",
@@ -182,7 +182,7 @@
       "Logging"
     ],
     "correct": 0,
-    "explication": "Cloud DLP inspecte les données et peut les anonymiser (tokenisation, redaction)."
+    "explanation": "Cloud DLP inspecte les données et peut les anonymiser (tokenisation, redaction)."
   },
   {
     "id": "GCP-DL-224",
@@ -192,7 +192,7 @@
     "question": "Cloud DLP peut-il analyser des images pour trouver des données sensibles ?",
     "options": ["Oui (OCR)", "Non", "Uniquement du texte", "Uniquement des bases de données"],
     "correct": 0,
-    "explication": "Cloud DLP peut utiliser l'OCR pour extraire et analyser le texte des images."
+    "explanation": "Cloud DLP peut utiliser l'OCR pour extraire et analyser le texte des images."
   },
   {
     "id": "GCP-DL-225",
@@ -202,7 +202,7 @@
     "question": "Access Transparency fournit-il des logs des accès des employés Google aux données ?",
     "options": ["Oui", "Non", "Uniquement pour les administrateurs", "Uniquement pour les incidents de sécurité"],
     "correct": 0,
-    "explication": "Access Transparency journalise les accès des ingénieurs Google aux données client."
+    "explanation": "Access Transparency journalise les accès des ingénieurs Google aux données client."
   },
   {
     "id": "GCP-DL-226",
@@ -217,7 +217,7 @@
       "Gérer les identités"
     ],
     "correct": 0,
-    "explication": "Les VPC Service Controls empêchent l'exfiltration de données en limitant les appels entre services."
+    "explanation": "Les VPC Service Controls empêchent l'exfiltration de données en limitant les appels entre services."
   },
   {
     "id": "GCP-DL-227",
@@ -227,7 +227,7 @@
     "question": "Cloud NAT est-il un service de sécurité réseau ?",
     "options": ["Oui (masque les IP privées)", "Non", "Uniquement pour le load balancing", "Uniquement pour le firewall"],
     "correct": 0,
-    "explication": "Cloud NAT permet aux instances sans IP publique d'accéder à Internet, améliorant la sécurité."
+    "explanation": "Cloud NAT permet aux instances sans IP publique d'accéder à Internet, améliorant la sécurité."
   },
   {
     "id": "GCP-DL-228",
@@ -242,7 +242,7 @@
       "Anti-virus"
     ],
     "correct": 0,
-    "explication": "BeyondCorp supprime le périmètre réseau pour l'accès aux applications."
+    "explanation": "BeyondCorp supprime le périmètre réseau pour l'accès aux applications."
   },
   {
     "id": "GCP-DL-229",
@@ -257,7 +257,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "IAP permet d'autoriser l'accès aux applications sans VPN."
+    "explanation": "IAP permet d'autoriser l'accès aux applications sans VPN."
   },
   {
     "id": "GCP-DL-230",
@@ -267,7 +267,7 @@
     "question": "Web Security Scanner détecte-t-il les vulnérabilités des applications web ?",
     "options": ["Oui (XSS, SQLi, etc.)", "Non", "Uniquement les problèmes de configuration", "Uniquement les problèmes de performance"],
     "correct": 0,
-    "explication": "Web Security Scanner scanne les applications déployées sur App Engine, GCE, GKE."
+    "explanation": "Web Security Scanner scanne les applications déployées sur App Engine, GCE, GKE."
   },
   {
     "id": "GCP-DL-231",
@@ -277,7 +277,7 @@
     "question": "Cloud Armor protège-t-il contre les attaques DDoS ?",
     "options": ["Oui", "Non", "Uniquement contre les injections SQL", "Uniquement contre le XSS"],
     "correct": 0,
-    "explication": "Cloud Armor offre une protection DDoS au niveau de la couche 3/4/7."
+    "explanation": "Cloud Armor offre une protection DDoS au niveau de la couche 3/4/7."
   },
   {
     "id": "GCP-DL-232",
@@ -292,7 +292,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Cloud IDS est un service managé de détection d'intrusion (IPS/IDS)."
+    "explanation": "Cloud IDS est un service managé de détection d'intrusion (IPS/IDS)."
   },
   {
     "id": "GCP-DL-233",
@@ -307,7 +307,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "Chronicle (Google Cloud) analyse les logs de sécurité pour détecter les menaces."
+    "explanation": "Chronicle (Google Cloud) analyse les logs de sécurité pour détecter les menaces."
   },
   {
     "id": "GCP-DL-234",
@@ -317,7 +317,7 @@
     "question": "Assured Workloads aide-t-il à répondre aux exigences réglementaires (IL4, IL5, FedRAMP) ?",
     "options": ["Oui", "Non", "Uniquement pour HIPAA", "Uniquement pour GDPR"],
     "correct": 0,
-    "explication": "Assured Workloads configure automatiquement les contrôles de conformité."
+    "explanation": "Assured Workloads configure automatiquement les contrôles de conformité."
   },
   {
     "id": "GCP-DL-235",
@@ -327,7 +327,7 @@
     "question": "EKM permet-il d'utiliser des clés externes (gérées par le client) pour chiffrer les données GCP ?",
     "options": ["Oui", "Non", "Uniquement pour Cloud Storage", "Uniquement pour Compute Engine"],
     "correct": 0,
-    "explication": "EKM utilise des clés stockées dans des systèmes externes (on-premise ou autres clouds)."
+    "explanation": "EKM utilise des clés stockées dans des systèmes externes (on-premise ou autres clouds)."
   },
   {
     "id": "GCP-DL-236",
@@ -337,7 +337,7 @@
     "question": "Les audit logs peuvent-ils être envoyés à Pub/Sub ?",
     "options": ["Oui", "Non", "Uniquement vers Cloud Storage", "Uniquement vers BigQuery"],
     "correct": 0,
-    "explication": "Les sinks d'audit peuvent envoyer les logs vers Pub/Sub, Cloud Storage, BigQuery."
+    "explanation": "Les sinks d'audit peuvent envoyer les logs vers Pub/Sub, Cloud Storage, BigQuery."
   },
   {
     "id": "GCP-DL-237",
@@ -347,7 +347,7 @@
     "question": "Cloud Asset Inventory permet-il d'exporter la liste de toutes les ressources GCP ?",
     "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour Cloud Storage"],
     "correct": 0,
-    "explication": "Cloud Asset Inventory fournit une vue complète des ressources et des politiques."
+    "explanation": "Cloud Asset Inventory fournit une vue complète des ressources et des politiques."
   },
   {
     "id": "GCP-DL-238",
@@ -357,7 +357,7 @@
     "question": "Les budgets Cloud Billing peuvent-ils déclencher des alertes et des actions automatisées ?",
     "options": ["Oui", "Non", "Uniquement des alertes", "Uniquement des actions"],
     "correct": 0,
-    "explication": "Les budgets peuvent envoyer des notifications Pub/Sub, qui peuvent déclencher des fonctions."
+    "explanation": "Les budgets peuvent envoyer des notifications Pub/Sub, qui peuvent déclencher des fonctions."
   },
   {
     "id": "GCP-DL-239",
@@ -367,7 +367,7 @@
     "question": "Les quotas GCP sont-ils des limites de ressources par projet ?",
     "options": ["Oui", "Non", "Uniquement pour les régions", "Uniquement pour les services"],
     "correct": 0,
-    "explication": "Les quotas empêchent une utilisation excessive et peuvent être augmentés sur demande."
+    "explanation": "Les quotas empêchent une utilisation excessive et peuvent être augmentés sur demande."
   },
   {
     "id": "GCP-DL-240",
@@ -377,7 +377,7 @@
     "question": "Les comptes de service (service accounts) sont-ils utilisés pour l'authentification des applications ?",
     "options": ["Oui", "Non", "Uniquement pour les utilisateurs", "Uniquement pour les VMs"],
     "correct": 0,
-    "explication": "Les comptes de service permettent aux applications d'accéder aux ressources GCP sans utilisateur."
+    "explanation": "Les comptes de service permettent aux applications d'accéder aux ressources GCP sans utilisateur."
   },
   {
     "id": "GCP-DL-241",
@@ -387,7 +387,7 @@
     "question": "Workload Identity permet-il aux applications GKE de s'authentifier sans clés de compte de service ?",
     "options": ["Oui", "Non", "Uniquement pour GKE Autopilot", "Uniquement pour GKE Standard"],
     "correct": 0,
-    "explication": "Workload Identity associe les comptes de service Kubernetes aux comptes de service GCP."
+    "explanation": "Workload Identity associe les comptes de service Kubernetes aux comptes de service GCP."
   },
   {
     "id": "GCP-DL-242",
@@ -397,7 +397,7 @@
     "question": "Binary Authorization impose-t-il que seules les images signées soient déployées sur GKE ?",
     "options": ["Oui", "Non", "Uniquement pour les images publiques", "Uniquement pour les images privées"],
     "correct": 0,
-    "explication": "Binary Authorization vérifie la signature des images avant le déploiement."
+    "explanation": "Binary Authorization vérifie la signature des images avant le déploiement."
   },
   {
     "id": "GCP-DL-243",
@@ -407,7 +407,7 @@
     "question": "Cloud Build peut-il être intégré à Binary Authorization pour signer les images ?",
     "options": ["Oui", "Non", "Uniquement avec Container Registry", "Uniquement avec Artifact Registry"],
     "correct": 0,
-    "explication": "Cloud Build peut signer les images avec des clés KMS pour Binary Authorization."
+    "explanation": "Cloud Build peut signer les images avec des clés KMS pour Binary Authorization."
   },
   {
     "id": "GCP-DL-244",
@@ -417,7 +417,7 @@
     "question": "Artifact Registry remplace-t-il Container Registry ?",
     "options": ["Oui", "Non", "Uniquement pour les images Docker", "Uniquement pour les paquets Maven"],
     "correct": 0,
-    "explication": "Artifact Registry est le successeur de Container Registry, supportant plus de formats."
+    "explanation": "Artifact Registry est le successeur de Container Registry, supportant plus de formats."
   },
   {
     "id": "GCP-DL-245",
@@ -427,7 +427,7 @@
     "question": "Container Analysis scanne-t-il les images de conteneurs pour les vulnérabilités ?",
     "options": ["Oui", "Non", "Uniquement les images publiques", "Uniquement les images Windows"],
     "correct": 0,
-    "explication": "Container Analysis (intégré à Artifact Registry) détecte les vulnérabilités connues."
+    "explanation": "Container Analysis (intégré à Artifact Registry) détecte les vulnérabilités connues."
   },
   {
     "id": "GCP-DL-246",
@@ -437,7 +437,7 @@
     "question": "Cloud Functions peut-il utiliser Cloud KMS pour déchiffrer des secrets ?",
     "options": ["Oui", "Non", "Uniquement avec Secret Manager", "Uniquement avec Cloud HSM"],
     "correct": 0,
-    "explication": "Cloud Functions peut appeler l'API KMS pour déchiffrer des données."
+    "explanation": "Cloud Functions peut appeler l'API KMS pour déchiffrer des données."
   },
   {
     "id": "GCP-DL-247",
@@ -447,7 +447,7 @@
     "question": "Cloud Scheduler peut-il authentifier les requêtes vers Cloud Run avec OIDC ?",
     "options": ["Oui", "Non", "Uniquement vers HTTP endpoints", "Uniquement vers App Engine"],
     "correct": 0,
-    "explication": "Cloud Scheduler peut ajouter un token OIDC pour authentifier les appels vers Cloud Run ou Cloud Functions."
+    "explanation": "Cloud Scheduler peut ajouter un token OIDC pour authentifier les appels vers Cloud Run ou Cloud Functions."
   },
   {
     "id": "GCP-DL-248",
@@ -457,7 +457,7 @@
     "question": "Cloud Tasks peut-il utiliser IAM pour autoriser l'accès aux files ?",
     "options": ["Oui", "Non", "Uniquement avec des clés d'API", "Uniquement avec des certificats"],
     "correct": 0,
-    "explication": "Cloud Tasks supporte IAM pour contrôler qui peut créer, lister ou supprimer des tâches."
+    "explanation": "Cloud Tasks supporte IAM pour contrôler qui peut créer, lister ou supprimer des tâches."
   },
   {
     "id": "GCP-DL-249",
@@ -467,7 +467,7 @@
     "question": "Les workflows Cloud Workflows s'exécutent-ils avec un compte de service ?",
     "options": ["Oui", "Non", "Uniquement avec le compte de l'utilisateur", "Uniquement sans authentification"],
     "correct": 0,
-    "explication": "Cloud Workflows nécessite un compte de service pour s'authentifier auprès des autres services GCP."
+    "explanation": "Cloud Workflows nécessite un compte de service pour s'authentifier auprès des autres services GCP."
   },
   {
     "id": "GCP-DL-250",
@@ -482,6 +482,6 @@
       "Les envoyer par email"
     ],
     "correct": 0,
-    "explication": "Les clés d'API doivent être protégées comme des secrets."
+    "explanation": "Les clés d'API doivent être protégées comme des secrets."
   }
 ]

@@ -748,5 +748,494 @@
     ],
     "correct": 3,
     "explanation": "Bonnes pratiques : ne jamais avaler d'exception, logger, utiliser des types spécifiques, ne pas utiliser Exception pour tout."
+  },
+  {
+    "id": "JAVA21-EEG-001",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "Exceptions - Hiérarchie, try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la hiérarchie des exceptions en Java :",
+    "options": [
+      "Toutes les exceptions héritent de la classe Throwable.",
+      "Error et Exception sont des classes sœurs dans l'arbre d'héritage.",
+      "RuntimeException est une sous-classe de Error.",
+      "Les exceptions Checked sont des sous-classes d'Exception."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Toutes les exceptions héritent de la classe Throwable, ce qui est correct. Error et Exception sont des classes sœurs dans l'arbre d'héritage, ce qui est également correct. RuntimeException n'est pas une sous-classe de Error mais d'Exception, ce qui rend cette option incorrecte. Les exceptions Checked sont effectivement des sous-classes d'Exception, ce qui est correct."
+  },
+  {
+    "id": "JAVA21-EEG-002",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre try-catch et try-with-resources en Java ?",
+    "options": [
+      "try-with-resources est utilisé pour gérer des ressources qui implémentent AutoCloseable.",
+      "try-catch permet de capturer des exceptions, tandis que try-with-resources ne le fait pas.",
+      "try-catch peut être utilisé avec des ressources AutoCloseable, mais try-with-resources ne le fait pas.",
+      "try-catch et try-with-resources sont interchangeables dans tous les cas."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "try-with-resources est utilisé pour gérer des ressources qui implémentent AutoCloseable, ce qui est correct. try-catch permet de capturer des exceptions, tandis que try-with-resources peut également être utilisé pour gérer les exceptions lors de la fermeture des ressources, ce qui rend cette option incorrecte. try-catch peut être utilisé avec des ressources AutoCloseable, mais try-with-resources est spécifiquement conçu pour cela, ce qui rend cette option incorrecte. try-catch et try-with-resources ne sont pas interchangeables dans tous les cas, car try-with-resources est conçu pour gérer des ressources AutoCloseable, ce qui rend cette option incorrecte."
+  },
+  {
+    "id": "JAVA21-EEG-003",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le bloc finally en Java ?",
+    "options": [
+      "Le bloc finally est toujours exécuté, même si une exception n'est pas lancée.",
+      "Le bloc finally peut être omis s'il ne contient aucune instruction.",
+      "Le bloc finally est exécuté avant le bloc catch si une exception est lancée.",
+      "Le bloc finally peut être utilisé pour libérer des ressources."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Le bloc finally est toujours exécuté, même si une exception n'est pas lancée, ce qui est correct. Le bloc finally peut être omis s'il ne contient aucune instruction, ce qui est correct. Le bloc finally n'est pas exécuté avant le bloc catch si une exception est lancée, mais après, ce qui rend cette option incorrecte. Le bloc finally peut être utilisé pour libérer des ressources, ce qui est correct."
+  },
+  {
+    "id": "JAVA21-EEG-004",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la signification de l'instruction 'throw' en Java ?",
+    "options": [
+      "Lance une nouvelle exception.",
+      "Capture une exception existante.",
+      "Termine le programme immédiatement.",
+      "Résout une exception existante."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'instruction 'throw' lance une nouvelle exception, ce qui est correct. Capture une exception existante n'est pas la fonction de 'throw', ce qui rend cette option incorrecte. Termine le programme immédiatement n'est pas la fonction de 'throw', ce qui rend cette option incorrecte. Résout une exception existante n'est pas la fonction de 'throw', ce qui rend cette option incorrecte."
+  },
+  {
+    "id": "JAVA21-EEG-005",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de try-with-resources en Java :",
+    "options": [
+      "try-with-resources est utilisé pour gérer des ressources qui implémentent AutoCloseable.",
+      "try-with-resources peut être utilisé avec plusieurs ressources en les déclarant dans le même bloc.",
+      "try-with-resources garantit que toutes les ressources sont fermées à la fin du bloc try.",
+      "try-with-resources ne peut pas être utilisé avec des ressources qui ne sont pas AutoCloseable."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "try-with-resources est utilisé pour gérer des ressources qui implémentent AutoCloseable, ce qui est correct. try-with-resources peut être utilisé avec plusieurs ressources en les déclarant dans le même bloc, ce qui est correct. try-with-resources garantit que toutes les ressources sont fermées à la fin du bloc try, ce qui est correct. try-with-resources peut être utilisé avec des ressources qui ne sont pas AutoCloseable, ce qui rend cette option incorrecte."
+  },
+  {
+    "id": "JAVA21-EEG-006",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une exception Checked et une exception Unchecked en Java ?",
+    "options": [
+      "Les exceptions Checked doivent être déclarées dans la signature de méthode ou capturées.",
+      "Les exceptions Unchecked sont des sous-classes d'Error.",
+      "Les exceptions Checked sont toujours lancées par le système, tandis que les exceptions Unchecked peuvent être lancées par l'utilisateur.",
+      "Les exceptions Checked sont gérées au moment de la compilation, tandis que les exceptions Unchecked sont gérées au moment de l'exécution."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les exceptions Checked doivent être déclarées dans la signature de méthode ou capturées, ce qui est correct. Les exceptions Unchecked ne sont pas des sous-classes d'Error mais de RuntimeException, ce qui rend cette option incorrecte. Les exceptions Checked ne sont pas toujours lancées par le système, ce qui rend cette option incorrecte. Les exceptions Checked sont gérées au moment de la compilation, tandis que les exceptions Unchecked sont gérées au moment de l'exécution, ce qui est correct."
+  },
+  {
+    "id": "JAVA21-EEG-007",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation du mot-clé 'finally' en Java ?",
+    "options": [
+      "Le bloc finally est toujours exécuté, même si une exception n'est pas lancée.",
+      "Le bloc finally peut être omis s'il ne contient aucune instruction.",
+      "Le bloc finally est exécuté avant le bloc catch si une exception est lancée.",
+      "Le bloc finally peut être utilisé pour libérer des ressources."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Le bloc finally est toujours exécuté, même si une exception n'est pas lancée, ce qui est correct. Le bloc finally peut être omis s'il ne contient aucune instruction, ce qui est correct. Le bloc finally n'est pas exécuté avant le bloc catch si une exception est lancée, mais après, ce qui rend cette option incorrecte. Le bloc finally peut être utilisé pour libérer des ressources, ce qui est correct."
+  },
+  {
+    "id": "JAVA21-EEG-008",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la signification de l'instruction 'throws' en Java ?",
+    "options": [
+      "Lance une nouvelle exception.",
+      "Indique que la méthode peut lancer des exceptions spécifiques.",
+      "Capture une exception existante.",
+      "Résout une exception existante."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'instruction 'throws' indique que la méthode peut lancer des exceptions spécifiques, ce qui est correct. Lance une nouvelle exception n'est pas la fonction de 'throws', ce qui rend cette option incorrecte. Capture une exception existante n'est pas la fonction de 'throws', ce qui rend cette option incorrecte. Résout une exception existante n'est pas la fonction de 'throws', ce qui rend cette option incorrecte."
+  },
+  {
+    "id": "JAVA21-EEG-009",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'instruction try-catch-finally en Java :",
+    "options": [
+      "Le bloc finally est exécuté même si une exception n'est pas lancée.",
+      "Le bloc catch doit toujours être utilisé avec un bloc try.",
+      "Il est possible d'avoir plusieurs blocs catch pour une seule instruction try.",
+      "Le bloc finally peut être omis si aucun traitement n'est nécessaire après le bloc try."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le bloc finally est effectivement exécuté même si aucune exception n'est lancée, ce qui le rend utile pour libérer des ressources. Le bloc catch n'est pas obligatoire si aucune gestion d'exception spécifique n'est requise, mais il est souvent utilisé. Il est possible de définir plusieurs blocs catch pour gérer différentes types d'exceptions spécifiques. Le bloc finally peut être omis, mais il est recommandé de l'utiliser pour garantir la fermeture des ressources ou d'autres opérations de nettoyage."
+  },
+  {
+    "id": "JAVA21-EEG-010",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre try-catch-finally et try-with-resources en Java ?",
+    "options": [
+      "try-with-resources permet de gérer automatiquement les ressources.",
+      "Le bloc finally n'est pas nécessaire dans try-with-resources.",
+      "try-catch-finally ne peut gérer que des ressources qui implémentent AutoCloseable.",
+      "try-with-resources est moins performant que try-catch-finally."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale différence est que try-with-resources permet de gérer automatiquement les ressources en s'assurant qu'elles sont fermées après l'exécution du bloc try, même en cas d'exception. Le bloc finally peut être utilisé avec try-with-resources pour des opérations supplémentaires, mais il n'est pas nécessaire. try-catch-finally peut gérer toutes les ressources, pas seulement celles qui implémentent AutoCloseable. En général, try-with-resources est aussi performant ou plus performant que try-catch-finally pour la gestion des ressources."
+  },
+  {
+    "id": "JAVA21-EEG-011",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de try-with-resources :",
+    "options": [
+      "try-with-resources est utilisé pour gérer automatiquement les ressources qui implémentent l'interface AutoCloseable.",
+      "try-with-resources peut être utilisé avec plusieurs ressources en les déclarant dans la clause try.",
+      "try-with-resources remplace complètement le bloc finally pour fermer les ressources.",
+      "Les exceptions lancées dans un try-with-resources sont cachées si une exception est déjà en cours de traitement."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car try-with-resources est bien utilisé pour gérer les ressources AutoCloseable. Option B est correcte car vous pouvez déclarer plusieurs ressources dans une clause try, séparées par des points-virgules. Option C est incorrecte car try-with-resources ne remplace pas complètement le bloc finally, mais peut être utilisé avec un bloc finally. Option D est incorrecte car les exceptions lancées dans un try-with-resources sont ajoutées à la pile des exceptions si une exception est déjà en cours de traitement."
+  },
+  {
+    "id": "JAVA21-EEG-012",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une exception checked et une unchecked en Java ?",
+    "options": [
+      "Les exceptions checked doivent être déclarées dans une clause throws ou gérées par un bloc catch.",
+      "Les exceptions unchecked sont généralement des erreurs de programmation qui devraient être évitées.",
+      "Les exceptions checked sont toujours des sous-classes de RuntimeException.",
+      "Toutes les options ci-dessus."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car les exceptions checked doivent être explicitement déclarées ou gérées. Option B est correcte car les exceptions unchecked, comme des erreurs de programmation, ne sont pas obligatoires à gérer explicitement. Option C est incorrecte car les exceptions checked ne sont pas des sous-classes de RuntimeException, mais plutôt des sous-classes d'Exception. Option D est incorrecte car elle combine des informations contradictoires."
+  },
+  {
+    "id": "JAVA21-EEG-013",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le bloc finally dans un try-catch-finally :",
+    "options": [
+      "Le bloc finally est toujours exécuté, même si une exception n'est pas lancée.",
+      "Le bloc finally peut être omis si aucun code de nettoyage n'est nécessaire.",
+      "Le bloc finally est exécuté après le bloc catch correspondant à l'exception lancée.",
+      "Le bloc finally peut être utilisé pour retourner une valeur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car le bloc finally s'exécute toujours à la fin, même si aucune exception n'est lancée. Option B est correcte car le bloc finally peut être omis si aucun nettoyage n'est nécessaire. Option C est correcte car le bloc finally s'exécute après le bloc catch correspondant à l'exception. Option D est incorrecte car un bloc finally ne peut pas retourner une valeur, ce qui serait ambigu avec le code après la structure try-catch-finally."
+  },
+  {
+    "id": "JAVA21-EEG-014",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour déclarer une ressource dans un try-with-resources ?",
+    "options": [
+      "try (Resource r = new Resource()) { ... }",
+      "try (Resource r = new Resource(); Resource s = new Resource()) { ... }",
+      "try (Resource r = new Resource; Resource s = new Resource) { ... }",
+      "Toutes les options ci-dessus."
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car elle déclare une ressource avec un constructeur. Option B est correcte car elle déclare plusieurs ressources, séparées par des points-virgules. Option C est incorrecte car elle manque les parenthèses dans l'initialisation des ressources. Option D est correcte car toutes les options précédentes sont syntaxiquement valides."
+  },
+  {
+    "id": "JAVA21-EEG-015",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'ordre d'exécution dans un try-catch-finally :",
+    "options": [
+      "Le bloc finally s'exécute toujours après le bloc try ou catch.",
+      "Si une exception est lancée dans le bloc try, le bloc catch correspondant s'exécute avant le finally.",
+      "Le bloc finally ne peut pas contenir de déclaration return.",
+      "Si une exception est lancée dans le bloc catch, elle peut être capturée par un autre bloc catch."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car le bloc finally s'exécute après le bloc try ou catch, peu importe si une exception est lancée. Option B est correcte car le bloc catch correspondant s'exécute avant le finally si une exception est lancée. Option C est incorrecte car un bloc finally peut contenir une déclaration return, mais cela peut entraîner des comportements inattendus. Option D est incorrecte car une exception lancée dans un bloc catch ne peut pas être capturée par un autre bloc catch, sauf si elle est relancée explicitement."
+  },
+  {
+    "id": "JAVA21-EEG-016",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le bloc finally dans une structure try-catch :",
+    "options": [
+      "Le bloc finally est toujours exécuté, quelle que soit l'occurrence d'une exception.",
+      "Le bloc finally peut être omis si aucune action n'est requise après le bloc catch.",
+      "Le bloc finally ne peut pas contenir de instructions return.",
+      "Le bloc finally est exécuté avant le bloc catch."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Le bloc finally est toujours exécuté après le bloc try et catch, indépendamment de l'occurrence d'une exception. Il peut être omis si aucune action spécifique n'est nécessaire après le bloc catch. Cependant, il ne peut pas contenir de instructions return car cela pourrait empêcher l'exécution du code dans le bloc finally. Le bloc finally est exécuté après le bloc catch."
+  },
+  {
+    "id": "JAVA21-EEG-017",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre try-with-resources et un bloc try-catch standard ?",
+    "options": [
+      "try-with-resources permet de gérer automatiquement les ressources.",
+      "Le bloc try-catch standard ne peut pas gérer plusieurs exceptions en une seule ligne.",
+      "try-with-resources nécessite que toutes les ressources soient des objets qui implémentent AutoCloseable.",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Toutes ces réponses sont correctes. try-with-resources permet de gérer automatiquement les ressources en s'assurant qu'elles sont fermées après l'exécution du bloc try. Le bloc try-catch standard peut effectivement gérer plusieurs exceptions en une seule ligne à partir de Java 7. try-with-resources nécessite que toutes les ressources soient des objets qui implémentent AutoCloseable."
+  },
+  {
+    "id": "JAVA21-EEG-018",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation du mot-clé 'throw' en Java ?",
+    "options": [
+      "'throw' est utilisé pour lancer une exception explicitement.",
+      "'throw' peut être utilisé pour lancer n'importe quelle exception, y compris les exceptions checked.",
+      "'throw' ne peut être utilisé que dans des blocs try-catch.",
+      "'throw' doit toujours être suivi d'une nouvelle instance d'exception."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "'throw' est effectivement utilisé pour lancer une exception explicitement. Cependant, 'throw' ne peut pas être utilisé pour lancer n'importe quelle exception checked sans un bloc try-catch ou une clause throws dans la signature de méthode. 'throw' peut être utilisé n'importe où dans le code, pas seulement dans des blocs try-catch. 'throw' doit toujours être suivi d'une nouvelle instance d'exception."
+  },
+  {
+    "id": "JAVA21-EEG-019",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la hiérarchie de l'exception IOException en Java ?",
+    "options": [
+      "IOException extends Exception.",
+      "IOException extends RuntimeException.",
+      "IOException extends Error.",
+      "IOException extends Throwable."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "IOException est une exception checked, donc elle étend Exception. RuntimeException et Error sont des exceptions unchecked, et Throwable est la classe parente de toutes les exceptions."
+  },
+  {
+    "id": "JAVA21-EEG-020",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'ordre d'exécution dans un bloc try-catch-finally :",
+    "options": [
+      "Le bloc finally est toujours exécuté avant le bloc catch.",
+      "Si une exception est lancée, le bloc catch est exécuté avant le bloc finally.",
+      "Le bloc try est toujours exécuté avant le bloc catch et finally.",
+      "Si une exception n'est pas lancée, le bloc finally est exécuté après le bloc try."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Le bloc try est toujours exécuté avant le bloc catch et finally. Si une exception est lancée, le bloc catch est effectivement exécuté avant le bloc finally. Cependant, le bloc finally est toujours exécuté après le bloc try et catch, quelle que soit l'occurrence d'une exception. Si une exception n'est pas lancée, le bloc finally est exécuté après le bloc try."
+  },
+  {
+    "id": "JAVA21-EEG-021",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le bloc finally :",
+    "options": [
+      "Le code dans le bloc finally s'exécute toujours, même si une exception est lancée.",
+      "Le code dans le bloc finally ne s'exécute pas si System.exit() est appelé.",
+      "Le code dans le bloc finally peut être omis si aucune action n'est nécessaire après la gestion des exceptions.",
+      "Le code dans le bloc finally ne peut pas contenir de déclarations return."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Le bloc finally s'exécute toujours après le try et catch, même si une exception est lancée. Cependant, il ne s'exécute pas si System.exit() est appelé. Il peut être omis, mais ne peut pas contenir de déclarations return."
+  },
+  {
+    "id": "JAVA21-EEG-022",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre try-with-resources et try-catch-finally ?",
+    "options": [
+      "try-with-resources est utilisé pour gérer les ressources qui implémentent AutoCloseable.",
+      "try-with-resources garantit que toutes les ressources sont fermées après l'exécution du bloc try.",
+      "try-catch-finally nécessite explicitement la fermeture des ressources.",
+      "Toutes les réponses précédentes."
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Toutes les réponses précédentes sont correctes. try-with-resources est spécifique pour gérer des ressources qui implémentent AutoCloseable, garantissant leur fermeture après l'exécution du bloc try. En revanche, avec try-catch-finally, il faut fermer les ressources explicitement."
+  },
+  {
+    "id": "JAVA21-EEG-023",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation du bloc catch ?",
+    "options": [
+      "Le bloc catch peut capturer plusieurs types d'exceptions dans une seule clause.",
+      "Le bloc catch doit toujours être suivi d'un bloc finally.",
+      "Le bloc catch peut être omis si le bloc try ne lance pas d'exceptions.",
+      "Le bloc catch doit capturer des exceptions de type Throwable."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Le bloc catch peut capturer plusieurs types d'exceptions dans une seule clause en utilisant des barres verticales. Le bloc catch doit capturer des exceptions de type Throwable, mais il n'est pas obligatoire d'avoir un bloc finally après chaque bloc catch. Le bloc catch ne peut pas être omis si le bloc try lance des exceptions."
+  },
+  {
+    "id": "JAVA21-EEG-024",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la bonne pratique pour gérer les exceptions en Java ?",
+    "options": [
+      "Capturer toutes les exceptions possibles dans un seul bloc catch.",
+      "Utiliser des blocs try-catch pour gérer les exceptions spécifiques et un bloc catch général.",
+      "Omettre la gestion des exceptions pour simplifier le code.",
+      "Utiliser try-with-resources uniquement pour les ressources qui implémentent AutoCloseable."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La bonne pratique est d'utiliser des blocs try-catch pour gérer les exceptions spécifiques et un bloc catch général pour capturer les autres types d'exceptions. Cela permet une gestion précise et flexible des erreurs."
+  },
+  {
+    "id": "JAVA21-EEG-025",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'ordre d'exécution dans un bloc try-catch-finally :",
+    "options": [
+      "Le code dans le bloc finally s'exécute après le bloc try et catch.",
+      "Si une exception est lancée, le code dans le bloc finally s'exécute avant le bloc catch.",
+      "Le code dans le bloc try est toujours exécuté avant les blocs catch et finally.",
+      "Le code dans le bloc catch est exécuté avant le bloc finally."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le code dans le bloc finally s'exécute après le bloc try et catch, peu importe si une exception est lancée ou non. Le code dans le bloc try est toujours exécuté avant les blocs catch et finally. Si une exception est lancée, le code dans le bloc catch est exécuté avant le bloc finally."
+  },
+  {
+    "id": "JAVA21-EEG-026",
+    "theme": "Exceptions et Gestion d'erreurs",
+    "theme_label": "try-catch-finally, try-with-resources",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de try-with-resources en Java :",
+    "options": [
+      "try-with-resources permet d'automatiquement fermer les ressources après l'exécution du bloc try",
+      "try-with-resources ne peut être utilisé que avec des classes qui implémentent l'interface AutoCloseable",
+      "try-with-resources peut être utilisé avec des classes qui implémentent la méthode close()",
+      "try-with-resources ne peut pas être utilisé avec des classes qui implémentent l'interface Closeable"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte car try-with-resources permet d'automatiquement fermer les ressources après l'exécution du bloc try. L'option B est correcte car try-with-resources ne peut être utilisé que avec des classes qui implémentent l'interface AutoCloseable. L'option C est incorrecte car Closeable est une interface, mais try-with-resources nécessite l'implémentation d'AutoCloseable. L'option D est incorrecte car try-with-resources peut être utilisé avec des classes qui implémentent la méthode close(), mais il faut qu'elles implémentent l'interface AutoCloseable."
   }
 ]

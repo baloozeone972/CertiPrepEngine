@@ -80,7 +80,12 @@
     "theme_label": "IAM Roles",
     "difficulty": "hard",
     "question": "Peut-on assumer un rôle IAM depuis un compte différent ?",
-    "options": ["Oui", "Non", "Uniquement avec organisations", "Uniquement avec identity center"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec organisations",
+      "Uniquement avec identity center"
+    ],
     "correct": 0,
     "explanation": "Les rôles IAM peuvent être assumés cross-compte avec une politique de confiance."
   },
@@ -195,7 +200,12 @@
     "theme_label": "IAM Password Policy",
     "difficulty": "hard",
     "question": "Peut-on configurer une politique de mot de passe IAM ?",
-    "options": ["Oui", "Non", "Uniquement pour les comptes root", "Uniquement pour les utilisateurs fédérés"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les comptes root",
+      "Uniquement pour les utilisateurs fédérés"
+    ],
     "correct": 0,
     "explanation": "On peut configurer la complexité, l'expiration, l'historique des mots de passe."
   },
@@ -445,7 +455,12 @@
     "theme_label": "AWS Shield",
     "difficulty": "hard",
     "question": "AWS Shield Standard est-il gratuit ?",
-    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour CloudFront"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour EC2",
+      "Uniquement pour CloudFront"
+    ],
     "correct": 0,
     "explanation": "Shield Standard est inclus gratuitement pour tous les clients AWS."
   },
@@ -455,7 +470,12 @@
     "theme_label": "AWS Shield Advanced",
     "difficulty": "hard",
     "question": "Quel est le coût mensuel de Shield Advanced ?",
-    "options": ["3 000 $ par mois", "1 000 $", "5 000 $", "10 000 $"],
+    "options": [
+      "3 000 $ par mois",
+      "1 000 $",
+      "5 000 $",
+      "10 000 $"
+    ],
     "correct": 0,
     "explanation": "Shield Advanced coûte 3 000 $ par mois + frais d'utilisation."
   },
@@ -480,7 +500,12 @@
     "theme_label": "AWS Network Firewall",
     "difficulty": "hard",
     "question": "À quel niveau fonctionne AWS Network Firewall ?",
-    "options": ["Couche 3/4 (réseau)", "Couche 7 (application)", "Couche 2", "Toutes les couches"],
+    "options": [
+      "Couche 3/4 (réseau)",
+      "Couche 7 (application)",
+      "Couche 2",
+      "Toutes les couches"
+    ],
     "correct": 0,
     "explanation": "Network Firewall protège au niveau réseau (VPC)."
   },
@@ -520,7 +545,12 @@
     "theme_label": "Amazon GuardDuty",
     "difficulty": "hard",
     "question": "GuardDuty est-il un service payant ?",
-    "options": ["Oui (30 jours d'essai)", "Non, gratuit", "Uniquement pour les comptes enterprise", "Uniquement pour Organizations"],
+    "options": [
+      "Oui (30 jours d'essai)",
+      "Non, gratuit",
+      "Uniquement pour les comptes enterprise",
+      "Uniquement pour Organizations"
+    ],
     "correct": 0,
     "explanation": "GuardDuty offre 30 jours d'essai gratuit, puis est payant."
   },
@@ -590,7 +620,12 @@
     "theme_label": "AWS Config Rules",
     "difficulty": "hard",
     "question": "Peut-on créer des règles personnalisées AWS Config ?",
-    "options": ["Oui", "Non", "Uniquement des règles managées", "Uniquement avec Lambda"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement des règles managées",
+      "Uniquement avec Lambda"
+    ],
     "correct": 0,
     "explanation": "On peut créer des règles personnalisées via Lambda."
   },
@@ -630,7 +665,12 @@
     "theme_label": "CloudTrail",
     "difficulty": "hard",
     "question": "Quelle est la rétention par défaut des événements CloudTrail ?",
-    "options": ["90 jours (management events)", "7 jours", "30 jours", "1 an"],
+    "options": [
+      "90 jours (management events)",
+      "7 jours",
+      "30 jours",
+      "1 an"
+    ],
     "correct": 0,
     "explanation": "CloudTrail conserve les événements management pendant 90 jours."
   },
@@ -730,7 +770,12 @@
     "theme_label": "Encryption best practices",
     "difficulty": "hard",
     "question": "Doit-on chiffrer les données au repos ?",
-    "options": ["Oui", "Non", "Seulement les données sensibles", "Uniquement pour S3"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement les données sensibles",
+      "Uniquement pour S3"
+    ],
     "correct": 0,
     "explanation": "Le chiffrement au repos est recommandé pour toutes les données."
   },
@@ -740,7 +785,12 @@
     "theme_label": "Encryption best practices",
     "difficulty": "hard",
     "question": "Doit-on chiffrer les données en transit ?",
-    "options": ["Oui", "Non", "Seulement pour Internet", "Seulement pour les API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour Internet",
+      "Seulement pour les API"
+    ],
     "correct": 0,
     "explanation": "Le chiffrement en transit (TLS) est recommandé pour toutes les communications."
   },
@@ -765,7 +815,12 @@
     "theme_label": "VPC security best practices",
     "difficulty": "hard",
     "question": "Doit-on utiliser des VPC Flow Logs ?",
-    "options": ["Oui, pour l'audit", "Non", "Optionnel", "Uniquement pour les VPC publics"],
+    "options": [
+      "Oui, pour l'audit",
+      "Non",
+      "Optionnel",
+      "Uniquement pour les VPC publics"
+    ],
     "correct": 0,
     "explanation": "Les Flow Logs aident à diagnostiquer et auditer le trafic réseau."
   },
@@ -775,7 +830,12 @@
     "theme_label": "Shared Responsibility Model",
     "difficulty": "hard",
     "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DU cloud ?",
-    "options": ["AWS", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "options": [
+      "AWS",
+      "Le client",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
     "correct": 0,
     "explanation": "AWS est responsable de la sécurité DU cloud (matériel, réseau, hyperviseur)."
   },
@@ -785,7 +845,12 @@
     "theme_label": "Shared Responsibility Model",
     "difficulty": "hard",
     "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DANS le cloud ?",
-    "options": ["Le client", "AWS", "Les deux", "Ni l'un ni l'autre"],
+    "options": [
+      "Le client",
+      "AWS",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
     "correct": 0,
     "explanation": "Le client est responsable de la sécurité DANS le cloud (données, OS, applications)."
   },
@@ -825,7 +890,12 @@
     "theme_label": "GDPR compliance",
     "difficulty": "hard",
     "question": "AWS est-il conforme GDPR ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement en Europe"
+    ],
     "correct": 0,
     "explanation": "AWS est conforme GDPR avec des engagements contractuels."
   },
@@ -978,5 +1048,439 @@
     ],
     "correct": 0,
     "explanation": "Plusieurs couches de sécurité pour RDS."
+  },
+  {
+    "id": "AWS-SAA-S&I-001",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM peuvent être attachées aux utilisateurs, groupes et rôles.",
+      "Les politiques IAM peuvent définir des permissions spécifiques pour les services AWS.",
+      "Les politiques IAM ne peuvent pas être utilisées pour contrôler l'accès aux ressources AWS.",
+      "Les politiques IAM peuvent être héritées des groupes auxquels un utilisateur appartient.",
+      "Les politiques IAM ne peuvent pas être modifiées une fois créées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les politiques IAM peuvent être attachées aux utilisateurs, groupes et rôles (A). Elles définissent des permissions spécifiques pour les services AWS (B). Les politiques IAM peuvent être héritées des groupes auxquels un utilisateur appartient (D). Les politiques IAM peuvent être modifiées une fois créées (C est incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-002",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un rôle IAM et une politique IAM ?",
+    "options": [
+      "Un rôle IAM est utilisé pour définir des permissions, tandis qu'une politique IAM est utilisée pour contrôler l'accès aux ressources.",
+      "Un rôle IAM est utilisé pour contrôler l'accès aux ressources, tandis qu'une politique IAM est utilisée pour définir des permissions.",
+      "Un rôle IAM est utilisé pour authentifier les utilisateurs, tandis qu'une politique IAM est utilisée pour autoriser les actions.",
+      "Un rôle IAM et une politique IAM sont interchangeables."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Un rôle IAM est utilisé pour contrôler l'accès aux ressources, tandis qu'une politique IAM est utilisée pour définir des permissions (B)."
+  },
+  {
+    "id": "AWS-SAA-S&I-003",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions IAM :",
+    "options": [
+      "Les conditions IAM permettent de restreindre les actions en fonction des propriétés spécifiques d'une demande.",
+      "Les conditions IAM ne peuvent être utilisées que pour les politiques IAM.",
+      "Les conditions IAM sont basées sur des propriétés telles que l'heure de la demande, le lieu d'exécution ou les informations du demandeur.",
+      "Les conditions IAM ne peuvent pas être utilisées pour restreindre l'accès aux ressources spécifiques.",
+      "Les conditions IAM sont définies dans les politiques IAM et peuvent être utilisées pour contrôler l'accès aux services AWS."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Les conditions IAM permettent de restreindre les actions en fonction des propriétés spécifiques d'une demande (A). Les conditions IAM peuvent être utilisées pour les politiques IAM et les rôles IAM (B est incorrect). Les conditions IAM sont basées sur des propriétés telles que l'heure de la demande, le lieu d'exécution ou les informations du demandeur (C). Les conditions IAM peuvent être utilisées pour restreindre l'accès aux ressources spécifiques (D est incorrect). Les conditions IAM sont définies dans les politiques IAM et peuvent être utilisées pour contrôler l'accès aux services AWS (E)."
+  },
+  {
+    "id": "AWS-SAA-S&I-004",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre AWS KMS et IAM ?",
+    "options": [
+      "AWS KMS est utilisé pour gérer les clés de chiffrement, tandis que IAM est utilisé pour gérer les identités et les accès.",
+      "AWS KMS est utilisé pour gérer les identités et les accès, tandis que IAM est utilisé pour gérer les clés de chiffrement.",
+      "AWS KMS et IAM sont interchangeables et peuvent être utilisés indifféremment.",
+      "AWS KMS est utilisé pour gérer les ressources AWS, tandis que IAM est utilisé pour gérer les utilisateurs et les groupes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS KMS est utilisé pour gérer les clés de chiffrement, tandis que IAM est utilisé pour gérer les identités et les accès (A)."
+  },
+  {
+    "id": "AWS-SAA-S&I-005",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS WAF :",
+    "options": [
+      "AWS WAF est utilisé pour protéger les applications web contre les menaces et les attaques.",
+      "AWS WAF ne peut être utilisé que pour protéger des applications web et non d'autres types de ressources.",
+      "AWS WAF peut être utilisé pour contrôler l'accès aux applications web en fonction des règles définies.",
+      "AWS WAF est basé sur les politiques IAM pour contrôler l'accès aux applications web.",
+      "AWS WAF ne peut pas être utilisé pour protéger les applications web contre les attaques de type DDoS."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "AWS WAF est utilisé pour protéger les applications web contre les menaces et les attaques (A). AWS WAF peut être utilisé pour contrôler l'accès aux applications web en fonction des règles définies (C). AWS WAF est basé sur les politiques IAM pour contrôler l'accès aux applications web (D est incorrect). AWS WAF peut être utilisé pour protéger les applications web contre les attaques de type DDoS (B est incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-006",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM peuvent être appliquées aux utilisateurs, groupes et rôles.",
+      "Les politiques IAM ne peuvent être appliquées qu'aux utilisateurs.",
+      "Les politiques IAM définissent les autorisations et les restrictions d'accès.",
+      "Les politiques IAM ne peuvent pas être utilisées pour gérer les identités."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les politiques IAM peuvent être appliquées aux utilisateurs, groupes et rôles (A correct). Les politiques IAM définissent les autorisations et les restrictions d'accès (C correct). Les politiques IAM ne peuvent pas être appliquées qu'aux utilisateurs (B incorrect). Les politiques IAM sont essentiellement utilisées pour gérer les identités et l'accès (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-007",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un rôle IAM et une politique IAM ?",
+    "options": [
+      "Un rôle IAM définit les autorisations, tandis qu'une politique IAM définit les identités.",
+      "Un rôle IAM définit les identités, tandis qu'une politique IAM définit les autorisations.",
+      "Un rôle IAM et une politique IAM sont interchangeables.",
+      "Aucune différence entre un rôle IAM et une politique IAM."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Un rôle IAM définit les identités, tandis qu'une politique IAM définit les autorisations (B correct). Un rôle IAM définit les identités, tandis qu'une politique IAM définit les autorisations (B correct). Un rôle IAM et une politique IAM ne sont pas interchangeables (C incorrect). Aucune différence entre un rôle IAM et une politique IAM (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-008",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS KMS :",
+    "options": [
+      "AWS KMS est un service de gestion des clés permettant la création et le contrôle d'accès aux clés.",
+      "AWS KMS est utilisé uniquement pour chiffrer des données dans le stockage S3.",
+      "AWS KMS permet de générer, stocker et gérer des clés de chiffrement.",
+      "AWS KMS ne peut être utilisé que pour chiffrer des données en transit."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "AWS KMS est un service de gestion des clés permettant la création et le contrôle d'accès aux clés (A correct). AWS KMS permet de générer, stocker et gérer des clés de chiffrement (C correct). AWS KMS est utilisé uniquement pour chiffrer des données dans le stockage S3 (B incorrect). AWS KMS peut être utilisé pour chiffrer des données en transit et à repos (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-009",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Access Analyzer",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité d'IAM Access Analyzer ?",
+    "options": [
+      "Analyser les politiques IAM pour détecter les violations de sécurité.",
+      "Générer des rapports sur l'utilisation des identités et des autorisations.",
+      "Simuler les actions d'un utilisateur pour détecter les vulnérabilités de sécurité.",
+      "Gérer les identités et les autorisations des utilisateurs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Analyser les politiques IAM pour détecter les violations de sécurité (A correct). Générer des rapports sur l'utilisation des identités et des autorisations (B correct). Simuler les actions d'un utilisateur pour détecter les vulnérabilités de sécurité (C correct). Gérer les identités et les autorisations des utilisateurs (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-010",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Access Advisor",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction de IAM Access Advisor ?",
+    "options": [
+      "Analyser les politiques IAM pour détecter les violations de sécurité.",
+      "Générer des rapports sur l'utilisation des identités et des autorisations.",
+      "Simuler les actions d'un utilisateur pour détecter les vulnérabilités de sécurité.",
+      "Gérer les identités et les autorisations des utilisateurs."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Générer des rapports sur l'utilisation des identités et des autorisations (B correct). Analyser les politiques IAM pour détecter les violations de sécurité (A incorrect). Simuler les actions d'un utilisateur pour détecter les vulnérabilités de sécurité (C incorrect). Gérer les identités et les autorisations des utilisateurs (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-011",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM peuvent être appliquées aux utilisateurs, groupes et rôles.",
+      "Les politiques IAM ne peuvent être appliquées qu'aux utilisateurs.",
+      "Les politiques IAM permettent de définir des autorisations spécifiques pour les actions sur les ressources AWS.",
+      "Les politiques IAM ne peuvent pas être utilisées pour définir des autorisations."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les politiques IAM peuvent être appliquées aux utilisateurs, groupes et rôles. Les politiques IAM permettent de définir des autorisations spécifiques pour les actions sur les ressources AWS."
+  },
+  {
+    "id": "AWS-SAA-S&I-012",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un utilisateur IAM et un rôle IAM ?",
+    "options": [
+      "Un utilisateur IAM peut avoir des autorisations spécifiques, tandis qu'un rôle IAM est utilisé pour accéder à des ressources AWS.",
+      "Un utilisateur IAM est utilisé pour accéder à des ressources AWS, tandis qu'un rôle IAM peut avoir des autorisations spécifiques.",
+      "Un utilisateur IAM et un rôle IAM ont les mêmes capacités d'accès aux ressources AWS.",
+      "Un utilisateur IAM est utilisé pour gérer les identités et les accès, tandis qu'un rôle IAM est utilisé pour définir des politiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un utilisateur IAM peut avoir des autorisations spécifiques, tandis qu'un rôle IAM est utilisé pour accéder à des ressources AWS."
+  },
+  {
+    "id": "AWS-SAA-S&I-013",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions IAM :",
+    "options": [
+      "Les conditions IAM permettent de définir des contraintes supplémentaires sur les autorisations.",
+      "Les conditions IAM ne peuvent être utilisées que pour les politiques d'IAM des utilisateurs.",
+      "Les conditions IAM peuvent être utilisées dans les politiques d'IAM pour contrôler l'accès en fonction de propriétés spécifiques des demandes.",
+      "Les conditions IAM ne peuvent pas être utilisées pour contrôler l'accès en fonction de propriétés spécifiques des demandes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les conditions IAM permettent de définir des contraintes supplémentaires sur les autorisations. Les conditions IAM peuvent être utilisées dans les politiques d'IAM pour contrôler l'accès en fonction de propriétés spécifiques des demandes."
+  },
+  {
+    "id": "AWS-SAA-S&I-014",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre AWS KMS et IAM ?",
+    "options": [
+      "AWS KMS est utilisé pour gérer les clés de chiffrement, tandis que IAM est utilisé pour gérer les identités et les accès.",
+      "AWS KMS est utilisé pour gérer les identités et les accès, tandis que IAM est utilisé pour gérer les clés de chiffrement.",
+      "AWS KMS et IAM ont les mêmes capacités pour gérer la sécurité des ressources AWS.",
+      "AWS KMS est utilisé uniquement pour les services AWS, tandis que IAM peut être utilisé avec d'autres systèmes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS KMS est utilisé pour gérer les clés de chiffrement, tandis que IAM est utilisé pour gérer les identités et les accès."
+  },
+  {
+    "id": "AWS-SAA-S&I-015",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS WAF :",
+    "options": [
+      "AWS WAF est utilisé pour protéger les applications web contre les menaces.",
+      "AWS WAF ne peut être utilisé que pour protéger les applications web et pas d'autres types de ressources AWS.",
+      "AWS WAF permet de créer des règles personnalisées pour filtrer les requêtes entrantes.",
+      "AWS WAF ne permet pas de créer des règles personnalisées pour filtrer les requêtes entrantes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "AWS WAF est utilisé pour protéger les applications web contre les menaces. AWS WAF permet de créer des règles personnalisées pour filtrer les requêtes entrantes."
+  },
+  {
+    "id": "AWS-SAA-S&I-016",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM peuvent être appliquées aux utilisateurs, groupes et rôles.",
+      "Les politiques IAM ne peuvent être appliquées qu'aux utilisateurs.",
+      "Les politiques IAM sont basées sur des actions spécifiques et non sur des ressources.",
+      "Les politiques IAM peuvent être utilisées pour contrôler l'accès aux services AWS."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les politiques IAM peuvent être appliquées aux utilisateurs, groupes et rôles (A). Les politiques IAM sont basées sur des actions spécifiques et non sur des ressources (C). Les politiques IAM peuvent être utilisées pour contrôler l'accès aux services AWS (D). Les politiques IAM ne peuvent être appliquées qu'aux utilisateurs est incorrect car elles s'appliquent également aux groupes et rôles."
+  },
+  {
+    "id": "AWS-SAA-S&I-017",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre un rôle IAM et une politique IAM ?",
+    "options": [
+      "Un rôle IAM est utilisé pour gérer les accès aux services AWS, tandis qu'une politique IAM est utilisée pour définir les actions autorisées.",
+      "Un rôle IAM est utilisé pour définir les actions autorisées, tandis qu'une politique IAM est utilisée pour gérer les accès aux services AWS.",
+      "Un rôle IAM et une politique IAM sont interchangeables et peuvent être utilisés de manière interchangeable.",
+      "Un rôle IAM est utilisé pour gérer les accès aux services AWS et aux ressources, tandis qu'une politique IAM est utilisée uniquement pour définir les actions autorisées."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un rôle IAM est utilisé pour gérer les accès aux services AWS (A). Un rôle IAM est utilisé uniquement pour définir les actions autorisées est incorrect car un rôle IAM peut également gérer l'accès aux ressources."
+  },
+  {
+    "id": "AWS-SAA-S&I-019",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation des conditions dans les politiques IAM ?",
+    "options": [
+      "Définir les actions autorisées pour un utilisateur.",
+      "Contrôler l'accès en fonction de certaines conditions spécifiques (par exemple, heure de la journée).",
+      "Gérer les identités et les rôles des utilisateurs.",
+      "Stocker des données sensibles."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Contrôler l'accès en fonction de certaines conditions spécifiques (par exemple, heure de la journée) est correct car les conditions dans les politiques IAM permettent d'ajouter des contraintes supplémentaires à l'accès, comme la date et l'heure de la journée."
+  },
+  {
+    "id": "AWS-SAA-S&I-019",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les rôles IAM :",
+    "options": [
+      "Un rôle IAM peut être utilisé pour accorder des autorisations à une entité AWS, comme une instance EC2.",
+      "Un rôle IAM peut être utilisé pour accorder des autorisations à un utilisateur AWS.",
+      "Un rôle IAM ne peut pas être utilisé pour accorder des autorisations à une entité AWS, comme une instance EC2.",
+      "Un rôle IAM peut être utilisé pour accorder des autorisations à un service AWS, comme Amazon S3."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Un rôle IAM peut être utilisé pour accorder des autorisations à une entité AWS, comme une instance EC2 (A correct). Un rôle IAM peut être utilisé pour accorder des autorisations à un utilisateur AWS (B correct). Un rôle IAM ne peut pas être utilisé pour accorder des autorisations à une entité AWS, comme une instance EC2 (C incorrect). Un rôle IAM peut être utilisé pour accorder des autorisations à un service AWS, comme Amazon S3 (D correct)."
+  },
+  {
+    "id": "AWS-SAA-S&I-020",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une politique IAM et un rôle IAM ?",
+    "options": [
+      "Une politique IAM définit les autorisations que peut exercer un utilisateur ou un groupe, tandis qu'un rôle IAM définit les autorisations que peut exercer une entité AWS.",
+      "Une politique IAM définit les autorisations que peut exercer un utilisateur ou un groupe, tandis qu'un rôle IAM définit les autorisations que peut exercer un service AWS.",
+      "Une politique IAM définit les autorisations que peut exercer une entité AWS, tandis qu'un rôle IAM définit les autorisations que peut exercer un utilisateur ou un groupe.",
+      "Une politique IAM définit les autorisations que peut exercer un service AWS, tandis qu'un rôle IAM définit les autorisations que peut exercer un utilisateur ou un groupe."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Une politique IAM définit les autorisations que peut exercer un utilisateur ou un groupe (B correct). Une politique IAM définit les autorisations que peut exercer une entité AWS, tandis qu'un rôle IAM définit les autorisations que peut exercer un utilisateur ou un groupe (C incorrect). Une politique IAM définit les autorisations que peut exercer un service AWS, tandis qu'un rôle IAM définit les autorisations que peut exercer un utilisateur ou un groupe (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-021",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions IAM :",
+    "options": [
+      "Les conditions IAM permettent de spécifier des exigences supplémentaires pour les autorisations.",
+      "Les conditions IAM ne peuvent être utilisées que sur des politiques IAM et non sur des rôles IAM.",
+      "Les conditions IAM peuvent être utilisées pour contrôler les autorisations en fonction de l'heure de la journée.",
+      "Les conditions IAM peuvent être utilisées pour contrôler les autorisations en fonction de l'emplacement géographique."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les conditions IAM permettent de spécifier des exigences supplémentaires pour les autorisations (A correct). Les conditions IAM ne peuvent être utilisées que sur des politiques IAM et non sur des rôles IAM (B incorrect). Les conditions IAM peuvent être utilisées pour contrôler les autorisations en fonction de l'heure de la journée (C correct). Les conditions IAM peuvent être utilisées pour contrôler les autorisations en fonction de l'emplacement géographique (D correct)."
+  },
+  {
+    "id": "AWS-SAA-S&I-022",
+    "theme": "Security & IAM",
+    "theme_label": "AWS KMS",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre AWS KMS et IAM ?",
+    "options": [
+      "AWS KMS est utilisé pour gérer les clés de chiffrement, tandis que IAM est utilisé pour gérer les identités et les accès.",
+      "AWS KMS est utilisé pour gérer les identités et les accès, tandis que IAM est utilisé pour gérer les clés de chiffrement.",
+      "AWS KMS et IAM sont utilisés ensemble pour gérer les identités, les accès et les clés de chiffrement.",
+      "AWS KMS est utilisé pour gérer les identités et les accès, tandis que IAM ne sert pas à rien."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS KMS est utilisé pour gérer les clés de chiffrement (A correct). AWS KMS est utilisé pour gérer les identités et les accès, tandis que IAM est utilisé pour gérer les clés de chiffrement (B incorrect). AWS KMS et IAM sont utilisés ensemble pour gérer les identités, les accès et les clés de chiffrement (C incorrect). AWS KMS est utilisé pour gérer les identités et les accès, tandis que IAM ne sert pas à rien (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-S&I-023",
+    "theme": "Security & IAM",
+    "theme_label": "AWS Security Hub",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS Security Hub :",
+    "options": [
+      "AWS Security Hub est un service qui centralise les alertes et les rapports de sécurité des services AWS.",
+      "AWS Security Hub peut être utilisé uniquement pour surveiller les risques de sécurité des services AWS.",
+      "AWS Security Hub peut être utilisé pour surveiller les risques de sécurité des services AWS et des ressources non-AWS.",
+      "AWS Security Hub peut être utilisé pour surveiller les risques de sécurité des ressources non-AWS, mais pas des services AWS."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "AWS Security Hub est un service qui centralise les alertes et les rapports de sécurité des services AWS (A correct). AWS Security Hub peut être utilisé uniquement pour surveiller les risques de sécurité des services AWS (B incorrect). AWS Security Hub peut être utilisé pour surveiller les risques de sécurité des services AWS et des ressources non-AWS (C correct). AWS Security Hub peut être utilisé pour surveiller les risques de sécurité des ressources non-AWS, mais pas des services AWS (D incorrect)."
   }
 ]

@@ -170,7 +170,12 @@
     "theme_label": "Room Database",
     "difficulty": "easy",
     "question": "Quelle annotation marque une entité Room ?",
-    "options": ["@Entity", "@Table", "@Database", "@Column"],
+    "options": [
+      "@Entity",
+      "@Table",
+      "@Database",
+      "@Column"
+    ],
     "correct": 0,
     "explanation": "@Entity définit une table dans la base."
   },
@@ -180,7 +185,12 @@
     "theme_label": "Room Database",
     "difficulty": "easy",
     "question": "Quelle annotation marque la clé primaire ?",
-    "options": ["@PrimaryKey", "@Id", "@Key", "@Primary"],
+    "options": [
+      "@PrimaryKey",
+      "@Id",
+      "@Key",
+      "@Primary"
+    ],
     "correct": 0,
     "explanation": "@PrimaryKey définit la clé primaire."
   },
@@ -190,7 +200,12 @@
     "theme_label": "Room Database",
     "difficulty": "medium",
     "question": "Quelle annotation marque une colonne ?",
-    "options": ["@ColumnInfo", "@Column", "@Field", "@Property"],
+    "options": [
+      "@ColumnInfo",
+      "@Column",
+      "@Field",
+      "@Property"
+    ],
     "correct": 0,
     "explanation": "@ColumnInfo personnalise le nom de colonne."
   },
@@ -200,7 +215,12 @@
     "theme_label": "Room Database",
     "difficulty": "medium",
     "question": "Quelle annotation marque un DAO ?",
-    "options": ["@Dao", "@Repository", "@Database", "@Query"],
+    "options": [
+      "@Dao",
+      "@Repository",
+      "@Database",
+      "@Query"
+    ],
     "correct": 0,
     "explanation": "@Dao définit les méthodes d'accès aux données."
   },
@@ -210,7 +230,12 @@
     "theme_label": "Room Database",
     "difficulty": "medium",
     "question": "Quelle annotation marque une requête SQL ?",
-    "options": ["@Query", "@SQL", "@Select", "@RawQuery"],
+    "options": [
+      "@Query",
+      "@SQL",
+      "@Select",
+      "@RawQuery"
+    ],
     "correct": 0,
     "explanation": "@Query exécute une requête SQL."
   },
@@ -310,7 +335,12 @@
     "theme_label": "SQLite",
     "difficulty": "hard",
     "question": "Room utilise quelle base de données sous-jacente ?",
-    "options": ["SQLite", "MySQL", "PostgreSQL", "Realm"],
+    "options": [
+      "SQLite",
+      "MySQL",
+      "PostgreSQL",
+      "Realm"
+    ],
     "correct": 0,
     "explanation": "Room est une abstraction sur SQLite."
   },
@@ -718,5 +748,345 @@
     ],
     "correct": 0,
     "explanation": "MigrationTestHelper de androidx.room.testing."
+  },
+  {
+    "id": "AND-DS-051",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux principales avantages de Room Database ?",
+    "options": [
+      "Supporte l'encapsulation des données",
+      "Permet une gestion simplifiée de la base de données SQLite",
+      "Facilite l'intégration avec Firebase",
+      "Assure la sécurité des données"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Room Database offre une gestion simplifiée de la base de données SQLite et facilite l'intégration avec Firebase. Bien que Room assure une certaine sécurité des données, ce n'est pas son principal avantage. L'encapsulation des données n'est pas spécifiquement une fonctionnalité de Room."
+  },
+  {
+    "id": "AND-DS-052",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment accéder à une instance de SharedPreferences ?",
+    "options": [
+      "SharedPreferences.getInstance()",
+      "getSharedPreferences(\"name\", MODE_PRIVATE)",
+      "PreferenceManager.getDefaultSharedPreferences(this)",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Deux méthodes sont disponibles pour accéder à une instance de SharedPreferences : par nom ou par défaut. Les options A et B sont correctes, tandis que C est incorrecte car elle fait référence à une méthode qui n'existe pas."
+  },
+  {
+    "id": "AND-DS-053",
+    "theme": "Data Storage",
+    "theme_label": "Scoped Storage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux principales différences entre Scoped Storage et Legacy Storage ?",
+    "options": [
+      "Scoped Storage est plus sécurisé",
+      "Scoped Storage permet l'accès direct aux fichiers des autres applications",
+      "Legacy Storage est plus performant",
+      "Scoped Storage nécessite une déclaration explicite des permissions"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Scoped Storage est plus sécurisé car il limite l'accès aux fichiers à l'application. Legacy Storage, en revanche, permet un accès plus large aux fichiers et nécessite des permissions spécifiques pour certaines opérations. L'option B est incorrecte car Scoped Storage ne permet pas l'accès direct aux fichiers des autres applications, contrairement à Legacy Storage."
+  },
+  {
+    "id": "AND-DS-054",
+    "theme": "Data Storage",
+    "theme_label": "ContentProvider",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour récupérer des données à partir d'un ContentProvider ?",
+    "options": [
+      "query()",
+      "insert()",
+      "update()",
+      "delete()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode query() est utilisée pour récupérer des données à partir d'un ContentProvider. Les autres méthodes (insert(), update(), delete()) sont utilisées pour effectuer des opérations de modification des données."
+  },
+  {
+    "id": "AND-DS-055",
+    "theme": "Data Storage",
+    "theme_label": "Database encryption",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux principales façons de crypter une base de données dans Android ?",
+    "options": [
+      "Utiliser SQLCipher",
+      "Crypter les données à l'application niveau",
+      "Utiliser Realm avec encryption",
+      "Utiliser SharedPreferences"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "SQLCipher et Realm avec encryption sont deux principales façons de crypter une base de données dans Android. SharedPreferences ne supporte pas la cryptage des données, et crypter les données à l'application niveau n'est généralement pas une solution sécurisée pour la base de données."
+  },
+  {
+    "id": "AND-DS-056",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Room Database :",
+    "options": [
+      "Supporte la migration de schémas",
+      "Peut être utilisé avec des fichiers externes",
+      "Nécessite l'utilisation de LiveData pour les requêtes asynchrones",
+      "Supporte la rétrocompatibilité avec SQLite"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Room Database supporte la migration de schémas et est compatible avec SQLite, ce qui permet une intégration fluide. Elle n'est pas limitée aux fichiers externes et peut utiliser LiveData pour les requêtes asynchrones, mais cela n'est pas une exigence."
+  },
+  {
+    "id": "AND-DS-057",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode correcte pour obtenir une instance de SharedPreferences ?",
+    "options": [
+      "getSharedPreferences(\"name\", MODE_PRIVATE)",
+      "PreferenceManager.getDefaultSharedPreferences(this)",
+      "SharedPreferences.getInstance()",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Les deux méthodes A et B sont correctes pour obtenir une instance de SharedPreferences. La méthode C n'existe pas."
+  },
+  {
+    "id": "AND-DS-058",
+    "theme": "Data Storage",
+    "theme_label": "Internal Storage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant Internal Storage :",
+    "options": [
+      "Accessible uniquement par l'application qui l'a créée",
+      "Peut être partagé avec d'autres applications",
+      "Le contenu est visible dans le système de fichiers externe",
+      "Supporte la lecture et l'écriture"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Internal Storage est accessible uniquement par l'application qui l'a créée et supporte la lecture et l'écriture. Le contenu n'est pas visible dans le système de fichiers externe et ne peut pas être partagé avec d'autres applications."
+  },
+  {
+    "id": "AND-DS-059",
+    "theme": "Data Storage",
+    "theme_label": "Scoped Storage",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Scoped Storage et External Storage ?",
+    "options": [
+      "Scoped Storage est plus sécurisé",
+      "External Storage permet un accès global aux fichiers",
+      "Scoped Storage ne supporte pas les permissions",
+      "External Storage est plus rapide"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Scoped Storage est plus sécurisé car il limite l'accès aux fichiers à l'application qui les a créées, tandis que External Storage permet un accès global aux fichiers."
+  },
+  {
+    "id": "AND-DS-060",
+    "theme": "Data Storage",
+    "theme_label": "Database encryption",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la cryptage de bases de données :",
+    "options": [
+      "Nécessite l'utilisation d'une bibliothèque externe",
+      "Supporté nativement par Room Database",
+      "Peut être utilisé avec SQLite",
+      "N'est pas recommandé pour des applications de petite taille"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Room Database supporte la cryptage nativement et peut être utilisé avec SQLite. La nécessité d'une bibliothèque externe dépend de la complexité requise, mais Room offre des options intégrées. Le cryptage n'est pas nécessairement recommandé pour des applications de petite taille, mais il peut être utilisé selon les besoins en sécurité."
+  },
+  {
+    "id": "AND-DS-061",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Room Database :",
+    "options": [
+      "Room est une bibliothèque de persistance des données pour les applications Android",
+      "Room prend en charge la migration automatique des bases de données",
+      "Room permet d'écrire des requêtes SQL complexes",
+      "Room ne supporte pas la synchronisation avec Firebase"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Room est effectivement une bibliothèque de persistance des données pour Android, ce qui fait de l'option A correcte. La migration automatique est également supportée par Room, ce qui rend l'option B correcte. Room permet d'écrire des requêtes SQL complexes, ce qui justifie l'option C comme correcte. En revanche, Room supporte en réalité la synchronisation avec Firebase via des bibliothèques complémentaires, donc l'option D est incorrecte."
+  },
+  {
+    "id": "AND-DS-062",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour obtenir une instance de SharedPreferences ?",
+    "options": [
+      "getSharedPreferences(\"name\", MODE_PRIVATE)",
+      "PreferenceManager.getDefaultSharedPreferences(this)",
+      "SharedPreferences.getInstance()",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Deux méthodes permettent d'obtenir une instance de SharedPreferences : getSharedPreferences(\"name\", MODE_PRIVATE) pour un fichier nommé, et PreferenceManager.getDefaultSharedPreferences(this) pour le fichier par défaut. Donc, l'option A et B est correcte."
+  },
+  {
+    "id": "AND-DS-063",
+    "theme": "Data Storage",
+    "theme_label": "Scoped Storage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant Scoped Storage ?",
+    "options": [
+      "Scoped Storage est disponible à partir d'Android 10",
+      "Scoped Storage permet l'accès direct aux fichiers des autres applications",
+      "Scoped Storage améliore la sécurité en limitant l'accès aux fichiers",
+      "Scoped Storage est désactivé par défaut"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Scoped Storage est effectivement introduit dans Android 10, ce qui fait de l'option A correcte. Cette fonctionnalité améliore la sécurité en limitant l'accès aux fichiers, ce qui justifie l'option C comme correcte. En revanche, Scoped Storage ne permet pas d'accéder directement aux fichiers des autres applications et est activé par défaut, donc les options B et D sont incorrectes."
+  },
+  {
+    "id": "AND-DS-064",
+    "theme": "Data Storage",
+    "theme_label": "ContentProvider",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour accéder aux données d'un ContentProvider ?",
+    "options": [
+      "getContentResolver().query()",
+      "ContentProvider.query()",
+      "Context.getContentProvider()",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Deux méthodes permettent d'accéder aux données d'un ContentProvider : getContentResolver().query() et ContentProvider.query(). Donc, l'option A et B est correcte."
+  },
+  {
+    "id": "AND-DS-065",
+    "theme": "Data Storage",
+    "theme_label": "Database encryption",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la cryptage de base de données ?",
+    "options": [
+      "La cryptage de base de données est supportée par Room",
+      "La cryptage de base de données est automatique avec SQLite",
+      "Room utilise SQLCipher pour la cryptage",
+      "La cryptage de base de données peut être désactivée"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "La cryptage de base de données est effectivement supportée par Room, ce qui fait de l'option A correcte. Room utilise SQLCipher pour la cryptage, ce qui justifie l'option C comme correcte. En revanche, SQLite ne supporte pas la cryptage automatique et la cryptage de base de données ne peut pas être désactivée, donc les options B et D sont incorrectes."
+  },
+  {
+    "id": "AND-DS-066",
+    "theme": "Data Storage",
+    "theme_label": "Room Database",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Room Database :",
+    "options": [
+      "Room est une abstraction sur SQLite",
+      "Room permet de créer des requêtes SQL complexes",
+      "Room ne supporte pas la migration de base de données",
+      "Room offre des fonctionnalités pour gérer les relations entre entités"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Room est effectivement une abstraction sur SQLite, ce qui facilite son utilisation. Elle permet de créer des requêtes SQL complexes grâce à l'annotation @Query. Bien que Room offre des fonctionnalités pour gérer les relations entre entités, il est possible de migrer une base de données avec Room en définissant des classes Migration. Donc, l'option C est incorrecte."
+  },
+  {
+    "id": "AND-DS-067",
+    "theme": "Data Storage",
+    "theme_label": "SharedPreferences",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour obtenir une instance de SharedPreferences ?",
+    "options": [
+      "getSharedPreferences(\"name\", MODE_PRIVATE)",
+      "PreferenceManager.getDefaultSharedPreferences(this)",
+      "SharedPreferences.getInstance()",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Deux méthodes peuvent être utilisées pour obtenir une instance de SharedPreferences : getSharedPreferences(\"name\", MODE_PRIVATE) pour une préférence nommée, ou PreferenceManager.getDefaultSharedPreferences(this) pour les préférences par défaut. Donc, l'option A et B est correcte."
+  },
+  {
+    "id": "AND-DS-068",
+    "theme": "Data Storage",
+    "theme_label": "Scoped Storage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales différences entre Scoped Storage et External Storage ?",
+    "options": [
+      "Scoped Storage est disponible sur toutes les versions d'Android",
+      "Scoped Storage offre une meilleure sécurité des fichiers",
+      "External Storage permet un accès direct aux fichiers de l'utilisateur",
+      "Scoped Storage ne nécessite pas de permissions spécifiques"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Scoped Storage offre une meilleure sécurité des fichiers en limitant l'accès aux applications. External Storage permet un accès direct aux fichiers de l'utilisateur, ce qui n'est pas possible avec Scoped Storage. Les autres options sont incorrectes : Scoped Storage est disponible à partir d'Android 10, et il nécessite des permissions spécifiques pour accéder aux fichiers."
   }
 ]

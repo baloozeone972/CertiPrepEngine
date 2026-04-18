@@ -1,0 +1,316 @@
+## Identité du projet
+
+Tu travailles sur CertifApp, la migration commerciale de CertiPrep Engine.
+CertiPrep Engine est une application JavaFX de bureau de préparation aux certifications professionnelles.
+
+Fonctionnalités existantes (à migrer intégralement) :
+- 4000+ questions couvrant une dizaine de certifications complètes
+- 500+ questions spécifiques Java 21 Developer (OCP)
+- Mode Examen : conditions réelles (temps limité, notation officielle)
+- Mode Libre : personnalisation des thèmes, nombre de questions, durée
+- Mode Révision : apprentissage avec correction immédiate
+- Thèmes clair/sombre commutables
+- Internationalisation Français/Anglais déjà implémentée
+- Historique des sessions avec SQLite (à migrer vers PostgreSQL)
+- Export PDF des résultats
+- Import/Export de questions supplémentaires (format à identifier dans le code)
+
+Stack actuelle à migrer : JavaFX + Java 17/21 + SQLite
+
+Objectif : migration complète vers Spring Boot 3 (backend REST), Angular 18 PWA (web)
+et Android Kotlin/Compose (mobile), destinée à une commercialisation sur l'ensemble
+du marché francophone mondial.
+
+---
+
+## Patrimoine de contenu — actif stratégique majeur
+
+4000+ questions déjà créées couvrant une dizaine de certifications complètes.
+Ce corpus est l'actif différenciant principal du produit.
+
+Certifications couvertes (à confirmer lors de la Phase 1 d'analyse) :
+- Oracle Certified Professional Java SE 21 (OCP 1Z0-830)
+- AWS Cloud Practitioner (CLF-C02)
+- AWS Solutions Architect Associate (SAA-C03)
+- Spring Professional (VMware/Broadcom)
+- Kubernetes CKA / CKAD
+- Docker DCA
+- (autres à identifier dans le code source)
+
+Structure d'une question (à préserver et enrichir) :
+- Énoncé
+- Options de réponse (QCM, vrai/faux, choix multiple)
+- Réponse(s) correcte(s)
+- Explication de réponse (section enrichissable — voir Phase Enrichissement)
+- Domaine / chapitre de la certification
+- Niveau de difficulté
+- Métadonnées (date création, dernière révision, auteur)
+
+---
+
+## Phase Enrichissement IA des questions (phase dédiée)
+
+Cette phase intervient après la migration technique. Elle constitue un cycle
+de relecture et d'enrichissement automatisé du corpus de 4000+ questions.
+
+### Objectif
+Améliorer la qualité pédagogique de chaque question en enrichissant la section
+"Explication de réponse" avec :
+- Justification détaillée de la bonne réponse (pourquoi c'est correct)
+- Explication de pourquoi chaque mauvaise option est incorrecte (distracteurs)
+- Référence à la documentation officielle (lien Oracle, AWS docs, etc.)
+- Exemple de code illustratif si pertinent (questions Java/Spring)
+- Lien vers le chapitre officiel de la certification concernée
+- Niveau de difficulté revu si nécessaire
+
+### Processus technique à implémenter
+- Interface d'administration dédiée : liste des questions avec statut de relecture
+  (NON_RELU / EN_COURS / RELU_VALIDE / RELU_ENRICHI)
+- Enrichissement IA assisté : bouton "Enrichir via IA" par question ou par lot
+  → appel LangChain4j → Claude/Ollama génère l'enrichissement
+  → affichage côte à côte : version originale vs version enrichie
+  → validation humaine obligatoire avant sauvegarde (human-in-the-loop)
+- Enrichissement par lot : sélection d'un domaine ou d'une certification entière
+- Historique des modifications : chaque version de l'explication est versionnée
+- Statut de confiance IA : score de certitude affiché pour guider la relecture humaine
+
+### Modèle de données enrichi
+Chaque explication doit supporter :
+- explanation_original   : texte original importé depuis JavaFX
+- explanation_enriched   : version enrichie par IA ou manuellement
+- explanation_status     : enum (ORIGINAL / AI_DRAFT / HUMAN_VALIDATED)
+- explanation_version    : numéro de version
+- last_reviewed_by       : userId du relecteur
+- last_reviewed_at       : timestamp
+- ai_confidence_score    : Float (0.0 à 1.0)
+- official_doc_url       : lien documentation officielle
+- code_example           : bloc de code illustratif (optionnel)
+
+---
+
+## Fonctionnalités innovantes à implémenter
+
+### IA pédagogique — différenciation marché
+
+1. Parcours adaptatif intelligent
+   Algorithme de répétition espacée (style Anki/SM-2) adapté aux certifications :
+   - Analyse des erreurs passées par domaine
+   - Priorisation automatique des domaines faibles
+   - Prédiction du score à l'examen en temps réel
+   - Jour J recommandé pour passer la certification
+
+2. Explication interactive par IA
+   Bouton "Expliquer cette question" sur chaque réponse incorrecte :
+   - LangChain4j appelle Claude/Ollama avec le contexte de la question
+   - Réponse en langage naturel, personnalisée selon l'historique de l'utilisateur
+   - Suggestions de questions similaires pour consolider la notion
+
+3. Génération de questions à la demande (admin + premium users)
+   - L'admin peut générer de nouvelles questions sur un domaine donné via IA
+   - Validation humaine obligatoire avant publication (human-in-the-loop)
+   - Les utilisateurs premium peuvent demander des questions sur un concept précis
+
+4. Assistant de révision conversationnel
+   Chat intégré (interface style messagerie) propulsé par LangChain4j :
+   - Répond aux questions sur les notions de la certification
+   - Génère des quiz flash à la demande ("donne-moi 5 questions sur les streams Java")
+   - Contexte maintenu sur la session de révision
+   - Disponible offline sur mobile (modèle quantisé embarqué ou cache de réponses)
+
+5. Analyse prédictive et tableau de bord intelligent
+   - Score de préparation par domaine (jauge 0-100%)
+   - Courbe de progression hebdomadaire
+   - Comparaison anonymisée avec d'autres candidats (benchmarking)
+   - Alertes : "Tu n'as pas révisé Lambda Expressions depuis 7 jours"
+   - Rapport PDF intelligent généré par IA avant l'examen
+
+6. Mode duel / compétition (gamification)
+   - Défi entre deux utilisateurs sur un domaine donné
+   - Classements par certification et par zone géographique
+   - Badges et certifications de progression
+   - Partage des scores sur LinkedIn (intégration OAuth LinkedIn)
+
+7. Import intelligent de questions
+   - Upload d'un PDF (dump, livre de préparation) → extraction automatique des questions par IA
+   - Validation et correction par l'admin avant intégration au catalogue
+   - Détection des doublons par similarité sémantique (embeddings)
+
+8. Mode simulation d'examen officiel
+   - Reconstitution exacte des conditions Pearson VUE / Prometric
+   - Interface identique à l'examen officiel (layout, navigation, timer)
+   - Rapport post-examen avec analyse par domaine conforme au score report officiel
+
+### Fonctionnalités de distribution et croissance
+
+9. Programme de contribution communautaire
+   - Les utilisateurs peuvent proposer de nouvelles questions
+   - Système de vote et validation communautaire
+   - Crédit/récompense pour les contributeurs (accès premium offert)
+
+10. API publique pour partenaires
+    - Accès au catalogue de questions via API pour écoles, bootcamps, entreprises
+    - Facturation à l'usage (Stripe Metered Billing)
+    - Tableau de bord partenaire avec statistiques d'utilisation
+
+---
+
+## Catalogue de certifications cibles
+
+Certifications à intégrer dans le catalogue (déjà couvertes + extensions) :
+- Oracle Certified Professional Java SE 21 (OCP 1Z0-830)
+- AWS Cloud Practitioner (CLF-C02)
+- AWS Solutions Architect Associate (SAA-C03)
+- Spring Professional (VMware/Broadcom)
+- Kubernetes CKA / CKAD
+- Docker DCA
+- (autres à identifier lors de la Phase 1 d'analyse du code source)
+
+Contrainte : respecter la structure officielle des domaines d'examen pour chaque certification
+(ex: OCP → 15 domaines officiels Oracle, avec pondération par domaine).
+
+---
+
+## Marché cible — Francophonie mondiale
+
+L'application s'adresse à l'ensemble des développeurs francophones, couvrant :
+
+Europe :
+- France métropolitaine
+- Suisse (Genève, Lausanne, Zurich francophone) — marché IT premium, forte demande certifications
+- Belgique (Bruxelles, Wallonie)
+- Luxembourg
+
+DOM-TOM et territoires français :
+- Martinique, Guadeloupe, Guyane, La Réunion, Mayotte
+- Nouvelle-Calédonie, Polynésie française
+
+Afrique francophone (marché prioritaire en forte croissance) :
+- Maghreb : Maroc, Algérie, Tunisie — viviers de développeurs Java
+- Afrique subsaharienne : Sénégal, Côte d'Ivoire, Cameroun, Mali, Burkina Faso, RDC
+- Île Maurice — hub tech anglophone/francophone
+
+Canada francophone :
+- Québec (Montréal, Québec City) — écosystème tech mature
+
+Implications techniques :
+- Paiement multi-devises : EUR, CHF, CAD, MAD, XOF, XAF, MUR (Stripe)
+- Tarification adaptée par zone (purchasing power parity)
+- CDN obligatoire (Cloudflare) — latence optimisée mondiale
+- PWA offline prioritaire pour zones à connectivité intermittente
+- Toutes les dates stockées en UTC, affichage en timezone locale
+- TVA automatique selon pays (Stripe Tax), exonération DOM
+
+---
+
+## Stack et conventions non négociables
+
+Stack obligatoire :
+- Java 21 (Records, Virtual Threads, Pattern Matching)
+- Spring Boot 3.3+, architecture hexagonale (domain / application / infrastructure / api)
+- LangChain4j pour toutes les intégrations LLM (Claude via API Anthropic + Ollama fallback)
+- Angular 18 standalone components + Signals (pas NgRx)
+- Kotlin + Jetpack Compose + Hilt pour Android
+- PostgreSQL via Supabase (migration depuis SQLite), migrations Flyway
+- Docker + GitHub Actions CI/CD
+- Cloudflare CDN
+
+Conventions de code :
+- Noms de classes et variables en anglais
+- Commentaires Javadoc en anglais
+- Explications et réponses en français
+- Chaque fichier produit doit avoir son chemin complet en en-tête
+- Zéro pseudo-code : tout fichier généré doit être directement utilisable
+
+---
+
+## Architecture des modules Maven
+
+certif-domain         → entités + règles métier (aucune dépendance framework)
+certif-application    → use cases, ports (interfaces)
+certif-infrastructure → JPA, Flyway, adapters, migration SQLite→PostgreSQL
+certif-api-rest       → Spring Boot, controllers, DTOs, sécurité JWT
+certif-ai             → LangChain4j, services IA (enrichissement, génération, chat)
+
+---
+
+## Règles de travail
+
+- Toujours produire du code complet, jamais de "// TODO" ou "// à compléter"
+- Toujours inclure les tests (JUnit 5 / Mockito) avec chaque service ou use case généré
+- Modulariser le code afin de pouvoir répartir les tâches entre plusieurs développeurs
+- Toujours produire la documentation (Javadoc, OpenAPI, README de module)
+- Si plusieurs approches sont possibles, choisir la meilleure et justifier en 2 lignes
+- Poser une question avant de coder si une ambiguïté est détectée dans le code source
+- Respecter la séparation stricte des couches hexagonales
+- Nommer chaque fichier avec son chemin complet
+  ex: certif-domain/src/main/java/com/certif/domain/model/Question.java
+
+---
+
+## Contraintes techniques
+
+- Compatibilité Android minimum : API 26 (Android 8.0)
+- PWA : score Lighthouse > 90 (Performance, Accessibility, PWA)
+- PWA offline prioritaire : examens téléchargeables pour usage sans connexion
+- API REST : temps de réponse < 200ms Europe, < 500ms Afrique/DOM
+- Pagination obligatoire sur toutes les listes (PageRequest Spring)
+- Support multilingue fr/en dès le départ (parité avec l'app JavaFX existante)
+- Export PDF : iText ou JasperReports (fonctionnalité existante à conserver)
+- Import/Export questions : compatibilité avec le format existant obligatoire
+- Toutes les dates/heures en UTC, affichage en timezone utilisateur
+- Le corpus de 4000+ questions doit être migré sans perte de données
+
+---
+
+## Sécurité et RGPD
+
+- Données hébergées en Europe (Supabase région eu-west)
+- Conformité RGPD complète (Europe + DOM-TOM)
+- Pas de stockage données de paiement côté serveur (Stripe)
+- Endpoints export et suppression données (RGPD Art. 17/20)
+- BCrypt force 12 minimum
+- Aucune donnée personnelle dans les logs
+- JWT : access token 15 min, refresh token 7 jours, rotation obligatoire
+
+---
+
+## Contexte commercial
+
+Modèle freemium avec tarification par zone :
+
+Gratuit (toutes zones) :
+- 2 examens par certification, 20 questions max, pas d'historique, pas d'IA
+
+Pro Europe / Suisse / Canada — 9,99 €/mois ou 99 €/an :
+- Examens illimités, historique, offline, export PDF, assistant IA, parcours adaptatif
+
+Pro DOM-TOM / Maghreb / Afrique — 5,99 €/mois ou 59 €/an :
+- Mêmes fonctionnalités, tarif adapté au pouvoir d'achat local
+
+Pack certif (achat unique) :
+- 4,99 € Europe — 2,99 € DOM/Afrique : accès permanent à une certification
+
+API partenaires (écoles, bootcamps, entreprises) :
+- Stripe Metered Billing à l'usage
+
+Marchés par priorité de lancement :
+1. France métropolitaine + DOM-TOM
+2. Maghreb (Maroc, Tunisie, Algérie)
+3. Suisse francophone
+4. Afrique subsaharienne francophone
+5. Québec
+
+---
+
+## Rôle attendu
+
+Tu es un architecte logiciel senior Java full-stack avec une expertise en migration
+d'applications desktop vers des plateformes web et mobile commerciales à portée internationale,
+et en intégration de LLM dans des produits SaaS pédagogiques.
+
+Pour chaque phase de travail :
+1. Produis tous les livrables demandés sans résumé ni pseudo-code
+2. Chaque fichier de code doit être complet et directement utilisable
+3. Si un choix d'implémentation est possible, applique le meilleur et justifie en 2 lignes
+4. Pose une question avant de coder si une ambiguïté est détectée dans le code source
+5. Attends la validation de chaque phase avant de passer à la suivante

@@ -12,7 +12,7 @@
       "Notifications push"
     ],
     "correct": 0,
-    "explication": "Service Bus offre des fonctionnalités avancées comme les sessions, les transactions, la détection de doublons."
+    "explanation": "Service Bus offre des fonctionnalités avancées comme les sessions, les transactions, la détection de doublons."
   },
   {
     "id": "AZ-204-312",
@@ -27,7 +27,7 @@
       "Queue pour les messages courts, Topic pour les longs"
     ],
     "correct": 0,
-    "explication": "Une file est consommée par un seul consommateur, un topic peut avoir plusieurs abonnements."
+    "explanation": "Une file est consommée par un seul consommateur, un topic peut avoir plusieurs abonnements."
   },
   {
     "id": "AZ-204-313",
@@ -42,7 +42,7 @@
       "Abonnements"
     ],
     "correct": 0,
-    "explication": "Les sessions garantissent que les messages d'un même groupe sont traités dans l'ordre."
+    "explanation": "Les sessions garantissent que les messages d'un même groupe sont traités dans l'ordre."
   },
   {
     "id": "AZ-204-314",
@@ -57,7 +57,7 @@
       "Empêche la duplication"
     ],
     "correct": 0,
-    "explication": "La détection de doublons utilise un identifiant de message (MessageId) pour ignorer les doublons."
+    "explanation": "La détection de doublons utilise un identifiant de message (MessageId) pour ignorer les doublons."
   },
   {
     "id": "AZ-204-315",
@@ -72,7 +72,7 @@
       "Verrouiller le topic"
     ],
     "correct": 0,
-    "explication": "Le mode peek-lock permet de traiter le message sans le supprimer immédiatement."
+    "explanation": "Le mode peek-lock permet de traiter le message sans le supprimer immédiatement."
   },
   {
     "id": "AZ-204-316",
@@ -87,7 +87,7 @@
       "File pour les messages expirés"
     ],
     "correct": 0,
-    "explication": "Les messages qui ne peuvent pas être traités (ex: expiration, dépassement de livraisons) sont placés dans la DLQ."
+    "explanation": "Les messages qui ne peuvent pas être traités (ex: expiration, dépassement de livraisons) sont placés dans la DLQ."
   },
   {
     "id": "AZ-204-317",
@@ -102,7 +102,7 @@
       "await topic.SendAsync(message)"
     ],
     "correct": 0,
-    "explication": "ServiceBusSender a la méthode SendMessageAsync."
+    "explanation": "ServiceBusSender a la méthode SendMessageAsync."
   },
   {
     "id": "AZ-204-318",
@@ -117,7 +117,7 @@
       "await subscription.ReceiveAsync()"
     ],
     "correct": 0,
-    "explication": "ServiceBusReceiver a la méthode ReceiveMessageAsync."
+    "explanation": "ServiceBusReceiver a la méthode ReceiveMessageAsync."
   },
   {
     "id": "AZ-204-319",
@@ -132,7 +132,7 @@
       "Notifications push"
     ],
     "correct": 0,
-    "explication": "Event Hubs est conçu pour des millions d'événements par seconde."
+    "explanation": "Event Hubs est conçu pour des millions d'événements par seconde."
   },
   {
     "id": "AZ-204-320",
@@ -147,7 +147,7 @@
       "Abonnement"
     ],
     "correct": 0,
-    "explication": "Les partitions permettent le parallélisme et l'ordre au sein de chaque partition."
+    "explanation": "Les partitions permettent le parallélisme et l'ordre au sein de chaque partition."
   },
   {
     "id": "AZ-204-321",
@@ -162,7 +162,7 @@
       "Topics"
     ],
     "correct": 0,
-    "explication": "Chaque groupe de consommateurs a son propre curseur de lecture sur le flux."
+    "explanation": "Chaque groupe de consommateurs a son propre curseur de lecture sur le flux."
   },
   {
     "id": "AZ-204-322",
@@ -172,7 +172,7 @@
     "question": "Quelle est la durée de rétention par défaut des événements ?",
     "options": ["1 jour", "7 jours", "24 heures", "48 heures"],
     "correct": 0,
-    "explication": "La rétention par défaut est d'1 jour (configurable jusqu'à 90 jours)."
+    "explanation": "La rétention par défaut est d'1 jour (configurable jusqu'à 90 jours)."
   },
   {
     "id": "AZ-204-323",
@@ -187,7 +187,7 @@
       "Nombre d'événements par seconde"
     ],
     "correct": 0,
-    "explication": "Les TU déterminent la capacité de débit."
+    "explanation": "Les TU déterminent la capacité de débit."
   },
   {
     "id": "AZ-204-324",
@@ -202,7 +202,7 @@
       "Capture des erreurs"
     ],
     "correct": 0,
-    "explication": "Capture permet de persister les événements pour une analyse ultérieure."
+    "explanation": "Capture permet de persister les événements pour une analyse ultérieure."
   },
   {
     "id": "AZ-204-325",
@@ -212,7 +212,7 @@
     "question": "Quelle est la taille maximale d'un message dans Event Hubs ?",
     "options": ["1 Mo", "256 Ko", "4 Mo", "64 Ko"],
     "correct": 0,
-    "explication": "La taille maximale d'un événement est 1 Mo (niveau standard) ou 1 Mo (niveau dédié)."
+    "explanation": "La taille maximale d'un événement est 1 Mo (niveau standard) ou 1 Mo (niveau dédié)."
   },
   {
     "id": "AZ-204-326",
@@ -227,7 +227,7 @@
       "Bus de messages"
     ],
     "correct": 0,
-    "explication": "Event Grid distribue des événements à des abonnés (webhooks, fonctions, etc.)."
+    "explanation": "Event Grid distribue des événements à des abonnés (webhooks, fonctions, etc.)."
   },
   {
     "id": "AZ-204-327",
@@ -242,7 +242,7 @@
       "Seulement événements HTTP"
     ],
     "correct": 0,
-    "explication": "Event Grid peut gérer des événements provenant de services Azure ou des applications personnalisées."
+    "explanation": "Event Grid peut gérer des événements provenant de services Azure ou des applications personnalisées."
   },
   {
     "id": "AZ-204-328",
@@ -257,7 +257,7 @@
       "Partition"
     ],
     "correct": 0,
-    "explication": "Les événements sont publiés sur un topic, puis distribués aux abonnements."
+    "explanation": "Les événements sont publiés sur un topic, puis distribués aux abonnements."
   },
   {
     "id": "AZ-204-329",
@@ -272,7 +272,7 @@
       "Enrichit les événements"
     ],
     "correct": 0,
-    "explication": "Les abonnements peuvent filtrer par type d'événement, préfixe/suffixe de sujet, etc."
+    "explanation": "Les abonnements peuvent filtrer par type d'événement, préfixe/suffixe de sujet, etc."
   },
   {
     "id": "AZ-204-330",
@@ -287,7 +287,7 @@
       "Archivage"
     ],
     "correct": 0,
-    "explication": "Event Grid réessaie la livraison avec backoff exponentiel."
+    "explanation": "Event Grid réessaie la livraison avec backoff exponentiel."
   },
   {
     "id": "AZ-204-331",
@@ -302,7 +302,7 @@
       "File pour les événements expirés"
     ],
     "correct": 0,
-    "explication": "Les événements non livrés après un certain nombre de tentatives sont envoyés vers un conteneur blob."
+    "explanation": "Les événements non livrés après un certain nombre de tentatives sont envoyés vers un conteneur blob."
   },
   {
     "id": "AZ-204-332",
@@ -317,7 +317,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "Logic Apps permet de créer des workflows d'intégration sans code."
+    "explanation": "Logic Apps permet de créer des workflows d'intégration sans code."
   },
   {
     "id": "AZ-204-333",
@@ -332,7 +332,7 @@
       "Service Bus seulement"
     ],
     "correct": 0,
-    "explication": "Logic Apps a de nombreux connecteurs et déclencheurs."
+    "explanation": "Logic Apps a de nombreux connecteurs et déclencheurs."
   },
   {
     "id": "AZ-204-334",
@@ -342,7 +342,7 @@
     "question": "Logic Apps peut-il s'exécuter en mode multi-locataire ou mono-locataire ?",
     "options": ["Oui", "Non", "Uniquement multi-locataire", "Uniquement mono-locataire"],
     "correct": 0,
-    "explication": "Logic Apps standard (mono-locataire) offre plus de flexibilité et VNet."
+    "explanation": "Logic Apps standard (mono-locataire) offre plus de flexibilité et VNet."
   },
   {
     "id": "AZ-204-335",
@@ -357,7 +357,7 @@
       "Connecteur pour le stockage"
     ],
     "correct": 0,
-    "explication": "Les connecteurs personnalisés permettent d'appeler des API non prises en charge nativement."
+    "explanation": "Les connecteurs personnalisés permettent d'appeler des API non prises en charge nativement."
   },
   {
     "id": "AZ-204-336",
@@ -372,7 +372,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "APIM permet de publier, sécuriser et analyser les API."
+    "explanation": "APIM permet de publier, sécuriser et analyser les API."
   },
   {
     "id": "AZ-204-337",
@@ -387,7 +387,7 @@
       "Seulement Portail administrateur"
     ],
     "correct": 0,
-    "explication": "APIM se compose de plusieurs composants."
+    "explanation": "APIM se compose de plusieurs composants."
   },
   {
     "id": "AZ-204-338",
@@ -402,7 +402,7 @@
       "Règle de cache"
     ],
     "correct": 0,
-    "explication": "Les politiques sont des fragments XML qui modifient le comportement de l'API."
+    "explanation": "Les politiques sont des fragments XML qui modifient le comportement de l'API."
   },
   {
     "id": "AZ-204-339",
@@ -412,7 +412,7 @@
     "question": "APIM peut-il mettre en cache les réponses ?",
     "options": ["Oui (cache intégré ou externe Redis)", "Non", "Uniquement avec Redis", "Uniquement avec le cache intégré"],
     "correct": 0,
-    "explication": "Le cache réduit la charge sur le backend."
+    "explanation": "Le cache réduit la charge sur le backend."
   },
   {
     "id": "AZ-204-340",
@@ -427,7 +427,7 @@
       "Limite le nombre de produits"
     ],
     "correct": 0,
-    "explication": "Les politiques rate-limit et quota contrôlent l'utilisation."
+    "explanation": "Les politiques rate-limit et quota contrôlent l'utilisation."
   },
   {
     "id": "AZ-204-341",
@@ -437,7 +437,7 @@
     "question": "APIM supporte-t-il OAuth2 pour l'authentification ?",
     "options": ["Oui", "Non", "Uniquement avec Azure AD", "Uniquement avec des clés d'API"],
     "correct": 0,
-    "explication": "APIM peut valider les tokens JWT (OAuth2)."
+    "explanation": "APIM peut valider les tokens JWT (OAuth2)."
   },
   {
     "id": "AZ-204-342",
@@ -447,7 +447,7 @@
     "question": "Event Grid peut-il délivrer des événements à une fonction Azure ?",
     "options": ["Oui", "Non", "Uniquement à Logic Apps", "Uniquement à webhook"],
     "correct": 0,
-    "explication": "Azure Functions peut être un abonné Event Grid."
+    "explanation": "Azure Functions peut être un abonné Event Grid."
   },
   {
     "id": "AZ-204-343",
@@ -457,7 +457,7 @@
     "question": "Service Bus supporte-t-il AMQP et HTTPS ?",
     "options": ["Oui", "Non", "Uniquement AMQP", "Uniquement HTTPS"],
     "correct": 0,
-    "explication": "Service Bus supporte AMQP (performant) et HTTPS (compatible)."
+    "explanation": "Service Bus supporte AMQP (performant) et HTTPS (compatible)."
   },
   {
     "id": "AZ-204-344",
@@ -472,7 +472,7 @@
       "File d'attente"
     ],
     "correct": 0,
-    "explication": "Chaque abonnement reçoit une copie de chaque message publié sur le topic."
+    "explanation": "Chaque abonnement reçoit une copie de chaque message publié sur le topic."
   },
   {
     "id": "AZ-204-345",
@@ -487,7 +487,7 @@
       "Event Hubs pour les files, Service Bus pour les topics"
     ],
     "correct": 0,
-    "explication": "Event Hubs est optimisé pour l'ingestion massive, Service Bus pour les messages structurés."
+    "explanation": "Event Hubs est optimisé pour l'ingestion massive, Service Bus pour les messages structurés."
   },
   {
     "id": "AZ-204-346",
@@ -502,7 +502,7 @@
       "Uniquement pour les événements personnalisés"
     ],
     "correct": 0,
-    "explication": "L'ordre n'est pas garanti entre différents sujets ou abonnements."
+    "explanation": "L'ordre n'est pas garanti entre différents sujets ou abonnements."
   },
   {
     "id": "AZ-204-347",
@@ -512,7 +512,7 @@
     "question": "Logic Apps peut-il s'exécuter en local avec le runtime local ?",
     "options": ["Oui (Logic Apps Standard)", "Non", "Uniquement dans le cloud", "Uniquement avec le portail"],
     "correct": 0,
-    "explication": "Logic Apps Standard peut être déployé en conteneur, localement ou dans AKS."
+    "explanation": "Logic Apps Standard peut être déployé en conteneur, localement ou dans AKS."
   },
   {
     "id": "AZ-204-348",
@@ -522,7 +522,7 @@
     "question": "APIM peut-il être intégré à Key Vault pour gérer les secrets ?",
     "options": ["Oui", "Non", "Uniquement pour les clés d'API", "Uniquement pour les certificats"],
     "correct": 0,
-    "explication": "APIM peut référencer Key Vault pour les secrets des backends."
+    "explanation": "APIM peut référencer Key Vault pour les secrets des backends."
   },
   {
     "id": "AZ-204-349",
@@ -537,7 +537,7 @@
       "Messagerie avec transactions"
     ],
     "correct": 0,
-    "explication": "Le niveau Premium offre des performances prédictibles avec des ressources dédiées."
+    "explanation": "Le niveau Premium offre des performances prédictibles avec des ressources dédiées."
   },
   {
     "id": "AZ-204-350",
@@ -552,6 +552,6 @@
       "Standard"
     ],
     "correct": 0,
-    "explication": "Le niveau dédié offre des clusters isolés pour les charges très élevées."
+    "explanation": "Le niveau dédié offre des clusters isolés pour les charges très élevées."
   }
 ]

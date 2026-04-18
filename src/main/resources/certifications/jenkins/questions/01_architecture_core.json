@@ -1,0 +1,902 @@
+[
+  {
+    "id": "JEN-T1-001",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'architecture Master/Agent de Jenkins :",
+    "options": [
+      "Le controller orchestre les builds mais n'exécute pas les tâches par défaut.",
+      "Les agents communiquent exclusivement via le protocole SSH.",
+      "Un agent peut être provisionné dynamiquement via le plugin Kubernetes ou Docker.",
+      "Les executors sur un agent définissent le nombre de builds pouvant s'exécuter simultanément sur ce nœud."
+    ],
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "correct": 0,
+    "explanation": "L'option A est exacte : depuis Jenkins 2.0, le controller est dédié à l'orchestration et à l'UI. L'option B est fausse : les agents utilisent JNLP (Java Web Start) ou SSH, pas exclusivement SSH. L'option C est vraie : les plugins cloud permettent de spawn des agents éphémères à la demande. L'option D est correcte : chaque executor représente un slot d'exécution parallèle sur l'agent."
+  },
+  {
+    "id": "JEN-T1-002",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive `Jenkinsfile` permet d'exécuter une étape uniquement si une condition spécifique est remplie ?",
+    "options": [
+      "when {}",
+      "if() {}",
+      "condition {}",
+      "unless {}"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dans les pipelines Declarative, `when {}` est la directive officielle pour l'exécution conditionnelle d'un stage ou step. `if()` est utilisé en Groovy pur (Scripted), mais pas comme directive Declarative. `condition` et `unless` n'existent pas dans la syntaxe officielle."
+  },
+  {
+    "id": "JEN-T1-003",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Credentials & Secrets",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la gestion des credentials dans Jenkins ?",
+    "options": [
+      "Les credentials sont stockés en clair dans `credentials.xml` par défaut.",
+      "Les `withCredentials` blocks masquent automatiquement les secrets dans les logs.",
+      "Le plugin Credentials Binding permet d'injecter des secrets comme variables d'environnement.",
+      "Les credentials sont répliqués automatiquement sur tous les agents sans configuration supplémentaire."
+    ],
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "correct": 1,
+    "explanation": "L'option A est fausse : Jenkins chiffre les secrets avec une clé maîtresse (master.key + hudson.util.Secret). L'option B est exacte : `withCredentials` active le masquage automatique (`****`) dans les sorties console. L'option C est vraie : le plugin bind les secrets à des variables `env` pour les steps. L'option D est incorrecte : les credentials ne sont pas propagés aux agents par défaut ; ils doivent être explicitement bindés dans le pipeline."
+  },
+  {
+    "id": "JEN-T1-004",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Plugins & Updates",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est recommandée pour mettre à jour Jenkins sans interrompre les builds en cours ?",
+    "options": [
+      "Redémarrer le service Jenkins manuellement après chaque update.",
+      "Activer le mode 'Safe Restart' via l'interface administrative.",
+      "Utiliser le plugin 'Rolling Restart' pour les clusters.",
+      "Arrêter les agents, mettre à jour, puis redémarrer."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Le `Safe Restart` (ou `/safeRestart`) termine les builds en cours, bloque les nouvelles exécutions, puis redémarre proprement. Le redémarrage manuel brutal peut corrompre des workspaces. 'Rolling Restart' n'est pas un plugin natif standard. Arrêter les agents manuellement n'est pas une pratique CI/CD industrielle."
+  },
+  {
+    "id": "JEN-T1-005",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Workspace & Execution",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les workspaces Jenkins :",
+    "options": [
+      "Chaque job dispose d'un workspace dédié sur le nœud où il s'exécute.",
+      "Les workspaces sont automatiquement nettoyés après chaque build réussi.",
+      "La directive `cleanWs()` permet de supprimer le contenu du workspace avant ou après une étape.",
+      "Les workspaces sont partagés entre tous les jobs d'un même agent par défaut."
+    ],
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "correct": 0,
+    "explanation": "L'option A est vraie : le workspace est isolé par job+agent. L'option B est fausse : Jenkins conserve les workspaces par défaut pour le caching ; le nettoyage doit être configuré explicitement. L'option C est exacte : `cleanWs()` (Workspace Cleanup Plugin) est la méthode standard. L'option D est incorrecte : le partage automatique n'existe pas et violerait l'isolation des builds."
+  },
+  {
+    "id": "JEN-T1-006",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour restreindre l'accès à un job Jenkins uniquement à certains utilisateurs ?",
+    "options": [
+      "Utiliser le plugin 'Project-based Matrix Authorization Strategy'.",
+      "Configurer un firewall au niveau du serveur Jenkins.",
+      "Masquer le job via un dossier privé dans l'UI.",
+      "Désactiver l'authentification globale et utiliser des tokens."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le plugin Matrix Authorization (ou Role-Based Strategy) permet de définir des permissions granulaires par job, groupe ou utilisateur. Le firewall contrôle l'accès réseau, pas les droits applicatifs. Masquer un dossier n'offre aucune sécurité réelle. Désactiver l'auth globale est une faille critique."
+  },
+  {
+    "id": "JEN-T1-007",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Triggers & Webhooks",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les méthodes valides pour déclencher un pipeline Jenkins automatiquement :",
+    "options": [
+      "Polling SCM configuré dans les paramètres du job.",
+      "Webhooks envoyés par GitHub/GitLab vers `/github-webhook/`.",
+      "L'exécution manuelle via l'API REST `/job/<name>/build`.",
+      "Un cron interne `*/5 * * * *` défini dans le `Jenkinsfile`."
+    ],
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "correct": 0,
+    "explanation": "L'option A est valide (polling, bien que déconseillé au profit des webhooks). L'option B est exacte : les webhooks poussent l'événement vers Jenkins. L'option C est vraie : l'API REST avec token d'authentification déclenche des builds. L'option D est fausse : le cron dans `Jenkinsfile` utilise la syntaxe `triggers { cron('...') }`, pas un cron système."
+  },
+  {
+    "id": "JEN-T1-008",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Groovy & Scripted",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans un pipeline Scripted, quelle méthode permet de capturer le code de retour d'une commande shell ?",
+    "options": [
+      "sh 'cmd'",
+      "def result = sh returnStatus: true, script: 'cmd'",
+      "sh returnCode: 'cmd'",
+      "execute('cmd')"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`returnStatus: true` empêche l'échec immédiat du pipeline et retourne l'exit code. `sh 'cmd'` throw une exception si exit != 0. Les autres options n'existent pas dans l'API Pipeline."
+  },
+  {
+    "id": "JEN-T1-009",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Shared Libraries",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les Shared Libraries Jenkins ?",
+    "options": [
+      "Elles permettent de factoriser du code Groovy réutilisable dans plusieurs pipelines.",
+      "Elles doivent obligatoirement être packagées en `.jar` avant import.",
+      "La directive `@Library('my-lib') _` les charge au début du pipeline.",
+      "Elles s'exécutent dans un sandbox isolé sans accès aux APIs Jenkins."
+    ],
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "correct": 0,
+    "explanation": "L'option A est exacte : c'est l'objectif principal (DRY, maintenance centralisée). L'option B est fausse : ce sont des répertoires Groovy versionnés dans Git. L'option C est vraie : `@Library` importe les fonctions/vars. L'option D est incorrecte : les shared libs peuvent être exécutées avec ou sans sandbox selon la config du controller."
+  },
+  {
+    "id": "JEN-T1-010",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Declarative Directives",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes sur la directive `options {}` en pipeline Declarative :",
+    "options": [
+      "Elle configure des paramètres globaux pour le pipeline ou le stage.",
+      "Elle accepte `timeout()`, `retry()`, et `disableConcurrentBuilds()`.",
+      "Elle remplace entièrement la section `post {}` pour les notifications.",
+      "Elle doit être placée avant `stages {}` au niveau racine du pipeline."
+    ],
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "correct": 0,
+    "explanation": "L'option A est vraie : `options` définit le comportement global. L'option B est exacte : ces directives font partie du DSL officiel. L'option C est fausse : `post` gère les hooks d'état (success/failure), pas les options. L'option D est correcte : `options` se déclare au niveau supérieur du `pipeline {}` ou dans un `stage`."
+  },
+  {
+    "id": "JEN-T1-011",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel port utilise par défaut l'agent JNLP pour communiquer avec le controller ?",
+    "options": [
+      "8080",
+      "50000",
+      "22",
+      "443"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Le port JNLP par défaut est 50000. Il doit être ouvert dans le firewall pour permettre la connexion TCP des agents. 8080 est l'UI, 22 est SSH, 443 est HTTPS."
+  },
+  {
+    "id": "JEN-T1-012",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant `agent any` ?",
+    "options": [
+      "Il exécute le pipeline sur le premier agent disponible.",
+      "Il nécessite une configuration explicite de labels.",
+      "Il est équivalent à `agent { label '' }`.",
+      "Il ne fonctionne pas avec les agents Docker."
+    ],
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "correct": 0,
+    "explanation": "L'option A est exacte : `any` sélectionne n'importe quel nœud online. L'option B est fausse : aucun label n'est requis. L'option C est vraie : syntaxe synonyme. L'option D est incorrecte : `any` fonctionne avec tous les types d'agents configurés."
+  },
+  {
+    "id": "JEN-T1-013",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Credentials & Secrets",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment injecter un secret Jenkins dans une commande shell sans l'afficher dans les logs ?",
+    "options": [
+      "echo $SECRET",
+      "withCredentials([string(credentialsId: 'my-secret', variable: 'MY_SECRET')]) { sh 'echo $MY_SECRET' }",
+      "env.SECRET = 'value'",
+      "Utiliser `mask: true` dans le shell."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`withCredentials` bind le secret à une variable et active automatiquement le masking dans la console. Les autres méthodes exposent le secret ou n'existent pas nativement."
+  },
+  {
+    "id": "JEN-T1-014",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Plugins & Updates",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les sources officielles pour installer des plugins Jenkins :",
+    "options": [
+      "Update Center intégré à l'UI",
+      "Marketplace externe non vérifié",
+      "Téléchargement manuel `.hpi` via l'UI",
+      "Déploiement via `plugins.txt` avec CasC"
+    ],
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "correct": 0,
+    "explanation": "L'Update Center (A) et l'upload manuel `.hpi` (C) sont officiels. CasC avec `plugins.txt` (D) est la pratique IaC standard. Les marketplaces externes (B) ne sont pas signées par Jenkins et posent un risque de sécurité."
+  },
+  {
+    "id": "JEN-T1-015",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Workspace & Execution",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle variable d'environnement contient le chemin absolu du workspace courant ?",
+    "options": [
+      "$JENKINS_HOME",
+      "$WORKSPACE",
+      "$BUILD_DIR",
+      "$JOB_PATH"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`$WORKSPACE` pointe vers le répertoire de travail du build actuel. `$JENKINS_HOME` est le racine du serveur. Les autres n'existent pas."
+  },
+  {
+    "id": "JEN-T1-016",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'audit Jenkins ?",
+    "options": [
+      "Le plugin Audit Trail enregistre toutes les actions utilisateur.",
+      "Les logs d'audit sont stockés dans `$JENKINS_HOME/logs/`.",
+      "L'audit natif est activé par défaut sans plugin.",
+      "Les logs d'audit peuvent être exportés vers syslog."
+    ],
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "correct": 0,
+    "explanation": "L'option A est exacte : Audit Trail est le standard. L'option B est fausse : le stockage dépend de la config du plugin. L'option C est incorrecte : Jenkins ne loggue pas nativement les actions métier sans plugin. L'option D est vraie : la plupart des plugins audit supportent syslog."
+  },
+  {
+    "id": "JEN-T1-017",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Triggers & Webhooks",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle syntaxe cron Jenkins exécute un job tous les jours à 23h00 ?",
+    "options": [
+      "0 23 * * *",
+      "H 23 * * *",
+      "23 0 * * *",
+      "0 11 * * *"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`H` (hash) évite le pic de charge en répartissant l'exécution sur une plage de ~10 min autour de l'heure. `0 23 * * *` est valide mais déconseillé en prod. Les autres sont syntaxiquement ou temporellement incorrectes."
+  },
+  {
+    "id": "JEN-T1-018",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Groovy & Scripted",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes sur `try/catch` dans un pipeline Scripted :",
+    "options": [
+      "Il capture les exceptions Java/Groovy.",
+      "Il peut envelopper des blocks `stage`.",
+      "Il ne fonctionne pas dans Declarative.",
+      "Il nécessite l'import `java.io.*`."
+    ],
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "correct": 0,
+    "explanation": "A et B sont exactes. `try/catch` est standard Groovy et fonctionne partout. C est fausse : Declarative supporte `catchError`. D est incorrect : aucun import spécifique requis."
+  },
+  {
+    "id": "JEN-T1-019",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Shared Libraries",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Où doivent résider les fichiers `.groovy` d'une Shared Library ?",
+    "options": [
+      "`src/`",
+      "`vars/`",
+      "`lib/`",
+      "`plugins/`"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`vars/` contient les fonctions globales appelables directement dans le pipeline. `src/` contient les classes Java/Groovy standard."
+  },
+  {
+    "id": "JEN-T1-020",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Declarative Directives",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant `environment {}` ?",
+    "options": [
+      "Il définit des variables d'environnement pour le pipeline/stage.",
+      "Il ne peut contenir que des valeurs statiques.",
+      "Il supporte `credentials()` pour injecter des secrets.",
+      "Il est écrasé par les variables système."
+    ],
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "correct": 0,
+    "explanation": "A et C sont exactes. B est faux : il supporte les expressions. D est faux : `environment {}` a priorité sur les vars système."
+  },
+  {
+    "id": "JEN-T1-021",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel fichier configure les labels et executors d'un agent Jenkins ?",
+    "options": [
+      "`agent.xml`",
+      "`config.xml` (via UI)",
+      "`nodes/agent/config.xml`",
+      "`jenkins.yml`"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Chaque agent a son `config.xml` sous `$JENKINS_HOME/nodes/<name>/`. La modification manuelle nécessite un reload ou restart."
+  },
+  {
+    "id": "JEN-T1-022",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les étapes valides dans un pipeline Declarative :",
+    "options": [
+      "`tools { maven 'M3' }`",
+      "`environment { PATH = '/usr/bin' }`",
+      "`post { always { cleanWs() } }`",
+      "`agent { docker { image 'node:18' } }`"
+    ],
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "correct": 0,
+    "explanation": "A, C, D sont exactes. B est faux : `PATH` ne doit pas être écrasé manuellement dans `environment {}`."
+  },
+  {
+    "id": "JEN-T1-023",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Credentials & Secrets",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de credential utilise un fichier `.ssh/id_rsa` ?",
+    "options": [
+      "Username with password",
+      "Secret text",
+      "SSH Username with private key",
+      "Secret file"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Le type spécifique pour les clés SSH est `SSH Username with private key`."
+  },
+  {
+    "id": "JEN-T1-024",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Plugins & Updates",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le mode 'Detached Plugin' ?",
+    "options": [
+      "Il charge un plugin sans redémarrage.",
+      "Il permet de tester des versions incompatibles.",
+      "Il est activé via `-Djenkins.install.DetachedPlugins.enable=true`.",
+      "Il est recommandé pour la production."
+    ],
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "correct": 1,
+    "explanation": "A et D sont faux. B et C sont exactes : le mode détaché est pour le dev/test."
+  },
+  {
+    "id": "JEN-T1-025",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Workspace & Execution",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment récupérer le numéro de build actuel dans un step ?",
+    "options": [
+      "${BUILD_NUMBER}",
+      "${env.BUILD_NUMBER}",
+      "${BUILD_ID}",
+      "${JOB_NUMBER}"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`${env.BUILD_NUMBER}` est la variable injectée automatiquement. Les autres n'existent pas ou sont obsolètes."
+  },
+  {
+    "id": "JEN-T1-026",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les bonnes pratiques de sécurité Jenkins :",
+    "options": [
+      "Désactiver l'accès CLI non sécurisé.",
+      "Utiliser HTTPS pour l'UI.",
+      "Configurer `csrf` protection.",
+      "Exécuter Jenkins en root."
+    ],
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "correct": 0,
+    "explanation": "A, B, C sont exactes. D est dangereuse et interdite en prod."
+  },
+  {
+    "id": "JEN-T1-027",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Triggers & Webhooks",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel plugin permet d'intégrer nativement GitHub à Jenkins ?",
+    "options": [
+      "GitHub Integration Plugin",
+      "Git Plugin",
+      "GitHub Plugin",
+      "SCM Sync Plugin"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "`GitHub Plugin` gère webhooks, auth et status. `Git Plugin` gère le checkout uniquement."
+  },
+  {
+    "id": "JEN-T1-028",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Groovy & Scripted",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies sur `@NonCPS` ?",
+    "options": [
+      "Il désactive la sérialisation du pipeline.",
+      "Il permet d'utiliser du Groovy non compatible CPS.",
+      "Il est requis pour les boucles `for`.",
+      "Il accélère l'exécution."
+    ],
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "correct": 0,
+    "explanation": "A et B sont exactes. C et D sont faux."
+  },
+  {
+    "id": "JEN-T1-029",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Shared Libraries",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment appeler une fonction `myFunc` depuis `vars/myFunc.groovy` ?",
+    "options": [
+      "myFunc()",
+      "library.myFunc()",
+      "call('myFunc')",
+      "run myFunc"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les fichiers `vars/` sont injectés globalement et appelables directement."
+  },
+  {
+    "id": "JEN-T1-030",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Declarative Directives",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les directives valides dans `post {}` :",
+    "options": [
+      "success",
+      "failure",
+      "always",
+      "cleanup"
+    ],
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "correct": 0,
+    "explanation": "A, B, C sont exactes. `cleanup` n'existe pas."
+  },
+  {
+    "id": "JEN-T1-031",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande vérifie la connectivité d'un agent JNLP ?",
+    "options": [
+      "java -jar agent.jar -jnlpUrl ...",
+      "ping agent.jenkins",
+      "telnet localhost 50000",
+      "ssh agent@jenkins"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande JNLP standard est utilisée pour le diagnostic."
+  },
+  {
+    "id": "JEN-T1-032",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies sur `parallel {}` ?",
+    "options": [
+      "Il exécute des stages simultanément.",
+      "Il nécessite `failFast: false` par défaut.",
+      "Il ne fonctionne qu'avec des agents Docker.",
+      "Il retourne `true` si tous les stages réussissent."
+    ],
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "correct": 0,
+    "explanation": "A et D sont exactes. B et C sont faux."
+  },
+  {
+    "id": "JEN-T1-033",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Credentials & Secrets",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel algorithme Jenkins utilise-t-il pour chiffrer les secrets locaux ?",
+    "options": [
+      "AES-256",
+      "RSA-2048",
+      "DES-CBC",
+      "MD5"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AES-256 avec une clé maîtresse dérivée de `master.key`."
+  },
+  {
+    "id": "JEN-T1-034",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Plugins & Updates",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les commandes CLI valides pour gérer Jenkins :",
+    "options": [
+      "java -jar jenkins-cli.jar -s http://localhost:8080 list-jobs",
+      "jenkins-cli reload",
+      "curl -X POST http://localhost:8080/restart",
+      "java -jar jenkins-cli.jar install-plugin my.hpi"
+    ],
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "correct": 0,
+    "explanation": "A et D sont exactes. B et C sont syntaxiquement incorrectes ou requièrent auth."
+  },
+  {
+    "id": "JEN-T1-035",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel rôle Jenkins permet de créer des jobs mais pas de les configurer ?",
+    "options": [
+      "Job/Configure",
+      "Job/Build",
+      "Overall/Read",
+      "View/Read"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`Job/Build` permet d'exécuter, pas de modifier. `Job/Configure` permet la config."
+  },
+  {
+    "id": "JKS-A&C-001",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'architecture Master/Agent de Jenkins :",
+    "options": [
+      "Le controller orchestre les builds mais n'exécute pas les tâches par défaut.",
+      "Les agents communiquent exclusivement via le protocole SSH.",
+      "Un agent peut être provisionné dynamiquement via le plugin Kubernetes ou Docker.",
+      "Les executors sur un agent définissent le nombre de builds pouvant s'exécuter simultanément sur ce nœud."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option A est exacte : depuis Jenkins 2.0, le controller est dédié à l'orchestration et à l'UI. L'option B est fausse : les agents peuvent communiquer via SSH, mais aussi via HTTP/HTTPS. L'option C est correcte : le plugin Kubernetes permet de provisionner des agents dynamiquement. L'option D est correcte : les executors définissent le nombre de tâches parallèles sur un agent."
+  },
+  {
+    "id": "JKS-A&C-002",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive `Jenkinsfile` permet d'exécuter une étape uniquement si une condition spécifique est remplie ?",
+    "options": [
+      "when {}",
+      "if() {}",
+      "condition {}",
+      "unless {}"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dans les pipelines Declarative, `when {}` est la directive officielle pour l'exécution conditionnelle d'un stage ou step. `if() {}` est une directive Groovy qui peut être utilisée dans les scripts Scripted, mais pas dans les pipelines Declarative. `condition {}` n'est pas une directive valide en Jenkins Pipeline. `unless {}` n'existe pas dans les pipelines Jenkins."
+  },
+  {
+    "id": "JKS-A&C-003",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Credentials & Secrets",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des secrets dans Jenkins :",
+    "options": [
+      "Les secrets peuvent être stockés directement dans les fichiers de configuration Jenkins.",
+      "Le plugin Credentials permet de gérer des secrets de manière sécurisée.",
+      "Les secrets peuvent être partagés entre différents projets Jenkins via des variables d'environnement.",
+      "Les secrets stockés dans le plugin Credentials sont chiffrés et protégés."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "L'option A est fausse : les secrets ne doivent pas être stockés directement dans les fichiers de configuration Jenkins pour des raisons de sécurité. L'option B est correcte : le plugin Credentials permet une gestion sécurisée des secrets. L'option C est correcte : les secrets peuvent être partagés entre projets via des variables d'environnement. L'option D est correcte : les secrets stockés dans le plugin Credentials sont chiffrés et protégés."
+  },
+  {
+    "id": "JKS-A&C-004",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Plugins & Updates",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour mettre à jour les plugins Jenkins en production ?",
+    "options": [
+      "Mettre à jour tous les plugins simultanément pour éviter des incompatibilités.",
+      "Mettre à jour les plugins un par un en vérifiant la compatibilité avant chaque mise à jour.",
+      "Mettre à jour les plugins en utilisant le mode de maintenance pour minimiser l'impact sur la production.",
+      "Mettre à jour les plugins en utilisant le plugin Update Center sans vérification."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique consiste à mettre à jour les plugins un par un en vérifiant la compatibilité avant chaque mise à jour. Cette approche permet de détecter et de corriger les problèmes potentiels avant qu'ils n'affectent la production. L'utilisation du mode de maintenance est également recommandée pour minimiser l'impact sur les builds en cours. La mise à jour simultanée de tous les plugins peut entraîner des incompatibilités et des problèmes de stabilité. L'utilisation du plugin Update Center sans vérification est inadvisable car elle peut entraîner des mises à jour non compatibles."
+  },
+  {
+    "id": "JKS-A&C-005",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité de Jenkins permet d'assigner des rôles et des permissions spécifiques à différents utilisateurs ou groupes ?",
+    "options": [
+      "Role-based Access Control (RBAC)",
+      "User Management",
+      "Security Configuration",
+      "Audit Logs"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonctionnalité de Jenkins qui permet d'assigner des rôles et des permissions spécifiques à différents utilisateurs ou groupes est le Role-based Access Control (RBAC). L'option B, User Management, permet de gérer les comptes utilisateurs, mais ne définit pas des rôles spécifiques. L'option C, Security Configuration, permet de configurer les paramètres de sécurité généraux, mais ne définit pas des rôles. L'option D, Audit Logs, permet de suivre les activités de sécurité, mais ne définit pas des rôles."
+  },
+  {
+    "id": "JKS-A&C-006",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le fonctionnement des agents dans Jenkins :",
+    "options": [
+      "Un agent peut être configuré pour exécuter des builds en local ou sur une machine virtuelle.",
+      "Les agents communiquent avec le controller uniquement via le protocole HTTP/HTTPS.",
+      "Un agent peut être déclaré comme 'offline' pour ne pas exécuter de builds.",
+      "Les agents peuvent être provisionnés automatiquement via des plugins comme Kubernetes ou Docker."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "L'option A est correcte : les agents peuvent être configurés pour exécuter des builds en local ou sur une machine virtuelle. L'option B est fausse : les agents communiquent également avec le controller via SSH. L'option C est correcte : un agent peut être déclaré comme 'offline'. L'option D est correcte : les agents peuvent être provisionnés automatiquement via des plugins comme Kubernetes ou Docker."
+  },
+  {
+    "id": "JKS-A&C-007",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive `Jenkinsfile` permet d'exécuter une étape uniquement si une condition spécifique est remplie ?",
+    "options": [
+      "when {}",
+      "if() {}",
+      "condition {}",
+      "unless {}"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dans les pipelines Declarative, `when {}` est la directive officielle pour l'exécution conditionnelle d'un stage ou step."
+  },
+  {
+    "id": "JKS-A&C-008",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Credentials & Secrets",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des secrets dans Jenkins :",
+    "options": [
+      "Les secrets peuvent être stockés directement dans le fichier `Jenkinsfile`.",
+      "Le plugin 'Secrets Manager' est nécessaire pour gérer les secrets en dehors du Jenkinsfile.",
+      "Les secrets peuvent être partagés entre différents projets via des variables d'environnement.",
+      "Les secrets peuvent être chiffrés et déchiffrés automatiquement par Jenkins."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "L'option A est fausse : les secrets ne doivent pas être stockés directement dans le fichier `Jenkinsfile` pour des raisons de sécurité. L'option B est incorrecte : le plugin 'Secrets Manager' n'est pas obligatoire pour gérer les secrets. L'option C est correcte : les secrets peuvent être partagés entre différents projets via des variables d'environnement. L'option D est correcte : les secrets peuvent être chiffrés et déchiffrés automatiquement par Jenkins."
+  },
+  {
+    "id": "JKS-A&C-009",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Plugins & Updates",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'importance de mettre à jour régulièrement les plugins Jenkins ?",
+    "options": [
+      "Mettre à jour les plugins est inutile car Jenkins ne change pas.",
+      "Les plugins obsolètes peuvent contenir des vulnérabilités de sécurité.",
+      "Mettre à jour les plugins est uniquement nécessaire pour ajouter de nouvelles fonctionnalités.",
+      "Les plugins obsolètes peuvent entraîner des performances dégradées."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Les plugins obsolètes peuvent contenir des vulnérabilités de sécurité qui pourraient être exploitées par des attaquants. Il est donc crucial de mettre à jour régulièrement les plugins Jenkins pour maintenir la sécurité et les performances du système."
+  },
+  {
+    "id": "JKS-A&C-010",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des droits d'accès dans Jenkins :",
+    "options": [
+      "Les utilisateurs peuvent être attribués à des rôles prédéfinis ou personnalisés.",
+      "Les droits d'accès peuvent être définis au niveau du projet ou de l'ensemble de Jenkins.",
+      "Le plugin 'Role Strategy Plugin' est nécessaire pour gérer les rôles et les droits d'accès.",
+      "Les utilisateurs peuvent être autorisés à exécuter des builds sans avoir besoin de droits administratifs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte : les utilisateurs peuvent être attribués à des rôles prédéfinis ou personnalisés. L'option B est correcte : les droits d'accès peuvent être définis au niveau du projet ou de l'ensemble de Jenkins. L'option C est fausse : le plugin 'Role Strategy Plugin' n'est pas obligatoire pour gérer les rôles et les droits d'accès. L'option D est incorrecte : les utilisateurs ne peuvent pas être autorisés à exécuter des builds sans avoir besoin de droits administratifs."
+  },
+  {
+    "id": "JKS-A&C-011",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Controller & Agents",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la communication entre le controller et les agents Jenkins :",
+    "options": [
+      "Le controller utilise uniquement le protocole HTTP pour communiquer avec les agents.",
+      "Les agents peuvent être configurés pour utiliser différents protocoles de communication (HTTP, SSH).",
+      "Le controller peut exécuter des tâches sur les agents sans nécessiter de configuration supplémentaire.",
+      "Les agents doivent être enregistrés auprès du controller avant qu'ils puissent exécuter des tâches."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "L'option A est incorrecte : le controller peut également utiliser SSH pour la communication. L'option B est correcte : les agents peuvent être configurés pour utiliser différents protocoles. L'option C est incorrecte : le controller nécessite une configuration pour exécuter des tâches sur les agents. L'option D est correcte : les agents doivent être enregistrés auprès du controller."
+  },
+  {
+    "id": "JKS-A&C-012",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Pipeline Syntax",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive `Jenkinsfile` permet d'exécuter une étape uniquement si une condition spécifique est remplie ?",
+    "options": [
+      "when {}",
+      "if() {}",
+      "condition {}",
+      "unless {}"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dans les pipelines Declarative, `when {}` est la directive officielle pour l'exécution conditionnelle d'un stage ou step. L'option A est correcte."
+  },
+  {
+    "id": "JKS-A&C-013",
+    "theme": "Architecture & Concepts Core",
+    "theme_label": "Security & RBAC",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des droits d'accès en utilisant le contrôle basé sur les rôles (RBAC) dans Jenkins :",
+    "options": [
+      "Le RBAC permet d'attribuer des droits d'accès spécifiques à chaque utilisateur individuellement.",
+      "Les rôles peuvent être définis pour gérer les droits d'accès à différents aspects de Jenkins (builds, configurations, etc.).",
+      "Le RBAC est uniquement disponible pour les pipelines Declarative.",
+      "Les utilisateurs peuvent être ajoutés à plusieurs rôles pour avoir un accès combiné."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "L'option A est incorrecte : le RBAC n'est pas basé sur l'attribution individuelle de droits à chaque utilisateur. L'option B est correcte : les rôles peuvent être définis pour gérer les droits d'accès à différents aspects de Jenkins. L'option C est incorrecte : le RBAC est disponible pour les pipelines Declarative et Scripted. L'option D est correcte : les utilisateurs peuvent être ajoutés à plusieurs rôles pour avoir un accès combiné."
+  }
+]

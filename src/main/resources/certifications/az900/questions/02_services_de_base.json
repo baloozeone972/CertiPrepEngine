@@ -1,0 +1,1571 @@
+[
+  {
+    "id": "AZ900-CORE-001",
+    "theme": "Services de base Azure",
+    "theme_label": "Régions et zones de disponibilité",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'une zone de disponibilité Azure ?",
+    "options": [
+      "Un emplacement physique unique dans une région Azure, composé d'un ou plusieurs datacenters indépendants en alimentation, réseau et refroidissement.",
+      "Un groupe de datacenters répartis sur plusieurs continents.",
+      "Une réplique exacte d'une région entière située à au moins 300 miles de distance.",
+      "Un service qui permet de sauvegarder automatiquement les machines virtuelles."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Une zone de disponibilité est un emplacement physique unique au sein d'une région Azure. Chaque zone est constituée d'un ou plusieurs datacenters équipés d'une alimentation, d'un refroidissement et d'un réseau indépendants. L'option B décrit plutôt une géographie Azure ou un groupe de régions. L'option C correspond à une région jumelée (paired region). L'option D décrit Azure Backup, un service spécifique. La haute disponibilité au sein d'une région est obtenue en répartissant les ressources sur plusieurs zones de disponibilité."
+  },
+  {
+    "id": "AZ900-CORE-002",
+    "theme": "Services de base Azure",
+    "theme_label": "Services de calcul",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure App Service.",
+    "options": [
+      "App Service est une offre PaaS qui permet de déployer des applications web, des API REST et des backends mobiles.",
+      "App Service inclut une fonctionnalité de mise à l'échelle automatique (autoscale) basée sur des métriques comme le CPU ou la mémoire.",
+      "App Service permet d'exécuter des conteneurs Docker sans gérer l'infrastructure sous-jacente.",
+      "App Service peut héberger des machines virtuelles Windows Server complètes.",
+      "App Service nécessite la gestion manuelle des correctifs du système d'exploitation."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Azure App Service est un service PaaS (Platform as a Service) qui prend en charge le déploiement d'applications web, d'API et de backends mobiles (A). Il offre des capacités d'autoscaling automatique en fonction de règles définies (B). Il prend également en charge l'exécution de conteneurs via Web App for Containers (C). L'option D est incorrecte car App Service ne fournit pas un accès complet à une VM Windows ; c'est le rôle d'Azure Virtual Machines (IaaS). L'option E est fausse : en PaaS, la gestion des correctifs du système d'exploitation sous-jacent est assurée par Microsoft."
+  },
+  {
+    "id": "AZ900-CORE-003",
+    "theme": "Services de base Azure",
+    "theme_label": "Stockage",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service de stockage Azure est optimisé pour l'hébergement de fichiers partagés accessibles via les protocoles SMB et NFS ?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure Queue Storage",
+      "Azure Table Storage"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure Files offre des partages de fichiers managés dans le cloud, accessibles via les protocoles standard SMB (Server Message Block) et NFS (Network File System). Il permet de monter un partage de fichiers sur plusieurs machines virtuelles simultanément. Azure Blob Storage est conçu pour le stockage d'objets non structurés (images, vidéos, logs). Queue Storage sert à la messagerie asynchrone. Table Storage est une base NoSQL clé-valeur."
+  },
+  {
+    "id": "AZ900-CORE-004",
+    "theme": "Services de base Azure",
+    "theme_label": "Réseau",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX fonctionnalités offertes par Azure Virtual Network (VNet) ? Sélectionnez les propositions exactes.",
+    "options": [
+      "Isolation logique du réseau cloud dédié à votre abonnement.",
+      "Filtrage du trafic entrant et sortant via des groupes de sécurité réseau (NSG).",
+      "Connexion directe à Internet sans passerelle NAT par défaut pour toutes les ressources.",
+      "Routage automatique du trafic entre toutes les régions Azure sans configuration supplémentaire.",
+      "Intégration native avec Azure Active Directory pour l'authentification des utilisateurs au niveau réseau."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Azure Virtual Network (VNet) fournit une isolation réseau logique pour vos ressources Azure (A). Il permet de filtrer le trafic via des NSG ou des appliances virtuelles (B). L'option C est incorrecte : les ressources déployées dans un VNet peuvent communiquer avec Internet par défaut, mais le trafic entrant depuis Internet nécessite une configuration (adresse IP publique, équilibreur de charge). L'option D est fausse : le routage entre régions nécessite une configuration de peering de VNet ou de passerelle VPN. L'option E n'est pas une fonctionnalité native du VNet ; l'authentification des utilisateurs se fait via Azure AD, mais pas au niveau du routage réseau."
+  },
+  {
+    "id": "AZ900-CORE-005",
+    "theme": "Services de base Azure",
+    "theme_label": "Bases de données",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Cosmos DB est une base de données de type :",
+    "options": [
+      "Relationnelle uniquement",
+      "NoSQL multi-modèle avec distribution mondiale",
+      "Data warehouse pour l'analyse décisionnelle",
+      "Cache en mémoire Redis"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure Cosmos DB est un service de base de données NoSQL multi-modèle entièrement managé, conçu pour une distribution mondiale et une scalabilité horizontale. Il prend en charge plusieurs API (SQL, MongoDB, Cassandra, Gremlin, Table). L'option A correspond à Azure SQL Database. L'option C décrit Azure Synapse Analytics. L'option D décrit Azure Cache for Redis."
+  },
+  {
+    "id": "AZ900-CORE-006",
+    "theme": "Services de base Azure",
+    "theme_label": "Services de calcul",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les options qui sont des avantages de l'utilisation d'Azure Virtual Machine Scale Sets.",
+    "options": [
+      "Gestion automatisée de la répartition du trafic réseau entre les instances.",
+      "Mise à l'échelle automatique basée sur des métriques de performance ou un planning.",
+      "Déploiement et gestion d'un ensemble de machines virtuelles identiques.",
+      "Garantie d'un SLA de disponibilité de 100% pour les applications déployées.",
+      "Possibilité d'exécuter des conteneurs Windows sans orchestrateur externe."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Les Virtual Machine Scale Sets permettent de créer et gérer un groupe de machines virtuelles identiques et à charge équilibrée (C). Ils offrent des fonctionnalités d'autoscaling automatique en fonction de métriques ou de plannings (B). L'équilibrage de charge est intégré (A). L'option D est incorrecte car aucun service Azure ne garantit un SLA de 100% (le maximum est généralement 99,99%). L'option E est hors sujet : les conteneurs Windows peuvent être exécutés sur AKS, Azure Container Instances ou App Service, mais les Scale Sets sont principalement pour les VM IaaS."
+  },
+  {
+    "id": "AZ900-CORE-007",
+    "theme": "Services de base Azure",
+    "theme_label": "Régions et zones de disponibilité",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Vous devez assurer la plus haute disponibilité possible pour une application critique déployée dans une seule région Azure. Quelle stratégie de déploiement recommandez-vous ?",
+    "options": [
+      "Déployer toutes les ressources dans un seul groupe à haute disponibilité (Availability Set).",
+      "Répartir les ressources sur au moins deux zones de disponibilité (Availability Zones).",
+      "Utiliser un équilibreur de charge de base avec une seule VM redondante.",
+      "Activer le stockage géo-redondant (GRS) pour les disques de la VM."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Pour obtenir la plus haute disponibilité au sein d'une même région, il faut utiliser les zones de disponibilité (Availability Zones). Celles-ci offrent une protection contre les pannes d'un datacenter entier, car chaque zone est physiquement séparée avec ses propres alimentation, réseau et refroidissement. Un Availability Set (A) protège contre les pannes matérielles et les mises à jour planifiées, mais pas contre une panne majeure du datacenter. L'option C offre une redondance limitée. L'option D concerne la réplication des données de stockage vers une autre région, ce qui améliore la reprise d'activité mais pas la disponibilité intra-région."
+  },
+  {
+    "id": "AZ900-CORE-008",
+    "theme": "Services de base Azure",
+    "theme_label": "Stockage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Concernant les comptes de stockage Azure, sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Un compte de stockage v2 à usage général peut contenir des objets blob, des fichiers, des files d'attente et des tables.",
+      "Le niveau d'accès 'Froid' (Cool) est optimisé pour les données rarement consultées mais qui nécessitent une latence de récupération faible.",
+      "Le niveau d'accès 'Archive' permet une récupération instantanée des données.",
+      "La réplication LRS (Locally Redundant Storage) réplique les données de manière synchrone dans trois zones de disponibilité distinctes.",
+      "Azure Files peut être utilisé pour remplacer un serveur de fichiers sur site et prend en charge l'authentification AD DS via Azure AD Domain Services."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Le compte de stockage v2 à usage général (GPv2) prend en charge tous les services de stockage de base : blob, files, queue et table (A). Le niveau Cool (B) est effectivement conçu pour les données rarement consultées, avec un coût de stockage plus faible mais un coût d'accès plus élevé ; la latence de récupération reste faible (de l'ordre de quelques millisecondes). L'option C est fausse : le niveau Archive nécessite une opération de réalimentation (rehydration) qui peut prendre plusieurs heures avant que les données soient accessibles. L'option D est incorrecte : LRS réplique trois copies des données dans un seul datacenter ou une seule zone de disponibilité, pas dans trois zones distinctes (c'est le rôle de ZRS). L'option E est correcte : Azure Files peut s'intégrer avec Active Directory Domain Services (AD DS) sur site via Azure AD DS ou Azure AD Kerberos pour l'authentification."
+  },
+  {
+    "id": "AZ900-CORE-009",
+    "theme": "Services de base Azure",
+    "theme_label": "Réseau",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet d'établir une connexion privée et sécurisée entre un réseau d'entreprise sur site et Azure via une connexion dédiée chez un fournisseur de connectivité ?",
+    "options": [
+      "Passerelle VPN",
+      "Azure ExpressRoute",
+      "Azure Front Door",
+      "Azure Firewall"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure ExpressRoute permet de créer des connexions privées entre des datacenters sur site et Azure, via un fournisseur de connectivité. Ces connexions ne transitent pas par l'Internet public, offrant ainsi une fiabilité, une vitesse et une latence plus prévisibles. Une passerelle VPN (A) utilise Internet. Azure Front Door (C) est un service d'accélération d'applications web global. Azure Firewall (D) est un service de sécurité réseau managé."
+  },
+  {
+    "id": "AZ900-CORE-010",
+    "theme": "Services de base Azure",
+    "theme_label": "Bases de données",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX différences principales entre Azure SQL Database et SQL Server sur une machine virtuelle Azure ? Sélectionnez les propositions exactes.",
+    "options": [
+      "Azure SQL Database est un service PaaS entièrement managé, tandis que SQL Server sur VM est un service IaaS.",
+      "Azure SQL Database prend en charge l'intégralité des fonctionnalités du moteur SQL Server, y compris les agents SQL et les vues système étendues.",
+      "Avec Azure SQL Database, la haute disponibilité et les sauvegardes automatiques sont incluses par défaut sans configuration supplémentaire.",
+      "Azure SQL Database permet un accès direct au système de fichiers du serveur pour restaurer des fichiers .bak.",
+      "SQL Server sur VM ne permet pas la mise à l'échelle automatique des ressources de calcul."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "Azure SQL Database est un service PaaS (A) : Microsoft gère le système d'exploitation et le moteur de base de données. La haute disponibilité et les sauvegardes sont intégrées automatiquement (C). L'option B est fausse : SQL Database ne prend pas en charge certaines fonctionnalités comme SQL Agent, les requêtes inter-bases via OPENQUERY ou l'accès aux vues système étendues. L'option D est incorrecte car en PaaS, on n'a pas accès au système de fichiers. L'option E est incorrecte : on peut modifier la taille de la VM (scale up/down) manuellement, et avec des scripts ou Azure Automation on peut l'automatiser ; mais il n'y a pas d'autoscaling natif comme pour App Service."
+  },
+  {
+    "id": "AZ900-CORE-011",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Functions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel modèle de tarification s'applique à Azure Functions ?",
+    "options": [
+      "Paiement à l'exécution (Consumption Plan) ou avec un plan App Service dédié.",
+      "Uniquement un tarif fixe mensuel.",
+      "Paiement à la minute de temps de calcul, identique aux machines virtuelles.",
+      "Gratuit pour toujours, sans limite."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Functions propose plusieurs plans : Consumption (paiement par exécution et Go-seconde), Premium (pour les fonctions longue durée), et Dedicated (App Service plan, tarif fixe)."
+  },
+  {
+    "id": "AZ900-CORE-012",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Logic Apps",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant Azure Logic Apps sont exactes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Logic Apps permet d'automatiser des workflows et d'intégrer des applications et des données sans écrire de code.",
+      "Logic Apps est un service serverless.",
+      "Logic Apps peut se connecter à des services sur site via la passerelle de données locale.",
+      "Logic Apps utilise un concepteur visuel pour créer des workflows.",
+      "Logic Apps remplace complètement Azure Functions."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Logic Apps est un service d'intégration serverless (A, B) avec un concepteur visuel (D) et supporte les connexions sur site via la passerelle de données (C). Il ne remplace pas Functions (E) ; les deux sont complémentaires (Functions pour du code personnalisé, Logic Apps pour l'orchestration déclarative)."
+  },
+  {
+    "id": "AZ900-CORE-013",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Kubernetes Service (AKS)",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans AKS, qui est responsable de la gestion et de la maintenance des nœuds maîtres (control plane) du cluster Kubernetes ?",
+    "options": [
+      "Microsoft (Azure)",
+      "Le client",
+      "Cela dépend du plan tarifaire choisi.",
+      "Un tiers de confiance certifié par la CNCF."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AKS est un service Kubernetes managé. Le plan de contrôle (API server, etcd, scheduler) est entièrement géré et maintenu par Azure sans frais supplémentaires. Le client gère uniquement les nœuds agents (worker nodes)."
+  },
+  {
+    "id": "AZ900-CORE-014",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Container Instances (ACI)",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages d'Azure Container Instances (ACI) ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Démarrage rapide des conteneurs sans gestion de serveur.",
+      "Paiement à la seconde pour les ressources consommées.",
+      "Orchestration complète de clusters de conteneurs.",
+      "Convient pour des tâches ponctuelles ou des scénarios simples.",
+      "Intégration native avec un réseau virtuel pour une isolation complète."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3, 4],
+    "explanation": "ACI permet d'exécuter des conteneurs sans gérer de VM (A), avec une facturation à la seconde (B). C'est idéal pour des charges de travail simples ou épisodiques (D). L'intégration au VNet est possible (E). L'orchestration de clusters (C) relève d'AKS, pas d'ACI."
+  },
+  {
+    "id": "AZ900-CORE-015",
+    "theme": "Services de base Azure",
+    "theme_label": "Stockage - Niveaux d'accès Blob",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel niveau d'accès de stockage Blob est le plus économique pour des données rarement consultées (moins d'une fois par an) et pouvant tolérer une latence de récupération de plusieurs heures ?",
+    "options": [
+      "Archive",
+      "Froid (Cool)",
+      "Chaud (Hot)",
+      "Premium"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le niveau Archive est conçu pour la rétention à long terme avec un coût de stockage minimal, mais une latence de récupération de l'ordre de plusieurs heures. Le niveau Cool est pour des accès peu fréquents (tous les 30 jours environ) avec une latence faible."
+  },
+  {
+    "id": "AZ900-CORE-016",
+    "theme": "Services de base Azure",
+    "theme_label": "Réseau - Peering de VNet",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les caractéristiques du peering de réseaux virtuels (VNet Peering) ? Sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Il permet de connecter deux VNets dans la même région ou dans des régions différentes.",
+      "Le trafic entre les VNets appairés transite par l'épine dorsale du réseau Microsoft, et non par Internet.",
+      "Il nécessite une passerelle VPN pour fonctionner.",
+      "Il peut être configuré entre des abonnements différents.",
+      "Les VNets appairés doivent avoir des plages d'adresses IP qui se chevauchent."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Le peering de VNet connecte des réseaux virtuels au sein d'Azure (même région ou cross-region) (A). Le trafic utilise le backbone privé de Microsoft (B). Il peut être établi entre abonnements différents (D). Aucune passerelle n'est requise (C faux). Les plages d'adresses ne doivent PAS se chevaucher (E faux)."
+  },
+  {
+    "id": "AZ900-CORE-017",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Virtual Desktop",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'Azure Virtual Desktop (AVD) ?",
+    "options": [
+      "Un service de virtualisation d'applications et de bureaux Windows exécuté dans le cloud Azure.",
+      "Un outil de monitoring des performances des VM.",
+      "Une version cloud de l'Active Directory sur site.",
+      "Un service de sauvegarde pour les postes de travail physiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AVD (anciennement Windows Virtual Desktop) est un service de VDI (Virtual Desktop Infrastructure) managé qui permet d'exécuter des bureaux et applications Windows dans Azure, accessible depuis n'importe où."
+  },
+  {
+    "id": "AZ900-CORE-018",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Batch",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Pour quel type de workload Azure Batch est-il spécifiquement conçu ?",
+    "options": [
+      "Traitement par lots à grande échelle et calcul haute performance (HPC).",
+      "Hébergement de sites web statiques.",
+      "Streaming de données en temps réel.",
+      "Gestion de bases de données relationnelles."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Batch permet d'exécuter des tâches de calcul intensif en parallèle sur des milliers de cœurs, avec gestion automatique des files d'attente et de la montée en charge. C'est l'outil idéal pour le rendu 3D, l'analyse financière, les simulations, etc."
+  },
+  {
+    "id": "AZ900-CORE-019",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Event Grid",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les caractéristiques d'Azure Event Grid ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "C'est un service de routage d'événements basé sur le modèle publication/abonnement.",
+      "Il permet de réagir à des changements d'état dans les ressources Azure (ex: création d'un blob).",
+      "Il est conçu pour la diffusion de millions d'événements par seconde.",
+      "Il prend en charge des sources d'événements personnalisées via des rubriques personnalisées.",
+      "Il garantit la persistance des événements pendant 7 jours."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Event Grid est un service de routage d'événements (A) qui réagit à des événements Azure ou personnalisés (B, D). Il est hautement scalable (C). La persistance (E) n'est pas garantie nativement (les événements sont livrés avec une politique de nouvelle tentative, mais pas stockés durablement ; pour la rétention, il faut utiliser Event Hub ou un compte de stockage)."
+  },
+  {
+    "id": "AZ900-CORE-020",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Event Hubs",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Azure Event Hubs et Azure Event Grid ?",
+    "options": [
+      "Event Hubs est conçu pour l'ingestion massive de flux de données (big data), tandis qu'Event Grid est conçu pour la notification d'événements discrets (style réactif).",
+      "Event Hubs utilise le protocole HTTP, Event Grid utilise AMQP.",
+      "Event Hubs est serverless, Event Grid nécessite un cluster provisionné.",
+      "Il n'y a pas de différence ; les deux services sont identiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Event Hubs est une plateforme de streaming de données pour des scénarios de télémétrie, de logs, avec rétention configurable. Event Grid est un service de distribution d'événements pour des architectures réactives (ex: déclencher une fonction quand une image est uploadée)."
+  },
+  {
+    "id": "AZ900-CORE-021",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Service Bus",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels modes de messagerie sont supportés par Azure Service Bus ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Files d'attente (Queues)",
+      "Rubriques et abonnements (Topics and Subscriptions)",
+      "Streaming de données en continu",
+      "Relais (Relay) pour exposer des services WCF sur site",
+      "Diffusion multicast sans abonnement"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Service Bus propose des files d'attente (A) et des rubriques/abonnements (B) pour la messagerie d'entreprise avec des fonctionnalités avancées comme les sessions, la livraison différée, etc. Le streaming (C) est plutôt pour Event Hubs. Le relais (D) existe dans Azure Relay, qui est un service distinct. La diffusion sans abonnement (E) n'est pas un mode Service Bus."
+  },
+  {
+    "id": "AZ900-CORE-022",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure IoT Hub",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est spécifiquement conçu pour connecter, surveiller et gérer des millions d'appareils IoT ?",
+    "options": [
+      "Azure IoT Hub",
+      "Azure Event Hubs",
+      "Azure Notification Hubs",
+      "Azure Sphere"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "IoT Hub est la passerelle cloud pour les appareils IoT, offrant une communication bidirectionnelle, l'approvisionnement des appareils, et l'intégration avec d'autres services Azure."
+  },
+  {
+    "id": "AZ900-CORE-023",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Cognitive Services",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles catégories de services font partie d'Azure Cognitive Services ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Vision (Computer Vision, Face API)",
+      "Speech (Speech to Text, Text to Speech)",
+      "Language (LUIS, Text Analytics)",
+      "Decision (Personalizer, Anomaly Detector)",
+      "OpenAI Service"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Toutes ces catégories font partie de Cognitive Services. Azure OpenAI Service est désormais une offre distincte mais souvent regroupée conceptuellement ; il fait partie des services d'IA d'Azure."
+  },
+  {
+    "id": "AZ900-CORE-024",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Machine Learning",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'Azure Machine Learning ?",
+    "options": [
+      "Plateforme pour entraîner, déployer et gérer des modèles de machine learning à grande échelle.",
+      "Fournir des modèles d'IA pré‑entraînés prêts à l'emploi.",
+      "Stocker de grands volumes de données pour l'entraînement.",
+      "Uniquement un outil de visualisation de données."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Machine Learning est un service complet de MLOps pour le cycle de vie des modèles personnalisés. Les modèles pré‑entraînés (B) sont plutôt dans Cognitive Services. Le stockage (C) est Azure Storage ou Data Lake. La visualisation (D) est une petite partie de l'outil."
+  },
+  {
+    "id": "AZ900-CORE-025",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Databricks",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les cas d'usage typiques d'Azure Databricks ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Analyse de données volumineuses (Big Data) avec Apache Spark.",
+      "Entraînement de modèles de machine learning distribués.",
+      "Ingénierie des données et pipelines ETL/ELT.",
+      "Streaming de données en temps réel avec Spark Structured Streaming.",
+      "Remplacement de SQL Server pour les applications transactionnelles."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Databricks est une plateforme unifiée d'analyse basée sur Spark, idéale pour le Big Data, le ML, l'ETL et le streaming. Elle ne remplace pas une base de données transactionnelle (E)."
+  },
+  {
+    "id": "AZ900-CORE-026",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Synapse Analytics",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Synapse Analytics est décrit comme :",
+    "options": [
+      "Un service d'analyse intégré qui combine l'entreposage de données d'entreprise et l'analyse Big Data.",
+      "Une base de données relationnelle entièrement managée.",
+      "Un outil de migration de données vers le cloud.",
+      "Un service de visualisation de données uniquement."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Synapse Analytics (anciennement SQL Data Warehouse) intègre des capacités de data warehouse, d'ETL sans code (pipelines), et d'analyse Spark. C'est bien plus qu'une simple base de données (B)."
+  },
+  {
+    "id": "AZ900-CORE-027",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Data Factory",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert Azure Data Factory ?",
+    "options": [
+      "Orchestrer et automatiser le déplacement et la transformation de données entre différents services.",
+      "Stocker des fichiers de manière sécurisée.",
+      "Visualiser des données sous forme de graphiques.",
+      "Exécuter du code serverless."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Data Factory est le service d'intégration de données (ETL/ELT) d'Azure, permettant de créer des pipelines pour copier et transformer des données entre sources cloud et sur site."
+  },
+  {
+    "id": "AZ900-CORE-028",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Data Lake Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels avantages offre Azure Data Lake Storage Gen2 ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Un espace de noms hiérarchique (dossiers/fichiers) pour des performances d'analyse optimisées.",
+      "La compatibilité avec l'API Blob Storage.",
+      "Le chiffrement des données au repos.",
+      "Le contrôle d'accès fin via des listes de contrôle d'accès POSIX.",
+      "La capacité à exécuter des transactions OLTP."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "ADLS Gen2 combine le stockage Blob avec un système de fichiers hiérarchique (A), tout en restant compatible avec l'API Blob (B). Le chiffrement (C) et les ACL POSIX (D) sont inclus. Ce n'est pas un stockage OLTP (E)."
+  },
+  {
+    "id": "AZ900-CORE-029",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Bastion",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel problème Azure Bastion résout-il principalement ?",
+    "options": [
+      "L'exposition des VM à Internet via des adresses IP publiques pour les connexions RDP/SSH.",
+      "La protection contre les attaques DDoS.",
+      "La gestion des certificats SSL.",
+      "L'équilibrage de charge du trafic réseau."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Bastion fournit un accès RDP/SSH sécurisé via le portail Azure, sans avoir besoin d'attribuer une IP publique aux VM, réduisant ainsi la surface d'attaque."
+  },
+  {
+    "id": "AZ900-CORE-030",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Monitor",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'Azure Monitor ?",
+    "options": [
+      "Collecter, analyser et agir sur les données de télémétrie des ressources Azure et sur site.",
+      "Gérer les identités et les accès.",
+      "Déployer des machines virtuelles.",
+      "Configurer des réseaux virtuels."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Monitor est la solution centralisée de surveillance qui agrège les métriques, les logs, et permet de créer des alertes et des dashboards."
+  },
+  {
+    "id": "AZ900-CORE-031",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Application Insights",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles informations peut-on collecter avec Azure Application Insights ? Sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Les temps de réponse des requêtes HTTP.",
+      "Les exceptions non gérées et les traces de pile.",
+      "Les métriques de performance du serveur (CPU, mémoire).",
+      "Les événements de dépendance (appels à SQL, API externes).",
+      "Les logs du système d'exploitation de la VM hôte."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Application Insights est un APM (Application Performance Management) qui surveille l'application elle-même : requêtes (A), exceptions (B), dépendances (D). Il peut aussi collecter les métriques du serveur (C) si l'agent est installé. Les logs de l'OS hôte (E) relèvent plutôt d'Azure Monitor pour les VM (Diagnostic Settings) ou de Log Analytics."
+  },
+  {
+    "id": "AZ900-CORE-032",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Load Balancer",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quel niveau du modèle OSI opère Azure Load Balancer ?",
+    "options": [
+      "Couche 4 (Transport)",
+      "Couche 7 (Application)",
+      "Couche 3 (Réseau)",
+      "Couche 2 (Liaison de données)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Load Balancer standard est un équilibreur de charge de couche 4 qui distribue le trafic en fonction de l'adresse IP et du port. Application Gateway est un équilibreur de couche 7."
+  },
+  {
+    "id": "AZ900-CORE-033",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Application Gateway",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles fonctionnalités sont offertes par Azure Application Gateway ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Routage basé sur le chemin de l'URL.",
+      "Terminaison SSL (offloading).",
+      "Pare‑feu d'application web (WAF).",
+      "Affinité de session (cookie‑based).",
+      "Routage du trafic mondial basé sur les performances."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Application Gateway (couche 7) offre le routage par chemin (A), la terminaison SSL (B), le WAF (C) et l'affinité de session (D). Le routage mondial (E) est une fonction d'Azure Front Door ou Traffic Manager."
+  },
+  {
+    "id": "AZ900-CORE-034",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Front Door",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure offre une accélération globale des applications web avec un équilibrage de charge mondial et un pare‑feu d'application web ?",
+    "options": [
+      "Azure Front Door",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Traffic Manager"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Front Door est un service global (anycast) qui combine la distribution de contenu (CDN), l'équilibrage de charge global et la protection WAF. Traffic Manager (D) est uniquement un DNS avec routage basé sur des règles, sans accélération de contenu ni WAF."
+  },
+  {
+    "id": "AZ900-CORE-035",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Traffic Manager",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles méthodes de routage sont disponibles avec Azure Traffic Manager ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Priorité (Priority)",
+      "Pondéré (Weighted)",
+      "Performance",
+      "Géographique",
+      "Multi‑valeur (MultiValue)"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Traffic Manager propose toutes ces méthodes de routage DNS."
+  },
+  {
+    "id": "AZ900-CORE-036",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure CDN",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le principal avantage d'utiliser Azure Content Delivery Network (CDN) ?",
+    "options": [
+      "Réduire la latence pour les utilisateurs finaux en servant le contenu depuis des serveurs périphériques proches d'eux.",
+      "Chiffrer le trafic entre les utilisateurs et l'origine.",
+      "Analyser les performances des applications web.",
+      "Héberger des bases de données."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le CDN met en cache le contenu statique sur des points de présence (PoP) répartis dans le monde, réduisant ainsi la distance réseau et améliorant les performances."
+  },
+  {
+    "id": "AZ900-CORE-037",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Key Vault",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de secret peut être stocké dans Azure Key Vault ?",
+    "options": [
+      "Clés de chiffrement, certificats et secrets (chaînes de connexion, mots de passe).",
+      "Uniquement des certificats SSL.",
+      "Des fichiers de configuration volumineux (> 1 Mo).",
+      "Des images Docker."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Key Vault est conçu pour la gestion centralisée et sécurisée des secrets, clés de chiffrement et certificats."
+  },
+  {
+    "id": "AZ900-CORE-038",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Dedicated Host",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans quel scénario utiliserait‑on Azure Dedicated Host plutôt que des machines virtuelles classiques ?",
+    "options": [
+      "Pour répondre à des exigences de conformité ou de licence qui imposent un serveur physique dédié non partagé.",
+      "Pour obtenir de meilleures performances réseau que les VM standard.",
+      "Pour réduire les coûts, car c'est moins cher que les VM classiques.",
+      "Pour bénéficier d'un support technique prioritaire."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dedicated Host fournit un serveur physique entier dédié à un client, utile pour des licences logicielles complexes (ex: SQL Server avec licences existantes) ou des obligations réglementaires (ex: secteur bancaire). C'est généralement plus cher qu'une VM partagée."
+  },
+  {
+    "id": "AZ900-CORE-039",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Reserved VM Instances",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels avantages procurent les instances de VM réservées (Reserved Instances) ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Une réduction significative du prix par rapport au paiement à l'usage.",
+      "Une garantie de capacité dans la région choisie.",
+      "La possibilité d'échanger ou d'annuler la réservation à tout moment sans frais.",
+      "Une facturation mensuelle fixe pour une période de 1 ou 3 ans.",
+      "L'application automatique de la remise à toutes les VM correspondantes."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 3, 4],
+    "explanation": "Les instances réservées offrent une remise (jusqu'à 72%) en échange d'un engagement de 1 ou 3 ans (A, D). La remise s'applique automatiquement à l'étendue configurée (E). La garantie de capacité (B) est une option supplémentaire payante. L'annulation (C) est possible mais avec des frais de résiliation."
+  },
+  {
+    "id": "AZ900-CORE-040",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Spot VMs",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle caractéristique décrit le mieux les machines virtuelles Azure Spot ?",
+    "options": [
+      "Elles utilisent la capacité excédentaire d'Azure à un prix très réduit, mais peuvent être évincées à tout moment si la capacité est nécessaire ailleurs.",
+      "Elles offrent des performances réseau améliorées.",
+      "Elles sont dédiées à un seul client sur un hôte physique.",
+      "Elles garantissent une disponibilité de 99,99 %."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les Spot VMs permettent d'économiser jusqu'à 90% sur le coût des VM, mais Azure peut les réquisitionner avec un préavis de 30 secondes seulement. Elles sont idéales pour les charges de travail tolérantes aux interruptions."
+  },
+  {
+    "id": "AZ900-CORE-041",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Availability Sets",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX composantes d'un groupe à haute disponibilité (Availability Set) qui protègent contre les pannes matérielles et les mises à jour ?",
+    "options": [
+      "Domaines d'erreur (Fault Domains)",
+      "Domaines de mise à jour (Update Domains)",
+      "Zones de disponibilité (Availability Zones)",
+      "Groupes de placement de proximité (Proximity Placement Groups)",
+      "Groupes de ressources (Resource Groups)"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Un Availability Set répartit les VM sur plusieurs domaines d'erreur (racks différents) et domaines de mise à jour (groupes redémarrés séquentiellement lors des maintenances). Les zones de disponibilité (C) sont un concept différent, plus puissant."
+  },
+  {
+    "id": "AZ900-CORE-042",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Proximity Placement Groups",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le but d'un groupe de placement de proximité (Proximity Placement Group) ?",
+    "options": [
+      "Garantir que des ressources Azure (VM, AKS) sont physiquement proches les unes des autres pour minimiser la latence réseau.",
+      "Regrouper des ressources de différentes régions pour une gestion simplifiée.",
+      "Fournir une haute disponibilité en répartissant les VM sur plusieurs zones.",
+      "Permettre le partage de données entre différents abonnements."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les groupes de placement de proximité forcent le placement des ressources dans le même datacenter physique, réduisant ainsi la latence de communication. Ils n'offrent pas de haute disponibilité (au contraire, ils augmentent le risque de panne simultanée)."
+  },
+  {
+    "id": "AZ900-CORE-043",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure DNS",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure DNS est un service qui permet de :",
+    "options": [
+      "Héberger des zones DNS et gérer des enregistrements DNS avec la même facturation et le même support que les autres services Azure.",
+      "Analyser le trafic réseau pour détecter des menaces.",
+      "Accélérer la résolution DNS pour les utilisateurs du monde entier.",
+      "Créer des noms de domaine personnalisés."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure DNS est un service d'hébergement de zones DNS faisant autorité. Il ne s'agit pas d'un résolveur récursif (C) ni d'un registre de noms de domaine (D)."
+  },
+  {
+    "id": "AZ900-CORE-044",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Private Link",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages d'Azure Private Link ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Accéder à des services Azure PaaS (ex: Azure SQL, Storage) via une adresse IP privée dans votre VNet.",
+      "Éliminer l'exposition des services à l'Internet public.",
+      "Connecter des services entre différents locataires Azure AD de manière sécurisée.",
+      "Traverser un peering de VNet sans configuration supplémentaire.",
+      "Faire transiter le trafic par l'épine dorsale de Microsoft, et non par Internet."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Private Link injecte une interface réseau privée (Private Endpoint) dans votre VNet pour accéder aux services PaaS (A) sans passer par Internet (B, E). Il fonctionne pour des services dans le même locataire Azure AD (C faux : peut fonctionner cross-tenant mais avec configuration spécifique). Le peering (D) est une fonction réseau distincte."
+  },
+  {
+    "id": "AZ900-CORE-045",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Service Health",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Service Health fournit des informations sur :",
+    "options": [
+      "L'état des services Azure, les maintenances planifiées et les avis de santé concernant spécifiquement vos ressources.",
+      "Les performances de vos applications.",
+      "Les recommandations de sécurité.",
+      "Les coûts de vos abonnements."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Service Health est un tableau de bord personnalisé qui montre les problèmes de service Azure affectant vos déploiements, ainsi que les maintenances à venir. Il est plus précis que la page Azure Status publique."
+  }
+,
+  {
+    "id": "AZ900-CORE-001",
+    "theme": "Services de base Azure",
+    "theme_label": "Régions et zones de disponibilité",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'une zone de disponibilité Azure ?",
+    "options": [
+      "Un emplacement physique unique dans une région Azure, composé d'un ou plusieurs datacenters indépendants en alimentation, réseau et refroidissement.",
+      "Un groupe de datacenters répartis sur plusieurs continents.",
+      "Une réplique exacte d'une région entière située à au moins 300 miles de distance.",
+      "Un service qui permet de sauvegarder automatiquement les machines virtuelles."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Une zone de disponibilité est un emplacement physique unique au sein d'une région Azure. Chaque zone est constituée d'un ou plusieurs datacenters équipés d'une alimentation, d'un refroidissement et d'un réseau indépendants. L'option B décrit plutôt une géographie Azure ou un groupe de régions. L'option C correspond à une région jumelée (paired region). L'option D décrit Azure Backup, un service spécifique. La haute disponibilité au sein d'une région est obtenue en répartissant les ressources sur plusieurs zones de disponibilité."
+  },
+  {
+    "id": "AZ900-CORE-002",
+    "theme": "Services de base Azure",
+    "theme_label": "Services de calcul",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure App Service.",
+    "options": [
+      "App Service est une offre PaaS qui permet de déployer des applications web, des API REST et des backends mobiles.",
+      "App Service inclut une fonctionnalité de mise à l'échelle automatique (autoscale) basée sur des métriques comme le CPU ou la mémoire.",
+      "App Service permet d'exécuter des conteneurs Docker sans gérer l'infrastructure sous-jacente.",
+      "App Service peut héberger des machines virtuelles Windows Server complètes.",
+      "App Service nécessite la gestion manuelle des correctifs du système d'exploitation."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Azure App Service est un service PaaS (Platform as a Service) qui prend en charge le déploiement d'applications web, d'API et de backends mobiles (A). Il offre des capacités d'autoscaling automatique en fonction de règles définies (B). Il prend également en charge l'exécution de conteneurs via Web App for Containers (C). L'option D est incorrecte car App Service ne fournit pas un accès complet à une VM Windows ; c'est le rôle d'Azure Virtual Machines (IaaS). L'option E est fausse : en PaaS, la gestion des correctifs du système d'exploitation sous-jacent est assurée par Microsoft."
+  },
+  {
+    "id": "AZ900-CORE-003",
+    "theme": "Services de base Azure",
+    "theme_label": "Stockage",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service de stockage Azure est optimisé pour l'hébergement de fichiers partagés accessibles via les protocoles SMB et NFS ?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure Queue Storage",
+      "Azure Table Storage"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure Files offre des partages de fichiers managés dans le cloud, accessibles via les protocoles standard SMB (Server Message Block) et NFS (Network File System). Il permet de monter un partage de fichiers sur plusieurs machines virtuelles simultanément. Azure Blob Storage est conçu pour le stockage d'objets non structurés (images, vidéos, logs). Queue Storage sert à la messagerie asynchrone. Table Storage est une base NoSQL clé-valeur."
+  },
+  {
+    "id": "AZ900-CORE-004",
+    "theme": "Services de base Azure",
+    "theme_label": "Réseau",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX fonctionnalités offertes par Azure Virtual Network (VNet) ? Sélectionnez les propositions exactes.",
+    "options": [
+      "Isolation logique du réseau cloud dédié à votre abonnement.",
+      "Filtrage du trafic entrant et sortant via des groupes de sécurité réseau (NSG).",
+      "Connexion directe à Internet sans passerelle NAT par défaut pour toutes les ressources.",
+      "Routage automatique du trafic entre toutes les régions Azure sans configuration supplémentaire.",
+      "Intégration native avec Azure Active Directory pour l'authentification des utilisateurs au niveau réseau."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Azure Virtual Network (VNet) fournit une isolation réseau logique pour vos ressources Azure (A). Il permet de filtrer le trafic via des NSG ou des appliances virtuelles (B). L'option C est incorrecte : les ressources déployées dans un VNet peuvent communiquer avec Internet par défaut, mais le trafic entrant depuis Internet nécessite une configuration (adresse IP publique, équilibreur de charge). L'option D est fausse : le routage entre régions nécessite une configuration de peering de VNet ou de passerelle VPN. L'option E n'est pas une fonctionnalité native du VNet ; l'authentification des utilisateurs se fait via Azure AD, mais pas au niveau du routage réseau."
+  },
+  {
+    "id": "AZ900-CORE-005",
+    "theme": "Services de base Azure",
+    "theme_label": "Bases de données",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Cosmos DB est une base de données de type :",
+    "options": [
+      "Relationnelle uniquement",
+      "NoSQL multi-modèle avec distribution mondiale",
+      "Data warehouse pour l'analyse décisionnelle",
+      "Cache en mémoire Redis"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure Cosmos DB est un service de base de données NoSQL multi-modèle entièrement managé, conçu pour une distribution mondiale et une scalabilité horizontale. Il prend en charge plusieurs API (SQL, MongoDB, Cassandra, Gremlin, Table). L'option A correspond à Azure SQL Database. L'option C décrit Azure Synapse Analytics. L'option D décrit Azure Cache for Redis."
+  },
+  {
+    "id": "AZ900-CORE-006",
+    "theme": "Services de base Azure",
+    "theme_label": "Services de calcul",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les options qui sont des avantages de l'utilisation d'Azure Virtual Machine Scale Sets.",
+    "options": [
+      "Gestion automatisée de la répartition du trafic réseau entre les instances.",
+      "Mise à l'échelle automatique basée sur des métriques de performance ou un planning.",
+      "Déploiement et gestion d'un ensemble de machines virtuelles identiques.",
+      "Garantie d'un SLA de disponibilité de 100% pour les applications déployées.",
+      "Possibilité d'exécuter des conteneurs Windows sans orchestrateur externe."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Les Virtual Machine Scale Sets permettent de créer et gérer un groupe de machines virtuelles identiques et à charge équilibrée (C). Ils offrent des fonctionnalités d'autoscaling automatique en fonction de métriques ou de plannings (B). L'équilibrage de charge est intégré (A). L'option D est incorrecte car aucun service Azure ne garantit un SLA de 100% (le maximum est généralement 99,99%). L'option E est hors sujet : les conteneurs Windows peuvent être exécutés sur AKS, Azure Container Instances ou App Service, mais les Scale Sets sont principalement pour les VM IaaS."
+  },
+  {
+    "id": "AZ900-CORE-007",
+    "theme": "Services de base Azure",
+    "theme_label": "Régions et zones de disponibilité",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Vous devez assurer la plus haute disponibilité possible pour une application critique déployée dans une seule région Azure. Quelle stratégie de déploiement recommandez-vous ?",
+    "options": [
+      "Déployer toutes les ressources dans un seul groupe à haute disponibilité (Availability Set).",
+      "Répartir les ressources sur au moins deux zones de disponibilité (Availability Zones).",
+      "Utiliser un équilibreur de charge de base avec une seule VM redondante.",
+      "Activer le stockage géo-redondant (GRS) pour les disques de la VM."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Pour obtenir la plus haute disponibilité au sein d'une même région, il faut utiliser les zones de disponibilité (Availability Zones). Celles-ci offrent une protection contre les pannes d'un datacenter entier, car chaque zone est physiquement séparée avec ses propres alimentation, réseau et refroidissement. Un Availability Set (A) protège contre les pannes matérielles et les mises à jour planifiées, mais pas contre une panne majeure du datacenter. L'option C offre une redondance limitée. L'option D concerne la réplication des données de stockage vers une autre région, ce qui améliore la reprise d'activité mais pas la disponibilité intra-région."
+  },
+  {
+    "id": "AZ900-CORE-008",
+    "theme": "Services de base Azure",
+    "theme_label": "Stockage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Concernant les comptes de stockage Azure, sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Un compte de stockage v2 à usage général peut contenir des objets blob, des fichiers, des files d'attente et des tables.",
+      "Le niveau d'accès 'Froid' (Cool) est optimisé pour les données rarement consultées mais qui nécessitent une latence de récupération faible.",
+      "Le niveau d'accès 'Archive' permet une récupération instantanée des données.",
+      "La réplication LRS (Locally Redundant Storage) réplique les données de manière synchrone dans trois zones de disponibilité distinctes.",
+      "Azure Files peut être utilisé pour remplacer un serveur de fichiers sur site et prend en charge l'authentification AD DS via Azure AD Domain Services."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Le compte de stockage v2 à usage général (GPv2) prend en charge tous les services de stockage de base : blob, files, queue et table (A). Le niveau Cool (B) est effectivement conçu pour les données rarement consultées, avec un coût de stockage plus faible mais un coût d'accès plus élevé ; la latence de récupération reste faible (de l'ordre de quelques millisecondes). L'option C est fausse : le niveau Archive nécessite une opération de réalimentation (rehydration) qui peut prendre plusieurs heures avant que les données soient accessibles. L'option D est incorrecte : LRS réplique trois copies des données dans un seul datacenter ou une seule zone de disponibilité, pas dans trois zones distinctes (c'est le rôle de ZRS). L'option E est correcte : Azure Files peut s'intégrer avec Active Directory Domain Services (AD DS) sur site via Azure AD DS ou Azure AD Kerberos pour l'authentification."
+  },
+  {
+    "id": "AZ900-CORE-009",
+    "theme": "Services de base Azure",
+    "theme_label": "Réseau",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet d'établir une connexion privée et sécurisée entre un réseau d'entreprise sur site et Azure via une connexion dédiée chez un fournisseur de connectivité ?",
+    "options": [
+      "Passerelle VPN",
+      "Azure ExpressRoute",
+      "Azure Front Door",
+      "Azure Firewall"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure ExpressRoute permet de créer des connexions privées entre des datacenters sur site et Azure, via un fournisseur de connectivité. Ces connexions ne transitent pas par l'Internet public, offrant ainsi une fiabilité, une vitesse et une latence plus prévisibles. Une passerelle VPN (A) utilise Internet. Azure Front Door (C) est un service d'accélération d'applications web global. Azure Firewall (D) est un service de sécurité réseau managé."
+  },
+  {
+    "id": "AZ900-CORE-010",
+    "theme": "Services de base Azure",
+    "theme_label": "Bases de données",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX différences principales entre Azure SQL Database et SQL Server sur une machine virtuelle Azure ? Sélectionnez les propositions exactes.",
+    "options": [
+      "Azure SQL Database est un service PaaS entièrement managé, tandis que SQL Server sur VM est un service IaaS.",
+      "Azure SQL Database prend en charge l'intégralité des fonctionnalités du moteur SQL Server, y compris les agents SQL et les vues système étendues.",
+      "Avec Azure SQL Database, la haute disponibilité et les sauvegardes automatiques sont incluses par défaut sans configuration supplémentaire.",
+      "Azure SQL Database permet un accès direct au système de fichiers du serveur pour restaurer des fichiers .bak.",
+      "SQL Server sur VM ne permet pas la mise à l'échelle automatique des ressources de calcul."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "Azure SQL Database est un service PaaS (A) : Microsoft gère le système d'exploitation et le moteur de base de données. La haute disponibilité et les sauvegardes sont intégrées automatiquement (C). L'option B est fausse : SQL Database ne prend pas en charge certaines fonctionnalités comme SQL Agent, les requêtes inter-bases via OPENQUERY ou l'accès aux vues système étendues. L'option D est incorrecte car en PaaS, on n'a pas accès au système de fichiers. L'option E est incorrecte : on peut modifier la taille de la VM (scale up/down) manuellement, et avec des scripts ou Azure Automation on peut l'automatiser ; mais il n'y a pas d'autoscaling natif comme pour App Service."
+  },
+  {
+    "id": "AZ900-CORE-011",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Functions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel modèle de tarification s'applique à Azure Functions ?",
+    "options": [
+      "Paiement à l'exécution (Consumption Plan) ou avec un plan App Service dédié.",
+      "Uniquement un tarif fixe mensuel.",
+      "Paiement à la minute de temps de calcul, identique aux machines virtuelles.",
+      "Gratuit pour toujours, sans limite."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Functions propose plusieurs plans : Consumption (paiement par exécution et Go-seconde), Premium (pour les fonctions longue durée), et Dedicated (App Service plan, tarif fixe)."
+  },
+  {
+    "id": "AZ900-CORE-012",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Logic Apps",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant Azure Logic Apps sont exactes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Logic Apps permet d'automatiser des workflows et d'intégrer des applications et des données sans écrire de code.",
+      "Logic Apps est un service serverless.",
+      "Logic Apps peut se connecter à des services sur site via la passerelle de données locale.",
+      "Logic Apps utilise un concepteur visuel pour créer des workflows.",
+      "Logic Apps remplace complètement Azure Functions."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Logic Apps est un service d'intégration serverless (A, B) avec un concepteur visuel (D) et supporte les connexions sur site via la passerelle de données (C). Il ne remplace pas Functions (E) ; les deux sont complémentaires (Functions pour du code personnalisé, Logic Apps pour l'orchestration déclarative)."
+  },
+  {
+    "id": "AZ900-CORE-013",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Kubernetes Service (AKS)",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans AKS, qui est responsable de la gestion et de la maintenance des nœuds maîtres (control plane) du cluster Kubernetes ?",
+    "options": [
+      "Microsoft (Azure)",
+      "Le client",
+      "Cela dépend du plan tarifaire choisi.",
+      "Un tiers de confiance certifié par la CNCF."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AKS est un service Kubernetes managé. Le plan de contrôle (API server, etcd, scheduler) est entièrement géré et maintenu par Azure sans frais supplémentaires. Le client gère uniquement les nœuds agents (worker nodes)."
+  },
+  {
+    "id": "AZ900-CORE-014",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Container Instances (ACI)",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages d'Azure Container Instances (ACI) ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Démarrage rapide des conteneurs sans gestion de serveur.",
+      "Paiement à la seconde pour les ressources consommées.",
+      "Orchestration complète de clusters de conteneurs.",
+      "Convient pour des tâches ponctuelles ou des scénarios simples.",
+      "Intégration native avec un réseau virtuel pour une isolation complète."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3, 4],
+    "explanation": "ACI permet d'exécuter des conteneurs sans gérer de VM (A), avec une facturation à la seconde (B). C'est idéal pour des charges de travail simples ou épisodiques (D). L'intégration au VNet est possible (E). L'orchestration de clusters (C) relève d'AKS, pas d'ACI."
+  },
+  {
+    "id": "AZ900-CORE-015",
+    "theme": "Services de base Azure",
+    "theme_label": "Stockage - Niveaux d'accès Blob",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel niveau d'accès de stockage Blob est le plus économique pour des données rarement consultées (moins d'une fois par an) et pouvant tolérer une latence de récupération de plusieurs heures ?",
+    "options": [
+      "Archive",
+      "Froid (Cool)",
+      "Chaud (Hot)",
+      "Premium"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le niveau Archive est conçu pour la rétention à long terme avec un coût de stockage minimal, mais une latence de récupération de l'ordre de plusieurs heures. Le niveau Cool est pour des accès peu fréquents (tous les 30 jours environ) avec une latence faible."
+  },
+  {
+    "id": "AZ900-CORE-016",
+    "theme": "Services de base Azure",
+    "theme_label": "Réseau - Peering de VNet",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les caractéristiques du peering de réseaux virtuels (VNet Peering) ? Sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Il permet de connecter deux VNets dans la même région ou dans des régions différentes.",
+      "Le trafic entre les VNets appairés transite par l'épine dorsale du réseau Microsoft, et non par Internet.",
+      "Il nécessite une passerelle VPN pour fonctionner.",
+      "Il peut être configuré entre des abonnements différents.",
+      "Les VNets appairés doivent avoir des plages d'adresses IP qui se chevauchent."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Le peering de VNet connecte des réseaux virtuels au sein d'Azure (même région ou cross-region) (A). Le trafic utilise le backbone privé de Microsoft (B). Il peut être établi entre abonnements différents (D). Aucune passerelle n'est requise (C faux). Les plages d'adresses ne doivent PAS se chevaucher (E faux)."
+  },
+  {
+    "id": "AZ900-CORE-017",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Virtual Desktop",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'Azure Virtual Desktop (AVD) ?",
+    "options": [
+      "Un service de virtualisation d'applications et de bureaux Windows exécuté dans le cloud Azure.",
+      "Un outil de monitoring des performances des VM.",
+      "Une version cloud de l'Active Directory sur site.",
+      "Un service de sauvegarde pour les postes de travail physiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AVD (anciennement Windows Virtual Desktop) est un service de VDI (Virtual Desktop Infrastructure) managé qui permet d'exécuter des bureaux et applications Windows dans Azure, accessible depuis n'importe où."
+  },
+  {
+    "id": "AZ900-CORE-018",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Batch",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Pour quel type de workload Azure Batch est-il spécifiquement conçu ?",
+    "options": [
+      "Traitement par lots à grande échelle et calcul haute performance (HPC).",
+      "Hébergement de sites web statiques.",
+      "Streaming de données en temps réel.",
+      "Gestion de bases de données relationnelles."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Batch permet d'exécuter des tâches de calcul intensif en parallèle sur des milliers de cœurs, avec gestion automatique des files d'attente et de la montée en charge. C'est l'outil idéal pour le rendu 3D, l'analyse financière, les simulations, etc."
+  },
+  {
+    "id": "AZ900-CORE-019",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Event Grid",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les caractéristiques d'Azure Event Grid ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "C'est un service de routage d'événements basé sur le modèle publication/abonnement.",
+      "Il permet de réagir à des changements d'état dans les ressources Azure (ex: création d'un blob).",
+      "Il est conçu pour la diffusion de millions d'événements par seconde.",
+      "Il prend en charge des sources d'événements personnalisées via des rubriques personnalisées.",
+      "Il garantit la persistance des événements pendant 7 jours."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Event Grid est un service de routage d'événements (A) qui réagit à des événements Azure ou personnalisés (B, D). Il est hautement scalable (C). La persistance (E) n'est pas garantie nativement (les événements sont livrés avec une politique de nouvelle tentative, mais pas stockés durablement ; pour la rétention, il faut utiliser Event Hub ou un compte de stockage)."
+  },
+  {
+    "id": "AZ900-CORE-020",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Event Hubs",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Azure Event Hubs et Azure Event Grid ?",
+    "options": [
+      "Event Hubs est conçu pour l'ingestion massive de flux de données (big data), tandis qu'Event Grid est conçu pour la notification d'événements discrets (style réactif).",
+      "Event Hubs utilise le protocole HTTP, Event Grid utilise AMQP.",
+      "Event Hubs est serverless, Event Grid nécessite un cluster provisionné.",
+      "Il n'y a pas de différence ; les deux services sont identiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Event Hubs est une plateforme de streaming de données pour des scénarios de télémétrie, de logs, avec rétention configurable. Event Grid est un service de distribution d'événements pour des architectures réactives (ex: déclencher une fonction quand une image est uploadée)."
+  },
+  {
+    "id": "AZ900-CORE-021",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Service Bus",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels modes de messagerie sont supportés par Azure Service Bus ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Files d'attente (Queues)",
+      "Rubriques et abonnements (Topics and Subscriptions)",
+      "Streaming de données en continu",
+      "Relais (Relay) pour exposer des services WCF sur site",
+      "Diffusion multicast sans abonnement"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Service Bus propose des files d'attente (A) et des rubriques/abonnements (B) pour la messagerie d'entreprise avec des fonctionnalités avancées comme les sessions, la livraison différée, etc. Le streaming (C) est plutôt pour Event Hubs. Le relais (D) existe dans Azure Relay, qui est un service distinct. La diffusion sans abonnement (E) n'est pas un mode Service Bus."
+  },
+  {
+    "id": "AZ900-CORE-022",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure IoT Hub",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est spécifiquement conçu pour connecter, surveiller et gérer des millions d'appareils IoT ?",
+    "options": [
+      "Azure IoT Hub",
+      "Azure Event Hubs",
+      "Azure Notification Hubs",
+      "Azure Sphere"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "IoT Hub est la passerelle cloud pour les appareils IoT, offrant une communication bidirectionnelle, l'approvisionnement des appareils, et l'intégration avec d'autres services Azure."
+  },
+  {
+    "id": "AZ900-CORE-023",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Cognitive Services",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles catégories de services font partie d'Azure Cognitive Services ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Vision (Computer Vision, Face API)",
+      "Speech (Speech to Text, Text to Speech)",
+      "Language (LUIS, Text Analytics)",
+      "Decision (Personalizer, Anomaly Detector)",
+      "OpenAI Service"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Toutes ces catégories font partie de Cognitive Services. Azure OpenAI Service est désormais une offre distincte mais souvent regroupée conceptuellement ; il fait partie des services d'IA d'Azure."
+  },
+  {
+    "id": "AZ900-CORE-024",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Machine Learning",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'Azure Machine Learning ?",
+    "options": [
+      "Plateforme pour entraîner, déployer et gérer des modèles de machine learning à grande échelle.",
+      "Fournir des modèles d'IA pré‑entraînés prêts à l'emploi.",
+      "Stocker de grands volumes de données pour l'entraînement.",
+      "Uniquement un outil de visualisation de données."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Machine Learning est un service complet de MLOps pour le cycle de vie des modèles personnalisés. Les modèles pré‑entraînés (B) sont plutôt dans Cognitive Services. Le stockage (C) est Azure Storage ou Data Lake. La visualisation (D) est une petite partie de l'outil."
+  },
+  {
+    "id": "AZ900-CORE-025",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Databricks",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les cas d'usage typiques d'Azure Databricks ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Analyse de données volumineuses (Big Data) avec Apache Spark.",
+      "Entraînement de modèles de machine learning distribués.",
+      "Ingénierie des données et pipelines ETL/ELT.",
+      "Streaming de données en temps réel avec Spark Structured Streaming.",
+      "Remplacement de SQL Server pour les applications transactionnelles."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Databricks est une plateforme unifiée d'analyse basée sur Spark, idéale pour le Big Data, le ML, l'ETL et le streaming. Elle ne remplace pas une base de données transactionnelle (E)."
+  },
+  {
+    "id": "AZ900-CORE-026",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Synapse Analytics",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Synapse Analytics est décrit comme :",
+    "options": [
+      "Un service d'analyse intégré qui combine l'entreposage de données d'entreprise et l'analyse Big Data.",
+      "Une base de données relationnelle entièrement managée.",
+      "Un outil de migration de données vers le cloud.",
+      "Un service de visualisation de données uniquement."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Synapse Analytics (anciennement SQL Data Warehouse) intègre des capacités de data warehouse, d'ETL sans code (pipelines), et d'analyse Spark. C'est bien plus qu'une simple base de données (B)."
+  },
+  {
+    "id": "AZ900-CORE-027",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Data Factory",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert Azure Data Factory ?",
+    "options": [
+      "Orchestrer et automatiser le déplacement et la transformation de données entre différents services.",
+      "Stocker des fichiers de manière sécurisée.",
+      "Visualiser des données sous forme de graphiques.",
+      "Exécuter du code serverless."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Data Factory est le service d'intégration de données (ETL/ELT) d'Azure, permettant de créer des pipelines pour copier et transformer des données entre sources cloud et sur site."
+  },
+  {
+    "id": "AZ900-CORE-028",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Data Lake Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels avantages offre Azure Data Lake Storage Gen2 ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Un espace de noms hiérarchique (dossiers/fichiers) pour des performances d'analyse optimisées.",
+      "La compatibilité avec l'API Blob Storage.",
+      "Le chiffrement des données au repos.",
+      "Le contrôle d'accès fin via des listes de contrôle d'accès POSIX.",
+      "La capacité à exécuter des transactions OLTP."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "ADLS Gen2 combine le stockage Blob avec un système de fichiers hiérarchique (A), tout en restant compatible avec l'API Blob (B). Le chiffrement (C) et les ACL POSIX (D) sont inclus. Ce n'est pas un stockage OLTP (E)."
+  },
+  {
+    "id": "AZ900-CORE-029",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Bastion",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel problème Azure Bastion résout-il principalement ?",
+    "options": [
+      "L'exposition des VM à Internet via des adresses IP publiques pour les connexions RDP/SSH.",
+      "La protection contre les attaques DDoS.",
+      "La gestion des certificats SSL.",
+      "L'équilibrage de charge du trafic réseau."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Bastion fournit un accès RDP/SSH sécurisé via le portail Azure, sans avoir besoin d'attribuer une IP publique aux VM, réduisant ainsi la surface d'attaque."
+  },
+  {
+    "id": "AZ900-CORE-030",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Monitor",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'Azure Monitor ?",
+    "options": [
+      "Collecter, analyser et agir sur les données de télémétrie des ressources Azure et sur site.",
+      "Gérer les identités et les accès.",
+      "Déployer des machines virtuelles.",
+      "Configurer des réseaux virtuels."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Monitor est la solution centralisée de surveillance qui agrège les métriques, les logs, et permet de créer des alertes et des dashboards."
+  },
+  {
+    "id": "AZ900-CORE-031",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Application Insights",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles informations peut-on collecter avec Azure Application Insights ? Sélectionnez TOUTES les affirmations correctes.",
+    "options": [
+      "Les temps de réponse des requêtes HTTP.",
+      "Les exceptions non gérées et les traces de pile.",
+      "Les métriques de performance du serveur (CPU, mémoire).",
+      "Les événements de dépendance (appels à SQL, API externes).",
+      "Les logs du système d'exploitation de la VM hôte."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Application Insights est un APM (Application Performance Management) qui surveille l'application elle-même : requêtes (A), exceptions (B), dépendances (D). Il peut aussi collecter les métriques du serveur (C) si l'agent est installé. Les logs de l'OS hôte (E) relèvent plutôt d'Azure Monitor pour les VM (Diagnostic Settings) ou de Log Analytics."
+  },
+  {
+    "id": "AZ900-CORE-032",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Load Balancer",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quel niveau du modèle OSI opère Azure Load Balancer ?",
+    "options": [
+      "Couche 4 (Transport)",
+      "Couche 7 (Application)",
+      "Couche 3 (Réseau)",
+      "Couche 2 (Liaison de données)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Load Balancer standard est un équilibreur de charge de couche 4 qui distribue le trafic en fonction de l'adresse IP et du port. Application Gateway est un équilibreur de couche 7."
+  },
+  {
+    "id": "AZ900-CORE-033",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Application Gateway",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles fonctionnalités sont offertes par Azure Application Gateway ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Routage basé sur le chemin de l'URL.",
+      "Terminaison SSL (offloading).",
+      "Pare‑feu d'application web (WAF).",
+      "Affinité de session (cookie‑based).",
+      "Routage du trafic mondial basé sur les performances."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Application Gateway (couche 7) offre le routage par chemin (A), la terminaison SSL (B), le WAF (C) et l'affinité de session (D). Le routage mondial (E) est une fonction d'Azure Front Door ou Traffic Manager."
+  },
+  {
+    "id": "AZ900-CORE-034",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Front Door",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure offre une accélération globale des applications web avec un équilibrage de charge mondial et un pare‑feu d'application web ?",
+    "options": [
+      "Azure Front Door",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Traffic Manager"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Front Door est un service global (anycast) qui combine la distribution de contenu (CDN), l'équilibrage de charge global et la protection WAF. Traffic Manager (D) est uniquement un DNS avec routage basé sur des règles, sans accélération de contenu ni WAF."
+  },
+  {
+    "id": "AZ900-CORE-035",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Traffic Manager",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles méthodes de routage sont disponibles avec Azure Traffic Manager ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Priorité (Priority)",
+      "Pondéré (Weighted)",
+      "Performance",
+      "Géographique",
+      "Multi‑valeur (MultiValue)"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Traffic Manager propose toutes ces méthodes de routage DNS."
+  },
+  {
+    "id": "AZ900-CORE-036",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure CDN",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le principal avantage d'utiliser Azure Content Delivery Network (CDN) ?",
+    "options": [
+      "Réduire la latence pour les utilisateurs finaux en servant le contenu depuis des serveurs périphériques proches d'eux.",
+      "Chiffrer le trafic entre les utilisateurs et l'origine.",
+      "Analyser les performances des applications web.",
+      "Héberger des bases de données."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le CDN met en cache le contenu statique sur des points de présence (PoP) répartis dans le monde, réduisant ainsi la distance réseau et améliorant les performances."
+  },
+  {
+    "id": "AZ900-CORE-037",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Key Vault",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de secret peut être stocké dans Azure Key Vault ?",
+    "options": [
+      "Clés de chiffrement, certificats et secrets (chaînes de connexion, mots de passe).",
+      "Uniquement des certificats SSL.",
+      "Des fichiers de configuration volumineux (> 1 Mo).",
+      "Des images Docker."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Key Vault est conçu pour la gestion centralisée et sécurisée des secrets, clés de chiffrement et certificats."
+  },
+  {
+    "id": "AZ900-CORE-038",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Dedicated Host",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans quel scénario utiliserait‑on Azure Dedicated Host plutôt que des machines virtuelles classiques ?",
+    "options": [
+      "Pour répondre à des exigences de conformité ou de licence qui imposent un serveur physique dédié non partagé.",
+      "Pour obtenir de meilleures performances réseau que les VM standard.",
+      "Pour réduire les coûts, car c'est moins cher que les VM classiques.",
+      "Pour bénéficier d'un support technique prioritaire."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dedicated Host fournit un serveur physique entier dédié à un client, utile pour des licences logicielles complexes (ex: SQL Server avec licences existantes) ou des obligations réglementaires (ex: secteur bancaire). C'est généralement plus cher qu'une VM partagée."
+  },
+  {
+    "id": "AZ900-CORE-039",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Reserved VM Instances",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels avantages procurent les instances de VM réservées (Reserved Instances) ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Une réduction significative du prix par rapport au paiement à l'usage.",
+      "Une garantie de capacité dans la région choisie.",
+      "La possibilité d'échanger ou d'annuler la réservation à tout moment sans frais.",
+      "Une facturation mensuelle fixe pour une période de 1 ou 3 ans.",
+      "L'application automatique de la remise à toutes les VM correspondantes."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 3, 4],
+    "explanation": "Les instances réservées offrent une remise (jusqu'à 72%) en échange d'un engagement de 1 ou 3 ans (A, D). La remise s'applique automatiquement à l'étendue configurée (E). La garantie de capacité (B) est une option supplémentaire payante. L'annulation (C) est possible mais avec des frais de résiliation."
+  },
+  {
+    "id": "AZ900-CORE-040",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Spot VMs",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle caractéristique décrit le mieux les machines virtuelles Azure Spot ?",
+    "options": [
+      "Elles utilisent la capacité excédentaire d'Azure à un prix très réduit, mais peuvent être évincées à tout moment si la capacité est nécessaire ailleurs.",
+      "Elles offrent des performances réseau améliorées.",
+      "Elles sont dédiées à un seul client sur un hôte physique.",
+      "Elles garantissent une disponibilité de 99,99 %."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les Spot VMs permettent d'économiser jusqu'à 90% sur le coût des VM, mais Azure peut les réquisitionner avec un préavis de 30 secondes seulement. Elles sont idéales pour les charges de travail tolérantes aux interruptions."
+  },
+  {
+    "id": "AZ900-CORE-041",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Availability Sets",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX composantes d'un groupe à haute disponibilité (Availability Set) qui protègent contre les pannes matérielles et les mises à jour ?",
+    "options": [
+      "Domaines d'erreur (Fault Domains)",
+      "Domaines de mise à jour (Update Domains)",
+      "Zones de disponibilité (Availability Zones)",
+      "Groupes de placement de proximité (Proximity Placement Groups)",
+      "Groupes de ressources (Resource Groups)"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Un Availability Set répartit les VM sur plusieurs domaines d'erreur (racks différents) et domaines de mise à jour (groupes redémarrés séquentiellement lors des maintenances). Les zones de disponibilité (C) sont un concept différent, plus puissant."
+  },
+  {
+    "id": "AZ900-CORE-042",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Proximity Placement Groups",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le but d'un groupe de placement de proximité (Proximity Placement Group) ?",
+    "options": [
+      "Garantir que des ressources Azure (VM, AKS) sont physiquement proches les unes des autres pour minimiser la latence réseau.",
+      "Regrouper des ressources de différentes régions pour une gestion simplifiée.",
+      "Fournir une haute disponibilité en répartissant les VM sur plusieurs zones.",
+      "Permettre le partage de données entre différents abonnements."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les groupes de placement de proximité forcent le placement des ressources dans le même datacenter physique, réduisant ainsi la latence de communication. Ils n'offrent pas de haute disponibilité (au contraire, ils augmentent le risque de panne simultanée)."
+  },
+  {
+    "id": "AZ900-CORE-043",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure DNS",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure DNS est un service qui permet de :",
+    "options": [
+      "Héberger des zones DNS et gérer des enregistrements DNS avec la même facturation et le même support que les autres services Azure.",
+      "Analyser le trafic réseau pour détecter des menaces.",
+      "Accélérer la résolution DNS pour les utilisateurs du monde entier.",
+      "Créer des noms de domaine personnalisés."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure DNS est un service d'hébergement de zones DNS faisant autorité. Il ne s'agit pas d'un résolveur récursif (C) ni d'un registre de noms de domaine (D)."
+  },
+  {
+    "id": "AZ900-CORE-044",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Private Link",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages d'Azure Private Link ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Accéder à des services Azure PaaS (ex: Azure SQL, Storage) via une adresse IP privée dans votre VNet.",
+      "Éliminer l'exposition des services à l'Internet public.",
+      "Connecter des services entre différents locataires Azure AD de manière sécurisée.",
+      "Traverser un peering de VNet sans configuration supplémentaire.",
+      "Faire transiter le trafic par l'épine dorsale de Microsoft, et non par Internet."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Private Link injecte une interface réseau privée (Private Endpoint) dans votre VNet pour accéder aux services PaaS (A) sans passer par Internet (B, E). Il fonctionne pour des services dans le même locataire Azure AD (C faux : peut fonctionner cross-tenant mais avec configuration spécifique). Le peering (D) est une fonction réseau distincte."
+  },
+  {
+    "id": "AZ900-CORE-045",
+    "theme": "Services de base Azure",
+    "theme_label": "Azure Service Health",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Service Health fournit des informations sur :",
+    "options": [
+      "L'état des services Azure, les maintenances planifiées et les avis de santé concernant spécifiquement vos ressources.",
+      "Les performances de vos applications.",
+      "Les recommandations de sécurité.",
+      "Les coûts de vos abonnements."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Service Health est un tableau de bord personnalisé qui montre les problèmes de service Azure affectant vos déploiements, ainsi que les maintenances à venir. Il est plus précis que la page Azure Status publique."
+  }
+]

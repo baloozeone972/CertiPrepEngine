@@ -1,0 +1,22 @@
+{
+  "id": "jenkins",
+  "name": "Jenkins Engineer CloudBees Certification",
+  "version": "1.0",
+  "description": "Certification officielle validant la maîtrise de l'automatisation CI/CD avec Jenkins. Couvre les pipelines Declarative/Scripted, la gestion des agents, la sécurité, l'intégration SCM et les bonnes pratiques CloudBees.",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 350,
+  "passingScore": 75,
+  "themes": [
+    {"name": "Architecture & Concepts Core", "count": 35},
+    {"name": "Pipelines Declarative & Scripted", "count": 40},
+    {"name": "Agents, Nodes & Executors", "count": 35},
+    {"name": "Sécurité & Credentials", "count": 40},
+    {"name": "Plugins & Ecosystem", "count": 30},
+    {"name": "SCM & Webhooks Integration", "count": 30},
+    {"name": "Artifacts, Archiving & Reporting", "count": 25},
+    {"name": "Troubleshooting & Logs", "count": 25},
+    {"name": "Jenkinsfile Best Practices", "count": 35},
+    {"name": "Cloud & Distributed Builds", "count": 55}
+  ]
+}

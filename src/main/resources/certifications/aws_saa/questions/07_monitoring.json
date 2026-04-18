@@ -20,7 +20,12 @@
     "theme_label": "CloudWatch",
     "difficulty": "easy",
     "question": "Quelle est la résolution standard des métriques CloudWatch ?",
-    "options": ["1 minute", "5 minutes", "10 secondes", "1 seconde"],
+    "options": [
+      "1 minute",
+      "5 minutes",
+      "10 secondes",
+      "1 seconde"
+    ],
     "correct": 0,
     "explanation": "Les métriques standard ont une granularité d'1 minute."
   },
@@ -45,7 +50,12 @@
     "theme_label": "CloudWatch",
     "difficulty": "hard",
     "question": "Combien de temps les métriques sont-elles conservées par défaut ?",
-    "options": ["15 mois", "1 mois", "3 mois", "6 mois"],
+    "options": [
+      "15 mois",
+      "1 mois",
+      "3 mois",
+      "6 mois"
+    ],
     "correct": 0,
     "explanation": "Les métriques CloudWatch sont conservées 15 mois."
   },
@@ -70,7 +80,12 @@
     "theme_label": "CloudWatch Alarms",
     "difficulty": "hard",
     "question": "Quels sont les états possibles d'une alarme ?",
-    "options": ["OK, ALARM, INSUFFICIENT_DATA", "OK, ERROR, WARNING", "GREEN, RED, YELLOW", "ACTIVE, INACTIVE"],
+    "options": [
+      "OK, ALARM, INSUFFICIENT_DATA",
+      "OK, ERROR, WARNING",
+      "GREEN, RED, YELLOW",
+      "ACTIVE, INACTIVE"
+    ],
     "correct": 0,
     "explanation": "Les alarmes peuvent être OK, ALARM ou INSUFFICIENT_DATA."
   },
@@ -95,7 +110,12 @@
     "theme_label": "CloudWatch Logs",
     "difficulty": "hard",
     "question": "Combien de temps les logs sont-ils conservés par défaut ?",
-    "options": ["Jamais expiré", "30 jours", "7 jours", "1 an"],
+    "options": [
+      "Jamais expiré",
+      "30 jours",
+      "7 jours",
+      "1 an"
+    ],
     "correct": 0,
     "explanation": "Par défaut, les logs n'expirent jamais."
   },
@@ -195,7 +215,12 @@
     "theme_label": "CloudTrail",
     "difficulty": "hard",
     "question": "CloudTrail enregistre-t-il les événements de données (S3, DynamoDB) ?",
-    "options": ["Oui, optionnel", "Non", "Oui, par défaut", "Uniquement pour S3"],
+    "options": [
+      "Oui, optionnel",
+      "Non",
+      "Oui, par défaut",
+      "Uniquement pour S3"
+    ],
     "correct": 0,
     "explanation": "Les événements de données sont optionnels (payants)."
   },
@@ -205,7 +230,12 @@
     "theme_label": "CloudTrail",
     "difficulty": "hard",
     "question": "CloudTrail peut-il envoyer des logs vers CloudWatch Logs ?",
-    "options": ["Oui", "Non", "Uniquement vers S3", "Uniquement vers Kinesis"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement vers S3",
+      "Uniquement vers Kinesis"
+    ],
     "correct": 0,
     "explanation": "CloudTrail peut envoyer les logs vers S3 et/ou CloudWatch Logs."
   },
@@ -230,7 +260,12 @@
     "theme_label": "AWS Config",
     "difficulty": "hard",
     "question": "AWS Config enregistre-t-il l'historique des configurations ?",
-    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour S3"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour EC2",
+      "Uniquement pour S3"
+    ],
     "correct": 0,
     "explanation": "AWS Config conserve l'historique des changements de configuration."
   },
@@ -240,7 +275,12 @@
     "theme_label": "AWS Config",
     "difficulty": "hard",
     "question": "Combien de temps AWS Config conserve-t-il l'historique ?",
-    "options": ["7 ans", "30 jours", "1 an", "Indéfini"],
+    "options": [
+      "7 ans",
+      "30 jours",
+      "1 an",
+      "Indéfini"
+    ],
     "correct": 0,
     "explanation": "AWS Config conserve l'historique jusqu'à 7 ans (configurable)."
   },
@@ -250,7 +290,12 @@
     "theme_label": "AWS Config Rules",
     "difficulty": "hard",
     "question": "Peut-on créer des règles Config personnalisées ?",
-    "options": ["Oui, via Lambda", "Non", "Uniquement des règles managées", "Uniquement avec CloudFormation"],
+    "options": [
+      "Oui, via Lambda",
+      "Non",
+      "Uniquement des règles managées",
+      "Uniquement avec CloudFormation"
+    ],
     "correct": 0,
     "explanation": "Les règles personnalisées s'écrivent avec AWS Lambda."
   },
@@ -275,7 +320,12 @@
     "theme_label": "VPC Flow Logs",
     "difficulty": "hard",
     "question": "Peut-on activer Flow Logs au niveau du subnet ?",
-    "options": ["Oui", "Non", "Uniquement au niveau VPC", "Uniquement au niveau ENI"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement au niveau VPC",
+      "Uniquement au niveau ENI"
+    ],
     "correct": 0,
     "explanation": "Flow Logs peuvent être activés au niveau VPC, subnet, ou ENI."
   },
@@ -285,7 +335,12 @@
     "theme_label": "AWS Health Dashboard",
     "difficulty": "hard",
     "question": "AWS Health Dashboard fournit-il des informations personnalisées ?",
-    "options": ["Oui (Personal Health Dashboard)", "Non", "Uniquement des informations publiques", "Uniquement pour les comptes Enterprise"],
+    "options": [
+      "Oui (Personal Health Dashboard)",
+      "Non",
+      "Uniquement des informations publiques",
+      "Uniquement pour les comptes Enterprise"
+    ],
     "correct": 0,
     "explanation": "Le Personal Health Dashboard montre les événements affectant vos ressources."
   },
@@ -295,7 +350,12 @@
     "theme_label": "AWS Health API",
     "difficulty": "hard",
     "question": "Peut-on interroger AWS Health via API ?",
-    "options": ["Oui", "Non", "Uniquement pour les comptes support", "Uniquement pour les organisations"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les comptes support",
+      "Uniquement pour les organisations"
+    ],
     "correct": 0,
     "explanation": "AWS Health a une API pour récupérer les événements."
   },
@@ -305,7 +365,12 @@
     "theme_label": "CloudWatch Agent",
     "difficulty": "hard",
     "question": "Le CloudWatch Agent peut-il collecter des métriques système sur EC2 ?",
-    "options": ["Oui", "Non", "Uniquement avec SSM", "Uniquement avec Lambda"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec SSM",
+      "Uniquement avec Lambda"
+    ],
     "correct": 0,
     "explanation": "L'agent CloudWatch collecte les métriques système et les logs."
   },
@@ -315,7 +380,12 @@
     "theme_label": "CloudWatch Agent",
     "difficulty": "hard",
     "question": "CloudWatch Agent peut-il collecter des logs d'applications ?",
-    "options": ["Oui", "Non", "Uniquement des logs système", "Uniquement des logs Windows"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement des logs système",
+      "Uniquement des logs Windows"
+    ],
     "correct": 0,
     "explanation": "L'agent peut collecter des logs d'applications personnalisées."
   },
@@ -415,7 +485,12 @@
     "theme_label": "EventBridge",
     "difficulty": "hard",
     "question": "EventBridge peut-il répondre aux événements CloudWatch Alarms ?",
-    "options": ["Oui", "Non", "Uniquement aux événements AWS", "Uniquement aux événements personnalisés"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement aux événements AWS",
+      "Uniquement aux événements personnalisés"
+    ],
     "correct": 0,
     "explanation": "EventBridge peut déclencher des actions basées sur les alarmes."
   },
@@ -425,7 +500,12 @@
     "theme_label": "EventBridge",
     "difficulty": "hard",
     "question": "EventBridge supporte-t-il les schémas d'événements ?",
-    "options": ["Oui (Schema Registry)", "Non", "Uniquement pour les événements AWS", "Uniquement pour les événements personnalisés"],
+    "options": [
+      "Oui (Schema Registry)",
+      "Non",
+      "Uniquement pour les événements AWS",
+      "Uniquement pour les événements personnalisés"
+    ],
     "correct": 0,
     "explanation": "EventBridge Schema Registry découvre et versionne les schémas."
   },
@@ -435,7 +515,12 @@
     "theme_label": "CloudWatch Dashboards",
     "difficulty": "hard",
     "question": "Les dashboards CloudWatch sont-ils partageables ?",
-    "options": ["Oui", "Non", "Uniquement avec un compte pro", "Uniquement avec AWS Organizations"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec un compte pro",
+      "Uniquement avec AWS Organizations"
+    ],
     "correct": 0,
     "explanation": "Les dashboards peuvent être partagés via des comptes ou publics."
   },
@@ -445,7 +530,12 @@
     "theme_label": "CloudWatch Dashboards",
     "difficulty": "hard",
     "question": "Peut-on exporter un dashboard CloudWatch en JSON ?",
-    "options": ["Oui", "Non", "Uniquement en PNG", "Uniquement en PDF"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement en PNG",
+      "Uniquement en PDF"
+    ],
     "correct": 0,
     "explanation": "Les dashboards peuvent être exportés en JSON pour sauvegarde."
   },
@@ -508,5 +598,266 @@
     ],
     "correct": 0,
     "explanation": "Centraliser les logs facilite l'analyse et la conformité."
+  },
+  {
+    "id": "AWS-SAA-M&L-001",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Alarms",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant CloudWatch Alarms :",
+    "options": [
+      "Les alarms peuvent être configurés pour surveiller des métriques CloudWatch.",
+      "Les alarms ne peuvent pas être associés à des logs.",
+      "Les alarms peuvent déclencher des actions telles que l'arrêt d'une instance EC2.",
+      "Les alarms ne peuvent pas être utilisés pour surveiller des ressources hors de CloudWatch."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les alarms peuvent surveiller des métriques CloudWatch (A correct). Les alarms peuvent être associés à des logs via AWS Lambda (B incorrect). Les alarms peuvent déclencher des actions telles que l'arrêt d'une instance EC2 (C correct). Les alarms peuvent être utilisés pour surveiller des ressources hors de CloudWatch via AWS Config Rules (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-002",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Logs Insights",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de CloudWatch Logs Insights ?",
+    "options": [
+      "Analyse et recherche dans les logs CloudWatch",
+      "Gestion des instances EC2",
+      "Stockage de données dans S3",
+      "Configuration des alarmes CloudWatch"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "CloudWatch Logs Insights permet d'analyser et de rechercher dans les logs CloudWatch (A correct). Gestion des instances EC2 est une fonction de CloudWatch Management Console (B incorrect). Stockage de données dans S3 est une fonction de Amazon S3 (C incorrect). Configuration des alarmes CloudWatch est une fonction de CloudWatch Alarms (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-003",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS X-Ray",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS X-Ray :",
+    "options": [
+      "X-Ray peut suivre les appels entre services dans une architecture microservices.",
+      "X-Ray ne peut pas être utilisé pour surveiller les performances des applications web.",
+      "X-Ray génère des traces détaillées qui peuvent être utilisées pour dépanner les applications.",
+      "X-Ray ne peut pas fournir des informations sur la sécurité de l'application."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "X-Ray peut suivre les appels entre services dans une architecture microservices (A correct). X-Ray peut être utilisé pour surveiller les performances des applications web (B incorrect). X-Ray génère des traces détaillées qui peuvent être utilisées pour dépanner les applications (C correct). X-Ray peut fournir des informations sur la sécurité de l'application via AWS Security Hub (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-004",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudTrail",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de CloudTrail ?",
+    "options": [
+      "Enregistrement des activités et des opérations sur les ressources AWS",
+      "Stockage de données dans S3",
+      "Configuration des alarmes CloudWatch",
+      "Gestion des instances EC2"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "CloudTrail enregistre les activités et des opérations sur les ressources AWS (A correct). Stockage de données dans S3 est une fonction de Amazon S3 (B incorrect). Configuration des alarmes CloudWatch est une fonction de CloudWatch Alarms (C incorrect). Gestion des instances EC2 est une fonction de CloudWatch Management Console (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-005",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Dashboards",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale des CloudWatch Dashboards ?",
+    "options": [
+      "Visualisation de métriques et logs en temps réel",
+      "Gestion des instances EC2",
+      "Stockage de données dans S3",
+      "Configuration des alarmes CloudWatch"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "CloudWatch Dashboards permettent de visualiser les métriques et logs en temps réel (A correct). Gestion des instances EC2 est une fonction de CloudWatch Management Console (B incorrect). Stockage de données dans S3 est une fonction de Amazon S3 (C incorrect). Configuration des alarmes CloudWatch est une fonction de CloudWatch Alarms (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-006",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Alarms",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant CloudWatch Alarms :",
+    "options": [
+      "Les alarmes peuvent être configurées pour surveiller des métriques CloudWatch.",
+      "Les alarmes ne peuvent pas être associées à des instances EC2.",
+      "Les alarmes peuvent déclencher des actions telles que l'arrêt d'une instance.",
+      "Les alarmes sont disponibles uniquement pour les métriques personnalisées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les alarmes peuvent surveiller des métriques CloudWatch (A est correct). Les alarmes peuvent être associées à des instances EC2 (B est incorrect). Les alarmes peuvent déclencher des actions telles que l'arrêt d'une instance (C est correct). Les alarmes ne sont pas disponibles uniquement pour les métriques personnalisées (D est incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-007",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Logs",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité des CloudWatch Logs ?",
+    "options": [
+      "Collecter et analyser les journaux d'application et de système",
+      "Stockage de données dans un format structuré",
+      "Gestion des identités et des accès",
+      "Optimisation des coûts AWS"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale utilité des CloudWatch Logs est de collecter et analyser les journaux d'application et de système (A est correct). Stockage de données dans un format structuré (B) n'est pas une fonction principale des CloudWatch Logs. Gestion des identités et des accès (C) est gérée par AWS Identity and Access Management (IAM). Optimisation des coûts AWS (D) est gérée par les services d'optimisation de coûts AWS."
+  },
+  {
+    "id": "AWS-SAA-M&L-008",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS X-Ray",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS X-Ray :",
+    "options": [
+      "X-Ray peut suivre les requêtes entre les services AWS.",
+      "X-Ray ne peut pas être utilisé pour surveiller les applications monolithiques.",
+      "X-Ray génère des traces qui peuvent être utilisées pour dépanner les applications.",
+      "X-Ray est disponible uniquement pour les applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "X-Ray peut suivre les requêtes entre les services AWS (A est correct). X-Ray peut être utilisé pour surveiller les applications monolithiques (B est incorrect). X-Ray génère des traces qui peuvent être utilisées pour dépanner les applications (C est correct). X-Ray n'est pas disponible uniquement pour les applications web (D est incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-009",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudTrail",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de CloudTrail ?",
+    "options": [
+      "Gérer les identités et des accès",
+      "Collecter et analyser les journaux d'API AWS",
+      "Optimiser les coûts AWS",
+      "Stockage de données dans un format structuré"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La principale fonction de CloudTrail est de collecter et analyser les journaux d'API AWS (B est correct). Gérer les identités et des accès (A) est géré par AWS Identity and Access Management (IAM). Optimiser les coûts AWS (C) est géré par les services d'optimisation de coûts AWS. Stockage de données dans un format structuré (D) n'est pas une fonction principale des CloudTrail."
+  },
+  {
+    "id": "AWS-SAA-M&L-010",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Dashboards",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant CloudWatch Dashboards :",
+    "options": [
+      "Les dashboards permettent de visualiser les métriques et les logs CloudWatch.",
+      "Les dashboards ne peuvent pas être partagés entre les utilisateurs AWS.",
+      "Les dashboards peuvent contenir des widgets pour afficher diverses métriques et logs.",
+      "Les dashboards sont disponibles uniquement pour les applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les dashboards permettent de visualiser les métriques et les logs CloudWatch (A est correct). Les dashboards peuvent être partagés entre les utilisateurs AWS (B est incorrect). Les dashboards peuvent contenir des widgets pour afficher diverses métriques et logs (C est correct). Les dashboards ne sont pas disponibles uniquement pour les applications web (D est incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-011",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Alarms",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les CloudWatch Alarms :",
+    "options": [
+      "Les alarmes peuvent être configurées pour surveiller des métriques CloudWatch.",
+      "Il est possible de créer des alarmes basées sur les logs CloudWatch.",
+      "Les alarmes peuvent déclencher des actions telles que l'arrêt d'une instance EC2.",
+      "Les alarmes peuvent être configurées pour envoyer des notifications par email."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les alarmes peuvent surveiller des métriques CloudWatch (A correct). Il est possible de créer des alarmes basées sur les logs CloudWatch (B correct). Les alarmes peuvent déclencher des actions telles que l'arrêt d'une instance EC2 (C correct). Les alarmes peuvent être configurées pour envoyer des notifications par email (D correct)."
+  },
+  {
+    "id": "AWS-SAA-M&L-012",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Logs Insights",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de CloudWatch Logs Insights ?",
+    "options": [
+      "Analyse et recherche des logs en temps réel",
+      "Stockage permanent des logs",
+      "Configuration des métriques CloudWatch",
+      "Gestion des alertes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "CloudWatch Logs Insights permet d'analyser et de rechercher des logs en temps réel (A correct). Stockage permanent des logs est la fonction de CloudWatch Logs, pas d'Insights (B incorrect). Configuration des métriques CloudWatch est la fonction de CloudWatch Metrics, pas d'Insights (C incorrect). Gestion des alertes est la fonction de CloudWatch Alarms, pas d'Insights (D incorrect)."
+  },
+  {
+    "id": "AWS-SAA-M&L-013",
+    "theme": "Monitoring & Logging",
+    "theme_label": "AWS X-Ray",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant AWS X-Ray :",
+    "options": [
+      "X-Ray peut surveiller les applications distribuées et identifier les problèmes de performance.",
+      "Il est possible d'utiliser X-Ray pour analyser des requêtes réseau et de base de données.",
+      "X-Ray peut générer des traces pour chaque requête traitée par une application.",
+      "Il est possible de configurer des notifications basées sur les traces X-Ray."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "X-Ray peut surveiller les applications distribuées et identifier les problèmes de performance (A correct). Il est possible d'utiliser X-Ray pour analyser des requêtes réseau et de base de données (B correct). X-Ray peut générer des traces pour chaque requête traitée par une application (C correct). Il est possible de configurer des notifications basées sur les traces X-Ray (D correct)."
+  },
+  {
+    "id": "AWS-SAA-M&L-014",
+    "theme": "Monitoring & Logging",
+    "theme_label": "CloudWatch Dashboards",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité des CloudWatch Dashboards ?",
+    "options": [
+      "Visualiser les métriques et les logs en temps réel",
+      "Gérer les configurations des applications",
+      "Stockage des données de logs",
+      "Configuration des alertes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les CloudWatch Dashboards permettent de visualiser les métriques et les logs en temps réel (A correct). Gérer les configurations des applications est la fonction de CloudWatch Config, pas de Dashboards (B incorrect). Stockage des données de logs est la fonction de CloudWatch Logs, pas de Dashboards (C incorrect). Configuration des alertes est la fonction de CloudWatch Alarms, pas de Dashboards (D incorrect)."
   }
 ]

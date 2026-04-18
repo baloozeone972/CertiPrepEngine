@@ -1,0 +1,643 @@
+[
+  {
+    "id": "GRAF-DASH-001",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de variable Grafana permet de sélectionner dynamiquement un hôte parmi la liste des serveurs surveillés ?",
+    "options": ["Query", "Custom", "Constant", "Text box"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Une variable de type 'Query' exécute une requête vers une source de données pour obtenir la liste des valeurs possibles. 'Custom' est une liste statique, 'Constant' est une valeur fixe, 'Text box' permet une saisie libre."
+  },
+  {
+    "id": "GRAF-DASH-002",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Transformations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les transformations de données disponibles nativement dans Grafana.",
+    "options": [
+      "Reduce",
+      "Filter by name",
+      "Join by field",
+      "Group by",
+      "Sort by"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Toutes ces transformations sont disponibles dans l'interface de transformation de Grafana. Elles permettent de manipuler les résultats avant affichage."
+  },
+  {
+    "id": "GRAF-DASH-003",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Panneaux",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de panneau est le plus adapté pour afficher la distribution des temps de réponse d'une API en percentiles (p50, p95, p99) ?",
+    "options": ["Stat", "Heatmap", "Table", "Graph (série temporelle)"],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Le panneau Heatmap permet de visualiser la distribution des données sous forme d'histogramme. Le panneau Stat affiche une valeur unique, la Table des données tabulaires, et le Graph une série temporelle."
+  },
+  {
+    "id": "GRAF-DASH-004",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Liens",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant les liens de dashboard dans Grafana sont correctes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Un lien peut contenir des variables qui seront remplacées par les valeurs du contexte actuel.",
+      "Les liens peuvent pointer vers une URL externe (ex: documentation).",
+      "Les liens ne fonctionnent que vers d'autres dashboards au sein de la même organisation.",
+      "Un panneau peut avoir plusieurs liens configurés.",
+      "Les liens peuvent être conditionnels selon la valeur d'une métrique."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Les liens supportent les variables (A), peuvent pointer vers des URL externes (B), et plusieurs liens par panneau sont possibles (D). Ils ne sont pas limités à la même organisation (C faux). Les liens conditionnels (E) ne sont pas une fonctionnalité native."
+  },
+  {
+    "id": "GRAF-DASH-005",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Time range",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment définir un intervalle de temps relatif 'les 7 derniers jours' dans une requête Grafana ?",
+    "options": [
+      "Utiliser la macro $__timeFilter",
+      "Sélectionner 'Last 7 days' dans le sélecteur de temps",
+      "Écrire 'time > now() - 7d' dans la requête",
+      "Configurer le rafraîchissement automatique sur 7d"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Le sélecteur de temps global du dashboard permet de choisir 'Last 7 days'. La macro $__timeFilter est utilisée dans la requête pour appliquer la plage sélectionnée."
+  },
+  {
+    "id": "GRAF-DASH-006",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Provisioning",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles méthodes permettent de provisionner automatiquement des dashboards Grafana au démarrage ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Placer les fichiers JSON de dashboard dans le répertoire de provisioning configuré.",
+      "Utiliser l'API Grafana pour importer des dashboards via un script d'initialisation.",
+      "Définir les dashboards dans le fichier grafana.ini.",
+      "Utiliser Terraform avec le provider Grafana.",
+      "Importer un dashboard via l'interface web et cocher 'Save as provisioned'."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Le provisioning natif utilise le système de fichiers (A). L'API peut être utilisée pour importer des dashboards (B). Terraform est une solution IaC courante (D). Le fichier grafana.ini (C) ne contient pas les définitions de dashboards. L'option (E) n'existe pas."
+  },
+  {
+    "id": "GRAF-DASH-007",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Graph Panel",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles options de visualisation sont disponibles pour le panneau 'Time series' (anciennement Graph) ?",
+    "options": [
+      "Lignes",
+      "Barres",
+      "Points",
+      "Remplissage de surface",
+      "Jauge"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Le panneau Time series supporte les lignes, barres, points et remplissage. La jauge est un type de panneau distinct."
+  },
+  {
+    "id": "GRAF-DASH-008",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Stat Panel",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel panneau affiche une valeur unique avec un seuil de couleur et une icône ?",
+    "options": ["Stat", "Gauge", "Bar gauge", "Table"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le panneau Stat est conçu pour afficher une valeur principale (ex: 42), avec des seuils pour changer la couleur de fond."
+  },
+  {
+    "id": "GRAF-DASH-009",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Table Panel",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment activer la coloration conditionnelle des cellules dans un panneau Table ?",
+    "options": [
+      "Utiliser les overrides de champ avec 'Color by value'",
+      "Configurer les seuils dans l'onglet 'Thresholds'",
+      "Appliquer une transformation 'Color'",
+      "Cela nécessite un plugin externe"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les overrides de champ permettent de définir des règles de coloration basées sur la valeur de la cellule. Les seuils (B) s'appliquent plutôt aux panneaux Stat/Gauge."
+  },
+  {
+    "id": "GRAF-DASH-010",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Bar Gauge",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles orientations sont possibles pour un panneau Bar Gauge ?",
+    "options": [
+      "Horizontale",
+      "Verticale",
+      "Circulaire",
+      "Rétro (style ancien)",
+      "Aucune, il n'est que vertical"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Bar Gauge peut être affiché en mode horizontal, vertical ou en jauge rétro (style ancien)."
+  },
+  {
+    "id": "GRAF-DASH-011",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Pie Chart",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de panneau est recommandé pour visualiser des proportions ?",
+    "options": ["Pie chart", "Bar chart", "Stat", "Logs"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le camembert (pie chart) est idéal pour afficher des parts relatives."
+  },
+  {
+    "id": "GRAF-DASH-012",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Geomap",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle source de données est nécessaire pour afficher des marqueurs géographiques dans le panneau Geomap ?",
+    "options": [
+      "Une source contenant des champs de latitude et longitude",
+      "Une base de données spatiale PostGIS",
+      "Un fichier GeoJSON",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Geomap peut utiliser des coordonnées lat/lon provenant de n'importe quelle source, une source PostGIS ou un fichier GeoJSON externe."
+  },
+  {
+    "id": "GRAF-DASH-013",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard variables - Multi‑value",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment permettre la sélection de plusieurs valeurs pour une variable de dashboard ?",
+    "options": [
+      "Activer l'option 'Multi‑value' dans la configuration de la variable",
+      "Utiliser le type de variable 'Query' uniquement",
+      "Ajouter le préfixe 'multi:' au nom de la variable",
+      "Sélectionner plusieurs valeurs dans le menu déroulant (fonctionne par défaut)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Il faut cocher la case 'Multi‑value' dans les options de la variable."
+  },
+  {
+    "id": "GRAF-DASH-014",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Variable dépendante",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Comment créer une variable dont les valeurs dépendent d'une autre variable (ex: choix du serveur après choix du datacenter) ?",
+    "options": [
+      "Utiliser une variable de type 'Query' qui référence la première variable dans sa requête (ex: $datacenter).",
+      "Configurer la variable enfant avec 'Refresh on dashboard load'.",
+      "Utiliser le type 'Interval'.",
+      "Définir la variable parent comme 'Multi‑value'.",
+      "Cela n'est pas possible"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Une variable de type Query peut utiliser `$parent` dans sa requête pour filtrer les résultats (A). Elle se rafraîchit automatiquement quand la variable parent change (B)."
+  },
+  {
+    "id": "GRAF-DASH-015",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Variable - Include All option",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert l'option 'Include All option' pour une variable ?",
+    "options": [
+      "Ajouter une valeur spéciale 'All' qui sélectionne toutes les valeurs possibles",
+      "Inclure toutes les variables dans les URLs partagées",
+      "Permettre à tous les utilisateurs de modifier la variable",
+      "Forcer la variable à inclure toutes les métriques du dashboard"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option 'Include All option' ajoute une entrée 'All' dans le menu déroulant. Lorsque sélectionnée, la variable est remplacée par une wildcard (*) ou une liste de toutes les valeurs."
+  },
+  {
+    "id": "GRAF-DASH-016",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Repeat Panel",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment répéter automatiquement un panneau pour chaque valeur d'une variable ?",
+    "options": [
+      "Dans les options du panneau, activer 'Repeat by variable' et choisir la variable",
+      "Utiliser le panneau 'Repeat' spécifique",
+      "Configurer une transformation 'Repeat'",
+      "Dupliquer manuellement le panneau"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option 'Repeat by variable' dans les paramètres généraux du panneau permet de générer une instance du panneau pour chaque valeur de la variable sélectionnée."
+  },
+  {
+    "id": "GRAF-DASH-017",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Annotations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sources peuvent être utilisées pour les annotations dans Grafana ?",
+    "options": [
+      "Requêtes vers une source de données",
+      "Événements de déploiement via l'API",
+      "Annotations manuelles via l'interface",
+      "Fichiers CSV",
+      "Logs de Loki"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "Les annotations peuvent provenir de requêtes (A), de l'API (B), de saisie manuelle (C) et de Loki (E). Les fichiers CSV (D) ne sont pas une source directe."
+  },
+  {
+    "id": "GRAF-DASH-018",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Export / Import",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le format d'export d'un dashboard Grafana ?",
+    "options": ["JSON", "YAML", "XML", "CSV"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les dashboards sont exportés au format JSON."
+  },
+  {
+    "id": "GRAF-DASH-019",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard versioning",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment Grafana gère-t-il l'historique des modifications d'un dashboard ?",
+    "options": [
+      "Grafana conserve automatiquement des versions à chaque sauvegarde, accessible via 'Versions'",
+      "Il faut utiliser un système de contrôle de version externe (Git)",
+      "Seule la dernière version est conservée",
+      "Les versions sont stockées dans la source de données"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana garde un historique des versions dans sa base de données interne. On peut comparer et restaurer des versions précédentes."
+  },
+  {
+    "id": "GRAF-DASH-020",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Templating avancé",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles syntaxes sont valides pour référencer une variable dans une requête Grafana ?",
+    "options": ["$variable", "${variable}", "[[variable]]", "$(variable)", "{{variable}}"],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Grafana supporte `$variable`, `${variable}` et `[[variable]]` selon la source de données. `$(variable)` n'est pas standard, `{{variable}}` est pour les templates de texte."
+  },
+  {
+    "id": "GRAF-DASH-021",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Playlist",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert une playlist dans Grafana ?",
+    "options": [
+      "Faire défiler automatiquement une série de dashboards sur un écran (kiosk mode)",
+      "Organiser les dashboards par dossier",
+      "Créer une liste de lecture de logs",
+      "Partager une sélection de panneaux"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les playlists permettent d'afficher plusieurs dashboards en rotation, idéal pour les écrans d'affichage dans les NOC."
+  },
+  {
+    "id": "GRAF-DASH-022",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard public",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment partager un dashboard publiquement sans authentification ?",
+    "options": [
+      "Activer le partage public et générer un lien",
+      "Créer un utilisateur anonyme",
+      "Exporter le JSON et l'envoyer par email",
+      "Ce n'est pas possible pour des raisons de sécurité"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option 'Share' > 'Public dashboard' permet de générer un lien accessible sans authentification (si l'administrateur a activé cette fonctionnalité)."
+  },
+  {
+    "id": "GRAF-DASH-023",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Snapshot",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'un snapshot de dashboard ?",
+    "options": [
+      "Une capture instantanée des données affichées à un moment donné, partageable via un lien.",
+      "Une sauvegarde complète du dashboard incluant les configurations.",
+      "Une copie d'écran automatique.",
+      "Un export au format PDF."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un snapshot fige les données du dashboard à l'instant T. Il peut être partagé et ne nécessite pas d'accès à la source de données."
+  },
+  {
+    "id": "GRAF-DASH-024",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Grafana Alerting (dashboard)",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Où peut-on voir l'état des alertes directement sur un dashboard ?",
+    "options": [
+      "En ajoutant un panneau 'Alert list' ou en activant les annotations d'alertes",
+      "En consultant le menu 'Alerting' séparé",
+      "Les alertes ne sont pas visibles sur les dashboards",
+      "En survolant les panneaux avec une icône d'alerte"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le panneau 'Alert list' affiche l'état des alertes. On peut aussi superposer les événements d'alerte sous forme d'annotations."
+  },
+  {
+    "id": "GRAF-DASH-025",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard Permissions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels niveaux de permission peut-on définir sur un dossier de dashboards ?",
+    "options": ["View", "Edit", "Admin", "Delete", "None"],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Les permissions de dossier sont View, Edit et Admin. 'Delete' n'est pas un niveau séparé (inclus dans Admin)."
+  },
+  {
+    "id": "GRAF-DASH-026",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Library Panels",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel avantage offrent les Library Panels ?",
+    "options": [
+      "Un panneau réutilisable qui se met à jour sur tous les dashboards lorsqu'il est modifié.",
+      "Un panneau pré‑configuré pour des métriques spécifiques.",
+      "Un panneau partagé en lecture seule.",
+      "Un panneau qui charge des librairies JavaScript externes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les Library Panels permettent de centraliser la définition d'un panneau. Toute modification est répercutée sur tous les dashboards qui l'utilisent."
+  },
+  {
+    "id": "GRAF-DASH-027",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard Insights",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fournit la fonctionnalité 'Dashboard Insights' de Grafana ?",
+    "options": [
+      "Des métriques d'utilisation (vues, erreurs, temps de chargement) pour les dashboards.",
+      "Des recommandations d'amélioration des requêtes.",
+      "Une analyse des permissions.",
+      "Des prévisions de coûts."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dashboard Insights (disponible dans Grafana Enterprise) donne des statistiques sur l'utilisation des dashboards pour aider à leur optimisation."
+  },
+  {
+    "id": "GRAF-DASH-028",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Grafana Canvas",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel panneau permet de créer des visualisations personnalisées en positionnant librement des éléments graphiques ?",
+    "options": ["Canvas", "Custom", "HTML", "Text"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le panneau Canvas offre une toile sur laquelle on peut placer des éléments (texte, images, formes) liés à des données."
+  },
+  {
+    "id": "GRAF-DASH-029",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Logs Panel",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles actions peut-on réaliser dans le panneau Logs ?",
+    "options": [
+      "Filtrer les logs par niveau",
+      "Rechercher en texte intégral",
+      "Visualiser les logs en temps réel (live tailing)",
+      "Créer des graphiques de métriques à partir des logs",
+      "Modifier les logs source"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Le panneau Logs permet de filtrer, rechercher, suivre en direct et générer des métriques. La modification des logs (E) n'est pas possible."
+  },
+  {
+    "id": "GRAF-DASH-030",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Trace Panel",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle source de données est nécessaire pour afficher une trace distribuée dans Grafana ?",
+    "options": ["Tempo", "Jaeger", "Zipkin", "Toutes ces réponses"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Grafana supporte Tempo, Jaeger et Zipkin comme sources de données de traces."
+  },
+  {
+    "id": "GRAF-DASH-031",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard JSON Model",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans le modèle JSON d'un dashboard Grafana, où sont stockées les requêtes d'un panneau ?",
+    "options": [
+      "Dans le tableau 'targets' du panneau",
+      "Dans l'objet 'queries' racine",
+      "Dans le champ 'datasource'",
+      "Dans 'panel.queries'"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Chaque panneau a une propriété `targets` qui contient un tableau d'objets représentant les requêtes vers la(les) source(s) de données."
+  },
+  {
+    "id": "GRAF-DASH-032",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Overrides de champ",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles actions peut-on effectuer avec un override de champ dans un panneau ?",
+    "options": [
+      "Renommer un champ",
+      "Changer le type d'unité",
+      "Appliquer une couleur basée sur une valeur",
+      "Masquer un champ",
+      "Modifier la requête source"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Les overrides permettent de personnaliser l'affichage des champs (nom, unité, couleur, visibilité) sans changer la requête (E faux)."
+  },
+  {
+    "id": "GRAF-DASH-033",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard URL",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment passer une valeur de variable dans l'URL d'un dashboard Grafana ?",
+    "options": [
+      "Ajouter ?var-nomVariable=valeur",
+      "Ajouter &nomVariable=valeur",
+      "Ajouter #nomVariable=valeur",
+      "Utiliser le chemin /d/uid/?nomVariable=valeur"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte est `?var-nomVariable=valeur`. Exemple : `?var-datacenter=paris`."
+  },
+  {
+    "id": "GRAF-DASH-034",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard Timezone",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment changer le fuseau horaire d'un dashboard ?",
+    "options": [
+      "Dans les paramètres du dashboard (General > Timezone)",
+      "Dans la configuration de l'organisation",
+      "Dans le profil utilisateur",
+      "Via une variable de dashboard"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le fuseau horaire peut être défini au niveau du dashboard (Settings > General). Par défaut, il suit le fuseau de l'utilisateur ou du navigateur."
+  },
+  {
+    "id": "GRAF-DASH-035",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard tags",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "À quoi servent les tags de dashboard ?",
+    "options": [
+      "Filtrer la liste des dashboards",
+      "Organiser les dashboards dans des dossiers",
+      "Rechercher des dashboards",
+      "Définir des permissions",
+      "Regrouper les dashboards par projet"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2, 4],
+    "explanation": "Les tags permettent de filtrer, rechercher et catégoriser les dashboards. Ils ne définissent pas les permissions (D) et sont indépendants des dossiers (B)."
+  },
+  {
+    "id": "GRAF-DASH-036",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Row",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le rôle d'une 'Row' dans un dashboard Grafana ?",
+    "options": [
+      "Regrouper logiquement des panneaux et permettre de les replier/déplier",
+      "Afficher une ligne de séparation visuelle",
+      "Créer une ligne de métriques agrégées",
+      "Définir une ligne de temps"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les lignes (rows) servent à organiser les panneaux. Elles peuvent être réduites pour économiser de l'espace."
+  },
+  {
+    "id": "GRAF-DASH-037",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Transformation - Reduce",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle transformation utiliser pour calculer la moyenne des valeurs de plusieurs séries en une seule série ?",
+    "options": [
+      "Reduce (Mode: Series to rows, puis calcul)",
+      "Merge",
+      "Group by",
+      "Join by field"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La transformation 'Reduce' avec l'option 'Series to rows' permet d'appliquer une fonction d'agrégation (moyenne, somme, etc.) sur plusieurs séries."
+  },
+  {
+    "id": "GRAF-DASH-038",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Transformation - Join by field",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelle transformation permet de fusionner deux séries de données ayant un champ commun (ex: timestamp) ?",
+    "options": [
+      "Join by field",
+      "Outer join",
+      "Merge",
+      "Concatenate fields",
+      "Group by"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "Les transformations 'Join by field' et 'Merge' peuvent combiner des données. 'Join by field' est la plus explicite pour une jointure sur une colonne."
+  },
+  {
+    "id": "GRAF-DASH-039",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Graph Tooltip",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel mode d'info‑bulle affiche toutes les séries à l'horodatage survolé ?",
+    "options": ["All series", "Single", "Hidden", "Shared crosshair"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le mode 'All series' affiche les valeurs de toutes les séries à cet instant. 'Single' affiche uniquement la série sous le curseur."
+  },
+  {
+    "id": "GRAF-DASH-040",
+    "theme": "Dashboards et visualisations",
+    "theme_label": "Dashboard kiosk mode",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment activer le mode kiosque (plein écran sans interface) pour un dashboard ?",
+    "options": [
+      "Ajouter &kiosk à l'URL",
+      "Appuyer sur F11",
+      "Sélectionner 'Fullscreen' dans le menu de partage",
+      "Utiliser le paramètre ?fullscreen"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le paramètre d'URL `&kiosk` (ou `?kiosk`) masque la barre supérieure et le menu, idéal pour l'affichage sur écran."
+  }
+]

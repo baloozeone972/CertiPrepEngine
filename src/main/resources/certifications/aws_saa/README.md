@@ -1,81 +1,59 @@
 # AWS Certified Solutions Architect - Associate (SAA-C03)
 
 ## 📋 Description
-
-La certification AWS Solutions Architect Associate valide la capacité à concevoir des solutions distribuées sur AWS,
-incluant la haute disponibilité, la scalabilité, la sécurité et l'optimisation des coûts.
+La certification AWS Certified Solutions Architect - Associate (SAA-C03) est une certification **théorique** qui évalue votre capacité à concevoir et mettre en œuvre des solutions sur la plateforme AWS. Elle couvre les aspects clés de l'architecture cloud, y compris la haute disponibilité et la scalabilité. Cette certification est essentielle pour les professionnels voulant s'engager dans le domaine de la gestion des infrastructures cloud.
 
 ## 🏛️ Organisme délivrant
-
 **Amazon Web Services (AWS)** - Leader mondial du cloud computing
 
 ## 📅 Validité
-
 - **Valable 3 ans**
-- Renouvellement possible par examen ou par accumulation de crédits (AWS Certified)
+- Renouvellement par examen ou certification supérieure (SAA-C04)
 
 ## 📚 Programme détaillé
-
 ### Thèmes principaux
-
-| Thème                           | Pourcentage |
-|---------------------------------|-------------|
-| Compute (EC2, Lambda, ECS)      | 25%         |
-| Storage (S3, EBS, EFS)          | 20%         |
-| Database (RDS, DynamoDB)        | 15%         |
-| Networking (VPC, Route53)       | 20%         |
-| Security & IAM                  | 10%         |
-| High Availability & Scalability | 5%          |
-| Monitoring & Logging            | 3%          |
-| Pricing & Support               | 2%          |
+| Thème | Pourcentage |
+|---|---|
+| Compute (EC2, Lambda, ECS) | 13.3% |
+| Storage (S3, EBS, EFS) | 11.7% |
+| Database (RDS, DynamoDB) | 9.5% |
+| Networking (VPC, Route53) | 13.3% |
+| Security & IAM | 11.7% |
+| High Availability & Scalability | 9.5% |
+| Monitoring & Logging | 6.7% |
+| Pricing & Support | 6.7% |
 
 ### Compétences évaluées
-
-- Conception d'architectures résilientes (multi-AZ, auto-scaling)
-- Choix des services de stockage adaptés (S3, EBS, EFS, Glacier)
-- Conception de réseaux VPC sécurisés
-- Mise en place de haute disponibilité et reprise après sinistre
-- Optimisation des coûts
-- Sécurité et conformité (IAM, encryption)
+- Conception et mise en œuvre d'infrastructures AWS
+- Sécurité des applications sur AWS
+- Optimisation des coûts et support technique
 
 ## 💼 Reconnaissance professionnelle
-
 ### Niveau de reconnaissance
-
-⭐⭐⭐⭐⭐ (Très élevé - Top 3 des certifications cloud les plus valorisées)
+⭐⭐⭐ (Très élevé - Standard de facto pour les solutions architectes AWS)
 
 ### Valeur sur le marché
-
-- **France** : Très recherchée (marché cloud en forte croissance)
-- **Europe** : Standard pour les architectes cloud
-- **Monde** : Une des certifications les plus reconnues internationalement
-
-### Salaires indicatifs (France)
-
-| Expérience                | Salaire moyen      |
-|---------------------------|--------------------|
-| Junior cloud              | 45 000 - 55 000 €  |
-| Architecte cloud confirmé | 65 000 - 85 000 €  |
-| Senior cloud architect    | 85 000 - 120 000 € |
-
-## 🎯 Objectif
-
-Devenir architecte cloud capable de concevoir des solutions robustes et scalables sur AWS.
-
-## 🚀 Débouchés
-
-- Cloud Architect
-- Solutions Architect
-- DevOps Engineer (spécialisé AWS)
-- Cloud Consultant
+- **France** : Très recherchée par les entreprises souhaitant moderniser leurs infrastructures
+- **Maroc** : Forte demande dans les grandes entreprises locales et internationales
+- **Tunisie** : Augmentation du nombre de demandes avec la croissance économique
+- **Sénégal** : Développement en cours, avec une demande croissante
+- **Québec** : Forte demande dans les entreprises canadiennes et internationales
+- **Suisse** : Recherchée par les entreprises suisses et européennes
+- **Belgique** : Augmentation du nombre de demandes avec la croissance économique
 
 ## 📊 Statistiques
+- **Taux de réussite** : ~72%
+- **Temps de préparation recommandé** : 150-200 heures
+- **Format examen** : Théorique (ordinateur), 65 questions, 130 minutes
 
-- **Taux de réussite** : ~65-70%
-- **Temps de préparation recommandé** : 80-120 heures
-- **Format examen** : QCM, 65 questions, 130 minutes
+## 🌍 Marchés francophones
+- **France** : Forte demande dans les grandes entreprises et startups
+- **Maroc** : Augmentation du nombre de demandes avec la croissance économique
+- **Tunisie** : Développement en cours, avec une demande croissante
+- **Sénégal** : Forte demande dans les grandes entreprises locales et internationales
+- **Québec** : Forte demande dans les entreprises canadiennes et internationales
+- **Suisse** : Recherchée par les entreprises suisses et européennes
+- **Belgique** : Augmentation du nombre de demandes avec la croissance économique
 
 ## 🔗 Liens utiles
-
-- [AWS Certification](https://aws.amazon.com/certification/)
-- [AWS Training](https://aws.amazon.com/training/)
+- [AWS Certified Solutions Architect - Associate](https://aws.amazon.com/certification/architect/)

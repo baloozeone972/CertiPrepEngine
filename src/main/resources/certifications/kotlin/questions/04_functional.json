@@ -20,7 +20,12 @@
     "theme_label": "Lambda expressions",
     "difficulty": "easy",
     "question": "Comment référencer un paramètre unique dans une lambda ?",
-    "options": ["it", "this", "value", "param"],
+    "options": [
+      "it",
+      "this",
+      "value",
+      "param"
+    ],
     "correct": 0,
     "explanation": "it est le nom implicite du paramètre unique."
   },
@@ -135,7 +140,12 @@
     "theme_label": "flatMap example",
     "difficulty": "hard",
     "question": "Que produit listOf(1,2).flatMap { listOf(it, it*2) } ?",
-    "options": ["[1,2,2,4]", "[1,2]", "[2,4]", "[1,2,4]"],
+    "options": [
+      "[1,2,2,4]",
+      "[1,2]",
+      "[2,4]",
+      "[1,2,4]"
+    ],
     "correct": 0,
     "explanation": "1 → [1,2], 2 → [2,4] → [1,2,2,4]."
   },
@@ -738,5 +748,321 @@
     ],
     "correct": 0,
     "explanation": "sumOf { it.length } somme les longueurs."
+  },
+  {
+    "id": "KOT-FP-001",
+    "theme": "Functional Programming",
+    "theme_label": "Higher-order functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions d'ordre supérieur en Kotlin :",
+    "options": [
+      "Une fonction d'ordre supérieur peut prendre une autre fonction en paramètre.",
+      "Une fonction d'ordre supérieur ne peut pas retourner une autre fonction.",
+      "Les fonctions lambda sont des exemples de fonctions d'ordre supérieur.",
+      "Une fonction d'ordre supérieur peut être stockée dans une variable."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "A est correct car une fonction d'ordre supérieur peut prendre une autre fonction en paramètre. B est incorrect car les fonctions d'ordre supérieur peuvent retourner une autre fonction. C est correct car les fonctions lambda sont des exemples de fonctions d'ordre supérieur. D est correct car une fonction d'ordre supérieur peut être stockée dans une variable."
+  },
+  {
+    "id": "KOT-FP-002",
+    "theme": "Functional Programming",
+    "theme_label": "map",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour transformer chaque élément d'une collection en Kotlin ?",
+    "options": [
+      "map",
+      "filter",
+      "reduce",
+      "flatMap"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car la méthode map est utilisée pour transformer chaque élément d'une collection en Kotlin. Les autres options sont incorrectes car elles servent à des opérations différentes : filter pour filtrer les éléments, reduce pour réduire la collection à une seule valeur, et flatMap pour transformer et aplatir les éléments."
+  },
+  {
+    "id": "KOT-FP-004",
+    "theme": "Functional Programming",
+    "theme_label": "Sequence",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre une List et une Sequence en Kotlin ?",
+    "options": [
+      "Une List est évaluée immédiatement, tandis qu'une Sequence est évaluée de manière paresseuse.",
+      "Une List peut contenir des éléments null, tandis qu'une Sequence non.",
+      "Une List est mutable, tandis qu'une Sequence est immutable.",
+      "Une List utilise moins de mémoire que une Sequence."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car une List est évaluée immédiatement, tandis qu'une Sequence est évaluée de manière paresseuse. Les autres options sont incorrectes car elles ne reflètent pas les principales différences entre une List et une Sequence."
+  },
+  {
+    "id": "KOT-FP-005",
+    "theme": "Functional Programming",
+    "theme_label": "filterIsInstance",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux affirmations correctes concernant filterIsInstance en Kotlin :",
+    "options": [
+      "filterIsInstance retourne une List de type nullable.",
+      "filterIsInstance filtre les éléments d'une collection en fonction du type spécifié.",
+      "filterIsInstance peut être utilisé avec n'importe quel type de collection.",
+      "filterIsInstance retourne une Sequence."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "A est incorrect car filterIsInstance retourne une List non nullable. B est correct car filterIsInstance filtre les éléments d'une collection en fonction du type spécifié. C est incorrect car filterIsInstance ne peut être utilisé qu'avec des collections de type Any. D est correct car filterIsInstance retourne une Sequence."
+  },
+  {
+    "id": "KOT-FP-005",
+    "theme": "Functional Programming",
+    "theme_label": "Higher-order functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions d'ordre supérieur en Kotlin :",
+    "options": [
+      "Les fonctions d'ordre supérieur peuvent prendre une autre fonction en paramètre.",
+      "Les fonctions d'ordre supérieur ne peuvent pas retourner une fonction.",
+      "Les lambdas en Kotlin sont des fonctions d'ordre supérieur.",
+      "Les fonctions d'ordre supérieur peuvent être stockées dans des variables."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les fonctions d'ordre supérieur peuvent prendre une autre fonction en paramètre (A est correct). Elles ne sont pas limitées à retourner une fonction, donc B est incorrect. Les lambdas en Kotlin sont des fonctions d'ordre supérieur (C est correct). Elles peuvent également être stockées dans des variables (D est correct)."
+  },
+  {
+    "id": "KOT-FP-006",
+    "theme": "Functional Programming",
+    "theme_label": "map",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction Kotlin utilisée pour transformer chaque élément d'une collection en une autre forme ?",
+    "options": [
+      "map",
+      "filter",
+      "reduce",
+      "flatMap"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonction map est utilisée pour transformer chaque élément d'une collection en une autre forme (A est correct)."
+  },
+  {
+    "id": "KOT-FP-007",
+    "theme": "Functional Programming",
+    "theme_label": "reduce vs fold",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant la différence entre reduce et fold en Kotlin ?",
+    "options": [
+      "reduce nécessite un élément neutre.",
+      "fold nécessite un élément neutre.",
+      "reduce peut être utilisé sur des collections vides.",
+      "fold peut être utilisé sur des collections vides."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "reduce nécessite un élément neutre (A est incorrect). fold nécessite un élément neutre (B est correct). reduce ne peut pas être utilisé sur des collections vides sans élément neutre (C est incorrect). fold peut être utilisé sur des collections vides avec un élément neutre (D est correct)."
+  },
+  {
+    "id": "KOT-FP-008",
+    "theme": "Functional Programming",
+    "theme_label": "Sequence vs List",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre une Sequence et une List en Kotlin ?",
+    "options": [
+      "Une Sequence est évaluée immédiatement, une List est évaluée de manière différée.",
+      "Une Sequence est évaluée de manière différée, une List est évaluée immédiatement.",
+      "Une Sequence est mutable, une List est immutable.",
+      "Une Sequence peut contenir des éléments nulls, une List ne le peut pas."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Une Sequence est évaluée de manière différée, une List est évaluée immédiatement (B est correct)."
+  },
+  {
+    "id": "KOT-FP-009",
+    "theme": "Functional Programming",
+    "theme_label": "distinctBy",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonction Kotlin est utilisée pour retourner une collection contenant des éléments distincts basés sur un critère spécifique ?",
+    "options": [
+      "distinct",
+      "distinctBy",
+      "unique",
+      "filterUnique"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "distinctBy est utilisée pour retourner une collection contenant des éléments distincts basés sur un critère spécifique (B est correct)."
+  },
+  {
+    "id": "KOT-FP-010",
+    "theme": "Functional Programming",
+    "theme_label": "Higher-order functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions d'ordre supérieur en Kotlin :",
+    "options": [
+      "Les fonctions d'ordre supérieur peuvent accepter des fonctions en tant que paramètres.",
+      "Les fonctions d'ordre supérieur peuvent retourner des fonctions.",
+      "Les fonctions d'ordre supérieur ne peuvent pas être utilisées avec des lambdas.",
+      "Les fonctions d'ordre supérieur permettent une programmation déclarative."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les options A, B et D sont correctes. Les fonctions d'ordre supérieur en Kotlin peuvent effectivement accepter des fonctions en tant que paramètres, retourner des fonctions et favoriser une programmation déclarative. L'option C est incorrecte car les fonctions d'ordre supérieur peuvent être utilisées avec des lambdas."
+  },
+  {
+    "id": "KOT-FP-011",
+    "theme": "Functional Programming",
+    "theme_label": "map",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre map et flatMap en Kotlin ?",
+    "options": [
+      "map transforme chaque élément de la collection en un autre élément, tandis que flatMap peut transformer et aplatir les éléments.",
+      "map retourne une collection de listes, tandis que flatMap retourne une seule liste.",
+      "map et flatMap sont interchangeables dans la plupart des cas.",
+      "flatMap transforme chaque élément en une liste, puis aplatit ces listes en une seule collection."
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "L'option D est correcte. flatMap transforme chaque élément en une liste, puis aplatit ces listes en une seule collection. Les options A et E sont incorrectes car map ne transforme pas les éléments en listes, et B est incorrect car map retourne une collection d'éléments transformés, pas de listes."
+  },
+  {
+    "id": "KOT-FP-012",
+    "theme": "Functional Programming",
+    "theme_label": "reduce vs fold",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant reduce et fold en Kotlin ?",
+    "options": [
+      "reduce lance une exception si la collection est vide.",
+      "fold nécessite un paramètre initial.",
+      "reduce et fold sont interchangeables dans tous les cas.",
+      "fold peut retourner un type différent du type des éléments de la collection."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les options B et D sont correctes. fold nécessite un paramètre initial, ce qui lui permet de fonctionner même sur des collections vides. De plus, fold peut retourner un type différent du type des éléments de la collection, ce qui est utile pour accumuler des résultats dans un autre type. Les options A et C sont incorrectes car reduce lance une exception sur des collections vides, et les deux fonctions ne sont pas interchangeables dans tous les cas."
+  },
+  {
+    "id": "KOT-FP-013",
+    "theme": "Functional Programming",
+    "theme_label": "Sequence",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre une List et une Sequence en Kotlin ?",
+    "options": [
+      "Une List est évaluée immédiatement, tandis qu'une Sequence est évaluée de manière différée.",
+      "Une List peut contenir des éléments null, tandis qu'une Sequence ne le peut pas.",
+      "Une List est toujours plus rapide que une Sequence.",
+      "Une Sequence ne peut pas être convertie en List."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option A est correcte. Une List est évaluée immédiatement, tandis qu'une Sequence est évaluée de manière différée, ce qui permet des opérations plus efficaces sur de grandes collections. Les options B et C sont incorrectes car une List peut contenir des éléments null, et il n'y a pas de garantie que l'une soit toujours plus rapide que l'autre. L'option D est incorrecte car une Sequence peut être convertie en List à l'aide de la méthode asList()."
+  },
+  {
+    "id": "KOT-FP-014",
+    "theme": "Functional Programming",
+    "theme_label": "distinctBy",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour supprimer les éléments en double d'une collection en Kotlin, en se basant sur une clé spécifique ?",
+    "options": [
+      "distinctBy",
+      "unique",
+      "removeDuplicates",
+      "filterUnique"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option A est correcte. distinctBy est la méthode utilisée pour supprimer les éléments en double d'une collection en Kotlin, en se basant sur une clé spécifique. Les options B et C sont incorrectes car elles ne font pas partie de l'API Kotlin standard. L'option D est également incorrecte car filterUnique n'existe pas dans l'API Kotlin."
+  },
+  {
+    "id": "KOT-FP-015",
+    "theme": "Functional Programming",
+    "theme_label": "Higher-order functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions d'ordre supérieur dans Kotlin :",
+    "options": [
+      "Une fonction d'ordre supérieur peut prendre une autre fonction en paramètre.",
+      "Une fonction d'ordre supérieur ne peut pas retourner une autre fonction.",
+      "Les fonctions anonymes peuvent être utilisées comme arguments pour les fonctions d'ordre supérieur.",
+      "Les fonctions d'ordre supérieur ne peuvent être utilisées que dans les bibliothèques standard."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car une fonction d'ordre supérieur peut effectivement prendre une autre fonction en paramètre. B est incorrect car les fonctions d'ordre supérieur peuvent retourner une autre fonction. C est correct car les fonctions anonymes, également appelées lambdas, peuvent être utilisées comme arguments pour les fonctions d'ordre supérieur. D est incorrect car les fonctions d'ordre supérieur sont largement utilisées dans divers contextes, pas seulement dans les bibliothèques standard."
+  },
+  {
+    "id": "KOT-FP-016",
+    "theme": "Functional Programming",
+    "theme_label": "Sequence",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre une List et une Sequence en Kotlin ?",
+    "options": [
+      "Une Sequence est évaluée de manière lazy, tandis qu'une List est évaluée immédiatement.",
+      "Une Sequence utilise moins de mémoire qu'une List.",
+      "Une Sequence est toujours plus rapide qu'une List.",
+      "Une Sequence ne peut pas être convertie en List."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car une Sequence en Kotlin est évaluée de manière lazy, ce qui signifie qu'elle n'est pas évaluée jusqu'à ce que ses éléments soient réellement nécessaires. B est incorrect car la différence principale n'est pas liée à l'utilisation de la mémoire. C est incorrect car la vitesse dépend du contexte et des opérations effectuées. D est incorrect car une Sequence peut être convertie en List à l'aide de la méthode asList()."
+  },
+  {
+    "id": "KOT-FP-017",
+    "theme": "Functional Programming",
+    "theme_label": "reduce vs fold",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux principales différences entre la méthode reduce et la méthode fold dans Kotlin ?",
+    "options": [
+      "reduce a besoin d'un élément neutre initial, tandis que fold non.",
+      "fold peut être utilisé avec des types de retour différents, contrairement à reduce.",
+      "reduce fonctionne sur une collection vide sans lever d'exception, tandis que fold lève une exception.",
+      "fold est plus performante que reduce dans tous les cas."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "A est incorrect car reduce nécessite effectivement un élément neutre initial. B est correct car fold peut spécifier un type de retour différent grâce à son paramètre initial, ce qui n'est pas le cas avec reduce. C est incorrect car reduce lève une exception sur une collection vide, contrairement à fold qui peut gérer ce cas avec un élément neutre initial. D est incorrect car la performance dépend du contexte et des opérations effectuées."
   }
 ]

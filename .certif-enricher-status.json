@@ -1,0 +1,552 @@
+{
+  "java21": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T09:08:35.049499",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/java21/README.md",
+        "elapsed": 85.57217478752136
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T10:46:27.031228",
+      "details": {
+        "themes": 9
+      }
+    }
+  },
+  "android": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T11:20:17.503583",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/android/README.md",
+        "elapsed": 62.24239993095398
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T11:37:24.772004",
+      "details": {
+        "themes": 3
+      }
+    }
+  },
+  "gradle": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T11:38:48.120123",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/gradle/README.md",
+        "elapsed": 83.33847904205322
+      }
+    }
+  },
+  "kotlin": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T11:40:03.304115",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/kotlin/README.md",
+        "elapsed": 75.17188000679016
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:02:04.743310",
+      "details": {
+        "themes": 4
+      }
+    }
+  },
+  "maven": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T12:03:07.965449",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/maven/README.md",
+        "elapsed": 63.21577215194702
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:07:15.773779",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "oca8": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T12:08:24.165796",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/oca8/README.md",
+        "elapsed": 68.384281873703
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:09:21.234409",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "ocp11": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T12:10:27.450954",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/ocp11/README.md",
+        "elapsed": 66.2084789276123
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:11:00.202853",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "ocp21": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T12:12:25.014717",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/ocp21/README.md",
+        "elapsed": 78.6567211151123
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:36:48.193158",
+      "details": {
+        "themes": 4
+      }
+    }
+  },
+  "spring6": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T12:37:54.796737",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/spring6/README.md",
+        "elapsed": 66.60010719299316
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:38:42.519390",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "springboot3": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-17T12:39:43.002654",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/springboot3/README.md",
+        "elapsed": 60.4794499874115
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-17T12:44:38.283346",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "aws_ccp": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T01:19:23.087488",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/aws_ccp/README.md",
+        "elapsed": 63.50161409378052
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T01:24:28.037626",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "aws_dev": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T01:25:33.563635",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/aws_dev/README.md",
+        "elapsed": 65.4873960018158
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T02:16:39.984312",
+      "details": {
+        "themes": 6
+      }
+    }
+  },
+  "aws_saa": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T02:17:34.515647",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/aws_saa/README.md",
+        "elapsed": 54.522680044174194
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T02:40:13.604859",
+      "details": {
+        "themes": 4
+      }
+    }
+  },
+  "az204": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T02:41:11.270379",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/az204/README.md",
+        "elapsed": 57.66061305999756
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T02:46:59.496619",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "az900": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T02:47:57.945994",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/az900/README.md",
+        "elapsed": 58.444847106933594
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T03:10:01.006742",
+      "details": {
+        "themes": 4
+      }
+    }
+  },
+  "cka": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T03:10:54.063008",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/cka/README.md",
+        "elapsed": 53.05033326148987
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T03:41:17.708320",
+      "details": {
+        "themes": 7
+      }
+    }
+  },
+  "ckad": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T03:42:10.949158",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/ckad/README.md",
+        "elapsed": 53.23676371574402
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T04:07:48.261909",
+      "details": {
+        "themes": 5
+      }
+    }
+  },
+  "docker": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:08:38.384225",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/docker/README.md",
+        "elapsed": 50.11622405052185
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T04:38:15.656345",
+      "details": {
+        "themes": 6
+      }
+    }
+  },
+  "github_actions": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:39:13.002857",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/github_actions/README.md",
+        "elapsed": 57.34292912483215
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T04:40:34.436192",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "gitlab": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:41:24.246708",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/gitlab/README.md",
+        "elapsed": 49.805826902389526
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T04:41:46.703673",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "jakartaee": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:42:32.535798",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/jakartaee/README.md",
+        "elapsed": 45.82734394073486
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T04:52:19.968537",
+      "details": {
+        "themes": 2
+      }
+    }
+  },
+  "jenkins": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:53:22.722365",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/jenkins/README.md",
+        "elapsed": 62.749654054641724
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T04:57:03.565866",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "ocp17": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:58:03.763939",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/ocp17/README.md",
+        "elapsed": 60.19094491004944
+      }
+    }
+  },
+  "quarkus": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T04:58:51.907799",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/quarkus/README.md",
+        "elapsed": 48.117879152297974
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T05:03:03.535626",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "sonarqube": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T05:03:53.256829",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/sonarqube/README.md",
+        "elapsed": 49.717955112457275
+      }
+    }
+  },
+  "terraform": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T06:58:39.988369",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/terraform/README.md",
+        "elapsed": 67.54857873916626
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:25:15.997931",
+      "details": {
+        "themes": 5
+      }
+    }
+  },
+  "podman": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:26:18.903015",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/podman/README.md",
+        "elapsed": 62.893491983413696
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:27:20.235754",
+      "details": {
+        "themes": 2
+      }
+    }
+  },
+  "prometheus": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:28:20.854467",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/prometheus/README.md",
+        "elapsed": 60.61238503456116
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:28:42.349879",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "puppet": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:29:39.537343",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/puppet/README.md",
+        "elapsed": 57.18039917945862
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:30:02.605609",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "grafana": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:30:58.360042",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/grafana/README.md",
+        "elapsed": 55.74201703071594
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:32:06.035076",
+      "details": {
+        "themes": 2
+      }
+    }
+  },
+  "gcp_dl": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:33:09.236973",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/gcp_dl/README.md",
+        "elapsed": 63.187939167022705
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:44:35.383022",
+      "details": {
+        "themes": 2
+      }
+    }
+  },
+  "cks": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:45:46.554802",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/cks/README.md",
+        "elapsed": 71.16109204292297
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:50:13.351750",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "ansible": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:51:12.999264",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/ansible/README.md",
+        "elapsed": 59.63918995857239
+      }
+    },
+    "questions": {
+      "done": true,
+      "timestamp": "2026-04-18T07:51:35.015320",
+      "details": {
+        "themes": 1
+      }
+    }
+  },
+  "chef": {
+    "readme": {
+      "done": true,
+      "timestamp": "2026-04-18T07:52:35.693917",
+      "details": {
+        "file": "/Users/baloozeone/W/DEV/CertiPrepEngine/src/main/resources/certifications/chef/README.md",
+        "elapsed": 60.67242622375488
+      }
+    }
+  }
+}

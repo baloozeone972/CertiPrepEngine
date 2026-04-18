@@ -5,7 +5,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure permet de créer des machines virtuelles ?",
-    "options": ["Azure Virtual Machines", "Azure App Service", "Azure Functions", "Azure Container Instances"],
+    "options": [
+      "Azure Virtual Machines",
+      "Azure App Service",
+      "Azure Functions",
+      "Azure Container Instances"
+    ],
     "correct": 0,
     "explanation": "Azure Virtual Machines est le service IaaS pour les VMs."
   },
@@ -15,7 +20,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure est un PaaS pour héberger des applications web ?",
-    "options": ["Azure App Service", "Azure Virtual Machines", "Azure Functions", "Azure Kubernetes Service"],
+    "options": [
+      "Azure App Service",
+      "Azure Virtual Machines",
+      "Azure Functions",
+      "Azure Kubernetes Service"
+    ],
     "correct": 0,
     "explanation": "Azure App Service héberge des applications web, API, mobile backends."
   },
@@ -25,7 +35,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure est serverless pour exécuter du code ?",
-    "options": ["Azure Functions", "Azure App Service", "Azure Logic Apps", "Azure Batch"],
+    "options": [
+      "Azure Functions",
+      "Azure App Service",
+      "Azure Logic Apps",
+      "Azure Batch"
+    ],
     "correct": 0,
     "explanation": "Azure Functions est le service serverless (Function as a Service)."
   },
@@ -35,7 +50,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure orchestre des conteneurs Docker ?",
-    "options": ["Azure Kubernetes Service (AKS)", "Azure Container Instances", "Azure Container Registry", "Azure Functions"],
+    "options": [
+      "Azure Kubernetes Service (AKS)",
+      "Azure Container Instances",
+      "Azure Container Registry",
+      "Azure Functions"
+    ],
     "correct": 0,
     "explanation": "AKS est le service Kubernetes managé d'Azure."
   },
@@ -45,7 +65,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure exécute des conteneurs sans gestion de serveurs ?",
-    "options": ["Azure Container Instances", "Azure Kubernetes Service", "Azure App Service", "Azure Functions"],
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Functions"
+    ],
     "correct": 0,
     "explanation": "ACI (Azure Container Instances) est serverless pour les conteneurs."
   },
@@ -55,7 +80,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure stocke les images Docker ?",
-    "options": ["Azure Container Registry", "Azure Storage", "Azure Container Instances", "Azure Kubernetes Service"],
+    "options": [
+      "Azure Container Registry",
+      "Azure Storage",
+      "Azure Container Instances",
+      "Azure Kubernetes Service"
+    ],
     "correct": 0,
     "explanation": "ACR (Azure Container Registry) stocke les images conteneur."
   },
@@ -65,7 +95,12 @@
     "theme_label": "Compute",
     "difficulty": "easy",
     "question": "Quel service Azure permet de créer des batch jobs ?",
-    "options": ["Azure Batch", "Azure Functions", "Azure Logic Apps", "Azure Automation"],
+    "options": [
+      "Azure Batch",
+      "Azure Functions",
+      "Azure Logic Apps",
+      "Azure Automation"
+    ],
     "correct": 0,
     "explanation": "Azure Batch exécute des jobs de calcul parallèles à grande échelle."
   },
@@ -75,7 +110,12 @@
     "theme_label": "Storage",
     "difficulty": "easy",
     "question": "Quel service Azure est le stockage objet ?",
-    "options": ["Azure Blob Storage", "Azure Files", "Azure Queue Storage", "Azure Table Storage"],
+    "options": [
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure Queue Storage",
+      "Azure Table Storage"
+    ],
     "correct": 0,
     "explanation": "Blob Storage est le stockage objet pour les données non structurées."
   },
@@ -85,7 +125,12 @@
     "theme_label": "Storage",
     "difficulty": "easy",
     "question": "Quel service Azure est un partage de fichiers SMB ?",
-    "options": ["Azure Files", "Azure Blob Storage", "Azure Disk Storage", "Azure NetApp Files"],
+    "options": [
+      "Azure Files",
+      "Azure Blob Storage",
+      "Azure Disk Storage",
+      "Azure NetApp Files"
+    ],
     "correct": 0,
     "explanation": "Azure Files fournit des partages de fichiers SMB accessibles depuis le cloud ou on-premise."
   },
@@ -95,9 +140,14 @@
     "theme_label": "Storage",
     "difficulty": "easy",
     "question": "Quel service Azure est une file d'attente de messages ?",
-    "options": ["Azure Queue Storage", "Azure Service Bus", "Azure Event Hubs", "Azure Notification Hubs"],
+    "options": [
+      "Azure Queue Storage",
+      "Azure Service Bus",
+      "Azure Event Hubs",
+      "Azure Notification Hubs"
+    ],
     "correct": 0,
-    "explication": "Queue Storage est une file d'attente simple pour les messages."
+    "explanation": "Queue Storage est une file d'attente simple pour les messages."
   },
   {
     "id": "AZ-900-031",
@@ -105,9 +155,14 @@
     "theme_label": "Storage",
     "difficulty": "easy",
     "question": "Quel service Azure est une base NoSQL clé-valeur ?",
-    "options": ["Azure Table Storage", "Azure Cosmos DB", "Azure SQL Database", "Azure Cache for Redis"],
+    "options": [
+      "Azure Table Storage",
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Cache for Redis"
+    ],
     "correct": 0,
-    "explication": "Table Storage est une base NoSQL clé-valeur."
+    "explanation": "Table Storage est une base NoSQL clé-valeur."
   },
   {
     "id": "AZ-900-032",
@@ -115,9 +170,14 @@
     "theme_label": "Storage",
     "difficulty": "easy",
     "question": "Quel service Azure est un disque managé pour VMs ?",
-    "options": ["Azure Disk Storage", "Azure Blob Storage", "Azure Files", "Azure NetApp Files"],
+    "options": [
+      "Azure Disk Storage",
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure NetApp Files"
+    ],
     "correct": 0,
-    "explication": "Disk Storage fournit des volumes de stockage bloc pour les VMs."
+    "explanation": "Disk Storage fournit des volumes de stockage bloc pour les VMs."
   },
   {
     "id": "AZ-900-033",
@@ -125,9 +185,14 @@
     "theme_label": "Database",
     "difficulty": "easy",
     "question": "Quel service Azure est une base de données relationnelle managée ?",
-    "options": ["Azure SQL Database", "Azure Cosmos DB", "Azure Database for MySQL", "Azure Database for PostgreSQL"],
+    "options": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Database for MySQL",
+      "Azure Database for PostgreSQL"
+    ],
     "correct": 0,
-    "explication": "Azure SQL Database est le service de base SQL managé."
+    "explanation": "Azure SQL Database est le service de base SQL managé."
   },
   {
     "id": "AZ-900-034",
@@ -135,9 +200,14 @@
     "theme_label": "Database",
     "difficulty": "easy",
     "question": "Quel service Azure est une base de données NoSQL globale ?",
-    "options": ["Azure Cosmos DB", "Azure SQL Database", "Azure Table Storage", "Azure Database for MongoDB"],
+    "options": [
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Table Storage",
+      "Azure Database for MongoDB"
+    ],
     "correct": 0,
-    "explication": "Cosmos DB est une base NoSQL distribuée globalement."
+    "explanation": "Cosmos DB est une base NoSQL distribuée globalement."
   },
   {
     "id": "AZ-900-035",
@@ -145,9 +215,14 @@
     "theme_label": "Database",
     "difficulty": "easy",
     "question": "Azure Cosmos DB supporte-t-il plusieurs API ?",
-    "options": ["Oui (SQL, MongoDB, Cassandra, Gremlin, Table)", "Non", "Uniquement SQL", "Uniquement MongoDB"],
+    "options": [
+      "Oui (SQL, MongoDB, Cassandra, Gremlin, Table)",
+      "Non",
+      "Uniquement SQL",
+      "Uniquement MongoDB"
+    ],
     "correct": 0,
-    "explication": "Cosmos DB supporte plusieurs API pour la compatibilité."
+    "explanation": "Cosmos DB supporte plusieurs API pour la compatibilité."
   },
   {
     "id": "AZ-900-036",
@@ -155,9 +230,14 @@
     "theme_label": "Database",
     "difficulty": "easy",
     "question": "Quel service Azure est un cache in-memory ?",
-    "options": ["Azure Cache for Redis", "Azure Cosmos DB", "Azure SQL Database", "Azure Table Storage"],
+    "options": [
+      "Azure Cache for Redis",
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Table Storage"
+    ],
     "correct": 0,
-    "explication": "Azure Cache for Redis est un cache in-memory managé."
+    "explanation": "Azure Cache for Redis est un cache in-memory managé."
   },
   {
     "id": "AZ-900-037",
@@ -165,9 +245,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure est un réseau virtuel privé ?",
-    "options": ["Azure Virtual Network (VNet)", "Azure VPN Gateway", "Azure ExpressRoute", "Azure Load Balancer"],
+    "options": [
+      "Azure Virtual Network (VNet)",
+      "Azure VPN Gateway",
+      "Azure ExpressRoute",
+      "Azure Load Balancer"
+    ],
     "correct": 0,
-    "explication": "VNet est le réseau virtuel isolé dans Azure."
+    "explanation": "VNet est le réseau virtuel isolé dans Azure."
   },
   {
     "id": "AZ-900-038",
@@ -175,9 +260,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure connecte un réseau on-premise à Azure via VPN ?",
-    "options": ["Azure VPN Gateway", "Azure ExpressRoute", "Azure Virtual WAN", "Azure Load Balancer"],
+    "options": [
+      "Azure VPN Gateway",
+      "Azure ExpressRoute",
+      "Azure Virtual WAN",
+      "Azure Load Balancer"
+    ],
     "correct": 0,
-    "explication": "VPN Gateway connecte via IPSec/VPN."
+    "explanation": "VPN Gateway connecte via IPSec/VPN."
   },
   {
     "id": "AZ-900-039",
@@ -185,9 +275,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure connecte un réseau on-premise à Azure via connexion privée dédiée ?",
-    "options": ["Azure ExpressRoute", "Azure VPN Gateway", "Azure Virtual WAN", "Azure Private Link"],
+    "options": [
+      "Azure ExpressRoute",
+      "Azure VPN Gateway",
+      "Azure Virtual WAN",
+      "Azure Private Link"
+    ],
     "correct": 0,
-    "explication": "ExpressRoute est une connexion privée et dédiée."
+    "explanation": "ExpressRoute est une connexion privée et dédiée."
   },
   {
     "id": "AZ-900-040",
@@ -195,9 +290,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure est un CDN ?",
-    "options": ["Azure CDN", "Azure Front Door", "Azure Traffic Manager", "Azure Application Gateway"],
+    "options": [
+      "Azure CDN",
+      "Azure Front Door",
+      "Azure Traffic Manager",
+      "Azure Application Gateway"
+    ],
     "correct": 0,
-    "explication": "Azure CDN est le service de diffusion de contenu."
+    "explanation": "Azure CDN est le service de diffusion de contenu."
   },
   {
     "id": "AZ-900-041",
@@ -205,9 +305,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure est un load balancer de couche 7 ?",
-    "options": ["Azure Application Gateway", "Azure Load Balancer", "Azure Traffic Manager", "Azure Front Door"],
+    "options": [
+      "Azure Application Gateway",
+      "Azure Load Balancer",
+      "Azure Traffic Manager",
+      "Azure Front Door"
+    ],
     "correct": 0,
-    "explication": "Application Gateway est un load balancer de couche 7 (HTTP/HTTPS)."
+    "explanation": "Application Gateway est un load balancer de couche 7 (HTTP/HTTPS)."
   },
   {
     "id": "AZ-900-042",
@@ -215,9 +320,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure est un load balancer de couche 4 ?",
-    "options": ["Azure Load Balancer", "Azure Application Gateway", "Azure Traffic Manager", "Azure Front Door"],
+    "options": [
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Traffic Manager",
+      "Azure Front Door"
+    ],
     "correct": 0,
-    "explication": "Azure Load Balancer est un load balancer de couche 4 (TCP/UDP)."
+    "explanation": "Azure Load Balancer est un load balancer de couche 4 (TCP/UDP)."
   },
   {
     "id": "AZ-900-043",
@@ -225,9 +335,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure dirige le trafic DNS vers le point de terminaison le plus proche ?",
-    "options": ["Azure Traffic Manager", "Azure Front Door", "Azure Load Balancer", "Azure Application Gateway"],
+    "options": [
+      "Azure Traffic Manager",
+      "Azure Front Door",
+      "Azure Load Balancer",
+      "Azure Application Gateway"
+    ],
     "correct": 0,
-    "explication": "Traffic Manager utilise le DNS pour le routage global."
+    "explanation": "Traffic Manager utilise le DNS pour le routage global."
   },
   {
     "id": "AZ-900-044",
@@ -235,9 +350,14 @@
     "theme_label": "Networking",
     "difficulty": "easy",
     "question": "Quel service Azure protège les applications web (WAF) ?",
-    "options": ["Azure Application Gateway (avec WAF)", "Azure Firewall", "Azure DDoS Protection", "Azure Front Door"],
+    "options": [
+      "Azure Application Gateway (avec WAF)",
+      "Azure Firewall",
+      "Azure DDoS Protection",
+      "Azure Front Door"
+    ],
     "correct": 0,
-    "explication": "Application Gateway inclut un WAF."
+    "explanation": "Application Gateway inclut un WAF."
   },
   {
     "id": "AZ-900-045",
@@ -245,9 +365,14 @@
     "theme_label": "Identity",
     "difficulty": "easy",
     "question": "Quel service Azure est le service d'annuaire et de gestion des identités ?",
-    "options": ["Azure Active Directory (Azure AD)", "Azure AD B2C", "Azure AD Domain Services", "Azure Identity Protection"],
+    "options": [
+      "Azure Active Directory (Azure AD)",
+      "Azure AD B2C",
+      "Azure AD Domain Services",
+      "Azure Identity Protection"
+    ],
     "correct": 0,
-    "explication": "Azure AD est le service d'annuaire pour les identités."
+    "explanation": "Azure AD est le service d'annuaire pour les identités."
   },
   {
     "id": "AZ-900-046",
@@ -255,9 +380,14 @@
     "theme_label": "Identity",
     "difficulty": "easy",
     "question": "Quel service Azure permet l'authentification des clients (B2C) ?",
-    "options": ["Azure AD B2C", "Azure AD", "Azure AD Domain Services", "Azure AD Identity Protection"],
+    "options": [
+      "Azure AD B2C",
+      "Azure AD",
+      "Azure AD Domain Services",
+      "Azure AD Identity Protection"
+    ],
     "correct": 0,
-    "explication": "Azure AD B2C est pour l'authentification des clients (Consumer)."
+    "explanation": "Azure AD B2C est pour l'authentification des clients (Consumer)."
   },
   {
     "id": "AZ-900-047",
@@ -265,9 +395,14 @@
     "theme_label": "Identity",
     "difficulty": "easy",
     "question": "Quel service Azure fournit des services de domaine managés ?",
-    "options": ["Azure AD Domain Services", "Azure AD", "Azure AD B2C", "Azure AD Identity Protection"],
+    "options": [
+      "Azure AD Domain Services",
+      "Azure AD",
+      "Azure AD B2C",
+      "Azure AD Identity Protection"
+    ],
     "correct": 0,
-    "explication": "Azure AD DS fournit des services de domaine comme LDAP, Kerberos."
+    "explanation": "Azure AD DS fournit des services de domaine comme LDAP, Kerberos."
   },
   {
     "id": "AZ-900-048",
@@ -275,9 +410,14 @@
     "theme_label": "Management",
     "difficulty": "easy",
     "question": "Quel service Azure permet l'Infrastructure as Code (IaC) ?",
-    "options": ["Azure Resource Manager (ARM) templates", "Azure CLI", "Azure PowerShell", "Azure Portal"],
+    "options": [
+      "Azure Resource Manager (ARM) templates",
+      "Azure CLI",
+      "Azure PowerShell",
+      "Azure Portal"
+    ],
     "correct": 0,
-    "explication": "ARM templates sont des modèles JSON pour déployer l'infrastructure."
+    "explanation": "ARM templates sont des modèles JSON pour déployer l'infrastructure."
   },
   {
     "id": "AZ-900-049",
@@ -285,9 +425,14 @@
     "theme_label": "Management",
     "difficulty": "easy",
     "question": "Quel service Azure est un outil de gestion de configuration ?",
-    "options": ["Azure Automation", "Azure Policy", "Azure Blueprints", "Azure Resource Graph"],
+    "options": [
+      "Azure Automation",
+      "Azure Policy",
+      "Azure Blueprints",
+      "Azure Resource Graph"
+    ],
     "correct": 0,
-    "explication": "Azure Automation permet l'automatisation des tâches et la gestion de configuration."
+    "explanation": "Azure Automation permet l'automatisation des tâches et la gestion de configuration."
   },
   {
     "id": "AZ-900-050",
@@ -295,9 +440,14 @@
     "theme_label": "Management",
     "difficulty": "easy",
     "question": "Quel service Azure applique des règles de conformité aux ressources ?",
-    "options": ["Azure Policy", "Azure Blueprints", "Azure Automation", "Azure Resource Manager"],
+    "options": [
+      "Azure Policy",
+      "Azure Blueprints",
+      "Azure Automation",
+      "Azure Resource Manager"
+    ],
     "correct": 0,
-    "explication": "Azure Policy évalue et applique des règles de conformité."
+    "explanation": "Azure Policy évalue et applique des règles de conformité."
   },
   {
     "id": "AZ-900-051",
@@ -305,9 +455,14 @@
     "theme_label": "Management",
     "difficulty": "easy",
     "question": "Quel service Azure définit un ensemble réutilisable de ressources ?",
-    "options": ["Azure Blueprints", "Azure Policy", "Azure Automation", "Azure Resource Manager"],
+    "options": [
+      "Azure Blueprints",
+      "Azure Policy",
+      "Azure Automation",
+      "Azure Resource Manager"
+    ],
     "correct": 0,
-    "explication": "Blueprints permettent de définir et déployer un ensemble de ressources conformes."
+    "explanation": "Blueprints permettent de définir et déployer un ensemble de ressources conformes."
   },
   {
     "id": "AZ-900-052",
@@ -315,9 +470,14 @@
     "theme_label": "Monitoring",
     "difficulty": "easy",
     "question": "Quel service Azure collecte les métriques et les logs ?",
-    "options": ["Azure Monitor", "Azure Log Analytics", "Azure Application Insights", "Azure Advisor"],
+    "options": [
+      "Azure Monitor",
+      "Azure Log Analytics",
+      "Azure Application Insights",
+      "Azure Advisor"
+    ],
     "correct": 0,
-    "explication": "Azure Monitor centralise les données de monitoring."
+    "explanation": "Azure Monitor centralise les données de monitoring."
   },
   {
     "id": "AZ-900-053",
@@ -325,9 +485,14 @@
     "theme_label": "Monitoring",
     "difficulty": "easy",
     "question": "Quel service Azure surveille les performances des applications ?",
-    "options": ["Azure Application Insights", "Azure Monitor", "Azure Log Analytics", "Azure Advisor"],
+    "options": [
+      "Azure Application Insights",
+      "Azure Monitor",
+      "Azure Log Analytics",
+      "Azure Advisor"
+    ],
     "correct": 0,
-    "explication": "Application Insights est pour l'APM (Application Performance Monitoring)."
+    "explanation": "Application Insights est pour l'APM (Application Performance Monitoring)."
   },
   {
     "id": "AZ-900-054",
@@ -335,9 +500,14 @@
     "theme_label": "Monitoring",
     "difficulty": "easy",
     "question": "Quel service Azure interroge les données de logs ?",
-    "options": ["Azure Log Analytics", "Azure Monitor", "Azure Application Insights", "Azure Advisor"],
+    "options": [
+      "Azure Log Analytics",
+      "Azure Monitor",
+      "Azure Application Insights",
+      "Azure Advisor"
+    ],
     "correct": 0,
-    "explication": "Log Analytics permet d'interroger les logs avec le langage KQL."
+    "explanation": "Log Analytics permet d'interroger les logs avec le langage KQL."
   },
   {
     "id": "AZ-900-055",
@@ -345,9 +515,14 @@
     "theme_label": "Integration",
     "difficulty": "easy",
     "question": "Quel service Azure est un bus de messages enterprise ?",
-    "options": ["Azure Service Bus", "Azure Event Hubs", "Azure Queue Storage", "Azure Event Grid"],
+    "options": [
+      "Azure Service Bus",
+      "Azure Event Hubs",
+      "Azure Queue Storage",
+      "Azure Event Grid"
+    ],
     "correct": 0,
-    "explication": "Service Bus est un broker de messages (queue, topic, relay)."
+    "explanation": "Service Bus est un broker de messages (queue, topic, relay)."
   },
   {
     "id": "AZ-900-056",
@@ -355,9 +530,14 @@
     "theme_label": "Integration",
     "difficulty": "easy",
     "question": "Quel service Azure ingère des événements massifs (IoT) ?",
-    "options": ["Azure Event Hubs", "Azure Service Bus", "Azure Event Grid", "Azure IoT Hub"],
+    "options": [
+      "Azure Event Hubs",
+      "Azure Service Bus",
+      "Azure Event Grid",
+      "Azure IoT Hub"
+    ],
     "correct": 0,
-    "explication": "Event Hubs est pour l'ingestion de millions d'événements par seconde."
+    "explanation": "Event Hubs est pour l'ingestion de millions d'événements par seconde."
   },
   {
     "id": "AZ-900-057",
@@ -365,9 +545,14 @@
     "theme_label": "Integration",
     "difficulty": "easy",
     "question": "Quel service Azure distribue des événements de manière réactive ?",
-    "options": ["Azure Event Grid", "Azure Event Hubs", "Azure Service Bus", "Azure Queue Storage"],
+    "options": [
+      "Azure Event Grid",
+      "Azure Event Hubs",
+      "Azure Service Bus",
+      "Azure Queue Storage"
+    ],
     "correct": 0,
-    "explication": "Event Grid distribue des événements à des abonnés."
+    "explanation": "Event Grid distribue des événements à des abonnés."
   },
   {
     "id": "AZ-900-058",
@@ -375,9 +560,14 @@
     "theme_label": "Integration",
     "difficulty": "easy",
     "question": "Quel service Azure est un outil d'intégration low-code ?",
-    "options": ["Azure Logic Apps", "Azure Functions", "Azure API Management", "Azure Service Bus"],
+    "options": [
+      "Azure Logic Apps",
+      "Azure Functions",
+      "Azure API Management",
+      "Azure Service Bus"
+    ],
     "correct": 0,
-    "explication": "Logic Apps permet de créer des workflows d'intégration visuellement."
+    "explanation": "Logic Apps permet de créer des workflows d'intégration visuellement."
   },
   {
     "id": "AZ-900-059",
@@ -385,9 +575,14 @@
     "theme_label": "Integration",
     "difficulty": "easy",
     "question": "Quel service Azure gère les API ?",
-    "options": ["Azure API Management", "Azure Logic Apps", "Azure Functions", "Azure App Service"],
+    "options": [
+      "Azure API Management",
+      "Azure Logic Apps",
+      "Azure Functions",
+      "Azure App Service"
+    ],
     "correct": 0,
-    "explication": "API Management publie, sécurise et analyse les API."
+    "explanation": "API Management publie, sécurise et analyse les API."
   },
   {
     "id": "AZ-900-060",
@@ -395,9 +590,14 @@
     "theme_label": "IoT",
     "difficulty": "easy",
     "question": "Quel service Azure connecte et gère les appareils IoT ?",
-    "options": ["Azure IoT Hub", "Azure Event Hubs", "Azure IoT Central", "Azure Sphere"],
+    "options": [
+      "Azure IoT Hub",
+      "Azure Event Hubs",
+      "Azure IoT Central",
+      "Azure Sphere"
+    ],
     "correct": 0,
-    "explication": "IoT Hub est le service central pour la communication IoT."
+    "explanation": "IoT Hub est le service central pour la communication IoT."
   },
   {
     "id": "AZ-900-061",
@@ -405,9 +605,14 @@
     "theme_label": "IoT",
     "difficulty": "easy",
     "question": "Quel service Azure est une plateforme IoT entièrement managée ?",
-    "options": ["Azure IoT Central", "Azure IoT Hub", "Azure IoT Edge", "Azure Sphere"],
+    "options": [
+      "Azure IoT Central",
+      "Azure IoT Hub",
+      "Azure IoT Edge",
+      "Azure Sphere"
+    ],
     "correct": 0,
-    "explication": "IoT Central est une plateforme SaaS pour les solutions IoT."
+    "explanation": "IoT Central est une plateforme SaaS pour les solutions IoT."
   },
   {
     "id": "AZ-900-062",
@@ -415,9 +620,14 @@
     "theme_label": "AI/ML",
     "difficulty": "easy",
     "question": "Quel service Azure est une plateforme de machine learning ?",
-    "options": ["Azure Machine Learning", "Azure Cognitive Services", "Azure Databricks", "Azure Bot Service"],
+    "options": [
+      "Azure Machine Learning",
+      "Azure Cognitive Services",
+      "Azure Databricks",
+      "Azure Bot Service"
+    ],
     "correct": 0,
-    "explication": "Azure Machine Learning est pour l'entraînement et le déploiement de modèles ML."
+    "explanation": "Azure Machine Learning est pour l'entraînement et le déploiement de modèles ML."
   },
   {
     "id": "AZ-900-063",
@@ -425,9 +635,14 @@
     "theme_label": "AI/ML",
     "difficulty": "easy",
     "question": "Quel service Azure fournit des API pré-entraînées (vision, langage, etc.) ?",
-    "options": ["Azure Cognitive Services", "Azure Machine Learning", "Azure Bot Service", "Azure Databricks"],
+    "options": [
+      "Azure Cognitive Services",
+      "Azure Machine Learning",
+      "Azure Bot Service",
+      "Azure Databricks"
+    ],
     "correct": 0,
-    "explication": "Cognitive Services offre des API IA prêtes à l'emploi."
+    "explanation": "Cognitive Services offre des API IA prêtes à l'emploi."
   },
   {
     "id": "AZ-900-064",
@@ -435,9 +650,14 @@
     "theme_label": "AI/ML",
     "difficulty": "easy",
     "question": "Quel service Azure permet de créer des chatbots ?",
-    "options": ["Azure Bot Service", "Azure Cognitive Services", "Azure Machine Learning", "Azure Logic Apps"],
+    "options": [
+      "Azure Bot Service",
+      "Azure Cognitive Services",
+      "Azure Machine Learning",
+      "Azure Logic Apps"
+    ],
     "correct": 0,
-    "explication": "Bot Service aide à développer et déployer des chatbots."
+    "explanation": "Bot Service aide à développer et déployer des chatbots."
   },
   {
     "id": "AZ-900-065",
@@ -445,9 +665,14 @@
     "theme_label": "Analytics",
     "difficulty": "easy",
     "question": "Quel service Azure est un data warehouse ?",
-    "options": ["Azure Synapse Analytics", "Azure Databricks", "Azure Data Lake Storage", "Azure Analysis Services"],
+    "options": [
+      "Azure Synapse Analytics",
+      "Azure Databricks",
+      "Azure Data Lake Storage",
+      "Azure Analysis Services"
+    ],
     "correct": 0,
-    "explication": "Synapse Analytics est un service d'analytique (data warehouse)."
+    "explanation": "Synapse Analytics est un service d'analytique (data warehouse)."
   },
   {
     "id": "AZ-900-066",
@@ -455,9 +680,14 @@
     "theme_label": "Analytics",
     "difficulty": "easy",
     "question": "Quel service Azure est un stockage pour big data ?",
-    "options": ["Azure Data Lake Storage", "Azure Blob Storage", "Azure Files", "Azure Table Storage"],
+    "options": [
+      "Azure Data Lake Storage",
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure Table Storage"
+    ],
     "correct": 0,
-    "explication": "Data Lake Storage est optimisé pour l'analytique big data."
+    "explanation": "Data Lake Storage est optimisé pour l'analytique big data."
   },
   {
     "id": "AZ-900-067",
@@ -465,9 +695,14 @@
     "theme_label": "Analytics",
     "difficulty": "easy",
     "question": "Quel service Azure est une plateforme d'analytique Spark ?",
-    "options": ["Azure Databricks", "Azure Synapse Analytics", "Azure HDInsight", "Azure Data Factory"],
+    "options": [
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "Azure HDInsight",
+      "Azure Data Factory"
+    ],
     "correct": 0,
-    "explication": "Databricks est une plateforme Spark managée."
+    "explanation": "Databricks est une plateforme Spark managée."
   },
   {
     "id": "AZ-900-068",
@@ -475,9 +710,14 @@
     "theme_label": "DevOps",
     "difficulty": "easy",
     "question": "Quel service Azure est un service de pipelines CI/CD ?",
-    "options": ["Azure DevOps", "Azure Pipelines", "Azure Repos", "Azure Artifacts"],
+    "options": [
+      "Azure DevOps",
+      "Azure Pipelines",
+      "Azure Repos",
+      "Azure Artifacts"
+    ],
     "correct": 0,
-    "explication": "Azure DevOps est la suite complète (Pipelines, Repos, Boards, etc.)."
+    "explanation": "Azure DevOps est la suite complète (Pipelines, Repos, Boards, etc.)."
   },
   {
     "id": "AZ-900-069",
@@ -485,9 +725,14 @@
     "theme_label": "DevOps",
     "difficulty": "easy",
     "question": "Quel service Azure stocke le code source Git ?",
-    "options": ["Azure Repos", "Azure Pipelines", "Azure Artifacts", "Azure Test Plans"],
+    "options": [
+      "Azure Repos",
+      "Azure Pipelines",
+      "Azure Artifacts",
+      "Azure Test Plans"
+    ],
     "correct": 0,
-    "explication": "Azure Repos est un dépôt Git privé."
+    "explanation": "Azure Repos est un dépôt Git privé."
   },
   {
     "id": "AZ-900-070",
@@ -495,9 +740,14 @@
     "theme_label": "Migration",
     "difficulty": "easy",
     "question": "Quel service Azure aide à évaluer et migrer des workloads ?",
-    "options": ["Azure Migrate", "Azure Site Recovery", "Azure Database Migration Service", "Azure Data Box"],
+    "options": [
+      "Azure Migrate",
+      "Azure Site Recovery",
+      "Azure Database Migration Service",
+      "Azure Data Box"
+    ],
     "correct": 0,
-    "explication": "Azure Migrate évalue et migre les serveurs vers Azure."
+    "explanation": "Azure Migrate évalue et migre les serveurs vers Azure."
   },
   {
     "id": "AZ-900-071",
@@ -505,9 +755,14 @@
     "theme_label": "Migration",
     "difficulty": "easy",
     "question": "Quel service Azure transfère des données physiques (appareil) ?",
-    "options": ["Azure Data Box", "Azure Migrate", "Azure Site Recovery", "Azure Import/Export"],
+    "options": [
+      "Azure Data Box",
+      "Azure Migrate",
+      "Azure Site Recovery",
+      "Azure Import/Export"
+    ],
     "correct": 0,
-    "explication": "Data Box est un appareil physique pour le transfert de grandes quantités de données."
+    "explanation": "Data Box est un appareil physique pour le transfert de grandes quantités de données."
   },
   {
     "id": "AZ-900-072",
@@ -515,9 +770,14 @@
     "theme_label": "Migration",
     "difficulty": "easy",
     "question": "Quel service Azure assure la reprise après sinistre (DR) ?",
-    "options": ["Azure Site Recovery", "Azure Backup", "Azure Migrate", "Azure Disaster Recovery"],
+    "options": [
+      "Azure Site Recovery",
+      "Azure Backup",
+      "Azure Migrate",
+      "Azure Disaster Recovery"
+    ],
     "correct": 0,
-    "explication": "Site Recovery orchestre la réplication et le basculement."
+    "explanation": "Site Recovery orchestre la réplication et le basculement."
   },
   {
     "id": "AZ-900-073",
@@ -525,9 +785,14 @@
     "theme_label": "Backup",
     "difficulty": "easy",
     "question": "Quel service Azure sauvegarde les données ?",
-    "options": ["Azure Backup", "Azure Site Recovery", "Azure Migrate", "Azure Storage"],
+    "options": [
+      "Azure Backup",
+      "Azure Site Recovery",
+      "Azure Migrate",
+      "Azure Storage"
+    ],
     "correct": 0,
-    "explication": "Azure Backup est le service de sauvegarde managé."
+    "explanation": "Azure Backup est le service de sauvegarde managé."
   },
   {
     "id": "AZ-900-074",
@@ -535,9 +800,14 @@
     "theme_label": "Cost Management",
     "difficulty": "easy",
     "question": "Quel service Azure aide à gérer et optimiser les coûts ?",
-    "options": ["Azure Cost Management", "Azure Advisor", "Azure Budgets", "Azure Pricing Calculator"],
+    "options": [
+      "Azure Cost Management",
+      "Azure Advisor",
+      "Azure Budgets",
+      "Azure Pricing Calculator"
+    ],
     "correct": 0,
-    "explication": "Cost Management fournit des outils d'analyse et d'optimisation des coûts."
+    "explanation": "Cost Management fournit des outils d'analyse et d'optimisation des coûts."
   },
   {
     "id": "AZ-900-075",
@@ -545,9 +815,14 @@
     "theme_label": "Advisor",
     "difficulty": "easy",
     "question": "Quel service Azure fournit des recommandations personnalisées ?",
-    "options": ["Azure Advisor", "Azure Monitor", "Azure Cost Management", "Azure Security Center"],
+    "options": [
+      "Azure Advisor",
+      "Azure Monitor",
+      "Azure Cost Management",
+      "Azure Security Center"
+    ],
     "correct": 0,
-    "explication": "Advisor donne des conseils sur la fiabilité, la sécurité, les performances et les coûts."
+    "explanation": "Advisor donne des conseils sur la fiabilité, la sécurité, les performances et les coûts."
   },
   {
     "id": "AZ-900-076",
@@ -555,9 +830,14 @@
     "theme_label": "Security Center",
     "difficulty": "easy",
     "question": "Quel service Azure unifie la gestion de la sécurité ?",
-    "options": ["Azure Security Center", "Azure Sentinel", "Azure Defender", "Azure Policy"],
+    "options": [
+      "Azure Security Center",
+      "Azure Sentinel",
+      "Azure Defender",
+      "Azure Policy"
+    ],
     "correct": 0,
-    "explication": "Security Center fournit une vue unifiée de la sécurité."
+    "explanation": "Security Center fournit une vue unifiée de la sécurité."
   },
   {
     "id": "AZ-900-077",
@@ -565,9 +845,14 @@
     "theme_label": "Sentinel",
     "difficulty": "easy",
     "question": "Quel service Azure est un SIEM (Security Information and Event Management) ?",
-    "options": ["Azure Sentinel", "Azure Security Center", "Azure Log Analytics", "Azure Monitor"],
+    "options": [
+      "Azure Sentinel",
+      "Azure Security Center",
+      "Azure Log Analytics",
+      "Azure Monitor"
+    ],
     "correct": 0,
-    "explication": "Azure Sentinel est un SIEM/SOAR cloud."
+    "explanation": "Azure Sentinel est un SIEM/SOAR cloud."
   },
   {
     "id": "AZ-900-078",
@@ -575,9 +860,14 @@
     "theme_label": "Firewall",
     "difficulty": "easy",
     "question": "Quel service Azure est un firewall managé ?",
-    "options": ["Azure Firewall", "Azure Application Gateway (WAF)", "Azure DDoS Protection", "Azure Network Security Group"],
+    "options": [
+      "Azure Firewall",
+      "Azure Application Gateway (WAF)",
+      "Azure DDoS Protection",
+      "Azure Network Security Group"
+    ],
     "correct": 0,
-    "explication": "Azure Firewall est un service de sécurité réseau managé."
+    "explanation": "Azure Firewall est un service de sécurité réseau managé."
   },
   {
     "id": "AZ-900-079",
@@ -585,9 +875,14 @@
     "theme_label": "DDoS Protection",
     "difficulty": "easy",
     "question": "Quel service Azure protège contre les attaques DDoS ?",
-    "options": ["Azure DDoS Protection", "Azure Firewall", "Azure Application Gateway (WAF)", "Azure Network Security Group"],
+    "options": [
+      "Azure DDoS Protection",
+      "Azure Firewall",
+      "Azure Application Gateway (WAF)",
+      "Azure Network Security Group"
+    ],
     "correct": 0,
-    "explication": "DDoS Protection offre une protection contre les attaques volumétriques."
+    "explanation": "DDoS Protection offre une protection contre les attaques volumétriques."
   },
   {
     "id": "AZ-900-080",
@@ -595,8 +890,416 @@
     "theme_label": "Key Vault",
     "difficulty": "easy",
     "question": "Quel service Azure stocke les secrets et clés ?",
-    "options": ["Azure Key Vault", "Azure Security Center", "Azure Information Protection", "Azure AD"],
+    "options": [
+      "Azure Key Vault",
+      "Azure Security Center",
+      "Azure Information Protection",
+      "Azure AD"
+    ],
     "correct": 0,
-    "explication": "Key Vault gère les secrets, les clés de chiffrement et les certificats."
+    "explanation": "Key Vault gère les secrets, les clés de chiffrement et les certificats."
+  },
+  {
+    "id": "AZ900-ACS-001",
+    "theme": "Azure Core Services",
+    "theme_label": "Networking",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les réseaux virtuels Azure :",
+    "options": [
+      "Les réseaux virtuels permettent de créer des environnements isolés.",
+      "Les sous-réseaux sont créés automatiquement lorsque vous créez un réseau virtuel.",
+      "Les groupes de sécurité virtuels (NSGs) sont utilisés pour contrôler le trafic réseau.",
+      "Les points de terminaison de service (Service Endpoints) permettent le contrôle du trafic entrant.",
+      "Les réseaux virtuels peuvent être connectés entre eux à l'aide de ponts."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les réseaux virtuels permettent de créer des environnements isolés (A). Les sous-réseaux doivent être créés manuellement (B est incorrect). Les groupes de sécurité virtuels (NSGs) sont utilisés pour contrôler le trafic réseau (C). Les points de terminaison de service (Service Endpoints) permettent le contrôle du trafic entrant (D). Les réseaux virtuels peuvent être connectés entre eux à l'aide de ponts (E)."
+  },
+  {
+    "id": "AZ900-ACS-002",
+    "theme": "Azure Core Services",
+    "theme_label": "Compute",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est utilisé pour exécuter des fonctions réactives et événementielles sans serveur ?",
+    "options": [
+      "Azure Functions",
+      "Azure App Service",
+      "Azure Kubernetes Service",
+      "Azure Virtual Machines"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Functions est le service utilisé pour exécuter des fonctions réactives et événementielles sans serveur (A). Azure App Service est un PaaS pour héberger des applications web, API, mobile backends (B est incorrect). Azure Kubernetes Service est un service PaaS pour déployer, mettre à l'échelle et gérer des applications conteneurisées (C est incorrect). Azure Virtual Machines sont des machines virtuelles IaaS (D est incorrect)."
+  },
+  {
+    "id": "AZ900-ACS-003",
+    "theme": "Azure Core Services",
+    "theme_label": "Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le stockage Azure Blob :",
+    "options": [
+      "Le stockage Blob est utilisé pour stocker des données de blocs.",
+      "Les conteneurs sont utilisés pour organiser les objets Blob.",
+      "Le stockage Blob est accessible via HTTP et HTTPS.",
+      "Les objets Blob peuvent être partagés en lecture seule ou en écriture seule.",
+      "Le stockage Blob est facturé par le nombre de requêtes et la taille des données stockées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "Le stockage Blob est utilisé pour stocker des données de blocs (A). Les conteneurs sont utilisés pour organiser les objets Blob (B). Le stockage Blob est accessible via HTTP et HTTPS (C). Les objets Blob peuvent être partagés en lecture seule ou en écriture seule (D est incorrect). Le stockage Blob est facturé par le nombre de requêtes et la taille des données stockées (E)."
+  },
+  {
+    "id": "AZ900-ACS-004",
+    "theme": "Azure Core Services",
+    "theme_label": "Integration",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet de connecter et d'intégrer des applications, services et données entre eux ?",
+    "options": [
+      "Azure Logic Apps",
+      "Azure Event Grid",
+      "Azure Service Bus",
+      "Azure Functions"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Logic Apps permet de connecter et d'intégrer des applications, services et données entre eux (A). Azure Event Grid est un service de diffusion d'événements qui peut être utilisé pour publier et abonner des événements (B est incorrect). Azure Service Bus est un service de messagerie qui permet d'envoyer et de recevoir des messages (C est incorrect). Azure Functions peut être utilisé pour exécuter du code réactif et événementiel sans serveur (D est incorrect)."
+  },
+  {
+    "id": "AZ900-ACS-005",
+    "theme": "Azure Core Services",
+    "theme_label": "Monitoring",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est utilisé pour surveiller les performances et la santé des applications et services ?",
+    "options": [
+      "Azure Monitor",
+      "Azure Log Analytics",
+      "Azure Application Insights",
+      "Azure Cost Management"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Azure Monitor est utilisé pour surveiller les performances et la santé des applications et services (A est incorrect). Azure Log Analytics permet d'analyser les journaux et les données de diagnostic (B est incorrect). Azure Application Insights permet de surveiller les performances et la santé des applications et services (C est correct). Azure Cost Management permet de gérer les coûts associés à Azure (D est incorrect)."
+  },
+  {
+    "id": "AZ900-ACS-006",
+    "theme": "Azure Core Services",
+    "theme_label": "Networking",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Virtual Network :",
+    "options": [
+      "Il permet de créer des réseaux virtuels.",
+      "Il peut être utilisé pour connecter les machines virtuelles à Internet.",
+      "Il offre des services de sécurité réseau avancés.",
+      "Il peut être utilisé pour déployer des applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option A est correcte car Azure Virtual Network permet de créer des réseaux virtuels. L'option B est incorrecte car Azure Virtual Network ne peut pas être utilisé directement pour connecter les machines virtuelles à Internet. L'option C est correcte car Azure Virtual Network offre des services de sécurité réseau avancés. L'option D est incorrecte car Azure Virtual Network n'est pas spécifiquement conçu pour déployer des applications web."
+  },
+  {
+    "id": "AZ900-ACS-007",
+    "theme": "Azure Core Services",
+    "theme_label": "Compute",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet de créer des machines virtuelles ?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure App Service",
+      "Azure Functions",
+      "Azure Kubernetes Service"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Virtual Machines est le service IaaS pour créer des machines virtuelles."
+  },
+  {
+    "id": "AZ900-ACS-008",
+    "theme": "Azure Core Services",
+    "theme_label": "Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Blob Storage :",
+    "options": [
+      "Il est utilisé pour stocker des données de blocs.",
+      "Il peut être utilisé pour héberger des applications web statiques.",
+      "Il offre un stockage dur pour les données à long terme.",
+      "Il peut être utilisé pour stocker des fichiers volumineux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "L'option A est correcte car Azure Blob Storage est utilisé pour stocker des données de blocs. L'option B est correcte car Azure Blob Storage peut être utilisé pour héberger des applications web statiques. L'option C est correcte car Azure Blob Storage offre un stockage dur pour les données à long terme. L'option D est correcte car Azure Blob Storage peut être utilisé pour stocker des fichiers volumineux."
+  },
+  {
+    "id": "AZ900-ACS-009",
+    "theme": "Azure Core Services",
+    "theme_label": "Integration",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet d'intégrer des applications et services entre eux ?",
+    "options": [
+      "Azure Logic Apps",
+      "Azure Event Grid",
+      "Azure Service Bus",
+      "Azure Functions"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Logic Apps permet d'intégrer des applications et services entre eux en utilisant une logique de flux de travail."
+  },
+  {
+    "id": "AZ900-ACS-010",
+    "theme": "Azure Core Services",
+    "theme_label": "Database",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est un PaaS pour héberger des bases de données relationnelles ?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Blob Storage",
+      "Azure Table Storage"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure SQL Database est un service PaaS pour héberger des bases de données relationnelles."
+  },
+  {
+    "id": "AZ900-ACS-011",
+    "theme": "Azure Core Services",
+    "theme_label": "Networking",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les services de réseau Azure :",
+    "options": [
+      "Azure Virtual Network (VNet)",
+      "Azure ExpressRoute",
+      "Azure Traffic Manager",
+      "Azure DNS",
+      "Azure Load Balancer"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Azure Virtual Network (VNet) permet de créer un réseau virtuel privé. Azure ExpressRoute offre une connexion privée à haut débit vers des sites locaux. Azure Traffic Manager distribue le trafic entre les points de terminaison. Azure DNS fournit des services DNS pour les domaines publics et privés. Azure Load Balancer distribue le trafic réseau entre les instances de service."
+  },
+  {
+    "id": "AZ900-ACS-012",
+    "theme": "Azure Core Services",
+    "theme_label": "Compute",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet de créer des machines virtuelles ?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure App Service",
+      "Azure Functions",
+      "Azure Container Instances"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Virtual Machines est le service IaaS pour créer et gérer des machines virtuelles."
+  },
+  {
+    "id": "AZ900-ACS-013",
+    "theme": "Azure Core Services",
+    "theme_label": "Storage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types de stockage Azure :",
+    "options": [
+      "Azure Blob Storage",
+      "Azure File Storage",
+      "Azure Disk Storage",
+      "Azure Table Storage",
+      "Azure Queue Storage"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Azure Blob Storage est idéal pour stocker des objets de taille variable. Azure File Storage offre un accès à fichiers partagés via SMB. Azure Disk Storage est utilisé pour le stockage de données persistantes pour les VMs. Azure Table Storage est un service NoSQL pour stocker des données structurées de manière flexible. Azure Queue Storage permet d'envoyer et de recevoir des messages entre les composants d'une application."
+  },
+  {
+    "id": "AZ900-ACS-014",
+    "theme": "Azure Core Services",
+    "theme_label": "Integration",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet d'intégrer des applications et des services entre eux ?",
+    "options": [
+      "Azure Logic Apps",
+      "Azure Event Grid",
+      "Azure Service Bus",
+      "Azure API Management"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Logic Apps permet de créer des workflows automatisés pour intégrer et automatiser les applications."
+  },
+  {
+    "id": "AZ900-ACS-015",
+    "theme": "Azure Core Services",
+    "theme_label": "Monitoring",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet de surveiller les performances et la santé des applications ?",
+    "options": [
+      "Azure Monitor",
+      "Azure Log Analytics",
+      "Azure Application Insights",
+      "Azure Cost Management"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Application Insights permet de surveiller les performances et la santé des applications, détecter les anomalies et générer des rapports."
+  },
+  {
+    "id": "AZ900-ACS-016",
+    "theme": "Azure Core Services",
+    "theme_label": "Networking",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Virtual Network (VNet) :",
+    "options": [
+      "Un VNet permet de connecter des machines virtuelles à Internet.",
+      "Un VNet peut être utilisé pour isoler les ressources Azure entre elles.",
+      "Un VNet peut uniquement être créé dans une région spécifique.",
+      "Un VNet peut être utilisé pour connecter des machines virtuelles à d'autres réseaux locaux via ExpressRoute.",
+      "Un VNet peut être utilisé pour créer des passerelles VPN entre différents réseaux."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Un VNet peut être utilisé pour isoler les ressources Azure entre elles (B). Un VNet peut être utilisé pour connecter des machines virtuelles à d'autres réseaux locaux via ExpressRoute (D). Un VNet ne permet pas de connecter des machines virtuelles à Internet directement (A est incorrect). Un VNet peut être créé dans plusieurs régions (C est incorrect). Un VNet peut être utilisé pour créer des passerelles VPN entre différents réseaux (E est correct)."
+  },
+  {
+    "id": "AZ900-ACS-017",
+    "theme": "Azure Core Services",
+    "theme_label": "Compute",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est utilisé pour exécuter des conteneurs ?",
+    "options": [
+      "Azure App Service",
+      "Azure Functions",
+      "Azure Container Instances",
+      "Azure Kubernetes Service"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Azure Container Instances est le service pour exécuter des conteneurs sans avoir à gérer l'infrastructure sous-jacente."
+  },
+  {
+    "id": "AZ900-ACS-018",
+    "theme": "Azure Core Services",
+    "theme_label": "Storage",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Blob Storage :",
+    "options": [
+      "Azure Blob Storage est un service pour stocker des fichiers volumineux.",
+      "Azure Blob Storage peut être utilisé pour stocker des données d'application, des images et des vidéos.",
+      "Azure Blob Storage offre un stockage dur pour les données critiques.",
+      "Azure Blob Storage peut uniquement être utilisé avec des applications web Azure.",
+      "Azure Blob Storage offre un stockage temporaire pour les données."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Blob Storage est un service pour stocker des fichiers volumineux (A). Azure Blob Storage peut être utilisé pour stocker des données d'application, des images et des vidéos (B). Azure Blob Storage offre un stockage dur pour les données critiques (C). Azure Blob Storage peut être utilisé avec des applications web Azure et d'autres types d'applications (D est incorrect). Azure Blob Storage offre un stockage permanent, pas temporaire, pour les données (E est incorrect)."
+  },
+  {
+    "id": "AZ900-ACS-019",
+    "theme": "Azure Core Services",
+    "theme_label": "Integration",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Logic Apps :",
+    "options": [
+      "Azure Logic Apps est un service pour automatiser les workflows entre applications et services.",
+      "Azure Logic Apps peut être utilisé pour créer des pipelines d'intégration entre différents systèmes.",
+      "Azure Logic Apps offre une interface utilisateur graphique pour créer des workflows complexes.",
+      "Azure Logic Apps peut uniquement être utilisé avec des services Azure.",
+      "Azure Logic Apps offre un stockage dur pour les données traitées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Azure Logic Apps est un service pour automatiser les workflows entre applications et services (A). Azure Logic Apps peut être utilisé pour créer des pipelines d'intégration entre différents systèmes (B). Azure Logic Apps offre une interface utilisateur graphique pour créer des workflows complexes (C). Azure Logic Apps peut être utilisé avec des services Azure et d'autres systèmes non-Azure (D est incorrect). Azure Logic Apps offre un stockage dur pour les données traitées, mais ce n'est pas sa principale fonction (E est incorrect)."
+  },
+  {
+    "id": "AZ900-ACS-020",
+    "theme": "Azure Core Services",
+    "theme_label": "Database",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure est utilisé pour stocker des données relationnelles ?",
+    "options": [
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Table Storage",
+      "Azure Blob Storage"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure SQL Database est le service pour stocker des données relationnelles."
+  },
+  {
+    "id": "AZ900-ACS-021",
+    "theme": "Azure Core Services",
+    "theme_label": "Networking",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les services de réseau Azure :",
+    "options": [
+      "Azure Virtual Network permet la création d'un réseau virtuel privé.",
+      "Azure Load Balancer peut répartir le trafic entre plusieurs instances de machines virtuelles.",
+      "Azure Express Route offre une connexion privée et haute performance vers le réseau local.",
+      "Azure Traffic Manager permet de gérer les flux de trafic entre plusieurs services Azure.",
+      "Azure Firewall offre une solution de pare-feu réseau pour les réseaux virtuels."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Azure Virtual Network permet la création d'un réseau virtuel privé. Azure Load Balancer peut répartir le trafic entre plusieurs instances de machines virtuelles. Azure Express Route offre une connexion privée et haute performance vers le réseau local. Azure Traffic Manager permet de gérer les flux de trafic entre plusieurs services Azure. Azure Firewall offre une solution de pare-feu réseau pour les réseaux virtuels."
   }
 ]

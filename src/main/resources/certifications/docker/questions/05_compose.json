@@ -12,7 +12,7 @@
       "Registre d'images"
     ],
     "correct": 0,
-    "explication": "Docker Compose utilise des fichiers YAML pour configurer les services."
+    "explanation": "Docker Compose utilise des fichiers YAML pour configurer les services."
   },
   {
     "id": "DKR-05-002",
@@ -27,7 +27,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Depuis Docker Compose v2, compose.yml est aussi accepté."
+    "explanation": "Depuis Docker Compose v2, compose.yml est aussi accepté."
   },
   {
     "id": "DKR-05-003",
@@ -42,7 +42,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker-compose (v1) ou docker compose (v2)."
+    "explanation": "docker-compose (v1) ou docker compose (v2)."
   },
   {
     "id": "DKR-05-004",
@@ -57,7 +57,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "down arrête et supprime les conteneurs, réseaux, et volumes par défaut."
+    "explanation": "down arrête et supprime les conteneurs, réseaux, et volumes par défaut."
   },
   {
     "id": "DKR-05-005",
@@ -72,7 +72,7 @@
       "Affiche les logs"
     ],
     "correct": 0,
-    "explication": "-d (detached) exécute en arrière-plan."
+    "explanation": "-d (detached) exécute en arrière-plan."
   },
   {
     "id": "DKR-05-006",
@@ -87,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "logs -f suit les logs en temps réel."
+    "explanation": "logs -f suit les logs en temps réel."
   },
   {
     "id": "DKR-05-007",
@@ -95,9 +95,14 @@
     "theme_label": "Fichier compose.yml",
     "difficulty": "easy",
     "question": "Quelle est la version minimale recommandée de Compose ?",
-    "options": ["3.x", "2.x", "1.x", "Toutes"],
+    "options": [
+      "3.x",
+      "2.x",
+      "1.x",
+      "Toutes"
+    ],
     "correct": 0,
-    "explication": "La version 3.x est compatible avec Swarm et les nouvelles fonctionnalités."
+    "explanation": "La version 3.x est compatible avec Swarm et les nouvelles fonctionnalités."
   },
   {
     "id": "DKR-05-008",
@@ -112,7 +117,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Un fichier Compose typique a version, services, et éventuellement networks, volumes."
+    "explanation": "Un fichier Compose typique a version, services, et éventuellement networks, volumes."
   },
   {
     "id": "DKR-05-009",
@@ -127,7 +132,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "image spécifie une image existante, build construit à partir d'un Dockerfile."
+    "explanation": "image spécifie une image existante, build construit à partir d'un Dockerfile."
   },
   {
     "id": "DKR-05-010",
@@ -142,7 +147,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "ports publie sur l'hôte, expose rend accessible aux services liés."
+    "explanation": "ports publie sur l'hôte, expose rend accessible aux services liés."
   },
   {
     "id": "DKR-05-011",
@@ -157,7 +162,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Bind mounts, volumes nommés, et chemins relatifs sont supportés."
+    "explanation": "Bind mounts, volumes nommés, et chemins relatifs sont supportés."
   },
   {
     "id": "DKR-05-012",
@@ -172,7 +177,7 @@
       "Aucune"
     ],
     "correct": 2,
-    "explication": "Il faut déclarer le volume au niveau racine, puis le référencer dans le service."
+    "explanation": "Il faut déclarer le volume au niveau racine, puis le référencer dans le service."
   },
   {
     "id": "DKR-05-013",
@@ -187,7 +192,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Déclarer le réseau puis l'assigner aux services."
+    "explanation": "Déclarer le réseau puis l'assigner aux services."
   },
   {
     "id": "DKR-05-014",
@@ -202,7 +207,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons de définir les variables."
+    "explanation": "Plusieurs façons de définir les variables."
   },
   {
     "id": "DKR-05-015",
@@ -210,9 +215,14 @@
     "theme_label": "Variables d'environnement",
     "difficulty": "easy",
     "question": "Quel fichier Compose lit automatiquement les variables d'environnement ?",
-    "options": [".env", "env.txt", "variables.env", "compose.env"],
+    "options": [
+      ".env",
+      "env.txt",
+      "variables.env",
+      "compose.env"
+    ],
     "correct": 0,
-    "explication": "Le fichier .env à côté du fichier compose.yml est automatiquement chargé."
+    "explanation": "Le fichier .env à côté du fichier compose.yml est automatiquement chargé."
   },
   {
     "id": "DKR-05-016",
@@ -227,7 +237,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "depends_on gère l'ordre de démarrage, mais pas l'attente de santé."
+    "explanation": "depends_on gère l'ordre de démarrage, mais pas l'attente de santé."
   },
   {
     "id": "DKR-05-017",
@@ -235,9 +245,14 @@
     "theme_label": "Dépendances",
     "difficulty": "easy",
     "question": "Quelle option de depends_on attend que le service soit sain (healthcheck) ?",
-    "options": ["service_healthy", "service_started", "service_ready", "service_alive"],
+    "options": [
+      "service_healthy",
+      "service_started",
+      "service_ready",
+      "service_alive"
+    ],
     "correct": 0,
-    "explication": "condition: service_healthy (Compose v2.2+)."
+    "explanation": "condition: service_healthy (Compose v2.2+)."
   },
   {
     "id": "DKR-05-018",
@@ -252,7 +267,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "exec exécute dans un conteneur en cours, run crée un nouveau conteneur."
+    "explanation": "exec exécute dans un conteneur en cours, run crée un nouveau conteneur."
   },
   {
     "id": "DKR-05-019",
@@ -267,7 +282,7 @@
       "Affiche les images"
     ],
     "correct": 0,
-    "explication": "Reconstruit les images selon les Dockerfiles."
+    "explanation": "Reconstruit les images selon les Dockerfiles."
   },
   {
     "id": "DKR-05-020",
@@ -282,7 +297,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "--no-cache ignore le cache Docker."
+    "explanation": "--no-cache ignore le cache Docker."
   },
   {
     "id": "DKR-05-021",
@@ -297,7 +312,7 @@
       "Configurer les réseaux"
     ],
     "correct": 0,
-    "explication": "Un service avec profiles ne démarre que si le profil est spécifié."
+    "explanation": "Un service avec profiles ne démarre que si le profil est spécifié."
   },
   {
     "id": "DKR-05-022",
@@ -312,7 +327,7 @@
       "B et C"
     ],
     "correct": 3,
-    "explication": "Option --profile ou variable d'environnement."
+    "explanation": "Option --profile ou variable d'environnement."
   },
   {
     "id": "DKR-05-023",
@@ -327,7 +342,7 @@
       "Variables d'environnement"
     ],
     "correct": 0,
-    "explication": "Les champs x- permettent de factoriser des fragments YAML."
+    "explanation": "Les champs x- permettent de factoriser des fragments YAML."
   },
   {
     "id": "DKR-05-024",
@@ -342,7 +357,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les ancres YAML (&) et alias (*) sont supportés, !reference aussi."
+    "explanation": "Les ancres YAML (&) et alias (*) sont supportés, !reference aussi."
   },
   {
     "id": "DKR-05-025",
@@ -357,7 +372,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les deux sont possibles pour configurer le healthcheck."
+    "explanation": "Les deux sont possibles pour configurer le healthcheck."
   },
   {
     "id": "DKR-05-026",
@@ -365,9 +380,14 @@
     "theme_label": "Healthcheck",
     "difficulty": "medium",
     "question": "Comment désactiver le healthcheck hérité ?",
-    "options": ["healthcheck: disable: true", "healthcheck: off", "healthcheck: none", "healthcheck: false"],
+    "options": [
+      "healthcheck: disable: true",
+      "healthcheck: off",
+      "healthcheck: none",
+      "healthcheck: false"
+    ],
     "correct": 0,
-    "explication": "disable: true supprime tout healthcheck de l'image."
+    "explanation": "disable: true supprime tout healthcheck de l'image."
   },
   {
     "id": "DKR-05-027",
@@ -382,7 +402,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "deploy.replicas est utilisé pour Swarm, --scale pour le mode local."
+    "explanation": "deploy.replicas est utilisé pour Swarm, --scale pour le mode local."
   },
   {
     "id": "DKR-05-028",
@@ -390,9 +410,14 @@
     "theme_label": "Scale",
     "difficulty": "easy",
     "question": "Les réplicas avec --scale fonctionnent-ils sans Swarm ?",
-    "options": ["Oui", "Non", "Uniquement avec --compatibility", "Uniquement avec Docker Desktop"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec --compatibility",
+      "Uniquement avec Docker Desktop"
+    ],
     "correct": 0,
-    "explication": "docker compose up --scale fonctionne en mode local (création de plusieurs conteneurs)."
+    "explanation": "docker compose up --scale fonctionne en mode local (création de plusieurs conteneurs)."
   },
   {
     "id": "DKR-05-029",
@@ -407,7 +432,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "external: true indique que le réseau existe déjà."
+    "explanation": "external: true indique que le réseau existe déjà."
   },
   {
     "id": "DKR-05-030",
@@ -422,7 +447,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Par défaut le driver est bridge, overlay nécessite Swarm."
+    "explanation": "Par défaut le driver est bridge, overlay nécessite Swarm."
   },
   {
     "id": "DKR-05-031",
@@ -437,7 +462,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "driver et driver_opts permettent de configurer le volume."
+    "explanation": "driver et driver_opts permettent de configurer le volume."
   },
   {
     "id": "DKR-05-032",
@@ -452,7 +477,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "external: true utilise un volume déjà créé."
+    "explanation": "external: true utilise un volume déjà créé."
   },
   {
     "id": "DKR-05-033",
@@ -460,9 +485,14 @@
     "theme_label": "Dépendances avancées",
     "difficulty": "hard",
     "question": "Quelle condition de depends_on permet d'attendre la fin d'un service one-shot ?",
-    "options": ["service_completed_successfully", "service_healthy", "service_started", "service_ready"],
+    "options": [
+      "service_completed_successfully",
+      "service_healthy",
+      "service_started",
+      "service_ready"
+    ],
     "correct": 0,
-    "explication": "service_completed_successfully attend qu'un service run se termine avec succès."
+    "explanation": "service_completed_successfully attend qu'un service run se termine avec succès."
   },
   {
     "id": "DKR-05-034",
@@ -477,7 +507,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les trois conditions sont supportées dans les versions récentes."
+    "explanation": "Les trois conditions sont supportées dans les versions récentes."
   },
   {
     "id": "DKR-05-035",
@@ -485,9 +515,14 @@
     "theme_label": "Variables de substitution",
     "difficulty": "easy",
     "question": "Comment utiliser une variable d'environnement dans un fichier Compose ?",
-    "options": ["${VAR}", "$VAR", "{{VAR}}", "%VAR%"],
+    "options": [
+      "${VAR}",
+      "$VAR",
+      "{{VAR}}",
+      "%VAR%"
+    ],
     "correct": 0,
-    "explication": "La syntaxe est ${VAR} ou $VAR (avec substitution)."
+    "explanation": "La syntaxe est ${VAR} ou $VAR (avec substitution)."
   },
   {
     "id": "DKR-05-036",
@@ -495,9 +530,14 @@
     "theme_label": "Variables de substitution",
     "difficulty": "easy",
     "question": "Comment fournir une valeur par défaut pour une variable ?",
-    "options": ["${VAR:-default}", "${VAR-default}", "$VAR:-default", "A et B"],
+    "options": [
+      "${VAR:-default}",
+      "${VAR-default}",
+      "$VAR:-default",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "${VAR:-default} et ${VAR-default} fonctionnent."
+    "explanation": "${VAR:-default} et ${VAR-default} fonctionnent."
   },
   {
     "id": "DKR-05-037",
@@ -505,9 +545,14 @@
     "theme_label": "Docker Compose v2",
     "difficulty": "easy",
     "question": "Quelle commande remplace `docker-compose` dans Docker Compose v2 ?",
-    "options": ["docker compose", "docker compose v2", "docker compose2", "docker run compose"],
+    "options": [
+      "docker compose",
+      "docker compose v2",
+      "docker compose2",
+      "docker run compose"
+    ],
     "correct": 0,
-    "explication": "docker compose (sans tiret) est le plugin officiel."
+    "explanation": "docker compose (sans tiret) est le plugin officiel."
   },
   {
     "id": "DKR-05-038",
@@ -515,9 +560,14 @@
     "theme_label": "Docker Compose v2",
     "difficulty": "easy",
     "question": "Docker Compose v2 est-il intégré à Docker CLI ?",
-    "options": ["Oui (plugin)", "Non", "Uniquement sur Docker Desktop", "Uniquement sur Linux"],
+    "options": [
+      "Oui (plugin)",
+      "Non",
+      "Uniquement sur Docker Desktop",
+      "Uniquement sur Linux"
+    ],
     "correct": 0,
-    "explication": "Le plugin compose est inclus avec Docker Engine 20.10+."
+    "explanation": "Le plugin compose est inclus avec Docker Engine 20.10+."
   },
   {
     "id": "DKR-05-039",
@@ -525,9 +575,14 @@
     "theme_label": "Docker Compose v2",
     "difficulty": "easy",
     "question": "Les commandes `docker compose` sont-elles rétrocompatibles avec `docker-compose` ?",
-    "options": ["Généralement oui", "Non", "Partiellement", "Uniquement pour les commandes de base"],
+    "options": [
+      "Généralement oui",
+      "Non",
+      "Partiellement",
+      "Uniquement pour les commandes de base"
+    ],
     "correct": 0,
-    "explication": "La plupart des commandes et options sont compatibles."
+    "explanation": "La plupart des commandes et options sont compatibles."
   },
   {
     "id": "DKR-05-040",
@@ -542,7 +597,7 @@
       "Surveille les volumes"
     ],
     "correct": 0,
-    "explication": "watch (expérimental) synchronise les changements de code."
+    "explanation": "watch (expérimental) synchronise les changements de code."
   },
   {
     "id": "DKR-05-041",
@@ -557,7 +612,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons selon la version."
+    "explanation": "Plusieurs façons selon la version."
   },
   {
     "id": "DKR-05-042",
@@ -572,7 +627,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "deploy.resources pour Swarm, cpus/mem_limit pour local (obsolète)."
+    "explanation": "deploy.resources pour Swarm, cpus/mem_limit pour local (obsolète)."
   },
   {
     "id": "DKR-05-043",
@@ -587,7 +642,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les options cpus et mem_limit sont utilisées en mode local."
+    "explanation": "Les options cpus et mem_limit sont utilisées en mode local."
   },
   {
     "id": "DKR-05-044",
@@ -602,7 +657,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "L'option -f permet de spécifier plusieurs fichiers."
+    "explanation": "L'option -f permet de spécifier plusieurs fichiers."
   },
   {
     "id": "DKR-05-045",
@@ -610,9 +665,14 @@
     "theme_label": "Multi-fichiers",
     "difficulty": "easy",
     "question": "Quel fichier est automatiquement fusionné s'il existe ?",
-    "options": ["docker-compose.override.yml", "compose.override.yml", "override.yml", "A et B"],
+    "options": [
+      "docker-compose.override.yml",
+      "compose.override.yml",
+      "override.yml",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "Le fichier override est automatiquement pris en compte."
+    "explanation": "Le fichier override est automatiquement pris en compte."
   },
   {
     "id": "DKR-05-046",
@@ -627,7 +687,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "config --profiles affiche les profils définis."
+    "explanation": "config --profiles affiche les profils définis."
   },
   {
     "id": "DKR-05-047",
@@ -642,7 +702,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les services sans profil sont toujours démarrés."
+    "explanation": "Les services sans profil sont toujours démarrés."
   },
   {
     "id": "DKR-05-048",
@@ -657,7 +717,7 @@
       "Oui, avec docker service create"
     ],
     "correct": 0,
-    "explication": "docker stack deploy utilise les fichiers Compose (version 3)."
+    "explanation": "docker stack deploy utilise les fichiers Compose (version 3)."
   },
   {
     "id": "DKR-05-049",
@@ -665,9 +725,14 @@
     "theme_label": "Docker Compose vs Swarm",
     "difficulty": "medium",
     "question": "Quelle directive Compose est ignorée par docker stack deploy ?",
-    "options": ["build", "cpus", "mem_limit", "Toutes ces réponses"],
+    "options": [
+      "build",
+      "cpus",
+      "mem_limit",
+      "Toutes ces réponses"
+    ],
     "correct": 3,
-    "explication": "Le déploiement en stack ignore les directives de build et certaines limites."
+    "explanation": "Le déploiement en stack ignore les directives de build et certaines limites."
   },
   {
     "id": "DKR-05-050",
@@ -682,7 +747,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "config valide et affiche la configuration résultante."
+    "explanation": "config valide et affiche la configuration résultante."
   },
   {
     "id": "DKR-05-051",
@@ -697,7 +762,7 @@
       "Supprime les images"
     ],
     "correct": 0,
-    "explication": "Utile pour la reproductibilité des déploiements."
+    "explanation": "Utile pour la reproductibilité des déploiements."
   },
   {
     "id": "DKR-05-052",
@@ -712,7 +777,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Le mode verbose affiche les commandes Docker sous-jacentes."
+    "explanation": "Le mode verbose affiche les commandes Docker sous-jacentes."
   },
   {
     "id": "DKR-05-053",
@@ -727,7 +792,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Le nom du projet est utilisé pour les préfixes des ressources."
+    "explanation": "Le nom du projet est utilisé pour les préfixes des ressources."
   },
   {
     "id": "DKR-05-054",
@@ -742,7 +807,7 @@
       "Le nom du fichier"
     ],
     "correct": 0,
-    "explication": "Le répertoire courant donne son nom au projet."
+    "explanation": "Le répertoire courant donne son nom au projet."
   },
   {
     "id": "DKR-05-055",
@@ -757,7 +822,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Postgres et MySQL exécutent les scripts dans ce répertoire."
+    "explanation": "Postgres et MySQL exécutent les scripts dans ce répertoire."
   },
   {
     "id": "DKR-05-056",
@@ -772,7 +837,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs techniques pour synchroniser le démarrage."
+    "explanation": "Plusieurs techniques pour synchroniser le démarrage."
   },
   {
     "id": "DKR-05-057",
@@ -787,7 +852,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "kompose et docker compose convert (expérimental) peuvent convertir."
+    "explanation": "kompose et docker compose convert (expérimental) peuvent convertir."
   },
   {
     "id": "DKR-05-058",
@@ -795,9 +860,14 @@
     "theme_label": "Docker Compose vs Kubernetes",
     "difficulty": "medium",
     "question": "Quel outil permet d'exécuter un fichier Compose dans Kubernetes ?",
-    "options": ["Kompose", "Compose on Kubernetes", "Docker Desktop", "Toutes ces réponses"],
+    "options": [
+      "Kompose",
+      "Compose on Kubernetes",
+      "Docker Desktop",
+      "Toutes ces réponses"
+    ],
     "correct": 3,
-    "explication": "Docker Desktop intègre un support de Compose pour Kubernetes."
+    "explanation": "Docker Desktop intègre un support de Compose pour Kubernetes."
   },
   {
     "id": "DKR-05-059",
@@ -812,7 +882,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les secrets ne doivent pas être versionnés."
+    "explanation": "Les secrets ne doivent pas être versionnés."
   },
   {
     "id": "DKR-05-060",
@@ -827,6 +897,381 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Combiner ces techniques pour une configuration flexible."
+    "explanation": "Combiner ces techniques pour une configuration flexible."
+  },
+  {
+    "id": "DCK-DC-001",
+    "theme": "Docker Compose",
+    "theme_label": "Services",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration des services dans Docker Compose :",
+    "options": [
+      "Les services sont définis dans le fichier docker-compose.yml.",
+      "Chaque service peut avoir plusieurs conteneurs associés.",
+      "Les services peuvent être dépendants les uns des autres.",
+      "La configuration des volumes est réalisée directement dans le fichier docker-compose.yml."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les services sont bien définis dans docker-compose.yml. Chaque service peut avoir plusieurs conteneurs via l'option scale. Les dépendances entre services sont gérées par la configuration des dépendances. La gestion des volumes est effectuée via les options volume ou volumes."
+  },
+  {
+    "id": "DCK-DC-002",
+    "theme": "Docker Compose",
+    "theme_label": "Profils",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour appliquer un profil spécifique dans Docker Compose ?",
+    "options": [
+      "docker-compose up --profile <nom_profil>",
+      "docker-compose run --profile <nom_profil>",
+      "docker-compose start --profile <nom_profil>",
+      "docker-compose pull --profile <nom_profil>"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker-compose up --profile <nom_profil> pour appliquer un profil spécifique."
+  },
+  {
+    "id": "DCK-DC-003",
+    "theme": "Docker Compose",
+    "theme_label": "Réseaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration des réseaux dans Docker Compose :",
+    "options": [
+      "Les réseaux peuvent être définis dans le fichier docker-compose.yml.",
+      "Il est possible de créer un réseau personnalisé pour les services.",
+      "Les services peuvent partager le même réseau par défaut.",
+      "La configuration des réseaux est réalisée directement dans le fichier docker-compose.yml."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les réseaux sont bien définis dans docker-compose.yml. Il est possible de créer un réseau personnalisé via l'option network_mode: custom. Les services peuvent partager le même réseau par défaut, mais cette configuration est moins courante. La gestion des réseaux est effectuée via les options network_mode et networks."
+  },
+  {
+    "id": "DCK-DC-004",
+    "theme": "Docker Compose",
+    "theme_label": "Commandes",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour redémarrer un service spécifique dans Docker Compose ?",
+    "options": [
+      "docker-compose restart <nom_service>",
+      "docker-compose start <nom_service>",
+      "docker-compose down <nom_service>",
+      "docker-compose up <nom_service>"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker-compose restart <nom_service> pour redémarrer un service spécifique."
+  },
+  {
+    "id": "DCK-DC-005",
+    "theme": "Docker Compose",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le débogage des services dans Docker Compose :",
+    "options": [
+      "Les logs des services peuvent être affichés avec la commande docker-compose logs.",
+      "Il est possible d'exécuter des commandes interactives dans un conteneur en cours d'exécution.",
+      "La commande docker-compose exec peut être utilisée pour exécuter des commandes dans un conteneur spécifique.",
+      "La commande docker-compose ps peut être utilisée pour afficher les informations sur les conteneurs en cours d'exécution."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les logs des services peuvent effectivement être affichés avec docker-compose logs. La commande docker-compose exec permet d'exécuter des commandes dans un conteneur spécifique. La commande docker-compose ps affiche bien les informations sur les conteneurs en cours d'exécution. La commande docker-compose start est utilisée pour démarrer les services, pas pour exécuter des commandes interactives."
+  },
+  {
+    "id": "DCK-DC-006",
+    "theme": "Docker Compose",
+    "theme_label": "Réseaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les réseaux Docker Compose :",
+    "options": [
+      "Les services peuvent communiquer entre eux via des noms de service",
+      "Les services peuvent uniquement communiquer via des IP statiques",
+      "Il est nécessaire de configurer manuellement les réseaux pour que les services communiquent",
+      "Les services peuvent partager des volumes entre eux"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les services peuvent communiquer entre eux via des noms de service (correct). Les services peuvent uniquement communiquer via des IP statiques (incorrect). Il est nécessaire de configurer manuellement les réseaux pour que les services communiquent (incorrect). Les services peuvent partager des volumes entre eux (correct)."
+  },
+  {
+    "id": "DCK-DC-007",
+    "theme": "Docker Compose",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour démarrer les services définis dans un fichier docker-compose.yml ?",
+    "options": [
+      "docker compose up",
+      "docker-compose start",
+      "docker run -f docker-compose.yml",
+      "docker compose run"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker compose up (index 0). Les autres options sont incorrectes."
+  },
+  {
+    "id": "DCK-DC-008",
+    "theme": "Docker Compose",
+    "theme_label": "Profils",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les profils Docker Compose :",
+    "options": [
+      "Les profils permettent de définir des configurations spécifiques pour différents environnements",
+      "Les profils sont automatiquement appliqués lors du démarrage des services",
+      "Il est nécessaire de spécifier le profil à chaque démarrage manuel",
+      "Les profils peuvent être utilisés pour définir des variables d'environnement"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les profils permettent de définir des configurations spécifiques pour différents environnements (correct). Les profils sont automatiquement appliqués lors du démarrage des services (incorrect). Il est nécessaire de spécifier le profil à chaque démarrage manuel (incorrect). Les profils peuvent être utilisés pour définir des variables d'environnement (correct)."
+  },
+  {
+    "id": "DCK-DC-009",
+    "theme": "Docker Compose",
+    "theme_label": "Troubleshooting",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de vérifier les logs des services Docker Compose en temps réel ?",
+    "options": [
+      "docker compose logs -f",
+      "docker-compose tail -f",
+      "docker run --rm -it <image> tail -f /var/log/syslog",
+      "docker-compose logs --tail=10"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker compose logs -f (index 0). Les autres options sont incorrectes."
+  },
+  {
+    "id": "DCK-DC-010",
+    "theme": "Docker Compose",
+    "theme_label": "Fichier compose.yml",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour définir une variable d'environnement dans un fichier docker-compose.yml ?",
+    "options": [
+      "environment: MY_VAR=value",
+      "env: {MY_VAR: value}",
+      "ENV MY_VAR=value",
+      "my_var: value"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte est ENV MY_VAR=value (index 2). Les autres options sont incorrectes."
+  },
+  {
+    "id": "DCK-DC-011",
+    "theme": "Docker Compose",
+    "theme_label": "Réseaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration des réseaux dans Docker Compose :",
+    "options": [
+      "Les services peuvent partager le même réseau par défaut.",
+      "Il est impossible de définir des réseaux personnalisés dans Docker Compose.",
+      "Les services peuvent être connectés à des réseaux externes.",
+      "La configuration réseau avancée est impossible avec Docker Compose."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les services peuvent partager le même réseau par défaut (A est correct). Il est impossible de définir des réseaux personnalisés dans Docker Compose (B est incorrect). Les services peuvent être connectés à des réseaux externes (C est correct). La configuration réseau avancée est possible avec Docker Compose, mais pas sans connaître les options avancées (D est incorrect)."
+  },
+  {
+    "id": "DCK-DC-012",
+    "theme": "Docker Compose",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour redémarrer un service spécifique dans Docker Compose ?",
+    "options": [
+      "docker-compose restart <service_name>",
+      "docker-compose up --force-recreate <service_name>",
+      "docker-compose start <service_name>",
+      "docker-compose restart"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker-compose restart <service_name> (A). La commande docker-compose up --force-recreate <service_name> redémarre le service mais ne garantit pas un redémarrage propre (B). La commande docker-compose start <service_name> ne redémarre pas le service s'il est déjà en cours d'exécution (C). La commande docker-compose restart redémarrera tous les services définis dans le fichier docker-compose.yml (D)."
+  },
+  {
+    "id": "DCK-DC-013",
+    "theme": "Docker Compose",
+    "theme_label": "Volumes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des volumes dans Docker Compose :",
+    "options": [
+      "Les volumes peuvent être définis au niveau du service.",
+      "Il est impossible de partager des volumes entre plusieurs services.",
+      "Les volumes peuvent être définis au niveau du projet.",
+      "La gestion des volumes est uniquement possible via le fichier docker-compose.yml."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les volumes peuvent être définis au niveau du service (A est correct). Il est possible de partager des volumes entre plusieurs services en utilisant des volumes nommés (B est incorrect). Les volumes peuvent être définis au niveau du projet en utilisant des volumes nommés (C est correct). La gestion des volumes peut être faite via le fichier docker-compose.yml, mais aussi en utilisant d'autres outils comme Docker CLI (D est incorrect)."
+  },
+  {
+    "id": "DCK-DC-014",
+    "theme": "Docker Compose",
+    "theme_label": "Healthcheck",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour vérifier le statut de santé d'un service en utilisant Docker Compose ?",
+    "options": [
+      "docker-compose healthcheck <service_name>",
+      "docker-compose inspect --health <service_name>",
+      "docker-compose ps -s <service_name>",
+      "docker-compose logs <service_name>"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker-compose inspect --health <service_name> (B). La commande docker-compose healthcheck <service_name> n'existe pas (A est incorrect). La commande docker-compose ps -s <service_name> ne fournit pas d'informations sur le statut de santé (C est incorrect). La commande docker-compose logs <service_name> affiche les journaux du service mais ne fournit pas le statut de santé (D est incorrect)."
+  },
+  {
+    "id": "DCK-DC-015",
+    "theme": "Docker Compose",
+    "theme_label": "Fichier compose.yml",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour définir une variable d'environnement dans un fichier docker-compose.yml ?",
+    "options": [
+      "environment: VAR_NAME=VAR_VALUE",
+      "env: {VAR_NAME: VAR_VALUE}",
+      "environment: [VAR_NAME=VAR_VALUE]",
+      "env_file: .env"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte est environment: VAR_NAME=VAR_VALUE (A). La syntaxe env: {VAR_NAME: VAR_VALUE} est incorrecte (B). La syntaxe environment: [VAR_NAME=VAR_VALUE] est incorrecte (C). La syntaxe env_file: .env permet de charger des variables d'environnement à partir d'un fichier .env (D est incorrect)."
+  },
+  {
+    "id": "DCK-DC-016",
+    "theme": "Docker Compose",
+    "theme_label": "Réseaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration des réseaux dans Docker Compose :",
+    "options": [
+      "Les services peuvent partager le même réseau par défaut.",
+      "Il est possible de définir un réseau personnalisé dans le fichier docker-compose.yml.",
+      "Les services ne peuvent communiquer que via l'adresse IP des conteneurs.",
+      "Le réseau bridge est le seul type de réseau supporté par Docker Compose."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les services peuvent partager le même réseau par défaut (A est correct). Il est possible de définir un réseau personnalisé dans le fichier docker-compose.yml (B est correct). Les services ne peuvent communiquer que via l'adresse IP des conteneurs (C est incorrect). Le réseau bridge est le seul type de réseau supporté par Docker Compose (D est incorrect)."
+  },
+  {
+    "id": "DCK-DC-017",
+    "theme": "Docker Compose",
+    "theme_label": "Services",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour démarrer les services définis dans un fichier docker-compose.yml ?",
+    "options": [
+      "docker-compose up",
+      "docker-compose start",
+      "docker-compose run",
+      "docker-compose init"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande docker-compose up est utilisée pour démarrer les services définis dans un fichier docker-compose.yml."
+  },
+  {
+    "id": "DCK-DC-018",
+    "theme": "Docker Compose",
+    "theme_label": "Volumes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration des volumes dans Docker Compose :",
+    "options": [
+      "Les volumes peuvent être définis pour partager des données entre les conteneurs et le système hôte.",
+      "Il est possible de définir des volumes nommés dans le fichier docker-compose.yml.",
+      "Les volumes doivent être spécifiés pour chaque service individuellement.",
+      "Le volume tmpfs est utilisé par défaut pour les volumes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les volumes peuvent être définis pour partager des données entre les conteneurs et le système hôte (A est correct). Il est possible de définir des volumes nommés dans le fichier docker-compose.yml (B est correct). Les volumes doivent être spécifiés pour chaque service individuellement (C est incorrect). Le volume tmpfs n'est pas utilisé par défaut pour les volumes (D est incorrect)."
+  },
+  {
+    "id": "DCK-DC-019",
+    "theme": "Docker Compose",
+    "theme_label": "Troubleshooting",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour vérifier l'état des services Docker Compose en cours d'exécution ?",
+    "options": [
+      "docker-compose status",
+      "docker-compose ps",
+      "docker-compose logs",
+      "docker-compose inspect"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La commande docker-compose ps est utilisée pour vérifier l'état des services Docker Compose en cours d'exécution."
+  },
+  {
+    "id": "DCK-DC-020",
+    "theme": "Docker Compose",
+    "theme_label": "Réseaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration des réseaux dans Docker Compose :",
+    "options": [
+      "Les services peuvent partager le même réseau par défaut.",
+      "Il est possible de définir des réseaux personnalisés dans le fichier docker-compose.yml.",
+      "Les services ne peuvent pas communiquer entre eux sur un même réseau personnalisé.",
+      "L'option 'network_mode: host' permet aux services de partager le réseau hôte.",
+      "La configuration des réseaux peut être réalisée en utilisant l'option 'networks'."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3,
+      4
+    ],
+    "explanation": "Les services peuvent partager le même réseau par défaut (A est correct). Il est possible de définir des réseaux personnalisés dans le fichier docker-compose.yml (B est correct). Les services peuvent communiquer entre eux sur un même réseau personnalisé (C est incorrect). L'option 'network_mode: host' permet aux services de partager le réseau hôte (D est correct). La configuration des réseaux peut être réalisée en utilisant l'option 'networks' (E est correct)."
   }
 ]

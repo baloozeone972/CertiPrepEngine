@@ -37,7 +37,7 @@
       "Groupe de ressources"
     ],
     "correct": 0,
-    "explication": "Le plan définit la région, le nombre de VMs, la taille des instances."
+    "explanation": "Le plan définit la région, le nombre de VMs, la taille des instances."
   },
   {
     "id": "AZ-204-004",
@@ -52,7 +52,7 @@
       "Premium seulement"
     ],
     "correct": 0,
-    "explication": "Plusieurs niveaux avec différentes capacités et fonctionnalités."
+    "explanation": "Plusieurs niveaux avec différentes capacités et fonctionnalités."
   },
   {
     "id": "AZ-204-005",
@@ -67,7 +67,7 @@
       "Groupe de sécurité"
     ],
     "correct": 0,
-    "explication": "Les slots permettent le déploiement sans temps d'arrêt (swap)."
+    "explanation": "Les slots permettent le déploiement sans temps d'arrêt (swap)."
   },
   {
     "id": "AZ-204-006",
@@ -77,7 +77,7 @@
     "question": "Combien de slots de déploiement peut-on avoir par application ?",
     "options": ["Jusqu'à 20 (selon le SKU)", "5", "10", "Illimité"],
     "correct": 0,
-    "explication": "Le nombre de slots dépend du niveau du plan App Service."
+    "explanation": "Le nombre de slots dépend du niveau du plan App Service."
   },
   {
     "id": "AZ-204-007",
@@ -92,7 +92,7 @@
       "Changer de région"
     ],
     "correct": 0,
-    "explication": "Le swap permet de mettre en production un nouveau déploiement sans interruption."
+    "explanation": "Le swap permet de mettre en production un nouveau déploiement sans interruption."
   },
   {
     "id": "AZ-204-008",
@@ -107,7 +107,7 @@
       "Règles de sécurité"
     ],
     "correct": 0,
-    "explication": "Les paramètres d'application sont injectés comme variables d'environnement."
+    "explanation": "Les paramètres d'application sont injectés comme variables d'environnement."
   },
   {
     "id": "AZ-204-009",
@@ -117,7 +117,7 @@
     "question": "Les paramètres d'application peuvent-ils être marqués comme 'slot setting' ?",
     "options": ["Oui (collés au slot)", "Non", "Uniquement pour les connexions", "Uniquement pour les chaînes"],
     "correct": 0,
-    "explication": "Les slot settings restent associés à un slot lors du swap."
+    "explanation": "Les slot settings restent associés à un slot lors du swap."
   },
   {
     "id": "AZ-204-010",
@@ -132,7 +132,7 @@
       "SSL"
     ],
     "correct": 0,
-    "explication": "App Service fournit une couche d'authentification intégrée (Easy Auth)."
+    "explanation": "App Service fournit une couche d'authentification intégrée (Easy Auth)."
   },
   {
     "id": "AZ-204-011",
@@ -147,7 +147,7 @@
       "Certificats pour les slots"
     ],
     "correct": 0,
-    "explication": "App Service peut fournir des certificats SSL gratuits pour les domaines personnalisés."
+    "explanation": "App Service peut fournir des certificats SSL gratuits pour les domaines personnalisés."
   },
   {
     "id": "AZ-204-012",
@@ -162,7 +162,7 @@
       "Mettre à jour le plan"
     ],
     "correct": 0,
-    "explication": "L'auto-scaling ajuste les instances en fonction des métriques (CPU, mémoire, requêtes)."
+    "explanation": "L'auto-scaling ajuste les instances en fonction des métriques (CPU, mémoire, requêtes)."
   },
   {
     "id": "AZ-204-013",
@@ -177,7 +177,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "App Service peut enregistrer les logs d'application, du serveur web, etc."
+    "explanation": "App Service peut enregistrer les logs d'application, du serveur web, etc."
   },
   {
     "id": "AZ-204-014",
@@ -192,7 +192,7 @@
       "Seulement Log Analytics"
     ],
     "correct": 0,
-    "explication": "Les logs peuvent être envoyés vers plusieurs destinations."
+    "explanation": "Les logs peuvent être envoyés vers plusieurs destinations."
   },
   {
     "id": "AZ-204-015",
@@ -207,7 +207,7 @@
       "Sauvegarde"
     ],
     "correct": 0,
-    "explication": "Always On empêche l'application de se décharger en cas d'inactivité."
+    "explanation": "Always On empêche l'application de se décharger en cas d'inactivité."
   },
   {
     "id": "AZ-204-016",
@@ -222,7 +222,7 @@
       "Jobs de réseau"
     ],
     "correct": 0,
-    "explication": "WebJobs permet d'exécuter des scripts en arrière-plan (continu ou déclenché)."
+    "explanation": "WebJobs permet d'exécuter des scripts en arrière-plan (continu ou déclenché)."
   },
   {
     "id": "AZ-204-017",
@@ -232,7 +232,7 @@
     "question": "WebJobs peut-il être déclenché par une file d'attente ?",
     "options": ["Oui", "Non", "Uniquement par timer", "Uniquement par blob"],
     "correct": 0,
-    "explication": "WebJobs peut être déclenché par des messages de files d'attente (Azure Queue)."
+    "explanation": "WebJobs peut être déclenché par des messages de files d'attente (Azure Queue)."
   },
   {
     "id": "AZ-204-018",
@@ -247,7 +247,7 @@
       "Service de réseau"
     ],
     "correct": 0,
-    "explication": "Azure Functions est le FaaS (Function as a Service) d'Azure."
+    "explanation": "Azure Functions est le FaaS (Function as a Service) d'Azure."
   },
   {
     "id": "AZ-204-019",
@@ -262,7 +262,7 @@
       "Python seulement"
     ],
     "correct": 0,
-    "explication": "Azure Functions supporte plusieurs langages."
+    "explanation": "Azure Functions supporte plusieurs langages."
   },
   {
     "id": "AZ-204-020",
@@ -277,7 +277,7 @@
       "Configuration"
     ],
     "correct": 0,
-    "explication": "Les déclencheurs sont des événements (HTTP, timer, queue, blob, etc.) qui démarrent la fonction."
+    "explanation": "Les déclencheurs sont des événements (HTTP, timer, queue, blob, etc.) qui démarrent la fonction."
   },
   {
     "id": "AZ-204-021",
@@ -292,7 +292,7 @@
       "Blob seulement"
     ],
     "correct": 0,
-    "explication": "Azure Functions a de nombreux déclencheurs."
+    "explanation": "Azure Functions a de nombreux déclencheurs."
   },
   {
     "id": "AZ-204-022",
@@ -307,7 +307,7 @@
       "Plan dédié"
     ],
     "correct": 0,
-    "explication": "Le plan de consommation facture l'exécution et le temps CPU."
+    "explanation": "Le plan de consommation facture l'exécution et le temps CPU."
   },
   {
     "id": "AZ-204-023",
@@ -322,7 +322,7 @@
       "Gratuit"
     ],
     "correct": 0,
-    "explication": "Le plan Premium offre des fonctionnalités supplémentaires (VNet, préchauffage)."
+    "explanation": "Le plan Premium offre des fonctionnalités supplémentaires (VNet, préchauffage)."
   },
   {
     "id": "AZ-204-024",
@@ -337,7 +337,7 @@
       "Fonctions récurrentes"
     ],
     "correct": 0,
-    "explication": "Durable Functions permet d'écrire des workflows avec état."
+    "explanation": "Durable Functions permet d'écrire des workflows avec état."
   },
   {
     "id": "AZ-204-025",
@@ -352,7 +352,7 @@
       "Activity seulement"
     ],
     "correct": 0,
-    "explication": "Durable Functions a plusieurs types de fonctions."
+    "explanation": "Durable Functions a plusieurs types de fonctions."
   },
   {
     "id": "AZ-204-026",
@@ -367,7 +367,7 @@
       "Configuration"
     ],
     "correct": 0,
-    "explication": "Les liaisons de sortie simplifient l'écriture vers des services (Blob, Queue, etc.)."
+    "explanation": "Les liaisons de sortie simplifient l'écriture vers des services (Blob, Queue, etc.)."
   },
   {
     "id": "AZ-204-027",
@@ -382,7 +382,7 @@
       "Fichier de liaison"
     ],
     "correct": 0,
-    "explication": "host.json configure les paramètres du runtime (timeout, logging, extensions)."
+    "explanation": "host.json configure les paramètres du runtime (timeout, logging, extensions)."
   },
   {
     "id": "AZ-204-028",
@@ -397,7 +397,7 @@
       "Fichier de build"
     ],
     "correct": 0,
-    "explication": "local.settings.json contient les paramètres pour l'exécution locale."
+    "explanation": "local.settings.json contient les paramètres pour l'exécution locale."
   },
   {
     "id": "AZ-204-029",
@@ -412,7 +412,7 @@
       "Code"
     ],
     "correct": 0,
-    "explication": "Les secrets doivent être stockés dans Key Vault ou les paramètres d'application."
+    "explanation": "Les secrets doivent être stockés dans Key Vault ou les paramètres d'application."
   },
   {
     "id": "AZ-204-030",
@@ -427,7 +427,7 @@
       "Redémarrage"
     ],
     "correct": 0,
-    "explication": "Le cold start est le temps de chargement d'une fonction qui n'a pas été utilisée récemment."
+    "explanation": "Le cold start est le temps de chargement d'une fonction qui n'a pas été utilisée récemment."
   },
   {
     "id": "AZ-204-031",
@@ -442,7 +442,7 @@
       "Augmenter la mémoire"
     ],
     "correct": 0,
-    "explication": "Le plan Premium maintient des instances préchauffées pour réduire le cold start."
+    "explanation": "Le plan Premium maintient des instances préchauffées pour réduire le cold start."
   },
   {
     "id": "AZ-204-032",
@@ -452,7 +452,7 @@
     "question": "Quelle est la durée maximale d'une fonction dans le plan Consommation ?",
     "options": ["10 minutes", "5 minutes", "30 minutes", "1 heure"],
     "correct": 0,
-    "explication": "Le timeout maximum est de 10 minutes (configurable, par défaut 5 min)."
+    "explanation": "Le timeout maximum est de 10 minutes (configurable, par défaut 5 min)."
   },
   {
     "id": "AZ-204-033",
@@ -462,7 +462,7 @@
     "question": "Quelle est la durée maximale dans le plan Premium ?",
     "options": ["30 minutes", "10 minutes", "1 heure", "Illimité"],
     "correct": 2,
-    "explication": "Le plan Premium peut aller jusqu'à 1 heure (60 minutes)."
+    "explanation": "Le plan Premium peut aller jusqu'à 1 heure (60 minutes)."
   },
   {
     "id": "AZ-204-034",
@@ -477,7 +477,7 @@
       "Changement de région"
     ],
     "correct": 0,
-    "explication": "Les Functions se mettent à l'échelle automatiquement selon le nombre d'événements."
+    "explanation": "Les Functions se mettent à l'échelle automatiquement selon le nombre d'événements."
   },
   {
     "id": "AZ-204-035",
@@ -492,7 +492,7 @@
       "Déclencheur queue"
     ],
     "correct": 0,
-    "explication": "Le déclencheur timer utilise une expression CRON."
+    "explanation": "Le déclencheur timer utilise une expression CRON."
   },
   {
     "id": "AZ-204-036",
@@ -507,7 +507,7 @@
       "Blob"
     ],
     "correct": 0,
-    "explication": "Le déclencheur HTTP permet d'appeler la fonction via une URL."
+    "explanation": "Le déclencheur HTTP permet d'appeler la fonction via une URL."
   },
   {
     "id": "AZ-204-037",
@@ -522,7 +522,7 @@
       "HTTP"
     ],
     "correct": 0,
-    "explication": "Le déclencheur blob réagit aux événements dans un conteneur blob."
+    "explanation": "Le déclencheur blob réagit aux événements dans un conteneur blob."
   },
   {
     "id": "AZ-204-038",
@@ -537,7 +537,7 @@
       "HTTP"
     ],
     "correct": 0,
-    "explication": "Le déclencheur queue traite les messages d'une file Azure Queue."
+    "explanation": "Le déclencheur queue traite les messages d'une file Azure Queue."
   },
   {
     "id": "AZ-204-039",
@@ -552,7 +552,7 @@
       "Blob"
     ],
     "correct": 0,
-    "explication": "Le déclencheur Cosmos DB réagit au flux de modifications (change feed)."
+    "explanation": "Le déclencheur Cosmos DB réagit au flux de modifications (change feed)."
   },
   {
     "id": "AZ-204-040",
@@ -567,7 +567,7 @@
       "Blob"
     ],
     "correct": 0,
-    "explication": "Le déclencheur Event Hub ingère des flux de données à grande échelle."
+    "explanation": "Le déclencheur Event Hub ingère des flux de données à grande échelle."
   },
   {
     "id": "AZ-204-041",
@@ -582,7 +582,7 @@
       "Blob"
     ],
     "correct": 0,
-    "explication": "Le déclencheur Service Bus lit les messages des files ou abonnements."
+    "explanation": "Le déclencheur Service Bus lit les messages des files ou abonnements."
   },
   {
     "id": "AZ-204-042",
@@ -597,7 +597,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Il est recommandé de réutiliser les clients HTTP, Cosmos, etc., pour éviter l'épuisement des ports."
+    "explanation": "Il est recommandé de réutiliser les clients HTTP, Cosmos, etc., pour éviter l'épuisement des ports."
   },
   {
     "id": "AZ-204-043",
@@ -612,7 +612,7 @@
       "La fonction est planifiée"
     ],
     "correct": 0,
-    "explication": "Les fonctions peuvent être synchrones (attendre le résultat) ou asynchrones."
+    "explanation": "Les fonctions peuvent être synchrones (attendre le résultat) ou asynchrones."
   },
   {
     "id": "AZ-204-044",
@@ -627,7 +627,7 @@
       "Configuration"
     ],
     "correct": 0,
-    "explication": "Azure Functions prend en charge l'injection de dépendances (comme ASP.NET Core)."
+    "explanation": "Azure Functions prend en charge l'injection de dépendances (comme ASP.NET Core)."
   },
   {
     "id": "AZ-204-045",
@@ -642,7 +642,7 @@
       "Configuration"
     ],
     "correct": 0,
-    "explication": "Le middleware permet d'intercepter et de traiter les requêtes HTTP avant qu'elles n'atteignent la fonction."
+    "explanation": "Le middleware permet d'intercepter et de traiter les requêtes HTTP avant qu'elles n'atteignent la fonction."
   },
   {
     "id": "AZ-204-046",
@@ -657,7 +657,7 @@
       "CLI"
     ],
     "correct": 0,
-    "explication": "Visual Studio a une option 'Publier' pour déployer directement sur Azure."
+    "explanation": "Visual Studio a une option 'Publier' pour déployer directement sur Azure."
   },
   {
     "id": "AZ-204-047",
@@ -672,7 +672,7 @@
       "az functionapp start"
     ],
     "correct": 0,
-    "explication": "La commande 'func azure functionapp publish' déploie l'application de fonction."
+    "explanation": "La commande 'func azure functionapp publish' déploie l'application de fonction."
   },
   {
     "id": "AZ-204-048",
@@ -687,7 +687,7 @@
       "Backup"
     ],
     "correct": 0,
-    "explication": "Functions peut être configuré pour se déployer automatiquement à partir d'un dépôt Git."
+    "explanation": "Functions peut être configuré pour se déployer automatiquement à partir d'un dépôt Git."
   },
   {
     "id": "AZ-204-049",
@@ -702,7 +702,7 @@
       "Seulement les traces"
     ],
     "correct": 0,
-    "explication": "Application Insights s'intègre aux Functions pour la surveillance."
+    "explanation": "Application Insights s'intègre aux Functions pour la surveillance."
   },
   {
     "id": "AZ-204-050",
@@ -717,7 +717,7 @@
       "Seulement Warning"
     ],
     "correct": 0,
-    "explication": "Les fonctions supportent plusieurs niveaux de log."
+    "explanation": "Les fonctions supportent plusieurs niveaux de log."
   },
   {
     "id": "AZ-204-051",
@@ -732,7 +732,7 @@
       "Variables système"
     ],
     "correct": 0,
-    "explication": "Les paramètres d'application sont la méthode recommandée."
+    "explanation": "Les paramètres d'application sont la méthode recommandée."
   },
   {
     "id": "AZ-204-052",
@@ -747,7 +747,7 @@
       "Extensions de logging"
     ],
     "correct": 0,
-    "explication": "Les extensions sont nécessaires pour utiliser certains déclencheurs (Cosmos DB, Event Hub, etc.)."
+    "explanation": "Les extensions sont nécessaires pour utiliser certains déclencheurs (Cosmos DB, Event Hub, etc.)."
   },
   {
     "id": "AZ-204-053",
@@ -762,7 +762,7 @@
       "Plan Gratuit"
     ],
     "correct": 0,
-    "explication": "Le plan Premium (anciennement Elastic Premium) offre des fonctionnalités intermédiaires."
+    "explanation": "Le plan Premium (anciennement Elastic Premium) offre des fonctionnalités intermédiaires."
   },
   {
     "id": "AZ-204-054",
@@ -772,7 +772,7 @@
     "question": "Quelle est la limite de mémoire pour une fonction dans le plan Consommation ?",
     "options": ["1.5 Go", "2 Go", "512 Mo", "4 Go"],
     "correct": 0,
-    "explication": "La mémoire maximale est de 1.5 Go dans le plan Consommation."
+    "explanation": "La mémoire maximale est de 1.5 Go dans le plan Consommation."
   },
   {
     "id": "AZ-204-055",
@@ -782,7 +782,7 @@
     "question": "Quelle est la limite de mémoire pour une fonction dans le plan Premium ?",
     "options": ["4 Go", "8 Go", "2 Go", "16 Go"],
     "correct": 0,
-    "explication": "Le plan Premium peut aller jusqu'à 4 Go de mémoire."
+    "explanation": "Le plan Premium peut aller jusqu'à 4 Go de mémoire."
   },
   {
     "id": "AZ-204-056",
@@ -797,7 +797,7 @@
       "Liaison"
     ],
     "correct": 0,
-    "explication": "Les proxies permettent de réécrire les URLs et de rediriger les requêtes."
+    "explanation": "Les proxies permettent de réécrire les URLs et de rediriger les requêtes."
   },
   {
     "id": "AZ-204-057",
@@ -812,7 +812,7 @@
       "Orchestration"
     ],
     "correct": 0,
-    "explication": "ACI permet d'exécuter des conteneurs de manière serverless."
+    "explanation": "ACI permet d'exécuter des conteneurs de manière serverless."
   },
   {
     "id": "AZ-204-058",
@@ -822,7 +822,7 @@
     "question": "ACI peut-il monter des volumes Azure Files ?",
     "options": ["Oui", "Non", "Uniquement des volumes vides", "Uniquement des volumes secrets"],
     "correct": 0,
-    "explication": "ACI peut monter des partages Azure Files."
+    "explanation": "ACI peut monter des partages Azure Files."
   },
   {
     "id": "AZ-204-059",
@@ -832,7 +832,7 @@
     "question": "ACI peut-il avoir une IP publique ?",
     "options": ["Oui", "Non", "Uniquement IP privée", "Uniquement avec load balancer"],
     "correct": 0,
-    "explication": "ACI peut attribuer une IP publique au conteneur."
+    "explanation": "ACI peut attribuer une IP publique au conteneur."
   },
   {
     "id": "AZ-204-060",
@@ -842,7 +842,7 @@
     "question": "ACI est-il facturé à la seconde ?",
     "options": ["Oui", "Non", "À la minute", "À l'heure"],
     "correct": 0,
-    "explication": "ACI facture à la seconde de temps d'exécution."
+    "explanation": "ACI facture à la seconde de temps d'exécution."
   },
   {
     "id": "AZ-204-061",
@@ -857,7 +857,7 @@
       "Kubernetes"
     ],
     "correct": 0,
-    "explication": "ACR stocke les images de conteneurs privées."
+    "explanation": "ACR stocke les images de conteneurs privées."
   },
   {
     "id": "AZ-204-062",
@@ -867,7 +867,7 @@
     "question": "ACR peut-il être intégré à AKS pour le déploiement ?",
     "options": ["Oui", "Non", "Uniquement avec ACI", "Uniquement avec App Service"],
     "correct": 0,
-    "explication": "AKS peut s'authentifier auprès d'ACR pour tirer les images."
+    "explanation": "AKS peut s'authentifier auprès d'ACR pour tirer les images."
   },
   {
     "id": "AZ-204-063",
@@ -877,7 +877,7 @@
     "question": "ACR supporte-t-il la réplication géographique ?",
     "options": ["Oui", "Non", "Uniquement dans la même région", "Uniquement avec Premium"],
     "correct": 0,
-    "explication": "La réplication géographique est disponible dans le niveau Premium."
+    "explanation": "La réplication géographique est disponible dans le niveau Premium."
   },
   {
     "id": "AZ-204-064",
@@ -892,7 +892,7 @@
       "Réplication"
     ],
     "correct": 0,
-    "explication": "ACR Tasks permet de construire des images dans le cloud sans Docker Engine local."
+    "explanation": "ACR Tasks permet de construire des images dans le cloud sans Docker Engine local."
   },
   {
     "id": "AZ-204-065",
@@ -907,7 +907,7 @@
       "Service de fonctions"
     ],
     "correct": 0,
-    "explication": "AKS est le service Kubernetes managé d'Azure."
+    "explanation": "AKS est le service Kubernetes managé d'Azure."
   },
   {
     "id": "AZ-204-066",
@@ -917,7 +917,7 @@
     "question": "AKS gère-t-il le plan de contrôle ?",
     "options": ["Oui", "Non", "Partiellement", "Uniquement les nœuds"],
     "correct": 0,
-    "explication": "AKS gère le plan de contrôle (API server, etcd) gratuitement."
+    "explanation": "AKS gère le plan de contrôle (API server, etcd) gratuitement."
   },
   {
     "id": "AZ-204-067",
@@ -932,7 +932,7 @@
       "Portail"
     ],
     "correct": 0,
-    "explication": "La commande 'az aks get-credentials' configure kubectl."
+    "explanation": "La commande 'az aks get-credentials' configure kubectl."
   },
   {
     "id": "AZ-204-068",
@@ -942,7 +942,7 @@
     "question": "AKS peut-il mettre à l'échelle automatiquement les nœuds ?",
     "options": ["Oui (cluster autoscaler)", "Non", "Uniquement manuel", "Uniquement horizontal"],
     "correct": 0,
-    "explication": "Le cluster autoscaler ajuste le nombre de nœuds en fonction de la charge."
+    "explanation": "Le cluster autoscaler ajuste le nombre de nœuds en fonction de la charge."
   },
   {
     "id": "AZ-204-069",
@@ -957,7 +957,7 @@
       "Redéploie les pods"
     ],
     "correct": 0,
-    "explication": "HPA ajuste les réplicas de pods en fonction de l'utilisation du CPU, de la mémoire, ou de métriques personnalisées."
+    "explanation": "HPA ajuste les réplicas de pods en fonction de l'utilisation du CPU, de la mémoire, ou de métriques personnalisées."
   },
   {
     "id": "AZ-204-070",
@@ -972,7 +972,7 @@
       "Groupe de mise à l'échelle"
     ],
     "correct": 0,
-    "explication": "Les groupes de disponibilité améliorent la disponibilité des VMs."
+    "explanation": "Les groupes de disponibilité améliorent la disponibilité des VMs."
   },
   {
     "id": "AZ-204-071",
@@ -987,7 +987,7 @@
       "Groupe de ressources"
     ],
     "correct": 0,
-    "explication": "VMSS permet de créer et gérer un ensemble de VMs identiques avec mise à l'échelle automatique."
+    "explanation": "VMSS permet de créer et gérer un ensemble de VMs identiques avec mise à l'échelle automatique."
   },
   {
     "id": "AZ-204-072",
@@ -1002,7 +1002,7 @@
       "Snapshot de disque"
     ],
     "correct": 0,
-    "explication": "Une image gérée contient le système d'exploitation et les disques de données."
+    "explanation": "Une image gérée contient le système d'exploitation et les disques de données."
   },
   {
     "id": "AZ-204-073",
@@ -1017,7 +1017,7 @@
       "Groupes de sécurité"
     ],
     "correct": 0,
-    "explication": "Les extensions permettent de configurer ou d'installer des logiciels sur les VMs."
+    "explanation": "Les extensions permettent de configurer ou d'installer des logiciels sur les VMs."
   },
   {
     "id": "AZ-204-074",
@@ -1032,7 +1032,7 @@
       "Sauvegarde la VM"
     ],
     "correct": 0,
-    "explication": "Custom Script exécute un script PowerShell ou Bash."
+    "explanation": "Custom Script exécute un script PowerShell ou Bash."
   },
   {
     "id": "AZ-204-075",
@@ -1047,7 +1047,7 @@
       "Sauvegarde"
     ],
     "correct": 0,
-    "explication": "L'extension DSC applique une configuration DSC pour maintenir l'état souhaité."
+    "explanation": "L'extension DSC applique une configuration DSC pour maintenir l'état souhaité."
   },
   {
     "id": "AZ-204-076",
@@ -1062,7 +1062,7 @@
       "Configurer le réseau"
     ],
     "correct": 0,
-    "explication": "VMAccess permet de réinitialiser les identifiants d'accès à la VM."
+    "explanation": "VMAccess permet de réinitialiser les identifiants d'accès à la VM."
   },
   {
     "id": "AZ-204-077",
@@ -1077,7 +1077,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Les diagnostics de VM envoient les données de performance vers Azure Monitor."
+    "explanation": "Les diagnostics de VM envoient les données de performance vers Azure Monitor."
   },
   {
     "id": "AZ-204-078",
@@ -1092,7 +1092,7 @@
       "Désactiver les mises à jour"
     ],
     "correct": 0,
-    "explication": "Azure Automation peut gérer les mises à jour des VMs Windows et Linux."
+    "explanation": "Azure Automation peut gérer les mises à jour des VMs Windows et Linux."
   },
   {
     "id": "AZ-204-079",
@@ -1107,7 +1107,7 @@
       "Ajouter des extensions"
     ],
     "correct": 0,
-    "explication": "Le redimensionnement nécessite généralement un arrêt de la VM."
+    "explanation": "Le redimensionnement nécessite généralement un arrêt de la VM."
   },
   {
     "id": "AZ-204-080",
@@ -1122,6 +1122,6 @@
       "Arrêter"
     ],
     "correct": 0,
-    "explication": "La capture (sysprep) prépare la VM pour créer une image réutilisable."
+    "explanation": "La capture (sysprep) prépare la VM pour créer une image réutilisable."
   }
 ]

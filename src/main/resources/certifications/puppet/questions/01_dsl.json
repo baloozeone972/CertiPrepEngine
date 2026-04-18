@@ -28,5 +28,27 @@
     ],
     "correct": 0,
     "explanation": "include est la fonction pour inclure une classe."
+  },
+  {
+    "id": "PUPP-PD-001",
+    "theme": "Puppet DSL",
+    "theme_label": "Syntaxe Puppet",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la syntaxe de Puppet :",
+    "options": [
+      "Les classes sont définies avec le mot-clé 'class'.",
+      "Les ressources sont déclarées avec le mot-clé 'define'.",
+      "La fonction 'include' est utilisée pour inclure une classe.",
+      "Les noms de classes et de ressources peuvent contenir des espaces.",
+      "La syntaxe 'package { 'nginx': ensure => installed }' est correcte."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Les classes sont définies avec 'class'. Les ressources sont déclarées avec 'define'. La fonction 'include' est utilisée pour inclure une classe. Les noms de classes et de ressources ne peuvent pas contenir des espaces. La syntaxe 'package { 'nginx': ensure => installed }' est correcte."
   }
 ]

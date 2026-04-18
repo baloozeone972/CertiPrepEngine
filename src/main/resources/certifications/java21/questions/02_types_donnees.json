@@ -748,5 +748,754 @@
     ],
     "correct": 1,
     "explanation": "short max = 32767. +1 → overflow silencieux à -32768 (MIN_VALUE)."
+  },
+  {
+    "id": "JAVA21-TDD-001",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers :",
+    "options": [
+      "L'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing est la conversion automatique d'un objet wrapper en type primitif.",
+      "La méthode parseInt() de la classe Integer peut convertir une chaîne en un entier.",
+      "La méthode parseDouble() de la classe Double ne peut pas convertir une chaîne en un double."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'auto-boxing et l'unboxing sont des conversions automatiques entre types primitifs et leurs wrappers. La méthode parseInt() de la classe Integer peut convertir une chaîne en un entier. La méthode parseDouble() de la classe Double peut convertir une chaîne en un double, donc cette affirmation est fausse."
+  },
+  {
+    "id": "JAVA21-TDD-002",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'int' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "int est un entier signé sur 32 bits. Plage de valeurs : -2,147,483,648 à 2,147,483,647."
+  },
+  {
+    "id": "JAVA21-TDD-003",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les wrappers en Java ?",
+    "options": [
+      "Les wrappers sont des classes qui encapsulent un type primitif.",
+      "Tous les wrappers ont une méthode valueOf() qui convertit un objet en type primitif.",
+      "Les wrappers sont immuables.",
+      "Les wrappers ont des méthodes statiques pour convertir des chaînes en types primitifs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les wrappers sont des classes qui encapsulent un type primitif. Les wrappers sont immuables, ce qui signifie qu'une fois créé, leur valeur ne peut pas être modifiée. Tous les wrappers n'ont pas une méthode valueOf() qui convertit un objet en type primitif, donc cette affirmation est fausse. Les wrappers ont des méthodes statiques pour convertir des chaînes en types primitifs, donc cette affirmation est vraie."
+  },
+  {
+    "id": "JAVA21-TDD-004",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le wrapper correspondant au type primitif 'float' ?",
+    "options": [
+      "Float",
+      "Double",
+      "Integer",
+      "Long"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le wrapper correspondant au type primitif 'float' est Float."
+  },
+  {
+    "id": "JAVA21-TDD-005",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion implicite (autoboxing) en Java :",
+    "options": [
+      "L'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing est la conversion automatique d'un objet wrapper en type primitif.",
+      "La méthode parseInt() de la classe Integer peut convertir une chaîne en un entier.",
+      "La méthode parseDouble() de la classe Double ne peut pas convertir une chaîne en un double."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'auto-boxing et l'unboxing sont des conversions implicites entre types primitifs et leurs wrappers. La méthode parseInt() de la classe Integer peut convertir une chaîne en un entier, donc cette affirmation est fausse. La méthode parseDouble() de la classe Double peut convertir une chaîne en un double, donc cette affirmation est fausse."
+  },
+  {
+    "id": "JAVA21-TDD-006",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'long' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "long est un entier signé sur 64 bits. Plage de valeurs : -9,223,372,036,854,775,808 à 9,223,372,036,854,775,807."
+  },
+  {
+    "id": "JAVA21-TDD-007",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la conversion explicite (unboxing) en Java ?",
+    "options": [
+      "L'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing est la conversion automatique d'un objet wrapper en type primitif.",
+      "La méthode parseInt() de la classe Integer peut convertir une chaîne en un entier.",
+      "La méthode parseDouble() de la classe Double ne peut pas convertir une chaîne en un double."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'auto-boxing et l'unboxing sont des conversions implicites entre types primitifs et leurs wrappers. L'unboxing est la conversion automatique d'un objet wrapper en type primitif, donc cette affirmation est vraie. La méthode parseInt() de la classe Integer peut convertir une chaîne en un entier, donc cette affirmation est vraie. La méthode parseDouble() de la classe Double peut convertir une chaîne en un double, donc cette affirmation est fausse."
+  },
+  {
+    "id": "JAVA21-TDD-008",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le wrapper correspondant au type primitif 'char' ?",
+    "options": [
+      "Character",
+      "String",
+      "Boolean",
+      "Byte"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le wrapper correspondant au type primitif 'char' est Character."
+  },
+  {
+    "id": "JAVA21-TDD-009",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion implicite entre types primitifs :",
+    "options": [
+      "Une conversion implicite peut se produire entre des types numériques compatibles.",
+      "Une conversion implicite peut se produire entre un type primitif et son wrapper correspondant.",
+      "Une conversion implicite peut se produire entre un type primitif et une chaîne de caractères.",
+      "Une conversion implicite peut se produire entre des types non compatibles comme 'int' et 'boolean'."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car Java effectue une conversion implicite entre des types numériques compatibles, comme de 'int' à 'double'. Option B est correcte car Java effectue une conversion implicite entre un type primitif et son wrapper correspondant, comme de 'int' à 'Integer'. Option C est incorrecte car une conversion implicite entre un type primitif et une chaîne de caractères nécessite une conversion explicite en utilisant la méthode toString(). Option D est incorrecte car il n'existe aucune conversion implicite entre des types non compatibles comme 'int' et 'boolean'."
+  },
+  {
+    "id": "JAVA21-TDD-010",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la valeur par défaut du type primitif 'char' en Java ?",
+    "options": [
+      "\\u0000",
+      "null",
+      "0",
+      "' '"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "\\u0000 est la valeur par défaut du type primitif 'char' en Java, qui représente le caractère nul."
+  },
+  {
+    "id": "JAVA21-TDD-011",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe 'Integer' en Java ?",
+    "options": [
+      "La méthode parseInt() peut convertir une chaîne en entier.",
+      "La méthode valueOf() retourne toujours une nouvelle instance de 'Integer'.",
+      "La méthode toString() peut convertir un entier en chaîne.",
+      "La méthode parseDouble() est définie dans la classe 'Integer'."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car la méthode parseInt() de la classe 'Integer' peut convertir une chaîne en entier. Option B est incorrecte car la méthode valueOf() peut retourner une instance existante à partir d'un pool d'instances pour des valeurs entre -128 et 127. Option C est correcte car la méthode toString() de la classe 'Integer' peut convertir un entier en chaîne. Option D est incorrecte car la méthode parseDouble() est définie dans la classe 'Double', pas dans la classe 'Integer'."
+  },
+  {
+    "id": "JAVA21-TDD-012",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'long' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "long est un entier signé sur 64 bits. Plage de valeurs : -9,223,372,036,854,775,808 à 9,223,372,036,854,775,807."
+  },
+  {
+    "id": "JAVA21-TDD-013",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion explicite entre types primitifs :",
+    "options": [
+      "Une conversion explicite peut se produire entre des types numériques incompatibles.",
+      "Une conversion explicite peut se produire entre un type primitif et son wrapper correspondant.",
+      "Une conversion explicite peut se produire entre un type primitif et une chaîne de caractères.",
+      "Une conversion explicite peut se produire entre des types non compatibles comme 'int' et 'boolean'."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car Java effectue une conversion explicite entre des types numériques incompatibles, comme de 'double' à 'int'. Option B est correcte car Java effectue une conversion explicite entre un type primitif et son wrapper correspondant, comme de 'int' à 'Integer'. Option C est incorrecte car une conversion explicite entre un type primitif et une chaîne de caractères nécessite l'utilisation d'une méthode comme toString(). Option D est incorrecte car il n'existe aucune conversion explicite entre des types non compatibles comme 'int' et 'boolean'."
+  },
+  {
+    "id": "JAVA21-TDD-014",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la valeur par défaut du type primitif 'boolean' en Java ?",
+    "options": [
+      "true",
+      "false",
+      "null",
+      "0"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "false est la valeur par défaut du type primitif 'boolean' en Java."
+  },
+  {
+    "id": "JAVA21-TDD-015",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe 'Double' en Java ?",
+    "options": [
+      "La méthode parseDouble() peut convertir une chaîne en double.",
+      "La méthode valueOf() retourne toujours une nouvelle instance de 'Double'.",
+      "La méthode toString() peut convertir un double en chaîne.",
+      "La méthode parseInt() est définie dans la classe 'Double'."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car la méthode parseDouble() de la classe 'Double' peut convertir une chaîne en double. Option B est incorrecte car la méthode valueOf() peut retourner une instance existante à partir d'un pool d'instances pour des valeurs entre -128 et 127. Option C est correcte car la méthode toString() de la classe 'Double' peut convertir un double en chaîne. Option D est incorrecte car la méthode parseInt() est définie dans la classe 'Integer', pas dans la classe 'Double'."
+  },
+  {
+    "id": "JAVA21-TDD-016",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'float' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "float est un type à virgule flottante signé sur 32 bits. Plage de valeurs : -3.4028235E+38 à 3.4028235E+38."
+  },
+  {
+    "id": "JAVA21-TDD-017",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers en Java :",
+    "options": [
+      "L'auto-boxing permet de convertir automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing ne peut se produire qu'avec des objets non nuls.",
+      "On peut utiliser la méthode parseXXX() des classes wrapper pour convertir une chaîne en type primitif.",
+      "La conversion entre types primitifs nécessite toujours une méthode explicite."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'auto-boxing est une fonctionnalité Java qui convertit automatiquement un type primitif en son wrapper correspondant, donc l'option A est correcte. L'unboxing peut se produire avec des objets nuls, ce qui lève une NullPointerException, donc l'option B est incorrecte. La méthode parseXXX() permet effectivement de convertir une chaîne en type primitif, donc l'option C est correcte. La conversion entre types primitifs ne nécessite pas toujours une méthode explicite, car Java effectue des conversions implicites lorsqu'il est sûr de le faire, donc l'option D est incorrecte."
+  },
+  {
+    "id": "JAVA21-TDD-018",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode correcte pour convertir un objet Integer en type primitif int ?",
+    "options": [
+      "int value = (int) myInteger;",
+      "int value = Integer.parseInt(myInteger);",
+      "int value = myInteger.intValue();",
+      "int value = Integer.valueOf(myInteger);"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte pour convertir un objet Integer en type primitif int est d'utiliser la méthode intValue() de l'objet Integer, donc l'option C est correcte. L'option A effectue une conversion de type et non une conversion d'un objet Integer à un int, donc elle est incorrecte. L'option B utilise parseInt() qui convertit une chaîne en int, pas un objet Integer, donc elle est incorrecte. L'option D utilise valueOf() qui retourne un objet Integer, pas un int primitif, donc elle est incorrecte."
+  },
+  {
+    "id": "JAVA21-TDD-019",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers en Java :",
+    "options": [
+      "La conversion automatique (autoboxing) est possible entre un type primitif et son wrapper correspondant.",
+      "La conversion manuelle (unboxing) est nécessaire pour utiliser une méthode qui attend un type primitif.",
+      "On peut convertir n'importe quel type primitif en son wrapper correspondant sans problème.",
+      "Il existe des méthodes spécifiques dans les classes de wrappers pour effectuer des conversions."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car Java permet l'autoboxing entre un type primitif et son wrapper. B est correct car pour utiliser une méthode qui attend un type primitif, il faut effectuer l'unboxing. C est incorrect car certains types de conversions peuvent nécessiter des cast explicites ou lever des exceptions (par exemple, conversion d'un Float vers un Integer). D est incorrect car les méthodes spécifiques pour la conversion sont généralement des méthodes statiques dans les classes de wrappers, mais elles ne couvrent pas toutes les conversions possibles."
+  },
+  {
+    "id": "JAVA21-TDD-020",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la classe wrapper correspondant au type primitif 'int' en Java ?",
+    "options": [
+      "Integer",
+      "Int",
+      "intWrapper",
+      "Integral"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car la classe wrapper correspondant au type primitif 'int' en Java est Integer. Les autres options ne sont pas des classes wrapper valides pour le type 'int'."
+  },
+  {
+    "id": "JAVA21-TDD-021",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la gestion de mémoire pour les types primitifs et leurs wrappers en Java :",
+    "options": [
+      "Les types primitifs sont stockés sur la pile (stack).",
+      "Les wrappers sont stockés sur le tas (heap).",
+      "Les types primitifs peuvent être null.",
+      "Les wrappers peuvent être null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "A est correct car les types primitifs sont généralement stockés sur la pile (stack). B est correct car les wrappers, étant des objets, sont stockés sur le tas (heap). C est incorrect car les types primitifs ne peuvent pas être null. D est correct car les wrappers, étant des objets, peuvent être null."
+  },
+  {
+    "id": "JAVA21-TDD-022",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode doit être utilisée pour convertir une chaîne de caractères en un type primitif 'int' en Java ?",
+    "options": [
+      "parseInt()",
+      "toInteger()",
+      "intParse()",
+      "valueOf()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car la méthode parseInt() doit être utilisée pour convertir une chaîne de caractères en un type primitif 'int'. Les autres options ne sont pas des méthodes valides pour cette conversion."
+  },
+  {
+    "id": "JAVA21-TDD-023",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'auto-boxing et l'unboxing en Java :",
+    "options": [
+      "L'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing convertit automatiquement un wrapper en son type primitif correspondant.",
+      "L'auto-boxing et l'unboxing sont toujours sans risque en termes d'exceptions.",
+      "Les conversions implicites entre types primitifs sont possibles sans auto-boxing ou unboxing."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car l'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant. B est correct car l'unboxing convertit automatiquement un wrapper en son type primitif correspondant. C est incorrect car l'auto-boxing et l'unboxing peuvent lever des exceptions, par exemple lors d'une conversion non valide. D est correct car les conversions implicites entre types primitifs sont possibles sans auto-boxing ou unboxing."
+  },
+  {
+    "id": "JAVA21-TDD-024",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers en Java :",
+    "options": [
+      "L'auto-boxing permet de convertir automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing est la conversion automatique d'un objet wrapper en type primitif.",
+      "La méthode parse() dans les classes wrapper convertit une chaîne en un type primitif.",
+      "La méthode toString() dans les classes wrapper convertit un type primitif en une chaîne."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'auto-boxing et l'unboxing sont des mécanismes de conversion entre types primitifs et leurs wrappers en Java. La méthode parse() dans les classes wrapper convertit une chaîne en un type primitif, tandis que la méthode toString() convertit un objet wrapper en une chaîne. L'option D est incorrecte car toString() n'est pas utilisée pour convertir un type primitif en une chaîne."
+  },
+  {
+    "id": "JAVA21-TDD-025",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'int' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "int est un entier signé sur 32 bits. Plage de valeurs : -2,147,483,648 à 2,147,483,647."
+  },
+  {
+    "id": "JAVA21-TDD-026",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les wrappers en Java ?",
+    "options": [
+      "Les wrappers sont des classes qui encapsulent les types primitifs.",
+      "Chaque type primitif a un wrapper correspondant dans le package java.lang.",
+      "Les wrappers peuvent être utilisés pour stocker des valeurs nulles.",
+      "Les wrappers sont toujours plus rapides que les types primitifs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les wrappers sont effectivement des classes qui encapsulent les types primitifs, permettant ainsi de stocker des valeurs nulles. Chaque type primitif a un wrapper correspondant dans le package java.lang, mais ce n'est pas toujours vrai pour tous les types primitifs. Les wrappers ne sont pas toujours plus rapides que les types primitifs, car ils comportent des coûts supplémentaires en termes de mémoire et de performances."
+  },
+  {
+    "id": "JAVA21-TDD-027",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle exception est levée lorsqu'on essaie de convertir une chaîne non numérique en un type primitif avec la méthode parse() ?",
+    "options": [
+      "NumberFormatException",
+      "NullPointerException",
+      "IllegalArgumentException",
+      "ClassCastException"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "NumberFormatException est levée lorsqu'une chaîne ne peut pas être convertie en un type numérique avec la méthode parse(). Les autres exceptions ne sont pas liées à cette conversion spécifique."
+  },
+  {
+    "id": "JAVA21-TDD-028",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la méthode valueOf() dans les classes wrapper en Java :",
+    "options": [
+      "La méthode valueOf() retourne une nouvelle instance de l'objet wrapper.",
+      "La méthode valueOf() peut utiliser un pool d'objets pour des valeurs spécifiques.",
+      "La méthode valueOf() est plus performante que l'auto-boxing pour des valeurs spécifiques.",
+      "La méthode valueOf() ne peut pas être utilisée avec des types primitifs."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "La méthode valueOf() peut retourner une nouvelle instance de l'objet wrapper ou utiliser un pool d'objets pour des valeurs spécifiques, ce qui peut améliorer les performances. La méthode valueOf() est plus performante que l'auto-boxing pour des valeurs spécifiques car elle utilise un pool d'objets. L'option D est incorrecte car valueOf() peut être utilisée avec des types primitifs."
+  },
+  {
+    "id": "JAVA21-TDD-029",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers en Java :",
+    "options": [
+      "L'auto-boxing permet de convertir automatiquement un type primitif en son wrapper correspondant.",
+      "Le dé-boxing permet de convertir automatiquement un wrapper en type primitif correspondant.",
+      "La conversion entre types primitifs nécessite toujours une méthode explicite de conversion.",
+      "Les wrappers ne peuvent pas être utilisés dans des structures de contrôle comme les boucles."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'auto-boxing et le dé-boxing sont des mécanismes permettant la conversion automatique entre types primitifs et leurs wrappers en Java. La conversion entre types primitifs nécessite parfois une méthode explicite, mais pas toujours. Les wrappers peuvent être utilisés dans des structures de contrôle comme les boucles."
+  },
+  {
+    "id": "JAVA21-TDD-030",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'int' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "int est un entier signé sur 32 bits. Plage de valeurs : -2,147,483,648 à 2,147,483,647."
+  },
+  {
+    "id": "JAVA21-TDD-031",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation des wrappers en Java ?",
+    "options": [
+      "Les wrappers permettent de stocker des valeurs primitives dans des collections.",
+      "Les wrappers peuvent être utilisés pour effectuer des opérations arithmétiques.",
+      "Les wrappers sont toujours plus rapides que les types primitifs en termes de performances.",
+      "Les wrappers peuvent être nuls, ce qui n'est pas possible avec les types primitifs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les wrappers permettent de stocker des valeurs primitives dans des collections qui ne peuvent contenir que des objets. Les wrappers peuvent être utilisés pour effectuer des opérations arithmétiques, mais cela n'est généralement pas recommandé car cela peut entraîner une perte de performances. Les wrappers peuvent être nuls, ce qui n'est pas possible avec les types primitifs."
+  },
+  {
+    "id": "JAVA21-TDD-032",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode utilisée pour convertir un type primitif en son wrapper correspondant ?",
+    "options": [
+      "Auto-boxing",
+      "Boxing explicite",
+      "Conversion implicite",
+      "Dé-boxing"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'auto-boxing est la méthode utilisée pour convertir automatiquement un type primitif en son wrapper correspondant."
+  },
+  {
+    "id": "JAVA21-TDD-033",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs en Java :",
+    "options": [
+      "La conversion implicite peut entraîner une perte de données.",
+      "La conversion explicite nécessite toujours une méthode de conversion.",
+      "Les conversions entre types primitifs peuvent être effectuées sans risque de perte de données.",
+      "Les conversions entre types primitifs peuvent être effectuées avec un cast."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La conversion implicite peut entraîner une perte de données si le type cible ne peut pas contenir la valeur du type source. La conversion explicite nécessite parfois une méthode de conversion, mais pas toujours. Les conversions entre types primitifs peuvent entraîner une perte de données, donc il n'est pas toujours possible de les effectuer sans risque. Les conversions entre types primitifs peuvent être effectuées avec un cast."
+  },
+  {
+    "id": "JAVA21-TDD-034",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers en Java :",
+    "options": [
+      "L'auto-boxing permet la conversion implicite d'un type primitif à son wrapper correspondant.",
+      "L'auto-unboxing permet la conversion implicite d'un wrapper à son type primitif correspondant.",
+      "La conversion entre types primitifs nécessite toujours l'utilisation d'un cast explicite.",
+      "Les wrappers ne peuvent pas être utilisés dans des structures de données qui nécessitent des types primitifs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'auto-boxing et l'auto-unboxing sont des fonctionnalités Java qui permettent la conversion implicite entre types primitifs et leurs wrappers correspondants. La conversion entre types primitifs nécessite parfois un cast explicite, mais pas toujours. Les wrappers peuvent être utilisés dans des structures de données qui nécessitent des types primitifs, car Java effectue automatiquement l'auto-unboxing."
+  },
+  {
+    "id": "JAVA21-TDD-035",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'int' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "int est un entier signé sur 32 bits. La plage de valeurs est -2,147,483,648 à 2,147,483,647."
+  },
+  {
+    "id": "JAVA21-TDD-036",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la conversion entre types primitifs en Java ?",
+    "options": [
+      "La conversion d'un double à un float peut entraîner une perte de précision.",
+      "La conversion d'un int à un short nécessite toujours un cast explicite.",
+      "La conversion d'un byte à un int peut entraîner une perte de précision.",
+      "La conversion d'un long à un int nécessite toujours un cast explicite."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La conversion d'un double à un float peut entraîner une perte de précision car un float a moins de bits pour représenter la partie décimale. La conversion d'un int à un short nécessite parfois un cast explicite, mais pas toujours si la valeur est dans la plage d'un short. La conversion d'un byte à un int ne peut pas entraîner une perte de précision car un int a plus de bits. La conversion d'un long à un int nécessite toujours un cast explicite car un long a plus de bits qu'un int."
+  },
+  {
+    "id": "JAVA21-TDD-037",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode correcte pour convertir une chaîne en un entier en Java ?",
+    "options": [
+      "Integer.parseInt()",
+      "String.toInteger()",
+      "Integer.valueOf()",
+      "String.toInt()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte pour convertir une chaîne en un entier en Java est Integer.parseInt()."
+  },
+  {
+    "id": "JAVA21-TDD-038",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des wrappers en Java :",
+    "options": [
+      "Les wrappers peuvent être utilisés dans des structures de données qui nécessitent des objets.",
+      "Les wrappers permettent la conversion implicite entre types primitifs et leurs wrappers correspondants.",
+      "Les wrappers sont toujours plus rapides que les types primitifs.",
+      "Les wrappers peuvent être null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les wrappers peuvent être utilisés dans des structures de données qui nécessitent des objets, comme les collections. Les wrappers permettent la conversion implicite entre types primitifs et leurs wrappers correspondants grâce à l'auto-boxing. Les wrappers ne sont pas toujours plus rapides que les types primitifs, car ils ont une surcharge mémoire. Les wrappers peuvent être null, ce qui n'est pas possible avec les types primitifs."
+  },
+  {
+    "id": "JAVA21-TDD-039",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la conversion entre types primitifs et leurs wrappers en Java :",
+    "options": [
+      "L'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant.",
+      "Le dé-boxing convertit automatiquement un wrapper en son type primitif correspondant.",
+      "On peut utiliser la méthode parse() des wrappers pour convertir une chaîne en type primitif.",
+      "On ne peut pas utiliser la méthode valueOf() des wrappers pour convertir une chaîne en type primitif."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'auto-boxing et le dé-boxing sont des mécanismes automatisés en Java pour convertir entre types primitifs et leurs wrappers. L'option A est correcte car elle décrit l'auto-boxing, B est correcte car elle décrit le dé-boxing. L'option C est correcte car parse() est une méthode des wrappers qui permet de convertir une chaîne en type primitif. L'option D est incorrecte car valueOf() est effectivement une méthode des wrappers qui permet de convertir une chaîne en type primitif."
+  },
+  {
+    "id": "JAVA21-TDD-040",
+    "theme": "Types de données et Wrappers",
+    "theme_label": "Primitifs, wrappers, conversion",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la taille en bits d'un type 'int' en Java ?",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "int est un entier signé sur 32 bits. Sa plage de valeurs va de -2,147,483,648 à 2,147,483,647."
   }
 ]

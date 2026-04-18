@@ -448,5 +448,195 @@
     ],
     "correct": 3,
     "explanation": "ModuleLayer permet de créer des configurations de modules isolées (ex: plusieurs versions, conteneurs)."
+  },
+  {
+    "id": "JAVA21-MJ-001",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'instruction 'exports' dans module-info.java :",
+    "options": [
+      "Exporte un package à d'autres modules",
+      "Ouvre le module à la réflexion",
+      "Déclare une dépendance avec un autre module",
+      "Permet d'accéder à des classes non publiques"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'instruction 'exports' est utilisée pour exporter un package à d'autres modules, ce qui signifie qu'il peut être accédé par ces modules. Elle ne déclare pas de dépendance (ce qui est fait avec 'requires') et elle n'ouvre pas le module à la réflexion (ce qui est fait avec 'opens'). De plus, elle ne permet pas d'accéder à des classes non publiques."
+  },
+  {
+    "id": "JAVA21-MJ-002",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive dans module-info.java permet de déclarer une dépendance avec un autre module ?",
+    "options": [
+      "exports",
+      "requires",
+      "opens",
+      "uses"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La directive 'requires' est utilisée pour déclarer une dépendance avec un autre module. Les autres directives ont des fonctions différentes : 'exports' pour exporter un package, 'opens' pour ouvrir un package à la réflexion, et 'uses' pour déclarer des services utilisés par le module."
+  },
+  {
+    "id": "JAVA21-MJ-003",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'instruction 'opens' dans module-info.java ?",
+    "options": [
+      "Permet l'accès réflexif à des classes non publiques",
+      "Exporte un package à d'autres modules",
+      "Déclare une dépendance avec un autre module",
+      "Ouvre le module à la réflexion pour tous les packages"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "L'instruction 'opens' permet l'accès réflexif à des classes non publiques, ce qui est nécessaire pour certaines fonctionnalités de réflexion. Elle ne déclare pas de dépendance (ce qui est fait avec 'requires') et elle n'exporte pas un package à d'autres modules (ce qui est fait avec 'exports'). De plus, elle ouvre le module à la réflexion pour tous les packages spécifiés."
+  },
+  {
+    "id": "JAVA21-MJ-004",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive dans module-info.java permet d'ouvrir un package à la réflexion pour tous les modules ?",
+    "options": [
+      "exports",
+      "requires transitive",
+      "opens",
+      "uses"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La directive 'opens' est utilisée pour ouvrir un package à la réflexion, ce qui permet aux modules de lire les classes non publiques. Les autres directives ont des fonctions différentes : 'exports' pour exporter un package, 'requires transitive' pour déclarer une dépendance transitive, et 'uses' pour déclarer des services utilisés par le module."
+  },
+  {
+    "id": "JAVA21-MJ-005",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la directive 'requires' dans module-info.java :",
+    "options": [
+      "Déclare une dépendance vers un autre module",
+      "Exporte des packages du module courant",
+      "Permet l'accès à la réflexion dans le module déclaré",
+      "Ouvre un package au module courant"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La directive 'requires' est utilisée pour déclarer une dépendance vers un autre module, ce qui signifie que le module courant nécessite les services fournis par ce module. L'option B est incorrecte car 'exports' est utilisée pour exporter des packages, pas 'requires'. L'option C est incorrecte car la directive 'opens' est utilisée pour permettre l'accès à la réflexion, pas 'requires'. L'option D est correcte car 'opens' permet d'accéder à la réflexion dans un package, mais elle est distincte de 'requires'."
+  },
+  {
+    "id": "JAVA21-MJ-006",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive dans module-info.java est utilisée pour déclarer que le module courant peut être utilisé par d'autres modules ?",
+    "options": [
+      "exports",
+      "requires",
+      "opens",
+      "provides"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La directive 'exports' est utilisée pour déclarer que le module courant peut être utilisé par d'autres modules. Elle rend un package accessible aux autres modules."
+  },
+  {
+    "id": "JAVA21-MJ-007",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la directive 'opens' dans module-info.java :",
+    "options": [
+      "Permet l'accès à la réflexion dans un package",
+      "Exporte des packages du module courant",
+      "Déclare une dépendance vers un autre module",
+      "Ouvre un package au module courant"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La directive 'opens' permet l'accès à la réflexion dans un package, ce qui signifie que le module courant peut être inspecté et modifié dynamiquement par d'autres modules. L'option B est incorrecte car 'exports' est utilisée pour exporter des packages, pas 'opens'. L'option C est incorrecte car la directive 'requires' est utilisée pour déclarer une dépendance, pas 'opens'. L'option D est correcte car 'opens' permet d'accéder à la réflexion dans un package, mais elle est distincte de 'requires'."
+  },
+  {
+    "id": "JAVA21-MJ-008",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle directive dans module-info.java est utilisée pour déclarer que le module courant fournit une implémentation d'une interface ou d'une classe ?",
+    "options": [
+      "exports",
+      "requires",
+      "opens",
+      "provides"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "La directive 'provides' est utilisée pour déclarer que le module courant fournit une implémentation d'une interface ou d'une classe. Elle est généralement utilisée en conjonction avec 'uses' dans un autre module pour indiquer une dépendance."
+  },
+  {
+    "id": "JAVA21-MJ-009",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la directive 'uses' dans module-info.java :",
+    "options": [
+      "Déclare une dépendance vers un service spécifique",
+      "Exporte des packages du module courant",
+      "Permet l'accès à la réflexion dans un package",
+      "Indique que le module courant utilise des services fournis par d'autres modules"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "La directive 'uses' est utilisée pour déclarer une dépendance vers un service spécifique, ce qui signifie que le module courant utilise des services fournis par d'autres modules. L'option B est incorrecte car 'exports' est utilisée pour exporter des packages, pas 'uses'. L'option C est incorrecte car la directive 'opens' est utilisée pour permettre l'accès à la réflexion, pas 'uses'. L'option D est correcte car 'uses' indique que le module courant utilise des services fournis par d'autres modules."
+  },
+  {
+    "id": "JAVA21-MJ-010",
+    "theme": "Modules JPMS",
+    "theme_label": "module-info.java, exports, requires, opens",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le fichier module-info.java :",
+    "options": [
+      "Il doit être placé à la racine du module.",
+      "Il définit les dépendances avec d'autres modules via 'requires'.",
+      "Il peut exporter des packages avec 'exports'.",
+      "Il permet d'ouvrir des packages à la réflexion avec 'opens'."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Toutes les affirmations sont correctes. module-info.java doit être à la racine du module, il définit les dépendances avec 'requires', il peut exporter des packages avec 'exports' et il permet d'ouvrir des packages à la réflexion avec 'opens'."
   }
 ]

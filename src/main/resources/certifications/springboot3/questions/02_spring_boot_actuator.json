@@ -20,7 +20,12 @@
     "theme_label": "Présentation",
     "difficulty": "easy",
     "question": "Quels sont les deux endpoints exposés par défaut ?",
-    "options": ["/health et /info", "/metrics et /health", "/info et /metrics", "/health et /env"],
+    "options": [
+      "/health et /info",
+      "/metrics et /health",
+      "/info et /metrics",
+      "/health et /env"
+    ],
     "correct": 0,
     "explanation": "Seuls /health et /info sont exposés par défaut pour des raisons de sécurité."
   },
@@ -30,7 +35,12 @@
     "theme_label": "Endpoints",
     "difficulty": "easy",
     "question": "Quel endpoint donne l'état de santé de l'application ?",
-    "options": ["/health", "/info", "/status", "/ping"],
+    "options": [
+      "/health",
+      "/info",
+      "/status",
+      "/ping"
+    ],
     "correct": 0,
     "explanation": "/health fournit des informations sur la santé de l'application."
   },
@@ -40,7 +50,12 @@
     "theme_label": "Endpoints",
     "difficulty": "easy",
     "question": "Quel endpoint donne des informations sur l'application ?",
-    "options": ["/info", "/health", "/metadata", "/details"],
+    "options": [
+      "/info",
+      "/health",
+      "/metadata",
+      "/details"
+    ],
     "correct": 0,
     "explanation": "/info fournit des informations personnalisables sur l'application."
   },
@@ -50,7 +65,12 @@
     "theme_label": "Endpoints",
     "difficulty": "medium",
     "question": "Quel endpoint expose les métriques de l'application ?",
-    "options": ["/metrics", "/stats", "/measure", "/counters"],
+    "options": [
+      "/metrics",
+      "/stats",
+      "/measure",
+      "/counters"
+    ],
     "correct": 0,
     "explanation": "/metrics expose les métriques comme la mémoire, CPU, etc."
   },
@@ -60,7 +80,12 @@
     "theme_label": "Endpoints",
     "difficulty": "medium",
     "question": "Quel endpoint expose les propriétés de configuration ?",
-    "options": ["/env", "/config", "/properties", "/settings"],
+    "options": [
+      "/env",
+      "/config",
+      "/properties",
+      "/settings"
+    ],
     "correct": 0,
     "explanation": "/env expose les propriétés d'environnement et de configuration."
   },
@@ -70,7 +95,12 @@
     "theme_label": "Endpoints",
     "difficulty": "medium",
     "question": "Quel endpoint expose la liste des beans Spring ?",
-    "options": ["/beans", "/components", "/context", "/instances"],
+    "options": [
+      "/beans",
+      "/components",
+      "/context",
+      "/instances"
+    ],
     "correct": 0,
     "explanation": "/beans liste tous les beans du contexte Spring."
   },
@@ -80,7 +110,12 @@
     "theme_label": "Endpoints",
     "difficulty": "medium",
     "question": "Quel endpoint expose les mappings des endpoints web ?",
-    "options": ["/mappings", "/routes", "/endpoints", "/apis"],
+    "options": [
+      "/mappings",
+      "/routes",
+      "/endpoints",
+      "/apis"
+    ],
     "correct": 0,
     "explanation": "/mappings montre les routes HTTP et leurs contrôleurs."
   },
@@ -90,7 +125,12 @@
     "theme_label": "Endpoints",
     "difficulty": "medium",
     "question": "Quel endpoint expose les threads de l'application ?",
-    "options": ["/threaddump", "/threads", "/dump", "/stack"],
+    "options": [
+      "/threaddump",
+      "/threads",
+      "/dump",
+      "/stack"
+    ],
     "correct": 0,
     "explanation": "/threaddump retourne un dump des threads."
   },
@@ -100,7 +140,12 @@
     "theme_label": "Endpoints",
     "difficulty": "medium",
     "question": "Quel endpoint expose la configuration des logs ?",
-    "options": ["/loggers", "/logs", "/logging", "/logconfig"],
+    "options": [
+      "/loggers",
+      "/logs",
+      "/logging",
+      "/logconfig"
+    ],
     "correct": 0,
     "explanation": "/loggers permet de consulter et modifier les niveaux de log."
   },
@@ -530,7 +575,12 @@
     "theme_label": "Custom endpoints",
     "difficulty": "hard",
     "question": "Quelle annotation marque une opération de lecture ?",
-    "options": ["@ReadOperation", "@GetMapping", "@Read", "@Query"],
+    "options": [
+      "@ReadOperation",
+      "@GetMapping",
+      "@Read",
+      "@Query"
+    ],
     "correct": 0,
     "explanation": "@ReadOperation pour les opérations GET."
   },
@@ -540,7 +590,12 @@
     "theme_label": "Custom endpoints",
     "difficulty": "hard",
     "question": "Quelle annotation marque une opération d'écriture ?",
-    "options": ["@WriteOperation", "@PostMapping", "@Write", "@Update"],
+    "options": [
+      "@WriteOperation",
+      "@PostMapping",
+      "@Write",
+      "@Update"
+    ],
     "correct": 0,
     "explanation": "@WriteOperation pour les opérations POST/PUT/DELETE."
   },
@@ -550,7 +605,12 @@
     "theme_label": "Custom endpoints",
     "difficulty": "hard",
     "question": "Quelle annotation marque une opération de suppression ?",
-    "options": ["@DeleteOperation", "@DeleteMapping", "@WriteOperation", "@Delete"],
+    "options": [
+      "@DeleteOperation",
+      "@DeleteMapping",
+      "@WriteOperation",
+      "@Delete"
+    ],
     "correct": 0,
     "explanation": "@DeleteOperation pour les opérations DELETE."
   },
@@ -620,7 +680,12 @@
     "theme_label": "Audit",
     "difficulty": "hard",
     "question": "Quel endpoint expose les événements d'audit ?",
-    "options": ["/auditevents", "/audit", "/events", "/logs"],
+    "options": [
+      "/auditevents",
+      "/audit",
+      "/events",
+      "/logs"
+    ],
     "correct": 0,
     "explanation": "/auditevents expose les événements d'audit."
   },
@@ -645,7 +710,12 @@
     "theme_label": "Heapdump",
     "difficulty": "hard",
     "question": "Quel endpoint génère un heap dump ?",
-    "options": ["/heapdump", "/dump", "/heap", "/memory"],
+    "options": [
+      "/heapdump",
+      "/dump",
+      "/heap",
+      "/memory"
+    ],
     "correct": 0,
     "explanation": "/heapdump génère un fichier HPROF."
   },
@@ -670,8 +740,333 @@
     "theme_label": "Prometheus",
     "difficulty": "hard",
     "question": "Quel endpoint expose les métriques pour Prometheus ?",
-    "options": ["/prometheus", "/metrics/prometheus", "/actuator/prometheus", "/scrape"],
+    "options": [
+      "/prometheus",
+      "/metrics/prometheus",
+      "/actuator/prometheus",
+      "/scrape"
+    ],
     "correct": 2,
     "explanation": "/actuator/prometheus est l'endpoint standard pour Prometheus."
+  },
+  {
+    "id": "SB3-SBA-001",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les endpoints Actuator :",
+    "options": [
+      "Les endpoints sont accessibles par défaut sur le port 8080",
+      "Il est possible de sécuriser les endpoints Actuator",
+      "Les endpoints Actuator sont exposés sur le chemin /actuator",
+      "Les endpoints ne peuvent pas être personnalisés"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les endpoints Actuator sont accessibles par défaut sur le port 8080 (option A), il est possible de sécuriser les endpoints Actuator (option B) et ils sont exposés sur le chemin /actuator (option C). Les endpoints peuvent en revanche être personnalisés (option D est fausse)."
+  },
+  {
+    "id": "SB3-SBA-002",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'endpoint par défaut pour vérifier la santé de l'application ?",
+    "options": [
+      "/health",
+      "/status",
+      "/info",
+      "/metrics"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'endpoint par défaut pour vérifier la santé de l'application est /health."
+  },
+  {
+    "id": "SB3-SBA-003",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la création d'un endpoint personnalisé avec Actuator ?",
+    "options": [
+      "On peut utiliser l'annotation @Endpoint",
+      "Il est nécessaire de créer une classe qui implémente EndpointWebExtension",
+      "On peut utiliser l'annotation @ReadOperation pour une opération de lecture",
+      "Les endpoints personnalisés ne peuvent pas être sécurisés"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "On peut utiliser l'annotation @Endpoint (option A) et on peut utiliser l'annotation @ReadOperation pour une opération de lecture (option C). Il est nécessaire de créer une classe qui implémente EndpointWebExtension pour des fonctionnalités plus avancées (option B est partielle), et les endpoints personnalisés peuvent être sécurisés (option D est fausse)."
+  },
+  {
+    "id": "SB3-SBA-005",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration d'Actuator :",
+    "options": [
+      "On peut désactiver certains endpoints en les mettant à false dans application.properties",
+      "Il est possible de personnaliser le chemin des endpoints Actuator",
+      "Actuator ne peut pas être configuré via application.properties",
+      "On peut activer des endpoints supplémentaires en les mettant à true dans application.properties"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "On peut désactiver certains endpoints en les mettant à false dans application.properties (option A), il est possible de personnaliser le chemin des endpoints Actuator (option B) et on peut activer des endpoints supplémentaires en les mettant à true dans application.properties (option D). Actuator peut être configuré via application.properties (option C est fausse)."
+  },
+  {
+    "id": "SB3-SBA-005",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'endpoint /health :",
+    "options": [
+      "Affiche l'état de santé globale de l'application",
+      "Peut être personnalisé pour inclure des détails spécifiques",
+      "N'offre pas d'informations sur les composants individuels de l'application",
+      "Permet de vérifier la santé des bases de données"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'endpoint /health affiche l'état de santé globale de l'application, ce qui est correct. Il peut également être personnalisé pour inclure des détails spécifiques, ce qui est aussi correct. Cependant, il peut fournir des informations sur les composants individuels de l'application et vérifier la santé des bases de données, donc ces options sont incorrectes."
+  },
+  {
+    "id": "SB3-SBA-006",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de l'endpoint /metrics ?",
+    "options": [
+      "Afficher les informations sur la santé de l'application",
+      "Exposer des métriques d'utilisation et de performance",
+      "Gérer les configurations de l'application",
+      "Afficher les informations d'environnement"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'endpoint /metrics est principalement utilisé pour exposer des métriques d'utilisation et de performance, ce qui est correct. Les autres options ne correspondent pas à la fonction principale de cet endpoint."
+  },
+  {
+    "id": "SB3-SBA-007",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la création d'un endpoint personnalisé avec Actuator ?",
+    "options": [
+      "Il est possible de créer un endpoint personnalisé en étendant la classe AbstractEndpoint",
+      "On peut utiliser l'annotation @Endpoint pour définir un endpoint personnalisé",
+      "Les endpoints personnalisés doivent être enregistrés dans le fichier application.properties",
+      "Il est nécessaire d'implémenter l'interface Endpoint"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Il est possible de créer un endpoint personnalisé en utilisant l'annotation @Endpoint, ce qui est correct. Il est également nécessaire d'implémenter l'interface Endpoint, ce qui est aussi correct. L'étendre AbstractEndpoint n'est pas nécessaire et les endpoints personnalisés ne sont pas enregistrés dans le fichier application.properties, donc ces options sont incorrectes."
+  },
+  {
+    "id": "SB3-SBA-008",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment désactiver un endpoint Actuator spécifique ?",
+    "options": [
+      "En ajoutant la propriété management.endpoints.web.exposure.exclude dans application.properties",
+      "En modifiant le fichier de configuration XML",
+      "En utilisant l'annotation @DisableEndpoint dans la classe principale de l'application",
+      "En supprimant le starter Actuator du projet"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Pour désactiver un endpoint Actuator spécifique, il faut ajouter la propriété management.endpoints.web.exposure.exclude dans application.properties, ce qui est correct. Les autres options ne sont pas valides pour désactiver un endpoint Actuator spécifique."
+  },
+  {
+    "id": "SB3-SBA-009",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Loggers",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'endpoint /loggers :",
+    "options": [
+      "Permet de modifier les niveaux de log des loggers au runtime",
+      "Affiche les messages de log en temps réel",
+      "Permet de récupérer la configuration actuelle des loggers",
+      "Nécessite une authentification pour être accédé"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'endpoint /loggers permet de modifier les niveaux de log des loggers au runtime et de récupérer la configuration actuelle des loggers, ce qui est correct. Cependant, il n'affiche pas les messages de log en temps réel et ne nécessite pas nécessairement une authentification pour être accédé, donc ces options sont incorrectes."
+  },
+  {
+    "id": "SB3-SBA-010",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Endpoints",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations correctes concernant les endpoints Actuator ?",
+    "options": [
+      "Les endpoints sont accessibles via HTTP par défaut.",
+      "Les endpoints peuvent être sécurisés en utilisant Spring Security.",
+      "Tous les endpoints sont exposés par défaut pour des raisons de sécurité.",
+      "Les endpoints peuvent être personnalisés en ajoutant des beans."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les endpoints Actuator sont accessibles via HTTP par défaut, ce qui est correct. Ils peuvent également être sécurisés en utilisant Spring Security, ce qui est aussi correct. Cependant, tous les endpoints ne sont pas exposés par défaut pour des raisons de sécurité, ce qui est incorrect. Enfin, bien que les endpoints puissent être personnalisés en ajoutant des beans, cette affirmation n'est pas spécifiquement correcte dans le contexte des endpoints Actuator."
+  },
+  {
+    "id": "SB3-SBA-011",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le code HTTP renvoyé par l'endpoint /health lorsque l'application est en bonne santé ?",
+    "options": [
+      "200",
+      "404",
+      "500",
+      "302"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'endpoint /health renvoie un code HTTP 200 lorsque l'application est en bonne santé, ce qui est correct."
+  },
+  {
+    "id": "SB3-SBA-012",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création d'un endpoint personnalisé avec Actuator :",
+    "options": [
+      "Il est possible de créer un endpoint personnalisé en étendant AbstractEndpoint.",
+      "Les endpoints personnalisés doivent être annotés avec @RestController.",
+      "Il est nécessaire d'implémenter l'interface Endpoint.",
+      "Les endpoints personnalisés peuvent être sécurisés en utilisant Spring Security."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les endpoints personnalisés doivent être annotés avec @RestController, ce qui est correct. Les endpoints personnalisés peuvent également être sécurisés en utilisant Spring Security, ce qui est aussi correct. Cependant, étendre AbstractEndpoint n'est pas la méthode recommandée pour créer un endpoint personnalisé dans Actuator, ce qui est incorrect. De plus, il n'est pas nécessaire d'implémenter l'interface Endpoint pour créer un endpoint personnalisé, ce qui est également incorrect."
+  },
+  {
+    "id": "SB3-SBA-013",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre les métriques 'counter' et 'gauge' dans Actuator ?",
+    "options": [
+      "Un compteur incrémente ses valeurs, tandis qu'une jauge peut augmenter ou diminuer.",
+      "Un compteur peut augmenter ou diminuer, tandis qu'une jauge incrémente ses valeurs.",
+      "Un compteur et une jauge ont la même fonctionnalité dans Actuator.",
+      "Les métriques 'counter' et 'gauge' ne sont pas disponibles dans Actuator."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un compteur incrémente ses valeurs, tandis qu'une jauge peut augmenter ou diminuer, ce qui est correct."
+  },
+  {
+    "id": "SB3-SBA-014",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Configuration",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment désactiver un endpoint Actuator spécifique ?",
+    "options": [
+      "En ajoutant la propriété management.endpoints.web.exposure.exclude=nomEndpoint",
+      "En supprimant le starter Actuator de la dépendance.",
+      "En modifiant l'annotation @Endpoint dans le code source.",
+      "En utilisant la propriété management.endpoints.web.exposure.include=nomEndpoint"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Pour désactiver un endpoint Actuator spécifique, il faut ajouter la propriété management.endpoints.web.exposure.exclude=nomEndpoint dans le fichier de configuration, ce qui est correct."
+  },
+  {
+    "id": "SB3-SBA-015",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Metrics",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les métriques dans Spring Boot Actuator :",
+    "options": [
+      "Les métriques peuvent être exposées via HTTP et JMX.",
+      "Spring Boot Actuator fournit des métriques sur les connexions HTTP par défaut.",
+      "Les métriques peuvent être personnalisées en ajoutant des beans de type MeterRegistry.",
+      "Les métriques sont stockées dans la base de données par défaut."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les métriques peuvent effectivement être exposées via HTTP et JMX, ce qui est une fonctionnalité importante d'Actuator. Spring Boot Acteur fournit des métriques sur les connexions HTTP par défaut, ce qui est une autre affirmation correcte. Les métriques peuvent être personnalisées en ajoutant des beans de type MeterRegistry, ce qui est également correct. Cependant, les métriques ne sont pas stockées dans une base de données par défaut ; elles sont généralement exposées via des endpoints HTTP ou JMX."
+  },
+  {
+    "id": "SB3-SBA-016",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Health",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode par défaut pour vérifier l'état de santé d'une application Spring Boot Actuator ?",
+    "options": [
+      "/health",
+      "/status",
+      "/info",
+      "/metrics"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "/health est l'endpoint par défaut utilisé pour vérifier l'état de santé d'une application Spring Boot Actuator. Il fournit des informations sur le statut global et les détails spécifiques de l'application."
+  },
+  {
+    "id": "SB3-SBA-017",
+    "theme": "Spring Boot Actuator",
+    "theme_label": "Custom endpoints",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la création d'endpoints personnalisés dans Spring Boot Actuator ?",
+    "options": [
+      "On peut créer des endpoints personnalisés en implémentant l'interface Endpoint.",
+      "Les endpoints personnalisés doivent être annotés avec @Endpoint.",
+      "On peut utiliser l'annotation @ReadOperation pour définir une opération de lecture.",
+      "Les endpoints personnalisés ne peuvent pas être sécurisés."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les endpoints personnalisés doivent être annotés avec @Endpoint, ce qui est une affirmation correcte. On peut utiliser l'annotation @ReadOperation pour définir une opération de lecture, ce qui est également correct. Cependant, il n'est pas vrai que les endpoints personnalisés ne peuvent pas être sécurisés ; ils peuvent être protégés en utilisant des mécanismes de sécurité tels que Spring Security. De plus, l'implémentation directe de l'interface Endpoint est moins courante et généralement déconseillée en faveur de l'utilisation des annotations."
   }
 ]

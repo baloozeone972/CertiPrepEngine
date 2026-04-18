@@ -1,0 +1,44 @@
+Génère un script Python 3.11 complet et fonctionnel nommé migrate_to_flyway.py.
+
+Contexte : migration du corpus CertiPrep Engine (fichiers JSON) vers PostgreSQL via Flyway.
+
+Structure JSON source d'une question :
+{
+  "id": "JAVA-001",
+  "theme": "Lambda, Streams et API fonctionnelle",
+  "theme_label": "Stream terminal operations",
+  "difficulty": "medium",
+  "question": "Quelle méthode de Stream...",
+  "options": ["collect()", "toList()", "asList()", "A et B"],
+  "correct": 3,
+  "explanation": "Depuis Java 16..."
+}
+
+Structure config.json d'une certification :
+{
+  "id": "ocp21",
+  "name": "Oracle Certified Professional Java SE 21",
+  "totalQuestions": 500,
+  "examDurationMinutes": 180,
+  "examQuestionCount": 80,
+  "passingScore": 68,
+  "themes": [{"name": "Lambda, Streams", "count": 60}]
+}
+
+Tables PostgreSQL cibles :
+- certifications(id VARCHAR PK, code, name, description, total_questions, exam_question_count, exam_duration_min, passing_score)
+- certification_themes(id UUID PK, certification_id FK, code, label, question_count, display_order)
+- questions(id UUID PK, legacy_id VARCHAR UNIQUE, certification_id FK, theme_id FK, statement, difficulty, explanation_original)
+- question_options(id UUID PK, question_id FK, label CHAR, text, is_correct BOOLEAN, display_order)
+
+Le script doit :
+1. Lire tous les config.json et fichiers questions/*.json dans certifications/
+2. Générer certif-infrastructure/src/main/resources/db/migration/V3__seed_questions.sql
+3. Utiliser INSERT ... ON CONFLICT DO NOTHING (idempotent)
+4. Échapper correctement les apostrophes dans le SQL (remplacer ' par '')
+5. Générer des UUID reproductibles via uuid5(namespace, legacy_id) pour la traçabilité
+6. Fusionner java21 et ocp21 : ignorer java21, utiliser ocp21 comme ID canonique
+7. Afficher un rapport : nb certifications, nb thèmes, nb questions, nb options générés
+8. Sauvegarder un fichier migration_report.json avec les statistiques
+
+Utilise : Python 3.11+, pathlib, json, uuid, argparse

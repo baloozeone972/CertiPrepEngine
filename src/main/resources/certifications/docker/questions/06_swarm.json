@@ -12,7 +12,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Swarm est l'orchestrateur intégré à Docker."
+    "explanation": "Swarm est l'orchestrateur intégré à Docker."
   },
   {
     "id": "DKR-06-002",
@@ -27,7 +27,7 @@
       "docker swarm new"
     ],
     "correct": 0,
-    "explication": "docker swarm init sur le nœud manager."
+    "explanation": "docker swarm init sur le nœud manager."
   },
   {
     "id": "DKR-06-003",
@@ -42,7 +42,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "docker info montre le statut, docker node ls liste les nœuds."
+    "explanation": "docker info montre le statut, docker node ls liste les nœuds."
   },
   {
     "id": "DKR-06-004",
@@ -57,7 +57,7 @@
       "docker swarm add"
     ],
     "correct": 0,
-    "explication": "Utiliser le token fourni par docker swarm join-token worker."
+    "explanation": "Utiliser le token fourni par docker swarm join-token worker."
   },
   {
     "id": "DKR-06-005",
@@ -72,7 +72,7 @@
       "Primary et secondary"
     ],
     "correct": 0,
-    "explication": "Les managers contrôlent le cluster, les workers exécutent les tâches."
+    "explanation": "Les managers contrôlent le cluster, les workers exécutent les tâches."
   },
   {
     "id": "DKR-06-006",
@@ -80,9 +80,14 @@
     "theme_label": "Fondamentaux",
     "difficulty": "easy",
     "question": "Combien de managers sont recommandés en production ?",
-    "options": ["3,5,7 (nombre impair)", "1", "2", "4"],
+    "options": [
+      "3,5,7 (nombre impair)",
+      "1",
+      "2",
+      "4"
+    ],
     "correct": 0,
-    "explication": "Nombre impair pour le quorum (tolérance de pannes)."
+    "explanation": "Nombre impair pour le quorum (tolérance de pannes)."
   },
   {
     "id": "DKR-06-007",
@@ -97,7 +102,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "docker service create avec diverses options."
+    "explanation": "docker service create avec diverses options."
   },
   {
     "id": "DKR-06-008",
@@ -112,7 +117,7 @@
       "docker service show"
     ],
     "correct": 0,
-    "explication": "docker service ls affiche les services."
+    "explanation": "docker service ls affiche les services."
   },
   {
     "id": "DKR-06-009",
@@ -127,7 +132,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "scale ou update --replicas."
+    "explanation": "scale ou update --replicas."
   },
   {
     "id": "DKR-06-010",
@@ -142,7 +147,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "inspect donne la configuration, ps liste les tâches."
+    "explanation": "inspect donne la configuration, ps liste les tâches."
   },
   {
     "id": "DKR-06-011",
@@ -157,7 +162,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "rm ou remove."
+    "explanation": "rm ou remove."
   },
   {
     "id": "DKR-06-012",
@@ -172,7 +177,7 @@
       "Volumes"
     ],
     "correct": 0,
-    "explication": "Chaque réplica est une tâche."
+    "explanation": "Chaque réplica est une tâche."
   },
   {
     "id": "DKR-06-013",
@@ -180,9 +185,14 @@
     "theme_label": "Réseaux",
     "difficulty": "easy",
     "question": "Quel type de réseau est utilisé pour les services Swarm ?",
-    "options": ["overlay", "bridge", "host", "macvlan"],
+    "options": [
+      "overlay",
+      "bridge",
+      "host",
+      "macvlan"
+    ],
     "correct": 0,
-    "explication": "Le driver overlay permet la communication multi-hôtes."
+    "explanation": "Le driver overlay permet la communication multi-hôtes."
   },
   {
     "id": "DKR-06-014",
@@ -197,7 +207,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "--attachable permet aux conteneurs indépendants de se connecter."
+    "explanation": "--attachable permet aux conteneurs indépendants de se connecter."
   },
   {
     "id": "DKR-06-015",
@@ -205,9 +215,14 @@
     "theme_label": "Réseaux",
     "difficulty": "easy",
     "question": "Les réseaux overlay sont-ils chiffrés par défaut ?",
-    "options": ["Non", "Oui", "Optionnel avec --opt encrypted", "Uniquement pour le trafic de gestion"],
+    "options": [
+      "Non",
+      "Oui",
+      "Optionnel avec --opt encrypted",
+      "Uniquement pour le trafic de gestion"
+    ],
     "correct": 2,
-    "explication": "Il faut spécifier --opt encrypted lors de la création."
+    "explanation": "Il faut spécifier --opt encrypted lors de la création."
   },
   {
     "id": "DKR-06-016",
@@ -222,7 +237,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs syntaxes pour la publication de ports."
+    "explanation": "Plusieurs syntaxes pour la publication de ports."
   },
   {
     "id": "DKR-06-017",
@@ -237,7 +252,7 @@
       "host est déprécié"
     ],
     "correct": 0,
-    "explication": "Le mode ingress (par défaut) équilibre le trafic, host publie directement sur le nœud."
+    "explanation": "Le mode ingress (par défaut) équilibre le trafic, host publie directement sur le nœud."
   },
   {
     "id": "DKR-06-018",
@@ -252,7 +267,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les secrets sont stockés chiffrés dans le cluster."
+    "explanation": "Les secrets sont stockés chiffrés dans le cluster."
   },
   {
     "id": "DKR-06-019",
@@ -267,7 +282,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le secret est monté dans /run/secrets/<nom>."
+    "explanation": "Le secret est monté dans /run/secrets/<nom>."
   },
   {
     "id": "DKR-06-020",
@@ -282,7 +297,7 @@
       "Dans un fichier temporaire"
     ],
     "correct": 0,
-    "explication": "Les secrets sont chiffrés et stockés dans le Raft log."
+    "explanation": "Les secrets sont chiffrés et stockés dans le Raft log."
   },
   {
     "id": "DKR-06-021",
@@ -297,7 +312,7 @@
       "Stocker des volumes"
     ],
     "correct": 0,
-    "explication": "Les configs sont similaires aux secrets mais non chiffrés."
+    "explanation": "Les configs sont similaires aux secrets mais non chiffrés."
   },
   {
     "id": "DKR-06-022",
@@ -312,7 +327,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "La syntaxe est similaire à celle des secrets."
+    "explanation": "La syntaxe est similaire à celle des secrets."
   },
   {
     "id": "DKR-06-023",
@@ -327,7 +342,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Update l'image et redéploie les tâches progressivement."
+    "explanation": "Update l'image et redéploie les tâches progressivement."
   },
   {
     "id": "DKR-06-024",
@@ -342,7 +357,7 @@
       "--max-parallel"
     ],
     "correct": 0,
-    "explication": "--update-parallelism définit combien de tâches sont mises à jour en même temps."
+    "explanation": "--update-parallelism définit combien de tâches sont mises à jour en même temps."
   },
   {
     "id": "DKR-06-025",
@@ -357,7 +372,7 @@
       "--wait-time"
     ],
     "correct": 0,
-    "explication": "--update-delay spécifie le temps d'attente entre les lots."
+    "explanation": "--update-delay spécifie le temps d'attente entre les lots."
   },
   {
     "id": "DKR-06-026",
@@ -372,7 +387,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les options sont les mêmes que pour docker run."
+    "explanation": "Les options sont les mêmes que pour docker run."
   },
   {
     "id": "DKR-06-027",
@@ -387,7 +402,7 @@
       "Un log est enregistré"
     ],
     "correct": 0,
-    "explication": "Les tâches défaillantes sont recréées."
+    "explanation": "Les tâches défaillantes sont recréées."
   },
   {
     "id": "DKR-06-028",
@@ -402,7 +417,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les contraintes utilisent des labels ou le hostname."
+    "explanation": "Les contraintes utilisent des labels ou le hostname."
   },
   {
     "id": "DKR-06-029",
@@ -417,7 +432,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "docker node update --label-add est la bonne syntaxe."
+    "explanation": "docker node update --label-add est la bonne syntaxe."
   },
   {
     "id": "DKR-06-030",
@@ -432,7 +447,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons d'afficher les labels."
+    "explanation": "Plusieurs façons d'afficher les labels."
   },
   {
     "id": "DKR-06-031",
@@ -447,7 +462,7 @@
       "Un volume"
     ],
     "correct": 0,
-    "explication": "docker stack deploy utilise un fichier compose.yml."
+    "explanation": "docker stack deploy utilise un fichier compose.yml."
   },
   {
     "id": "DKR-06-032",
@@ -462,7 +477,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker stack deploy est la commande."
+    "explanation": "docker stack deploy est la commande."
   },
   {
     "id": "DKR-06-033",
@@ -477,7 +492,7 @@
       "docker stack services"
     ],
     "correct": 0,
-    "explication": "docker stack ls affiche les stacks déployées."
+    "explanation": "docker stack ls affiche les stacks déployées."
   },
   {
     "id": "DKR-06-034",
@@ -492,7 +507,7 @@
       "docker stack delete mystack"
     ],
     "correct": 0,
-    "explication": "rm supprime les services, réseaux, etc."
+    "explanation": "rm supprime les services, réseaux, etc."
   },
   {
     "id": "DKR-06-035",
@@ -507,7 +522,7 @@
       "Un type de réseau"
     ],
     "correct": 2,
-    "explication": "Le routing mesh permet d'accéder à un service via n'importe quel nœud."
+    "explanation": "Le routing mesh permet d'accéder à un service via n'importe quel nœud."
   },
   {
     "id": "DKR-06-036",
@@ -515,9 +530,14 @@
     "theme_label": "Routing mesh",
     "difficulty": "hard",
     "question": "Le routing mesh utilise-t-il iptables ?",
-    "options": ["Oui", "Non", "Uniquement sur Linux", "Uniquement avec overlay"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement sur Linux",
+      "Uniquement avec overlay"
+    ],
     "correct": 0,
-    "explication": "Le routing mesh est implémenté avec iptables et ipvs."
+    "explanation": "Le routing mesh est implémenté avec iptables et ipvs."
   },
   {
     "id": "DKR-06-037",
@@ -532,7 +552,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "docker service logs collecte les logs de toutes les tâches."
+    "explanation": "docker service logs collecte les logs de toutes les tâches."
   },
   {
     "id": "DKR-06-038",
@@ -547,7 +567,7 @@
       "Oui, sur chaque nœud"
     ],
     "correct": 0,
-    "explication": "Les logs sont stockés localement sur chaque nœud avec le driver json-file."
+    "explanation": "Les logs sont stockés localement sur chaque nœud avec le driver json-file."
   },
   {
     "id": "DKR-06-039",
@@ -562,7 +582,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "--force-new-cluster réinitialise le cluster en cas de perte de quorum."
+    "explanation": "--force-new-cluster réinitialise le cluster en cas de perte de quorum."
   },
   {
     "id": "DKR-06-040",
@@ -577,7 +597,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Il faut d'abord le rétrograder en worker si possible."
+    "explanation": "Il faut d'abord le rétrograder en worker si possible."
   },
   {
     "id": "DKR-06-041",
@@ -592,7 +612,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "docker swarm join-token --rotate génère de nouveaux tokens."
+    "explanation": "docker swarm join-token --rotate génère de nouveaux tokens."
   },
   {
     "id": "DKR-06-042",
@@ -607,7 +627,7 @@
       "8080"
     ],
     "correct": 0,
-    "explication": "Les ports spécifiques sont nécessaires pour le fonctionnement."
+    "explanation": "Les ports spécifiques sont nécessaires pour le fonctionnement."
   },
   {
     "id": "DKR-06-043",
@@ -615,9 +635,14 @@
     "theme_label": "Sécurité",
     "difficulty": "hard",
     "question": "Le chiffrement du trafic overlay est-il activé par défaut ?",
-    "options": ["Non", "Oui", "Uniquement pour le trafic de gestion", "Uniquement pour les services publiés"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement pour le trafic de gestion",
+      "Uniquement pour les services publiés"
+    ],
     "correct": 0,
-    "explication": "Il faut ajouter --opt encrypted lors de la création du réseau."
+    "explanation": "Il faut ajouter --opt encrypted lors de la création du réseau."
   },
   {
     "id": "DKR-06-044",
@@ -632,7 +657,7 @@
       "Dépend du cas"
     ],
     "correct": 0,
-    "explication": "Swarm est intégré à Docker et plus simple pour les petits déploiements."
+    "explanation": "Swarm est intégré à Docker et plus simple pour les petits déploiements."
   },
   {
     "id": "DKR-06-045",
@@ -647,7 +672,7 @@
       "Oui, avec placement"
     ],
     "correct": 0,
-    "explication": "--mode global exécute une tâche par nœud."
+    "explanation": "--mode global exécute une tâche par nœud."
   },
   {
     "id": "DKR-06-046",
@@ -662,7 +687,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "--mode global est l'option correcte."
+    "explanation": "--mode global est l'option correcte."
   },
   {
     "id": "DKR-06-047",
@@ -670,9 +695,14 @@
     "theme_label": "Services global",
     "difficulty": "easy",
     "question": "Les services global sont-ils affectés par les mises à jour rolling ?",
-    "options": ["Oui", "Non", "Uniquement si --update-parallelism=1", "Oui, mais sans délai"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si --update-parallelism=1",
+      "Oui, mais sans délai"
+    ],
     "correct": 0,
-    "explication": "Les mises à jour s'appliquent à tous les nœuds."
+    "explanation": "Les mises à jour s'appliquent à tous les nœuds."
   },
   {
     "id": "DKR-06-048",
@@ -687,7 +717,7 @@
       "Impossible"
     ],
     "correct": 0,
-    "explication": "Les volumes doivent être accessibles depuis tous les nœuds."
+    "explanation": "Les volumes doivent être accessibles depuis tous les nœuds."
   },
   {
     "id": "DKR-06-049",
@@ -702,7 +732,7 @@
       "Uniquement avec le driver local"
     ],
     "correct": 2,
-    "explication": "Le driver local crée un volume local à chaque nœud."
+    "explanation": "Le driver local crée un volume local à chaque nœud."
   },
   {
     "id": "DKR-06-050",
@@ -717,7 +747,7 @@
       "docker swarm deploy"
     ],
     "correct": 0,
-    "explication": "docker stack déploie une stack en utilisant un fichier compose."
+    "explanation": "docker stack déploie une stack en utilisant un fichier compose."
   },
   {
     "id": "DKR-06-051",
@@ -732,7 +762,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "build n'est pas supporté, depends_on est ignoré, cpus est utilisé pour Swarm."
+    "explanation": "build n'est pas supporté, depends_on est ignoré, cpus est utilisé pour Swarm."
   },
   {
     "id": "DKR-06-052",
@@ -747,7 +777,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Swarm n'a pas d'autoscaling intégré, contrairement à Kubernetes."
+    "explanation": "Swarm n'a pas d'autoscaling intégré, contrairement à Kubernetes."
   },
   {
     "id": "DKR-06-053",
@@ -762,7 +792,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "--reserve-cpu et --reserve-memory pour les réservations."
+    "explanation": "--reserve-cpu et --reserve-memory pour les réservations."
   },
   {
     "id": "DKR-06-054",
@@ -777,7 +807,7 @@
       "Uniquement sur les managers"
     ],
     "correct": 0,
-    "explication": "Le scheduler ne place les tâches que si les ressources sont disponibles."
+    "explanation": "Le scheduler ne place les tâches que si les ressources sont disponibles."
   },
   {
     "id": "DKR-06-055",
@@ -792,7 +822,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les préférences (ex: spread) aident à répartir les tâches."
+    "explanation": "Les préférences (ex: spread) aident à répartir les tâches."
   },
   {
     "id": "DKR-06-056",
@@ -807,7 +837,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "spread répartit uniformément selon une clé."
+    "explanation": "spread répartit uniformément selon une clé."
   },
   {
     "id": "DKR-06-057",
@@ -822,7 +852,7 @@
       "Met le nœud en pause"
     ],
     "correct": 0,
-    "explication": "Le nœud quitte le Swarm. Sur un manager, il faut --force."
+    "explanation": "Le nœud quitte le Swarm. Sur un manager, il faut --force."
   },
   {
     "id": "DKR-06-058",
@@ -837,7 +867,7 @@
       "Un worker devient manager"
     ],
     "correct": 0,
-    "explication": "Le nombre de managers doit rester impair pour maintenir le quorum."
+    "explanation": "Le nombre de managers doit rester impair pour maintenir le quorum."
   },
   {
     "id": "DKR-06-059",
@@ -852,7 +882,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Permet de changer le délai de snapshot, le nombre d'historiques, etc."
+    "explanation": "Permet de changer le délai de snapshot, le nombre d'historiques, etc."
   },
   {
     "id": "DKR-06-060",
@@ -867,6 +897,379 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "La haute disponibilité nécessite redondance et répartition."
+    "explanation": "La haute disponibilité nécessite redondance et répartition."
+  },
+  {
+    "id": "DCK-DS-001",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les services Docker Swarm :",
+    "options": [
+      "Les services peuvent être déployés sur un seul nœud.",
+      "Les services sont répliqués automatiquement pour assurer la disponibilité.",
+      "Les services ne peuvent être mis à jour qu'en supprimant et en recréant.",
+      "Les services utilisent le routing mesh pour la communication entre les instances."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les services sont répliqués automatiquement pour assurer la disponibilité. Les services utilisent le routing mesh pour la communication entre les instances. Les services peuvent être déployés sur un seul nœud, mais ce n'est pas recommandé pour la disponibilité. Les services ne peuvent être mis à jour qu'en supprimant et en recréant, ce qui peut entraîner une downtime."
+  },
+  {
+    "id": "DCK-DS-002",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour afficher les informations sur le réseau Docker Swarm ?",
+    "options": [
+      "docker network inspect",
+      "docker swarm network ls",
+      "docker network show",
+      "docker network display"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker network inspect permet d'afficher les informations détaillées sur un réseau spécifique."
+  },
+  {
+    "id": "DCK-DS-003",
+    "theme": "Docker Swarm",
+    "theme_label": "Stack",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les stacks Docker Swarm :",
+    "options": [
+      "Une stack peut être déployée sur plusieurs clusters Swarm.",
+      "Les stacks permettent de gérer des applications complexes en un seul fichier YAML.",
+      "Une stack ne peut être déployée qu'un fois sur un cluster Swarm.",
+      "Les stacks utilisent le modèle de déploiement monolithique."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Une stack peut être déployée sur plusieurs clusters Swarm. Les stacks permettent de gérer des applications complexes en un seul fichier YAML. Une stack ne peut être déployée qu'un fois sur un cluster Swarm, ce qui n'est pas le cas avec les stacks multiples. Les stacks utilisent le modèle de déploiement microservices."
+  },
+  {
+    "id": "DCK-DS-004",
+    "theme": "Docker Swarm",
+    "theme_label": "Secrets",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour créer un secret dans Docker Swarm ?",
+    "options": [
+      "docker secret create",
+      "docker swarm secret add",
+      "docker secret generate",
+      "docker secret import"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker secret create permet de créer un secret dans Docker Swarm."
+  },
+  {
+    "id": "DCK-DS-005",
+    "theme": "Docker Swarm",
+    "theme_label": "Rolling updates",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour effectuer une mise à jour rolling des services Docker Swarm ?",
+    "options": [
+      "docker service update",
+      "docker swarm update",
+      "docker update",
+      "docker service upgrade"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker service update permet de mettre à jour les services Docker Swarm en utilisant une mise à jour rolling."
+  },
+  {
+    "id": "DCK-DS-006",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la mise à jour de services en Docker Swarm :",
+    "options": [
+      "docker service update --image <new_image> <service_name>",
+      "docker service scale <service_name>=<replicas>",
+      "docker service update --force <service_name>",
+      "Toutes les affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "docker service update --image <new_image> <service_name> est correct pour mettre à jour l'image d'un service. docker service scale <service_name>=<replicas> est correct pour échaler le nombre de répliques d'un service. docker service update --force <service_name> est correct pour forcer la mise à jour du service, même si les configurations ne changent pas."
+  },
+  {
+    "id": "DCK-DS-007",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour inspecter un réseau Docker Swarm ?",
+    "options": [
+      "docker network inspect <network_name>",
+      "docker swarm inspect <network_name>",
+      "docker service inspect <network_name>",
+      "docker volume inspect <network_name>"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker network inspect <network_name> est la commande correcte pour inspecter un réseau Docker Swarm."
+  },
+  {
+    "id": "DCK-DS-008",
+    "theme": "Docker Swarm",
+    "theme_label": "Sécurité",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité des services Docker Swarm :",
+    "options": [
+      "Les secrets sont stockés en clair sur le nœud manager.",
+      "L'authentification est basée sur des tokens JWT.",
+      "Les communications entre les nœuds sont chiffrées par défaut.",
+      "Toutes les affirmations"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les secrets sont stockés en clair sur le nœud manager, donc cette affirmation est incorrecte. L'authentification est basée sur des tokens JWT, donc cette affirmation est correcte. Les communications entre les nœuds sont chiffrées par défaut, donc cette affirmation est correcte. Toutes les affirmations ne sont pas correctes."
+  },
+  {
+    "id": "DCK-DS-009",
+    "theme": "Docker Swarm",
+    "theme_label": "Routing mesh",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation du routing mesh dans Docker Swarm ?",
+    "options": [
+      "Gestion des volumes de données",
+      "Orchestration des services",
+      "Chiffrement des communications entre les nœuds",
+      "Gestion des secrets"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La principale utilisation du routing mesh dans Docker Swarm est l'orchestration des services."
+  },
+  {
+    "id": "DCK-DS-010",
+    "theme": "Docker Swarm",
+    "theme_label": "Troubleshooting",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le débogage des services Docker Swarm :",
+    "options": [
+      "docker service logs <service_name> peut afficher les journaux du service.",
+      "docker node inspect <node_name> peut fournir des informations sur le nœud.",
+      "docker service ps <service_name> peut montrer les états des répliques du service.",
+      "Toutes les affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "docker service logs <service_name> peut afficher les journaux du service, donc cette affirmation est correcte. docker node inspect <node_name> peut fournir des informations sur le nœud, donc cette affirmation est correcte. docker service ps <service_name> peut montrer les états des répliques du service, donc cette affirmation est correcte. Toutes les affirmations sont correctes."
+  },
+  {
+    "id": "DCK-DS-011",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le routing mesh dans Docker Swarm :",
+    "options": [
+      "Il permet de gérer les communications entre les services.",
+      "Il nécessite l'utilisation d'un réseau externe pour fonctionner.",
+      "Il est automatiquement configuré lors de l'initialisation d'un cluster Swarm.",
+      "Il peut être désactivé si nécessaire."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le routing mesh est automatiquement configuré lors de l'initialisation d'un cluster Swarm et permet de gérer les communications entre les services. Il n'a pas besoin d'un réseau externe et ne peut pas être désactivé."
+  },
+  {
+    "id": "DCK-DS-012",
+    "theme": "Docker Swarm",
+    "theme_label": "Services global",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour déployer un service global dans Docker Swarm ?",
+    "options": [
+      "docker service create --replicas 1 myimage",
+      "docker service create --mode global myimage",
+      "docker service create --replicas 0 myimage",
+      "docker service create --mode replicated myimage"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "docker service create --mode global myimage est la commande correcte pour déployer un service global."
+  },
+  {
+    "id": "DCK-DS-013",
+    "theme": "Docker Swarm",
+    "theme_label": "Placement preferences",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les préférences de placement dans Docker Swarm :",
+    "options": [
+      "Elles permettent d'influencer la distribution des tâches sur les nœuds.",
+      "Elles sont définies lors de la création d'un service.",
+      "Elles ne peuvent être modifiées une fois le service créé.",
+      "Elles sont basées sur des étiquettes de nœuds."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les préférences de placement permettent d'influencer la distribution des tâches sur les nœuds, sont définies lors de la création d'un service et sont basées sur des étiquettes de nœuds. Elles peuvent être modifiées une fois le service créé."
+  },
+  {
+    "id": "DCK-DS-014",
+    "theme": "Docker Swarm",
+    "theme_label": "Health checks",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour vérifier les états de santé des tâches d'un service dans Docker Swarm ?",
+    "options": [
+      "docker service inspect --format '{{.Status.Health}}' myservice",
+      "docker service logs myservice",
+      "docker service ps myservice",
+      "docker service stats myservice"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker service inspect --format '{{.Status.Health}}' myservice est la commande correcte pour vérifier les états de santé des tâches d'un service."
+  },
+  {
+    "id": "DCK-DS-015",
+    "theme": "Docker Swarm",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande est utilisée pour monter un volume dans un service Docker Swarm ?",
+    "options": [
+      "docker service create --mount type=volume,src=myvol,dst=/app myimage",
+      "docker service create --volume type=bind,src=/host/path,dst=/app myimage",
+      "docker service create --volume type=local,src=myvol,dst=/app myimage",
+      "docker service create --volume type=tmpfs,src=myvol,dst=/app myimage"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "docker service create --mount type=volume,src=myvol,dst=/app myimage est la commande correcte pour monter un volume dans un service Docker Swarm."
+  },
+  {
+    "id": "DCK-DS-016",
+    "theme": "Docker Swarm",
+    "theme_label": "Services",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les services Docker Swarm :",
+    "options": [
+      "Les services peuvent être déployés sur un seul nœud.",
+      "Les services sont répliqués par défaut pour une haute disponibilité.",
+      "Les services ne peuvent pas être mis à jour en temps réel.",
+      "Les services utilisent le routing mesh par défaut."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les services sont répliqués par défaut pour une haute disponibilité (B). Les services utilisent le routing mesh par défaut (D). Les services peuvent être déployés sur un seul nœud, mais elles sont généralement répliquées (A est partiellement correct). Les services peuvent être mis à jour en temps réel avec des rolling updates (C est incorrect)."
+  },
+  {
+    "id": "DCK-DS-017",
+    "theme": "Docker Swarm",
+    "theme_label": "Réseaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande Docker pour créer un réseau overlay dans Docker Swarm ?",
+    "options": [
+      "docker network create --driver overlay my_overlay_network",
+      "docker swarm network create my_overlay_network",
+      "docker network overlay create my_overlay_network",
+      "docker network add --driver overlay my_overlay_network"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker network create --driver overlay my_overlay_network (A)."
+  },
+  {
+    "id": "DCK-DS-018",
+    "theme": "Docker Swarm",
+    "theme_label": "Stack",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les stacks Docker Swarm :",
+    "options": [
+      "Les stacks sont utilisées pour déployer des applications complexes.",
+      "Les stacks ne peuvent être déployées que sur un seul nœud.",
+      "Les stacks permettent de gérer plusieurs services en une seule unité.",
+      "Les stacks ne peuvent pas être mise à jour après le déploiement."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les stacks sont utilisées pour déployer des applications complexes (A). Les stacks permettent de gérer plusieurs services en une seule unité (C). Les stacks ne peuvent être déployées que sur un seul nœud est incorrect (B est incorrect). Les stacks peuvent être mise à jour après le déploiement avec docker stack upgrade (D est incorrect)."
+  },
+  {
+    "id": "DCK-DS-020",
+    "theme": "Docker Swarm",
+    "theme_label": "Placement preferences",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Docker permet de définir des préférences de placement pour un service dans Docker Swarm ?",
+    "options": [
+      "docker service create --placement-preference key=value my_service",
+      "docker service update --placement-pref key=value my_service",
+      "docker service create --constraint key=value my_service",
+      "docker service update --constraint-add key=value my_service"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker service update --placement-pref key=value my_service (B)."
+  },
+  {
+    "id": "DCK-DS-020",
+    "theme": "Docker Swarm",
+    "theme_label": "Services global",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les services global dans Docker Swarm :",
+    "options": [
+      "Les services global sont toujours distribués sur tous les nœuds du cluster.",
+      "Un service global peut être mis à jour sans affecter le fonctionnement des services existants.",
+      "Les services global sont toujours de type 'replicated'.",
+      "Un service global peut être créé en utilisant la commande 'docker service create --mode global'.",
+      "Les services global sont toujours de type 'global'."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Un service global peut être mis à jour sans affecter le fonctionnement des services existants (correct). Les services global ne sont pas toujours de type 'replicated' (incorrect, ils peuvent être de type 'global'). Les services global ne sont pas toujours distribués sur tous les nœuds du cluster (incorrect, ils sont répartis en fonction de la stratégie de placement). Un service global peut être créé en utilisant la commande 'docker service create --mode global' (correct). Les services global ne sont pas toujours de type 'global' (incorrect, ils peuvent être de type 'replicated')."
   }
 ]

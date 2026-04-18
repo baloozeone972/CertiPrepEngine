@@ -1,0 +1,610 @@
+[
+  {
+    "id": "AZ900-SOL-001",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure AI Services",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet d'ajouter des capacités d'IA pré‑entraînées (vision, langage, parole) à une application sans expertise en machine learning ?",
+    "options": [
+      "Azure Cognitive Services",
+      "Azure Machine Learning",
+      "Azure Databricks",
+      "Azure Synapse Analytics"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Cognitive Services fournit des API prêtes à l'emploi pour l'IA. Azure Machine Learning est pour créer et entraîner ses propres modèles."
+  },
+  {
+    "id": "AZ900-SOL-002",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Bot Service",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels composants sont nécessaires pour créer un bot conversationnel intelligent avec Azure ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Azure Bot Service (pour l'enregistrement et les canaux).",
+      "Language Understanding (LUIS) ou Azure AI Language pour la compréhension du langage naturel.",
+      "Azure Functions ou App Service pour la logique métier.",
+      "Azure Kubernetes Service (AKS) obligatoirement.",
+      "Azure SQL Database pour stocker les conversations."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Un bot s'appuie généralement sur Bot Service (A) pour la connexion aux canaux (Teams, Slack, etc.), un service de NLU comme LUIS (B), et une logique d'application hébergée (Functions, Web App) (C). AKS (D) n'est pas obligatoire. SQL Database (E) peut être utilisée mais n'est pas indispensable."
+  },
+  {
+    "id": "AZ900-SOL-003",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure DevOps",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure fournit des outils de planification de projet, de gestion de code source (Git), de pipelines CI/CD et de gestion de packages ?",
+    "options": [
+      "Azure DevOps",
+      "GitHub Actions",
+      "Azure Monitor",
+      "Azure Resource Manager"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure DevOps est la suite intégrée de Microsoft pour la gestion du cycle de vie des applications (boards, repos, pipelines, artifacts). GitHub Actions (B) est un produit distinct (bien que les deux soient liés)."
+  },
+  {
+    "id": "AZ900-SOL-004",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "GitHub Actions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant GitHub Actions sont correctes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "GitHub Actions permet d'automatiser des workflows de build, test et déploiement directement depuis un dépôt GitHub.",
+      "Les workflows sont définis dans des fichiers YAML.",
+      "GitHub Actions peut déployer des ressources sur Azure en utilisant des actions du marketplace.",
+      "GitHub Actions nécessite un abonnement Azure payant pour être utilisé.",
+      "GitHub Actions peut être déclenché par des événements comme un push ou une pull request."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "GitHub Actions est un service CI/CD intégré à GitHub. Les workflows YAML (A, B) peuvent utiliser des actions pré‑construites (C) et se déclencher sur des événements GitHub (E). L'utilisation de base est gratuite pour les dépôts publics, et incluse dans les plans GitHub (D faux : pas besoin d'abonnement Azure spécifique, sauf pour utiliser certaines actions Azure)."
+  },
+  {
+    "id": "AZ900-SOL-005",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure DevTest Labs",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est l'avantage principal d'Azure DevTest Labs pour une équipe de développement ?",
+    "options": [
+      "Permet de contrôler les coûts en définissant des quotas, des heures d'arrêt automatique et des politiques de réutilisation des VM.",
+      "Fournit un environnement de production sécurisé pour les tests de charge.",
+      "Offre un support technique gratuit 24h/24 pour les développeurs.",
+      "Remplace complètement Azure DevOps pour la gestion des tests."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "DevTest Labs aide à gérer les environnements de développement et de test en évitant le gaspillage (arrêt automatique des VM la nuit, limites de quotas). Ce n'est pas un environnement de production (B), ni un support gratuit (C), ni un remplacement d'Azure DevOps (D)."
+  },
+  {
+    "id": "AZ900-SOL-006",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Portail Azure",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles actions peut-on effectuer via le portail Azure ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Créer et gérer des ressources Azure graphiquement.",
+      "Ouvrir une session Cloud Shell pour exécuter des commandes PowerShell ou Bash.",
+      "Consulter les factures et les coûts.",
+      "Modifier les fichiers de configuration système des VM directement sans redémarrage.",
+      "Créer des dashboards personnalisés."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "Le portail permet la gestion graphique (A), l'accès à Cloud Shell (B), la visualisation des coûts (C) et la création de dashboards (E). Il ne permet pas l'édition directe de fichiers système à chaud (D) sans passer par une connexion à la VM."
+  },
+  {
+    "id": "AZ900-SOL-007",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure PowerShell / CLI",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Azure PowerShell et Azure CLI ?",
+    "options": [
+      "Azure PowerShell est basé sur .NET et fonctionne dans PowerShell, tandis qu'Azure CLI est basé sur Python et fonctionne dans n'importe quel shell (bash, cmd).",
+      "Azure PowerShell ne fonctionne que sous Windows, Azure CLI que sous Linux.",
+      "Azure PowerShell est gratuit, Azure CLI est payant.",
+      "Il n'y a pas de différence, les commandes sont identiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les deux outils sont multiplateformes et gratuits. La différence est l'environnement d'exécution et la syntaxe (verbe-nom pour PowerShell, az resource action pour CLI)."
+  },
+  {
+    "id": "AZ900-SOL-008",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Cloud Shell",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les caractéristiques d'Azure Cloud Shell ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Il fournit un environnement shell accessible depuis le portail Azure.",
+      "Il nécessite un compte de stockage pour persister les fichiers de l'utilisateur.",
+      "Il inclut des outils préinstallés comme Git, kubectl, Terraform.",
+      "Il permet de choisir entre Bash et PowerShell.",
+      "Il peut exécuter des applications graphiques."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Cloud Shell est un shell basé navigateur avec stockage persistant (via un compte de stockage) (A, B). Il propose Bash ou PowerShell (D) et de nombreux outils préinstallés (C). Il ne supporte pas les interfaces graphiques (E)."
+  },
+  {
+    "id": "AZ900-SOL-009",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Modèles ARM",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le format d'un modèle Azure Resource Manager (ARM) ?",
+    "options": [
+      "JSON",
+      "YAML",
+      "XML",
+      "HCL (HashiCorp Configuration Language)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les modèles ARM sont écrits en JSON. Bicep est un langage plus récent qui se compile en JSON. YAML est utilisé par Kubernetes, HCL par Terraform."
+  },
+  {
+    "id": "AZ900-SOL-010",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Bicep",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages de Bicep par rapport aux modèles ARM JSON ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Syntaxe plus concise et lisible.",
+      "Prise en charge native des boucles et des conditions.",
+      "Pas besoin de déclarer les propriétés 'dependsOn' dans la plupart des cas (détection implicite).",
+      "Compilation transparente vers JSON avant déploiement.",
+      "Exécution directe par Azure sans compilation."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Bicep offre une syntaxe simplifiée (A), un support amélioré pour les boucles (B), une gestion automatique des dépendances (C), et se compile en JSON (D). Azure ne comprend pas Bicep nativement (E), il faut le transpiler ou utiliser les outils qui le font automatiquement."
+  },
+  {
+    "id": "AZ900-SOL-011",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Arc",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Arc permet de gérer quels types de ressources ?",
+    "options": [
+      "Des serveurs physiques, des machines virtuelles sur site ou dans d'autres clouds, et des clusters Kubernetes hors Azure.",
+      "Uniquement des machines virtuelles Azure.",
+      "Uniquement des services de bases de données.",
+      "Uniquement des appareils IoT."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Arc étend la gestion Azure Resource Manager à n'importe quelle infrastructure : serveurs Windows/Linux, clusters Kubernetes (y compris sur site ou AWS/GCP), et même certains services de données (Azure Arc‑enabled data services)."
+  },
+  {
+    "id": "AZ900-SOL-012",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Blueprints",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels artefacts peut‑on inclure dans un blueprint Azure ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Attributions de rôles RBAC",
+      "Définitions Azure Policy",
+      "Modèles ARM",
+      "Groupes de ressources",
+      "Un abonnement Azure lui‑même"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Un blueprint peut contenir des artefacts RBAC (A), Policy (B), modèles ARM (C) et groupes de ressources (D). Il ne crée pas un abonnement (E) mais s'applique à un abonnement existant."
+  },
+  {
+    "id": "AZ900-SOL-013",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Policy",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel effet Azure Policy permet d'auditer l'existence d'une ressource non conforme sans bloquer sa création ?",
+    "options": [
+      "Audit",
+      "Deny",
+      "DeployIfNotExists",
+      "Modify"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'effet 'Audit' crée un événement de non‑conformité dans le journal d'activité mais n'empêche pas la création. 'Deny' bloque la création."
+  },
+  {
+    "id": "AZ900-SOL-014",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Policy - Remédiation",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels effets d'Azure Policy peuvent être utilisés pour corriger automatiquement une configuration non conforme ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "DeployIfNotExists",
+      "Modify",
+      "Audit",
+      "Deny",
+      "Append"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Les effets 'DeployIfNotExists' (déploie une ressource manquante), 'Modify' (modifie une propriété) et 'Append' (ajoute une valeur à un tableau) peuvent modifier l'état des ressources (et donc corriger). 'Audit' et 'Deny' ne font que contrôler ou bloquer."
+  },
+  {
+    "id": "AZ900-SOL-015",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Verrouillage des ressources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de verrou empêche toute modification et toute suppression d'une ressource Azure ?",
+    "options": [
+      "ReadOnly",
+      "CanNotDelete",
+      "NoModify",
+      "Locked"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le verrou 'ReadOnly' empêche la suppression et toute modification. 'CanNotDelete' permet les modifications mais empêche la suppression."
+  },
+  {
+    "id": "AZ900-SOL-016",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Monitor",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Où les données de logs collectées par Azure Monitor (ex: journaux d'activité, diagnostics) sont‑elles généralement stockées pour analyse ?",
+    "options": [
+      "Dans un espace de travail Log Analytics",
+      "Dans un compte de stockage Blob",
+      "Dans Azure SQL Database",
+      "Dans un fichier plat sur le disque local de la VM"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Log Analytics est la plateforme de stockage et d'interrogation des logs dans Azure Monitor (requêtes KQL). Les comptes de stockage peuvent servir pour l'archivage à long terme, mais pas pour l'analyse interactive."
+  },
+  {
+    "id": "AZ900-SOL-017",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Alerts",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sur quels types de signaux peut‑on déclencher une alerte Azure Monitor ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Métriques (ex: CPU > 80%)",
+      "Journaux (Logs) (ex: recherche d'une chaîne spécifique dans les logs)",
+      "Événements du journal d'activité (ex: arrêt d'une VM)",
+      "Tests de disponibilité (Application Insights)",
+      "Alertes de sécurité Azure Security Center"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Azure Monitor Alerts peut être basé sur des métriques, des logs, le journal d'activité, et des tests web. Les alertes de sécurité (E) sont généralement gérées par Microsoft Defender for Cloud, qui peut aussi créer des alertes dans Azure Monitor."
+  },
+  {
+    "id": "AZ900-SOL-018",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Action Groups",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert un groupe d'actions (Action Group) dans Azure Monitor ?",
+    "options": [
+      "Définir les actions à exécuter lorsqu'une alerte est déclenchée (email, SMS, appel webhook, runbook, etc.).",
+      "Regrouper plusieurs machines virtuelles pour une maintenance simultanée.",
+      "Appliquer une même stratégie Azure Policy à plusieurs ressources.",
+      "Gérer les autorisations RBAC pour un ensemble d'utilisateurs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un groupe d'actions est une collection de préférences de notification et d'actions automatisées liées à une alerte."
+  },
+  {
+    "id": "AZ900-SOL-019",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Automation",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel composant d'Azure Automation permet d'exécuter des scripts PowerShell ou Python sur des VM Azure ou sur site sans connexion directe ?",
+    "options": [
+      "Runbooks avec Hybrid Runbook Worker",
+      "State Configuration (DSC)",
+      "Update Management",
+      "Change Tracking and Inventory"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les Runbooks sont des scripts automatisés. Le Hybrid Runbook Worker permet d'exécuter ces runbooks sur des machines en dehors d'Azure (sur site, autres clouds)."
+  },
+  {
+    "id": "AZ900-SOL-020",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Logic Apps",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les cas d'usage typiques d'Azure Logic Apps ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Automatiser l'envoi d'un email lorsqu'un fichier est déposé dans un conteneur Blob.",
+      "Synchroniser des données entre une base de données SQL Server sur site et Dynamics 365.",
+      "Orchestrer un processus d'approbation métier.",
+      "Exécuter du code C# complexe nécessitant des librairies tierces.",
+      "Traiter des millions de messages de télémétrie par seconde."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Logic Apps excelle dans l'intégration et l'orchestration déclarative (A, B, C). Pour du code personnalisé complexe (D), Azure Functions est plus adapté. Pour le streaming haute vélocité (E), Event Hubs ou Stream Analytics sont préférables."
+  },
+  {
+    "id": "AZ900-SOL-021",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Service Health",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Service Health fournit des informations sur :",
+    "options": [
+      "L'état des services Azure, les maintenances planifiées et les avis de santé concernant spécifiquement vos ressources.",
+      "Les performances de vos applications.",
+      "Les recommandations de sécurité.",
+      "Les coûts de vos abonnements."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Service Health est un tableau de bord personnalisé qui montre les problèmes de service Azure affectant vos déploiements, ainsi que les maintenances à venir. Il est plus précis que la page Azure Status publique."
+  },
+  {
+    "id": "AZ900-SOL-022",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Advisor",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles catégories de recommandations sont fournies par Azure Advisor ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Coût",
+      "Sécurité",
+      "Fiabilité (Haute disponibilité)",
+      "Performance opérationnelle",
+      "Excellence opérationnelle"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Azure Advisor couvre ces cinq piliers du Well‑Architected Framework."
+  },
+  {
+    "id": "AZ900-SOL-023",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Cost Management",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment peut‑on configurer une alerte pour être prévenu lorsque les dépenses mensuelles dépassent un seuil défini ?",
+    "options": [
+      "Créer un budget dans Azure Cost Management et y associer une alerte.",
+      "Créer une alerte de métrique Azure Monitor sur le total des coûts.",
+      "Utiliser une stratégie Azure Policy avec effet 'Deny'.",
+      "Configurer un runbook Azure Automation qui s'exécute chaque heure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonctionnalité 'Budgets' dans Cost Management permet de définir des seuils et de déclencher des alertes (email, groupe d'actions)."
+  },
+  {
+    "id": "AZ900-SOL-024",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Tags (Balises)",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant les balises (tags) dans Azure sont correctes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Elles sont héritées par les ressources enfants (ex: une VM hérite des tags de son groupe de ressources).",
+      "Elles peuvent être utilisées pour ventiler les coûts dans l'analyse de facturation.",
+      "Elles peuvent être appliquées rétroactivement aux coûts déjà facturés.",
+      "Elles ne sont pas prises en charge pour les services classiques (ASM).",
+      "Elles peuvent être forcées par une Azure Policy."
+    ],
+    "correct": 0,
+    "correct_multiple": [1, 4],
+    "explanation": "Les tags ne sont PAS hérités automatiquement (A faux). Ils permettent l'analyse des coûts pour les périodes après leur application, mais pas rétroactivement (C faux). Les services classiques (D) ont un support limité des tags. On peut imposer des tags avec Azure Policy (E)."
+  },
+  {
+    "id": "AZ900-SOL-025",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Microsoft Defender for Cloud",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de Microsoft Defender for Cloud (anciennement Azure Security Center) ?",
+    "options": [
+      "Fournir une gestion unifiée de la sécurité et une protection avancée contre les menaces pour les charges de travail hybrides.",
+      "Gérer les identités et les accès.",
+      "Analyser les coûts des ressources.",
+      "Déployer automatiquement des applications."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Defender for Cloud évalue la configuration de sécurité, donne un score de sécurité, et propose des protections avancées (Defender plans) pour les VM, conteneurs, bases de données, etc."
+  },
+  {
+    "id": "AZ900-SOL-026",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est‑ce qu'Azure Sentinel ?",
+    "options": [
+      "Un service SIEM (Security Information and Event Management) et SOAR (Security Orchestration Automated Response) natif du cloud.",
+      "Un pare‑feu nouvelle génération (NGFW).",
+      "Un antivirus pour machines virtuelles.",
+      "Un outil de test d'intrusion."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Sentinel collecte les logs de sécurité, détecte les menaces via l'IA, et automatise les réponses (playbooks)."
+  },
+  {
+    "id": "AZ900-SOL-027",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Migrate",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles fonctionnalités offre Azure Migrate ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Découverte et évaluation des serveurs sur site pour la migration vers Azure.",
+      "Migration de bases de données vers Azure SQL.",
+      "Migration d'applications web vers Azure App Service.",
+      "Analyse des dépendances entre applications.",
+      "Optimisation automatique des coûts après migration."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Azure Migrate est un hub central pour les projets de migration : évaluation (A), migration de bases de données (B), migration d'applications web (C) et visualisation des dépendances (D). L'optimisation des coûts (E) est plutôt du ressort d'Azure Advisor."
+  },
+  {
+    "id": "AZ900-SOL-028",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Site Recovery",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Site Recovery est principalement utilisé pour :",
+    "options": [
+      "La reprise d'activité après sinistre (DR) en répliquant des machines virtuelles vers une région Azure secondaire.",
+      "La sauvegarde quotidienne des fichiers.",
+      "La migration de serveurs physiques sans interruption de service.",
+      "L'équilibrage de charge entre régions."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Site Recovery orchestre la réplication et le basculement des VM pour la continuité d'activité. Azure Backup (B) est le service de sauvegarde."
+  },
+  {
+    "id": "AZ900-SOL-029",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Backup",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de coffre est utilisé par Azure Backup pour stocker les sauvegardes ?",
+    "options": [
+      "Coffre Recovery Services",
+      "Coffre de sauvegarde (Backup Vault)",
+      "Coffre de clés (Key Vault)",
+      "Compte de stockage Blob"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les coffres Recovery Services sont utilisés pour Azure Backup et Azure Site Recovery. Il existe aussi des coffres de sauvegarde (Backup Vault) pour des workloads plus récents (ex: Azure Database for PostgreSQL), mais l'option A est la plus générique pour l'AZ‑900."
+  },
+  {
+    "id": "AZ900-SOL-030",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Resource Mover",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service permet de déplacer des ressources Azure d'une région à une autre avec un minimum d'effort ?",
+    "options": [
+      "Azure Resource Mover",
+      "Azure Site Recovery",
+      "Azure Migrate",
+      "Azure Traffic Manager"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Resource Mover simplifie le déplacement de ressources (VM, SQL DB, etc.) entre régions. Site Recovery est utilisé pour la reprise d'activité, mais peut aussi servir pour la migration (bien que Resource Mover soit l'outil dédié)."
+  },
+  {
+    "id": "AZ900-SOL-031",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Quickstart Templates",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Où peut‑on trouver des modèles ARM pré‑conçus pour déployer rapidement des configurations courantes ?",
+    "options": [
+      "Azure Quickstart Templates (sur GitHub)",
+      "Azure Marketplace",
+      "Azure Advisor",
+      "Azure Blueprints"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le dépôt GitHub 'Azure/azure-quickstart-templates' contient des centaines de modèles ARM communautaires et Microsoft. La Marketplace (B) propose des applications packagées, pas seulement des modèles."
+  },
+  {
+    "id": "AZ900-SOL-032",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure CLI - Mode interactif",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment activer le mode interactif dans Azure CLI pour obtenir des suggestions et une aide contextuelle ?",
+    "options": [
+      "az interactive",
+      "az shell",
+      "az --interactive",
+      "az i"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande `az interactive` lance un shell interactif avec complétion et documentation intégrées."
+  },
+  {
+    "id": "AZ900-SOL-033",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure PowerShell - Modules",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel module PowerShell est le module unique recommandé pour interagir avec la plupart des services Azure (remplaçant les modules AzureRM et Az individuels) ?",
+    "options": [
+      "Az",
+      "Azure",
+      "AzureRM",
+      "AzureAD"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le module 'Az' est le module cross‑plateforme moderne. 'AzureRM' est déprécié. 'Azure' est l'ancien module ASM."
+  },
+  {
+    "id": "AZ900-SOL-034",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Managed Applications",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages des applications managées Azure (Managed Applications) pour les fournisseurs de services ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Elles permettent de verrouiller l'accès aux ressources sous‑jacentes pour les clients finaux.",
+      "Elles facilitent la publication d'offres sur l'Azure Marketplace.",
+      "Elles garantissent un support technique gratuit de Microsoft pour le fournisseur.",
+      "Elles permettent de facturer le client via l'abonnement Azure de ce dernier.",
+      "Elles imposent l'utilisation exclusive de modèles Bicep."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Les Managed Apps créent un groupe de ressources verrouillé (A) et peuvent être publiées sur la Marketplace (B). La facturation se fait via l'abonnement du client (D). Le support (C) reste à la charge du fournisseur. Bicep (E) n'est pas obligatoire."
+  },
+  {
+    "id": "AZ900-SOL-035",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Resource Graph",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service permet d'interroger l'ensemble de vos ressources Azure à grande échelle avec un langage de requête de type Kusto ?",
+    "options": [
+      "Azure Resource Graph",
+      "Azure Monitor Logs",
+      "Azure Data Explorer",
+      "Azure Search"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Resource Graph Explorer permet d'exécuter des requêtes KQL sur les propriétés des ressources (ex: compter toutes les VM avec une certaine balise). C'est plus performant et plus étendu que la simple API ARM List."
+  }
+]

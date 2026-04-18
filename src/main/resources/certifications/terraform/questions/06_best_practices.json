@@ -12,7 +12,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Séparer les environnements et utiliser des modules."
+    "explanation": "Séparer les environnements et utiliser des modules."
   },
   {
     "id": "TF-06-002",
@@ -27,7 +27,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les environnements distincts réduisent les risques."
+    "explanation": "Les environnements distincts réduisent les risques."
   },
   {
     "id": "TF-06-003",
@@ -42,7 +42,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "main.tf contient les ressources et providers."
+    "explanation": "main.tf contient les ressources et providers."
   },
   {
     "id": "TF-06-004",
@@ -57,7 +57,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "variables.tf contient les définitions de variables."
+    "explanation": "variables.tf contient les définitions de variables."
   },
   {
     "id": "TF-06-005",
@@ -67,7 +67,7 @@
     "question": "Que mettre dans outputs.tf ?",
     "options": ["Les outputs", "Les variables", "A et B", "A seulement"],
     "correct": 0,
-    "explication": "outputs.tf contient les outputs."
+    "explanation": "outputs.tf contient les outputs."
   },
   {
     "id": "TF-06-006",
@@ -82,7 +82,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "terraform.tfvars contient les valeurs sensibles ou spécifiques à l'environnement."
+    "explanation": "terraform.tfvars contient les valeurs sensibles ou spécifiques à l'environnement."
   },
   {
     "id": "TF-06-007",
@@ -92,7 +92,7 @@
     "question": "Faut-il versionner le dossier .terraform ?",
     "options": ["Non", "Oui", "Optionnel", "A seulement"],
     "correct": 0,
-    "explication": ".terraform doit être ignoré (dans .gitignore)."
+    "explanation": ".terraform doit être ignoré (dans .gitignore)."
   },
   {
     "id": "TF-06-008",
@@ -102,7 +102,7 @@
     "question": "Faut-il versionner terraform.tfstate ?",
     "options": ["Non (utiliser backend distant)", "Oui", "Optionnel", "A seulement"],
     "correct": 0,
-    "explication": "L'état ne doit pas être versionné (contient des secrets)."
+    "explanation": "L'état ne doit pas être versionné (contient des secrets)."
   },
   {
     "id": "TF-06-009",

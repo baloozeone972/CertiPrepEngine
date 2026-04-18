@@ -42,7 +42,7 @@
       "Integration as a Service"
     ],
     "correct": 0,
-    "explication": "IaaS fournit des serveurs, stockage et réseaux virtualisés."
+    "explanation": "IaaS fournit des serveurs, stockage et réseaux virtualisés."
   },
   {
     "id": "GCP-DL-004",
@@ -57,7 +57,7 @@
       "Process as a Service"
     ],
     "correct": 0,
-    "explication": "PaaS fournit une plateforme pour développer et déployer des applications."
+    "explanation": "PaaS fournit une plateforme pour développer et déployer des applications."
   },
   {
     "id": "GCP-DL-005",
@@ -72,7 +72,7 @@
       "Security as a Service"
     ],
     "correct": 0,
-    "explication": "SaaS fournit des applications logicielles via Internet."
+    "explanation": "SaaS fournit des applications logicielles via Internet."
   },
   {
     "id": "GCP-DL-006",
@@ -87,7 +87,7 @@
       "Ressources hybrides"
     ],
     "correct": 0,
-    "explication": "Le cloud public est accessible à tous via Internet."
+    "explanation": "Le cloud public est accessible à tous via Internet."
   },
   {
     "id": "GCP-DL-007",
@@ -102,7 +102,7 @@
       "Ressources temporaires"
     ],
     "correct": 0,
-    "explication": "Le cloud privé est dédié à une seule organisation."
+    "explanation": "Le cloud privé est dédié à une seule organisation."
   },
   {
     "id": "GCP-DL-008",
@@ -117,7 +117,7 @@
       "Un cloud local"
     ],
     "correct": 0,
-    "explication": "Le cloud hybride combine cloud public et privé."
+    "explanation": "Le cloud hybride combine cloud public et privé."
   },
   {
     "id": "GCP-DL-009",
@@ -132,7 +132,7 @@
       "Capacité à sauvegarder"
     ],
     "correct": 0,
-    "explication": "L'élasticité permet d'ajuster les ressources automatiquement."
+    "explanation": "L'élasticité permet d'ajuster les ressources automatiquement."
   },
   {
     "id": "GCP-DL-010",
@@ -147,7 +147,7 @@
       "Payer à l'année"
     ],
     "correct": 0,
-    "explication": "Pay-as-you-go signifie payer uniquement pour les ressources consommées."
+    "explanation": "Pay-as-you-go signifie payer uniquement pour les ressources consommées."
   },
   {
     "id": "GCP-DL-011",
@@ -162,7 +162,7 @@
       "Coût variable"
     ],
     "correct": 0,
-    "explication": "Plus on utilise de ressources, plus le coût unitaire diminue."
+    "explanation": "Plus on utilise de ressources, plus le coût unitaire diminue."
   },
   {
     "id": "GCP-DL-012",
@@ -177,7 +177,7 @@
       "Système sécurisé"
     ],
     "correct": 0,
-    "explication": "La haute disponibilité garantit l'accès continu aux applications."
+    "explanation": "La haute disponibilité garantit l'accès continu aux applications."
   },
   {
     "id": "GCP-DL-013",
@@ -192,7 +192,7 @@
       "Correction automatique"
     ],
     "correct": 0,
-    "explication": "La tolérance aux pannes permet de fonctionner malgré des défaillances."
+    "explanation": "La tolérance aux pannes permet de fonctionner malgré des défaillances."
   },
   {
     "id": "GCP-DL-014",
@@ -207,7 +207,7 @@
       "Augmenter la mémoire"
     ],
     "correct": 0,
-    "explication": "La scalabilité horizontale ajoute des instances supplémentaires."
+    "explanation": "La scalabilité horizontale ajoute des instances supplémentaires."
   },
   {
     "id": "GCP-DL-015",
@@ -222,7 +222,7 @@
       "Ajouter des régions"
     ],
     "correct": 0,
-    "explication": "La scalabilité verticale augmente la taille des instances."
+    "explanation": "La scalabilité verticale augmente la taille des instances."
   },
   {
     "id": "GCP-DL-016",
@@ -237,7 +237,7 @@
       "Un réseau"
     ],
     "correct": 0,
-    "explication": "Une région GCP est un regroupement géographique de zones."
+    "explanation": "Une région GCP est un regroupement géographique de zones."
   },
   {
     "id": "GCP-DL-017",
@@ -252,7 +252,7 @@
       "Réseau"
     ],
     "correct": 0,
-    "explication": "Une zone est un centre de données distinct (isolation des pannes)."
+    "explanation": "Une zone est un centre de données distinct (isolation des pannes)."
   },
   {
     "id": "GCP-DL-018",
@@ -260,9 +260,14 @@
     "theme_label": "GCP régions et zones",
     "difficulty": "easy",
     "question": "Combien de zones minimum par région GCP ?",
-    "options": ["3", "1", "2", "4"],
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
     "correct": 0,
-    "explication": "Chaque région GCP a au moins 3 zones."
+    "explanation": "Chaque région GCP a au moins 3 zones."
   },
   {
     "id": "GCP-DL-019",
@@ -270,9 +275,14 @@
     "theme_label": "Responsabilité partagée",
     "difficulty": "easy",
     "question": "Dans le modèle de responsabilité partagée, qui est responsable du matériel ?",
-    "options": ["Le fournisseur cloud", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "options": [
+      "Le fournisseur cloud",
+      "Le client",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
     "correct": 0,
-    "explication": "Le fournisseur cloud est responsable du matériel, des centres de données."
+    "explanation": "Le fournisseur cloud est responsable du matériel, des centres de données."
   },
   {
     "id": "GCP-DL-020",
@@ -280,9 +290,14 @@
     "theme_label": "Responsabilité partagée",
     "difficulty": "easy",
     "question": "Dans le modèle de responsabilité partagée, qui est responsable des données ?",
-    "options": ["Le client", "Le fournisseur cloud", "Les deux", "Ni l'un ni l'autre"],
+    "options": [
+      "Le client",
+      "Le fournisseur cloud",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
     "correct": 0,
-    "explication": "Le client est responsable de ses données."
+    "explanation": "Le client est responsable de ses données."
   },
   {
     "id": "GCP-DL-021",
@@ -297,7 +312,7 @@
       "Formation des employés"
     ],
     "correct": 0,
-    "explication": "La transformation digitale repense les modèles d'affaires avec les technologies."
+    "explanation": "La transformation digitale repense les modèles d'affaires avec les technologies."
   },
   {
     "id": "GCP-DL-022",
@@ -312,7 +327,7 @@
       "Matériel dédié"
     ],
     "correct": 0,
-    "explication": "Le cloud permet de tester des idées rapidement sans investissement initial."
+    "explanation": "Le cloud permet de tester des idées rapidement sans investissement initial."
   },
   {
     "id": "GCP-DL-023",
@@ -327,7 +342,7 @@
       "Ignorer les données"
     ],
     "correct": 0,
-    "explication": "Les décisions sont guidées par l'analyse des données."
+    "explanation": "Les décisions sont guidées par l'analyse des données."
   },
   {
     "id": "GCP-DL-024",
@@ -342,7 +357,7 @@
       "Arrêter les applications"
     ],
     "correct": 0,
-    "explication": "La modernisation utilise des microservices, conteneurs, serverless."
+    "explanation": "La modernisation utilise des microservices, conteneurs, serverless."
   },
   {
     "id": "GCP-DL-025",
@@ -357,7 +372,7 @@
       "Processus de base de données"
     ],
     "correct": 0,
-    "explication": "DevOps améliore la collaboration entre les équipes de développement et d'exploitation."
+    "explanation": "DevOps améliore la collaboration entre les équipes de développement et d'exploitation."
   },
   {
     "id": "GCP-DL-026",
@@ -372,7 +387,7 @@
       "Code Integration / Code Deployment"
     ],
     "correct": 0,
-    "explication": "CI/CD automatise l'intégration et la livraison des logiciels."
+    "explanation": "CI/CD automatise l'intégration et la livraison des logiciels."
   },
   {
     "id": "GCP-DL-027",
@@ -387,7 +402,7 @@
       "Ingénierie des bases de données"
     ],
     "correct": 0,
-    "explication": "SRE applique des principes d'ingénierie aux opérations."
+    "explanation": "SRE applique des principes d'ingénierie aux opérations."
   },
   {
     "id": "GCP-DL-028",
@@ -402,7 +417,7 @@
       "Security Level Objective"
     ],
     "correct": 0,
-    "explication": "SLO est l'objectif de performance cible pour un service."
+    "explanation": "SLO est l'objectif de performance cible pour un service."
   },
   {
     "id": "GCP-DL-029",
@@ -417,7 +432,7 @@
       "Security Level Indicator"
     ],
     "correct": 0,
-    "explication": "SLI est une mesure quantifiable de la performance du service."
+    "explanation": "SLI est une mesure quantifiable de la performance du service."
   },
   {
     "id": "GCP-DL-030",
@@ -432,7 +447,7 @@
       "Security Level Agreement"
     ],
     "correct": 0,
-    "explication": "SLA est l'accord contractuel entre le fournisseur et le client."
+    "explanation": "SLA est l'accord contractuel entre le fournisseur et le client."
   },
   {
     "id": "GCP-DL-031",
@@ -447,7 +462,7 @@
       "Uniquement des devis"
     ],
     "correct": 0,
-    "explication": "GCP fournit des outils de gestion des coûts (Budgets, Recommandations)."
+    "explanation": "GCP fournit des outils de gestion des coûts (Budgets, Recommandations)."
   },
   {
     "id": "GCP-DL-032",
@@ -462,7 +477,7 @@
       "Uniquement pour la résilience"
     ],
     "correct": 0,
-    "explication": "Les régions permettent de respecter la souveraineté des données."
+    "explanation": "Les régions permettent de respecter la souveraineté des données."
   },
   {
     "id": "GCP-DL-033",
@@ -477,7 +492,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les 6 R sont les stratégies de migration courantes."
+    "explanation": "Les 6 R sont les stratégies de migration courantes."
   },
   {
     "id": "GCP-DL-034",
@@ -492,7 +507,7 @@
       "Arrêter l'application"
     ],
     "correct": 0,
-    "explication": "Lift & shift déplace les applications sans modification."
+    "explanation": "Lift & shift déplace les applications sans modification."
   },
   {
     "id": "GCP-DL-035",
@@ -507,7 +522,7 @@
       "Arrêter l'application"
     ],
     "correct": 0,
-    "explication": "Le refactoring modernise l'application pour le cloud."
+    "explanation": "Le refactoring modernise l'application pour le cloud."
   },
   {
     "id": "GCP-DL-036",
@@ -522,7 +537,7 @@
       "Seulement AI/ML"
     ],
     "correct": 0,
-    "explication": "GCP propose une large gamme de services."
+    "explanation": "GCP propose une large gamme de services."
   },
   {
     "id": "GCP-DL-037",
@@ -537,7 +552,7 @@
       "Licences perpétuelles"
     ],
     "correct": 0,
-    "explication": "GCP offre plusieurs modèles pour optimiser les coûts."
+    "explanation": "GCP offre plusieurs modèles pour optimiser les coûts."
   },
   {
     "id": "GCP-DL-038",
@@ -545,9 +560,14 @@
     "theme_label": "Google Cloud Free Tier",
     "difficulty": "easy",
     "question": "GCP propose-t-il un niveau gratuit ?",
-    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour Cloud Storage"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour Compute Engine",
+      "Uniquement pour Cloud Storage"
+    ],
     "correct": 0,
-    "explication": "GCP a un niveau gratuit avec des limites mensuelles."
+    "explanation": "GCP a un niveau gratuit avec des limites mensuelles."
   },
   {
     "id": "GCP-DL-039",
@@ -555,9 +575,14 @@
     "theme_label": "Cloud Sustainability",
     "difficulty": "easy",
     "question": "Google Cloud s'engage-t-il à utiliser de l'énergie renouvelable ?",
-    "options": ["Oui", "Non", "Uniquement dans certaines régions", "Uniquement pour les centres de données"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement dans certaines régions",
+      "Uniquement pour les centres de données"
+    ],
     "correct": 0,
-    "explication": "Google Cloud est neutre en carbone et utilise de l'énergie renouvelable."
+    "explanation": "Google Cloud est neutre en carbone et utilise de l'énergie renouvelable."
   },
   {
     "id": "GCP-DL-040",
@@ -565,9 +590,14 @@
     "theme_label": "Open source",
     "difficulty": "easy",
     "question": "Google Cloud supporte-t-il les technologies open source ?",
-    "options": ["Oui (Kubernetes, TensorFlow, etc.)", "Non", "Uniquement pour les bases de données", "Uniquement pour le calcul"],
+    "options": [
+      "Oui (Kubernetes, TensorFlow, etc.)",
+      "Non",
+      "Uniquement pour les bases de données",
+      "Uniquement pour le calcul"
+    ],
     "correct": 0,
-    "explication": "Google est un contributeur majeur à l'open source."
+    "explanation": "Google est un contributeur majeur à l'open source."
   },
   {
     "id": "GCP-DL-041",
@@ -575,9 +605,14 @@
     "theme_label": "Partner ecosystem",
     "difficulty": "easy",
     "question": "GCP a-t-il des partenaires technologiques ?",
-    "options": ["Oui", "Non", "Uniquement pour le support", "Uniquement pour la formation"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour le support",
+      "Uniquement pour la formation"
+    ],
     "correct": 0,
-    "explication": "GCP a un vaste écosystème de partenaires (ISV, SI, etc.)."
+    "explanation": "GCP a un vaste écosystème de partenaires (ISV, SI, etc.)."
   },
   {
     "id": "GCP-DL-042",
@@ -592,7 +627,7 @@
       "Seulement Cloud Architect"
     ],
     "correct": 0,
-    "explication": "GCP propose plusieurs certifications."
+    "explanation": "GCP propose plusieurs certifications."
   },
   {
     "id": "GCP-DL-043",
@@ -600,9 +635,14 @@
     "theme_label": "Training",
     "difficulty": "easy",
     "question": "Google propose-t-il des formations gratuites sur le cloud ?",
-    "options": ["Oui (Google Cloud Skills Boost)", "Non", "Uniquement payantes", "Uniquement pour les partenaires"],
+    "options": [
+      "Oui (Google Cloud Skills Boost)",
+      "Non",
+      "Uniquement payantes",
+      "Uniquement pour les partenaires"
+    ],
     "correct": 0,
-    "explication": "Google Cloud Skills Boost offre des cours gratuits et des labs."
+    "explanation": "Google Cloud Skills Boost offre des cours gratuits et des labs."
   },
   {
     "id": "GCP-DL-044",
@@ -617,7 +657,7 @@
       "En augmentant la bureaucratie"
     ],
     "correct": 0,
-    "explication": "Le cloud permet une culture d'innovation et d'agilité."
+    "explanation": "Le cloud permet une culture d'innovation et d'agilité."
   },
   {
     "id": "GCP-DL-045",
@@ -625,9 +665,14 @@
     "theme_label": "Multi-cloud",
     "difficulty": "easy",
     "question": "GCP supporte-t-il le multi-cloud ?",
-    "options": ["Oui (Anthos, Cloud Interconnect)", "Non", "Uniquement pour le stockage", "Uniquement pour le calcul"],
+    "options": [
+      "Oui (Anthos, Cloud Interconnect)",
+      "Non",
+      "Uniquement pour le stockage",
+      "Uniquement pour le calcul"
+    ],
     "correct": 0,
-    "explication": "Anthos permet de gérer des applications sur GCP et d'autres clouds."
+    "explanation": "Anthos permet de gérer des applications sur GCP et d'autres clouds."
   },
   {
     "id": "GCP-DL-046",
@@ -635,9 +680,14 @@
     "theme_label": "Hybrid cloud",
     "difficulty": "easy",
     "question": "GCP offre-t-il des solutions pour le cloud hybride ?",
-    "options": ["Oui (Anthos, Cloud Run for Anthos)", "Non", "Uniquement via VPN", "Uniquement via Interconnect"],
+    "options": [
+      "Oui (Anthos, Cloud Run for Anthos)",
+      "Non",
+      "Uniquement via VPN",
+      "Uniquement via Interconnect"
+    ],
     "correct": 0,
-    "explication": "Anthos permet d'exécuter des conteneurs sur GCP et sur site."
+    "explanation": "Anthos permet d'exécuter des conteneurs sur GCP et sur site."
   },
   {
     "id": "GCP-DL-047",
@@ -652,7 +702,7 @@
       "App Engine"
     ],
     "correct": 0,
-    "explication": "L'edge computing traite les données près de la source (IoT, retail)."
+    "explanation": "L'edge computing traite les données près de la source (IoT, retail)."
   },
   {
     "id": "GCP-DL-048",
@@ -660,9 +710,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "GCP est-il certifié ISO 27001 ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement pour certains services"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement pour certains services"
+    ],
     "correct": 0,
-    "explication": "GCP est certifié ISO 27001."
+    "explanation": "GCP est certifié ISO 27001."
   },
   {
     "id": "GCP-DL-049",
@@ -670,9 +725,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "GCP est-il conforme GDPR ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement en Europe"
+    ],
     "correct": 0,
-    "explication": "GCP est conforme GDPR."
+    "explanation": "GCP est conforme GDPR."
   },
   {
     "id": "GCP-DL-050",
@@ -680,8 +740,362 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Quel service GCP donne accès aux rapports de conformité ?",
-    "options": ["Cloud Compliance", "Assured Workloads", "Security Command Center", "IAM"],
+    "options": [
+      "Cloud Compliance",
+      "Assured Workloads",
+      "Security Command Center",
+      "IAM"
+    ],
     "correct": 0,
-    "explication": "Assured Workloads aide à répondre aux exigences réglementaires."
+    "explanation": "Assured Workloads aide à répondre aux exigences réglementaires."
+  },
+  {
+    "id": "GCP-DT-001",
+    "theme": "Digital Transformation",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les avantages du cloud :",
+    "options": [
+      "Coût réduit grâce à la facturation basée sur l'utilisation",
+      "Amélioration de la disponibilité et de la fiabilité des services",
+      "Accès aux dernières technologies sans investissement initial significatif",
+      "Facilité de mise à l'échelle et d'adaptation aux besoins changeants",
+      "Réduction des risques de sécurité en raison du manque de contrôle sur les infrastructures"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "A est correct car les coûts peuvent être réduits grâce à la facturation basée sur l'utilisation. B est correct car le cloud offre une haute disponibilité et fiabilité. C est correct car les fournisseurs de cloud offrent souvent les dernières technologies sans investissement initial. D est correct car le cloud permet une facilité de mise à l'échelle et d'adaptation aux besoins changeants. E est incorrect car les fournisseurs de cloud offrent généralement des mesures de sécurité robustes."
+  },
+  {
+    "id": "GCP-DT-002",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre IaaS, PaaS et SaaS ?",
+    "options": [
+      "IaaS fournit des infrastructures virtuelles, PaaS fournit des plateformes pour développer et exécuter des applications, SaaS fournit des applications prêtes à l'emploi",
+      "IaaS fournit des applications, PaaS fournit des infrastructures virtuelles, SaaS fournit des plateformes pour développer et exécuter des applications",
+      "IaaS fournit des plateformes pour développer et exécuter des applications, PaaS fournit des infrastructures virtuelles, SaaS fournit des applications prêtes à l'emploi",
+      "IaaS fournit des infrastructures virtuelles, PaaS fournit des applications prêtes à l'emploi, SaaS fournit des plateformes pour développer et exécuter des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "IaaS fournit des infrastructures virtuelles, PaaS fournit des plateformes pour développer et exécuter des applications, SaaS fournit des applications prêtes à l'emploi."
+  },
+  {
+    "id": "GCP-DT-003",
+    "theme": "Digital Transformation",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les modèles de déploiement :",
+    "options": [
+      "Public : accessible à tous les utilisateurs via Internet",
+      "Private : dédié à une organisation unique",
+      "Hybrid : combinaison de déploiement public et privé",
+      "Edge : déployé sur des appareils physiques aux frontières de la réseau",
+      "Multi-cloud : utilisation de plusieurs fournisseurs cloud simultanément"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "A est correct car les ressources sont accessibles à tous via Internet. B est correct car le déploiement privé est dédié à une organisation unique. C est correct car il combine les avantages de la sécurité du cloud privé et de l'accès à Internet. D est correct car il permet une meilleure performance pour les applications nécessitant des données locales. E est correct car il offre la flexibilité d'utiliser plusieurs fournisseurs cloud."
+  },
+  {
+    "id": "GCP-DT-004",
+    "theme": "Digital Transformation",
+    "theme_label": "GCP régions et zones",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une région et une zone dans Google Cloud Platform ?",
+    "options": [
+      "Une région est un ensemble de zones, une zone est un centre de données physique",
+      "Une région est un centre de données physique, une zone est un ensemble de régions",
+      "Une région et une zone sont des termes interchangeables",
+      "Une région est un ensemble de zones géographiquement proches, une zone est un centre de données physique"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Une région est un ensemble de zones géographiquement proches, une zone est un centre de données physique."
+  },
+  {
+    "id": "GCP-DT-005",
+    "theme": "Digital Transformation",
+    "theme_label": "SLI/SLO/SLA",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant SLI, SLO et SLA :",
+    "options": [
+      "SLI (Service Level Indicator) est une mesure de la performance du service",
+      "SLO (Service Level Objective) est le niveau de performance souhaité pour un service",
+      "SLA (Service Level Agreement) est un contrat entre le fournisseur de services et le client",
+      "SLI, SLO et SLA sont tous des termes interchangeables",
+      "SLI est le niveau de performance souhaité, SLO est la mesure de la performance du service"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "A est correct car SLI mesure la performance du service. B est correct car SLO est le niveau de performance souhaité pour un service. C est correct car SLA est un contrat entre le fournisseur de services et le client. D est incorrect car SLI, SLO et SLA ne sont pas interchangeables. E est incorrect car SLI est la mesure de la performance du service, SLO est le niveau de performance souhaité."
+  },
+  {
+    "id": "GCP-DT-006",
+    "theme": "Digital Transformation",
+    "theme_label": "Transformation digitale",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la transformation digitale :",
+    "options": [
+      "La transformation digitale implique l'adoption de technologies numériques pour améliorer les processus d'affaires.",
+      "Elle se limite à la mise en place de systèmes informatiques modernes.",
+      "La transformation digitale nécessite une révision complète de l'organisation et des processus métier.",
+      "Elle peut entraîner une perte de compétences techniques au sein de l'entreprise.",
+      "La transformation digitale est un processus rapide et facile à mener."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "La transformation digitale implique l'adoption de technologies numériques pour améliorer les processus d'affaires. Elle nécessite une révision complète de l'organisation et des processus métier. La transformation digitale peut entraîner une perte de compétences techniques au sein de l'entreprise."
+  },
+  {
+    "id": "GCP-DT-007",
+    "theme": "Digital Transformation",
+    "theme_label": "Transformation digitale",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est une caractéristique principale de la transformation digitale ?",
+    "options": [
+      "Réduction des coûts informatiques",
+      "Augmentation de la productivité grâce à l'automatisation",
+      "Mise en place d'un système de gestion des stocks traditionnel",
+      "Réduction de la sécurité informatique"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Augmentation de la productivité grâce à l'automatisation est une caractéristique principale de la transformation digitale."
+  },
+  {
+    "id": "GCP-DT-008",
+    "theme": "Digital Transformation",
+    "theme_label": "Transformation digitale",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les défis de la transformation digitale :",
+    "options": [
+      "La mise en œuvre rapide des technologies numériques sans planification préalable.",
+      "L'absence de compétences techniques au sein de l'équipe IT.",
+      "La nécessité de mettre en œuvre des systèmes informatiques monolithiques.",
+      "Le risque accru de cyberattaques en raison des systèmes plus connectés.",
+      "La facilité de la migration vers le cloud pour toutes les entreprises."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "La mise en œuvre rapide des technologies numériques sans planification préalable peut entraîner des problèmes. L'absence de compétences techniques au sein de l'équipe IT est un défi majeur. Le risque accru de cyberattaques en raison des systèmes plus connectés est un aspect important à considérer."
+  },
+  {
+    "id": "GCP-DT-009",
+    "theme": "Digital Transformation",
+    "theme_label": "Transformation digitale",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est une stratégie courante pour faciliter la transformation digitale dans une entreprise ?",
+    "options": [
+      "Mise en place d'un système de gestion des stocks traditionnel",
+      "Adoption progressive et pilotage des technologies numériques",
+      "Rétrocession complète vers les systèmes informatiques anciens",
+      "Annulation des projets de transformation digitale en cours"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Adoption progressive et pilotage des technologies numériques est une stratégie courante pour faciliter la transformation digitale dans une entreprise."
+  },
+  {
+    "id": "GCP-DT-010",
+    "theme": "Digital Transformation",
+    "theme_label": "Transformation digitale",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les avantages de la transformation digitale :",
+    "options": [
+      "Amélioration de l'efficacité et productivité des processus métier.",
+      "Réduction des coûts informatiques grâce à l'utilisation efficace des ressources cloud.",
+      "Augmentation du temps de réponse aux clients grâce à l'automatisation des processus.",
+      "Mise en place d'un système de gestion des stocks traditionnel",
+      "Réduction de la sécurité informatique en raison des systèmes moins connectés."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Amélioration de l'efficacité et productivité des processus métier. Réduction des coûts informatiques grâce à l'utilisation efficace des ressources cloud. Augmentation du temps de réponse aux clients grâce à l'automatisation des processus."
+  },
+  {
+    "id": "GCP-DT-011",
+    "theme": "Digital Transformation",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la responsabilité partagée dans le cloud :",
+    "options": [
+      "La responsabilité est uniquement sur les clients.",
+      "Les fournisseurs de cloud sont responsables des infrastructures et des services.",
+      "La sécurité est complètement le domaine des clients.",
+      "Les clients sont responsables de la mise à jour et du support des applications."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les fournisseurs de cloud sont responsables des infrastructures et des services, tandis que les clients sont responsables de la mise à jour et du support des applications. La sécurité est partagée."
+  },
+  {
+    "id": "GCP-DT-012",
+    "theme": "Digital Transformation",
+    "theme_label": "Cloud computing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre IaaS, PaaS et SaaS ?",
+    "options": [
+      "IaaS fournit des infrastructures, PaaS offre des plateformes et SaaS donne accès aux applications.",
+      "IaaS, PaaS et SaaS sont tous des types de stockage cloud.",
+      "IaaS est le plus cher, PaaS le moyen et SaaS le moins cher.",
+      "Tous les trois offrent les mêmes services."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "IaaS fournit des infrastructures, PaaS offre des plateformes et SaaS donne accès aux applications."
+  },
+  {
+    "id": "GCP-DT-013",
+    "theme": "Digital Transformation",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les modèles de déploiement dans le cloud :",
+    "options": [
+      "Le modèle monolithique est toujours le meilleur pour les applications cloud.",
+      "La déploiement hybride permet une combinaison de cloud et on-premises.",
+      "La déploiement multi-cloud utilise plusieurs fournisseurs de cloud simultanément.",
+      "Le modèle serverless est toujours le plus économique."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "La déploiement hybride et multi-cloud sont des modèles populaires, tandis que le modèle monolithique n'est pas toujours le meilleur pour les applications cloud. Le modèle serverless peut être économique mais ne convient pas à tous les cas d'utilisation."
+  },
+  {
+    "id": "GCP-DT-014",
+    "theme": "Digital Transformation",
+    "theme_label": "GCP Pricing",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre le pricing à l'utilisation et le pricing par abonnement dans GCP ?",
+    "options": [
+      "Le pricing à l'utilisation facture uniquement pour les ressources utilisées, tandis que le pricing par abonnement facture un montant fixe.",
+      "Le pricing à l'utilisation est basé sur le nombre de machines virtuelles, tandis que le pricing par abonnement facture pour les services spécifiques.",
+      "Le pricing à l'utilisation est basé sur le nombre de transactions, tandis que le pricing par abonnement facture pour les heures d'utilisation.",
+      "Le pricing à l'utilisation est basé sur le nombre de jours, tandis que le pricing par abonnement facture pour les heures d'utilisation."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le pricing à l'utilisation facture uniquement pour les ressources utilisées, tandis que le pricing par abonnement facture un montant fixe."
+  },
+  {
+    "id": "GCP-DT-015",
+    "theme": "Digital Transformation",
+    "theme_label": "DevOps",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce que DevOps ?",
+    "options": [
+      "Un ensemble de pratiques qui favorisent le développement et la mise en œuvre continue.",
+      "Un langage de programmation pour le développement web.",
+      "Un type de base de données relationnelle.",
+      "Un modèle de déploiement monolithique."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "DevOps est un ensemble de pratiques qui favorisent le développement et la mise en œuvre continue."
+  },
+  {
+    "id": "GCP-DT-016",
+    "theme": "Digital Transformation",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la responsabilité partagée dans le cloud :",
+    "options": [
+      "La responsabilité est entièrement sur les fournisseurs de services cloud.",
+      "Les clients sont responsables des données et des applications sur leur propre infrastructure.",
+      "La responsabilité est partagée entre les fournisseurs de services cloud et les clients.",
+      "Les fournisseurs de services cloud ne sont pas responsables des attaques externes."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "La responsabilité partagée implique que les clients sont responsables des données et des applications sur leur propre infrastructure, tandis que les fournisseurs de services cloud sont responsables de la sécurité et de l'infrastructure physique. Les fournisseurs de services cloud ne sont pas responsables des attaques externes."
+  },
+  {
+    "id": "GCP-DT-017",
+    "theme": "Digital Transformation",
+    "theme_label": "Migration",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale raison de migrer vers le cloud ?",
+    "options": [
+      "Réduction des coûts d'infrastructure physique",
+      "Amélioration de la performance des applications",
+      "Accès à une équipe technique expérimentée",
+      "Toutes les réponses ci-dessus"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "La migration vers le cloud offre plusieurs avantages, notamment une réduction des coûts d'infrastructure physique, une amélioration de la performance des applications et un accès à une équipe technique expérimentée."
+  },
+  {
+    "id": "GCP-DT-018",
+    "theme": "Digital Transformation",
+    "theme_label": "DevOps",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant DevOps :",
+    "options": [
+      "DevOps est un processus de développement et d'exploitation qui met l'accent sur la collaboration.",
+      "DevOps est uniquement une pratique de développement logiciel.",
+      "DevOps implique l'utilisation d'outils et de pratiques pour améliorer la qualité du logiciel.",
+      "DevOps est une approche de gestion des projets qui ne concerne pas les équipes de développement."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "DevOps est un processus de développement et d'exploitation qui met l'accent sur la collaboration. DevOps implique l'utilisation d'outils et de pratiques pour améliorer la qualité du logiciel. DevOps n'est pas uniquement une pratique de développement logiciel et ne concerne pas seulement les équipes de développement."
   }
 ]

@@ -1,36 +1,60 @@
 # Certified Kubernetes Application Developer (CKAD)
 
 ## 📋 Description
+La certification CKAD (Certified Kubernetes Application Developer) est une certification **pratique** qui évalue les compétences de développement d'applications cloud-native sur Kubernetes. Elle vise à certifier que le candidat est capable de concevoir, déployer et gérer des applications Kubernetes efficacement.
 
-Certification CKAD - Développement d'applications cloud-native sur Kubernetes, déploiements, services, configuration et
-observabilité.
+Cette certification est particulièrement utile pour les développeurs de logiciels, les ingénieurs DevOps et les architectes technologiques qui souhaitent s'assurer de leur maîtrise des meilleures pratiques et des bonnes performances dans le développement d'applications sur Kubernetes.
 
 ## 🏛️ Organisme délivrant
-
-**CNCF (Cloud Native Computing Foundation)** - Linux Foundation
+**Cloud Native Computing Foundation (CNCF)** - Fondation open source sous la Linux Foundation
 
 ## 📅 Validité
-
 - **Valable 2 ans**
-- Renouvellement par examen
+- Renouvellement par examen ou certification supérieure (CKA)
 
-## 📚 Programme
+## 📚 Programme détaillé
+### Thèmes principaux
+| Thème | Questions |
+|---|---|
+| Application Design | 40 |
+| Deployment Configuration | 60 |
+| Observability | 40 |
+| Services & Networking | 60 |
+| State Persistence | 50 |
 
-- Application Design
-- Deployment Configuration
-- Observability (liveness/readiness probes)
-- Services & Networking
-- State Persistence
+### Compétences évaluées
+- Concevoir des architectures d'applications Kubernetes
+- Configurer des déploiements et des mises à jour de manière efficace
+- Assurer la surveillance et le débogage des applications Kubernetes
+- Gérer les services et les réseaux dans un environnement Kubernetes
+- Gérer la persistance de l'état des applications
 
-## 💼 Reconnaissance
+## 💼 Reconnaissance professionnelle
+### Niveau de reconnaissance
+⭐⭐⭐⭐⭐ (Très élevé - Standard de facto pour le développement d'applications sur Kubernetes)
 
-⭐⭐⭐⭐⭐ (Très élevé - Standard pour développeurs Kubernetes)
+### Valeur sur le marché
+- **France** : Très recherchée par les entreprises de technologie et les startups
+- **Maroc** : Augmente la portée des opportunités en développement d'applications cloud-native
+- **Tunisie** : Favorise la compétitivité des entreprises technologiques
+- **Sénégal** : Ouvre de nouvelles perspectives pour les développeurs sénégalais
+- **Québec** : Augmente la demande en compétences Kubernetes chez les entreprises canadiennes
+- **Suisse** : Renforce la position de Suisse comme leader en technologie
+- **Belgique** : Favorise l'innovation et le développement de solutions cloud-native
 
-## 💰 Salaires (France)
+## 📊 Statistiques
+- **Taux de réussite** : ~66%
+- **Temps de préparation recommandé** : 150-200 heures
+- **Format examen** : Pratique (terminal), 19 questions, 120 minutes
 
-- 2-4 ans : 55 000 - 70 000 €
-- 4-6 ans : 70 000 - 95 000 €
+## 🌍 Marchés francophones
+- **France** : Les grandes entreprises technologiques et les startups cherchent des développeurs Kubernetes qualifiés
+- **Maroc** : La demande en compétences Kubernetes augmente rapidement, notamment chez les entreprises de technologie
+- **Tunisie** : Les startups et les PME cherchent des développeurs Kubernetes pour développer leurs applications cloud-native
+- **Sénégal** : La demande en compétences Kubernetes est en croissance, notamment chez les entreprises technologiques
+- **Québec** : Les entreprises canadiennes cherchent des développeurs Kubernetes pour développer leurs solutions cloud-native
+- **Suisse** : Les entreprises suisses cherchent des développeurs Kubernetes pour développer leurs applications cloud-native
+- **Belgique** : Les entreprises belges cherchent des développeurs Kubernetes pour développer leurs solutions cloud-native
 
-## 🔗 Liens
-
+## 🔗 Liens utiles
 - [CNCF CKAD](https://www.cncf.io/certification/ckad/)

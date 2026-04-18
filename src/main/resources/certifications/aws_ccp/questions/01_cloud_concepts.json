@@ -395,7 +395,12 @@
     "theme_label": "Comparaison",
     "difficulty": "hard",
     "question": "Combien d'AZ minimum par région ?",
-    "options": ["2", "1", "3", "4"],
+    "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
     "correct": 0,
     "explanation": "Chaque région AWS a au moins 2 Availability Zones."
   },
@@ -570,7 +575,12 @@
     "theme_label": "AWS Well-Architected",
     "difficulty": "hard",
     "question": "Combien y a-t-il de piliers dans le Well-Architected Framework ?",
-    "options": ["6", "5", "4", "7"],
+    "options": [
+      "6",
+      "5",
+      "4",
+      "7"
+    ],
     "correct": 0,
     "explanation": "6 piliers : Excellence opérationnelle, Sécurité, Fiabilité, Performance, Optimisation des coûts, Durabilité."
   },
@@ -685,7 +695,12 @@
     "theme_label": "AWS Free Tier",
     "difficulty": "medium",
     "question": "Combien de temps dure le Free Tier ?",
-    "options": ["12 mois", "6 mois", "24 mois", "Toujours"],
+    "options": [
+      "12 mois",
+      "6 mois",
+      "24 mois",
+      "Toujours"
+    ],
     "correct": 0,
     "explanation": "Le Free Tier dure 12 mois pour les nouveaux comptes AWS."
   },
@@ -733,5 +748,308 @@
     ],
     "correct": 0,
     "explanation": "1 million de requêtes Lambda par mois."
+  },
+  {
+    "id": "AWS-CCP-CC-001",
+    "theme": "Cloud Concepts",
+    "theme_label": "Avantages du cloud",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les avantages du cloud :",
+    "options": [
+      "Coût réduit grâce à la facturation basée sur l'utilisation",
+      "Accès instantané aux ressources informatiques",
+      "Redondance et disponibilité élevée grâce aux zones de disponibilité",
+      "Manque d'infrastructure physique à gérer",
+      "Limitations de performance en raison des dépendances réseau"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Coût réduit grâce à la facturation basée sur l'utilisation (VRAI), Accès instantané aux ressources informatiques (VRAI), Redondance et disponibilité élevée grâce aux zones de disponibilité (VRAI), Manque d'infrastructure physique à gérer (VRAI), Limitations de performance en raison des dépendances réseau (FAUX)"
+  },
+  {
+    "id": "AWS-CCP-CC-003",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les modèles de déploiement AWS :",
+    "options": [
+      "Public : accessible à tous les utilisateurs",
+      "Private : accessible uniquement aux utilisateurs autorisés",
+      "Hybrid : combinaison de cloud public et local",
+      "Semi-public : accessible à certains utilisateurs autorisés",
+      "Isolated : non accessible aux autres utilisateurs"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Public : accessible à tous les utilisateurs (VRAI), Private : accessible uniquement aux utilisateurs autorisés (VRAI), Hybrid : combinaison de cloud public et local (VRAI), Semi-public : accessible à certains utilisateurs autorisés (FAUX), Isolated : non accessible aux autres utilisateurs (FAUX)"
+  },
+  {
+    "id": "AWS-CCP-CC-004",
+    "theme": "Cloud Concepts",
+    "theme_label": "Edge locations",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction des edge locations AWS ?",
+    "options": [
+      "Stockage de données à long terme",
+      "Traitement des données en temps réel",
+      "Gestion des utilisateurs et des identités",
+      "Déploiement de applications web"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Les edge locations AWS sont utilisées pour traiter des données en temps réel, offrant une latence réduite."
+  },
+  {
+    "id": "AWS-CCP-CC-005",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle partie de la responsabilité est partagée entre le client et AWS dans le cloud ?",
+    "options": [
+      "La sécurité des données est entièrement la responsabilité de AWS",
+      "Le client gère les infrastructures et AWS gère les applications",
+      "La sécurité des données est la responsabilité du client, tandis que AWS gère les infrastructures",
+      "AWS gère toutes les aspects de la sécurité et du fonctionnement"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La sécurité des données est la responsabilité du client, tandis que AWS gère les infrastructures."
+  },
+  {
+    "id": "AWS-CCP-CC-005",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les modèles de déploiement AWS :",
+    "options": [
+      "Public: accessible à tous les utilisateurs.",
+      "Private: réservé à un seul compte AWS.",
+      "Hybrid: combinaison de services publics et privés.",
+      "Dedicated: dédié à un seul client."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Public est correct car il est accessible à tous les utilisateurs. Private est incorrect car il n'est pas réservé à un seul compte AWS. Hybrid est correct car il combine des services publics et privés. Dedicated est incorrect car il n'est pas dédié à un seul client."
+  },
+  {
+    "id": "AWS-CCP-CC-006",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la responsabilité partagée dans le modèle AWS ?",
+    "options": [
+      "Responsabilité totale sur les infrastructures et les applications.",
+      "Responsabilité partagée entre le fournisseur de cloud et l'utilisateur.",
+      "Responsabilité totale sur les applications, la responsabilité partielle sur les infrastructures.",
+      "Responsabilité partagée entre le fournisseur de cloud et le client, mais exclusivement sur les infrastructures."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La responsabilité partagée dans le modèle AWS est correctement décrivie comme une responsabilité partagée entre le fournisseur de cloud et l'utilisateur."
+  },
+  {
+    "id": "AWS-CCP-CC-008",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la responsabilité du fournisseur de cloud dans le modèle AWS ?",
+    "options": [
+      "Gestion des infrastructures et des applications.",
+      "Mise à jour et maintenance des infrastructures, mais pas des applications.",
+      "Gestion des applications, mais pas des infrastructures.",
+      "Aucune responsabilité."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le fournisseur de cloud est responsable de la gestion des infrastructures et des applications (correct)."
+  },
+  {
+    "id": "AWS-CCP-CC-009",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le modèle de déploiement AWS qui offre des ressources privées et dédiées à un seul compte ?",
+    "options": [
+      "Public",
+      "Private",
+      "Hybrid",
+      "Dedicated"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Le modèle Dedicated offre des ressources privées et dédiées à un seul compte AWS (correct)."
+  },
+  {
+    "id": "AWS-CCP-CC-009",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les modèles de déploiement AWS :",
+    "options": [
+      "Public: accessible à tout le monde",
+      "Private: accessible uniquement aux utilisateurs autorisés",
+      "Hybrid: combinaison de cloud public et privé",
+      "Edge: déploiement local pour des performances accrues"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Public est correct car il est accessible à tout le monde. Private est correct pour un accès restreint. Hybrid est correct pour une combinaison de public et privé. Edge est incorrect car il s'agit d'une extension du réseau AWS à proximité des utilisateurs finaux."
+  },
+  {
+    "id": "AWS-CCP-CC-010",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la responsabilité de l'entreprise dans le modèle AWS Well-Architected ?",
+    "options": [
+      "Tout est la responsabilité de AWS",
+      "L'entreprise a une responsabilité limitée",
+      "Tout est la responsabilité de l'entreprise",
+      "Responsabilité partagée entre AWS et l'entreprise"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Responsabilité partagée entre AWS et l'entreprise est correct car AWS gère la sécurité des infrastructures physiques, tandis que l'entreprise est responsable de la sécurité et de la gestion des applications."
+  },
+  {
+    "id": "AWS-CCP-CC-011",
+    "theme": "Cloud Concepts",
+    "theme_label": "Zones de disponibilité",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les zones de disponibilité AWS :",
+    "options": [
+      "Une zone de disponibilité est une région entière",
+      "Une zone de disponibilité est un ensemble d'infrastructures physiques indépendantes",
+      "Une zone de disponibilité est un service AWS dédié",
+      "Une zone de disponibilité offre une haute disponibilité et la récupération des données"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Une zone de disponibilité est un ensemble d'infrastructures physiques indépendantes, donc elle n'est pas une région entière. Une zone de disponibilité offre une haute disponibilité et la récupération des données, donc elle est correcte. Une zone de disponibilité n'est pas un service AWS dédié."
+  },
+  {
+    "id": "AWS-CCP-CC-012",
+    "theme": "Cloud Concepts",
+    "theme_label": "Comparaison",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la comparaison entre le cloud public et le cloud privé :",
+    "options": [
+      "Le cloud public est moins sécurisé que le cloud privé",
+      "Le cloud privé offre une meilleure scalabilité que le cloud public",
+      "Le coût du cloud public est généralement inférieur au cloud privé",
+      "Le cloud privé offre une meilleure isolation des données que le cloud public"
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Le cloud public est généralement moins sécurisé que le cloud privé, donc elle est incorrecte. Le coût du cloud public peut être inférieur au cloud privé selon les configurations, donc elle est incorrecte. Le cloud privé offre une meilleure isolation des données que le cloud public, donc elle est correcte."
+  },
+  {
+    "id": "AWS-CCP-CC-013",
+    "theme": "Cloud Concepts",
+    "theme_label": "Bénéfices",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'un des principaux bénéfices du cloud computing ?",
+    "options": [
+      "Accès à des ressources informatiques à la demande",
+      "Des serveurs physiques locaux",
+      "Un type de base de données spécifique",
+      "Un langage de programmation particulier"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Accès à des ressources informatiques à la demande est correct car le cloud permet aux utilisateurs d'accéder à des ressources tels que des serveurs, du stockage et des applications via Internet."
+  },
+  {
+    "id": "AWS-CCP-CC-014",
+    "theme": "Cloud Concepts",
+    "theme_label": "Responsabilité partagée",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la responsabilité partagée dans le cloud :",
+    "options": [
+      "Le fournisseur de la plateforme est responsable de la sécurité des données.",
+      "L'utilisateur est responsable du choix et de la configuration des ressources cloud utilisées.",
+      "Le fournisseur s'occupe du support technique et de la maintenance des infrastructures.",
+      "L'utilisateur est responsable de la mise à jour des logiciels et des systèmes d'exploitation.",
+      "Le fournisseur gère les coûts associés aux services cloud utilisés."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'utilisateur est responsable du choix et de la configuration des ressources cloud utilisées (B). Le fournisseur s'occupe du support technique et de la maintenance des infrastructures (C). L'utilisateur est responsable de la mise à jour des logiciels et des systèmes d'exploitation (D). Le fournisseur gère les coûts associés aux services cloud utilisés (E). Le fournisseur n'est pas responsable de la sécurité des données dans tous les cas (A)."
+  },
+  {
+    "id": "AWS-CCP-CC-015",
+    "theme": "Cloud Concepts",
+    "theme_label": "Modèles de déploiement",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le modèle de déploiement qui implique l'utilisation d'un service cloud pour héberger une application et ses données ?",
+    "options": [
+      "Public",
+      "Private",
+      "Hybrid",
+      "Community"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Le modèle de déploiement Hybrid implique l'utilisation d'un service cloud pour héberger une application et ses données. Les autres modèles ne répondent pas à cette description."
+  },
+  {
+    "id": "AWS-CCP-CC-016",
+    "theme": "Cloud Concepts",
+    "theme_label": "Cas d'usage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant un cas d'utilisation typique du cloud pour une entreprise :",
+    "options": [
+      "Une entreprise peut utiliser le cloud pour stocker des données sensibles et les protéger contre la perte physique.",
+      "Une entreprise peut utiliser le cloud pour créer une application web rapide et scalable sans investir dans des serveurs physiques.",
+      "Une entreprise peut utiliser le cloud pour gérer les coûts de l'infrastructure informatique en payant uniquement ce qu'elle utilise.",
+      "Une entreprise peut utiliser le cloud pour déployer des applications sur un réseau local privé.",
+      "Une entreprise peut utiliser le cloud pour stocker des données en dehors du pays, ce qui peut entraîner des contraintes réglementaires."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Une entreprise peut utiliser le cloud pour créer une application web rapide et scalable sans investir dans des serveurs physiques (B). Une entreprise peut utiliser le cloud pour gérer les coûts de l'infrastructure informatique en payant uniquement ce qu'elle utilise (C). Une entreprise peut utiliser le cloud pour stocker des données en dehors du pays, ce qui peut entraîner des contraintes réglementaires (E). Une entreprise peut utiliser le cloud pour stocker des données sensibles et les protéger contre la perte physique (A). Une entreprise peut utiliser le cloud pour déployer des applications sur un réseau local privé (D)."
   }
 ]

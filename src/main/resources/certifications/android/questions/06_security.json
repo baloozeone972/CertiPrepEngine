@@ -95,7 +95,12 @@
     "theme_label": "Encryption",
     "difficulty": "hard",
     "question": "Quel algorithme est recommandé pour le chiffrement ?",
-    "options": ["AES/GCM/NoPadding", "DES", "RC4", "Blowfish"],
+    "options": [
+      "AES/GCM/NoPadding",
+      "DES",
+      "RC4",
+      "Blowfish"
+    ],
     "correct": 0,
     "explanation": "AES/GCM est l'algorithme recommandé."
   },
@@ -375,7 +380,12 @@
     "theme_label": "Hashing",
     "difficulty": "hard",
     "question": "Quel algorithme de hash est recommandé ?",
-    "options": ["SHA-256", "MD5", "SHA-1", "CRC32"],
+    "options": [
+      "SHA-256",
+      "MD5",
+      "SHA-1",
+      "CRC32"
+    ],
     "correct": 0,
     "explanation": "SHA-256 est l'algorithme de hash recommandé."
   },
@@ -888,5 +898,365 @@
     ],
     "correct": 0,
     "explanation": "Simulation d'attaque pour trouver des vulnérabilités."
+  },
+  {
+    "id": "AND-SEC-061",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encryption AES :",
+    "options": [
+      "AES est un algorithme symétrique",
+      "AES utilise des clés de 128, 192 ou 256 bits",
+      "AES est plus lent que le chiffrement RSA",
+      "AES est utilisé pour l'authentification biologique"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "AES est effectivement un algorithme symétrique, ce qui signifie qu'il utilise la même clé pour chiffrer et déchiffrer les données. Il supporte des clés de 128, 192 ou 256 bits. Cependant, AES est généralement plus rapide que RSA, qui est un algorithme asymétrique. L'utilisation d'AES pour l'authentification biologique n'est pas une utilisation standard."
+  },
+  {
+    "id": "AND-SEC-062",
+    "theme": "Security",
+    "theme_label": "SSL/TLS",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre SSL et TLS ?",
+    "options": [
+      "SSL est plus sécurisé que TLS",
+      "TLS est la version mise à jour de SSL",
+      "SSL utilise des certificats émis par l'OS",
+      "TLS ne supporte pas les protocoles HTTP"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "TLS est la version mise à jour de SSL et apporte des améliorations en matière de sécurité. Les autres options sont incorrectes car SSL n'est pas plus sécurisé que TLS, les certificats SSL peuvent être émis par des autorités de certification tierces, et TLS supporte les protocoles HTTP."
+  },
+  {
+    "id": "AND-SEC-063",
+    "theme": "Security",
+    "theme_label": "ProGuard/R8",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux principales fonctions de ProGuard/R8 ?",
+    "options": [
+      "Obfusquer le code source",
+      "Minifier les fichiers de ressources",
+      "Optimiser le bytecode",
+      "Gérer les permissions d'application"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "ProGuard/R8 obfusque le code source pour rendre plus difficile la compréhension du code par des attaquants. Il minifie également les fichiers de ressources pour réduire la taille de l'application. L'optimisation du bytecode améliore les performances de l'application, mais ce n'est pas une fonction principale. La gestion des permissions d'application est généralement gérée par le système Android, pas par ProGuard/R8."
+  },
+  {
+    "id": "AND-SEC-064",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est la plus sûre pour l'authentification biométrique sur Android ?",
+    "options": [
+      "Empreinte digitale",
+      "Authentification faciale",
+      "Mot de passe",
+      "Code PIN"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'authentification faciale est généralement considérée comme la méthode la plus sûre sur Android en raison de l'utilisation d'algorithmes avancés pour vérifier l'identité de l'utilisateur. Bien que les empreintes digitales soient également sécuritaires, l'authentification faciale offre une couche supplémentaire de sécurité en vérifiant également la présence du visage."
+  },
+  {
+    "id": "AND-SEC-065",
+    "theme": "Security",
+    "theme_label": "Firebase App Check",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les trois principales utilisations de Firebase App Check ?",
+    "options": [
+      "Protéger les appels API contre l'usurpation d'identité",
+      "Gérer les mises à jour de l'application",
+      "Crypter les données stockées dans Firebase",
+      "Assurer la conformité aux réglementations de sécurité"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Firebase App Check est principalement utilisé pour protéger les appels API contre l'usurpation d'identité en vérifiant que les requêtes proviennent de votre application authentifiée. Il peut également aider à assurer la conformité aux réglementations de sécurité en limitant l'accès non autorisé. La gestion des mises à jour de l'application et le cryptage des données sont généralement gérés par d'autres outils ou services."
+  },
+  {
+    "id": "AND-SEC-066",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales méthodes d'encryption utilisées dans Android ?",
+    "options": [
+      "AES",
+      "RSA",
+      "SHA-256",
+      "MD5"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "AES et RSA sont des méthodes d'encryption couramment utilisées dans Android. SHA-256 est un algorithme de hachage, pas d'encryption. MD5 n'est plus considéré comme sécurisé et ne devrait pas être utilisé pour l'encryption."
+  },
+  {
+    "id": "AND-SEC-067",
+    "theme": "Security",
+    "theme_label": "Android Keystore",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de l'Android Keystore ?",
+    "options": [
+      "Stockage sécurisé de clés cryptographiques",
+      "Gestion des permissions d'applications",
+      "Sauvegarde de données utilisateur",
+      "Cryptage des fichiers"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'Android Keystore est utilisé pour stocker de manière sécurisée des clés cryptographiques, ce qui permet de protéger les données sensibles. Les autres options ne sont pas des fonctions principales du Keystore."
+  },
+  {
+    "id": "AND-SEC-068",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX méthodes de biometric authentication disponibles dans Android ?",
+    "options": [
+      "Fingerprint",
+      "Face recognition",
+      "Voice recognition",
+      "Signature"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Fingerprint et Face recognition sont les deux méthodes de biometric authentication disponibles dans Android. Voice recognition n'est pas une méthode native et Signature est une méthode de signature digitale, pas d'authentification biologique."
+  },
+  {
+    "id": "AND-SEC-069",
+    "theme": "Security",
+    "theme_label": "ProGuard/R8",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de ProGuard/R8 dans un projet Android ?",
+    "options": [
+      "Optimiser et minimifier le code",
+      "Gérer les permissions d'applications",
+      "Crypter les données sensibles",
+      "Déboguer l'application"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "ProGuard/R8 est utilisé pour optimiser et minimifier le code, ce qui réduit la taille de l'APK et améliore les performances. Les autres options ne sont pas des fonctions principales de ProGuard/R8."
+  },
+  {
+    "id": "AND-SEC-070",
+    "theme": "Security",
+    "theme_label": "SSL/TLS",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales fonctions de SSL/TLS dans une communication sécurisée ?",
+    "options": [
+      "Chiffrement des données",
+      "Authentification mutuelle",
+      "Intégrité des messages",
+      "Compression des données"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "SSL/TLS chiffre les données pour assurer leur confidentialité et effectue une authentification mutuelle entre le client et le serveur. L'intégrité des messages est également assurée, mais la compression n'est pas une fonction de SSL/TLS."
+  },
+  {
+    "id": "AND-SEC-071",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encryption AES :",
+    "options": [
+      "AES est un algorithme symétrique",
+      "AES est utilisé pour le chiffrement de données",
+      "AES est un algorithme asymétrique",
+      "AES est utilisé pour la signature numérique"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "AES est effectivement un algorithme symétrique utilisé pour le chiffrement de données, ce qui fait d'Options A et B correctes. Option C est incorrecte car AES n'est pas asymétrique, et Option D est incorrecte car AES n'est pas utilisé pour la signature numérique."
+  },
+  {
+    "id": "AND-SEC-072",
+    "theme": "Security",
+    "theme_label": "Android Keystore",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de l'Android Keystore ?",
+    "options": [
+      "Stockage sécurisé des clés cryptographiques",
+      "Gestion de la mémoire du système",
+      "Stockage des préférences utilisateur",
+      "Gestion des permissions d'application"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'Android Keystore est principalement utilisé pour stocker des clés cryptographiques de manière sécurisée, ce qui fait d'Option A la réponse correcte. Les autres options ne sont pas les fonctions principales du Keystore."
+  },
+  {
+    "id": "AND-SEC-073",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales méthodes de biometric authentication sur Android ?",
+    "options": [
+      "Authentification par empreinte digitale",
+      "Authentification par reconnaissance faciale",
+      "Authentification par mot de passe",
+      "Authentification par PIN"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'authentification par empreinte digitale et la reconnaissance faciale sont les deux principales méthodes de biometric authentication sur Android, ce qui fait d'Options A et B correctes. Les autres options sont des méthodes de vérification non biométriques."
+  },
+  {
+    "id": "AND-SEC-074",
+    "theme": "Security",
+    "theme_label": "SSL/TLS",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité de SSL/TLS dans une application Android ?",
+    "options": [
+      "Chiffrement des données en transit",
+      "Stockage sécurisé des clés privées",
+      "Gestion des permissions d'application",
+      "Authentification de l'utilisateur"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale utilité de SSL/TLS dans une application Android est le chiffrement des données en transit, ce qui protège les informations sensibles lors de l'échange avec un serveur. Cela fait d'Option A la réponse correcte."
+  },
+  {
+    "id": "AND-SEC-075",
+    "theme": "Security",
+    "theme_label": "Root detection",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales méthodes de détection de root sur un appareil Android ?",
+    "options": [
+      "Vérification des fichiers système",
+      "Utilisation de bibliothèques tierces",
+      "Vérification des permissions d'application",
+      "Gestion des préférences utilisateur"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "La détection de root peut être réalisée en vérifiant les fichiers système qui sont modifiés lorsqu'un appareil est rooté (Option A) et en utilisant des bibliothèques tierces spécialisées dans cette tâche (Option B). Les autres options ne sont pas des méthodes de détection de root."
+  },
+  {
+    "id": "AND-SEC-076",
+    "theme": "Security",
+    "theme_label": "Encryption",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encryption en Android :",
+    "options": [
+      "L'encryption peut être utilisée pour protéger les données sensibles.",
+      "Le chiffrement AES est symétrique et rapide.",
+      "Le chiffrement RSA est asymétrique mais plus lent que le chiffrement AES.",
+      "L'encryption peut être utilisée pour protéger les fichiers sur le stockage externe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'encryption est effectivement utilisée pour protéger les données sensibles. Le chiffrement AES est symétrique et rapide, ce qui en fait un choix populaire pour la protection des données. Le chiffrement RSA est asymétrique et bien que plus lent, il est souvent utilisé pour échanger des clés de chiffrement symétriques. L'encryption peut être utilisée pour protéger les fichiers sur le stockage externe, mais cela dépend de la mise en œuvre correcte."
+  },
+  {
+    "id": "AND-SEC-078",
+    "theme": "Security",
+    "theme_label": "Biometric Authentication",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales méthodes de biometric authentication disponibles sur Android ?",
+    "options": [
+      "Authentification par empreinte digitale",
+      "Authentification par reconnaissance faciale",
+      "Authentification par mot de passe",
+      "Authentification par PIN"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'authentification par empreinte digitale et l'authentification par reconnaissance faciale sont les deux principales méthodes de biometric authentication disponibles sur Android. Bien que l'authentification par mot de passe et PIN soit également disponible, ces méthodes ne sont pas considérées comme biometric."
+  },
+  {
+    "id": "AND-SEC-079",
+    "theme": "Security",
+    "theme_label": "ProGuard/R8",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de ProGuard/R8 lors du build d'une application Android ?",
+    "options": [
+      "Minimiser et obfusquer le code Java/Kotlin",
+      "Gérer les permissions de l'application",
+      "Optimiser les performances du GPU",
+      "Crypter les données sensibles"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale fonction de ProGuard/R8 lors du build d'une application Android est de minimiser et d'obfusquer le code Java/Kotlin, ce qui aide à protéger le code source et à réduire la taille de l'APK."
+  },
+  {
+    "id": "AND-SEC-080",
+    "theme": "Security",
+    "theme_label": "Firebase App Check",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales utilisations de Firebase App Check ?",
+    "options": [
+      "Protéger les appels à l'API Firebase contre les utilisateurs non autorisés",
+      "Crypter les données sensibles stockées dans Firebase",
+      "Gérer les mises à jour de l'application",
+      "Optimiser le stockage dans Firebase"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Firebase App Check est principalement utilisé pour protéger les appels à l'API Firebase contre les utilisateurs non autorisés en vérifiant que les requêtes proviennent d'applications authentifiées. Bien que Firebase offre des fonctionnalités de cryptage pour protéger les données sensibles, cela n'est pas la principale fonction de Firebase App Check."
   }
 ]

@@ -12,7 +12,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le registry est la source par défaut, mais on peut spécifier d'autres sources."
+    "explanation": "Le registry est la source par défaut, mais on peut spécifier d'autres sources."
   },
   {
     "id": "TF-04-002",
@@ -27,7 +27,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "La source est définie dans required_providers."
+    "explanation": "La source est définie dans required_providers."
   },
   {
     "id": "TF-04-003",
@@ -35,9 +35,14 @@
     "theme_label": "Providers",
     "difficulty": "easy",
     "question": "Un provider peut-il être développé en Go ?",
-    "options": ["Oui", "Non", "Uniquement en HCL", "Uniquement en JSON"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement en HCL",
+      "Uniquement en JSON"
+    ],
     "correct": 0,
-    "explication": "Les providers sont écrits en Go et compilés en binaires."
+    "explanation": "Les providers sont écrits en Go et compilés en binaires."
   },
   {
     "id": "TF-04-004",
@@ -52,7 +57,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "init -upgrade met à jour les providers selon les contraintes."
+    "explanation": "init -upgrade met à jour les providers selon les contraintes."
   },
   {
     "id": "TF-04-005",
@@ -67,7 +72,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "providers liste les providers et leurs versions."
+    "explanation": "providers liste les providers et leurs versions."
   },
   {
     "id": "TF-04-006",
@@ -75,9 +80,14 @@
     "theme_label": "Providers",
     "difficulty": "easy",
     "question": "Peut-on avoir plusieurs versions d'un même provider dans un projet ?",
-    "options": ["Non", "Oui (avec des alias et configurations séparées)", "Oui, mais déconseillé", "A et B"],
+    "options": [
+      "Non",
+      "Oui (avec des alias et configurations séparées)",
+      "Oui, mais déconseillé",
+      "A et B"
+    ],
     "correct": 1,
-    "explication": "C'est possible mais complexe, généralement une seule version par projet."
+    "explanation": "C'est possible mais complexe, généralement une seule version par projet."
   },
   {
     "id": "TF-04-007",
@@ -92,7 +102,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "provider = alias."
+    "explanation": "provider = alias."
   },
   {
     "id": "TF-04-008",
@@ -107,7 +117,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les modules permettent la réutilisation et l'organisation."
+    "explanation": "Les modules permettent la réutilisation et l'organisation."
   },
   {
     "id": "TF-04-009",
@@ -122,7 +132,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Un module est simplement un répertoire contenant des fichiers Terraform."
+    "explanation": "Un module est simplement un répertoire contenant des fichiers Terraform."
   },
   {
     "id": "TF-04-010",
@@ -137,7 +147,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "source = chemin relatif."
+    "explanation": "source = chemin relatif."
   },
   {
     "id": "TF-04-011",
@@ -152,7 +162,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les modules doivent être bien encapsulés."
+    "explanation": "Les modules doivent être bien encapsulés."
   },
   {
     "id": "TF-04-012",
@@ -167,7 +177,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "terraform-docs génère automatiquement la documentation."
+    "explanation": "terraform-docs génère automatiquement la documentation."
   },
   {
     "id": "TF-04-013",
@@ -182,7 +192,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Terratest est un framework de test pour Terraform."
+    "explanation": "Terratest est un framework de test pour Terraform."
   },
   {
     "id": "TF-04-014",
@@ -197,7 +207,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le registry contient des modules publics et privés."
+    "explanation": "Le registry contient des modules publics et privés."
   },
   {
     "id": "TF-04-015",
@@ -212,7 +222,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le registry s'intègre avec GitHub."
+    "explanation": "Le registry s'intègre avec GitHub."
   },
   {
     "id": "TF-04-016",
@@ -227,7 +237,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Un seul fichier .tf suffit, mais la séparation est recommandée."
+    "explanation": "Un seul fichier .tf suffit, mais la séparation est recommandée."
   },
   {
     "id": "TF-04-017",
@@ -242,7 +252,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les tags Git sont la méthode standard."
+    "explanation": "Les tags Git sont la méthode standard."
   },
   {
     "id": "TF-04-018",
@@ -257,7 +267,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "version = '...' est la syntaxe."
+    "explanation": "version = '...' est la syntaxe."
   },
   {
     "id": "TF-04-019",
@@ -272,7 +282,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Par défaut, le module utilise les providers du parent."
+    "explanation": "Par défaut, le module utilise les providers du parent."
   },
   {
     "id": "TF-04-020",
@@ -287,7 +297,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "providers = { nom_local = alias } dans l'appel du module."
+    "explanation": "providers = { nom_local = alias } dans l'appel du module."
   },
   {
     "id": "TF-04-021",
@@ -295,9 +305,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Un module peut-il avoir ses propres providers ?",
-    "options": ["Oui", "Non", "Uniquement les providers racine", "Uniquement les providers distants"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les providers racine",
+      "Uniquement les providers distants"
+    ],
     "correct": 0,
-    "explication": "Un module peut déclarer required_providers."
+    "explanation": "Un module peut déclarer required_providers."
   },
   {
     "id": "TF-04-022",
@@ -312,7 +327,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les valeurs peuvent être centralisées."
+    "explanation": "Les valeurs peuvent être centralisées."
   },
   {
     "id": "TF-04-023",
@@ -327,7 +342,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le parent peut accéder aux outputs des modules."
+    "explanation": "Le parent peut accéder aux outputs des modules."
   },
   {
     "id": "TF-04-024",
@@ -342,7 +357,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "La composition de modules est recommandée."
+    "explanation": "La composition de modules est recommandée."
   },
   {
     "id": "TF-04-025",
@@ -357,7 +372,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les références créent des dépendances implicites."
+    "explanation": "Les références créent des dépendances implicites."
   },
   {
     "id": "TF-04-026",
@@ -372,7 +387,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les cycles ne sont pas autorisés."
+    "explanation": "Les cycles ne sont pas autorisés."
   },
   {
     "id": "TF-04-027",
@@ -387,7 +402,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "init -upgrade met à jour les modules."
+    "explanation": "init -upgrade met à jour les modules."
   },
   {
     "id": "TF-04-028",
@@ -402,7 +417,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les modules sont dans .terraform/modules."
+    "explanation": "Les modules sont dans .terraform/modules."
   },
   {
     "id": "TF-04-029",
@@ -417,7 +432,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Utiliser git:: devant l'URL."
+    "explanation": "Utiliser git:: devant l'URL."
   },
   {
     "id": "TF-04-030",
@@ -432,7 +447,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "// après l'URL indique le sous-répertoire."
+    "explanation": "// après l'URL indique le sous-répertoire."
   },
   {
     "id": "TF-04-031",
@@ -440,9 +455,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Peut-on utiliser un module depuis un registry privé ?",
-    "options": ["Oui (Terraform Cloud/Enterprise)", "Non", "Uniquement public", "A et B"],
+    "options": [
+      "Oui (Terraform Cloud/Enterprise)",
+      "Non",
+      "Uniquement public",
+      "A et B"
+    ],
     "correct": 0,
-    "explication": "Terraform Cloud/Enterprise a un registry privé."
+    "explanation": "Terraform Cloud/Enterprise a un registry privé."
   },
   {
     "id": "TF-04-032",
@@ -457,7 +477,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "La syntaxe avec [index] est correcte."
+    "explanation": "La syntaxe avec [index] est correcte."
   },
   {
     "id": "TF-04-033",
@@ -472,7 +492,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "La syntaxe avec ['clé']."
+    "explanation": "La syntaxe avec ['clé']."
   },
   {
     "id": "TF-04-034",
@@ -480,9 +500,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Un module peut-il contenir des data sources ?",
-    "options": ["Oui", "Non", "Uniquement les modules racine", "Uniquement les modules enfants"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les modules racine",
+      "Uniquement les modules enfants"
+    ],
     "correct": 0,
-    "explication": "Les data sources sont autorisées dans les modules."
+    "explanation": "Les data sources sont autorisées dans les modules."
   },
   {
     "id": "TF-04-035",
@@ -497,7 +522,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les variables sont la clé de la flexibilité."
+    "explanation": "Les variables sont la clé de la flexibilité."
   },
   {
     "id": "TF-04-036",
@@ -512,7 +537,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "validate vérifie la syntaxe, fmt le style."
+    "explanation": "validate vérifie la syntaxe, fmt le style."
   },
   {
     "id": "TF-04-037",
@@ -527,7 +552,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "registry.terraform.io."
+    "explanation": "registry.terraform.io."
   },
   {
     "id": "TF-04-038",
@@ -542,7 +567,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le registry a une fonction de recherche."
+    "explanation": "Le registry a une fonction de recherche."
   },
   {
     "id": "TF-04-039",
@@ -557,7 +582,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le versioning sémantique est recommandé."
+    "explanation": "Le versioning sémantique est recommandé."
   },
   {
     "id": "TF-04-040",
@@ -572,7 +597,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Permet les versions compatibles."
+    "explanation": "Permet les versions compatibles."
   },
   {
     "id": "TF-04-041",
@@ -580,9 +605,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Quelle est la différence entre = et == ?",
-    "options": ["Identiques en HCL", "= est assignation, == est égalité", "A et B", "A seulement"],
+    "options": [
+      "Identiques en HCL",
+      "= est assignation, == est égalité",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
-    "explication": "En HCL, = est pour les attributs, == pour les conditions."
+    "explanation": "En HCL, = est pour les attributs, == pour les conditions."
   },
   {
     "id": "TF-04-042",
@@ -590,9 +620,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Peut-on utiliser des providers communautaires ?",
-    "options": ["Oui", "Non", "Uniquement HashiCorp", "Uniquement vérifiés"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement HashiCorp",
+      "Uniquement vérifiés"
+    ],
     "correct": 0,
-    "explication": "Le registry contient des providers communautaires."
+    "explanation": "Le registry contient des providers communautaires."
   },
   {
     "id": "TF-04-043",
@@ -607,7 +642,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les deux syntaxes sont valides, mais required_providers est préféré."
+    "explanation": "Les deux syntaxes sont valides, mais required_providers est préféré."
   },
   {
     "id": "TF-04-044",
@@ -622,7 +657,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Terraform prend la dernière version disponible."
+    "explanation": "Terraform prend la dernière version disponible."
   },
   {
     "id": "TF-04-045",
@@ -637,7 +672,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le lock file (.terraform.lock.hcl) enregistre les versions exactes."
+    "explanation": "Le lock file (.terraform.lock.hcl) enregistre les versions exactes."
   },
   {
     "id": "TF-04-046",
@@ -645,9 +680,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Où est stocké le lock file ?",
-    "options": [".terraform.lock.hcl", "terraform.lock.hcl", "lock.hcl", "A seulement"],
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock.hcl",
+      "lock.hcl",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "Le fichier de verrouillage des providers."
+    "explanation": "Le fichier de verrouillage des providers."
   },
   {
     "id": "TF-04-047",
@@ -655,9 +695,14 @@
     "theme_label": "Modules",
     "difficulty": "easy",
     "question": "Doit-on versionner le lock file ?",
-    "options": ["Oui (pour la reproductibilité)", "Non", "Optionnel", "A seulement"],
+    "options": [
+      "Oui (pour la reproductibilité)",
+      "Non",
+      "Optionnel",
+      "A seulement"
+    ],
     "correct": 0,
-    "explication": "Il est recommandé de le versionner."
+    "explanation": "Il est recommandé de le versionner."
   },
   {
     "id": "TF-04-048",
@@ -672,7 +717,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "init -upgrade met à jour les providers et le lock file."
+    "explanation": "init -upgrade met à jour les providers et le lock file."
   },
   {
     "id": "TF-04-049",
@@ -687,7 +732,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le namespace 'hashicorp' indique un provider officiel."
+    "explanation": "Le namespace 'hashicorp' indique un provider officiel."
   },
   {
     "id": "TF-04-050",
@@ -702,6 +747,155 @@
       "A et B"
     ],
     "correct": 0,
-    "explication": "Les providers personnalisés sont des binaires Go."
+    "explanation": "Les providers personnalisés sont des binaires Go."
+  },
+  {
+    "id": "TF-P&M-001",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la réutilisation des modules Terraform :",
+    "options": [
+      "Les modules peuvent être appelés à partir de n'importe quel fichier Terraform.",
+      "Un module peut avoir des entrées (inputs) et des sorties (outputs).",
+      "Les modules ne peuvent être appelés qu'une seule fois dans un fichier Terraform.",
+      "Un module peut contenir des ressources et des configurations de variables."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les modules peuvent être appelés à partir de n'importe quel fichier Terraform (A). Un module peut avoir des entrées et des sorties (B). Les modules ne peuvent être appelés qu'une seule fois dans un fichier Terraform est faux (C). Un module peut contenir des ressources et des configurations de variables (D)."
+  },
+  {
+    "id": "TF-P&M-002",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour appeler un module dans Terraform ?",
+    "options": [
+      "module \"my_module\" { source = \"./modules/my_module\" }",
+      "module my_module { source = \"./modules/my_module\" }",
+      "module my_module { source = \"./modules/my_module\" version = \"1.0\" }",
+      "module my_module { source = \"./modules/my_module\", version = \"1.0\" }"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte est : module my_module { source = \"./modules/my_module\", version = \"1.0\" } (D)."
+  },
+  {
+    "id": "TF-P&M-003",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des providers dans Terraform :",
+    "options": [
+      "Un provider peut être utilisé par plusieurs modules en même temps.",
+      "Les providers doivent toujours être définis dans le fichier main.tf.",
+      "Un provider peut avoir des configurations spécifiques pour chaque région.",
+      "Les providers peuvent être versionnés et le versionnement est géré automatiquement."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Un provider peut être utilisé par plusieurs modules en même temps (A). Les providers doivent toujours être définis dans le fichier main.tf est faux (B). Un provider peut avoir des configurations spécifiques pour chaque région (C). Les providers peuvent être versionnés et le versionnement est géré automatiquement est faux (D)."
+  },
+  {
+    "id": "TF-P&M-004",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une variable local et une variable d'entrée dans un module Terraform ?",
+    "options": [
+      "Une variable locale est définie à l'intérieur d'un module et n'est pas accessible en dehors, tandis qu'une variable d'entrée est définie à l'extérieur du module et peut être modifiée.",
+      "Une variable locale est définie à l'extérieur du module et peut être modifiée, tandis qu'une variable d'entrée est définie à l'intérieur du module et n'est pas accessible en dehors.",
+      "Une variable locale est utilisée pour stocker des valeurs temporaires, tandis qu'une variable d'entrée est utilisée pour passer des paramètres à un module.",
+      "Une variable locale et une variable d'entrée sont utilisées de la même manière dans un module Terraform."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Une variable locale est utilisée pour stocker des valeurs temporaires, tandis qu'une variable d'entrée est utilisée pour passer des paramètres à un module (C)."
+  },
+  {
+    "id": "TF-P&M-005",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande Terraform pour lister les providers disponibles dans le registry ?",
+    "options": [
+      "terraform providers list",
+      "terraform providers search",
+      "terraform providers show",
+      "terraform providers install"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande Terraform pour lister les providers disponibles dans le registry est : terraform providers list (A)."
+  },
+  {
+    "id": "TF-P&M-006",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la réutilisation des modules en Terraform :",
+    "options": [
+      "Les modules peuvent être appelés à partir d'autres modules.",
+      "Un module ne peut être utilisé qu'une seule fois dans un projet.",
+      "Les modules peuvent être réutilisés à travers différents environnements de déploiement.",
+      "Les modules doivent être stockés dans le même répertoire que le fichier main.tf."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les modules peuvent être appelés à partir d'autres modules (A correct). Un module peut être utilisé plusieurs fois dans un projet (B incorrect). Les modules peuvent être réutilisés à travers différents environnements de déploiement (C correct). Les modules ne sont pas obligatoirement stockés dans le même répertoire que le fichier main.tf (D incorrect)."
+  },
+  {
+    "id": "TF-P&M-007",
+    "theme": "Providers & Modules",
+    "theme_label": "Providers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande Terraform utilisée pour initialiser les providers ?",
+    "options": [
+      "terraform init",
+      "terraform apply",
+      "terraform plan",
+      "terraform destroy"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande terraform init est utilisée pour initialiser les providers (A correct). La commande terraform apply est utilisée pour appliquer les changements planifiés (B incorrect). La commande terraform plan est utilisée pour afficher les changements qui seront appliqués (C incorrect). La commande terraform destroy est utilisée pour détruire les ressources Terraform (D incorrect)."
+  },
+  {
+    "id": "TF-P&M-008",
+    "theme": "Providers & Modules",
+    "theme_label": "Modules",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des versions des modules en Terraform :",
+    "options": [
+      "Les versions des modules peuvent être spécifiées dans le fichier main.tf.",
+      "Il n'est pas possible de spécifier une version spécifique des modules.",
+      "Les versions des modules peuvent être gérées à l'aide de la fonction lookup() dans le fichier main.tf.",
+      "Les versions des modules doivent être mises à jour manuellement chaque fois qu'une nouvelle version est disponible."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les versions des modules peuvent être spécifiées dans le fichier main.tf (A correct). Il est possible de spécifier une version spécifique des modules (B incorrect). Les versions des modules peuvent être gérées à l'aide de la fonction lookup() dans le fichier main.tf (C correct). Les versions des modules doivent être mises à jour manuellement chaque fois qu'une nouvelle version est disponible (D incorrect)."
   }
 ]

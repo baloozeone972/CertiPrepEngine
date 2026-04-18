@@ -5,7 +5,12 @@
     "theme_label": "Classes",
     "difficulty": "easy",
     "question": "Quelle est la visibilité par défaut en Kotlin ?",
-    "options": ["public", "private", "internal", "protected"],
+    "options": [
+      "public",
+      "private",
+      "internal",
+      "protected"
+    ],
     "correct": 0,
     "explanation": "Par défaut, les membres sont public."
   },
@@ -15,7 +20,12 @@
     "theme_label": "Inheritance",
     "difficulty": "easy",
     "question": "Quel mot-clé est utilisé pour l'héritage ?",
-    "options": [":", "extends", "implements", "inherits"],
+    "options": [
+      ":",
+      "extends",
+      "implements",
+      "inherits"
+    ],
     "correct": 0,
     "explanation": "class B : A()"
   },
@@ -40,7 +50,12 @@
     "theme_label": "Inheritance",
     "difficulty": "medium",
     "question": "Quel mot-clé rend une classe héritable ?",
-    "options": ["open", "public", "abstract", "final"],
+    "options": [
+      "open",
+      "public",
+      "abstract",
+      "final"
+    ],
     "correct": 0,
     "explanation": "open permet l'héritage."
   },
@@ -95,7 +110,12 @@
     "theme_label": "Abstract classes",
     "difficulty": "easy",
     "question": "Quel mot-clé pour une classe abstraite ?",
-    "options": ["abstract", "open", "sealed", "interface"],
+    "options": [
+      "abstract",
+      "open",
+      "sealed",
+      "interface"
+    ],
     "correct": 0,
     "explanation": "abstract class MyClass"
   },
@@ -270,7 +290,12 @@
     "theme_label": "Backing field",
     "difficulty": "hard",
     "question": "Comment accéder au backing field dans un setter ?",
-    "options": ["field", "value", "this.field", "backingField"],
+    "options": [
+      "field",
+      "value",
+      "this.field",
+      "backingField"
+    ],
     "correct": 0,
     "explanation": "field représente le champ de stockage."
   },
@@ -460,7 +485,12 @@
     "theme_label": "Inline classes",
     "difficulty": "hard",
     "question": "Quelle annotation pour une inline class ?",
-    "options": ["@JvmInline", "@Inline", "@Value", "@Data"],
+    "options": [
+      "@JvmInline",
+      "@Inline",
+      "@Value",
+      "@Data"
+    ],
     "correct": 0,
     "explanation": "@JvmInline value class Password(val value: String)"
   },
@@ -515,7 +545,12 @@
     "theme_label": "Operator overloading",
     "difficulty": "hard",
     "question": "Quel mot-clé pour surcharger + ?",
-    "options": ["plus", "add", "sum", "concat"],
+    "options": [
+      "plus",
+      "add",
+      "sum",
+      "concat"
+    ],
     "correct": 0,
     "explanation": "operator fun plus(other: T): T"
   },
@@ -525,7 +560,12 @@
     "theme_label": "Operator overloading",
     "difficulty": "hard",
     "question": "Quel mot-clé pour surcharger [] ?",
-    "options": ["get", "set", "index", "access"],
+    "options": [
+      "get",
+      "set",
+      "index",
+      "access"
+    ],
     "correct": 0,
     "explanation": "operator fun get(index: Int): T"
   },
@@ -558,5 +598,211 @@
     ],
     "correct": 0,
     "explanation": "copy fait une copie superficielle des propriétés."
+  },
+  {
+    "id": "KOT-OBJ-001",
+    "theme": "Object-oriented",
+    "theme_label": "Inheritance",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage en Kotlin :",
+    "options": [
+      "Une classe peut hériter de plusieurs classes.",
+      "Une classe peut implémenter plusieurs interfaces.",
+      "L'héritage multiple est supporté par Kotlin.",
+      "Une classe peut hériter d'une interface."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Option B est correcte car une classe peut implémenter plusieurs interfaces. Option D est correcte car Kotlin permet à une classe d'hériter d'une interface, mais pas directement de plusieurs classes. Option A est incorrecte car Kotlin ne supporte pas l'héritage multiple de classes. Option C est incorrecte pour la même raison que A."
+  },
+  {
+    "id": "KOT-OBJ-002",
+    "theme": "Object-oriented",
+    "theme_label": "Interfaces",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre une interface et une classe abstraite en Kotlin ?",
+    "options": [
+      "Une interface peut avoir des propriétés, une classe abstraite non.",
+      "Une classe abstraite peut avoir des constructeurs, une interface non.",
+      "Une interface ne peut pas avoir de méthodes concrètes, une classe abstraite oui.",
+      "Une interface peut être instanciée, une classe abstraite non."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Option C est correcte car une interface en Kotlin ne peut avoir que des méthodes abstraites et des propriétés, tandis qu'une classe abstraite peut avoir des méthodes concrètes et des propriétés. Les autres options sont incorrectes car une interface peut avoir des propriétés, une classe abstraite peut avoir des constructeurs et ne peut pas être instanciée."
+  },
+  {
+    "id": "KOT-OBJ-003",
+    "theme": "Object-oriented",
+    "theme_label": "Data classes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales caractéristiques d'une data class en Kotlin ?",
+    "options": [
+      "Génération automatique de méthodes equals() et hashCode().",
+      "Possibilité d'ajouter des propriétés supplémentaires.",
+      "Génération automatique de méthodes toString() et copy().",
+      "Possibilité d'héritage."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car une data class génère automatiquement les méthodes equals() et hashCode(). Option C est correcte car une data class génère également automatiquement les méthodes toString() et copy(). Option B est incorrecte car une data class ne permet pas d'ajouter des propriétés supplémentaires après sa déclaration. Option D est incorrecte car une data class ne peut pas hériter d'une autre classe."
+  },
+  {
+    "id": "KOT-OBJ-004",
+    "theme": "Object-oriented",
+    "theme_label": "Visibility modifiers",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel modificateur de visibilité permet à une propriété d'être accessible uniquement dans le même fichier Kotlin ?",
+    "options": [
+      "private",
+      "internal",
+      "protected",
+      "public"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Option B est correcte car le modificateur 'internal' permet à une propriété d'être accessible uniquement dans le même fichier Kotlin. Les autres options sont incorrectes car 'private' limite l'accès à la classe, 'protected' permet l'accès dans la même classe et ses sous-classes, et 'public' permet l'accès partout."
+  },
+  {
+    "id": "KOT-OBJ-005",
+    "theme": "Object-oriented",
+    "theme_label": "Operator overloading",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX opérateurs qui ne peuvent pas être surchargés en Kotlin ?",
+    "options": [
+      "+",
+      "-",
+      "*",
+      "/",
+      "%"
+    ],
+    "correct": 3,
+    "correct_multiple": [
+      3,
+      4
+    ],
+    "explanation": "Option D est correcte car l'opérateur '/' ne peut pas être surchargé en Kotlin. Option E est correcte car l'opérateur '%' ne peut pas être surchargé en Kotlin. Les autres options sont incorrectes car les opérateurs '+', '-', '*' peuvent être surchargés en Kotlin."
+  },
+  {
+    "id": "KOT-OBJ-006",
+    "theme": "Object-oriented",
+    "theme_label": "Data classes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations correctes concernant les data classes en Kotlin ?",
+    "options": [
+      "Les data classes peuvent avoir des propriétés avec des valeurs par défaut.",
+      "Les data classes implémentent automatiquement les méthodes equals() et hashCode().",
+      "Les data classes peuvent avoir des méthodes abstraites.",
+      "Les data classes ne peuvent pas avoir de constructeurs primaires."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Option B est correcte car les data classes implémentent automatiquement equals() et hashCode(). Option C est incorrecte car les data classes peuvent avoir des méthodes abstraites. Les autres options sont correctes."
+  },
+  {
+    "id": "KOT-OBJ-007",
+    "theme": "Object-oriented",
+    "theme_label": "Visibility modifiers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel modificateur de visibilité permet d'accéder à une propriété uniquement dans le même fichier Kotlin ?",
+    "options": [
+      "public",
+      "private",
+      "internal",
+      "protected"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "L'option C (internal) est correcte car elle permet d'accéder à une propriété uniquement dans le même fichier Kotlin. Les autres options sont incorrectes car public permet l'accès partout, private uniquement dans la même classe et protected dans la même hiérarchie de classes."
+  },
+  {
+    "id": "KOT-OBJ-008",
+    "theme": "Object-oriented",
+    "theme_label": "Data classes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les data classes en Kotlin :",
+    "options": [
+      "Une data class génère automatiquement des méthodes equals() et hashCode().",
+      "Les data classes peuvent avoir des propriétés avec des initialisateurs.",
+      "Une data class peut avoir des méthodes supplémentaires.",
+      "Les data classes ne peuvent pas être héritées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car les data classes génèrent automatiquement equals() et hashCode(). B est incorrect car les propriétés avec des initialisateurs ne sont pas autorisées dans une data class. C est correct car les data classes peuvent avoir des méthodes supplémentaires. D est incorrect car les data classes peuvent être héritées, mais elles ne peuvent hériter d'aucune autre classe."
+  },
+  {
+    "id": "KOT-OBJ-009",
+    "theme": "Object-oriented",
+    "theme_label": "Visibility modifiers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la visibilité par défaut en Kotlin ?",
+    "options": [
+      "public",
+      "private",
+      "internal",
+      "protected"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car par défaut, les membres sont publics et visibles partout. B est incorrect car private rend le membre visible uniquement dans la classe où il est déclaré. C est incorrect car internal rend le membre visible dans le même module. D est incorrect car protected rend le membre visible dans la classe et ses sous-classes."
+  },
+  {
+    "id": "KOT-OBJ-010",
+    "theme": "Object-oriented",
+    "theme_label": "Sealed classes",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les sealed classes en Kotlin ?",
+    "options": [
+      "Une sealed class peut être instanciée.",
+      "Les sous-classes d'une sealed class doivent être déclarées dans le même fichier.",
+      "Une sealed class ne peut pas avoir de constructeur public.",
+      "Les sous-classes d'une sealed class peuvent être instanciées."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "A est incorrect car une sealed class ne peut pas être instanciée directement. B est correct car les sous-classes d'une sealed class doivent être déclarées dans le même fichier ou dans un fichier imbriqué. C est incorrect car une sealed class peut avoir un constructeur public, mais cela n'est généralement pas recommandé. D est correct car les sous-classes d'une sealed class peuvent être instanciées."
+  },
+  {
+    "id": "KOT-OBJ-011",
+    "theme": "Object-oriented",
+    "theme_label": "Companion object",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité d'un companion object en Kotlin ?",
+    "options": [
+      "Créer des instances de la classe.",
+      "Définir des propriétés et des méthodes statiques.",
+      "Gérer la mémoire de l'objet.",
+      "Permettre l'héritage multiple."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "B est correct car un companion object permet de définir des propriétés et des méthodes statiques pour une classe. A est incorrect car un companion object ne crée pas d'instances de la classe, mais plutôt des instances du companion object. C est incorrect car le garbage collector gère la mémoire, pas un companion object. D est incorrect car Kotlin ne supporte pas l'héritage multiple."
   }
 ]

@@ -1,0 +1,55 @@
+Voici le script complet en Python qui répond à vos spécifications :
+
+```python
+import json
+import uuid
+from pathlib import Path
+import argparse
+
+def generate_sql(question):
+    id = question['id']
+    theme = question['theme']
+    statement = question['question'].replace("'", "''")
+    difficulty = question['difficulty']
+    explanation = question['explanation'].replace("'", "''")
+    options = question['options']
+    correct = question['correct']
+    
+    sql_statements = []
+
+    # Créer la certification si elle n'existe pas déjà
+    sql_statements.append(f"""INSERT INTO certifications (id, name) 
+                               VALUES ('{id}', 'Oracle Certified Profession[10D[K
+Professional Java SE 21') ON CONFLICT DO NOTHING;""")
+    
+    # Créer le thème de certification si il n'existe pas déjà
+    sql_statements.append(f"""INSERT INTO certification_themes (id, certifi[7D[K
+certification_id, code) 
+                               VALUES ('{uuid.uuid5(uuid.NAMESPACE_DNS, id+[3D[K
+id+theme)}', '{id}', '{theme}') ON CONFLICT DO NOTHING;""")
+    
+    # Créer la question si elle n'existe pas déjà
+    sql_statements.append(f"""INSERT INTO questions (id, legacy_id, certifi[7D[K
+certification_id, theme_id, statement, difficulty, explanation_original) 
+                               VALUES ('{uuid.uuid5(uuid.NAMESPACE_DNS, id)[3D[K
+id)}', '{id}', '{id}', '{uuid.uuid5(uuid.NAMESPACE_DNS, id+theme)}', '{stat[6D[K
+'{statement}', '{difficulty}', '{explanation}') ON CONFLICT DO NOTHING;""")[12D[K
+NOTHING;""")
+    
+    # Créer les options de la question si elles n'existent pas déjà
+    for i, option in enumerate(options):
+        is_correct = (i+1 == correct)  # Correct est un index basé sur 1
+        sql_statements.append(f"""INSERT INTO question_options (id, questio[7D[K
+question_id, label, text, is_correct, display_order) 
+                                   VALUES ('{uuid.uuid5(uuid.NAMESPACE_DNS,[33D[K
+('{uuid.uuid5(uuid.NAMESPACE_DNS, id+str(i))}', '{uuid.uuid5(uuid.NAMESPACE[27D[K
+'{uuid.uuid5(uuid.NAMESPACE_DNS, id)}', '{(chr(64 + i)) if i<26 else chr(65[6D[K
+chr(65+int((i-1)/25)-1)+chr(65+(i-1)%25)}', '{option.replace("'", "''")}', [K
+{str(is_correct).lower()}, {i}) ON CONFLICT DO NOTHING;""")
+    
+    return sql_statements
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('questions_folder', help='Chemin vers le dossier co[2D[K
+conten

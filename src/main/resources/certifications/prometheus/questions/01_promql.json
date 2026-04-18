@@ -28,5 +28,25 @@
     ],
     "correct": 0,
     "explanation": "sum agrège toutes les séries, sum by (label) agrège en conservant les labels spécifiés."
+  },
+  {
+    "id": "PROM-PRO-001",
+    "theme": "PromQL",
+    "theme_label": "Requêtes PromQL",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la fonction 'avg_over_time' en PromQL :",
+    "options": [
+      "Elle calcule la moyenne des valeurs sur une période donnée.",
+      "Elle retourne la valeur maximale au cours de l'intervalle spécifié.",
+      "Elle permet de calculer le taux de changement des valeurs sur une période donnée.",
+      "Elle est utilisée pour sommer toutes les séries de données."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "avg_over_time calcule la moyenne des valeurs sur une période donnée. Elle n'est pas utilisée pour retourner la valeur maximale, ne calcule pas le taux de changement des valeurs et n'est pas utilisée pour sommer toutes les séries de données."
   }
 ]

@@ -140,7 +140,12 @@
     "theme_label": "Load Balancing",
     "difficulty": "hard",
     "question": "À quel niveau fonctionne ALB ?",
-    "options": ["Couche 7 (application)", "Couche 4 (transport)", "Couche 3", "Couche 2"],
+    "options": [
+      "Couche 7 (application)",
+      "Couche 4 (transport)",
+      "Couche 3",
+      "Couche 2"
+    ],
     "correct": 0,
     "explanation": "ALB est un load balancer de couche 7 (HTTP/HTTPS)."
   },
@@ -150,7 +155,12 @@
     "theme_label": "Load Balancing",
     "difficulty": "hard",
     "question": "À quel niveau fonctionne NLB ?",
-    "options": ["Couche 4 (transport)", "Couche 7 (application)", "Couche 3", "Couche 2"],
+    "options": [
+      "Couche 4 (transport)",
+      "Couche 7 (application)",
+      "Couche 3",
+      "Couche 2"
+    ],
     "correct": 0,
     "explanation": "NLB est un load balancer de couche 4 (TCP/UDP/TLS)."
   },
@@ -205,7 +215,12 @@
     "theme_label": "Multi-AZ",
     "difficulty": "hard",
     "question": "Quelle est la latence typique entre deux AZ ?",
-    "options": ["Quelques millisecondes", "Quelques secondes", "Quelques minutes", "Quelques heures"],
+    "options": [
+      "Quelques millisecondes",
+      "Quelques secondes",
+      "Quelques minutes",
+      "Quelques heures"
+    ],
     "correct": 0,
     "explanation": "La latence entre AZ d'une même région est très faible (ms)."
   },
@@ -275,7 +290,12 @@
     "theme_label": "Aurora",
     "difficulty": "hard",
     "question": "Aurora supporte-t-il les réplicas cross-region ?",
-    "options": ["Oui", "Non", "Uniquement avec Global Database", "Uniquement avec DMS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec Global Database",
+      "Uniquement avec DMS"
+    ],
     "correct": 0,
     "explanation": "Aurora Global Database permet des réplicas dans d'autres régions."
   },
@@ -285,7 +305,12 @@
     "theme_label": "DynamoDB",
     "difficulty": "hard",
     "question": "DynamoDB est-il hautement disponible par défaut ?",
-    "options": ["Oui", "Non", "Uniquement avec DAX", "Uniquement avec Global Tables"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec DAX",
+      "Uniquement avec Global Tables"
+    ],
     "correct": 0,
     "explanation": "DynamoDB réplique automatiquement les données sur 3 AZ."
   },
@@ -310,7 +335,12 @@
     "theme_label": "S3",
     "difficulty": "hard",
     "question": "S3 Standard réplique-t-il les données ?",
-    "options": ["Oui, sur 3 AZ", "Non", "Oui, sur 2 AZ", "Oui, sur 1 AZ"],
+    "options": [
+      "Oui, sur 3 AZ",
+      "Non",
+      "Oui, sur 2 AZ",
+      "Oui, sur 1 AZ"
+    ],
     "correct": 0,
     "explanation": "S3 Standard réplique les données sur au moins 3 AZ."
   },
@@ -320,7 +350,12 @@
     "theme_label": "S3 Cross-Region Replication (CRR)",
     "difficulty": "hard",
     "question": "S3 CRR réplique-t-il les objets existants par défaut ?",
-    "options": ["Non", "Oui", "Optionnel", "Uniquement avec Versioning"],
+    "options": [
+      "Non",
+      "Oui",
+      "Optionnel",
+      "Uniquement avec Versioning"
+    ],
     "correct": 0,
     "explanation": "CRR réplique uniquement les nouveaux objets, pas les existants."
   },
@@ -330,7 +365,12 @@
     "theme_label": "EFS",
     "difficulty": "hard",
     "question": "EFS est-il répliqué sur plusieurs AZ ?",
-    "options": ["Oui", "Non", "Uniquement avec EFS One Zone", "Uniquement avec EFS Standard"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec EFS One Zone",
+      "Uniquement avec EFS Standard"
+    ],
     "correct": 0,
     "explanation": "EFS Standard réplique les données sur plusieurs AZ."
   },
@@ -340,7 +380,12 @@
     "theme_label": "EFS One Zone",
     "difficulty": "hard",
     "question": "EFS One Zone est-il recommandé pour les données critiques ?",
-    "options": ["Non", "Oui", "Oui avec backup", "Uniquement pour les données temporaires"],
+    "options": [
+      "Non",
+      "Oui",
+      "Oui avec backup",
+      "Uniquement pour les données temporaires"
+    ],
     "correct": 0,
     "explanation": "EFS One Zone ne résiste pas à une panne d'AZ."
   },
@@ -350,7 +395,12 @@
     "theme_label": "ElastiCache",
     "difficulty": "hard",
     "question": "ElastiCache Redis supporte-t-il Multi-AZ ?",
-    "options": ["Oui", "Non", "Uniquement avec cluster", "Uniquement avec réplication"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec cluster",
+      "Uniquement avec réplication"
+    ],
     "correct": 0,
     "explanation": "Redis avec réplication supporte Multi-AZ pour failover automatique."
   },
@@ -360,7 +410,12 @@
     "theme_label": "ElastiCache",
     "difficulty": "hard",
     "question": "ElastiCache Memcached supporte-t-il Multi-AZ ?",
-    "options": ["Non", "Oui", "Uniquement avec cluster", "Uniquement avec réplication"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement avec cluster",
+      "Uniquement avec réplication"
+    ],
     "correct": 0,
     "explanation": "Memcached ne supporte pas la persistance ni le Multi-AZ."
   },
@@ -370,7 +425,12 @@
     "theme_label": "Route53",
     "difficulty": "hard",
     "question": "Route53 est-il hautement disponible ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement pour les enregistrements A"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement pour les enregistrements A"
+    ],
     "correct": 0,
     "explanation": "Route53 est un service global hautement disponible."
   },
@@ -395,7 +455,12 @@
     "theme_label": "CloudFront",
     "difficulty": "hard",
     "question": "CloudFront est-il hautement disponible ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement avec origin failover"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement avec origin failover"
+    ],
     "correct": 0,
     "explanation": "CloudFront est un CDN mondial hautement disponible."
   },
@@ -420,7 +485,12 @@
     "theme_label": "Global Accelerator",
     "difficulty": "hard",
     "question": "Global Accelerator est-il hautement disponible ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement avec ALB"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement avec ALB"
+    ],
     "correct": 0,
     "explanation": "Global Accelerator utilise le réseau AWS mondial pour une HA naturelle."
   },
@@ -535,7 +605,12 @@
     "theme_label": "EC2 Auto Recovery",
     "difficulty": "hard",
     "question": "EC2 Auto Recovery peut-il être configuré via CloudWatch ?",
-    "options": ["Oui", "Non", "Uniquement avec ASG", "Uniquement avec ELB"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec ASG",
+      "Uniquement avec ELB"
+    ],
     "correct": 0,
     "explanation": "On peut configurer une alarme CloudWatch pour déclencher la récupération."
   },
@@ -605,7 +680,12 @@
     "theme_label": "ELB Idle Timeout",
     "difficulty": "hard",
     "question": "Quel est le timeout inactivité par défaut pour ALB ?",
-    "options": ["60 secondes", "30 secondes", "120 secondes", "300 secondes"],
+    "options": [
+      "60 secondes",
+      "30 secondes",
+      "120 secondes",
+      "300 secondes"
+    ],
     "correct": 0,
     "explanation": "Le timeout par défaut d'ALB est 60 secondes."
   },
@@ -645,7 +725,12 @@
     "theme_label": "SQS FIFO",
     "difficulty": "hard",
     "question": "SQS FIFO garantit-il l'ordre des messages ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement avec groupes de messages"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement avec groupes de messages"
+    ],
     "correct": 0,
     "explanation": "SQS FIFO (First-In-First-Out) garantit l'ordre des messages."
   },
@@ -700,7 +785,12 @@
     "theme_label": "SNS",
     "difficulty": "hard",
     "question": "SNS est-il hautement disponible ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement avec FIFO"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement avec FIFO"
+    ],
     "correct": 0,
     "explanation": "SNS est un service managé hautement disponible."
   },
@@ -710,7 +800,12 @@
     "theme_label": "Kinesis Data Streams",
     "difficulty": "hard",
     "question": "Kinesis Data Streams réplique-t-il les données ?",
-    "options": ["Oui, sur 3 AZ", "Non", "Oui, sur 2 AZ", "Oui, sur 1 AZ"],
+    "options": [
+      "Oui, sur 3 AZ",
+      "Non",
+      "Oui, sur 2 AZ",
+      "Oui, sur 1 AZ"
+    ],
     "correct": 0,
     "explanation": "Kinesis réplique les données sur 3 AZ pour une haute disponibilité."
   },
@@ -720,7 +815,12 @@
     "theme_label": "Kinesis Data Streams",
     "difficulty": "hard",
     "question": "Combien de temps les données sont-elles conservées par défaut ?",
-    "options": ["24 heures", "7 jours", "48 heures", "30 jours"],
+    "options": [
+      "24 heures",
+      "7 jours",
+      "48 heures",
+      "30 jours"
+    ],
     "correct": 0,
     "explanation": "La rétention par défaut est 24 heures (configurable jusqu'à 365 jours)."
   },
@@ -730,7 +830,12 @@
     "theme_label": "EBS Snapshots",
     "difficulty": "hard",
     "question": "Les snapshots EBS sont-ils stockés de manière redondante ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement dans la même AZ"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement dans la même AZ"
+    ],
     "correct": 0,
     "explanation": "Les snapshots EBS sont stockés dans S3, donc répliqués."
   },
@@ -740,7 +845,12 @@
     "theme_label": "EBS Snapshots",
     "difficulty": "hard",
     "question": "Peut-on copier un snapshot EBS vers une autre région ?",
-    "options": ["Oui", "Non", "Uniquement avec AWS Backup", "Uniquement avec DMS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec AWS Backup",
+      "Uniquement avec DMS"
+    ],
     "correct": 0,
     "explanation": "Les snapshots peuvent être copiés entre régions pour DR."
   },
@@ -750,7 +860,12 @@
     "theme_label": "AWS Backup",
     "difficulty": "hard",
     "question": "AWS Backup permet-il des sauvegardes cross-region ?",
-    "options": ["Oui", "Non", "Uniquement pour RDS", "Uniquement pour EC2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour RDS",
+      "Uniquement pour EC2"
+    ],
     "correct": 0,
     "explanation": "AWS Backup peut copier automatiquement les sauvegardes vers une autre région."
   },
@@ -760,7 +875,12 @@
     "theme_label": "Database Migration Service (DMS)",
     "difficulty": "hard",
     "question": "DMS peut-il maintenir une réplication continue pour DR ?",
-    "options": ["Oui", "Non", "Uniquement pour la migration initiale", "Uniquement pour les bases Oracle"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour la migration initiale",
+      "Uniquement pour les bases Oracle"
+    ],
     "correct": 0,
     "explanation": "DMS peut effectuer une réplication continue pour la DR."
   },
@@ -778,5 +898,404 @@
     ],
     "correct": 0,
     "explanation": "Combiner Multi-AZ, Auto Scaling et Load Balancer pour une HA optimale."
+  },
+  {
+    "id": "AWS-SAA-HA&-001",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Auto Scaling :",
+    "options": [
+      "Auto Scaling permet d'ajouter ou de retirer des instances en fonction du trafic.",
+      "Auto Scaling nécessite une configuration manuelle pour chaque instance ajoutée.",
+      "Auto Scaling peut être utilisé avec des instances EC2, ECS et EKS.",
+      "Auto Scaling ne fonctionne qu'avec les applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Auto Scaling s'adapte automatiquement au trafic. B est incorrect car il configure automatiquement les instances. C est correct car Auto Scaling fonctionne avec divers types d'instances. D est incorrect car il peut être utilisé pour de nombreuses applications."
+  },
+  {
+    "id": "AWS-SAA-HA&-002",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'objectif principal d'un load balancer ?",
+    "options": [
+      "Distribuer le trafic entre plusieurs instances pour améliorer la disponibilité et la performance.",
+      "Stockager des données persistantes pour les applications web.",
+      "Gérer le stockage et la sauvegarde des données.",
+      "Sécuriser les applications en utilisant des protocoles de chiffrement."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car le load balancer distribue le trafic pour une meilleure disponibilité et performance. B est incorrect car il s'agit d'un service S3. C est incorrect car c'est un service AWS Backup. D est incorrect car il s'agit d'un service AWS WAF."
+  },
+  {
+    "id": "AWS-SAA-HA&-003",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les stratégies de récupération des données (DR) :",
+    "options": [
+      "Les snapshots EBS sont une méthode efficace pour la récupération des données.",
+      "La réplication AWS Cross-Region est une stratégie de DR utilisée pour les données critiques.",
+      "Les instances EC2 Auto Recovery sont automatiquement redémarrées en cas de panne.",
+      "La mise à jour des applications est une stratégie de DR."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car les snapshots EBS sont une méthode de récupération des données. B est correct car AWS Cross-Region offre une réplication des données. C est incorrect car EC2 Auto Recovery n'est pas une stratégie de DR. D est incorrect car c'est une pratique de gestion des applications."
+  },
+  {
+    "id": "AWS-SAA-HA&-004",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-AZ",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la mise en place d'une architecture Multi-AZ ?",
+    "options": [
+      "Améliore la disponibilité en cas de panne d'une zone géographique.",
+      "Permet une meilleure performance des applications.",
+      "Réduit les coûts de stockage.",
+      "Permet un accès local aux données."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car la Multi-AZ améliore la disponibilité. B est incorrect car elle n'affecte pas directement les performances. C est incorrect car elle ne réduit pas les coûts de stockage. D est incorrect car elle n'offre pas un accès local aux données."
+  },
+  {
+    "id": "AWS-SAA-HA&-005",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Elasticache",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Amazon ElastiCache :",
+    "options": [
+      "ElastiCache est un service de stockage en cache pour les applications web.",
+      "Il peut être utilisé avec des instances EC2, ECS et EKS.",
+      "ElastiCache offre plusieurs types de stockage en cache (Redis, Memcached).",
+      "Il nécessite une configuration manuelle pour chaque instance ajoutée."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car ElastiCache est un service de stockage en cache. B est correct car il peut être utilisé avec divers types d'instances. C est correct car ElastiCache offre plusieurs types de stockage en cache. D est incorrect car il configure automatiquement les instances."
+  },
+  {
+    "id": "AWS-SAA-HA&-006",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Auto Scaling :",
+    "options": [
+      "Auto Scaling augmente automatiquement le nombre d'instances en fonction de la demande.",
+      "Auto Scaling peut réduire automatiquement le nombre d'instances lorsque la charge baisse.",
+      "Auto Scaling nécessite une configuration manuelle pour augmenter le nombre d'instances.",
+      "Auto Scaling peut être utilisé uniquement avec des instances EC2."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Auto Scaling augmente automatiquement le nombre d'instances en fonction de la demande (correct). Auto Scaling peut réduire automatiquement le nombre d'instances lorsque la charge baisse (correct). Auto Scaling nécessite une configuration manuelle pour augmenter le nombre d'instances (incorrect, il n'y a pas besoin de configuration manuelle). Auto Scaling peut être utilisé uniquement avec des instances EC2 (incorrect, il peut être utilisé avec d'autres types de ressources AWS)."
+  },
+  {
+    "id": "AWS-SAA-HA&-007",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'un load balancer ?",
+    "options": [
+      "Distribuer les charges de travail entre plusieurs instances pour améliorer la disponibilité et la performance.",
+      "Stockager des données dans le cloud.",
+      "Gérer les connexions réseau entre les applications et les utilisateurs.",
+      "Analyser les journaux d'activité des applications."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonction principale d'un load balancer est de distribuer les charges de travail entre plusieurs instances pour améliorer la disponibilité et la performance (correct). Stockager des données dans le cloud est une fonction de stockage. Gérer les connexions réseau entre les applications et les utilisateurs est une fonction de réseau. Analyser les journaux d'activité des applications est une fonction d'analyse."
+  },
+  {
+    "id": "AWS-SAA-HA&-008",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les stratégies de récupération d'urgence (DR) :",
+    "options": [
+      "Les stratégies de DR impliquent toujours la mise en place d'un site de récupération physique.",
+      "Les stratégies de DR peuvent impliquer la réplication des données entre les régions AWS.",
+      "Les stratégies de DR sont généralement moins coûteuses que les solutions de récupération prévue (DRP).",
+      "Les stratégies de DR ne nécessitent pas de planification préalable."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les stratégies de DR peuvent impliquer la réplication des données entre les régions AWS (correct). Les stratégies de DR sont généralement moins coûteuses que les solutions de récupération prévue (DRP) (correct). Les stratégies de DR impliquent toujours la mise en place d'un site de récupération physique (incorrect, les stratégies peuvent également impliquer la réplication des données). Les stratégies de DR ne nécessitent pas de planification préalable (incorrect, une planification préalable est nécessaire pour une stratégie efficace de DR)."
+  },
+  {
+    "id": "AWS-SAA-HA&-009",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-AZ",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la configuration Multi-AZ pour RDS ?",
+    "options": [
+      "Améliore la disponibilité en cas de pannes dans une région.",
+      "Permet d'accéder aux données à partir de plusieurs régions AWS.",
+      "Augmente les performances en répartissant la charge entre plusieurs zones géographiques.",
+      "Permet de stocker des données à long terme."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Améliore la disponibilité en cas de pannes dans une région (correct). Permet d'accéder aux données à partir de plusieurs régions AWS (incorrect, c'est une caractéristique de la réplication跨区域). Augmente les performances en répartissant la charge entre plusieurs zones géographiques (incorrect, c'est une caractéristique de la réplication跨区域). Permet de stocker des données à long terme (incorrect, c'est une caractéristique de S3)."
+  },
+  {
+    "id": "AWS-SAA-HA&-010",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Elasticache",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction d'Elasticache ?",
+    "options": [
+      "Stockage de données en cache pour accélérer les applications.",
+      "Gestion des connexions réseau entre les applications et les utilisateurs.",
+      "Analyse des journaux d'activité des applications.",
+      "Stockage de données à long terme."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale fonction d'Elasticache est de stockage de données en cache pour accélérer les applications (correct). Gestion des connexions réseau entre les applications et les utilisateurs est une fonction de réseau. Analyse des journaux d'activité des applications est une fonction d'analyse. Stockage de données à long terme est une fonction de stockage."
+  },
+  {
+    "id": "AWS-SAA-HA&-011",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'Auto Scaling :",
+    "options": [
+      "L'Auto Scaling permet d'ajuster automatiquement le nombre d'instances en fonction de la charge.",
+      "L'Auto Scaling peut être utilisé pour les applications web et les services backend.",
+      "L'Auto Scaling nécessite une configuration manuelle pour chaque instance.",
+      "L'Auto Scaling peut être utilisé avec des applications monolithiques."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'Auto Scaling est utilisé pour ajuster automatiquement le nombre d'instances en fonction de la charge. Il peut être utilisé pour les applications web et les services backend. L'Auto Scaling nécessite une configuration automatique, pas manuelle, pour chaque instance. Il ne peut pas être utilisé avec des applications monolithiques."
+  },
+  {
+    "id": "AWS-SAA-HA&-012",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'un Load Balancer ?",
+    "options": [
+      "Distribuer les charges entre plusieurs instances pour éviter le surcharge.",
+      "Gérer la sécurité des données stockées dans les instances.",
+      "Optimiser les performances de l'instance principale.",
+      "Gérer la mise à jour des applications."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonction principale d'un Load Balancer est de distribuer les charges entre plusieurs instances pour éviter le surcharge."
+  },
+  {
+    "id": "AWS-SAA-HA&-013",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les stratégies de récupération d'urgence (DR) :",
+    "options": [
+      "Les stratégies de DR impliquent la réplication des données vers une région différente.",
+      "Les stratégies de DR nécessitent la mise en place d'un environnement de récupération alternatif.",
+      "Les stratégies de DR sont généralement utilisées pour les applications critiques.",
+      "Les stratégies de DR peuvent être réalisées sans interruption du service."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les stratégies de DR impliquent la réplication des données vers une région différente. Les stratégies de DR nécessitent la mise en place d'un environnement de récupération alternatif. Les stratégies de DR sont généralement utilisées pour les applications critiques. Les stratégies de DR peuvent nécessiter une interruption du service."
+  },
+  {
+    "id": "AWS-SAA-HA&-014",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-AZ",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la configuration Multi-AZ pour les applications AWS ?",
+    "options": [
+      "Améliore la disponibilité en cas de pannes des zones.",
+      "Permet d'accélérer les performances des applications.",
+      "Réduit les coûts de stockage.",
+      "Optimise la sécurité des données."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'avantage principal de la configuration Multi-AZ pour les applications AWS est d'améliorer la disponibilité en cas de pannes des zones."
+  },
+  {
+    "id": "AWS-SAA-HA&-015",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Aurora",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Amazon Aurora :",
+    "options": [
+      "Aurora est une base de données relationnelle à haute disponibilité et à grande échelle.",
+      "Aurora offre des options de réplication en temps réel entre les zones géographiques.",
+      "Aurora nécessite une configuration manuelle pour la réplication des données.",
+      "Aurora est principalement utilisé pour les applications web."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Aurora est une base de données relationnelle à haute disponibilité et à grande échelle. Aurora offre des options de réplication en temps réel entre les zones géographiques. Aurora nécessite une configuration automatique pour la réplication des données. Aurora peut être utilisé pour divers types d'applications."
+  },
+  {
+    "id": "AWS-SAA-HA&-016",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Auto Scaling :",
+    "options": [
+      "Auto Scaling peut augmenter ou diminuer le nombre d'instances en fonction de la charge.",
+      "Auto Scaling nécessite un groupe de sécurité pour chaque instance.",
+      "Auto Scaling peut être utilisé avec des instances EC2, ECS et RDS.",
+      "Auto Scaling est basé sur des politiques définies par l'utilisateur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "A est correct car Auto Scaling ajuste le nombre d'instances. B est incorrect car les groupes de sécurité sont généralement associés aux instances individuelles, pas à Auto Scaling. C est correct car Auto Scaling peut être utilisé avec divers types de ressources AWS. D est correct car les utilisateurs définissent des politiques pour déclencher l'ajustement automatique."
+  },
+  {
+    "id": "AWS-SAA-HA&-017",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Load Balancing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction d'un load balancer ?",
+    "options": [
+      "Distribuer la charge entre plusieurs instances pour une meilleure disponibilité.",
+      "Augmenter la puissance de calcul d'une seule instance.",
+      "Stockager des données en temps réel.",
+      "Gérer les connexions réseau entre les clients et les instances."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car un load balancer distribue la charge entre plusieurs instances pour une meilleure disponibilité. B est incorrect car un load balancer ne gère pas l'augmentation de la puissance de calcul. C est incorrect car un load balancer ne gère pas le stockage des données en temps réel. D est correct car un load balancer gère les connexions réseau entre les clients et les instances."
+  },
+  {
+    "id": "AWS-SAA-HA&-018",
+    "theme": "High Availability & Scalability",
+    "theme_label": "DR Strategies",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les stratégies de récupération d'urgence (DR) :",
+    "options": [
+      "Les snapshots EBS sont une méthode efficace de sauvegarder les données.",
+      "La réplication S3 Cross-Region est une stratégie de DR pour les applications web.",
+      "La mise en place d'une architecture Multi-AZ améliore la disponibilité mais pas la récupération d'urgence.",
+      "La mise en place d'une architecture Multi-Region améliore à la fois la disponibilité et la récupération d'urgence."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "A est correct car les snapshots EBS sont une méthode efficace de sauvegarder les données. B est correct car la réplication S3 Cross-Region peut aider à récupérer les données dans une région différente. C est incorrect car la mise en place d'une architecture Multi-AZ améliore la disponibilité mais pas nécessairement la récupération d'urgence. D est correct car la mise en place d'une architecture Multi-Region améliore à la fois la disponibilité et la récupération d'urgence."
+  },
+  {
+    "id": "AWS-SAA-HA&-019",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Multi-AZ",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal d'une architecture Multi-AZ ?",
+    "options": [
+      "Améliore la disponibilité en offrant des instances dans plusieurs zones géographiques.",
+      "Augmente la puissance de calcul en combinant les ressources des zones géographiques.",
+      "Permet une récupération d'urgence instantanée en cas de pannes.",
+      "Stocke les données en temps réel dans plusieurs régions."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car une architecture Multi-AZ améliore la disponibilité en offrant des instances dans plusieurs zones géographiques. B est incorrect car une architecture Multi-AZ ne gère pas l'augmentation de la puissance de calcul. C est incorrect car une architecture Multi-AZ ne permet pas une récupération d'urgence instantanée en cas de pannes. D est incorrect car une architecture Multi-AZ ne gère pas le stockage des données en temps réel."
+  },
+  {
+    "id": "AWS-SAA-HA&-020",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Elasticache",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Elasticache :",
+    "options": [
+      "Elasticache est une base de données en cache pour les applications web.",
+      "Elasticache peut être utilisé avec des instances EC2, ECS et RDS.",
+      "Elasticache offre une haute disponibilité en utilisant des réplicas dans plusieurs zones géographiques.",
+      "Elasticache est basé sur des politiques définies par l'utilisateur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "A est correct car Elasticache est une base de données en cache pour les applications web. B est correct car Elasticache peut être utilisé avec des instances EC2, ECS et RDS. C est correct car Elasticache offre une haute disponibilité en utilisant des réplicas dans plusieurs zones géographiques. D est incorrect car les politiques d'Elasticache sont définies par AWS."
+  },
+  {
+    "id": "AWS-SAA-HA&-021",
+    "theme": "High Availability & Scalability",
+    "theme_label": "Auto Scaling",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'Auto Scaling :",
+    "options": [
+      "L'Auto Scaling augmente automatiquement le nombre d'instances en fonction de la charge.",
+      "L'Auto Scaling peut diminuer le nombre d'instances si la charge diminue.",
+      "L'Auto Scaling nécessite une configuration manuelle pour chaque instance ajoutée.",
+      "L'Auto Scaling est basé sur des métriques telles que le CPU et la mémoire utilisée.",
+      "L'Auto Scaling peut être utilisé uniquement avec des instances EC2."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "L'Auto Scaling augmente et diminue automatiquement le nombre d'instances en fonction de la charge. Il nécessite une configuration simple et peut utiliser des métriques comme le CPU et la mémoire utilisée. L'Auto Scaling est principalement utilisé avec des instances EC2, mais peut également être utilisé avec d'autres types de ressources."
   }
 ]

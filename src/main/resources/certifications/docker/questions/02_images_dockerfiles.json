@@ -12,7 +12,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Combiner les commandes, utiliser des images légères, et nettoyer les caches."
+    "explanation": "Combiner les commandes, utiliser des images légères, et nettoyer les caches."
   },
   {
     "id": "DKR-02-002",
@@ -27,7 +27,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les multi-stage builds séparent la compilation de l'exécution, évitant les outils de build dans l'image finale."
+    "explanation": "Les multi-stage builds séparent la compilation de l'exécution, évitant les outils de build dans l'image finale."
   },
   {
     "id": "DKR-02-003",
@@ -42,7 +42,7 @@
       "FROM builder AS final"
     ],
     "correct": 0,
-    "explication": "COPY --from=<stage> copie les fichiers depuis une étape nommée."
+    "explanation": "COPY --from=<stage> copie les fichiers depuis une étape nommée."
   },
   {
     "id": "DKR-02-004",
@@ -50,9 +50,14 @@
     "theme_label": "Couches (layers)",
     "difficulty": "medium",
     "question": "Combien de couches une image peut-elle avoir ?",
-    "options": ["127", "Sans limite", "42", "Dépend du système de fichiers"],
+    "options": [
+      "127",
+      "Sans limite",
+      "42",
+      "Dépend du système de fichiers"
+    ],
     "correct": 0,
-    "explication": "Le nombre maximal de couches est 127 (limite du système de fichiers overlay)."
+    "explanation": "Le nombre maximal de couches est 127 (limite du système de fichiers overlay)."
   },
   {
     "id": "DKR-02-005",
@@ -67,7 +72,7 @@
       "Ne cache rien"
     ],
     "correct": 0,
-    "explication": "Si une instruction n'a pas changé, Docker réutilise la couche existante."
+    "explanation": "Si une instruction n'a pas changé, Docker réutilise la couche existante."
   },
   {
     "id": "DKR-02-006",
@@ -82,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Toute modification du contenu d'une instruction invalide le cache pour cette couche et les suivantes."
+    "explanation": "Toute modification du contenu d'une instruction invalide le cache pour cette couche et les suivantes."
   },
   {
     "id": "DKR-02-007",
@@ -90,9 +95,14 @@
     "theme_label": "Bonnes pratiques",
     "difficulty": "easy",
     "question": "Doit-on exécuter les conteneurs en tant que root ?",
-    "options": ["Non, créer un utilisateur non root", "Oui", "Cela dépend", "Seulement pour les images de base"],
+    "options": [
+      "Non, créer un utilisateur non root",
+      "Oui",
+      "Cela dépend",
+      "Seulement pour les images de base"
+    ],
     "correct": 0,
-    "explication": "Il est recommandé de créer un utilisateur non root pour améliorer la sécurité."
+    "explanation": "Il est recommandé de créer un utilisateur non root pour améliorer la sécurité."
   },
   {
     "id": "DKR-02-008",
@@ -100,9 +110,14 @@
     "theme_label": "Bonnes pratiques",
     "difficulty": "easy",
     "question": "Faut-il spécifier une version de tag plutôt que 'latest' ?",
-    "options": ["Oui, pour la reproductibilité", "Non, 'latest' est suffisant", "Cela dépend", "Uniquement pour les images officielles"],
+    "options": [
+      "Oui, pour la reproductibilité",
+      "Non, 'latest' est suffisant",
+      "Cela dépend",
+      "Uniquement pour les images officielles"
+    ],
     "correct": 0,
-    "explication": "Utiliser des tags spécifiques (ex: '1.0.0') évite les changements inattendus."
+    "explanation": "Utiliser des tags spécifiques (ex: '1.0.0') évite les changements inattendus."
   },
   {
     "id": "DKR-02-009",
@@ -117,7 +132,7 @@
       "ADD de gros fichiers"
     ],
     "correct": 0,
-    "explication": "Placer les instructions stables en premier maximise la réutilisation du cache."
+    "explanation": "Placer les instructions stables en premier maximise la réutilisation du cache."
   },
   {
     "id": "DKR-02-010",
@@ -132,7 +147,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Utiliser .dockerignore pour exclure les fichiers inutiles ou sensibles."
+    "explanation": "Utiliser .dockerignore pour exclure les fichiers inutiles ou sensibles."
   },
   {
     "id": "DKR-02-011",
@@ -147,7 +162,7 @@
       "Ignorer des volumes"
     ],
     "correct": 0,
-    "explication": ".dockerignore fonctionne comme .gitignore pour le contexte envoyé au daemon."
+    "explanation": ".dockerignore fonctionne comme .gitignore pour le contexte envoyé au daemon."
   },
   {
     "id": "DKR-02-012",
@@ -162,7 +177,7 @@
       "Définit un label"
     ],
     "correct": 0,
-    "explication": "ARG peut être passé avec docker build --build-arg."
+    "explanation": "ARG peut être passé avec docker build --build-arg."
   },
   {
     "id": "DKR-02-013",
@@ -177,7 +192,7 @@
       "docker build --env MA_VERSION=1.0"
     ],
     "correct": 0,
-    "explication": "--build-arg spécifie les valeurs pour les ARG."
+    "explanation": "--build-arg spécifie les valeurs pour les ARG."
   },
   {
     "id": "DKR-02-014",
@@ -192,7 +207,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "ADD a des fonctionnalités supplémentaires, mais COPY est recommandé quand possible."
+    "explanation": "ADD a des fonctionnalités supplémentaires, mais COPY est recommandé quand possible."
   },
   {
     "id": "DKR-02-015",
@@ -207,7 +222,7 @@
       "Vérifie la mémoire"
     ],
     "correct": 0,
-    "explication": "HEALTHCHECK permet à Docker de surveiller la santé de l'application."
+    "explanation": "HEALTHCHECK permet à Docker de surveiller la santé de l'application."
   },
   {
     "id": "DKR-02-016",
@@ -215,9 +230,14 @@
     "theme_label": "Dockerfile instructions",
     "difficulty": "easy",
     "question": "Comment désactiver HEALTHCHECK ?",
-    "options": ["HEALTHCHECK NONE", "HEALTHCHECK OFF", "HEALTHCHECK DISABLE", "HEALTHCHECK false"],
+    "options": [
+      "HEALTHCHECK NONE",
+      "HEALTHCHECK OFF",
+      "HEALTHCHECK DISABLE",
+      "HEALTHCHECK false"
+    ],
     "correct": 0,
-    "explication": "HEALTHCHECK NONE supprime tout healthcheck hérité."
+    "explanation": "HEALTHCHECK NONE supprime tout healthcheck hérité."
   },
   {
     "id": "DKR-02-017",
@@ -232,7 +252,7 @@
       "Définit un shell de construction"
     ],
     "correct": 0,
-    "explication": "SHELL permet d'utiliser par exemple PowerShell sur Windows."
+    "explanation": "SHELL permet d'utiliser par exemple PowerShell sur Windows."
   },
   {
     "id": "DKR-02-018",
@@ -247,7 +267,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Par défaut, docker stop envoie SIGTERM. STOPSIGNAL permet de le changer."
+    "explanation": "Par défaut, docker stop envoie SIGTERM. STOPSIGNAL permet de le changer."
   },
   {
     "id": "DKR-02-019",
@@ -262,7 +282,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "USER root n'est pas recommandé."
+    "explanation": "USER root n'est pas recommandé."
   },
   {
     "id": "DKR-02-020",
@@ -277,7 +297,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons selon la distribution de base."
+    "explanation": "Plusieurs façons selon la distribution de base."
   },
   {
     "id": "DKR-02-021",
@@ -292,7 +312,7 @@
       "FROM golang:1.18 BUILDER"
     ],
     "correct": 0,
-    "explication": "Le mot-clé AS permet de nommer l'étape."
+    "explanation": "Le mot-clé AS permet de nommer l'étape."
   },
   {
     "id": "DKR-02-022",
@@ -300,9 +320,14 @@
     "theme_label": "Multi-stage builds",
     "difficulty": "hard",
     "question": "Peut-on copier depuis une étape externe (une autre image) ?",
-    "options": ["Oui, avec COPY --from=nginx:latest", "Non", "Uniquement depuis les étapes du même Dockerfile", "Uniquement depuis des images locales"],
+    "options": [
+      "Oui, avec COPY --from=nginx:latest",
+      "Non",
+      "Uniquement depuis les étapes du même Dockerfile",
+      "Uniquement depuis des images locales"
+    ],
     "correct": 0,
-    "explication": "COPY --from peut utiliser le nom d'une image existante."
+    "explanation": "COPY --from peut utiliser le nom d'une image existante."
   },
   {
     "id": "DKR-02-023",
@@ -317,7 +342,7 @@
       "docker build --only=builder"
     ],
     "correct": 0,
-    "explication": "--target permet de construire uniquement jusqu'à l'étape nommée."
+    "explanation": "--target permet de construire uniquement jusqu'à l'étape nommée."
   },
   {
     "id": "DKR-02-024",
@@ -332,7 +357,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker history montre la taille de chaque couche."
+    "explanation": "docker history montre la taille de chaque couche."
   },
   {
     "id": "DKR-02-025",
@@ -347,7 +372,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "dive montre les couches, docker-slim réduit la taille, docker scout analyse."
+    "explanation": "dive montre les couches, docker-slim réduit la taille, docker scout analyse."
   },
   {
     "id": "DKR-02-026",
@@ -362,7 +387,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Alpine est populaire pour sa petite taille, mais peut manquer de compatibilité."
+    "explanation": "Alpine est populaire pour sa petite taille, mais peut manquer de compatibilité."
   },
   {
     "id": "DKR-02-027",
@@ -377,7 +402,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "--squash (expérimental) crée une seule couche, mais perd l'historique."
+    "explanation": "--squash (expérimental) crée une seule couche, mais perd l'historique."
   },
   {
     "id": "DKR-02-028",
@@ -392,7 +417,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le tag doit inclure l'hôte du registre (et le port si différent de 443)."
+    "explanation": "Le tag doit inclure l'hôte du registre (et le port si différent de 443)."
   },
   {
     "id": "DKR-02-029",
@@ -407,7 +432,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Pour un registre non HTTPS, il faut ajouter insecure-registries."
+    "explanation": "Pour un registre non HTTPS, il faut ajouter insecure-registries."
   },
   {
     "id": "DKR-02-030",
@@ -422,7 +447,7 @@
       "docker registry delete"
     ],
     "correct": 0,
-    "explication": "La suppression d'une image sur un registre nécessite l'API (ex: skopeo, crane)."
+    "explanation": "La suppression d'une image sur un registre nécessite l'API (ex: skopeo, crane)."
   },
   {
     "id": "DKR-02-031",
@@ -437,7 +462,7 @@
       "docker-compose up registry"
     ],
     "correct": 0,
-    "explication": "L'image officielle registry:2 permet de démarrer un registre local."
+    "explanation": "L'image officielle registry:2 permet de démarrer un registre local."
   },
   {
     "id": "DKR-02-032",
@@ -452,7 +477,7 @@
       "debian:stable-slim"
     ],
     "correct": 0,
-    "explication": "scratch est une image vide de 0 octet, pour les binaires statiques."
+    "explanation": "scratch est une image vide de 0 octet, pour les binaires statiques."
   },
   {
     "id": "DKR-02-033",
@@ -467,7 +492,7 @@
       "Pour des bases de données"
     ],
     "correct": 0,
-    "explication": "Scratch ne contient aucun outil, seulement les binaires que vous copiez."
+    "explanation": "Scratch ne contient aucun outil, seulement les binaires que vous copiez."
   },
   {
     "id": "DKR-02-034",
@@ -482,7 +507,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Alpine est basée sur musl, slim est une version allégée de Debian."
+    "explanation": "Alpine est basée sur musl, slim est une version allégée de Debian."
   },
   {
     "id": "DKR-02-035",
@@ -497,7 +522,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker commit capture l'état d'un conteneur, export/import est plus bas niveau."
+    "explanation": "docker commit capture l'état d'un conteneur, export/import est plus bas niveau."
   },
   {
     "id": "DKR-02-036",
@@ -512,7 +537,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs outils disponibles (docker scan, docker scout, Trivy, Clair)."
+    "explanation": "Plusieurs outils disponibles (docker scan, docker scout, Trivy, Clair)."
   },
   {
     "id": "DKR-02-037",
@@ -527,7 +552,7 @@
       "Versionne l'image"
     ],
     "correct": 0,
-    "explication": "Les signatures utilisent des clés pour vérifier l'intégrité."
+    "explanation": "Les signatures utilisent des clés pour vérifier l'intégrité."
   },
   {
     "id": "DKR-02-038",
@@ -542,7 +567,7 @@
       "docker image sign <image>"
     ],
     "correct": 0,
-    "explication": "docker trust sign nécessite DOCKER_CONTENT_TRUST=1 et des clés."
+    "explanation": "docker trust sign nécessite DOCKER_CONTENT_TRUST=1 et des clés."
   },
   {
     "id": "DKR-02-039",
@@ -557,7 +582,7 @@
       "Le nombre de couches"
     ],
     "correct": 0,
-    "explication": "Si DOCKER_CONTENT_TRUST=1, docker pull refuse les images non signées."
+    "explanation": "Si DOCKER_CONTENT_TRUST=1, docker pull refuse les images non signées."
   },
   {
     "id": "DKR-02-040",
@@ -572,7 +597,7 @@
       "Dépend du driver"
     ],
     "correct": 3,
-    "explication": "Le stockage dépend du driver (overlay2 par défaut)."
+    "explanation": "Le stockage dépend du driver (overlay2 par défaut)."
   },
   {
     "id": "DKR-02-041",
@@ -587,7 +612,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker history montre les couches avec les commandes, inspect donne les IDs."
+    "explanation": "docker history montre les couches avec les commandes, inspect donne les IDs."
   },
   {
     "id": "DKR-02-042",
@@ -602,7 +627,7 @@
       "Pour la lisibilité"
     ],
     "correct": 0,
-    "explication": "Les instructions qui changent rarement doivent être placées en haut."
+    "explanation": "Les instructions qui changent rarement doivent être placées en haut."
   },
   {
     "id": "DKR-02-043",
@@ -617,7 +642,7 @@
       "docker build --clean"
     ],
     "correct": 0,
-    "explication": "--no-cache reconstruit toutes les couches sans utiliser le cache."
+    "explanation": "--no-cache reconstruit toutes les couches sans utiliser le cache."
   },
   {
     "id": "DKR-02-044",
@@ -632,7 +657,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le cache local est partagé, mais on peut aussi importer des caches distants."
+    "explanation": "Le cache local est partagé, mais on peut aussi importer des caches distants."
   },
   {
     "id": "DKR-02-045",
@@ -647,7 +672,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Ne pas coder les secrets en dur ; utiliser des volumes ou des gestionnaires de secrets."
+    "explanation": "Ne pas coder les secrets en dur ; utiliser des volumes ou des gestionnaires de secrets."
   },
   {
     "id": "DKR-02-046",
@@ -662,7 +687,7 @@
       "Utiliser WORKDIR"
     ],
     "correct": 0,
-    "explication": "Chaque instruction RUN, COPY, ADD crée une couche."
+    "explanation": "Chaque instruction RUN, COPY, ADD crée une couche."
   },
   {
     "id": "DKR-02-047",
@@ -677,7 +702,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Préférer des tags sémantiques (1.0.0, 1.0, etc.)."
+    "explanation": "Préférer des tags sémantiques (1.0.0, 1.0, etc.)."
   },
   {
     "id": "DKR-02-048",
@@ -692,7 +717,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Ne pas inclure les secrets dans l'image."
+    "explanation": "Ne pas inclure les secrets dans l'image."
   },
   {
     "id": "DKR-02-049",
@@ -707,7 +732,7 @@
       "Utiliser multi-stage"
     ],
     "correct": 0,
-    "explication": "Copier d'abord les manifestes permet de mettre en cache l'installation des dépendances."
+    "explanation": "Copier d'abord les manifestes permet de mettre en cache l'installation des dépendances."
   },
   {
     "id": "DKR-02-050",
@@ -715,9 +740,14 @@
     "theme_label": "Dockerfile best practices",
     "difficulty": "easy",
     "question": "Quelle instruction doit être utilisée pour définir l'utilisateur non root ?",
-    "options": ["USER", "RUN useradd", "A et B", "RUN adduser"],
+    "options": [
+      "USER",
+      "RUN useradd",
+      "A et B",
+      "RUN adduser"
+    ],
     "correct": 2,
-    "explication": "Il faut d'abord créer l'utilisateur avec RUN, puis passer à cet utilisateur avec USER."
+    "explanation": "Il faut d'abord créer l'utilisateur avec RUN, puis passer à cet utilisateur avec USER."
   },
   {
     "id": "DKR-02-051",
@@ -732,7 +762,7 @@
       "Nettoie le cache"
     ],
     "correct": 0,
-    "explication": "Mount cache (BuildKit) permet de réutiliser des caches (ex: ~/.m2, ~/.npm)."
+    "explanation": "Mount cache (BuildKit) permet de réutiliser des caches (ex: ~/.m2, ~/.npm)."
   },
   {
     "id": "DKR-02-052",
@@ -747,7 +777,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "BuildKit est activé par défaut depuis Docker 23.0, mais peut être forcé."
+    "explanation": "BuildKit est activé par défaut depuis Docker 23.0, mais peut être forcé."
   },
   {
     "id": "DKR-02-053",
@@ -762,7 +792,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "BuildKit améliore les performances et la flexibilité."
+    "explanation": "BuildKit améliore les performances et la flexibilité."
   },
   {
     "id": "DKR-02-054",
@@ -777,7 +807,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "docker buildx permet de construire des images multi-architecture."
+    "explanation": "docker buildx permet de construire des images multi-architecture."
   },
   {
     "id": "DKR-02-055",
@@ -792,7 +822,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les secrets ne sont pas persistés dans l'image."
+    "explanation": "Les secrets ne sont pas persistés dans l'image."
   },
   {
     "id": "DKR-02-056",
@@ -807,7 +837,7 @@
       "Lie des fichiers"
     ],
     "correct": 0,
-    "explication": "Permet de monter des contextes de build sans les copier."
+    "explanation": "Permet de monter des contextes de build sans les copier."
   },
   {
     "id": "DKR-02-057",
@@ -822,7 +852,7 @@
       "docker export --oci"
     ],
     "correct": 0,
-    "explication": "BuildKit supporte l'export OCI."
+    "explanation": "BuildKit supporte l'export OCI."
   },
   {
     "id": "DKR-02-058",
@@ -837,7 +867,7 @@
       "Autoriser les caches"
     ],
     "correct": 0,
-    "explication": "--allow net.host par exemple."
+    "explanation": "--allow net.host par exemple."
   },
   {
     "id": "DKR-02-059",
@@ -852,7 +882,7 @@
       "docker est plus rapide"
     ],
     "correct": 0,
-    "explication": "On peut construire et pousser en une seule commande avec --push."
+    "explanation": "On peut construire et pousser en une seule commande avec --push."
   },
   {
     "id": "DKR-02-060",
@@ -860,9 +890,14 @@
     "theme_label": "Dockerfile linter",
     "difficulty": "easy",
     "question": "Quel outil vérifie les bonnes pratiques dans les Dockerfiles ?",
-    "options": ["hadolint", "dockerfilelint", "lint-dockerfile", "A et B"],
+    "options": [
+      "hadolint",
+      "dockerfilelint",
+      "lint-dockerfile",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "hadolint est très populaire pour analyser les Dockerfiles."
+    "explanation": "hadolint est très populaire pour analyser les Dockerfiles."
   },
   {
     "id": "DKR-02-061",
@@ -877,7 +912,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Hadolint détecte de nombreux anti-patterns."
+    "explanation": "Hadolint détecte de nombreux anti-patterns."
   },
   {
     "id": "DKR-02-062",
@@ -892,7 +927,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les images distroless (Google) ne contiennent que l'application et ses dépendances, pas de shell."
+    "explanation": "Les images distroless (Google) ne contiennent que l'application et ses dépendances, pas de shell."
   },
   {
     "id": "DKR-02-063",
@@ -907,7 +942,7 @@
       "Non supportées"
     ],
     "correct": 0,
-    "explication": "L'absence de shell complique le dépannage."
+    "explanation": "L'absence de shell complique le dépannage."
   },
   {
     "id": "DKR-02-064",
@@ -922,7 +957,7 @@
       "docker rmi"
     ],
     "correct": 0,
-    "explication": "docker-slim analyse et crée une version allégée de l'image."
+    "explanation": "docker-slim analyse et crée une version allégée de l'image."
   },
   {
     "id": "DKR-02-065",
@@ -937,7 +972,7 @@
       "Supprime un volume"
     ],
     "correct": 0,
-    "explication": "VOLUME déclare un point de montage, mais le volume est créé au runtime."
+    "explanation": "VOLUME déclare un point de montage, mais le volume est créé au runtime."
   },
   {
     "id": "DKR-02-066",
@@ -952,7 +987,7 @@
       "EXPOSE [80,443]"
     ],
     "correct": 0,
-    "explication": "Les ports sont séparés par des espaces."
+    "explanation": "Les ports sont séparés par des espaces."
   },
   {
     "id": "DKR-02-067",
@@ -967,7 +1002,7 @@
       "Ajoute un commentaire"
     ],
     "correct": 0,
-    "explication": "LABEL version='1.0' maintainer='me@example.com'."
+    "explanation": "LABEL version='1.0' maintainer='me@example.com'."
   },
   {
     "id": "DKR-02-068",
@@ -982,7 +1017,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons, mais une seule instruction LABEL réduit le nombre de couches."
+    "explanation": "Plusieurs façons, mais une seule instruction LABEL réduit le nombre de couches."
   },
   {
     "id": "DKR-02-069",
@@ -997,7 +1032,7 @@
       "S'exécute au push"
     ],
     "correct": 0,
-    "explication": "ONBUILD est utile pour les images de base destinées à être étendues."
+    "explanation": "ONBUILD est utile pour les images de base destinées à être étendues."
   },
   {
     "id": "DKR-02-070",
@@ -1012,6 +1047,469 @@
       "Définit le signal de pause"
     ],
     "correct": 0,
-    "explication": "Par défaut SIGTERM, peut être changé en SIGINT ou autre."
+    "explanation": "Par défaut SIGTERM, peut être changé en SIGINT ou autre."
+  },
+  {
+    "id": "DCK-IED-001",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile instructions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des instructions Dockerfile :",
+    "options": [
+      "RUN est utilisé pour exécuter des commandes dans l'image",
+      "COPY copie les fichiers du système hôte vers l'image",
+      "FROM est utilisé pour spécifier une image de base",
+      "LABEL ajoute des métadonnées à l'image"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "RUN est correct car il exécute des commandes dans l'image. COPY est correct car il copie des fichiers du système hôte vers l'image. FROM est correct car il spécifie une image de base. LABEL est correct car il ajoute des métadonnées à l'image."
+  },
+  {
+    "id": "DCK-IED-002",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "BuildKit",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale avant-garde de BuildKit par rapport à l'ancien moteur de construction ?",
+    "options": [
+      "Amélioration des performances",
+      "Simplicité accrue",
+      "Support pour les builds multi-étapes",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "BuildKit offre des améliorations de performance, une simplicité accrue et un support pour les builds multi-étapes."
+  },
+  {
+    "id": "DCK-IED-003",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile best practices",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les meilleures pratiques pour les Dockerfiles :",
+    "options": [
+      "Utiliser des images de base minimales",
+      "Nettoyer les fichiers temporaires après l'installation des dépendances",
+      "Utiliser des layers distincts pour chaque étape de construction",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Utiliser des images de base minimales est correct car cela réduit la taille de l'image. Nettoyer les fichiers temporaires après l'installation des dépendances est correct pour éviter les layers inutiles. Utiliser des layers distincts pour chaque étape de construction est correct car cela permet une meilleure utilisation du cache."
+  },
+  {
+    "id": "DCK-IED-004",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Multi-stage builds",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur des builds multi-étapes dans Docker ?",
+    "options": [
+      "Réduire la taille de l'image finale",
+      "Améliorer les performances du build",
+      "Faciliter la gestion des dépendances",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Réduire la taille de l'image finale est correct car les builds multi-étapes séparent la compilation des outils de build nécessaires pour l'exécution."
+  },
+  {
+    "id": "DCK-IED-005",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Layers caching",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction du caching dans les builds Docker ?",
+    "options": [
+      "Améliorer les performances des builds en réutilisant les layers",
+      "Réduire la taille de l'image finale",
+      "Faciliter la gestion des dépendances",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Améliorer les performances des builds en réutilisant les layers est correct car le caching permet d'éviter de reconstruire des layers qui n'ont pas changé."
+  },
+  {
+    "id": "DCK-IED-006",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile best practices",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les meilleures pratiques Dockerfile :",
+    "options": [
+      "Utiliser des images de base officielles",
+      "Chaîner les commandes RUN pour améliorer la performance",
+      "Nettoyer les fichiers temporaires après chaque commande",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Utiliser des images de base officielles est une bonne pratique pour la sécurité et la taille de l'image. Chaîner les commandes RUN peut améliorer la performance, mais nettoyer les fichiers temporaires après chaque commande est une bonne pratique pour éviter la surcharge de l'image."
+  },
+  {
+    "id": "DCK-IED-007",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile instructions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle instruction Dockerfile permet de copier des fichiers ou des répertoires d'un hôte vers une image Docker ?",
+    "options": [
+      "COPY",
+      "ADD",
+      "RUN",
+      "EXPOSE"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "COPY est l'instruction correcte pour copier des fichiers ou des répertoires d'un hôte vers une image Docker. ADD est similaire mais peut également télécharger des fichiers à partir de URLs et extraire les archives."
+  },
+  {
+    "id": "DCK-IED-008",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "BuildKit",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant BuildKit :",
+    "options": [
+      "BuildKit est une alternative à l'ancien moteur de construction Docker",
+      "Il permet d'améliorer les performances des builds en parallélisant les étapes",
+      "BuildKit est disponible uniquement sur Docker Enterprise Edition",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "BuildKit est une alternative à l'ancien moteur de construction Docker et permet d'améliorer les performances des builds en parallélisant les étapes. Il est disponible sur toutes les versions de Docker, y compris la Community Edition."
+  },
+  {
+    "id": "DCK-IED-009",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Optimisation des images",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour optimiser les images Docker ?",
+    "options": [
+      "Utiliser des images de base alpine",
+      "Chaîner les commandes RUN avec &&",
+      "Nettoyer les fichiers temporaires dans la même couche",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Toutes ces réponses sont bonnes pour optimiser les images Docker. Utiliser des images de base alpine réduit la taille, chaîner les commandes RUN améliore l'efficacité et nettoyer les fichiers temporaires réduit la taille de l'image."
+  },
+  {
+    "id": "DCK-IED-010",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Sécurité des images",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité des images Docker :",
+    "options": [
+      "Utiliser des images de base officielles pour éviter les vulnérabilités",
+      "Mettre à jour régulièrement les images pour corriger les vulnérabilités",
+      "Nettoyer les fichiers temporaires après chaque commande pour éviter des vulnérabilités",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Utiliser des images de base officielles et mettre à jour régulièrement les images sont bonnes pratiques pour la sécurité des images Docker. Nettoyer les fichiers temporaires après chaque commande peut également aider à éviter des vulnérabilités."
+  },
+  {
+    "id": "DCK-IED-011",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile instructions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande COPY :",
+    "options": [
+      "Copie des fichiers et répertoires entre le système hôte et l'image",
+      "Peut être utilisé pour copier des fichiers entre deux images Docker",
+      "La commande ADD est préférable à COPY pour toutes les opérations de copie",
+      "La commande COPY est moins flexible que ADD"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "COPY copie des fichiers et répertoires entre le système hôte et l'image. ADD peut être utilisé pour copier des fichiers entre deux images Docker, mais COPY est moins flexible."
+  },
+  {
+    "id": "DCK-IED-012",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "BuildKit",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de BuildKit dans Docker ?",
+    "options": [
+      "Améliore la performance des builds en parallélisant les étapes",
+      "Permet de stocker les images dans un registre distant",
+      "Gère les volumes et les mounts des conteneurs",
+      "Permet de déployer des applications sur différents environnements"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "BuildKit améliore la performance des builds en parallélisant les étapes."
+  },
+  {
+    "id": "DCK-IED-013",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Images de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les images de base :",
+    "options": [
+      "Les images de base ne doivent contenir que les fichiers essentiels",
+      "Les images de base peuvent être utilisées pour créer des images plus petites et plus légères",
+      "Les images de base ne doivent pas être modifiées une fois créées",
+      "Les images de base sont toujours plus grandes que les images personnalisées"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les images de base ne doivent contenir que les fichiers essentiels et peuvent être utilisées pour créer des images plus petites et plus légères. Les images de base ne doivent pas être modifiées une fois créées."
+  },
+  {
+    "id": "DCK-IED-014",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile best practices",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour améliorer la sécurité des images Docker ?",
+    "options": [
+      "Utiliser des images de base sécurisées",
+      "Nettoyer les fichiers temporaires après l'installation des paquets",
+      "Exposer le moins de ports possibles",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Utiliser des images de base sécurisées, nettoyer les fichiers temporaires après l'installation des paquets et exposer le moins de ports possibles sont toutes bonnes pratiques pour améliorer la sécurité des images Docker."
+  },
+  {
+    "id": "DCK-IED-015",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Layers caching",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'importance du caching des couches (layers) dans les builds Docker ?",
+    "options": [
+      "Améliore la vitesse des builds en réutilisant les couches existantes",
+      "Permet de stocker les images dans un registre distant",
+      "Gère les volumes et les mounts des conteneurs",
+      "Permet de déployer des applications sur différents environnements"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le caching des couches (layers) améliore la vitesse des builds en réutilisant les couches existantes."
+  },
+  {
+    "id": "DCK-IED-016",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile instructions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des instructions COPY et ADD dans un Dockerfile :",
+    "options": [
+      "COPY est utilisé pour copier des fichiers et des répertoires",
+      "ADD peut également télécharger des fichiers à partir de URL",
+      "COPY est moins flexible que ADD",
+      "Toutes ces affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "COPY est utilisé pour copier des fichiers et des répertoires. ADD peut également télécharger des fichiers à partir de URL. COPY est moins flexible que ADD car il ne prend pas en charge les URLs et les archives compressées."
+  },
+  {
+    "id": "DCK-IED-017",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "BuildKit",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale avantage de BuildKit par rapport à l'ancien moteur de build Docker ?",
+    "options": [
+      "Amélioration des performances",
+      "Support pour les builds multi-étapes",
+      "Facilité de configuration",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "BuildKit offre des améliorations significatives en termes de performances et de flexibilité, notamment en supportant les builds multi-étapes."
+  },
+  {
+    "id": "DCK-IED-018",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile best practices",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les bonnes pratiques pour la création de Dockerfiles :",
+    "options": [
+      "Utiliser des images de base officielles et minimales",
+      "Nettoyer les fichiers temporaires après l'installation des paquets",
+      "Chaîner les commandes RUN pour réduire le nombre de couches",
+      "Toutes ces affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Utiliser des images de base officielles et minimales permet une image plus légère. Nettoyer les fichiers temporaires après l'installation des paquets réduit la taille de l'image. Chaîner les commandes RUN pour réduire le nombre de couches améliore la performance et la sécurité."
+  },
+  {
+    "id": "DCK-IED-019",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Multi-stage builds",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation des builds multi-étapes (multi-stage builds) ?",
+    "options": [
+      "Réduire la taille finale de l'image",
+      "Compiler dans une étape et copier les binaires dans une autre",
+      "Augmenter la sécurité",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Les builds multi-étapes séparent la compilation de l'exécution, évitant les outils de build dans l'image finale et réduisant ainsi la taille de l'image."
+  },
+  {
+    "id": "DCK-IED-020",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Layers caching",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'importance de la mise en cache des couches (layers) dans Docker ?",
+    "options": [
+      "Améliore les performances en évitant la répétition des opérations",
+      "Permet de stocker les images en cache pour une utilisation future",
+      "Augmente la sécurité des images",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La mise en cache des couches améliore les performances en évitant la répétition des opérations et permet de stocker les images en cache pour une utilisation future."
+  },
+  {
+    "id": "DCK-IED-021",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile instructions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la commande COPY dans un Dockerfile :",
+    "options": [
+      "Permet de copier des fichiers ou des répertoires depuis le système hôte vers l'image",
+      "Nécessite que les fichiers soient spécifiés par leur chemin absolu",
+      "Peut être utilisé pour copier des fichiers depuis une image source vers l'image finale",
+      "Toutes ces affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "COPY peut copier des fichiers ou des répertoires depuis le système hôte, peut être utilisé pour copier des fichiers depuis une image source, et est généralement spécifié par leur chemin relatif. Nécessite pas que les fichiers soient spécifiés par leur chemin absolu."
+  },
+  {
+    "id": "DCK-IED-022",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "BuildKit",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur de BuildKit par rapport à la commande docker build traditionnelle ?",
+    "options": [
+      "Amélioration des performances de construction",
+      "Support pour les builds multi-étapes",
+      "Facilité d'utilisation des fichiers .dockerignore",
+      "Amélioration de la sécurité"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "BuildKit offre des améliorations significatives en termes de performances et d'efficacité, notamment grâce à ses capacités de cache et de multi-étapes."
+  },
+  {
+    "id": "DCK-IED-023",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Images de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les images de base :",
+    "options": [
+      "Les images de base sont généralement petites et légères",
+      "Elles ne peuvent pas être utilisées comme une image finale pour un conteneur",
+      "Les images de base sont souvent utilisées pour fournir une couche minimale sur laquelle construire d'autres images",
+      "Toutes ces affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les images de base sont généralement petites et légères, peuvent être utilisées comme une image finale pour un conteneur (en utilisant COPY ou ADD), et sont souvent utilisées pour fournir une couche minimale sur laquelle construire d'autres images."
+  },
+  {
+    "id": "DCK-IED-024",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Dockerfile best practices",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour améliorer la sécurité des images Docker ?",
+    "options": [
+      "Utiliser des images de base non officielles",
+      "Négliger les mises à jour de sécurité des paquets",
+      "Mettre à jour régulièrement les images et les paquets",
+      "Utiliser des mots de passe complexes pour les utilisateurs"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique pour améliorer la sécurité des images Docker est de mettre à jour régulièrement les images et les paquets pour éviter les vulnérabilités connues."
+  },
+  {
+    "id": "DCK-IED-025",
+    "theme": "Images et Dockerfiles",
+    "theme_label": "Optimisation des images",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est une bonne pratique pour optimiser la taille d'une image Docker ?",
+    "options": [
+      "Utiliser des images de base plus grandes pour faciliter le développement",
+      "Ajouter autant que possible de fichiers dans une seule couche",
+      "Nettoyer les fichiers temporaires après l'installation des paquets",
+      "Négliger la gestion du cache"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Une bonne pratique pour optimiser la taille d'une image Docker est de nettoyer les fichiers temporaires après l'installation des paquets pour réduire la taille finale de l'image."
   }
 ]

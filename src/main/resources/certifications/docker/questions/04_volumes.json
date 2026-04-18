@@ -12,7 +12,7 @@
       "Volumes, named volumes, anonymous volumes"
     ],
     "correct": 0,
-    "explication": "Volumes (gérés par Docker), bind mounts (chemin hôte), tmpfs (mémoire)."
+    "explanation": "Volumes (gérés par Docker), bind mounts (chemin hôte), tmpfs (mémoire)."
   },
   {
     "id": "DKR-04-002",
@@ -27,7 +27,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "On peut créer explicitement ou implicitement via -v."
+    "explanation": "On peut créer explicitement ou implicitement via -v."
   },
   {
     "id": "DKR-04-003",
@@ -42,7 +42,7 @@
       "docker volume show"
     ],
     "correct": 0,
-    "explication": "docker volume ls affiche la liste des volumes."
+    "explanation": "docker volume ls affiche la liste des volumes."
   },
   {
     "id": "DKR-04-004",
@@ -57,7 +57,7 @@
       "docker volume details monvolume"
     ],
     "correct": 0,
-    "explication": "docker volume inspect donne le point de montage et les options."
+    "explanation": "docker volume inspect donne le point de montage et les options."
   },
   {
     "id": "DKR-04-005",
@@ -72,7 +72,7 @@
       "docker volume remove monvolume"
     ],
     "correct": 0,
-    "explication": "docker volume rm supprime un volume (s'il n'est pas utilisé)."
+    "explanation": "docker volume rm supprime un volume (s'il n'est pas utilisé)."
   },
   {
     "id": "DKR-04-006",
@@ -87,7 +87,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "prune supprime les volumes non référencés par un conteneur."
+    "explanation": "prune supprime les volumes non référencés par un conteneur."
   },
   {
     "id": "DKR-04-007",
@@ -102,7 +102,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Deux syntaxes : -v ou --mount (plus explicite)."
+    "explanation": "Deux syntaxes : -v ou --mount (plus explicite)."
   },
   {
     "id": "DKR-04-008",
@@ -117,7 +117,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les volumes sont préférés pour la portabilité."
+    "explanation": "Les volumes sont préférés pour la portabilité."
   },
   {
     "id": "DKR-04-009",
@@ -132,7 +132,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": ":ro ou readonly=true."
+    "explanation": ":ro ou readonly=true."
   },
   {
     "id": "DKR-04-010",
@@ -147,7 +147,7 @@
       "Stocker des données sur le réseau"
     ],
     "correct": 0,
-    "explication": "tmpfs est utilisé pour des données temporaires sensibles."
+    "explanation": "tmpfs est utilisé pour des données temporaires sensibles."
   },
   {
     "id": "DKR-04-011",
@@ -162,7 +162,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "--tmpfs ou --mount type=tmpfs."
+    "explanation": "--tmpfs ou --mount type=tmpfs."
   },
   {
     "id": "DKR-04-012",
@@ -177,7 +177,7 @@
       "/var/lib/docker/aufs/"
     ],
     "correct": 0,
-    "explication": "Les volumes sont dans /var/lib/docker/volumes/ (Linux)."
+    "explanation": "Les volumes sont dans /var/lib/docker/volumes/ (Linux)."
   },
   {
     "id": "DKR-04-013",
@@ -185,9 +185,14 @@
     "theme_label": "Named volumes",
     "difficulty": "easy",
     "question": "Peut-on partager un volume entre plusieurs conteneurs ?",
-    "options": ["Oui", "Non", "Uniquement avec les mêmes images", "Uniquement avec les mêmes options"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec les mêmes images",
+      "Uniquement avec les mêmes options"
+    ],
     "correct": 0,
-    "explication": "Plusieurs conteneurs peuvent monter le même volume simultanément."
+    "explanation": "Plusieurs conteneurs peuvent monter le même volume simultanément."
   },
   {
     "id": "DKR-04-014",
@@ -202,7 +207,7 @@
       "docker run --volume-driver"
     ],
     "correct": 0,
-    "explication": "Si un volume vide est monté sur un répertoire contenant des données, les données sont copiées."
+    "explanation": "Si un volume vide est monté sur un répertoire contenant des données, les données sont copiées."
   },
   {
     "id": "DKR-04-015",
@@ -217,7 +222,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le driver local peut être configuré avec des options NFS."
+    "explanation": "Le driver local peut être configuré avec des options NFS."
   },
   {
     "id": "DKR-04-016",
@@ -232,7 +237,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "On peut spécifier le driver lors de la création du volume."
+    "explanation": "On peut spécifier le driver lors de la création du volume."
   },
   {
     "id": "DKR-04-017",
@@ -247,7 +252,7 @@
       "docker export monvolume"
     ],
     "correct": 0,
-    "explication": "Monter le volume dans un conteneur temporaire et tar."
+    "explanation": "Monter le volume dans un conteneur temporaire et tar."
   },
   {
     "id": "DKR-04-018",
@@ -262,7 +267,7 @@
       "docker volume import"
     ],
     "correct": 0,
-    "explication": "Utiliser un conteneur temporaire pour extraire l'archive."
+    "explanation": "Utiliser un conteneur temporaire pour extraire l'archive."
   },
   {
     "id": "DKR-04-019",
@@ -277,7 +282,7 @@
       "L'utilisateur nobody"
     ],
     "correct": 0,
-    "explication": "Les permissions dépendent de l'UID dans le conteneur."
+    "explanation": "Les permissions dépendent de l'UID dans le conteneur."
   },
   {
     "id": "DKR-04-020",
@@ -292,7 +297,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Il faut aligner les UID entre l'hôte et le conteneur."
+    "explanation": "Il faut aligner les UID entre l'hôte et le conteneur."
   },
   {
     "id": "DKR-04-021",
@@ -300,9 +305,14 @@
     "theme_label": "Volume drivers",
     "difficulty": "hard",
     "question": "Quel driver de volume est utilisé par défaut ?",
-    "options": ["local", "default", "native", "builtin"],
+    "options": [
+      "local",
+      "default",
+      "native",
+      "builtin"
+    ],
     "correct": 0,
-    "explication": "Le driver local gère les volumes sur le système de fichiers de l'hôte."
+    "explanation": "Le driver local gère les volumes sur le système de fichiers de l'hôte."
   },
   {
     "id": "DKR-04-022",
@@ -317,7 +327,7 @@
       "docker volume create --driver <plugin>"
     ],
     "correct": 0,
-    "explication": "Les plugins se gèrent via docker plugin."
+    "explanation": "Les plugins se gèrent via docker plugin."
   },
   {
     "id": "DKR-04-023",
@@ -325,9 +335,14 @@
     "theme_label": "Bind mounts vs volumes",
     "difficulty": "easy",
     "question": "Quel type de montage est recommandé pour la persistance des données ?",
-    "options": ["Volumes", "Bind mounts", "tmpfs", "Les deux"],
+    "options": [
+      "Volumes",
+      "Bind mounts",
+      "tmpfs",
+      "Les deux"
+    ],
     "correct": 0,
-    "explication": "Les volumes sont plus portables et sécurisés."
+    "explanation": "Les volumes sont plus portables et sécurisés."
   },
   {
     "id": "DKR-04-024",
@@ -335,9 +350,14 @@
     "theme_label": "Bind mounts vs volumes",
     "difficulty": "easy",
     "question": "Quel type de montage permet de partager des fichiers de configuration entre l'hôte et le conteneur ?",
-    "options": ["Bind mounts", "Volumes", "tmpfs", "Named pipes"],
+    "options": [
+      "Bind mounts",
+      "Volumes",
+      "tmpfs",
+      "Named pipes"
+    ],
     "correct": 0,
-    "explication": "Bind mount permet de monter un fichier ou répertoire de l'hôte."
+    "explanation": "Bind mount permet de monter un fichier ou répertoire de l'hôte."
   },
   {
     "id": "DKR-04-025",
@@ -352,7 +372,7 @@
       "Illimitée"
     ],
     "correct": 0,
-    "explication": "tmpfs utilise la mémoire, donc limitée par la RAM de l'hôte."
+    "explanation": "tmpfs utilise la mémoire, donc limitée par la RAM de l'hôte."
   },
   {
     "id": "DKR-04-026",
@@ -367,7 +387,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "On peut spécifier la taille (ex: 100m)."
+    "explanation": "On peut spécifier la taille (ex: 100m)."
   },
   {
     "id": "DKR-04-027",
@@ -382,7 +402,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "docker system df montre l'utilisation globale, volume ls --size montre la taille de chaque volume."
+    "explanation": "docker system df montre l'utilisation globale, volume ls --size montre la taille de chaque volume."
   },
   {
     "id": "DKR-04-028",
@@ -397,7 +417,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "On ne peut pas supprimer un volume attaché à un conteneur en cours."
+    "explanation": "On ne peut pas supprimer un volume attaché à un conteneur en cours."
   },
   {
     "id": "DKR-04-029",
@@ -405,9 +425,14 @@
     "theme_label": "Volume drivers",
     "difficulty": "hard",
     "question": "Quel plugin de volume permet le chiffrement ?",
-    "options": ["Volume plugins tiers (ex: netapp, rexray)", "local", "overlay", "bind"],
+    "options": [
+      "Volume plugins tiers (ex: netapp, rexray)",
+      "local",
+      "overlay",
+      "bind"
+    ],
     "correct": 0,
-    "explication": "Certains plugins offrent le chiffrement au repos."
+    "explanation": "Certains plugins offrent le chiffrement au repos."
   },
   {
     "id": "DKR-04-030",
@@ -422,7 +447,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les options sont passées avec --opt lors de la création du volume."
+    "explanation": "Les options sont passées avec --opt lors de la création du volume."
   },
   {
     "id": "DKR-04-031",
@@ -437,7 +462,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Accès direct ou via conteneur temporaire."
+    "explanation": "Accès direct ou via conteneur temporaire."
   },
   {
     "id": "DKR-04-032",
@@ -452,7 +477,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Plusieurs méthodes (cp ou conteneur temporaire)."
+    "explanation": "Plusieurs méthodes (cp ou conteneur temporaire)."
   },
   {
     "id": "DKR-04-033",
@@ -467,7 +492,7 @@
       "Supprime un volume"
     ],
     "correct": 0,
-    "explication": "VOLUME /data empêche de modifier le contenu dans le Dockerfile."
+    "explanation": "VOLUME /data empêche de modifier le contenu dans le Dockerfile."
   },
   {
     "id": "DKR-04-034",
@@ -482,7 +507,7 @@
       "Non, jamais"
     ],
     "correct": 1,
-    "explication": "Les instructions avant VOLUME sont incluses dans le volume initial."
+    "explanation": "Les instructions avant VOLUME sont incluses dans le volume initial."
   },
   {
     "id": "DKR-04-035",
@@ -497,7 +522,7 @@
       "Volume non persistant"
     ],
     "correct": 0,
-    "explication": "Les volumes anonymes sont difficiles à gérer (nom généré)."
+    "explanation": "Les volumes anonymes sont difficiles à gérer (nom généré)."
   },
   {
     "id": "DKR-04-036",
@@ -512,7 +537,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les volumes nommés sont recommandés pour la persistance."
+    "explanation": "Les volumes nommés sont recommandés pour la persistance."
   },
   {
     "id": "DKR-04-037",
@@ -527,7 +552,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "On peut utiliser le même volume nommé ou --volumes-from."
+    "explanation": "On peut utiliser le même volume nommé ou --volumes-from."
   },
   {
     "id": "DKR-04-038",
@@ -542,7 +567,7 @@
       "Supprime les volumes"
     ],
     "correct": 0,
-    "explication": "docker run --volumes-from conteneur_source ..."
+    "explanation": "docker run --volumes-from conteneur_source ..."
   },
   {
     "id": "DKR-04-039",
@@ -557,7 +582,7 @@
       "Options pour les réseaux"
     ],
     "correct": 0,
-    "explication": "Ces modes améliorent les performances des bind mounts sur Docker Desktop."
+    "explanation": "Ces modes améliorent les performances des bind mounts sur Docker Desktop."
   },
   {
     "id": "DKR-04-040",
@@ -565,9 +590,14 @@
     "theme_label": "Volume drivers",
     "difficulty": "hard",
     "question": "Quel driver de volume est utilisé par Docker Desktop pour les partages Mac ?",
-    "options": ["osxfs", "fuse", "virtiofs", "9p"],
+    "options": [
+      "osxfs",
+      "fuse",
+      "virtiofs",
+      "9p"
+    ],
     "correct": 0,
-    "explication": "osxfs (ancien), maintenant virtiofs plus performant."
+    "explanation": "osxfs (ancien), maintenant virtiofs plus performant."
   },
   {
     "id": "DKR-04-041",
@@ -582,7 +612,7 @@
       "docker save volume"
     ],
     "correct": 0,
-    "explication": "La méthode standard est de sauvegarder en archive et de restaurer."
+    "explanation": "La méthode standard est de sauvegarder en archive et de restaurer."
   },
   {
     "id": "DKR-04-042",
@@ -590,9 +620,14 @@
     "theme_label": "Volume performance",
     "difficulty": "hard",
     "question": "Quel type de montage offre les meilleures performances ?",
-    "options": ["tmpfs (mémoire)", "volumes", "bind mounts", "tous identiques"],
+    "options": [
+      "tmpfs (mémoire)",
+      "volumes",
+      "bind mounts",
+      "tous identiques"
+    ],
     "correct": 0,
-    "explication": "tmpfs est en mémoire, donc très rapide mais non persistant."
+    "explanation": "tmpfs est en mémoire, donc très rapide mais non persistant."
   },
   {
     "id": "DKR-04-043",
@@ -607,7 +642,7 @@
       "Les volumes sont plus lents"
     ],
     "correct": 0,
-    "explication": "Les bind mounts traversent la couche de virtualisation, donc plus lents."
+    "explanation": "Les bind mounts traversent la couche de virtualisation, donc plus lents."
   },
   {
     "id": "DKR-04-044",
@@ -622,7 +657,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Souvent le problème vient des permissions UID/GID."
+    "explanation": "Souvent le problème vient des permissions UID/GID."
   },
   {
     "id": "DKR-04-045",
@@ -637,7 +672,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "inspect donne les conteneurs utilisateurs, ps peut filtrer."
+    "explanation": "inspect donne les conteneurs utilisateurs, ps peut filtrer."
   },
   {
     "id": "DKR-04-046",
@@ -652,7 +687,7 @@
       "Ne pas copier les permissions"
     ],
     "correct": 0,
-    "explication": "Lorsqu'un volume vide est monté, Docker copie par défaut le contenu existant. nocopy l'empêche."
+    "explanation": "Lorsqu'un volume vide est monté, Docker copie par défaut le contenu existant. nocopy l'empêche."
   },
   {
     "id": "DKR-04-047",
@@ -667,7 +702,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "On peut monter un fichier, mais la cible doit être un fichier."
+    "explanation": "On peut monter un fichier, mais la cible doit être un fichier."
   },
   {
     "id": "DKR-04-048",
@@ -682,7 +717,7 @@
       "Permissions"
     ],
     "correct": 0,
-    "explication": "Utilisé sur les systèmes SELinux (RHEL/CentOS)."
+    "explanation": "Utilisé sur les systèmes SELinux (RHEL/CentOS)."
   },
   {
     "id": "DKR-04-049",
@@ -697,7 +732,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le driver doit être installé au préalable."
+    "explanation": "Le driver doit être installé au préalable."
   },
   {
     "id": "DKR-04-050",
@@ -705,8 +740,350 @@
     "theme_label": "Volume drivers",
     "difficulty": "hard",
     "question": "Quel plugin de volume est souvent utilisé avec AWS EBS ?",
-    "options": ["rexray/ebs", "docker-volume-ebs", "aws-ebs-plugin", "local"],
+    "options": [
+      "rexray/ebs",
+      "docker-volume-ebs",
+      "aws-ebs-plugin",
+      "local"
+    ],
     "correct": 0,
-    "explication": "REX-Ray est un plugin populaire pour EBS."
+    "explanation": "REX-Ray est un plugin populaire pour EBS."
+  },
+  {
+    "id": "DCK-VES-001",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les volume drivers :",
+    "options": [
+      "Les volume drivers gèrent le stockage des volumes.",
+      "Docker utilise un seul driver par défaut pour tous les volumes.",
+      "Les volume drivers peuvent être spécifiés lors de la création d'un volume.",
+      "Tous les drivers sont automatisés et nécessitent pas de configuration manuelle."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les volume drivers gèrent le stockage des volumes (A correct). Docker utilise un seul driver par défaut pour tous les volumes (B incorrect, il peut y avoir plusieurs drivers). Les volume drivers peuvent être spécifiés lors de la création d'un volume (C correct). Tous les drivers ne sont pas automatisés et nécessitent souvent une configuration manuelle (D incorrect)."
+  },
+  {
+    "id": "DCK-VES-002",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un bind mount et un volume ?",
+    "options": [
+      "Un bind mount monte une partie du système de fichiers hôte dans le conteneur, tandis qu'un volume est géré par Docker.",
+      "Un bind mount est stocké sur le système de fichiers du hôte, tandis qu'un volume est stocké dans un répertoire spécifique de Docker.",
+      "Un bind mount nécessite une configuration manuelle, tandis qu'un volume est automatiquement configuré par Docker.",
+      "Aucune différence entre les deux."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un bind mount monte une partie du système de fichiers hôte dans le conteneur (A correct). Un bind mount est stocké sur le système de fichiers du hôte, tandis qu'un volume est stocké dans un répertoire spécifique de Docker (B correct). Un bind mount nécessite une configuration manuelle, tandis qu'un volume est automatiquement configuré par Docker (C correct). Aucune différence entre les deux (D incorrect)."
+  },
+  {
+    "id": "DCK-VES-003",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les named volumes :",
+    "options": [
+      "Les named volumes sont stockés dans un répertoire spécifique de Docker.",
+      "Les named volumes peuvent être partagés entre plusieurs conteneurs.",
+      "Les named volumes ne nécessitent pas de configuration manuelle lors de leur création.",
+      "Tous les named volumes sont automatiquement supprimés lorsque le conteneur est supprimé."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les named volumes sont stockés dans un répertoire spécifique de Docker (A correct). Les named volumes peuvent être partagés entre plusieurs conteneurs (B correct). Les named volumes ne nécessitent pas de configuration manuelle lors de leur création (C incorrect, ils peuvent nécessiter une configuration spécifique). Tous les named volumes ne sont pas automatiquement supprimés lorsque le conteneur est supprimé (D incorrect, ils peuvent être conservés même après la suppression du conteneur)."
+  },
+  {
+    "id": "DCK-VES-004",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les options de volume :",
+    "options": [
+      "Les options de volume permettent de spécifier des paramètres supplémentaires lors de la création d'un volume.",
+      "Les options de volume peuvent être utilisées pour définir des permissions sur les volumes.",
+      "Les options de volume sont spécifiques aux drivers de volume et peuvent varier d'un driver à l'autre.",
+      "Toutes les options de volume sont automatiquement appliquées aux volumes lors de leur création."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les options de volume permettent de spécifier des paramètres supplémentaires lors de la création d'un volume (A correct). Les options de volume peuvent être utilisées pour définir des permissions sur les volumes (B correct). Les options de volume sont spécifiques aux drivers de volume et peuvent varier d'un driver à l'autre (C correct). Toutes les options de volume ne sont pas automatiquement appliquées aux volumes lors de leur création (D incorrect, elles doivent être spécifiées explicitement)."
+  },
+  {
+    "id": "DCK-VES-005",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume permissions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment définir les permissions sur un volume lors de sa création ?",
+    "options": [
+      "docker volume create --permission 755 monvolume",
+      "docker run -v monvolume:/data:rw",
+      "docker volume create --mode 755 monvolume",
+      "A et C"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Les permissions sur un volume peuvent être définies lors de sa création avec l'option --mode (C correct). Les permissions sur un volume peuvent également être définies lors de la montée du volume avec le paramètre :rw (B incorrect, il n'y a pas d'option --permission). Aucune des options ne permet de définir les permissions (A incorrect, il n'y a pas d'option --permission). A et C (D incorrect, seule l'option --mode est correcte)."
+  },
+  {
+    "id": "DCK-VES-006",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les volume drivers :",
+    "options": [
+      "Les volume drivers permettent de stocker des données en dehors du système d'exploitation hôte.",
+      "Les volume drivers sont utilisés pour partager des données entre plusieurs conteneurs.",
+      "Les volume drivers ne peuvent être utilisés que sur les systèmes d'exploitation Linux.",
+      "Les volume drivers sont disponibles uniquement pour les conteneurs Docker sur Windows."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les volume drivers permettent de stocker des données en dehors du système d'exploitation hôte (correct). Ils sont utilisés pour partager des données entre plusieurs conteneurs (correct). Les volume drivers ne peuvent être utilisés que sur les systèmes d'exploitation Linux (incorrect). Les volume drivers sont disponibles pour les conteneurs Docker sur tous les systèmes d'exploitation pris en charge par Docker (incorrect)."
+  },
+  {
+    "id": "DCK-VES-007",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volumes",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour créer un volume nommé ?",
+    "options": [
+      "docker volume create monvolume",
+      "docker run -v monvolume:/data",
+      "docker run --volume monvolume:/data",
+      "A et B"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker volume create monvolume (option 0). Les options B et C sont des utilisations de volumes, mais elles ne créent pas le volume. L'option D est incorrecte car elle ne correspond à aucune des options correctes."
+  },
+  {
+    "id": "DCK-VES-008",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les bind mounts :",
+    "options": [
+      "Les bind mounts permettent de monter un fichier ou un répertoire du système d'exploitation hôte dans le conteneur.",
+      "Les bind mounts sont utilisés pour partager des données entre plusieurs conteneurs.",
+      "Les bind mounts ne peuvent être utilisés que sur les systèmes d'exploitation Linux.",
+      "Les bind mounts sont disponibles uniquement pour les conteneurs Docker sur Windows."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les bind mounts permettent de monter un fichier ou un répertoire du système d'exploitation hôte dans le conteneur (correct). Ils sont utilisés pour partager des données entre plusieurs conteneurs (correct). Les bind mounts ne peuvent être utilisés que sur les systèmes d'exploitation Linux (incorrect). Les bind mounts sont disponibles pour les conteneurs Docker sur tous les systèmes d'exploitation pris en charge par Docker (incorrect)."
+  },
+  {
+    "id": "DCK-VES-009",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Named volumes",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un named volume et un anonymous volume ?",
+    "options": [
+      "Un named volume est stocké sur le système d'exploitation hôte, tandis qu'un anonymous volume est stocké dans un conteneur.",
+      "Un named volume peut être partagé entre plusieurs conteneurs, tandis qu'un anonymous volume ne peut pas.",
+      "Un named volume est persistant même après la suppression d'un conteneur, tandis qu'un anonymous volume est éphémère.",
+      "A et C"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Un named volume est persistant même après la suppression d'un conteneur (correct). Un anonymous volume est éphémère (correct). Les options A et B sont incorrectes car elles ne décrivent pas correctement la différence entre named volumes et anonymous volumes."
+  },
+  {
+    "id": "DCK-VES-010",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la commande pour créer un volume avec une taille limitée de 10GB ?",
+    "options": [
+      "docker volume create --size=10G monvolume",
+      "docker run -v 10G:monvolume:/data",
+      "docker volume create --limit=10G monvolume",
+      "A et B"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande correcte est docker volume create --size=10G monvolume (option 0). Les options B et C sont incorrectes car elles ne contiennent pas l'option --size. L'option D est incorrecte car elle ne correspond à aucune des options correctes."
+  },
+  {
+    "id": "DCK-VES-011",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les options de volume :",
+    "options": [
+      "docker volume create --driver local myvolume",
+      "docker volume create --opt type=tmpfs myvolume",
+      "docker volume create --driver none myvolume",
+      "docker volume create --opt device=/dev/sda1 myvolume"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "docker volume create --driver local myvolume est correct car elle utilise un driver spécifique. docker volume create --opt type=tmpfs myvolume est correct car elle spécifie le type de stockage tmpfs. docker volume create --driver none myvolume est incorrect car le driver 'none' n'est pas utilisé pour créer des volumes. docker volume create --opt device=/dev/sda1 myvolume est incorrect car elle spécifie un périphérique physique, ce qui n'est pas recommandé pour les volumes Docker."
+  },
+  {
+    "id": "DCK-VES-012",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts vs volumes",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre les bind mounts et les volumes en termes de persistance des données ?",
+    "options": [
+      "Les bind mounts sont persistants même après la suppression du conteneur, tandis que les volumes ne le sont pas.",
+      "Les volumes sont persistants même après la suppression du conteneur, tandis que les bind mounts ne le sont pas.",
+      "Les volumes et les bind mounts ont la même durée de vie que le conteneur.",
+      "Aucune différence entre les deux."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Les volumes sont persistants même après la suppression du conteneur, tandis que les bind mounts ne le sont pas. Les volumes sont gérés par Docker et stockés dans un emplacement spécifique, tandis que les bind mounts utilisent des chemins de fichiers sur le système hôte."
+  },
+  {
+    "id": "DCK-VES-013",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les performances des volumes :",
+    "options": [
+      "Les volumes tmpfs sont généralement les plus rapides car ils utilisent la mémoire du système.",
+      "Les volumes nommés sont généralement plus lents que les volumes anonymes car ils nécessitent des opérations supplémentaires.",
+      "Les bind mounts sont généralement plus rapides que les volumes car ils utilisent directement le système de fichiers.",
+      "Les volumes sont généralement plus lents que les bind mounts car ils nécessitent des opérations supplémentaires."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les volumes tmpfs sont généralement les plus rapides car ils utilisent la mémoire du système. Les volumes nommés ne sont généralement pas plus lents que les volumes anonymes, bien qu'ils puissent nécessiter des opérations supplémentaires. Les bind mounts sont généralement plus rapides que les volumes car ils utilisent directement le système de fichiers. Les volumes ne sont généralement pas plus lents que les bind mounts, bien qu'ils puissent nécessiter des opérations supplémentaires."
+  },
+  {
+    "id": "DCK-VES-014",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume backup",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure méthode pour sauvegarder un volume Docker ?",
+    "options": [
+      "Sauvegarder le répertoire du volume sur le système hôte.",
+      "Utiliser la commande docker volume backup.",
+      "Sauvegarder le conteneur associé au volume.",
+      "Aucune méthode de sauvegarde."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La meilleure méthode pour sauvegarder un volume Docker est de sauvegarder le répertoire du volume sur le système hôte. Cela permet une sauvegarde complète et facile à restaurer."
+  },
+  {
+    "id": "DCK-VES-015",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume permissions",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les permissions des volumes :",
+    "options": [
+      "Les permissions des volumes sont héritées du système hôte.",
+      "Les permissions des volumes peuvent être définies spécifiquement lors de la création du volume.",
+      "Les permissions des volumes sont toujours les mêmes pour tous les conteneurs utilisant le même volume.",
+      "Les permissions des volumes ne peuvent être modifiées que lors de la création du volume."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les permissions des volumes sont héritées du système hôte. Les permissions des volumes peuvent être définies spécifiquement lors de la création du volume. Les permissions des volumes ne sont pas toujours les mêmes pour tous les conteneurs utilisant le même volume. Les permissions des volumes peuvent être modifiées lors de l'utilisation du volume par un conteneur."
+  },
+  {
+    "id": "DCK-VES-016",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume drivers",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les volume drivers :",
+    "options": [
+      "Les volume drivers gèrent la persistance des données.",
+      "Les volume drivers peuvent être utilisés pour stocker des données en mémoire.",
+      "Les volume drivers ne sont pas nécessaires pour utiliser les volumes Docker.",
+      "Les volume drivers peuvent être spécifiés lors de la création d'un volume."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les volume drivers gèrent la persistance des données (correct). Les volume drivers peuvent être utilisés pour stocker des données en mémoire (incorrect, les tmpfs sont utilisés pour cela). Les volume drivers ne sont pas nécessaires pour utiliser les volumes Docker (incorrect, ils facilitent la gestion des données). Les volume drivers peuvent être spécifiés lors de la création d'un volume (correct)."
+  },
+  {
+    "id": "DCK-VES-017",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Bind mounts",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un bind mount et un volume Docker ?",
+    "options": [
+      "Un bind mount est stocké sur le système d'exploitation hôte, tandis qu'un volume Docker est géré par Docker.",
+      "Un bind mount peut être utilisé pour partager des données entre conteneurs, tandis qu'un volume Docker ne le peut pas.",
+      "Un bind mount est moins flexible que un volume Docker.",
+      "Aucune différence entre les deux."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un bind mount est stocké sur le système d'exploitation hôte, tandis qu'un volume Docker est géré par Docker (correct). Un bind mount peut être utilisé pour partager des données entre conteneurs, tandis qu'un volume Docker ne le peut pas (incorrect). Un bind mount est moins flexible que un volume Docker (incorrect, les volumes Docker offrent plus de fonctionnalités). Aucune différence entre les deux (incorrect)."
+  },
+  {
+    "id": "DCK-VES-018",
+    "theme": "Volumes et Stockage",
+    "theme_label": "Volume options",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les options de volume :",
+    "options": [
+      "Les options de volume peuvent être utilisées pour spécifier des permissions sur un volume.",
+      "Les options de volume ne sont pas disponibles pour les bind mounts.",
+      "Les options de volume peuvent être utilisées pour définir des limites de mémoire sur un volume.",
+      "Les options de volume ne sont pas disponibles pour les tmpfs mounts."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les options de volume peuvent être utilisées pour spécifier des permissions sur un volume (correct). Les options de volume ne sont pas disponibles pour les bind mounts (incorrect, les options de volume peuvent être utilisées avec les bind mounts). Les options de volume peuvent être utilisées pour définir des limites de mémoire sur un volume (correct). Les options de volume ne sont pas disponibles pour les tmpfs mounts (incorrect, les tmpfs mounts ont des limites de mémoire définies par Docker)."
   }
 ]

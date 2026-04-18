@@ -1,0 +1,542 @@
+[
+  {
+    "id": "PODMAN-IMG-001",
+    "theme": "Gestion des images",
+    "theme_label": "Build",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande construit une image à partir d'un Containerfile dans le répertoire courant ?",
+    "options": [
+      "podman build -t monimage .",
+      "podman image build -t monimage .",
+      "podman create image monimage .",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman build` et `podman image build` sont deux syntaxes équivalentes pour construire une image."
+  },
+  {
+    "id": "PODMAN-IMG-002",
+    "theme": "Gestion des images",
+    "theme_label": "Registres",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les actions qui nécessitent une connexion préalable à un registre privé (`podman login`).",
+    "options": [
+      "podman push monimage docker://registry.exemple.com/monimage",
+      "podman pull registry.exemple.com/autreimage",
+      "podman search registry.exemple.com/monimage",
+      "podman tag monimage registry.exemple.com/monimage",
+      "podman rmi registry.exemple.com/monimage"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Le push (A) et le pull (B) depuis un registre privé nécessitent une authentification. `search` (C) peut fonctionner sans login si le registre autorise l'accès anonyme. `tag` (D) et `rmi` (E) sont des opérations locales."
+  },
+  {
+    "id": "PODMAN-IMG-003",
+    "theme": "Gestion des images",
+    "theme_label": "Tag",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande renomme une image locale 'old:latest' en 'new:1.0' ?",
+    "options": [
+      "podman tag old:latest new:1.0",
+      "podman image tag old:latest new:1.0",
+      "podman rename old:latest new:1.0",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman tag` et `podman image tag` sont équivalentes. `rename` n'existe pas pour les images."
+  },
+  {
+    "id": "PODMAN-IMG-004",
+    "theme": "Gestion des images",
+    "theme_label": "Multi-stage builds",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels avantages offrent les builds multi‑étapes (multi‑stage) dans un Containerfile ?",
+    "options": [
+      "Réduire la taille finale de l'image.",
+      "Séparer les dépendances de build des dépendances d'exécution.",
+      "Améliorer la sécurité en ne conservant que l'artefact final.",
+      "Permettre l'utilisation de plusieurs images de base différentes dans un même Containerfile.",
+      "Accélérer le processus de build grâce à la parallélisation automatique."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Les multi‑stage builds réduisent la taille (A), isolent les dépendances (B), améliorent la sécurité (C) et permettent plusieurs images FROM (D). La parallélisation (E) n'est pas automatique."
+  },
+  {
+    "id": "PODMAN-IMG-005",
+    "theme": "Gestion des images",
+    "theme_label": "Sauvegarde",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment exporter une image Podman vers un fichier tar pour transfert ?",
+    "options": [
+      "podman save -o monimage.tar monimage",
+      "podman export monimage -o monimage.tar",
+      "podman image save monimage -o monimage.tar",
+      "A et C"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman save` et `podman image save` produisent une archive tar de l'image. `export` (B) exporte le système de fichiers d'un conteneur, pas une image."
+  },
+  {
+    "id": "PODMAN-IMG-006",
+    "theme": "Gestion des images",
+    "theme_label": "Docker compatibilité",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant la compatibilité entre Podman et Docker sont correctes ?",
+    "options": [
+      "Podman peut exécuter des images construites par Docker.",
+      "Les Containerfiles écrits pour Docker fonctionnent sans modification avec `podman build`.",
+      "L'alias `docker` peut être redirigé vers `podman` via `alias docker=podman`.",
+      "Podman supporte l'API socket de Docker pour les outils comme docker-compose.",
+      "Les volumes nommés créés avec Docker sont automatiquement réutilisés par Podman."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Podman est compatible avec les images Docker (A) et les Containerfile (B). L'alias (C) fonctionne pour les commandes de base. Podman peut exposer une socket compatible Docker via `podman system service` (D). Les volumes ne sont pas partagés (E faux)."
+  },
+  {
+    "id": "PODMAN-IMG-007",
+    "theme": "Gestion des images",
+    "theme_label": "Podman pull",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande télécharge une image depuis un registre ?",
+    "options": ["podman pull alpine", "podman download alpine", "podman fetch alpine", "podman image get alpine"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman pull` est la commande standard pour télécharger une image."
+  },
+  {
+    "id": "PODMAN-IMG-008",
+    "theme": "Gestion des images",
+    "theme_label": "Podman search",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande recherche des images dans un registre (ex: Docker Hub) ?",
+    "options": ["podman search nginx", "podman find nginx", "podman query nginx", "podman list nginx"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman search` interroge le registre configuré (par défaut Docker Hub) et affiche les images correspondantes."
+  },
+  {
+    "id": "PODMAN-IMG-009",
+    "theme": "Gestion des images",
+    "theme_label": "Podman rmi",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles commandes suppriment une image locale ?",
+    "options": [
+      "podman rmi monimage",
+      "podman image rm monimage",
+      "podman image delete monimage",
+      "podman remove image monimage",
+      "podman image remove monimage"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "`podman rmi` et `podman image rm` sont les commandes correctes. Les autres variantes n'existent pas."
+  },
+  {
+    "id": "PODMAN-IMG-010",
+    "theme": "Gestion des images",
+    "theme_label": "Podman history",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Que montre `podman history monimage` ?",
+    "options": [
+      "La liste des couches qui composent l'image, avec leur commande de création et leur taille.",
+      "L'historique des exécutions de conteneurs basés sur cette image.",
+      "Les tags précédents de l'image.",
+      "Les vulnérabilités connues de l'image."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman history` affiche les couches de l'image telles que définies dans le Containerfile."
+  },
+  {
+    "id": "PODMAN-IMG-011",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image prune",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle option supprime toutes les images non utilisées, y compris celles avec plusieurs tags ?",
+    "options": ["podman image prune -a", "podman image prune --all", "podman rmi -a", "A et B"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman image prune -a` ou `--all` supprime toutes les images qui ne sont pas utilisées par au moins un conteneur. `podman rmi -a` tente de supprimer toutes les images, mais échoue si certaines sont utilisées."
+  },
+  {
+    "id": "PODMAN-IMG-012",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image sign",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de signer une image avec GPG ?",
+    "options": ["podman image sign", "podman sign image", "podman trust sign", "podman image trust"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman image sign` utilise les clés GPG configurées pour signer l'image, garantissant son intégrité."
+  },
+  {
+    "id": "PODMAN-IMG-013",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image trust",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment configurer la politique de confiance pour un registre (ex: accepter seulement les images signées) ?",
+    "options": [
+      "Modifier le fichier /etc/containers/policy.json",
+      "Utiliser `podman trust set`",
+      "Définir la variable d'environnement PODMAN_TRUST",
+      "Via l'option --trust-policy au pull"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La politique de signature est définie dans `policy.json`. `podman image trust set` est un outil pour gérer les clés de signature, pas la politique."
+  },
+  {
+    "id": "PODMAN-IMG-014",
+    "theme": "Gestion des images",
+    "theme_label": "Podman build --squash",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fait l'option `--squash` lors du build d'une image ?",
+    "options": [
+      "Fusionne toutes les couches de l'image en une seule couche, réduisant la taille finale.",
+      "Compresse l'image avec gzip.",
+      "Supprime les fichiers temporaires.",
+      "Ignore les couches du cache."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--squash` (expérimental) aplatit l'image en une seule couche, ce qui peut réduire la taille mais perd les bénéfices du cache et de la réutilisation des couches."
+  },
+  {
+    "id": "PODMAN-IMG-015",
+    "theme": "Gestion des images",
+    "theme_label": "Podman build --cache-from",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert l'option `--cache-from` ?",
+    "options": [
+      "Utiliser une image externe (ex: depuis un registre) comme source de cache pour accélérer le build",
+      "Spécifier un répertoire de cache local",
+      "Ignorer le cache pour certaines étapes",
+      "Définir une durée de validité du cache"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--cache-from` permet de réutiliser les couches d'une image distante, utile dans les environnements CI où le cache local n'est pas persistant."
+  },
+  {
+    "id": "PODMAN-IMG-016",
+    "theme": "Gestion des images",
+    "theme_label": "Podman manifest",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que permet de faire `podman manifest` ?",
+    "options": [
+      "Créer et gérer des listes de manifestes pour les images multi‑architectures (ex: amd64 et arm64 sous le même tag).",
+      "Afficher le contenu d'une couche d'image.",
+      "Lister les fichiers modifiés dans une image.",
+      "Générer un Containerfile à partir d'une image."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman manifest` est l'outil pour construire des images multi‑arch, regroupant plusieurs images spécifiques à une architecture sous une seule référence."
+  },
+  {
+    "id": "PODMAN-IMG-017",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image scp",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment transférer une image directement entre deux hôtes via SSH sans passer par un registre ?",
+    "options": [
+      "podman image scp monimage user@remote::",
+      "scp monimage.tar user@remote: && podman load",
+      "podman save | ssh user@remote podman load",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman image scp` est la méthode native. Les combinaisons save/load via SSH fonctionnent aussi."
+  },
+  {
+    "id": "PODMAN-IMG-018",
+    "theme": "Gestion des images",
+    "theme_label": "Podman build --secret",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment passer un secret (ex: clé SSH) au build sans le laisser dans l'image finale ?",
+    "options": [
+      "Utiliser `--secret id=myssh,src=$HOME/.ssh/id_rsa` et `RUN --mount=type=secret,id=myssh`",
+      "Utiliser `--build-arg`",
+      "Monter un volume avec `-v`",
+      "Copier le secret puis le supprimer dans le Containerfile"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les secrets de build (BuildKit) permettent de monter temporairement un fichier sensible pendant le build sans qu'il ne persiste dans l'image."
+  },
+  {
+    "id": "PODMAN-IMG-019",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image tree",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande affiche une arborescence des couches d'une image ?",
+    "options": ["podman image tree monimage", "podman image layers monimage", "podman image history --tree monimage", "podman image graph monimage"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman image tree` montre la hiérarchie des couches et leur taille de manière visuelle."
+  },
+  {
+    "id": "PODMAN-IMG-020",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image exists",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment vérifier si une image existe localement ?",
+    "options": ["podman image exists monimage", "podman images | grep monimage", "podman inspect monimage", "Toutes ces réponses"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman image exists` retourne un code de sortie. Les autres commandes permettent aussi de le vérifier."
+  },
+  {
+    "id": "PODMAN-IMG-021",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image mount",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fait `podman image mount monimage` ?",
+    "options": [
+      "Monter le système de fichiers de l'image dans un répertoire de l'hôte pour inspection",
+      "Monter l'image comme volume dans un conteneur",
+      "Rendre l'image accessible à d'autres utilisateurs",
+      "Attacher un tag à l'image"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman image mount` expose le contenu de l'image en lecture seule sur le système de fichiers hôte, utile pour le débogage."
+  },
+  {
+    "id": "PODMAN-IMG-022",
+    "theme": "Gestion des images",
+    "theme_label": "Podman build --label",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment ajouter un label (métadonnée) à une image lors du build ?",
+    "options": ["podman build --label version=1.0 -t monimage .", "LABEL version=1.0 dans le Containerfile", "A et B", "podman build --metadata version=1.0"],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Les labels peuvent être définis dans le Containerfile avec `LABEL` ou passés en ligne de commande avec `--label`."
+  },
+  {
+    "id": "PODMAN-IMG-023",
+    "theme": "Gestion des images",
+    "theme_label": "Podman push",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande envoie une image vers un registre distant ?",
+    "options": ["podman push monimage docker://registry/monimage", "podman upload monimage", "podman publish monimage", "podman image upload"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman push` transfère l'image vers le registre spécifié."
+  },
+  {
+    "id": "PODMAN-IMG-024",
+    "theme": "Gestion des images",
+    "theme_label": "Podman load",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment importer une image depuis un fichier tar créé avec `podman save` ?",
+    "options": ["podman load -i monimage.tar", "podman import monimage.tar", "podman image load monimage.tar", "A et C"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman load` et `podman image load` sont les commandes pour charger une archive d'image."
+  },
+  {
+    "id": "PODMAN-IMG-025",
+    "theme": "Gestion des images",
+    "theme_label": "Podman import",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre `podman import` et `podman load` ?",
+    "options": [
+      "import crée une image à partir d'un système de fichiers (tar d'un conteneur exporté) sans historique ; load restaure une image complète avec ses couches.",
+      "import est pour les images Docker, load pour les images OCI.",
+      "import fonctionne uniquement en rootfull.",
+      "Il n'y a pas de différence."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman export` crée un tar du système de fichiers d'un conteneur. `podman import` le transforme en une image plate (une seule couche). `save/load` préservent l'historique et les couches."
+  },
+  {
+    "id": "PODMAN-IMG-026",
+    "theme": "Gestion des images",
+    "theme_label": "Containerfile ARG",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment utiliser une variable de build (ARG) dans un Containerfile ?",
+    "options": [
+      "ARG MA_VERSION\nRUN echo $MA_VERSION",
+      "ENV MA_VERSION=v1\nRUN echo $MA_VERSION",
+      "ARG MA_VERSION; RUN echo %MA_VERSION%",
+      "VAR MA_VERSION"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`ARG` définit une variable utilisable pendant le build. On peut la passer avec `--build-arg MA_VERSION=v1`."
+  },
+  {
+    "id": "PODMAN-IMG-027",
+    "theme": "Gestion des images",
+    "theme_label": "Containerfile ENTRYPOINT vs CMD",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelle est la différence entre ENTRYPOINT et CMD dans un Containerfile ?",
+    "options": [
+      "ENTRYPOINT définit la commande principale qui ne peut pas être écrasée facilement ; CMD fournit des arguments par défaut.",
+      "CMD est exécuté avant ENTRYPOINT.",
+      "Si les deux sont définis, CMD sert d'arguments à ENTRYPOINT.",
+      "ENTRYPOINT est obligatoire, CMD est optionnel.",
+      "Il n'y a pas de différence."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "ENTRYPOINT est le processus principal. CMD donne les paramètres par défaut. Si l'utilisateur passe une commande à `podman run`, elle remplace CMD mais pas ENTRYPOINT."
+  },
+  {
+    "id": "PODMAN-IMG-028",
+    "theme": "Gestion des images",
+    "theme_label": "Containerfile ADD vs COPY",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Pourquoi est-il recommandé d'utiliser COPY plutôt que ADD dans la plupart des cas ?",
+    "options": [
+      "COPY est plus simple et ne fait que copier des fichiers locaux ; ADD a des fonctionnalités supplémentaires (extraction d'archives, téléchargement) qui peuvent être sources d'erreurs.",
+      "ADD est déprécié.",
+      "COPY est plus rapide.",
+      "ADD ne fonctionne qu'avec des URLs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "COPY est explicite et sans surprise. ADD est conservé pour des cas spécifiques (ex: extraction automatique d'une archive tar)."
+  },
+  {
+    "id": "PODMAN-IMG-029",
+    "theme": "Gestion des images",
+    "theme_label": "Containerfile USER",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fait `USER 1001` dans un Containerfile ?",
+    "options": [
+      "Définit l'utilisateur (UID) sous lequel les commandes RUN, CMD et ENTRYPOINT suivantes seront exécutées.",
+      "Crée un nouvel utilisateur dans le conteneur.",
+      "Change le propriétaire des fichiers copiés.",
+      "Définit le nom d'utilisateur pour le login."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`USER` change l'utilisateur par défaut pour les processus lancés dans le conteneur. Il ne crée pas l'utilisateur (il faut le faire avant avec `RUN useradd`)."
+  },
+  {
+    "id": "PODMAN-IMG-030",
+    "theme": "Gestion des images",
+    "theme_label": "Podman build --platform",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment construire une image pour une architecture différente (ex: arm64 sur un hôte amd64) ?",
+    "options": [
+      "podman build --platform linux/arm64 -t monimage .",
+      "podman build --arch arm64 -t monimage .",
+      "podman build --target-arch arm64",
+      "Cela nécessite une machine virtuelle QEMU configurée automatiquement par Podman"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--platform` permet de spécifier l'architecture cible. Podman utilise QEMU user‑mode pour l'émulation si nécessaire."
+  },
+  {
+    "id": "PODMAN-IMG-031",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image untag",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment supprimer un tag spécifique d'une image sans supprimer l'image elle‑même ?",
+    "options": ["podman rmi monimage:tag", "podman image untag monimage:tag", "podman tag -d monimage:tag", "B et C"],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`podman image untag` supprime le tag. `podman rmi` supprimerait l'image si c'est le dernier tag. `podman tag -d` n'existe pas."
+  },
+  {
+    "id": "PODMAN-IMG-032",
+    "theme": "Gestion des images",
+    "theme_label": "Podman images --filter",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment lister uniquement les images intermédiaires (dangling) ?",
+    "options": ["podman images --filter dangling=true", "podman images --dangling", "podman images -a --filter intermediate=true", "podman image prune --dry-run"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les images dangling sont celles sans tag (ex: `<none>`). Le filtre `dangling=true` les affiche."
+  },
+  {
+    "id": "PODMAN-IMG-033",
+    "theme": "Gestion des images",
+    "theme_label": "Podman image digest",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment obtenir le hash (digest) d'une image pour garantir son immuabilité ?",
+    "options": ["podman image inspect --format='{{.Digest}}' monimage", "podman image digest monimage", "podman images --digests", "A et C"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman images --digests` affiche la colonne DIGEST. `podman inspect` permet d'extraire la valeur."
+  },
+  {
+    "id": "PODMAN-IMG-034",
+    "theme": "Gestion des images",
+    "theme_label": "Registres insecure",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Où configurer un registre privé non sécurisé (HTTP) pour Podman ?",
+    "options": [
+      "Dans /etc/containers/registries.conf, sous [[registry]] avec insecure = true",
+      "Dans /etc/docker/daemon.json",
+      "Via la variable d'environnement PODMAN_INSECURE_REGISTRIES",
+      "Avec l'option --insecure-registry à chaque commande"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La configuration des registres se trouve dans `registries.conf`. On peut y définir des registres `insecure` (HTTP)."
+  },
+  {
+    "id": "PODMAN-IMG-035",
+    "theme": "Gestion des images",
+    "theme_label": "Short-name aliases",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment configurer des alias de noms courts (ex: 'alpine' pointe vers 'docker.io/library/alpine') ?",
+    "options": [
+      "Dans /etc/containers/registries.conf.d/000-shortnames.conf",
+      "Dans /etc/containers/registries.conf",
+      "Via `podman image alias`",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Les alias de noms courts sont configurés dans des fichiers `registries.conf.d/`. On peut aussi les mettre dans le fichier principal."
+  }
+]

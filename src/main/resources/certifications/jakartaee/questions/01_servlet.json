@@ -5,7 +5,12 @@
     "theme_label": "Cycle de vie Servlet",
     "difficulty": "easy",
     "question": "Quelle méthode est appelée une seule fois lors du chargement d'une servlet ?",
-    "options": ["init()", "service()", "doGet()", "destroy()"],
+    "options": [
+      "init()",
+      "service()",
+      "doGet()",
+      "destroy()"
+    ],
     "correct": 0,
     "explanation": "init() est appelée une fois lors de l'initialisation de la servlet."
   },
@@ -15,7 +20,12 @@
     "theme_label": "Cycle de vie Servlet",
     "difficulty": "easy",
     "question": "Quelle méthode est appelée pour chaque requête HTTP ?",
-    "options": ["service()", "init()", "destroy()", "doGet()"],
+    "options": [
+      "service()",
+      "init()",
+      "destroy()",
+      "doGet()"
+    ],
     "correct": 0,
     "explanation": "service() distribue la requête aux méthodes doGet/doPost."
   },
@@ -25,7 +35,12 @@
     "theme_label": "Cycle de vie Servlet",
     "difficulty": "easy",
     "question": "Quelle méthode est appelée lors du déchargement de la servlet ?",
-    "options": ["destroy()", "init()", "service()", "finalize()"],
+    "options": [
+      "destroy()",
+      "init()",
+      "service()",
+      "finalize()"
+    ],
     "correct": 0,
     "explanation": "destroy() est appelée avant la suppression de la servlet."
   },
@@ -35,7 +50,12 @@
     "theme_label": "Annotations",
     "difficulty": "medium",
     "question": "Quelle annotation déclare une servlet ?",
-    "options": ["@WebServlet", "@Servlet", "@HttpServlet", "@WebService"],
+    "options": [
+      "@WebServlet",
+      "@Servlet",
+      "@HttpServlet",
+      "@WebService"
+    ],
     "correct": 0,
     "explanation": "@WebServlet est l'annotation pour déclarer une servlet."
   },
@@ -210,7 +230,12 @@
     "theme_label": "Session",
     "difficulty": "hard",
     "question": "Quel est l'ID de session par défaut ?",
-    "options": ["JSESSIONID", "SESSIONID", "ID", "JSESSION"],
+    "options": [
+      "JSESSIONID",
+      "SESSIONID",
+      "ID",
+      "JSESSION"
+    ],
     "correct": 0,
     "explanation": "Le nom du cookie de session est JSESSIONID."
   },
@@ -295,7 +320,12 @@
     "theme_label": "Listener",
     "difficulty": "hard",
     "question": "Quelle méthode est appelée au démarrage ?",
-    "options": ["contextInitialized()", "contextDestroyed()", "init()", "start()"],
+    "options": [
+      "contextInitialized()",
+      "contextDestroyed()",
+      "init()",
+      "start()"
+    ],
     "correct": 0,
     "explanation": "contextInitialized() au démarrage de l'application."
   },
@@ -305,7 +335,12 @@
     "theme_label": "Listener",
     "difficulty": "hard",
     "question": "Quelle annotation déclare un listener ?",
-    "options": ["@WebListener", "@Listener", "@ServletListener", "@ContextListener"],
+    "options": [
+      "@WebListener",
+      "@Listener",
+      "@ServletListener",
+      "@ContextListener"
+    ],
     "correct": 0,
     "explanation": "@WebListener est l'annotation pour les listeners."
   },
@@ -330,7 +365,12 @@
     "theme_label": "Filter",
     "difficulty": "medium",
     "question": "Quelle interface implémenter pour un filtre ?",
-    "options": ["Filter", "HttpFilter", "ServletFilter", "RequestFilter"],
+    "options": [
+      "Filter",
+      "HttpFilter",
+      "ServletFilter",
+      "RequestFilter"
+    ],
     "correct": 0,
     "explanation": "L'interface Filter est à implémenter."
   },
@@ -340,7 +380,12 @@
     "theme_label": "Filter",
     "difficulty": "hard",
     "question": "Quelle méthode est appelée pour chaque requête ?",
-    "options": ["doFilter()", "init()", "destroy()", "execute()"],
+    "options": [
+      "doFilter()",
+      "init()",
+      "destroy()",
+      "execute()"
+    ],
     "correct": 0,
     "explanation": "doFilter() traite chaque requête."
   },
@@ -365,7 +410,12 @@
     "theme_label": "Filter",
     "difficulty": "hard",
     "question": "Quelle annotation déclare un filtre ?",
-    "options": ["@WebFilter", "@Filter", "@ServletFilter", "@HttpFilter"],
+    "options": [
+      "@WebFilter",
+      "@Filter",
+      "@ServletFilter",
+      "@HttpFilter"
+    ],
     "correct": 0,
     "explanation": "@WebFilter est l'annotation pour les filtres."
   },
@@ -405,7 +455,12 @@
     "theme_label": "Async",
     "difficulty": "hard",
     "question": "Comment terminer un traitement asynchrone ?",
-    "options": ["asyncContext.complete()", "asyncContext.done()", "asyncContext.finish()", "asyncContext.end()"],
+    "options": [
+      "asyncContext.complete()",
+      "asyncContext.done()",
+      "asyncContext.finish()",
+      "asyncContext.end()"
+    ],
     "correct": 0,
     "explanation": "complete() termine le traitement asynchrone."
   },
@@ -460,7 +515,12 @@
     "theme_label": "Security",
     "difficulty": "hard",
     "question": "Quelle annotation déclare les rôles autorisés ?",
-    "options": ["@RolesAllowed", "@PermitAll", "@DenyAll", "Toutes ces réponses"],
+    "options": [
+      "@RolesAllowed",
+      "@PermitAll",
+      "@DenyAll",
+      "Toutes ces réponses"
+    ],
     "correct": 3,
     "explanation": "Les annotations JSR-250 sont supportées."
   },
@@ -605,7 +665,12 @@
     "theme_label": "Versions",
     "difficulty": "hard",
     "question": "Quelle version de Servlet est incluse dans Jakarta EE 10 ?",
-    "options": ["Servlet 6.0", "Servlet 5.0", "Servlet 4.0", "Servlet 3.1"],
+    "options": [
+      "Servlet 6.0",
+      "Servlet 5.0",
+      "Servlet 4.0",
+      "Servlet 3.1"
+    ],
     "correct": 0,
     "explanation": "Jakarta EE 10 inclut Servlet 6.0."
   },
@@ -615,7 +680,12 @@
     "theme_label": "Versions",
     "difficulty": "hard",
     "question": "Quelle version a introduit les annotations ?",
-    "options": ["Servlet 3.0", "Servlet 2.5", "Servlet 4.0", "Servlet 5.0"],
+    "options": [
+      "Servlet 3.0",
+      "Servlet 2.5",
+      "Servlet 4.0",
+      "Servlet 5.0"
+    ],
     "correct": 0,
     "explanation": "Servlet 3.0 a introduit les annotations @WebServlet, @WebFilter."
   },
@@ -625,7 +695,12 @@
     "theme_label": "Versions",
     "difficulty": "hard",
     "question": "Quelle version a introduit le support asynchrone ?",
-    "options": ["Servlet 3.0", "Servlet 2.5", "Servlet 4.0", "Servlet 5.0"],
+    "options": [
+      "Servlet 3.0",
+      "Servlet 2.5",
+      "Servlet 4.0",
+      "Servlet 5.0"
+    ],
     "correct": 0,
     "explanation": "Servlet 3.0 a introduit le traitement asynchrone."
   },
@@ -635,7 +710,12 @@
     "theme_label": "Versions",
     "difficulty": "hard",
     "question": "Quelle version a introduit HTTP/2 ?",
-    "options": ["Servlet 4.0", "Servlet 3.1", "Servlet 5.0", "Servlet 6.0"],
+    "options": [
+      "Servlet 4.0",
+      "Servlet 3.1",
+      "Servlet 5.0",
+      "Servlet 6.0"
+    ],
     "correct": 0,
     "explanation": "Servlet 4.0 a introduit le support HTTP/2."
   },
@@ -818,5 +898,422 @@
     ],
     "correct": 0,
     "explanation": "Cache-Control: no-cache désactive la mise en cache."
+  },
+  {
+    "id": "JAKA-JS-001",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Filters :",
+    "options": [
+      "Les Filters peuvent intercepter les requêtes et réponses avant qu'elles ne soient traitées par les servlets.",
+      "Les Filters peuvent modifier le contenu de la requête et de la réponse.",
+      "Les Filters sont définis dans le fichier web.xml.",
+      "Les Filters peuvent être appliqués à des URL spécifiques ou à toutes les URLs.",
+      "Les Filters sont exécutés avant la servlet, mais après le Container."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les Filters peuvent intercepter les requêtes et réponses avant qu'elles ne soient traitées par les servlets (correct). Les Filters peuvent modifier le contenu de la requête et de la réponse (correct). Les Filters sont définis dans le fichier web.xml (incorrect, ils peuvent être définis par annotations). Les Filters peuvent être appliqués à des URL spécifiques ou à toutes les URLs (correct). Les Filters sont exécutés avant la servlet, mais après le Container (incorrect, ils sont exécutés avant la servlet)."
+  },
+  {
+    "id": "JAKA-JS-002",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de HttpServletRequest permet d'obtenir le type MIME du contenu de la requête ?",
+    "options": [
+      "getContentType()",
+      "getMethod()",
+      "getParameter(String name)",
+      "getHeader(String name)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "getContentType() est la méthode qui permet d'obtenir le type MIME du contenu de la requête."
+  },
+  {
+    "id": "JAKA-JS-003",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant HttpServletResponse :",
+    "options": [
+      "La méthode sendRedirect(String location) redirige la réponse vers une URL différente.",
+      "La méthode setStatus(int sc) permet de définir le code d'état HTTP.",
+      "La méthode setHeader(String name, String value) permet de définir les en-têtes de la réponse.",
+      "La méthode getWriter() retourne un PrintWriter pour écrire du texte dans la réponse.",
+      "La méthode setContentLength(int len) définit la longueur du contenu de la réponse."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "La méthode sendRedirect(String location) redirige la réponse vers une URL différente (correct). La méthode setStatus(int sc) permet de définir le code d'état HTTP (correct). La méthode setHeader(String name, String value) permet de définir les en-têtes de la réponse (correct). La méthode getWriter() retourne un PrintWriter pour écrire du texte dans la réponse (correct). La méthode setContentLength(int len) définit la longueur du contenu de la réponse (incorrect, elle définit le nombre d'octets)."
+  },
+  {
+    "id": "JAKA-JS-004",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des sessions en Servlet :",
+    "options": [
+      "La méthode getSession() retourne une HttpSession si elle existe, sinon elle la crée.",
+      "La méthode invalidate() termine la session et supprime tous les objets associés.",
+      "La méthode setMaxInactiveInterval(int interval) définit la durée d'inactivité avant l'expiration de la session.",
+      "La méthode getAttribute(String name) retourne l'objet associé au nom spécifié.",
+      "La méthode removeAttribute(String name) supprime l'objet associé au nom spécifié."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "La méthode getSession() retourne une HttpSession si elle existe, sinon elle la crée (correct). La méthode invalidate() termine la session et supprime tous les objets associés (correct). La méthode setMaxInactiveInterval(int interval) définit la durée d'inactivité avant l'expiration de la session (correct). La méthode getAttribute(String name) retourne l'objet associé au nom spécifié (correct). La méthode removeAttribute(String name) supprime l'objet associé au nom spécifié (correct)."
+  },
+  {
+    "id": "JAKA-JS-005",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Async",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de HttpServletResponse permet d'indiquer que la réponse est asynchrone ?",
+    "options": [
+      "startAsync()",
+      "setAsyncSupported(true)",
+      "asyncDispatch()",
+      "complete()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode startAsync() permet d'indiquer que la réponse est asynchrone."
+  },
+  {
+    "id": "JAKA-JS-006",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les filtres (Filter) en Jakarta Servlet :",
+    "options": [
+      "Les filtres peuvent intercepter les requêtes et réponses avant qu'elles ne soient traitées par la servlet.",
+      "Les filtres sont définis dans le fichier web.xml.",
+      "Un seul filtre peut être associé à une URL spécifique.",
+      "Les filtres peuvent modifier le contenu de la réponse avant qu'elle ne soit envoyée au client.",
+      "Les filtres sont déclarés en utilisant des annotations."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les filtres peuvent intercepter les requêtes et réponses avant qu'elles ne soient traitées par la servlet (A est correct). Les filtres sont définis dans le fichier web.xml (B est incorrect, ils peuvent aussi être déclarés par annotations). Un seul filtre peut être associé à une URL spécifique (C est incorrect, il peut y avoir plusieurs filtres pour une même URL). Les filtres peuvent modifier le contenu de la réponse avant qu'elle ne soit envoyée au client (D est correct). Les filtres sont déclarés en utilisant des annotations (E est correct)."
+  },
+  {
+    "id": "JAKA-JS-007",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de HttpServletRequest permet d'obtenir le chemin d'accès complet de la requête ?",
+    "options": [
+      "getRequestURI()",
+      "getServletPath()",
+      "getContextPath()",
+      "getPathInfo()"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "getContextPath() retourne le chemin d'accès complet de la requête (contexte de l'application). getRequestURI() retourne le chemin d'accès à la ressource demandée. getServletPath() retourne le chemin de l'URL qui correspond à la servlet. getPathInfo() retourne les informations supplémentaires après le chemin de la servlet."
+  },
+  {
+    "id": "JAKA-JS-008",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant HttpServletResponse en Jakarta Servlet :",
+    "options": [
+      "setContentType(String type) définit le type de contenu de la réponse.",
+      "setStatus(int sc) définit le code d'état HTTP de la réponse.",
+      "addHeader(String name, String value) ajoute un en-tête à la réponse.",
+      "sendRedirect(String location) redirige le client vers une autre URL.",
+      "setHeader(String name, String value) écrase tous les en-têtes existants avec le même nom."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "setContentType(String type) définit le type de contenu de la réponse (A est correct). setStatus(int sc) définit le code d'état HTTP de la réponse (B est correct). addHeader(String name, String value) ajoute un en-tête à la réponse (C est correct). sendRedirect(String location) redirige le client vers une autre URL (D est correct). setHeader(String name, String value) écrase tous les en-têtes existants avec le même nom (E est incorrect, il ajoute un en-tête sans écraser les autres)."
+  },
+  {
+    "id": "JAKA-JS-009",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des sessions en Jakarta Servlet :",
+    "options": [
+      "La session est associée à un utilisateur spécifique et persiste jusqu'à ce qu'elle soit détruite.",
+      "La session peut être créée en appelant request.getSession() sans paramètres.",
+      "La session peut être détruite en appelant session.invalidate().",
+      "Les données de la session sont stockées côté client dans un cookie.",
+      "La durée de vie maximale d'une session peut être définie en appelant session.setMaxInactiveInterval(int interval)."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "La session est associée à un utilisateur spécifique et persiste jusqu'à ce qu'elle soit détruite (A est correct). La session peut être créée en appelant request.getSession() sans paramètres (B est correct). La session peut être détruite en appelant session.invalidate(). (C est correct). Les données de la session sont stockées côté serveur et non côté client dans un cookie (D est incorrect). La durée de vie maximale d'une session peut être définie en appelant session.setMaxInactiveInterval(int interval). (E est correct)."
+  },
+  {
+    "id": "JAKA-JS-010",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Async",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de HttpServletRequest permet d'indiquer que la servlet gère les requêtes de manière asynchrone ?",
+    "options": [
+      "startAsync()",
+      "asyncSupported()",
+      "isAsyncStarted()",
+      "getDispatcherType()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "startAsync() indique que la servlet gère les requêtes de manière asynchrone (A est correct). asyncSupported() indique si la servlet prend en charge les requêtes asynchrones (B est incorrect). isAsyncStarted() indique si la requête est en cours d'exécution de manière asynchrone (C est incorrect). getDispatcherType() retourne le type de dispatcheur pour la requête (D est incorrect)."
+  },
+  {
+    "id": "JAKA-JS-011",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Annotations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des annotations en Jakarta Servlet :",
+    "options": [
+      "@WebServlet est utilisé pour déclarer une servlet.",
+      "@HttpConstraint est utilisé pour définir des contraintes de sécurité.",
+      "@MultipartConfig est utilisé pour configurer le traitement des fichiers multipart.",
+      "@WebFilter est utilisé pour définir un filtre.",
+      "@SessionScoped est utilisé pour déclarer une session."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "@WebServlet est correct car il permet de déclarer une servlet. @HttpConstraint est incorrect car il n'existe pas dans Jakarta Servlet. @MultipartConfig est correct car il permet de configurer le traitement des fichiers multipart. @WebFilter est correct car il permet de définir un filtre. @SessionScoped est incorrect car il n'existe pas dans Jakarta Servlet."
+  },
+  {
+    "id": "JAKA-JS-012",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de HttpServletRequest est utilisée pour obtenir la valeur d'un paramètre de requête ?",
+    "options": [
+      "getParameter(String name)",
+      "getAttribute(String name)",
+      "getSession()",
+      "getHeader(String name)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "getParameter(String name) est correct car elle permet d'obtenir la valeur d'un paramètre de requête. getAttribute(String name) est incorrect car elle permet d'obtenir un attribut de la requête. getSession() est incorrect car elle permet d'obtenir une session. getHeader(String name) est incorrect car elle permet d'obtenir la valeur d'un en-tête de requête."
+  },
+  {
+    "id": "JAKA-JS-013",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant HttpServletResponse :",
+    "options": [
+      "sendRedirect(String location) redirige la réponse vers une URL différente.",
+      "setStatus(int sc) permet de définir le code d'état HTTP.",
+      "setContentType(String type) définit le type MIME de la réponse.",
+      "addHeader(String name, String value) ajoute un en-tête à la réponse.",
+      "getWriter() retourne un PrintWriter pour écrire le corps de la réponse."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "sendRedirect(String location) est correct car elle redirige la réponse vers une URL différente. setStatus(int sc) est correct car elle permet de définir le code d'état HTTP. setContentType(String type) est correct car elle définit le type MIME de la réponse. addHeader(String name, String value) est correct car elle ajoute un en-tête à la réponse. getWriter() est incorrect car il retourne un PrintWriter pour écrire le corps de la réponse, mais ne peut être appelé qu'une seule fois."
+  },
+  {
+    "id": "JAKA-JS-014",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Listener",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle interface de listener est utilisée pour détecter les événements de session dans Jakarta Servlet ?",
+    "options": [
+      "HttpSessionListener",
+      "ServletContextListener",
+      "ServletRequestListener",
+      "ApplicationListener"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "HttpSessionListener est correct car elle permet de détecter les événements de session. ServletContextListener est incorrect car elle permet de détecter les événements du contexte de l'application. ServletRequestListener est incorrect car elle permet de détecter les événements de requête. ApplicationListener n'existe pas dans Jakarta Servlet."
+  },
+  {
+    "id": "JAKA-JS-015",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Async",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de HttpServletRequest permet d'effectuer une opération asynchrone ?",
+    "options": [
+      "startAsync()",
+      "asyncSupported()",
+      "isAsyncStarted()",
+      "getDispatcherType()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "startAsync() est correct car elle permet d'effectuer une opération asynchrone. asyncSupported() est incorrect car elle vérifie si la servlet prend en charge les opérations asynchrones. isAsyncStarted() est incorrect car elle vérifie si une opération asynchrone a été démarrée. getDispatcherType() est incorrect car elle retourne le type de dispatcheur pour la requête."
+  },
+  {
+    "id": "JAKA-JS-016",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Filter",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les filtres en Jakarta Servlet :",
+    "options": [
+      "Les filtres peuvent intercepter les requêtes et réponses.",
+      "Les filtres sont définis dans le fichier web.xml.",
+      "Les filtres peuvent modifier les données de la requête et de la réponse.",
+      "Les filtres sont exécutés avant les servlets.",
+      "Les filtres peuvent être utilisés pour la gestion de l'authentification."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les filtres peuvent intercepter les requêtes et réponses (A). Les filtres peuvent modifier les données de la requête et de la réponse (C). Les filtres sont exécutés avant les servlets (D). Les filtres peuvent être utilisés pour la gestion de l'authentification (E). Les filtres ne sont pas définis dans le fichier web.xml, mais plutôt par annotations ou programmation (B)."
+  },
+  {
+    "id": "JAKA-JS-017",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Session",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour récupérer une session existante dans un servlet ?",
+    "options": [
+      "getSession()",
+      "createSession()",
+      "findSession()",
+      "retrieveSession()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode getSession() est utilisée pour récupérer une session existante dans un servlet. Elle renvoie la session actuelle associée à la requête, ou crée une nouvelle session si elle n'existe pas."
+  },
+  {
+    "id": "JAKA-JS-018",
+    "theme": "Jakarta Servlet",
+    "theme_label": "Annotations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des annotations en Jakarta Servlet :",
+    "options": [
+      "@WebServlet est utilisé pour déclarer une servlet.",
+      "@HttpSessionScoped est utilisé pour définir la portée d'une session.",
+      "@MultipartConfig est utilisé pour configurer le téléchargement de fichiers.",
+      "@WebFilter est utilisé pour définir un filtre.",
+      "@WebListener est utilisé pour définir un écouteur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "@WebServlet est utilisé pour déclarer une servlet (A). @MultipartConfig est utilisé pour configurer le téléchargement de fichiers (C). @WebFilter est utilisé pour définir un filtre (D). @WebListener n'est pas une annotation valide en Jakarta Servlet. @HttpSessionScoped est utilisé pour définir la portée d'une session, mais n'est pas une annotation standard en Jakarta Servlet."
+  },
+  {
+    "id": "JAKA-JS-019",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant HttpServletRequest en Jakarta Servlet :",
+    "options": [
+      "getRequestDispatcher() est utilisé pour obtenir un dispatcher de requête.",
+      "getHeaderNames() renvoie tous les noms de headers de la requête.",
+      "getParameterMap() retourne un map des paramètres de la requête.",
+      "getCookies() renvoie tous les cookies associés à la requête.",
+      "getLocalAddr() retourne l'adresse IP locale de la connexion."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "getRequestDispatcher() est utilisé pour obtenir un dispatcher de requête (A). getHeaderNames() renvoie tous les noms de headers de la requête (B). getParameterMap() retourne un map des paramètres de la requête (C). getCookies() renvoie tous les cookies associés à la requête, mais n'est pas une méthode standard en Jakarta Servlet. getLocalAddr() retourne l'adresse IP locale de la connexion, mais n'est pas une méthode standard en Jakarta Servlet."
+  },
+  {
+    "id": "JAKA-JS-020",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletResponse",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour définir le contenu type de la réponse dans un servlet ?",
+    "options": [
+      "setContentType()",
+      "setContentLength()",
+      "setStatus()",
+      "sendRedirect()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode setContentType() est utilisée pour définir le contenu type de la réponse dans un servlet. Elle indique au client le type MIME du contenu retourné."
+  },
+  {
+    "id": "JAKA-JS-021",
+    "theme": "Jakarta Servlet",
+    "theme_label": "HttpServletRequest",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant HttpServletRequest :",
+    "options": [
+      "Permet d'obtenir des données de la requête HTTP.",
+      "Permet de définir des cookies dans la réponse HTTP.",
+      "Permet d'obtenir l'URL de la requête HTTP.",
+      "Permet de définir des en-têtes dans la réponse HTTP."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Permet d'obtenir des données de la requête HTTP (correct). Permet de définir des cookies dans la réponse HTTP (incorrect). Permet d'obtenir l'URL de la requête HTTP (correct). Permet de définir des en-têtes dans la réponse HTTP (incorrect)."
   }
 ]

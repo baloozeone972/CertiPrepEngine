@@ -1498,5 +1498,664 @@
     ],
     "correct": 0,
     "explanation": "L'adoption dépendra de la migration des frameworks."
+  },
+  {
+    "id": "OCP-VT-001",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création de virtual threads en Java 21 :",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Thread.startVirtualThread() permet de créer et démarrer un virtual thread. C est également correct car Thread.ofVirtual().start() est une autre façon de créer et démarrer un virtual thread. B est incorrect car new VirtualThread() n'est pas une méthode valide pour créer un virtual thread en Java 21. D est correct car il résume les deux options valides."
+  },
+  {
+    "id": "OCP-VT-002",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale caractéristique des virtual threads en Java 21 ?",
+    "options": [
+      "Permettent une utilisation efficace de la mémoire",
+      "Sont plus rapides que les threads traditionnels",
+      "Permettent une gestion fine des ressources",
+      "Sont moins coûteux en termes de CPU"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale caractéristique des virtual threads est qu'ils permettent une utilisation efficace de la mémoire, car ils sont plus légers et peuvent être millions sur un seul OS thread."
+  },
+  {
+    "id": "OCP-VT-003",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la structured concurrency en Java 21 ?",
+    "options": [
+      "Permet de gérer facilement les tâches asynchrones",
+      "Assure la propagation des exceptions de manière hiérarchique",
+      "Permet l'utilisation de try-with-resources pour les threads",
+      "Assure la terminaison des tâches enfants avant le parent"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car la structured concurrency facilite la gestion des tâches asynchrones en Java 21. B est correct car elle assure la propagation des exceptions de manière hiérarchique, ce qui signifie que si une tâche enfant échoue, l'exception est propagée à la tâche parent. C est incorrect car try-with-resources n'est pas spécifique à la structured concurrency et ne s'applique pas exclusivement aux threads. D est incorrect car la structured concurrency n'impose pas nécessairement que les tâches enfants terminent avant le parent."
+  },
+  {
+    "id": "OCP-VT-004",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la performance des virtual threads en Java 21 ?",
+    "options": [
+      "Réduction du temps de réponse",
+      "Augmentation du nombre de threads par CPU",
+      "Amélioration de l'utilisation de la mémoire",
+      "Réduction du temps d'exécution"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'avantage principal de la performance des virtual threads est l'augmentation du nombre de threads par CPU, ce qui permet d'exécuter un grand nombre de tâches en parallèle sans consommer beaucoup de ressources."
+  },
+  {
+    "id": "OCP-VT-005",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les TROIS propositions vraies concernant l'utilisation d'ExecutorService avec des virtual threads en Java 21 ?",
+    "options": [
+      "Permet de gérer un pool de threads virtual",
+      "Supporte la soumission de tâches asynchrones",
+      "Assure la gestion automatique des ressources",
+      "Permet de limiter le nombre maximum de threads"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "A est correct car ExecutorService peut gérer un pool de threads virtual. B est correct car il supporte la soumission de tâches asynchrones, ce qui facilite leur exécution. C est incorrect car ExecutorService ne gère pas automatiquement les ressources de manière unique à des virtual threads. D est correct car il permet de limiter le nombre maximum de threads, ce qui est une fonctionnalité utile pour contrôler la charge du système."
+  },
+  {
+    "id": "OCP-VT-006",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les virtual threads en Java 21 :",
+    "options": [
+      "Les virtual threads sont moins couteux en ressources que les threads traditionnels.",
+      "Les virtual threads ne peuvent pas être interrompus.",
+      "Les virtual threads fonctionnent avec le modèle de thread structuré.",
+      "Les virtual threads sont gérés par un pool de threads réels."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les virtual threads sont moins couteux en ressources que les threads traditionnels, ce qui est correct. Les virtual threads peuvent être interrompus, donc cette affirmation est incorrecte. Ils fonctionnent avec le modèle de thread structuré, ce qui est correct. Les virtual threads ne sont pas gérés par un pool de threads réels, mais plutôt par un planificateur virtuel, donc cette affirmation est incorrecte."
+  },
+  {
+    "id": "OCP-VT-007",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de l'utilisation des virtual threads en termes de performance ?",
+    "options": [
+      "Réduction du temps d'exécution des tâches.",
+      "Augmentation de l'utilisation de la CPU.",
+      "Amélioration de l'efficacité du mémoire.",
+      "Augmentation du nombre de tâches par thread."
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "L'avantage principal de l'utilisation des virtual threads est d'augmenter le nombre de tâches par thread, ce qui améliore l'utilisation des ressources."
+  },
+  {
+    "id": "OCP-VT-008",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le structured concurrency en Java 21 ?",
+    "options": [
+      "Structured concurrency permet de gérer les tâches de manière hiérarchique.",
+      "Structured concurrency est incompatible avec les threads traditionnels.",
+      "Structured concurrency facilite le suivi et le débogage des tâches.",
+      "Structured concurrency ne nécessite pas de gestion explicite des exceptions."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Structured concurrency permet de gérer les tâches de manière hiérarchique, ce qui est correct. Structured concurrency n'est pas incompatible avec les threads traditionnels, donc cette affirmation est incorrecte. Structured concurrency facilite le suivi et le débogage des tâches, ce qui est correct. Structured concurrency nécessite une gestion explicite des exceptions, donc cette affirmation est incorrecte."
+  },
+  {
+    "id": "OCP-VT-009",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de l'interface ExecutorService permet de soumettre une tâche en tant que virtual thread ?",
+    "options": [
+      "submitAsVirtualThread(Runnable task)",
+      "runAsyncAsVirtualThread(Callable<V> task)",
+      "executeAsVirtualThread(Runnable command)",
+      "scheduleAsVirtualThread(Runnable command, long delay, TimeUnit unit)"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La méthode executeAsVirtualThread(Runnable command) permet de soumettre une tâche en tant que virtual thread."
+  },
+  {
+    "id": "OCP-VT-010",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant ThreadLocal en Java 21 :",
+    "options": [
+      "ThreadLocal est utilisé pour stocker des valeurs spécifiques à un thread.",
+      "ThreadLocal ne peut pas être utilisé avec les virtual threads.",
+      "ThreadLocal permet de partager des données entre plusieurs tâches.",
+      "ThreadLocal est thread-safe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ThreadLocal est utilisé pour stocker des valeurs spécifiques à un thread, ce qui est correct. ThreadLocal peut être utilisé avec les virtual threads, donc cette affirmation est incorrecte. ThreadLocal ne permet pas de partager des données entre plusieurs tâches, donc cette affirmation est incorrecte. ThreadLocal est thread-safe, ce qui est correct."
+  },
+  {
+    "id": "OCP-VT-011",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création de virtual threads en Java 21 :",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car elle utilise la méthode startVirtualThread() pour créer et démarrer un virtual thread. Option B est incorrecte car VirtualThread n'est pas une classe existante en Java 21. Option C est correcte car elle utilise Thread.ofVirtual().start() pour créer et démarrer un virtual thread. Option D est incorrecte car elle est une combinaison des options A et C, mais ne doit pas être sélectionnée en tant que réponse."
+  },
+  {
+    "id": "OCP-VT-012",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle caractéristique est inhérente aux virtual threads en Java 21 ?",
+    "options": [
+      "Peuvent partager le même thread de pile",
+      "Utilisent autant de mémoire que les threads traditionnels",
+      "Sont gérés par le système d'exploitation",
+      "Peuvent être interrompus à tout moment"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les virtual threads en Java 21 peuvent partager le même thread de pile, ce qui les distingue des threads traditionnels qui ont leur propre pile. Les options B et C sont incorrectes car les virtual threads ne consomment pas autant de mémoire que les threads traditionnels et ne sont pas gérés par le système d'exploitation. L'option D est incorrecte car les virtual threads ne sont pas interrompus à tout moment."
+  },
+  {
+    "id": "OCP-VT-013",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales avantages de l'utilisation des virtual threads en termes de performance ?",
+    "options": [
+      "Réduction du temps d'exécution des tâches",
+      "Amélioration de l'utilisation de la mémoire",
+      "Augmentation du nombre de threads par processeur",
+      "Réduction des coûts d'infrastructure"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Option B est correcte car les virtual threads utilisent moins de mémoire que les threads traditionnels, ce qui améliore l'utilisation globale de la mémoire. Option C est correcte car les virtual threads permettent d'exécuter un grand nombre de tâches simultanément, augmentant ainsi le nombre effectif de threads par processeur. Options A et D sont incorrectes car les virtual threads n'ont pas nécessairement un impact direct sur le temps d'exécution des tâches ou les coûts d'infrastructure."
+  },
+  {
+    "id": "OCP-VT-014",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de l'interface ExecutorService permet d'exécuter des tâches sur des virtual threads ?",
+    "options": [
+      "execute(Runnable command)",
+      "submit(Callable<T> task)",
+      "runAsync(Runnable task, Executor executor)",
+      "supplyAsync(Supplier<U> supplier, Executor executor)"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Option C est correcte car runAsync() permet d'exécuter des tâches sur un Executor, qui peut être configuré pour utiliser des virtual threads. Options A et B sont incorrectes car elles ne prennent pas explicitement un Executor en paramètre. Option D est incorrecte car supplyAsync() retourne un Future et ne prend pas explicitement un Executor en paramètre."
+  },
+  {
+    "id": "OCP-VT-015",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX bonnes pratiques pour garantir la gestion efficace de la concurrence structurée avec des virtual threads ?",
+    "options": [
+      "Utiliser try-with-resources pour gérer les ressources",
+      "Créer des virtual threads indépendamment sans gestion de portée",
+      "Encapsuler les tâches dans des classes anonymes",
+      "Utiliser des Scoped Values pour partager des données"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Option A est correcte car try-with-resources permet de gérer automatiquement la fermeture des ressources, ce qui est crucial dans le contexte de la concurrence structurée. Option B est incorrecte car créer des virtual threads indépendamment sans gestion de portée peut entraîner des fuites de ressources. Option C est incorrecte car encapsuler les tâches dans des classes anonymes n'est pas une pratique recommandée pour la gestion efficace de la concurrence structurée. Option D est correcte car Scoped Values permettent de partager des données de manière sécurisée et structurée entre les virtual threads."
+  },
+  {
+    "id": "OCP-VT-016",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les virtual threads :",
+    "options": [
+      "Les virtual threads sont moins couteux en ressources que les threads traditionnels.",
+      "Les virtual threads ne peuvent pas être interrompus.",
+      "Les virtual threads sont gérés par un planificateur de thread.",
+      "Les virtual threads peuvent être utilisés pour des tâches I/O intensives."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les virtual threads sont effectivement moins couteux en ressources que les threads traditionnels, ce qui est l'une des principales caractéristiques de Java 21. Les virtual threads ne peuvent pas être interrompus, ce qui est une limitation importante à prendre en compte. Les virtual threads sont gérés par un planificateur de thread, ce qui permet une gestion efficace des ressources. Les virtual threads peuvent être utilisés pour des tâches I/O intensives, ce qui les rend particulièrement utiles dans des applications nécessitant une grande quantité de threads pour gérer les entrées/sorties."
+  },
+  {
+    "id": "OCP-VT-017",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour créer un virtual thread dans Java 21 ?",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Les deux méthodes Thread.startVirtualThread(() -> task()) et Thread.ofVirtual().start(() -> task()) sont correctes pour créer un virtual thread dans Java 21. L'option A et C est également correcte car elle combine les deux méthodes."
+  },
+  {
+    "id": "OCP-VT-018",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la performance des virtual threads ?",
+    "options": [
+      "Les virtual threads peuvent améliorer les performances dans des applications avec une grande quantité de tâches I/O.",
+      "Les virtual threads diminuent le temps d'exécution des tâches CPU-bound.",
+      "Les virtual threads augmentent la latence dans les applications avec une grande quantité de tâches.",
+      "Les virtual threads peuvent réduire le nombre de threads nécessaires dans une application."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les virtual threads peuvent améliorer les performances dans des applications avec une grande quantité de tâches I/O, car ils permettent d'utiliser efficacement les ressources du système. Les virtual threads augmentent la latence dans les applications avec une grande quantité de tâches, car ils nécessitent plus de contextes pour gérer les threads. Les virtual threads peuvent réduire le nombre de threads nécessaires dans une application, car ils sont moins couteux en ressources que les threads traditionnels."
+  },
+  {
+    "id": "OCP-VT-019",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour créer un ExecutorService qui utilise des virtual threads ?",
+    "options": [
+      "Executors.newVirtualThreadExecutor()",
+      "Executors.newFixedThreadPool(n)",
+      "Executors.newCachedThreadPool()",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode Executors.newVirtualThreadExecutor() est utilisée pour créer un ExecutorService qui utilise des virtual threads. Les autres options créent des pools de threads traditionnels."
+  },
+  {
+    "id": "OCP-VT-020",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant ThreadLocal :",
+    "options": [
+      "ThreadLocal est utilisé pour stocker des valeurs spécifiques à un thread.",
+      "ThreadLocal peut être utilisé avec les virtual threads.",
+      "ThreadLocal est moins performant que Scoped Values.",
+      "ThreadLocal peut être utilisé pour partager des données entre threads."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ThreadLocal est effectivement utilisé pour stocker des valeurs spécifiques à un thread, ce qui permet de gérer les données de manière isolée pour chaque thread. ThreadLocal peut être utilisé avec les virtual threads, car il est conçu pour fonctionner dans un environnement multithreadé. ThreadLocal est moins performant que Scoped Values, car les Scoped Values sont spécifiquement conçus pour fonctionner avec les virtual threads. ThreadLocal peut être utilisé pour partager des données entre threads, mais cela doit être fait avec prudence pour éviter les problèmes de concurrence."
+  },
+  {
+    "id": "OCP-VT-021",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création de virtual threads en Java 21 :",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Thread.startVirtualThread() permet de créer et démarrer un virtual thread. C est également correct car Thread.ofVirtual().start() permet de créer et démarrer un virtual thread. B est incorrect car new VirtualThread(() -> task()) n'est pas une méthode valide pour créer un virtual thread en Java 21. D est correct car il résume les deux méthodes valides mentionnées précédemment."
+  },
+  {
+    "id": "OCP-VT-022",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale caractéristique des virtual threads en Java 21 ?",
+    "options": [
+      "Ils sont plus lourds que les threads traditionnels",
+      "Ils utilisent moins de ressources système",
+      "Ils ne peuvent pas être interrompus",
+      "Ils sont moins performants que les threads traditionnels"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "B est correct car les virtual threads en Java 21 sont conçus pour utiliser moins de ressources système, ce qui les rend plus légers et plus efficaces dans un environnement multi-threadé. A est incorrect car les virtual threads sont en fait plus légers que les threads traditionnels. C est incorrect car les virtual threads peuvent être interrompus, contrairement à l'affirmation. D est incorrect car les virtual threads sont généralement plus performants que les threads traditionnels en raison de leur utilisation optimisée des ressources."
+  },
+  {
+    "id": "OCP-VT-023",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant la structured concurrency en Java 21 ?",
+    "options": [
+      "Elle permet de gérer les threads de manière hiérarchique",
+      "Elle est implémentée avec l'interface ExecutorService",
+      "Elle facilite le suivi et la gestion des erreurs",
+      "Elle est incompatible avec les threads traditionnels"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car la structured concurrency en Java 21 permet de gérer les threads de manière hiérarchique, ce qui facilite la coordination et le contrôle des tâches. C est également correct car elle facilite le suivi et la gestion des erreurs, en permettant une propagation d'exceptions structurée. B est incorrect car ExecutorService n'est pas spécifiquement lié à la structured concurrency, bien qu'elle puisse être utilisée avec. D est incorrect car la structured concurrency n'est pas incompatible avec les threads traditionnels ; elle peut être utilisée en conjonction avec eux pour améliorer la gestion des tâches."
+  },
+  {
+    "id": "OCP-VT-024",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la performance des virtual threads en Java 21 ?",
+    "options": [
+      "Ils utilisent moins de mémoire",
+      "Ils sont plus rapides que les threads traditionnels",
+      "Ils permettent un meilleur parallélisme",
+      "Ils réduisent le temps de démarrage des threads"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "C est correct car la performance des virtual threads en Java 21 réside principalement dans leur capacité à permettre un meilleur parallélisme, en utilisant efficacement les ressources système pour gérer de nombreux threads virtuels. A est incorrect car bien que les virtual threads puissent utiliser moins de mémoire, c'est un avantage secondaire. B est incorrect car les virtual threads ne sont pas nécessairement plus rapides que les threads traditionnels ; leur avantage réside dans la gestion efficace du parallélisme. D est incorrect car le temps de démarrage des virtual threads n'est pas significativement réduit par rapport aux threads traditionnels."
+  },
+  {
+    "id": "OCP-VT-025",
+    "theme": "Virtual Threads",
+    "theme_label": "Debugging",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX méthodes recommandées pour déboguer des virtual threads en Java 21 ?",
+    "options": [
+      "Utiliser des outils de profilage",
+      "Activer les logs détaillés",
+      "Utiliser des breakpoints dans l'IDE",
+      "A et B sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car l'utilisation d'outils de profilage, tels que JVisualVM ou Java Flight Recorder, peut aider à surveiller et à analyser le comportement des virtual threads. B est également correct car l'activation des logs détaillés peut fournir des informations précieuses sur le flux d'exécution et les problèmes potentiels. C est incorrect car, bien que les breakpoints puissent être utilisés dans un IDE pour déboguer des threads traditionnels, leur utilisation avec les virtual threads peut être plus complexe en raison de leur nature non bloquante. D est correct car il résume les deux méthodes valides mentionnées précédemment."
+  },
+  {
+    "id": "OCP-VT-026",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création de virtual threads en Java 21 :",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car Thread.startVirtualThread() est une méthode valide pour créer et démarrer un virtual thread. Option B est incorrecte car VirtualThread n'est pas une classe existante dans Java 21. Option C est correcte car Thread.ofVirtual().start() est une autre méthode valide pour créer et démarrer un virtual thread. Option D est correcte car elle résume les deux options précédentes."
+  },
+  {
+    "id": "OCP-VT-027",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de l'utilisation des virtual threads en termes de performance ?",
+    "options": [
+      "Réduction du temps de démarrage des threads",
+      "Amélioration de l'utilisation des ressources CPU",
+      "Augmentation du nombre de threads par processus",
+      "Toutes les options ci-dessus"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Toutes les options ci-dessus sont correctes. Les virtual threads permettent une gestion plus fine des ressources, réduisent le temps de démarrage par rapport aux threads traditionnels et augmentent significativement le nombre de threads que le système peut gérer efficacement."
+  },
+  {
+    "id": "OCP-VT-028",
+    "theme": "Virtual Threads",
+    "theme_label": "ExecutorService",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'utilisation d'ExecutorService avec des virtual threads ?",
+    "options": [
+      "ExecutorService peut être utilisé pour gérer des virtual threads",
+      "Virtual threads ne peuvent pas être utilisés avec ExecutorService",
+      "ExecutorService nécessite des modifications spécifiques pour gérer des virtual threads",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car ExecutorService peut être utilisé pour gérer des virtual threads en Java 21. Option B est incorrecte car les virtual threads sont totalement compatibles avec ExecutorService. Option C est correcte car des modifications spécifiques peuvent être nécessaires pour optimiser l'utilisation d'ExecutorService avec des virtual threads, notamment en ajustant les paramètres de pool. Option D est correcte car elle résume les deux options précédentes."
+  },
+  {
+    "id": "OCP-VT-029",
+    "theme": "Virtual Threads",
+    "theme_label": "ThreadLocal",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale limitation de l'utilisation de ThreadLocal avec des virtual threads ?",
+    "options": [
+      "ThreadLocal ne fonctionne pas avec des virtual threads",
+      "ThreadLocal peut causer des fuites de mémoire",
+      "ThreadLocal peut entraîner des problèmes de concurrence",
+      "Aucune des options ci-dessus"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "ThreadLocal peut causer des fuites de mémoire avec des virtual threads car les références peuvent être maintenues dans ThreadLocal même après que le thread ait terminé son exécution. Les autres options ne sont pas spécifiques aux virtual threads ou ne représentent pas des limitations majeures."
+  },
+  {
+    "id": "OCP-VT-030",
+    "theme": "Virtual Threads",
+    "theme_label": "Limitations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les LIMITATIONS de l'utilisation des virtual threads en Java 21 ?",
+    "options": [
+      "Virtual threads ne peuvent pas être utilisés dans des applications web",
+      "Leur utilisation peut entraîner une surcharge de la JVM",
+      "Ils ne sont pas compatibles avec les frameworks traditionnels",
+      "A et B sont correctes"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Option A est incorrecte car virtual threads peuvent être utilisés dans des applications web. Option B est correcte car une utilisation excessive de virtual threads peut surcharger la JVM, surtout si les threads sont bloqués. Option C est correcte car certains frameworks traditionnels peuvent avoir des problèmes de compatibilité avec virtual threads, nécessitant des ajustements. Option D est correcte car elle résume les deux options précédentes."
+  },
+  {
+    "id": "OCP-VT-031",
+    "theme": "Virtual Threads",
+    "theme_label": "Création",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la création de virtual threads en Java 21 :",
+    "options": [
+      "Thread.startVirtualThread(() -> task())",
+      "new VirtualThread(() -> task())",
+      "Thread.ofVirtual().start(() -> task())",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Thread.startVirtualThread() permet de créer et démarrer un virtual thread. C est également correct car Thread.ofVirtual().start() est une autre méthode pour créer et démarrer un virtual thread. B est incorrect car new VirtualThread() n'est pas la méthode standard pour créer des virtual threads en Java 21. D est correct car il résume les deux méthodes valides mentionnées dans A et C."
+  },
+  {
+    "id": "OCP-VT-032",
+    "theme": "Virtual Threads",
+    "theme_label": "Caractéristiques",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est une caractéristique principale des virtual threads en Java 21 ?",
+    "options": [
+      "Peuvent partager le même thread physique",
+      "Consomment beaucoup de mémoire",
+      "Sont moins performants que les threads traditionnels",
+      "Nécessitent une gestion manuelle de la mémoire"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car les virtual threads sont conçus pour partager le même thread physique, ce qui permet une gestion plus efficace des ressources. B est incorrect car les virtual threads ne consomment pas nécessairement plus de mémoire que les threads traditionnels. C est incorrect car ils sont généralement plus performants en raison de leur gestion fine des threads. D est incorrect car les virtual threads ne nécessitent pas une gestion manuelle de la mémoire."
+  },
+  {
+    "id": "OCP-VT-033",
+    "theme": "Virtual Threads",
+    "theme_label": "Structured Concurrency",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la structured concurrency en Java 21 ?",
+    "options": [
+      "Permet de gérer les tâches de manière hiérarchique",
+      "Nécessite l'utilisation explicite des try-with-resources",
+      "Permet de partager des ressources entre les tâches",
+      "A et C sont correctes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car la structured concurrency permet de gérer les tâches de manière hiérarchique, facilitant ainsi leur gestion et la propagation des exceptions. C est également correct car elle permet de partager des ressources entre les tâches, ce qui peut améliorer l'efficacité. B est incorrect car la structured concurrency ne nécessite pas nécessairement l'utilisation explicite des try-with-resources, bien qu'elle puisse être utilisée pour gérer les ressources. D est correct car il résume les deux affirmations valides mentionnées dans A et C."
+  },
+  {
+    "id": "OCP-VT-034",
+    "theme": "Virtual Threads",
+    "theme_label": "Performance",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage principal de la performance des virtual threads par rapport aux threads traditionnels ?",
+    "options": [
+      "Utilisent moins de mémoire",
+      "Permettent une meilleure gestion des ressources",
+      "Sont plus rapides pour exécuter des tâches I/O",
+      "Toutes les options sont correctes"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Toutes les options sont correctes. Les virtual threads utilisent moins de mémoire, permettent une meilleure gestion des ressources en partageant le même thread physique, et sont plus rapides pour exécuter des tâches I/O grâce à leur modèle de virtualisation léger."
+  },
+  {
+    "id": "OCP-VT-035",
+    "theme": "Virtual Threads",
+    "theme_label": "Migration",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la migration de code vers des virtual threads en Java 21 ?",
+    "options": [
+      "Nécessite une réécriture complète du code",
+      "Peut être effectuée progressivement sans changer l'API existante",
+      "Nécessite une mise à jour du runtime Java",
+      "A et C sont correctes"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "B est correct car la migration vers des virtual threads peut être effectuée progressivement sans changer l'API existante, ce qui permet une transition plus fluide. C est également correct car elle nécessite une mise à jour du runtime Java pour bénéficier des fonctionnalités de virtual threads. A est incorrect car une réécriture complète du code n'est généralement pas nécessaire pour adopter les virtual threads. D est correct car il résume les deux affirmations valides mentionnées dans B et C."
   }
 ]

@@ -20,7 +20,12 @@
     "theme_label": "Services",
     "difficulty": "easy",
     "question": "Quel est le type de service par défaut ?",
-    "options": ["ClusterIP", "NodePort", "LoadBalancer", "ExternalName"],
+    "options": [
+      "ClusterIP",
+      "NodePort",
+      "LoadBalancer",
+      "ExternalName"
+    ],
     "correct": 0,
     "explanation": "ClusterIP expose le service uniquement à l'intérieur du cluster."
   },
@@ -45,9 +50,14 @@
     "theme_label": "Services",
     "difficulty": "easy",
     "question": "Quelle est la plage de ports NodePort par défaut ?",
-    "options": ["30000-32767", "1-65535", "80-443", "1024-65535"],
+    "options": [
+      "30000-32767",
+      "1-65535",
+      "80-443",
+      "1024-65535"
+    ],
     "correct": 0,
-    "explication": "Par défaut, les ports NodePort sont alloués dans cette plage."
+    "explanation": "Par défaut, les ports NodePort sont alloués dans cette plage."
   },
   {
     "id": "CKA-03-005",
@@ -62,7 +72,7 @@
       "Crée un proxy"
     ],
     "correct": 0,
-    "explication": "LoadBalancer utilise le cloud provider pour créer un LB externe."
+    "explanation": "LoadBalancer utilise le cloud provider pour créer un LB externe."
   },
   {
     "id": "CKA-03-006",
@@ -77,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Headless service permet la découverte directe des pods."
+    "explanation": "Headless service permet la découverte directe des pods."
   },
   {
     "id": "CKA-03-007",
@@ -92,7 +102,7 @@
       "Proxy TCP"
     ],
     "correct": 0,
-    "explication": "Ingress gère l'accès externe aux services, souvent via un contrôleur."
+    "explanation": "Ingress gère l'accès externe aux services, souvent via un contrôleur."
   },
   {
     "id": "CKA-03-008",
@@ -100,9 +110,14 @@
     "theme_label": "Ingress",
     "difficulty": "easy",
     "question": "Quel contrôleur Ingress est le plus courant ?",
-    "options": ["nginx-ingress", "traefik", "haproxy", "kong"],
+    "options": [
+      "nginx-ingress",
+      "traefik",
+      "haproxy",
+      "kong"
+    ],
     "correct": 0,
-    "explication": "nginx-ingress est le plus répandu."
+    "explanation": "nginx-ingress est le plus répandu."
   },
   {
     "id": "CKA-03-009",
@@ -117,7 +132,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le host peut être défini dans rules et tls."
+    "explanation": "Le host peut être défini dans rules et tls."
   },
   {
     "id": "CKA-03-010",
@@ -132,7 +147,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "La section tls référence un secret contenant le certificat et la clé."
+    "explanation": "La section tls référence un secret contenant le certificat et la clé."
   },
   {
     "id": "CKA-03-011",
@@ -147,7 +162,7 @@
       "Configurer le DNS"
     ],
     "correct": 0,
-    "explication": "Les Network Policies sont des firewalls au niveau du pod."
+    "explanation": "Les Network Policies sont des firewalls au niveau du pod."
   },
   {
     "id": "CKA-03-012",
@@ -155,9 +170,14 @@
     "theme_label": "Network Policies",
     "difficulty": "easy",
     "question": "Par défaut, le trafic entre pods est-il autorisé ou bloqué ?",
-    "options": ["Autorisé (allow all)", "Bloqué (deny all)", "Dépend du CNI", "Autorisé uniquement dans le même namespace"],
+    "options": [
+      "Autorisé (allow all)",
+      "Bloqué (deny all)",
+      "Dépend du CNI",
+      "Autorisé uniquement dans le même namespace"
+    ],
     "correct": 0,
-    "explication": "Par défaut, tout le trafic est autorisé. Les Network Policies sont de type whitelist."
+    "explanation": "Par défaut, tout le trafic est autorisé. Les Network Policies sont de type whitelist."
   },
   {
     "id": "CKA-03-013",
@@ -172,7 +192,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Une policy sans règles ingress bloque tout le trafic entrant."
+    "explanation": "Une policy sans règles ingress bloque tout le trafic entrant."
   },
   {
     "id": "CKA-03-014",
@@ -187,7 +207,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "podSelector et namespaceSelector sont possibles."
+    "explanation": "podSelector et namespaceSelector sont possibles."
   },
   {
     "id": "CKA-03-015",
@@ -195,9 +215,14 @@
     "theme_label": "DNS",
     "difficulty": "easy",
     "question": "Quel est le nom DNS d'un service dans le même namespace ?",
-    "options": ["<service-name>", "<service-name>.<namespace>.svc.cluster.local", "<service-name>.svc.cluster.local", "A et C"],
+    "options": [
+      "<service-name>",
+      "<service-name>.<namespace>.svc.cluster.local",
+      "<service-name>.svc.cluster.local",
+      "A et C"
+    ],
     "correct": 3,
-    "explication": "<service-name> est suffisant dans le même namespace."
+    "explanation": "<service-name> est suffisant dans le même namespace."
   },
   {
     "id": "CKA-03-016",
@@ -212,7 +237,7 @@
       "<service-name>.cluster.local"
     ],
     "correct": 0,
-    "explication": "Le nom FQDN inclut le namespace."
+    "explanation": "Le nom FQDN inclut le namespace."
   },
   {
     "id": "CKA-03-017",
@@ -220,9 +245,14 @@
     "theme_label": "Ingress Controller",
     "difficulty": "easy",
     "question": "Un Ingress Controller est-il nécessaire pour utiliser un Ingress ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement pour le TLS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement pour le TLS"
+    ],
     "correct": 0,
-    "explication": "L'Ingress Controller implémente les règles Ingress."
+    "explanation": "L'Ingress Controller implémente les règles Ingress."
   },
   {
     "id": "CKA-03-018",
@@ -237,7 +267,7 @@
       "DNS"
     ],
     "correct": 0,
-    "explication": "Un service mesh ajoute des fonctionnalités comme le mTLS, la retry, le circuit breaker."
+    "explanation": "Un service mesh ajoute des fonctionnalités comme le mTLS, la retry, le circuit breaker."
   },
   {
     "id": "CKA-03-019",
@@ -252,7 +282,7 @@
       "Port du service"
     ],
     "correct": 0,
-    "explication": "Les endpoints sont automatiquement mis à jour par le contrôleur de service."
+    "explanation": "Les endpoints sont automatiquement mis à jour par le contrôleur de service."
   },
   {
     "id": "CKA-03-020",
@@ -260,9 +290,14 @@
     "theme_label": "Network policy types",
     "difficulty": "easy",
     "question": "Quels sont les champs de policyTypes ?",
-    "options": ["Ingress, Egress", "Ingress seulement", "Egress seulement", "A et B"],
+    "options": [
+      "Ingress, Egress",
+      "Ingress seulement",
+      "Egress seulement",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "On peut spécifier Ingress, Egress, ou les deux."
+    "explanation": "On peut spécifier Ingress, Egress, ou les deux."
   },
   {
     "id": "CKA-03-021",
@@ -277,7 +312,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "egress: [] bloque tout le trafic sortant."
+    "explanation": "egress: [] bloque tout le trafic sortant."
   },
   {
     "id": "CKA-03-022",
@@ -292,7 +327,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "ExternalName permet d'accéder à un service externe via un nom DNS local."
+    "explanation": "ExternalName permet d'accéder à un service externe via un nom DNS local."
   },
   {
     "id": "CKA-03-023",
@@ -300,9 +335,14 @@
     "theme_label": "NodePort vs LoadBalancer",
     "difficulty": "easy",
     "question": "Le type LoadBalancer nécessite-t-il un cloud provider ?",
-    "options": ["Oui", "Non (mais il faut un contrôleur)", "Non (intégré à Kubernetes)", "Uniquement pour AWS"],
+    "options": [
+      "Oui",
+      "Non (mais il faut un contrôleur)",
+      "Non (intégré à Kubernetes)",
+      "Uniquement pour AWS"
+    ],
     "correct": 0,
-    "explication": "LoadBalancer utilise l'API du cloud provider pour créer un LB externe."
+    "explanation": "LoadBalancer utilise l'API du cloud provider pour créer un LB externe."
   },
   {
     "id": "CKA-03-024",
@@ -317,7 +357,7 @@
       "nginx.org/rewrite-target: /"
     ],
     "correct": 0,
-    "explication": "L'annotation rewrite-target est spécifique au contrôleur nginx-ingress."
+    "explanation": "L'annotation rewrite-target est spécifique au contrôleur nginx-ingress."
   },
   {
     "id": "CKA-03-025",
@@ -332,7 +372,7 @@
       "ImplementationSpecific seulement"
     ],
     "correct": 0,
-    "explication": "Exact correspond exactement, Prefix correspond au préfixe."
+    "explanation": "Exact correspond exactement, Prefix correspond au préfixe."
   },
   {
     "id": "CKA-03-026",
@@ -347,7 +387,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "ClientIP dirige les requêtes d'une même IP vers le même pod."
+    "explanation": "ClientIP dirige les requêtes d'une même IP vers le même pod."
   },
   {
     "id": "CKA-03-027",
@@ -362,7 +402,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Local conserve l'IP source mais peut déséquilibrer le trafic."
+    "explanation": "Local conserve l'IP source mais peut déséquilibrer le trafic."
   },
   {
     "id": "CKA-03-028",
@@ -377,7 +417,7 @@
       "from: - namespaceSelector: {}"
     ],
     "correct": 0,
-    "explication": "namespaceSelector sélectionne les namespaces par label."
+    "explanation": "namespaceSelector sélectionne les namespaces par label."
   },
   {
     "id": "CKA-03-029",
@@ -392,7 +432,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "create secret tls est la commande spécifique."
+    "explanation": "create secret tls est la commande spécifique."
   },
   {
     "id": "CKA-03-030",
@@ -407,7 +447,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "ipBlock spécifie une plage CIDR."
+    "explanation": "ipBlock spécifie une plage CIDR."
   },
   {
     "id": "CKA-03-031",
@@ -415,9 +455,14 @@
     "theme_label": "Kube-proxy modes",
     "difficulty": "easy",
     "question": "Quel mode kube-proxy offre les meilleures performances ?",
-    "options": ["ipvs", "iptables", "userspace", "kernelspace"],
+    "options": [
+      "ipvs",
+      "iptables",
+      "userspace",
+      "kernelspace"
+    ],
     "correct": 0,
-    "explication": "ipvs utilise le noyau Linux pour un forwarding plus efficace."
+    "explanation": "ipvs utilise le noyau Linux pour un forwarding plus efficace."
   },
   {
     "id": "CKA-03-032",
@@ -425,9 +470,14 @@
     "theme_label": "ClusterIP vs Headless",
     "difficulty": "easy",
     "question": "Un service headless permet-il le load balancing ?",
-    "options": ["Non", "Oui", "Uniquement avec StatefulSet", "Uniquement avec ExternalName"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement avec StatefulSet",
+      "Uniquement avec ExternalName"
+    ],
     "correct": 0,
-    "explication": "Headless renvoie la liste des adresses IP, pas de virtual IP."
+    "explanation": "Headless renvoie la liste des adresses IP, pas de virtual IP."
   },
   {
     "id": "CKA-03-033",
@@ -435,9 +485,14 @@
     "theme_label": "Ingress wildcard",
     "difficulty": "easy",
     "question": "Peut-on utiliser un certificat wildcard avec Ingress ?",
-    "options": ["Oui (*.example.com)", "Non", "Uniquement avec des contrôleurs spécifiques", "Uniquement pour les sous-domaines"],
+    "options": [
+      "Oui (*.example.com)",
+      "Non",
+      "Uniquement avec des contrôleurs spécifiques",
+      "Uniquement pour les sous-domaines"
+    ],
     "correct": 0,
-    "explication": "Les certificats wildcard sont supportés."
+    "explanation": "Les certificats wildcard sont supportés."
   },
   {
     "id": "CKA-03-034",
@@ -452,7 +507,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Il faut spécifier les deux policyTypes et des règles vides."
+    "explanation": "Il faut spécifier les deux policyTypes et des règles vides."
   },
   {
     "id": "CKA-03-035",
@@ -460,9 +515,14 @@
     "theme_label": "Service topologyKeys (déprécié)",
     "difficulty": "easy",
     "question": "Quelle fonctionnalité a remplacé topologyKeys ?",
-    "options": ["Topology Aware Routing (Service) et topologySpreadConstraints", "Rien", "Affinity", "NodeSelector"],
+    "options": [
+      "Topology Aware Routing (Service) et topologySpreadConstraints",
+      "Rien",
+      "Affinity",
+      "NodeSelector"
+    ],
     "correct": 0,
-    "explication": "Topology Aware Routing permet de préférer les endpoints locaux."
+    "explanation": "Topology Aware Routing permet de préférer les endpoints locaux."
   },
   {
     "id": "CKA-03-036",
@@ -470,9 +530,14 @@
     "theme_label": "Ingress API versions",
     "difficulty": "easy",
     "question": "Quelle est l'API stable actuelle pour Ingress ?",
-    "options": ["networking.k8s.io/v1", "extensions/v1beta1", "networking.k8s.io/v1beta1", "ingress/v1"],
+    "options": [
+      "networking.k8s.io/v1",
+      "extensions/v1beta1",
+      "networking.k8s.io/v1beta1",
+      "ingress/v1"
+    ],
     "correct": 0,
-    "explication": "networking.k8s.io/v1 est la version stable depuis Kubernetes 1.19."
+    "explanation": "networking.k8s.io/v1 est la version stable depuis Kubernetes 1.19."
   },
   {
     "id": "CKA-03-037",
@@ -480,9 +545,14 @@
     "theme_label": "Service type ExternalName",
     "difficulty": "easy",
     "question": "ExternalName fonctionne-t-il avec un service headless ?",
-    "options": ["Non", "Oui", "Uniquement avec clusterIP", "Uniquement avec NodePort"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement avec clusterIP",
+      "Uniquement avec NodePort"
+    ],
     "correct": 0,
-    "explication": "ExternalName ne crée pas d'endpoints, juste un enregistrement CNAME."
+    "explanation": "ExternalName ne crée pas d'endpoints, juste un enregistrement CNAME."
   },
   {
     "id": "CKA-03-038",
@@ -497,7 +567,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Il faut autoriser les requêtes DNS (port 53 UDP/TCP) vers le service kube-dns."
+    "explanation": "Il faut autoriser les requêtes DNS (port 53 UDP/TCP) vers le service kube-dns."
   },
   {
     "id": "CKA-03-039",
@@ -512,7 +582,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Le default backend reçoit les requêtes non correspondantes."
+    "explanation": "Le default backend reçoit les requêtes non correspondantes."
   },
   {
     "id": "CKA-03-040",
@@ -527,7 +597,7 @@
       "Affinité de session"
     ],
     "correct": 0,
-    "explication": "Améliore la latence et réduit les coûts de transfert de données."
+    "explanation": "Améliore la latence et réduit les coûts de transfert de données."
   },
   {
     "id": "CKA-03-041",
@@ -542,7 +612,7 @@
       "N'importe où"
     ],
     "correct": 0,
-    "explication": "Les contrôleurs sont souvent déployés dans un namespace dédié."
+    "explanation": "Les contrôleurs sont souvent déployés dans un namespace dédié."
   },
   {
     "id": "CKA-03-042",
@@ -557,7 +627,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "limit-rps et limit-rpm sont des annotations courantes."
+    "explanation": "limit-rps et limit-rpm sont des annotations courantes."
   },
   {
     "id": "CKA-03-043",
@@ -572,7 +642,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les EndpointSlices découpent les endpoints en morceaux pour éviter les limites d'étiquette."
+    "explanation": "Les EndpointSlices découpent les endpoints en morceaux pour éviter les limites d'étiquette."
   },
   {
     "id": "CKA-03-044",
@@ -587,7 +657,7 @@
       "Oui, avec ipBlock"
     ],
     "correct": 0,
-    "explication": "namespaceSelector sélectionne des namespaces par label."
+    "explanation": "namespaceSelector sélectionne des namespaces par label."
   },
   {
     "id": "CKA-03-045",
@@ -602,7 +672,7 @@
       "Aléatoire"
     ],
     "correct": 0,
-    "explication": "Les chemins sont évalués du plus spécifique au moins spécifique."
+    "explanation": "Les chemins sont évalués du plus spécifique au moins spécifique."
   },
   {
     "id": "CKA-03-046",
@@ -617,7 +687,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les readiness probes déterminent si le pod reçoit du trafic."
+    "explanation": "Les readiness probes déterminent si le pod reçoit du trafic."
   },
   {
     "id": "CKA-03-047",
@@ -632,7 +702,7 @@
       "Non, Ingress est pour les entrées, service mesh pour l'intérieur"
     ],
     "correct": 0,
-    "explication": "Ingress gère le trafic entrant, service mesh gère la communication entre services."
+    "explanation": "Ingress gère le trafic entrant, service mesh gère la communication entre services."
   },
   {
     "id": "CKA-03-048",
@@ -647,7 +717,7 @@
       "API pour les network policies"
     ],
     "correct": 0,
-    "explication": "Gateway API (v1beta1) offre plus de fonctionnalités qu'Ingress."
+    "explanation": "Gateway API (v1beta1) offre plus de fonctionnalités qu'Ingress."
   },
   {
     "id": "CKA-03-049",
@@ -662,7 +732,7 @@
       "Pod, Deployment"
     ],
     "correct": 0,
-    "explication": "Gateway API introduit de nouveaux types de ressources."
+    "explanation": "Gateway API introduit de nouveaux types de ressources."
   },
   {
     "id": "CKA-03-050",
@@ -677,6 +747,351 @@
       "Configurer le DNS"
     ],
     "correct": 0,
-    "explication": "Multus est un méta-CNI qui permet d'attacher plusieurs CNI à un pod."
+    "explanation": "Multus est un méta-CNI qui permet d'attacher plusieurs CNI à un pod."
+  },
+  {
+    "id": "CKA-S&N-001",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Network Policies :",
+    "options": [
+      "Les règles sont appliquées à l'entrée et à la sortie des pods.",
+      "Les Network Policies peuvent être appliquées au niveau du namespace.",
+      "Les règles peuvent spécifier des politiques d'égress pour les sorties de pods.",
+      "Les Network Policies ne peuvent être appliquées qu'aux services."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les règles sont appliquées à l'entrée et à la sortie des pods (A). Les Network Policies peuvent être appliquées au niveau du namespace (B). Les règles peuvent spécifier des politiques d'égress pour les sorties de pods (C). Les Network Policies ne peuvent être appliquées qu'aux services est FALSÉ."
+  },
+  {
+    "id": "CKA-S&N-002",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre les types de services NodePort et LoadBalancer ?",
+    "options": [
+      "NodePort expose le service uniquement à l'intérieur du cluster, tandis que LoadBalancer expose le service via un équilibreur de charge dans la cloud.",
+      "NodePort et LoadBalancer sont les mêmes types de services, ils diffèrent uniquement par leur configuration.",
+      "NodePort expose le service via un port sur chaque nœud du cluster, tandis que LoadBalancer utilise un équilibreur de charge pour distribuer le trafic.",
+      "NodePort et LoadBalancer ne peuvent être utilisés qu'ensemble."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "NodePort expose le service via un port sur chaque nœud du cluster (A est FALSÉ). LoadBalancer utilise un équilibreur de charge pour distribuer le trafic (C est VRAI). NodePort et LoadBalancer ne peuvent être utilisés qu'ensemble est FALSÉ."
+  },
+  {
+    "id": "CKA-S&N-003",
+    "theme": "Services & Networking",
+    "theme_label": "DNS",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le DNS dans Kubernetes :",
+    "options": [
+      "Kubernetes utilise un serveur DNS interne pour résoudre les noms de service.",
+      "Les pods peuvent accéder au DNS interne via le service Kubernetes.",
+      "Le serveur DNS interne est accessible uniquement à partir des nœuds du cluster.",
+      "Les pods peuvent résoudre les noms de domaine publics via le DNS interne."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Kubernetes utilise un serveur DNS interne pour résoudre les noms de service (A). Les pods peuvent accéder au DNS interne via le service Kubernetes (B). Le serveur DNS interne est accessible uniquement à partir des nœuds du cluster est FALSÉ. Les pods peuvent résoudre les noms de domaine publics via le DNS interne est FALSÉ."
+  },
+  {
+    "id": "CKA-S&N-004",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress Controller",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Ingress Controller basé sur NGINX et un Ingress Controller basé sur Traefik ?",
+    "options": [
+      "NGINX est basé sur un modèle de routing par domaine, tandis que Traefik est basé sur un modèle de routing par chemin.",
+      "NGINX nécessite une configuration manuelle pour chaque route, tandis que Traefik peut détecter automatiquement les routes à partir des annotations de service.",
+      "NGINX est plus performant que Traefik pour les charges de travail lourdes, tandis que Traefik est plus adapté aux petits projets.",
+      "NGINX et Traefik sont des alternatives de gestion des DNS, pas d'Ingress Controller."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "NGINX est basé sur un modèle de routing par domaine, tandis que Traefik est basé sur un modèle de routing par chemin (A est VRAI). NGINX nécessite une configuration manuelle pour chaque route, tandis que Traefik peut détecter automatiquement les routes à partir des annotations de service (B est VRAI). NGINX est plus performant que Traefik pour les charges de travail lourdes, tandis que Traefik est plus adapté aux petits projets est FALSÉ. NGINX et Traefik sont des alternatives de gestion des DNS, pas d'Ingress Controller est FALSÉ."
+  },
+  {
+    "id": "CKA-S&N-005",
+    "theme": "Services & Networking",
+    "theme_label": "Service Mesh",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant un Service Mesh :",
+    "options": [
+      "Un Service Mesh gère le routage et la mise en réseau de microservices.",
+      "Un Service Mesh peut être utilisé pour gérer les communications entre services dans un cluster Kubernetes.",
+      "Un Service Mesh nécessite une configuration manuelle pour chaque service.",
+      "Un Service Mesh est un type de service Kubernetes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Un Service Mesh gère le routage et la mise en réseau de microservices (A). Un Service Mesh peut être utilisé pour gérer les communications entre services dans un cluster Kubernetes (B). Un Service Mesh nécessite une configuration manuelle pour chaque service est FALSÉ. Un Service Mesh est un type de service Kubernetes est FALSÉ."
+  },
+  {
+    "id": "CKA-S&N-006",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Network Policies :",
+    "options": [
+      "Les règles de réseau peuvent être appliquées à des espaces de noms spécifiques.",
+      "Les Network Policies ne peuvent pas être utilisées pour contrôler le trafic entrant.",
+      "Les règles de réseau peuvent spécifier des types d'actions comme 'Allow' ou 'Deny'.",
+      "Les Network Policies ne peuvent pas être utilisées pour définir des politiques de DNS.",
+      "Les règles de réseau peuvent cibler les pods spécifiques en utilisant des sélecteurs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Les règles de réseau peuvent être appliquées à des espaces de noms spécifiques (A correct). Les Network Policies peuvent contrôler le trafic entrant et sortant (B incorrect). Les règles de réseau peuvent spécifier des types d'actions comme 'Allow' ou 'Deny' (C correct). Les Network Policies peuvent être utilisées pour définir des politiques de DNS (D incorrect). Les règles de réseau peuvent cibler les pods spécifiques en utilisant des sélecteurs (E correct)."
+  },
+  {
+    "id": "CKA-S&N-007",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre 'path' et 'pathType' dans une configuration Ingress ?",
+    "options": [
+      "'Path' spécifie le chemin d'accès, tandis que 'pathType' définit le type de correspondance (exact, préfixe ou regex).",
+      "'Path' définit le type de correspondance (exact, préfixe ou regex), tandis que 'pathType' spécifie le chemin d'accès.",
+      "'Path' et 'pathType' sont interchangeables et ne servent pas à la même chose.",
+      "'Path' spécifie le chemin d'accès, tandis que 'pathType' est utilisé pour définir la stratégie de mise à jour du service."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "'Path' spécifie le chemin d'accès, tandis que 'pathType' définit le type de correspondance (exact, préfixe ou regex)."
+  },
+  {
+    "id": "CKA-S&N-008",
+    "theme": "Services & Networking",
+    "theme_label": "Service Mesh",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Service Mesh :",
+    "options": [
+      "Les Service Mesh permettent de gérer le trafic inter-service en utilisant des sidecar proxies.",
+      "Les Service Mesh ne peuvent pas être utilisés pour gérer le trafic HTTP/HTTPS.",
+      "Les Service Mesh sont principalement utilisés pour les microservices à grande échelle.",
+      "Les Service Mesh ne peuvent pas être utilisés pour la mise en réseau inter-cluster.",
+      "Les Service Mesh permettent de mettre en œuvre des politiques de sécurité et de traçabilité."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Les Service Mesh permettent de gérer le trafic inter-service en utilisant des sidecar proxies (A correct). Les Service Mesh peuvent être utilisés pour gérer le trafic HTTP/HTTPS (B incorrect). Les Service Mesh sont principalement utilisés pour les microservices à grande échelle (C correct). Les Service Mesh peuvent être utilisés pour la mise en réseau inter-cluster (D incorrect). Les Service Mesh permettent de mettre en œuvre des politiques de sécurité et de traçabilité (E correct)."
+  },
+  {
+    "id": "CKA-S&N-009",
+    "theme": "Services & Networking",
+    "theme_label": "DNS",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un 'ExternalName' service et un 'ClusterIP' service dans Kubernetes ?",
+    "options": [
+      "Un 'ExternalName' service mappe un nom de domaine externe à un nom de domaine interne, tandis qu'un 'ClusterIP' service expose un service interne à l'intérieur du cluster.",
+      "Un 'ExternalName' service expose un service interne à l'intérieur du cluster, tandis qu'un 'ClusterIP' service mappe un nom de domaine externe à un nom de domaine interne.",
+      "Un 'ExternalName' service et un 'ClusterIP' service sont interchangeables et ne servent pas à la même chose.",
+      "Un 'ExternalName' service est utilisé pour définir des politiques de sécurité, tandis qu'un 'ClusterIP' service est utilisé pour la mise en réseau inter-cluster."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un 'ExternalName' service mappe un nom de domaine externe à un nom de domaine interne, tandis qu'un 'ClusterIP' service expose un service interne à l'intérieur du cluster."
+  },
+  {
+    "id": "CKA-S&N-010",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress Controller",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Ingress Controllers :",
+    "options": [
+      "Les Ingress Controllers sont des composants qui gèrent les règles d'accès entrant pour un ensemble de services.",
+      "Les Ingress Controllers ne peuvent pas être utilisés pour gérer le trafic HTTP/HTTPS.",
+      "Les Ingress Controllers sont principalement utilisés pour les applications monolithiques.",
+      "Les Ingress Controllers ne peuvent pas être déployés sur des clusters Kubernetes.",
+      "Les Ingress Controllers permettent de mettre en œuvre des politiques de sécurité et de traçabilité."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      4
+    ],
+    "explanation": "Les Ingress Controllers sont des composants qui gèrent les règles d'accès entrant pour un ensemble de services (A correct). Les Ingress Controllers peuvent être utilisés pour gérer le trafic HTTP/HTTPS (B incorrect). Les Ingress Controllers sont principalement utilisés pour les microservices à grande échelle (C incorrect). Les Ingress Controllers peuvent être déployés sur des clusters Kubernetes (D incorrect). Les Ingress Controllers permettent de mettre en œuvre des politiques de sécurité et de traçabilité (E correct)."
+  },
+  {
+    "id": "CKA-S&N-011",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Network Policies :",
+    "options": [
+      "Les Network Policies permettent de contrôler le trafic réseau entre les pods.",
+      "Les Network Policies peuvent être appliquées à des noms de services spécifiques.",
+      "Les Network Policies ne peuvent être appliquées qu'aux pods dans le même namespace.",
+      "Les Network Policies utilisent des sélecteurs pour définir les pods à affecter."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les Network Policies permettent de contrôler le trafic réseau entre les pods (A). Les Network Policies peuvent être appliquées à des noms de services spécifiques (B). Les Network Policies ne peuvent être appliquées qu'aux pods dans le même namespace est incorrect (C). Les Network Policies utilisent des sélecteurs pour définir les pods à affecter (D)."
+  },
+  {
+    "id": "CKA-S&N-012",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le type d'Ingress Controller par défaut dans Kubernetes ?",
+    "options": [
+      "Nginx Ingress Controller",
+      "Traefik Ingress Controller",
+      "HAProxy Ingress Controller",
+      "Ingress-nginx"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Ingress-nginx est le type d'Ingress Controller par défaut dans Kubernetes."
+  },
+  {
+    "id": "CKA-S&N-013",
+    "theme": "Services & Networking",
+    "theme_label": "Service Mesh",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Service Mesh :",
+    "options": [
+      "Les Service Mesh permettent de gérer le trafic réseau entre les services dans un cluster Kubernetes.",
+      "Les Service Mesh utilisent des sidecars pour intercepter et gérer le trafic réseau.",
+      "Les Service Mesh sont principalement utilisés pour les applications monolithiques.",
+      "Les Service Mesh peuvent être déployés sur n'importe quel orchestrateur de conteneurs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les Service Mesh permettent de gérer le trafic réseau entre les services dans un cluster Kubernetes (A). Les Service Mesh utilisent des sidecars pour intercepter et gérer le trafic réseau (B). Les Service Mesh sont principalement utilisés pour les applications monolithiques est incorrect (C). Les Service Mesh peuvent être déployés sur n'importe quel orchestrateur de conteneurs (D)."
+  },
+  {
+    "id": "CKA-S&N-014",
+    "theme": "Services & Networking",
+    "theme_label": "DNS",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de la résolution DNS dans Kubernetes ?",
+    "options": [
+      "Permettre aux pods de se connecter entre eux en utilisant des noms de domaines.",
+      "Permettre aux pods d'accéder à des ressources externes via leur IP.",
+      "Permettre aux pods de se connecter à des services en utilisant des noms de domaines.",
+      "Permettre aux pods d'accéder à des ressources internes via leur IP."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La résolution DNS dans Kubernetes permet aux pods de se connecter à des services en utilisant des noms de domaines."
+  },
+  {
+    "id": "CKA-S&N-015",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress Controller",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'installation et la configuration d'un Ingress Controller :",
+    "options": [
+      "Pour installer un Ingress Controller, il faut utiliser le déploiement YAML fourni par Kubernetes.",
+      "Pour configurer un Ingress Controller, il faut modifier le fichier de configuration du service Kubernetes.",
+      "Pour installer un Ingress Controller, il faut utiliser un déploiement YAML spécifique à l'Ingress Controller choisi.",
+      "Pour configurer un Ingress Controller, il faut modifier le fichier de configuration du déploiement Kubernetes."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Pour installer un Ingress Controller, il faut utiliser un déploiement YAML spécifique à l'Ingress Controller choisi (A). Pour configurer un Ingress Controller, il faut modifier le fichier de configuration du service Kubernetes est incorrect (B). Pour installer un Ingress Controller, il faut utiliser le déploiement YAML fourni par Kubernetes est incorrect (C). Pour configurer un Ingress Controller, il faut modifier le fichier de configuration du déploiement Kubernetes (D)."
+  },
+  {
+    "id": "CKA-S&N-016",
+    "theme": "Services & Networking",
+    "theme_label": "Network Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Network Policies :",
+    "options": [
+      "Les règles de réseau sont appliquées au niveau du service.",
+      "Les Network Policies peuvent contrôler le trafic entrant et sortant des pods.",
+      "Les règles de réseau peuvent être appliquées à l'ensemble du cluster.",
+      "Les Network Policies sont basées sur les étiquettes de ressources."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les règles de réseau sont appliquées au niveau des pods (Option B). Les Network Policies peuvent contrôler le trafic entrant et sortant des pods (Option B). Les règles de réseau ne sont pas appliquées à l'ensemble du cluster (Option C). Les Network Policies sont basées sur les étiquettes de ressources (Option D)."
+  },
+  {
+    "id": "CKA-S&N-017",
+    "theme": "Services & Networking",
+    "theme_label": "Ingress",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre NodePort et LoadBalancer ?",
+    "options": [
+      "NodePort expose le service sur un port spécifique de chaque nœud du cluster.",
+      "LoadBalancer expose le service via une adresse IP publique fournie par le fournisseur de cloud.",
+      "NodePort est utilisé uniquement pour les services internes, tandis que LoadBalancer est pour les services externes.",
+      "NodePort et LoadBalancer sont interchangeables."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "NodePort expose le service sur un port spécifique de chaque nœud du cluster (Option A). LoadBalancer expose le service via une adresse IP publique fournie par le fournisseur de cloud (Option B). NodePort est utilisé pour les services internes et externes, tandis que LoadBalancer est principalement pour les services externes (Option C). NodePort et LoadBalancer ne sont pas interchangeables (Option D)."
+  },
+  {
+    "id": "CKA-S&N-018",
+    "theme": "Services & Networking",
+    "theme_label": "Service Mesh",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Service Mesh :",
+    "options": [
+      "Un Service Mesh gère uniquement le trafic HTTP.",
+      "Un Service Mesh peut aider à améliorer la sécurité et la fiabilité du réseau interne.",
+      "Un Service Mesh nécessite une configuration manuelle pour chaque service.",
+      "Un Service Mesh peut être utilisé avec n'importe quel type de réseau."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Un Service Mesh peut aider à améliorer la sécurité et la fiabilité du réseau interne (Option B). Un Service Mesh peut être utilisé avec n'importe quel type de réseau (Option D). Un Service Mesh gère non seulement le trafic HTTP, mais également d'autres types de trafic (Option A est incorrecte). Un Service Mesh nécessite généralement une configuration automatique ou semi-automatique, pas une configuration manuelle pour chaque service (Option C est incorrecte)."
   }
 ]

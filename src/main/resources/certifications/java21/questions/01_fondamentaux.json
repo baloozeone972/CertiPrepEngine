@@ -748,5 +748,740 @@
     ],
     "correct": 1,
     "explanation": "Les blocs de texte (\"\"\" ... \"\"\") préservent la mise en forme, gèrent l'indentation automatiquement et sont plus lisibles pour les chaînes multi-lignes."
+  },
+  {
+    "id": "JAVA21-FDL-001",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la convention de nommage pour une méthode en Java ?",
+    "options": [
+      "snake_case",
+      "camelCase",
+      "PascalCase",
+      "UPPER_CASE"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "En Java, les méthodes suivent la convention camelCase (première lettre en minuscule et majuscules pour les mots suivants). Exemple : 'calculateTotal'."
+  },
+  {
+    "id": "JAVA21-FDL-002",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les commentaires en Java :",
+    "options": [
+      "// Ceci est un commentaire à une ligne",
+      "/* Ceci est un commentaire sur plusieurs lignes */",
+      "/** Ceci est un commentaire de documentation */",
+      "/* Ceci est un commentaire à une ligne */"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "// est utilisé pour les commentaires sur une ligne. /* */ est utilisé pour les commentaires sur plusieurs lignes. /** */ est utilisé pour la documentation."
+  },
+  {
+    "id": "JAVA21-FDL-004",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les variables en Java ?",
+    "options": [
+      "Les variables doivent être déclarées avant leur utilisation",
+      "Les variables peuvent changer de type après leur initialisation",
+      "Les variables locales doivent être initialisées avant utilisation",
+      "Les variables statiques sont accessibles sans instanciation"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les variables doivent être déclarées avant leur utilisation. Les variables locales doivent être initialisées avant utilisation. Les autres propositions sont incorrectes."
+  },
+  {
+    "id": "JAVA21-FDL-005",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre '==' et 'equals()' en Java ?",
+    "options": [
+      "'==' compare les valeurs, 'equals()' compare les références",
+      "'==' compare les références, 'equals()' compare les valeurs",
+      "Les deux sont interchangeables pour comparer des objets",
+      "'==' est utilisé pour les primitifs, 'equals()' pour les objets"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "'==' compare les références pour les objets et les valeurs pour les primitifs. 'equals()' compare généralement les valeurs des objets."
+  },
+  {
+    "id": "JAVA21-FDL-006",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour déclarer une variable de type int en Java ?",
+    "options": [
+      "int a = 10;",
+      "integer a = 10;",
+      "Int a = 10;",
+      "int a = '10';"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte pour déclarer une variable de type int est 'int a = 10;'"
+  },
+  {
+    "id": "JAVA21-FDL-008",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre 'final' et 'static' en Java ?",
+    "options": [
+      "'final' rend une variable immuable, 'static' associe la variable à la classe",
+      "'final' associe une variable à la classe, 'static' rend une variable immuable",
+      "'final' et 'static' ont le même effet sur les variables",
+      "Aucune des deux n'a d'effet significatif sur les variables"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "'final' rend une variable immuable, empêchant sa modification après initialisation. 'static' associe la variable à la classe plutôt qu'à une instance spécifique."
+  },
+  {
+    "id": "JAVA21-FDL-007",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les variables en Java :",
+    "options": [
+      "Une variable doit être déclarée avant d'être utilisée.",
+      "Les variables peuvent changer de type après leur initialisation.",
+      "Les noms de variables ne peuvent pas contenir d'espaces.",
+      "Les types primitifs ont des valeurs par défaut."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "A est correct car en Java, une variable doit être déclarée avant d'être utilisée. B est incorrect car les variables en Java ne peuvent pas changer de type après leur initialisation. C est correct car les noms de variables en Java ne peuvent pas contenir d'espaces. D est correct car les types primitifs en Java ont des valeurs par défaut, comme 0 pour int ou false pour boolean."
+  },
+  {
+    "id": "JAVA21-FDL-008",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode correcte pour déclarer une variable en Java ?",
+    "options": [
+      "int x = 10;",
+      "x int = 10;",
+      "var x = 10;",
+      "int = x 10;"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car 'int x = 10;' est une déclaration de variable valide en Java. B est incorrect car 'x int = 10;' ne suit pas la syntaxe correcte. C est correct car 'var x = 10;' est une déclaration de variable valide à partir de Java 10. D est incorrect car 'int = x 10;' n'est pas une déclaration de variable valide."
+  },
+  {
+    "id": "JAVA21-FDL-009",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les commentaires en Java ?",
+    "options": [
+      "// Ceci est un commentaire à une seule ligne.",
+      "/* Ceci est un commentaire sur plusieurs lignes. */",
+      "Ceci n'est pas un commentaire.",
+      "# Ceci est un commentaire en Python."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car '// Ceci est un commentaire à une seule ligne.' est la syntaxe pour un commentaire sur une seule ligne en Java. B est correct car '/* Ceci est un commentaire sur plusieurs lignes. */' est la syntaxe pour un commentaire sur plusieurs lignes en Java. C est incorrect car 'Ceci n'est pas un commentaire.' n'est pas une déclaration de commentaire. D est incorrect car '# Ceci est un commentaire en Python.' est la syntaxe pour un commentaire en Python, pas en Java."
+  },
+  {
+    "id": "JAVA21-FDL-010",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le type de données utilisé pour représenter un caractère en Java ?",
+    "options": [
+      "char",
+      "string",
+      "int",
+      "float"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car 'char' est le type de données utilisé pour représenter un caractère en Java. B est incorrect car 'string' n'est pas le type de données correct pour un caractère en Java. C est incorrect car 'int' est utilisé pour représenter des nombres entiers, pas des caractères. D est incorrect car 'float' est utilisé pour représenter des nombres à virgule flottante, pas des caractères."
+  },
+  {
+    "id": "JAVA21-FDL-011",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations correctes concernant les opérateurs en Java ?",
+    "options": [
+      "+ est utilisé pour l'addition.",
+      "- est utilisé pour la soustraction.",
+      "* est utilisé pour la division.",
+      "/ est utilisé pour la multiplication."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car '+ est utilisé pour l'addition.' est une affirmation vraie en Java. B est correct car '- est utilisé pour la soustraction.' est également une affirmation vraie en Java. C est incorrect car '* est utilisé pour la division.' n'est pas vrai, '*' est utilisé pour la multiplication. D est incorrect car '/ est utilisé pour la multiplication.' n'est pas vrai, '/' est utilisé pour la division."
+  },
+  {
+    "id": "JAVA21-FDL-012",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode correcte pour déclarer une constante en Java ?",
+    "options": [
+      "final int x = 10;",
+      "const int x = 10;",
+      "int final x = 10;",
+      "int x = 10; x.final();"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car 'final int x = 10;' est la méthode correcte pour déclarer une constante en Java. B est incorrect car 'const int x = 10;' n'est pas la syntaxe correcte pour déclarer une constante en Java. C est incorrect car 'int final x = 10;' n'est pas la syntaxe correcte. D est incorrect car 'int x = 10; x.final();' n'est pas une déclaration de constante valide."
+  },
+  {
+    "id": "JAVA21-FDL-013",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les TROIS affirmations correctes concernant les tableaux en Java ?",
+    "options": [
+      "Les tableaux peuvent être de taille variable.",
+      "Les tableaux sont indexés à partir de 1.",
+      "Les tableaux peuvent être multidimensionnels.",
+      "Les éléments d'un tableau doivent tous être du même type."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "A est incorrect car les tableaux en Java ont une taille fixe. B est incorrect car les tableaux en Java sont indexés à partir de 0, pas de 1. C est correct car les tableaux en Java peuvent être multidimensionnels. D est correct car tous les éléments d'un tableau doivent être du même type en Java."
+  },
+  {
+    "id": "JAVA21-FDL-014",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le résultat de l'expression '5 + 3 * 2' en Java ?",
+    "options": [
+      "16",
+      "11",
+      "10",
+      "8"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "D est correct car selon les règles de priorité des opérateurs en Java, la multiplication est effectuée avant l'addition. Donc '3 * 2' est évalué en premier, donnant 6, puis '5 + 6' donne le résultat final de 11."
+  },
+  {
+    "id": "JAVA21-FDL-015",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les modificateurs d'accès en Java :",
+    "options": [
+      "public signifie que le membre est accessible depuis n'importe où.",
+      "private signifie que le membre est accessible uniquement dans la classe définissant ce membre.",
+      "protected signifie que le membre est accessible dans toutes les classes du même package et dans les sous-classes.",
+      "default (sans modificateur) signifie que le membre est accessible dans toutes les classes du même package."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "L'option A est correcte car 'public' permet l'accès depuis n'importe où. L'option B est correcte car 'private' limite l'accès à la classe seule. L'option C est incorrecte car 'protected' permet également l'accès dans les sous-classes, pas seulement dans le même package. L'option D est correcte car sans modificateur, l'accès est limité au même package."
+  },
+  {
+    "id": "JAVA21-FDL-016",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode principale utilisée pour démarrer une application Java ?",
+    "options": [
+      "public static void start(String[] args)",
+      "public static void main(String[] args)",
+      "public void main(String... args)",
+      "public static int main(String[] args)"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'option B est correcte car 'public static void main(String[] args)' est la méthode principale standard pour démarrer une application Java. Les autres options sont incorrectes car elles ne respectent pas la signature requise pour le point d'entrée de l'application."
+  },
+  {
+    "id": "JAVA21-FDL-017",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les variables en Java :",
+    "options": [
+      "Les noms des variables doivent commencer par une lettre ou un trait de soulignement",
+      "Les noms des variables sont sensibles à la casse",
+      "Java permet l'utilisation de mots-clés comme noms de variables",
+      "Les types primitifs en Java ne nécessitent pas d'initialisation avant utilisation"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les noms des variables en Java doivent effectivement commencer par une lettre ou un trait de soulignement, ce qui rend l'option A correcte. Les noms des variables sont également sensibles à la casse, ce qui rend l'option B correcte. Cependant, utiliser des mots-clés comme noms de variables est interdit et rend l'option C incorrecte. Enfin, les types primitifs en Java doivent être initialisés avant utilisation, ce qui rend l'option D incorrecte."
+  },
+  {
+    "id": "JAVA21-FDL-018",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode correcte pour déclarer et initialiser une variable en Java ?",
+    "options": [
+      "int x = 10;",
+      "x = 10 int;",
+      "var y : double = 3.14;",
+      "float z = '3.14f';"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte pour déclarer et initialiser une variable en Java est 'int x = 10;', ce qui rend l'option A correcte. Les autres options contiennent des erreurs de syntaxe ou de type, ce qui les rend incorrectes."
+  },
+  {
+    "id": "JAVA21-FDL-019",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les types primitifs en Java ?",
+    "options": [
+      "byte est un type entier signé de 8 bits",
+      "char est utilisé pour stocker des nombres flottants",
+      "short peut contenir des valeurs entre -32768 et 32767",
+      "boolean peut avoir les valeurs 'true', 'false' et 'null'"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "byte est effectivement un type entier signé de 8 bits, ce qui rend l'option A correcte. short peut contenir des valeurs entre -32768 et 32767, ce qui rend l'option C correcte. char est utilisé pour stocker des caractères uniques, pas des nombres flottants, ce qui rend l'option B incorrecte. boolean ne peut avoir que les valeurs 'true' et 'false', pas 'null', ce qui rend l'option D incorrecte."
+  },
+  {
+    "id": "JAVA21-FDL-020",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre '==' et '.equals()' en Java ?",
+    "options": [
+      "'==' compare les références, '.equals()' compare les valeurs",
+      "'==' compare les valeurs, '.equals()' compare les références",
+      "Les deux opérateurs comparent les valeurs",
+      "Les deux opérateurs comparent les références"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "'==' compare les références, tandis que '.equals()' compare les valeurs. C'est pourquoi l'option A est correcte. Les autres options sont incorrectes car elles inversent ou confondent les rôles des deux opérateurs."
+  },
+  {
+    "id": "JAVA21-FDL-021",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les commentaires en Java :",
+    "options": [
+      "// est utilisé pour un commentaire sur une seule ligne",
+      "/* */ est utilisé pour un commentaire sur plusieurs lignes",
+      "/**/ est utilisé pour un commentaire de documentation",
+      "/* */ peut être imbriqué"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "// est effectivement utilisé pour un commentaire sur une seule ligne, ce qui rend l'option A correcte. /* */ est utilisé pour un commentaire sur plusieurs lignes, ce qui rend l'option B correcte. /**/ n'est pas une syntaxe valide pour un commentaire en Java, ce qui rend l'option C incorrecte. /* */ ne peut pas être imbriqué en Java, ce qui rend l'option D incorrecte."
+  },
+  {
+    "id": "JAVA21-FDL-022",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types de données primitifs en Java :",
+    "options": [
+      "byte est un type de données entier signé sur 8 bits",
+      "float est utilisé pour stocker des nombres décimaux avec une précision inférieure à double",
+      "char est utilisé pour stocker des chaînes de caractères",
+      "boolean peut avoir les valeurs true ou false"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "byte est effectivement un type de données entier signé sur 8 bits. float est utilisé pour stocker des nombres décimaux avec une précision inférieure à double, ce qui est correct. char n'est pas utilisé pour stocker des chaînes de caractères, mais plutôt un seul caractère. boolean peut avoir les valeurs true ou false, ce qui est correct."
+  },
+  {
+    "id": "JAVA21-FDL-023",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode utilisée pour déclarer une variable en Java ?",
+    "options": [
+      "declare",
+      "init",
+      "var",
+      "let"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte pour déclarer une variable en Java est 'var'. Cette méthode permet de déduire automatiquement le type à partir de la valeur assignée. Les autres options ne sont pas des mots-clés utilisés pour déclarer une variable en Java."
+  },
+  {
+    "id": "JAVA21-FDL-024",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les commentaires en Java ?",
+    "options": [
+      "// est utilisé pour un commentaire sur une seule ligne",
+      "/* */ est utilisé pour un commentaire sur plusieurs lignes",
+      "/**/ est utilisé pour un commentaire de documentation",
+      "/* */ peut être imbriqué dans d'autres commentaires"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "// est effectivement utilisé pour un commentaire sur une seule ligne. /* */ est utilisé pour un commentaire sur plusieurs lignes, ce qui est correct. /**/ n'est pas une syntaxe valide pour les commentaires en Java. Les commentaires /* */ ne peuvent pas être imbriqués dans d'autres commentaires."
+  },
+  {
+    "id": "JAVA21-FDL-025",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour déclarer et initialiser une variable de type int en Java ?",
+    "options": [
+      "int x = 10;",
+      "var x = int(10);",
+      "x = 10; int x;",
+      "int x := 10;"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte pour déclarer et initialiser une variable de type int en Java est 'int x = 10;'. Les autres options contiennent des erreurs de syntaxe ou ne sont pas valides en Java."
+  },
+  {
+    "id": "JAVA21-FDL-026",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les opérateurs d'affectation en Java :",
+    "options": [
+      "+=",
+      "-=",
+      "*=",
+      "/="
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Tous les opérateurs d'affectation mentionnés sont corrects en Java. +=, -=, *= et /= permettent de modifier la valeur d'une variable en effectuant une opération arithmétique avec une autre valeur."
+  },
+  {
+    "id": "JAVA21-FDL-027",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les commentaires en Java :",
+    "options": [
+      "// Ceci est un commentaire à une ligne",
+      "/* Ceci est un commentaire sur plusieurs lignes */",
+      "/** Ceci est un commentaire de documentation */",
+      "/* Ceci est un commentaire à une ligne */"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "// est utilisé pour les commentaires à une ligne. /* */ est utilisé pour les commentaires sur plusieurs lignes. /** */ est utilisé pour la documentation de code."
+  },
+  {
+    "id": "JAVA21-FDL-029",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'opérateur ternaire en Java ?",
+    "options": [
+      "L'opérateur ternaire est un remplacement pour une structure if-else",
+      "L'opérateur ternaire nécessite trois opérandes",
+      "L'opérateur ternaire peut retourner n'importe quel type de données",
+      "L'opérateur ternaire est toujours plus rapide qu'un if-else"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'opérateur ternaire est effectivement un remplacement pour une structure if-else et nécessite trois opérandes. Il peut retourner n'importe quel type de données, mais cela ne fait pas partie des deux affirmations vraies. La vitesse n'est pas une garantie de l'opérateur ternaire."
+  },
+  {
+    "id": "JAVA21-FDL-030",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour déclarer une variable en Java ?",
+    "options": [
+      "int a = 10;",
+      "var b = 'Java';",
+      "float c = 3.14f;",
+      "double d = 2.71828;"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte pour déclarer une variable en Java est 'int a = 10;' ou 'var b = 'Java';'."
+  },
+  {
+    "id": "JAVA21-FDL-031",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types primitifs en Java :",
+    "options": [
+      "byte est un type primitif",
+      "String est un type primitif",
+      "char est un type primitif",
+      "boolean est un type primitif"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "byte, char et boolean sont des types primitifs en Java. String est une classe non primitive."
+  },
+  {
+    "id": "JAVA21-FDL-031",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les variables en Java :",
+    "options": [
+      "Les noms de variables doivent commencer par une lettre ou un trait de soulignement.",
+      "Les noms de variables peuvent contenir des espaces.",
+      "Java est sensible à la casse dans les noms de variables.",
+      "Les noms de variables ne peuvent pas être des mots-clés Java."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Option A est correcte car les noms de variables en Java doivent effectivement commencer par une lettre ou un trait de soulignement. Option B est incorrecte car les noms de variables ne peuvent pas contenir d'espaces. Option C est correcte car Java est effectivement sensible à la casse, ce qui signifie que 'variable' et 'Variable' seraient considérés comme deux variables différentes. Option D est correcte car les noms de variables ne peuvent pas être des mots-clés Java réservés."
+  },
+  {
+    "id": "JAVA21-FDL-032",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la valeur par défaut de l'objet String en Java ?",
+    "options": [
+      "null",
+      "",
+      "undefined",
+      "void"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La valeur par défaut d'une variable de type String en Java est une chaîne vide (\"\"), ce qui signifie qu'elle ne contient aucun caractère."
+  },
+  {
+    "id": "JAVA21-FDL-033",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les types primitifs en Java ?",
+    "options": [
+      "Les types primitifs ont des valeurs par défaut.",
+      "Les types primitifs sont des objets.",
+      "Les types primitifs peuvent être nulls.",
+      "Les types primitifs sont stockés sur la pile."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Option A est correcte car chaque type primitif en Java a une valeur par défaut. Par exemple, int est 0, boolean est false, etc. Option B est incorrecte car les types primitifs ne sont pas des objets ; ils sont des types de données basiques. Option C est incorrecte car les types primitifs ne peuvent pas être nulls, contrairement aux objets. Option D est correcte car les types primitifs sont généralement stockés sur la pile, ce qui leur permet d'avoir un accès rapide et une durée de vie limitée au bloc dans lequel ils sont déclarés."
+  },
+  {
+    "id": "JAVA21-FDL-034",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la syntaxe correcte pour déclarer une variable entière en Java ?",
+    "options": [
+      "int x = 10;",
+      "integer x = 10;",
+      "Int x = 10;",
+      "int x = '10';"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe correcte pour déclarer une variable entière en Java est 'int x = 10;'. Option B et C utilisent des types incorrects ('integer' et 'Int'), et option D utilise une chaîne entre guillemets simples, ce qui est incorrect pour un entier."
+  },
+  {
+    "id": "JAVA21-FDL-035",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les commentaires en Java :",
+    "options": [
+      "// Ceci est un commentaire sur une seule ligne.",
+      "/* Ceci est un commentaire multiligne. */",
+      "/** Ceci est un commentaire de documentation. */",
+      "Ceci n'est pas un commentaire."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Option A est correcte car '//' est utilisé pour les commentaires sur une seule ligne en Java. Option B est correcte car '/* */' est utilisé pour les commentaires multilignes. Option C est correcte car '/** */' est utilisé pour les commentaires de documentation, qui sont souvent utilisés avec des outils de génération de documentation. Option D est incorrecte car elle n'est pas un commentaire et ne sera pas ignorée par le compilateur."
+  },
+  {
+    "id": "JAVA21-FDL-036",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les variables en Java :",
+    "options": [
+      "Les noms des variables ne peuvent contenir d'espace.",
+      "Une variable doit être déclarée avant son utilisation.",
+      "Les types primitifs ont des valeurs par défaut.",
+      "Une variable peut être redéclarée dans le même bloc."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Option A est incorrecte car les noms des variables peuvent contenir des underscores (_) pour séparer les mots. Option B est correcte car en Java, une variable doit être déclarée avant d'être utilisée. Option C est correcte car les types primitifs en Java ont des valeurs par défaut (par exemple, 0 pour int, false pour boolean). Option D est incorrecte car une variable ne peut pas être redéclarée dans le même bloc."
+  },
+  {
+    "id": "JAVA21-FDL-037",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le type de retour pour la méthode main() en Java ?",
+    "options": [
+      "void",
+      "int",
+      "String[]",
+      "boolean"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode main() doit retourner void, ce qui signifie qu'elle ne retourne aucune valeur."
+  },
+  {
+    "id": "JAVA21-FDL-038",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'opérateur ternaire en Java ?",
+    "options": [
+      "L'opérateur ternaire est une alternative à l'instruction if-else.",
+      "L'opérateur ternaire peut retourner n'importe quel type d'objet.",
+      "L'opérateur ternaire doit être utilisé avec des conditions booléennes.",
+      "L'opérateur ternaire peut avoir plus de deux opérands."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car l'opérateur ternaire (condition ? expression1 : expression2) est une alternative concise à l'instruction if-else. Option B est incorrecte car l'opérateur ternaire retourne toujours une valeur spécifique et ne peut pas retourner n'importe quel type d'objet. Option C est correcte car l'opérateur ternaire nécessite une condition booléenne. Option D est incorrecte car l'opérateur ternaire ne peut avoir que deux opérands après la condition."
+  },
+  {
+    "id": "JAVA21-FDL-039",
+    "theme": "Fondamentaux du Langage",
+    "theme_label": "Structure et syntaxe de base",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre '==' et 'equals()' en Java ?",
+    "options": [
+      "'==' compare les références, 'equals()' compare les valeurs.",
+      "'==' compare les valeurs, 'equals()' compare les références.",
+      "Les deux opérateurs font la même chose : comparer les valeurs.",
+      "'==' compare les types, 'equals()' compare les objets."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "'==' est utilisé pour comparer les références d'objets en Java, ce qui signifie qu'il vérifie si deux variables font référence au même objet dans la mémoire. 'equals()' est une méthode qui compare les valeurs de deux objets. Par défaut, 'equals()' fonctionne comme '==', mais il peut être redéfini dans une classe pour comparer les valeurs des objets."
   }
 ]

@@ -65,7 +65,12 @@
     "theme_label": "Rôles",
     "difficulty": "medium",
     "question": "Quelle annotation déclare les rôles sur une servlet ?",
-    "options": ["@ServletSecurity", "@DeclareRoles", "@RolesAllowed", "@SecurityRoles"],
+    "options": [
+      "@ServletSecurity",
+      "@DeclareRoles",
+      "@RolesAllowed",
+      "@SecurityRoles"
+    ],
     "correct": 1,
     "explanation": "@DeclareRoles déclare les rôles utilisés."
   },
@@ -240,7 +245,12 @@
     "theme_label": "Security Context",
     "difficulty": "hard",
     "question": "Comment injecter le SecurityContext ?",
-    "options": ["@Inject SecurityContext", "@Context SecurityContext", "A et B", "A seulement"],
+    "options": [
+      "@Inject SecurityContext",
+      "@Context SecurityContext",
+      "A et B",
+      "A seulement"
+    ],
     "correct": 2,
     "explanation": "@Inject ou @Context fonctionnent."
   },
@@ -400,7 +410,12 @@
     "theme_label": "Session security",
     "difficulty": "hard",
     "question": "Quel flag empêche l'accès JavaScript au cookie ?",
-    "options": ["HttpOnly", "Secure", "SameSite", "Domain"],
+    "options": [
+      "HttpOnly",
+      "Secure",
+      "SameSite",
+      "Domain"
+    ],
     "correct": 0,
     "explanation": "HttpOnly protège contre les XSS."
   },
@@ -410,7 +425,12 @@
     "theme_label": "Session security",
     "difficulty": "hard",
     "question": "Quel flag force le cookie sur HTTPS ?",
-    "options": ["Secure", "HttpOnly", "SameSite", "Domain"],
+    "options": [
+      "Secure",
+      "HttpOnly",
+      "SameSite",
+      "Domain"
+    ],
     "correct": 0,
     "explanation": "Secure limite le cookie aux connexions HTTPS."
   },
@@ -450,7 +470,12 @@
     "theme_label": "JWT",
     "difficulty": "hard",
     "question": "Quelle annotation injecte un JWT ?",
-    "options": ["@Inject JsonWebToken", "@Inject JWT", "@Inject Token", "@JWT"],
+    "options": [
+      "@Inject JsonWebToken",
+      "@Inject JWT",
+      "@Inject Token",
+      "@JWT"
+    ],
     "correct": 0,
     "explanation": "JsonWebToken est injectable avec @Inject."
   },
@@ -475,7 +500,12 @@
     "theme_label": "Encryption",
     "difficulty": "hard",
     "question": "Quel algorithme est recommandé pour chiffrer ?",
-    "options": ["AES-GCM", "DES", "RC4", "3DES"],
+    "options": [
+      "AES-GCM",
+      "DES",
+      "RC4",
+      "3DES"
+    ],
     "correct": 0,
     "explanation": "AES-GCM est recommandé pour le chiffrement authentifié."
   },
@@ -718,5 +748,259 @@
     ],
     "correct": 0,
     "explanation": "Le Security Manager contrôle les permissions des applications."
+  },
+  {
+    "id": "JAKA-JS-001",
+    "theme": "Jakarta Security",
+    "theme_label": "Authentification",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des sessions en Jakarta EE :",
+    "options": [
+      "Les sessions peuvent être stockées dans la mémoire du serveur.",
+      "Les sessions ne peuvent pas être stockées dans un magasin externe.",
+      "La durée de vie d'une session peut être définie par le développeur.",
+      "Les sessions sont automatiquement détruites après une période d'inactivité."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les sessions peuvent être stockées dans la mémoire du serveur (A). Les sessions ne peuvent pas être stockées uniquement en mémoire (B est incorrect). La durée de vie d'une session peut être définie par le développeur (C). Les sessions sont automatiquement détruites après une période d'inactivité (D)."
+  },
+  {
+    "id": "JAKA-JS-002",
+    "theme": "Jakarta Security",
+    "theme_label": "Programmatic security",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour vérifier les permissions en Java EE ?",
+    "options": [
+      "isUserInRole(String role)",
+      "hasPermission(Object target, String permission)",
+      "checkPermission(Permission perm)",
+      "verifyRole(String role)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode isUserInRole(String role) est utilisée pour vérifier les permissions en Java EE."
+  },
+  {
+    "id": "JAKA-JS-003",
+    "theme": "Jakarta Security",
+    "theme_label": "Security headers",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les en-têtes de sécurité HTTP :",
+    "options": [
+      "X-Frame-Options est utilisé pour prévenir les attaques de clickjacking.",
+      "X-XSS-Protection est utilisé pour désactiver le filtre de sécurité contre les attaques XSS.",
+      "Content-Security-Policy est utilisé pour définir des directives sur les sources autorisées de contenu.",
+      "Strict-Transport-Security est utilisé pour forcer le navigateur à utiliser uniquement HTTPS."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "X-Frame-Options est utilisé pour prévenir les attaques de clickjacking (A). X-XSS-Protection est utilisé pour activer le filtre de sécurité contre les attaques XSS (B est incorrect). Content-Security-Policy est utilisé pour définir des directives sur les sources autorisées de contenu (C). Strict-Transport-Security est utilisé pour forcer le navigateur à utiliser uniquement HTTPS (D)."
+  },
+  {
+    "id": "JAKA-JS-004",
+    "theme": "Jakarta Security",
+    "theme_label": "Password hashing",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle bibliothèque Java est recommandée pour le hachage de mots de passe en Jakarta EE ?",
+    "options": [
+      "BCrypt",
+      "SHA-256",
+      "MD5",
+      "PBKDF2"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "BCrypt est recommandée pour le hachage de mots de passe en Jakarta EE."
+  },
+  {
+    "id": "JAKA-JS-005",
+    "theme": "Jakarta Security",
+    "theme_label": "CSRF",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la prévention des attaques CSRF en Jakarta EE :",
+    "options": [
+      "Les formulaires doivent inclure un token CSRF généré par le serveur.",
+      "La validation du token CSRF doit se faire côté client.",
+      "Les cookies doivent être marqués comme Secure et HttpOnly.",
+      "La validation du token CSRF doit se faire côté serveur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Les formulaires doivent inclure un token CSRF généré par le serveur (A). La validation du token CSRF doit se faire côté serveur (B est incorrect). Les cookies doivent être marqués comme Secure et HttpOnly (C). La validation du token CSRF doit se faire côté serveur (D)."
+  },
+  {
+    "id": "JAKA-JS-006",
+    "theme": "Jakarta Security",
+    "theme_label": "Programmatic security",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité programmatique dans Jakarta EE :",
+    "options": [
+      "La classe SecurityContext peut être utilisée pour accéder aux informations d'authentification et de sécurité.",
+      "La méthode HttpServletRequest.getUserPrincipal() peut être utilisée pour obtenir les informations de l'utilisateur authentifié.",
+      "La classe IdentityStore peut être utilisée pour stocker et gérer les identités des utilisateurs.",
+      "La méthode HttpServletResponse.setHeader() peut être utilisée pour ajouter des en-têtes de sécurité comme CSRF.",
+      "La classe PasswordHash peut être utilisée pour hasher et vérifier les mots de passe des utilisateurs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "A est correct car SecurityContext fournit un accès programmatique aux informations de sécurité. B est correct car getUserPrincipal() permet d'obtenir l'utilisateur authentifié. C est incorrect car IdentityStore est utilisé pour stocker les identités, pas directement dans la sécurité programmatique. D est correct car on peut ajouter des en-têtes de sécurité via HttpServletResponse.setHeader(). E est correct car PasswordHash est utilisé pour gérer les mots de passe."
+  },
+  {
+    "id": "JAKA-JS-007",
+    "theme": "Jakarta Security",
+    "theme_label": "Session security",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode pour détruire une session utilisateur dans Jakarta EE ?",
+    "options": [
+      "request.getSession().invalidate()",
+      "session.invalidate()",
+      "HttpSession.invalidate()",
+      "request.getSession().destroy()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte est request.getSession().invalidate() qui détruit la session de l'utilisateur."
+  },
+  {
+    "id": "JAKA-JS-008",
+    "theme": "Jakarta Security",
+    "theme_label": "Best practices",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les meilleures pratiques de sécurité en Jakarta EE :",
+    "options": [
+      "Utiliser des mots de passe forts et un stockage sécurisé pour les identifiants.",
+      "Activer le chiffrement SSL/TLS pour toutes les communications sensibles.",
+      "Utiliser des en-têtes de sécurité comme CSRF et XSS pour protéger contre les attaques.",
+      "Utiliser des mécanismes d'authentification comme BASIC, FORM et DIGEST.",
+      "Utiliser des classes de hachage pour stocker les mots de passe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "A est correct car utiliser des mots de passe forts et un stockage sécurisé est une pratique essentielle. B est correct car le chiffrement SSL/TLS protège les communications sensibles. C est correct car utiliser des en-têtes de sécurité comme CSRF et XSS améliore la sécurité. D est incorrect car les mécanismes d'authentification doivent être choisis en fonction du contexte et de la sécurité requise. E est correct car utiliser des classes de hachage pour stocker les mots de passe est une bonne pratique."
+  },
+  {
+    "id": "JAKA-JS-009",
+    "theme": "Jakarta Security",
+    "theme_label": "Security headers",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction de l'en-tête HTTP 'Content-Security-Policy' dans Jakarta EE ?",
+    "options": [
+      "Permet de définir les politiques de sécurité pour le contenu chargé par la page.",
+      "Permet de protéger contre les attaques CSRF.",
+      "Permet de contrôler l'accès aux ressources du serveur.",
+      "Permet de définir les politiques d'authentification."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'en-tête Content-Security-Policy permet de définir les politiques de sécurité pour le contenu chargé par la page, protégeant ainsi contre diverses attaques."
+  },
+  {
+    "id": "JAKA-JS-010",
+    "theme": "Jakarta Security",
+    "theme_label": "Common vulnerabilities",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale vulnérabilité liée à l'utilisation de mots de passe faibles dans Jakarta EE ?",
+    "options": [
+      "Attaque par force brute",
+      "Injection SQL",
+      "Cross-Site Scripting (XSS)",
+      "Déni de service (DoS)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'utilisation de mots de passe faibles est une vulnérabilité majeure car elle rend les comptes plus faciles à pirater, en particulier par des attaques par force brute."
+  },
+  {
+    "id": "JAKA-JS-011",
+    "theme": "Jakarta Security",
+    "theme_label": "Programmatic security",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la sécurité programmative dans Jakarta EE :",
+    "options": [
+      "La sécurité peut être configurée via des annotations comme @RolesAllowed.",
+      "La sécurité peut être gérée par la classe SecurityContext pour accéder aux informations de l'utilisateur authentifié.",
+      "La sécurité peut être réalisée en utilisant des classes comme IdentityStore pour gérer les identités.",
+      "La sécurité peut être appliquée à des méthodes spécifiques en utilisant l'annotation @PermitAll.",
+      "La sécurité peut être configurée via le fichier web.xml."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les affirmations A, B et C sont correctes car elles décrivent des méthodes courantes de la sécurité programmative dans Jakarta EE. L'affirmation D est incorrecte car @PermitAll n'affecte pas la sécurité, mais plutôt l'accès. L'affirmation E est également incorrecte car la configuration de la sécurité ne se fait pas uniquement via web.xml."
+  },
+  {
+    "id": "JAKA-JS-012",
+    "theme": "Jakarta Security",
+    "theme_label": "Session security",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode pour détruire une session dans Jakarta EE ?",
+    "options": [
+      "session.invalidate()",
+      "session.destroy()",
+      "session.close()",
+      "session.remove()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode correcte pour détruire une session dans Jakarta EE est session.invalidate()."
+  },
+  {
+    "id": "JAKA-JS-013",
+    "theme": "Jakarta Security",
+    "theme_label": "Security headers",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les en-têtes de sécurité dans Jakarta EE :",
+    "options": [
+      "X-Content-Type-Options peut être utilisé pour prévenir les attaques de type MIME-sniffing.",
+      "X-Frame-Options peut être utilisé pour contrôler si une page peut être affichée dans un iframe.",
+      "X-XSS-Protection est utilisé pour activer la protection contre les attaques XSS dans les navigateurs obsolètes.",
+      "Content-Security-Policy peut être utilisé pour définir des politiques de sécurité plus strictes.",
+      "Strict-Transport-Security peut être utilisé pour forcer le navigateur à utiliser HTTPS."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "Toutes les affirmations sont correctes car elles décrivent des en-têtes de sécurité couramment utilisés dans Jakarta EE pour améliorer la sécurité des applications web."
   }
 ]

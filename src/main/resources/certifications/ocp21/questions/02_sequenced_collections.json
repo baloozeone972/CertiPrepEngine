@@ -20,7 +20,12 @@
     "theme_label": "Méthodes",
     "difficulty": "easy",
     "question": "Quelle méthode retourne le premier élément d'une SequencedCollection ?",
-    "options": ["getFirst()", "first()", "element()", "peek()"],
+    "options": [
+      "getFirst()",
+      "first()",
+      "element()",
+      "peek()"
+    ],
     "correct": 0,
     "explanation": "getFirst() retourne le premier élément sans le supprimer."
   },
@@ -30,7 +35,12 @@
     "theme_label": "Méthodes",
     "difficulty": "easy",
     "question": "Quelle méthode retourne le dernier élément d'une SequencedCollection ?",
-    "options": ["getLast()", "last()", "element()", "peekLast()"],
+    "options": [
+      "getLast()",
+      "last()",
+      "element()",
+      "peekLast()"
+    ],
     "correct": 0,
     "explanation": "getLast() retourne le dernier élément sans le supprimer."
   },
@@ -40,7 +50,12 @@
     "theme_label": "Méthodes",
     "difficulty": "medium",
     "question": "Quelle méthode supprime et retourne le premier élément ?",
-    "options": ["removeFirst()", "pollFirst()", "pop()", "remove()"],
+    "options": [
+      "removeFirst()",
+      "pollFirst()",
+      "pop()",
+      "remove()"
+    ],
     "correct": 0,
     "explanation": "removeFirst() supprime et retourne le premier élément."
   },
@@ -50,7 +65,12 @@
     "theme_label": "Méthodes",
     "difficulty": "medium",
     "question": "Quelle méthode supprime et retourne le dernier élément ?",
-    "options": ["removeLast()", "pollLast()", "popLast()", "removeLastElement()"],
+    "options": [
+      "removeLast()",
+      "pollLast()",
+      "popLast()",
+      "removeLastElement()"
+    ],
     "correct": 0,
     "explanation": "removeLast() supprime et retourne le dernier élément."
   },
@@ -60,7 +80,12 @@
     "theme_label": "Méthodes",
     "difficulty": "medium",
     "question": "Quelle méthode ajoute un élément en première position ?",
-    "options": ["addFirst()", "push()", "offerFirst()", "prepend()"],
+    "options": [
+      "addFirst()",
+      "push()",
+      "offerFirst()",
+      "prepend()"
+    ],
     "correct": 0,
     "explanation": "addFirst() ajoute un élément en première position."
   },
@@ -70,7 +95,12 @@
     "theme_label": "Méthodes",
     "difficulty": "medium",
     "question": "Quelle méthode ajoute un élément en dernière position ?",
-    "options": ["addLast()", "add()", "offerLast()", "append()"],
+    "options": [
+      "addLast()",
+      "add()",
+      "offerLast()",
+      "append()"
+    ],
     "correct": 0,
     "explanation": "addLast() ajoute un élément en dernière position."
   },
@@ -140,7 +170,12 @@
     "theme_label": "SequencedSet",
     "difficulty": "medium",
     "question": "Quelle méthode est spécifique à SequencedSet ?",
-    "options": ["reversed()", "addFirst()", "getFirst()", "removeLast()"],
+    "options": [
+      "reversed()",
+      "addFirst()",
+      "getFirst()",
+      "removeLast()"
+    ],
     "correct": 0,
     "explanation": "SequencedSet hérite de SequencedCollection et Set, reversed() retourne un SequencedSet."
   },
@@ -180,7 +215,12 @@
     "theme_label": "SequencedMap",
     "difficulty": "hard",
     "question": "Quelle méthode sur SequencedMap retourne la première entrée ?",
-    "options": ["firstEntry()", "getFirst()", "firstKey()", "entrySet().getFirst()"],
+    "options": [
+      "firstEntry()",
+      "getFirst()",
+      "firstKey()",
+      "entrySet().getFirst()"
+    ],
     "correct": 0,
     "explanation": "firstEntry() retourne la première entrée de la map ordonnée."
   },
@@ -190,7 +230,12 @@
     "theme_label": "SequencedMap",
     "difficulty": "hard",
     "question": "Quelle méthode sur SequencedMap retourne la dernière entrée ?",
-    "options": ["lastEntry()", "getLast()", "lastKey()", "entrySet().getLast()"],
+    "options": [
+      "lastEntry()",
+      "getLast()",
+      "lastKey()",
+      "entrySet().getLast()"
+    ],
     "correct": 0,
     "explanation": "lastEntry() retourne la dernière entrée de la map ordonnée."
   },
@@ -560,7 +605,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nlist.addFirst(0);\nSystem.out.println(list);",
-    "options": ["[0, 1, 2, 3]", "[1, 2, 3, 0]", "[0, 1, 2, 3, 0]", "Erreur"],
+    "options": [
+      "[0, 1, 2, 3]",
+      "[1, 2, 3, 0]",
+      "[0, 1, 2, 3, 0]",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "addFirst(0) ajoute 0 au début de la liste."
   },
@@ -570,7 +620,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nvar reversed = list.reversed();\nSystem.out.println(reversed.getFirst());",
-    "options": ["3", "1", "2", "Erreur"],
+    "options": [
+      "3",
+      "1",
+      "2",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "reversed() donne une vue inversée, getFirst() retourne 3."
   },
@@ -580,7 +635,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar map = new LinkedHashMap<String, Integer>();\nmap.put(\"A\", 1);\nmap.put(\"B\", 2);\nSystem.out.println(map.firstEntry().getKey());",
-    "options": ["A", "B", "null", "Erreur"],
+    "options": [
+      "A",
+      "B",
+      "null",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "firstEntry() retourne la première entrée (A)."
   },
@@ -590,7 +650,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar set = new LinkedHashSet<>(Set.of(1, 2, 3));\nset.addFirst(0);\nSystem.out.println(set);",
-    "options": ["[0, 1, 2, 3]", "[1, 2, 3, 0]", "[0, 1, 2, 3, 0]", "Erreur"],
+    "options": [
+      "[0, 1, 2, 3]",
+      "[1, 2, 3, 0]",
+      "[0, 1, 2, 3, 0]",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "addFirst(0) ajoute 0 au début du LinkedHashSet."
   },
@@ -600,7 +665,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar deque = new ArrayDeque<>(List.of(1, 2, 3));\ndeque.addFirst(0);\nSystem.out.println(deque.getFirst());",
-    "options": ["0", "1", "2", "3"],
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
     "correct": 0,
     "explanation": "addFirst(0) ajoute 0 au début, getFirst() retourne 0."
   },
@@ -610,7 +680,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nlist.removeFirst();\nSystem.out.println(list);",
-    "options": ["[2, 3]", "[1, 2]", "[1, 3]", "Erreur"],
+    "options": [
+      "[2, 3]",
+      "[1, 2]",
+      "[1, 3]",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "removeFirst() supprime le premier élément (1), reste [2, 3]."
   },
@@ -620,7 +695,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nlist.removeLast();\nSystem.out.println(list);",
-    "options": ["[1, 2]", "[2, 3]", "[1, 3]", "Erreur"],
+    "options": [
+      "[1, 2]",
+      "[2, 3]",
+      "[1, 3]",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "removeLast() supprime le dernier élément (3), reste [1, 2]."
   },
@@ -630,7 +710,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar map = new TreeMap<String, Integer>();\nmap.put(\"A\", 1);\nmap.put(\"C\", 3);\nmap.put(\"B\", 2);\nSystem.out.println(map.firstEntry().getKey());",
-    "options": ["A", "B", "C", "null"],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "null"
+    ],
     "correct": 0,
     "explanation": "TreeMap trie par clé, firstEntry() retourne la plus petite clé (A)."
   },
@@ -640,7 +725,12 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar map = new TreeMap<String, Integer>();\nmap.put(\"A\", 1);\nmap.put(\"C\", 3);\nmap.put(\"B\", 2);\nSystem.out.println(map.lastEntry().getKey());",
-    "options": ["C", "A", "B", "null"],
+    "options": [
+      "C",
+      "A",
+      "B",
+      "null"
+    ],
     "correct": 0,
     "explanation": "TreeMap trie par clé, lastEntry() retourne la plus grande clé (C)."
   },
@@ -650,8 +740,295 @@
     "theme_label": "Exemple",
     "difficulty": "hard",
     "question": "Que produit ce code ?\nvar list = new ArrayList<>(List.of(1, 2, 3));\nvar reversed = list.reversed();\nreversed.addFirst(0);\nSystem.out.println(list);",
-    "options": ["[1, 2, 3, 0]", "[0, 1, 2, 3]", "[0, 1, 2, 3, 0]", "[1, 2, 3]"],
+    "options": [
+      "[1, 2, 3, 0]",
+      "[0, 1, 2, 3]",
+      "[0, 1, 2, 3, 0]",
+      "[1, 2, 3]"
+    ],
     "correct": 0,
     "explanation": "La modification de la vue inversée affecte la liste originale."
+  },
+  {
+    "id": "OCP-SC-001",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles méthodes peuvent être utilisées pour ajouter des éléments à une SequencedCollection ?",
+    "options": [
+      "addFirst()",
+      "addElement()",
+      "push()",
+      "insert()"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "addFirst() et push() sont des méthodes valides pour ajouter des éléments à une SequencedCollection. addElement() n'est pas spécifique aux collections ordonnées, et insert() n'existe pas dans l'API de SequencedCollection."
+  },
+  {
+    "id": "OCP-SC-002",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est la plus performante pour accéder au premier élément d'une SequencedCollection ?",
+    "options": [
+      "getFirst()",
+      "first()",
+      "element()",
+      "peek()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "getFirst() est la méthode la plus performante pour accéder au premier élément d'une SequencedCollection sans le supprimer."
+  },
+  {
+    "id": "OCP-SC-003",
+    "theme": "Sequenced Collections",
+    "theme_label": "Collections supportées",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles collections Java 21 sont des implémentations de SequencedCollection ?",
+    "options": [
+      "ArrayList",
+      "LinkedList",
+      "TreeMap",
+      "HashMap"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "LinkedList et TreeMap sont des implémentations de SequencedCollection. ArrayList n'est pas ordonné et HashMap ne conserve pas l'ordre des entrées."
+  },
+  {
+    "id": "OCP-SC-004",
+    "theme": "Sequenced Collections",
+    "theme_label": "Modification",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode permet de modifier le premier élément d'une SequencedCollection ?",
+    "options": [
+      "setFirst()",
+      "replaceFirst()",
+      "modifyFirst()",
+      "updateFirst()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "replaceFirst() est la méthode utilisée pour modifier le premier élément d'une SequencedCollection."
+  },
+  {
+    "id": "OCP-SC-005",
+    "theme": "Sequenced Collections",
+    "theme_label": "Streams",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles opérations de Stream peuvent être utilisées avec une SequencedCollection ?",
+    "options": [
+      "sorted()",
+      "distinct()",
+      "reversed()",
+      "shuffled()"
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "reversed() et shuffled() sont des opérations de Stream qui peuvent être utilisées avec une SequencedCollection. sorted() et distinct() ne sont pas spécifiques aux collections ordonnées."
+  },
+  {
+    "id": "OCP-SC-006",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la méthode removeFirst() dans une SequencedCollection :",
+    "options": [
+      "Retire et retourne le premier élément de la collection.",
+      "Lève une NoSuchElementException si la collection est vide.",
+      "Ne modifie pas l'état de la collection s'il est vide.",
+      "Peut être utilisée avec n'importe quelle implémentation de Collection."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "removeFirst() retire et retourne le premier élément de la collection, ce qui est correct. Elle lève une NoSuchElementException si la collection est vide, également correct. Cependant, elle modifie bien l'état de la collection s'il n'est pas vide, donc l'option C est incorrecte. La méthode removeFirst() ne peut être utilisée qu'avec des implémentations de SequencedCollection, donc l'option D est incorrecte."
+  },
+  {
+    "id": "OCP-SC-007",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est la plus performante pour accéder au premier élément d'une SequencedCollection ?",
+    "options": [
+      "getFirst()",
+      "element()",
+      "peek()",
+      "first()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "getFirst() est la méthode la plus performante pour accéder au premier élément d'une SequencedCollection car elle est spécifiquement conçue pour cette opération."
+  },
+  {
+    "id": "OCP-SC-008",
+    "theme": "Sequenced Collections",
+    "theme_label": "Collections supportées",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles collections Java 21 implémentent l'interface SequencedCollection ?",
+    "options": [
+      "ArrayList",
+      "LinkedList",
+      "TreeMap",
+      "HashMap"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "LinkedList et TreeMap implémentent l'interface SequencedCollection. ArrayList et HashMap ne sont pas des collections ordonnées, donc ces options sont incorrectes."
+  },
+  {
+    "id": "OCP-SC-009",
+    "theme": "Sequenced Collections",
+    "theme_label": "Modification",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode permet de modifier le premier élément d'une SequencedCollection sans le retirer ?",
+    "options": [
+      "setFirst()",
+      "replaceFirst()",
+      "updateFirst()",
+      "modifyFirst()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "replaceFirst() est la méthode qui permet de modifier le premier élément d'une SequencedCollection sans le retirer."
+  },
+  {
+    "id": "OCP-SC-010",
+    "theme": "Sequenced Collections",
+    "theme_label": "Interfaces",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles interfaces sont étendues par SequencedCollection ?",
+    "options": [
+      "Collection",
+      "List",
+      "Set",
+      "Map"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "SequencedCollection étend les interfaces Collection et List. Les interfaces Set et Map ne sont pas des collections ordonnées, donc ces options sont incorrectes."
+  },
+  {
+    "id": "OCP-SC-011",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la méthode removeFirst() dans une SequencedCollection :",
+    "options": [
+      "Retire et retourne le premier élément de la collection.",
+      "Lève une NoSuchElementException si la collection est vide.",
+      "N'affecte pas l'ordre des éléments restants.",
+      "Peut être utilisée sur n'importe quelle implémentation de Collection."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte car removeFirst() retire et retourne le premier élément de la collection. L'option B est correcte car elle lève une NoSuchElementException si la collection est vide. L'option C est incorrecte car removeFirst() affecte l'ordre des éléments restants en supprimant le premier. L'option D est incorrecte car removeFirst() n'est pas disponible sur toutes les implémentations de Collection, mais seulement sur celles qui implémentent SequencedCollection."
+  },
+  {
+    "id": "OCP-SC-012",
+    "theme": "Sequenced Collections",
+    "theme_label": "List",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode permet d'ajouter un élément à la fin d'une SequencedList ?",
+    "options": [
+      "addFirst()",
+      "append()",
+      "addLast()",
+      "push()"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "L'option C est correcte car addLast() ajoute un élément à la fin d'une SequencedList. Les autres options sont incorrectes : addFirst() ajoute à la tête, append() n'est pas une méthode standard de List, et push() est généralement utilisé avec Deque."
+  },
+  {
+    "id": "OCP-SC-013",
+    "theme": "Sequenced Collections",
+    "theme_label": "Méthodes",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la méthode removeFirst() dans une SequencedCollection :",
+    "options": [
+      "Retire et retourne le premier élément de la collection.",
+      "Lève une NoSuchElementException si la collection est vide.",
+      "N'affecte pas la collection si elle est vide.",
+      "Peut être utilisée avec n'importe quelle implémentation de Collection."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "removeFirst() retire et retourne le premier élément de la collection, donc l'option A est correcte. Elle lève également une NoSuchElementException si la collection est vide, donc l'option B est correcte. Cependant, elle ne retourne pas null si la collection est vide, donc l'option C est incorrecte. Enfin, removeFirst() n'est pas une méthode standard de Collection, donc l'option D est incorrecte."
+  },
+  {
+    "id": "OCP-SC-014",
+    "theme": "Sequenced Collections",
+    "theme_label": "List",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode permet d'insérer un élément à une position spécifique dans une List ?",
+    "options": [
+      "add(int index, E element)",
+      "insert(int index, E element)",
+      "put(int index, E element)",
+      "set(int index, E element)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode add(int index, E element) permet d'insérer un élément à une position spécifique dans une List. Les autres options ne sont pas des méthodes valides pour insérer un élément à une position spécifique."
+  },
+  {
+    "id": "OCP-SC-015",
+    "theme": "Sequenced Collections",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles des affirmations suivantes sont vraies concernant les performances des collections ordonnées en Java 21 ?",
+    "options": [
+      "Les opérations d'insertion et de suppression sont plus rapides que dans les collections non ordonnées.",
+      "Les accès aux éléments par index sont plus rapides dans les LinkedList que dans les ArrayList.",
+      "Les méthodes de tri sont optimisées pour les collections ordonnées.",
+      "Les itérateurs sur les collections ordonnées sont plus rapides que sur les non ordonnées."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Les opérations d'insertion et de suppression peuvent être plus rapides dans les LinkedList que dans les ArrayList, donc l'option B est correcte. Les itérateurs sur les collections ordonnées peuvent être plus rapides que sur les non ordonnées, donc l'option D est correcte. Cependant, les opérations d'insertion et de suppression peuvent être plus lentes dans les LinkedList, donc l'option A est incorrecte. Les méthodes de tri ne sont pas spécifiquement optimisées pour les collections ordonnées, donc l'option C est incorrecte."
   }
 ]

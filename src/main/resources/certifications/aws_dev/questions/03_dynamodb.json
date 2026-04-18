@@ -65,7 +65,12 @@
     "theme_label": "Fondamentaux",
     "difficulty": "hard",
     "question": "Quelle est la taille maximale d'un élément DynamoDB ?",
-    "options": ["400 KB", "1 MB", "64 KB", "256 KB"],
+    "options": [
+      "400 KB",
+      "1 MB",
+      "64 KB",
+      "256 KB"
+    ],
     "correct": 0,
     "explanation": "La taille maximale d'un élément est 400 KB."
   },
@@ -150,7 +155,12 @@
     "theme_label": "Index",
     "difficulty": "hard",
     "question": "Combien de LSI peut-on créer par table ?",
-    "options": ["5", "10", "20", "Illimité"],
+    "options": [
+      "5",
+      "10",
+      "20",
+      "Illimité"
+    ],
     "correct": 0,
     "explanation": "Maximum 5 LSI par table."
   },
@@ -160,7 +170,12 @@
     "theme_label": "Index",
     "difficulty": "hard",
     "question": "Combien de GSI peut-on créer par table ?",
-    "options": ["20", "5", "10", "50"],
+    "options": [
+      "20",
+      "5",
+      "10",
+      "50"
+    ],
     "correct": 0,
     "explanation": "Maximum 20 GSI par table (par défaut)."
   },
@@ -177,7 +192,7 @@
       "Eventual garantit le dernier écrit"
     ],
     "correct": 0,
-    "explication": "Les lectures fortement cohérentes utilisent 2 RCU, les éventuellement cohérentes 0.5 RCU."
+    "explanation": "Les lectures fortement cohérentes utilisent 2 RCU, les éventuellement cohérentes 0.5 RCU."
   },
   {
     "id": "AWS-DEV-154",
@@ -185,9 +200,14 @@
     "theme_label": "Read consistency",
     "difficulty": "hard",
     "question": "Par défaut, les lectures DynamoDB sont-elles fortement cohérentes ?",
-    "options": ["Non (éventuellement cohérentes)", "Oui", "Optionnel", "Dépend du mode capacité"],
+    "options": [
+      "Non (éventuellement cohérentes)",
+      "Oui",
+      "Optionnel",
+      "Dépend du mode capacité"
+    ],
     "correct": 0,
-    "explication": "Les lectures par défaut sont éventuellement cohérentes."
+    "explanation": "Les lectures par défaut sont éventuellement cohérentes."
   },
   {
     "id": "AWS-DEV-155",
@@ -195,9 +215,14 @@
     "theme_label": "Transactions",
     "difficulty": "hard",
     "question": "DynamoDB supporte-t-il les transactions ACID ?",
-    "options": ["Oui", "Non", "Uniquement pour les écritures", "Uniquement pour les lectures"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les écritures",
+      "Uniquement pour les lectures"
+    ],
     "correct": 0,
-    "explication": "Les transactions offrent des garanties ACID sur plusieurs éléments."
+    "explanation": "Les transactions offrent des garanties ACID sur plusieurs éléments."
   },
   {
     "id": "AWS-DEV-156",
@@ -212,7 +237,7 @@
       "UpdateItem seulement"
     ],
     "correct": 0,
-    "explication": "Deux opérations transactionnelles."
+    "explanation": "Deux opérations transactionnelles."
   },
   {
     "id": "AWS-DEV-157",
@@ -227,7 +252,7 @@
       "Migration"
     ],
     "correct": 0,
-    "explication": "DAX est un cache Redis compatible DynamoDB pour des lectures microsecondes."
+    "explanation": "DAX est un cache Redis compatible DynamoDB pour des lectures microsecondes."
   },
   {
     "id": "AWS-DEV-158",
@@ -235,9 +260,14 @@
     "theme_label": "DAX",
     "difficulty": "hard",
     "question": "DAX est-il compatible avec l'API DynamoDB ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement pour les lectures"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement pour les lectures"
+    ],
     "correct": 0,
-    "explication": "DAX est compatible avec l'API DynamoDB (GetItem, Query, Scan)."
+    "explanation": "DAX est compatible avec l'API DynamoDB (GetItem, Query, Scan)."
   },
   {
     "id": "AWS-DEV-159",
@@ -245,9 +275,14 @@
     "theme_label": "DAX",
     "difficulty": "hard",
     "question": "DAX est-il écrit en lecture ou écriture ?",
-    "options": ["Lecture seulement", "Lecture/écriture", "Écriture seulement", "Cache uniquement"],
+    "options": [
+      "Lecture seulement",
+      "Lecture/écriture",
+      "Écriture seulement",
+      "Cache uniquement"
+    ],
     "correct": 0,
-    "explication": "DAX est un cache de lecture seulement."
+    "explanation": "DAX est un cache de lecture seulement."
   },
   {
     "id": "AWS-DEV-160",
@@ -262,7 +297,7 @@
       "Migration"
     ],
     "correct": 0,
-    "explication": "Streams capture les modifications (création, mise à jour, suppression)."
+    "explanation": "Streams capture les modifications (création, mise à jour, suppression)."
   },
   {
     "id": "AWS-DEV-161",
@@ -270,9 +305,14 @@
     "theme_label": "Streams",
     "difficulty": "hard",
     "question": "Combien de temps les données sont-elles conservées dans DynamoDB Streams ?",
-    "options": ["24 heures", "7 jours", "30 jours", "48 heures"],
+    "options": [
+      "24 heures",
+      "7 jours",
+      "30 jours",
+      "48 heures"
+    ],
     "correct": 0,
-    "explication": "La rétention par défaut est 24 heures (configurable jusqu'à 7 jours)."
+    "explanation": "La rétention par défaut est 24 heures (configurable jusqu'à 7 jours)."
   },
   {
     "id": "AWS-DEV-162",
@@ -287,7 +327,7 @@
       "Table indexée"
     ],
     "correct": 0,
-    "explication": "Les Global Tables répliquent les données dans plusieurs régions, lecture/écriture partout."
+    "explanation": "Les Global Tables répliquent les données dans plusieurs régions, lecture/écriture partout."
   },
   {
     "id": "AWS-DEV-163",
@@ -295,9 +335,14 @@
     "theme_label": "Global Tables",
     "difficulty": "hard",
     "question": "Global Tables nécessite-t-il l'activation des streams ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement pour les nouvelles tables"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement pour les nouvelles tables"
+    ],
     "correct": 0,
-    "explication": "Global Tables utilise DynamoDB Streams pour la réplication."
+    "explanation": "Global Tables utilise DynamoDB Streams pour la réplication."
   },
   {
     "id": "AWS-DEV-164",
@@ -312,7 +357,7 @@
       "Limite de temps"
     ],
     "correct": 0,
-    "explication": "TTL marque les éléments pour suppression automatique à une date."
+    "explanation": "TTL marque les éléments pour suppression automatique à une date."
   },
   {
     "id": "AWS-DEV-165",
@@ -327,7 +372,7 @@
       "Dans les 72h"
     ],
     "correct": 0,
-    "explication": "La suppression est asynchrone et peut prendre jusqu'à 48 heures."
+    "explanation": "La suppression est asynchrone et peut prendre jusqu'à 48 heures."
   },
   {
     "id": "AWS-DEV-166",
@@ -342,7 +387,7 @@
       "Snapshots seulement"
     ],
     "correct": 0,
-    "explication": "Les backups on-demand sont complets, PITR permet la restauration à n'importe quel moment."
+    "explanation": "Les backups on-demand sont complets, PITR permet la restauration à n'importe quel moment."
   },
   {
     "id": "AWS-DEV-167",
@@ -350,9 +395,14 @@
     "theme_label": "Backup",
     "difficulty": "hard",
     "question": "Quelle est la période de rétention de PITR ?",
-    "options": ["35 jours", "7 jours", "90 jours", "1 an"],
+    "options": [
+      "35 jours",
+      "7 jours",
+      "90 jours",
+      "1 an"
+    ],
     "correct": 0,
-    "explication": "PITR permet de restaurer à n'importe quelle seconde dans les 35 derniers jours."
+    "explanation": "PITR permet de restaurer à n'importe quelle seconde dans les 35 derniers jours."
   },
   {
     "id": "AWS-DEV-168",
@@ -360,9 +410,14 @@
     "theme_label": "Query vs Scan",
     "difficulty": "hard",
     "question": "Quelle opération est la plus efficace pour trouver des éléments ?",
-    "options": ["Query", "Scan", "GetItem", "BatchGetItem"],
+    "options": [
+      "Query",
+      "Scan",
+      "GetItem",
+      "BatchGetItem"
+    ],
     "correct": 0,
-    "explication": "Query utilise la clé de partition (plus efficace). Scan lit toute la table."
+    "explanation": "Query utilise la clé de partition (plus efficace). Scan lit toute la table."
   },
   {
     "id": "AWS-DEV-169",
@@ -370,9 +425,14 @@
     "theme_label": "Query vs Scan",
     "difficulty": "hard",
     "question": "Scan consomme-t-il plus de RCU que Query ?",
-    "options": ["Oui", "Non", "Identique", "Dépend de la taille des résultats"],
+    "options": [
+      "Oui",
+      "Non",
+      "Identique",
+      "Dépend de la taille des résultats"
+    ],
     "correct": 0,
-    "explication": "Scan lit tous les éléments, donc consomme plus de RCU."
+    "explanation": "Scan lit tous les éléments, donc consomme plus de RCU."
   },
   {
     "id": "AWS-DEV-170",
@@ -387,7 +447,7 @@
       "NextToken / PreviousToken"
     ],
     "correct": 0,
-    "explication": "La pagination utilise LastEvaluatedKey pour obtenir la page suivante."
+    "explanation": "La pagination utilise LastEvaluatedKey pour obtenir la page suivante."
   },
   {
     "id": "AWS-DEV-171",
@@ -395,9 +455,14 @@
     "theme_label": "Batch operations",
     "difficulty": "hard",
     "question": "BatchGetItem peut-il lire jusqu'à combien d'éléments ?",
-    "options": ["100", "25", "50", "200"],
+    "options": [
+      "100",
+      "25",
+      "50",
+      "200"
+    ],
     "correct": 0,
-    "explication": "BatchGetItem peut lire jusqu'à 100 éléments (ou 16 Mo)."
+    "explanation": "BatchGetItem peut lire jusqu'à 100 éléments (ou 16 Mo)."
   },
   {
     "id": "AWS-DEV-172",
@@ -405,9 +470,14 @@
     "theme_label": "Batch operations",
     "difficulty": "hard",
     "question": "BatchWriteItem peut-il écrire jusqu'à combien d'éléments ?",
-    "options": ["25", "10", "50", "100"],
+    "options": [
+      "25",
+      "10",
+      "50",
+      "100"
+    ],
     "correct": 0,
-    "explication": "BatchWriteItem peut écrire jusqu'à 25 éléments (ou 16 Mo)."
+    "explanation": "BatchWriteItem peut écrire jusqu'à 25 éléments (ou 16 Mo)."
   },
   {
     "id": "AWS-DEV-173",
@@ -422,7 +492,7 @@
       "Journaliser l'écriture"
     ],
     "correct": 0,
-    "explication": "Les écritures conditionnelles (ConditionExpression) évitent les race conditions."
+    "explanation": "Les écritures conditionnelles (ConditionExpression) évitent les race conditions."
   },
   {
     "id": "AWS-DEV-174",
@@ -437,7 +507,7 @@
       "InternalServerError"
     ],
     "correct": 0,
-    "explication": "ConditionalCheckFailedException indique que la condition n'est pas satisfaite."
+    "explanation": "ConditionalCheckFailedException indique que la condition n'est pas satisfaite."
   },
   {
     "id": "AWS-DEV-175",
@@ -452,7 +522,7 @@
       "TransactWriteItems"
     ],
     "correct": 0,
-    "explication": "ADD (UpdateItem) permet des incrémentations atomiques."
+    "explanation": "ADD (UpdateItem) permet des incrémentations atomiques."
   },
   {
     "id": "AWS-DEV-176",
@@ -467,7 +537,7 @@
       "Seulement FilterExpression"
     ],
     "correct": 0,
-    "explication": "Plusieurs expressions pour différents usages."
+    "explanation": "Plusieurs expressions pour différents usages."
   },
   {
     "id": "AWS-DEV-177",
@@ -482,7 +552,7 @@
       "Filtrer les clés"
     ],
     "correct": 0,
-    "explication": "FilterExpression s'applique après la lecture, n'affecte pas la capacité consommée."
+    "explanation": "FilterExpression s'applique après la lecture, n'affecte pas la capacité consommée."
   },
   {
     "id": "AWS-DEV-178",
@@ -497,7 +567,7 @@
       "Optimiser les performances"
     ],
     "correct": 0,
-    "explication": "ExpressionAttributeNames permet d'utiliser des noms d'attributs qui sont des mots réservés."
+    "explanation": "ExpressionAttributeNames permet d'utiliser des noms d'attributs qui sont des mots réservés."
   },
   {
     "id": "AWS-DEV-179",
@@ -512,7 +582,7 @@
       "Optimiser les requêtes"
     ],
     "correct": 0,
-    "explication": "ExpressionAttributeValues évite l'injection et permet de réutiliser les expressions."
+    "explanation": "ExpressionAttributeValues évite l'injection et permet de réutiliser les expressions."
   },
   {
     "id": "AWS-DEV-180",
@@ -527,7 +597,7 @@
       "Seulement sets"
     ],
     "correct": 0,
-    "explication": "DynamoDB supporte plusieurs types de données."
+    "explanation": "DynamoDB supporte plusieurs types de données."
   },
   {
     "id": "AWS-DEV-181",
@@ -535,9 +605,14 @@
     "theme_label": "JSON support",
     "difficulty": "hard",
     "question": "DynamoDB peut-il stocker des documents JSON ?",
-    "options": ["Oui (type M ou L)", "Non", "Uniquement avec DAX", "Uniquement avec Streams"],
+    "options": [
+      "Oui (type M ou L)",
+      "Non",
+      "Uniquement avec DAX",
+      "Uniquement avec Streams"
+    ],
     "correct": 0,
-    "explication": "Les types Map (M) et List (L) permettent de stocker des documents JSON."
+    "explanation": "Les types Map (M) et List (L) permettent de stocker des documents JSON."
   },
   {
     "id": "AWS-DEV-182",
@@ -552,7 +627,7 @@
       "Utiliser un Binary"
     ],
     "correct": 0,
-    "explication": "JSON est converti en Map (objet) et List (tableau)."
+    "explanation": "JSON est converti en Map (objet) et List (tableau)."
   },
   {
     "id": "AWS-DEV-183",
@@ -567,7 +642,7 @@
       "Moins sécurisé"
     ],
     "correct": 0,
-    "explication": "Les clés monotones concentrent les écritures sur une seule partition."
+    "explanation": "Les clés monotones concentrent les écritures sur une seule partition."
   },
   {
     "id": "AWS-DEV-184",
@@ -582,7 +657,7 @@
       "Utiliser une clé unique"
     ],
     "correct": 0,
-    "explication": "Le sharding (suffixe aléatoire) distribue les écritures sur plusieurs partitions."
+    "explanation": "Le sharding (suffixe aléatoire) distribue les écritures sur plusieurs partitions."
   },
   {
     "id": "AWS-DEV-185",
@@ -597,7 +672,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Le pattern d'adjacence utilise la clé de tri pour les relations."
+    "explanation": "Le pattern d'adjacence utilise la clé de tri pour les relations."
   },
   {
     "id": "AWS-DEV-186",
@@ -612,7 +687,7 @@
       "Index GSI"
     ],
     "correct": 0,
-    "explication": "Le pattern d'adjacence utilise une seule table avec PK et SK pour représenter les relations."
+    "explanation": "Le pattern d'adjacence utilise une seule table avec PK et SK pour représenter les relations."
   },
   {
     "id": "AWS-DEV-187",
@@ -627,7 +702,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "GSI ou Scan avec filtre selon le volume de données."
+    "explanation": "GSI ou Scan avec filtre selon le volume de données."
   },
   {
     "id": "AWS-DEV-188",
@@ -642,7 +717,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Retry avec backoff ou augmenter la capacité."
+    "explanation": "Retry avec backoff ou augmenter la capacité."
   },
   {
     "id": "AWS-DEV-189",
@@ -657,7 +732,7 @@
       "Retry sans backoff"
     ],
     "correct": 0,
-    "explication": "Le SDK AWS implémente des retries automatiques avec backoff exponentiel."
+    "explanation": "Le SDK AWS implémente des retries automatiques avec backoff exponentiel."
   },
   {
     "id": "AWS-DEV-190",
@@ -672,7 +747,7 @@
       "Seulement Latency"
     ],
     "correct": 0,
-    "explication": "Surveiller la consommation et les throttling."
+    "explanation": "Surveiller la consommation et les throttling."
   },
   {
     "id": "AWS-DEV-191",
@@ -687,7 +762,7 @@
       "DAX"
     ],
     "correct": 0,
-    "explication": "Les métriques par partition sont disponibles dans CloudWatch."
+    "explanation": "Les métriques par partition sont disponibles dans CloudWatch."
   },
   {
     "id": "AWS-DEV-192",
@@ -702,7 +777,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "DynamoDB Local peut être exécuté via Docker ou JAR."
+    "explanation": "DynamoDB Local peut être exécuté via Docker ou JAR."
   },
   {
     "id": "AWS-DEV-193",
@@ -717,7 +792,7 @@
       "Uniquement les API de base"
     ],
     "correct": 0,
-    "explication": "Quelques fonctionnalités (comme les Global Tables) ne sont pas supportées localement."
+    "explanation": "Quelques fonctionnalités (comme les Global Tables) ne sont pas supportées localement."
   },
   {
     "id": "AWS-DEV-194",
@@ -732,7 +807,7 @@
       "Seulement Query"
     ],
     "correct": 0,
-    "explication": "Les permissions dépendent des opérations nécessaires."
+    "explanation": "Les permissions dépendent des opérations nécessaires."
   },
   {
     "id": "AWS-DEV-195",
@@ -740,9 +815,14 @@
     "theme_label": "IAM conditions",
     "difficulty": "hard",
     "question": "Peut-on restreindre l'accès par attribut ?",
-    "options": ["Oui (ConditionExpression)", "Non", "Uniquement par clé", "Uniquement par table"],
+    "options": [
+      "Oui (ConditionExpression)",
+      "Non",
+      "Uniquement par clé",
+      "Uniquement par table"
+    ],
     "correct": 0,
-    "explication": "Les politiques IAM peuvent limiter l'accès à certains attributs."
+    "explanation": "Les politiques IAM peuvent limiter l'accès à certains attributs."
   },
   {
     "id": "AWS-DEV-196",
@@ -750,9 +830,14 @@
     "theme_label": "Encryption at rest",
     "difficulty": "hard",
     "question": "DynamoDB chiffre-t-il les données au repos par défaut ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement pour les tables avec DAX"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement pour les tables avec DAX"
+    ],
     "correct": 0,
-    "explication": "Le chiffrement au repos est activé par défaut (AWS owned CMK)."
+    "explanation": "Le chiffrement au repos est activé par défaut (AWS owned CMK)."
   },
   {
     "id": "AWS-DEV-197",
@@ -760,9 +845,14 @@
     "theme_label": "Encryption at rest",
     "difficulty": "hard",
     "question": "Peut-on utiliser une clé KMS personnalisée ?",
-    "options": ["Oui", "Non", "Uniquement pour les backups", "Uniquement pour les streams"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les backups",
+      "Uniquement pour les streams"
+    ],
     "correct": 0,
-    "explication": "On peut choisir une clé KMS (Customer Managed CMK) lors de la création de la table."
+    "explanation": "On peut choisir une clé KMS (Customer Managed CMK) lors de la création de la table."
   },
   {
     "id": "AWS-DEV-198",
@@ -770,9 +860,14 @@
     "theme_label": "Export to S3",
     "difficulty": "hard",
     "question": "DynamoDB peut-il exporter des données vers S3 ?",
-    "options": ["Oui (export to S3)", "Non", "Uniquement via EMR", "Uniquement via Lambda"],
+    "options": [
+      "Oui (export to S3)",
+      "Non",
+      "Uniquement via EMR",
+      "Uniquement via Lambda"
+    ],
     "correct": 0,
-    "explication": "L'export to S3 (DynamoDB Backup) permet d'exporter au format DynamoDB JSON ou Ion."
+    "explanation": "L'export to S3 (DynamoDB Backup) permet d'exporter au format DynamoDB JSON ou Ion."
   },
   {
     "id": "AWS-DEV-199",
@@ -780,9 +875,14 @@
     "theme_label": "Import from S3",
     "difficulty": "hard",
     "question": "DynamoDB peut-il importer des données depuis S3 ?",
-    "options": ["Oui", "Non", "Uniquement via EMR", "Uniquement via Lambda"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via EMR",
+      "Uniquement via Lambda"
+    ],
     "correct": 0,
-    "explication": "L'import depuis S3 supporte CSV, DynamoDB JSON, Ion."
+    "explanation": "L'import depuis S3 supporte CSV, DynamoDB JSON, Ion."
   },
   {
     "id": "AWS-DEV-200",
@@ -797,7 +897,7 @@
       "Client SDK"
     ],
     "correct": 0,
-    "explication": "PartiQL permet d'interroger DynamoDB avec une syntaxe similaire à SQL."
+    "explanation": "PartiQL permet d'interroger DynamoDB avec une syntaxe similaire à SQL."
   },
   {
     "id": "AWS-DEV-201",
@@ -805,9 +905,14 @@
     "theme_label": "PartiQL",
     "difficulty": "hard",
     "question": "PartiQL supporte-t-il les opérations d'écriture ?",
-    "options": ["Oui (INSERT, UPDATE, DELETE)", "Non", "Lecture seulement", "Uniquement SELECT"],
+    "options": [
+      "Oui (INSERT, UPDATE, DELETE)",
+      "Non",
+      "Lecture seulement",
+      "Uniquement SELECT"
+    ],
     "correct": 0,
-    "explication": "PartiQL supporte les opérations DML (INSERT, UPDATE, DELETE)."
+    "explanation": "PartiQL supporte les opérations DML (INSERT, UPDATE, DELETE)."
   },
   {
     "id": "AWS-DEV-202",
@@ -822,7 +927,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "NoSQL Workbench aide à concevoir et tester les modèles DynamoDB."
+    "explanation": "NoSQL Workbench aide à concevoir et tester les modèles DynamoDB."
   },
   {
     "id": "AWS-DEV-203",
@@ -837,7 +942,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Streams pour réactivité, appel direct pour requêtes."
+    "explanation": "Streams pour réactivité, appel direct pour requêtes."
   },
   {
     "id": "AWS-DEV-204",
@@ -845,9 +950,14 @@
     "theme_label": "DynamoDB with API Gateway",
     "difficulty": "hard",
     "question": "API Gateway peut-il s'intégrer directement à DynamoDB ?",
-    "options": ["Oui (intégration AWS)", "Non", "Uniquement via Lambda", "Uniquement via VTL"],
+    "options": [
+      "Oui (intégration AWS)",
+      "Non",
+      "Uniquement via Lambda",
+      "Uniquement via VTL"
+    ],
     "correct": 0,
-    "explication": "API Gateway peut appeler DynamoDB directement via l'intégration AWS."
+    "explanation": "API Gateway peut appeler DynamoDB directement via l'intégration AWS."
   },
   {
     "id": "AWS-DEV-205",
@@ -855,9 +965,14 @@
     "theme_label": "DynamoDB with AppSync",
     "difficulty": "hard",
     "question": "AWS AppSync peut-il utiliser DynamoDB comme source de données ?",
-    "options": ["Oui", "Non", "Uniquement avec Lambda", "Uniquement avec Aurora"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec Lambda",
+      "Uniquement avec Aurora"
+    ],
     "correct": 0,
-    "explication": "AppSync a une intégration native avec DynamoDB pour GraphQL."
+    "explanation": "AppSync a une intégration native avec DynamoDB pour GraphQL."
   },
   {
     "id": "AWS-DEV-206",
@@ -865,9 +980,14 @@
     "theme_label": "DynamoDB with EMR",
     "difficulty": "hard",
     "question": "EMR peut-il lire/écrire dans DynamoDB ?",
-    "options": ["Oui", "Non", "Uniquement en lecture", "Uniquement en écriture"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement en lecture",
+      "Uniquement en écriture"
+    ],
     "correct": 0,
-    "explication": "EMR peut interagir avec DynamoDB via Hadoop/Hive."
+    "explanation": "EMR peut interagir avec DynamoDB via Hadoop/Hive."
   },
   {
     "id": "AWS-DEV-207",
@@ -875,9 +995,14 @@
     "theme_label": "DynamoDB with Glue",
     "difficulty": "hard",
     "question": "AWS Glue peut-il extraire des données de DynamoDB ?",
-    "options": ["Oui", "Non", "Uniquement avec ETL", "Uniquement avec Crawlers"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec ETL",
+      "Uniquement avec Crawlers"
+    ],
     "correct": 0,
-    "explication": "Glue peut lire DynamoDB comme source ETL."
+    "explanation": "Glue peut lire DynamoDB comme source ETL."
   },
   {
     "id": "AWS-DEV-208",
@@ -885,9 +1010,14 @@
     "theme_label": "DynamoDB with Athena",
     "difficulty": "hard",
     "question": "Athena peut-il interroger DynamoDB ?",
-    "options": ["Non", "Oui (via Connector)", "Uniquement avec EMR", "Uniquement avec Glue"],
+    "options": [
+      "Non",
+      "Oui (via Connector)",
+      "Uniquement avec EMR",
+      "Uniquement avec Glue"
+    ],
     "correct": 1,
-    "explication": "Un connecteur Athena pour DynamoDB existe (via Lambda)."
+    "explanation": "Un connecteur Athena pour DynamoDB existe (via Lambda)."
   },
   {
     "id": "AWS-DEV-209",
@@ -895,9 +1025,14 @@
     "theme_label": "DynamoDB with QuickSight",
     "difficulty": "hard",
     "question": "QuickSight peut-il se connecter directement à DynamoDB ?",
-    "options": ["Non", "Oui", "Uniquement via Athena", "Uniquement via Glue"],
+    "options": [
+      "Non",
+      "Oui",
+      "Uniquement via Athena",
+      "Uniquement via Glue"
+    ],
     "correct": 1,
-    "explication": "QuickSight a un connecteur natif pour DynamoDB."
+    "explanation": "QuickSight a un connecteur natif pour DynamoDB."
   },
   {
     "id": "AWS-DEV-210",
@@ -912,6 +1047,438 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs stratégies pour optimiser les coûts."
+    "explanation": "Plusieurs stratégies pour optimiser les coûts."
+  },
+  {
+    "id": "AWS-DEV-DYN-001",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la différence entre Query et Scan dans DynamoDB :",
+    "options": [
+      "Query utilise des index secondaires, tandis que Scan effectue une recherche complète de la table.",
+      "Query est plus coûteux en termes de frais, car il utilise des index secondaires.",
+      "Scan peut être utilisé sur n'importe quelle table, mais Query nécessite un index secondaire.",
+      "Query peut être utilisé sur n'importe quelle table, y compris les tables sans index secondaire.",
+      "Scan est plus rapide que Query pour des jeux de données petits."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car Query utilise des index secondaires tandis que Scan effectue une recherche complète. B est incorrect car Query n'est pas plus coûteux en termes de frais. C est correct car Scan peut être utilisé sur n'importe quelle table, mais Query nécessite un index secondaire. D est incorrect car Query peut être utilisé sur n'importe quelle table, y compris les tables sans index secondaire. E est incorrect car Scan n'est pas plus rapide que Query pour des jeux de données petits."
+  },
+  {
+    "id": "AWS-DEV-DYN-002",
+    "theme": "DynamoDB",
+    "theme_label": "Read consistency",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre Strong et Eventual consistency en termes de cohérence des lectures dans DynamoDB ?",
+    "options": [
+      "Strong consistency offre les meilleures performances, tandis que Eventual consistency offre la meilleure cohérence.",
+      "Strong consistency offre la meilleure cohérence, tandis que Eventual consistency offre les meilleures performances.",
+      "Strong consistency est disponible uniquement pour les tables à partition unique, tandis que Eventual consistency peut être utilisé sur toutes les tables.",
+      "Strong consistency offre la meilleure cohérence, mais nécessite plus de ressources que Eventual consistency.",
+      "Eventual consistency offre la meilleure cohérence, mais peut entraîner des lags de lecture."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "B est correct car Strong consistency offre la meilleure cohérence, tandis que Eventual consistency offre les meilleures performances. A est incorrect car Strong consistency n'offre pas les meilleures performances. C est incorrect car Eventual consistency peut être utilisé sur toutes les tables. D est incorrect car Strong consistency offre la meilleure cohérence, mais nécessite plus de ressources que Eventual consistency. E est incorrect car Eventual consistency offre la meilleure cohérence, mais peut entraîner des lags de lecture."
+  },
+  {
+    "id": "AWS-DEV-DYN-003",
+    "theme": "DynamoDB",
+    "theme_label": "Transactions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des transactions en DynamoDB :",
+    "options": [
+      "Les transactions peuvent être utilisées pour effectuer des opérations sur plusieurs tables.",
+      "Les transactions sont disponibles uniquement pour les tables à partition unique.",
+      "Les transactions peuvent être utilisées pour effectuer des opérations de lecture et d'écriture sur la même table.",
+      "Les transactions nécessitent une charge de travail élevée et sont donc moins performantes que les opérations simples.",
+      "Les transactions peuvent être utilisées pour effectuer des opérations conditionnelles."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car les transactions peuvent être utilisées pour effectuer des opérations sur plusieurs tables. B est incorrect car les transactions sont disponibles pour toutes les tables, y compris les tables à partition unique. C est correct car les transactions peuvent être utilisées pour effectuer des opérations de lecture et d'écriture sur la même table. D est incorrect car les transactions ne nécessitent pas une charge de travail élevée et sont généralement plus performantes que les opérations simples. E est correct car les transactions peuvent être utilisées pour effectuer des opérations conditionnelles."
+  },
+  {
+    "id": "AWS-DEV-DYN-004",
+    "theme": "DynamoDB",
+    "theme_label": "Global Tables",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur des Global Tables en DynamoDB ?",
+    "options": [
+      "Permet de répliquer des données entre plusieurs régions AWS pour une meilleure disponibilité et la latence.",
+      "Permet de stocker des données dans plusieurs bases de données pour une meilleure performance.",
+      "Permet d'utiliser différents types de clés primaires dans différentes régions pour une meilleure flexibilité.",
+      "Permet d'effectuer des jointures entre plusieurs tables dans différentes régions pour une meilleure cohérence des données.",
+      "Permet de partager les données entre plusieurs comptes AWS pour une meilleure collaboration."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car les Global Tables permettent de répliquer des données entre plusieurs régions AWS pour une meilleure disponibilité et la latence. B est incorrect car les Global Tables ne permettent pas de stocker des données dans plusieurs bases de données. C est incorrect car les Global Tables utilisent la même clé primaire dans toutes les régions pour une meilleure cohérence des données. D est incorrect car les Global Tables ne permettent pas d'effectuer des jointures entre plusieurs tables dans différentes régions. E est incorrect car les Global Tables ne permettent pas de partager les données entre plusieurs comptes AWS."
+  },
+  {
+    "id": "AWS-DEV-DYN-005",
+    "theme": "DynamoDB",
+    "theme_label": "Time To Live (TTL)",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité du Time To Live (TTL) dans DynamoDB ?",
+    "options": [
+      "Permet de supprimer automatiquement les éléments qui ont atteint une certaine date d'expiration.",
+      "Permet de stocker des données dans un format JSON pour une meilleure facilité d'accès.",
+      "Permet de répartir les données entre plusieurs régions AWS pour une meilleure disponibilité.",
+      "Permet de définir des politiques d'accès et de contrôle pour les données.",
+      "Permet de compresser les données stockées dans la table."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "A est correct car le TTL permet de supprimer automatiquement les éléments qui ont atteint une certaine date d'expiration. B est incorrect car le TTL ne permet pas de stocker des données dans un format JSON. C est incorrect car le TTL n'affecte pas la répartition des données entre les régions AWS. D est incorrect car le TTL n'affecte pas la définition des politiques d'accès et de contrôle pour les données. E est incorrect car le TTL n'affecte pas la compression des données stockées dans la table."
+  },
+  {
+    "id": "AWS-DEV-DYN-006",
+    "theme": "DynamoDB",
+    "theme_label": "Best practices",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les meilleures pratiques de conception pour DynamoDB :",
+    "options": [
+      "Utiliser des clés de partition et d'index secondaire pour améliorer les performances de lecture.",
+      "Ne pas utiliser des clés de partition et d'index secondaire pour éviter les frais supplémentaires.",
+      "Utiliser des transactions multiples pour mettre à jour plusieurs éléments en même temps.",
+      "Ne pas utiliser des transactions multiples car elles augmentent les coûts."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Utiliser des clés de partition et d'index secondaire pour améliorer les performances de lecture (correct). Ne pas utiliser des clés de partition et d'index secondaire pour éviter les frais supplémentaires (incorrect). Utiliser des transactions multiples pour mettre à jour plusieurs éléments en même temps (correct). Ne pas utiliser des transactions multiples car elles augmentent les coûts (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-007",
+    "theme": "DynamoDB",
+    "theme_label": "Clés",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une clé primaire et une clé secondaire dans DynamoDB ?",
+    "options": [
+      "Une clé primaire est utilisée pour accéder aux éléments individuels, tandis qu'une clé secondaire est utilisée pour créer des index secondaires.",
+      "Une clé primaire est utilisée pour créer des index secondaires, tandis qu'une clé secondaire est utilisée pour accéder aux éléments individuels.",
+      "Une clé primaire et une clé secondaire sont interchangeables dans DynamoDB.",
+      "Il n'y a pas de différence entre une clé primaire et une clé secondaire."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Une clé primaire est utilisée pour accéder aux éléments individuels, tandis qu'une clé secondaire est utilisée pour créer des index secondaires (correct). Une clé primaire est utilisée pour créer des index secondaires, tandis qu'une clé secondaire est utilisée pour accéder aux éléments individuels (incorrect). Une clé primaire et une clé secondaire sont interchangeables dans DynamoDB (incorrect). Il n'y a pas de différence entre une clé primaire et une clé secondaire (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-008",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la différence entre une requête (query) et un scan (scan) dans DynamoDB :",
+    "options": [
+      "Une requête utilise une clé de partition pour accéder aux éléments, tandis qu'un scan parcourt tous les éléments.",
+      "Une requête parcourt tous les éléments, tandis qu'un scan utilise une clé de partition pour accéder aux éléments.",
+      "Une requête nécessite un index secondaire, tandis qu'un scan peut être effectué sur la table principale.",
+      "Une requête et un scan sont interchangeables dans DynamoDB."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Une requête utilise une clé de partition pour accéder aux éléments, tandis qu'un scan parcourt tous les éléments (correct). Une requête parcourt tous les éléments, tandis qu'un scan utilise une clé de partition pour accéder aux éléments (incorrect). Une requête nécessite un index secondaire, tandis qu'un scan peut être effectué sur la table principale (correct). Une requête et un scan sont interchangeables dans DynamoDB (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-009",
+    "theme": "DynamoDB",
+    "theme_label": "Read consistency",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre la cohérence forte (strong consistency) et la cohérence faible (eventual consistency) dans DynamoDB ?",
+    "options": [
+      "La cohérence forte donne accès aux données les plus récentes, tandis que la cohérence faible peut retourner des données obsolètes.",
+      "La cohérence forte peut retourner des données obsolètes, tandis que la cohérence faible donne accès aux données les plus récentes.",
+      "La cohérence forte et la cohérence faible sont interchangeables dans DynamoDB.",
+      "Il n'y a pas de différence entre la cohérence forte et la cohérence faible."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La cohérence forte donne accès aux données les plus récentes, tandis que la cohérence faible peut retourner des données obsolètes (correct). La cohérence forte peut retourner des données obsolètes, tandis que la cohérence faible donne accès aux données les plus récentes (incorrect). La cohérence forte et la cohérence faible sont interchangeables dans DynamoDB (incorrect). Il n'y a pas de différence entre la cohérence forte et la cohérence faible (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-010",
+    "theme": "DynamoDB",
+    "theme_label": "Transactions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les transactions dans DynamoDB :",
+    "options": [
+      "Les transactions multiples permettent de mettre à jour plusieurs éléments en même temps.",
+      "Les transactions multiples augmentent les coûts de l'utilisation de DynamoDB.",
+      "Les transactions multiples nécessitent un index secondaire pour être effectuées.",
+      "Les transactions multiples sont interchangeables avec les opérations de base."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les transactions multiples permettent de mettre à jour plusieurs éléments en même temps (correct). Les transactions multiples augmentent les coûts de l'utilisation de DynamoDB (correct). Les transactions multiples nécessitent un index secondaire pour être effectuées (incorrect). Les transactions multiples sont interchangeables avec les opérations de base (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-011",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la différence entre Query et Scan en DynamoDB :",
+    "options": [
+      "Query utilise une clé de partition pour accélérer la recherche.",
+      "Scan effectue une recherche complète de tous les éléments dans la table.",
+      "Query nécessite l'utilisation d'index secondaire, tandis que Scan utilise l'index principal.",
+      "Query est moins coûteux en termes de frais que Scan."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Query utilise une clé de partition pour accélérer la recherche (correct). Scan effectue une recherche complète de tous les éléments dans la table (correct). Query nécessite l'utilisation d'index secondaire, tandis que Scan utilise l'index principal (incorrect). Query est moins coûteux en termes de frais que Scan (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-012",
+    "theme": "DynamoDB",
+    "theme_label": "Best practices",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour optimiser les performances de lecture en DynamoDB ?",
+    "options": [
+      "Utiliser des clés de partition et d'ordre appropriées",
+      "Augmenter le nombre de RCU/WCU",
+      "Activer l'encryption en transit",
+      "Utiliser des tables locales"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Utiliser des clés de partition et d'ordre appropriées est la meilleure pratique pour optimiser les performances de lecture en DynamoDB (correct). Augmenter le nombre de RCU/WCU peut aider mais n'est pas toujours la meilleure solution (incorrect). Activer l'encryption en transit est une sécurité, pas une optimisation des performances (incorrect). Utiliser des tables locales peut être utile dans certains cas mais n'est pas une pratique générale (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-013",
+    "theme": "DynamoDB",
+    "theme_label": "Global Tables",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Global Tables en DynamoDB :",
+    "options": [
+      "Permettent la réplication des données entre régions AWS",
+      "Aumentent automatiquement les RCU/WCU en fonction de la charge",
+      "Sont disponibles uniquement pour les tables provisionnées",
+      "Permettent d'utiliser des clés de partition et d'ordre différents entre régions"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Permettent la réplication des données entre régions AWS (correct). Aumentent automatiquement les RCU/WCU en fonction de la charge (incorrect). Sont disponibles uniquement pour les tables provisionnées (incorrect). Permettent d'utiliser des clés de partition et d'ordre différents entre régions (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-014",
+    "theme": "DynamoDB",
+    "theme_label": "Time To Live (TTL)",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité du Time To Live (TTL) dans DynamoDB ?",
+    "options": [
+      "Permet de supprimer automatiquement les données après une période définie",
+      "Augmente la performance des lectures et écritures",
+      "Permet de chiffrer les données sensibles",
+      "Active l'encryption en repos"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Permet de supprimer automatiquement les données après une période définie (correct). Augmente la performance des lectures et écritures (incorrect). Permet de chiffrer les données sensibles (incorrect). Active l'encryption en repos (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-015",
+    "theme": "DynamoDB",
+    "theme_label": "Batch operations",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage des opérations en lot (batch operations) en DynamoDB ?",
+    "options": [
+      "Permet d'effectuer plusieurs opérations en une seule requête",
+      "Augmente la performance des lectures et écritures",
+      "Permet de chiffrer les données sensibles",
+      "Active l'encryption en repos"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Permet d'effectuer plusieurs opérations en une seule requête (correct). Augmente la performance des lectures et écritures (incorrect). Permet de chiffrer les données sensibles (incorrect). Active l'encryption en repos (incorrect)."
+  },
+  {
+    "id": "AWS-DEV-DYN-016",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la différence entre Query et Scan dans DynamoDB :",
+    "options": [
+      "Query nécessite une clé de partition définie, Scan ne la nécessite pas.",
+      "Query est plus coûteux que Scan en termes de frais d'accès.",
+      "Scan peut être utilisé pour lire des données sur une base complète, Query ne le peut pas.",
+      "Query est plus rapide que Scan pour lire des données spécifiques."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Query nécessite une clé de partition définie, mais Scan peut être utilisé pour lire des données sur une base complète. Query est généralement plus rapide et moins coûteux que Scan pour lire des données spécifiques."
+  },
+  {
+    "id": "AWS-DEV-DYN-018",
+    "theme": "DynamoDB",
+    "theme_label": "Global Tables",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Global Tables dans DynamoDB :",
+    "options": [
+      "Les Global Tables permettent la réplication des données entre plusieurs régions AWS.",
+      "Les Global Tables sont disponibles pour toutes les tables DynamoDB existantes.",
+      "Les Global Tables nécessitent une clé de partition unique pour chaque région.",
+      "Les Global Tables offrent des performances identiques dans toutes les régions."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les Global Tables permettent la réplication des données entre plusieurs régions AWS. Les Global Tables sont disponibles pour toutes les tables DynamoDB existantes, mais une clé de partition unique n'est pas nécessaire pour chaque région."
+  },
+  {
+    "id": "AWS-DEV-DYN-020",
+    "theme": "DynamoDB",
+    "theme_label": "Backup",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctionnalités de sauvegarde dans DynamoDB :",
+    "options": [
+      "DynamoDB offre des sauvegardes automatisées à jour toutes les heures.",
+      "Les sauvegardes manuelles peuvent être effectuées en utilisant la commande AWS CLI.",
+      "Les sauvegardes sont stockées dans le même compte AWS que la table DynamoDB.",
+      "Les sauvegardes sont disponibles pour toutes les tables DynamoDB, y compris celles avec des clés de partition et de classement."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les sauvegardes manuelles peuvent être effectuées en utilisant la commande AWS CLI. Les sauvegardes sont stockées dans le même compte AWS que la table DynamoDB, mais les sauvegardes automatisées ne sont pas disponibles pour toutes les tables."
+  },
+  {
+    "id": "AWS-DEV-DYN-019",
+    "theme": "DynamoDB",
+    "theme_label": "Query vs Scan",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la différence entre Query et Scan en DynamoDB :",
+    "options": [
+      "Query nécessite une clé de partition définie, tandis que Scan scanne tous les éléments.",
+      "Query est plus rapide et coûte moins cher que Scan.",
+      "Scan peut être utilisé pour des requêtes plus complexes que Query.",
+      "Query est limité à 1MB de données par requête, tandis que Scan peut traiter des volumes plus importants."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "A est correct car Query nécessite une clé de partition définie et Scan scanne tous les éléments. B est incorrect car Query peut être plus rapide que Scan selon la charge de travail et l'index utilisé. C est incorrect car Query peut être utilisé pour des requêtes plus complexes que Scan. D est correct car Query est limité à 1MB de données par requête, tandis que Scan peut traiter des volumes plus importants."
+  },
+  {
+    "id": "AWS-DEV-DYN-020",
+    "theme": "DynamoDB",
+    "theme_label": "IAM permissions",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle autorisation IAM est nécessaire pour lire des données dans une table DynamoDB ?",
+    "options": [
+      "dynamodb:GetItem",
+      "dynamodb:Query",
+      "dynamodb:Scan",
+      "dynamodb:GetRecords"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "dynamodb:GetItem est la permission nécessaire pour lire des données dans une table DynamoDB."
+  },
+  {
+    "id": "AWS-DEV-DYN-021",
+    "theme": "DynamoDB",
+    "theme_label": "Global Tables",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Global Tables en DynamoDB :",
+    "options": [
+      "Permettent la réplication de données entre régions AWS.",
+      "Augmentent automatiquement les performances des requêtes.",
+      "Sont disponibles uniquement pour les tables provisionnées.",
+      "Permettent la mise à jour des données en temps réel entre régions."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "A est correct car les Global Tables permettent la réplication de données entre régions AWS. B est incorrect car les Global Tables ne sont pas conçus pour augmenter automatiquement les performances des requêtes. C est incorrect car les Global Tables sont disponibles pour toutes types de tables, y compris les tables on-demand. D est correct car les Global Tables permettent la mise à jour des données en temps réel entre régions."
+  },
+  {
+    "id": "AWS-DEV-DYN-022",
+    "theme": "DynamoDB",
+    "theme_label": "Batch operations",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle opération batch est disponible dans DynamoDB pour mettre à jour plusieurs éléments en même temps ?",
+    "options": [
+      "BatchWriteItem",
+      "BatchGetItem",
+      "PutItem",
+      "UpdateItem"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "BatchWriteItem est l'opération batch disponible dans DynamoDB pour mettre à jour plusieurs éléments en même temps."
+  },
+  {
+    "id": "AWS-DEV-DYN-023",
+    "theme": "DynamoDB",
+    "theme_label": "Encryption at rest",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode d'encryption est disponible pour les données à repos dans DynamoDB ?",
+    "options": [
+      "AWS KMS",
+      "SSL/TLS",
+      "IPsec",
+      "MDM"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS KMS est la méthode d'encryption disponible pour les données à repos dans DynamoDB."
   }
 ]

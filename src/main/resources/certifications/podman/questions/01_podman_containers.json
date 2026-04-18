@@ -1,0 +1,593 @@
+[
+  {
+    "id": "PODMAN-CTR-001",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Rootless",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de lancer un conteneur nginx en mode rootless avec Podman ?",
+    "options": ["podman run nginx", "sudo podman run nginx", "podman container run nginx", "podman start nginx"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Par défaut, Podman fonctionne en mode rootless ; `podman run nginx` suffit. `sudo` (B) forcerait le mode rootfull. `podman start` (D) démarre un conteneur existant."
+  },
+  {
+    "id": "PODMAN-CTR-002",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Pods",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les pods dans Podman.",
+    "options": [
+      "Un pod est un groupe d'un ou plusieurs conteneurs partageant le même espace de noms réseau.",
+      "La commande `podman pod create` crée un pod vide.",
+      "Les conteneurs d'un même pod peuvent communiquer via localhost.",
+      "Un pod peut être exporté au format Kubernetes YAML.",
+      "Les pods ne sont disponibles qu'en mode rootfull."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Les pods partagent l'espace réseau (A). `podman pod create` crée un pod sans conteneur (B). La communication via localhost est possible (C). `podman generate kube` exporte le pod (D). Les pods fonctionnent aussi en rootless (E faux)."
+  },
+  {
+    "id": "PODMAN-CTR-003",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Inspection",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande affiche les détails complets (format JSON) d'un conteneur nommé 'web' ?",
+    "options": ["podman inspect web", "podman info web", "podman describe web", "podman show web"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman inspect` retourne toutes les informations sur l'objet (conteneur, image, pod) au format JSON."
+  },
+  {
+    "id": "PODMAN-CTR-004",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Exécution de commandes",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX manières d'exécuter une commande interactive (ex: /bin/bash) dans un conteneur existant avec Podman ?",
+    "options": [
+      "podman exec -it mon_conteneur /bin/bash",
+      "podman attach mon_conteneur /bin/bash",
+      "podman run -it mon_conteneur /bin/bash",
+      "podman container exec -it mon_conteneur /bin/bash",
+      "podman enter mon_conteneur"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 3],
+    "explanation": "`podman exec` (A) et `podman container exec` (D) sont valides. `podman attach` (B) s'attache au processus principal, il ne lance pas une nouvelle commande. `podman run` (C) crée un nouveau conteneur. `podman enter` (E) n'existe pas."
+  },
+  {
+    "id": "PODMAN-CTR-005",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle option de `podman logs` permet de suivre les logs en temps réel (comme `tail -f`) ?",
+    "options": ["-f", "-t", "--follow", "A et C"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Les deux options `-f` et `--follow` sont synonymes et activent le suivi en continu."
+  },
+  {
+    "id": "PODMAN-CTR-006",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Nettoyage",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles commandes permettent de supprimer tous les conteneurs arrêtés et toutes les images inutilisées ?",
+    "options": [
+      "podman system prune -a",
+      "podman container prune",
+      "podman image prune -a",
+      "podman rm -a ; podman rmi -a",
+      "podman cleanup all"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "`podman system prune -a` (A) nettoie tout. `podman container prune` (B) supprime les conteneurs arrêtés, `podman image prune -a` (C) les images inutilisées. Les commandes combinées (D) fonctionnent aussi. `podman cleanup all` (E) n'existe pas."
+  },
+  {
+    "id": "PODMAN-CTR-007",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Port mapping",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment mapper le port 8080 de l'hôte vers le port 80 du conteneur ?",
+    "options": ["podman run -p 8080:80 nginx", "podman run --port 8080:80 nginx", "podman run -e PORT=8080:80 nginx", "podman run --expose 8080:80 nginx"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option `-p` (ou `--publish`) permet de mapper un port hôte vers un port conteneur."
+  },
+  {
+    "id": "PODMAN-CTR-008",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Variables d'environnement",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Comment passer une variable d'environnement à un conteneur Podman ?",
+    "options": [
+      "podman run -e MA_VAR=valeur image",
+      "podman run --env MA_VAR=valeur image",
+      "podman run --env-file env.list image",
+      "Modifier le Containerfile puis reconstruire",
+      "Via l'option `--set-env`"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "`-e` et `--env` définissent une variable. `--env-file` lit un fichier. La reconstruction (D) est une alternative mais n'est pas une commande run directe."
+  },
+  {
+    "id": "PODMAN-CTR-009",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Redémarrage automatique",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle politique de redémarrage redémarre toujours le conteneur, sauf si l'utilisateur l'arrête explicitement ?",
+    "options": ["--restart=always", "--restart=on-failure", "--restart=unless-stopped", "--restart=no"],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "`unless-stopped` redémarre le conteneur même après un redémarrage du système, sauf s'il a été arrêté manuellement. `always` (A) le redémarre même après arrêt manuel."
+  },
+  {
+    "id": "PODMAN-CTR-010",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman machine",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert `podman machine` ?",
+    "options": [
+      "Gérer une VM Linux pour exécuter Podman sur macOS ou Windows",
+      "Créer des conteneurs sur plusieurs hôtes distants",
+      "Cloner un conteneur existant",
+      "Automatiser le déploiement de pods"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Podman machine provisionne une machine virtuelle (généralement Fedora CoreOS) qui contient le démon Podman, permettant d'utiliser Podman sur des systèmes non‑Linux."
+  },
+  {
+    "id": "PODMAN-CTR-011",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman compose",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Podman permet de lancer une pile définie dans un fichier docker‑compose.yml ?",
+    "options": ["podman-compose up", "podman compose up", "podman run --compose", "podman stack deploy"],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Podman intègre un sous‑ensemble de la CLI Docker Compose via `podman compose`. `podman-compose` est un outil externe (pip)."
+  },
+  {
+    "id": "PODMAN-CTR-012",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod top",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fait `podman pod top monpod` ?",
+    "options": [
+      "Affiche les processus en cours d'exécution dans tous les conteneurs du pod",
+      "Affiche l'utilisation CPU du pod",
+      "Affiche les logs du pod",
+      "Liste les pods les plus consommateurs"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman pod top` est similaire à `top` mais pour l'ensemble des conteneurs d'un pod."
+  },
+  {
+    "id": "PODMAN-CTR-013",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman stats",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande affiche en continu l'utilisation des ressources (CPU, mémoire) des conteneurs ?",
+    "options": ["podman stats", "podman top", "podman inspect --stats", "podman resource"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman stats` fournit un flux en direct des métriques de consommation."
+  },
+  {
+    "id": "PODMAN-CTR-014",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman cp",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment copier un fichier de l'hôte vers un conteneur ?",
+    "options": ["podman cp fichier.txt monconteneur:/chemin/", "podman copy fichier.txt monconteneur:/chemin/", "podman scp fichier.txt monconteneur", "docker cp fichier.txt monconteneur:/chemin/ (via alias)"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande est `podman cp`. L'alias docker fonctionne aussi mais la question porte sur Podman."
+  },
+  {
+    "id": "PODMAN-CTR-015",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman wait",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert `podman wait monconteneur` ?",
+    "options": [
+      "Bloquer jusqu'à ce que le conteneur se termine et afficher son code de sortie",
+      "Attendre que le conteneur soit prêt (healthcheck)",
+      "Mettre en pause l'exécution du conteneur",
+      "Attendre que le réseau soit disponible"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman wait` attend la fin du conteneur et retourne le code de sortie. C'est utile dans les scripts."
+  },
+  {
+    "id": "PODMAN-CTR-016",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman diff",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que montre `podman diff monconteneur` ?",
+    "options": [
+      "Les fichiers modifiés ou ajoutés dans le conteneur par rapport à son image de base",
+      "La différence de configuration entre deux conteneurs",
+      "Les changements dans les logs",
+      "Les différences entre deux images"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman diff` inspecte la couche de conteneur en écriture et liste les fichiers ajoutés (A), modifiés (C) ou supprimés (D)."
+  },
+  {
+    "id": "PODMAN-CTR-017",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman commit",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment créer une nouvelle image à partir des modifications apportées à un conteneur ?",
+    "options": ["podman commit monconteneur nouvelleimage:tag", "podman save monconteneur -o image.tar", "podman export monconteneur | podman import - nouvelleimage", "A et C"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman commit` crée une image directement. L'export/import (C) est une alternative mais perd l'historique des couches."
+  },
+  {
+    "id": "PODMAN-CTR-018",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman events",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande affiche en temps réel les événements Podman (création, arrêt, suppression de conteneurs) ?",
+    "options": ["podman events", "podman logs --system", "journalctl -u podman", "podman monitor"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman events` diffuse un flux d'événements au format JSON."
+  },
+  {
+    "id": "PODMAN-CTR-019",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman healthcheck",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Comment définir un healthcheck dans un Containerfile pour Podman ?",
+    "options": [
+      "HEALTHCHECK CMD curl --fail http://localhost || exit 1",
+      "RUN healthcheck curl http://localhost",
+      "CMD healthcheck",
+      "LABEL healthcheck=\"curl http://localhost\"",
+      "Via l'option --healthcheck-command au build"
+    ],
+    "correct": 0,
+    "correct_multiple": [0],
+    "explanation": "L'instruction `HEALTHCHECK` est supportée dans les Containerfiles. Les autres options n'existent pas."
+  },
+  {
+    "id": "PODMAN-CTR-020",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod volume",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment partager un volume entre tous les conteneurs d'un pod ?",
+    "options": [
+      "Créer le volume et l'attacher à chaque conteneur du pod avec -v",
+      "Utiliser --volume avec podman pod create",
+      "Les volumes sont automatiquement partagés dans un pod",
+      "Monter le volume sur l'hôte et utiliser un bind mount"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`podman pod create` accepte l'option `--volume` qui attache un volume à l'infrastructure du pod, le rendant accessible à tous les conteneurs du pod."
+  },
+  {
+    "id": "PODMAN-CTR-021",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod clone",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande permet de dupliquer un pod existant ?",
+    "options": ["podman pod clone", "podman generate pod", "podman pod cp", "Aucune, il faut exporter puis recréer"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman pod clone` (introduit dans Podman 4.x) crée une copie d'un pod existant."
+  },
+  {
+    "id": "PODMAN-CTR-022",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --replace",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fait l'option `--replace` avec `podman run` ?",
+    "options": [
+      "Si un conteneur du même nom existe déjà, il est supprimé et remplacé par le nouveau.",
+      "Remplace le point d'entrée du conteneur.",
+      "Remplace les variables d'environnement existantes.",
+      "Force le remplacement de l'image locale par celle du registre."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--replace` est utile pour les scripts qui redémarrent un conteneur avec une nouvelle configuration sans avoir à le supprimer manuellement."
+  },
+  {
+    "id": "PODMAN-CTR-023",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman rm --force",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment forcer la suppression d'un conteneur en cours d'exécution ?",
+    "options": ["podman rm -f monconteneur", "podman stop monconteneur && podman rm monconteneur", "podman kill monconteneur ; podman rm monconteneur", "Toutes ces réponses"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman rm -f` arrête (kill) puis supprime. Les combinaisons manuelles fonctionnent aussi."
+  },
+  {
+    "id": "PODMAN-CTR-024",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod rm",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande supprime un pod et tous ses conteneurs ?",
+    "options": ["podman pod rm monpod", "podman rm pod monpod", "podman pod delete monpod", "A et C"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman pod rm` et `podman pod delete` sont synonymes. `podman rm` seul ne supprime pas un pod."
+  },
+  {
+    "id": "PODMAN-CTR-025",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod pause/unpause",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est l'effet de `podman pod pause monpod` ?",
+    "options": [
+      "Suspend tous les processus dans tous les conteneurs du pod",
+      "Met en pause le pod lui‑même, mais pas les conteneurs",
+      "Arrête les conteneurs",
+      "Bloque le trafic réseau entrant du pod"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`pause` utilise cgroups freezer pour suspendre l'exécution des processus dans tout le pod. `unpause` les reprend."
+  },
+  {
+    "id": "PODMAN-CTR-026",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --userns",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que permet l'option `--userns=keep-id` ?",
+    "options": [
+      "Mapper l'UID/GID de l'utilisateur hôte dans le conteneur, utile pour les volumes bind mount",
+      "Garder le même namespace utilisateur que le parent",
+      "Empêcher le conteneur de changer d'utilisateur",
+      "Désactiver les namespaces utilisateur"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--userns=keep-id` fait en sorte que l'utilisateur dans le conteneur ait le même UID que l'utilisateur hôte, évitant les problèmes de permissions sur les volumes."
+  },
+  {
+    "id": "PODMAN-CTR-027",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --privileged",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le risque d'exécuter un conteneur avec `--privileged` ?",
+    "options": [
+      "Le conteneur a un accès presque complet aux périphériques et aux capacités de l'hôte",
+      "Le conteneur consomme plus de CPU",
+      "Le conteneur ne peut plus accéder au réseau",
+      "Le conteneur est exécuté en mode rootless forcé"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le mode privilégié désactive la plupart des restrictions de sécurité. Il est déconseillé sauf pour des cas spécifiques (ex: exécution de Docker-in-Docker)."
+  },
+  {
+    "id": "PODMAN-CTR-028",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman container checkpoint/restore",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité expérimentale permet de sauvegarder l'état d'un conteneur et de le restaurer plus tard ?",
+    "options": ["podman container checkpoint", "podman container snapshot", "podman save", "podman export"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman container checkpoint` utilise CRIU pour geler un conteneur et sauvegarder son état mémoire sur disque."
+  },
+  {
+    "id": "PODMAN-CTR-029",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod top vs container top",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre `podman pod top` et `podman top` ?",
+    "options": [
+      "pod top affiche les processus de tous les conteneurs du pod ; podman top ceux d'un conteneur unique.",
+      "Aucune, ce sont des alias.",
+      "podman top n'existe pas.",
+      "pod top affiche les pods eux‑mêmes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman pod top` agrège les processus de tous les conteneurs du pod. `podman top` concerne un conteneur spécifique."
+  },
+  {
+    "id": "PODMAN-CTR-030",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman auto-update",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment activer la mise à jour automatique d'un conteneur lorsque son image change ?",
+    "options": [
+      "Ajouter le label 'io.containers.autoupdate=registry' et utiliser `podman auto-update`",
+      "Utiliser l'option --auto-update au run",
+      "Configurer un cron job qui fait pull et restart",
+      "A et B"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Le label `io.containers.autoupdate` et la commande `podman auto-update` fournissent une mise à jour automatique intégrée. L'option `--auto-update` existe aussi."
+  },
+  {
+    "id": "PODMAN-CTR-031",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod create --share",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels namespaces peuvent être partagés dans un pod via l'option `--share` ?",
+    "options": ["network", "uts", "ipc", "pid", "cgroup"],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Par défaut, les pods partagent network, uts, ipc. L'option `--share` permet d'ajouter pid (pour voir les processus des autres conteneurs). cgroup n'est pas partagé."
+  },
+  {
+    "id": "PODMAN-CTR-032",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman generate systemd",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande génère un fichier unit systemd pour un conteneur existant ?",
+    "options": ["podman generate systemd monconteneur", "podman systemd generate monconteneur", "podman create systemd monconteneur", "podman unit monconteneur"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman generate systemd` crée une unité systemd qui peut être activée pour démarrer le conteneur au boot."
+  },
+  {
+    "id": "PODMAN-CTR-033",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman container exists",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment vérifier si un conteneur nommé 'web' existe (sans afficher d'erreur) ?",
+    "options": ["podman container exists web", "podman ps -a --filter name=web", "podman inspect web", "A et C"],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "`podman container exists web` retourne 0 si le conteneur existe, 1 sinon. `podman inspect` fonctionne aussi mais avec une sortie d'erreur en cas d'absence."
+  },
+  {
+    "id": "PODMAN-CTR-034",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --init",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert l'option `--init` de `podman run` ?",
+    "options": [
+      "Exécuter un processus init léger (tini) comme PID 1 pour gérer les processus zombies",
+      "Initialiser le réseau du conteneur",
+      "Initialiser les volumes",
+      "Exécuter le conteneur en mode interactif"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--init` insère un mini‑init (basé sur Tini) qui nettoie les processus zombies et propage les signaux correctement."
+  },
+  {
+    "id": "PODMAN-CTR-035",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman ps --external",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que montre `podman ps --external` ?",
+    "options": [
+      "Les conteneurs qui ont été checkpointés (état figé)",
+      "Les conteneurs appartenant à d'autres utilisateurs",
+      "Les conteneurs orphelins sans pod",
+      "Les conteneurs en cours de création"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option `--external` affiche les conteneurs dans un état spécial comme 'stopped' ou 'checkpointed' qui ne sont normalement pas listés par `ps -a`."
+  },
+  {
+    "id": "PODMAN-CTR-036",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod inspect",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande affiche les détails de configuration d'un pod au format JSON ?",
+    "options": ["podman pod inspect monpod", "podman inspect pod monpod", "podman pod describe monpod", "podman pod show monpod"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman pod inspect` est la commande dédiée. `podman inspect` fonctionne aussi sur les pods mais `podman pod inspect` est plus explicite."
+  },
+  {
+    "id": "PODMAN-CTR-037",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --tz",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment définir le fuseau horaire d'un conteneur ?",
+    "options": [
+      "podman run --tz=Europe/Paris image",
+      "podman run -e TZ=Europe/Paris image",
+      "Monter /etc/localtime en volume",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Podman supporte `--tz`, la variable d'environnement `TZ` et le montage de `/etc/localtime`."
+  },
+  {
+    "id": "PODMAN-CTR-038",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --security-opt",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles options de sécurité peut-on activer avec `--security-opt` ?",
+    "options": [
+      "seccomp=unconfined",
+      "apparmor=unconfined",
+      "label=type:container_t",
+      "no-new-privileges",
+      "rootless=true"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "`--security-opt` permet de configurer seccomp, AppArmor, SELinux et no-new-privileges. `rootless` n'est pas une option de sécurité mais un mode d'exécution."
+  },
+  {
+    "id": "PODMAN-CTR-039",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman run --cgroups",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle valeur de `--cgroups` permet à un conteneur rootless d'utiliser cgroups v2 ?",
+    "options": ["enabled", "disabled", "no-conmon", "split"],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--cgroups=enabled` active le support cgroups v2 pour les conteneurs rootless, permettant des limites de ressources plus précises."
+  },
+  {
+    "id": "PODMAN-CTR-040",
+    "theme": "Gestion des conteneurs et pods",
+    "theme_label": "Podman pod prune",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Que fait `podman pod prune` ?",
+    "options": [
+      "Supprime tous les pods arrêtés",
+      "Supprime tous les pods et leurs conteneurs",
+      "Nettoie les ressources inutilisées d'un pod",
+      "Supprime les pods sans conteneurs"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`podman pod prune` supprime tous les pods qui ne sont pas en cours d'exécution (état Exited)."
+  }
+]

@@ -1,0 +1,754 @@
+[
+  {
+    "id": "SQ-ANALYSE-001",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "facile",
+    "question": "Quels sont les principaux outils qui peuvent intégrer SonarQube dans un pipeline CI/CD ? (plusieurs réponses)",
+    "options": [
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions",
+      "Azure DevOps",
+      "Docker Compose"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Tous ces outils de CI/CD supportent l'intégration avec SonarQube via des plugins ou des actions dédiées. Docker Compose est un outil d'orchestration de conteneurs, pas un serveur CI/CD."
+  },
+  {
+    "id": "SQ-ANALYSE-002",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle est la commande de base pour lancer une analyse SonarQube avec Maven ?",
+    "options": [
+      "mvn sonar:sonar",
+      "mvn sonar-scanner:scan",
+      "mvn sonarqube:analyze",
+      "mvn verify sonar:sonar"
+    ],
+    "correct": 0,
+    "explanation": "La commande standard est 'mvn sonar:sonar' (ou 'mvn clean verify sonar:sonar' pour inclure la compilation et les tests avant l'analyse)."
+  },
+  {
+    "id": "SQ-ANALYSE-003",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "Le plugin SonarScanner pour Gradle s'applique avec 'id \"org.sonarqube\"'.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. On utilise 'plugins { id \"org.sonarqube\" version \"x.y.z\" }' puis './gradlew sonar'."
+  },
+  {
+    "id": "SQ-ANALYSE-004",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels paramètres sont nécessaires pour une analyse dans un pipeline CI/CD ? (plusieurs réponses)",
+    "options": [
+      "sonar.host.url",
+      "sonar.projectKey",
+      "sonar.login (token)",
+      "sonar.branch.name (pour les branches)"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Les trois premiers sont essentiels. sonar.branch.name est requis seulement si l'on veut distinguer les analyses par branche."
+  },
+  {
+    "id": "SQ-ANALYSE-005",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quelle instruction GitHub Actions permet d'exécuter une analyse SonarQube ?",
+    "options": [
+      "uses: SonarSource/sonarqube-scan-action@master",
+      "run: sonar-scanner",
+      "uses: actions/sonar@v1",
+      "uses: sonar/scan@v2"
+    ],
+    "correct": 0,
+    "explanation": "L'action officielle est 'SonarSource/sonarqube-scan-action'. Elle encapsule le scanner et simplifie la configuration."
+  },
+  {
+    "id": "SQ-ANALYSE-006",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les avantages d'utiliser 'sonar.qualitygate.wait=true' dans un pipeline ? (plusieurs réponses)",
+    "options": [
+      "Le pipeline attend la fin du traitement serveur",
+      "Le job échoue si la Quality Gate n'est pas respectée",
+      "Cela bloque la fusion de la Pull Request",
+      "Cela accélère l'analyse"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Avec wait=true, le scanner attend et retourne un code d'erreur en cas d'échec de la Quality Gate, ce qui permet de bloquer le pipeline et la PR. Cela n'accélère pas l'analyse."
+  },
+  {
+    "id": "SQ-ANALYSE-007",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Dans un projet Maven multi-modules, où doit-on configurer les propriétés SonarQube ?",
+    "options": [
+      "Dans le pom.xml parent, ou via la ligne de commande",
+      "Uniquement dans chaque module",
+      "Dans le settings.xml global",
+      "Dans un fichier sonar-project.properties à la racine"
+    ],
+    "correct": 0,
+    "explanation": "Il est recommandé de les placer dans le pom.xml parent pour héritage, ou de les passer en arguments -D."
+  },
+  {
+    "id": "SQ-ANALYSE-008",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "SonarQube peut analyser du code Scala via le plugin SonarScala.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Un plugin communautaire (SonarScala) existe pour analyser Scala, bien qu'il ne soit pas officiel."
+  },
+  {
+    "id": "SQ-ANALYSE-009",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles informations le SonarScanner envoie-t-il au serveur lors d'une analyse ? (plusieurs réponses)",
+    "options": [
+      "Le code source",
+      "Les métriques calculées localement (loc, complexité)",
+      "Les résultats de l'analyse statique (issues)",
+      "Les rapports de couverture de code"
+    ],
+    "correct": [1, 2, 3],
+    "explanation": "Le scanner envoie les métriques, les issues et les rapports de couverture. Le code source lui-même n'est pas envoyé, sauf pour les lignes nécessaires à l'affichage dans l'interface."
+  },
+  {
+    "id": "SQ-ANALYSE-010",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Comment intégrer un rapport de couverture JaCoCo dans une analyse Maven ?",
+    "options": [
+      "Configurer le plugin jacoco-maven-plugin et exécuter mvn clean test avant sonar:sonar",
+      "SonarQube génère automatiquement la couverture",
+      "Ajouter -Dsonar.coverage.jacoco.xmlReportPaths",
+      "Les réponses A et C"
+    ],
+    "correct": 3,
+    "explanation": "Il faut générer le rapport JaCoCo (via le plugin) et indiquer à SonarQube où le trouver (sonar.coverage.jacoco.xmlReportPaths). SonarQube ne le génère pas."
+  },
+  {
+    "id": "SQ-ANALYSE-011",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les bonnes pratiques pour l'analyse dans une pipeline CI/CD ? (plusieurs réponses)",
+    "options": [
+      "Exécuter l'analyse après la compilation et les tests",
+      "Utiliser un token dédié avec des permissions limitées",
+      "Stocker les tokens dans des variables d'environnement ou secrets",
+      "Toujours utiliser le scanner standalone pour plus de contrôle"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Il faut analyser après les tests, sécuriser les tokens, et utiliser le scanner adapté au projet (Maven/Gradle si possible). Le standalone est une option, pas une obligation."
+  },
+  {
+    "id": "SQ-ANALYSE-012",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel fichier est utilisé pour configurer l'analyse avec le scanner standalone ?",
+    "options": [
+      "sonar-project.properties",
+      "sonar.properties",
+      "scanner.properties",
+      "analysis.properties"
+    ],
+    "correct": 0,
+    "explanation": "Le scanner standalone utilise un fichier nommé 'sonar-project.properties' à la racine du projet."
+  },
+  {
+    "id": "SQ-ANALYSE-013",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "SonarScanner peut être exécuté sans aucune configuration préalable sur un projet Java standard.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Il faut au minimum spécifier sonar.host.url et sonar.projectKey, soit dans sonar-project.properties soit en arguments."
+  },
+  {
+    "id": "SQ-ANALYSE-014",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels langages peuvent être analysés par SonarQube sans plugin supplémentaire (support de base) ? (plusieurs réponses)",
+    "options": [
+      "Java",
+      "JavaScript/TypeScript",
+      "C#",
+      "Python",
+      "Go"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Java, JS/TS, C#, Python, PHP, etc. sont inclus dans les éditions récentes. Go nécessite un plugin additionnel."
+  },
+  {
+    "id": "SQ-ANALYSE-015",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quel est le nom du plugin Jenkins officiel pour intégrer SonarQube ?",
+    "options": [
+      "SonarQube Scanner",
+      "SonarQube Plugin",
+      "Sonar Plugin",
+      "Jenkins Sonar Integration"
+    ],
+    "correct": 0,
+    "explanation": "Le plugin s'appelle 'SonarQube Scanner' (ou 'SonarQube Scanner for Jenkins')."
+  },
+  {
+    "id": "SQ-ANALYSE-016",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Dans un projet GitHub Actions, quelles variables d'environnement sont couramment utilisées pour l'analyse ? (plusieurs réponses)",
+    "options": [
+      "SONAR_TOKEN",
+      "SONAR_HOST_URL",
+      "GITHUB_TOKEN",
+      "SONAR_PROJECT_KEY"
+    ],
+    "correct": [0, 1],
+    "explanation": "SONAR_TOKEN et SONAR_HOST_URL sont les plus courantes. GITHUB_TOKEN peut être utilisé pour l'intégration PR, mais pas pour l'analyse elle-même. Le project key est souvent passé en paramètre."
+  },
+  {
+    "id": "SQ-ANALYSE-017",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel est l'objectif de la propriété 'sonar.exclusions' ?",
+    "options": [
+      "Exclure des fichiers ou répertoires de l'analyse",
+      "Exclure des règles spécifiques",
+      "Exclure des développeurs",
+      "Exclure des métriques"
+    ],
+    "correct": 0,
+    "explanation": "sonar.exclusions permet de définir des motifs pour ignorer certains fichiers (ex: **/generated/**)."
+  },
+  {
+    "id": "SQ-ANALYSE-018",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "SonarQube peut importer les résultats de tests unitaires au format JUnit XML.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. SonarQube peut importer les rapports de tests (exécution et couverture) via les propriétés sonar.junit.reportPaths et sonar.coverage.jacoco.xmlReportPaths."
+  },
+  {
+    "id": "SQ-ANALYSE-019",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les différences entre l'analyse avec le scanner Maven et le scanner standalone ? (plusieurs réponses)",
+    "options": [
+      "Le scanner Maven récupère automatiquement les dépendances et la configuration du projet",
+      "Le scanner standalone nécessite un fichier sonar-project.properties",
+      "Le scanner Maven ne peut pas analyser du code non Java",
+      "Le scanner standalone est plus rapide"
+    ],
+    "correct": [0, 1],
+    "explanation": "Le scanner Maven est intégré et utilise la configuration Maven existante. Le standalone nécessite un fichier de propriétés et est plus générique. Les deux peuvent analyser d'autres langages avec configuration."
+  },
+  {
+    "id": "SQ-ANALYSE-020",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Comment configurer SonarQube pour analyser un projet monorepo contenant plusieurs langages ?",
+    "options": [
+      "Une seule analyse avec le scanner standalone en spécifiant les sources de chaque langage",
+      "Il faut un projet SonarQube différent par langage",
+      "Impossible, SonarQube ne supporte pas les monorepos",
+      "Utiliser le scanner Maven pour tout"
+    ],
+    "correct": 0,
+    "explanation": "Le scanner peut analyser plusieurs langages en une seule exécution si les sources sont bien spécifiées (sonar.sources, sonar.tests)."
+  },
+  {
+    "id": "SQ-ANALYSE-021",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels plugins SonarQube sont utiles pour l'intégration avec des outils de build ? (plusieurs réponses)",
+    "options": [
+      "SonarJava",
+      "SonarJS",
+      "JaCoCo",
+      "SonarScanner pour Maven/Gradle"
+    ],
+    "correct": [0, 1],
+    "explanation": "Les plugins d'analyse de langage (SonarJava, SonarJS) sont nécessaires. JaCoCo est un outil externe. Le scanner Maven/Gradle est un client, pas un plugin serveur."
+  },
+  {
+    "id": "SQ-ANALYSE-022",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel est le rôle de 'sonar.tests' ?",
+    "options": [
+      "Spécifier le répertoire contenant les tests unitaires",
+      "Exécuter les tests unitaires",
+      "Générer le rapport de couverture",
+      "Analyser les performances des tests"
+    ],
+    "correct": 0,
+    "explanation": "sonar.tests définit le chemin vers les sources de tests pour l'analyse statique (ex: pour les règles spécifiques aux tests)."
+  },
+  {
+    "id": "SQ-ANALYSE-023",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "L'analyse SonarQube peut être déclenchée manuellement depuis l'interface web de SonarQube.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. L'analyse est toujours initiée par un client (scanner) et ne peut être lancée depuis l'interface web."
+  },
+  {
+    "id": "SQ-ANALYSE-024",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les conditions pour que le 'Pull Request Decoration' fonctionne dans GitHub ? (plusieurs réponses)",
+    "options": [
+      "Avoir configuré l'intégration GitHub dans SonarQube",
+      "Utiliser un token GitHub avec les permissions appropriées",
+      "Le plugin SonarJava doit être installé",
+      "L'analyse doit être lancée avec les paramètres de PR (sonar.pullrequest.key, etc.)"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Il faut l'intégration GitHub, un token, et les paramètres de PR. SonarJava n'est pas spécifiquement requis."
+  },
+  {
+    "id": "SQ-ANALYSE-025",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Dans GitLab CI, comment définir une variable pour le token SonarQube ?",
+    "options": [
+      "Dans Settings > CI/CD > Variables, en tant que variable masquée",
+      "Dans le fichier .gitlab-ci.yml en clair",
+      "Dans sonar-project.properties",
+      "Via une commande export"
+    ],
+    "correct": 0,
+    "explanation": "Il est recommandé de définir SONAR_TOKEN comme variable CI/CD protégée et masquée dans les paramètres du projet GitLab."
+  },
+  {
+    "id": "SQ-ANALYSE-026",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les avantages de l'analyse incrémentale (analyse du nouveau code uniquement) ? (plusieurs réponses)",
+    "options": [
+      "Analyse plus rapide",
+      "Détection des problèmes uniquement dans le code modifié",
+      "Réduction de la charge sur le serveur",
+      "Pas besoin de compiler le code"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "L'analyse incrémentale (mode PR ou branche) est plus rapide et se concentre sur les changements, réduisant la charge. La compilation reste nécessaire."
+  },
+  {
+    "id": "SQ-ANALYSE-027",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Comment SonarQube identifie-t-il qu'une analyse concerne une Pull Request ?",
+    "options": [
+      "Via les paramètres sonar.pullrequest.key et sonar.pullrequest.branch",
+      "Via la branche Git détectée automatiquement",
+      "Via le titre du commit",
+      "Via un webhook"
+    ],
+    "correct": 0,
+    "explanation": "Il faut passer explicitement les paramètres sonar.pullrequest.key (ID de la PR) et sonar.pullrequest.branch (branche source) lors de l'analyse."
+  },
+  {
+    "id": "SQ-ANALYSE-028",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Le plugin SonarScanner pour Maven fonctionne uniquement avec Maven 3.x.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Il fonctionne avec les versions récentes de Maven (3.x et au-delà)."
+  },
+  {
+    "id": "SQ-ANALYSE-029",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "facile",
+    "question": "Quels sont les formats de rapport de couverture supportés par SonarQube ? (plusieurs réponses)",
+    "options": [
+      "JaCoCo XML",
+      "Cobertura XML",
+      "Clover XML",
+      "LCOV"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "SonarQube supporte JaCoCo, Cobertura, et LCOV (pour JS/TS). Clover est moins courant mais peut être supporté via conversion."
+  },
+  {
+    "id": "SQ-ANALYSE-030",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle est la valeur par défaut du paramètre 'sonar.sourceEncoding' ?",
+    "options": [
+      "UTF-8",
+      "ISO-8859-1",
+      "System encoding",
+      "Aucune, doit être spécifié"
+    ],
+    "correct": 2,
+    "explanation": "Par défaut, SonarScanner utilise l'encodage système, mais il est fortement recommandé de le spécifier (UTF-8)."
+  },
+  {
+    "id": "SQ-ANALYSE-031",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les étapes d'une analyse de Pull Request avec SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Le scanner calcule les différences avec la branche cible",
+      "Seules les lignes modifiées sont analysées",
+      "Les résultats sont affichés dans l'interface de la PR",
+      "La Quality Gate est évaluée"
+    ],
+    "correct": [0, 2, 3],
+    "explanation": "L'analyse se concentre sur les changements, mais elle analyse tout de même le contexte. Les résultats sont postés dans la PR et la QG est vérifiée. 'Seules les lignes modifiées' est une simplification."
+  },
+  {
+    "id": "SQ-ANALYSE-032",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quelle est la propriété pour spécifier le chemin du rapport de tests Surefire ?",
+    "options": [
+      "sonar.junit.reportPaths",
+      "sonar.surefire.reportPath",
+      "sonar.test.reportPaths",
+      "sonar.tests.report"
+    ],
+    "correct": 0,
+    "explanation": "sonar.junit.reportPaths (ou sonar.junit.reportPath pour un seul fichier) est utilisé pour importer les rapports de tests unitaires."
+  },
+  {
+    "id": "SQ-ANALYSE-033",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "SonarQube peut analyser du code Terraform (HCL) pour détecter des problèmes de sécurité.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. SonarQube supporte l'analyse de code Infrastructure as Code (Terraform, CloudFormation) via des plugins dédiés."
+  },
+  {
+    "id": "SQ-ANALYSE-034",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les avantages d'utiliser SonarLint en complément de l'analyse serveur ? (plusieurs réponses)",
+    "options": [
+      "Détection instantanée des problèmes dans l'IDE",
+      "Correction avant même le commit",
+      "Remplacement de l'analyse serveur",
+      "Alignement avec les règles du serveur (mode connecté)"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "SonarLint détecte les problèmes localement et peut se synchroniser avec les règles du serveur. Il ne remplace pas l'analyse serveur, il la complète."
+  },
+  {
+    "id": "SQ-ANALYSE-035",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Dans une analyse avec Gradle, comment passer des propriétés SonarQube en ligne de commande ?",
+    "options": [
+      "-Dsonar.projectKey=myproject",
+      "-Psonar.projectKey=myproject",
+      "--sonar.projectKey=myproject",
+      "gradle.properties"
+    ],
+    "correct": 1,
+    "explanation": "Avec Gradle, on utilise -P pour passer des propriétés au build (ex: -Psonar.projectKey=key). -D est pour les propriétés système."
+  },
+  {
+    "id": "SQ-ANALYSE-036",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les bonnes pratiques pour gérer plusieurs projets dans une même instance SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Utiliser des Project Keys uniques",
+      "Structurer avec des Portfolios (Enterprise+)",
+      "Utiliser des Quality Gates différentes selon le type de projet",
+      "Toujours utiliser le même Quality Profile"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Il faut des clés uniques, organiser avec des Portfolios si possible, et adapter les Quality Gates. Le même Quality Profile n'est pas toujours adapté."
+  },
+  {
+    "id": "SQ-ANALYSE-037",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel outil permet de scanner les dépendances pour détecter les vulnérabilités dans SonarQube ?",
+    "options": [
+      "SonarQube intègre OWASP Dependency Check",
+      "SonarQube utilise son propre moteur d'analyse de dépendances (SonarSecurity)",
+      "Il faut un plugin externe",
+      "Ce n'est pas possible"
+    ],
+    "correct": 1,
+    "explanation": "SonarQube (Developer Edition+) inclut l'analyse des dépendances (Snyk intégré ou SonarSource Security Engine)."
+  },
+  {
+    "id": "SQ-ANALYSE-038",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "L'analyse des dépendances nécessite l'envoi du fichier pom.xml ou build.gradle au serveur.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Le scanner collecte les dépendances et les envoie au serveur pour analyse."
+  },
+  {
+    "id": "SQ-ANALYSE-039",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les paramètres pour configurer un proxy avec SonarScanner ? (plusieurs réponses)",
+    "options": [
+      "sonar.scanner.proxyHost",
+      "sonar.scanner.proxyPort",
+      "sonar.web.proxyHost",
+      "HTTP_PROXY (variable d'environnement)"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Le scanner utilise sonar.scanner.proxyHost/Port ou les variables d'environnement HTTP_PROXY/HTTPS_PROXY."
+  },
+  {
+    "id": "SQ-ANALYSE-040",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Comment désactiver temporairement l'analyse d'un module Maven spécifique ?",
+    "options": [
+      "Ajouter <sonar.skip>true</sonar.skip> dans les propriétés du module",
+      "Exclure le module dans sonar.exclusions",
+      "Ne pas compiler le module",
+      "Supprimer le module du pom.xml"
+    ],
+    "correct": 0,
+    "explanation": "On peut utiliser la propriété sonar.skip à true pour ignorer un module lors de l'analyse Maven."
+  },
+  {
+    "id": "SQ-ANALYSE-041",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les différences entre l'analyse sur une branche de fonctionnalité et sur la branche principale ? (plusieurs réponses)",
+    "options": [
+      "La branche principale est considérée comme référence pour la Leak Period",
+      "Les résultats des branches sont stockés séparément",
+      "La Quality Gate peut être différente",
+      "L'analyse des branches nécessite la Developer Edition"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Toutes ces affirmations sont vraies : la branche principale sert de référence, les résultats sont séparés, les QG peuvent différer, et l'analyse de branches est une fonctionnalité commerciale."
+  },
+  {
+    "id": "SQ-ANALYSE-042",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle est la durée approximative de rétention des analyses de branches dans SonarQube ?",
+    "options": [
+      "30 jours sans activité",
+      "90 jours",
+      "Indéfinie",
+      "7 jours"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, les branches inactives sont supprimées après 30 jours (configurable)."
+  },
+  {
+    "id": "SQ-ANALYSE-043",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Il est possible d'analyser un projet sans avoir accès à son code source (ex: via un bytecode compilé).",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. SonarQube a besoin du code source pour effectuer l'analyse statique."
+  },
+  {
+    "id": "SQ-ANALYSE-044",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les moyens de visualiser l'historique des analyses d'un projet ? (plusieurs réponses)",
+    "options": [
+      "Graphique d'activité dans l'interface du projet",
+      "API api/measures/search_history",
+      "En consultant les logs du scanner",
+      "Via la page 'Historique' des Quality Gates"
+    ],
+    "correct": [0, 1],
+    "explanation": "L'interface montre l'activité, et l'API permet de récupérer l'historique des mesures. Les logs du scanner ne sont pas stockés sur le serveur."
+  },
+  {
+    "id": "SQ-ANALYSE-045",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Quelle est la fonction de l'API 'api/ce/task' ?",
+    "options": [
+      "Obtenir le statut d'une tâche du Compute Engine",
+      "Lancer une analyse",
+      "Récupérer les résultats d'analyse",
+      "Gérer les plugins"
+    ],
+    "correct": 0,
+    "explanation": "Cette API permet de suivre l'état d'avancement d'une tâche d'analyse (PENDING, IN_PROGRESS, SUCCESS, FAILED)."
+  },
+  {
+    "id": "SQ-ANALYSE-046",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels sont les types de problèmes que SonarQube peut détecter dans les fichiers Dockerfile ? (plusieurs réponses)",
+    "options": [
+      "Instructions non optimisées (ex: RUN multiples)",
+      "Utilisation de l'utilisateur root",
+      "Secrets exposés",
+      "Faille de sécurité dans une image de base"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "SonarQube analyse les Dockerfiles pour détecter des problèmes de sécurité, de performance et de bonnes pratiques."
+  },
+  {
+    "id": "SQ-ANALYSE-047",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle est l'URL de base de l'API REST de SonarQube ?",
+    "options": [
+      "/api",
+      "/rest",
+      "/api/v2",
+      "/sonar/api"
+    ],
+    "correct": 0,
+    "explanation": "L'API REST est accessible sous /api (ex: http://sonarqube:9000/api)."
+  },
+  {
+    "id": "SQ-ANALYSE-048",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "Il est possible de déclencher une analyse SonarQube via un appel API REST.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. L'analyse est toujours déclenchée par le scanner. L'API permet de récupérer des résultats ou configurer des projets, pas de lancer une analyse."
+  },
+  {
+    "id": "SQ-ANALYSE-049",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles informations peut-on récupérer via l'API 'api/measures/component' ? (plusieurs réponses)",
+    "options": [
+      "Les métriques (bugs, coverage, etc.) d'un composant",
+      "La note de qualité globale",
+      "La configuration du Quality Profile",
+      "L'historique des analyses"
+    ],
+    "correct": [0, 1],
+    "explanation": "Cette API retourne les mesures actuelles (valeurs et notes) pour un composant. L'historique nécessite 'search_history'."
+  },
+  {
+    "id": "SQ-ANALYSE-050",
+    "theme": "SonarQube",
+    "theme_label": "Analyse et Intégration CI/CD",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Dans un pipeline Jenkins déclaratif, comment bloquer le build si la Quality Gate échoue ?",
+    "options": [
+      "Utiliser waitForQualityGate() dans le bloc sonar-scanner",
+      "Utiliser une étape conditionnelle basée sur le statut de la tâche CE",
+      "Vérifier manuellement dans l'interface",
+      "C'est automatique avec le plugin"
+    ],
+    "correct": 1,
+    "explanation": "Il faut utiliser l'étape 'waitForQualityGate' qui interroge l'API pour connaître le résultat et lever une erreur si la QG échoue."
+  }
+]

@@ -12,7 +12,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "BigQuery est un data warehouse analytique (SQL)."
+    "explanation": "BigQuery est un data warehouse analytique (SQL)."
   },
   {
     "id": "GCP-DL-162",
@@ -20,9 +20,14 @@
     "theme_label": "BigQuery",
     "difficulty": "easy",
     "question": "BigQuery supporte-t-il le SQL standard ?",
-    "options": ["Oui", "Non", "Uniquement un dialecte propriétaire", "Uniquement des requêtes NoSQL"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement un dialecte propriétaire",
+      "Uniquement des requêtes NoSQL"
+    ],
     "correct": 0,
-    "explication": "BigQuery utilise le SQL standard (ANSI 2011)."
+    "explanation": "BigQuery utilise le SQL standard (ANSI 2011)."
   },
   {
     "id": "GCP-DL-163",
@@ -30,9 +35,14 @@
     "theme_label": "BigQuery",
     "difficulty": "easy",
     "question": "BigQuery peut-il interroger directement des données dans Cloud Storage ?",
-    "options": ["Oui (tables externes)", "Non", "Uniquement après import", "Uniquement via Dataflow"],
+    "options": [
+      "Oui (tables externes)",
+      "Non",
+      "Uniquement après import",
+      "Uniquement via Dataflow"
+    ],
     "correct": 0,
-    "explication": "BigQuery peut lire des fichiers dans Cloud Storage (CSV, JSON, Parquet, Avro)."
+    "explanation": "BigQuery peut lire des fichiers dans Cloud Storage (CSV, JSON, Parquet, Avro)."
   },
   {
     "id": "GCP-DL-164",
@@ -40,9 +50,14 @@
     "theme_label": "BigQuery",
     "difficulty": "easy",
     "question": "BigQuery supporte-t-il le partitionnement et le clustering ?",
-    "options": ["Oui", "Non", "Uniquement le partitionnement", "Uniquement le clustering"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement le partitionnement",
+      "Uniquement le clustering"
+    ],
     "correct": 0,
-    "explication": "Le partitionnement (par date) et le clustering (par colonne) améliorent les performances et réduisent les coûts."
+    "explanation": "Le partitionnement (par date) et le clustering (par colonne) améliorent les performances et réduisent les coûts."
   },
   {
     "id": "GCP-DL-165",
@@ -57,7 +72,7 @@
       "Moteur de transformation"
     ],
     "correct": 0,
-    "explication": "BI Engine accélère les requêtes de visualisation (Looker, Tableau)."
+    "explanation": "BI Engine accélère les requêtes de visualisation (Looker, Tableau)."
   },
   {
     "id": "GCP-DL-166",
@@ -65,9 +80,14 @@
     "theme_label": "BigQuery",
     "difficulty": "easy",
     "question": "BigQuery Omni permet-il d'interroger des données dans AWS et Azure ?",
-    "options": ["Oui", "Non", "Uniquement AWS", "Uniquement Azure"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement AWS",
+      "Uniquement Azure"
+    ],
     "correct": 0,
-    "explication": "BigQuery Omni interroge les données dans AWS S3 et Azure Blob."
+    "explanation": "BigQuery Omni interroge les données dans AWS S3 et Azure Blob."
   },
   {
     "id": "GCP-DL-167",
@@ -82,7 +102,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Dataflow exécute des pipelines Apache Beam."
+    "explanation": "Dataflow exécute des pipelines Apache Beam."
   },
   {
     "id": "GCP-DL-168",
@@ -90,9 +110,14 @@
     "theme_label": "Dataflow",
     "difficulty": "easy",
     "question": "Dataflow supporte-t-il les modèles prédéfinis (templates) ?",
-    "options": ["Oui", "Non", "Uniquement pour le batch", "Uniquement pour le streaming"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour le batch",
+      "Uniquement pour le streaming"
+    ],
     "correct": 0,
-    "explication": "Dataflow propose des templates pour des transformations courantes (Cloud Storage to BigQuery)."
+    "explanation": "Dataflow propose des templates pour des transformations courantes (Cloud Storage to BigQuery)."
   },
   {
     "id": "GCP-DL-169",
@@ -107,7 +132,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Dataproc crée rapidement des clusters Hadoop/Spark."
+    "explanation": "Dataproc crée rapidement des clusters Hadoop/Spark."
   },
   {
     "id": "GCP-DL-170",
@@ -115,9 +140,14 @@
     "theme_label": "Dataproc",
     "difficulty": "easy",
     "question": "Dataproc facture-t-il à la minute les clusters ?",
-    "options": ["Oui", "Non", "À l'heure", "Au mois"],
+    "options": [
+      "Oui",
+      "Non",
+      "À l'heure",
+      "Au mois"
+    ],
     "correct": 0,
-    "explication": "Dataproc facture les nœuds de cluster à la minute (minimum 1 minute)."
+    "explanation": "Dataproc facture les nœuds de cluster à la minute (minimum 1 minute)."
   },
   {
     "id": "GCP-DL-171",
@@ -132,7 +162,7 @@
       "BigQuery"
     ],
     "correct": 0,
-    "explication": "Dataproc Serverless permet d'exécuter des jobs Spark sans provisionner de cluster."
+    "explanation": "Dataproc Serverless permet d'exécuter des jobs Spark sans provisionner de cluster."
   },
   {
     "id": "GCP-DL-172",
@@ -147,7 +177,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Dataprep est un service de préparation de données sans code (basé sur Trifacta)."
+    "explanation": "Dataprep est un service de préparation de données sans code (basé sur Trifacta)."
   },
   {
     "id": "GCP-DL-173",
@@ -162,7 +192,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Pub/Sub est un service de messagerie pour l'ingestion d'événements."
+    "explanation": "Pub/Sub est un service de messagerie pour l'ingestion d'événements."
   },
   {
     "id": "GCP-DL-174",
@@ -170,9 +200,14 @@
     "theme_label": "Pub/Sub",
     "difficulty": "easy",
     "question": "Pub/Sub supporte-t-il les messages avec accusé de réception ?",
-    "options": ["Oui", "Non", "Uniquement au moins une fois", "Uniquement exactement une fois"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement au moins une fois",
+      "Uniquement exactement une fois"
+    ],
     "correct": 0,
-    "explication": "Pub/Sub offre une livraison au moins une fois (avec accusé)."
+    "explanation": "Pub/Sub offre une livraison au moins une fois (avec accusé)."
   },
   {
     "id": "GCP-DL-175",
@@ -187,7 +222,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Data Catalog permet de rechercher et gérer les métadonnées des ressources GCP."
+    "explanation": "Data Catalog permet de rechercher et gérer les métadonnées des ressources GCP."
   },
   {
     "id": "GCP-DL-176",
@@ -202,7 +237,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Looker (intégré à Google Cloud) permet de créer des dashboards et des explorations de données."
+    "explanation": "Looker (intégré à Google Cloud) permet de créer des dashboards et des explorations de données."
   },
   {
     "id": "GCP-DL-177",
@@ -217,7 +252,7 @@
       "ETL"
     ],
     "correct": 0,
-    "explication": "Looker Studio crée des rapports interactifs à partir de nombreuses sources."
+    "explanation": "Looker Studio crée des rapports interactifs à partir de nombreuses sources."
   },
   {
     "id": "GCP-DL-178",
@@ -232,7 +267,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Cloud Composer orchestre les pipelines de données avec Airflow."
+    "explanation": "Cloud Composer orchestre les pipelines de données avec Airflow."
   },
   {
     "id": "GCP-DL-179",
@@ -247,7 +282,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Dataplex fournit une gestion unifiée des données (lacs, catalogues, qualité)."
+    "explanation": "Dataplex fournit une gestion unifiée des données (lacs, catalogues, qualité)."
   },
   {
     "id": "GCP-DL-180",
@@ -262,7 +297,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Data Fusion est un service ETL/ELT visuel."
+    "explanation": "Data Fusion est un service ETL/ELT visuel."
   },
   {
     "id": "GCP-DL-181",
@@ -270,9 +305,14 @@
     "theme_label": "Cloud Logging",
     "difficulty": "easy",
     "question": "Cloud Logging collecte-t-il les logs des services GCP ?",
-    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour App Engine"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour Compute Engine",
+      "Uniquement pour App Engine"
+    ],
     "correct": 0,
-    "explication": "Cloud Logging centralise les logs de toutes les ressources GCP."
+    "explanation": "Cloud Logging centralise les logs de toutes les ressources GCP."
   },
   {
     "id": "GCP-DL-182",
@@ -280,9 +320,14 @@
     "theme_label": "Cloud Monitoring",
     "difficulty": "easy",
     "question": "Cloud Monitoring fournit-il des métriques et des alertes ?",
-    "options": ["Oui", "Non", "Uniquement pour Compute Engine", "Uniquement pour GKE"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour Compute Engine",
+      "Uniquement pour GKE"
+    ],
     "correct": 0,
-    "explication": "Cloud Monitoring (anciennement Stackdriver) surveille les performances."
+    "explanation": "Cloud Monitoring (anciennement Stackdriver) surveille les performances."
   },
   {
     "id": "GCP-DL-183",
@@ -297,7 +342,7 @@
       "Alertes"
     ],
     "correct": 0,
-    "explication": "Cloud Trace suit les requêtes pour identifier les goulots d'étranglement."
+    "explanation": "Cloud Trace suit les requêtes pour identifier les goulots d'étranglement."
   },
   {
     "id": "GCP-DL-184",
@@ -312,7 +357,7 @@
       "Alertes"
     ],
     "correct": 0,
-    "explication": "Cloud Profiler montre où le temps CPU est passé (profilage en continu)."
+    "explanation": "Cloud Profiler montre où le temps CPU est passé (profilage en continu)."
   },
   {
     "id": "GCP-DL-185",
@@ -320,9 +365,14 @@
     "theme_label": "Cloud Debugger",
     "difficulty": "easy",
     "question": "Cloud Debugger permet-il de déboguer sans arrêter l'application ?",
-    "options": ["Oui", "Non", "Uniquement pour les applications Java", "Uniquement pour les applications Python"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les applications Java",
+      "Uniquement pour les applications Python"
+    ],
     "correct": 0,
-    "explication": "Cloud Debugger capture l'état des variables sans interrompre l'exécution."
+    "explanation": "Cloud Debugger capture l'état des variables sans interrompre l'exécution."
   },
   {
     "id": "GCP-DL-186",
@@ -337,7 +387,7 @@
       "Alertes"
     ],
     "correct": 0,
-    "explication": "Error Reporting regroupe les erreurs par type et fournit des statistiques."
+    "explanation": "Error Reporting regroupe les erreurs par type et fournit des statistiques."
   },
   {
     "id": "GCP-DL-187",
@@ -345,9 +395,14 @@
     "theme_label": "Cloud Audit Logs",
     "difficulty": "easy",
     "question": "Cloud Audit Logs enregistre-t-il les activités administratives ?",
-    "options": ["Oui", "Non", "Uniquement pour les données sensibles", "Uniquement pour les accès à l'API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les données sensibles",
+      "Uniquement pour les accès à l'API"
+    ],
     "correct": 0,
-    "explication": "Les audit logs (Admin Activity, Data Access) aident à la conformité."
+    "explanation": "Les audit logs (Admin Activity, Data Access) aident à la conformité."
   },
   {
     "id": "GCP-DL-188",
@@ -355,9 +410,14 @@
     "theme_label": "BigQuery reservations",
     "difficulty": "easy",
     "question": "Les réservations BigQuery permettent-elles d'allouer des slots dédiés ?",
-    "options": ["Oui", "Non", "Uniquement pour le stockage", "Uniquement pour les requêtes"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour le stockage",
+      "Uniquement pour les requêtes"
+    ],
     "correct": 0,
-    "explication": "Les réservations garantissent des ressources de calcul (slots)."
+    "explanation": "Les réservations garantissent des ressources de calcul (slots)."
   },
   {
     "id": "GCP-DL-189",
@@ -365,9 +425,14 @@
     "theme_label": "BigQuery materialized views",
     "difficulty": "easy",
     "question": "Les vues matérialisées BigQuery améliorent-elles les performances des requêtes ?",
-    "options": ["Oui", "Non", "Seulement pour les données en temps réel", "Seulement pour les données historiques"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour les données en temps réel",
+      "Seulement pour les données historiques"
+    ],
     "correct": 0,
-    "explication": "Les vues matérialisées pré-calculent les résultats des requêtes complexes."
+    "explanation": "Les vues matérialisées pré-calculent les résultats des requêtes complexes."
   },
   {
     "id": "GCP-DL-190",
@@ -375,9 +440,14 @@
     "theme_label": "BigQuery ML",
     "difficulty": "easy",
     "question": "BigQuery ML permet-il de créer des modèles ML avec SQL ?",
-    "options": ["Oui", "Non", "Uniquement pour la régression", "Uniquement pour la classification"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour la régression",
+      "Uniquement pour la classification"
+    ],
     "correct": 0,
-    "explication": "BigQuery ML entraîne des modèles (régression, classification, clustering) avec SQL."
+    "explanation": "BigQuery ML entraîne des modèles (régression, classification, clustering) avec SQL."
   },
   {
     "id": "GCP-DL-191",
@@ -392,7 +462,7 @@
       "Stockage"
     ],
     "correct": 0,
-    "explication": "Vertex AI regroupe les services de ML de GCP (AutoML, entraînement personnalisé)."
+    "explanation": "Vertex AI regroupe les services de ML de GCP (AutoML, entraînement personnalisé)."
   },
   {
     "id": "GCP-DL-192",
@@ -400,9 +470,14 @@
     "theme_label": "Vertex AI Workbench",
     "difficulty": "easy",
     "question": "Vertex AI Workbench est-il un service de notebooks gérés (Jupyter) ?",
-    "options": ["Oui", "Non", "Uniquement pour les modèles pré-entraînés", "Uniquement pour les données tabulaires"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les modèles pré-entraînés",
+      "Uniquement pour les données tabulaires"
+    ],
     "correct": 0,
-    "explication": "Vertex AI Workbench fournit des environnements JupyterLab entièrement gérés."
+    "explanation": "Vertex AI Workbench fournit des environnements JupyterLab entièrement gérés."
   },
   {
     "id": "GCP-DL-193",
@@ -410,9 +485,14 @@
     "theme_label": "Cloud Natural Language API",
     "difficulty": "easy",
     "question": "L'API Cloud Natural Language analyse-t-elle le texte (entités, sentiments) ?",
-    "options": ["Oui", "Non", "Uniquement pour l'anglais", "Uniquement pour le français"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour l'anglais",
+      "Uniquement pour le français"
+    ],
     "correct": 0,
-    "explication": "L'API Natural Language supporte plusieurs langues pour l'analyse sémantique."
+    "explanation": "L'API Natural Language supporte plusieurs langues pour l'analyse sémantique."
   },
   {
     "id": "GCP-DL-194",
@@ -420,9 +500,14 @@
     "theme_label": "Vision API",
     "difficulty": "easy",
     "question": "L'API Vision permet-elle la détection d'objets dans les images ?",
-    "options": ["Oui", "Non", "Uniquement l'OCR", "Uniquement la détection de visages"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement l'OCR",
+      "Uniquement la détection de visages"
+    ],
     "correct": 0,
-    "explication": "Vision API supporte la détection d'étiquettes, d'objets, de texte, etc."
+    "explanation": "Vision API supporte la détection d'étiquettes, d'objets, de texte, etc."
   },
   {
     "id": "GCP-DL-195",
@@ -430,9 +515,14 @@
     "theme_label": "Speech-to-Text",
     "difficulty": "easy",
     "question": "L'API Speech-to-Text convertit-elle l'audio en texte ?",
-    "options": ["Oui", "Non", "Uniquement pour l'anglais", "Uniquement pour les fichiers courts"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour l'anglais",
+      "Uniquement pour les fichiers courts"
+    ],
     "correct": 0,
-    "explication": "Speech-to-Text supporte de nombreuses langues et reconnaît la parole en temps réel ou sur fichiers."
+    "explanation": "Speech-to-Text supporte de nombreuses langues et reconnaît la parole en temps réel ou sur fichiers."
   },
   {
     "id": "GCP-DL-196",
@@ -440,9 +530,14 @@
     "theme_label": "Translation API",
     "difficulty": "easy",
     "question": "L'API Translation supporte-t-elle la traduction automatique entre plus de 100 langues ?",
-    "options": ["Oui", "Non", "Uniquement l'anglais", "Uniquement les langues européennes"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement l'anglais",
+      "Uniquement les langues européennes"
+    ],
     "correct": 0,
-    "explication": "Translation API offre une traduction neuronale pour de nombreuses langues."
+    "explanation": "Translation API offre une traduction neuronale pour de nombreuses langues."
   },
   {
     "id": "GCP-DL-197",
@@ -450,9 +545,14 @@
     "theme_label": "Document AI",
     "difficulty": "easy",
     "question": "Document AI permet-il d'extraire des données de documents (factures, formulaires) ?",
-    "options": ["Oui", "Non", "Uniquement pour les PDF", "Uniquement pour les images"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les PDF",
+      "Uniquement pour les images"
+    ],
     "correct": 0,
-    "explication": "Document AI utilise le ML pour traiter des documents structurés et non structurés."
+    "explanation": "Document AI utilise le ML pour traiter des documents structurés et non structurés."
   },
   {
     "id": "GCP-DL-198",
@@ -460,9 +560,14 @@
     "theme_label": "Recommender",
     "difficulty": "easy",
     "question": "Recommender fournit-il des recommandations d'optimisation (coûts, sécurité) ?",
-    "options": ["Oui", "Non", "Uniquement pour les coûts", "Uniquement pour la sécurité"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les coûts",
+      "Uniquement pour la sécurité"
+    ],
     "correct": 0,
-    "explication": "Recommender analyse les ressources et propose des actions (ex: redimensionner des VMs)."
+    "explanation": "Recommender analyse les ressources et propose des actions (ex: redimensionner des VMs)."
   },
   {
     "id": "GCP-DL-199",
@@ -470,9 +575,14 @@
     "theme_label": "Cloud Scheduler for data pipelines",
     "difficulty": "easy",
     "question": "Cloud Scheduler peut-il déclencher des pipelines Dataflow ou Dataproc ?",
-    "options": ["Oui", "Non", "Uniquement via Cloud Functions", "Uniquement via Pub/Sub"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via Cloud Functions",
+      "Uniquement via Pub/Sub"
+    ],
     "correct": 0,
-    "explication": "Cloud Scheduler peut appeler des endpoints HTTP (API Dataflow, etc.)."
+    "explanation": "Cloud Scheduler peut appeler des endpoints HTTP (API Dataflow, etc.)."
   },
   {
     "id": "GCP-DL-200",
@@ -480,9 +590,14 @@
     "theme_label": "Eventarc for data events",
     "difficulty": "easy",
     "question": "Eventarc peut-il déclencher des workflows à partir d'événements Cloud Storage ?",
-    "options": ["Oui", "Non", "Uniquement pour Pub/Sub", "Uniquement pour Firestore"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour Pub/Sub",
+      "Uniquement pour Firestore"
+    ],
     "correct": 0,
-    "explication": "Eventarc peut recevoir des événements Cloud Storage et les router vers Cloud Run ou Cloud Functions."
+    "explanation": "Eventarc peut recevoir des événements Cloud Storage et les router vers Cloud Run ou Cloud Functions."
   },
   {
     "id": "GCP-DL-201",
@@ -490,9 +605,14 @@
     "theme_label": "Cloud Storage Transfer for data lakes",
     "difficulty": "easy",
     "question": "Storage Transfer Service est-il adapté pour charger des données dans Cloud Storage ?",
-    "options": ["Oui", "Non", "Uniquement pour les sauvegardes", "Uniquement pour les archives"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les sauvegardes",
+      "Uniquement pour les archives"
+    ],
     "correct": 0,
-    "explication": "Storage Transfer Service automatise les transferts depuis des sources variées vers GCS."
+    "explanation": "Storage Transfer Service automatise les transferts depuis des sources variées vers GCS."
   },
   {
     "id": "GCP-DL-202",
@@ -500,9 +620,14 @@
     "theme_label": "BigQuery Partitioning",
     "difficulty": "easy",
     "question": "Le partitionnement par colonne de date dans BigQuery réduit-il les coûts des requêtes ?",
-    "options": ["Oui", "Non", "Uniquement pour les requêtes groupées", "Uniquement pour les jointures"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les requêtes groupées",
+      "Uniquement pour les jointures"
+    ],
     "correct": 0,
-    "explication": "Le partitionnement permet aux requêtes de ne scanner que les partitions nécessaires."
+    "explanation": "Le partitionnement permet aux requêtes de ne scanner que les partitions nécessaires."
   },
   {
     "id": "GCP-DL-203",
@@ -510,9 +635,14 @@
     "theme_label": "BigQuery clustering",
     "difficulty": "easy",
     "question": "Le clustering améliore-t-il les performances des requêtes avec filtres sur colonnes ?",
-    "options": ["Oui", "Non", "Uniquement pour les colonnes de partition", "Uniquement pour les colonnes de date"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les colonnes de partition",
+      "Uniquement pour les colonnes de date"
+    ],
     "correct": 0,
-    "explication": "Le clustering trie les données, accélérant les requêtes avec des conditions sur les colonnes clusterisées."
+    "explanation": "Le clustering trie les données, accélérant les requêtes avec des conditions sur les colonnes clusterisées."
   },
   {
     "id": "GCP-DL-204",
@@ -520,9 +650,14 @@
     "theme_label": "Dataflow streaming engine",
     "difficulty": "easy",
     "question": "Le moteur de streaming Dataflow améliore-t-il les performances des pipelines en streaming ?",
-    "options": ["Oui", "Non", "Uniquement pour le batch", "Uniquement pour les petits volumes"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour le batch",
+      "Uniquement pour les petits volumes"
+    ],
     "correct": 0,
-    "explication": "Le streaming engine sépare le traitement de l'état, améliorant la scalabilité."
+    "explanation": "Le streaming engine sépare le traitement de l'état, améliorant la scalabilité."
   },
   {
     "id": "GCP-DL-205",
@@ -537,7 +672,7 @@
       "API"
     ],
     "correct": 0,
-    "explication": "Datastream capture les changements de Cloud Spanner pour les envoyer à BigQuery."
+    "explanation": "Datastream capture les changements de Cloud Spanner pour les envoyer à BigQuery."
   },
   {
     "id": "GCP-DL-206",
@@ -545,9 +680,14 @@
     "theme_label": "Datastream",
     "difficulty": "easy",
     "question": "Datastream permet-il la réplication en temps réel de bases de données vers BigQuery ?",
-    "options": ["Oui", "Non", "Uniquement pour les bases Oracle", "Uniquement pour les bases MySQL"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les bases Oracle",
+      "Uniquement pour les bases MySQL"
+    ],
     "correct": 0,
-    "explication": "Datastream capture les changements (CDC) des bases de données et les envoie vers Cloud Storage ou BigQuery."
+    "explanation": "Datastream capture les changements (CDC) des bases de données et les envoie vers Cloud Storage ou BigQuery."
   },
   {
     "id": "GCP-DL-207",
@@ -562,7 +702,7 @@
       "Compression"
     ],
     "correct": 0,
-    "explication": "CDC permet la réplication en continu des modifications vers un data warehouse."
+    "explanation": "CDC permet la réplication en continu des modifications vers un data warehouse."
   },
   {
     "id": "GCP-DL-208",
@@ -577,7 +717,7 @@
       "Uniquement pour les abonnements push"
     ],
     "correct": 2,
-    "explication": "Pub/Sub peut garantir l'ordre avec les clés de classement (ordering keys)."
+    "explanation": "Pub/Sub peut garantir l'ordre avec les clés de classement (ordering keys)."
   },
   {
     "id": "GCP-DL-209",
@@ -585,9 +725,14 @@
     "theme_label": "Data Catalog tagging",
     "difficulty": "easy",
     "question": "Data Catalog permet-il d'ajouter des tags de métadonnées aux actifs ?",
-    "options": ["Oui", "Non", "Uniquement pour BigQuery", "Uniquement pour Cloud Storage"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour BigQuery",
+      "Uniquement pour Cloud Storage"
+    ],
     "correct": 0,
-    "explication": "Data Catalog supporte les tags pour organiser les données (PII, domaine, etc.)."
+    "explanation": "Data Catalog supporte les tags pour organiser les données (PII, domaine, etc.)."
   },
   {
     "id": "GCP-DL-210",
@@ -595,8 +740,331 @@
     "theme_label": "BigQuery data lineage",
     "difficulty": "easy",
     "question": "BigQuery peut-il tracer la lignée des données (d'où viennent les résultats) ?",
-    "options": ["Oui (via Data Catalog)", "Non", "Uniquement avec Dataflow", "Uniquement avec Dataproc"],
+    "options": [
+      "Oui (via Data Catalog)",
+      "Non",
+      "Uniquement avec Dataflow",
+      "Uniquement avec Dataproc"
+    ],
     "correct": 0,
-    "explication": "Data Catalog capture la lignée des données pour BigQuery et autres services."
+    "explanation": "Data Catalog capture la lignée des données pour BigQuery et autres services."
+  },
+  {
+    "id": "GCP-D&A-001",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant BigQuery :",
+    "options": [
+      "BigQuery est un data warehouse serverless.",
+      "Il utilise le SQL standard (ANSI 2011).",
+      "BigQuery est une base de données relationnelle.",
+      "Il ne supporte pas le streaming des données."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "BigQuery est un data warehouse serverless (A correct). Il utilise le SQL standard (ANSI 2011) (B correct). BigQuery est une base de données relationnelle (C correct). Il supporte le streaming des données (D incorrect)."
+  },
+  {
+    "id": "GCP-D&A-002",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Storage Transfer Service",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de Cloud Storage Transfer Service ?",
+    "options": [
+      "Transférer des données entre Google Cloud Storage et d'autres services.",
+      "Analyser les données stockées dans Google Cloud Storage.",
+      "Créer des modèles de machine learning à partir des données.",
+      "Gérer les journaux d'audit Google Cloud."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Cloud Storage Transfer Service permet de transférer des données entre Google Cloud Storage et d'autres services (A correct). Il n'est pas utilisé pour analyser les données (B incorrect), créer des modèles de machine learning (C incorrect) ou gérer les journaux d'audit Google Cloud (D incorrect)."
+  },
+  {
+    "id": "GCP-D&A-003",
+    "theme": "Data & Analytics",
+    "theme_label": "Vertex AI",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Vertex AI :",
+    "options": [
+      "Vertex AI est un service d'IA pour le développement et l'entraînement de modèles.",
+      "Il permet d'utiliser des algorithmes prédéfinis pour la vision par ordinateur.",
+      "Vertex AI peut être utilisé pour le déploiement de modèles pré-entraînés.",
+      "Il offre des outils pour la gestion et l'analyse des modèles."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Vertex AI est un service d'IA pour le développement et l'entraînement de modèles (A correct). Il permet d'utiliser des algorithmes prédéfinis pour la vision par ordinateur (B correct). Vertex AI peut être utilisé pour le déploiement de modèles pré-entraînés (C correct). Il offre des outils pour la gestion et l'analyse des modèles (D correct)."
+  },
+  {
+    "id": "GCP-D&A-004",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Natural Language API",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de Cloud Natural Language API ?",
+    "options": [
+      "Analyser le sentiment et l'intention des textes.",
+      "Créer des modèles de machine learning pour la reconnaissance d'images.",
+      "Transmettre des données entre Google Cloud Storage et d'autres services.",
+      "Gérer les journaux d'audit Google Cloud."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Cloud Natural Language API permet d'analyser le sentiment et l'intention des textes (A correct). Il n'est pas utilisé pour créer des modèles de machine learning pour la reconnaissance d'images (B incorrect), transmettre des données entre Google Cloud Storage et d'autres services (C incorrect) ou gérer les journaux d'audit Google Cloud (D incorrect)."
+  },
+  {
+    "id": "GCP-D&A-005",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataflow",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de Dataflow ?",
+    "options": [
+      "Transférer des données entre Google Cloud Storage et d'autres services.",
+      "Analyser les données en temps réel.",
+      "Créer des modèles de machine learning à partir des données.",
+      "Gérer les journaux d'audit Google Cloud."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Dataflow permet d'analyser les données en temps réel (A correct). Il n'est pas utilisé pour transférer des données entre Google Cloud Storage et d'autres services (B incorrect), créer des modèles de machine learning (C incorrect) ou gérer les journaux d'audit Google Cloud (D incorrect)."
+  },
+  {
+    "id": "GCP-D&A-006",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant BigQuery :",
+    "options": [
+      "BigQuery est un service de stockage NoSQL.",
+      "Il permet d'effectuer des analyses en temps réel sur les données à grande échelle.",
+      "BigQuery offre un stockage et une analyse intégrés.",
+      "Il nécessite l'utilisation d'un langage de programmation spécifique pour les requêtes."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "BigQuery est un service de stockage et d'analyse intégrés (C). Il permet d'effectuer des analyses en temps réel sur les données à grande échelle (B). Il n'est pas un service de stockage NoSQL (A) et utilise le SQL standard pour les requêtes (D)."
+  },
+  {
+    "id": "GCP-D&A-007",
+    "theme": "Data & Analytics",
+    "theme_label": "Dataproc",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité de Dataproc ?",
+    "options": [
+      "Gérer les données en temps réel",
+      "Analyser des données à grande échelle",
+      "Stocker des images et des fichiers",
+      "Convertir les données en format PDF"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Dataproc est principalement utilisé pour analyser des données à grande échelle (B). Il permet de traiter et d'analyser des ensembles de données volumineux avec des outils comme Apache Hadoop et Spark."
+  },
+  {
+    "id": "GCP-D&A-008",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Storage Transfer Service",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Cloud Storage Transfer Service :",
+    "options": [
+      "Il permet de transférer des données entre Cloud Storage et d'autres services.",
+      "Il ne peut transférer que les fichiers texte.",
+      "Il nécessite une configuration manuelle pour chaque transfert.",
+      "Il peut être utilisé uniquement pour les données stockées dans Google Cloud."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Cloud Storage Transfer Service permet de transférer des données entre Cloud Storage et d'autres services (A). Il peut être utilisé pour les données stockées dans Google Cloud (D). Il ne nécessite pas une configuration manuelle pour chaque transfert (C). Il peut transférer des fichiers texte et autres types de données (B)."
+  },
+  {
+    "id": "GCP-D&A-009",
+    "theme": "Data & Analytics",
+    "theme_label": "Vertex AI",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Vertex AI et Google Cloud Machine Learning Engine (ML Engine) ?",
+    "options": [
+      "Vertex AI est un service de stockage NoSQL.",
+      "Vertex AI offre des outils d'analyse de données en temps réel.",
+      "Vertex AI est spécialisé dans l'apprentissage automatique et la formation de modèles.",
+      "Vertex AI permet uniquement des analyses statistiques."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Vertex AI est spécialisé dans l'apprentissage automatique et la formation de modèles (C). Il offre des outils pour développer, entraîner et déployer des modèles d'apprentissage automatique. Google Cloud Machine Learning Engine (ML Engine) est un service plus général pour l'analyse et la formation de modèles."
+  },
+  {
+    "id": "GCP-D&A-010",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant BigQuery :",
+    "options": [
+      "BigQuery est un service de stockage de données relationnelles.",
+      "Il permet d'exécuter des requêtes SQL sur les données stockées dans Google Cloud Storage.",
+      "BigQuery est un service de base NoSQL.",
+      "Il offre des capacités d'analyse et de visualisation de données via Google Data Studio.",
+      "BigQuery est un service de stockage de cache."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "BigQuery est un service de stockage et d'analyse de données relationnelles (A est incorrect). Il permet d'exécuter des requêtes SQL sur les données stockées dans Google Cloud Storage (B est correct). BigQuery n'est pas une base NoSQL (C est incorrect). Il offre des capacités d'analyse et de visualisation de données via Google Data Studio (D est correct). BigQuery n'est pas un service de stockage de cache (E est incorrect)."
+  },
+  {
+    "id": "GCP-D&A-011",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Spanner to BigQuery",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de Cloud Spanner pour BigQuery ?",
+    "options": [
+      "Il permet d'importer des données dans BigQuery.",
+      "Il fournit une base de données NoSQL pour les données stockées dans BigQuery.",
+      "Il offre des capacités d'analyse de données en temps réel.",
+      "Il permet de synchroniser les données entre Cloud Spanner et BigQuery."
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Cloud Spanner est utilisé pour synchroniser les données entre Cloud Spanner et BigQuery (D est correct). Il permet d'importer des données dans BigQuery, mais ce n'est pas son principal usage (A est incorrect). Il ne fournit pas de base de données NoSQL pour les données stockées dans BigQuery (B est incorrect). Il ne offre pas des capacités d'analyse de données en temps réel (C est incorrect)."
+  },
+  {
+    "id": "GCP-D&A-012",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery ML",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant BigQuery ML :",
+    "options": [
+      "BigQuery ML permet d'effectuer des analyses statistiques sur les données.",
+      "Il offre des capacités de formation et d'évaluation de modèles machine learning directement dans BigQuery.",
+      "BigQuery ML peut être utilisé uniquement pour des modèles de classification.",
+      "Il permet d'intégrer des modèles machine learning dans des pipelines BigQuery.",
+      "BigQuery ML nécessite une connaissance approfondie de la programmation en Python."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "BigQuery ML offre des capacités de formation et d'évaluation de modèles machine learning directement dans BigQuery (B est correct). Il permet d'intégrer des modèles machine learning dans des pipelines BigQuery (D est correct). BigQuery ML permet d'effectuer des analyses statistiques sur les données, mais ce n'est pas son seul usage (A est incorrect). BigQuery ML peut être utilisé pour des modèles de classification, mais aussi pour d'autres types de modèles (C est incorrect). BigQuery ML nécessite une connaissance approfondie de la programmation en Python, mais ce n'est pas une exigence absolue (E est incorrect)."
+  },
+  {
+    "id": "GCP-D&A-013",
+    "theme": "Data & Analytics",
+    "theme_label": "Vertex AI Workbench",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de Vertex AI Workbench pour les développeurs ?",
+    "options": [
+      "Il permet de développer et d'entraîner des modèles machine learning directement sur Google Cloud Platform.",
+      "Il offre une interface graphique pour la gestion des données BigQuery.",
+      "Il fournit un outil de visualisation de données en temps réel.",
+      "Il permet de synchroniser les données entre Cloud Spanner et BigQuery."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Vertex AI Workbench permet de développer et d'entraîner des modèles machine learning directement sur Google Cloud Platform (A est correct). Il offre une interface graphique pour la gestion des données BigQuery, mais ce n'est pas son principal usage (B est incorrect). Il fournit un outil de visualisation de données en temps réel, mais ce n'est pas son principal usage (C est incorrect). Il permet de synchroniser les données entre Cloud Spanner et BigQuery, mais ce n'est pas son principal usage (D est incorrect)."
+  },
+  {
+    "id": "GCP-D&A-014",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Natural Language API",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de Cloud Natural Language API ?",
+    "options": [
+      "Il permet d'analyser le sentiment et l'intention des textes.",
+      "Il fournit une base de données NoSQL pour les données stockées dans Google Cloud Storage.",
+      "Il offre des capacités d'analyse de données en temps réel.",
+      "Il permet de synchroniser les données entre Cloud Spanner et BigQuery."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Cloud Natural Language API permet d'analyser le sentiment et l'intention des textes (A est correct). Il fournit une base de données NoSQL pour les données stockées dans Google Cloud Storage, mais ce n'est pas son principal usage (B est incorrect). Il offre des capacités d'analyse de données en temps réel, mais ce n'est pas son principal usage (C est incorrect). Il permet de synchroniser les données entre Cloud Spanner et BigQuery, mais ce n'est pas son principal usage (D est incorrect)."
+  },
+  {
+    "id": "GCP-D&A-015",
+    "theme": "Data & Analytics",
+    "theme_label": "BigQuery",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant BigQuery :",
+    "options": [
+      "BigQuery est un service de stockage de données relationnelles.",
+      "Il permet d'effectuer des analyses en temps réel sur les données stockées dans Cloud Storage.",
+      "BigQuery offre un moteur de traitement distribué pour analyser des volumes massifs de données.",
+      "Il ne supporte pas le SQL standard.",
+      "BigQuery est un service de stockage NoSQL."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "BigQuery est un service de stockage et d'analyse Big Data serverless, il permet des analyses en temps réel sur les données stockées dans Cloud Storage et offre un moteur de traitement distribué pour analyser des volumes massifs de données. Il supporte le SQL standard et n'est pas un service de stockage NoSQL."
+  },
+  {
+    "id": "GCP-D&A-016",
+    "theme": "Data & Analytics",
+    "theme_label": "Cloud Storage Transfer Service",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale du Cloud Storage Transfer Service ?",
+    "options": [
+      "Transférer des données entre différents systèmes de stockage, y compris Cloud Storage.",
+      "Analyser des données en temps réel.",
+      "Créer des modèles d'apprentissage automatique.",
+      "Gérer les journaux et les métriques de l'infrastructure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le Cloud Storage Transfer Service est utilisé pour transférer des données entre différents systèmes de stockage, y compris Cloud Storage."
+  },
+  {
+    "id": "GCP-D&A-017",
+    "theme": "Data & Analytics",
+    "theme_label": "Vertex AI Workbench",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Vertex AI Workbench :",
+    "options": [
+      "Vertex AI Workbench est un service de développement et d'entraînement d'apprentissage automatique.",
+      "Il permet de créer et de gérer des environnements Jupyter pour le développement d'applications AI.",
+      "Il offre une intégration complète avec les services d'analyse de données de Google Cloud.",
+      "Il ne peut être utilisé que pour le développement d'applications AI et non pour l'analyse de données.",
+      "Vertex AI Workbench est un service de stockage de données."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Vertex AI Workbench est un service de développement et d'entraînement d'apprentissage automatique qui permet de créer et de gérer des environnements Jupyter pour le développement d'applications AI et offre une intégration complète avec les services d'analyse de données de Google Cloud. Il ne peut pas être utilisé que pour le développement d'applications AI et non pour l'analyse de données."
   }
 ]

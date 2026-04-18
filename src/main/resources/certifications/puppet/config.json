@@ -1,0 +1,32 @@
+{
+  "id": "puppet",
+  "name": "Puppet Professional",
+  "version": "1.0",
+  "description": "Certification Puppet - Gestion de configuration et infrastructure as code avec Puppet",
+  "totalQuestions": 300,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 60,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Puppet DSL",
+      "count": 70
+    },
+    {
+      "name": "Modules",
+      "count": 60
+    },
+    {
+      "name": "Classes & Defined Types",
+      "count": 60
+    },
+    {
+      "name": "Hiera",
+      "count": 50
+    },
+    {
+      "name": "Puppet Server",
+      "count": 60
+    }
+  ]
+}

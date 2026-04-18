@@ -1,0 +1,512 @@
+[
+  {
+    "id": "TRIVY-T1-001",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Architecture & Moteur de scan",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'architecture interne du moteur de scan de Trivy ?",
+    "options": [
+      "Trivy utilise des détecteurs spécialisés pour identifier les systèmes d'exploitation et les gestionnaires de paquets.",
+      "Le scanner repose exclusivement sur l'appel à des APIs REST externes en temps réel.",
+      "Les bases de données de vulnérabilités sont pré-téléchargées et stockées localement par défaut.",
+      "Le moteur nécessite obligatoirement un cluster Kubernetes pour fonctionner."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "Les options A et C sont correctes. Trivy utilise une architecture modulaire avec des détecteurs OS/Language qui analysent les fichiers de manifest et de lock. Par défaut, il télécharge une base de données SQLite compacte (vuln-list) qui est mise en cache localement, permettant les scans hors-ligne une fois initialisée. L'option B est fausse car le mode offline existe et est courant. L'option D est incorrecte : Trivy s'exécute nativement en binaire ou conteneur standalone, Kubernetes est facultatif pour le mode server/scanner."
+  },
+  {
+    "id": "TRIVY-T1-002",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "CLI & Commandes de base",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande Trivy permet d'exécuter un scan rapide d'une image locale `my-app:latest` sans télécharger la base de données ?",
+    "options": [
+      "trivy image my-app:latest --skip-db-update",
+      "trivy image my-app:latest --light",
+      "trivy image my-app:latest --offline",
+      "trivy image my-app:latest --dry-run"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le flag `--skip-db-update` empêche la synchronisation des CVE, utilisant la version déjà en cache. `--light` (obsolète) ne désactive pas le téléchargement. `--offline` n'est pas un flag officiel valide dans la CLI actuelle. `--dry-run` simule l'exécution sans produire de résultats. La réponse A respecte la documentation officielle de la CLI pour les environnements CI restreints."
+  },
+  {
+    "id": "TRIVY-T1-003",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Bases de données de vulnérabilités (DB)",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le format et le stockage de la base de données Trivy (Trivy DB) :",
+    "options": [
+      "La base est compressée au format `.db` SQLite et inclut les vulnérabilités OS et applicatives.",
+      "Trivy télécharge par défaut les données NVD et les convertit en schema interne à chaque scan.",
+      "Le fichier de cache est stocké dans `$HOME/.cache/trivy/db/` par défaut.",
+      "La mise à jour de la DB ne peut être déclenchée qu'automatiquement via un cron système."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "Les options A et C sont exactes. Trivy utilise un format SQLite binaire compact pour accélérer les requêtes. Le chemin de cache par défaut est effectivement `$HOME/.cache/trivy/db/` (ou `/root/.cache/` en conteneur). L'option B est fausse : NVD n'est pas le seul fournisseur et la conversion se fait lors de la génération de l'image DB, pas à chaque scan client. L'option D est incorrecte : la mise à jour se fait via `trivy image --download-db-only` ou manuellement avec `trivy -v`, sans dépendre de cron."
+  },
+  {
+    "id": "TRIVY-T1-004",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Formats d'entrée & Cibles supportées",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Parmi les types d'artefacts suivants, quel est le seul que Trivy ne prend PAS en charge nativement comme cible de scan ?",
+    "options": [
+      "Archive TAR contenant un filesystem Linux (`rootfs.tar.gz`)",
+      "Fichier exécutable PE Windows (`.exe`)",
+      "Répertoire Git local avec des fichiers `requirements.txt`",
+      "Image Docker hébergée sur Amazon ECR"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Trivy est conçu pour Linux, les conteneurs, l'IaC et les fichiers de lock. Il ne scanne pas les binaires compilés Windows (`.exe`) pour des vulnérabilités OS. Le rootfs tar est supporté (`trivy fs rootfs.tar.gz`), les fichiers de lock via `trivy fs .`, et les registres ECR via l'authentification AWS standard. Cette limitation est documentée dans la matrice de compatibilité officielle."
+  },
+  {
+    "id": "TRIVY-T1-005",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Mode Serveur & Intégration CI/CD",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX principales raisons d'utiliser le mode Client/Serveur (`trivy server`) en entreprise ?",
+    "options": [
+      "Éviter le téléchargement répété de la DB sur chaque nœud de build CI/CD.",
+      "Remplacer entièrement Docker par un runtime alternatif.",
+      "Centraliser les requêtes de scan pour appliquer des quotas et des logs d'audit.",
+      "Compiler les images conteneur plus rapidement grâce au mode GPU."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "A et C sont correctes. Le mode server mutualise la DB (évitant des appels réseau parallèles massifs) et permet de tracer les scans pour la gouvernance. B est faux : Trivy ne remplace pas un runtime conteneur. D est faux : le scanning est CPU/RAM bound et n'utilise pas de GPU. Cette architecture est explicitement recommandée par Aqua pour les pipelines haute fréquence."
+  },
+  {
+    "id": "TRIVY-T1-006",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Gestion des faux positifs & Ignores",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel mécanisme Trivy permet d'exclure une CVE spécifique du rapport sans modifier la base de vulnérabilités ?",
+    "options": [
+      "Un fichier `.trivyignore` placé à la racine du projet",
+      "Le paramètre `--exclude-cve` dans le Dockerfile",
+      "L'ajout de `TRIVY_SKIP=true` en variable d'environnement",
+      "La commande `trivy patch CVE-2023-XXXX`"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Trivy lit `.trivyignore` (format compatible avec `trivyignore.yaml`) pour filtrer les CVE par ligne. C'est la méthode standard documentée. B, C et D n'existent pas dans la CLI actuelle. Le fichier ignore supporte aussi les motifs par package et les commentaires expliquant la décision de risque."
+  },
+  {
+    "id": "TRIVY-T1-007",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Performances & Mise en cache",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les propositions vraies concernant l'optimisation des performances de Trivy dans un pipeline GitHub Actions :",
+    "options": [
+      "Utiliser l'action `actions/cache` pour persister `~/.cache/trivy` entre les jobs.",
+      "Désactiver le scan des fichiers de lock avec `--security-checks vuln` pour gagner du temps.",
+      "Forcer le re-téléchargement de la DB à chaque `push` via `--db-repository`.",
+      "Configurer `--timeout 10m` pour éviter les échecs sur de grosses images (>5Go)."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 3],
+    "explanation": "A et D sont correctes. Cacher le cache réduit drastiquement le temps de scan (évite 1-2 min de download). Augmenter le timeout est nécessaire pour les images lourdes. B est faux : `--security-checks vuln` est déjà par défaut et ne désactive pas les lockfiles. C est faux : forcer le re-téléchargement dégrade les performances et est contraire aux bonnes pratiques. Ces optimisations sont validées dans le guide officiel CI/CD."
+  },
+  {
+    "id": "TRIVY-T1-008",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Architecture & Moteur de scan",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment Trivy identifie-t-il la version exacte d'un package Node.js dans une image ?",
+    "options": [
+      "En analysant `package.json` et `package-lock.json` ou `yarn.lock`.",
+      "En interrogeant directement le registre npm lors du scan.",
+      "En lisant le binaire `/usr/bin/node` via les métadonnées ELF.",
+      "En utilisant `apt list` ou `apk info` dans le conteneur."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Trivy parse les fichiers de lock pour extraire les versions exactes des dépendances transientes. C'est le seul moyen fiable en analyse statique. B nécessite du réseau actif (non fait par défaut). C est impossible car le binaire ne contient pas la liste des packages npm. D ne concerne que les paquets système Linux, pas les langages. Cette approche est expliquée dans la section `Dependency Scanning` de la doc."
+  },
+  {
+    "id": "TRIVY-T1-009",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Bases de données de vulnérabilités (DB)",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX sources principales que Trivy agrège dans sa base de vulnérabilités ?",
+    "options": [
+      "NVD (National Vulnerability Database) et OS Vendor Feeds (Red Hat, Debian, Alpine)",
+      "GitHub Advisory Database pour les écosystèmes JavaScript/Python/Ruby",
+      "VirusTotal pour l'analyse comportementale en temps réel",
+      "CVE Mitre avec des scores CVSS v4 uniquement"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "Trivy fusionne NVD, les advisories propriétaires des éditeurs OS, et GHSA pour les langages. A et B sont exactes. C est faux : VirusTotal est un outil de threat intelligence, pas une feed intégrée à Trivy. D est faux : Trivy supporte CVSS v2, v3.x et utilise aussi EPSS pour la priorisation. La transparence des feeds est documentée dans `trivy-db` sur GitHub."
+  },
+  {
+    "id": "TRIVY-T1-010",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "CLI & Commandes de base",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel flag Trivy permet de limiter les résultats aux vulnérabilités critiques ET hautes uniquement ?",
+    "options": [
+      "--severity CRITICAL,HIGH",
+      "--severity-level 3",
+      "--min-severity 2",
+      "--severity-only CRIT,HIGH"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La syntaxe officielle utilise `--severity` avec des valeurs séparées par des virgules : `LOW,MEDIUM,HIGH,CRITICAL`. Les autres options ne correspondent à aucun paramètre CLI valide. Ce filtre est essentiel pour les gates de production. Référence : `trivy image --help`."
+  },
+  {
+    "id": "TRIVY-T1-011",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Formats d'entrée & Cibles supportées",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le scan de fichiers de configuration Kubernetes avec Trivy :",
+    "options": [
+      "La commande `trivy config k8s-manifest.yaml` analyse les mauvaises configurations de sécurité.",
+      "Trivy ne détecte que les CVE dans les images, pas les erreurs de manifest YAML.",
+      "Le scan IaC utilise des règles basées sur des benchmarks CIS et des bonnes pratiques.",
+      "Trivy modifie automatiquement les manifests pour corriger les failles."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "A et C sont correctes. `trivy config` (anciennement `misconfig`) détecte des failles de posture : privilèges root, volumes hostPath, secrets en clair, etc. B est faux : IaC et CVE sont deux moteurs distincts. D est faux : Trivy est un outil d'audit, pas un correcteur automatique (GitOps tools comme ArgoCD ou Kustomize le feraient). La doc `trivy config` détaille ces règles."
+  },
+  {
+    "id": "TRIVY-T1-012",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Mode Serveur & Intégration CI/CD",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Dans une architecture Trivy Server, quel protocole est utilisé pour les appels entre le client léger et le service de scan ?",
+    "options": [
+      "gRPC sur le port 4954 par défaut",
+      "WebSocket sécurisé (WSS)",
+      "AMQP pour la file de messages",
+      "SSH tunnel chiffré"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Trivy server expose un endpoint gRPC (`--listen :4954`) optimisé pour les échanges structurés et la performance. Les autres protocoles ne sont pas implémentés nativement pour cette communication. gRPC permet le streaming des résultats et la validation TLS. Référence : `trivy server --help`."
+  },
+  {
+    "id": "TRIVY-T1-013",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Gestion des faux positifs & Ignores",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX méthodes valides pour ignorer une vulnérabilité spécifique liée à un package `openssl` dans Trivy ?",
+    "options": [
+      "Ajouter `CVE-2023-XXXX` dans `.trivyignore` à la racine du projet",
+      "Utiliser le flag CLI `--ignore-file` pointant vers un chemin absolu",
+      "Supprimer manuellement le binaire `openssl` du cache système",
+      "Modifier la variable `TRIVY_IGNORE_UNFIXED=false`"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "A et B sont correctes. Trivy supporte `.trivyignore` implicite ou explicite via `--ignore-file`. C est destructeur et inutile. D ne contrôle pas l'ignorance de CVE mais le filtrage des failles sans correctif. La gestion fine des ignores est cruciale pour éviter le bruit dans les pipelines. Doc : `Ignoring Vulnerabilities`."
+  },
+  {
+    "id": "TRIVY-T1-014",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Performances & Mise en cache",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel paramètre réduit la consommation mémoire lors du scan d'une image volumineuse ?",
+    "options": [
+      "--image-config-scanner legacy",
+      "--skip-files /tmp/**",
+      "--memory-limit 2g",
+      "--skip-db-update"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "`--skip-files` permet d'exclure des chemins inutiles (logs, caches, datasets), réduisant l'I/O et la RAM. A n'existe pas. C n'est pas un flag valide (la limitation se fait au niveau Docker/K8s). D économise du réseau, pas de la RAM pendant l'analyse. Cette optimisation est documentée pour les environnements CI contraints."
+  },
+  {
+    "id": "TRIVY-T1-015",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Architecture & Moteur de scan",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les propositions vraies concernant le cycle de vie d'un scan Trivy :",
+    "options": [
+      "1. Extraction des métadonnées de l'artefact cible",
+      "2. Détection des OS/Languages installés",
+      "3. Requêtes HTTP synchrones vers NVD à chaque package",
+      "4. Matching des packages avec la base locale et génération du rapport"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "A, B et D décrivent fidèlement le pipeline : introspection -> fingerprint -> matching local -> output. C est faux car Trivy fonctionne en mode offline/local une fois la DB synchronisée, évitant les appels réseau bloquants. Cette architecture garantit la reproductibilité et la vitesse, comme indiqué dans le `How Trivy Works` de la documentation."
+  },
+  {
+    "id": "TRIVY-T1-016",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "CLI & Commandes de base",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le résultat de la commande `trivy fs . --format table --show-suppressed` ?",
+    "options": [
+      "Affiche le tableau des vulnérabilités en incluant celles marquées comme ignorées",
+      "Supprime les faux positifs de la base de données",
+      "Exporte uniquement les CVE de haute criticité",
+      "Masque les dépendances transitives pour alléger le rapport"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`--show-suppressed` force l'affichage des CVE filtrées par `.trivyignore` ou par règles internes, utile pour l'audit. B, C et D n'existent pas ou correspondent à d'autres flags (`--suppress`, `--severity`, `--no-suppressed`). Cette fonctionnalité est destinée aux audits de conformité où la traçabilité des décisions d'exception est requise."
+  },
+  {
+    "id": "TRIVY-T1-017",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Formats d'entrée & Cibles supportées",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX cibles valides pour `trivy image` ?",
+    "options": [
+      "Une image taggée dans Docker Hub (`docker.io/library/alpine:3.18`)",
+      "Un pod Kubernetes en cours d'exécution (`k8s pod/my-pod`)",
+      "Un fichier Dockerfile non construit (`trivy image ./Dockerfile`)",
+      "Une image chargée localement via `docker save` (`trivy image myimage.tar`)"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 3],
+    "explanation": `trivy image` accepte les références de registres et les archives OCI/TAR. A et D sont exactes. B est incorrect car Trivy ne scanne pas directement des pods en live (il faut extraire l'image ou utiliser `trivy kubernetes`). C est faux : `trivy image` scanne des artefacts construits, pas des Dockerfiles (c'est `trivy config` pour ça). Référence : `Target Support Matrix`."
+  },
+  {
+    "id": "TRIVY-T1-018",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Bases de données de vulnérabilités (DB)",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment mettre à jour manuellement la base Trivy dans un environnement air-gapped ?",
+    "options": [
+      "Copier le dossier `.cache/trivy` depuis un environnement connecté vers le nœud isolé",
+      "Exécuter `trivy sync` sans arguments",
+      "Modifier directement le fichier `CVE-2023.json` dans le conteneur",
+      "Utiliser `apt update trivy-db` sur l'hôte"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "En air-gapped, la méthode recommandée est de synchroniser le cache sur une machine connectée puis de le copier sur le nœud sécurisé. `trivy sync` n'existe pas. Modifier les JSON directement casse l'intégrité SQLite. `apt` ne gère pas la base Trivy. Cette procédure est documentée dans le guide `Air-gapped Environment`."
+  },
+  {
+    "id": "TRIVY-T1-019",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Mode Serveur & Intégration CI/CD",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes sur la sécurisation du serveur Trivy en production :",
+    "options": [
+      "L'authentification mTLS peut être activée entre clients et serveur",
+      "Le serveur expose par défaut une API REST non sécurisée sur le port 4954",
+      "Les logs d'accès doivent être routés vers un SIEM pour traçabilité",
+      "Trivy server chiffre automatiquement les images pendant le scan"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "A et C sont correctes. mTLS est supporté pour les échanges clients/serveur, et les logs sont essentiels pour l'audit. B est faux : le port par défaut est gRPC, pas REST, et doit être sécurisé réseau. D est faux : Trivy ne chiffre pas les images, il les analyse. La sécurité du mode server est détaillée dans `Deployment Guide`."
+  },
+  {
+    "id": "TRIVY-T1-020",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Gestion des faux positifs & Ignores",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel format de fichier ignore permet d'ajouter une date d'expiration et une justification pour une CVE ?",
+    "options": [
+      ".trivyignore.yaml",
+      ".dockerignore",
+      ".gitignore",
+      "trivy-rules.json"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le format YAML (`.trivyignore.yaml`) supporte la syntaxe étendue avec `id`, `expiresOn`, et `reason`. Les fichiers `.dockerignore` et `.gitignore` gèrent l'exclusion de fichiers, pas de CVE. `trivy-rules.json` n'est pas un format officiel pour les ignores. Cette fonctionnalité améliore la gouvernance sécurité."
+  },
+  {
+    "id": "TRIVY-T1-021",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Performances & Mise en cache",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX actions qui accélèrent significativement un premier scan Trivy sur une nouvelle VM ?",
+    "options": [
+      "Pré-charger la DB via `trivy image --download-db-only`",
+      "Utiliser `--scanners secret` au lieu de `vuln`",
+      "Monter un volume cache persistant pour `~/.cache/trivy`",
+      "Désactiver l'analyse des couches avec `--no-layers`"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "A et C sont correctes. Télécharger la DB avant évite le délai de premier scan. Persister le cache via un volume accélère les exécutions suivantes. B change le type de scan mais ne réduit pas le temps global. D est invalide : les couches sont fondamentales pour la détection. Optimisations CI/CD validées par Aqua."
+  },
+  {
+    "id": "TRIVY-T1-022",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Architecture & Moteur de scan",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Que signifie le score `VEX (Vulnerability Exploitability eXchange)` dans un rapport Trivy ?",
+    "options": [
+      "Contexte sur la probabilité d'exploitation réelle d'une CVE dans l'artefact analysé",
+      "Vitesse de correction moyenne dans l'écosystème open source",
+      "Score de performance du scanner lors du dernier run",
+      "Niveau de licence commerciale du package vulnérable"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "VEX permet de prioriser les vulnérabilités selon leur exploitabilité réelle, réduisant le bruit. C'est un standard émergent supporté par Trivy pour le triage avancé. Les autres options n'ont aucun lien avec VEX. Intégré pour alignement NIST SSDF."
+  },
+  {
+    "id": "TRIVY-T1-023",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "CLI & Commandes de base",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes sur le flag `--exit-code 1` dans Trivy :",
+    "options": [
+      "Retourne un code 1 si une vulnérabilité dépasse le seuil défini",
+      "S'utilise principalement dans les pipelines CI/CD pour bloquer le déploiement",
+      "Modifie le score CVSS des vulnérabilités détectées",
+      "Force le téléchargement de la DB même si elle existe"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "A et B sont exactes. Le code de sortie non-zero déclenche l'échec du job CI, essentiel pour les gates qualité. C est faux : les scores sont issus des feeds, non modifiés. D est géré par `--skip-db-update`. C'est une fonctionnalité critique pour le shift-left."
+  },
+  {
+    "id": "TRIVY-T1-024",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Formats d'entrée & Cibles supportées",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande scanne un dépôt Git cloné localement pour des failles de configuration ?",
+    "options": [
+      "trivy config ./my-repo",
+      "trivy git ./my-repo",
+      "trivy scan-repo ./my-repo",
+      "trivy fs --type repo ./my-repo"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "`trivy config` (anciennement `misconfig`) est la commande unifiée pour analyser les fichiers IaC et config dans un répertoire. Les autres syntaxes n'existent pas. Référence officielle `scanning infrastructure as code`."
+  },
+  {
+    "id": "TRIVY-T1-025",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Mode Serveur & Intégration CI/CD",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX bonnes pratiques pour scaler Trivy Server dans un cluster Kubernetes ?",
+    "options": [
+      "Utiliser un Deployment avec HPA basé sur la CPU/RAM",
+      "Exécuter tous les pods en mode privileged pour accès direct au Docker socket",
+      "Partager la DB via un PersistentVolumeClaim en mode ReadWriteMany",
+      "Limiter le nombre de scans simultanés à 1 via `--max-concurrency 1`"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "A et C sont correctes. Le HPA permet l'élasticité, et le PVC partagé évite la duplication de la DB. B est dangereux et inutile (pas besoin de Docker socket). D contredit le scaling. Architecture validée dans `Kubernetes Deployment Guide` d'Aqua."
+  },
+  {
+    "id": "TRIVY-T1-026",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Gestion des faux positifs & Ignores",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment ignorer toutes les CVE de criticité LOW dans un fichier d'ignore ?",
+    "options": [
+      "Il n'est pas possible d'ignorer par sévérité via `.trivyignore`",
+      "Ajouter la ligne `severity: LOW` dans le YAML",
+      "Utiliser le flag `--ignore-severity LOW` au runtime",
+      "Modifier le score CVSS dans la DB"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Le filtrage par sévérité se fait dynamiquement via CLI (`--ignore-unfixed`, `--severity` ou `--exit-code`), pas via le fichier ignore qui cible des CVE ou packages précis. B est faux car le fichier ignore ne prend pas de filtre `severity`. A est partiellement vrai mais C est la méthode opérationnelle correcte. D est interdit."
+  },
+  {
+    "id": "TRIVY-T1-027",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Performances & Mise en cache",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les raisons pour lesquelles `--cache-dir` doit être configuré explicitement en CI/CD :",
+    "options": [
+      "Éviter les conflits d'écriture entre agents CI exécutés sur le même nœud",
+      "Garantir la persistance du cache au-delà du cycle de vie éphémère du conteneur de build",
+      "Réduire la taille des artefacts Docker finaux",
+      "Activer le mode GPU pour le parsing JSON"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1],
+    "explanation": "A et B sont correctes. Un chemin de cache dédié évite la corruption et permet la persistance via volumes CI. C est faux : le cache ne fait pas partie de l'image de prod. D est fictif. Configuration critique pour la fiabilité des pipelines, documentée dans `CI/CD Best Practices`."
+  },
+  {
+    "id": "TRIVY-T1-028",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Architecture & Moteur de scan",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel langage est principalement utilisé pour développer les détecteurs de packages Trivy ?",
+    "options": [
+      "Go",
+      "Python",
+      "Rust",
+      "Java"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Trivy est écrit en Go pour sa compilation native, sa performance et sa gestion mémoire prévisible dans les conteneurs. Python/Rust/Java ne sont pas le socle du moteur principal. Référence : `CONTRIBUTING.md` sur GitHub."
+  },
+  {
+    "id": "TRIVY-T1-029",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Bases de données de vulnérabilités (DB)",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX caractéristiques d'une mise à jour `trivy-db` ?",
+    "options": [
+      "Elle est incrémentale pour réduire la bande passante",
+      "Elle supprime automatiquement les logs d'exécution précédents",
+      "Elle inclut des signatures numériques pour vérifier l'intégrité",
+      "Elle nécessite un redémarrage du service OS"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 2],
+    "explanation": "A et C sont correctes. Le téléchargement est optimisé (delta) et signé cryptographiquement pour éviter les tampering. B est faux : les logs sont gérés séparément. D est inutile car Trivy lit la DB à chaud. Sécurité et performance documentées dans `Database Architecture`."
+  },
+  {
+    "id": "TRIVY-T1-030",
+    "theme": "Fondamentaux & Architecture Trivy",
+    "theme_label": "Mode Serveur & Intégration CI/CD",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel format de sortie Trivy est recommandé pour l'intégration avec SonarQube ?",
+    "options": [
+      "SARIF",
+      "HTML",
+      "Markdown",
+      "XML Legacy"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "SARIF (Static Analysis Results Interchange Format) est le standard supporté nativement par SonarQube, GitHub Code Scanning et autres outils. Trivy l'exporte via `--format sarif`. Les autres formats ne sont pas parsables automatiquement par Sonar. Alignement OASIS standard."
+  }
+]

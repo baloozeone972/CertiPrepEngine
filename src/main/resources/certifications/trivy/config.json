@@ -1,32 +1,18 @@
 {
-  "id": "trivy",
-  "name": "Trivy Security (Aqua Security)",
+  "id": "AQUA-TRIVY-1",
+  "name": "Trivy Security Professional (Aqua)",
   "version": "1.0",
-  "description": "Certification Trivy - Scan de vulnérabilités pour conteneurs et code",
-  "totalQuestions": 150,
-  "examDurationMinutes": 60,
-  "examQuestionCount": 40,
+  "description": "Cette certification valide la maîtrise de l'analyse continue de vulnérabilités, de la conformité et de la génération SBOM avec Trivy. Elle cible les ingénieurs sécurité et DevOps souhaitant intégrer le scanning natif dans les pipelines CI/CD et les registres d'images.",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 80,
   "passingScore": 70,
   "themes": [
-    {
-      "name": "Trivy Basics",
-      "count": 30
-    },
-    {
-      "name": "Container Scanning",
-      "count": 40
-    },
-    {
-      "name": "Filesystem Scanning",
-      "count": 30
-    },
-    {
-      "name": "Misconfiguration Scanning",
-      "count": 30
-    },
-    {
-      "name": "CI/CD Integration",
-      "count": 20
-    }
+    {"name": "Fondamentaux & Architecture Trivy", "count": 60},
+    {"name": "Scan de Conteneurs & Images OCI", "count": 60},
+    {"name": "Analyse IaC & Dépendances (SBOM)", "count": 60},
+    {"name": "Mode Serveur & Intégration CI/CD", "count": 55},
+    {"name": "Politiques OPA & Conformité Réglementaire", "count": 60},
+    {"name": "Reporting, Export & Optimisation", "count": 55}
   ]
 }

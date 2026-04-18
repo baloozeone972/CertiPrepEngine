@@ -1,0 +1,757 @@
+[
+  {
+    "id": "SQ-ARCH-001",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "facile",
+    "question": "Quels sont les composants essentiels d'une installation SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "Base de données",
+      "Serveur Web (interface)",
+      "Scanner",
+      "Elasticsearch",
+      "Compute Engine"
+    ],
+    "correct": [0, 1, 3, 4],
+    "explanation": "Le Scanner est un client séparé, non inclus dans le serveur. Le serveur inclut le serveur web, le Compute Engine, Elasticsearch et nécessite une base de données."
+  },
+  {
+    "id": "SQ-ARCH-002",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle base de données est recommandée par SonarSource pour une installation de production ?",
+    "options": [
+      "MySQL",
+      "PostgreSQL",
+      "Oracle",
+      "Microsoft SQL Server"
+    ],
+    "correct": 1,
+    "explanation": "PostgreSQL est la base de données recommandée pour SonarQube en production. MySQL n'est plus supporté."
+  },
+  {
+    "id": "SQ-ARCH-003",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "SonarQube peut fonctionner avec une base de données H2 intégrée en production.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. La base H2 est uniquement destinée aux tests et à l'évaluation, pas à la production."
+  },
+  {
+    "id": "SQ-ARCH-004",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les prérequis pour installer SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "Java 17 ou supérieur",
+      "Un serveur d'application comme Tomcat",
+      "Une base de données supportée",
+      "Un compte administrateur"
+    ],
+    "correct": [0, 2],
+    "explanation": "SonarQube nécessite Java 17+ et une base de données. Il intègre son propre serveur web (pas besoin de Tomcat)."
+  },
+  {
+    "id": "SQ-ARCH-005",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Dans quel fichier se trouvent les paramètres de configuration principaux de SonarQube Server ?",
+    "options": [
+      "sonar.properties",
+      "application.yml",
+      "config.json",
+      "settings.xml"
+    ],
+    "correct": 0,
+    "explanation": "Les paramètres de configuration (port, base de données, etc.) sont définis dans conf/sonar.properties."
+  },
+  {
+    "id": "SQ-ARCH-006",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels ports sont utilisés par défaut par SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "9000 pour l'interface web",
+      "9092 pour le Compute Engine",
+      "9001 pour Elasticsearch",
+      "5432 pour PostgreSQL"
+    ],
+    "correct": [0, 2],
+    "explanation": "Par défaut : interface web sur 9000, Elasticsearch sur 9001. Le port 5432 est celui de PostgreSQL, pas un port exposé par SonarQube."
+  },
+  {
+    "id": "SQ-ARCH-007",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quel utilisateur système est recommandé pour exécuter le service SonarQube sous Linux ?",
+    "options": [
+      "root",
+      "sonarqube",
+      "nobody",
+      "admin"
+    ],
+    "correct": 1,
+    "explanation": "Pour des raisons de sécurité, il est recommandé de créer un utilisateur dédié 'sonarqube' avec des permissions limitées."
+  },
+  {
+    "id": "SQ-ARCH-008",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "SonarQube Server nécessite une connexion Internet pour fonctionner.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. SonarQube peut fonctionner en mode déconnecté, mais il ne pourra pas télécharger de nouveaux plugins ou mises à jour de règles."
+  },
+  {
+    "id": "SQ-ARCH-009",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels sont les modes de déploiement possibles pour SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "Machine unique",
+      "Cluster (haute disponibilité)",
+      "Docker",
+      "Kubernetes",
+      "Serverless"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "SonarQube peut être déployé sur une seule machine, en cluster (Data Center Edition), via Docker ou Kubernetes. Le mode serverless n'est pas supporté."
+  },
+  {
+    "id": "SQ-ARCH-010",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Quelle édition de SonarQube est nécessaire pour un déploiement en cluster haute disponibilité ?",
+    "options": [
+      "Community Edition",
+      "Developer Edition",
+      "Enterprise Edition",
+      "Data Center Edition"
+    ],
+    "correct": 3,
+    "explanation": "Le clustering (HA) est une fonctionnalité exclusive de la Data Center Edition."
+  },
+  {
+    "id": "SQ-ARCH-011",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles sont les responsabilités du Compute Engine ? (plusieurs réponses)",
+    "options": [
+      "Traiter les rapports d'analyse bruts",
+      "Calculer les métriques agrégées",
+      "Stocker les résultats en base de données",
+      "Servir l'interface web"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Le Compute Engine traite les rapports, calcule les métriques et persiste les résultats. L'interface web est servie par le composant Web Server."
+  },
+  {
+    "id": "SQ-ARCH-012",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Dans quel répertoire se trouvent les logs de SonarQube Server ?",
+    "options": [
+      "/var/log/sonarqube",
+      "logs/ dans le répertoire d'installation",
+      "/opt/sonarqube/logs",
+      "system32/logs"
+    ],
+    "correct": 1,
+    "explanation": "Les logs se trouvent dans le sous-répertoire logs/ du répertoire d'installation de SonarQube."
+  },
+  {
+    "id": "SQ-ARCH-013",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "Elasticsearch intégré à SonarQube doit être configuré et géré séparément.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Elasticsearch est intégré et géré automatiquement par SonarQube ; il ne nécessite pas de gestion séparée."
+  },
+  {
+    "id": "SQ-ARCH-014",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les bonnes pratiques pour la configuration mémoire de SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Allouer au moins 2 Go de heap au processus SonarQube",
+      "Configurer le heap d'Elasticsearch via sonar.search.javaOpts",
+      "Utiliser les paramètres JVM par défaut sans modification",
+      "Surveiller l'utilisation mémoire pour ajuster"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Il est recommandé d'allouer suffisamment de heap, de configurer séparément Elasticsearch, et d'ajuster selon l'usage. Les paramètres par défaut peuvent être insuffisants en production."
+  },
+  {
+    "id": "SQ-ARCH-015",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quelle commande permet de démarrer SonarQube en tant que service sous Linux (systemd) ?",
+    "options": [
+      "systemctl start sonarqube",
+      "service sonarqube start",
+      "/opt/sonarqube/bin/linux-x86-64/sonar.sh start",
+      "start sonarqube"
+    ],
+    "correct": 0,
+    "explanation": "Après avoir créé un fichier de service systemd, on utilise 'systemctl start sonarqube'. Le script sonar.sh peut aussi être utilisé manuellement."
+  },
+  {
+    "id": "SQ-ARCH-016",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels sont les avantages d'un déploiement Docker de SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Simplicité de mise en place",
+      "Isolation des dépendances",
+      "Scalabilité horizontale native",
+      "Mises à jour facilitées"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Docker simplifie le déploiement et les mises à jour, et isole les dépendances. La scalabilité horizontale nécessite la Data Center Edition, pas inhérente à Docker."
+  },
+  {
+    "id": "SQ-ARCH-017",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quelle variable d'environnement peut être utilisée pour passer des options JVM à SonarQube ?",
+    "options": [
+      "SONAR_JAVA_OPTS",
+      "JAVA_OPTS",
+      "SONARQUBE_JVM_OPTS",
+      "SONAR_JVM_OPTS"
+    ],
+    "correct": 0,
+    "explanation": "La variable SONAR_JAVA_OPTS permet d'ajouter des options JVM au démarrage de SonarQube."
+  },
+  {
+    "id": "SQ-ARCH-018",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "SonarQube Server nécessite un reverse proxy (Nginx, Apache) pour être accessible en HTTPS.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. SonarQube n'implémente pas HTTPS nativement ; il est recommandé de placer un reverse proxy devant pour gérer le SSL/TLS."
+  },
+  {
+    "id": "SQ-ARCH-019",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les exigences de configuration pour une base de données PostgreSQL utilisée avec SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Encodage UTF-8",
+      "Création d'un utilisateur dédié",
+      "Extension pgcrypto optionnelle",
+      "Configuration de 'max_connections' suffisante"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "UTF-8 est requis, un utilisateur dédié est recommandé, et max_connections doit être suffisant. L'extension pgcrypto n'est pas requise."
+  },
+  {
+    "id": "SQ-ARCH-020",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Quel est le rôle du plugin 'sonar-auth-oidc' ?",
+    "options": [
+      "Permettre l'authentification via OpenID Connect",
+      "Gérer les autorisations des utilisateurs",
+      "Intégrer SonarQube avec LDAP",
+      "Synchroniser les groupes depuis un annuaire"
+    ],
+    "correct": 0,
+    "explanation": "Le plugin sonar-auth-oidc (ou l'authentification OIDC native) permet l'authentification via OpenID Connect (ex: Keycloak, Auth0)."
+  },
+  {
+    "id": "SQ-ARCH-021",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels composants peuvent être mis à l'échelle horizontalement dans un cluster SonarQube Data Center ? (plusieurs réponses)",
+    "options": [
+      "Serveurs Web (interfaces)",
+      "Compute Engines",
+      "Base de données",
+      "Elasticsearch"
+    ],
+    "correct": [0, 1],
+    "explanation": "Les serveurs Web et les Compute Engines peuvent être mis à l'échelle. La base de données et Elasticsearch ont leurs propres mécanismes de scaling/clustering."
+  },
+  {
+    "id": "SQ-ARCH-022",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle est l'URL par défaut de l'interface web SonarQube après une installation locale ?",
+    "options": [
+      "http://localhost:9000",
+      "http://localhost:8080",
+      "https://localhost:9001",
+      "http://localhost:80"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, l'interface web est accessible sur http://localhost:9000."
+  },
+  {
+    "id": "SQ-ARCH-023",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "Le couple login/mot de passe par défaut pour l'administrateur est admin/admin.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Lors de la première connexion, les identifiants par défaut sont admin/admin ; il est impératif de les changer."
+  },
+  {
+    "id": "SQ-ARCH-024",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles actions sont nécessaires après la mise à jour de SonarQube vers une nouvelle version majeure ? (plusieurs réponses)",
+    "options": [
+      "Exécuter la migration de la base de données",
+      "Mettre à jour les plugins installés",
+      "Réindexer Elasticsearch",
+      "Réinstaller le serveur"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "La mise à jour déclenche une migration de BDD, nécessite de mettre à jour les plugins, et une réindexation peut avoir lieu. Une réinstallation complète n'est pas nécessaire."
+  },
+  {
+    "id": "SQ-ARCH-025",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Dans quel fichier peut-on configurer les paramètres d'Elasticsearch intégré ?",
+    "options": [
+      "conf/sonar.properties",
+      "conf/elasticsearch.yml",
+      "conf/es.properties",
+      "conf/sonar-es.properties"
+    ],
+    "correct": 0,
+    "explanation": "Les paramètres d'Elasticsearch sont configurés dans sonar.properties avec le préfixe 'sonar.search'."
+  },
+  {
+    "id": "SQ-ARCH-026",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles sont les méthodes d'authentification supportées nativement par SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "Authentification locale (base interne)",
+      "LDAP",
+      "SAML",
+      "GitHub OAuth",
+      "OpenID Connect"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "SonarQube supporte l'authentification locale, LDAP, SAML, GitHub OAuth, et OIDC (selon l'édition). OpenID Connect est disponible dans les éditions récentes."
+  },
+  {
+    "id": "SQ-ARCH-027",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quelle est la fonction du service 'sonar-scanner' ?",
+    "options": [
+      "Analyser le code source et envoyer les résultats au serveur",
+      "Démarrer le serveur SonarQube",
+      "Gérer les plugins",
+      "Superviser l'état du serveur"
+    ],
+    "correct": 0,
+    "explanation": "Le sonar-scanner est l'outil client qui exécute l'analyse et envoie les résultats."
+  },
+  {
+    "id": "SQ-ARCH-028",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Le SonarScanner peut être utilisé sans installation, via une image Docker.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Il existe des images Docker officielles pour le scanner, permettant de l'exécuter sans installation préalable."
+  },
+  {
+    "id": "SQ-ARCH-029",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les limitations de l'édition Community par rapport aux éditions commerciales ? (plusieurs réponses)",
+    "options": [
+      "Pas de support de l'analyse de branches",
+      "Pas de support de l'analyse de Pull Request",
+      "Pas de support de LDAP",
+      "Pas de possibilité de créer des Quality Gates personnalisées"
+    ],
+    "correct": [0, 1],
+    "explanation": "L'édition Community ne supporte pas l'analyse de branches/PR et certaines fonctionnalités avancées. LDAP et les Quality Gates personnalisées sont disponibles."
+  },
+  {
+    "id": "SQ-ARCH-030",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle commande permet de vérifier la version du SonarScanner installé ?",
+    "options": [
+      "sonar-scanner --version",
+      "sonar-scanner -v",
+      "sonar-scanner version",
+      "sonar-scanner -version"
+    ],
+    "correct": 1,
+    "explanation": "L'option -v (ou --version) affiche la version du scanner."
+  },
+  {
+    "id": "SQ-ARCH-031",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les paramètres obligatoires pour une analyse avec SonarScanner ? (plusieurs réponses)",
+    "options": [
+      "sonar.host.url",
+      "sonar.projectKey",
+      "sonar.login",
+      "sonar.projectName"
+    ],
+    "correct": [0, 1],
+    "explanation": "Les paramètres minimaux sont sonar.host.url et sonar.projectKey. sonar.login est nécessaire si l'authentification est requise. Le nom du projet est optionnel."
+  },
+  {
+    "id": "SQ-ARCH-032",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quel est le but du paramètre 'sonar.sources' ?",
+    "options": [
+      "Spécifier le répertoire contenant le code source à analyser",
+      "Définir l'URL du serveur SonarQube",
+      "Indiquer le token d'authentification",
+      "Exclure certains fichiers"
+    ],
+    "correct": 0,
+    "explanation": "sonar.sources définit le chemin vers les sources à analyser."
+  },
+  {
+    "id": "SQ-ARCH-033",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Il est possible d'analyser plusieurs modules Maven en une seule exécution du scanner.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Le scanner Maven analyse automatiquement tous les modules d'un projet multi-modules."
+  },
+  {
+    "id": "SQ-ARCH-034",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les bonnes pratiques pour sécuriser une instance SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "Changer le mot de passe admin par défaut",
+      "Utiliser un reverse proxy avec HTTPS",
+      "Restreindre l'accès au port Elasticsearch",
+      "Désactiver l'authentification pour simplifier"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Il faut changer le mot de passe, utiliser HTTPS, et restreindre l'accès réseau. Ne pas désactiver l'authentification."
+  },
+  {
+    "id": "SQ-ARCH-035",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Quel est le rôle du plugin 'sonar-ldap' ?",
+    "options": [
+      "Synchroniser les utilisateurs et groupes depuis un annuaire LDAP",
+      "Permettre l'authentification unique (SSO)",
+      "Gérer les autorisations basées sur les rôles LDAP",
+      "Toutes ces réponses"
+    ],
+    "correct": 3,
+    "explanation": "Le plugin LDAP permet l'authentification, la synchronisation des utilisateurs/groupes et la gestion des autorisations via LDAP."
+  },
+  {
+    "id": "SQ-ARCH-036",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles informations peut-on trouver dans les logs 'sonar.log' ? (plusieurs réponses)",
+    "options": [
+      "Démarrage du serveur",
+      "Erreurs de connexion à la base de données",
+      "Détail des analyses de code",
+      "Actions des utilisateurs"
+    ],
+    "correct": [0, 1],
+    "explanation": "sonar.log contient les logs du serveur (démarrage, erreurs système). Les analyses sont dans ce.log et access.log."
+  },
+  {
+    "id": "SQ-ARCH-037",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Comment SonarQube gère-t-il le stockage des rapports d'analyse ?",
+    "options": [
+      "Dans la base de données uniquement",
+      "Dans Elasticsearch uniquement",
+      "Métadonnées en base, données textuelles dans Elasticsearch",
+      "Dans des fichiers plats"
+    ],
+    "correct": 2,
+    "explanation": "Les métadonnées et résultats agrégés sont en base, les données de recherche (issues, code source) dans Elasticsearch."
+  },
+  {
+    "id": "SQ-ARCH-038",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "difficile",
+    "question": "SonarQube peut être configuré pour utiliser un Elasticsearch externe plutôt que l'instance intégrée.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Il est possible (mais non recommandé pour la plupart des cas) de configurer un cluster Elasticsearch externe."
+  },
+  {
+    "id": "SQ-ARCH-039",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels sont les avantages de la Data Center Edition en termes d'architecture ? (plusieurs réponses)",
+    "options": [
+      "Haute disponibilité",
+      "Répartition de charge entre plusieurs serveurs",
+      "Possibilité d'avoir plusieurs Compute Engines",
+      "Support de Kubernetes"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "La DCE offre HA, load balancing, et scalabilité des CE. Le support de Kubernetes est une option de déploiement, pas une exclusivité DCE."
+  },
+  {
+    "id": "SQ-ARCH-040",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Quelle est la fonction de l'outil 'sonar-upgrade' ?",
+    "options": [
+      "Automatiser la mise à jour de SonarQube Server",
+      "Mettre à jour les plugins",
+      "Migrer les données d'une ancienne version",
+      "Vérifier la compatibilité avant mise à jour"
+    ],
+    "correct": 0,
+    "explanation": "L'outil sonar-upgrade (introduit récemment) facilite la mise à jour du serveur en automatisant certaines étapes."
+  },
+  {
+    "id": "SQ-ARCH-041",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles sont les options de déploiement du SonarScanner ? (plusieurs réponses)",
+    "options": [
+      "Exécutable standalone",
+      "Plugin Maven",
+      "Plugin Gradle",
+      "Image Docker",
+      "Extension IDE"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Le scanner existe en standalone, plugin Maven/Gradle, et Docker. L'extension IDE est SonarLint, pas un scanner."
+  },
+  {
+    "id": "SQ-ARCH-042",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle est la durée de validité par défaut d'un token d'authentification généré dans SonarQube ?",
+    "options": [
+      "30 jours",
+      "90 jours",
+      "1 an",
+      "Illimitée"
+    ],
+    "correct": 0,
+    "explanation": "Par défaut, les tokens expirent après 30 jours. Cette durée peut être modifiée."
+  },
+  {
+    "id": "SQ-ARCH-043",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "Il est possible d'utiliser un token d'utilisateur pour s'authentifier lors d'une analyse avec SonarScanner.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. On utilise sonar.login=<token> pour s'authentifier sans mot de passe."
+  },
+  {
+    "id": "SQ-ARCH-044",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles sont les conséquences d'un échec du Compute Engine lors d'une analyse ? (plusieurs réponses)",
+    "options": [
+      "L'analyse apparaît en statut 'En attente' ou 'Échec'",
+      "Les résultats ne sont pas visibles dans le projet",
+      "Le scanner retourne un code d'erreur",
+      "Le serveur redémarre automatiquement"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Si le CE échoue, le traitement ne se termine pas, les résultats ne sont pas disponibles, et le scanner peut échouer (selon l'option qualitygate.wait)."
+  },
+  {
+    "id": "SQ-ARCH-045",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Où se trouve le fichier de configuration 'wrapper.conf' et à quoi sert-il ?",
+    "options": [
+      "conf/ - Configuration du service wrapper (démarrage en tant que service Windows/Linux)",
+      "bin/ - Configuration du scanner",
+      "logs/ - Configuration des logs",
+      "data/ - Configuration des données"
+    ],
+    "correct": 0,
+    "explanation": "wrapper.conf configure le service wrapper utilisé pour démarrer SonarQube en tant que service."
+  },
+  {
+    "id": "SQ-ARCH-046",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles sont les éditions de SonarQube disponibles ? (plusieurs réponses)",
+    "options": [
+      "Community Edition",
+      "Developer Edition",
+      "Enterprise Edition",
+      "Data Center Edition",
+      "Cloud Edition"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Les éditions sont Community, Developer, Enterprise, Data Center. SonarCloud est un service distinct."
+  },
+  {
+    "id": "SQ-ARCH-047",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Quel paramètre JVM permet d'augmenter la mémoire heap allouée à SonarQube ?",
+    "options": [
+      "-Xmx",
+      "-Xms",
+      "-Xss",
+      "-XX:MaxPermSize"
+    ],
+    "correct": 0,
+    "explanation": "-Xmx définit la taille maximale du heap Java."
+  },
+  {
+    "id": "SQ-ARCH-048",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Il est recommandé d'exécuter SonarQube en tant qu'utilisateur root pour faciliter la gestion des permissions.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Pour des raisons de sécurité, il ne faut jamais exécuter SonarQube en root."
+  },
+  {
+    "id": "SQ-ARCH-049",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels sont les paramètres de sonar.properties pour configurer la connexion à PostgreSQL ? (plusieurs réponses)",
+    "options": [
+      "sonar.jdbc.url",
+      "sonar.jdbc.username",
+      "sonar.jdbc.password",
+      "sonar.database.name"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Les paramètres sont sonar.jdbc.url, username, password. Le nom de la base est dans l'URL."
+  },
+  {
+    "id": "SQ-ARCH-050",
+    "theme": "SonarQube",
+    "theme_label": "Installation et Architecture",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel est le nom du processus principal de SonarQube Server ?",
+    "options": [
+      "sonarqube",
+      "java",
+      "wrapper",
+      "sonar"
+    ],
+    "correct": 1,
+    "explanation": "SonarQube est une application Java, donc le processus apparaît comme 'java' avec des arguments spécifiques."
+  }
+]

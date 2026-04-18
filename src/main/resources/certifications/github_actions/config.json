@@ -1,32 +1,22 @@
 {
   "id": "github_actions",
-  "name": "GitHub Actions",
+  "name": "GitHub Actions Professional Certification",
   "version": "1.0",
-  "description": "Certification GitHub Actions - Automatisation CI/CD avec GitHub Actions",
-  "totalQuestions": 200,
-  "examDurationMinutes": 60,
-  "examQuestionCount": 40,
-  "passingScore": 70,
+  "description": "Validation des compétences avancées dans la conception, l'automatisation et la sécurisation de pipelines CI/CD avec GitHub Actions. Cette certification atteste de la maîtrise de l'orchestration, des runners, des expressions et des bonnes pratiques DevOps sur la plateforme.",
+  "totalQuestions": 350,
+  "examDurationMinutes": 120,
+  "examQuestionCount": 350,
+  "passingScore": 75,
   "themes": [
-    {
-      "name": "Workflows",
-      "count": 60
-    },
-    {
-      "name": "Actions & Runners",
-      "count": 50
-    },
-    {
-      "name": "Environment Variables",
-      "count": 30
-    },
-    {
-      "name": "Security",
-      "count": 30
-    },
-    {
-      "name": "Matrix Builds",
-      "count": 30
-    }
+    {"name": "Fondamentaux et Architecture", "count": 35},
+    {"name": "Workflows CI et Orchestration", "count": 40},
+    {"name": "Déploiement Continu et Environnements", "count": 35},
+    {"name": "Sécurité, Secrets et Permissions", "count": 40},
+    {"name": "Caching, Artifacts et Stockage", "count": 30},
+    {"name": "Actions Personnalisées et Docker", "count": 35},
+    {"name": "Matrices, Stratégies et Optimisation", "count": 30},
+    {"name": "Marketplace, Communauté et Intégrations", "count": 25},
+    {"name": "Dépannage, Logs et Monitoring", "count": 25},
+    {"name": "Bonnes Pratiques DevOps et Gouvernance", "count": 55}
   ]
 }

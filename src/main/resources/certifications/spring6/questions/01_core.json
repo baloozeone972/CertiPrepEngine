@@ -43,5 +43,47 @@
     ],
     "correct": 0,
     "explanation": "@ComponentScan indique à Spring où chercher les classes annotées avec @Component, @Service, etc."
+  },
+  {
+    "id": "SP6-SCE-001",
+    "theme": "Spring Core et IoC",
+    "theme_label": "Inversion de Contrôle et Injection de Dépendances",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'annotation @Autowired dans Spring :",
+    "options": [
+      "Permet l'injection automatique de dépendances par type.",
+      "Peut être utilisé sur des champs, des méthodes et des constructeurs.",
+      "N'est pas recommandé pour l'injection par nom de bean.",
+      "Supporte la résolution des dépendances par type et par nom."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "@Autowired permet l'injection automatique de dépendances par type, ce qui est correct. Elle peut être utilisée sur des champs, des méthodes et des constructeurs, ce qui est également correct. Elle n'est pas spécifiquement recommandée pour l'injection par nom de bean, mais elle peut être utilisée avec @Qualifier pour ce faire. Elle supporte la résolution des dépendances par type et par nom, ce qui est correct."
+  },
+  {
+    "id": "SP6-SCE-002",
+    "theme": "Spring Core et IoC",
+    "theme_label": "Inversion de Contrôle et Injection de Dépendances",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'Inversion de Contrôle (IoC) dans Spring :",
+    "options": [
+      "L'IoC est une pratique qui déplace la responsabilité de créer et de gérer les objets vers un conteneur.",
+      "Spring utilise l'IoC pour gérer la durée de vie des beans.",
+      "L'IoC est incompatible avec l'utilisation manuelle de new pour instancier des objets.",
+      "L'IoC permet une meilleure modularité et testabilité du code."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "L'IoC est une pratique qui déplace la responsabilité de créer et de gérer les objets vers un conteneur, ce qui est correct. Spring utilise l'IoC pour gérer la durée de vie des beans, ce qui est également correct. Bien que l'IoC puisse réduire l'utilisation de new, elle n'est pas entièrement incompatible avec son utilisation manuelle. L'IoC permet une meilleure modularité et testabilité du code, ce qui est correct."
   }
 ]

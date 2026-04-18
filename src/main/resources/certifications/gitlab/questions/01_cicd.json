@@ -28,5 +28,27 @@
     ],
     "correct": 0,
     "explanation": "Les stages définissent l'ordre d'exécution des jobs (build, test, deploy)."
+  },
+  {
+    "id": "GL-GC-001",
+    "theme": "GitLab CI/CD",
+    "theme_label": "Configuration CI/CD",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les 'variables d'environnement' dans GitLab CI/CD :",
+    "options": [
+      "Les variables d'environnement sont définies dans le fichier .gitlab-ci.yml",
+      "Les variables d'environnement peuvent être utilisées dans les jobs CI/CD",
+      "Les variables d'environnement sont héritées des parents au niveau du projet",
+      "Les variables d'environnement ne peuvent être modifiées qu'au niveau du projet",
+      "Les variables d'environnement sont utilisées pour stocker des secrets de sécurité"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      4
+    ],
+    "explanation": "Les variables d'environnement sont définies dans le fichier .gitlab-ci.yml (A correct). Elles peuvent être utilisées dans les jobs CI/CD (B correct). Elles sont héritées des parents au niveau du projet (C correct). Elles ne peuvent être modifiées qu'au niveau du projet est incorrect car elles peuvent être modifiées dans les jobs (D incorrect). Les variables d'environnement sont utilisées pour stocker des secrets de sécurité (E correct)."
   }
 ]

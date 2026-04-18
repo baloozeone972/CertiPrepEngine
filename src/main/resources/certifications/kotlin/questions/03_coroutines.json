@@ -35,7 +35,12 @@
     "theme_label": "Suspend functions",
     "difficulty": "easy",
     "question": "Quel mot-clé marque une fonction suspendable ?",
-    "options": ["suspend", "async", "await", "delay"],
+    "options": [
+      "suspend",
+      "async",
+      "await",
+      "delay"
+    ],
     "correct": 0,
     "explanation": "suspend est le mot-clé pour les fonctions pouvant suspendre l'exécution."
   },
@@ -60,7 +65,12 @@
     "theme_label": "Coroutine builders",
     "difficulty": "easy",
     "question": "Quel builder lance une nouvelle coroutine sans retour ?",
-    "options": ["launch", "async", "runBlocking", "withContext"],
+    "options": [
+      "launch",
+      "async",
+      "runBlocking",
+      "withContext"
+    ],
     "correct": 0,
     "explanation": "launch lance une coroutine et retourne un Job."
   },
@@ -70,7 +80,12 @@
     "theme_label": "Coroutine builders",
     "difficulty": "easy",
     "question": "Quel builder lance une coroutine et retourne un résultat ?",
-    "options": ["async", "launch", "runBlocking", "produce"],
+    "options": [
+      "async",
+      "launch",
+      "runBlocking",
+      "produce"
+    ],
     "correct": 0,
     "explanation": "async retourne Deferred<T> pour récupérer le résultat."
   },
@@ -140,7 +155,12 @@
     "theme_label": "Dispatchers",
     "difficulty": "medium",
     "question": "Quel dispatcher est optimisé pour les opérations CPU intensives ?",
-    "options": ["Dispatchers.Default", "Dispatchers.IO", "Dispatchers.Main", "Dispatchers.Unconfined"],
+    "options": [
+      "Dispatchers.Default",
+      "Dispatchers.IO",
+      "Dispatchers.Main",
+      "Dispatchers.Unconfined"
+    ],
     "correct": 0,
     "explanation": "Default utilise le pool commun pour les calculs."
   },
@@ -150,7 +170,12 @@
     "theme_label": "Dispatchers",
     "difficulty": "medium",
     "question": "Quel dispatcher est adapté aux opérations réseau/fichier ?",
-    "options": ["Dispatchers.IO", "Dispatchers.Default", "Dispatchers.Main", "Dispatchers.Unconfined"],
+    "options": [
+      "Dispatchers.IO",
+      "Dispatchers.Default",
+      "Dispatchers.Main",
+      "Dispatchers.Unconfined"
+    ],
     "correct": 0,
     "explanation": "IO est conçu pour les opérations bloquantes I/O."
   },
@@ -190,7 +215,12 @@
     "theme_label": "withContext",
     "difficulty": "hard",
     "question": "withContext est-il suspend ?",
-    "options": ["Oui", "Non", "Parfois", "Dépend du dispatcher"],
+    "options": [
+      "Oui",
+      "Non",
+      "Parfois",
+      "Dépend du dispatcher"
+    ],
     "correct": 0,
     "explanation": "withContext est une fonction suspend qui retourne le résultat."
   },
@@ -200,7 +230,12 @@
     "theme_label": "Job",
     "difficulty": "medium",
     "question": "Que retourne launch ?",
-    "options": ["Job", "Deferred<T>", "Unit", "CoroutineScope"],
+    "options": [
+      "Job",
+      "Deferred<T>",
+      "Unit",
+      "CoroutineScope"
+    ],
     "correct": 0,
     "explanation": "launch retourne un Job pour gérer la coroutine."
   },
@@ -210,7 +245,12 @@
     "theme_label": "Job",
     "difficulty": "hard",
     "question": "Comment attendre la fin d'un Job ?",
-    "options": ["job.join()", "job.await()", "job.wait()", "job.complete()"],
+    "options": [
+      "job.join()",
+      "job.await()",
+      "job.wait()",
+      "job.complete()"
+    ],
     "correct": 0,
     "explanation": "join() suspend la coroutine jusqu'à la fin du Job."
   },
@@ -220,7 +260,12 @@
     "theme_label": "Job",
     "difficulty": "hard",
     "question": "Comment annuler une coroutine ?",
-    "options": ["job.cancel()", "job.stop()", "job.interrupt()", "job.kill()"],
+    "options": [
+      "job.cancel()",
+      "job.stop()",
+      "job.interrupt()",
+      "job.kill()"
+    ],
     "correct": 0,
     "explanation": "cancel() annule la coroutine et ses enfants."
   },
@@ -230,7 +275,12 @@
     "theme_label": "Deferred",
     "difficulty": "medium",
     "question": "Que retourne async ?",
-    "options": ["Deferred<T>", "Job", "Unit", "CoroutineScope"],
+    "options": [
+      "Deferred<T>",
+      "Job",
+      "Unit",
+      "CoroutineScope"
+    ],
     "correct": 0,
     "explanation": "async retourne Deferred<T> qui étend Job."
   },
@@ -240,7 +290,12 @@
     "theme_label": "Deferred",
     "difficulty": "hard",
     "question": "Comment obtenir le résultat d'un Deferred ?",
-    "options": ["deferred.await()", "deferred.get()", "deferred.result()", "deferred.value()"],
+    "options": [
+      "deferred.await()",
+      "deferred.get()",
+      "deferred.result()",
+      "deferred.value()"
+    ],
     "correct": 0,
     "explanation": "await() suspend la coroutine jusqu'au résultat."
   },
@@ -340,7 +395,12 @@
     "theme_label": "Channels",
     "difficulty": "hard",
     "question": "Comment envoyer un message sur un Channel ?",
-    "options": ["channel.send(value)", "channel.offer(value)", "channel.put(value)", "A et B"],
+    "options": [
+      "channel.send(value)",
+      "channel.offer(value)",
+      "channel.put(value)",
+      "A et B"
+    ],
     "correct": 3,
     "explanation": "send (suspend) ou offer (non-suspend)."
   },
@@ -350,7 +410,12 @@
     "theme_label": "Channels",
     "difficulty": "hard",
     "question": "Comment recevoir un message d'un Channel ?",
-    "options": ["channel.receive()", "channel.poll()", "channel.take()", "A et B"],
+    "options": [
+      "channel.receive()",
+      "channel.poll()",
+      "channel.take()",
+      "A et B"
+    ],
     "correct": 3,
     "explanation": "receive (suspend) ou poll (non-suspend)."
   },
@@ -435,7 +500,12 @@
     "theme_label": "Flow operators",
     "difficulty": "hard",
     "question": "Quel opérateur transforme chaque élément ?",
-    "options": ["map", "filter", "transform", "collect"],
+    "options": [
+      "map",
+      "filter",
+      "transform",
+      "collect"
+    ],
     "correct": 0,
     "explanation": "map applique une transformation à chaque élément."
   },
@@ -445,7 +515,12 @@
     "theme_label": "Flow operators",
     "difficulty": "hard",
     "question": "Comment collecter les valeurs d'un Flow ?",
-    "options": ["collect", "launchIn", "onEach", "A et B"],
+    "options": [
+      "collect",
+      "launchIn",
+      "onEach",
+      "A et B"
+    ],
     "correct": 3,
     "explanation": "collect est l'opérateur terminal principal."
   },
@@ -485,7 +560,12 @@
     "theme_label": "Flow context",
     "difficulty": "hard",
     "question": "Comment changer le contexte d'un Flow ?",
-    "options": ["flowOn", "withContext", "launchOn", "contextOn"],
+    "options": [
+      "flowOn",
+      "withContext",
+      "launchOn",
+      "contextOn"
+    ],
     "correct": 0,
     "explanation": "flowOn change le contexte pour les opérations upstream."
   },
@@ -675,7 +755,12 @@
     "theme_label": "Android ViewModel",
     "difficulty": "hard",
     "question": "Quel scope est lié au ViewModel ?",
-    "options": ["viewModelScope", "lifecycleScope", "coroutineScope", "mainScope"],
+    "options": [
+      "viewModelScope",
+      "lifecycleScope",
+      "coroutineScope",
+      "mainScope"
+    ],
     "correct": 0,
     "explanation": "viewModelScope est annulé quand le ViewModel est détruit."
   },
@@ -685,7 +770,12 @@
     "theme_label": "Android Lifecycle",
     "difficulty": "hard",
     "question": "Quel scope est lié au cycle de vie ?",
-    "options": ["lifecycleScope", "viewModelScope", "coroutineScope", "globalScope"],
+    "options": [
+      "lifecycleScope",
+      "viewModelScope",
+      "coroutineScope",
+      "globalScope"
+    ],
     "correct": 0,
     "explanation": "lifecycleScope est annulé quand le Lifecycle se termine."
   },
@@ -785,7 +875,12 @@
     "theme_label": "Mutex",
     "difficulty": "hard",
     "question": "Comment acquérir un Mutex ?",
-    "options": ["mutex.lock()", "mutex.withLock { }", "mutex.acquire()", "A et B"],
+    "options": [
+      "mutex.lock()",
+      "mutex.withLock { }",
+      "mutex.acquire()",
+      "A et B"
+    ],
     "correct": 3,
     "explanation": "lock() suspend, withLock est la forme recommandée."
   },
@@ -953,5 +1048,404 @@
     ],
     "correct": 0,
     "explanation": "GlobalScope est déconseillé sauf cas très particuliers."
+  },
+  {
+    "id": "KOT-COR-071",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les builders de coroutines :",
+    "options": [
+      "launch lance une coroutine dans le contexte courant et retourne un Job",
+      "async lance une coroutine et retourne un Deferred",
+      "runBlocking bloque le thread courant jusqu'à la fin de la coroutine",
+      "withContext change le contexte et attend la fin du bloc"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "launch lance une coroutine dans le contexte courant et retourne un Job, donc c'est correct. async lance une coroutine et retourne un Deferred, donc c'est correct. runBlocking bloque le thread courant jusqu'à la fin de la coroutine, donc c'est correct. withContext change le contexte et attend la fin du bloc, donc c'est correct."
+  },
+  {
+    "id": "KOT-COR-072",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Dispatchers.IO et Dispatchers.Default ?",
+    "options": [
+      "Dispatchers.IO est pour les opérations I/O, Dispatchers.Default est pour le calcul intensif",
+      "Dispatchers.IO est pour le calcul intensif, Dispatchers.Default est pour les opérations I/O",
+      "Aucune différence, ils sont interchangeables",
+      "Dispatchers.IO utilise plus de threads que Dispatchers.Default"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dispatchers.IO est conçu pour les opérations I/O, tandis que Dispatchers.Default est destiné au calcul intensif. Donc, la première option est correcte."
+  },
+  {
+    "id": "KOT-COR-073",
+    "theme": "Coroutines",
+    "theme_label": "Job",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant un Job dans Kotlin coroutines ?",
+    "options": [
+      "Un Job peut être annulé",
+      "Un Job est toujours lancé dans le contexte global",
+      "Un Job peut être attendu avec await()",
+      "Un Job est immuable après sa création"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Un Job peut être annulé, donc c'est correct. Un Job est toujours lancé dans le contexte global, donc c'est incorrect. Un Job peut être attendu avec await(), donc c'est correct. Un Job est immuable après sa création, donc c'est incorrect."
+  },
+  {
+    "id": "KOT-COR-074",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de Channel est utilisé pour gérer des éléments avec une capacité limitée ?",
+    "options": [
+      "Channel.UNLIMITED",
+      "Channel.CONFLATED",
+      "Channel.BUFFERED",
+      "Channel.RENDEZVOUS"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Channel.BUFFERED est utilisé pour gérer des éléments avec une capacité limitée, donc c'est correct."
+  },
+  {
+    "id": "KOT-COR-075",
+    "theme": "Coroutines",
+    "theme_label": "Flow",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Flow :",
+    "options": [
+      "Flow est un flux de données asynchrone",
+      "Flow peut être transformé avec des opérateurs comme map ou filter",
+      "Flow est toujours chaud (hot)",
+      "Flow peut être collecté avec launchIn ou collect"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Flow est un flux de données asynchrone, donc c'est correct. Flow peut être transformé avec des opérateurs comme map ou filter, donc c'est correct. Flow est toujours chaud (hot), donc c'est incorrect. Flow peut être collecté avec launchIn ou collect, donc c'est correct."
+  },
+  {
+    "id": "KOT-COR-076",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Dispatchers :",
+    "options": [
+      "Dispatchers.IO est utilisé pour les opérations d'entrée/sortie",
+      "Dispatchers.Default est optimisé pour les calculs CPU intensifs",
+      "Dispatchers.Main est utilisé dans Android pour l'UI",
+      "Dispatchers.Unconfined peut changer de thread pendant son exécution"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Dispatchers.IO est utilisé pour les opérations d'entrée/sortie, Dispatchers.Default est optimisé pour les calculs CPU intensifs, et Dispatchers.Main est utilisé dans Android pour l'UI. Dispatchers.Unconfined peut changer de thread pendant son exécution, ce qui n'est pas toujours souhaité pour des tâches longues."
+  },
+  {
+    "id": "KOT-COR-077",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle coroutine builder est utilisée pour lancer une coroutine dans le contexte principal ?",
+    "options": [
+      "launch",
+      "async",
+      "runBlocking",
+      "withContext"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "runBlocking est utilisé pour lancer une coroutine dans le contexte principal et attendre sa fin."
+  },
+  {
+    "id": "KOT-COR-078",
+    "theme": "Coroutines",
+    "theme_label": "Job",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant Job :",
+    "options": [
+      "Job est utilisé pour représenter une tâche en cours d'exécution",
+      "Job peut être annulé avec la méthode cancel()",
+      "Job est un type de Dispatcher",
+      "Job peut être lancé avec launch()"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Job est utilisé pour représenter une tâche en cours d'exécution et peut être annulé avec la méthode cancel(). Job n'est pas un type de Dispatcher, mais il peut être lancé avec launch()."
+  },
+  {
+    "id": "KOT-COR-079",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Channel et une SharedFlow ?",
+    "options": [
+      "Channel est conçu pour des communications unidirectionnelles, SharedFlow est bidirectionnelle",
+      "Channel ne supporte pas la rétention des valeurs, SharedFlow peut les conserver",
+      "Channel est asynchrone, SharedFlow est synchrone",
+      "Channel peut avoir plusieurs émetteurs, SharedFlow ne le peut pas"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Channel ne supporte pas la rétention des valeurs, SharedFlow peut les conserver. Channel est asynchrone et peut avoir plusieurs émetteurs, tandis que SharedFlow est principalement utilisé pour la diffusion de données à plusieurs consommateurs."
+  },
+  {
+    "id": "KOT-COR-080",
+    "theme": "Coroutines",
+    "theme_label": "CoroutineScope",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant CoroutineScope :",
+    "options": [
+      "CoroutineScope est utilisé pour la gestion de la durée de vie des coroutines",
+      "CoroutineScope peut être annulé avec cancel()",
+      "CoroutineScope est un type de Dispatcher",
+      "CoroutineScope peut lancer des coroutines avec launch()"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "CoroutineScope est utilisé pour la gestion de la durée de vie des coroutines, peut être annulé avec cancel(), et peut lancer des coroutines avec launch(). CoroutineScope n'est pas un type de Dispatcher."
+  },
+  {
+    "id": "KOT-COR-081",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les coroutine builders en Kotlin :",
+    "options": [
+      "launch lance une nouvelle coroutine et retourne un Job.",
+      "async lance une nouvelle coroutine et retourne un Deferred.",
+      "runBlocking est utilisé pour bloquer le thread actuel jusqu'à la fin de la coroutine.",
+      "withContext change le contexte de l'exécution sans créer une nouvelle coroutine."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "launch est correct car il lance une nouvelle coroutine et retourne un Job. async est également correct car il lance une nouvelle coroutine et retourne un Deferred. runBlocking est incorrect car, bien qu'il puisse être utilisé pour bloquer le thread actuel, il n'est pas un coroutine builder. withContext est incorrect car, bien qu'il puisse changer le contexte de l'exécution, il ne crée pas une nouvelle coroutine."
+  },
+  {
+    "id": "KOT-COR-082",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Dispatchers.IO et Dispatchers.Default ?",
+    "options": [
+      "Dispatchers.IO est utilisé pour les opérations de E/S bloquantes, tandis que Dispatchers.Default est utilisé pour le calcul intensif.",
+      "Dispatchers.IO est utilisé pour le calcul intensif, tandis que Dispatchers.Default est utilisé pour les opérations de E/S bloquantes.",
+      "Dispatchers.IO et Dispatchers.Default sont interchangeables pour toutes les tâches.",
+      "Dispatchers.IO est utilisé pour le multithreading, tandis que Dispatchers.Default est utilisé pour les coroutines."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dispatchers.IO est correct car il est utilisé pour les opérations de E/S bloquantes, tandis que Dispatchers.Default est correct car il est utilisé pour le calcul intensif. Les autres options sont incorrectes car elles inversent ou généralisent les utilisations spécifiques de ces dispatchers."
+  },
+  {
+    "id": "KOT-COR-083",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les coroutine builders :",
+    "options": [
+      "launch lance une coroutine dans le contexte courant",
+      "async retourne un Deferred qui peut être attendu",
+      "runBlocking est utilisé pour bloquer le thread courant jusqu'à la fin de la coroutine",
+      "withContext change le contexte et attend la fin de la coroutine"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "launch lance une coroutine dans le contexte courant et ne retourne pas de valeur, donc c'est correct. async retourne un Deferred qui peut être attendu, aussi correct. runBlocking est utilisé pour bloquer le thread courant jusqu'à la fin de la coroutine, donc c'est correct. withContext change le contexte mais ne lance pas une nouvelle coroutine, donc incorrect."
+  },
+  {
+    "id": "KOT-COR-084",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Dispatchers.IO et Dispatchers.Default ?",
+    "options": [
+      "Dispatchers.IO est pour les opérations de E/S, Dispatchers.Default est pour le calcul intensif",
+      "Dispatchers.IO est pour les calculs intensifs, Dispatchers.Default est pour les opérations de E/S",
+      "Aucune différence, ils sont interchangeables",
+      "Dispatchers.IO utilise des threads plus nombreux que Dispatchers.Default"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dispatchers.IO est conçu pour les opérations de E/S, tandis que Dispatchers.Default est conçu pour le calcul intensif. Aucune différence n'est correcte car ils ont des utilisations spécifiques."
+  },
+  {
+    "id": "KOT-COR-085",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les Channels ?",
+    "options": [
+      "Les Channels sont thread-safe",
+      "Les Channels peuvent être utilisés pour la communication entre coroutines",
+      "Les Channels sont limités à un seul producteur et consommateur",
+      "Les Channels ne peuvent pas être utilisé pour des messages de type suspend"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les Channels sont thread-safe, donc c'est correct. Ils peuvent être utilisés pour la communication entre coroutines, aussi correct. Ils ne sont pas limités à un seul producteur et consommateur, donc incorrect. Les Channels peuvent être utilisés pour des messages de type suspend, donc incorrect."
+  },
+  {
+    "id": "KOT-COR-086",
+    "theme": "Coroutines",
+    "theme_label": "CoroutineScope",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre CoroutineScope et GlobalScope ?",
+    "options": [
+      "CoroutineScope est lié à un contexte spécifique, GlobalScope n'est pas lié",
+      "GlobalScope est lié à un contexte spécifique, CoroutineScope n'est pas lié",
+      "Aucune différence, ils sont interchangeables",
+      "CoroutineScope est plus performant que GlobalScope"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "CoroutineScope est lié à un contexte spécifique, tandis que GlobalScope n'est pas lié à aucun contexte spécifique. Aucune différence n'est correcte car ils ont des utilisations différentes."
+  },
+  {
+    "id": "KOT-COR-087",
+    "theme": "Coroutines",
+    "theme_label": "Cancellation",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion de l'annulation des coroutines :",
+    "options": [
+      "Une coroutine peut être annulée via un Job",
+      "L'annulation d'une coroutine interrompt immédiatement son exécution",
+      "Une coroutine peut être configurée pour ne pas être annulable",
+      "L'annulation d'une coroutine peut être interceptée avec try/catch"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Une coroutine peut être annulée via un Job, donc c'est correct. L'annulation d'une coroutine n'interrompt pas immédiatement son exécution, donc incorrect. Une coroutine peut être configurée pour ne pas être annulable, donc c'est correct. L'annulation d'une coroutine peut être interceptée avec try/catch, donc c'est correct."
+  },
+  {
+    "id": "KOT-COR-088",
+    "theme": "Coroutines",
+    "theme_label": "Coroutine builders",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les coroutine builders :",
+    "options": [
+      "launch lance une coroutine dans le contexte courant et retourne un Job",
+      "async lance une coroutine et retourne un Deferred",
+      "runBlocking bloque le thread courant jusqu'à la fin de la coroutine",
+      "withContext change le contexte de la coroutine et retourne son résultat"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "launch lance une coroutine dans le contexte courant et retourne un Job, donc c'est correct. async lance une coroutine et retourne un Deferred, aussi correct. runBlocking bloque le thread courant jusqu'à la fin de la coroutine, donc c'est incorrect. withContext change le contexte de la coroutine et retourne son résultat, donc c'est correct."
+  },
+  {
+    "id": "KOT-COR-089",
+    "theme": "Coroutines",
+    "theme_label": "Dispatchers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Dispatchers.IO et Dispatchers.Default ?",
+    "options": [
+      "Dispatchers.IO est utilisé pour les opérations I/O, tandis que Dispatchers.Default est utilisé pour le calcul intensif",
+      "Dispatchers.IO est utilisé pour le calcul intensif, tandis que Dispatchers.Default est utilisé pour les opérations I/O",
+      "Aucune différence, elles sont interchangeables",
+      "Dispatchers.IO est plus rapide que Dispatchers.Default"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Dispatchers.IO est utilisé pour les opérations I/O, tandis que Dispatchers.Default est utilisé pour le calcul intensif."
+  },
+  {
+    "id": "KOT-COR-091",
+    "theme": "Coroutines",
+    "theme_label": "Channels",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Channel et une SharedFlow ?",
+    "options": [
+      "Un Channel est conçu pour les communications unidirectionnelles, tandis qu'une SharedFlow est conçue pour une diffusion à plusieurs abonnés",
+      "Un Channel est conçu pour la gestion de backpressure, tandis qu'une SharedFlow ne le fait pas",
+      "Un Channel est conçu pour les opérations I/O, tandis qu'une SharedFlow est conçue pour le calcul intensif",
+      "Aucune différence, elles sont interchangeables"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un Channel est conçu pour les communications unidirectionnelles, tandis qu'une SharedFlow est conçue pour une diffusion à plusieurs abonnés."
+  },
+  {
+    "id": "KOT-COR-092",
+    "theme": "Coroutines",
+    "theme_label": "CoroutineScope",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant CoroutineScope :",
+    "options": [
+      "CoroutineScope permet de gérer la durée de vie des coroutines",
+      "CoroutineScope peut être annulé avec cancel()",
+      "CoroutineScope est utilisé pour exécuter des coroutines",
+      "CoroutineScope ne peut pas être annulé"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "CoroutineScope permet de gérer la durée de vie des coroutines, donc c'est correct. CoroutineScope peut être annulé avec cancel(), donc c'est correct. CoroutineScope est utilisé pour exécuter des coroutines, donc c'est correct. CoroutineScope peut être annulé, donc cette option est incorrecte."
   }
 ]

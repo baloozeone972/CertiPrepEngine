@@ -28,5 +28,25 @@
     ],
     "correct": 1,
     "explanation": "requires static indique une dépendance optionnelle, nécessaire à la compilation mais pas à l'exécution."
+  },
+  {
+    "id": "OCP1-JM-001",
+    "theme": "Java Modules (JPMS)",
+    "theme_label": "Déclaration et utilisation des modules",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'instruction 'requires' dans un fichier module-info.java :",
+    "options": [
+      "Déclare une dépendance obligatoire à la compilation et à l'exécution",
+      "Permet d'ouvrir un package à la réflexion",
+      "Peut être utilisé avec le modificateur 'transitive' pour dépendances transitives",
+      "Déclare un service fourni par le module"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option A est correcte car 'requires' déclare une dépendance obligatoire à la fois pour la compilation et l'exécution. L'option B est incorrecte car 'requires' ne sert pas à ouvrir un package à la réflexion. L'option C est correcte car 'requires transitive' peut être utilisé pour déclarer des dépendances transitives. L'option D est incorrecte car 'requires' ne déclare pas de services fournis."
   }
 ]

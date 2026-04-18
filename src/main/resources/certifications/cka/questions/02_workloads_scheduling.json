@@ -12,7 +12,7 @@
       "Un volume"
     ],
     "correct": 0,
-    "explication": "Un pod est un groupe de conteneurs partageant le même réseau et stockage."
+    "explanation": "Un pod est un groupe de conteneurs partageant le même réseau et stockage."
   },
   {
     "id": "CKA-02-002",
@@ -27,7 +27,7 @@
       "kubectl start monpod --image=nginx"
     ],
     "correct": 0,
-    "explication": "kubectl run crée un pod."
+    "explanation": "kubectl run crée un pod."
   },
   {
     "id": "CKA-02-003",
@@ -42,7 +42,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons de supprimer un pod."
+    "explanation": "Plusieurs façons de supprimer un pod."
   },
   {
     "id": "CKA-02-004",
@@ -57,7 +57,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "On peut ajouter des labels via kubectl label ou dans le manifeste."
+    "explanation": "On peut ajouter des labels via kubectl label ou dans le manifeste."
   },
   {
     "id": "CKA-02-005",
@@ -72,7 +72,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "-l ou --selector filtre les ressources par label."
+    "explanation": "-l ou --selector filtre les ressources par label."
   },
   {
     "id": "CKA-02-006",
@@ -87,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Le ReplicaSet assure la haute disponibilité des pods."
+    "explanation": "Le ReplicaSet assure la haute disponibilité des pods."
   },
   {
     "id": "CKA-02-007",
@@ -95,9 +95,14 @@
     "theme_label": "ReplicaSet",
     "difficulty": "easy",
     "question": "Quelle ressource est généralement utilisée à la place du ReplicaSet ?",
-    "options": ["Deployment", "StatefulSet", "DaemonSet", "Job"],
+    "options": [
+      "Deployment",
+      "StatefulSet",
+      "DaemonSet",
+      "Job"
+    ],
     "correct": 0,
-    "explication": "Les Deployments gèrent les ReplicaSets avec des mises à jour rolling."
+    "explanation": "Les Deployments gèrent les ReplicaSets avec des mises à jour rolling."
   },
   {
     "id": "CKA-02-008",
@@ -112,7 +117,7 @@
       "Gestion des secrets"
     ],
     "correct": 0,
-    "explication": "Les Deployments offrent des fonctionnalités avancées de mise à jour."
+    "explanation": "Les Deployments offrent des fonctionnalités avancées de mise à jour."
   },
   {
     "id": "CKA-02-009",
@@ -127,7 +132,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs façons de changer le nombre de réplicas."
+    "explanation": "Plusieurs façons de changer le nombre de réplicas."
   },
   {
     "id": "CKA-02-010",
@@ -142,7 +147,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "set image, edit, patch sont possibles."
+    "explanation": "set image, edit, patch sont possibles."
   },
   {
     "id": "CKA-02-011",
@@ -157,7 +162,7 @@
       "kubectl describe deployment mondeploy"
     ],
     "correct": 0,
-    "explication": "rollout history affiche les révisions."
+    "explanation": "rollout history affiche les révisions."
   },
   {
     "id": "CKA-02-012",
@@ -172,7 +177,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "undo revient à la version précédente ou spécifiée."
+    "explanation": "undo revient à la version précédente ou spécifiée."
   },
   {
     "id": "CKA-02-013",
@@ -187,7 +192,7 @@
       "Scaling"
     ],
     "correct": 0,
-    "explication": "Restart redémarre les pods sans changer l'image."
+    "explanation": "Restart redémarre les pods sans changer l'image."
   },
   {
     "id": "CKA-02-014",
@@ -202,7 +207,7 @@
       "Un volume partagé"
     ],
     "correct": 0,
-    "explication": "DaemonSet garantit qu'un pod tourne sur chaque nœud."
+    "explanation": "DaemonSet garantit qu'un pod tourne sur chaque nœud."
   },
   {
     "id": "CKA-02-015",
@@ -217,7 +222,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "DaemonSet est idéal pour les agents système par nœud."
+    "explanation": "DaemonSet est idéal pour les agents système par nœud."
   },
   {
     "id": "CKA-02-016",
@@ -232,7 +237,7 @@
       "Volume persistant"
     ],
     "correct": 0,
-    "explication": "StatefulSet est utilisé pour les applications avec état (bases de données)."
+    "explanation": "StatefulSet est utilisé pour les applications avec état (bases de données)."
   },
   {
     "id": "CKA-02-017",
@@ -240,9 +245,14 @@
     "theme_label": "StatefulSet",
     "difficulty": "easy",
     "question": "Les pods d'un StatefulSet ont-ils des noms uniques et prévisibles ?",
-    "options": ["Oui", "Non", "Uniquement si ordre", "Uniquement si headless service"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si ordre",
+      "Uniquement si headless service"
+    ],
     "correct": 0,
-    "explication": "Les noms suivent le format <nom-statefulset>-<index>."
+    "explanation": "Les noms suivent le format <nom-statefulset>-<index>."
   },
   {
     "id": "CKA-02-018",
@@ -257,7 +267,7 @@
       "ClusterIP"
     ],
     "correct": 0,
-    "explication": "Un headless service permet d'accéder à chaque pod individuellement."
+    "explanation": "Un headless service permet d'accéder à chaque pod individuellement."
   },
   {
     "id": "CKA-02-019",
@@ -272,7 +282,7 @@
       "Gérer des bases de données"
     ],
     "correct": 0,
-    "explication": "Un Job crée des pods qui s'exécutent jusqu'à terminaison."
+    "explanation": "Un Job crée des pods qui s'exécutent jusqu'à terminaison."
   },
   {
     "id": "CKA-02-020",
@@ -287,7 +297,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "kubectl create job (impératif) ou fichier YAML."
+    "explanation": "kubectl create job (impératif) ou fichier YAML."
   },
   {
     "id": "CKA-02-021",
@@ -302,7 +312,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "CronJob crée des Jobs à intervalles réguliers."
+    "explanation": "CronJob crée des Jobs à intervalles réguliers."
   },
   {
     "id": "CKA-02-022",
@@ -317,7 +327,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "kubectl create cronjob est disponible, mais YAML est plus flexible."
+    "explanation": "kubectl create cronjob est disponible, mais YAML est plus flexible."
   },
   {
     "id": "CKA-02-023",
@@ -332,7 +342,7 @@
       "S'exécutent en arrière-plan"
     ],
     "correct": 0,
-    "explication": "Les initContainers effectuent des tâches de préparation (attente de service, migration)."
+    "explanation": "Les initContainers effectuent des tâches de préparation (attente de service, migration)."
   },
   {
     "id": "CKA-02-024",
@@ -340,9 +350,14 @@
     "theme_label": "Init Containers",
     "difficulty": "easy",
     "question": "Les initContainers s'exécutent-ils avant ou après le démarrage des conteneurs principaux ?",
-    "options": ["Avant", "Après", "En même temps", "Dans l'ordre défini"],
+    "options": [
+      "Avant",
+      "Après",
+      "En même temps",
+      "Dans l'ordre défini"
+    ],
     "correct": 0,
-    "explication": "Ils doivent se terminer avec succès avant le démarrage des conteneurs principaux."
+    "explanation": "Ils doivent se terminer avec succès avant le démarrage des conteneurs principaux."
   },
   {
     "id": "CKA-02-025",
@@ -357,7 +372,7 @@
       "nodeSelector: zone: prod"
     ],
     "correct": 0,
-    "explication": "nodeSelector sélectionne les nœuds ayant le label."
+    "explanation": "nodeSelector sélectionne les nœuds ayant le label."
   },
   {
     "id": "CKA-02-026",
@@ -372,7 +387,7 @@
       "nodeSelector: required"
     ],
     "correct": 0,
-    "explication": "requiredDuringScheduling est une condition dure."
+    "explanation": "requiredDuringScheduling est une condition dure."
   },
   {
     "id": "CKA-02-027",
@@ -387,7 +402,7 @@
       "antiAffinity"
     ],
     "correct": 0,
-    "explication": "podAntiAffinity évite que deux pods s'exécutent sur le même nœud."
+    "explanation": "podAntiAffinity évite que deux pods s'exécutent sur le même nœud."
   },
   {
     "id": "CKA-02-028",
@@ -402,7 +417,7 @@
       "Marquer le nœud comme défaillant"
     ],
     "correct": 0,
-    "explication": "Les taints empêchent les pods non tolérants d'être placés sur le nœud."
+    "explanation": "Les taints empêchent les pods non tolérants d'être placés sur le nœud."
   },
   {
     "id": "CKA-02-029",
@@ -417,7 +432,7 @@
       "kubectl patch nodes node1 -p '{\"spec\":{\"taints\":...}}'"
     ],
     "correct": 0,
-    "explication": "kubectl taint est la commande spécifique."
+    "explanation": "kubectl taint est la commande spécifique."
   },
   {
     "id": "CKA-02-030",
@@ -432,7 +447,7 @@
       "PreferNoSchedule seulement"
     ],
     "correct": 0,
-    "explication": "NoSchedule (dur), PreferNoSchedule (préférence), NoExecute (éviction)."
+    "explanation": "NoSchedule (dur), PreferNoSchedule (préférence), NoExecute (éviction)."
   },
   {
     "id": "CKA-02-031",
@@ -447,7 +462,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Les requests garantissent des ressources, les limits limitent l'utilisation."
+    "explanation": "Les requests garantissent des ressources, les limits limitent l'utilisation."
   },
   {
     "id": "CKA-02-032",
@@ -455,9 +470,14 @@
     "theme_label": "Resource management",
     "difficulty": "easy",
     "question": "Que signifie l'unité 'm' pour CPU (ex: 250m) ?",
-    "options": ["millicore (1/1000 de cœur)", "megacore", "millihertz", "mégahertz"],
+    "options": [
+      "millicore (1/1000 de cœur)",
+      "megacore",
+      "millihertz",
+      "mégahertz"
+    ],
     "correct": 0,
-    "explication": "250m = 0.25 cœur CPU."
+    "explanation": "250m = 0.25 cœur CPU."
   },
   {
     "id": "CKA-02-033",
@@ -465,9 +485,14 @@
     "theme_label": "Resource management",
     "difficulty": "easy",
     "question": "Que se passe-t-il si un pod dépasse sa limite de mémoire ?",
-    "options": ["OOM kill", "Throttling", "Pod suspendu", "Pod redémarré"],
+    "options": [
+      "OOM kill",
+      "Throttling",
+      "Pod suspendu",
+      "Pod redémarré"
+    ],
     "correct": 0,
-    "explication": "Le conteneur est terminé par OOM Killer (Out Of Memory)."
+    "explanation": "Le conteneur est terminé par OOM Killer (Out Of Memory)."
   },
   {
     "id": "CKA-02-034",
@@ -475,9 +500,14 @@
     "theme_label": "Resource management",
     "difficulty": "easy",
     "question": "Que se passe-t-il si un pod dépasse sa limite de CPU ?",
-    "options": ["Throttling (ralentissement)", "OOM kill", "Pod suspendu", "Pod redémarré"],
+    "options": [
+      "Throttling (ralentissement)",
+      "OOM kill",
+      "Pod suspendu",
+      "Pod redémarré"
+    ],
     "correct": 0,
-    "explication": "Le CPU est limité (throttling) sans terminaison."
+    "explanation": "Le CPU est limité (throttling) sans terminaison."
   },
   {
     "id": "CKA-02-035",
@@ -492,7 +522,7 @@
       "Ajuste les requêtes"
     ],
     "correct": 0,
-    "explication": "HPA utilise les métriques (CPU, mémoire, personnalisées) pour scaler."
+    "explanation": "HPA utilise les métriques (CPU, mémoire, personnalisées) pour scaler."
   },
   {
     "id": "CKA-02-036",
@@ -507,7 +537,7 @@
       "kubectl apply -f hpa.yaml"
     ],
     "correct": 0,
-    "explication": "autoscale est la commande impérative pour créer un HPA."
+    "explanation": "autoscale est la commande impérative pour créer un HPA."
   },
   {
     "id": "CKA-02-037",
@@ -522,7 +552,7 @@
       "Ajuste les services"
     ],
     "correct": 0,
-    "explication": "VPA recommande ou ajuste automatiquement les ressources des pods."
+    "explanation": "VPA recommande ou ajuste automatiquement les ressources des pods."
   },
   {
     "id": "CKA-02-038",
@@ -537,7 +567,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Le PDB protège les applications lors des opérations de maintenance (drain)."
+    "explanation": "Le PDB protège les applications lors des opérations de maintenance (drain)."
   },
   {
     "id": "CKA-02-039",
@@ -552,7 +582,7 @@
       "minAvailable pour les reads, maxUnavailable pour les writes"
     ],
     "correct": 0,
-    "explication": "Les deux ne peuvent pas être utilisés en même temps."
+    "explanation": "Les deux ne peuvent pas être utilisés en même temps."
   },
   {
     "id": "CKA-02-040",
@@ -567,7 +597,7 @@
       "Définir la priorité des volumes"
     ],
     "correct": 0,
-    "explication": "Les pods de haute priorité peuvent évincer les pods de basse priorité."
+    "explanation": "Les pods de haute priorité peuvent évincer les pods de basse priorité."
   },
   {
     "id": "CKA-02-041",
@@ -582,7 +612,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Impératif ou déclaratif."
+    "explanation": "Impératif ou déclaratif."
   },
   {
     "id": "CKA-02-042",
@@ -597,7 +627,7 @@
       "Migration"
     ],
     "correct": 0,
-    "explication": "La préemption permet aux pods prioritaires de prendre la place des moins prioritaires."
+    "explanation": "La préemption permet aux pods prioritaires de prendre la place des moins prioritaires."
   },
   {
     "id": "CKA-02-043",
@@ -612,7 +642,7 @@
       "Gérer les taints"
     ],
     "correct": 0,
-    "explication": "Ils aident à répartir les pods pour la haute disponibilité."
+    "explanation": "Ils aident à répartir les pods pour la haute disponibilité."
   },
   {
     "id": "CKA-02-044",
@@ -627,7 +657,7 @@
       "Écart de ressources"
     ],
     "correct": 0,
-    "explication": "maxSkew contrôle la répartition."
+    "explanation": "maxSkew contrôle la répartition."
   },
   {
     "id": "CKA-02-045",
@@ -635,9 +665,14 @@
     "theme_label": "Graceful termination",
     "difficulty": "easy",
     "question": "Quel est le délai d'arrêt gracieux par défaut ?",
-    "options": ["30 secondes", "10 secondes", "60 secondes", "5 secondes"],
+    "options": [
+      "30 secondes",
+      "10 secondes",
+      "60 secondes",
+      "5 secondes"
+    ],
     "correct": 0,
-    "explication": "Le pod reçoit SIGTERM et a 30s pour se terminer avant SIGKILL."
+    "explanation": "Le pod reçoit SIGTERM et a 30s pour se terminer avant SIGKILL."
   },
   {
     "id": "CKA-02-046",
@@ -652,7 +687,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le champ terminationGracePeriodSeconds dans le pod spec."
+    "explanation": "Le champ terminationGracePeriodSeconds dans le pod spec."
   },
   {
     "id": "CKA-02-047",
@@ -667,7 +702,7 @@
       "Exécuter en cas d'erreur"
     ],
     "correct": 0,
-    "explication": "preStop permet de nettoyer ou de se retirer proprement d'un service."
+    "explanation": "preStop permet de nettoyer ou de se retirer proprement d'un service."
   },
   {
     "id": "CKA-02-048",
@@ -682,7 +717,7 @@
       "Indique la charge"
     ],
     "correct": 0,
-    "explication": "Si la readiness probe échoue, le pod est retiré du service."
+    "explanation": "Si la readiness probe échoue, le pod est retiré du service."
   },
   {
     "id": "CKA-02-049",
@@ -697,7 +732,7 @@
       "Log une erreur"
     ],
     "correct": 0,
-    "explication": "La liveness probe permet de redémarrer les conteneurs bloqués."
+    "explanation": "La liveness probe permet de redémarrer les conteneurs bloqués."
   },
   {
     "id": "CKA-02-050",
@@ -712,6 +747,329 @@
       "Pour les cronjobs"
     ],
     "correct": 0,
-    "explication": "La startup probe désactive la liveness probe jusqu'à ce qu'elle réussisse."
+    "explanation": "La startup probe désactive la liveness probe jusqu'à ce qu'elle réussisse."
+  },
+  {
+    "id": "CKA-W&S-001",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Deployments :",
+    "options": [
+      "Un Deployment crée et gère des ReplicaSets pour assurer la disponibilité de l'application.",
+      "Un Deployment ne peut pas être mis à jour sans supprimer les anciennes réplicas.",
+      "Un Deployment peut être utilisé pour mettre à jour une application en déployant de nouvelles réplicas.",
+      "Un Deployment peut ne pas avoir de stratégie de mise à jour définie."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A est correct car les Deployments gèrent des ReplicaSets. B est incorrect car les Deployments peuvent être mis à jour sans supprimer les anciennes réplicas. C est correct car les Deployments permettent des mises à jour de l'application. D est incorrect car toutes les stratégies de mise à jour doivent être définies."
+  },
+  {
+    "id": "CKA-W&S-002",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de définir les ressources minimales et maximales pour un pod ?",
+    "options": [
+      "kubectl set resources",
+      "kubectl limit",
+      "kubectl resource",
+      "kubectl capacity"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "kubectl set resources est la commande correcte pour définir les ressources minimales et maximales pour un pod."
+  },
+  {
+    "id": "CKA-W&S-003",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "StatefulSet",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les StatefulSets :",
+    "options": [
+      "Un StatefulSet garanti l'ordre de création et de suppression des pods.",
+      "Un StatefulSet peut être utilisé pour les applications qui nécessitent une identité unique.",
+      "Un StatefulSet peut ne pas être mis à jour sans supprimer les anciennes réplicas.",
+      "Un StatefulSet peut ne pas avoir de stratégie de mise à jour définie."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car les StatefulSets garantissent l'ordre de création et de suppression des pods. B est correct car les StatefulSets sont idéaux pour les applications nécessitant une identité unique. C est incorrect car les StatefulSets peuvent être mis à jour sans supprimer les anciennes réplicas. D est incorrect car toutes les stratégies de mise à jour doivent être définies."
+  },
+  {
+    "id": "CKA-W&S-004",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Scheduling",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le scheduling :",
+    "options": [
+      "Le scheduler Kubernetes sélectionne automatiquement les nœuds sur lesquels exécuter les pods.",
+      "Le scheduler Kubernetes peut être configuré pour éviter la surcharge des nœuds.",
+      "Le scheduler Kubernetes ne peut pas prendre en compte les contraintes de topologie lors du placement des pods.",
+      "Le scheduler Kubernetes peut ne pas respecter les contraintes de préemption."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "A est correct car le scheduler Kubernetes sélectionne automatiquement les nœuds sur lesquels exécuter les pods. B est correct car le scheduler Kubernetes peut être configuré pour éviter la surcharge des nœuds. C est incorrect car le scheduler Kubernetes peut prendre en compte les contraintes de topologie lors du placement des pods. D est incorrect car le scheduler Kubernetes respecte les contraintes de préemption."
+  },
+  {
+    "id": "CKA-W&S-005",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Init Containers",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité des init containers dans Kubernetes ?",
+    "options": [
+      "Exécuter une tâche initiale avant le démarrage des conteneurs principaux.",
+      "Gérer les ressources de stockage pour les pods.",
+      "Assurer la disponibilité des services à l'intérieur du pod.",
+      "Contrôler les politiques de sécurité des pods."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les init containers sont utilisés pour exécuter une tâche initiale avant le démarrage des conteneurs principaux."
+  },
+  {
+    "id": "CKA-W&S-006",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Deployments :",
+    "options": [
+      "Les Deployments permettent de déployer et de mettre à jour des applications.",
+      "Un Deployment peut avoir plusieurs réplicas d'un même Pod.",
+      "Les Deployments ne peuvent pas être mis à jour sans interruption.",
+      "Un Deployment peut avoir un seul réplica d'un même Pod."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les Deployments permettent de déployer et de mettre à jour des applications. Un Deployment peut avoir plusieurs réplicas d'un même Pod. Les Deployments peuvent être mis à jour sans interruption grâce aux Rolling Updates. Un Deployment peut avoir un seul réplica d'un même Pod."
+  },
+  {
+    "id": "CKA-W&S-007",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de vérifier la consommation des ressources d'un Pod ?",
+    "options": [
+      "kubectl describe pod <nom-pod>",
+      "kubectl get pod <nom-pod> -o yaml",
+      "kubectl top pod <nom-pod>",
+      "kubectl logs pod <nom-pod>"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "kubectl top pod <nom-pod> permet de vérifier la consommation des ressources d'un Pod."
+  },
+  {
+    "id": "CKA-W&S-008",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "StatefulSet",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les StatefulSets :",
+    "options": [
+      "Les StatefulSets garantissent l'unicité et l'ordre de déploiement des Pods.",
+      "Un StatefulSet peut avoir plusieurs réplicas d'un même Pod.",
+      "Les Pods d'un StatefulSet ont un nom unique et persistant.",
+      "Un StatefulSet ne peut pas être mis à jour sans interruption."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les StatefulSets garantissent l'unicité et l'ordre de déploiement des Pods. Un StatefulSet peut avoir plusieurs réplicas d'un même Pod. Les Pods d'un StatefulSet ont un nom unique et persistant. Un StatefulSet peut être mis à jour sans interruption grâce aux Rolling Updates."
+  },
+  {
+    "id": "CKA-W&S-009",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Scheduling",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de voir les nœuds disponibles pour le scheduling ?",
+    "options": [
+      "kubectl get nodes",
+      "kubectl describe nodes",
+      "kubectl top nodes",
+      "kubectl logs nodes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "kubectl get nodes permet de voir les nœuds disponibles pour le scheduling."
+  },
+  {
+    "id": "CKA-W&S-010",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Taints et Tolerations",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Taints et Tolerations :",
+    "options": [
+      "Les Taints permettent de marquer un nœud pour qu'il ne puisse être utilisé que par certains Pods.",
+      "Les Tolerations permettent aux Pods de s'inscrire sur des nœuds avec des taints.",
+      "Les Taints et les Tolerations sont utilisés pour gérer le placement des Pods sur les nœuds.",
+      "Les Taints ne peuvent pas être supprimées une fois appliquées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les Taints permettent de marquer un nœud pour qu'il ne puisse être utilisé que par certains Pods. Les Tolerations permettent aux Pods de s'inscrire sur des nœuds avec des taints. Les Taints et les Tolerations sont utilisés pour gérer le placement des Pods sur les nœuds. Les Taints peuvent être supprimées une fois appliquées."
+  },
+  {
+    "id": "CKA-W&S-011",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Deployments :",
+    "options": [
+      "Un Deployment permet de déployer et mettre à jour des applications.",
+      "Les ReplicaSets sont gérés automatiquement par les Deployments.",
+      "Un Deployment peut être mis à l'échelle en modifiant le champ replicas.",
+      "Les Rolling Updates sont effectués par défaut pour les Deployments.",
+      "Un Deployment ne peut pas être mis à jour une fois créé."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "A est correct car un Deployment gère les déploiements et mises à jour des applications. B est correct car les ReplicaSets sont gérés automatiquement par les Deployments. C est correct car on peut modifier le champ replicas pour mettre à l'échelle un Deployment. D est correct car les Rolling Updates sont effectués par défaut pour les Deployments. E est incorrect car un Deployment peut être mis à jour une fois créé."
+  },
+  {
+    "id": "CKA-W&S-012",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de vérifier les ressources utilisées par un pod ?",
+    "options": [
+      "kubectl describe pod <nom-pod>",
+      "kubectl get pods --all-namespaces",
+      "kubectl top pod <nom-pod>",
+      "kubectl logs <nom-pod>"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "kubectl top pod <nom-pod> permet de vérifier les ressources utilisées par un pod."
+  },
+  {
+    "id": "CKA-W&S-013",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "StatefulSet",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les StatefulSets :",
+    "options": [
+      "Un StatefulSet assure l'unicité et la cohérence des identités de chaque pod.",
+      "Les pods d'un StatefulSet sont ordonnés et numérotés.",
+      "Un StatefulSet ne peut pas être mis à l'échelle horizontalement.",
+      "Les volumes persistent sont associés aux pods d'un StatefulSet et persistent même si le pod est redémarré.",
+      "Un StatefulSet ne peut pas être mis à jour une fois créé."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "A est correct car un StatefulSet assure l'unicité et la cohérence des identités de chaque pod. B est correct car les pods d'un StatefulSet sont ordonnés et numérotés. C est incorrect car un StatefulSet peut être mis à l'échelle horizontalement. D est correct car les volumes persistent sont associés aux pods d'un StatefulSet et persistent même si le pod est redémarré. E est incorrect car un StatefulSet peut être mis à jour une fois créé."
+  },
+  {
+    "id": "CKA-W&S-014",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Scheduling",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre les taints et les tolérations dans Kubernetes ?",
+    "options": [
+      "Les taints sont appliquées aux nœuds, tandis que les tolérations sont appliquées aux pods.",
+      "Les taints définissent des conditions de tolérance pour les pods, tandis que les tolérations sont des spécifications d'attirance pour les nœuds.",
+      "Les taints et les tolérations sont utilisés ensemble pour contrôler la distribution des pods sur les nœuds.",
+      "Les taints sont utilisés pour définir des politiques de sécurité, tandis que les tolérations sont utilisées pour gérer la mise à jour des pods."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Les taints et les tolérations sont utilisés ensemble pour contrôler la distribution des pods sur les nœuds."
+  },
+  {
+    "id": "CKA-W&S-015",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Graceful termination",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de la période de garde (grace period) lors d'une terminaison gracieuse des pods ?",
+    "options": [
+      "Permet de spécifier la durée pendant laquelle le pod reste actif après avoir reçu un signal de terminaison.",
+      "Permet de définir le nombre de réplicas à maintenir pendant la terminaison des pods.",
+      "Permet de configurer le nombre de seconds avant que les nœuds ne soient considérés comme indisponibles.",
+      "Permet de définir le délai avant que les pods ne soient redémarrés."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La période de garde (grace period) permet de spécifier la durée pendant laquelle le pod reste actif après avoir reçu un signal de terminaison."
+  },
+  {
+    "id": "CKA-W&S-016",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Deployments :",
+    "options": [
+      "Un Deployment permet de mettre à jour le nombre d'instances d'une application.",
+      "Les Deployments ne gèrent pas la mise à jour des applications.",
+      "Un Deployment peut être mis en pause avant une mise à jour.",
+      "Les ReplicaSets sont créés automatiquement par les Deployments pour gérer les instances."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Un Deployment permet de mettre à jour le nombre d'instances d'une application. Les Deployments ne gèrent pas la mise à jour des applications. Un Deployment peut être mis en pause avant une mise à jour. Les ReplicaSets sont créés automatiquement par les Deployments pour gérer les instances."
+  },
+  {
+    "id": "CKA-W&S-017",
+    "theme": "Workloads & Scheduling",
+    "theme_label": "Resource management",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de vérifier les ressources utilisées par un pod ?",
+    "options": [
+      "kubectl describe pod monpod",
+      "kubectl get pod monpod",
+      "kubectl top pod monpod",
+      "kubectl logs pod monpod"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "kubectl top pod monpod permet de vérifier les ressources utilisées par un pod."
   }
 ]

@@ -598,5 +598,212 @@
     ],
     "correct": 3,
     "explanation": "Cette view permet de stocker des attributs arbitraires (clé-valeur) sur les fichiers, si le système de fichiers le supporte."
+  },
+  {
+    "id": "JAVA21-FIE-001",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant les buffers dans Java NIO ?",
+    "options": [
+      "Un buffer peut être utilisé pour lire et écrire des données.",
+      "Les buffers ont une taille fixe qui ne peut pas être modifiée après leur création.",
+      "Un buffer peut être utilisé pour effectuer des opérations de lecture et d'écriture non bloquantes.",
+      "Les buffers sont toujours liés à un canal pour effectuer des opérations d'entrée/sortie."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "A est correct car un buffer peut être utilisé pour lire et écrire des données. B est incorrect car bien que les buffers aient une taille initiale, cette taille peut être modifiée en utilisant des méthodes spécifiques. C est incorrect car les buffers eux-mêmes ne sont pas non bloquants, mais peuvent être utilisés avec des canaux non bloquants. D est correct car un buffer doit généralement être associé à un canal pour effectuer des opérations d'entrée/sortie."
+  },
+  {
+    "id": "JAVA21-FIE-002",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle classe est utilisée pour effectuer des opérations d'entrée/sortie sur un fichier en mode non bloquant dans Java NIO ?",
+    "options": [
+      "FileInputStream",
+      "FileChannel",
+      "RandomAccessFile",
+      "Selector"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "B est correct car FileChannel peut être utilisé dans un mode non bloquant pour effectuer des opérations d'entrée/sortie sur un fichier. A est incorrect car FileInputStream est utilisé pour lire des fichiers en mode bloquant. C est incorrect car RandomAccessFile peut être utilisé pour accéder à des fichiers de manière séquentielle ou aléatoire, mais il n'est pas nécessairement non bloquant. D est incorrect car Selector est utilisé pour gérer plusieurs canaux, mais il n'est pas lui-même une classe d'entrée/sortie."
+  },
+  {
+    "id": "JAVA21-FIE-003",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le flux de sortie (OutputStream) :",
+    "options": [
+      "OutputStream est une classe abstraite.",
+      "OutputStream peut être utilisé pour écrire des données binaires dans un fichier.",
+      "FileOutputStream est une implémentation de OutputStream qui écrit des données dans un fichier.",
+      "BufferedOutputStream améliore les performances en utilisant un tampon."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "OutputStream est une classe abstraite, donc A est correct. OutputStream peut effectivement être utilisé pour écrire des données binaires dans un fichier, donc B est correct. FileOutputStream est une implémentation de OutputStream qui écrit des données dans un fichier, donc C est correct. BufferedOutputStream améliore les performances en utilisant un tampon, donc D est correct."
+  },
+  {
+    "id": "JAVA21-FIE-004",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle classe est utilisée pour lire des fichiers texte avec encodage ?",
+    "options": [
+      "FileReader",
+      "BufferedReader",
+      "InputStreamReader",
+      "FileInputStream"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "InputStreamReader est utilisée pour lire des flux d'octets et les convertir en caractères, ce qui inclut l'encodage. FileReader est utilisée pour lire des fichiers texte, mais sans spécifier d'encodage. BufferedReader est utilisé pour améliorer les performances de lecture, mais il ne gère pas l'encodage. FileInputStream est utilisé pour lire des fichiers binaires."
+  },
+  {
+    "id": "JAVA21-FIE-005",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le NIO (New Input/Output) :",
+    "options": [
+      "NIO permet de manipuler des fichiers en mode non bloquant.",
+      "NIO est basé sur les canaux (channels) et les tampons (buffers).",
+      "NIO ne supporte pas la lecture asynchrone des fichiers.",
+      "NIO permet de gérer efficacement des volumes de données importants."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "NIO permet effectivement de manipuler des fichiers en mode non bloquant, donc A est correct. NIO est basé sur les canaux (channels) et les tampons (buffers), donc B est correct. NIO supporte la lecture asynchrone des fichiers, donc C est incorrect. NIO permet de gérer efficacement des volumes de données importants, donc D est correct."
+  },
+  {
+    "id": "JAVA21-FIE-006",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle classe est utilisée pour écrire des fichiers texte ?",
+    "options": [
+      "FileWriter",
+      "BufferedWriter",
+      "OutputStreamWriter",
+      "FileOutputStream"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "FileWriter est utilisée pour écrire des fichiers texte. BufferedWriter est utilisé pour améliorer les performances de l'écriture, mais il ne gère pas directement les fichiers texte. OutputStreamWriter est utilisée pour écrire des flux d'octets, mais elle nécessite un encodage. FileOutputStream est utilisé pour écrire des fichiers binaires."
+  },
+  {
+    "id": "JAVA21-FIE-007",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les buffers dans NIO :",
+    "options": [
+      "Les buffers peuvent être de différents types (ByteBuffer, CharBuffer, etc.).",
+      "Les buffers ont une capacité fixe qui ne peut pas être modifiée.",
+      "Les buffers permettent de gérer efficacement les données en entrée/sortie.",
+      "Les buffers ne peuvent pas être réinitialisés après leur utilisation."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les buffers dans NIO peuvent être de différents types (ByteBuffer, CharBuffer, etc.), donc A est correct. Les buffers ont une capacité fixe qui peut être modifiée en utilisant le méthode compact(), donc B est incorrect. Les buffers permettent de gérer efficacement les données en entrée/sortie, donc C est correct. Les buffers peuvent être réinitialisés après leur utilisation en utilisant le méthode clear() ou rewind(), donc D est incorrect."
+  },
+  {
+    "id": "JAVA21-FIE-008",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les canaux (Channels) en Java NIO :",
+    "options": [
+      "Les canaux peuvent être utilisés pour lire et écrire des données.",
+      "Les canaux sont toujours associés à un flux (Stream).",
+      "Les canaux supportent l'asynchronisme.",
+      "Les canaux ne peuvent pas être utilisés avec des fichiers."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car les canaux en Java NIO sont conçus pour lire et écrire des données. Option B est incorrecte car les canaux ne sont pas toujours associés à un flux, ils peuvent être utilisés de manière indépendante. Option C est correcte car les canaux supportent l'asynchronisme, ce qui les rend très utiles dans des applications nécessitant une gestion efficace des E/S. Option D est incorrecte car les canaux peuvent en effet être utilisés avec des fichiers, ce qui facilite la manipulation de données sur le disque."
+  },
+  {
+    "id": "JAVA21-FIE-009",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ouvrir un fichier en lecture seule dans Java NIO ?",
+    "options": [
+      "Files.open(path, StandardOpenOption.READ)",
+      "Files.newInputStream(path)",
+      "Files.createFile(path)",
+      "Files.delete(path)"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Option B est correcte car Files.newInputStream(path) est la méthode utilisée pour ouvrir un fichier en lecture seule dans Java NIO. Option A est incorrecte car elle utilise StandardOpenOption.READ, qui peut être utilisé pour ouvrir un fichier en lecture et écriture. Option C est incorrecte car elle crée un nouveau fichier, ce qui n'est pas pour ouvrir en lecture seule. Option D est incorrecte car elle supprime un fichier, ce qui n'est pas pour ouvrir en lecture seule."
+  },
+  {
+    "id": "JAVA21-FIE-010",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant les buffers en Java NIO :",
+    "options": [
+      "Les buffers peuvent être alloués de manière dynamique.",
+      "Les buffers ont une capacité fixe et ne peuvent pas être redimensionnés.",
+      "Les buffers supportent l'ordre des octets (byte order).",
+      "Les buffers ne peuvent être utilisés qu'avec les canaux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car les buffers en Java NIO peuvent être alloués de manière dynamique, ce qui leur permet d'adapter leur taille en fonction des besoins. Option B est incorrecte car bien que les buffers aient une capacité fixe, ils peuvent être redimensionnés en utilisant la méthode compact() ou clear(). Option C est correcte car les buffers supportent l'ordre des octets, ce qui est particulièrement utile lors de la manipulation de données binaires. Option D est incorrecte car les buffers peuvent être utilisés non seulement avec les canaux, mais aussi directement avec des flux (Streams)."
+  },
+  {
+    "id": "JAVA21-FIE-011",
+    "theme": "Flux I/O et NIO",
+    "theme_label": "Java I/O et NIO - Fichiers, flux, buffers, canaux",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle classe est utilisée pour lire des fichiers texte en Java NIO avec un encodage spécifique ?",
+    "options": [
+      "FileReader",
+      "BufferedReader",
+      "InputStreamReader",
+      "Files.newBufferedReader(path, Charset.forName(\"UTF-8\"))"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Option D est correcte car Files.newBufferedReader(path, Charset.forName(\"UTF-8\")) est la méthode utilisée pour lire des fichiers texte en Java NIO avec un encodage spécifique. Option A est incorrecte car FileReader ne supporte pas de spécifier l'encodage. Option B est incorrecte car BufferedReader est un flux de caractères qui ne permet pas de spécifier l'encodage. Option C est incorrecte car InputStreamReader est un flux d'octets qui nécessite un InputStream, mais elle ne permet pas de spécifier directement l'encodage lors de la lecture d'un fichier."
   }
 ]

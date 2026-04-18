@@ -1,28 +1,17 @@
 {
   "id": "grafana",
-  "name": "Grafana Fundamentals",
+  "name": "Grafana Associate",
   "version": "1.0",
-  "description": "Certification Grafana - Visualisation de données et dashboards",
-  "totalQuestions": 200,
-  "examDurationMinutes": 60,
-  "examQuestionCount": 40,
-  "passingScore": 70,
+  "description": "La certification Grafana Associate valide les compétences fondamentales pour visualiser, surveiller et analyser des données avec Grafana. Elle couvre la création de dashboards, la configuration des sources de données, les alertes et l'administration de base de Grafana.",
+  "totalQuestions": 250,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 60,
+  "passingScore": 75,
   "themes": [
-    {
-      "name": "Grafana Basics",
-      "count": 50
-    },
-    {
-      "name": "Dashboards",
-      "count": 60
-    },
-    {
-      "name": "Data Sources",
-      "count": 40
-    },
-    {
-      "name": "Panels & Queries",
-      "count": 50
-    }
+    {"name": "Fondamentaux de Grafana", "count": 50},
+    {"name": "Dashboards et visualisations", "count": 75},
+    {"name": "Sources de données", "count": 50},
+    {"name": "Alertes", "count": 50},
+    {"name": "Administration et sécurité", "count": 25}
   ]
 }

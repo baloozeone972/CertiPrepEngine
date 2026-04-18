@@ -12,7 +12,7 @@
       "string, number, boolean"
     ],
     "correct": 0,
-    "explication": "Les types primitifs sont string, number, bool."
+    "explanation": "Les types primitifs sont string, number, bool."
   },
   {
     "id": "TF-02-002",
@@ -27,7 +27,7 @@
       "list, map, tuple"
     ],
     "correct": 0,
-    "explication": "list (ordre), map (clé-valeur), set (unique, non ordonné)."
+    "explanation": "list (ordre), map (clé-valeur), set (unique, non ordonné)."
   },
   {
     "id": "TF-02-003",
@@ -42,7 +42,7 @@
       "tuple est ordonné, list non"
     ],
     "correct": 0,
-    "explication": "tuple = [string, number, bool] peut mélanger les types."
+    "explanation": "tuple = [string, number, bool] peut mélanger les types."
   },
   {
     "id": "TF-02-004",
@@ -57,7 +57,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "description est optionnelle mais recommandée."
+    "explanation": "description est optionnelle mais recommandée."
   },
   {
     "id": "TF-02-005",
@@ -72,7 +72,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "sensitive = true masque la valeur dans les logs."
+    "explanation": "sensitive = true masque la valeur dans les logs."
   },
   {
     "id": "TF-02-006",
@@ -87,7 +87,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "-var 'key=value' ou -var key=value."
+    "explanation": "-var 'key=value' ou -var key=value."
   },
   {
     "id": "TF-02-007",
@@ -102,7 +102,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "-var-file est l'option."
+    "explanation": "-var-file est l'option."
   },
   {
     "id": "TF-02-008",
@@ -117,7 +117,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Ces fichiers sont chargés automatiquement s'ils existent."
+    "explanation": "Ces fichiers sont chargés automatiquement s'ils existent."
   },
   {
     "id": "TF-02-009",
@@ -132,7 +132,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "La ligne de commande écrase les autres sources."
+    "explanation": "La ligne de commande écrase les autres sources."
   },
   {
     "id": "TF-02-010",
@@ -140,9 +140,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction concatène des listes ?",
-    "options": ["concat", "merge", "join", "flatten"],
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
     "correct": 0,
-    "explication": "concat([1,2], [3,4]) = [1,2,3,4]."
+    "explanation": "concat([1,2], [3,4]) = [1,2,3,4]."
   },
   {
     "id": "TF-02-011",
@@ -150,9 +155,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction fusionne des maps ?",
-    "options": ["merge", "concat", "map", "join"],
+    "options": [
+      "merge",
+      "concat",
+      "map",
+      "join"
+    ],
     "correct": 0,
-    "explication": "merge(map1, map2) combine les maps."
+    "explanation": "merge(map1, map2) combine les maps."
   },
   {
     "id": "TF-02-012",
@@ -160,9 +170,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne la longueur d'une liste ou d'une map ?",
-    "options": ["length", "count", "size", "len"],
+    "options": [
+      "length",
+      "count",
+      "size",
+      "len"
+    ],
     "correct": 0,
-    "explication": "length(list) retourne le nombre d'éléments."
+    "explanation": "length(list) retourne le nombre d'éléments."
   },
   {
     "id": "TF-02-013",
@@ -170,9 +185,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne un élément d'une liste par index ?",
-    "options": ["element", "index", "lookup", "get"],
+    "options": [
+      "element",
+      "index",
+      "lookup",
+      "get"
+    ],
     "correct": 0,
-    "explication": "element(list, index) retourne l'élément (avec wrap-around)."
+    "explanation": "element(list, index) retourne l'élément (avec wrap-around)."
   },
   {
     "id": "TF-02-014",
@@ -180,9 +200,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction cherche une clé dans une map avec valeur par défaut ?",
-    "options": ["lookup", "get", "element", "index"],
+    "options": [
+      "lookup",
+      "get",
+      "element",
+      "index"
+    ],
     "correct": 0,
-    "explication": "lookup(map, key, default) est très utilisée."
+    "explanation": "lookup(map, key, default) est très utilisée."
   },
   {
     "id": "TF-02-015",
@@ -190,9 +215,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction crée une map à partir d'une liste de paires clé-valeur ?",
-    "options": ["map", "tomap", "merge", "zipmap"],
+    "options": [
+      "map",
+      "tomap",
+      "merge",
+      "zipmap"
+    ],
     "correct": 3,
-    "explication": "zipmap(['a','b'], [1,2]) = {'a':1,'b':2}."
+    "explanation": "zipmap(['a','b'], [1,2]) = {'a':1,'b':2}."
   },
   {
     "id": "TF-02-016",
@@ -200,9 +230,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne une sous-liste (slice) ?",
-    "options": ["slice", "substr", "split", "element"],
+    "options": [
+      "slice",
+      "substr",
+      "split",
+      "element"
+    ],
     "correct": 0,
-    "explication": "slice(list, start, end) fonctionne comme en Python."
+    "explanation": "slice(list, start, end) fonctionne comme en Python."
   },
   {
     "id": "TF-02-017",
@@ -210,9 +245,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction convertit une chaîne en liste en la divisant ?",
-    "options": ["split", "join", "regex", "chomp"],
+    "options": [
+      "split",
+      "join",
+      "regex",
+      "chomp"
+    ],
     "correct": 0,
-    "explication": "split(',', 'a,b,c') = ['a','b','c']."
+    "explanation": "split(',', 'a,b,c') = ['a','b','c']."
   },
   {
     "id": "TF-02-018",
@@ -220,9 +260,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction combine une liste en chaîne avec un séparateur ?",
-    "options": ["join", "split", "format", "concat"],
+    "options": [
+      "join",
+      "split",
+      "format",
+      "concat"
+    ],
     "correct": 0,
-    "explication": "join(',', ['a','b','c']) = 'a,b,c'."
+    "explanation": "join(',', ['a','b','c']) = 'a,b,c'."
   },
   {
     "id": "TF-02-019",
@@ -230,9 +275,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction formate une chaîne (comme printf) ?",
-    "options": ["format", "sprintf", "printf", "formatstring"],
+    "options": [
+      "format",
+      "sprintf",
+      "printf",
+      "formatstring"
+    ],
     "correct": 0,
-    "explication": "format('Hello %s', name)."
+    "explanation": "format('Hello %s', name)."
   },
   {
     "id": "TF-02-020",
@@ -240,9 +290,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne la valeur absolue ?",
-    "options": ["abs", "absolut", "absolute", "math.abs"],
+    "options": [
+      "abs",
+      "absolut",
+      "absolute",
+      "math.abs"
+    ],
     "correct": 0,
-    "explication": "abs(-5) = 5."
+    "explanation": "abs(-5) = 5."
   },
   {
     "id": "TF-02-021",
@@ -250,9 +305,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne le plus grand nombre ?",
-    "options": ["max", "maximum", "biggest", "maxnum"],
+    "options": [
+      "max",
+      "maximum",
+      "biggest",
+      "maxnum"
+    ],
     "correct": 0,
-    "explication": "max(5,12,9) = 12."
+    "explanation": "max(5,12,9) = 12."
   },
   {
     "id": "TF-02-022",
@@ -260,9 +320,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne le plus petit nombre ?",
-    "options": ["min", "minimum", "smallest", "minnum"],
+    "options": [
+      "min",
+      "minimum",
+      "smallest",
+      "minnum"
+    ],
     "correct": 0,
-    "explication": "min(5,12,9) = 5."
+    "explanation": "min(5,12,9) = 5."
   },
   {
     "id": "TF-02-023",
@@ -270,9 +335,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction encode une chaîne en base64 ?",
-    "options": ["base64encode", "base64", "b64encode", "encodebase64"],
+    "options": [
+      "base64encode",
+      "base64",
+      "b64encode",
+      "encodebase64"
+    ],
     "correct": 0,
-    "explication": "base64encode('hello') = 'aGVsbG8='."
+    "explanation": "base64encode('hello') = 'aGVsbG8='."
   },
   {
     "id": "TF-02-024",
@@ -280,9 +350,14 @@
     "theme_label": "Fonctions",
     "difficulty": "easy",
     "question": "Quelle fonction décode une chaîne base64 ?",
-    "options": ["base64decode", "base64", "b64decode", "decodebase64"],
+    "options": [
+      "base64decode",
+      "base64",
+      "b64decode",
+      "decodebase64"
+    ],
     "correct": 0,
-    "explication": "base64decode('aGVsbG8=') = 'hello'."
+    "explanation": "base64decode('aGVsbG8=') = 'hello'."
   },
   {
     "id": "TF-02-025",
@@ -297,7 +372,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "condition ? valeur_si_vrai : valeur_si_faux."
+    "explanation": "condition ? valeur_si_vrai : valeur_si_faux."
   },
   {
     "id": "TF-02-026",
@@ -312,7 +387,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "C'est un pattern courant pour rendre une ressource optionnelle."
+    "explanation": "C'est un pattern courant pour rendre une ressource optionnelle."
   },
   {
     "id": "TF-02-027",
@@ -327,7 +402,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "[for item in list : expression] produit une liste."
+    "explanation": "[for item in list : expression] produit une liste."
   },
   {
     "id": "TF-02-028",
@@ -342,7 +417,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "{for item in list : key => value} produit une map."
+    "explanation": "{for item in list : key => value} produit une map."
   },
   {
     "id": "TF-02-029",
@@ -357,7 +432,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les deux syntaxes sont valides."
+    "explanation": "Les deux syntaxes sont valides."
   },
   {
     "id": "TF-02-030",
@@ -372,7 +447,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "dynamic permet de générer des blocs imbriqués dynamiquement."
+    "explanation": "dynamic permet de générer des blocs imbriqués dynamiquement."
   },
   {
     "id": "TF-02-031",
@@ -387,7 +462,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "dynamic 'nom' { for_each = collection content { ... } }."
+    "explanation": "dynamic 'nom' { for_each = collection content { ... } }."
   },
   {
     "id": "TF-02-032",
@@ -402,7 +477,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "aws_instance.web[*].public_ip retourne toutes les IPs."
+    "explanation": "aws_instance.web[*].public_ip retourne toutes les IPs."
   },
   {
     "id": "TF-02-033",
@@ -417,7 +492,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les deux syntaxes sont équivalentes."
+    "explanation": "Les deux syntaxes sont équivalentes."
   },
   {
     "id": "TF-02-034",
@@ -425,9 +500,14 @@
     "theme_label": "Interpolation",
     "difficulty": "easy",
     "question": "Comment interpoler une valeur dans une chaîne ?",
-    "options": ["${var.name}", "$var.name", "{var.name}", "A et B"],
+    "options": [
+      "${var.name}",
+      "$var.name",
+      "{var.name}",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "${} est la syntaxe d'interpolation."
+    "explanation": "${} est la syntaxe d'interpolation."
   },
   {
     "id": "TF-02-035",
@@ -442,7 +522,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Heredoc (<<-EOT) ou \"\"\" (multi-lignes)."
+    "explanation": "Heredoc (<<-EOT) ou \"\"\" (multi-lignes)."
   },
   {
     "id": "TF-02-036",
@@ -450,9 +530,14 @@
     "theme_label": "Expressions régulières",
     "difficulty": "easy",
     "question": "Quelle fonction applique une regex ?",
-    "options": ["regex", "match", "regexall", "A et C"],
+    "options": [
+      "regex",
+      "match",
+      "regexall",
+      "A et C"
+    ],
     "correct": 3,
-    "explication": "regex capture la première correspondance, regexall toutes."
+    "explanation": "regex capture la première correspondance, regexall toutes."
   },
   {
     "id": "TF-02-037",
@@ -460,9 +545,14 @@
     "theme_label": "Expressions régulières",
     "difficulty": "easy",
     "question": "Que retourne regex('([a-z]+)', 'hello world') ?",
-    "options": ["hello", "world", "['hello']", "null"],
+    "options": [
+      "hello",
+      "world",
+      "['hello']",
+      "null"
+    ],
     "correct": 0,
-    "explication": "regex retourne la première capture."
+    "explanation": "regex retourne la première capture."
   },
   {
     "id": "TF-02-038",
@@ -470,9 +560,14 @@
     "theme_label": "Filesystem functions",
     "difficulty": "easy",
     "question": "Quelle fonction lit le contenu d'un fichier ?",
-    "options": ["file", "readfile", "templatefile", "filecontent"],
+    "options": [
+      "file",
+      "readfile",
+      "templatefile",
+      "filecontent"
+    ],
     "correct": 0,
-    "explication": "file('path') retourne le contenu sous forme de chaîne."
+    "explanation": "file('path') retourne le contenu sous forme de chaîne."
   },
   {
     "id": "TF-02-039",
@@ -480,9 +575,14 @@
     "theme_label": "Filesystem functions",
     "difficulty": "easy",
     "question": "Quelle fonction lit un fichier et le traite comme un template ?",
-    "options": ["templatefile", "file", "template", "render"],
+    "options": [
+      "templatefile",
+      "file",
+      "template",
+      "render"
+    ],
     "correct": 0,
-    "explication": "templatefile('script.sh.tpl', { var = 'value' })"
+    "explanation": "templatefile('script.sh.tpl', { var = 'value' })"
   },
   {
     "id": "TF-02-040",
@@ -490,9 +590,14 @@
     "theme_label": "Filesystem functions",
     "difficulty": "easy",
     "question": "Quelle fonction liste les fichiers d'un répertoire ?",
-    "options": ["fileset", "listdir", "glob", "filelist"],
+    "options": [
+      "fileset",
+      "listdir",
+      "glob",
+      "filelist"
+    ],
     "correct": 0,
-    "explication": "fileset(path, pattern) retourne une liste de fichiers."
+    "explanation": "fileset(path, pattern) retourne une liste de fichiers."
   },
   {
     "id": "TF-02-041",
@@ -500,9 +605,14 @@
     "theme_label": "Type conversion",
     "difficulty": "easy",
     "question": "Comment convertir une liste en set ?",
-    "options": ["toset", "set", "newset", "convert"],
+    "options": [
+      "toset",
+      "set",
+      "newset",
+      "convert"
+    ],
     "correct": 0,
-    "explication": "toset(list) élimine les doublons."
+    "explanation": "toset(list) élimine les doublons."
   },
   {
     "id": "TF-02-042",
@@ -510,9 +620,14 @@
     "theme_label": "Type conversion",
     "difficulty": "easy",
     "question": "Comment convertir une map en liste de valeurs ?",
-    "options": ["values", "mapvalues", "list", "tolist"],
+    "options": [
+      "values",
+      "mapvalues",
+      "list",
+      "tolist"
+    ],
     "correct": 0,
-    "explication": "values(map) retourne une liste des valeurs."
+    "explanation": "values(map) retourne une liste des valeurs."
   },
   {
     "id": "TF-02-043",
@@ -520,9 +635,14 @@
     "theme_label": "Type conversion",
     "difficulty": "easy",
     "question": "Comment convertir une map en liste de clés ?",
-    "options": ["keys", "mapkeys", "keylist", "tokeys"],
+    "options": [
+      "keys",
+      "mapkeys",
+      "keylist",
+      "tokeys"
+    ],
     "correct": 0,
-    "explication": "keys(map) retourne une liste des clés."
+    "explanation": "keys(map) retourne une liste des clés."
   },
   {
     "id": "TF-02-044",
@@ -537,7 +657,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "try(expr1, expr2, ...) retourne la première non nulle."
+    "explanation": "try(expr1, expr2, ...) retourne la première non nulle."
   },
   {
     "id": "TF-02-045",
@@ -552,7 +672,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "can(expr) retourne true si l'expression réussit."
+    "explanation": "can(expr) retourne true si l'expression réussit."
   },
   {
     "id": "TF-02-046",
@@ -560,9 +680,14 @@
     "theme_label": "Time functions",
     "difficulty": "easy",
     "question": "Quelle fonction retourne l'horodatage actuel (RFC3339) ?",
-    "options": ["timestamp", "time", "now", "current_time"],
+    "options": [
+      "timestamp",
+      "time",
+      "now",
+      "current_time"
+    ],
     "correct": 0,
-    "explication": "timestamp() retourne une chaîne comme '2024-01-01T00:00:00Z'."
+    "explanation": "timestamp() retourne une chaîne comme '2024-01-01T00:00:00Z'."
   },
   {
     "id": "TF-02-047",
@@ -570,9 +695,14 @@
     "theme_label": "Time functions",
     "difficulty": "easy",
     "question": "Comment formater une date ?",
-    "options": ["formatdate", "dateformat", "format_time", "strftime"],
+    "options": [
+      "formatdate",
+      "dateformat",
+      "format_time",
+      "strftime"
+    ],
     "correct": 0,
-    "explication": "formatdate('DD MMM YYYY', timestamp())"
+    "explanation": "formatdate('DD MMM YYYY', timestamp())"
   },
   {
     "id": "TF-02-048",
@@ -580,9 +710,14 @@
     "theme_label": "Time functions",
     "difficulty": "easy",
     "question": "Quelle fonction ajoute une durée à un timestamp ?",
-    "options": ["timeadd", "addtime", "timestamp_add", "time_plus"],
+    "options": [
+      "timeadd",
+      "addtime",
+      "timestamp_add",
+      "time_plus"
+    ],
     "correct": 0,
-    "explication": "timeadd(timestamp, '72h') ajoute 72 heures."
+    "explanation": "timeadd(timestamp, '72h') ajoute 72 heures."
   },
   {
     "id": "TF-02-049",
@@ -590,9 +725,14 @@
     "theme_label": "Crypto functions",
     "difficulty": "easy",
     "question": "Quelle fonction calcule le MD5 d'une chaîne ?",
-    "options": ["md5", "hash", "md5sum", "digest"],
+    "options": [
+      "md5",
+      "hash",
+      "md5sum",
+      "digest"
+    ],
     "correct": 0,
-    "explication": "md5('hello') retourne le hash."
+    "explanation": "md5('hello') retourne le hash."
   },
   {
     "id": "TF-02-050",
@@ -600,9 +740,14 @@
     "theme_label": "Crypto functions",
     "difficulty": "easy",
     "question": "Quelle fonction calcule le SHA256 ?",
-    "options": ["sha256", "sha256sum", "hash", "digest256"],
+    "options": [
+      "sha256",
+      "sha256sum",
+      "hash",
+      "digest256"
+    ],
     "correct": 0,
-    "explication": "sha256('hello') retourne le hash."
+    "explanation": "sha256('hello') retourne le hash."
   },
   {
     "id": "TF-02-051",
@@ -610,9 +755,14 @@
     "theme_label": "Crypto functions",
     "difficulty": "easy",
     "question": "Quelle fonction génère un UUID aléatoire ?",
-    "options": ["uuid", "uuidv4", "random_uuid", "A et B"],
+    "options": [
+      "uuid",
+      "uuidv4",
+      "random_uuid",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "uuid() retourne un UUID v4."
+    "explanation": "uuid() retourne un UUID v4."
   },
   {
     "id": "TF-02-052",
@@ -620,9 +770,14 @@
     "theme_label": "Crypto functions",
     "difficulty": "easy",
     "question": "Quelle fonction encode en base64 ?",
-    "options": ["base64encode", "b64encode", "encodebase64", "A et B"],
+    "options": [
+      "base64encode",
+      "b64encode",
+      "encodebase64",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "base64encode('hello')"
+    "explanation": "base64encode('hello')"
   },
   {
     "id": "TF-02-053",
@@ -630,9 +785,14 @@
     "theme_label": "JSON/YAML",
     "difficulty": "easy",
     "question": "Quelle fonction parse une chaîne JSON ?",
-    "options": ["jsondecode", "jsonparse", "from_json", "parsejson"],
+    "options": [
+      "jsondecode",
+      "jsonparse",
+      "from_json",
+      "parsejson"
+    ],
     "correct": 0,
-    "explication": "jsondecode('{\"a\":1}') retourne une map."
+    "explanation": "jsondecode('{\"a\":1}') retourne une map."
   },
   {
     "id": "TF-02-054",
@@ -640,9 +800,14 @@
     "theme_label": "JSON/YAML",
     "difficulty": "easy",
     "question": "Quelle fonction encode une valeur en JSON ?",
-    "options": ["jsonencode", "to_json", "jsonstring", "json"],
+    "options": [
+      "jsonencode",
+      "to_json",
+      "jsonstring",
+      "json"
+    ],
     "correct": 0,
-    "explication": "jsonencode({a=1}) = '{\"a\":1}'."
+    "explanation": "jsonencode({a=1}) = '{\"a\":1}'."
   },
   {
     "id": "TF-02-055",
@@ -650,9 +815,14 @@
     "theme_label": "JSON/YAML",
     "difficulty": "easy",
     "question": "Quelle fonction parse une chaîne YAML ?",
-    "options": ["yamldecode", "yamlparse", "from_yaml", "parseyaml"],
+    "options": [
+      "yamldecode",
+      "yamlparse",
+      "from_yaml",
+      "parseyaml"
+    ],
     "correct": 0,
-    "explication": "yamldecode('a: 1') retourne une map."
+    "explanation": "yamldecode('a: 1') retourne une map."
   },
   {
     "id": "TF-02-056",
@@ -660,9 +830,14 @@
     "theme_label": "JSON/YAML",
     "difficulty": "easy",
     "question": "Quelle fonction encode une valeur en YAML ?",
-    "options": ["yamlencode", "to_yaml", "yamlstring", "yaml"],
+    "options": [
+      "yamlencode",
+      "to_yaml",
+      "yamlstring",
+      "yaml"
+    ],
     "correct": 0,
-    "explication": "yamlencode({a=1}) = 'a: 1\\n'."
+    "explanation": "yamlencode({a=1}) = 'a: 1\\n'."
   },
   {
     "id": "TF-02-057",
@@ -677,7 +852,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "provider 'aws' { ... } ou provider aws { ... }."
+    "explanation": "provider 'aws' { ... } ou provider aws { ... }."
   },
   {
     "id": "TF-02-058",
@@ -692,7 +867,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "alias permet d'avoir plusieurs configurations."
+    "explanation": "alias permet d'avoir plusieurs configurations."
   },
   {
     "id": "TF-02-059",
@@ -707,7 +882,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "provider = aws.west."
+    "explanation": "provider = aws.west."
   },
   {
     "id": "TF-02-060",
@@ -722,7 +897,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "module 'nom' { source = ... }."
+    "explanation": "module 'nom' { source = ... }."
   },
   {
     "id": "TF-02-061",
@@ -730,9 +905,14 @@
     "theme_label": "Module outputs",
     "difficulty": "easy",
     "question": "Comment accéder à un output d'un module ?",
-    "options": ["module.vpc.vpc_id", "${module.vpc.vpc_id}", "A et B", "module['vpc'].vpc_id"],
+    "options": [
+      "module.vpc.vpc_id",
+      "${module.vpc.vpc_id}",
+      "A et B",
+      "module['vpc'].vpc_id"
+    ],
     "correct": 3,
-    "explication": "module.nom.output."
+    "explanation": "module.nom.output."
   },
   {
     "id": "TF-02-062",
@@ -747,7 +927,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "version = '...' dans le bloc module."
+    "explanation": "version = '...' dans le bloc module."
   },
   {
     "id": "TF-02-063",
@@ -762,7 +942,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "count = 3 crée 3 modules."
+    "explanation": "count = 3 crée 3 modules."
   },
   {
     "id": "TF-02-064",
@@ -777,7 +957,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "for_each = var.map crée un module par élément."
+    "explanation": "for_each = var.map crée un module par élément."
   },
   {
     "id": "TF-02-065",
@@ -792,7 +972,7 @@
       "Seulement Git"
     ],
     "correct": 0,
-    "explication": "Source peut être locale, registry, git, etc."
+    "explanation": "Source peut être locale, registry, git, etc."
   },
   {
     "id": "TF-02-066",
@@ -807,7 +987,7 @@
       "A et C"
     ],
     "correct": 1,
-    "explication": "git:: devant l'URL."
+    "explanation": "git:: devant l'URL."
   },
   {
     "id": "TF-02-067",
@@ -822,7 +1002,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le paramètre ref spécifie la branche/tag/commit."
+    "explanation": "Le paramètre ref spécifie la branche/tag/commit."
   },
   {
     "id": "TF-02-068",
@@ -830,9 +1010,14 @@
     "theme_label": "Module outputs",
     "difficulty": "easy",
     "question": "Un module peut-il avoir des outputs ?",
-    "options": ["Oui", "Non", "Uniquement les modules racine", "Uniquement les modules enfants"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les modules racine",
+      "Uniquement les modules enfants"
+    ],
     "correct": 0,
-    "explication": "Les outputs permettent de passer des données du module au parent."
+    "explanation": "Les outputs permettent de passer des données du module au parent."
   },
   {
     "id": "TF-02-069",
@@ -847,7 +1032,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Les arguments du module sont les noms des variables."
+    "explanation": "Les arguments du module sont les noms des variables."
   },
   {
     "id": "TF-02-070",
@@ -862,6 +1047,366 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "output 'nom' { value = ... }."
+    "explanation": "output 'nom' { value = ... }."
+  },
+  {
+    "id": "TF-CL-002",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une variable déclarée avec 'var' et une variable déclarée avec 'locals' dans Terraform ?",
+    "options": [
+      "'var' est utilisée pour les variables d'environnement, tandis que 'locals' est utilisée pour les variables locales au sein du module.",
+      "'var' est utilisée pour les variables de configuration, tandis que 'locals' est utilisée pour les variables temporaires.",
+      "'var' est utilisée pour les variables d'entrée, tandis que 'locals' est utilisée pour les variables de sortie.",
+      "'var' est utilisée pour les variables définies dans le main.tf, tandis que 'locals' est utilisée pour les variables définies dans un module."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "'var' est utilisée pour les variables de configuration, tandis que 'locals' est utilisée pour les variables temporaires (B correct)."
+  },
+  {
+    "id": "TF-CL-003",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions de cryptage en Terraform :",
+    "options": [
+      "La fonction 'bcrypt' génère un hash de mot de passe.",
+      "La fonction 'base64encode' encode une chaîne en base64.",
+      "La fonction 'md5' génère un hash MD5.",
+      "La fonction 'sha256' génère un hash SHA-1."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La fonction 'bcrypt' génère un hash de mot de passe (A correct). La fonction 'base64encode' encode une chaîne en base64 (B correct). La fonction 'md5' génère un hash MD5 (C correct). La fonction 'sha256' génère un hash SHA-1, pas SHA-256 (D incorrect)."
+  },
+  {
+    "id": "TF-CL-004",
+    "theme": "Configuration Language",
+    "theme_label": "JSON/YAML",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre l'utilisation de JSON et YAML dans Terraform ?",
+    "options": [
+      "JSON est utilisé pour les fichiers de configuration, tandis que YAML est utilisé pour les fichiers .tfvars.",
+      "JSON est utilisé pour les fichiers de sortie, tandis que YAML est utilisé pour les fichiers d'entrée.",
+      "JSON et YAML sont interchangeables dans Terraform.",
+      "JSON est utilisé pour les fichiers de variables, tandis que YAML est utilisé pour les fichiers de configuration."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "JSON est utilisé pour les fichiers de configuration, tandis que YAML est utilisé pour les fichiers .tfvars (A correct)."
+  },
+  {
+    "id": "TF-CL-005",
+    "theme": "Configuration Language",
+    "theme_label": "Types de données",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un 'list' et un 'map' en Terraform ?",
+    "options": [
+      "Un 'list' contient des éléments ordonnés, tandis qu'un 'map' contient des paires clé-valeur.",
+      "Un 'list' est utilisé pour stocker des données scalaires, tandis qu'un 'map' est utilisé pour stocker des objets complexes.",
+      "Un 'list' et un 'map' sont interchangeables dans Terraform.",
+      "Un 'list' est utilisé pour stocker des données structurées, tandis qu'un 'map' est utilisé pour stocker des données simples."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un 'list' contient des éléments ordonnés, tandis qu'un 'map' contient des paires clé-valeur (A correct)."
+  },
+  {
+    "id": "TF-CL-005",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions de cryptographie dans Terraform :",
+    "options": [
+      "hashicorp.crypto.md5() génère un hash MD5",
+      "hashicorp.crypto.sha1() génère un hash SHA-1",
+      "hashicorp.crypto.sha256() génère un hash SHA-256",
+      "hashicorp.crypto.sha512() génère un hash SHA-512",
+      "hashicorp.crypto.base64encode() encode en base64"
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3,
+      4
+    ],
+    "explanation": "hashicorp.crypto.md5() et hashicorp.crypto.sha1() génèrent des hashes MD5 et SHA-1 respectivement, ce qui est incorrect. hashicorp.crypto.sha256() et hashicorp.crypto.sha512() génèrent des hashes SHA-256 et SHA-512 respectivement, ce qui est correct. hashicorp.crypto.base64encode() encode en base64, ce qui est également correct."
+  },
+  {
+    "id": "TF-CL-006",
+    "theme": "Configuration Language",
+    "theme_label": "Types de données",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un 'list' et un 'set' en Terraform ?",
+    "options": [
+      "Un 'list' est ordonné et peut contenir des éléments en double, tandis qu'un 'set' est non-ordonné et ne peut contenir des éléments en double.",
+      "Un 'list' est non-ordonné et ne peut contenir des éléments en double, tandis qu'un 'set' est ordonné et peut contenir des éléments en double.",
+      "Un 'list' et un 'set' sont les mêmes types de données avec des différences mineures.",
+      "Un 'list' est utilisé pour stocker des données non-structurées, tandis qu'un 'set' est utilisé pour stocker des données structurées."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un 'list' est ordonné et peut contenir des éléments en double, tandis qu'un 'set' est non-ordonné et ne peut contenir des éléments en double, ce qui est correct."
+  },
+  {
+    "id": "TF-CL-007",
+    "theme": "Configuration Language",
+    "theme_label": "For expressions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les expressions 'for' dans Terraform :",
+    "options": [
+      "Les expressions 'for' sont utilisées pour itérer sur des listes et générer de nouvelles structures de données.",
+      "Les expressions 'for' ne peuvent être utilisées que pour itérer sur des listes et non sur d'autres types de données.",
+      "Les expressions 'for' peuvent être imbriquées pour itérer sur plusieurs structures de données.",
+      "Les expressions 'for' génèrent toujours des listes, même si l'on itère sur un autre type de données.",
+      "Les expressions 'for' peuvent être utilisées pour filtrer des éléments dans une liste."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Les expressions 'for' sont utilisées pour itérer sur des listes et générer de nouvelles structures de données, ce qui est correct. Les expressions 'for' peuvent être imbriquées pour itérer sur plusieurs structures de données, ce qui est également correct. Les expressions 'for' peuvent être utilisées pour filtrer des éléments dans une liste, ce qui est correct. Les expressions 'for' ne peuvent être utilisées que pour itérer sur des listes et non sur d'autres types de données, ce qui est incorrect. Les expressions 'for' génèrent toujours des listes, même si l'on itère sur un autre type de données, ce qui est incorrect."
+  },
+  {
+    "id": "TF-CL-008",
+    "theme": "Configuration Language",
+    "theme_label": "Filesystem functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions de gestion du système de fichiers dans Terraform :",
+    "options": [
+      "file() lit le contenu d'un fichier et retourne une chaîne de caractères.",
+      "fileexists() vérifie si un fichier existe et retourne une valeur booléenne.",
+      "readfile() lit le contenu d'un fichier et retourne un tableau de chaînes de caractères.",
+      "writefile() écrit du contenu dans un fichier spécifié.",
+      "copy() copie un fichier d'un emplacement à un autre."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "file() lit le contenu d'un fichier et retourne une chaîne de caractères, ce qui est correct. fileexists() vérifie si un fichier existe et retourne une valeur booléenne, ce qui est également correct. readfile() lit le contenu d'un fichier et retourne un tableau de chaînes de caractères, ce qui est incorrect. writefile() écrit du contenu dans un fichier spécifié, ce qui est correct. copy() copie un fichier d'un emplacement à un autre, ce qui est également correct."
+  },
+  {
+    "id": "TF-CL-009",
+    "theme": "Configuration Language",
+    "theme_label": "Dynamic blocks",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité des blocs dynamiques dans Terraform ?",
+    "options": [
+      "Permettent de générer des structures de données complexes en fonction d'une condition.",
+      "Permettent de définir des ressources multiples avec une seule configuration réutilisable.",
+      "Permettent d'itérer sur des listes et de générer une ressource pour chaque élément.",
+      "Permettent de définir des variables dynamiques qui peuvent changer à l'exécution.",
+      "Permettent de conditionner la création d'une ressource en fonction d'une valeur."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Les blocs dynamiques dans Terraform permettent d'itérer sur des listes et de générer une ressource pour chaque élément, ce qui est correct."
+  },
+  {
+    "id": "TF-CL-010",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions de chiffrement en Terraform :",
+    "options": [
+      "base64encode() est utilisée pour encoder en base64.",
+      "sha256() est utilisée pour calculer le hash SHA-256.",
+      "md5() est utilisée pour calculer le hash MD5.",
+      "hmac() est utilisée pour générer un message HMAC."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "base64encode() est correct car elle encode en base64. sha256() et md5() sont corrects pour les calculs de hash respectifs. hmac() est incorrect car elle ne génère pas directement un HMAC, mais plutôt une signature HMAC."
+  },
+  {
+    "id": "TF-CL-011",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une variable déclarée avec 'variable' et une variable déclarée avec 'locals' dans Terraform ?",
+    "options": [
+      "La variable déclarée avec 'variable' est accessible dans toutes les parties du code, tandis que celle déclarée avec 'locals' est locale à la portée où elle est définie.",
+      "La variable déclarée avec 'variable' est locale à la portée où elle est définie, tandis que celle déclarée avec 'locals' est accessible dans toutes les parties du code.",
+      "La variable déclarée avec 'variable' est utilisée pour des valeurs dynamiques, tandis que celle déclarée avec 'locals' est utilisée pour des valeurs statiques.",
+      "La variable déclarée avec 'variable' est utilisée pour des valeurs statiques, tandis que celle déclarée avec 'locals' est utilisée pour des valeurs dynamiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La variable déclarée avec 'variable' est locale à la portée où elle est définie, tandis que celle déclarée avec 'locals' est accessible dans toutes les parties du code."
+  },
+  {
+    "id": "TF-CL-012",
+    "theme": "Configuration Language",
+    "theme_label": "For expressions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les expressions 'for' en Terraform :",
+    "options": [
+      "Les expressions 'for' peuvent être utilisées pour itérer sur des listes et générer des nouvelles listes.",
+      "Les expressions 'for' peuvent être utilisées pour itérer sur des objets et générer des nouvelles listes.",
+      "Les expressions 'for' peuvent être utilisées pour itérer sur des objets et générer des nouvelles structures de données.",
+      "Les expressions 'for' peuvent être utilisées pour itérer sur des listes et générer des nouvelles structures de données."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les expressions 'for' peuvent être utilisées pour itérer sur des listes et générer des nouvelles structures de données. Elles ne peuvent pas directement itérer sur des objets et générer des nouvelles listes."
+  },
+  {
+    "id": "TF-CL-013",
+    "theme": "Configuration Language",
+    "theme_label": "Conditions",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure façon de vérifier si une variable est vide ou non dans Terraform ?",
+    "options": [
+      "Utiliser 'var.my_variable != null'",
+      "Utiliser 'length(var.my_variable) == 0'",
+      "Utiliser 'var.my_variable == null'",
+      "Utiliser 'length(var.my_variable) > 0'"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La meilleure façon de vérifier si une variable est vide ou non dans Terraform est d'utiliser 'length(var.my_variable) == 0'."
+  },
+  {
+    "id": "TF-CL-014",
+    "theme": "Configuration Language",
+    "theme_label": "Dynamic blocks",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les blocs dynamiques en Terraform :",
+    "options": [
+      "Les blocs dynamiques sont utilisés pour itérer sur des listes et générer des ressources multiples.",
+      "Les blocs dynamiques sont utilisés pour définir des configurations conditionnelles basées sur les valeurs de variables.",
+      "Les blocs dynamiques sont utilisés pour inclure du code conditionnel dans une configuration Terraform.",
+      "Les blocs dynamiques sont utilisés pour définir des ressources multiples sans itérer sur une liste."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les blocs dynamiques sont utilisés pour itérer sur des listes et générer des ressources multiples. Ils peuvent également être utilisés pour définir des configurations conditionnelles basées sur les valeurs de variables. Ils ne sont pas utilisés pour inclure du code conditionnel dans une configuration Terraform, mais plutôt pour générer des ressources multiples."
+  },
+  {
+    "id": "TF-CL-015",
+    "theme": "Configuration Language",
+    "theme_label": "For expressions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les for expressions :",
+    "options": [
+      "Les for expressions peuvent être utilisées pour itérer sur des listes et générer des ressources multiples.",
+      "Les for expressions ne peuvent être utilisées que pour itérer sur les objets et générer des ressources multiples.",
+      "Les for expressions peuvent être utilisées pour itérer sur les listes et générer des ressources multiples, mais pas sur les objets.",
+      "Les for expressions peuvent être utilisées pour itérer sur des listes et générer des ressources multiples, mais pas sur les objets."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les for expressions peuvent être utilisées pour itérer sur des listes et générer des ressources multiples. Elles ne peuvent pas être utilisées pour itérer sur les objets de la même manière."
+  },
+  {
+    "id": "TF-CL-016",
+    "theme": "Configuration Language",
+    "theme_label": "Variables",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une variable déclarée avec 'var' et une variable déclarée avec 'locals' ?",
+    "options": [
+      "Une variable déclarée avec 'var' est une variable d'entrée, tandis qu'une variable déclarée avec 'locals' est une variable locale.",
+      "Une variable déclarée avec 'var' est une variable de sortie, tandis qu'une variable déclarée avec 'locals' est une variable d'entrée.",
+      "Une variable déclarée avec 'var' est une variable locale, tandis qu'une variable déclarée avec 'locals' est une variable d'entrée.",
+      "Une variable déclarée avec 'var' est une variable de sortie, tandis qu'une variable déclarée avec 'locals' est une variable locale."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Une variable déclarée avec 'var' est une variable d'entrée, tandis qu'une variable déclarée avec 'locals' est une variable locale."
+  },
+  {
+    "id": "TF-CL-017",
+    "theme": "Configuration Language",
+    "theme_label": "Crypto functions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les fonctions de chiffrement :",
+    "options": [
+      "La fonction 'base64encode' peut être utilisée pour encoder une chaîne en base64.",
+      "La fonction 'bcrypt' peut être utilisée pour hasher un mot de passe.",
+      "La fonction 'sha256' peut être utilisée pour générer un hachage SHA-256 d'une chaîne.",
+      "La fonction 'md5' peut être utilisée pour générer un hachage MD5 d'une chaîne."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "La fonction 'base64encode' peut être utilisée pour encoder une chaîne en base64. La fonction 'bcrypt' peut être utilisée pour hasher un mot de passe. La fonction 'sha256' peut être utilisée pour générer un hachage SHA-256 d'une chaîne. La fonction 'md5' peut également être utilisée pour générer un hachage MD5 d'une chaîne."
+  },
+  {
+    "id": "TF-CL-018",
+    "theme": "Configuration Language",
+    "theme_label": "Time functions",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonction peut être utilisée pour obtenir la date et l'heure actuelles au format ISO 8601 ?",
+    "options": [
+      "timestamp()",
+      "current_time()",
+      "utc_timestamp()",
+      "iso8601_date()"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La fonction 'utc_timestamp()' peut être utilisée pour obtenir la date et l'heure actuelles au format ISO 8601."
+  },
+  {
+    "id": "TF-CL-019",
+    "theme": "Configuration Language",
+    "theme_label": "Module outputs",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une sortie d'un module et une variable de sortie dans Terraform ?",
+    "options": [
+      "Une sortie d'un module est une variable locale, tandis qu'une variable de sortie est une variable d'entrée.",
+      "Une sortie d'un module est une variable d'entrée, tandis qu'une variable de sortie est une variable locale.",
+      "Une sortie d'un module est une valeur retournée par le module, tandis qu'une variable de sortie est une définition de variable.",
+      "Une sortie d'un module est une définition de variable, tandis qu'une variable de sortie est une valeur retournée par le module."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Une sortie d'un module est une valeur retournée par le module, tandis qu'une variable de sortie est une définition de variable."
   }
 ]

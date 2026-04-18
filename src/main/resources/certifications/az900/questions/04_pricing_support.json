@@ -27,7 +27,7 @@
       "Au mois"
     ],
     "correct": 0,
-    "explication": "Les VMs sont facturées à la seconde (minimum 1 minute)."
+    "explanation": "Les VMs sont facturées à la seconde (minimum 1 minute)."
   },
   {
     "id": "AZ-900-143",
@@ -35,9 +35,14 @@
     "theme_label": "Reserved Instances",
     "difficulty": "easy",
     "question": "Les Reserved Instances offrent-elles une réduction ?",
-    "options": ["Oui (jusqu'à 72%)", "Non", "Uniquement pour les VMs", "Uniquement pour les bases de données"],
+    "options": [
+      "Oui (jusqu'à 72%)",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour les bases de données"
+    ],
     "correct": 0,
-    "explication": "Les réservations offrent des réductions en échange d'un engagement d'1 ou 3 ans."
+    "explanation": "Les réservations offrent des réductions en échange d'un engagement d'1 ou 3 ans."
   },
   {
     "id": "AZ-900-144",
@@ -52,7 +57,7 @@
       "Remise pour les engagements"
     ],
     "correct": 0,
-    "explication": "L'Azure Hybrid Benefit permet d'utiliser vos licences on-premise sur Azure."
+    "explanation": "L'Azure Hybrid Benefit permet d'utiliser vos licences on-premise sur Azure."
   },
   {
     "id": "AZ-900-145",
@@ -60,9 +65,14 @@
     "theme_label": "Spot Instances",
     "difficulty": "easy",
     "question": "Les instances Spot peuvent-elles être interrompues ?",
-    "options": ["Oui", "Non", "Uniquement avec préavis", "Uniquement avec notification"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec préavis",
+      "Uniquement avec notification"
+    ],
     "correct": 0,
-    "explication": "Les instances Spot peuvent être reprises avec un préavis de 30 secondes."
+    "explanation": "Les instances Spot peuvent être reprises avec un préavis de 30 secondes."
   },
   {
     "id": "AZ-900-146",
@@ -77,7 +87,7 @@
       "Uniquement le stockage"
     ],
     "correct": 0,
-    "explication": "Le compte gratuit comprend un crédit de 200 $ pour 30 jours, 12 mois de services gratuits, et des services toujours gratuits."
+    "explanation": "Le compte gratuit comprend un crédit de 200 $ pour 30 jours, 12 mois de services gratuits, et des services toujours gratuits."
   },
   {
     "id": "AZ-900-147",
@@ -92,7 +102,7 @@
       "Suivre les dépenses"
     ],
     "correct": 0,
-    "explication": "La calculatrice permet d'estimer les coûts des services."
+    "explanation": "La calculatrice permet d'estimer les coûts des services."
   },
   {
     "id": "AZ-900-148",
@@ -107,7 +117,7 @@
       "Optimiser"
     ],
     "correct": 0,
-    "explication": "Le calculateur TCO estime les économies réalisées en migrant vers Azure."
+    "explanation": "Le calculateur TCO estime les économies réalisées en migrant vers Azure."
   },
   {
     "id": "AZ-900-149",
@@ -115,9 +125,14 @@
     "theme_label": "Azure Cost Management",
     "difficulty": "easy",
     "question": "Azure Cost Management permet-il de suivre les coûts ?",
-    "options": ["Oui", "Non", "Uniquement pour les abonnements EA", "Uniquement pour les souscriptions"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les abonnements EA",
+      "Uniquement pour les souscriptions"
+    ],
     "correct": 0,
-    "explication": "Cost Management fournit des outils d'analyse et de suivi des coûts."
+    "explanation": "Cost Management fournit des outils d'analyse et de suivi des coûts."
   },
   {
     "id": "AZ-900-150",
@@ -125,9 +140,14 @@
     "theme_label": "Azure Budgets",
     "difficulty": "easy",
     "question": "Les budgets Azure peuvent-ils envoyer des alertes ?",
-    "options": ["Oui", "Non", "Uniquement des notifications", "Uniquement des actions"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement des notifications",
+      "Uniquement des actions"
+    ],
     "correct": 0,
-    "explication": "Les budgets peuvent envoyer des alertes par e-mail ou déclencher des actions."
+    "explanation": "Les budgets peuvent envoyer des alertes par e-mail ou déclencher des actions."
   },
   {
     "id": "AZ-900-151",
@@ -135,9 +155,14 @@
     "theme_label": "Azure Advisor cost recommendations",
     "difficulty": "easy",
     "question": "Azure Advisor donne-t-il des conseils pour réduire les coûts ?",
-    "options": ["Oui", "Non", "Uniquement pour la sécurité", "Uniquement pour les performances"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour la sécurité",
+      "Uniquement pour les performances"
+    ],
     "correct": 0,
-    "explication": "Advisor fournit des recommandations d'optimisation des coûts."
+    "explanation": "Advisor fournit des recommandations d'optimisation des coûts."
   },
   {
     "id": "AZ-900-152",
@@ -152,7 +177,7 @@
       "Professional Direct seulement"
     ],
     "correct": 0,
-    "explication": "Azure propose Basic (gratuit), Developer, Standard, Professional Direct (et Premier pour les grands comptes)."
+    "explanation": "Azure propose Basic (gratuit), Developer, Standard, Professional Direct (et Premier pour les grands comptes)."
   },
   {
     "id": "AZ-900-153",
@@ -160,9 +185,14 @@
     "theme_label": "Azure Support",
     "difficulty": "easy",
     "question": "Le plan Basic est-il gratuit ?",
-    "options": ["Oui", "Non", "Uniquement pour les comptes de moins d'un an", "Uniquement pour les étudiants"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les comptes de moins d'un an",
+      "Uniquement pour les étudiants"
+    ],
     "correct": 0,
-    "explication": "Le plan Basic est inclus gratuitement."
+    "explanation": "Le plan Basic est inclus gratuitement."
   },
   {
     "id": "AZ-900-154",
@@ -170,9 +200,14 @@
     "theme_label": "Azure Support",
     "difficulty": "easy",
     "question": "Quel plan offre un temps de réponse de moins d'une heure pour les cas critiques ?",
-    "options": ["Professional Direct", "Standard", "Developer", "Basic"],
+    "options": [
+      "Professional Direct",
+      "Standard",
+      "Developer",
+      "Basic"
+    ],
     "correct": 0,
-    "explication": "Le plan Professional Direct offre une réponse < 1 heure pour les cas critiques."
+    "explanation": "Le plan Professional Direct offre une réponse < 1 heure pour les cas critiques."
   },
   {
     "id": "AZ-900-155",
@@ -180,9 +215,14 @@
     "theme_label": "Azure Support",
     "difficulty": "easy",
     "question": "Quel plan inclut un Technical Account Manager (TAM) ?",
-    "options": ["Premier", "Professional Direct", "Standard", "Developer"],
+    "options": [
+      "Premier",
+      "Professional Direct",
+      "Standard",
+      "Developer"
+    ],
     "correct": 0,
-    "explication": "Le plan Premier (ou Enterprise) inclut un TAM dédié."
+    "explanation": "Le plan Premier (ou Enterprise) inclut un TAM dédié."
   },
   {
     "id": "AZ-900-156",
@@ -197,7 +237,7 @@
       "Conformité"
     ],
     "correct": 0,
-    "explication": "Le SLA est l'engagement de Microsoft sur la disponibilité du service."
+    "explanation": "Le SLA est l'engagement de Microsoft sur la disponibilité du service."
   },
   {
     "id": "AZ-900-157",
@@ -212,7 +252,7 @@
       "Aucune conséquence"
     ],
     "correct": 0,
-    "explication": "Microsoft accorde des crédits de service en cas de non-respect du SLA."
+    "explanation": "Microsoft accorde des crédits de service en cas de non-respect du SLA."
   },
   {
     "id": "AZ-900-158",
@@ -227,7 +267,7 @@
       "SLA pour une zone"
     ],
     "correct": 0,
-    "explication": "Le SLA composite est le produit des SLA des composants."
+    "explanation": "Le SLA composite est le produit des SLA des composants."
   },
   {
     "id": "AZ-900-159",
@@ -242,7 +282,7 @@
       "Surveiller les logs"
     ],
     "correct": 0,
-    "explication": "Service Health donne des informations sur les incidents et maintenances."
+    "explanation": "Service Health donne des informations sur les incidents et maintenances."
   },
   {
     "id": "AZ-900-160",
@@ -250,9 +290,14 @@
     "theme_label": "Azure Status",
     "difficulty": "easy",
     "question": "Azure Status affiche-t-il la disponibilité globale des services Azure ?",
-    "options": ["Oui", "Non", "Uniquement pour une région", "Uniquement pour les services de calcul"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour une région",
+      "Uniquement pour les services de calcul"
+    ],
     "correct": 0,
-    "explication": "Azure Status est une page publique montrant la santé des services par région."
+    "explanation": "Azure Status est une page publique montrant la santé des services par région."
   },
   {
     "id": "AZ-900-161",
@@ -260,9 +305,14 @@
     "theme_label": "Resource Groups",
     "difficulty": "easy",
     "question": "Les ressources dans un groupe de ressources sont-elles facturées séparément ?",
-    "options": ["Oui (facturation par ressource)", "Non", "Uniquement pour les VMs", "Uniquement pour le stockage"],
+    "options": [
+      "Oui (facturation par ressource)",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour le stockage"
+    ],
     "correct": 0,
-    "explication": "La facturation est individuelle par ressource, quel que soit le groupe."
+    "explanation": "La facturation est individuelle par ressource, quel que soit le groupe."
   },
   {
     "id": "AZ-900-162",
@@ -270,9 +320,14 @@
     "theme_label": "Tags",
     "difficulty": "easy",
     "question": "Les tags aident-ils à la gestion des coûts ?",
-    "options": ["Oui (regrouper les coûts par tag)", "Non", "Uniquement pour les VMs", "Uniquement pour le stockage"],
+    "options": [
+      "Oui (regrouper les coûts par tag)",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour le stockage"
+    ],
     "correct": 0,
-    "explication": "Les tags permettent de regrouper les coûts par projet, équipe, environnement."
+    "explanation": "Les tags permettent de regrouper les coûts par projet, équipe, environnement."
   },
   {
     "id": "AZ-900-163",
@@ -287,7 +342,7 @@
       "Licence open source"
     ],
     "correct": 0,
-    "explication": "EA est un contrat de licence pour les grandes entreprises avec des engagements de dépenses."
+    "explanation": "EA est un contrat de licence pour les grandes entreprises avec des engagements de dépenses."
   },
   {
     "id": "AZ-900-164",
@@ -302,7 +357,7 @@
       "Remise automatique"
     ],
     "correct": 0,
-    "explication": "L'engagement de consommation (MACC) offre des réductions en échange d'un engagement de dépenses."
+    "explanation": "L'engagement de consommation (MACC) offre des réductions en échange d'un engagement de dépenses."
   },
   {
     "id": "AZ-900-165",
@@ -310,9 +365,14 @@
     "theme_label": "Azure Spot VM eviction",
     "difficulty": "easy",
     "question": "Quel est le préavis pour l'éviction d'une instance Spot ?",
-    "options": ["30 secondes", "2 minutes", "5 minutes", "10 minutes"],
+    "options": [
+      "30 secondes",
+      "2 minutes",
+      "5 minutes",
+      "10 minutes"
+    ],
     "correct": 0,
-    "explication": "Azure donne un préavis de 30 secondes avant l'éviction."
+    "explanation": "Azure donne un préavis de 30 secondes avant l'éviction."
   },
   {
     "id": "AZ-900-166",
@@ -320,9 +380,14 @@
     "theme_label": "Azure Savings Plan",
     "difficulty": "easy",
     "question": "Le Savings Plan Azure offre-t-il une flexibilité sur les familles de VMs ?",
-    "options": ["Oui", "Non", "Uniquement pour une famille", "Uniquement pour une région"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour une famille",
+      "Uniquement pour une région"
+    ],
     "correct": 0,
-    "explication": "Le Savings Plan est plus flexible que les RI."
+    "explanation": "Le Savings Plan est plus flexible que les RI."
   },
   {
     "id": "AZ-900-167",
@@ -337,7 +402,7 @@
       "Échange impossible"
     ],
     "correct": 0,
-    "explication": "Les RI peuvent être échangées ou remboursées avec des frais."
+    "explanation": "Les RI peuvent être échangées ou remboursées avec des frais."
   },
   {
     "id": "AZ-900-168",
@@ -345,9 +410,14 @@
     "theme_label": "Azure Hybrid Benefit for Linux",
     "difficulty": "easy",
     "question": "Azure Hybrid Benefit s'applique-t-il aux VMs Linux ?",
-    "options": ["Non", "Oui (Red Hat, SUSE)", "Uniquement pour Ubuntu", "Uniquement pour Debian"],
+    "options": [
+      "Non",
+      "Oui (Red Hat, SUSE)",
+      "Uniquement pour Ubuntu",
+      "Uniquement pour Debian"
+    ],
     "correct": 1,
-    "explication": "Il existe des offres Hybrid Benefit pour Red Hat et SUSE."
+    "explanation": "Il existe des offres Hybrid Benefit pour Red Hat et SUSE."
   },
   {
     "id": "AZ-900-169",
@@ -355,9 +425,14 @@
     "theme_label": "Azure Spot VM pricing",
     "difficulty": "easy",
     "question": "Le prix des instances Spot est-il variable ?",
-    "options": ["Oui", "Non", "Fixe", "Dépend de la région"],
+    "options": [
+      "Oui",
+      "Non",
+      "Fixe",
+      "Dépend de la région"
+    ],
     "correct": 0,
-    "explication": "Les prix Spot varient en fonction de l'offre et de la demande."
+    "explanation": "Les prix Spot varient en fonction de l'offre et de la demande."
   },
   {
     "id": "AZ-900-170",
@@ -365,9 +440,14 @@
     "theme_label": "Azure Cost Management + Billing",
     "difficulty": "easy",
     "question": "Azure Cost Management permet-il de définir des budgets ?",
-    "options": ["Oui", "Non", "Uniquement pour les abonnements", "Uniquement pour les groupes de ressources"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les abonnements",
+      "Uniquement pour les groupes de ressources"
+    ],
     "correct": 0,
-    "explication": "Cost Management permet de créer des budgets et des alertes."
+    "explanation": "Cost Management permet de créer des budgets et des alertes."
   },
   {
     "id": "AZ-900-171",
@@ -375,9 +455,14 @@
     "theme_label": "Azure Advisor cost recommendations",
     "difficulty": "easy",
     "question": "Advisor peut-il recommander de redimensionner des VMs sous-utilisées ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs Windows", "Uniquement pour les VMs Linux"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs Windows",
+      "Uniquement pour les VMs Linux"
+    ],
     "correct": 0,
-    "explication": "Advisor identifie les VMs sous-utilisées et recommande un redimensionnement."
+    "explanation": "Advisor identifie les VMs sous-utilisées et recommande un redimensionnement."
   },
   {
     "id": "AZ-900-172",
@@ -385,9 +470,14 @@
     "theme_label": "Azure Support plans comparison",
     "difficulty": "easy",
     "question": "Quel plan supporte l'accès à toutes les API de support ?",
-    "options": ["Tous sauf Basic", "Seulement Professional Direct", "Seulement Standard", "Seulement Premier"],
+    "options": [
+      "Tous sauf Basic",
+      "Seulement Professional Direct",
+      "Seulement Standard",
+      "Seulement Premier"
+    ],
     "correct": 0,
-    "explication": "Les plans Developer, Standard, Professional Direct et Premier ont accès aux API de support."
+    "explanation": "Les plans Developer, Standard, Professional Direct et Premier ont accès aux API de support."
   },
   {
     "id": "AZ-900-173",
@@ -395,9 +485,14 @@
     "theme_label": "Azure SLA credits",
     "difficulty": "easy",
     "question": "Les crédits SLA sont-ils automatiques ou demandés ?",
-    "options": ["Demande via une réclamation", "Automatiques", "Uniquement pour les comptes Enterprise", "Uniquement pour les comptes CSP"],
+    "options": [
+      "Demande via une réclamation",
+      "Automatiques",
+      "Uniquement pour les comptes Enterprise",
+      "Uniquement pour les comptes CSP"
+    ],
     "correct": 0,
-    "explication": "Il faut demander les crédits en soumettant une réclamation."
+    "explanation": "Il faut demander les crédits en soumettant une réclamation."
   },
   {
     "id": "AZ-900-174",
@@ -405,9 +500,14 @@
     "theme_label": "Azure Service Health alerts",
     "difficulty": "easy",
     "question": "Service Health peut-il envoyer des alertes par e-mail ?",
-    "options": ["Oui", "Non", "Uniquement par SMS", "Uniquement par webhook"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement par SMS",
+      "Uniquement par webhook"
+    ],
     "correct": 0,
-    "explication": "Service Health peut envoyer des alertes par e-mail, SMS, webhook."
+    "explanation": "Service Health peut envoyer des alertes par e-mail, SMS, webhook."
   },
   {
     "id": "AZ-900-175",
@@ -415,9 +515,14 @@
     "theme_label": "Azure Service Health personalization",
     "difficulty": "easy",
     "question": "Service Health peut-il être personnalisé pour suivre des services spécifiques ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les bases de données"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour les bases de données"
+    ],
     "correct": 0,
-    "explication": "Vous pouvez configurer Service Health pour surveiller des services, régions, et abonnements spécifiques."
+    "explanation": "Vous pouvez configurer Service Health pour surveiller des services, régions, et abonnements spécifiques."
   },
   {
     "id": "AZ-900-176",
@@ -425,9 +530,14 @@
     "theme_label": "Azure Status history",
     "difficulty": "easy",
     "question": "Azure Status conserve-t-il un historique des incidents ?",
-    "options": ["Oui", "Non", "Seulement pour les 30 derniers jours", "Seulement pour les 90 derniers jours"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour les 30 derniers jours",
+      "Seulement pour les 90 derniers jours"
+    ],
     "correct": 0,
-    "explication": "Azure Status affiche un historique des incidents."
+    "explanation": "Azure Status affiche un historique des incidents."
   },
   {
     "id": "AZ-900-177",
@@ -435,9 +545,14 @@
     "theme_label": "Azure Support for students",
     "difficulty": "easy",
     "question": "Azure for Students offre-t-il un crédit gratuit ?",
-    "options": ["Oui (100$)", "Non", "Uniquement des VMs gratuites", "Uniquement du stockage gratuit"],
+    "options": [
+      "Oui (100$)",
+      "Non",
+      "Uniquement des VMs gratuites",
+      "Uniquement du stockage gratuit"
+    ],
     "correct": 0,
-    "explication": "Azure for Students offre 100 $ de crédit."
+    "explanation": "Azure for Students offre 100 $ de crédit."
   },
   {
     "id": "AZ-900-178",
@@ -445,9 +560,14 @@
     "theme_label": "Azure Sponsorship",
     "difficulty": "easy",
     "question": "Azure Sponsorship offre-t-il des crédits pour les startups ?",
-    "options": ["Oui", "Non", "Uniquement pour les entreprises", "Uniquement pour les gouvernements"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les entreprises",
+      "Uniquement pour les gouvernements"
+    ],
     "correct": 0,
-    "explication": "Azure Sponsorship offre des crédits (souvent via des programmes partenaires)."
+    "explanation": "Azure Sponsorship offre des crédits (souvent via des programmes partenaires)."
   },
   {
     "id": "AZ-900-179",
@@ -455,9 +575,14 @@
     "theme_label": "Azure Pricing tiers",
     "difficulty": "easy",
     "question": "Les services Azure ont-ils différents niveaux de tarification (ex: Basic, Standard, Premium) ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour le stockage"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour le stockage"
+    ],
     "correct": 0,
-    "explication": "La plupart des services ont plusieurs niveaux (ex: Storage, App Service, SQL Database)."
+    "explanation": "La plupart des services ont plusieurs niveaux (ex: Storage, App Service, SQL Database)."
   },
   {
     "id": "AZ-900-180",
@@ -465,9 +590,14 @@
     "theme_label": "Azure Spot VM use cases",
     "difficulty": "easy",
     "question": "Les instances Spot sont-elles adaptées aux workloads tolérants aux interruptions ?",
-    "options": ["Oui", "Non", "Uniquement pour les batch jobs", "Uniquement pour les dev/test"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les batch jobs",
+      "Uniquement pour les dev/test"
+    ],
     "correct": 0,
-    "explication": "Les instances Spot sont idéales pour les workloads non critiques, batch, ou tolérants aux interruptions."
+    "explanation": "Les instances Spot sont idéales pour les workloads non critiques, batch, ou tolérants aux interruptions."
   },
   {
     "id": "AZ-900-181",
@@ -475,9 +605,14 @@
     "theme_label": "Azure Hybrid Benefit for Windows Server",
     "difficulty": "easy",
     "question": "Azure Hybrid Benefit permet-il d'utiliser des licences Windows Server avec Software Assurance ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour les conteneurs"
+    ],
     "correct": 0,
-    "explication": "L'Azure Hybrid Benefit s'applique aux licences Windows Server avec Software Assurance."
+    "explanation": "L'Azure Hybrid Benefit s'applique aux licences Windows Server avec Software Assurance."
   },
   {
     "id": "AZ-900-182",
@@ -485,9 +620,14 @@
     "theme_label": "Azure Hybrid Benefit for SQL Server",
     "difficulty": "easy",
     "question": "Azure Hybrid Benefit s'applique-t-il à SQL Server ?",
-    "options": ["Oui", "Non", "Uniquement pour Azure SQL Managed Instance", "Uniquement pour SQL on VMs"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour Azure SQL Managed Instance",
+      "Uniquement pour SQL on VMs"
+    ],
     "correct": 0,
-    "explication": "L'Azure Hybrid Benefit s'applique à SQL Server sur Azure (VM, Managed Instance)."
+    "explanation": "L'Azure Hybrid Benefit s'applique à SQL Server sur Azure (VM, Managed Instance)."
   },
   {
     "id": "AZ-900-183",
@@ -495,9 +635,14 @@
     "theme_label": "Azure Dev/Test pricing",
     "difficulty": "easy",
     "question": "Azure offre-t-il des tarifs réduits pour le développement/test ?",
-    "options": ["Oui (Dev/Test pricing)", "Non", "Uniquement pour les MSDN subscribers", "Uniquement pour les startups"],
+    "options": [
+      "Oui (Dev/Test pricing)",
+      "Non",
+      "Uniquement pour les MSDN subscribers",
+      "Uniquement pour les startups"
+    ],
     "correct": 0,
-    "explication": "Azure a des tarifs Dev/Test réduits pour les environnements non productifs."
+    "explanation": "Azure a des tarifs Dev/Test réduits pour les environnements non productifs."
   },
   {
     "id": "AZ-900-184",
@@ -505,9 +650,14 @@
     "theme_label": "Azure Reserved Instance scope",
     "difficulty": "easy",
     "question": "Les Reserved Instances peuvent-elles être appliquées à un abonnement spécifique ou partagées ?",
-    "options": ["Oui (single ou shared)", "Non", "Uniquement partagées", "Uniquement par abonnement"],
+    "options": [
+      "Oui (single ou shared)",
+      "Non",
+      "Uniquement partagées",
+      "Uniquement par abonnement"
+    ],
     "correct": 0,
-    "explication": "Les RI peuvent avoir une portée partagée (organisation) ou par abonnement."
+    "explanation": "Les RI peuvent avoir une portée partagée (organisation) ou par abonnement."
   },
   {
     "id": "AZ-900-185",
@@ -515,9 +665,14 @@
     "theme_label": "Azure Reserved Instance term",
     "difficulty": "easy",
     "question": "Les Reserved Instances sont-elles disponibles pour 1 an ou 3 ans ?",
-    "options": ["1 an ou 3 ans", "Seulement 1 an", "Seulement 3 ans", "6 mois"],
+    "options": [
+      "1 an ou 3 ans",
+      "Seulement 1 an",
+      "Seulement 3 ans",
+      "6 mois"
+    ],
     "correct": 0,
-    "explication": "Les RI sont disponibles pour des engagements de 1 ou 3 ans."
+    "explanation": "Les RI sont disponibles pour des engagements de 1 ou 3 ans."
   },
   {
     "id": "AZ-900-186",
@@ -525,9 +680,14 @@
     "theme_label": "Azure Savings Plan term",
     "difficulty": "easy",
     "question": "Les Savings Plans sont-ils disponibles pour 1 an ou 3 ans ?",
-    "options": ["1 an ou 3 ans", "Seulement 1 an", "Seulement 3 ans", "6 mois"],
+    "options": [
+      "1 an ou 3 ans",
+      "Seulement 1 an",
+      "Seulement 3 ans",
+      "6 mois"
+    ],
     "correct": 0,
-    "explication": "Les Savings Plans sont disponibles pour 1 ou 3 ans."
+    "explanation": "Les Savings Plans sont disponibles pour 1 ou 3 ans."
   },
   {
     "id": "AZ-900-187",
@@ -542,7 +702,7 @@
       "Seulement le stockage"
     ],
     "correct": 0,
-    "explication": "Il y a des services toujours gratuits, comme Cosmos DB, Functions, etc."
+    "explanation": "Il y a des services toujours gratuits, comme Cosmos DB, Functions, etc."
   },
   {
     "id": "AZ-900-188",
@@ -557,7 +717,7 @@
       "Seulement le stockage"
     ],
     "correct": 0,
-    "explication": "Les services gratuits pendant 12 mois incluent une VM B1S, un stockage, une base SQL, etc."
+    "explanation": "Les services gratuits pendant 12 mois incluent une VM B1S, un stockage, une base SQL, etc."
   },
   {
     "id": "AZ-900-189",
@@ -565,9 +725,14 @@
     "theme_label": "Azure Pricing for data transfer",
     "difficulty": "easy",
     "question": "Le transfert de données entrant vers Azure est-il gratuit ?",
-    "options": ["Oui", "Non", "Seulement pour les premiers Go", "Seulement pour certaines régions"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour les premiers Go",
+      "Seulement pour certaines régions"
+    ],
     "correct": 0,
-    "explication": "Le transfert de données entrant (upload) vers Azure est gratuit."
+    "explanation": "Le transfert de données entrant (upload) vers Azure est gratuit."
   },
   {
     "id": "AZ-900-190",
@@ -575,9 +740,14 @@
     "theme_label": "Azure Pricing for data transfer out",
     "difficulty": "easy",
     "question": "Le transfert de données sortant d'Azure est-il facturé ?",
-    "options": ["Oui", "Non", "Seulement au-delà d'un seuil", "Seulement pour certaines régions"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement au-delà d'un seuil",
+      "Seulement pour certaines régions"
+    ],
     "correct": 0,
-    "explication": "Le transfert sortant est facturé (sauf certaines exceptions comme les CDN)."
+    "explanation": "Le transfert sortant est facturé (sauf certaines exceptions comme les CDN)."
   },
   {
     "id": "AZ-900-191",
@@ -585,9 +755,14 @@
     "theme_label": "Azure Pricing calculator features",
     "difficulty": "easy",
     "question": "La calculatrice de prix Azure prend-elle en compte les Savings Plans ?",
-    "options": ["Oui", "Non", "Uniquement les RI", "Uniquement le pay-as-you-go"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement les RI",
+      "Uniquement le pay-as-you-go"
+    ],
     "correct": 0,
-    "explication": "La calculatrice permet d'inclure les Savings Plans et les RI."
+    "explanation": "La calculatrice permet d'inclure les Savings Plans et les RI."
   },
   {
     "id": "AZ-900-192",
@@ -595,9 +770,14 @@
     "theme_label": "Azure TCO calculator",
     "difficulty": "easy",
     "question": "Le calculateur TCO demande-t-il une description de l'infrastructure on-premise ?",
-    "options": ["Oui", "Non", "Seulement pour les serveurs", "Seulement pour le stockage"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour les serveurs",
+      "Seulement pour le stockage"
+    ],
     "correct": 0,
-    "explication": "Le calculateur TCO nécessite des informations sur les serveurs, stockage, réseau, etc."
+    "explanation": "Le calculateur TCO nécessite des informations sur les serveurs, stockage, réseau, etc."
   },
   {
     "id": "AZ-900-193",
@@ -605,9 +785,14 @@
     "theme_label": "Azure Cost Management + Billing API",
     "difficulty": "easy",
     "question": "Cost Management a-t-il une API pour accéder aux données de facturation ?",
-    "options": ["Oui", "Non", "Uniquement pour les EA", "Uniquement pour les CSP"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les EA",
+      "Uniquement pour les CSP"
+    ],
     "correct": 0,
-    "explication": "Cost Management fournit des API pour accéder aux données de consommation et de facturation."
+    "explanation": "Cost Management fournit des API pour accéder aux données de consommation et de facturation."
   },
   {
     "id": "AZ-900-194",
@@ -615,9 +800,14 @@
     "theme_label": "Azure Advisor cost recommendations types",
     "difficulty": "easy",
     "question": "Advisor donne-t-il des recommandations pour supprimer les ressources non utilisées ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les disques"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour les disques"
+    ],
     "correct": 0,
-    "explication": "Advisor identifie les ressources inutilisées (VMs arrêtées, etc.)."
+    "explanation": "Advisor identifie les ressources inutilisées (VMs arrêtées, etc.)."
   },
   {
     "id": "AZ-900-195",
@@ -625,9 +815,14 @@
     "theme_label": "Azure Support response times",
     "difficulty": "easy",
     "question": "Quel plan supporte une réponse initiale de 1 heure pour les cas critiques ?",
-    "options": ["Standard", "Professional Direct", "Developer", "Basic"],
+    "options": [
+      "Standard",
+      "Professional Direct",
+      "Developer",
+      "Basic"
+    ],
     "correct": 1,
-    "explication": "Professional Direct offre une réponse < 1 heure pour les cas de gravité A."
+    "explanation": "Professional Direct offre une réponse < 1 heure pour les cas de gravité A."
   },
   {
     "id": "AZ-900-196",
@@ -635,9 +830,14 @@
     "theme_label": "Azure Support for CSP",
     "difficulty": "easy",
     "question": "Les partenaires CSP ont-ils un support spécifique ?",
-    "options": ["Oui (plan de support CSP)", "Non", "Uniquement pour les revendeurs", "Uniquement pour les ISV"],
+    "options": [
+      "Oui (plan de support CSP)",
+      "Non",
+      "Uniquement pour les revendeurs",
+      "Uniquement pour les ISV"
+    ],
     "correct": 0,
-    "explication": "Microsoft propose des plans de support pour les partenaires CSP."
+    "explanation": "Microsoft propose des plans de support pour les partenaires CSP."
   },
   {
     "id": "AZ-900-197",
@@ -645,9 +845,14 @@
     "theme_label": "Azure SLA for single VM",
     "difficulty": "easy",
     "question": "Quel est le SLA pour une seule VM sans disques premium ?",
-    "options": ["99.9%", "99.95%", "99.99%", "100%"],
+    "options": [
+      "99.9%",
+      "99.95%",
+      "99.99%",
+      "100%"
+    ],
     "correct": 0,
-    "explication": "Le SLA pour une seule VM est de 99.9% (avec deux VM dans un groupe à disponibilité, 99.95%)."
+    "explanation": "Le SLA pour une seule VM est de 99.9% (avec deux VM dans un groupe à disponibilité, 99.95%)."
   },
   {
     "id": "AZ-900-198",
@@ -655,9 +860,14 @@
     "theme_label": "Azure SLA for App Service",
     "difficulty": "easy",
     "question": "Quel est le SLA pour Azure App Service ?",
-    "options": ["99.95%", "99.9%", "99.99%", "99.5%"],
+    "options": [
+      "99.95%",
+      "99.9%",
+      "99.99%",
+      "99.5%"
+    ],
     "correct": 0,
-    "explication": "Le SLA pour App Service est de 99.95%."
+    "explanation": "Le SLA pour App Service est de 99.95%."
   },
   {
     "id": "AZ-900-199",
@@ -665,9 +875,14 @@
     "theme_label": "Azure Service Health mobile app",
     "difficulty": "easy",
     "question": "Service Health a-t-il une application mobile ?",
-    "options": ["Oui", "Non", "Uniquement pour iOS", "Uniquement pour Android"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour iOS",
+      "Uniquement pour Android"
+    ],
     "correct": 0,
-    "explication": "Service Health est disponible dans l'application mobile Azure."
+    "explanation": "Service Health est disponible dans l'application mobile Azure."
   },
   {
     "id": "AZ-900-200",
@@ -675,8 +890,405 @@
     "theme_label": "Azure Status RSS feed",
     "difficulty": "easy",
     "question": "Azure Status propose-t-il un flux RSS ?",
-    "options": ["Oui", "Non", "Uniquement par email", "Uniquement par SMS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement par email",
+      "Uniquement par SMS"
+    ],
     "correct": 0,
-    "explication": "Azure Status a des flux RSS pour suivre les incidents."
+    "explanation": "Azure Status a des flux RSS pour suivre les incidents."
+  },
+  {
+    "id": "AZ900-P&S-001",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Advisor cost recommendations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les recommandations de coûts d'Azure Advisor :",
+    "options": [
+      "Les recommandations sont basées sur l'utilisation récente des ressources.",
+      "Elles ne prennent pas en compte les coûts futurs des ressources.",
+      "Les recommandations peuvent inclure la migration vers des instances réservées pour réduire les coûts.",
+      "Elles sont disponibles uniquement pour les abonnements payants."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les recommandations d'Azure Advisor sont basées sur l'utilisation récente des ressources et peuvent inclure la migration vers des instances réservées pour réduire les coûts. Elles ne prennent pas en compte les coûts futurs des ressources et sont disponibles pour tous les types d'abonnements, y compris les gratuits."
+  },
+  {
+    "id": "AZ900-P&S-002",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Hybrid Benefit",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation de l'Azure Hybrid Benefit ?",
+    "options": [
+      "Réduire les coûts des VMs Windows Server et SQL Server en utilisant un abonnement Azure.",
+      "Permettre la migration vers des instances réservées.",
+      "Avoir accès à toutes les fonctionnalités d'Azure gratuits.",
+      "Réduire le coût des ressources en utilisant une offre de tarification spécifique."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'Azure Hybrid Benefit réduit les coûts des VMs Windows Server et SQL Server en utilisant un abonnement Azure."
+  },
+  {
+    "id": "AZ900-P&S-003",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Spot Instances",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les instances Spot Azure :",
+    "options": [
+      "Les instances Spot sont toujours disponibles.",
+      "Elles peuvent être interrompues à tout moment sans préavis.",
+      "Les instances Spot sont facturées à la seconde.",
+      "Elles ne peuvent être utilisées que pour les VMs de base."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les instances Spot peuvent être interrompues à tout moment sans préavis et sont facturées à la seconde. Elles ne sont pas toujours disponibles et peuvent être utilisées pour des VMs de base ainsi que d'autres types."
+  },
+  {
+    "id": "AZ900-P&S-004",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Cost Management + Billing",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité d'Azure permet de visualiser le coût total des ressources sur une période donnée ?",
+    "options": [
+      "Azure Cost Management + Billing",
+      "Azure Advisor cost recommendations",
+      "Azure Free Account services",
+      "Azure Support plans"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Cost Management + Billing permet de visualiser le coût total des ressources sur une période donnée."
+  },
+  {
+    "id": "AZ900-P&S-005",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Status",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation de l'Azure Status ?",
+    "options": [
+      "Vérifier les disponibilité des services Azure.",
+      "Gérer les coûts des ressources.",
+      "Configurer les alertes de support.",
+      "Accéder aux recommandations de coûts."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'Azure Status permet de vérifier la disponibilité des services Azure."
+  },
+  {
+    "id": "AZ900-P&S-006",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Advisor cost recommendations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Advisor cost recommendations :",
+    "options": [
+      "Il propose des recommandations basées sur les coûts pour améliorer l'efficacité des dépenses.",
+      "Il ne fonctionne que pour les ressources Azure Enterprise Edition.",
+      "Il peut recommander des actions comme l'utilisation de modèles de tarification pay-as-you-go.",
+      "Il ne génère pas d'alertes en cas de dépenses élevées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Azure Advisor cost recommendations propose des recommandations basées sur les coûts pour améliorer l'efficacité des dépenses. Il peut recommander des actions comme l'utilisation de modèles de tarification pay-as-you-go. Il ne fonctionne pas que pour les ressources Azure Enterprise Edition et peut générer des alertes en cas de dépenses élevées."
+  },
+  {
+    "id": "AZ900-P&S-007",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Support Plans",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre le support standard et le support avancé Azure ?",
+    "options": [
+      "Le support avancé offre une réponse plus rapide aux problèmes.",
+      "Le support standard est gratuit et le support avancé est payant.",
+      "Le support standard offre des fonctionnalités supplémentaires comme les alertes en temps réel.",
+      "Le support avancé ne couvre que les problèmes liés aux services Azure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le support avancé offre une réponse plus rapide aux problèmes. Le support standard est payant et le support avancé offre des fonctionnalités supplémentaires comme les alertes en temps réel. Le support avancé couvre également les problèmes liés aux services Azure."
+  },
+  {
+    "id": "AZ900-P&S-008",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Hybrid Benefit",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Hybrid Benefit :",
+    "options": [
+      "Il permet de réduire les coûts des licences Windows Server et SQL Server sur Azure.",
+      "Il est disponible uniquement pour les ressources Azure Enterprise Edition.",
+      "Il offre un remise de 70% sur les licences Windows Server et SQL Server.",
+      "Il peut être utilisé avec des licences Azure Hybrid Benefit pour Linux."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Azure Hybrid Benefit permet de réduire les coûts des licences Windows Server et SQL Server sur Azure. Il est disponible pour les ressources Azure Enterprise Edition, mais pas uniquement. Il offre un remise de 70% sur les licences Windows Server et SQL Server, mais pas nécessairement un remise de 70%. Il peut être utilisé avec des licences Azure Hybrid Benefit pour Linux."
+  },
+  {
+    "id": "AZ900-P&S-009",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Spot Instances",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre une instance Spot et une instance standard Azure ?",
+    "options": [
+      "Une instance Spot est toujours disponible pour les applications critiques.",
+      "Une instance Spot peut être interrompue à tout moment sans préavis.",
+      "Une instance Spot est toujours moins coûteuse qu'une instance standard Azure.",
+      "Une instance Spot offre des performances meilleures que les instances standard Azure."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Une instance Spot peut être interrompue à tout moment sans préavis. Une instance Spot est toujours moins coûteuse qu'une instance standard Azure, mais elle n'est pas toujours disponible pour les applications critiques. Une instance Spot offre des performances similaires aux instances standard Azure."
+  },
+  {
+    "id": "AZ900-P&S-010",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Cost Management + Billing",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité d'Azure Cost Management permet de suivre les coûts par service et par région ?",
+    "options": [
+      "Budgets",
+      "Cost Management + Billing API",
+      "Azure Consumption Commitment",
+      "Resource Groups"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les budgets permettent de suivre les coûts par service et par région. La Cost Management + Billing API permet d'automatiser la gestion des coûts et des factures. Les Azure Consumption Commitment permettent d'acheter des ressources à un prix réduit en avancant sur les coûts futurs. Les Resource Groups permettent de regrouper des ressources Azure pour faciliter la gestion."
+  },
+  {
+    "id": "AZ900-P&S-011",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Advisor cost recommendations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Advisor cost recommendations :",
+    "options": [
+      "Il propose des recommandations basées sur les coûts actuels",
+      "Il peut recommander l'utilisation de modèles de tarification plus économiques",
+      "Il ne suggère que des solutions pour les VMs",
+      "Il n'affecte pas le coût total de l'abonnement"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Advisor propose des recommandations basées sur les coûts actuels et peut suggérer l'utilisation de modèles de tarification plus économiques. Il n'est pas limité aux VMs et peut affecter le coût total de l'abonnement."
+  },
+  {
+    "id": "AZ900-P&S-012",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Support Plans",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre le support standard et le support premium ?",
+    "options": [
+      "Le support premium offre une réponse plus rapide aux problèmes",
+      "Le support standard est gratuit et le premium payant",
+      "Le support premium offre des services supplémentaires comme l'assistance téléphonique",
+      "Le support standard est réservé aux grands clients"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Le support premium offre des services supplémentaires comme l'assistance téléphonique, ce qui n'est pas disponible avec le support standard."
+  },
+  {
+    "id": "AZ900-P&S-013",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Status",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Status :",
+    "options": [
+      "Il offre une vue en temps réel des services Azure",
+      "Il peut être utilisé pour planifier les mises à jour",
+      "Il ne fournit pas d'informations sur le statut des services Azure",
+      "Il nécessite une inscription pour l'utilisation"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Status offre une vue en temps réel des services Azure et peut être utilisé pour planifier les mises à jour. Il fournit également des informations sur le statut des services Azure et n'exige pas une inscription pour l'utilisation."
+  },
+  {
+    "id": "AZ900-P&S-014",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Consumption Commitment",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur d'utiliser Azure Consumption Commitment ?",
+    "options": [
+      "Il offre un remise de 10% sur les coûts",
+      "Il permet d'acheter des instances de machines virtuelles à un prix réduit",
+      "Il offre une protection contre les fluctuations des coûts",
+      "Il permet de réduire le coût total en fonction du nombre d'heures utilisées"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Azure Consumption Commitment offre une protection contre les fluctuations des coûts en offrant un remise sur les coûts de l'abonnement."
+  },
+  {
+    "id": "AZ900-P&S-015",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Cost Management + Billing",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Cost Management + Billing :",
+    "options": [
+      "Il permet de gérer les coûts et les factures Azure",
+      "Il offre des recommandations pour réduire les coûts",
+      "Il ne peut être utilisé que par les grands clients",
+      "Il nécessite une inscription pour l'utilisation"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Cost Management + Billing permet de gérer les coûts et les factures Azure et offre des recommandations pour réduire les coûts. Il n'est pas limité aux grands clients et nécessite une inscription pour l'utilisation."
+  },
+  {
+    "id": "AZ900-P&S-016",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Advisor cost recommendations",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les recommandations de coûts d'Azure Advisor :",
+    "options": [
+      "Elles sont basées sur une analyse des coûts actuels et futurs.",
+      "Elles ne prennent pas en compte les coûts de stockage.",
+      "Elles peuvent recommander des actions pour réduire les coûts.",
+      "Elles sont disponibles uniquement pour les abonnements payants."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les recommandations de coûts d'Azure Advisor sont basées sur une analyse des coûts actuels et futurs, et peuvent recommander des actions pour réduire les coûts. Elles prennent en compte tous les types de coûts, y compris le stockage. Elles sont disponibles pour tous les abonnements Azure."
+  },
+  {
+    "id": "AZ900-P&S-017",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Free Account",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelles sont les principales avantages d'un compte Azure Free ?",
+    "options": [
+      "Accès à tous les services Azure.",
+      "500 USD de crédit mensuel pour les services sélectionnés.",
+      "12 mois d'accès illimité à tous les services.",
+      "Accès à un support technique professionnel."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Un compte Azure Free offre 500 USD de crédit mensuel pour les services sélectionnés, mais ne donne pas accès à tous les services Azure. L'accès illimité est limité aux 12 premiers mois, et il n'y a pas de support technique professionnel inclus."
+  },
+  {
+    "id": "AZ900-P&S-018",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Cost Management + Billing",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Cost Management + Billing :",
+    "options": [
+      "Il permet de suivre et de gérer les coûts des ressources Azure.",
+      "Il offre un TCO Calculator pour estimer les coûts totaux de la vie d'un projet.",
+      "Il peut générer des alertes lorsque les coûts dépassent un budget défini.",
+      "Il ne peut être utilisé que par les comptes payants."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Azure Cost Management + Billing permet de suivre et de gérer les coûts des ressources Azure, offre un TCO Calculator pour estimer les coûts totaux de la vie d'un projet, et peut générer des alertes lorsque les coûts dépassent un budget défini. Il est disponible pour tous les comptes Azure, y compris les gratuits."
+  },
+  {
+    "id": "AZ900-P&S-019",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Reserved Instances",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une instance réservée standard et une instance réservée flexible ?",
+    "options": [
+      "Une instance réservée standard est facturée à la demande, tandis qu'une instance réservée flexible est facturée mensuellement.",
+      "Une instance réservée standard offre un accès illimité à une région, tandis qu'une instance réservée flexible est limitée à une seule région.",
+      "Une instance réservée standard peut être utilisée sur n'importe quelle machine virtuelle, tandis qu'une instance réservée flexible est liée à une machine virtuelle spécifique.",
+      "Une instance réservée standard peut être transférée, tandis qu'une instance réservée flexible ne peut pas."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Une instance réservée standard offre un accès illimité à une région, tandis qu'une instance réservée flexible est limitée à une seule région. Une instance réservée standard peut être utilisée sur n'importe quelle machine virtuelle, tandis qu'une instance réservée flexible est liée à une machine virtuelle spécifique. Une instance réservée standard ne peut pas être transférée, tandis qu'une instance réservée flexible peut."
+  },
+  {
+    "id": "AZ900-P&S-020",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Hybrid Benefit",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Hybrid Benefit :",
+    "options": [
+      "Il permet d'utiliser les licences Windows Server et SQL Server sur des machines virtuelles Azure à moindre coût.",
+      "Il est disponible uniquement pour les comptes payants.",
+      "Il peut être utilisé sur n'importe quel type de machine virtuelle.",
+      "Il offre un accès illimité à tous les services Azure."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Hybrid Benefit permet d'utiliser les licences Windows Server et SQL Server sur des machines virtuelles Azure à moindre coût, mais il est disponible uniquement pour les comptes payants. Il peut être utilisé sur n'importe quel type de machine virtuelle, mais ne donne pas d'accès illimité à tous les services Azure."
+  },
+  {
+    "id": "AZ900-P&S-021",
+    "theme": "Pricing & Support",
+    "theme_label": "Azure Advisor cost recommendations types",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les recommandations de coûts d'Azure Advisor :",
+    "options": [
+      "Recommandations basées sur les coûts actuels des ressources",
+      "Recommandations pour optimiser la performance des applications",
+      "Recommandations pour réduire les coûts en modifiant la configuration des ressources",
+      "Recommandations pour migrer vers Azure",
+      "Recommandations pour améliorer la sécurité des ressources"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les recommandations d'Azure Advisor incluent des suggestions pour réduire les coûts en modifiant la configuration des ressources (correct). Elles ne sont pas spécifiquement basées sur les performances des applications ou la sécurité (incorrect). Elles peuvent également aider à optimiser la performance et à migrer vers Azure, mais ces aspects ne sont pas les principaux objectifs des recommandations de coûts (incorrect)."
   }
 ]

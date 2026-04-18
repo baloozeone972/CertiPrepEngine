@@ -20,9 +20,14 @@
     "theme_label": "Composants du control plane",
     "difficulty": "easy",
     "question": "Quel composant stocke l'état du cluster ?",
-    "options": ["etcd", "kube-apiserver", "kube-scheduler", "kube-controller-manager"],
+    "options": [
+      "etcd",
+      "kube-apiserver",
+      "kube-scheduler",
+      "kube-controller-manager"
+    ],
     "correct": 0,
-    "explication": "etcd est la base de données clé-valeur qui stocke l'état du cluster."
+    "explanation": "etcd est la base de données clé-valeur qui stocke l'état du cluster."
   },
   {
     "id": "CKA-01-003",
@@ -30,9 +35,14 @@
     "theme_label": "Composants du control plane",
     "difficulty": "easy",
     "question": "Quel composant est responsable de la planification des pods ?",
-    "options": ["kube-scheduler", "kube-apiserver", "kube-controller-manager", "kubelet"],
+    "options": [
+      "kube-scheduler",
+      "kube-apiserver",
+      "kube-controller-manager",
+      "kubelet"
+    ],
     "correct": 0,
-    "explication": "Le scheduler assigne les pods aux nœuds."
+    "explanation": "Le scheduler assigne les pods aux nœuds."
   },
   {
     "id": "CKA-01-004",
@@ -40,9 +50,14 @@
     "theme_label": "Composants du control plane",
     "difficulty": "easy",
     "question": "Quel composant exécute les controllers (ex: deployment controller) ?",
-    "options": ["kube-controller-manager", "kube-apiserver", "kube-scheduler", "kubelet"],
+    "options": [
+      "kube-controller-manager",
+      "kube-apiserver",
+      "kube-scheduler",
+      "kubelet"
+    ],
     "correct": 0,
-    "explication": "Le controller manager exécute les boucles de contrôle."
+    "explanation": "Le controller manager exécute les boucles de contrôle."
   },
   {
     "id": "CKA-01-005",
@@ -50,9 +65,14 @@
     "theme_label": "Composants du control plane",
     "difficulty": "easy",
     "question": "Quel composant est le point d'entrée de toutes les opérations Kubernetes ?",
-    "options": ["kube-apiserver", "kube-scheduler", "kube-controller-manager", "etcd"],
+    "options": [
+      "kube-apiserver",
+      "kube-scheduler",
+      "kube-controller-manager",
+      "etcd"
+    ],
     "correct": 0,
-    "explication": "L'API server valide et traite toutes les requêtes."
+    "explanation": "L'API server valide et traite toutes les requêtes."
   },
   {
     "id": "CKA-01-006",
@@ -67,7 +87,7 @@
       "kube-controller-manager, kube-proxy"
     ],
     "correct": 0,
-    "explication": "Les nœuds workers exécutent kubelet, kube-proxy et un container runtime."
+    "explanation": "Les nœuds workers exécutent kubelet, kube-proxy et un container runtime."
   },
   {
     "id": "CKA-01-007",
@@ -75,9 +95,14 @@
     "theme_label": "Composants des nœuds",
     "difficulty": "easy",
     "question": "Quel composant s'assure que les conteneurs tournent sur le nœud ?",
-    "options": ["kubelet", "kube-proxy", "container runtime", "kube-apiserver"],
+    "options": [
+      "kubelet",
+      "kube-proxy",
+      "container runtime",
+      "kube-apiserver"
+    ],
     "correct": 0,
-    "explication": "Le kubelet gère les pods et conteneurs sur le nœud."
+    "explanation": "Le kubelet gère les pods et conteneurs sur le nœud."
   },
   {
     "id": "CKA-01-008",
@@ -85,9 +110,14 @@
     "theme_label": "Composants des nœuds",
     "difficulty": "easy",
     "question": "Quel composant gère les règles réseau (iptables) sur le nœud ?",
-    "options": ["kube-proxy", "kubelet", "container runtime", "cni plugin"],
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "container runtime",
+      "cni plugin"
+    ],
     "correct": 0,
-    "explication": "kube-proxy implémente le service proxy et les règles iptables."
+    "explanation": "kube-proxy implémente le service proxy et les règles iptables."
   },
   {
     "id": "CKA-01-009",
@@ -95,9 +125,14 @@
     "theme_label": "Add-ons",
     "difficulty": "easy",
     "question": "Quel add-on fournit la résolution DNS dans le cluster ?",
-    "options": ["CoreDNS", "kube-dns", "coredns", "A et B"],
+    "options": [
+      "CoreDNS",
+      "kube-dns",
+      "coredns",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "CoreDNS est l'add-on DNS standard depuis Kubernetes 1.13."
+    "explanation": "CoreDNS est l'add-on DNS standard depuis Kubernetes 1.13."
   },
   {
     "id": "CKA-01-010",
@@ -105,9 +140,14 @@
     "theme_label": "Add-ons",
     "difficulty": "easy",
     "question": "Quel add-on expose les métriques des nœuds et pods ?",
-    "options": ["Metrics Server", "Heapster", "Prometheus", "cAdvisor"],
+    "options": [
+      "Metrics Server",
+      "Heapster",
+      "Prometheus",
+      "cAdvisor"
+    ],
     "correct": 0,
-    "explication": "Metrics Server collecte les métriques de ressources pour HPA et kubectl top."
+    "explanation": "Metrics Server collecte les métriques de ressources pour HPA et kubectl top."
   },
   {
     "id": "CKA-01-011",
@@ -115,9 +155,14 @@
     "theme_label": "Add-ons",
     "difficulty": "easy",
     "question": "Quel add-on est nécessaire pour l'auto-scaling horizontal (HPA) ?",
-    "options": ["Metrics Server", "Heapster", "Prometheus", "Custom Metrics API"],
+    "options": [
+      "Metrics Server",
+      "Heapster",
+      "Prometheus",
+      "Custom Metrics API"
+    ],
     "correct": 0,
-    "explication": "HPA utilise les métriques de Metrics Server par défaut."
+    "explanation": "HPA utilise les métriques de Metrics Server par défaut."
   },
   {
     "id": "CKA-01-012",
@@ -132,7 +177,7 @@
       "kubectl config get-contexts"
     ],
     "correct": 0,
-    "explication": "use-context bascule vers un contexte existant."
+    "explanation": "use-context bascule vers un contexte existant."
   },
   {
     "id": "CKA-01-013",
@@ -147,7 +192,7 @@
       "kubectl config list-contexts"
     ],
     "correct": 0,
-    "explication": "get-contexts liste les contextes avec l'astérisque pour le courant."
+    "explanation": "get-contexts liste les contextes avec l'astérisque pour le courant."
   },
   {
     "id": "CKA-01-014",
@@ -162,7 +207,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl logs avec options -c, --tail, --since."
+    "explanation": "kubectl logs avec options -c, --tail, --since."
   },
   {
     "id": "CKA-01-015",
@@ -177,7 +222,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl exec permet d'exécuter des commandes dans un conteneur."
+    "explanation": "kubectl exec permet d'exécuter des commandes dans un conteneur."
   },
   {
     "id": "CKA-01-016",
@@ -192,7 +237,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl cp fonctionne comme scp."
+    "explanation": "kubectl cp fonctionne comme scp."
   },
   {
     "id": "CKA-01-017",
@@ -207,7 +252,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "apply est déclaratif, create est impératif."
+    "explanation": "apply est déclaratif, create est impératif."
   },
   {
     "id": "CKA-01-018",
@@ -222,7 +267,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "delete peut supprimer par nom, fichier, ou tout."
+    "explanation": "delete peut supprimer par nom, fichier, ou tout."
   },
   {
     "id": "CKA-01-019",
@@ -237,7 +282,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "describe donne l'état, -o yaml donne la définition complète."
+    "explanation": "describe donne l'état, -o yaml donne la définition complète."
   },
   {
     "id": "CKA-01-020",
@@ -252,7 +297,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "kubectl get events liste les événements."
+    "explanation": "kubectl get events liste les événements."
   },
   {
     "id": "CKA-01-021",
@@ -260,9 +305,14 @@
     "theme_label": "API Server",
     "difficulty": "easy",
     "question": "Quel port utilise l'API server par défaut ?",
-    "options": ["6443", "8080", "443", "8443"],
+    "options": [
+      "6443",
+      "8080",
+      "443",
+      "8443"
+    ],
     "correct": 0,
-    "explication": "L'API server écoute sur le port 6443 (HTTPS)."
+    "explanation": "L'API server écoute sur le port 6443 (HTTPS)."
   },
   {
     "id": "CKA-01-022",
@@ -277,7 +327,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl proxy ou direct avec certificats."
+    "explanation": "kubectl proxy ou direct avec certificats."
   },
   {
     "id": "CKA-01-023",
@@ -292,7 +342,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "L'aggregation layer permet d'ajouter des API via des apiservices."
+    "explanation": "L'aggregation layer permet d'ajouter des API via des apiservices."
   },
   {
     "id": "CKA-01-024",
@@ -300,9 +350,14 @@
     "theme_label": "etcd",
     "difficulty": "easy",
     "question": "Quel port etcd utilise-t-il par défaut ?",
-    "options": ["2379", "2380", "6443", "10250"],
+    "options": [
+      "2379",
+      "2380",
+      "6443",
+      "10250"
+    ],
     "correct": 0,
-    "explication": "2379 pour le client, 2380 pour le peer-to-peer."
+    "explanation": "2379 pour le client, 2380 pour le peer-to-peer."
   },
   {
     "id": "CKA-01-025",
@@ -317,7 +372,7 @@
       "A et B"
     ],
     "correct": 0,
-    "explication": "etcdctl snapshot save sauvegarde l'état."
+    "explanation": "etcdctl snapshot save sauvegarde l'état."
   },
   {
     "id": "CKA-01-026",
@@ -332,7 +387,7 @@
       "etcdctl load"
     ],
     "correct": 0,
-    "explication": "snapshot restore restaure la sauvegarde."
+    "explanation": "snapshot restore restaure la sauvegarde."
   },
   {
     "id": "CKA-01-027",
@@ -347,7 +402,7 @@
       "Règle réseau"
     ],
     "correct": 0,
-    "explication": "La politique de scheduler définit comment les pods sont placés."
+    "explanation": "La politique de scheduler définit comment les pods sont placés."
   },
   {
     "id": "CKA-01-028",
@@ -362,7 +417,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "nodeSelector, nodeName, ou node affinity."
+    "explanation": "nodeSelector, nodeName, ou node affinity."
   },
   {
     "id": "CKA-01-029",
@@ -377,7 +432,7 @@
       "Seulement Node"
     ],
     "correct": 0,
-    "explication": "Plusieurs contrôleurs tournent dans le controller manager."
+    "explanation": "Plusieurs contrôleurs tournent dans le controller manager."
   },
   {
     "id": "CKA-01-030",
@@ -392,7 +447,7 @@
       "Gère les volumes"
     ],
     "correct": 0,
-    "explication": "Le node controller gère le cycle de vie des nœuds."
+    "explanation": "Le node controller gère le cycle de vie des nœuds."
   },
   {
     "id": "CKA-01-031",
@@ -407,7 +462,7 @@
       "Gérer les configmaps"
     ],
     "correct": 0,
-    "explication": "CCM intègre Kubernetes avec l'API du cloud provider."
+    "explanation": "CCM intègre Kubernetes avec l'API du cloud provider."
   },
   {
     "id": "CKA-01-032",
@@ -415,9 +470,14 @@
     "theme_label": "Kubelet",
     "difficulty": "easy",
     "question": "Sur quel port le kubelet expose ses métriques ?",
-    "options": ["10250", "10255", "6443", "8080"],
+    "options": [
+      "10250",
+      "10255",
+      "6443",
+      "8080"
+    ],
     "correct": 0,
-    "explication": "Le kubelet expose son API sur le port 10250 (HTTPS)."
+    "explanation": "Le kubelet expose son API sur le port 10250 (HTTPS)."
   },
   {
     "id": "CKA-01-033",
@@ -432,7 +492,7 @@
       "/var/lib/kubelet/config"
     ],
     "correct": 0,
-    "explication": "Le kubelet surveille ce répertoire pour les manifests statiques."
+    "explanation": "Le kubelet surveille ce répertoire pour les manifests statiques."
   },
   {
     "id": "CKA-01-034",
@@ -440,9 +500,14 @@
     "theme_label": "Kube-proxy",
     "difficulty": "easy",
     "question": "Quels modes de fonctionnement kube-proxy supporte-t-il ?",
-    "options": ["iptables, ipvs, userspace", "iptables seulement", "ipvs seulement", "userspace seulement"],
+    "options": [
+      "iptables, ipvs, userspace",
+      "iptables seulement",
+      "ipvs seulement",
+      "userspace seulement"
+    ],
     "correct": 0,
-    "explication": "iptables est le mode par défaut, ipvs est plus performant."
+    "explanation": "iptables est le mode par défaut, ipvs est plus performant."
   },
   {
     "id": "CKA-01-035",
@@ -457,7 +522,7 @@
       "CRI-O seulement"
     ],
     "correct": 0,
-    "explication": "Kubernetes utilise l'interface CRI pour communiquer avec le runtime."
+    "explanation": "Kubernetes utilise l'interface CRI pour communiquer avec le runtime."
   },
   {
     "id": "CKA-01-036",
@@ -472,7 +537,7 @@
       "Interface de logging"
     ],
     "correct": 0,
-    "explication": "CNI est un standard pour configurer le réseau des conteneurs."
+    "explanation": "CNI est un standard pour configurer le réseau des conteneurs."
   },
   {
     "id": "CKA-01-037",
@@ -487,7 +552,7 @@
       "CoreDNS"
     ],
     "correct": 0,
-    "explication": "Calico, Flannel, Weave, Cilium sont des plugins réseau."
+    "explanation": "Calico, Flannel, Weave, Cilium sont des plugins réseau."
   },
   {
     "id": "CKA-01-038",
@@ -502,7 +567,7 @@
       "Interface de logging"
     ],
     "correct": 0,
-    "explication": "CSI permet d'intégrer des solutions de stockage externes."
+    "explanation": "CSI permet d'intégrer des solutions de stockage externes."
   },
   {
     "id": "CKA-01-039",
@@ -517,7 +582,7 @@
       "Interface de sécurité"
     ],
     "correct": 0,
-    "explication": "CRI permet à kubelet de communiquer avec différents runtimes."
+    "explanation": "CRI permet à kubelet de communiquer avec différents runtimes."
   },
   {
     "id": "CKA-01-040",
@@ -532,6 +597,271 @@
       "kubeadm cluster"
     ],
     "correct": 0,
-    "explication": "kubeadm init initialise le control plane."
+    "explanation": "kubeadm init initialise le control plane."
+  },
+  {
+    "id": "CKA-CA-001",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants du control plane",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le kube-apiserver :",
+    "options": [
+      "Il gère les requêtes d'API et stocke l'état du cluster.",
+      "Il est responsable de la planification des nœuds.",
+      "Il coordonne les actions du controller manager.",
+      "Il exécute des conteneurs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le kube-apiserver gère les requêtes d'API et stocke l'état du cluster. Il coordonne les actions du controller manager. Il n'est pas responsable de la planification des nœuds et ne exécute pas directement des conteneurs."
+  },
+  {
+    "id": "CKA-CA-002",
+    "theme": "Cluster Architecture",
+    "theme_label": "Composants des nœuds",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel composant est responsable de l'exécution des conteneurs sur un nœud Kubernetes ?",
+    "options": [
+      "kubelet",
+      "kube-proxy",
+      "container runtime",
+      "etcd"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "kubelet est responsable de l'exécution des conteneurs sur un nœud Kubernetes. kube-proxy gère les règles de réseau pour les services. container runtime exécute les conteneurs, mais n'est pas un composant Kubernetes lui-même. etcd stocke l'état du cluster."
+  },
+  {
+    "id": "CKA-CA-003",
+    "theme": "Cluster Architecture",
+    "theme_label": "Add-ons",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les add-ons Kubernetes :",
+    "options": [
+      "Istio est un add-on pour la mise en réseau et la gestion de service.",
+      "Metrics Server fournit des métriques d'utilisation des ressources pour le dimensionnement automatique.",
+      "Prometheus est un add-on de monitoring et d'alerting.",
+      "NFS est un add-on pour le stockage réseau."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Istio est effectivement un add-on pour la mise en réseau et la gestion de service. Metrics Server fournit des métriques d'utilisation des ressources pour le dimensionnement automatique. Prometheus est un add-on de monitoring et d'alerting. NFS n'est pas généralement considéré comme un add-on Kubernetes standard."
+  },
+  {
+    "id": "CKA-CA-004",
+    "theme": "Cluster Architecture",
+    "theme_label": "API Server",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de l'API server dans Kubernetes ?",
+    "options": [
+      "Il gère les requêtes d'API et stocke l'état du cluster.",
+      "Il exécute des conteneurs sur les nœuds.",
+      "Il coordonne les actions du controller manager.",
+      "Il gère la mise en réseau des conteneurs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'API server gère les requêtes d'API et stocke l'état du cluster. Il n'exécute pas directement des conteneurs, ne coordonne pas les actions du controller manager et n'est pas responsable de la mise en réseau des conteneurs."
+  },
+  {
+    "id": "CKA-CA-005",
+    "theme": "Cluster Architecture",
+    "theme_label": "etcd",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de etcd dans Kubernetes ?",
+    "options": [
+      "Il stocke l'état du cluster.",
+      "Il exécute des conteneurs sur les nœuds.",
+      "Il gère les requêtes d'API.",
+      "Il coordonne les actions du controller manager."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "etcd stocke l'état du cluster. Il n'exécute pas directement des conteneurs, ne gère pas les requêtes d'API et n'est pas responsable de la coordination des actions du controller manager."
+  },
+  {
+    "id": "CKA-CA-006",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubelet",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le Kubelet :",
+    "options": [
+      "Le Kubelet est responsable de l'orchestration des conteneurs sur les nœuds.",
+      "Le Kubelet communique avec l'API server pour obtenir des instructions.",
+      "Le Kubelet gère les volumes persistants via CSI.",
+      "Le Kubelet est le composant du control plane qui orchestre les nœuds.",
+      "Le Kubelet est responsable de la création et du maintien des conteneurs."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3,
+      4
+    ],
+    "explanation": "Le Kubelet est responsable de l'orchestration des conteneurs sur les nœuds (B, D, E). Il communique avec l'API server pour obtenir des instructions (B). Il gère les volumes persistants via CSI (C). Il n'est pas le composant du control plane qui orchestre les nœuds (D est incorrect)."
+  },
+  {
+    "id": "CKA-CA-007",
+    "theme": "Cluster Architecture",
+    "theme_label": "API Server",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de l'API Server dans Kubernetes ?",
+    "options": [
+      "Gérer les volumes persistants via CSI.",
+      "Orchestrer les conteneurs sur les nœuds.",
+      "Stocker l'état du cluster et fournir des interfaces API pour le contrôle du cluster.",
+      "Gérer les journaux des conteneurs."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "L'API Server stocke l'état du cluster et fournit des interfaces API pour le contrôle du cluster (C)."
+  },
+  {
+    "id": "CKA-CA-008",
+    "theme": "Cluster Architecture",
+    "theme_label": "etcd",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant etcd :",
+    "options": [
+      "etcd est une base de données clé-valeur distribuée.",
+      "etcd stocke l'état du cluster et les configurations des composants Kubernetes.",
+      "etcd est responsable de la création et de la gestion des conteneurs sur les nœuds.",
+      "etcd est le composant du control plane qui orchestre les nœuds.",
+      "etcd utilise un protocole de consensus pour garantir la cohérence des données."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      4
+    ],
+    "explanation": "etcd est une base de données clé-valeur distribuée (A). Il stocke l'état du cluster et les configurations des composants Kubernetes (B). Il n'est pas responsable de la création et de la gestion des conteneurs sur les nœuds (C est incorrect). Il n'est pas le composant du control plane qui orchestre les nœuds (D est incorrect). etcd utilise un protocole de consensus pour garantir la cohérence des données (E)."
+  },
+  {
+    "id": "CKA-CA-009",
+    "theme": "Cluster Architecture",
+    "theme_label": "Cloud Controller Manager",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale du Cloud Controller Manager dans un cluster Kubernetes sur des plateformes cloud ?",
+    "options": [
+      "Gérer les volumes persistants via CSI.",
+      "Orchestrer les conteneurs sur les nœuds.",
+      "Gérer les ressources cloud et les interactions avec le fournisseur de services cloud.",
+      "Gérer les journaux des conteneurs."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Le Cloud Controller Manager gère les ressources cloud et les interactions avec le fournisseur de services cloud (C)."
+  },
+  {
+    "id": "CKA-CA-010",
+    "theme": "Cluster Architecture",
+    "theme_label": "CNI",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le CNI (Container Network Interface) :",
+    "options": [
+      "Le CNI est responsable de la configuration et du routage des réseaux pour les conteneurs.",
+      "Le CNI fournit une interface standardisée pour la configuration réseau des conteneurs sur les nœuds.",
+      "Le CNI est le composant du control plane qui orchestre les nœuds.",
+      "Le CNI gère les journaux des conteneurs.",
+      "Le CNI est responsable de la création et de la gestion des volumes persistants."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Le CNI est responsable de la configuration et du routage des réseaux pour les conteneurs (A). Il fournit une interface standardisée pour la configuration réseau des conteneurs sur les nœuds (B). Il n'est pas le composant du control plane qui orchestre les nœuds (C est incorrect). Il ne gère pas les journaux des conteneurs (D est incorrect). Il n'est pas responsable de la création et de la gestion des volumes persistants (E est incorrect)."
+  },
+  {
+    "id": "CKA-CA-011",
+    "theme": "Cluster Architecture",
+    "theme_label": "API Server",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le API Server Kubernetes :",
+    "options": [
+      "Le API Server est responsable de l'authentification et de l'autorisation des requêtes.",
+      "Le API Server gère les états des nœuds et des pods.",
+      "Le API Server est une base de données clé-valeur.",
+      "Le API Server exécute des conteneurs."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Le API Server est responsable de l'authentification et de l'autorisation des requêtes (correct). Le API Server gère les états des nœuds et des pods (correct). Le API Server est une base de données clé-valeur (incorrect, c'est etcd qui le fait). Le API Server exécute des conteneurs (incorrect, c'est kubelet qui le fait)."
+  },
+  {
+    "id": "CKA-CA-012",
+    "theme": "Cluster Architecture",
+    "theme_label": "Cloud Controller Manager",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel composant est spécifique à un fournisseur de cloud et gère les ressources spécifiques à ce fournisseur ?",
+    "options": [
+      "Cloud Controller Manager",
+      "Kubelet",
+      "kube-apiserver",
+      "etcd"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Cloud Controller Manager est spécifique à un fournisseur de cloud et gère les ressources spécifiques à ce fournisseur (correct). Kubelet est responsable de la gestion des conteneurs sur un nœud spécifique (incorrect). kube-apiserver gère les API du cluster (incorrect). etcd est la base de données clé-valeur qui stocke l'état du cluster (incorrect)."
+  },
+  {
+    "id": "CKA-CA-013",
+    "theme": "Cluster Architecture",
+    "theme_label": "Kubelet",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le Kubelet :",
+    "options": [
+      "Le Kubelet est responsable de la gestion des conteneurs sur un nœud spécifique.",
+      "Le Kubelet communique avec le API Server pour obtenir des instructions sur les conteneurs à exécuter.",
+      "Le Kubelet est une base de données clé-valeur.",
+      "Le Kubelet exécute des requêtes HTTP."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Le Kubelet est responsable de la gestion des conteneurs sur un nœud spécifique (correct). Le Kubelet communique avec le API Server pour obtenir des instructions sur les conteneurs à exécuter (correct). Le Kubelet est une base de données clé-valeur (incorrect, c'est etcd qui le fait). Le Kubelet exécute des requêtes HTTP (incorrect, c'est kube-apiserver qui le fait)."
+  },
+  {
+    "id": "CKA-CA-014",
+    "theme": "Cluster Architecture",
+    "theme_label": "CNI",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale responsabilité du plugin réseau CNI (Container Network Interface) dans un cluster Kubernetes ?",
+    "options": [
+      "Gérer les ressources de stockage des conteneurs.",
+      "Fournir une interface réseau pour les conteneurs dans le cluster.",
+      "Gérer l'authentification et l'autorisation des requêtes HTTP.",
+      "Exécuter des conteneurs sur les nœuds du cluster."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La principale responsabilité du plugin réseau CNI (Container Network Interface) dans un cluster Kubernetes est de fournir une interface réseau pour les conteneurs dans le cluster (correct). Gérer les ressources de stockage des conteneurs (incorrect, c'est CSI qui le fait). Gérer l'authentification et l'autorisation des requêtes HTTP (incorrect, c'est le API Server qui le fait). Exécuter des conteneurs sur les nœuds du cluster (incorrect, c'est kubelet qui le fait)."
   }
 ]

@@ -898,5 +898,741 @@
     ],
     "correct": 0,
     "explanation": "Comme les sealed classes, une sealed interface restreint quelles classes ou interfaces peuvent l'implémenter/étendre, avec le mot-clé permits."
+  },
+  {
+    "id": "JAVA21-P-C-001",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encapsulation en Java :",
+    "options": [
+      "L'encapsulation permet de protéger les données.",
+      "L'encapsulation est réalisée en utilisant des méthodes publiques.",
+      "L'encapsulation permet de modifier l'accès aux attributs d'une classe.",
+      "L'encapsulation est souvent implémentée en utilisant des variables privées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "L'encapsulation en Java permet de protéger les données et de modifier leur accès, généralement en utilisant des variables privées et des méthodes publiques pour y accéder. L'option B est incorrecte car l'encapsulation n'est pas uniquement réalisée par des méthodes publiques, mais aussi par le contrôle d'accès aux attributs."
+  },
+  {
+    "id": "JAVA21-P-C-002",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une classe et un objet en Java ?",
+    "options": [
+      "Une classe est une instance d'un objet.",
+      "Un objet est une définition de données et de comportements.",
+      "Une classe définit les propriétés et les méthodes, tandis qu'un objet est une instance de cette classe.",
+      "Un objet est un type de classe."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Une classe définit les propriétés et les méthodes, tandis qu'un objet est une instance de cette classe. L'option A est incorrecte car une classe n'est pas une instance d'un objet, mais elle peut créer des objets. L'option B est incorrecte car un objet n'est pas une définition, mais une instance. L'option D est incorrecte car un objet n'est pas un type de classe, mais une instance d'une classe."
+  },
+  {
+    "id": "JAVA21-P-C-003",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'héritage en Java ?",
+    "options": [
+      "Java ne supporte pas l'héritage multiple.",
+      "L'héritage permet à une classe de posséder plusieurs classes mères.",
+      "Une classe peut hériter d'une interface et d'une classe.",
+      "L'héritage est utilisé pour modifier le comportement d'une classe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Java ne supporte pas l'héritage multiple, mais il permet à une classe d'implémenter plusieurs interfaces. L'héritage est utilisé pour modifier le comportement d'une classe en redéfinissant ses méthodes. L'option B est incorrecte car une classe ne peut hériter d'une seule classe mère. L'option C est incorrecte car une classe ne peut hériter d'une seule classe, mais elle peut implémenter plusieurs interfaces."
+  },
+  {
+    "id": "JAVA21-P-C-004",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode utilisée pour appeler une méthode de la classe parente en Java ?",
+    "options": [
+      "super.methodName()",
+      "parent.methodName()",
+      "this.methodName()",
+      "base.methodName()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode utilisée pour appeler une méthode de la classe parente en Java est super.methodName(). L'option B est incorrecte car il n'y a pas de mot-clé 'parent'. L'option C est incorrecte car 'this' fait référence à l'objet courant, pas au parent. L'option D est incorrecte car il n'y a pas de mot-clé 'base'."
+  },
+  {
+    "id": "JAVA21-P-C-005",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le polymorphisme en Java :",
+    "options": [
+      "Le polymorphisme permet de faire référence à un objet sous une forme différente.",
+      "Le polymorphisme est réalisé par l'intermédiaire de méthodes abstraites.",
+      "Le polymorphisme permet d'appeler une méthode qui est définie dans la classe enfant.",
+      "Le polymorphisme est utilisé pour réduire le couplage."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Le polymorphisme en Java permet de faire référence à un objet sous une forme différente et d'appeler une méthode définie dans la classe enfant. Le polymorphisme est réalisé par l'intermédiaire de méthodes abstraites, d'interfaces et de surcharge. L'option B est incorrecte car le polymorphisme n'est pas uniquement réalisé par des méthodes abstraites."
+  },
+  {
+    "id": "JAVA21-P-C-006",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une méthode abstraite et une méthode concrète en Java ?",
+    "options": [
+      "Une méthode abstraite doit être implémentée dans la classe enfant, tandis qu'une méthode concrète est déjà implémentée.",
+      "Une méthode abstraite peut être déclarée dans une classe sans corps, tandis qu'une méthode concrète doit avoir un corps.",
+      "Une méthode abstraite est toujours publique, tandis qu'une méthode concrète peut avoir n'importe quel modificateur d'accès.",
+      "Une méthode abstraite ne peut pas être statique, tandis qu'une méthode concrète peut l'être."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Une méthode abstraite peut être déclarée dans une classe sans corps, tandis qu'une méthode concrète doit avoir un corps. L'option A est incorrecte car une méthode abstraite peut être implémentée dans la classe enfant, mais elle n'est pas obligatoire si la méthode est redéfinie. L'option C est incorrecte car une méthode abstraite n'est pas toujours publique, elle peut avoir d'autres modificateurs d'accès. L'option D est incorrecte car une méthode abstraite peut être statique, mais ce n'est pas courant."
+  },
+  {
+    "id": "JAVA21-P-C-007",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'interface en Java ?",
+    "options": [
+      "Une interface peut contenir des méthodes concrètes.",
+      "Une interface peut hériter d'une autre interface.",
+      "Une classe peut implémenter plusieurs interfaces.",
+      "Une interface ne peut pas contenir des attributs."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Une interface peut hériter d'une autre interface et une classe peut implémenter plusieurs interfaces. Une interface ne peut pas contenir des méthodes concrètes, sauf en utilisant les méthodes par défaut ou statiques introduits dans Java 8. L'option D est incorrecte car une interface peut contenir des attributs, mais ils sont implicitement publics, statiques et finals."
+  },
+  {
+    "id": "JAVA21-P-C-008",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre une classe abstraite et une interface en Java ?",
+    "options": [
+      "Une classe abstraite peut contenir des méthodes concrètes, tandis qu'une interface ne peut pas.",
+      "Une classe abstraite peut être instanciée, tandis qu'une interface ne peut pas.",
+      "Une classe abstraite peut avoir des constructeurs, tandis qu'une interface ne peut pas.",
+      "Une classe abstraite peut avoir des champs non statiques, tandis qu'une interface ne peut pas."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Une classe abstraite peut avoir des constructeurs, tandis qu'une interface ne peut pas. Une classe abstraite peut contenir des méthodes concrètes et des champs non statiques, tandis qu'une interface ne peut contenir que des méthodes abstraites et des champs publics statiques finals. L'option B est incorrecte car une classe abstraite ne peut pas être instanciée, mais elle peut avoir des constructeurs pour initialiser ses sous-classes. L'option D est incorrecte car une interface peut avoir des champs publics statiques finals."
+  },
+  {
+    "id": "JAVA21-P-C-009",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la polymorphisme en Java :",
+    "options": [
+      "Permet de définir une méthode dans la classe parente et redéfinir cette méthode dans la classe enfant",
+      "Permet de créer des objets avec des types différents mais qui peuvent être traités comme étant du même type",
+      "Permet de surcharger des méthodes dans une classe enfant",
+      "Permet d'avoir plusieurs classes avec le même nom"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte car la polymorphisme permet de redéfinir une méthode dans une classe enfant. L'option B est correcte car elle décrit le polymorphisme par subtypes, où des objets de types différents peuvent être traités comme étant du même type. L'option C est incorrecte car la surcharge de méthodes se fait dans une même classe, pas entre parent et enfant. L'option D est incorrecte car le polymorphisme ne concerne pas la possibilité de créer des classes avec le même nom."
+  },
+  {
+    "id": "JAVA21-P-C-010",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre l'héritage et l'interface en Java ?",
+    "options": [
+      "L'héritage permet de partager des méthodes et des attributs, l'interface ne le fait pas",
+      "L'interface peut avoir des méthodes avec une implémentation, l'héritage non",
+      "L'héritage est utilisé pour définir des classes, l'interface pour définir des types",
+      "L'héritage est multiple, l'interface ne peut être implémentée qu'une seule fois"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "L'option C est correcte car l'héritage est utilisé pour définir des classes avec une hiérarchie, tandis que l'interface est utilisée pour définir des types qui peuvent être partagés entre différentes classes. Les autres options sont incorrectes car l'héritage permet de partager des méthodes et des attributs, les interfaces peuvent avoir des méthodes avec une implémentation par défaut en Java 8+, et l'héritage est simple mais une classe peut implémenter plusieurs interfaces."
+  },
+  {
+    "id": "JAVA21-P-C-011",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'encapsulation en Java ?",
+    "options": [
+      "Permet de protéger les données en utilisant des accesseurs et mutateurs",
+      "Permet de partager des méthodes entre différentes classes",
+      "Permet d'implémenter des interfaces",
+      "Permet de cacher les détails d'implémentation"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "L'option A est correcte car l'encapsulation permet de protéger les données en utilisant des accesseurs (getters) et mutateurs (setters). L'option B est incorrecte car l'héritage ou l'implémentation d'interfaces permettent de partager des méthodes entre différentes classes. L'option C est incorrecte car l'encapsulation n'est pas liée à l'implémentation d'interfaces. L'option D est correcte car l'encapsulation permet de cacher les détails d'implémentation en limitant l'accès direct aux variables membres."
+  },
+  {
+    "id": "JAVA21-P-C-012",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode appelée lors de l'instanciation d'un objet en Java ?",
+    "options": [
+      "constructeur",
+      "initialiseur",
+      "méthode statique",
+      "méthode d'instance"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option A est correcte car le constructeur est appelé lors de l'instanciation d'un objet en Java. Les autres options sont incorrectes car l'initialiseur est utilisé pour initialiser des champs, les méthodes statiques ne sont pas appelées lors de l'instanciation et les méthodes d'instance nécessitent une instance pour être appelées."
+  },
+  {
+    "id": "JAVA21-P-C-013",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'abstraction en Java :",
+    "options": [
+      "Permet de cacher les détails d'implémentation",
+      "Permet de définir des méthodes sans implémentations",
+      "Permet de partager des données entre différentes classes",
+      "Permet d'avoir plusieurs constructeurs dans une classe"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte car l'abstraction permet de cacher les détails d'implémentation en utilisant des interfaces et des classes abstraites. L'option B est correcte car elle décrit l'utilisation de méthodes abstraites dans une interface ou une classe abstraite. L'option C est incorrecte car l'abstraction ne concerne pas la partage de données entre différentes classes. L'option D est incorrecte car l'abstraction n'est pas liée à la possibilité de définir plusieurs constructeurs dans une classe."
+  },
+  {
+    "id": "JAVA21-P-C-014",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage en Java :",
+    "options": [
+      "Une classe peut hériter de plusieurs classes parentes",
+      "Une classe peut hériter d'une seule classe parente",
+      "L'héritage est utilisé pour réutiliser le code",
+      "Une classe peut hériter d'une interface uniquement"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'option B est correcte car Java supporte l'héritage simple de classes (une seule classe parente). L'option C est correcte car l'héritage est utilisé pour réutiliser le code. Les options A et D sont incorrectes car Java ne supporte pas l'héritage multiple de classes mais permet l'héritage d'interfaces."
+  },
+  {
+    "id": "JAVA21-P-C-015",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre 'extends' et 'implements' en Java ?",
+    "options": [
+      "'extends' est utilisé pour implémenter des interfaces, 'implements' est utilisé pour hériter de classes",
+      "'extends' est utilisé pour hériter de classes, 'implements' est utilisé pour implémenter des interfaces",
+      "'extends' et 'implements' sont interchangeables",
+      "Aucune différence, ils ont le même usage"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "'extends' est utilisé pour hériter de classes, tandis que 'implements' est utilisé pour implémenter des interfaces. Les options A et C sont incorrectes car elles inversent les usages, tandis que l'option D est incorrecte car ces mots-clés ont des utilisations distinctes."
+  },
+  {
+    "id": "JAVA21-P-C-016",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le polymorphisme en Java ?",
+    "options": [
+      "Le polymorphisme permet de définir plusieurs méthodes avec le même nom",
+      "Le polymorphisme est utilisé pour surcharger des classes",
+      "Le polymorphisme permet de faire référence à un objet d'une classe enfant avec une variable de type de classe parente",
+      "Le polymorphisme est utilisé pour cacher des méthodes"
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "L'option C est correcte car le polymorphisme permet de faire référence à un objet d'une classe enfant avec une variable de type de classe parente. L'option D est correcte car le polymorphisme permet également de cacher des méthodes. Les options A et B sont incorrectes car le polymorphisme ne concerne pas la surcharge de méthodes ou l'implémentation de plusieurs méthodes avec le même nom."
+  },
+  {
+    "id": "JAVA21-P-C-017",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode appelée lors de l'instanciation d'un objet en Java ?",
+    "options": [
+      "Constructeur",
+      "Méthode main",
+      "Méthode start",
+      "Méthode init"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode appelée lors de l'instanciation d'un objet en Java est le constructeur. Les options B, C et D sont incorrectes car elles ne correspondent pas à des méthodes spécifiques de l'instanciation d'un objet."
+  },
+  {
+    "id": "JAVA21-P-C-018",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la surcharge de méthodes en Java :",
+    "options": [
+      "La surcharge permet de définir plusieurs méthodes avec le même nom mais des signatures différentes",
+      "La surcharge permet de modifier le comportement d'une méthode existante",
+      "La surcharge est réalisée dans différentes classes",
+      "La surcharge peut être effectuée en changeant le type des paramètres"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "L'option A est correcte car la surcharge permet de définir plusieurs méthodes avec le même nom mais des signatures différentes. L'option D est correcte car la surcharge peut être effectuée en changeant le type des paramètres. Les options B et C sont incorrectes car la surcharge ne modifie pas le comportement d'une méthode existante et n'est pas réalisée dans différentes classes."
+  },
+  {
+    "id": "JAVA21-P-C-019",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage en Java :",
+    "options": [
+      "Une classe peut hériter de plusieurs classes parentes",
+      "Une classe peut hériter d'une seule classe parente",
+      "L'héritage n'existe pas en Java",
+      "Une classe peut hériter d'une interface uniquement"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "L'option B est correcte car Java supporte l'héritage simple de classes, une classe peut hériter d'une seule classe parente. L'option D est correcte car une classe peut également hériter d'une interface, ce qui est appelé héritage multiple. Les options A et C sont incorrectes : Java ne supporte pas l'héritage multiple de classes, mais permet d'implémenter plusieurs interfaces."
+  },
+  {
+    "id": "JAVA21-P-C-020",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode utilisée pour appeler une méthode de la classe parente dans Java ?",
+    "options": [
+      "super.methodName()",
+      "this.methodName()",
+      "parent.methodName()",
+      "base.methodName()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option A est correcte car 'super.methodName()' est utilisé pour appeler une méthode de la classe parente dans Java. Les options B, C et D sont incorrectes : 'this' fait référence à l'objet actuel, 'parent' et 'base' ne sont pas des mots-clés valides en Java pour accéder à la classe parente."
+  },
+  {
+    "id": "JAVA21-P-C-021",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le polymorphisme en Java ?",
+    "options": [
+      "Le polymorphisme permet de définir plusieurs méthodes avec le même nom dans une classe",
+      "Le polymorphisme est réalisé par l'intermédiaire de l'héritage et des interfaces",
+      "Le polymorphisme ne peut être utilisé que avec les classes abstraites",
+      "Le polymorphisme permet d'utiliser un objet d'une classe enfant comme si c'était un objet de la classe parente"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "L'option B est correcte car le polymorphisme en Java est effectivement réalisé par l'intermédiaire de l'héritage et des interfaces. L'option D est correcte car le polymorphisme permet d'utiliser un objet d'une classe enfant comme si c'était un objet de la classe parente, ce qui est appelé polymorphisme par subtyping. Les options A et C sont incorrectes : le polymorphisme ne permet pas de définir plusieurs méthodes avec le même nom dans une classe, et il peut être utilisé avec des classes non abstraites."
+  },
+  {
+    "id": "JAVA21-P-C-022",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un constructeur et une méthode dans Java ?",
+    "options": [
+      "Un constructeur initialise un objet, une méthode effectue une action",
+      "Un constructeur peut retourner une valeur, une méthode ne peut pas",
+      "Un constructeur s'exécute après l'appel de la méthode main()",
+      "Un constructeur doit avoir le même nom que la classe, une méthode peut avoir n'importe quel nom"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'option A est correcte car un constructeur initialise les attributs d'un objet lors de sa création, tandis qu'une méthode effectue une action spécifique. Les options B et C sont incorrectes : un constructeur ne retourne aucune valeur, et il s'exécute lors de la création d'un objet, pas après l'appel de main(). L'option D est incorrecte car une méthode peut avoir le même nom que la classe, mais ce n'est pas une règle."
+  },
+  {
+    "id": "JAVA21-P-C-023",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encapsulation en Java :",
+    "options": [
+      "L'encapsulation permet de cacher les détails d'implémentation",
+      "L'encapsulation est réalisée en utilisant des accesseurs (getters) et mutateurs (setters)",
+      "L'encapsulation permet de protéger les données",
+      "L'encapsulation est réalisée en utilisant des variables publiques"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'option A est correcte car l'encapsulation permet de cacher les détails d'implémentation en utilisant des modificateurs d'accès. L'option B est correcte car l'encapsulation est souvent réalisée en utilisant des accesseurs et mutateurs pour contrôler l'accès aux attributs. L'option C est correcte car elle protège les données en limitant leur accès direct. L'option D est incorrecte car utiliser des variables publiques va à l'encontre de la philosophie de l'encapsulation, qui vise à protéger les données."
+  },
+  {
+    "id": "JAVA21-P-C-024",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage en Java :",
+    "options": [
+      "Une classe peut hériter de plusieurs classes parentes",
+      "Une classe peut hériter d'une seule classe parente",
+      "L'héritage n'existe pas en Java",
+      "Une classe peut hériter d'une interface"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "L'héritage en Java est simple, une classe peut hériter d'une seule classe parente (option B). L'héritage multiple de classes n'est pas supporté (option A est incorrecte), mais une classe peut hériter d'une interface (option D). L'héritage existe en Java, donc l'option C est incorrecte."
+  },
+  {
+    "id": "JAVA21-P-C-025",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Que signifie 'implements' en Java ?",
+    "options": [
+      "Déclare une méthode abstraite",
+      "Hérite d'une classe parente",
+      "Implémente une interface",
+      "Crée une nouvelle instance"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "'implements' est utilisé pour implémenter une interface, donc l'option C est correcte. Les autres options ne sont pas liées à 'implements'."
+  },
+  {
+    "id": "JAVA21-P-C-026",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le polymorphisme en Java :",
+    "options": [
+      "Permet de créer des méthodes avec le même nom dans différentes classes",
+      "Permet d'appeler une méthode sur un objet sans connaître son type exact",
+      "Nécessite l'utilisation de la clé 'final'",
+      "Permet d'utiliser des types génériques"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Le polymorphisme permet d'appeler une méthode sur un objet sans connaître son type exact (option B). Il permet également de créer des méthodes avec le même nom dans différentes classes (option A), ce qui est appelé polymorphisme par surcharge. L'utilisation de 'final' empêche la surcharge et l'override, donc option C est incorrecte. Les types génériques sont liés à la paramétrisation de classes et méthodes, pas directement au polymorphisme (option D)."
+  },
+  {
+    "id": "JAVA21-P-C-027",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre 'abstract' et 'interface' en Java ?",
+    "options": [
+      "'abstract' peut avoir des méthodes non implémentées, 'interface' ne peut pas",
+      "'abstract' est utilisé pour définir des classes, 'interface' est utilisé pour définir des méthodes",
+      "'abstract' peut avoir des champs, 'interface' ne peut pas",
+      "'abstract' peut être hérité par une classe, 'interface' ne peut pas"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "'abstract' peut avoir des champs (variables), tandis que 'interface' ne peut pas contenir de champs sauf des constantes. Les autres options sont incorrectes car 'abstract' peut avoir des méthodes non implémentées (option A est partielle), 'interface' est utilisé pour définir des méthodes mais peut également avoir des champs constants (option B), et 'interface' peut être implémentée par une classe, pas héritée (option D)."
+  },
+  {
+    "id": "JAVA21-P-C-028",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le polymorphisme par inclusion en Java :",
+    "options": [
+      "Permet d'utiliser un objet d'une classe dérivée comme un objet de sa classe mère",
+      "Nécessite l'utilisation du mot-clé 'extends'",
+      "Permet d'appeler des méthodes spécifiques à la classe dérivée",
+      "Nécessite l'utilisation du mot-clé 'implements'"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le polymorphisme par inclusion permet d'utiliser un objet d'une classe dérivée comme un objet de sa classe mère (option A). Il permet également d'appeler des méthodes spécifiques à la classe dérivée (option C). Le polymorphisme par inclusion n'utilise pas nécessairement 'extends' ou 'implements', donc options B et D sont incorrectes."
+  },
+  {
+    "id": "JAVA21-P-C-029",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage en Java :",
+    "options": [
+      "Une classe peut hériter de plusieurs classes parentes",
+      "Une classe peut hériter d'une seule classe parente",
+      "L'héritage n'existe pas en Java",
+      "Une classe peut hériter d'une interface uniquement"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "L'héritage en Java est simple (une classe peut hériter d'une seule classe parente), mais il existe l'héritage multiple d'interfaces (une classe peut hériter d'une interface uniquement). L'héritage existe en Java, donc l'option C est incorrecte. L'option A est incorrecte car Java ne supporte pas l'héritage multiple de classes."
+  },
+  {
+    "id": "JAVA21-P-C-030",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Que signifie 'extends' en Java ?",
+    "options": [
+      "Implémente une interface",
+      "Hérite d'une classe parente",
+      "Crée une nouvelle instance",
+      "Déclare une méthode abstraite"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "'extends' est utilisé pour l'héritage de classes. Une classe étend une autre classe avec 'extends'. Les autres options ne sont pas correctes car 'implements' est utilisé pour implémenter une interface, 'new' crée une nouvelle instance et 'abstract' déclare une méthode abstraite."
+  },
+  {
+    "id": "JAVA21-P-C-031",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le polymorphisme en Java ?",
+    "options": [
+      "Le polymorphisme permet de définir des méthodes avec le même nom dans différentes classes",
+      "Le polymorphisme ne peut être utilisé qu'avec des méthodes statiques",
+      "Le polymorphisme permet d'appeler une méthode d'une classe enfant en utilisant une référence de la classe parente",
+      "Le polymorphisme est utilisé pour accéder à des attributs"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le polymorphisme permet de définir des méthodes avec le même nom dans différentes classes (surcharge et redéfinition). Il permet également d'appeler une méthode d'une classe enfant en utilisant une référence de la classe parente (liaison dynamique). L'option B est incorrecte car le polymorphisme peut être utilisé avec des méthodes non statiques. L'option D est incorrecte car le polymorphisme s'applique aux méthodes, pas aux attributs."
+  },
+  {
+    "id": "JAVA21-P-C-032",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre 'abstract' et 'interface' en Java ?",
+    "options": [
+      "'abstract' est utilisé pour définir des méthodes abstraites, 'interface' est utilisée pour définir une classe",
+      "'abstract' peut avoir des méthodes non abstraites, 'interface' ne peut avoir que des méthodes abstraites",
+      "'abstract' est utilisé pour définir une classe, 'interface' est utilisée pour définir des méthodes",
+      "'abstract' peut avoir des attributs, 'interface' ne peut pas"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "'abstract' peut avoir des méthodes non abstraites, tandis que 'interface' ne peut avoir que des méthodes abstraites (à partir de Java 8, les interfaces peuvent avoir des méthodes par défaut et statiques). Les autres options ne sont pas correctes car 'abstract' est utilisé pour définir des classes, et 'interface' est utilisée pour définir un contrat de méthodes."
+  },
+  {
+    "id": "JAVA21-P-C-033",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le polymorphisme en Java :",
+    "options": [
+      "Le polymorphisme permet de définir des méthodes avec le même nom dans différentes classes",
+      "Le polymorphisme ne peut être utilisé qu'avec des méthodes statiques",
+      "Le polymorphisme permet d'appeler une méthode d'une classe enfant en utilisant une référence de la classe parente",
+      "Le polymorphisme est utilisé pour accéder à des attributs"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le polymorphisme permet de définir des méthodes avec le même nom dans différentes classes (surcharge et redéfinition). Il permet également d'appeler une méthode d'une classe enfant en utilisant une référence de la classe parente (liaison dynamique). L'option B est incorrecte car le polymorphisme peut être utilisé avec des méthodes non statiques. L'option D est incorrecte car le polymorphisme s'applique aux méthodes, pas aux attributs."
+  },
+  {
+    "id": "JAVA21-P-C-034",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'héritage en Java :",
+    "options": [
+      "Une classe peut hériter de plusieurs classes parentes",
+      "Une classe peut hériter d'une seule classe parente",
+      "L'héritage multiple est possible via des interfaces",
+      "Une classe peut hériter d'une interface"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'héritage en Java est simple et une classe peut hériter d'une seule classe parente (option B). L'héritage multiple est possible via des interfaces, ce qui signifie qu'une classe peut implémenter plusieurs interfaces (option C). Une classe ne peut pas hériter d'une interface, mais plutôt l'implémenter (option D). Donc, les options B et C sont correctes."
+  },
+  {
+    "id": "JAVA21-P-C-035",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre 'extends' et 'implements' en Java ?",
+    "options": [
+      "'extends' est utilisé pour l'héritage de classes, 'implements' pour l'implémentation d'interfaces",
+      "'extends' est utilisé pour l'implémentation d'interfaces, 'implements' pour l'héritage de classes",
+      "'extends' et 'implements' sont interchangeables",
+      "Aucune différence"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "'extends' est utilisé pour l'héritage de classes, tandis que 'implements' est utilisé pour implémenter des interfaces (option A)."
+  },
+  {
+    "id": "JAVA21-P-C-036",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant le polymorphisme en Java :",
+    "options": [
+      "Le polymorphisme permet de définir des méthodes avec le même nom dans différentes classes",
+      "Le polymorphisme est utilisé pour améliorer la performance du code",
+      "Le polymorphisme permet d'appeler une méthode sur un objet sans connaître son type exact",
+      "Le polymorphisme est utilisé pour réduire la complexité du code"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le polymorphisme permet de définir des méthodes avec le même nom dans différentes classes (option A) et permet d'appeler une méthode sur un objet sans connaître son type exact (option C). Le polymorphisme n'est pas principalement utilisé pour améliorer la performance du code (option B) ni pour réduire la complexité du code (option D)."
+  },
+  {
+    "id": "JAVA21-P-C-037",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la méthode appelée lorsqu'on utilise un objet de type parent mais qu'il s'agit en réalité d'un objet de type enfant ?",
+    "options": [
+      "Méthode de la classe parente",
+      "Méthode de la classe enfant si elle est redéfinie",
+      "Aucune méthode n'est appelée",
+      "Toutes les méthodes sont appelées"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Lorsqu'on utilise un objet de type parent mais qu'il s'agit en réalité d'un objet de type enfant, la méthode appelée est celle de la classe enfant si elle est redéfinie (option B)."
+  },
+  {
+    "id": "JAVA21-P-C-038",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encapsulation en Java :",
+    "options": [
+      "L'encapsulation permet de cacher les détails d'implémentation",
+      "L'encapsulation est réalisée en utilisant des modificateurs d'accès (public, private, protected)",
+      "L'encapsulation permet de protéger les données",
+      "L'encapsulation est utilisée pour accélérer l'exécution du code"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "L'encapsulation permet de cacher les détails d'implémentation (option A), est réalisée en utilisant des modificateurs d'accès (public, private, protected) (option B), et permet de protéger les données (option C). L'encapsulation n'est pas utilisée pour accélérer l'exécution du code (option D)."
+  },
+  {
+    "id": "JAVA21-P-C-039",
+    "theme": "POO - Classes, Héritage, Polymorphisme",
+    "theme_label": "Programmation Orientée Objet - Concepts fondamentaux",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le polymorphisme en Java :",
+    "options": [
+      "Le polymorphisme permet à une méthode d'être redéfinie dans une classe enfant",
+      "Le polymorphisme est réalisé à l'aide de l'interface",
+      "Le polymorphisme peut être utilisé avec des objets de type Object",
+      "Le polymorphisme ne fonctionne qu'avec les classes concrètes"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option A est correcte car le polymorphisme en Java permet effectivement à une méthode d'être redéfinie dans une classe enfant, ce qui est connu sous le nom de surcharge (overriding). L'option B est incorrecte car, bien que les interfaces jouent un rôle dans le polymorphisme en Java (en définissant des méthodes que les classes peuvent implémenter), le polymorphisme lui-même ne se limite pas exclusivement aux interfaces. L'option C est correcte car le polymorphisme peut être utilisé avec des objets de type Object, ce qui est une caractéristique importante du polymorphisme en Java. L'option D est incorrecte car le polymorphisme fonctionne également avec des classes abstraites et non seulement avec les classes concrètes."
   }
 ]

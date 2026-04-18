@@ -898,5 +898,886 @@
     ],
     "correct": 0,
     "explanation": "LinkedHashSet supprime les doublons tout en conservant l'ordre d'apparition (1, puis 2, puis 3)."
+  },
+  {
+    "id": "JAVA21-CEG-001",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe ArrayList :",
+    "options": [
+      "ArrayList est basée sur un tableau dynamique.",
+      "ArrayList permet l'accès direct aux éléments par leur index.",
+      "ArrayList est thread-safe.",
+      "ArrayList peut contenir des éléments null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "ArrayList est basée sur un tableau dynamique, ce qui permet l'accès direct aux éléments par leur index. Elle peut contenir des éléments null, mais elle n'est pas thread-safe."
+  },
+  {
+    "id": "JAVA21-CEG-002",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "addLast()",
+      "append()",
+      "push()",
+      "offer()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode addLast() est utilisée pour ajouter un élément à la fin d'une LinkedList."
+  },
+  {
+    "id": "JAVA21-CEG-003",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe HashSet :",
+    "options": [
+      "HashSet garantit l'ordre d'insertion.",
+      "HashSet ne permet pas de doublons.",
+      "HashSet est basée sur une table de hachage.",
+      "HashSet peut contenir des éléments null."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "HashSet ne garantit pas l'ordre d'insertion, mais il ne permet pas de doublons et est basé sur une table de hachage. Il peut contenir un seul élément null."
+  },
+  {
+    "id": "JAVA21-CEG-004",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour obtenir la taille d'un Set ?",
+    "options": [
+      "size()",
+      "length()",
+      "count()",
+      "getSize()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode size() est utilisée pour obtenir la taille d'un Set."
+  },
+  {
+    "id": "JAVA21-CEG-005",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe TreeMap :",
+    "options": [
+      "TreeMap est basé sur un arbre rouge-noir.",
+      "TreeMap garantit l'ordre naturel des clés.",
+      "TreeMap peut contenir des éléments null.",
+      "TreeMap est thread-safe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "TreeMap est basé sur un arbre rouge-noir et garantit l'ordre naturel des clés. Cependant, il ne peut pas contenir de clés null et n'est pas thread-safe."
+  },
+  {
+    "id": "JAVA21-CEG-006",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour supprimer un élément d'une Queue ?",
+    "options": [
+      "remove()",
+      "poll()",
+      "pop()",
+      "dequeue()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La méthode poll() est utilisée pour supprimer et retourner l'élément en tête d'une Queue."
+  },
+  {
+    "id": "JAVA21-CEG-007",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe LinkedList :",
+    "options": [
+      "LinkedList est basée sur une liste chaînée.",
+      "LinkedList permet l'accès direct aux éléments par leur index.",
+      "LinkedList est plus rapide pour les insertions et suppressions à la fin que LinkedList.",
+      "LinkedList peut contenir des éléments null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "LinkedList est basée sur une liste chaînée et peut contenir des éléments null. Elle n'est pas plus rapide pour les insertions et suppressions à la fin que ArrayList."
+  },
+  {
+    "id": "JAVA21-CEG-008",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour vérifier si un Set contient un élément spécifique ?",
+    "options": [
+      "contains()",
+      "has()",
+      "exists()",
+      "includes()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode contains() est utilisée pour vérifier si un Set contient un élément spécifique."
+  },
+  {
+    "id": "JAVA21-CEG-009",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe ArrayList :",
+    "options": [
+      "ArrayList est basé sur un tableau dynamique.",
+      "L'accès aux éléments dans une ArrayList est rapide.",
+      "ArrayList n'accepte pas les éléments null.",
+      "Les méthodes d'insertion et de suppression sont coûteuses en termes de performances."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car ArrayList utilise un tableau dynamique pour stocker ses éléments. Option B est correcte car l'accès aux éléments par index est rapide dans une ArrayList (temps constant). Option C est incorrecte car ArrayList accepte des éléments null. Option D est correcte car l'insertion et la suppression d'éléments peuvent être coûteuses en termes de performances, surtout si elles nécessitent un redimensionnement du tableau interne."
+  },
+  {
+    "id": "JAVA21-CEG-010",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "addFirst()",
+      "addLast()",
+      "append()",
+      "push()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Option B est correcte car addLast() ajoute un élément à la fin de la LinkedList. Option A est incorrecte car addFirst() ajoute un élément au début. Option C n'existe pas dans LinkedList. Option D est incorrecte car push() ajoute un élément au début de la liste."
+  },
+  {
+    "id": "JAVA21-CEG-011",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe HashSet :",
+    "options": [
+      "HashSet ne garantit pas l'ordre des éléments.",
+      "HashSet permet les éléments null.",
+      "HashSet est basé sur une structure de données arborescente.",
+      "HashSet n'accepte pas les doublons."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Option A est correcte car HashSet ne garantit pas l'ordre des éléments. Option B est incorrecte car HashSet n'autorise qu'un seul élément null. Option C est incorrecte car HashSet est basé sur une structure de données de hachage, pas arborescente. Option D est correcte car HashSet n'accepte pas les doublons."
+  },
+  {
+    "id": "JAVA21-CEG-012",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour obtenir la valeur associée à une clé dans un HashMap ?",
+    "options": [
+      "get()",
+      "find()",
+      "search()",
+      "lookup()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car get() retourne la valeur associée à une clé dans un HashMap. Les autres options ne sont pas des méthodes valides pour cette opération."
+  },
+  {
+    "id": "JAVA21-CEG-013",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe TreeSet :",
+    "options": [
+      "TreeSet est basé sur un arbre binaire équilibré.",
+      "TreeSet permet les éléments null.",
+      "TreeSet garantit l'ordre des éléments selon leur ordre naturel ou un comparateur.",
+      "TreeSet est moins performant que HashSet."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car TreeSet utilise un arbre binaire équilibré (un TreeMap sous-jacent). Option B est incorrecte car TreeSet n'autorise qu'un seul élément null. Option C est correcte car TreeSet trie les éléments selon leur ordre naturel ou un comparateur fourni. Option D est incorrecte car TreeSet peut être plus performant que HashSet dans certaines situations, notamment pour les opérations d'insertion et de suppression."
+  },
+  {
+    "id": "JAVA21-CEG-014",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour vérifier si une LinkedList contient un élément spécifique ?",
+    "options": [
+      "contains()",
+      "includes()",
+      "has()",
+      "exists()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car contains() vérifie si une LinkedList contient un élément spécifique. Les autres options ne sont pas des méthodes valides pour cette opération."
+  },
+  {
+    "id": "JAVA21-CEG-015",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe HashMap :",
+    "options": [
+      "HashMap ne garantit pas l'ordre des entrées.",
+      "HashMap permet les clés null.",
+      "HashMap est basé sur une structure de données arborescente.",
+      "HashMap n'accepte pas les clés en double."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Option A est correcte car HashMap ne garantit pas l'ordre des entrées. Option B est incorrecte car HashMap n'autorise qu'une seule clé null. Option C est incorrecte car HashMap est basé sur une structure de données de hachage, pas arborescente. Option D est correcte car HashMap n'accepte pas les clés en double."
+  },
+  {
+    "id": "JAVA21-CEG-016",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour enlever le premier élément d'une LinkedList ?",
+    "options": [
+      "removeFirst()",
+      "pollFirst()",
+      "pop()",
+      "shift()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car removeFirst() enlève le premier élément d'une LinkedList. Les autres options ne sont pas des méthodes valides pour cette opération."
+  },
+  {
+    "id": "JAVA21-CEG-017",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface List :",
+    "options": [
+      "List est ordonné et permet les doublons.",
+      "List est plus rapide que Set pour l'accès par index.",
+      "List ne peut pas contenir des éléments null.",
+      "List est une sous-interface de Collection."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Option A est correcte car List maintient l'ordre d'insertion et permet les doublons. Option B est incorrecte car l'accès par index dans une List n'est pas nécessairement plus rapide que dans un Set. Option C est incorrecte car List peut contenir des éléments null. Option D est correcte car List est une sous-interface de Collection."
+  },
+  {
+    "id": "JAVA21-CEG-018",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "addFirst",
+      "addLast",
+      "addElement",
+      "push"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Option B est correcte car addLast ajoute un élément à la fin d'une LinkedList. Option A est incorrecte car addFirst ajoute un élément au début de la liste. Option C est incorrecte car addElement n'est pas une méthode spécifique à LinkedList. Option D est incorrecte car push ajoute un élément au début de la liste."
+  },
+  {
+    "id": "JAVA21-CEG-019",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'interface Map ?",
+    "options": [
+      "Map ne permet pas de clés null.",
+      "Map garantit l'ordre d'insertion des éléments.",
+      "Map permet de valeurs null.",
+      "Map est une sous-interface de Collection."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Option C est correcte car Map permet de valeurs null. Option D est correcte car Map est une sous-interface de Collection. Option A est incorrecte car Map permet effectivement des clés null dans certaines implémentations comme HashMap. Option B est incorrecte car Map n'garantit pas l'ordre d'insertion des éléments, sauf pour LinkedHashMap qui le fait."
+  },
+  {
+    "id": "JAVA21-CEG-020",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour obtenir la taille d'un Set ?",
+    "options": [
+      "size",
+      "length",
+      "count",
+      "getSize"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car size() retourne la taille du Set. Option B est incorrecte car length n'est pas une méthode de l'interface Set. Option C est incorrecte car count n'est pas une méthode standard pour obtenir la taille d'un Set. Option D est incorrecte car getSize n'est pas une méthode standard de l'interface Set."
+  },
+  {
+    "id": "JAVA21-CEG-021",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface Queue :",
+    "options": [
+      "Queue est une sous-interface de Collection.",
+      "Queue garantit l'ordre FIFO (First In, First Out).",
+      "Queue permet d'accéder aux éléments sans les supprimer.",
+      "Queue ne peut pas contenir des éléments null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car Queue est une sous-interface de Collection. Option B est correcte car Queue garantit l'ordre FIFO. Option C est incorrecte car les méthodes de Queue comme poll() ou remove() suppriment l'élément. Option D est incorrecte car Queue peut contenir des éléments null, sauf pour certaines implémentations comme PriorityQueue qui ne le permettent pas."
+  },
+  {
+    "id": "JAVA21-CEG-022",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant la classe ArrayList ?",
+    "options": [
+      "ArrayList est basé sur un tableau dynamique.",
+      "ArrayList permet l'accès direct aux éléments par leur index.",
+      "ArrayList est thread-safe.",
+      "ArrayList trie automatiquement ses éléments."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "ArrayList est basé sur un tableau dynamique et permet l'accès direct aux éléments par leur index. Cependant, ArrayList n'est pas thread-safe et ne trie pas automatiquement ses éléments."
+  },
+  {
+    "id": "JAVA21-CEG-023",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "addFirst()",
+      "addLast()",
+      "addElement()",
+      "append()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "addLast() est la méthode utilisée pour ajouter un élément à la fin d'une LinkedList. addFirst() ajoute à l'avant, addElement() est une méthode de Vector et append() n'existe pas dans LinkedList."
+  },
+  {
+    "id": "JAVA21-CEG-024",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe HashMap ?",
+    "options": [
+      "HashMap permet des clés null.",
+      "HashMap est ordonné par insertion.",
+      "HashMap ne peut pas contenir de valeurs null.",
+      "HashMap est thread-safe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "HashMap permet des clés null mais pas de valeurs null. HashMap n'est pas ordonné par insertion (à partir de Java 8, il est ordonné pour des performances améliorées). HashMap n'est pas thread-safe."
+  },
+  {
+    "id": "JAVA21-CEG-025",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle interface est étendue par toutes les interfaces de collection (hors Map) ?",
+    "options": [
+      "Collection",
+      "Iterable",
+      "List",
+      "Set"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Iterable est l'interface étendue par toutes les interfaces de collection (hors Map) car elle définit la méthode iterator(). Collection est une interface plus haut dans la hiérarchie, List et Set sont des interfaces spécifiques."
+  },
+  {
+    "id": "JAVA21-CEG-026",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX affirmations vraies concernant la classe HashSet ?",
+    "options": [
+      "HashSet n'accepte pas de doublons.",
+      "HashSet est ordonné par insertion.",
+      "HashSet permet des éléments null.",
+      "HashSet est thread-safe."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "HashSet n'accepte pas de doublons et permet des éléments null. Cependant, HashSet n'est pas ordonné par insertion (à partir de Java 8, il est ordonné pour des performances améliorées). HashSet n'est pas thread-safe."
+  },
+  {
+    "id": "JAVA21-CEG-027",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface List :",
+    "options": [
+      "List est ordonné et accepte les doublons.",
+      "List ne peut pas être utilisé avec des primitives.",
+      "List est une sous-interface de Collection.",
+      "List ne garantit pas l'ordre d'insertion."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car List maintient l'ordre d'insertion et permet les doublons. Option B est incorrecte car List peut être utilisé avec des objets, mais pas directement avec des primitives. Option C est correcte car List est une sous-interface de Collection. Option D est incorrecte car List garantit l'ordre d'insertion."
+  },
+  {
+    "id": "JAVA21-CEG-028",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une List ?",
+    "options": [
+      "add(int index, E element)",
+      "append(E element)",
+      "push(E element)",
+      "add(E element)"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Option D est correcte car la méthode add(E element) ajoute un élément à la fin de la List. Options A, B et C sont incorrectes car elles ne correspondent pas aux méthodes standard de la List."
+  },
+  {
+    "id": "JAVA21-CEG-029",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'interface Set :",
+    "options": [
+      "Set garantit l'ordre d'insertion.",
+      "Set ne permet pas de doublons.",
+      "Set est une sous-interface de List.",
+      "Set peut contenir des éléments null."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Option B est correcte car Set ne permet pas de doublons. Option D est correcte car Set peut contenir des éléments null, sauf pour les implémentations spécifiques comme EnumSet. Option A est incorrecte car Set n'garantit pas l'ordre d'insertion. Option C est incorrecte car Set n'est pas une sous-interface de List."
+  },
+  {
+    "id": "JAVA21-CEG-030",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour obtenir la taille d'une Collection ?",
+    "options": [
+      "size()",
+      "length()",
+      "count()",
+      "getSize()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Option A est correcte car la méthode size() retourne le nombre d'éléments dans une Collection. Options B, C et D sont incorrectes car elles ne correspondent pas aux méthodes standard de la Collection."
+  },
+  {
+    "id": "JAVA21-CEG-031",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface Map :",
+    "options": [
+      "Map associe des clés à des valeurs.",
+      "Map ne permet pas de doublons pour les clés.",
+      "Map est une sous-interface de Collection.",
+      "Map peut contenir des éléments null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car Map associe des clés à des valeurs. Option B est correcte car Map ne permet pas de doublons pour les clés. Option C est incorrecte car Map n'est pas une sous-interface de Collection, mais une interface distincte. Option D est correcte car Map peut contenir des éléments null pour les clés et/ou les valeurs, sauf pour les implémentations spécifiques comme HashMap qui ne permet pas de clés null par défaut."
+  },
+  {
+    "id": "JAVA21-CEG-032",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la méthode toArray() dans l'interface Collection :",
+    "options": [
+      "toArray() retourne un tableau d'Object[]",
+      "toArray(T[] a) retourne un tableau de type T[] si le tableau passé est assez grand",
+      "toArray(T[] a) retourne un nouveau tableau de type T[] avec la même taille que le Collection",
+      "toArray(T[] a) retourne un tableau de type T[] avec une taille égale au nombre d'éléments dans la Collection"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "toArray() retourne un tableau d'Object[] par défaut, donc l'affirmation A est correcte. toArray(T[] a) retourne un tableau de type T[] si le tableau passé est assez grand, donc l'affirmation B est correcte. L'affirmation C est incorrecte car toArray(T[] a) retourne un tableau de type T[] avec une taille égale au nombre d'éléments dans la Collection, pas nécessairement de la même taille que le tableau passé. L'affirmation D est correcte car toArray(T[] a) retourne un tableau de type T[] avec une taille égale au nombre d'éléments dans la Collection."
+  },
+  {
+    "id": "JAVA21-CEG-033",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "add()",
+      "append()",
+      "push()",
+      "offerLast()"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La méthode add() est utilisée pour ajouter un élément à la fin d'une LinkedList, donc l'affirmation A est correcte. append() n'est pas une méthode standard pour les LinkedList en Java, donc l'affirmation B est incorrecte. push() ajoute un élément au début de la LinkedList, donc l'affirmation C est incorrecte. offerLast() ajoute un élément à la fin de la LinkedList, mais elle retourne un booléen indiquant si l'élément a été ajouté, donc l'affirmation D est incorrecte."
+  },
+  {
+    "id": "JAVA21-CEG-034",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface List :",
+    "options": [
+      "List est ordonné et accepte les doublons.",
+      "List est plus rapide que Set pour l'accès par index.",
+      "Set est une sous-interface de List.",
+      "List ne peut contenir que des objets."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Option A est correcte car List maintient l'ordre d'insertion et permet les doublons. Option B est correcte car List offre un accès rapide aux éléments par index, ce qui la rend généralement plus rapide que Set pour cette opération. Option C est incorrecte car Set et List sont des interfaces distinctes, l'une ne dérivant pas de l'autre. Option D est incorrecte car List peut contenir des objets et des primitives, mais les primitives sont généralement emballées dans leurs classes wrapper."
+  },
+  {
+    "id": "JAVA21-CEG-035",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une List ?",
+    "options": [
+      "addFirst()",
+      "append()",
+      "push()",
+      "add()"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Option D est correcte car la méthode add() ajoute un élément à la fin d'une List. Les autres options ne sont pas des méthodes standard pour ajouter un élément à une List : addFirst() est spécifique aux LinkedList, append() et push() ne sont pas des méthodes de List."
+  },
+  {
+    "id": "JAVA21-CEG-036",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'interface Set :",
+    "options": [
+      "Set n'est pas ordonné.",
+      "Set permet d'accéder aux éléments par index.",
+      "Set ne peut contenir des doublons.",
+      "Set est une sous-interface de List."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Option A est correcte car Set ne garantit pas l'ordre des éléments. Option B est incorrecte car les éléments de Set ne peuvent pas être accessibles par index, contrairement aux List. Option C est correcte car Set ne permet pas de doublons basé sur equals() et hashCode(). Option D est incorrecte car Set et List sont des interfaces distinctes, l'une ne dérivant pas de l'autre."
+  },
+  {
+    "id": "JAVA21-CEG-037",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à une Set ?",
+    "options": [
+      "addFirst()",
+      "append()",
+      "push()",
+      "add()"
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "Option D est correcte car la méthode add() ajoute un élément à une Set. Les autres options ne sont pas des méthodes standard pour ajouter un élément à une Set : addFirst() est spécifique aux LinkedList, append() et push() ne sont pas des méthodes de Set."
+  },
+  {
+    "id": "JAVA21-CEG-038",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'interface Map :",
+    "options": [
+      "Map est ordonné par défaut.",
+      "Map permet d'accéder aux éléments par clé.",
+      "Map peut contenir des doublons de clés.",
+      "Map est une sous-interface de Collection."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Option A est incorrecte car Map n'est pas ordonnée par défaut, bien que certaines implémentations comme LinkedHashMap puissent maintenir l'ordre d'insertion. Option B est correcte car Map permet d'accéder aux éléments en utilisant une clé unique. Option C est incorrecte car Map ne peut pas contenir de doublons de clés, chaque clé doit être unique. Option D est correcte car Map est une sous-interface de Collection, bien que ce ne soit pas directement visible dans l'interface Map elle-même."
+  },
+  {
+    "id": "JAVA21-CEG-039",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe ArrayList :",
+    "options": [
+      "ArrayList est basé sur un tableau dynamique.",
+      "ArrayList permet l'accès direct aux éléments par index.",
+      "ArrayList est thread-safe.",
+      "ArrayList peut contenir des éléments null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "ArrayList est basé sur un tableau dynamique (A est correct). Il permet l'accès direct aux éléments par index (B est correct). Cependant, ArrayList n'est pas thread-safe (C est incorrect). Il peut contenir des éléments null (D est correct)."
+  },
+  {
+    "id": "JAVA21-CEG-040",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "addFirst()",
+      "addLast()",
+      "addElement()",
+      "push()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "addLast() est la méthode utilisée pour ajouter un élément à la fin d'une LinkedList (B est correct). addFirst() ajoute un élément au début (A est incorrect). addElement() n'est pas une méthode de LinkedList (C est incorrect). push() ajoute un élément au début, comme en pile (D est incorrect)."
+  },
+  {
+    "id": "JAVA21-CEG-041",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe HashSet ?",
+    "options": [
+      "HashSet garantit l'ordre d'insertion.",
+      "HashSet n'autorise pas les éléments en double.",
+      "HashSet est basé sur une table de hachage.",
+      "HashSet peut contenir des éléments null."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "HashSet n'autorise pas les éléments en double (B est correct). HashSet est basé sur une table de hachage (C est correct). HashSet ne garantit pas l'ordre d'insertion (A est incorrect). Bien que possible, HashSet ne recommande pas de contenir des éléments null multiples (D est incorrect)."
+  },
+  {
+    "id": "JAVA21-CEG-042",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle interface est étendue par Map et permet d'accéder aux éléments par clé ?",
+    "options": [
+      "Collection",
+      "Iterable",
+      "Map.Entry",
+      "NavigableMap"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Map.Entry est l'interface étendue par Map et permet d'accéder aux éléments par clé (C est correct). Collection et Iterable sont des interfaces de haut niveau pour les collections (A et B sont incorrects). NavigableMap est une sous-interface de SortedMap, pas directement liée à l'accès par clé (D est incorrect)."
+  },
+  {
+    "id": "JAVA21-CEG-043",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation de génériques dans Java :",
+    "options": [
+      "Les génériques permettent de définir des classes et des méthodes paramétrées.",
+      "Les génériques garantissent la sécurité du type à l'exécution.",
+      "Les génériques peuvent être utilisés avec des types primitifs.",
+      "Les génériques permettent de créer des collections typées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les génériques permettent de définir des classes et des méthodes paramétrées (A est correct). Ils garantissent la sécurité du type à la compilation, pas à l'exécution (B est incorrect). Les génériques ne peuvent pas être utilisés avec des types primitifs (C est incorrect). Les génériques permettent de créer des collections typées, ce qui évite les casts (D est correct)."
+  },
+  {
+    "id": "JAVA21-CEG-044",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la classe ArrayList :",
+    "options": [
+      "ArrayList est basé sur un tableau dynamique.",
+      "ArrayList permet l'accès direct aux éléments par index.",
+      "ArrayList est thread-safe.",
+      "ArrayList peut contenir des éléments null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "ArrayList est basé sur un tableau dynamique (Option A correcte). Il permet l'accès direct aux éléments par index (Option B correcte). ArrayList n'est pas thread-safe, contrairement à Vector (Option C incorrecte). ArrayList peut contenir des éléments null (Option D correcte)."
+  },
+  {
+    "id": "JAVA21-CEG-045",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une LinkedList ?",
+    "options": [
+      "addFirst()",
+      "addLast()",
+      "append()",
+      "push()"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "addLast() est la méthode utilisée pour ajouter un élément à la fin d'une LinkedList (Option B correcte). addFirst() ajoute un élément au début (Option A incorrecte). append() n'est pas une méthode de LinkedList (Option C incorrecte). push() ajoute un élément au début, comme une pile (Option D incorrecte)."
+  },
+  {
+    "id": "JAVA21-CEG-046",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant la classe HashMap :",
+    "options": [
+      "HashMap ne permet pas de clés null.",
+      "HashMap est ordonnée par insertion.",
+      "HashMap ne permet pas de valeurs null.",
+      "HashMap peut contenir plusieurs entrées avec la même clé."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "HashMap permet une clé null (Option A incorrecte). HashMap est ordonnée par insertion à partir de Java 8 (Option B correcte). HashMap permet des valeurs null (Option C incorrecte). HashMap ne peut contenir qu'une seule entrée pour une clé donnée (Option D incorrecte)."
+  },
+  {
+    "id": "JAVA21-CEG-047",
+    "theme": "Collections et Génériques",
+    "theme_label": "Collections Framework - List, Set, Map, Queue",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle interface est utilisée pour représenter une collection ordonnée et qui ne permet pas de doublons ?",
+    "options": [
+      "List",
+      "Set",
+      "Queue",
+      "Map"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Set est l'interface utilisée pour représenter une collection ordonnée et qui ne permet pas de doublons (Option B correcte). List est ordonnée mais peut contenir des doublons (Option A incorrecte). Queue est une collection ordonnée mais permet généralement des doublons (Option C incorrecte). Map n'est pas une collection ordonnée et ne permet pas de doublons pour les clés, mais elle peut contenir des valeurs en double (Option D incorrecte)."
   }
 ]

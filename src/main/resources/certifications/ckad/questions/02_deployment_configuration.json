@@ -12,7 +12,7 @@
       "kubectl create deployment monapp --image=nginx --replicas=3"
     ],
     "correct": 0,
-    "explication": "create deployment avec --replicas."
+    "explanation": "create deployment avec --replicas."
   },
   {
     "id": "CKAD-02-002",
@@ -27,7 +27,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "expose deployment ou create service."
+    "explanation": "expose deployment ou create service."
   },
   {
     "id": "CKAD-02-003",
@@ -42,7 +42,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs méthodes."
+    "explanation": "Plusieurs méthodes."
   },
   {
     "id": "CKAD-02-004",
@@ -57,7 +57,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "rollout status attend la fin du rollout."
+    "explanation": "rollout status attend la fin du rollout."
   },
   {
     "id": "CKAD-02-005",
@@ -72,7 +72,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "undo sans paramètre revient à la version précédente."
+    "explanation": "undo sans paramètre revient à la version précédente."
   },
   {
     "id": "CKAD-02-006",
@@ -87,7 +87,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "history affiche les révisions."
+    "explanation": "history affiche les révisions."
   },
   {
     "id": "CKAD-02-007",
@@ -102,7 +102,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Restart crée un nouveau rollout avec les mêmes spécifications."
+    "explanation": "Restart crée un nouveau rollout avec les mêmes spécifications."
   },
   {
     "id": "CKAD-02-008",
@@ -117,7 +117,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "scale est la commande dédiée."
+    "explanation": "scale est la commande dédiée."
   },
   {
     "id": "CKAD-02-009",
@@ -125,9 +125,14 @@
     "theme_label": "Scaling",
     "difficulty": "easy",
     "question": "Quelle ressource permet le scaling automatique ?",
-    "options": ["HorizontalPodAutoscaler", "VerticalPodAutoscaler", "ClusterAutoscaler", "A et B"],
+    "options": [
+      "HorizontalPodAutoscaler",
+      "VerticalPodAutoscaler",
+      "ClusterAutoscaler",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "HPA (CPU/mémoire), VPA (ressources)."
+    "explanation": "HPA (CPU/mémoire), VPA (ressources)."
   },
   {
     "id": "CKAD-02-010",
@@ -142,7 +147,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "autoscale est la commande impérative."
+    "explanation": "autoscale est la commande impérative."
   },
   {
     "id": "CKAD-02-011",
@@ -157,7 +162,7 @@
       "B seulement"
     ],
     "correct": 0,
-    "explication": "RollingUpdate (progressif), Recreate (supprime tout puis recrée)."
+    "explanation": "RollingUpdate (progressif), Recreate (supprime tout puis recrée)."
   },
   {
     "id": "CKAD-02-012",
@@ -172,7 +177,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "maxUnavailable (pods indisponibles), maxSurge (pods supplémentaires)."
+    "explanation": "maxUnavailable (pods indisponibles), maxSurge (pods supplémentaires)."
   },
   {
     "id": "CKAD-02-013",
@@ -187,7 +192,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Augmente la fiabilité des mises à jour."
+    "explanation": "Augmente la fiabilité des mises à jour."
   },
   {
     "id": "CKAD-02-014",
@@ -202,7 +207,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "kubectl create job est simple."
+    "explanation": "kubectl create job est simple."
   },
   {
     "id": "CKAD-02-015",
@@ -217,7 +222,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "parallelism: nombre de pods simultanés, completions: nombre total de succès."
+    "explanation": "parallelism: nombre de pods simultanés, completions: nombre total de succès."
   },
   {
     "id": "CKAD-02-016",
@@ -232,7 +237,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Par défaut 6 tentatives."
+    "explanation": "Par défaut 6 tentatives."
   },
   {
     "id": "CKAD-02-017",
@@ -247,7 +252,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "La syntaxe cron est standard."
+    "explanation": "La syntaxe cron est standard."
   },
   {
     "id": "CKAD-02-018",
@@ -262,7 +267,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Si le Job n'a pas démarré dans ce délai, il est ignoré."
+    "explanation": "Si le Job n'a pas démarré dans ce délai, il est ignoré."
   },
   {
     "id": "CKAD-02-019",
@@ -277,7 +282,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "suspend: true arrête la création de nouveaux Jobs."
+    "explanation": "suspend: true arrête la création de nouveaux Jobs."
   },
   {
     "id": "CKAD-02-020",
@@ -292,7 +297,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Les StatefulSets sont pour les applications avec état (bases de données)."
+    "explanation": "Les StatefulSets sont pour les applications avec état (bases de données)."
   },
   {
     "id": "CKAD-02-021",
@@ -307,7 +312,7 @@
       "<statefulset-name>-<index>"
     ],
     "correct": 0,
-    "explication": "Ex: mysql-0, mysql-1, mysql-2."
+    "explanation": "Ex: mysql-0, mysql-1, mysql-2."
   },
   {
     "id": "CKAD-02-022",
@@ -322,7 +327,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "volumeClaimTemplates crée un PVC pour chaque réplica."
+    "explanation": "volumeClaimTemplates crée un PVC pour chaque réplica."
   },
   {
     "id": "CKAD-02-023",
@@ -330,9 +335,14 @@
     "theme_label": "StatefulSet",
     "difficulty": "easy",
     "question": "Les pods d'un StatefulSet sont-ils créés et supprimés dans l'ordre ?",
-    "options": ["Oui (de 0 à N-1)", "Non", "Aléatoire", "Uniquement à la création"],
+    "options": [
+      "Oui (de 0 à N-1)",
+      "Non",
+      "Aléatoire",
+      "Uniquement à la création"
+    ],
     "correct": 0,
-    "explication": "L'ordre est garanti pour les opérations de scaling."
+    "explanation": "L'ordre est garanti pour les opérations de scaling."
   },
   {
     "id": "CKAD-02-024",
@@ -347,7 +357,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "DaemonSet garantit qu'un pod tourne sur chaque nœud (ou sous-ensemble)."
+    "explanation": "DaemonSet garantit qu'un pod tourne sur chaque nœud (ou sous-ensemble)."
   },
   {
     "id": "CKAD-02-025",
@@ -355,9 +365,14 @@
     "theme_label": "DaemonSet",
     "difficulty": "easy",
     "question": "Un DaemonSet peut-il être mis à l'échelle ?",
-    "options": ["Non (c'est un pod par nœud)", "Oui", "Uniquement avec nodeSelector", "Uniquement avec tolerations"],
+    "options": [
+      "Non (c'est un pod par nœud)",
+      "Oui",
+      "Uniquement avec nodeSelector",
+      "Uniquement avec tolerations"
+    ],
     "correct": 0,
-    "explication": "Le nombre de pods est égal au nombre de nœuds sélectionnés."
+    "explanation": "Le nombre de pods est égal au nombre de nœuds sélectionnés."
   },
   {
     "id": "CKAD-02-026",
@@ -372,7 +387,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "runAsNonRoot: true est préféré."
+    "explanation": "runAsNonRoot: true est préféré."
   },
   {
     "id": "CKAD-02-027",
@@ -387,7 +402,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Ces options renforcent la sécurité."
+    "explanation": "Ces options renforcent la sécurité."
   },
   {
     "id": "CKAD-02-028",
@@ -402,7 +417,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "--from-file peut être un répertoire, chaque fichier devient une clé."
+    "explanation": "--from-file peut être un répertoire, chaque fichier devient une clé."
   },
   {
     "id": "CKAD-02-029",
@@ -417,7 +432,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "--from-file peut spécifier une clé personnalisée."
+    "explanation": "--from-file peut spécifier une clé personnalisée."
   },
   {
     "id": "CKAD-02-030",
@@ -432,7 +447,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le secret est monté dans un répertoire, chaque clé devient un fichier."
+    "explanation": "Le secret est monté dans un répertoire, chaque clé devient un fichier."
   },
   {
     "id": "CKAD-02-031",
@@ -447,7 +462,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "value définit une valeur littérale."
+    "explanation": "value définit une valeur littérale."
   },
   {
     "id": "CKAD-02-032",
@@ -462,7 +477,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "fieldRef sur metadata.namespace."
+    "explanation": "fieldRef sur metadata.namespace."
   },
   {
     "id": "CKAD-02-033",
@@ -477,7 +492,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Downward API volume expose les métadonnées dans des fichiers."
+    "explanation": "Downward API volume expose les métadonnées dans des fichiers."
   },
   {
     "id": "CKAD-02-034",
@@ -492,7 +507,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "ResourceQuota avec champ pods."
+    "explanation": "ResourceQuota avec champ pods."
   },
   {
     "id": "CKAD-02-035",
@@ -507,7 +522,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "defaultRequest pour les requests, default pour les limits."
+    "explanation": "defaultRequest pour les requests, default pour les limits."
   },
   {
     "id": "CKAD-02-036",
@@ -522,7 +537,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "httpGet est plus simple, exec peut exécuter n'importe quelle commande."
+    "explanation": "httpGet est plus simple, exec peut exécuter n'importe quelle commande."
   },
   {
     "id": "CKAD-02-037",
@@ -537,7 +552,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "tcpSocket vérifie simplement si le port écoute."
+    "explanation": "tcpSocket vérifie simplement si le port écoute."
   },
   {
     "id": "CKAD-02-038",
@@ -552,7 +567,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "La startup probe désactive la liveness probe jusqu'à son succès."
+    "explanation": "La startup probe désactive la liveness probe jusqu'à son succès."
   },
   {
     "id": "CKAD-02-039",
@@ -567,7 +582,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Par défaut 3."
+    "explanation": "Par défaut 3."
   },
   {
     "id": "CKAD-02-040",
@@ -582,7 +597,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Utile pour les readiness probes (minimum 1)."
+    "explanation": "Utile pour les readiness probes (minimum 1)."
   },
   {
     "id": "CKAD-02-041",
@@ -590,9 +605,14 @@
     "theme_label": "Init containers",
     "difficulty": "easy",
     "question": "Les init containers peuvent-ils accéder aux secrets ?",
-    "options": ["Oui", "Non", "Uniquement si montés", "Uniquement via variables"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si montés",
+      "Uniquement via variables"
+    ],
     "correct": 0,
-    "explication": "Ils peuvent monter des secrets comme les conteneurs normaux."
+    "explanation": "Ils peuvent monter des secrets comme les conteneurs normaux."
   },
   {
     "id": "CKAD-02-042",
@@ -600,9 +620,14 @@
     "theme_label": "Init containers",
     "difficulty": "easy",
     "question": "Les init containers partagent-ils les volumes avec les conteneurs principaux ?",
-    "options": ["Oui", "Non", "Uniquement si partagés", "Uniquement les emptyDir"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si partagés",
+      "Uniquement les emptyDir"
+    ],
     "correct": 0,
-    "explication": "Ils peuvent préparer des données dans un volume partagé."
+    "explanation": "Ils peuvent préparer des données dans un volume partagé."
   },
   {
     "id": "CKAD-02-043",
@@ -610,9 +635,14 @@
     "theme_label": "Sidecar pattern",
     "difficulty": "easy",
     "question": "Quel pattern utilise un conteneur auxiliaire pour le logging ?",
-    "options": ["Sidecar", "Adapter", "Ambassador", "Init container"],
+    "options": [
+      "Sidecar",
+      "Adapter",
+      "Ambassador",
+      "Init container"
+    ],
     "correct": 0,
-    "explication": "Le sidecar collecte les logs et les envoie vers une destination centralisée."
+    "explanation": "Le sidecar collecte les logs et les envoie vers une destination centralisée."
   },
   {
     "id": "CKAD-02-044",
@@ -627,7 +657,7 @@
       "Initialisation"
     ],
     "correct": 0,
-    "explication": "L'adapter normalise les sorties (ex: métriques Prometheus)."
+    "explanation": "L'adapter normalise les sorties (ex: métriques Prometheus)."
   },
   {
     "id": "CKAD-02-045",
@@ -635,9 +665,14 @@
     "theme_label": "Ambassador pattern",
     "difficulty": "easy",
     "question": "Quel pattern utilise un conteneur pour proxyfier les connexions externes ?",
-    "options": ["Ambassador", "Sidecar", "Adapter", "Init container"],
+    "options": [
+      "Ambassador",
+      "Sidecar",
+      "Adapter",
+      "Init container"
+    ],
     "correct": 0,
-    "explication": "L'ambassador simplifie la connexion à des services externes."
+    "explanation": "L'ambassador simplifie la connexion à des services externes."
   },
   {
     "id": "CKAD-02-046",
@@ -652,7 +687,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le suffixe - supprime le label."
+    "explanation": "Le suffixe - supprime le label."
   },
   {
     "id": "CKAD-02-047",
@@ -667,7 +702,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "annotate est la commande dédiée."
+    "explanation": "annotate est la commande dédiée."
   },
   {
     "id": "CKAD-02-048",
@@ -682,7 +717,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le type merge (par défaut) fusionne les champs."
+    "explanation": "Le type merge (par défaut) fusionne les champs."
   },
   {
     "id": "CKAD-02-049",
@@ -690,9 +725,14 @@
     "theme_label": "Strategic merge patch",
     "difficulty": "easy",
     "question": "Quel est le type de patch par défaut de kubectl patch ?",
-    "options": ["strategic", "merge", "json", "patch"],
+    "options": [
+      "strategic",
+      "merge",
+      "json",
+      "patch"
+    ],
     "correct": 0,
-    "explication": "Le strategic merge patch est spécifique à Kubernetes."
+    "explanation": "Le strategic merge patch est spécifique à Kubernetes."
   },
   {
     "id": "CKAD-02-050",
@@ -707,7 +747,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "apply est la méthode déclarative recommandée."
+    "explanation": "apply est la méthode déclarative recommandée."
   },
   {
     "id": "CKAD-02-051",
@@ -722,7 +762,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "replace est impératif et moins sûr."
+    "explanation": "replace est impératif et moins sûr."
   },
   {
     "id": "CKAD-02-052",
@@ -737,7 +777,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "edit est pratique pour des modifications rapides."
+    "explanation": "edit est pratique pour des modifications rapides."
   },
   {
     "id": "CKAD-02-053",
@@ -752,7 +792,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "patch est plus adapté à l'automatisation."
+    "explanation": "patch est plus adapté à l'automatisation."
   },
   {
     "id": "CKAD-02-054",
@@ -767,7 +807,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "helm install avec un nom de release."
+    "explanation": "helm install avec un nom de release."
   },
   {
     "id": "CKAD-02-055",
@@ -782,7 +822,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "upgrade modifie la release."
+    "explanation": "upgrade modifie la release."
   },
   {
     "id": "CKAD-02-056",
@@ -797,7 +837,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "rollback sans numéro revient à la version précédente."
+    "explanation": "rollback sans numéro revient à la version précédente."
   },
   {
     "id": "CKAD-02-057",
@@ -812,7 +852,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "--set pour les valeurs simples, -f pour un fichier."
+    "explanation": "--set pour les valeurs simples, -f pour un fichier."
   },
   {
     "id": "CKAD-02-058",
@@ -820,9 +860,14 @@
     "theme_label": "Helm templates",
     "difficulty": "easy",
     "question": "Quel langage de template utilise Helm ?",
-    "options": ["Go templates", "Jinja2", "Mustache", "Handlebars"],
+    "options": [
+      "Go templates",
+      "Jinja2",
+      "Mustache",
+      "Handlebars"
+    ],
     "correct": 0,
-    "explication": "Go templates avec des fonctions additionnelles de Sprig."
+    "explanation": "Go templates avec des fonctions additionnelles de Sprig."
   },
   {
     "id": "CKAD-02-059",
@@ -837,7 +882,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Kustomize est intégré à kubectl (kubectl apply -k)."
+    "explanation": "Kustomize est intégré à kubectl (kubectl apply -k)."
   },
   {
     "id": "CKAD-02-060",
@@ -845,8 +890,399 @@
     "theme_label": "Kustomize",
     "difficulty": "easy",
     "question": "Quel fichier Kustomize définit la configuration ?",
-    "options": ["kustomization.yaml", "kustomize.yaml", "k8s.yaml", "overlay.yaml"],
+    "options": [
+      "kustomization.yaml",
+      "kustomize.yaml",
+      "k8s.yaml",
+      "overlay.yaml"
+    ],
     "correct": 0,
-    "explication": "kustomization.yaml est le fichier de configuration."
+    "explanation": "kustomization.yaml est le fichier de configuration."
+  },
+  {
+    "id": "CKAD-DC-001",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le Rolling Update :",
+    "options": [
+      "Le Rolling Update permet de mettre à jour les pods une par une.",
+      "Le Rolling Update peut être désactivé pour des mises à jour rapides.",
+      "Le Rolling Update nécessite une image Docker différente pour chaque mise à jour.",
+      "Le Rolling Update peut être configuré pour mettre à jour les pods en même temps."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Le Rolling Update permet de mettre à jour les pods une par une (correct). Le Rolling Update peut être désactivé pour des mises à jour rapides (correct). Le Rolling Update nécessite une image Docker différente pour chaque mise à jour (incorrect, il peut utiliser la même image avec des modifications). Le Rolling Update peut être configuré pour mettre à jour les pods en même temps (incorrect, cela serait un Rolling Update parallèle)."
+  },
+  {
+    "id": "CKAD-DC-002",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Deployment et un StatefulSet ?",
+    "options": [
+      "Un StatefulSet conserve les identités et les états des pods, tandis qu'un Deployment ne le fait pas.",
+      "Un StatefulSet est utilisé pour les applications sans état, tandis qu'un Deployment est utilisé pour les applications avec état.",
+      "Un StatefulSet est moins flexible que un Deployment.",
+      "Un StatefulSet ne peut pas être mis à l'échelle."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un StatefulSet conserve les identités et les états des pods, tandis qu'un Deployment ne le fait pas (correct). Un StatefulSet est utilisé pour les applications avec état, tandis qu'un Deployment est utilisé pour les applications sans état (incorrect). Un StatefulSet est moins flexible que un Deployment (incorrect). Un StatefulSet peut être mis à l'échelle (incorrect)."
+  },
+  {
+    "id": "CKAD-DC-003",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant un Job :",
+    "options": [
+      "Un Job est utilisé pour exécuter une tâche en un seul pod.",
+      "Un Job peut être mis à l'échelle pour exécuter plusieurs pods en même temps.",
+      "Un Job peut être configuré pour redémarrer les pods si ils échouent.",
+      "Un Job peut être utilisé pour exécuter une tâche récurrente."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Un Job est utilisé pour exécuter une tâche en un seul pod (correct). Un Job peut être mis à l'échelle pour exécuter plusieurs pods en même temps (incorrect, cela serait un CronJob). Un Job peut être configuré pour redémarrer les pods si ils échouent (correct). Un Job peut être utilisé pour exécuter une tâche récurrente (incorrect, cela serait un CronJob)."
+  },
+  {
+    "id": "CKAD-DC-004",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant un CronJob :",
+    "options": [
+      "Un CronJob est utilisé pour exécuter une tâche à intervalles réguliers.",
+      "Un CronJob peut être mis à l'échelle pour exécuter plusieurs pods en même temps.",
+      "Un CronJob peut être configuré pour redémarrer les pods si ils échouent.",
+      "Un CronJob peut être utilisé pour exécuter une tâche une seule fois."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Un CronJob est utilisé pour exécuter une tâche à intervalles réguliers (correct). Un CronJob peut être mis à l'échelle pour exécuter plusieurs pods en même temps (correct). Un CronJob peut être configuré pour redémarrer les pods si ils échouent (incorrect, cela serait un Job). Un CronJob peut être utilisé pour exécuter une tâche une seule fois (incorrect, cela serait un Job)."
+  },
+  {
+    "id": "CKAD-DC-005",
+    "theme": "Deployment Configuration",
+    "theme_label": "Scaling",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment augmenter le nombre de réplicas d'un Deployment ?",
+    "options": [
+      "kubectl scale deployment monapp --replicas=5",
+      "kubectl update deployment monapp --replicas=5",
+      "kubectl edit deployment monapp --replicas=5",
+      "kubectl replace deployment monapp --replicas=5"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "kubectl scale deployment monapp --replicas=5 est la commande correcte pour augmenter le nombre de réplicas d'un Deployment."
+  },
+  {
+    "id": "CKAD-DC-006",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la mise à jour progressive d'un Deployment :",
+    "options": [
+      "La mise à jour progressive est réalisée par défaut avec un rolling update.",
+      "Un rolling update peut être désactivé en utilisant le flag --record=false.",
+      "La stratégie de mise à jour peut être définie avec la clé 'spec.strategy.type'.",
+      "Le nombre de réplicas peut être modifié directement sur le Deployment sans impact sur la mise à jour progressive."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "La mise à jour progressive est réalisée par défaut avec un rolling update (A). Un rolling update peut être désactivé en utilisant le flag --record=false (B est incorrect). La stratégie de mise à jour peut être définie avec la clé 'spec.strategy.type' (C). Le nombre de réplicas peut être modifié directement sur le Deployment sans impact sur la mise à jour progressive (D est incorrect)."
+  },
+  {
+    "id": "CKAD-DC-007",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un Deployment et un StatefulSet ?",
+    "options": [
+      "Un StatefulSet maintient l'identité et l'état des applications, tandis qu'un Deployment ne le fait pas.",
+      "Un StatefulSet est utilisé pour des applications stateless, tandis qu'un Deployment est pour des applications stateful.",
+      "Un StatefulSet ne peut pas être mis à l'échelle, tandis qu'un Deployment peut.",
+      "Aucune différence entre les deux."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un StatefulSet maintient l'identité et l'état des applications, tandis qu'un Deployment ne le fait pas (A). Un StatefulSet est utilisé pour des applications stateless, tandis qu'un Deployment est pour des applications stateful (B est incorrect). Un StatefulSet peut être mis à l'échelle, tandis qu'un Deployment ne peut pas (C est incorrect). Aucune différence entre les deux (D est incorrect)."
+  },
+  {
+    "id": "CKAD-DC-008",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant un Job :",
+    "options": [
+      "Un Job est utilisé pour exécuter une tâche ponctuelle.",
+      "Un Job peut être mis à jour en utilisant la commande kubectl apply.",
+      "La spécification de 'spec.completions' définit le nombre de fois que la tâche doit être exécutée.",
+      "Un Job peut être annulé en utilisant la commande kubectl delete."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Un Job est utilisé pour exécuter une tâche ponctuelle (A). Un Job peut être mis à jour en utilisant la commande kubectl apply (B est correct). La spécification de 'spec.completions' définit le nombre de fois que la tâche doit être exécutée (C). Un Job peut être annulé en utilisant la commande kubectl delete (D est incorrect)."
+  },
+  {
+    "id": "CKAD-DC-009",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant un CronJob :",
+    "options": [
+      "Un CronJob est utilisé pour exécuter des tâches périodiques.",
+      "La spécification de 'spec.schedule' définit la fréquence à laquelle la tâche est exécutée.",
+      "Un CronJob peut être mis à jour en utilisant la commande kubectl apply.",
+      "La spécification de 'spec.jobTemplate' définit le Job qui sera exécuté à chaque échéance."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Un CronJob est utilisé pour exécuter des tâches périodiques (A). La spécification de 'spec.schedule' définit la fréquence à laquelle la tâche est exécutée (B). Un CronJob peut être mis à jour en utilisant la commande kubectl apply (C). La spécification de 'spec.jobTemplate' définit le Job qui sera exécuté à chaque échéance (D est correct)."
+  },
+  {
+    "id": "CKAD-DC-010",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la mise à jour progressive d'un Deployment :",
+    "options": [
+      "La mise à jour progressive est réalisée en arrêtant complètement les anciens pods avant de déployer les nouveaux.",
+      "La mise à jour progressive peut être configurée avec le paramètre `maxSurge` et `maxUnavailable`.",
+      "La mise à jour progressive est réalisée en déployant les nouveaux pods et en arrêtant progressivement les anciens.",
+      "La mise à jour progressive est réalisée en déployant les nouveaux pods et en gardant le même nombre de pods actifs."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "La mise à jour progressive est réalisée en déployant les nouveaux pods et en arrêtant progressivement les anciens. La mise à jour progressive peut être configurée avec le paramètre `maxSurge` et `maxUnavailable`. La mise à jour progressive n'est pas réalisée en arrêtant complètement les anciens pods avant de déployer les nouveaux. La mise à jour progressive n'est pas réalisée en gardant le même nombre de pods actifs."
+  },
+  {
+    "id": "CKAD-DC-011",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Deployment et un StatefulSet ?",
+    "options": [
+      "Un Deployment gère des applications étatlesses tandis qu'un StatefulSet gère des applications étatées.",
+      "Un Deployment est utilisé pour déployer des services tandis qu'un StatefulSet est utilisé pour déployer des applications.",
+      "Un Deployment utilise un volume persistant tandis qu'un StatefulSet ne l'utilise pas.",
+      "Un Deployment est utilisé pour déployer des applications étatées tandis qu'un StatefulSet est utilisé pour déployer des applications étatlesses."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un Deployment gère des applications étatlesses tandis qu'un StatefulSet gère des applications étatées. Un Deployment est utilisé pour déployer des services tandis qu'un StatefulSet est utilisé pour déployer des applications. Un Deployment utilise un volume persistant tandis qu'un StatefulSet ne l'utilise pas. Un Deployment est utilisé pour déployer des applications étatées tandis qu'un StatefulSet est utilisé pour déployer des applications étatlesses."
+  },
+  {
+    "id": "CKAD-DC-012",
+    "theme": "Deployment Configuration",
+    "theme_label": "Rolling update",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration d'une mise à jour progressive avec un StatefulSet :",
+    "options": [
+      "La mise à jour progressive est désactivée par défaut pour un StatefulSet.",
+      "La mise à jour progressive peut être configurée avec le paramètre `updateStrategy` et les sous-params `type: RollingUpdate` et `partition`.",
+      "La mise à jour progressive est réalisée en déployant les nouveaux pods et en arrêtant progressivement les anciens.",
+      "La mise à jour progressive est réalisée en arrêtant complètement les anciens pods avant de déployer les nouveaux."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "La mise à jour progressive est désactivée par défaut pour un StatefulSet. La mise à jour progressive peut être configurée avec le paramètre `updateStrategy` et les sous-params `type: RollingUpdate` et `partition`. La mise à jour progressive est réalisée en déployant les nouveaux pods et en arrêtant progressivement les anciens. La mise à jour progressive n'est pas réalisée en arrêtant complètement les anciens pods avant de déployer les nouveaux."
+  },
+  {
+    "id": "CKAD-DC-013",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Job et un CronJob ?",
+    "options": [
+      "Un Job est utilisé pour exécuter une tâche ponctuelle tandis qu'un CronJob est utilisé pour exécuter une tâche à intervalles réguliers.",
+      "Un Job est utilisé pour déployer des services tandis qu'un CronJob est utilisé pour exécuter une tâche à intervalles réguliers.",
+      "Un Job utilise un volume persistant tandis qu'un CronJob ne l'utilise pas.",
+      "Un Job est utilisé pour exécuter une tâche à intervalles réguliers tandis qu'un CronJob est utilisé pour exécuter une tâche ponctuelle."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un Job est utilisé pour exécuter une tâche ponctuelle tandis qu'un CronJob est utilisé pour exécuter une tâche à intervalles réguliers. Un Job est utilisé pour déployer des services tandis qu'un CronJob est utilisé pour exécuter une tâche à intervalles réguliers. Un Job utilise un volume persistant tandis qu'un CronJob ne l'utilise pas. Un Job est utilisé pour exécuter une tâche à intervalles réguliers tandis qu'un CronJob est utilisé pour exécuter une tâche ponctuelle."
+  },
+  {
+    "id": "CKAD-DC-014",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration d'un CronJob :",
+    "options": [
+      "Un CronJob exécute une tâche ponctuelle.",
+      "Un CronJob peut être configuré pour exécuter une tâche à intervalles réguliers.",
+      "Un CronJob peut être configuré pour exécuter une tâche à des heures spécifiques.",
+      "Un CronJob peut être configuré pour exécuter une tâche à des jours spécifiques."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Un CronJob exécute une tâche ponctuelle. Un CronJob peut être configuré pour exécuter une tâche à intervalles réguliers. Un CronJob peut être configuré pour exécuter une tâche à des heures spécifiques. Un CronJob peut être configuré pour exécuter une tâche à des jours spécifiques."
+  },
+  {
+    "id": "CKAD-DC-015",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la mise à jour progressive d'un Deployment :",
+    "options": [
+      "La mise à jour progressive est réalisée par défaut avec le paramètre progressDeadlineSeconds.",
+      "La mise à jour progressive peut être désactivée en utilisant le paramètre maxUnavailable.",
+      "La mise à jour progressive peut être contrôlée en utilisant le paramètre maxSurge.",
+      "La mise à jour progressive est réalisée par défaut avec le paramètre maxSurge.",
+      "La mise à jour progressive peut être désactivée en utilisant le paramètre progressDeadlineSeconds."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "La mise à jour progressive peut être contrôlée en utilisant le paramètre maxSurge. La mise à jour progressive est réalisée par défaut avec le paramètre progressDeadlineSeconds. La mise à jour progressive peut être désactivée en utilisant le paramètre maxUnavailable."
+  },
+  {
+    "id": "CKAD-DC-016",
+    "theme": "Deployment Configuration",
+    "theme_label": "StatefulSet",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre un Deployment et un StatefulSet ?",
+    "options": [
+      "Un StatefulSet conserve l'état des applications tandis qu'un Deployment ne le fait pas.",
+      "Un StatefulSet est utilisé pour les applications stateless tandis qu'un Deployment est utilisé pour les applications stateful.",
+      "Un StatefulSet utilise des services ClusterIP tandis qu'un Deployment utilise des services NodePort.",
+      "Aucune différence entre les deux."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un StatefulSet conserve l'état des applications tandis qu'un Deployment ne le fait pas."
+  },
+  {
+    "id": "CKAD-DC-017",
+    "theme": "Deployment Configuration",
+    "theme_label": "Rolling update",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des erreurs pendant une mise à jour progressive :",
+    "options": [
+      "La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxUnavailable.",
+      "La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxSurge.",
+      "La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse progressDeadlineSeconds.",
+      "La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxSurge et progressDeadlineSeconds.",
+      "La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxUnavailable et progressDeadlineSeconds."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      4
+    ],
+    "explanation": "La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxUnavailable. La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxSurge. La mise à jour est automatiquement annulée si le nombre de réplicas indisponibles dépasse maxUnavailable et progressDeadlineSeconds."
+  },
+  {
+    "id": "CKAD-DC-018",
+    "theme": "Deployment Configuration",
+    "theme_label": "Jobs",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un Job et un CronJob ?",
+    "options": [
+      "Un Job exécute une tâche une seule fois tandis qu'un CronJob exécute une tâche à intervalles réguliers.",
+      "Un Job est utilisé pour les applications stateless tandis qu'un CronJob est utilisé pour les applications stateful.",
+      "Un Job utilise des services ClusterIP tandis qu'un CronJob utilise des services NodePort.",
+      "Aucune différence entre les deux."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un Job exécute une tâche une seule fois tandis qu'un CronJob exécute une tâche à intervalles réguliers."
+  },
+  {
+    "id": "CKAD-DC-019",
+    "theme": "Deployment Configuration",
+    "theme_label": "CronJobs",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la planification des CronJobs :",
+    "options": [
+      "Un CronJob peut être planifié pour exécuter une tâche à chaque minute.",
+      "Un CronJob peut être planifié pour exécuter une tâche à chaque heure.",
+      "Un CronJob peut être planifié pour exécuter une tâche tous les jours à une heure spécifique.",
+      "Un CronJob peut être planifié pour exécuter une tâche tous les mois à une date spécifique.",
+      "Un CronJob peut être planifié pour exécuter une tâche tous les ans à une date spécifique."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Un CronJob peut être planifié pour exécuter une tâche à chaque heure. Un CronJob peut être planifié pour exécuter une tâche tous les jours à une heure spécifique. Un CronJob peut être planifié pour exécuter une tâche tous les mois à une date spécifique."
+  },
+  {
+    "id": "CKAD-DC-020",
+    "theme": "Deployment Configuration",
+    "theme_label": "Deployment",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la mise à jour progressive d'un Deployment :",
+    "options": [
+      "Une mise à jour progressive peut être réalisée en utilisant un Rolling Update.",
+      "La stratégie de mise à jour par défaut est le Recreate, qui n'est pas appropriée pour les applications en production.",
+      "Les Rolling Update permettent de mettre à jour le nombre de réplicas simultanément.",
+      "La stratégie Rolling Update nécessite une configuration spécifique dans le fichier YAML du Deployment."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Une mise à jour progressive peut être réalisée en utilisant un Rolling Update (A). La stratégie de mise à jour par défaut est le Recreate, qui n'est pas appropriée pour les applications en production (B). Les Rolling Update permettent de mettre à jour le nombre de réplicas simultanément (C). La stratégie Rolling Update nécessite une configuration spécifique dans le fichier YAML du Deployment (D)."
   }
 ]

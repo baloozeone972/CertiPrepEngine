@@ -1,0 +1,32 @@
+{
+  "id": "aws_ccp",
+  "name": "AWS Certified Cloud Practitioner (CLF-C02)",
+  "version": "1.0",
+  "description": "Certification AWS Cloud Practitioner - Fondamentaux du cloud AWS, concepts de base, services et modèles de tarification",
+  "totalQuestions": 350,
+  "examDurationMinutes": 90,
+  "examQuestionCount": 65,
+  "passingScore": 70,
+  "themes": [
+    {
+      "name": "Cloud Concepts",
+      "count": 50
+    },
+    {
+      "name": "AWS Core Services",
+      "count": 100
+    },
+    {
+      "name": "Security & Compliance",
+      "count": 60
+    },
+    {
+      "name": "Billing & Pricing",
+      "count": 70
+    },
+    {
+      "name": "Architecture & Design",
+      "count": 70
+    }
+  ]
+}

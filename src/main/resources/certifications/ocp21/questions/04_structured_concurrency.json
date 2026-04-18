@@ -80,7 +80,12 @@
     "theme_label": "StructuredTaskScope",
     "difficulty": "hard",
     "question": "Comment fermer un StructuredTaskScope ?",
-    "options": ["close()", "shutdown()", "terminate()", "stop()"],
+    "options": [
+      "close()",
+      "shutdown()",
+      "terminate()",
+      "stop()"
+    ],
     "correct": 0,
     "explanation": "close() ferme le scope et attend les tâches."
   },
@@ -225,7 +230,12 @@
     "theme_label": "StructuredTaskScope.Subtask",
     "difficulty": "hard",
     "question": "Comment obtenir l'état d'une Subtask ?",
-    "options": ["state()", "getState()", "status()", "isDone()"],
+    "options": [
+      "state()",
+      "getState()",
+      "status()",
+      "isDone()"
+    ],
     "correct": 0,
     "explanation": "state() retourne l'état de la sous-tâche."
   },
@@ -235,7 +245,12 @@
     "theme_label": "StructuredTaskScope.Subtask",
     "difficulty": "hard",
     "question": "Comment obtenir le résultat d'une Subtask ?",
-    "options": ["get()", "result()", "value()", "output()"],
+    "options": [
+      "get()",
+      "result()",
+      "value()",
+      "output()"
+    ],
     "correct": 0,
     "explanation": "get() retourne le résultat ou lance une exception."
   },
@@ -245,7 +260,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<String>()) {\n    Future<String> f1 = scope.fork(() -> \"A\");\n    Future<String> f2 = scope.fork(() -> \"B\");\n    scope.join();\n    System.out.println(scope.result());\n}",
-    "options": ["A", "B", "AB", "Erreur"],
+    "options": [
+      "A",
+      "B",
+      "AB",
+      "Erreur"
+    ],
     "correct": 0,
     "explanation": "ShutdownOnSuccess retourne le premier résultat (A)."
   },
@@ -255,7 +275,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    Future<String> f1 = scope.fork(() -> { throw new RuntimeException(); });\n    Future<String> f2 = scope.fork(() -> \"B\");\n    scope.join();\n    scope.throwIfFailed();\n} catch (Exception e) {\n    System.out.println(\"Erreur\");\n}",
-    "options": ["Erreur", "B", "A", "Rien"],
+    "options": [
+      "Erreur",
+      "B",
+      "A",
+      "Rien"
+    ],
     "correct": 0,
     "explanation": "La première tâche échoue, throwIfFailed() lance une exception."
   },
@@ -265,7 +290,12 @@
     "theme_label": "Exemples",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { Thread.sleep(100); return 1; });\n    scope.fork(() -> 2);\n    scope.join();\n    System.out.println(scope.result());\n}",
-    "options": ["2", "1", "Erreur", "null"],
+    "options": [
+      "2",
+      "1",
+      "Erreur",
+      "null"
+    ],
     "correct": 0,
     "explanation": "La deuxième tâche (2) se termine plus rapidement."
   },
@@ -425,7 +455,12 @@
     "theme_label": "JEP",
     "difficulty": "hard",
     "question": "Quel JEP introduit Structured Concurrency ?",
-    "options": ["JEP 453", "JEP 440", "JEP 441", "JEP 442"],
+    "options": [
+      "JEP 453",
+      "JEP 440",
+      "JEP 441",
+      "JEP 442"
+    ],
     "correct": 0,
     "explanation": "JEP 453: Structured Concurrency (preview)."
   },
@@ -570,7 +605,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<String>()) {\n    scope.fork(() -> { Thread.sleep(1000); return \"Lent\"; });\n    scope.fork(() -> { Thread.sleep(100); return \"Rapide\"; });\n    scope.join();\n    System.out.println(scope.result());\n}",
-    "options": ["Rapide", "Lent", "Erreur", "null"],
+    "options": [
+      "Rapide",
+      "Lent",
+      "Erreur",
+      "null"
+    ],
     "correct": 0,
     "explanation": "La tâche 'Rapide' se termine en premier."
   },
@@ -580,7 +620,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    Future<String> f1 = scope.fork(() -> { throw new IOException(); });\n    Future<String> f2 = scope.fork(() -> \"OK\");\n    scope.join();\n    scope.throwIfFailed();\n} catch (IOException e) {\n    System.out.println(\"IO\");\n} catch (Exception e) {\n    System.out.println(\"Autre\");\n}",
-    "options": ["IO", "OK", "Autre", "Rien"],
+    "options": [
+      "IO",
+      "OK",
+      "Autre",
+      "Rien"
+    ],
     "correct": 0,
     "explanation": "La première tâche lance IOException."
   },
@@ -590,7 +635,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    scope.fork(() -> 1);\n    scope.fork(() -> 2);\n    scope.join();\n    System.out.println(\"Fin\");\n}",
-    "options": ["Fin", "Erreur", "1", "2"],
+    "options": [
+      "Fin",
+      "Erreur",
+      "1",
+      "2"
+    ],
     "correct": 0,
     "explanation": "Les tâches s'exécutent, 'Fin' est affiché."
   },
@@ -600,7 +650,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> 42);\n    scope.join();\n    System.out.println(scope.result());\n}",
-    "options": ["42", "Erreur", "null", "0"],
+    "options": [
+      "42",
+      "Erreur",
+      "null",
+      "0"
+    ],
     "correct": 0,
     "explanation": "Une seule tâche, son résultat est 42."
   },
@@ -610,7 +665,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { throw new RuntimeException(); });\n    scope.join();\n    System.out.println(scope.result());\n} catch (Exception e) {\n    System.out.println(\"Exception\");\n}",
-    "options": ["Exception", "Erreur", "null", "0"],
+    "options": [
+      "Exception",
+      "Erreur",
+      "null",
+      "0"
+    ],
     "correct": 0,
     "explanation": "La tâche échoue, result() lance une exception."
   },
@@ -620,7 +680,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { Thread.sleep(500); return 1; });\n    scope.fork(() -> { Thread.sleep(1000); return 2; });\n    scope.join();\n    System.out.println(scope.result());\n}",
-    "options": ["1", "2", "Erreur", "null"],
+    "options": [
+      "1",
+      "2",
+      "Erreur",
+      "null"
+    ],
     "correct": 0,
     "explanation": "La première tâche (1) se termine en premier."
   },
@@ -630,7 +695,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    scope.fork(() -> { Thread.sleep(100); return 1; });\n    scope.fork(() -> { Thread.sleep(200); return 2; });\n    scope.join();\n    System.out.println(\"Terminé\");\n}",
-    "options": ["Terminé", "Erreur", "1", "2"],
+    "options": [
+      "Terminé",
+      "Erreur",
+      "1",
+      "2"
+    ],
     "correct": 0,
     "explanation": "Toutes les tâches se terminent, 'Terminé' est affiché."
   },
@@ -640,7 +710,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    var future = scope.fork(() -> { Thread.sleep(100); return 1; });\n    scope.join();\n    System.out.println(future.get());\n} catch (Exception e) {\n    System.out.println(\"Erreur\");\n}",
-    "options": ["1", "Erreur", "Terminé", "null"],
+    "options": [
+      "1",
+      "Erreur",
+      "Terminé",
+      "null"
+    ],
     "correct": 0,
     "explanation": "future.get() retourne le résultat de la tâche (1)."
   },
@@ -650,7 +725,12 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnSuccess<Integer>()) {\n    scope.fork(() -> { throw new RuntimeException(\"Erreur1\"); });\n    scope.fork(() -> 42);\n    scope.join();\n    System.out.println(scope.result());\n} catch (Exception e) {\n    System.out.println(e.getMessage());\n}",
-    "options": ["42", "Erreur1", "Erreur", "null"],
+    "options": [
+      "42",
+      "Erreur1",
+      "Erreur",
+      "null"
+    ],
     "correct": 0,
     "explanation": "La deuxième tâche réussit, result() retourne 42."
   },
@@ -660,8 +740,295 @@
     "theme_label": "Exemples avancés",
     "difficulty": "hard",
     "question": "Que produit ce code ?\ntry (var scope = new StructuredTaskScope.ShutdownOnFailure()) {\n    var f1 = scope.fork(() -> 1);\n    var f2 = scope.fork(() -> 2);\n    scope.join();\n    System.out.println(f1.get() + f2.get());\n} catch (Exception e) {\n    System.out.println(\"Erreur\");\n}",
-    "options": ["3", "Erreur", "1", "2"],
+    "options": [
+      "3",
+      "Erreur",
+      "1",
+      "2"
+    ],
     "correct": 0,
     "explanation": "Les deux tâches réussissent, somme = 3."
+  },
+  {
+    "id": "OCP-SC-001",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope.Subtask",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'état des sous-tâches dans un StructuredTaskScope :",
+    "options": [
+      "Les sous-tâches peuvent être annulées",
+      "Les sous-tâches sont toujours exécutées en parallèle",
+      "Les sous-tâches peuvent être marquées comme terminées avec succès",
+      "Les sous-tâches sont indépendantes du scope principal"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les sous-tâches peuvent être annulées et marquées comme terminées avec succès, ce qui est vrai. Les sous-tâches ne sont pas toujours exécutées en parallèle et dépendent du scope principal, ce qui est faux."
+  },
+  {
+    "id": "OCP-SC-002",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope vs ExecutorService",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre StructuredTaskScope et ExecutorService ?",
+    "options": [
+      "StructuredTaskScope est basé sur des threads, ExecutorService sur des tâches",
+      "ExecutorService fournit une concurrence structurée, StructuredTaskScope non",
+      "StructuredTaskScope est plus performant que ExecutorService",
+      "ExecutorService gère les annulations, StructuredTaskScope non"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "ExecutorService fournit une concurrence structurée, tandis que StructuredTaskScope est basé sur des threads, ce qui est vrai. Les autres options sont fausses."
+  },
+  {
+    "id": "OCP-SC-003",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant StructuredTaskScope :",
+    "options": [
+      "StructuredTaskScope permet la gestion structurée des tâches",
+      "Il est utilisé pour créer des threads indépendants",
+      "Les tâches dans un StructuredTaskScope sont liées au scope",
+      "StructuredTaskScope remplace complètement ExecutorService"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "StructuredTaskScope permet effectivement la gestion structurée des tâches et les tâches dans un StructuredTaskScope sont liées au scope. Cependant, il ne remplace pas complètement ExecutorService et n'est pas utilisé pour créer des threads indépendants."
+  },
+  {
+    "id": "OCP-SC-004",
+    "theme": "Structured Concurrency",
+    "theme_label": "Subtask states",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'état initial d'un subtask dans un StructuredTaskScope ?",
+    "options": [
+      "RUNNING",
+      "NEW",
+      "COMPLETED",
+      "FAILED"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'état initial d'un subtask dans un StructuredTaskScope est NEW."
+  },
+  {
+    "id": "OCP-SC-005",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnSuccess",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux affirmations vraies concernant ShutdownOnSuccess :",
+    "options": [
+      "Il permet d'arrêter tous les sous-tâches en cas de succès",
+      "Il est utilisé pour gérer les erreurs dans un StructuredTaskScope",
+      "Il arrête tous les sous-tâches en cas d'échec",
+      "Il est une implémentation de StructuredTaskScope"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ShutdownOnSuccess permet effectivement d'arrêter tous les sous-tâches en cas de succès et est une implémentation de StructuredTaskScope. Cependant, il n'est pas utilisé pour gérer les erreurs et ne s'arrête pas tous les sous-tâches en cas d'échec."
+  },
+  {
+    "id": "OCP-SC-006",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope vs ExecutorService",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre StructuredTaskScope et ExecutorService ?",
+    "options": [
+      "StructuredTaskScope est basé sur des threads, ExecutorService sur des tâches",
+      "ExecutorService permet une gestion structurée des tâches",
+      "StructuredTaskScope limite les threads réutilisés, ExecutorService non",
+      "ExecutorService est plus performant que StructuredTaskScope"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "La principale différence entre StructuredTaskScope et ExecutorService est que StructuredTaskScope limite les threads réutilisés, tandis qu'ExecutorService ne le fait pas."
+  },
+  {
+    "id": "OCP-SC-007",
+    "theme": "Structured Concurrency",
+    "theme_label": "Gestion des erreurs",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les deux affirmations vraies concernant la gestion des erreurs dans un StructuredTaskScope :",
+    "options": [
+      "Les exceptions sont propagées au scope parent",
+      "Il est possible de capturer des erreurs spécifiques dans les sous-tâches",
+      "Les exceptions sont ignorées par défaut",
+      "Il est possible de définir un comportement de fallback"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les exceptions sont effectivement propagées au scope parent et il est possible de définir un comportement de fallback dans un StructuredTaskScope. Cependant, les exceptions ne sont pas ignorées par défaut et il n'est pas possible de capturer des erreurs spécifiques dans les sous-tâches."
+  },
+  {
+    "id": "OCP-SC-008",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant StructuredTaskScope :",
+    "options": [
+      "StructuredTaskScope permet la gestion structurée des tâches",
+      "Il est basé sur ExecutorService",
+      "Les sous-tâches sont liées au scope parent",
+      "Il ne gère pas les exceptions"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "StructuredTaskScope permet la gestion structurée des tâches et les sous-tâches sont liées au scope parent. Il est basé sur une nouvelle API et non sur ExecutorService, donc cette option est incorrecte. La gestion des exceptions est effectivement une fonctionnalité de StructuredTaskScope, donc cette option est également incorrecte."
+  },
+  {
+    "id": "OCP-SC-009",
+    "theme": "Structured Concurrency",
+    "theme_label": "Subtask states",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'état initial d'un subtask dans un StructuredTaskScope ?",
+    "options": [
+      "RUNNING",
+      "PENDING",
+      "COMPLETED",
+      "FAILED"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'état initial d'un subtask dans un StructuredTaskScope est PENDING, car il attend son exécution."
+  },
+  {
+    "id": "OCP-SC-010",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnSuccess",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant ShutdownOnSuccess :",
+    "options": [
+      "Il arrête le StructuredTaskScope sur la première erreur",
+      "Il termine le scope lorsque toutes les tâches réussissent",
+      "Il ignore les résultats des tâches",
+      "Il ne peut pas être utilisé avec ShutdownOnFailure"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "ShutdownOnSuccess termine le scope lorsque toutes les tâches réussissent. Il ne peut pas être utilisé avec ShutdownOnFailure car ils sont mutuellement exclusifs. Les autres options sont incorrectes."
+  },
+  {
+    "id": "OCP-SC-011",
+    "theme": "Structured Concurrency",
+    "theme_label": "Thread factory",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle méthode de ThreadFactory est utilisée par défaut dans un StructuredTaskScope ?",
+    "options": [
+      "newFixedThreadPool",
+      "newCachedThreadPool",
+      "defaultThreadFactory",
+      "newSingleThreadExecutor"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Par défaut, un StructuredTaskScope utilise la méthode defaultThreadFactory pour créer des threads."
+  },
+  {
+    "id": "OCP-SC-012",
+    "theme": "Structured Concurrency",
+    "theme_label": "Performance",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX options qui peuvent améliorer la performance d'un StructuredTaskScope :",
+    "options": [
+      "Utiliser des virtual threads",
+      "Augmenter le nombre de tâches par thread",
+      "Réduire la complexité des tâches",
+      "Utiliser un ExecutorService"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'utilisation de virtual threads peut améliorer la performance en permettant une meilleure gestion des ressources. Réduire la complexité des tâches peut également améliorer les performances en réduisant le temps d'exécution. Augmenter le nombre de tâches par thread et utiliser un ExecutorService peuvent avoir l'effet inverse en surchargeant les ressources."
+  },
+  {
+    "id": "OCP-SC-013",
+    "theme": "Structured Concurrency",
+    "theme_label": "StructuredTaskScope",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le StructuredTaskScope :",
+    "options": [
+      "Permet la gestion structurée des tâches concourantes",
+      "Supporte l'exécution de tâches indépendantes",
+      "Facilite la gestion des erreurs et des annulations",
+      "Est une alternative à ExecutorService"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Le StructuredTaskScope permet la gestion structurée des tâches concourantes et facilite la gestion des erreurs et des annulations. Bien que ce ne soit pas une alternative directe à ExecutorService, il offre des fonctionnalités similaires dans un contexte structuré."
+  },
+  {
+    "id": "OCP-SC-014",
+    "theme": "Structured Concurrency",
+    "theme_label": "Subtask states",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'état initial d'un sous-tâche dans un StructuredTaskScope ?",
+    "options": [
+      "RUNNING",
+      "PENDING",
+      "COMPLETED",
+      "CANCELLED"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'état initial d'un sous-tâche dans un StructuredTaskScope est PENDING, car la tâche n'a pas encore commencé à s'exécuter."
+  },
+  {
+    "id": "OCP-SC-015",
+    "theme": "Structured Concurrency",
+    "theme_label": "ShutdownOnSuccess",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant ShutdownOnSuccess :",
+    "options": [
+      "Arrête le StructuredTaskScope dès que la première tâche réussit",
+      "Continue l'exécution des autres tâches même si une tâche réussit",
+      "Arrête le StructuredTaskScope dès que la première tâche échoue",
+      "Ignore les résultats des autres tâches"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "ShutdownOnSuccess arrête le StructuredTaskScope dès que la première tâche réussit et ignore les résultats des autres tâches. Cependant, il ne continue pas l'exécution des autres tâches même si une tâche réussit et ne s'arrête pas dès que la première tâche échoue."
   }
 ]

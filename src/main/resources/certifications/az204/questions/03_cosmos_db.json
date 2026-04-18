@@ -12,7 +12,7 @@
       "Cache"
     ],
     "correct": 0,
-    "explication": "Cosmos DB est une base NoSQL multi-modèle et globalement distribuée."
+    "explanation": "Cosmos DB est une base NoSQL multi-modèle et globalement distribuée."
   },
   {
     "id": "AZ-204-142",
@@ -27,7 +27,7 @@
       "Cassandra seulement"
     ],
     "correct": 0,
-    "explication": "Cosmos DB supporte plusieurs API pour la compatibilité."
+    "explanation": "Cosmos DB supporte plusieurs API pour la compatibilité."
   },
   {
     "id": "AZ-204-143",
@@ -42,7 +42,7 @@
       "Backup"
     ],
     "correct": 0,
-    "explication": "La distribution globale permet une faible latence pour les utilisateurs du monde entier."
+    "explanation": "La distribution globale permet une faible latence pour les utilisateurs du monde entier."
   },
   {
     "id": "AZ-204-144",
@@ -57,7 +57,7 @@
       "Latence"
     ],
     "correct": 0,
-    "explication": "RU/s mesure le débit de traitement, normalisé pour tous les types d'opérations."
+    "explanation": "RU/s mesure le débit de traitement, normalisé pour tous les types d'opérations."
   },
   {
     "id": "AZ-204-145",
@@ -72,7 +72,7 @@
       "Sauvegarde"
     ],
     "correct": 0,
-    "explication": "Le partitionnement est clé pour la scalabilité horizontale."
+    "explanation": "Le partitionnement est clé pour la scalabilité horizontale."
   },
   {
     "id": "AZ-204-146",
@@ -87,7 +87,7 @@
       "Index"
     ],
     "correct": 0,
-    "explication": "La clé de partition détermine comment les données sont distribuées."
+    "explanation": "La clé de partition détermine comment les données sont distribuées."
   },
   {
     "id": "AZ-204-147",
@@ -102,7 +102,7 @@
       "Réplica"
     ],
     "correct": 0,
-    "explication": "Les partitions logiques sont contenues dans des partitions physiques."
+    "explanation": "Les partitions logiques sont contenues dans des partitions physiques."
   },
   {
     "id": "AZ-204-148",
@@ -117,7 +117,7 @@
       "Cassandra CQL"
     ],
     "correct": 0,
-    "explication": "L'API Core utilise une syntaxe SQL-like pour interroger les documents JSON."
+    "explanation": "L'API Core utilise une syntaxe SQL-like pour interroger les documents JSON."
   },
   {
     "id": "AZ-204-149",
@@ -132,7 +132,7 @@
       "SELECT * FROM items"
     ],
     "correct": 0,
-    "explication": "La requête utilise 'c' comme alias du conteneur."
+    "explanation": "La requête utilise 'c' comme alias du conteneur."
   },
   {
     "id": "AZ-204-150",
@@ -147,7 +147,7 @@
       "c.age > 18"
     ],
     "correct": 0,
-    "explication": "La clause WHERE filtre les documents."
+    "explanation": "La clause WHERE filtre les documents."
   },
   {
     "id": "AZ-204-151",
@@ -162,7 +162,7 @@
       "SELECT c.name, c.age"
     ],
     "correct": 0,
-    "explication": "La projection spécifie les champs à retourner."
+    "explanation": "La projection spécifie les champs à retourner."
   },
   {
     "id": "AZ-204-152",
@@ -177,7 +177,7 @@
       "CONCAT"
     ],
     "correct": 0,
-    "explication": "JOIN permet d'exploser les tableaux imbriqués."
+    "explanation": "JOIN permet d'exploser les tableaux imbriqués."
   },
   {
     "id": "AZ-204-153",
@@ -187,7 +187,7 @@
     "question": "Cosmos DB indexe-t-il automatiquement tous les champs ?",
     "options": ["Oui (par défaut)", "Non", "Uniquement la clé de partition", "Uniquement l'ID"],
     "correct": 0,
-    "explication": "L'indexation automatique peut être personnalisée (politique d'indexation)."
+    "explanation": "L'indexation automatique peut être personnalisée (politique d'indexation)."
   },
   {
     "id": "AZ-204-154",
@@ -202,7 +202,7 @@
       "Full, Partial"
     ],
     "correct": 0,
-    "explication": "Consistent (mise à jour synchrone), Lazy (asynchrone), None (pas d'index)."
+    "explanation": "Consistent (mise à jour synchrone), Lazy (asynchrone), None (pas d'index)."
   },
   {
     "id": "AZ-204-155",
@@ -217,7 +217,7 @@
       "Aucun impact"
     ],
     "correct": 0,
-    "explication": "Sans index, les requêtes deviennent des scans coûteux."
+    "explanation": "Sans index, les requêtes deviennent des scans coûteux."
   },
   {
     "id": "AZ-204-156",
@@ -232,7 +232,7 @@
       "Sauvegarde"
     ],
     "correct": 0,
-    "explication": "Le Change Feed permet de traiter les modifications en temps réel."
+    "explanation": "Le Change Feed permet de traiter les modifications en temps réel."
   },
   {
     "id": "AZ-204-157",
@@ -247,7 +247,7 @@
       "Portal"
     ],
     "correct": 0,
-    "explication": "Le Change Feed Processor simplifie la lecture parallèle et reprise."
+    "explanation": "Le Change Feed Processor simplifie la lecture parallèle et reprise."
   },
   {
     "id": "AZ-204-158",
@@ -257,7 +257,7 @@
     "question": "Le déclencheur Cosmos DB pour Functions utilise-t-il le Change Feed ?",
     "options": ["Oui", "Non", "Uniquement pour les insertions", "Uniquement pour les suppressions"],
     "correct": 0,
-    "explication": "Le déclencheur Cosmos DB lit le Change Feed pour invoquer la fonction."
+    "explanation": "Le déclencheur Cosmos DB lit le Change Feed pour invoquer la fonction."
   },
   {
     "id": "AZ-204-159",
@@ -272,7 +272,7 @@
       "Session seulement"
     ],
     "correct": 0,
-    "explication": "Cosmos DB offre cinq niveaux de cohérence bien définis."
+    "explanation": "Cosmos DB offre cinq niveaux de cohérence bien définis."
   },
   {
     "id": "AZ-204-160",
@@ -282,7 +282,7 @@
     "question": "Quel niveau de cohérence garantit les lectures à jour (linearizability) ?",
     "options": ["Strong", "Bounded Staleness", "Session", "Eventual"],
     "correct": 0,
-    "explication": "Strong offre la plus forte cohérence (mais impacte la latence)."
+    "explanation": "Strong offre la plus forte cohérence (mais impacte la latence)."
   },
   {
     "id": "AZ-204-161",
@@ -292,7 +292,7 @@
     "question": "Quel niveau de cohérence est le plus performant ?",
     "options": ["Eventual", "Strong", "Bounded Staleness", "Session"],
     "correct": 0,
-    "explication": "Eventual offre la meilleure performance et disponibilité."
+    "explanation": "Eventual offre la meilleure performance et disponibilité."
   },
   {
     "id": "AZ-204-162",
@@ -302,7 +302,7 @@
     "question": "Cosmos DB supporte-t-il les procédures stockées ?",
     "options": ["Oui (JavaScript)", "Non", "Uniquement en SQL", "Uniquement en C#"],
     "correct": 0,
-    "explication": "Les procédures stockées, triggers et UDF s'écrivent en JavaScript."
+    "explanation": "Les procédures stockées, triggers et UDF s'écrivent en JavaScript."
   },
   {
     "id": "AZ-204-163",
@@ -312,7 +312,7 @@
     "question": "Les procédures stockées s'exécutent-elles au sein de la transaction de partition ?",
     "options": ["Oui", "Non", "Uniquement en lecture", "Uniquement en écriture"],
     "correct": 0,
-    "explication": "Elles sont exécutées dans la portée de la partition."
+    "explanation": "Elles sont exécutées dans la portée de la partition."
   },
   {
     "id": "AZ-204-164",
@@ -322,7 +322,7 @@
     "question": "Quels types de triggers sont supportés ?",
     "options": ["Pre-trigger, Post-trigger", "Before, After", "Insert, Update, Delete", "A et B"],
     "correct": 3,
-    "explication": "Les pre-triggers s'exécutent avant l'opération, post-triggers après."
+    "explanation": "Les pre-triggers s'exécutent avant l'opération, post-triggers après."
   },
   {
     "id": "AZ-204-165",
@@ -337,7 +337,7 @@
       "Vues"
     ],
     "correct": 0,
-    "explication": "Les UDF étendent la logique des requêtes."
+    "explanation": "Les UDF étendent la logique des requêtes."
   },
   {
     "id": "AZ-204-166",
@@ -352,7 +352,7 @@
       "Uniquement avec Change Feed"
     ],
     "correct": 0,
-    "explication": "Les lots transactionnels permettent d'exécuter plusieurs opérations atomiquement sur une même partition."
+    "explanation": "Les lots transactionnels permettent d'exécuter plusieurs opérations atomiquement sur une même partition."
   },
   {
     "id": "AZ-204-167",
@@ -362,7 +362,7 @@
     "question": "Les lots transactionnels peuvent-ils traverser les partitions ?",
     "options": ["Non", "Oui", "Uniquement en lecture", "Uniquement en écriture"],
     "correct": 0,
-    "explication": "Les transactions sont limitées à une seule partition logique."
+    "explanation": "Les transactions sont limitées à une seule partition logique."
   },
   {
     "id": "AZ-204-168",
@@ -372,7 +372,7 @@
     "question": "Combien de RU coûte une lecture d'un document de 1 Ko ?",
     "options": ["1 RU", "2 RU", "0.5 RU", "10 RU"],
     "correct": 0,
-    "explication": "Une lecture point de 1 Ko coûte 1 RU."
+    "explanation": "Une lecture point de 1 Ko coûte 1 RU."
   },
   {
     "id": "AZ-204-169",
@@ -382,7 +382,7 @@
     "question": "Une écriture de 1 Ko coûte combien de RU ?",
     "options": ["5 RU", "1 RU", "10 RU", "2 RU"],
     "correct": 0,
-    "explication": "Une écriture de 1 Ko coûte 5 RU."
+    "explanation": "Une écriture de 1 Ko coûte 5 RU."
   },
   {
     "id": "AZ-204-170",
@@ -397,7 +397,7 @@
       "Portail"
     ],
     "correct": 0,
-    "explication": "Chaque réponse inclut le nombre de RU consommées."
+    "explanation": "Chaque réponse inclut le nombre de RU consommées."
   },
   {
     "id": "AZ-204-171",
@@ -407,7 +407,7 @@
     "question": "Peut-on définir le throughput au niveau du conteneur ou de la base ?",
     "options": ["Oui (les deux)", "Non (seulement conteneur)", "Non (seulement base)", "Uniquement partagé"],
     "correct": 0,
-    "explication": "Le throughput peut être dédié à un conteneur ou partagé entre plusieurs conteneurs d'une même base."
+    "explanation": "Le throughput peut être dédié à un conteneur ou partagé entre plusieurs conteneurs d'une même base."
   },
   {
     "id": "AZ-204-172",
@@ -422,7 +422,7 @@
       "Réplication automatique"
     ],
     "correct": 0,
-    "explication": "L'autoscale ajuste les RU/s entre un minimum et un maximum."
+    "explanation": "L'autoscale ajuste les RU/s entre un minimum et un maximum."
   },
   {
     "id": "AZ-204-173",
@@ -432,7 +432,7 @@
     "question": "Cosmos DB a-t-il un mode serverless ?",
     "options": ["Oui (facturation à la demande)", "Non", "Uniquement pour l'API Core", "Uniquement pour MongoDB"],
     "correct": 0,
-    "explication": "Le mode serverless facture les RU consommées, pas de provisionnement."
+    "explanation": "Le mode serverless facture les RU consommées, pas de provisionnement."
   },
   {
     "id": "AZ-204-174",
@@ -442,7 +442,7 @@
     "question": "Le TTL dans Cosmos DB supprime-t-il automatiquement les documents après un certain temps ?",
     "options": ["Oui", "Non", "Uniquement pour les conteneurs", "Uniquement pour les bases"],
     "correct": 0,
-    "explication": "TTL peut être défini au niveau du conteneur ou par document."
+    "explanation": "TTL peut être défini au niveau du conteneur ou par document."
   },
   {
     "id": "AZ-204-175",
@@ -457,7 +457,7 @@
       "Utiliser le Change Feed"
     ],
     "correct": 0,
-    "explication": "La propriété defaultTtl (en secondes) active le TTL."
+    "explanation": "La propriété defaultTtl (en secondes) active le TTL."
   },
   {
     "id": "AZ-204-176",
@@ -467,7 +467,7 @@
     "question": "Cosmos DB sauvegarde-t-il automatiquement les données ?",
     "options": ["Oui (backup continu)", "Non", "Uniquement manuel", "Uniquement avec Azure Backup"],
     "correct": 0,
-    "explication": "Les sauvegardes continues sont effectuées automatiquement."
+    "explanation": "Les sauvegardes continues sont effectuées automatiquement."
   },
   {
     "id": "AZ-204-177",
@@ -477,7 +477,7 @@
     "question": "Quel est le mode de sauvegarde par défaut ?",
     "options": ["Périodique (toutes les 4 heures)", "Continue", "Manuelle", "Aucune"],
     "correct": 1,
-    "explication": "Le mode continu (point-in-time) est désormais la valeur par défaut."
+    "explanation": "Le mode continu (point-in-time) est désormais la valeur par défaut."
   },
   {
     "id": "AZ-204-178",
@@ -487,7 +487,7 @@
     "question": "L'API MongoDB de Cosmos DB est-elle compatible avec les drivers MongoDB ?",
     "options": ["Oui (version 3.6, 4.0, 4.2, 5.0)", "Non", "Partiellement", "Uniquement les drivers .NET"],
     "correct": 0,
-    "explication": "Cosmos DB imite le protocole MongoDB pour la compatibilité."
+    "explanation": "Cosmos DB imite le protocole MongoDB pour la compatibilité."
   },
   {
     "id": "AZ-204-179",
@@ -497,7 +497,7 @@
     "question": "L'API Cassandra supporte-t-elle CQL ?",
     "options": ["Oui", "Non", "Uniquement les requêtes de base", "Uniquement les écritures"],
     "correct": 0,
-    "explication": "L'API Cassandra est compatible avec CQL et les drivers Cassandra."
+    "explanation": "L'API Cassandra est compatible avec CQL et les drivers Cassandra."
   },
   {
     "id": "AZ-204-180",
@@ -507,7 +507,7 @@
     "question": "Quel langage de requête utilise l'API Gremlin ?",
     "options": ["Gremlin (Apache TinkerPop)", "Cypher", "SPARQL", "SQL"],
     "correct": 0,
-    "explication": "L'API Gremlin supporte le langage de traversée de graphe Gremlin."
+    "explanation": "L'API Gremlin supporte le langage de traversée de graphe Gremlin."
   },
   {
     "id": "AZ-204-181",
@@ -517,7 +517,7 @@
     "question": "L'API Table est-elle compatible avec Azure Table Storage ?",
     "options": ["Oui (API identique)", "Non", "Partiellement", "Uniquement les opérations de base"],
     "correct": 0,
-    "explication": "L'API Table de Cosmos DB est compatible avec Azure Table Storage, mais avec des performances supérieures."
+    "explanation": "L'API Table de Cosmos DB est compatible avec Azure Table Storage, mais avec des performances supérieures."
   },
   {
     "id": "AZ-204-182",
@@ -532,7 +532,7 @@
       "Seulement l'outil de migration"
     ],
     "correct": 0,
-    "explication": "Plusieurs outils sont disponibles."
+    "explanation": "Plusieurs outils sont disponibles."
   },
   {
     "id": "AZ-204-183",
@@ -547,7 +547,7 @@
       "API"
     ],
     "correct": 0,
-    "explication": "L'outil dt.exe prend en charge plusieurs sources (JSON, MongoDB, SQL, etc.)."
+    "explanation": "L'outil dt.exe prend en charge plusieurs sources (JSON, MongoDB, SQL, etc.)."
   },
   {
     "id": "AZ-204-184",
@@ -562,7 +562,7 @@
       "TableClient"
     ],
     "correct": 0,
-    "explication": "CosmosClient est le client principal (SDK v3)."
+    "explanation": "CosmosClient est le client principal (SDK v3)."
   },
   {
     "id": "AZ-204-185",
@@ -577,7 +577,7 @@
       "collection.CreateAsync()"
     ],
     "correct": 0,
-    "explication": "Il faut d'abord obtenir la base de données, puis créer le conteneur."
+    "explanation": "Il faut d'abord obtenir la base de données, puis créer le conteneur."
   },
   {
     "id": "AZ-204-186",
@@ -592,7 +592,7 @@
       "database.QueryAsync()"
     ],
     "correct": 0,
-    "explication": "GetItemQueryIterator retourne un itérateur pour paginer les résultats."
+    "explanation": "GetItemQueryIterator retourne un itérateur pour paginer les résultats."
   },
   {
     "id": "AZ-204-187",
@@ -607,7 +607,7 @@
       "database.ReadItemAsync()"
     ],
     "correct": 0,
-    "explication": "La lecture point est la plus efficace (faible latence, faible coût)."
+    "explanation": "La lecture point est la plus efficace (faible latence, faible coût)."
   },
   {
     "id": "AZ-204-188",
@@ -622,7 +622,7 @@
       "database.CreateItemAsync()"
     ],
     "correct": 0,
-    "explication": "CreateItemAsync crée un nouvel élément."
+    "explanation": "CreateItemAsync crée un nouvel élément."
   },
   {
     "id": "AZ-204-189",
@@ -637,7 +637,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "ReplaceItemAsync remplace, UpsertItemAsync insère ou remplace."
+    "explanation": "ReplaceItemAsync remplace, UpsertItemAsync insère ou remplace."
   },
   {
     "id": "AZ-204-190",
@@ -652,7 +652,7 @@
       "database.DeleteItemAsync()"
     ],
     "correct": 0,
-    "explication": "La suppression nécessite l'ID et la clé de partition."
+    "explanation": "La suppression nécessite l'ID et la clé de partition."
   },
   {
     "id": "AZ-204-191",
@@ -667,7 +667,7 @@
       "Date"
     ],
     "correct": 0,
-    "explication": "Une bonne clé de partition distribue uniformément la charge."
+    "explanation": "Une bonne clé de partition distribue uniformément la charge."
   },
   {
     "id": "AZ-204-192",
@@ -677,7 +677,7 @@
     "question": "Quelle est la taille maximale d'un document ?",
     "options": ["2 Mo", "1 Mo", "512 Ko", "4 Mo"],
     "correct": 0,
-    "explication": "La taille maximale d'un document est 2 Mo (augmentable à 16 Mo avec les grandes documents)."
+    "explanation": "La taille maximale d'un document est 2 Mo (augmentable à 16 Mo avec les grandes documents)."
   },
   {
     "id": "AZ-204-193",
@@ -692,7 +692,7 @@
       "Seulement stockage"
     ],
     "correct": 0,
-    "explication": "Azure Monitor fournit des métriques détaillées."
+    "explanation": "Azure Monitor fournit des métriques détaillées."
   },
   {
     "id": "AZ-204-194",
@@ -707,7 +707,7 @@
       "TTL"
     ],
     "correct": 0,
-    "explication": "La métrique PartitionKeyRUConsumption montre la consommation par clé de partition."
+    "explanation": "La métrique PartitionKeyRUConsumption montre la consommation par clé de partition."
   },
   {
     "id": "AZ-204-195",
@@ -717,7 +717,7 @@
     "question": "Cosmos DB supporte-t-il l'authentification Azure AD ?",
     "options": ["Oui", "Non", "Uniquement pour l'API Core", "Uniquement pour l'API MongoDB"],
     "correct": 0,
-    "explication": "Azure AD est supporté pour l'authentification (rôles, RBAC)."
+    "explanation": "Azure AD est supporté pour l'authentification (rôles, RBAC)."
   },
   {
     "id": "AZ-204-196",
@@ -732,7 +732,7 @@
       "Clés de chiffrement"
     ],
     "correct": 0,
-    "explication": "Cosmos DB permet de générer des clés en lecture seule pour les applications."
+    "explanation": "Cosmos DB permet de générer des clés en lecture seule pour les applications."
   },
   {
     "id": "AZ-204-197",
@@ -742,7 +742,7 @@
     "question": "Peut-on restreindre l'accès à Cosmos DB via un VNet ?",
     "options": ["Oui (service endpoints, private endpoints)", "Non", "Uniquement avec pare-feu IP", "Uniquement avec points de terminaison privés"],
     "correct": 0,
-    "explication": "Les service endpoints et private endpoints sont supportés."
+    "explanation": "Les service endpoints et private endpoints sont supportés."
   },
   {
     "id": "AZ-204-198",
@@ -752,7 +752,7 @@
     "question": "Les données dans Cosmos DB sont-elles chiffrées au repos ?",
     "options": ["Oui", "Non", "Uniquement pour l'API Core", "Optionnel"],
     "correct": 0,
-    "explication": "Le chiffrement au repos est activé par défaut."
+    "explanation": "Le chiffrement au repos est activé par défaut."
   },
   {
     "id": "AZ-204-199",
@@ -762,7 +762,7 @@
     "question": "Peut-on utiliser ses propres clés de chiffrement (CMK) ?",
     "options": ["Oui (via Key Vault)", "Non", "Uniquement pour les backups", "Uniquement pour les index"],
     "correct": 0,
-    "explication": "CMK permet d'utiliser des clés gérées par le client (Key Vault)."
+    "explanation": "CMK permet d'utiliser des clés gérées par le client (Key Vault)."
   },
   {
     "id": "AZ-204-200",
@@ -772,6 +772,6 @@
     "question": "Pour réduire les coûts, faut-il provisionner les RU/s au plus juste ?",
     "options": ["Oui, en surveillant la consommation", "Non, toujours plus", "Utiliser autoscale", "A et C"],
     "correct": 3,
-    "explication": "L'autoscale et le monitoring aident à optimiser les coûts."
+    "explanation": "L'autoscale et le monitoring aident à optimiser les coûts."
   }
 ]

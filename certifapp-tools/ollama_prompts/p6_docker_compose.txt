@@ -1,0 +1,46 @@
+Génère le fichier docker-compose.yml complet pour le développement local du projet CertifApp.
+
+Services requis :
+
+1. db (PostgreSQL 16 avec pgvector)
+   - Image : pgvector/pgvector:pg16
+   - Port : 5432
+   - Variables : POSTGRES_DB=certifapp, POSTGRES_USER=certif, POSTGRES_PASSWORD=certif_local
+   - Volume persistant : postgres_data
+   - Healthcheck : pg_isready
+
+2. app (Spring Boot backend)
+   - Build depuis ./certif-api-rest/Dockerfile
+   - Port : 8080
+   - Profile Spring : local
+   - Variables d'environnement : DB, Supabase, Ollama, Stripe (depuis .env)
+   - Dépend de : db (healthy)
+   - Healthcheck : /actuator/health
+
+3. web (Angular PWA)
+   - Build depuis ./certif-web/Dockerfile
+   - Port : 4200
+   - Variables : API_URL=http://localhost:8080
+   - Dépend de : app
+
+4. ollama (LLM local)
+   - Image : ollama/ollama:latest
+   - Port : 11434
+   - Volume : ollama_models pour persister les modèles téléchargés
+   - Ressources : 12Go RAM max (Mac M3 avec 18Go)
+
+5. redis (cache + sessions)
+   - Image : redis:7-alpine
+   - Port : 6379
+   - Volume persistant
+
+6. nginx (reverse proxy local)
+   - Image : nginx:alpine
+   - Port : 80
+   - Config inline : / → web:4200, /api → app:8080, /ws → app:8080 (WebSocket)
+
+Inclure :
+- Fichier .env.example avec toutes les variables
+- Networks : certifapp-network bridge
+- Volumes nommés
+- Profiles Docker : --profile ollama pour activer le service Ollama optionnellement

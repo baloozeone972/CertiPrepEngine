@@ -20,7 +20,12 @@
     "theme_label": "Types d'API",
     "difficulty": "easy",
     "question": "Quel type d'API est le plus économique et rapide pour les proxys ?",
-    "options": ["HTTP API", "REST API", "WebSocket API", "SOAP API"],
+    "options": [
+      "HTTP API",
+      "REST API",
+      "WebSocket API",
+      "SOAP API"
+    ],
     "correct": 0,
     "explanation": "HTTP API est plus simple, moins cher et plus rapide que REST API."
   },
@@ -30,7 +35,12 @@
     "theme_label": "Types d'API",
     "difficulty": "medium",
     "question": "Quel type d'API supporte les transformations de requêtes/réponses complexes ?",
-    "options": ["REST API", "HTTP API", "WebSocket API", "Aucun"],
+    "options": [
+      "REST API",
+      "HTTP API",
+      "WebSocket API",
+      "Aucun"
+    ],
     "correct": 0,
     "explanation": "REST API offre plus de fonctionnalités (modèles de mapping, validation, etc.)."
   },
@@ -40,7 +50,12 @@
     "theme_label": "REST API",
     "difficulty": "medium",
     "question": "Quelle est la limite de taille de requête pour REST API ?",
-    "options": ["10 Mo", "1 Mo", "6 Mo", "256 Ko"],
+    "options": [
+      "10 Mo",
+      "1 Mo",
+      "6 Mo",
+      "256 Ko"
+    ],
     "correct": 0,
     "explanation": "La taille maximale de requête est 10 Mo."
   },
@@ -50,7 +65,12 @@
     "theme_label": "REST API",
     "difficulty": "hard",
     "question": "Quelle est la limite de temps d'exécution pour REST API (intégration Lambda) ?",
-    "options": ["29 secondes", "15 minutes", "30 secondes", "60 secondes"],
+    "options": [
+      "29 secondes",
+      "15 minutes",
+      "30 secondes",
+      "60 secondes"
+    ],
     "correct": 0,
     "explanation": "API Gateway a un timeout de 29 secondes pour les intégrations."
   },
@@ -90,7 +110,12 @@
     "theme_label": "HTTP API",
     "difficulty": "hard",
     "question": "HTTP API supporte-t-il les modèles de mapping ?",
-    "options": ["Non (limité)", "Oui", "Partiellement", "Uniquement pour les réponses"],
+    "options": [
+      "Non (limité)",
+      "Oui",
+      "Partiellement",
+      "Uniquement pour les réponses"
+    ],
     "correct": 0,
     "explanation": "HTTP API a des capacités de transformation limitées."
   },
@@ -100,7 +125,12 @@
     "theme_label": "HTTP API",
     "difficulty": "hard",
     "question": "HTTP API supporte-t-il JWT autorisation ?",
-    "options": ["Oui (intégré)", "Non", "Uniquement via Lambda authorizer", "Uniquement via IAM"],
+    "options": [
+      "Oui (intégré)",
+      "Non",
+      "Uniquement via Lambda authorizer",
+      "Uniquement via IAM"
+    ],
     "correct": 0,
     "explanation": "HTTP API a un authorizer JWT intégré."
   },
@@ -110,7 +140,12 @@
     "theme_label": "WebSocket API",
     "difficulty": "hard",
     "question": "Quels sont les événements de connexion WebSocket ?",
-    "options": ["$connect, $disconnect, $default", "open, close, message", "onOpen, onClose, onMessage", "connect, disconnect, error"],
+    "options": [
+      "$connect, $disconnect, $default",
+      "open, close, message",
+      "onOpen, onClose, onMessage",
+      "connect, disconnect, error"
+    ],
     "correct": 0,
     "explanation": "API Gateway utilise les routes $connect, $disconnect, $default."
   },
@@ -120,7 +155,12 @@
     "theme_label": "WebSocket API",
     "difficulty": "hard",
     "question": "Combien de temps une connexion WebSocket peut-elle rester ouverte ?",
-    "options": ["2 heures", "1 heure", "30 minutes", "Illimité"],
+    "options": [
+      "2 heures",
+      "1 heure",
+      "30 minutes",
+      "Illimité"
+    ],
     "correct": 0,
     "explanation": "La durée maximale de connexion est de 2 heures."
   },
@@ -145,7 +185,12 @@
     "theme_label": "Authorizers",
     "difficulty": "hard",
     "question": "Un Lambda authorizer peut-il mettre en cache les politiques ?",
-    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "Le cache réduit les appels à l'authorizer."
   },
@@ -170,7 +215,12 @@
     "theme_label": "Usage plans & API keys",
     "difficulty": "hard",
     "question": "Les API keys sont-elles obligatoires pour les usage plans ?",
-    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "Les API keys identifient le client pour appliquer les limites."
   },
@@ -195,7 +245,12 @@
     "theme_label": "Caching",
     "difficulty": "hard",
     "question": "API Gateway peut-il mettre en cache les réponses ?",
-    "options": ["Oui (cache API)", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui (cache API)",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "Le cache API réduit la charge sur les backends."
   },
@@ -220,7 +275,12 @@
     "theme_label": "CORS",
     "difficulty": "hard",
     "question": "API Gateway peut-il gérer automatiquement CORS ?",
-    "options": ["Oui (configuration)", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui (configuration)",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "CORS peut être activé dans la configuration de l'API."
   },
@@ -260,7 +320,12 @@
     "theme_label": "Logging & Monitoring",
     "difficulty": "hard",
     "question": "Quels niveaux de détail pour les logs API Gateway ?",
-    "options": ["ERROR, INFO", "DEBUG, INFO", "ERROR seulement", "INFO seulement"],
+    "options": [
+      "ERROR, INFO",
+      "DEBUG, INFO",
+      "ERROR seulement",
+      "INFO seulement"
+    ],
     "correct": 0,
     "explanation": "Les niveaux ERROR et INFO sont disponibles."
   },
@@ -270,7 +335,12 @@
     "theme_label": "X-Ray tracing",
     "difficulty": "hard",
     "question": "API Gateway peut-il activer X-Ray tracing ?",
-    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "X-Ray tracing peut être activé au niveau du stage."
   },
@@ -295,7 +365,12 @@
     "theme_label": "Throttling",
     "difficulty": "hard",
     "question": "Quelle est la limite par défaut au niveau du compte ?",
-    "options": ["10 000 requêtes/seconde", "1000", "100", "50 000"],
+    "options": [
+      "10 000 requêtes/seconde",
+      "1000",
+      "100",
+      "50 000"
+    ],
     "correct": 0,
     "explanation": "La limite par défaut est 10 000 requêtes/seconde par région."
   },
@@ -305,7 +380,12 @@
     "theme_label": "Custom domain names",
     "difficulty": "hard",
     "question": "API Gateway supporte-t-il des noms de domaine personnalisés ?",
-    "options": ["Oui (avec ACM)", "Non", "Uniquement avec CloudFront", "Uniquement avec Route53"],
+    "options": [
+      "Oui (avec ACM)",
+      "Non",
+      "Uniquement avec CloudFront",
+      "Uniquement avec Route53"
+    ],
     "correct": 0,
     "explanation": "Les domaines personnalisés nécessitent un certificat ACM."
   },
@@ -315,7 +395,12 @@
     "theme_label": "Custom domain names",
     "difficulty": "hard",
     "question": "Combien de domaines personnalisés peut-on avoir par API ?",
-    "options": ["Illimité", "1", "5", "10"],
+    "options": [
+      "Illimité",
+      "1",
+      "5",
+      "10"
+    ],
     "correct": 0,
     "explanation": "On peut associer plusieurs domaines à une API."
   },
@@ -325,7 +410,12 @@
     "theme_label": "Mapping templates (VTL)",
     "difficulty": "hard",
     "question": "Quel langage est utilisé pour les modèles de mapping ?",
-    "options": ["Apache Velocity (VTL)", "JSONPath", "JMESPath", "XPath"],
+    "options": [
+      "Apache Velocity (VTL)",
+      "JSONPath",
+      "JMESPath",
+      "XPath"
+    ],
     "correct": 0,
     "explanation": "VTL (Velocity Template Language) est utilisé."
   },
@@ -335,7 +425,12 @@
     "theme_label": "Mapping templates",
     "difficulty": "hard",
     "question": "Comment accéder au corps de la requête dans un modèle ?",
-    "options": ["$input.body", "$request.body", "$context.body", "$event.body"],
+    "options": [
+      "$input.body",
+      "$request.body",
+      "$context.body",
+      "$event.body"
+    ],
     "correct": 0,
     "explanation": "$input.body donne accès au corps de la requête."
   },
@@ -345,7 +440,12 @@
     "theme_label": "Mapping templates",
     "difficulty": "hard",
     "question": "Comment accéder à un paramètre de chemin ?",
-    "options": ["$input.params('path').parameterName", "$context.path.parameterName", "$request.path.parameterName", "$event.path.parameterName"],
+    "options": [
+      "$input.params('path').parameterName",
+      "$context.path.parameterName",
+      "$request.path.parameterName",
+      "$event.path.parameterName"
+    ],
     "correct": 0,
     "explanation": "$input.params('path') retourne les paramètres de chemin."
   },
@@ -355,7 +455,12 @@
     "theme_label": "Request validation",
     "difficulty": "hard",
     "question": "API Gateway peut-il valider les requêtes ?",
-    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "La validation de requête est supportée (paramètres, corps)."
   },
@@ -365,7 +470,12 @@
     "theme_label": "Request validation",
     "difficulty": "hard",
     "question": "Quels schémas de validation sont supportés ?",
-    "options": ["JSON Schema", "XML Schema", "Avro", "Protobuf"],
+    "options": [
+      "JSON Schema",
+      "XML Schema",
+      "Avro",
+      "Protobuf"
+    ],
     "correct": 0,
     "explanation": "JSON Schema est utilisé pour valider le corps."
   },
@@ -420,7 +530,12 @@
     "theme_label": "Integration types",
     "difficulty": "hard",
     "question": "Avec l'intégration Lambda proxy, qui formate la réponse ?",
-    "options": ["Lambda", "API Gateway", "Les deux", "Aucun"],
+    "options": [
+      "Lambda",
+      "API Gateway",
+      "Les deux",
+      "Aucun"
+    ],
     "correct": 0,
     "explanation": "Lambda doit retourner le format spécifique (statusCode, headers, body)."
   },
@@ -445,7 +560,12 @@
     "theme_label": "HTTP integration",
     "difficulty": "hard",
     "question": "HTTP integration peut-elle appeler des endpoints externes ?",
-    "options": ["Oui", "Non", "Uniquement AWS", "Uniquement privés"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement AWS",
+      "Uniquement privés"
+    ],
     "correct": 0,
     "explanation": "HTTP integration peut appeler n'importe quel endpoint HTTP/HTTPS."
   },
@@ -455,7 +575,12 @@
     "theme_label": "HTTP integration",
     "difficulty": "hard",
     "question": "Quel est le timeout pour une intégration HTTP ?",
-    "options": ["29 secondes", "15 minutes", "30 secondes", "60 secondes"],
+    "options": [
+      "29 secondes",
+      "15 minutes",
+      "30 secondes",
+      "60 secondes"
+    ],
     "correct": 0,
     "explanation": "Le timeout est de 29 secondes (50 ms pour les appels privés via VPC Link)."
   },
@@ -510,7 +635,12 @@
     "theme_label": "API Gateway endpoints",
     "difficulty": "hard",
     "question": "Quel endpoint est recommandé pour les utilisateurs mondiaux ?",
-    "options": ["Edge-optimized (CloudFront)", "Regional", "Private", "Aucun"],
+    "options": [
+      "Edge-optimized (CloudFront)",
+      "Regional",
+      "Private",
+      "Aucun"
+    ],
     "correct": 0,
     "explanation": "Edge-optimized utilise CloudFront pour la latence mondiale."
   },
@@ -520,9 +650,14 @@
     "theme_label": "Private API",
     "difficulty": "hard",
     "question": "Comment accéder à une API Gateway privée ?",
-    "options": ["VPC Endpoint (interface endpoint)", "Internet", "VPN", "Direct Connect"],
+    "options": [
+      "VPC Endpoint (interface endpoint)",
+      "Internet",
+      "VPN",
+      "Direct Connect"
+    ],
     "correct": 0,
-    "explication": "Les API privées sont accessibles via des VPC Endpoints."
+    "explanation": "Les API privées sont accessibles via des VPC Endpoints."
   },
   {
     "id": "AWS-DEV-125",
@@ -530,7 +665,12 @@
     "theme_label": "OpenAPI/Swagger",
     "difficulty": "hard",
     "question": "API Gateway peut-il importer une définition OpenAPI ?",
-    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "Les définitions OpenAPI peuvent être importées pour créer ou mettre à jour une API."
   },
@@ -570,7 +710,12 @@
     "theme_label": "Deployment",
     "difficulty": "hard",
     "question": "Un stage peut-il avoir plusieurs déploiements ?",
-    "options": ["Non, un seul actif", "Oui", "Uniquement avec canary", "Uniquement avec alias"],
+    "options": [
+      "Non, un seul actif",
+      "Oui",
+      "Uniquement avec canary",
+      "Uniquement avec alias"
+    ],
     "correct": 0,
     "explanation": "Un stage pointe vers un seul déploiement à la fois."
   },
@@ -580,7 +725,12 @@
     "theme_label": "Canary deployment",
     "difficulty": "hard",
     "question": "API Gateway supporte-t-il les déploiements canary ?",
-    "options": ["Oui", "Non", "Uniquement pour REST API", "Uniquement pour HTTP API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour REST API",
+      "Uniquement pour HTTP API"
+    ],
     "correct": 0,
     "explanation": "Les canary deployments permettent de tester un nouveau déploiement avec un pourcentage de trafic."
   },
@@ -605,7 +755,12 @@
     "theme_label": "Documentation",
     "difficulty": "hard",
     "question": "API Gateway peut-il générer automatiquement la documentation ?",
-    "options": ["Oui", "Non", "Uniquement avec OpenAPI", "Uniquement avec Swagger"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec OpenAPI",
+      "Uniquement avec Swagger"
+    ],
     "correct": 0,
     "explanation": "API Gateway peut générer une documentation interactive pour les développeurs."
   },
@@ -615,7 +770,12 @@
     "theme_label": "Documentation",
     "difficulty": "hard",
     "question": "La documentation peut-elle être exportée ?",
-    "options": ["Oui (OpenAPI)", "Non", "Uniquement en PDF", "Uniquement en HTML"],
+    "options": [
+      "Oui (OpenAPI)",
+      "Non",
+      "Uniquement en PDF",
+      "Uniquement en HTML"
+    ],
     "correct": 0,
     "explanation": "La documentation peut être exportée au format OpenAPI."
   },
@@ -670,7 +830,12 @@
     "theme_label": "Usage plans",
     "difficulty": "hard",
     "question": "Peut-on associer plusieurs API keys à un usage plan ?",
-    "options": ["Oui", "Non", "Une seule", "Illimité"],
+    "options": [
+      "Oui",
+      "Non",
+      "Une seule",
+      "Illimité"
+    ],
     "correct": 0,
     "explanation": "Un usage plan peut avoir plusieurs API keys."
   },
@@ -725,8 +890,417 @@
     "theme_label": "Best practices",
     "difficulty": "hard",
     "question": "Doit-on utiliser les stages pour séparer les environnements ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement pour les API REST"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement pour les API REST"
+    ],
     "correct": 0,
     "explanation": "Les stages permettent de gérer dev, test, prod avec des configurations différentes."
+  },
+  {
+    "id": "AWS-DEV-AG-001",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types d'intégration dans API Gateway :",
+    "options": [
+      "HTTP Integration",
+      "Lambda Integration",
+      "VPC Link",
+      "S3 Bucket",
+      "DynamoDB"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "HTTP Integration permet d'intégrer des services HTTP. Lambda Integration utilise les fonctions Lambda comme backend. VPC Link permet d'intégrer des services dans un VPC. S3 Bucket et DynamoDB sont des types de stockage, pas d'intégration."
+  },
+  {
+    "id": "AWS-DEV-AG-002",
+    "theme": "API Gateway",
+    "theme_label": "HTTP API",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre REST API et HTTP API dans AWS API Gateway ?",
+    "options": [
+      "HTTP API est plus rapide et moins cher que REST API",
+      "REST API est basé sur le protocole HTTP/1.1, tandis que HTTP API est basé sur HTTP/2",
+      "HTTP API ne prend pas en charge le protocole WebSocket",
+      "REST API peut être utilisé uniquement pour des services publics, tandis que HTTP API est destiné aux services internes"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "HTTP API est basé sur HTTP/2, ce qui offre des performances meilleures que REST API qui utilise généralement HTTP/1.1."
+  },
+  {
+    "id": "AWS-DEV-AG-003",
+    "theme": "API Gateway",
+    "theme_label": "Authorizers",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les authorizers dans API Gateway :",
+    "options": [
+      "Les authorizers peuvent être utilisés pour authentifier les appels API",
+      "Les authorizers peuvent être configurés pour vérifier les signatures des requêtes",
+      "Les authorizers ne peuvent être utilisés que avec les API REST",
+      "Les authorizers sont nécessaires pour toutes les types d'intégration API Gateway",
+      "Les authorizers peuvent être utilisés pour limiter l'accès aux ressources API"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      4
+    ],
+    "explanation": "Les authorizers peuvent être utilisés pour authentifier les appels API et vérifier les signatures des requêtes. Ils ne sont pas nécessaires pour toutes les types d'intégration API Gateway et peuvent être utilisés pour limiter l'accès aux ressources API."
+  },
+  {
+    "id": "AWS-DEV-AG-004",
+    "theme": "API Gateway",
+    "theme_label": "Caching",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage majeur de l'utilisation du caching dans API Gateway ?",
+    "options": [
+      "Améliore les performances en réduisant le temps de réponse",
+      "Permet d'accéder aux données stockées en base de données",
+      "Facilite la mise à jour des API sans downtime",
+      "Permet de stocker des données sensibles en toute sécurité"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'utilisation du caching dans API Gateway améliore les performances en réduisant le temps de réponse."
+  },
+  {
+    "id": "AWS-DEV-AG-005",
+    "theme": "API Gateway",
+    "theme_label": "Logging & Monitoring",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le logging et la surveillance dans API Gateway :",
+    "options": [
+      "API Gateway fournit des journaux détaillés pour chaque appel API",
+      "X-Ray peut être utilisé pour surveiller les appels API et identifier les problèmes de performance",
+      "La surveillance peut être configurée pour envoyer des alertes en cas d'anomalies",
+      "Les journaux sont stockés localement sur les serveurs API Gateway",
+      "La surveillance peut être désactivée pour des raisons de sécurité"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "API Gateway fournit des journaux détaillés pour chaque appel API, X-Ray peut être utilisé pour surveiller les appels API et identifier les problèmes de performance, et la surveillance peut être configurée pour envoyer des alertes en cas d'anomalies. Les journaux ne sont pas stockés localement sur les serveurs API Gateway et la surveillance ne peut généralement pas être désactivée."
+  },
+  {
+    "id": "AWS-DEV-AG-006",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types d'intégration dans API Gateway :",
+    "options": [
+      "HTTP Integration",
+      "Lambda Proxy Integration",
+      "VPC Link Integration",
+      "WebSocket Integration"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "HTTP Integration est correct car elle permet d'intégrer des services HTTP. Lambda Proxy Integration est correct car elle permet d'exécuter du code Lambda directement à partir de l'API Gateway. VPC Link Integration est correct car elle permet d'intégrer des services dans un VPC. WebSocket Integration est incorrect car elle ne s'applique qu'à l'API Gateway WebSocket."
+  },
+  {
+    "id": "AWS-DEV-AG-007",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type d'API est le plus adapté pour des applications mobiles et web en temps réel ?",
+    "options": [
+      "REST API",
+      "HTTP API",
+      "WebSocket API",
+      "SOAP API"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "WebSocket API est le plus adapté pour des applications mobiles et web en temps réel car elle permet une communication bidirectionnelle et en temps réel."
+  },
+  {
+    "id": "AWS-DEV-AG-008",
+    "theme": "API Gateway",
+    "theme_label": "Authorizers",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les authorizers dans API Gateway :",
+    "options": [
+      "IAM Authorizer",
+      "Cognito User Pool Authorizer",
+      "Lambda Authorizer",
+      "Request Validator"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "IAM Authorizer est correct car elle permet d'utiliser les identités IAM pour autoriser les appels à l'API. Cognito User Pool Authorizer est correct car elle permet d'utiliser les pools utilisateur Amazon Cognito pour autoriser les appels à l'API. Lambda Authorizer est correct car elle permet d'utiliser des fonctions Lambda personnalisées pour autoriser les appels à l'API. Request Validator n'est pas un authorizer, mais une méthode pour valider les requêtes entrantes."
+  },
+  {
+    "id": "AWS-DEV-AG-009",
+    "theme": "API Gateway",
+    "theme_label": "Logging & Monitoring",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité d'API Gateway permet de suivre les appels à l'API et les erreurs ?",
+    "options": [
+      "CORS",
+      "Logging & Monitoring",
+      "Throttling",
+      "API Keys"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Logging & Monitoring est correct car elle permet de suivre les appels à l'API et les erreurs en générant des journaux détaillés."
+  },
+  {
+    "id": "AWS-DEV-AG-010",
+    "theme": "API Gateway",
+    "theme_label": "Throttling",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité d'API Gateway permet de limiter le nombre de requêtes par minute ?",
+    "options": [
+      "Throttling",
+      "CORS",
+      "Logging & Monitoring",
+      "API Keys"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Throttling est correct car elle permet de limiter le nombre de requêtes par minute pour protéger les ressources et prévenir les abus."
+  },
+  {
+    "id": "AWS-DEV-AG-011",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les API Gateway :",
+    "options": [
+      "API Gateway propose trois types de APIs (REST, HTTP, WebSocket).",
+      "HTTP API est le plus économique et rapide pour les proxys.",
+      "REST API peut être utilisé pour créer des applications mobiles.",
+      "WebSocket API est utile pour les applications en temps réel.",
+      "SOAP API est également supportée par API Gateway."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "API Gateway propose trois types de APIs (REST, HTTP, WebSocket). HTTP API est plus simple, moins cher et plus rapide que REST API. REST API peut être utilisé pour créer des applications mobiles. WebSocket API est utile pour les applications en temps réel. SOAP API n'est pas supportée par API Gateway."
+  },
+  {
+    "id": "AWS-DEV-AG-012",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'intégration type utilisée pour appeler une autre API depuis une API Gateway ?",
+    "options": [
+      "HTTP Integration",
+      "AWS Lambda Integration",
+      "VPC Link",
+      "WebSocket Integration"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'intégration type utilisée pour appeler une autre API depuis une API Gateway est l'HTTP Integration."
+  },
+  {
+    "id": "AWS-DEV-AG-013",
+    "theme": "API Gateway",
+    "theme_label": "Caching",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le caching dans API Gateway :",
+    "options": [
+      "Le caching peut être activé pour améliorer les performances des appels API.",
+      "Le caching est disponible uniquement pour les API REST.",
+      "Le caching peut être configuré à différents niveaux (API, Stage, Route).",
+      "Le caching permet de stocker les réponses des appels API pour une durée définie.",
+      "Le caching est désactivé par défaut."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Le caching peut être activé pour améliorer les performances des appels API. Le caching est disponible pour les API REST et HTTP. Le caching peut être configuré à différents niveaux (API, Stage, Route). Le caching permet de stocker les réponses des appels API pour une durée définie. Le caching n'est pas désactivé par défaut."
+  },
+  {
+    "id": "AWS-DEV-AG-014",
+    "theme": "API Gateway",
+    "theme_label": "Logging & Monitoring",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour configurer les journaux et le suivi des API Gateway ?",
+    "options": [
+      "Activer les journaux à niveau d'API pour suivre toutes les requêtes.",
+      "Configurer des alertes basées sur le taux d'erreurs pour les API Gateway.",
+      "Utiliser X-Ray tracing pour analyser le flux de requêtes et l'optimisation des performances.",
+      "Toutes les options ci-dessus."
+    ],
+    "correct": 3,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique pour configurer les journaux et le suivi des API Gateway est d'activer les journaux à niveau d'API pour suivre toutes les requêtes, configurer des alertes basées sur le taux d'erreurs pour les API Gateway et utiliser X-Ray tracing pour analyser le flux de requêtes et l'optimisation des performances."
+  },
+  {
+    "id": "AWS-DEV-AG-015",
+    "theme": "API Gateway",
+    "theme_label": "Throttling",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité du throttling dans API Gateway ?",
+    "options": [
+      "Permet de limiter le nombre d'appels API par minute.",
+      "Permet de gérer les erreurs HTTP 500.",
+      "Permet d'activer le caching des réponses API.",
+      "Permet de sécuriser les appels API avec des clés d'API."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le throttling dans API Gateway permet de limiter le nombre d'appels API par minute."
+  },
+  {
+    "id": "AWS-DEV-AG-016",
+    "theme": "API Gateway",
+    "theme_label": "Integration types",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types d'intégration dans API Gateway :",
+    "options": [
+      "Lambda Proxy Integration",
+      "HTTP Integration",
+      "VPC Link",
+      "WebSocket Integration",
+      "S3 Bucket"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Lambda Proxy Integration et HTTP Integration sont des types d'intégration disponibles. VPC Link permet de connecter API Gateway à des services dans un réseau virtuel privé (VPC). WebSocket Integration permet de créer des API WebSocket. S3 Bucket n'est pas un type d'intégration."
+  },
+  {
+    "id": "AWS-DEV-AG-017",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence principale entre REST API et HTTP API dans API Gateway ?",
+    "options": [
+      "REST API est basé sur le protocole HTTP tandis que HTTP API est basé sur le protocole WebSocket",
+      "REST API permet des interactions synchrones tandis que HTTP API est asynchrone",
+      "HTTP API offre un meilleur coût et une meilleure performance pour les proxys comparé à REST API",
+      "REST API est utilisé principalement pour les applications mobiles tandis que HTTP API est utilisé pour les applications web"
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "HTTP API offre un meilleur coût et une meilleure performance pour les proxys comparé à REST API."
+  },
+  {
+    "id": "AWS-DEV-AG-018",
+    "theme": "API Gateway",
+    "theme_label": "Mapping templates",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les mapping templates dans API Gateway :",
+    "options": [
+      "Les mapping templates permettent de transformer les données d'entrée et de sortie entre le client et l'intégration",
+      "Les mapping templates sont utilisés uniquement pour les API REST",
+      "Les mapping templates peuvent être définis à l'aide de Velocity Template Language (VTL)",
+      "Les mapping templates sont automatiquement générés par API Gateway",
+      "Les mapping templates peuvent être utilisés pour les API WebSocket"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les mapping templates permettent de transformer les données d'entrée et de sortie entre le client et l'intégration. Ils peuvent être définis à l'aide de Velocity Template Language (VTL). Les mapping templates sont utilisés pour les API REST et WebSocket."
+  },
+  {
+    "id": "AWS-DEV-AG-019",
+    "theme": "API Gateway",
+    "theme_label": "Throttling",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de la fonctionnalité Throttling dans API Gateway ?",
+    "options": [
+      "Permet de gérer le débit des requêtes pour éviter les surcharges",
+      "Permet de définir des politiques d'accès basées sur le temps",
+      "Permet de stocker les données des utilisateurs",
+      "Permet de surveiller l'utilisation de l'API"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Permet de gérer le débit des requêtes pour éviter les surcharges."
+  },
+  {
+    "id": "AWS-DEV-AG-020",
+    "theme": "API Gateway",
+    "theme_label": "Custom domain names",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'avantage de configurer un nom de domaine personnalisé pour une API Gateway ?",
+    "options": [
+      "Permet d'améliorer la sécurité de l'API",
+      "Permet d'utiliser un nom de domaine propre et facile à retenir",
+      "Permet de réduire le coût des appels API",
+      "Permet d'accéder à l'API uniquement via le réseau local"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Permet d'utiliser un nom de domaine propre et facile à retenir."
+  },
+  {
+    "id": "AWS-DEV-AG-021",
+    "theme": "API Gateway",
+    "theme_label": "Types d'API",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les API Gateway :",
+    "options": [
+      "Les API Gateway REST et HTTP sont interchangeables.",
+      "Les API Gateway WebSocket permettent la communication bidirectionnelle.",
+      "Les API Gateway peuvent être utilisées pour créer des APIs privées et publiques.",
+      "Les API Gateway ne supportent pas le protocole SOAP.",
+      "Les API Gateway peuvent être déployées dans un VPC."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      4
+    ],
+    "explanation": "Les API Gateway REST et HTTP ne sont pas interchangeables, mais ils peuvent être utilisés de manière similaire. Les API Gateway WebSocket permettent bien la communication bidirectionnelle. Les API Gateway peuvent effectivement être utilisées pour créer des APIs privées et publiques. Les API Gateway ne supportent pas le protocole SOAP, mais ils peuvent être utilisées pour des APIs RESTful et HTTP. Les API Gateway peuvent être déployées dans un VPC, ce qui permet une meilleure sécurité et contrôle."
   }
 ]

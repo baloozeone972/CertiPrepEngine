@@ -12,7 +12,7 @@
       "Monitoring"
     ],
     "correct": 0,
-    "explication": "Helm gère les charts (templates Kubernetes)."
+    "explanation": "Helm gère les charts (templates Kubernetes)."
   },
   {
     "id": "CKA-07-002",
@@ -27,7 +27,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Un chart est une collection de fichiers décrivant un ensemble de ressources."
+    "explanation": "Un chart est une collection de fichiers décrivant un ensemble de ressources."
   },
   {
     "id": "CKA-07-003",
@@ -42,7 +42,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "helm install déploie une release."
+    "explanation": "helm install déploie une release."
   },
   {
     "id": "CKA-07-004",
@@ -57,7 +57,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "helm list montre les releases installées."
+    "explanation": "helm list montre les releases installées."
   },
   {
     "id": "CKA-07-005",
@@ -72,7 +72,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "helm upgrade met à jour la release."
+    "explanation": "helm upgrade met à jour la release."
   },
   {
     "id": "CKA-07-006",
@@ -87,7 +87,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "uninstall et delete (ancien) suppriment la release."
+    "explanation": "uninstall et delete (ancien) suppriment la release."
   },
   {
     "id": "CKA-07-007",
@@ -102,7 +102,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "--set pour les valeurs simples, -f pour un fichier."
+    "explanation": "--set pour les valeurs simples, -f pour un fichier."
   },
   {
     "id": "CKA-07-008",
@@ -117,7 +117,7 @@
       "Dans etcd"
     ],
     "correct": 2,
-    "explication": "Helm v3 stocke les releases dans des secrets (plus sécurisé)."
+    "explanation": "Helm v3 stocke les releases dans des secrets (plus sécurisé)."
   },
   {
     "id": "CKA-07-009",
@@ -132,7 +132,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "helm create génère un squelette de chart."
+    "explanation": "helm create génère un squelette de chart."
   },
   {
     "id": "CKA-07-010",
@@ -147,7 +147,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "lint vérifie la syntaxe, template génère les manifests."
+    "explanation": "lint vérifie la syntaxe, template génère les manifests."
   },
   {
     "id": "CKA-07-011",
@@ -162,7 +162,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "repo add ajoute, repo update rafraîchit l'index."
+    "explanation": "repo add ajoute, repo update rafraîchit l'index."
   },
   {
     "id": "CKA-07-012",
@@ -177,7 +177,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "search hub pour Artifact Hub, search repo pour les dépôts configurés."
+    "explanation": "search hub pour Artifact Hub, search repo pour les dépôts configurés."
   },
   {
     "id": "CKA-07-013",
@@ -192,7 +192,7 @@
       "Un registre Docker"
     ],
     "correct": 2,
-    "explication": "Les dépôts HTTP ou OCI stockent les charts."
+    "explanation": "Les dépôts HTTP ou OCI stockent les charts."
   },
   {
     "id": "CKA-07-014",
@@ -207,7 +207,7 @@
       "Remplacer les valeurs"
     ],
     "correct": 2,
-    "explication": "Les templates utilisent des fonctions, des pipelines, des conditions."
+    "explanation": "Les templates utilisent des fonctions, des pipelines, des conditions."
   },
   {
     "id": "CKA-07-015",
@@ -215,9 +215,14 @@
     "theme_label": "Helm",
     "difficulty": "easy",
     "question": "Comment accéder à une valeur de .Values dans un template ?",
-    "options": ["{{ .Values.key }}", "{{ .Values.key }}", "${Values.key}", "A et B"],
+    "options": [
+      "{{ .Values.key }}",
+      "{{ .Values.key }}",
+      "${Values.key}",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "La syntaxe Go template utilise {{ .Values.key }}."
+    "explanation": "La syntaxe Go template utilise {{ .Values.key }}."
   },
   {
     "id": "CKA-07-016",
@@ -232,7 +237,7 @@
       "Remplacer"
     ],
     "correct": 2,
-    "explication": "include permet de réutiliser des blocs de template."
+    "explanation": "include permet de réutiliser des blocs de template."
   },
   {
     "id": "CKA-07-017",
@@ -247,7 +252,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "tpl permet d'interpréter une chaîne contenant des directives de template."
+    "explanation": "tpl permet d'interpréter une chaîne contenant des directives de template."
   },
   {
     "id": "CKA-07-018",
@@ -262,7 +267,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "values.yaml contient les valeurs par défaut."
+    "explanation": "values.yaml contient les valeurs par défaut."
   },
   {
     "id": "CKA-07-019",
@@ -270,9 +275,14 @@
     "theme_label": "Helm",
     "difficulty": "easy",
     "question": "Quel fichier contient les métadonnées du chart (nom, version) ?",
-    "options": ["Chart.yaml", "values.yaml", "requirements.yaml", "metadata.yaml"],
+    "options": [
+      "Chart.yaml",
+      "values.yaml",
+      "requirements.yaml",
+      "metadata.yaml"
+    ],
     "correct": 0,
-    "explication": "Chart.yaml est obligatoire."
+    "explanation": "Chart.yaml est obligatoire."
   },
   {
     "id": "CKA-07-020",
@@ -287,7 +297,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les Operators automatisent les opérations (backup, upgrade, scaling)."
+    "explanation": "Les Operators automatisent les opérations (backup, upgrade, scaling)."
   },
   {
     "id": "CKA-07-021",
@@ -302,7 +312,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Operator SDK et Kubebuilder sont les plus courants."
+    "explanation": "Operator SDK et Kubebuilder sont les plus courants."
   },
   {
     "id": "CKA-07-022",
@@ -317,7 +327,7 @@
       "Type de secret"
     ],
     "correct": 2,
-    "explication": "Les CRD permettent de créer des ressources personnalisées."
+    "explanation": "Les CRD permettent de créer des ressources personnalisées."
   },
   {
     "id": "CKA-07-023",
@@ -332,7 +342,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "kubectl create -f crd.yaml."
+    "explanation": "kubectl create -f crd.yaml."
   },
   {
     "id": "CKA-07-024",
@@ -347,7 +357,7 @@
       "Un pod"
     ],
     "correct": 2,
-    "explication": "Le contrôleur est le cœur de l'Operator."
+    "explanation": "Le contrôleur est le cœur de l'Operator."
   },
   {
     "id": "CKA-07-025",
@@ -362,7 +372,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "L'Operator s'exécute comme un pod dans le cluster."
+    "explanation": "L'Operator s'exécute comme un pod dans le cluster."
   },
   {
     "id": "CKA-07-026",
@@ -377,7 +387,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Helm est pour le déploiement, Operator pour la gestion du cycle de vie."
+    "explanation": "Helm est pour le déploiement, Operator pour la gestion du cycle de vie."
   },
   {
     "id": "CKA-07-027",
@@ -392,7 +402,7 @@
       "Un registry"
     ],
     "correct": 2,
-    "explication": "OLM est un composant de Operator Framework."
+    "explanation": "OLM est un composant de Operator Framework."
   },
   {
     "id": "CKA-07-028",
@@ -407,7 +417,7 @@
       "CRD"
     ],
     "correct": 2,
-    "explication": "CatalogSource pointe vers un registry contenant les Operators."
+    "explanation": "CatalogSource pointe vers un registry contenant les Operators."
   },
   {
     "id": "CKA-07-029",
@@ -422,7 +432,7 @@
       "Uniquement avec Operator SDK"
     ],
     "correct": 0,
-    "explication": "Beaucoup d'Operators sont distribués sous forme de Helm charts."
+    "explanation": "Beaucoup d'Operators sont distribués sous forme de Helm charts."
   },
   {
     "id": "CKA-07-030",
@@ -437,6 +447,220 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "template et install --dry-run produisent les YAML."
+    "explanation": "template et install --dry-run produisent les YAML."
+  },
+  {
+    "id": "CKA-H&O-001",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Operators Kubernetes :",
+    "options": [
+      "Les Operators automatisent la gestion des applications en Kubernetes.",
+      "Les Operators sont des ressources personnalisées définies par l'utilisateur.",
+      "Les Operators utilisent des controllers pour gérer les applications.",
+      "Les Operators sont exclusifs aux applications stateless."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Les Operators automatisent la gestion des applications en Kubernetes. Les Operators sont des ressources personnalisées définies par l'utilisateur. Les Operators utilisent des controllers pour gérer les applications. Les Operators ne sont pas exclusifs aux applications stateless."
+  },
+  {
+    "id": "CKA-H&O-002",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'un Operator dans Kubernetes ?",
+    "options": [
+      "Un outil de gestion des applications en Kubernetes.",
+      "Une ressource personnalisée définie par l'utilisateur pour automatiser la gestion des applications.",
+      "Un type de controller Kubernetes.",
+      "Une méthode de déploiement d'applications."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Un Operator dans Kubernetes est une ressource personnalisée définie par l'utilisateur pour automatiser la gestion des applications."
+  },
+  {
+    "id": "CKA-H&O-003",
+    "theme": "Helm & Operators",
+    "theme_label": "OLM",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le Operator Lifecycle Manager (OLM) :",
+    "options": [
+      "OLM est un outil pour installer, mettre à jour et gérer des Operators dans Kubernetes.",
+      "OLM est intégré au core de Kubernetes.",
+      "OLM utilise des CRDs pour définir les Operators et leurs ressources personnalisées.",
+      "OLM gère uniquement les applications stateless."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "OLM est un outil pour installer, mettre à jour et gérer des Operators dans Kubernetes. OLM n'est pas intégré au core de Kubernetes. OLM utilise des CRDs pour définir les Operators et leurs ressources personnalisées. OLM ne gère pas uniquement les applications stateless."
+  },
+  {
+    "id": "CKA-H&O-004",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm vs Operator",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Helm et un Operator dans Kubernetes ?",
+    "options": [
+      "Helm gère les applications en tant que packages, tandis qu'un Operator gère les applications comme des entités personnalisées.",
+      "Helm est un outil de déploiement, tandis qu'un Operator est une ressource personnalisée.",
+      "Helm utilise des controllers, tandis qu'un Operator gère les applications via des ressources personnalisées.",
+      "Helm est utilisé pour la gestion des applications stateless, tandis qu'un Operator gère les applications stateful."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Helm gère les applications en tant que packages, tandis qu'un Operator gère les applications comme des entités personnalisées."
+  },
+  {
+    "id": "CKA-H&O-005",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'un controller dans le contexte des Operators Kubernetes ?",
+    "options": [
+      "Un outil de gestion des applications en Kubernetes.",
+      "Une ressource personnalisée définie par l'utilisateur pour automatiser la gestion des applications.",
+      "Un type de controller Kubernetes qui gère les Operators.",
+      "Une méthode de déploiement d'applications."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Un controller dans le contexte des Operators Kubernetes est une ressource personnalisée définie par l'utilisateur pour automatiser la gestion des applications."
+  },
+  {
+    "id": "CKA-H&O-006",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Helm :",
+    "options": [
+      "Helm est un package manager pour Kubernetes.",
+      "Un chart Helm est une collection de fichiers décrivant un ensemble de ressources Kubernetes.",
+      "Helm peut être utilisé pour installer, mettre à jour et gérer des applications Kubernetes.",
+      "Helm est un orchestrateur de conteneurs.",
+      "Helm ne nécessite pas d'installation sur le cluster Kubernetes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Helm est un package manager pour Kubernetes (A). Un chart Helm est une collection de fichiers décrivant un ensemble de ressources Kubernetes (B). Helm peut être utilisé pour installer, mettre à jour et gérer des applications Kubernetes (C). Helm n'est pas un orchestrateur de conteneurs (D). Helm nécessite une installation sur le cluster Kubernetes."
+  },
+  {
+    "id": "CKA-H&O-007",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est-ce qu'un Operator dans Kubernetes ?",
+    "options": [
+      "Un outil pour automatiser la gestion des applications Kubernetes.",
+      "Un type de ressource Kubernetes personnalisée.",
+      "Une méthode pour déployer des applications sur le cluster.",
+      "Un outil de monitoring des applications Kubernetes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un Operator dans Kubernetes est un outil pour automatiser la gestion des applications Kubernetes (A). Un type de ressource Kubernetes personnalisée est une CRD, pas un Operator (B). Une méthode pour déployer des applications sur le cluster est Helm ou kubectl apply, pas un Operator (C). Un outil de monitoring des applications Kubernetes est Prometheus ou Grafana, pas un Operator (D)."
+  },
+  {
+    "id": "CKA-H&O-008",
+    "theme": "Helm & Operators",
+    "theme_label": "OLM",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant OLM (Operator Lifecycle Manager) :",
+    "options": [
+      "OLM est un outil pour gérer les Operators dans Kubernetes.",
+      "OLM peut installer, mettre à jour et supprimer des Operators.",
+      "OLM est une ressource personnalisée Kubernetes.",
+      "OLM nécessite une installation sur le cluster Kubernetes.",
+      "OLM est un outil de monitoring des applications Kubernetes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "OLM est un outil pour gérer les Operators dans Kubernetes (A). OLM peut installer, mettre à jour et supprimer des Operators (B). OLM est une ressource personnalisée Kubernetes (C). OLM nécessite une installation sur le cluster Kubernetes (D). OLM n'est pas un outil de monitoring des applications Kubernetes (E)."
+  },
+  {
+    "id": "CKA-H&O-009",
+    "theme": "Helm & Operators",
+    "theme_label": "Helm vs Operator",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Helm et un Operator dans Kubernetes ?",
+    "options": [
+      "Helm gère des applications complexes, tandis qu'un Operator gère des ressources simples.",
+      "Helm est un outil de déploiement, tandis qu'un Operator est une ressource personnalisée Kubernetes.",
+      "Helm gère des applications à l'échelle, tandis qu'un Operator gère des applications individuelles.",
+      "Helm est basé sur des templates, tandis qu'un Operator utilise du code Go."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Helm est un outil de déploiement, tandis qu'un Operator est une ressource personnalisée Kubernetes (B). Helm gère des applications à l'échelle, tandis qu'un Operator gère des applications individuelles (C). Helm est basé sur des templates, tandis qu'un Operator utilise du code Go (D)."
+  },
+  {
+    "id": "CKA-H&O-010",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Operators :",
+    "options": [
+      "Un Operator est un outil pour automatiser la gestion des applications Kubernetes.",
+      "Les Operators sont utilisés pour déployer des applications sur le cluster Kubernetes.",
+      "Un Operator peut gérer des ressources personnalisées Kubernetes.",
+      "Les Operators nécessitent une installation sur le cluster Kubernetes.",
+      "Les Operators ne peuvent pas être utilisés pour gérer des applications complexes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Un Operator est un outil pour automatiser la gestion des applications Kubernetes (A). Les Operators sont utilisés pour déployer des applications sur le cluster Kubernetes (B). Un Operator peut gérer des ressources personnalisées Kubernetes (C). Les Operators nécessitent une installation sur le cluster Kubernetes (D). Les Operators peuvent être utilisés pour gérer des applications complexes (E)."
+  },
+  {
+    "id": "CKA-H&O-011",
+    "theme": "Helm & Operators",
+    "theme_label": "Operators",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les Operators :",
+    "options": [
+      "Les Operators automatisent la gestion des applications Kubernetes.",
+      "Les Operators sont basés sur le modèle de contrôle client-serveur.",
+      "Les Operators peuvent gérer des ressources personnalisées Kubernetes.",
+      "Les Operators sont exclusivement utilisés pour les applications stateless."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les Operators automatisent la gestion des applications Kubernetes (A est correct). Les Operators sont basés sur le modèle de contrôle client-serveur (B est correct). Les Operators peuvent gérer des ressources personnalisées Kubernetes (C est correct). Les Operators ne sont pas exclusivement utilisés pour les applications stateless (D est incorrect car ils peuvent également gérer des applications stateful)."
   }
 ]

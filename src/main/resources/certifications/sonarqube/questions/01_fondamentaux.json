@@ -1,0 +1,763 @@
+[
+  {
+    "id": "SQ-FOND-001",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel est l'objectif principal de SonarQube ?",
+    "options": [
+      "Automatiser le déploiement des applications",
+      "Réaliser une inspection continue de la qualité du code",
+      "Gérer les dépendances des projets Java",
+      "Orchestrer des conteneurs Docker"
+    ],
+    "correct": 1,
+    "explanation": "SonarQube est une plateforme d'inspection continue de la qualité du code. Il détecte les bugs, les vulnérabilités et les code smells."
+  },
+  {
+    "id": "SQ-FOND-002",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "facile",
+    "question": "Parmi les types de problèmes suivants, lesquels sont détectés par SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Bugs",
+      "Vulnérabilités",
+      "Code Smells",
+      "Erreurs de compilation"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "SonarQube détecte les bugs, vulnérabilités et code smells. Les erreurs de compilation sont généralement détectées par le compilateur avant l'analyse."
+  },
+  {
+    "id": "SQ-FOND-003",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Qu'est-ce qu'un 'Quality Profile' dans SonarQube ?",
+    "options": [
+      "Un ensemble de seuils de métriques à respecter",
+      "Un ensemble de règles appliquées lors de l'analyse",
+      "Un rapport de couverture de code",
+      "Un plugin pour ajouter un nouveau langage"
+    ],
+    "correct": 1,
+    "explanation": "Un Quality Profile définit l'ensemble des règles de codage appliquées à un projet, spécifique à un langage."
+  },
+  {
+    "id": "SQ-FOND-004",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Lesquelles de ces affirmations concernant une 'Quality Gate' sont vraies ? (plusieurs réponses)",
+    "options": [
+      "C'est un ensemble de conditions que le code doit respecter",
+      "Elle peut faire échouer un build si les conditions ne sont pas remplies",
+      "Elle est définie au niveau du code source",
+      "Un projet ne peut avoir qu'une seule Quality Gate active"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Une Quality Gate est un ensemble de seuils (conditions) qui, si non respectés, peut bloquer la validation. Elle est assignée à un projet (une seule active) et définie globalement."
+  },
+  {
+    "id": "SQ-FOND-005",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "Le principe 'Clean as You Code' consiste à corriger tous les problèmes de qualité du code legacy en une seule fois.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. 'Clean as You Code' consiste à se concentrer sur la qualité du nouveau code pour améliorer progressivement la base de code sans être submergé par la dette historique."
+  },
+  {
+    "id": "SQ-FOND-006",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Que représente le 'Sonar Way' ?",
+    "options": [
+      "Un plugin de sécurité avancée",
+      "Le profil de qualité et la Quality Gate par défaut recommandés",
+      "Un outil d'analyse de performance",
+      "Une méthode de déploiement"
+    ],
+    "correct": 1,
+    "explanation": "'Sonar Way' est le Quality Profile et la Quality Gate par défaut fournis par SonarSource."
+  },
+  {
+    "id": "SQ-FOND-007",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Comment SonarQube quantifie-t-il la 'dette technique' ?",
+    "options": [
+      "En heures de travail nécessaires pour corriger tous les code smells",
+      "En nombre de lignes de code à réécrire",
+      "En euros investis dans la maintenance",
+      "En pourcentage de tests unitaires échoués"
+    ],
+    "correct": 0,
+    "explanation": "La dette technique est estimée en temps (heures ou jours) nécessaire pour corriger les code smells."
+  },
+  {
+    "id": "SQ-FOND-008",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles caractéristiques définissent un 'code smell' ? (plusieurs réponses)",
+    "options": [
+      "C'est un indicateur de mauvaise conception",
+      "Le code ne compile pas",
+      "Il rend le code difficile à maintenir",
+      "C'est une faille de sécurité exploitable"
+    ],
+    "correct": [0, 2],
+    "explanation": "Un code smell est un problème de maintenabilité ou de conception, mais le code fonctionne. Il n'empêche pas la compilation et n'est pas une vulnérabilité."
+  },
+  {
+    "id": "SQ-FOND-009",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quelle est la différence entre un 'bug' et une 'vulnérabilité' dans SonarQube ?",
+    "options": [
+      "Un bug concerne la logique métier, une vulnérabilité concerne la sécurité",
+      "Un bug est critique, une vulnérabilité est mineure",
+      "Un bug est détecté par les tests, une vulnérabilité par l'analyse statique",
+      "Aucune différence"
+    ],
+    "correct": 0,
+    "explanation": "Un bug est une erreur fonctionnelle ; une vulnérabilité est une faiblesse de sécurité exploitable."
+  },
+  {
+    "id": "SQ-FOND-010",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Parmi ces niveaux de sévérité, lesquels sont utilisés par SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Info",
+      "Minor",
+      "Major",
+      "Critical",
+      "Blocker",
+      "Warning"
+    ],
+    "correct": [0, 1, 2, 3, 4],
+    "explanation": "SonarQube utilise Info, Minor, Major, Critical, Blocker. 'Warning' n'est pas un niveau de sévérité SonarQube."
+  },
+  {
+    "id": "SQ-FOND-011",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Le 'Shift-Left' consiste à intégrer les tests de qualité et sécurité le plus tard possible dans le cycle de développement.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Le 'Shift-Left' consiste à déplacer les tests vers la gauche, c'est-à-dire le plus tôt possible."
+  },
+  {
+    "id": "SQ-FOND-012",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "SonarQube est principalement un outil d'analyse :",
+    "options": [
+      "Dynamique (exécution du code)",
+      "Statique (sans exécution du code)",
+      "De performance en production",
+      "De logs applicatifs"
+    ],
+    "correct": 1,
+    "explanation": "SonarQube analyse le code source sans l'exécuter (analyse statique)."
+  },
+  {
+    "id": "SQ-FOND-013",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels éléments composent une 'règle' (rule) dans SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Un motif de code spécifique à rechercher",
+      "Une sévérité associée",
+      "Une description du problème",
+      "Un test unitaire automatisé"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Une règle définit un motif problématique, sa sévérité, une description et des conseils. Ce n'est pas un test unitaire."
+  },
+  {
+    "id": "SQ-FOND-014",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quelle métrique mesure le pourcentage de code exécuté par les tests ?",
+    "options": [
+      "La duplication de code",
+      "La complexité cyclomatique",
+      "La couverture de code (Code Coverage)",
+      "La densité de commentaires"
+    ],
+    "correct": 2,
+    "explanation": "La couverture de code indique le pourcentage de lignes ou branches exécutées par les tests unitaires."
+  },
+  {
+    "id": "SQ-FOND-015",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Pourquoi la duplication de code est-elle problématique ? (plusieurs réponses)",
+    "options": [
+      "Elle augmente la taille des fichiers",
+      "Elle rend la maintenance plus difficile (corrections à répliquer)",
+      "Elle propage les bugs",
+      "Elle améliore les performances"
+    ],
+    "correct": [1, 2],
+    "explanation": "La duplication complique la maintenance et augmente le risque de bugs car une correction doit être faite à plusieurs endroits."
+  },
+  {
+    "id": "SQ-FOND-016",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Comment SonarQube évalue-t-il la 'maintenabilité' d'un projet ?",
+    "options": [
+      "En comptant le nombre de développeurs",
+      "En analysant le temps de compilation",
+      "En calculant une note (A à E) basée sur le ratio de dette technique",
+      "En mesurant le nombre de lignes de code"
+    ],
+    "correct": 2,
+    "explanation": "La note de maintenabilité (A à E) est basée sur le ratio entre la dette technique estimée et le temps de développement."
+  },
+  {
+    "id": "SQ-FOND-017",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "La note de fiabilité (Reliability) est basée sur le nombre de tests unitaires réussis.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. La note de fiabilité est basée sur la présence et la sévérité des bugs détectés."
+  },
+  {
+    "id": "SQ-FOND-018",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles notes (de A à E) SonarQube attribue-t-il à un projet ? (plusieurs réponses)",
+    "options": [
+      "Maintenabilité",
+      "Fiabilité",
+      "Sécurité",
+      "Performance"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "SonarQube donne des notes de A à E pour la maintenabilité, la fiabilité et la sécurité. Il n'y a pas de note globale de performance."
+  },
+  {
+    "id": "SQ-FOND-019",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Comment SonarQube obtient-il les données de couverture de code ?",
+    "options": [
+      "Il les calcule lui-même en instrumentant le code",
+      "Il importe un rapport généré par un outil externe comme JaCoCo",
+      "Il les estime à partir de l'analyse statique",
+      "Il ne mesure pas la couverture de code"
+    ],
+    "correct": 1,
+    "explanation": "SonarQube importe des rapports de couverture produits par des outils tiers (JaCoCo, cobertura, etc.)."
+  },
+  {
+    "id": "SQ-FOND-020",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels sont les avantages de se concentrer sur le 'nouveau code' ? (plusieurs réponses)",
+    "options": [
+      "Empêcher l'ajout de nouvelle dette technique",
+      "Améliorer progressivement la qualité",
+      "Corriger plus facilement les bugs historiques",
+      "Éviter d'être submergé par la dette existante"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Se concentrer sur le nouveau code permet de ne pas aggraver la situation et d'améliorer incrémentalement la base de code sans avoir à tout corriger d'un coup."
+  },
+  {
+    "id": "SQ-FOND-021",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "facile",
+    "question": "Quels sont les trois composants principaux de l'architecture SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Base de données",
+      "Serveur Web",
+      "Scanner",
+      "Docker Engine",
+      "Git"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "L'architecture standard repose sur : le Scanner (client), le Serveur Web (interface) et la Base de données (stockage)."
+  },
+  {
+    "id": "SQ-FOND-022",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Quel composant est responsable du traitement des rapports d'analyse et de leur enregistrement en base ?",
+    "options": [
+      "Le Scanner",
+      "Le serveur Web",
+      "Le Compute Engine",
+      "Elasticsearch"
+    ],
+    "correct": 2,
+    "explanation": "Le Compute Engine (CE) traite les rapports bruts et persiste les résultats."
+  },
+  {
+    "id": "SQ-FOND-023",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Elasticsearch intégré à SonarQube Server est utilisé pour stocker les rapports d'analyse bruts.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Elasticsearch est utilisé comme moteur d'indexation pour les recherches rapides, pas pour le stockage principal."
+  },
+  {
+    "id": "SQ-FOND-024",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel est le rôle du SonarScanner ?",
+    "options": [
+      "Héberger l'interface web",
+      "Exécuter l'analyse du code source sur la machine locale ou l'agent CI/CD",
+      "Stocker les résultats d'analyse",
+      "Gérer les utilisateurs et permissions"
+    ],
+    "correct": 1,
+    "explanation": "Le SonarScanner est le client qui analyse le code et envoie un rapport au serveur."
+  },
+  {
+    "id": "SQ-FOND-025",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Parmi ces bases de données, lesquelles sont officiellement supportées par SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "PostgreSQL",
+      "MySQL",
+      "Oracle",
+      "Microsoft SQL Server",
+      "MongoDB"
+    ],
+    "correct": [0, 2, 3],
+    "explanation": "PostgreSQL (recommandée), Oracle et MS SQL Server sont supportées. MySQL n'est plus supporté depuis la 7.9."
+  },
+  {
+    "id": "SQ-FOND-026",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Qu'est-ce qu'un 'Security Hotspot' ?",
+    "options": [
+      "Une vulnérabilité critique confirmée",
+      "Un code sensible nécessitant une revue humaine pour déterminer le risque",
+      "Une configuration de sécurité incorrecte",
+      "Un bug lié à l'authentification"
+    ],
+    "correct": 1,
+    "explanation": "Un Security Hotspot signale un code potentiellement risqué qui doit être examiné par un développeur."
+  },
+  {
+    "id": "SQ-FOND-027",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels mécanismes permettent d'appliquer une politique de qualité uniforme à plusieurs projets ? (plusieurs réponses)",
+    "options": [
+      "Quality Profiles partagés",
+      "Quality Gates globales",
+      "Portfolios",
+      "Plugins"
+    ],
+    "correct": [0, 1],
+    "explanation": "On peut définir des Quality Profiles et Quality Gates globalement et les assigner à plusieurs projets. Les Portfolios servent à l'agrégation, pas à l'application de politiques."
+  },
+  {
+    "id": "SQ-FOND-028",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "moyen",
+    "question": "Un projet peut avoir plusieurs Quality Gates actives simultanément.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. Un projet ne peut avoir qu'une seule Quality Gate active à la fois."
+  },
+  {
+    "id": "SQ-FOND-029",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Qu'est-ce qu'une 'issue' dans SonarQube ?",
+    "options": [
+      "Un ticket Jira lié au code",
+      "Une occurrence spécifique d'un problème détecté à un endroit précis du code",
+      "Un message d'erreur du compilateur",
+      "Une tâche planifiée pour la maintenance"
+    ],
+    "correct": 1,
+    "explanation": "Une issue matérialise une violation de règle dans le code, avec sa localisation et sa sévérité."
+  },
+  {
+    "id": "SQ-FOND-030",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Parmi ces états/résolutions, lesquels peut prendre une 'issue' dans SonarQube ? (plusieurs réponses)",
+    "options": [
+      "Ouvert",
+      "Confirmé",
+      "Résolu - Fixé",
+      "Résolu - Faux positif",
+      "Résolu - Won't Fix",
+      "En cours"
+    ],
+    "correct": [0, 1, 2, 3, 4],
+    "explanation": "Les états sont Ouvert, Confirmé, Réouvert, Résolu (avec Fixé, Faux positif, Won't Fix). 'En cours' n'est pas un état natif."
+  },
+  {
+    "id": "SQ-FOND-031",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "moyen",
+    "question": "Que signifie marquer une issue comme 'False Positive' ?",
+    "options": [
+      "L'issue est un bug critique à corriger immédiatement",
+      "L'outil a signalé un problème qui, après analyse humaine, n'en est pas un",
+      "L'issue a été corrigée automatiquement",
+      "L'issue sera corrigée plus tard"
+    ],
+    "correct": 1,
+    "explanation": "Un 'False Positive' indique que la règle s'est déclenchée à tort dans ce contexte."
+  },
+  {
+    "id": "SQ-FOND-032",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Dans quels cas est-il approprié de marquer une issue comme 'Won't Fix' ? (plusieurs réponses)",
+    "options": [
+      "Le problème est reconnu mais sa correction est trop coûteuse",
+      "Le code concerné sera bientôt supprimé",
+      "C'est un faux positif",
+      "Le risque de régression est trop élevé"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "'Won't Fix' signifie que l'équipe choisit de ne pas corriger. Ce n'est pas un faux positif (on utilise 'False Positive' pour cela)."
+  },
+  {
+    "id": "SQ-FOND-033",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "SonarQube ne peut analyser que du code Java.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. SonarQube supporte plus de 30 langages."
+  },
+  {
+    "id": "SQ-FOND-034",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Quel outil permet d'exécuter des analyses SonarQube directement dans l'IDE ?",
+    "options": [
+      "SonarScanner for IDE",
+      "SonarLint",
+      "SonarCloud",
+      "SonarRunner"
+    ],
+    "correct": 1,
+    "explanation": "SonarLint est une extension pour IDE qui détecte les problèmes en temps réel."
+  },
+  {
+    "id": "SQ-FOND-035",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quelles différences existent entre SonarQube Server et SonarQube Cloud ? (plusieurs réponses)",
+    "options": [
+      "SonarQube Server est auto-hébergé, SonarQube Cloud est un SaaS",
+      "SonarQube Cloud a une intégration native avec GitHub/GitLab/Bitbucket",
+      "SonarQube Server ne supporte pas l'analyse de Pull Request",
+      "SonarQube Cloud est gratuit pour les projets open source"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Server est auto-hébergé ; Cloud est SaaS avec intégrations natives. L'analyse de PR est possible dans les deux (selon édition pour Server)."
+  },
+  {
+    "id": "SQ-FOND-036",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "facile",
+    "question": "SonarQube peut être intégré dans un pipeline CI/CD pour bloquer une Pull Request si la Quality Gate échoue.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. C'est un cas d'usage courant pour garantir la qualité avant fusion."
+  },
+  {
+    "id": "SQ-FOND-037",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Comment un projet est-il identifié de manière unique dans une instance SonarQube ?",
+    "options": [
+      "Par le nom du projet",
+      "Par une clé de projet (Project Key) unique",
+      "Par l'URL du dépôt Git",
+      "Par le chemin du répertoire"
+    ],
+    "correct": 1,
+    "explanation": "Chaque projet a une Project Key unique utilisée lors de l'analyse."
+  },
+  {
+    "id": "SQ-FOND-038",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "moyen",
+    "question": "Quels modes de visibilité peut avoir un projet dans SonarQube Server ? (plusieurs réponses)",
+    "options": [
+      "Public (visible par tous)",
+      "Privé (restreint à certains groupes)",
+      "Interne",
+      "Externe"
+    ],
+    "correct": [0, 1],
+    "explanation": "Un projet peut être Public ou Privé (permission 'Browse' nécessaire)."
+  },
+  {
+    "id": "SQ-FOND-039",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "facile",
+    "question": "Comment ajouter le support d'un nouveau langage de programmation dans SonarQube ?",
+    "options": [
+      "En modifiant le code source de SonarQube",
+      "En installant un plugin via le Marketplace",
+      "En écrivant un script shell",
+      "En contactant le support"
+    ],
+    "correct": 1,
+    "explanation": "L'extensibilité repose sur des plugins installables depuis le Marketplace."
+  },
+  {
+    "id": "SQ-FOND-040",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles périodes de référence peut-on définir pour la 'Leak Period' (New Code) ? (plusieurs réponses)",
+    "options": [
+      "Version précédente",
+      "Nombre de jours spécifique",
+      "Analyse spécifique",
+      "Toujours 30 jours"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "La Leak Period peut être basée sur une version précédente, un nombre de jours, ou une analyse de référence. Elle n'est pas fixée à 30 jours."
+  },
+  {
+    "id": "SQ-FOND-041",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Pourquoi SonarQube analyse-t-il le bytecode Java en plus du code source ?",
+    "options": [
+      "Pour mesurer les performances",
+      "Pour détecter des problèmes qui ne sont visibles qu'au niveau bytecode (ex: méthodes dépréciées)",
+      "Pour la couverture de code",
+      "Il n'analyse pas le bytecode"
+    ],
+    "correct": 1,
+    "explanation": "Certaines règles nécessitent l'analyse du bytecode, par exemple pour détecter l'utilisation de méthodes dépréciées."
+  },
+  {
+    "id": "SQ-FOND-042",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "difficile",
+    "question": "La 'Cognitive Complexity' est identique à la complexité cyclomatique.",
+    "options": ["Vrai", "Faux"],
+    "correct": 1,
+    "explanation": "Faux. La Cognitive Complexity est une métrique conçue pour mesurer la difficulté de compréhension humaine, différente de la complexité cyclomatique."
+  },
+  {
+    "id": "SQ-FOND-043",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels sont les avantages de l'analyse de Pull Request dans SonarQube Developer Edition ? (plusieurs réponses)",
+    "options": [
+      "Analyse uniquement du code modifié",
+      "Affichage des issues directement dans l'interface de la PR",
+      "Possibilité de bloquer la fusion si la Quality Gate échoue",
+      "Analyse plus rapide que l'analyse complète"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "L'analyse de PR se concentre sur les changements, affiche les résultats dans la PR, et peut bloquer la fusion. L'analyse n'est pas nécessairement plus rapide qu'une analyse incrémentale."
+  },
+  {
+    "id": "SQ-FOND-044",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Qu'est-ce qu'un 'Quality Profile' hérité ?",
+    "options": [
+      "Un profil qui ne peut pas être modifié",
+      "Un profil qui étend un profil parent et peut surcharger certaines règles",
+      "Un profil réservé aux projets legacy",
+      "Un profil partagé entre plusieurs organisations"
+    ],
+    "correct": 1,
+    "explanation": "Un profil hérité peut étendre un autre profil (ex: 'Sonar Way') et y ajouter ou désactiver des règles."
+  },
+  {
+    "id": "SQ-FOND-045",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Où peut-on définir les propriétés d'analyse SonarQube pour un projet Maven ? (plusieurs réponses)",
+    "options": [
+      "Dans le fichier pom.xml",
+      "Dans un fichier sonar-project.properties",
+      "Via les arguments en ligne de commande Maven",
+      "Dans le fichier settings.xml"
+    ],
+    "correct": [0, 2],
+    "explanation": "Avec le plugin SonarScanner pour Maven, les propriétés se définissent dans le pom.xml ou via -D sur la ligne de commande. sonar-project.properties est utilisé par le scanner standalone."
+  },
+  {
+    "id": "SQ-FOND-046",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "À quoi sert la propriété 'sonar.exclusions' ?",
+    "options": [
+      "Exclure des fichiers ou répertoires de l'analyse",
+      "Exclure des règles spécifiques",
+      "Exclure des développeurs",
+      "Exclure des métriques"
+    ],
+    "correct": 0,
+    "explanation": "sonar.exclusions permet de définir des motifs de fichiers à exclure (ex: **/generated/**)."
+  },
+  {
+    "id": "SQ-FOND-047",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "true_false",
+    "difficulty": "difficile",
+    "question": "La propriété 'sonar.branch.name' est utilisée pour nommer la branche dans SonarQube lors d'une analyse multi-branches.",
+    "options": ["Vrai", "Faux"],
+    "correct": 0,
+    "explanation": "Vrai. Elle spécifie le nom de la branche courante."
+  },
+  {
+    "id": "SQ-FOND-048",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quels effets a la propriété 'sonar.qualitygate.wait=true' ? (plusieurs réponses)",
+    "options": [
+      "Le scanner attend la fin du traitement côté serveur",
+      "Le scanner retourne un code de sortie non nul si la Quality Gate échoue",
+      "L'analyse est plus rapide",
+      "Permet de bloquer un pipeline CI/CD en cas d'échec"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Cette option (défaut true) fait attendre le scanner et retourne un statut d'échec si la Quality Gate n'est pas respectée, utile pour les pipelines."
+  },
+  {
+    "id": "SQ-FOND-049",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "single",
+    "difficulty": "difficile",
+    "question": "Dans quelle version de SonarQube la fonctionnalité 'Applications' (agrégation de projets) a-t-elle été introduite ?",
+    "options": [
+      "SonarQube 7.9 LTS",
+      "SonarQube 8.9 LTS",
+      "SonarQube 9.9 LTS",
+      "SonarQube 10.x"
+    ],
+    "correct": 2,
+    "explanation": "Les Applications ont été introduites dans SonarQube 9.9 LTS (Enterprise Edition+)."
+  },
+  {
+    "id": "SQ-FOND-050",
+    "theme": "SonarQube",
+    "theme_label": "Fondamentaux",
+    "type": "multiple",
+    "difficulty": "difficile",
+    "question": "Quelles informations sont fournies par le 'Remediation Cost' d'une issue ? (plusieurs réponses)",
+    "options": [
+      "Une estimation du temps de correction en minutes",
+      "Le coût financier de la correction",
+      "Une contribution à la dette technique totale",
+      "La complexité de la correction"
+    ],
+    "correct": [0, 2],
+    "explanation": "Le Remediation Cost est une estimation du temps (en minutes) nécessaire pour corriger l'issue, et il contribue au calcul de la dette technique."
+  }
+]

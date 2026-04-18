@@ -43,5 +43,45 @@
     ],
     "correct": 2,
     "explanation": "Le char 'a' a la valeur Unicode 97, additionné à 1 donne 98 de type int."
+  },
+  {
+    "id": "OCA8-TDD-001",
+    "theme": "Types de données et opérateurs",
+    "theme_label": "Types primitifs et wrappers",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les types primitifs et leurs wrappers en Java :",
+    "options": [
+      "Le type primitif int a une taille de 32 bits.",
+      "L'objet Integer peut être utilisé pour stocker des valeurs entières de 64 bits.",
+      "Le type primitif boolean ne peut avoir que deux valeurs : true ou false.",
+      "L'objet Boolean est utilisé pour stocker des valeurs booléennes avec une valeur par défaut de null."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option A est correcte car le type primitif int en Java est effectivement sur 32 bits. L'option B est incorrecte car l'objet Integer, qui est le wrapper pour int, ne peut stocker que des valeurs entières de 32 bits. L'option C est correcte car le type primitif boolean en Java ne peut effectivement avoir que deux valeurs : true ou false. L'option D est incorrecte car l'objet Boolean, qui est le wrapper pour boolean, ne peut pas avoir une valeur par défaut de null; il doit être initialisé explicitement."
+  },
+  {
+    "id": "OCA8-TDD-002",
+    "theme": "Types de données et opérateurs",
+    "theme_label": "Types primitifs et wrappers",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les DEUX propositions vraies concernant l'auto-boxing et l'unboxing en Java ?",
+    "options": [
+      "L'auto-boxing convertit automatiquement un type primitif en son wrapper correspondant.",
+      "L'unboxing convertit automatiquement un objet wrapper en son type primitif correspondant.",
+      "L'auto-boxing et l'unboxing peuvent être utilisés pour tous les types primitifs.",
+      "L'auto-boxing et l'unboxing peuvent entraîner des erreurs de NullPointerException."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "L'option A est correcte car l'auto-boxing en Java convertit automatiquement un type primitif en son wrapper correspondant. L'option B est correcte car l'unboxing convertit automatiquement un objet wrapper en son type primitif correspondant. L'option C est incorrecte car l'auto-boxing et l'unboxing ne peuvent pas être utilisés pour tous les types primitifs; par exemple, ils ne fonctionnent pas avec le type primitif void. L'option D est correcte car l'auto-boxing et l'unboxing peuvent effectivement entraîner des erreurs de NullPointerException si le wrapper est null."
   }
 ]

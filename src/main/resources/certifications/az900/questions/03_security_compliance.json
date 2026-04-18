@@ -1,5 +1,613 @@
 [
   {
+    "id": "AZ900-SOL-001",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure AI Services",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure permet d'ajouter des capacités d'IA pré‑entraînées (vision, langage, parole) à une application sans expertise en machine learning ?",
+    "options": [
+      "Azure Cognitive Services",
+      "Azure Machine Learning",
+      "Azure Databricks",
+      "Azure Synapse Analytics"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Cognitive Services fournit des API prêtes à l'emploi pour l'IA. Azure Machine Learning est pour créer et entraîner ses propres modèles."
+  },
+  {
+    "id": "AZ900-SOL-002",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Bot Service",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels composants sont nécessaires pour créer un bot conversationnel intelligent avec Azure ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Azure Bot Service (pour l'enregistrement et les canaux).",
+      "Language Understanding (LUIS) ou Azure AI Language pour la compréhension du langage naturel.",
+      "Azure Functions ou App Service pour la logique métier.",
+      "Azure Kubernetes Service (AKS) obligatoirement.",
+      "Azure SQL Database pour stocker les conversations."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Un bot s'appuie généralement sur Bot Service (A) pour la connexion aux canaux (Teams, Slack, etc.), un service de NLU comme LUIS (B), et une logique d'application hébergée (Functions, Web App) (C). AKS (D) n'est pas obligatoire. SQL Database (E) peut être utilisée mais n'est pas indispensable."
+  },
+  {
+    "id": "AZ900-SOL-003",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure DevOps",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service Azure fournit des outils de planification de projet, de gestion de code source (Git), de pipelines CI/CD et de gestion de packages ?",
+    "options": [
+      "Azure DevOps",
+      "GitHub Actions",
+      "Azure Monitor",
+      "Azure Resource Manager"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure DevOps est la suite intégrée de Microsoft pour la gestion du cycle de vie des applications (boards, repos, pipelines, artifacts). GitHub Actions (B) est un produit distinct (bien que les deux soient liés)."
+  },
+  {
+    "id": "AZ900-SOL-004",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "GitHub Actions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant GitHub Actions sont correctes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "GitHub Actions permet d'automatiser des workflows de build, test et déploiement directement depuis un dépôt GitHub.",
+      "Les workflows sont définis dans des fichiers YAML.",
+      "GitHub Actions peut déployer des ressources sur Azure en utilisant des actions du marketplace.",
+      "GitHub Actions nécessite un abonnement Azure payant pour être utilisé.",
+      "GitHub Actions peut être déclenché par des événements comme un push ou une pull request."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "GitHub Actions est un service CI/CD intégré à GitHub. Les workflows YAML (A, B) peuvent utiliser des actions pré‑construites (C) et se déclencher sur des événements GitHub (E). L'utilisation de base est gratuite pour les dépôts publics, et incluse dans les plans GitHub (D faux : pas besoin d'abonnement Azure spécifique, sauf pour utiliser certaines actions Azure)."
+  },
+  {
+    "id": "AZ900-SOL-005",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure DevTest Labs",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est l'avantage principal d'Azure DevTest Labs pour une équipe de développement ?",
+    "options": [
+      "Permet de contrôler les coûts en définissant des quotas, des heures d'arrêt automatique et des politiques de réutilisation des VM.",
+      "Fournit un environnement de production sécurisé pour les tests de charge.",
+      "Offre un support technique gratuit 24h/24 pour les développeurs.",
+      "Remplace complètement Azure DevOps pour la gestion des tests."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "DevTest Labs aide à gérer les environnements de développement et de test en évitant le gaspillage (arrêt automatique des VM la nuit, limites de quotas). Ce n'est pas un environnement de production (B), ni un support gratuit (C), ni un remplacement d'Azure DevOps (D)."
+  },
+  {
+    "id": "AZ900-SOL-006",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Portail Azure",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles actions peut-on effectuer via le portail Azure ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Créer et gérer des ressources Azure graphiquement.",
+      "Ouvrir une session Cloud Shell pour exécuter des commandes PowerShell ou Bash.",
+      "Consulter les factures et les coûts.",
+      "Modifier les fichiers de configuration système des VM directement sans redémarrage.",
+      "Créer des dashboards personnalisés."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 4],
+    "explanation": "Le portail permet la gestion graphique (A), l'accès à Cloud Shell (B), la visualisation des coûts (C) et la création de dashboards (E). Il ne permet pas l'édition directe de fichiers système à chaud (D) sans passer par une connexion à la VM."
+  },
+  {
+    "id": "AZ900-SOL-007",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure PowerShell / CLI",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale différence entre Azure PowerShell et Azure CLI ?",
+    "options": [
+      "Azure PowerShell est basé sur .NET et fonctionne dans PowerShell, tandis qu'Azure CLI est basé sur Python et fonctionne dans n'importe quel shell (bash, cmd).",
+      "Azure PowerShell ne fonctionne que sous Windows, Azure CLI que sous Linux.",
+      "Azure PowerShell est gratuit, Azure CLI est payant.",
+      "Il n'y a pas de différence, les commandes sont identiques."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les deux outils sont multiplateformes et gratuits. La différence est l'environnement d'exécution et la syntaxe (verbe-nom pour PowerShell, az resource action pour CLI)."
+  },
+  {
+    "id": "AZ900-SOL-008",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Cloud Shell",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles sont les caractéristiques d'Azure Cloud Shell ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Il fournit un environnement shell accessible depuis le portail Azure.",
+      "Il nécessite un compte de stockage pour persister les fichiers de l'utilisateur.",
+      "Il inclut des outils préinstallés comme Git, kubectl, Terraform.",
+      "Il permet de choisir entre Bash et PowerShell.",
+      "Il peut exécuter des applications graphiques."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Cloud Shell est un shell basé navigateur avec stockage persistant (via un compte de stockage) (A, B). Il propose Bash ou PowerShell (D) et de nombreux outils préinstallés (C). Il ne supporte pas les interfaces graphiques (E)."
+  },
+  {
+    "id": "AZ900-SOL-009",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Modèles ARM",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel est le format d'un modèle Azure Resource Manager (ARM) ?",
+    "options": [
+      "JSON",
+      "YAML",
+      "XML",
+      "HCL (HashiCorp Configuration Language)"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les modèles ARM sont écrits en JSON. Bicep est un langage plus récent qui se compile en JSON. YAML est utilisé par Kubernetes, HCL par Terraform."
+  },
+  {
+    "id": "AZ900-SOL-010",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Bicep",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages de Bicep par rapport aux modèles ARM JSON ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Syntaxe plus concise et lisible.",
+      "Prise en charge native des boucles et des conditions.",
+      "Pas besoin de déclarer les propriétés 'dependsOn' dans la plupart des cas (détection implicite).",
+      "Compilation transparente vers JSON avant déploiement.",
+      "Exécution directe par Azure sans compilation."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Bicep offre une syntaxe simplifiée (A), un support amélioré pour les boucles (B), une gestion automatique des dépendances (C), et se compile en JSON (D). Azure ne comprend pas Bicep nativement (E), il faut le transpiler ou utiliser les outils qui le font automatiquement."
+  },
+  {
+    "id": "AZ900-SOL-011",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Arc",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Arc permet de gérer quels types de ressources ?",
+    "options": [
+      "Des serveurs physiques, des machines virtuelles sur site ou dans d'autres clouds, et des clusters Kubernetes hors Azure.",
+      "Uniquement des machines virtuelles Azure.",
+      "Uniquement des services de bases de données.",
+      "Uniquement des appareils IoT."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Azure Arc étend la gestion Azure Resource Manager à n'importe quelle infrastructure : serveurs Windows/Linux, clusters Kubernetes (y compris sur site ou AWS/GCP), et même certains services de données (Azure Arc‑enabled data services)."
+  },
+  {
+    "id": "AZ900-SOL-012",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Blueprints",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quels artefacts peut‑on inclure dans un blueprint Azure ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Attributions de rôles RBAC",
+      "Définitions Azure Policy",
+      "Modèles ARM",
+      "Groupes de ressources",
+      "Un abonnement Azure lui‑même"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Un blueprint peut contenir des artefacts RBAC (A), Policy (B), modèles ARM (C) et groupes de ressources (D). Il ne crée pas un abonnement (E) mais s'applique à un abonnement existant."
+  },
+  {
+    "id": "AZ900-SOL-013",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Policy",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel effet Azure Policy permet d'auditer l'existence d'une ressource non conforme sans bloquer sa création ?",
+    "options": [
+      "Audit",
+      "Deny",
+      "DeployIfNotExists",
+      "Modify"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'effet 'Audit' crée un événement de non‑conformité dans le journal d'activité mais n'empêche pas la création. 'Deny' bloque la création."
+  },
+  {
+    "id": "AZ900-SOL-014",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Policy - Remédiation",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels effets d'Azure Policy peuvent être utilisés pour corriger automatiquement une configuration non conforme ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "DeployIfNotExists",
+      "Modify",
+      "Audit",
+      "Deny",
+      "Append"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 4],
+    "explanation": "Les effets 'DeployIfNotExists' (déploie une ressource manquante), 'Modify' (modifie une propriété) et 'Append' (ajoute une valeur à un tableau) peuvent modifier l'état des ressources (et donc corriger). 'Audit' et 'Deny' ne font que contrôler ou bloquer."
+  },
+  {
+    "id": "AZ900-SOL-015",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Verrouillage des ressources",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de verrou empêche toute modification et toute suppression d'une ressource Azure ?",
+    "options": [
+      "ReadOnly",
+      "CanNotDelete",
+      "NoModify",
+      "Locked"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le verrou 'ReadOnly' empêche la suppression et toute modification. 'CanNotDelete' permet les modifications mais empêche la suppression."
+  },
+  {
+    "id": "AZ900-SOL-016",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Monitor",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Où les données de logs collectées par Azure Monitor (ex: journaux d'activité, diagnostics) sont‑elles généralement stockées pour analyse ?",
+    "options": [
+      "Dans un espace de travail Log Analytics",
+      "Dans un compte de stockage Blob",
+      "Dans Azure SQL Database",
+      "Dans un fichier plat sur le disque local de la VM"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Log Analytics est la plateforme de stockage et d'interrogation des logs dans Azure Monitor (requêtes KQL). Les comptes de stockage peuvent servir pour l'archivage à long terme, mais pas pour l'analyse interactive."
+  },
+  {
+    "id": "AZ900-SOL-017",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Alerts",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sur quels types de signaux peut‑on déclencher une alerte Azure Monitor ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Métriques (ex: CPU > 80%)",
+      "Journaux (Logs) (ex: recherche d'une chaîne spécifique dans les logs)",
+      "Événements du journal d'activité (ex: arrêt d'une VM)",
+      "Tests de disponibilité (Application Insights)",
+      "Alertes de sécurité Azure Security Center"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Azure Monitor Alerts peut être basé sur des métriques, des logs, le journal d'activité, et des tests web. Les alertes de sécurité (E) sont généralement gérées par Microsoft Defender for Cloud, qui peut aussi créer des alertes dans Azure Monitor."
+  },
+  {
+    "id": "AZ900-SOL-018",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Action Groups",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "À quoi sert un groupe d'actions (Action Group) dans Azure Monitor ?",
+    "options": [
+      "Définir les actions à exécuter lorsqu'une alerte est déclenchée (email, SMS, appel webhook, runbook, etc.).",
+      "Regrouper plusieurs machines virtuelles pour une maintenance simultanée.",
+      "Appliquer une même stratégie Azure Policy à plusieurs ressources.",
+      "Gérer les autorisations RBAC pour un ensemble d'utilisateurs."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Un groupe d'actions est une collection de préférences de notification et d'actions automatisées liées à une alerte."
+  },
+  {
+    "id": "AZ900-SOL-019",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Automation",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel composant d'Azure Automation permet d'exécuter des scripts PowerShell ou Python sur des VM Azure ou sur site sans connexion directe ?",
+    "options": [
+      "Runbooks avec Hybrid Runbook Worker",
+      "State Configuration (DSC)",
+      "Update Management",
+      "Change Tracking and Inventory"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les Runbooks sont des scripts automatisés. Le Hybrid Runbook Worker permet d'exécuter ces runbooks sur des machines en dehors d'Azure (sur site, autres clouds)."
+  },
+  {
+    "id": "AZ900-SOL-020",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Logic Apps",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les cas d'usage typiques d'Azure Logic Apps ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Automatiser l'envoi d'un email lorsqu'un fichier est déposé dans un conteneur Blob.",
+      "Synchroniser des données entre une base de données SQL Server sur site et Dynamics 365.",
+      "Orchestrer un processus d'approbation métier.",
+      "Exécuter du code C# complexe nécessitant des librairies tierces.",
+      "Traiter des millions de messages de télémétrie par seconde."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2],
+    "explanation": "Logic Apps excelle dans l'intégration et l'orchestration déclarative (A, B, C). Pour du code personnalisé complexe (D), Azure Functions est plus adapté. Pour le streaming haute vélocité (E), Event Hubs ou Stream Analytics sont préférables."
+  },
+  {
+    "id": "AZ900-SOL-021",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Service Health",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Service Health fournit des informations sur :",
+    "options": [
+      "L'état des services Azure, les maintenances planifiées et les avis de santé concernant spécifiquement vos ressources.",
+      "Les performances de vos applications.",
+      "Les recommandations de sécurité.",
+      "Les coûts de vos abonnements."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Service Health est un tableau de bord personnalisé qui montre les problèmes de service Azure affectant vos déploiements, ainsi que les maintenances à venir. Il est plus précis que la page Azure Status publique."
+  },
+  {
+    "id": "AZ900-SOL-022",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Advisor",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles catégories de recommandations sont fournies par Azure Advisor ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Coût",
+      "Sécurité",
+      "Fiabilité (Haute disponibilité)",
+      "Performance opérationnelle",
+      "Excellence opérationnelle"
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3, 4],
+    "explanation": "Azure Advisor couvre ces cinq piliers du Well‑Architected Framework."
+  },
+  {
+    "id": "AZ900-SOL-023",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Cost Management",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment peut‑on configurer une alerte pour être prévenu lorsque les dépenses mensuelles dépassent un seuil défini ?",
+    "options": [
+      "Créer un budget dans Azure Cost Management et y associer une alerte.",
+      "Créer une alerte de métrique Azure Monitor sur le total des coûts.",
+      "Utiliser une stratégie Azure Policy avec effet 'Deny'.",
+      "Configurer un runbook Azure Automation qui s'exécute chaque heure."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La fonctionnalité 'Budgets' dans Cost Management permet de définir des seuils et de déclencher des alertes (email, groupe d'actions)."
+  },
+  {
+    "id": "AZ900-SOL-024",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Tags (Balises)",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles affirmations concernant les balises (tags) dans Azure sont correctes ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Elles sont héritées par les ressources enfants (ex: une VM hérite des tags de son groupe de ressources).",
+      "Elles peuvent être utilisées pour ventiler les coûts dans l'analyse de facturation.",
+      "Elles peuvent être appliquées rétroactivement aux coûts déjà facturés.",
+      "Elles ne sont pas prises en charge pour les services classiques (ASM).",
+      "Elles peuvent être forcées par une Azure Policy."
+    ],
+    "correct": 0,
+    "correct_multiple": [1, 4],
+    "explanation": "Les tags ne sont PAS hérités automatiquement (A faux). Ils permettent l'analyse des coûts pour les périodes après leur application, mais pas rétroactivement (C faux). Les services classiques (D) ont un support limité des tags. On peut imposer des tags avec Azure Policy (E)."
+  },
+  {
+    "id": "AZ900-SOL-025",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Microsoft Defender for Cloud",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de Microsoft Defender for Cloud (anciennement Azure Security Center) ?",
+    "options": [
+      "Fournir une gestion unifiée de la sécurité et une protection avancée contre les menaces pour les charges de travail hybrides.",
+      "Gérer les identités et les accès.",
+      "Analyser les coûts des ressources.",
+      "Déployer automatiquement des applications."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Defender for Cloud évalue la configuration de sécurité, donne un score de sécurité, et propose des protections avancées (Defender plans) pour les VM, conteneurs, bases de données, etc."
+  },
+  {
+    "id": "AZ900-SOL-026",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Qu'est‑ce qu'Azure Sentinel ?",
+    "options": [
+      "Un service SIEM (Security Information and Event Management) et SOAR (Security Orchestration Automated Response) natif du cloud.",
+      "Un pare‑feu nouvelle génération (NGFW).",
+      "Un antivirus pour machines virtuelles.",
+      "Un outil de test d'intrusion."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Sentinel collecte les logs de sécurité, détecte les menaces via l'IA, et automatise les réponses (playbooks)."
+  },
+  {
+    "id": "AZ900-SOL-027",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Migrate",
+    "difficulty": "easy",
+    "type": "MULTI_CHOICE",
+    "question": "Quelles fonctionnalités offre Azure Migrate ? Sélectionnez TOUTES les réponses correctes.",
+    "options": [
+      "Découverte et évaluation des serveurs sur site pour la migration vers Azure.",
+      "Migration de bases de données vers Azure SQL.",
+      "Migration d'applications web vers Azure App Service.",
+      "Analyse des dépendances entre applications.",
+      "Optimisation automatique des coûts après migration."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 2, 3],
+    "explanation": "Azure Migrate est un hub central pour les projets de migration : évaluation (A), migration de bases de données (B), migration d'applications web (C) et visualisation des dépendances (D). L'optimisation des coûts (E) est plutôt du ressort d'Azure Advisor."
+  },
+  {
+    "id": "AZ900-SOL-028",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Site Recovery",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Azure Site Recovery est principalement utilisé pour :",
+    "options": [
+      "La reprise d'activité après sinistre (DR) en répliquant des machines virtuelles vers une région Azure secondaire.",
+      "La sauvegarde quotidienne des fichiers.",
+      "La migration de serveurs physiques sans interruption de service.",
+      "L'équilibrage de charge entre régions."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Site Recovery orchestre la réplication et le basculement des VM pour la continuité d'activité. Azure Backup (B) est le service de sauvegarde."
+  },
+  {
+    "id": "AZ900-SOL-029",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Backup",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel type de coffre est utilisé par Azure Backup pour stocker les sauvegardes ?",
+    "options": [
+      "Coffre Recovery Services",
+      "Coffre de sauvegarde (Backup Vault)",
+      "Coffre de clés (Key Vault)",
+      "Compte de stockage Blob"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Les coffres Recovery Services sont utilisés pour Azure Backup et Azure Site Recovery. Il existe aussi des coffres de sauvegarde (Backup Vault) pour des workloads plus récents (ex: Azure Database for PostgreSQL), mais l'option A est la plus générique pour l'AZ‑900."
+  },
+  {
+    "id": "AZ900-SOL-030",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Resource Mover",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service permet de déplacer des ressources Azure d'une région à une autre avec un minimum d'effort ?",
+    "options": [
+      "Azure Resource Mover",
+      "Azure Site Recovery",
+      "Azure Migrate",
+      "Azure Traffic Manager"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Resource Mover simplifie le déplacement de ressources (VM, SQL DB, etc.) entre régions. Site Recovery est utilisé pour la reprise d'activité, mais peut aussi servir pour la migration (bien que Resource Mover soit l'outil dédié)."
+  },
+  {
+    "id": "AZ900-SOL-031",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Quickstart Templates",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Où peut‑on trouver des modèles ARM pré‑conçus pour déployer rapidement des configurations courantes ?",
+    "options": [
+      "Azure Quickstart Templates (sur GitHub)",
+      "Azure Marketplace",
+      "Azure Advisor",
+      "Azure Blueprints"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le dépôt GitHub 'Azure/azure-quickstart-templates' contient des centaines de modèles ARM communautaires et Microsoft. La Marketplace (B) propose des applications packagées, pas seulement des modèles."
+  },
+  {
+    "id": "AZ900-SOL-032",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure CLI - Mode interactif",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Comment activer le mode interactif dans Azure CLI pour obtenir des suggestions et une aide contextuelle ?",
+    "options": [
+      "az interactive",
+      "az shell",
+      "az --interactive",
+      "az i"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La commande `az interactive` lance un shell interactif avec complétion et documentation intégrées."
+  },
+  {
+    "id": "AZ900-SOL-033",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure PowerShell - Modules",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel module PowerShell est le module unique recommandé pour interagir avec la plupart des services Azure (remplaçant les modules AzureRM et Az individuels) ?",
+    "options": [
+      "Az",
+      "Azure",
+      "AzureRM",
+      "AzureAD"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le module 'Az' est le module cross‑plateforme moderne. 'AzureRM' est déprécié. 'Azure' est l'ancien module ASM."
+  },
+  {
+    "id": "AZ900-SOL-034",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Managed Applications",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Quels sont les avantages des applications managées Azure (Managed Applications) pour les fournisseurs de services ? Sélectionnez TOUTES les bonnes réponses.",
+    "options": [
+      "Elles permettent de verrouiller l'accès aux ressources sous‑jacentes pour les clients finaux.",
+      "Elles facilitent la publication d'offres sur l'Azure Marketplace.",
+      "Elles garantissent un support technique gratuit de Microsoft pour le fournisseur.",
+      "Elles permettent de facturer le client via l'abonnement Azure de ce dernier.",
+      "Elles imposent l'utilisation exclusive de modèles Bicep."
+    ],
+    "correct": 0,
+    "correct_multiple": [0, 1, 3],
+    "explanation": "Les Managed Apps créent un groupe de ressources verrouillé (A) et peuvent être publiées sur la Marketplace (B). La facturation se fait via l'abonnement du client (D). Le support (C) reste à la charge du fournisseur. Bicep (E) n'est pas obligatoire."
+  },
+  {
+    "id": "AZ900-SOL-035",
+    "theme": "Solutions de base et outils de gestion",
+    "theme_label": "Azure Resource Graph",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quel service permet d'interroger l'ensemble de vos ressources Azure à grande échelle avec un langage de requête de type Kusto ?",
+    "options": [
+      "Azure Resource Graph",
+      "Azure Monitor Logs",
+      "Azure Data Explorer",
+      "Azure Search"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Resource Graph Explorer permet d'exécuter des requêtes KQL sur les propriétés des ressources (ex: compter toutes les VM avec une certaine balise). C'est plus performant et plus étendu que la simple API ARM List."
+  },
+  {
     "id": "AZ-900-081",
     "theme": "Security & Compliance",
     "theme_label": "Azure AD",
@@ -20,7 +628,12 @@
     "theme_label": "Azure AD",
     "difficulty": "easy",
     "question": "Azure AD est-il la même chose qu'Active Directory on-premise ?",
-    "options": ["Non, c'est un service cloud différent", "Oui", "Partiellement", "C'est une copie"],
+    "options": [
+      "Non, c'est un service cloud différent",
+      "Oui",
+      "Partiellement",
+      "C'est une copie"
+    ],
     "correct": 0,
     "explanation": "Azure AD est un service cloud, bien qu'il puisse se synchroniser avec AD on-premise."
   },
@@ -202,7 +815,7 @@
       "WAF"
     ],
     "correct": 0,
-    "explication": "Azure Firewall est un service de sécurité réseau managé."
+    "explanation": "Azure Firewall est un service de sécurité réseau managé."
   },
   {
     "id": "AZ-900-095",
@@ -217,7 +830,7 @@
       "Load balancer"
     ],
     "correct": 0,
-    "explication": "NSG contient des règles de filtrage du trafic."
+    "explanation": "NSG contient des règles de filtrage du trafic."
   },
   {
     "id": "AZ-900-096",
@@ -225,9 +838,14 @@
     "theme_label": "DDoS Protection",
     "difficulty": "easy",
     "question": "Azure DDoS Protection est-il disponible en deux niveaux ?",
-    "options": ["Basic (gratuit) et Standard", "Seulement Standard", "Seulement Basic", "Premium"],
+    "options": [
+      "Basic (gratuit) et Standard",
+      "Seulement Standard",
+      "Seulement Basic",
+      "Premium"
+    ],
     "correct": 0,
-    "explication": "DDoS Protection Basic est inclus, Standard est payant avec plus de fonctionnalités."
+    "explanation": "DDoS Protection Basic est inclus, Standard est payant avec plus de fonctionnalités."
   },
   {
     "id": "AZ-900-097",
@@ -235,9 +853,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Quel service Azure donne accès aux rapports de conformité ?",
-    "options": ["Azure Compliance Documentation", "Azure Security Center", "Azure Policy", "Azure Blueprints"],
+    "options": [
+      "Azure Compliance Documentation",
+      "Azure Security Center",
+      "Azure Policy",
+      "Azure Blueprints"
+    ],
     "correct": 0,
-    "explication": "Azure Compliance Documentation fournit les rapports de conformité."
+    "explanation": "Azure Compliance Documentation fournit les rapports de conformité."
   },
   {
     "id": "AZ-900-098",
@@ -245,9 +868,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Azure est-il certifié ISO 27001 ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement pour certains services"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement pour certains services"
+    ],
     "correct": 0,
-    "explication": "Azure est certifié ISO 27001."
+    "explanation": "Azure est certifié ISO 27001."
   },
   {
     "id": "AZ-900-099",
@@ -255,9 +883,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Azure est-il conforme GDPR ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement en Europe"
+    ],
     "correct": 0,
-    "explication": "Azure est conforme GDPR."
+    "explanation": "Azure est conforme GDPR."
   },
   {
     "id": "AZ-900-100",
@@ -265,9 +898,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Azure est-il certifié HIPAA ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement aux USA"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement aux USA"
+    ],
     "correct": 0,
-    "explication": "Azure est certifié HIPAA (Business Associate Agreement)."
+    "explanation": "Azure est certifié HIPAA (Business Associate Agreement)."
   },
   {
     "id": "AZ-900-101",
@@ -275,9 +913,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Azure est-il certifié SOC 1, 2, 3 ?",
-    "options": ["Oui", "Non", "Seulement SOC 2", "Seulement SOC 1"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement SOC 2",
+      "Seulement SOC 1"
+    ],
     "correct": 0,
-    "explication": "Azure a les certifications SOC 1, 2, 3."
+    "explanation": "Azure a les certifications SOC 1, 2, 3."
   },
   {
     "id": "AZ-900-102",
@@ -285,9 +928,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Azure Government est-il destiné aux agences gouvernementales américaines ?",
-    "options": ["Oui", "Non", "Uniquement aux agences fédérales", "Uniquement aux agences locales"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement aux agences fédérales",
+      "Uniquement aux agences locales"
+    ],
     "correct": 0,
-    "explication": "Azure Government répond aux exigences de sécurité des agences américaines."
+    "explanation": "Azure Government répond aux exigences de sécurité des agences américaines."
   },
   {
     "id": "AZ-900-103",
@@ -295,9 +943,14 @@
     "theme_label": "Compliance",
     "difficulty": "easy",
     "question": "Azure China est-il opéré par 21Vianet ?",
-    "options": ["Oui", "Non", "Par Microsoft", "Par un partenaire local"],
+    "options": [
+      "Oui",
+      "Non",
+      "Par Microsoft",
+      "Par un partenaire local"
+    ],
     "correct": 0,
-    "explication": "Azure China est opéré par 21Vianet pour se conformer aux régulations chinoises."
+    "explanation": "Azure China est opéré par 21Vianet pour se conformer aux régulations chinoises."
   },
   {
     "id": "AZ-900-104",
@@ -305,9 +958,14 @@
     "theme_label": "Encryption at rest",
     "difficulty": "easy",
     "question": "Les données dans Azure Storage sont-elles chiffrées par défaut ?",
-    "options": ["Oui", "Non", "Optionnel", "Uniquement pour certains types"],
+    "options": [
+      "Oui",
+      "Non",
+      "Optionnel",
+      "Uniquement pour certains types"
+    ],
     "correct": 0,
-    "explication": "Azure Storage chiffre les données au repos par défaut (SSE)."
+    "explanation": "Azure Storage chiffre les données au repos par défaut (SSE)."
   },
   {
     "id": "AZ-900-105",
@@ -315,9 +973,14 @@
     "theme_label": "Encryption in transit",
     "difficulty": "easy",
     "question": "Azure supporte-t-il TLS pour les communications ?",
-    "options": ["Oui", "Non", "Uniquement pour certaines régions", "Uniquement pour certains services"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour certaines régions",
+      "Uniquement pour certains services"
+    ],
     "correct": 0,
-    "explication": "Azure utilise TLS pour le chiffrement en transit."
+    "explanation": "Azure utilise TLS pour le chiffrement en transit."
   },
   {
     "id": "AZ-900-106",
@@ -332,7 +995,7 @@
       "Gérer les identités"
     ],
     "correct": 0,
-    "explication": "Azure AD Connect synchronise les identités entre AD local et Azure AD."
+    "explanation": "Azure AD Connect synchronise les identités entre AD local et Azure AD."
   },
   {
     "id": "AZ-900-107",
@@ -347,7 +1010,7 @@
       "PIM"
     ],
     "correct": 0,
-    "explication": "Conditional Access prend des décisions d'accès en fonction de conditions (emplacement, appareil, etc.)."
+    "explanation": "Conditional Access prend des décisions d'accès en fonction de conditions (emplacement, appareil, etc.)."
   },
   {
     "id": "AZ-900-108",
@@ -355,9 +1018,14 @@
     "theme_label": "Azure AD B2B",
     "difficulty": "easy",
     "question": "Azure AD B2B permet-il d'inviter des utilisateurs externes ?",
-    "options": ["Oui", "Non", "Uniquement pour les partenaires", "Uniquement pour les fournisseurs"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les partenaires",
+      "Uniquement pour les fournisseurs"
+    ],
     "correct": 0,
-    "explication": "Azure AD B2B permet de partager des applications avec des utilisateurs externes."
+    "explanation": "Azure AD B2B permet de partager des applications avec des utilisateurs externes."
   },
   {
     "id": "AZ-900-109",
@@ -372,7 +1040,7 @@
       "Mots de passe temporaires"
     ],
     "correct": 0,
-    "explication": "JIT restreint l'accès aux ports de gestion et les ouvre à la demande."
+    "explanation": "JIT restreint l'accès aux ports de gestion et les ouvre à la demande."
   },
   {
     "id": "AZ-900-110",
@@ -387,7 +1055,7 @@
       "Load balancer"
     ],
     "correct": 0,
-    "explication": "Bastion fournit un accès RDP/SSH via le navigateur."
+    "explanation": "Bastion fournit un accès RDP/SSH via le navigateur."
   },
   {
     "id": "AZ-900-111",
@@ -395,9 +1063,14 @@
     "theme_label": "Azure DDoS Protection Standard",
     "difficulty": "easy",
     "question": "Azure DDoS Protection Standard offre-t-il une protection contre les attaques DDoS ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les applications web"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour les applications web"
+    ],
     "correct": 0,
-    "explication": "DDoS Protection Standard protège les ressources VNet."
+    "explanation": "DDoS Protection Standard protège les ressources VNet."
   },
   {
     "id": "AZ-900-112",
@@ -412,7 +1085,7 @@
       "Une ressource"
     ],
     "correct": 0,
-    "explication": "Une initiative regroupe plusieurs politiques pour atteindre un objectif de conformité."
+    "explanation": "Une initiative regroupe plusieurs politiques pour atteindre un objectif de conformité."
   },
   {
     "id": "AZ-900-113",
@@ -427,7 +1100,7 @@
       "Pass, Fail, Skip"
     ],
     "correct": 0,
-    "explication": "Les effets incluent Deny, Audit, Append, DeployIfNotExists, etc."
+    "explanation": "Les effets incluent Deny, Audit, Append, DeployIfNotExists, etc."
   },
   {
     "id": "AZ-900-114",
@@ -442,7 +1115,7 @@
       "Seulement les rôles"
     ],
     "correct": 0,
-    "explication": "Un blueprint peut contenir plusieurs types d'artefacts."
+    "explanation": "Un blueprint peut contenir plusieurs types d'artefacts."
   },
   {
     "id": "AZ-900-115",
@@ -450,9 +1123,14 @@
     "theme_label": "Security Center tiers",
     "difficulty": "easy",
     "question": "Azure Security Center a-t-il des niveaux gratuits et payants ?",
-    "options": ["Oui (Free et Standard)", "Non", "Uniquement payant", "Uniquement gratuit"],
+    "options": [
+      "Oui (Free et Standard)",
+      "Non",
+      "Uniquement payant",
+      "Uniquement gratuit"
+    ],
     "correct": 0,
-    "explication": "Le niveau gratuit offre une évaluation de base, le niveau Standard (ou Defender) des protections avancées."
+    "explanation": "Le niveau gratuit offre une évaluation de base, le niveau Standard (ou Defender) des protections avancées."
   },
   {
     "id": "AZ-900-116",
@@ -467,7 +1145,7 @@
       "Anti-DDoS"
     ],
     "correct": 0,
-    "explication": "Azure Defender offre des protections avancées pour divers services."
+    "explanation": "Azure Defender offre des protections avancées pour divers services."
   },
   {
     "id": "AZ-900-117",
@@ -475,9 +1153,14 @@
     "theme_label": "Azure Sentinel pricing",
     "difficulty": "easy",
     "question": "Azure Sentinel est-il payant ?",
-    "options": ["Oui (basé sur le volume de données)", "Non", "Gratuit pour les premiers Go", "Inclus dans Security Center"],
+    "options": [
+      "Oui (basé sur le volume de données)",
+      "Non",
+      "Gratuit pour les premiers Go",
+      "Inclus dans Security Center"
+    ],
     "correct": 0,
-    "explication": "Sentinel facture le volume de données ingérées et analysées."
+    "explanation": "Sentinel facture le volume de données ingérées et analysées."
   },
   {
     "id": "AZ-900-118",
@@ -485,9 +1168,14 @@
     "theme_label": "Key Vault soft-delete",
     "difficulty": "easy",
     "question": "Key Vault supporte-t-il la suppression réversible (soft-delete) ?",
-    "options": ["Oui", "Non", "Uniquement pour les secrets", "Uniquement pour les clés"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les secrets",
+      "Uniquement pour les clés"
+    ],
     "correct": 0,
-    "explication": "Key Vault a une fonction de suppression réversible pour récupérer les ressources supprimées."
+    "explanation": "Key Vault a une fonction de suppression réversible pour récupérer les ressources supprimées."
   },
   {
     "id": "AZ-900-119",
@@ -495,9 +1183,14 @@
     "theme_label": "Azure Information Protection labels",
     "difficulty": "easy",
     "question": "AIP permet-il d'appliquer des labels de classification ?",
-    "options": ["Oui", "Non", "Uniquement pour les emails", "Uniquement pour les documents Office"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les emails",
+      "Uniquement pour les documents Office"
+    ],
     "correct": 0,
-    "explication": "AIP permet de classer et protéger les documents avec des labels."
+    "explanation": "AIP permet de classer et protéger les documents avec des labels."
   },
   {
     "id": "AZ-900-120",
@@ -505,9 +1198,14 @@
     "theme_label": "Azure AD Domain Services",
     "difficulty": "easy",
     "question": "Azure AD Domain Services fournit-il des services de domaine (LDAP, Kerberos) ?",
-    "options": ["Oui", "Non", "Uniquement avec synchronisation", "Uniquement pour les VMs Windows"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec synchronisation",
+      "Uniquement pour les VMs Windows"
+    ],
     "correct": 0,
-    "explication": "Azure AD DS offre des services de domaine managés."
+    "explanation": "Azure AD DS offre des services de domaine managés."
   },
   {
     "id": "AZ-900-121",
@@ -515,9 +1213,14 @@
     "theme_label": "Azure AD B2C",
     "difficulty": "easy",
     "question": "Azure AD B2C est-il destiné aux applications clientes ?",
-    "options": ["Oui", "Non", "Uniquement pour les employés", "Uniquement pour les partenaires"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les employés",
+      "Uniquement pour les partenaires"
+    ],
     "correct": 0,
-    "explication": "B2C est pour l'authentification des clients (Consumer)."
+    "explanation": "B2C est pour l'authentification des clients (Consumer)."
   },
   {
     "id": "AZ-900-122",
@@ -525,9 +1228,14 @@
     "theme_label": "Azure AD Privileged Identity Management",
     "difficulty": "easy",
     "question": "PIM nécessite-t-il une licence Azure AD Premium P2 ?",
-    "options": ["Oui", "Non", "Gratuit", "Inclus dans P1"],
+    "options": [
+      "Oui",
+      "Non",
+      "Gratuit",
+      "Inclus dans P1"
+    ],
     "correct": 0,
-    "explication": "PIM est disponible avec Azure AD Premium P2."
+    "explanation": "PIM est disponible avec Azure AD Premium P2."
   },
   {
     "id": "AZ-900-123",
@@ -535,9 +1243,14 @@
     "theme_label": "Azure AD Identity Protection",
     "difficulty": "easy",
     "question": "Identity Protection nécessite-t-il une licence Premium P2 ?",
-    "options": ["Oui", "Non", "Gratuit", "Inclus dans P1"],
+    "options": [
+      "Oui",
+      "Non",
+      "Gratuit",
+      "Inclus dans P1"
+    ],
     "correct": 0,
-    "explication": "Identity Protection est disponible avec Azure AD Premium P2."
+    "explanation": "Identity Protection est disponible avec Azure AD Premium P2."
   },
   {
     "id": "AZ-900-124",
@@ -545,9 +1258,14 @@
     "theme_label": "Azure Firewall vs NSG",
     "difficulty": "easy",
     "question": "Azure Firewall est-il plus complet qu'un NSG ?",
-    "options": ["Oui (FQDN, threat intelligence, etc.)", "Non", "Identiques", "NSG plus complet"],
+    "options": [
+      "Oui (FQDN, threat intelligence, etc.)",
+      "Non",
+      "Identiques",
+      "NSG plus complet"
+    ],
     "correct": 0,
-    "explication": "Azure Firewall offre des fonctionnalités avancées (FQDN, threat intelligence)."
+    "explanation": "Azure Firewall offre des fonctionnalités avancées (FQDN, threat intelligence)."
   },
   {
     "id": "AZ-900-125",
@@ -555,9 +1273,14 @@
     "theme_label": "Azure WAF",
     "difficulty": "easy",
     "question": "Le WAF d'Azure peut-il être associé à Application Gateway ?",
-    "options": ["Oui", "Non", "Uniquement à Front Door", "Uniquement à CDN"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement à Front Door",
+      "Uniquement à CDN"
+    ],
     "correct": 0,
-    "explication": "Application Gateway peut intégrer un WAF."
+    "explanation": "Application Gateway peut intégrer un WAF."
   },
   {
     "id": "AZ-900-126",
@@ -565,9 +1288,14 @@
     "theme_label": "Azure DDoS Protection tiers",
     "difficulty": "easy",
     "question": "Azure DDoS Protection Standard nécessite-t-il un abonnement ?",
-    "options": ["Oui", "Non", "Inclus dans le support", "Inclus dans Azure AD Premium"],
+    "options": [
+      "Oui",
+      "Non",
+      "Inclus dans le support",
+      "Inclus dans Azure AD Premium"
+    ],
     "correct": 0,
-    "explication": "DDoS Protection Standard est un service payant."
+    "explanation": "DDoS Protection Standard est un service payant."
   },
   {
     "id": "AZ-900-127",
@@ -575,9 +1303,14 @@
     "theme_label": "Azure Policy compliance",
     "difficulty": "easy",
     "question": "Azure Policy peut-il évaluer la conformité des ressources existantes ?",
-    "options": ["Oui", "Non", "Uniquement pour les nouvelles ressources", "Uniquement pour les ressources modifiées"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les nouvelles ressources",
+      "Uniquement pour les ressources modifiées"
+    ],
     "correct": 0,
-    "explication": "Azure Policy évalue les ressources existantes et nouvelles."
+    "explanation": "Azure Policy évalue les ressources existantes et nouvelles."
   },
   {
     "id": "AZ-900-128",
@@ -585,9 +1318,14 @@
     "theme_label": "Azure Blueprints versioning",
     "difficulty": "easy",
     "question": "Les blueprints supportent-ils le versioning ?",
-    "options": ["Oui", "Non", "Uniquement avec des étiquettes", "Uniquement avec des snapshots"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec des étiquettes",
+      "Uniquement avec des snapshots"
+    ],
     "correct": 0,
-    "explication": "Les blueprints ont des versions pour suivre les modifications."
+    "explanation": "Les blueprints ont des versions pour suivre les modifications."
   },
   {
     "id": "AZ-900-129",
@@ -595,9 +1333,14 @@
     "theme_label": "Azure Security Center secure score",
     "difficulty": "easy",
     "question": "Security Center fournit-il un score de sécurité ?",
-    "options": ["Oui", "Non", "Uniquement pour les VMs", "Uniquement pour les conteneurs"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les VMs",
+      "Uniquement pour les conteneurs"
+    ],
     "correct": 0,
-    "explication": "Le secure score évalue la posture de sécurité."
+    "explanation": "Le secure score évalue la posture de sécurité."
   },
   {
     "id": "AZ-900-130",
@@ -605,9 +1348,14 @@
     "theme_label": "Azure Security Center recommendations",
     "difficulty": "easy",
     "question": "Security Center donne-t-il des recommandations de sécurité ?",
-    "options": ["Oui", "Non", "Uniquement pour les machines", "Uniquement pour les réseaux"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour les machines",
+      "Uniquement pour les réseaux"
+    ],
     "correct": 0,
-    "explication": "Security Center propose des recommandations pour améliorer la sécurité."
+    "explanation": "Security Center propose des recommandations pour améliorer la sécurité."
   },
   {
     "id": "AZ-900-131",
@@ -615,9 +1363,14 @@
     "theme_label": "Azure Sentinel connectors",
     "difficulty": "easy",
     "question": "Sentinel peut-il se connecter à des sources de données tierces ?",
-    "options": ["Oui (via connecteurs)", "Non", "Uniquement aux services Azure", "Uniquement à Office 365"],
+    "options": [
+      "Oui (via connecteurs)",
+      "Non",
+      "Uniquement aux services Azure",
+      "Uniquement à Office 365"
+    ],
     "correct": 0,
-    "explication": "Sentinel a de nombreux connecteurs pour les sources tierces."
+    "explanation": "Sentinel a de nombreux connecteurs pour les sources tierces."
   },
   {
     "id": "AZ-900-132",
@@ -625,9 +1378,14 @@
     "theme_label": "Azure Key Vault logging",
     "difficulty": "easy",
     "question": "Key Vault peut-il envoyer des logs à Log Analytics ?",
-    "options": ["Oui", "Non", "Uniquement via Event Hub", "Uniquement via Storage"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via Event Hub",
+      "Uniquement via Storage"
+    ],
     "correct": 0,
-    "explication": "Key Vault peut envoyer les logs de diagnostic à Log Analytics."
+    "explanation": "Key Vault peut envoyer les logs de diagnostic à Log Analytics."
   },
   {
     "id": "AZ-900-133",
@@ -635,9 +1393,14 @@
     "theme_label": "Azure AD Connect health",
     "difficulty": "easy",
     "question": "Azure AD Connect Health surveille-t-il l'état de synchronisation ?",
-    "options": ["Oui", "Non", "Uniquement pour AD FS", "Uniquement pour les domain controllers"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour AD FS",
+      "Uniquement pour les domain controllers"
+    ],
     "correct": 0,
-    "explication": "Connect Health surveille la santé de la synchronisation."
+    "explanation": "Connect Health surveille la santé de la synchronisation."
   },
   {
     "id": "AZ-900-134",
@@ -645,9 +1408,14 @@
     "theme_label": "Azure AD application proxy",
     "difficulty": "easy",
     "question": "Azure AD Application Proxy permet-il d'accéder à des applications on-premise ?",
-    "options": ["Oui", "Non", "Uniquement aux applications cloud", "Uniquement aux applications SaaS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement aux applications cloud",
+      "Uniquement aux applications SaaS"
+    ],
     "correct": 0,
-    "explication": "Application Proxy donne un accès sécurisé aux applications internes."
+    "explanation": "Application Proxy donne un accès sécurisé aux applications internes."
   },
   {
     "id": "AZ-900-135",
@@ -655,9 +1423,14 @@
     "theme_label": "Azure AD self-service password reset",
     "difficulty": "easy",
     "question": "Azure AD permet-il la réinitialisation de mot de passe en libre-service ?",
-    "options": ["Oui", "Non", "Uniquement avec licence Premium", "Uniquement avec AD on-premise"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec licence Premium",
+      "Uniquement avec AD on-premise"
+    ],
     "correct": 0,
-    "explication": "La réinitialisation de mot de passe en libre-service est disponible avec certaines licences."
+    "explanation": "La réinitialisation de mot de passe en libre-service est disponible avec certaines licences."
   },
   {
     "id": "AZ-900-136",
@@ -665,9 +1438,14 @@
     "theme_label": "Azure AD dynamic groups",
     "difficulty": "easy",
     "question": "Azure AD supporte-t-il des groupes dynamiques basés sur des attributs ?",
-    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec P1",
+      "Uniquement avec P2"
+    ],
     "correct": 0,
-    "explication": "Les groupes dynamiques sont disponibles avec Azure AD Premium P1."
+    "explanation": "Les groupes dynamiques sont disponibles avec Azure AD Premium P1."
   },
   {
     "id": "AZ-900-137",
@@ -675,9 +1453,14 @@
     "theme_label": "Azure AD administrative units",
     "difficulty": "easy",
     "question": "Azure AD permet-il de déléguer l'administration par unités administratives ?",
-    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec P1",
+      "Uniquement avec P2"
+    ],
     "correct": 0,
-    "explication": "Les unités administratives permettent une délégation granulaire."
+    "explanation": "Les unités administratives permettent une délégation granulaire."
   },
   {
     "id": "AZ-900-138",
@@ -685,9 +1468,14 @@
     "theme_label": "Azure AD access reviews",
     "difficulty": "easy",
     "question": "Azure AD Access Reviews permet-il de vérifier les accès ?",
-    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec P1",
+      "Uniquement avec P2"
+    ],
     "correct": 0,
-    "explication": "Access Reviews permet de vérifier et de révoquer les accès."
+    "explanation": "Access Reviews permet de vérifier et de révoquer les accès."
   },
   {
     "id": "AZ-900-139",
@@ -695,9 +1483,14 @@
     "theme_label": "Azure AD terms of use",
     "difficulty": "easy",
     "question": "Azure AD permet-il d'exiger l'acceptation des conditions d'utilisation ?",
-    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec P1",
+      "Uniquement avec P2"
+    ],
     "correct": 0,
-    "explication": "Les conditions d'utilisation peuvent être présentées aux utilisateurs."
+    "explanation": "Les conditions d'utilisation peuvent être présentées aux utilisateurs."
   },
   {
     "id": "AZ-900-140",
@@ -705,8 +1498,411 @@
     "theme_label": "Azure AD identity governance",
     "difficulty": "easy",
     "question": "Azure AD Identity Governance inclut-il des fonctionnalités de gestion des accès ?",
-    "options": ["Oui", "Non", "Uniquement avec P1", "Uniquement avec P2"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec P1",
+      "Uniquement avec P2"
+    ],
     "correct": 0,
-    "explication": "Identity Governance offre des fonctionnalités avancées de gestion des accès."
+    "explanation": "Identity Governance offre des fonctionnalités avancées de gestion des accès."
+  },
+  {
+    "id": "AZ900-S&C-001",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Identity Protection",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure AD Identity Protection :",
+    "options": [
+      "Il détecte les anomalies de connexion et les comportements non normaux des utilisateurs.",
+      "Il permet de gérer les mots de passe complexes pour les utilisateurs.",
+      "Il offre une protection contre les accès non autorisés via des appareils inconnus.",
+      "Il fournit une solution de sauvegarde complète pour les données utilisateur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A et C sont corrects car Azure AD Identity Protection détecte les anomalies de connexion et offre une protection contre les accès non autorisés via des appareils inconnus. B est incorrect car Azure AD Identity Protection ne gère pas spécifiquement les mots de passe complexes. D est incorrect car Azure AD Identity Protection n'offre pas une solution de sauvegarde complète pour les données utilisateur."
+  },
+  {
+    "id": "AZ900-S&C-002",
+    "theme": "Security & Compliance",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction du contrôle d'accès basé sur les rôles (RBAC) dans Azure ?",
+    "options": [
+      "Gérer les utilisateurs et leurs droits d'accès aux ressources",
+      "Synchroniser les données entre différents services Azure",
+      "Configurer des alertes et des notifications pour les événements de sécurité",
+      "Gérer la mise à jour des systèmes et des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale fonction du contrôle d'accès basé sur les rôles (RBAC) dans Azure est de gérer les utilisateurs et leurs droits d'accès aux ressources."
+  },
+  {
+    "id": "AZ900-S&C-003",
+    "theme": "Security & Compliance",
+    "theme_label": "Encryption at rest",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encryption at rest dans Azure :",
+    "options": [
+      "Azure offre des options d'encryption intégrées pour les services de stockage.",
+      "L'encryption at rest peut être appliquée uniquement aux disques durs virtuels.",
+      "Il est possible de configurer l'encryption au niveau du conteneur dans Azure Blob Storage.",
+      "L'encryption at rest est automatiquement activée pour tous les comptes de stockage."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A et C sont corrects car Azure offre des options d'encryption intégrées pour les services de stockage, y compris le conteneur dans Azure Blob Storage. B est incorrect car l'encryption at rest peut être appliquée à d'autres types de ressources que les disques durs virtuels. D est incorrect car l'encryption at rest n'est pas automatiquement activée pour tous les comptes de stockage."
+  },
+  {
+    "id": "AZ900-S&C-004",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilisation d'Azure Policy dans Azure ?",
+    "options": [
+      "Gérer les configurations et les contrôles de sécurité des ressources",
+      "Synchroniser les données entre différents services Azure",
+      "Configurer des alertes et des notifications pour les événements de sécurité",
+      "Gérer la mise à jour des systèmes et des applications"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La principale utilisation d'Azure Policy dans Azure est de gérer les configurations et les contrôles de sécurité des ressources."
+  },
+  {
+    "id": "AZ900-S&C-005",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Sentinel :",
+    "options": [
+      "Il est un service d'analyse de sécurité centralisé pour les environnements Azure.",
+      "Il peut être utilisé uniquement avec des services spécifiques d'Azure.",
+      "Il offre une interface utilisateur pour la création et le détection des alertes de sécurité.",
+      "Il ne peut pas être intégré à d'autres systèmes de gestion de la sécurité."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A et C sont corrects car Azure Sentinel est un service d'analyse de sécurité centralisé pour les environnements Azure et offre une interface utilisateur pour la création et le détection des alertes de sécurité. B est incorrect car Azure Sentinel peut être utilisé avec divers services d'Azure et non uniquement avec des services spécifiques. D est incorrect car Azure Sentinel peut être intégré à d'autres systèmes de gestion de la sécurité."
+  },
+  {
+    "id": "AZ900-S&C-006",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy and Blueprints",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Policy et Blueprints :",
+    "options": [
+      "Azure Policy permet de définir des stratégies pour les ressources Azure.",
+      "Blueprints sont utilisés pour déployer et gérer des ensembles de ressources Azure.",
+      "Azure Policy ne peut être appliqué qu'aux abonnements Azure.",
+      "Blueprints peuvent inclure des paramètres personnalisés pour les ressources déployées.",
+      "Azure Policy et Blueprints sont exclusifs et ne peuvent pas être utilisés ensemble."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Azure Policy permet de définir des stratégies pour les ressources Azure (A). Blueprints sont utilisés pour déployer et gérer des ensembles de ressources Azure (B). Azure Policy peut être appliqué à différents niveaux, y compris les abonnements (C est incorrect). Blueprints peuvent inclure des paramètres personnalisés pour les ressources déployées (D). Azure Policy et Blueprints peuvent être utilisés ensemble pour une gestion plus complète des ressources (E est incorrect)."
+  },
+  {
+    "id": "AZ900-S&C-007",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Security Center",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'Azure Security Center ?",
+    "options": [
+      "Gestion des identités et des accès",
+      "Détection et réponse aux menaces",
+      "Gestion des ressources Azure",
+      "Optimisation des performances"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure Security Center détecte et répond aux menaces potentielles dans les environnements Azure (B). Il n'est pas principalement destiné à la gestion des identités et des accès, aux ressources Azure ou à l'optimisation des performances."
+  },
+  {
+    "id": "AZ900-S&C-008",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Key Vault",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Key Vault :",
+    "options": [
+      "Azure Key Vault est utilisé pour stocker des secrets et des clés de chiffrement.",
+      "Il peut être configuré pour permettre le chiffrement à repos et en transit.",
+      "Azure Key Vault ne peut être utilisé que pour stocker des clés de chiffrement.",
+      "Il est nécessaire d'activer le chiffrement à repos pour utiliser Azure Key Vault.",
+      "Azure Key Vault peut être utilisé pour stocker des secrets, mais pas des clés de chiffrement."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Key Vault est utilisé pour stocker des secrets et des clés de chiffrement (A). Il peut être configuré pour permettre le chiffrement à repos et en transit (B). Azure Key Vault peut être utilisé pour stocker des secrets ainsi que des clés de chiffrement (C est incorrect). Il n'est pas nécessaire d'activer le chiffrement à repos pour utiliser Azure Key Vault (D est incorrect). Azure Key Vault peut être utilisé pour stocker des secrets, mais aussi des clés de chiffrement (E est incorrect)."
+  },
+  {
+    "id": "AZ900-S&C-009",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD B2B",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale utilité d'Azure AD B2B ?",
+    "options": [
+      "Permettre aux utilisateurs de partager des documents avec d'autres entreprises sans créer de compte Azure",
+      "Gérer les identités et les accès des utilisateurs externes à l'entreprise",
+      "Optimiser les performances des applications Azure",
+      "Faciliter le déploiement de nouvelles applications Azure"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Azure AD B2B permet de gérer les identités et les accès des utilisateurs externes à l'entreprise (B). Il n'est pas principalement utilisé pour partager des documents sans compte Azure, optimiser les performances ou faciliter le déploiement de nouvelles applications."
+  },
+  {
+    "id": "AZ900-S&C-010",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Firewall and Network Security Groups (NSG)",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Firewall et Network Security Groups (NSG) :",
+    "options": [
+      "Azure Firewall est utilisé pour contrôler le trafic réseau entrant et sortant.",
+      "Network Security Groups (NSG) sont utilisés pour contrôler le trafic réseau entrant et sortant.",
+      "Azure Firewall est une solution plus coûteuse que Network Security Groups (NSG).",
+      "Azure Firewall peut être utilisé uniquement pour les réseaux virtuels Azure.",
+      "Network Security Groups (NSG) ne peuvent être utilisés que pour les réseaux virtuels Azure."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Firewall est utilisé pour contrôler le trafic réseau entrant et sortant (A). Network Security Groups (NSG) sont également utilisés pour contrôler le trafic réseau entrant et sortant (B). Azure Firewall peut être utilisé pour les réseaux virtuels Azure, mais aussi pour d'autres types de réseaux (C est incorrect). Azure Firewall peut être utilisé uniquement pour les réseaux virtuels Azure (D est incorrect). Network Security Groups (NSG) peuvent être utilisés pour les réseaux virtuels Azure, mais aussi pour d'autres types de réseaux (E est incorrect)."
+  },
+  {
+    "id": "AZ900-S&C-011",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Identity Protection",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure AD Identity Protection :",
+    "options": [
+      "Il aide à détecter les anomalies d'authentification",
+      "Il permet de gérer les mots de passe forts",
+      "Il offre une protection contre les phishing",
+      "Il peut surveiller l'activité des utilisateurs"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Azure AD Identity Protection aide à détecter les anomalies d'authentification, offre une protection contre les phishing et peut surveiller l'activité des utilisateurs. Il ne permet pas directement de gérer les mots de passe forts."
+  },
+  {
+    "id": "AZ900-S&C-012",
+    "theme": "Security & Compliance",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de l'Azure Role-Based Access Control (RBAC) ?",
+    "options": [
+      "Gérer les identités et les mots de passe des utilisateurs",
+      "Contrôler l'accès aux ressources en fonction des rôles",
+      "Gérer les flux de données entre différents services",
+      "Optimiser les performances des applications"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Contrôler l'accès aux ressources en fonction des rôles est la fonction principale de RBAC."
+  },
+  {
+    "id": "AZ900-S&C-013",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Policy :",
+    "options": [
+      "Il permet de définir des règles pour les ressources Azure",
+      "Il peut automatiser la conformité avec des normes d'entreprise",
+      "Il offre une protection contre les cyberattaques",
+      "Il peut gérer les coûts des ressources Azure"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Azure Policy permet de définir des règles pour les ressources Azure et peut automatiser la conformité avec des normes d'entreprise. Il ne offre pas directement une protection contre les cyberattaques ni gère-t-il les coûts des ressources Azure."
+  },
+  {
+    "id": "AZ900-S&C-014",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction de Azure Sentinel ?",
+    "options": [
+      "Analyser les journaux et détecter les menaces",
+      "Gérer les identités et les mots de passe des utilisateurs",
+      "Optimiser les performances des applications",
+      "Contrôler l'accès aux ressources en fonction des rôles"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Analyser les journaux et détecter les menaces est la principale fonction de Azure Sentinel."
+  },
+  {
+    "id": "AZ900-S&C-015",
+    "theme": "Security & Compliance",
+    "theme_label": "Encryption at rest",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale méthode d'encryption at rest dans Azure ?",
+    "options": [
+      "Encryption AES-256",
+      "Encryption RSA-4096",
+      "Encryption DES",
+      "Encryption RC4"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Encryption AES-256 est la principale méthode d'encryption at rest dans Azure."
+  },
+  {
+    "id": "AZ900-S&C-016",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Policy :",
+    "options": [
+      "Permet de gérer les configurations et les contrôles d'accès",
+      "Intègre uniquement la sécurité des données",
+      "Peut être utilisé pour déployer et gérer les configurations de ressources Azure",
+      "N'est pas intégré à d'autres services Azure"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A et C sont corrects car Azure Policy permet de gérer les configurations et d'appliquer des contrôles d'accès. B est incorrect car Azure Policy offre également des fonctionnalités de sécurité des données. D est incorrect car Azure Policy est intégré à d'autres services Azure, notamment Azure Security Center."
+  },
+  {
+    "id": "AZ900-S&C-017",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD Identity Protection",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle fonctionnalité d'Azure AD Identity Protection aide-t-elle à détecter les menaces liées aux identités ?",
+    "options": [
+      "Analyse des comportements d'identité",
+      "Synchronisation des identités avec les systèmes on-premise",
+      "Gestion des mots de passe complexes",
+      "Détection des activités non conformes"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'analyse des comportements d'identité est la fonctionnalité principale d'Azure AD Identity Protection qui aide à détecter les menaces liées aux identités."
+  },
+  {
+    "id": "AZ900-S&C-018",
+    "theme": "Security & Compliance",
+    "theme_label": "RBAC",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le contrôle d'accès basé sur les rôles (RBAC) dans Azure :",
+    "options": [
+      "Permet de définir des rôles personnalisés pour les utilisateurs",
+      "Intègre uniquement aux services Azure",
+      "Peut être utilisé pour gérer les autorisations d'accès aux ressources",
+      "N'est pas flexible et ne peut être utilisé que pour les administrateurs"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "A et C sont corrects car le contrôle d'accès basé sur les rôles (RBAC) permet de définir des rôles personnalisés et de gérer les autorisations d'accès aux ressources. B est incorrect car RBAC peut être utilisé avec d'autres services, pas uniquement Azure. D est incorrect car RBAC offre une grande flexibilité et peut être utilisé pour différents types d'utilisateurs, pas seulement les administrateurs."
+  },
+  {
+    "id": "AZ900-S&C-019",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure AD B2B",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'objectif principal d'utiliser Azure AD B2B pour collaborer avec des partenaires externes ?",
+    "options": [
+      "Permettre aux partenaires de partager des données sensibles sans exposer leur propre infrastructure",
+      "Simplifier la gestion des utilisateurs locaux dans l'organisation",
+      "Offrir un accès complet aux ressources Azure de l'organisation à tous les partenaires",
+      "Permettre aux partenaires de gérer leurs propres identités et accès"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'objectif principal d'utiliser Azure AD B2B est de permettre aux partenaires externes de partager des données sensibles sans exposer leur propre infrastructure."
+  },
+  {
+    "id": "AZ900-S&C-020",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Sentinel",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la principale fonction d'Azure Sentinel dans le domaine de la sécurité informatique ?",
+    "options": [
+      "Analyse et détection des menaces",
+      "Gestion des identités et des accès",
+      "Stockage de données de sécurité",
+      "Déploiement de pare-feu"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "L'analyse et la détection des menaces sont les principales fonctions d'Azure Sentinel dans le domaine de la sécurité informatique."
+  },
+  {
+    "id": "AZ900-S&C-021",
+    "theme": "Security & Compliance",
+    "theme_label": "Azure Policy",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant Azure Policy :",
+    "options": [
+      "Azure Policy permet de gérer les configurations des ressources Azure.",
+      "Il peut être utilisé pour appliquer des contrôles de sécurité et de conformité.",
+      "Azure Policy peut être intégré à Azure Security Center pour une meilleure visibilité.",
+      "Il fonctionne uniquement avec les ressources Azure IaaS.",
+      "Azure Policy peut être utilisé pour définir des stratégies de noms et d'étiquettes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "Azure Policy permet de gérer les configurations des ressources Azure (A). Il peut être utilisé pour appliquer des contrôles de sécurité et de conformité (B). Azure Policy peut être intégré à Azure Security Center pour une meilleure visibilité (C). Il fonctionne également avec les ressources Azure PaaS et SaaS, pas uniquement IaaS (D est incorrect). Azure Policy peut être utilisé pour définir des stratégies de noms et d'étiquettes (E)."
   }
 ]

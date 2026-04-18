@@ -1,0 +1,16 @@
+Génère un script Python 3.11 complet et fonctionnel nommé normalize_questions.py.
+
+Ce script doit :
+1. Parcourir récursivement tous les fichiers .json dans le dossier passé en argument (défaut: src/main/resources/certifications/)
+2. Pour chaque fichier JSON contenant un tableau de questions :
+   - Remplacer le champ "explication" par "explanation" dans chaque objet question
+   - Valider les champs obligatoires : id, theme, difficulty, question, options (tableau), correct (entier)
+   - Valider que difficulty est dans ["easy", "medium", "hard"]
+   - Valider que correct est un index valide dans options[]
+3. Mode dry-run par défaut (--dry-run flag) : affiche les modifications sans écrire
+4. Mode --apply : écrit les modifications dans les fichiers
+5. Générer un rapport CSV rapport_normalisation.csv : fichier, nb_questions, nb_normalisees, nb_invalides, erreurs
+6. Afficher un résumé console coloré à la fin
+
+Utilise : Python 3.11+, pathlib, json, argparse, csv, sys, logging
+Zéro dépendance externe (pas de pip install requis)

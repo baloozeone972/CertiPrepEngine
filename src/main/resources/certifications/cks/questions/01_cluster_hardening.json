@@ -12,7 +12,7 @@
       "Désactiver les ServiceAccounts"
     ],
     "correct": 0,
-    "explication": "Le principe du moindre privilège s'applique."
+    "explanation": "Le principe du moindre privilège s'applique."
   },
   {
     "id": "CKS-01-002",
@@ -27,7 +27,7 @@
       "Utiliser des secrets non lisibles"
     ],
     "correct": 0,
-    "explication": "Seuls les services qui en ont besoin doivent accéder aux secrets."
+    "explanation": "Seuls les services qui en ont besoin doivent accéder aux secrets."
   },
   {
     "id": "CKS-01-003",
@@ -42,7 +42,7 @@
       "--secure-port=6443"
     ],
     "correct": 0,
-    "explication": "Par défaut, l'accès anonyme est autorisé."
+    "explanation": "Par défaut, l'accès anonyme est autorisé."
   },
   {
     "id": "CKS-01-004",
@@ -57,7 +57,7 @@
       "--auth-only"
     ],
     "correct": 0,
-    "explication": "Activer uniquement les modes nécessaires."
+    "explanation": "Activer uniquement les modes nécessaires."
   },
   {
     "id": "CKS-01-005",
@@ -72,7 +72,7 @@
       "--secure-port"
     ],
     "correct": 0,
-    "explication": "Le flag --anonymous-auth=false doit être défini dans la configuration du kubelet."
+    "explanation": "Le flag --anonymous-auth=false doit être défini dans la configuration du kubelet."
   },
   {
     "id": "CKS-01-006",
@@ -87,7 +87,7 @@
       "--authorization-mode=Node"
     ],
     "correct": 2,
-    "explication": "Webhook délègue l'autorisation à l'API server (RBAC)."
+    "explanation": "Webhook délègue l'autorisation à l'API server (RBAC)."
   },
   {
     "id": "CKS-01-007",
@@ -102,7 +102,7 @@
       "kubectl encrypt secrets"
     ],
     "correct": 0,
-    "explication": "Il faut créer un fichier EncryptionConfiguration et passer le flag --encryption-provider-config à l'API server."
+    "explanation": "Il faut créer un fichier EncryptionConfiguration et passer le flag --encryption-provider-config à l'API server."
   },
   {
     "id": "CKS-01-008",
@@ -110,9 +110,14 @@
     "theme_label": "etcd encryption",
     "difficulty": "easy",
     "question": "Quelles ressources sont chiffrées par défaut dans etcd ?",
-    "options": ["Aucune (base64 seulement)", "Secrets", "ConfigMaps", "Toutes les ressources"],
+    "options": [
+      "Aucune (base64 seulement)",
+      "Secrets",
+      "ConfigMaps",
+      "Toutes les ressources"
+    ],
     "correct": 0,
-    "explication": "Par défaut, les données sont stockées en base64 (non chiffrées)."
+    "explanation": "Par défaut, les données sont stockées en base64 (non chiffrées)."
   },
   {
     "id": "CKS-01-009",
@@ -127,7 +132,7 @@
       "--log-audit"
     ],
     "correct": 0,
-    "explication": "Il faut un fichier de politique d'audit."
+    "explanation": "Il faut un fichier de politique d'audit."
   },
   {
     "id": "CKS-01-010",
@@ -142,7 +147,7 @@
       "Off, Basic, Detailed"
     ],
     "correct": 0,
-    "explication": "Les niveaux déterminent la quantité d'informations journalisées."
+    "explanation": "Les niveaux déterminent la quantité d'informations journalisées."
   },
   {
     "id": "CKS-01-011",
@@ -157,7 +162,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "ImagePolicyWebhook est dédié, mais les webhooks génériques peuvent aussi le faire."
+    "explanation": "ImagePolicyWebhook est dédié, mais les webhooks génériques peuvent aussi le faire."
   },
   {
     "id": "CKS-01-012",
@@ -172,7 +177,7 @@
       "Enforce, Audit, Warn"
     ],
     "correct": 0,
-    "explication": "Privileged (aucune restriction), Baseline (restrictions minimales), Restricted (strict)."
+    "explanation": "Privileged (aucune restriction), Baseline (restrictions minimales), Restricted (strict)."
   },
   {
     "id": "CKS-01-013",
@@ -187,7 +192,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le label enforce bloque les pods non conformes."
+    "explanation": "Le label enforce bloque les pods non conformes."
   },
   {
     "id": "CKS-01-014",
@@ -195,9 +200,14 @@
     "theme_label": "OPA Gatekeeper",
     "difficulty": "easy",
     "question": "Quel langage utilise OPA Gatekeeper pour définir les politiques ?",
-    "options": ["Rego", "JSON", "YAML", "Python"],
+    "options": [
+      "Rego",
+      "JSON",
+      "YAML",
+      "Python"
+    ],
     "correct": 0,
-    "explication": "Rego est le langage de politique d'Open Policy Agent."
+    "explanation": "Rego est le langage de politique d'Open Policy Agent."
   },
   {
     "id": "CKS-01-015",
@@ -212,7 +222,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les Network Policies appliquent le principe de défense en profondeur."
+    "explanation": "Les Network Policies appliquent le principe de défense en profondeur."
   },
   {
     "id": "CKS-01-016",
@@ -227,7 +237,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "À définir dans le pod spec ou le ServiceAccount."
+    "explanation": "À définir dans le pod spec ou le ServiceAccount."
   },
   {
     "id": "CKS-01-017",
@@ -235,9 +245,14 @@
     "theme_label": "Service accounts",
     "difficulty": "easy",
     "question": "Par défaut, le token du ServiceAccount est-il monté dans tous les pods ?",
-    "options": ["Oui", "Non", "Uniquement si explicite", "Uniquement dans kube-system"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement si explicite",
+      "Uniquement dans kube-system"
+    ],
     "correct": 0,
-    "explication": "Par défaut, le token est monté automatiquement."
+    "explanation": "Par défaut, le token est monté automatiquement."
   },
   {
     "id": "CKS-01-018",
@@ -252,7 +267,7 @@
       "Partagé entre utilisateurs"
     ],
     "correct": 0,
-    "explication": "Les kubeconfig contiennent des secrets (certificats, tokens)."
+    "explanation": "Les kubeconfig contiennent des secrets (certificats, tokens)."
   },
   {
     "id": "CKS-01-019",
@@ -267,7 +282,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Ces flags protègent contre le flooding."
+    "explanation": "Ces flags protègent contre le flooding."
   },
   {
     "id": "CKS-01-020",
@@ -282,7 +297,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Le chemin peut varier selon l'installation."
+    "explanation": "Le chemin peut varier selon l'installation."
   },
   {
     "id": "CKS-01-021",
@@ -297,7 +312,7 @@
       "Utilise les règles locales"
     ],
     "correct": 0,
-    "explication": "Le kubelet interroge l'API server via SubjectAccessReview."
+    "explanation": "Le kubelet interroge l'API server via SubjectAccessReview."
   },
   {
     "id": "CKS-01-022",
@@ -305,9 +320,14 @@
     "theme_label": "API server encryption",
     "difficulty": "easy",
     "question": "Quel provider de chiffrement est recommandé ?",
-    "options": ["aescbc", "secretbox", "kms", "A et B"],
+    "options": [
+      "aescbc",
+      "secretbox",
+      "kms",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "aescbc et secretbox sont des options, kms (Cloud KMS) est recommandé."
+    "explanation": "aescbc et secretbox sont des options, kms (Cloud KMS) est recommandé."
   },
   {
     "id": "CKS-01-023",
@@ -322,7 +342,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Le chemin est arbitraire, mais le flag doit pointer vers le fichier."
+    "explanation": "Le chemin est arbitraire, mais le flag doit pointer vers le fichier."
   },
   {
     "id": "CKS-01-024",
@@ -330,9 +350,14 @@
     "theme_label": "Audit policy",
     "difficulty": "easy",
     "question": "Quel niveau d'audit enregistre le corps de la requête et de la réponse ?",
-    "options": ["RequestResponse", "Request", "Metadata", "None"],
+    "options": [
+      "RequestResponse",
+      "Request",
+      "Metadata",
+      "None"
+    ],
     "correct": 0,
-    "explication": "RequestResponse enregistre le plus de détails."
+    "explanation": "RequestResponse enregistre le plus de détails."
   },
   {
     "id": "CKS-01-025",
@@ -347,7 +372,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "On peut omettre des stages spécifiques."
+    "explanation": "On peut omettre des stages spécifiques."
   },
   {
     "id": "CKS-01-026",
@@ -355,9 +380,14 @@
     "theme_label": "Node restriction",
     "difficulty": "easy",
     "question": "Quel admission controller empêche les kubelets de modifier les labels des nœuds ?",
-    "options": ["NodeRestriction", "NodeRestriction", "NodeRestriction", "NodeRestriction"],
+    "options": [
+      "NodeRestriction",
+      "NodeRestriction",
+      "NodeRestriction",
+      "NodeRestriction"
+    ],
     "correct": 0,
-    "explication": "NodeRestriction limite les opérations du kubelet à ses propres nœuds."
+    "explanation": "NodeRestriction limite les opérations du kubelet à ses propres nœuds."
   },
   {
     "id": "CKS-01-027",
@@ -365,9 +395,14 @@
     "theme_label": "DenyEscalatingExec",
     "difficulty": "easy",
     "question": "Quel admission controller empêche l'exécution de commandes dans les pods privilégiés ?",
-    "options": ["DenyEscalatingExec", "PodSecurityPolicy", "SecurityContextDeny", "A et B"],
+    "options": [
+      "DenyEscalatingExec",
+      "PodSecurityPolicy",
+      "SecurityContextDeny",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "DenyEscalatingExec et SecurityContextDeny sont des admission controllers de sécurité."
+    "explanation": "DenyEscalatingExec et SecurityContextDeny sont des admission controllers de sécurité."
   },
   {
     "id": "CKS-01-028",
@@ -382,7 +417,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Il interroge un webhook externe pour décider d'accepter ou non l'image."
+    "explanation": "Il interroge un webhook externe pour décider d'accepter ou non l'image."
   },
   {
     "id": "CKS-01-029",
@@ -397,7 +432,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "RuntimeClass permet d'utiliser des runtimes sécurisés (sandbox)."
+    "explanation": "RuntimeClass permet d'utiliser des runtimes sécurisés (sandbox)."
   },
   {
     "id": "CKS-01-030",
@@ -412,7 +447,7 @@
       "CRI"
     ],
     "correct": 0,
-    "explication": "gVisor fournit une couche d'isolation supplémentaire entre le conteneur et le noyau."
+    "explanation": "gVisor fournit une couche d'isolation supplémentaire entre le conteneur et le noyau."
   },
   {
     "id": "CKS-01-031",
@@ -420,9 +455,14 @@
     "theme_label": "Kata Containers",
     "difficulty": "easy",
     "question": "Kata Containers utilise-t-il des VM légères ?",
-    "options": ["Oui", "Non", "Uniquement avec QEMU", "Uniquement avec Firecracker"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec QEMU",
+      "Uniquement avec Firecracker"
+    ],
     "correct": 0,
-    "explication": "Kata exécute chaque conteneur dans sa propre VM légère."
+    "explanation": "Kata exécute chaque conteneur dans sa propre VM légère."
   },
   {
     "id": "CKS-01-032",
@@ -437,7 +477,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "PSP est déprécié, PSA est la solution native, d'autres alternatives existent."
+    "explanation": "PSP est déprécié, PSA est la solution native, d'autres alternatives existent."
   },
   {
     "id": "CKS-01-033",
@@ -452,7 +492,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs mécanismes peuvent imposer runAsNonRoot."
+    "explanation": "Plusieurs mécanismes peuvent imposer runAsNonRoot."
   },
   {
     "id": "CKS-01-034",
@@ -467,7 +507,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "RuntimeDefault fournit un ensemble de syscalls par défaut, plus restrictif qu'Unconfined."
+    "explanation": "RuntimeDefault fournit un ensemble de syscalls par défaut, plus restrictif qu'Unconfined."
   },
   {
     "id": "CKS-01-035",
@@ -482,7 +522,7 @@
       "B seulement"
     ],
     "correct": 2,
-    "explication": "L'annotation est utilisée (beta)."
+    "explanation": "L'annotation est utilisée (beta)."
   },
   {
     "id": "CKS-01-036",
@@ -497,7 +537,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "seLinuxOptions dans securityContext."
+    "explanation": "seLinuxOptions dans securityContext."
   },
   {
     "id": "CKS-01-037",
@@ -512,7 +552,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "fsGroup définit le GID propriétaire des volumes."
+    "explanation": "fsGroup définit le GID propriétaire des volumes."
   },
   {
     "id": "CKS-01-038",
@@ -527,7 +567,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "readOnlyRootFilesystem: true est une bonne pratique."
+    "explanation": "readOnlyRootFilesystem: true est une bonne pratique."
   },
   {
     "id": "CKS-01-039",
@@ -535,9 +575,14 @@
     "theme_label": "Capabilities",
     "difficulty": "easy",
     "question": "Quelle capacité est dangereuse et doit être supprimée ?",
-    "options": ["CAP_SYS_ADMIN", "CAP_NET_ADMIN", "CAP_SYS_PTRACE", "Toutes ces réponses"],
+    "options": [
+      "CAP_SYS_ADMIN",
+      "CAP_NET_ADMIN",
+      "CAP_SYS_PTRACE",
+      "Toutes ces réponses"
+    ],
     "correct": 3,
-    "explication": "Ces capacités permettent des actions privilégiées."
+    "explanation": "Ces capacités permettent des actions privilégiées."
   },
   {
     "id": "CKS-01-040",
@@ -552,6 +597,272 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "drop: [ALL] supprime toutes les capacités, puis on peut en ajouter."
+    "explanation": "drop: [ALL] supprime toutes les capacités, puis on peut en ajouter."
+  },
+  {
+    "id": "CKS-CH-001",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server flags",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les flags de l'API server :",
+    "options": [
+      "--insecure-port=8080 permet de rendre l'API server accessible via HTTP",
+      "--kubelet-client-certificate=/etc/kubernetes/pki/kubelet-client.crt est utilisé pour authentifier le kubelet",
+      "--anonymous-auth=true permet à tout le monde d'accéder sans authentification",
+      "--authorization-mode=Node,Webhook autorise les nœuds et les webhooks pour l'autorisation",
+      "--tls-cert-file=/etc/kubernetes/pki/apiserver.crt active le mode TLS pour l'API server"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3,
+      4
+    ],
+    "explanation": "L'option 1 est incorrecte car l'API server ne devrait jamais être accessible via HTTP sans authentification. L'option 2 est correcte car elle active l'authentification du kubelet. L'option 3 est incorrecte car l'authentification anonyme devrait être désactivée. L'option 4 est correcte car elle active les nœuds et les webhooks pour l'autorisation. L'option 5 est correcte car elle active le mode TLS pour sécuriser l'API server."
+  },
+  {
+    "id": "CKS-CH-002",
+    "theme": "Cluster Hardening",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour les comptes de service dans un cluster Kubernetes ?",
+    "options": [
+      "Créer un ServiceAccount spécifique pour chaque application, avec des permissions minimales",
+      "Utiliser le ServiceAccount par défaut",
+      "Donner les permissions admin à tous les comptes de service",
+      "Désactiver les ServiceAccounts"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique consiste à créer un ServiceAccount spécifique pour chaque application et lui donner uniquement les permissions nécessaires, ce qui permet une meilleure isolation et contrôle des droits d'accès."
+  },
+  {
+    "id": "CKS-CH-003",
+    "theme": "Cluster Hardening",
+    "theme_label": "etcd encryption",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encryption de l'état de l'API server :",
+    "options": [
+      "--etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt active l'encryption de l'état",
+      "--etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt est utilisé pour authentifier le client",
+      "--etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key est utilisé pour authentifier le client",
+      "--etcd-servers=https://127.0.0.1:2379 active la connexion à l'état de l'API server",
+      "--etcd-prefix=/registry est utilisé pour spécifier le préfixe de l'état"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "L'option 1 est incorrecte car l'encryption de l'état n'est pas activé par ce flag. L'option 2 est correcte car elle active l'authentification du client pour l'état. L'option 3 est correcte car elle active également l'authentification du client pour l'état. L'option 4 est incorrecte car elle active la connexion à l'état de l'API server, mais ne spécifie pas l'encryption. L'option 5 est incorrecte car elle spécifie le préfixe de l'état, mais ne concerne pas l'encryption."
+  },
+  {
+    "id": "CKS-CH-004",
+    "theme": "Cluster Hardening",
+    "theme_label": "PodSecurity admission",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour activer le PodSecurity admission dans un cluster Kubernetes ?",
+    "options": [
+      "Activer le pod-security-policy en remplaçant les règles par défaut",
+      "Configurer le PodSecurity admission avec des règles strictes pour les pods",
+      "Désactiver le PodSecurity admission pour permettre une configuration plus flexible",
+      "Utiliser les règles par défaut sans modification"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique consiste à activer le PodSecurity admission avec des règles strictes pour les pods, ce qui permet de contrôler et d'améliorer la sécurité des pods en entrée."
+  },
+  {
+    "id": "CKS-CH-005",
+    "theme": "Cluster Hardening",
+    "theme_label": "Service accounts",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les ServiceAccounts dans un cluster Kubernetes :",
+    "options": [
+      "Un ServiceAccount par défaut est créé automatiquement pour chaque namespace",
+      "Les comptes de service ne devraient jamais être utilisés pour exécuter des pods",
+      "Les comptes de service peuvent être utilisés pour exécuter des pods, mais doivent avoir des permissions minimales",
+      "Les comptes de service ne peuvent être utilisés que pour accéder aux secrets du cluster",
+      "Les comptes de service ne peuvent pas être supprimés une fois créés"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "L'option 1 est correcte car un ServiceAccount par défaut est créé automatiquement pour chaque namespace. L'option 2 est incorrecte car les comptes de service peuvent être utilisés pour exécuter des pods, mais doivent avoir des permissions minimales. L'option 3 est correcte car les comptes de service peuvent être utilisés pour exécuter des pods, mais doivent avoir des permissions minimales. L'option 4 est incorrecte car les comptes de service peuvent être utilisés pour accéder aux secrets du cluster, mais ne sont pas limités à cela. L'option 5 est incorrecte car les comptes de service peuvent être supprimés une fois créés."
+  },
+  {
+    "id": "CKS-CH-006",
+    "theme": "Cluster Hardening",
+    "theme_label": "PodSecurity admission",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la configuration de PodSecurity admission :",
+    "options": [
+      "PodSecurityPolicy est une alternative à la configuration de PodSecurity admission",
+      "La configuration de PodSecurity admission peut être réalisée via le fichier de configuration API server",
+      "PodSecurity admission est désactivé par défaut dans les clusters Kubernetes",
+      "La configuration de PodSecurity admission peut être réalisée via le fichier de configuration kubelet"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "La configuration de PodSecurity admission peut effectivement être réalisée via le fichier de configuration API server. Cependant, PodSecurityPolicy est déprécié et ne devrait pas être utilisé. La configuration de PodSecurity admission n'est pas désactivée par défaut et ne peut pas être réalisée via le fichier de configuration kubelet."
+  },
+  {
+    "id": "CKS-CH-007",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server flags",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la bonne pratique pour sécuriser l'accès à l'API server Kubernetes ?",
+    "options": [
+      "Utiliser le flag --insecure-bind-address",
+      "Activer l'authentification et l'autorisation avec les flags appropriés",
+      "Ne pas modifier les flags par défaut de l'API server",
+      "Utiliser le flag --anonymous-auth"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'activer l'authentification et l'autorisation avec les flags appropriés est la bonne pratique pour sécuriser l'accès à l'API server Kubernetes."
+  },
+  {
+    "id": "CKS-CH-008",
+    "theme": "Cluster Hardening",
+    "theme_label": "RBAC",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la gestion des comptes de service dans un cluster Kubernetes :",
+    "options": [
+      "Un ServiceAccount peut avoir des permissions administratives sur le cluster",
+      "Il est recommandé de créer un ServiceAccount spécifique pour chaque application avec des permissions minimales",
+      "Les comptes de service ne nécessitent pas d'authentification pour accéder aux ressources du cluster",
+      "La rotation des clés de ServiceAccount peut être réalisée manuellement"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Il est recommandé de créer un ServiceAccount spécifique pour chaque application avec des permissions minimales. La rotation des clés de ServiceAccount peut effectivement être réalisée manuellement, mais elle n'est pas automatique par défaut. Un ServiceAccount peut avoir des permissions administratives sur le cluster, mais cela doit être évité pour des raisons de sécurité. Les comptes de service nécessitent une authentification pour accéder aux ressources du cluster."
+  },
+  {
+    "id": "CKS-CH-009",
+    "theme": "Cluster Hardening",
+    "theme_label": "etcd encryption",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour sécuriser l'accès à l'état de l'API server Kubernetes ?",
+    "options": [
+      "Utiliser le flag --insecure-bind-address",
+      "Activer l'authentification et l'autorisation avec les flags appropriés",
+      "Ne pas modifier les flags par défaut de l'API server",
+      "Utiliser le flag --anonymous-auth"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "L'activer l'authentification et l'autorisation avec les flags appropriés est la bonne pratique pour sécuriser l'accès à l'API server Kubernetes."
+  },
+  {
+    "id": "CKS-CH-010",
+    "theme": "Cluster Hardening",
+    "theme_label": "Service accounts",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la bonne pratique pour gérer les comptes de service dans un cluster Kubernetes ?",
+    "options": [
+      "Créer un ServiceAccount spécifique pour chaque application avec des permissions minimales",
+      "Utiliser le ServiceAccount par défaut",
+      "Donner les permissions admin",
+      "Désactiver les ServiceAccounts"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le principe du moindre privilège s'applique. Il est recommandé de créer un ServiceAccount spécifique pour chaque application avec des permissions minimales."
+  },
+  {
+    "id": "CKS-CH-011",
+    "theme": "Cluster Hardening",
+    "theme_label": "API server flags",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les flags de l'API server :",
+    "options": [
+      "--insecure-bind-address=0.0.0.0 permet d'accepter les connexions non sécurisées",
+      "--secure-port=6443 est le port par défaut pour les connexions sécurisées",
+      "--allow-privileged=true permet d'exécuter des conteneurs privilégiés",
+      "--authorization-mode=Node,RBAC active les modes d'autorisation Node et RBAC",
+      "--client-ca-file=/etc/kubernetes/pki/ca.crt spécifie le fichier de certificat CA pour les clients"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3,
+      4
+    ],
+    "explanation": "--insecure-bind-address=0.0.0.0 est incorrect car elle désactive la sécurité. --secure-port=6443 est correct. --allow-privileged=true est incorrect car elle augmente le risque de sécurité. --authorization-mode=Node,RBAC est correct. --client-ca-file=/etc/kubernetes/pki/ca.crt est correct."
+  },
+  {
+    "id": "CKS-CH-012",
+    "theme": "Cluster Hardening",
+    "theme_label": "RBAC",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour les rôles RBAC dans un cluster Kubernetes ?",
+    "options": [
+      "Créer des rôles avec des permissions minimales pour chaque application",
+      "Donner les permissions admin à tous les rôles",
+      "Désactiver les rôles non utilisés",
+      "Utiliser des rôles avec des permissions maximales"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique est de créer des rôles avec des permissions minimales pour chaque application, ce qui respecte le principe du moindre privilège."
+  },
+  {
+    "id": "CKS-CH-013",
+    "theme": "Cluster Hardening",
+    "theme_label": "etcd encryption",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'encryption de etcd :",
+    "options": [
+      "etcd utilise une encryption par défaut pour les données stockées",
+      "L'encryption de etcd peut être activée en modifiant le fichier /etc/kubernetes/manifests/etcd.yaml",
+      "L'encryption de etcd nécessite une clé de chiffrement générée manuellement",
+      "L'encryption de etcd peut être désactivée pour améliorer les performances",
+      "etcd utilise une encryption basée sur le chiffrement à clé publique"
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "etcd utilise une encryption par défaut pour les données stockées est incorrect car elle n'est pas activée par défaut. L'encryption de etcd peut être activée en modifiant le fichier /etc/kubernetes/manifests/etcd.yaml est correct. L'encryption de etcd nécessite une clé de chiffrement générée manuellement est correct. L'encryption de etcd peut être désactivée pour améliorer les performances est incorrect car cela augmente le risque de sécurité. etcd utilise une encryption basée sur le chiffrement à clé publique est incorrect car elle utilise un chiffrement à clé symétrique."
+  },
+  {
+    "id": "CKS-CH-014",
+    "theme": "Cluster Hardening",
+    "theme_label": "PodSecurity admission",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour l'utilisation de l'admission controller PodSecurity ?",
+    "options": [
+      "Activer l'admission controller sans configuration pour une sécurité maximale",
+      "Configurer des règles strictes pour restreindre les capacités et les permissions des pods",
+      "Désactiver l'admission controller pour améliorer les performances",
+      "Utiliser des règles génériques sans restrictions"
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique est de configurer des règles strictes pour restreindre les capacités et les permissions des pods, ce qui respecte le principe du moindre privilège."
   }
 ]

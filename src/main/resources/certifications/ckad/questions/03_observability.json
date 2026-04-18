@@ -12,7 +12,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Plusieurs options pour affiner les logs."
+    "explanation": "Plusieurs options pour affiner les logs."
   },
   {
     "id": "CKAD-03-002",
@@ -27,7 +27,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "-f ou --follow."
+    "explanation": "-f ou --follow."
   },
   {
     "id": "CKAD-03-003",
@@ -42,7 +42,7 @@
       "kubectl logs --tail=100 <pod>"
     ],
     "correct": 2,
-    "explication": "--previous ou -p."
+    "explanation": "--previous ou -p."
   },
   {
     "id": "CKAD-03-004",
@@ -57,7 +57,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les événements aident à diagnostiquer les problèmes."
+    "explanation": "Les événements aident à diagnostiquer les problèmes."
   },
   {
     "id": "CKAD-03-005",
@@ -72,7 +72,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "field-selector est plus précis."
+    "explanation": "field-selector est plus précis."
   },
   {
     "id": "CKAD-03-006",
@@ -87,7 +87,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl top nécessite Metrics Server."
+    "explanation": "kubectl top nécessite Metrics Server."
   },
   {
     "id": "CKAD-03-007",
@@ -102,7 +102,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "top nodes montre CPU et mémoire."
+    "explanation": "top nodes montre CPU et mémoire."
   },
   {
     "id": "CKAD-03-008",
@@ -117,7 +117,7 @@
       "Le pod manque de ressources"
     ],
     "correct": 0,
-    "explication": "Vérifier les logs pour la cause."
+    "explanation": "Vérifier les logs pour la cause."
   },
   {
     "id": "CKAD-03-009",
@@ -132,7 +132,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Vérifier le nom de l'image et les credentials."
+    "explanation": "Vérifier le nom de l'image et les credentials."
   },
   {
     "id": "CKAD-03-010",
@@ -147,7 +147,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl describe pod montre la raison."
+    "explanation": "kubectl describe pod montre la raison."
   },
   {
     "id": "CKAD-03-011",
@@ -162,7 +162,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Les conditions sont dans le status du pod."
+    "explanation": "Les conditions sont dans le status du pod."
   },
   {
     "id": "CKAD-03-012",
@@ -177,7 +177,7 @@
       "A et B"
     ],
     "correct": 0,
-    "explication": "Waiting (en attente), Running, Terminated (terminé avec code)."
+    "explanation": "Waiting (en attente), Running, Terminated (terminé avec code)."
   },
   {
     "id": "CKAD-03-013",
@@ -192,7 +192,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "La condition Ready indique si le pod est prêt."
+    "explanation": "La condition Ready indique si le pod est prêt."
   },
   {
     "id": "CKAD-03-014",
@@ -207,7 +207,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Le nombre de redémarrages est affiché dans get pods."
+    "explanation": "Le nombre de redémarrages est affiché dans get pods."
   },
   {
     "id": "CKAD-03-015",
@@ -222,7 +222,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "exec permet d'exécuter des commandes interactives."
+    "explanation": "exec permet d'exécuter des commandes interactives."
   },
   {
     "id": "CKAD-03-016",
@@ -237,7 +237,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "kubectl cp fonctionne comme scp."
+    "explanation": "kubectl cp fonctionne comme scp."
   },
   {
     "id": "CKAD-03-017",
@@ -252,7 +252,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "kubectl debug (v1.18+) est plus puissant."
+    "explanation": "kubectl debug (v1.18+) est plus puissant."
   },
   {
     "id": "CKAD-03-018",
@@ -267,7 +267,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "kubectl debug avec --target partage le namespace réseau."
+    "explanation": "kubectl debug avec --target partage le namespace réseau."
   },
   {
     "id": "CKAD-03-019",
@@ -282,7 +282,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "Il faut souvent un outil externe pour filtrer par temps."
+    "explanation": "Il faut souvent un outil externe pour filtrer par temps."
   },
   {
     "id": "CKAD-03-020",
@@ -297,7 +297,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Fluentd est couramment utilisé avec Elasticsearch."
+    "explanation": "Fluentd est couramment utilisé avec Elasticsearch."
   },
   {
     "id": "CKAD-03-021",
@@ -305,9 +305,14 @@
     "theme_label": "Prometheus",
     "difficulty": "easy",
     "question": "Quel outil collecte des métriques avec un modèle pull ?",
-    "options": ["Prometheus", "Datadog", "New Relic", "Dynatrace"],
+    "options": [
+      "Prometheus",
+      "Datadog",
+      "New Relic",
+      "Dynatrace"
+    ],
     "correct": 0,
-    "explication": "Prometheus est l'outil de monitoring pull-based le plus populaire."
+    "explanation": "Prometheus est l'outil de monitoring pull-based le plus populaire."
   },
   {
     "id": "CKAD-03-022",
@@ -322,7 +327,7 @@
       "A seulement"
     ],
     "correct": 2,
-    "explication": "Prometheus utilise l'API Kubernetes pour découvrir les pods, services, endpoints."
+    "explanation": "Prometheus utilise l'API Kubernetes pour découvrir les pods, services, endpoints."
   },
   {
     "id": "CKAD-03-023",
@@ -330,9 +335,14 @@
     "theme_label": "Grafana",
     "difficulty": "easy",
     "question": "Quel outil visualise les métriques de Prometheus ?",
-    "options": ["Grafana", "Kibana", "Tableau", "Power BI"],
+    "options": [
+      "Grafana",
+      "Kibana",
+      "Tableau",
+      "Power BI"
+    ],
     "correct": 0,
-    "explication": "Grafana est le plus couramment utilisé avec Prometheus."
+    "explanation": "Grafana est le plus couramment utilisé avec Prometheus."
   },
   {
     "id": "CKAD-03-024",
@@ -340,9 +350,14 @@
     "theme_label": "Distributed tracing",
     "difficulty": "easy",
     "question": "Quel outil de tracing distribué est souvent utilisé avec Kubernetes ?",
-    "options": ["Jaeger", "Zipkin", "AWS X-Ray", "Toutes ces réponses"],
+    "options": [
+      "Jaeger",
+      "Zipkin",
+      "AWS X-Ray",
+      "Toutes ces réponses"
+    ],
     "correct": 3,
-    "explication": "Jaeger et Zipkin sont des projets CNCF."
+    "explanation": "Jaeger et Zipkin sont des projets CNCF."
   },
   {
     "id": "CKAD-03-025",
@@ -357,7 +372,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "ping, curl, nslookup depuis un pod."
+    "explanation": "ping, curl, nslookup depuis un pod."
   },
   {
     "id": "CKAD-03-026",
@@ -372,7 +387,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Vérifier que le pod utilise le serveur DNS du cluster."
+    "explanation": "Vérifier que le pod utilise le serveur DNS du cluster."
   },
   {
     "id": "CKAD-03-027",
@@ -380,9 +395,14 @@
     "theme_label": "Resource limits troubleshooting",
     "difficulty": "easy",
     "question": "Un pod peut-il être OOMKilled même s'il ne dépasse pas sa limit ?",
-    "options": ["Non", "Oui (si node manque de mémoire)", "A et B", "Uniquement avec limit"],
+    "options": [
+      "Non",
+      "Oui (si node manque de mémoire)",
+      "A et B",
+      "Uniquement avec limit"
+    ],
     "correct": 0,
-    "explication": "OOMKill se produit lorsque le conteneur dépasse sa limit de mémoire."
+    "explanation": "OOMKill se produit lorsque le conteneur dépasse sa limit de mémoire."
   },
   {
     "id": "CKAD-03-028",
@@ -397,7 +417,7 @@
       "B seulement"
     ],
     "correct": 1,
-    "explication": "Les métriques CPU throttling sont visibles via Prometheus."
+    "explanation": "Les métriques CPU throttling sont visibles via Prometheus."
   },
   {
     "id": "CKAD-03-029",
@@ -412,7 +432,7 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "Les événements donnent la raison."
+    "explanation": "Les événements donnent la raison."
   },
   {
     "id": "CKAD-03-030",
@@ -420,9 +440,14 @@
     "theme_label": "Node conditions",
     "difficulty": "easy",
     "question": "Quelle condition indique qu'un nœud est prêt à recevoir des pods ?",
-    "options": ["Ready", "Healthy", "Available", "Schedulable"],
+    "options": [
+      "Ready",
+      "Healthy",
+      "Available",
+      "Schedulable"
+    ],
     "correct": 0,
-    "explication": "La condition Ready est True lorsque le nœud est sain."
+    "explanation": "La condition Ready est True lorsque le nœud est sain."
   },
   {
     "id": "CKAD-03-031",
@@ -430,9 +455,14 @@
     "theme_label": "Node pressure",
     "difficulty": "easy",
     "question": "Quelle condition indique une pression mémoire sur le nœud ?",
-    "options": ["MemoryPressure", "DiskPressure", "PIDPressure", "A et B"],
+    "options": [
+      "MemoryPressure",
+      "DiskPressure",
+      "PIDPressure",
+      "A et B"
+    ],
     "correct": 3,
-    "explication": "MemoryPressure peut entraîner l'éviction de pods."
+    "explanation": "MemoryPressure peut entraîner l'éviction de pods."
   },
   {
     "id": "CKAD-03-032",
@@ -447,7 +477,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "/healthz retourne OK si l'API server est sain."
+    "explanation": "/healthz retourne OK si l'API server est sain."
   },
   {
     "id": "CKAD-03-033",
@@ -462,7 +492,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "Le scheduler s'exécute dans un pod sur les nœuds masters."
+    "explanation": "Le scheduler s'exécute dans un pod sur les nœuds masters."
   },
   {
     "id": "CKAD-03-034",
@@ -477,7 +507,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le kubelet est un service systemd sur les nœuds."
+    "explanation": "Le kubelet est un service systemd sur les nœuds."
   },
   {
     "id": "CKAD-03-035",
@@ -492,7 +522,7 @@
       "A et C"
     ],
     "correct": 3,
-    "explication": "kubectl logs utilise l'API kubelet."
+    "explanation": "kubectl logs utilise l'API kubelet."
   },
   {
     "id": "CKAD-03-036",
@@ -500,9 +530,14 @@
     "theme_label": "Audit logs",
     "difficulty": "easy",
     "question": "Les audit logs enregistrent-ils les actions des utilisateurs ?",
-    "options": ["Oui", "Non", "Seulement les échecs", "Seulement les succès"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement les échecs",
+      "Seulement les succès"
+    ],
     "correct": 0,
-    "explication": "Les audit logs sont utiles pour la sécurité et la conformité."
+    "explanation": "Les audit logs sont utiles pour la sécurité et la conformité."
   },
   {
     "id": "CKAD-03-037",
@@ -517,7 +552,7 @@
       "A seulement"
     ],
     "correct": 0,
-    "explication": "Le profiling expose des métriques de performance."
+    "explanation": "Le profiling expose des métriques de performance."
   },
   {
     "id": "CKAD-03-038",
@@ -532,7 +567,7 @@
       "B et C"
     ],
     "correct": 3,
-    "explication": "Le niveau de verbosité 8 montre les requêtes API."
+    "explanation": "Le niveau de verbosité 8 montre les requêtes API."
   },
   {
     "id": "CKAD-03-039",
@@ -547,7 +582,7 @@
       "A et B"
     ],
     "correct": 3,
-    "explication": "describe inclut les événements, get -o yaml montre la définition."
+    "explanation": "describe inclut les événements, get -o yaml montre la définition."
   },
   {
     "id": "CKAD-03-040",
@@ -562,6 +597,254 @@
       "Toutes ces réponses"
     ],
     "correct": 3,
-    "explication": "-w ou --watch suit les modifications."
+    "explanation": "-w ou --watch suit les modifications."
+  },
+  {
+    "id": "CKAD-OBS-001",
+    "theme": "Observability",
+    "theme_label": "Metrics",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la collecte de métriques dans Kubernetes :",
+    "options": [
+      "Prometheus peut être utilisé pour collecter et afficher les métriques.",
+      "Les métriques peuvent être exportées en utilisant la méthode GET sur le port 10250 du kubelet.",
+      "L'API server fournit directement des métriques via l'endpoint /metrics.",
+      "Les métriques peuvent être stockées dans un objet Kubernetes appelé MetricsServer."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Prometheus est une solution populaire pour la collecte et l'affichage des métriques. Les métriques peuvent être exportées via le port 10250 du kubelet. L'API server fournit des métriques via l'endpoint /metrics, mais cela nécessite une configuration spécifique. MetricsServer est un objet Kubernetes qui fournit des métriques pour l'ordonnancement et la mise à l'échelle."
+  },
+  {
+    "id": "CKAD-OBS-002",
+    "theme": "Observability",
+    "theme_label": "Debugging",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de décrire le statut d'un pod en détail ?",
+    "options": [
+      "kubectl describe pod <pod>",
+      "kubectl get pod <pod> -o yaml",
+      "kubectl logs <pod>",
+      "kubectl exec -it <pod> -- /bin/sh"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "kubectl describe pod <pod> fournit un aperçu détaillé du pod, y compris son état, les ressources utilisées, les conditions et plus encore."
+  },
+  {
+    "id": "CKAD-OBS-003",
+    "theme": "Observability",
+    "theme_label": "Events",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les événements dans Kubernetes :",
+    "options": [
+      "Les événements sont stockés dans un objet Event.",
+      "Les événements peuvent être vus en utilisant la commande kubectl get events.",
+      "Les événements sont générés par le kubelet pour les pods en cours d'exécution.",
+      "Les événements peuvent être filtrés par type ou niveau de gravité."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Les événements sont stockés dans un objet Event. Ils peuvent être vus en utilisant la commande kubectl get events. Les événements sont générés par le kubelet pour les pods en cours d'exécution. Les événements peuvent être filtrés par type ou niveau de gravité."
+  },
+  {
+    "id": "CKAD-OBS-004",
+    "theme": "Observability",
+    "theme_label": "Pod status",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le statut d'un pod :",
+    "options": [
+      "Le statut d'un pod peut être consulté en utilisant la commande kubectl get pod <pod> -o jsonpath='{.status.state}'",
+      "Le statut d'un pod inclut des informations sur les conditions du pod, comme Running ou NotReady.",
+      "Le statut d'un pod peut être modifié manuellement en utilisant la commande kubectl patch.",
+      "Le statut d'un pod peut être utilisé pour déterminer si un pod est prêt à recevoir du trafic."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      3
+    ],
+    "explanation": "Le statut d'un pod peut être consulté en utilisant la commande kubectl get pod <pod> -o jsonpath='{.status.state}'. Le statut d'un pod inclut des informations sur les conditions du pod, comme Running ou NotReady. Le statut d'un pod peut être utilisé pour déterminer si un pod est prêt à recevoir du trafic. Le statut d'un pod ne peut pas être modifié manuellement en utilisant la commande kubectl patch."
+  },
+  {
+    "id": "CKAD-OBS-005",
+    "theme": "Observability",
+    "theme_label": "Grafana",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité principale de Grafana dans le contexte d'observabilité Kubernetes ?",
+    "options": [
+      "Grafana permet de visualiser les métriques et les événements Kubernetes.",
+      "Grafana permet de déboguer les applications Kubernetes.",
+      "Grafana permet de gérer les configurations des pods Kubernetes.",
+      "Grafana permet d'ordonnancer les pods Kubernetes."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Grafana est une solution d'analyse et de visualisation de données qui peut être utilisée pour visualiser les métriques et les événements Kubernetes."
+  },
+  {
+    "id": "CKAD-OBS-006",
+    "theme": "Observability",
+    "theme_label": "Metrics",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des métriques dans Kubernetes :",
+    "options": [
+      "Prometheus peut récupérer des métriques à partir de l'API Kubernetes.",
+      "Les métriques sont stockées localement sur chaque nœud et ne peuvent pas être récupérées à distance.",
+      "Kubelet expose des métriques sur les ressources utilisées par les pods.",
+      "Grafana peut être utilisé pour visualiser et analyser les métriques Kubernetes."
+    ],
+    "correct": 2,
+    "correct_multiple": [
+      2,
+      3
+    ],
+    "explanation": "Kubelet expose des métriques sur les ressources utilisées par les pods (correct), Prometheus peut récupérer des métriques à partir de l'API Kubernetes (correct), Les métriques sont stockées localement sur chaque nœud et ne peuvent pas être récupérées à distance (incorrect), Grafana peut être utilisé pour visualiser et analyser les métriques Kubernetes (correct)."
+  },
+  {
+    "id": "CKAD-OBS-007",
+    "theme": "Observability",
+    "theme_label": "Logs",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de suivre les logs en temps réel d'un pod ?",
+    "options": [
+      "kubectl logs -f <pod>",
+      "kubectl logs --follow <pod>",
+      "kubectl attach <pod>",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "-f ou --follow permettent de suivre les logs en temps réel d'un pod (correct), kubectl attach <pod> permet de connecter à un terminal dans un conteneur, Toutes ces réponses est incorrecte car -f et --follow sont les seules options valides."
+  },
+  {
+    "id": "CKAD-OBS-008",
+    "theme": "Observability",
+    "theme_label": "Events",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant l'utilisation des événements dans Kubernetes :",
+    "options": [
+      "Les événements sont stockés localement sur chaque nœud.",
+      "Les événements peuvent être récupérés en utilisant la commande kubectl get events.",
+      "Les événements sont générés pour les actions spécifiques comme le démarrage d'un pod.",
+      "Les événements sont conservés indéfiniment sur le cluster."
+    ],
+    "correct": 1,
+    "correct_multiple": [
+      1,
+      2
+    ],
+    "explanation": "Les événements peuvent être récupérés en utilisant la commande kubectl get events (correct), Les événements sont générés pour les actions spécifiques comme le démarrage d'un pod (correct), Les événements sont stockés localement sur chaque nœud (incorrect), Les événements ne sont pas conservés indéfiniment sur le cluster (incorrect)."
+  },
+  {
+    "id": "CKAD-OBS-009",
+    "theme": "Observability",
+    "theme_label": "Pod status",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle commande kubectl permet de voir le statut d'un pod ?",
+    "options": [
+      "kubectl describe <pod>",
+      "kubectl status <pod>",
+      "kubectl get pod <pod> -o wide",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "kubectl describe <pod> permet de voir le statut d'un pod (correct), kubectl status <pod> n'est pas une commande valide, kubectl get pod <pod> -o wide affiche des informations sur le pod mais pas son statut complet, Toutes ces réponses est incorrecte car kubectl describe <pod> est la seule commande valide."
+  },
+  {
+    "id": "CKAD-OBS-010",
+    "theme": "Observability",
+    "theme_label": "Distributed tracing",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant le suivi distribué dans Kubernetes :",
+    "options": [
+      "Jaeger peut être utilisé pour le suivi distribué dans Kubernetes.",
+      "Le suivi distribué nécessite une configuration spécifique sur chaque pod pour fonctionner.",
+      "Zipkin est un autre outil de suivi distribué qui peut être utilisé dans Kubernetes.",
+      "Le suivi distribué est automatiquement activé pour tous les pods dans un cluster Kubernetes."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      2
+    ],
+    "explanation": "Jaeger peut être utilisé pour le suivi distribué dans Kubernetes (correct), Le suivi distribué nécessite une configuration spécifique sur chaque pod pour fonctionner (correct), Zipkin est un autre outil de suivi distribué qui peut être utilisé dans Kubernetes (correct), Le suivi distribué n'est pas automatiquement activé pour tous les pods dans un cluster Kubernetes (incorrect)."
+  },
+  {
+    "id": "CKAD-OBS-011",
+    "theme": "Observability",
+    "theme_label": "Metrics",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant la collecte de métriques dans Kubernetes :",
+    "options": [
+      "Prometheus peut être utilisé pour collecter des métriques.",
+      "Metrics Server est un composant intégré de Kubernetes qui collecte des métriques.",
+      "Grafana peut être utilisé pour visualiser les métriques collectées par Prometheus.",
+      "Toutes ces affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Prometheus peut effectivement collecter des métriques. Metrics Server est un composant intégré pour cela. Grafana peut visualiser les métriques collectées par Prometheus."
+  },
+  {
+    "id": "CKAD-OBS-013",
+    "theme": "Observability",
+    "theme_label": "Conditions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions des pods :",
+    "options": [
+      "Les conditions indiquent l'état du pod.",
+      "Un pod peut avoir plusieurs types de conditions.",
+      "Les conditions peuvent être consultées avec kubectl describe <pod>.",
+      "Toutes ces affirmations"
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Les conditions indiquent l'état du pod. Un pod peut avoir plusieurs types de conditions. Les conditions peuvent effectivement être consultées avec kubectl describe <pod>."
+  },
+  {
+    "id": "CKAD-OBS-014",
+    "theme": "Observability",
+    "theme_label": "Distributed tracing",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de la surveillance distribuée dans Kubernetes ?",
+    "options": [
+      "Permettre le suivi des requêtes à travers les services",
+      "Optimiser les performances de l'application",
+      "Gérer la sécurité des données",
+      "Toutes ces réponses"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "La surveillance distribuée permet de suivre les requêtes à travers les services."
   }
 ]

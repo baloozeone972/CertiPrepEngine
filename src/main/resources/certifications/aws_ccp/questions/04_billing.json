@@ -217,7 +217,7 @@
       "Optimiser"
     ],
     "correct": 0,
-    "explication": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
+    "explanation": "Cost Anomaly Detection utilise ML pour identifier les anomalies."
   },
   {
     "id": "AWS-CCP-217",
@@ -227,7 +227,7 @@
     "question": "Quel service AWS permet la facturation consolidée ?",
     "options": ["AWS Organizations", "Consolidated Billing", "Cost Explorer", "Budgets"],
     "correct": 0,
-    "explication": "AWS Organizations offre la facturation consolidée pour tous les comptes membres."
+    "explanation": "AWS Organizations offre la facturation consolidée pour tous les comptes membres."
   },
   {
     "id": "AWS-CCP-218",
@@ -237,7 +237,7 @@
     "question": "Le transfert de données entre services dans la même AZ est-il facturé ?",
     "options": ["Non", "Oui", "Uniquement pour les grands volumes", "Uniquement pour les régions"],
     "correct": 0,
-    "explication": "Le trafic entre services dans la même AZ via IP privée est gratuit."
+    "explanation": "Le trafic entre services dans la même AZ via IP privée est gratuit."
   },
   {
     "id": "AWS-CCP-219",
@@ -247,7 +247,7 @@
     "question": "Le transfert de données sortant d'Internet est-il facturé ?",
     "options": ["Oui", "Non", "Seulement au-delà d'un seuil", "Uniquement pour EC2"],
     "correct": 0,
-    "explication": "Le trafic sortant vers Internet est facturé."
+    "explanation": "Le trafic sortant vers Internet est facturé."
   },
   {
     "id": "AWS-CCP-220",
@@ -262,7 +262,7 @@
       "Standard, Premium"
     ],
     "correct": 0,
-    "explication": "AWS propose quatre plans de support."
+    "explanation": "AWS propose quatre plans de support."
   },
   {
     "id": "AWS-CCP-221",
@@ -272,7 +272,7 @@
     "question": "Le plan Basic est-il gratuit ?",
     "options": ["Oui", "Non", "Uniquement pour les comptes de moins d'un an", "Uniquement pour les comptes éducatifs"],
     "correct": 0,
-    "explication": "Le plan Basic est inclus gratuitement."
+    "explanation": "Le plan Basic est inclus gratuitement."
   },
   {
     "id": "AWS-CCP-222",
@@ -282,7 +282,7 @@
     "question": "Quel plan supporte le Technical Account Manager (TAM) ?",
     "options": ["Enterprise", "Business", "Developer", "Basic"],
     "correct": 0,
-    "explication": "Le plan Enterprise inclut un TAM dédié."
+    "explanation": "Le plan Enterprise inclut un TAM dédié."
   },
   {
     "id": "AWS-CCP-223",
@@ -292,7 +292,7 @@
     "question": "Quel plan offre un temps de réponse de 15 minutes pour les cas de production ?",
     "options": ["Enterprise", "Business", "Developer", "Basic"],
     "correct": 0,
-    "explication": "Enterprise offre une réponse critique en 15 minutes."
+    "explanation": "Enterprise offre une réponse critique en 15 minutes."
   },
   {
     "id": "AWS-CCP-224",
@@ -307,7 +307,7 @@
       "Chiffrement"
     ],
     "correct": 0,
-    "explication": "Les lifecycle policies et le choix de classe de stockage réduisent les coûts."
+    "explanation": "Les lifecycle policies et le choix de classe de stockage réduisent les coûts."
   },
   {
     "id": "AWS-CCP-225",
@@ -322,7 +322,7 @@
       "Plus de CPU"
     ],
     "correct": 0,
-    "explication": "Utiliser des modèles de tarification économiques et ajuster la capacité."
+    "explanation": "Utiliser des modèles de tarification économiques et ajuster la capacité."
   },
   {
     "id": "AWS-CCP-226",
@@ -337,7 +337,7 @@
       "Monitore les performances"
     ],
     "correct": 0,
-    "explication": "Le tagging aide à analyser les coûts par dimension."
+    "explanation": "Le tagging aide à analyser les coûts par dimension."
   },
   {
     "id": "AWS-CCP-227",
@@ -347,7 +347,7 @@
     "question": "Trusted Advisor aide-t-il à réduire les coûts ?",
     "options": ["Oui", "Non", "Uniquement pour la sécurité", "Uniquement pour les performances"],
     "correct": 0,
-    "explication": "Trusted Advisor identifie les ressources sous-utilisées."
+    "explanation": "Trusted Advisor identifie les ressources sous-utilisées."
   },
   {
     "id": "AWS-CCP-228",
@@ -357,7 +357,7 @@
     "question": "Compute Optimizer aide-t-il à réduire les coûts ?",
     "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour Lambda"],
     "correct": 0,
-    "explication": "Compute Optimizer recommande des types d'instance plus adaptés."
+    "explanation": "Compute Optimizer recommande des types d'instance plus adaptés."
   },
   {
     "id": "AWS-CCP-229",
@@ -367,7 +367,7 @@
     "question": "Organizations permet-il une facturation consolidée ?",
     "options": ["Oui", "Non", "Uniquement avec Control Tower", "Uniquement avec AWS Config"],
     "correct": 0,
-    "explication": "Organizations consolide la facturation des comptes membres."
+    "explanation": "Organizations consolide la facturation des comptes membres."
   },
   {
     "id": "AWS-CCP-230",
@@ -377,7 +377,7 @@
     "question": "Peut-on obtenir les prix AWS via API ?",
     "options": ["Oui", "Non", "Uniquement via le console", "Uniquement via le calculateur"],
     "correct": 0,
-    "explication": "L'API AWS Price List permet d'obtenir les tarifs par programme."
+    "explanation": "L'API AWS Price List permet d'obtenir les tarifs par programme."
   },
   {
     "id": "AWS-CCP-231",
@@ -392,7 +392,7 @@
       "Optimiser"
     ],
     "correct": 0,
-    "explication": "Billing Conductor permet de regrouper et facturer des comptes internes."
+    "explanation": "Billing Conductor permet de regrouper et facturer des comptes internes."
   },
   {
     "id": "AWS-CCP-232",
@@ -402,7 +402,7 @@
     "question": "AWS Marketplace permet-il d'acheter des logiciels tiers ?",
     "options": ["Oui", "Non", "Uniquement des AMI", "Uniquement des SaaS"],
     "correct": 0,
-    "explication": "Marketplace propose des AMI, SaaS, conteneurs, etc."
+    "explanation": "Marketplace propose des AMI, SaaS, conteneurs, etc."
   },
   {
     "id": "AWS-CCP-233",
@@ -417,7 +417,7 @@
       "Optimisation"
     ],
     "correct": 0,
-    "explication": "AWS Activate offre des crédits et du support aux startups."
+    "explanation": "AWS Activate offre des crédits et du support aux startups."
   },
   {
     "id": "AWS-CCP-234",
@@ -427,7 +427,7 @@
     "question": "Les crédits AWS peuvent-ils être appliqués à tous les services ?",
     "options": ["Non, certains services exclus", "Oui", "Uniquement EC2", "Uniquement S3"],
     "correct": 0,
-    "explication": "Certains services (ex: Marketplace) peuvent être exclus."
+    "explanation": "Certains services (ex: Marketplace) peuvent être exclus."
   },
   {
     "id": "AWS-CCP-235",
@@ -442,7 +442,7 @@
       "Scheduled seulement"
     ],
     "correct": 0,
-    "explication": "Standard, Convertible (flexibilité), Scheduled (heures fixes)."
+    "explanation": "Standard, Convertible (flexibilité), Scheduled (heures fixes)."
   },
   {
     "id": "AWS-CCP-236",
@@ -457,7 +457,7 @@
       "Aucun"
     ],
     "correct": 0,
-    "explication": "Savings Plans sont plus flexibles que les RI."
+    "explanation": "Savings Plans sont plus flexibles que les RI."
   },
   {
     "id": "AWS-CCP-237",
@@ -467,7 +467,7 @@
     "question": "Les budgets AWS peuvent-ils être basés sur des métriques ?",
     "options": ["Oui (coût, utilisation)", "Non", "Uniquement sur le coût", "Uniquement sur l'utilisation"],
     "correct": 0,
-    "explication": "Les budgets peuvent surveiller le coût ou l'utilisation."
+    "explanation": "Les budgets peuvent surveiller le coût ou l'utilisation."
   },
   {
     "id": "AWS-CCP-238",
@@ -477,7 +477,7 @@
     "question": "Cost Explorer peut-il prévoir les coûts futurs ?",
     "options": ["Oui", "Non", "Uniquement pour les 3 prochains mois", "Uniquement pour l'année suivante"],
     "correct": 0,
-    "explication": "Cost Explorer utilise le machine learning pour les prévisions."
+    "explanation": "Cost Explorer utilise le machine learning pour les prévisions."
   },
   {
     "id": "AWS-CCP-239",
@@ -487,7 +487,7 @@
     "question": "Le transfert de données entre régions est-il facturé ?",
     "options": ["Oui", "Non", "Seulement pour les grands volumes", "Seulement pour les services de calcul"],
     "correct": 0,
-    "explication": "Le transfert inter-régions est facturé par Go."
+    "explanation": "Le transfert inter-régions est facturé par Go."
   },
   {
     "id": "AWS-CCP-240",
@@ -497,7 +497,7 @@
     "question": "Le transfert de données entrant (upload) vers AWS est-il facturé ?",
     "options": ["Non", "Oui", "Seulement au-delà d'un seuil", "Seulement pour S3"],
     "correct": 0,
-    "explication": "Le transfert entrant vers AWS est généralement gratuit."
+    "explanation": "Le transfert entrant vers AWS est généralement gratuit."
   },
   {
     "id": "AWS-CCP-241",
@@ -507,7 +507,7 @@
     "question": "Le calculateur de prix AWS est-il gratuit ?",
     "options": ["Oui", "Non", "Uniquement pour les comptes pro", "Uniquement pour les comptes enterprise"],
     "correct": 0,
-    "explication": "Le calculateur est accessible gratuitement à tous."
+    "explanation": "Le calculateur est accessible gratuitement à tous."
   },
   {
     "id": "AWS-CCP-242",
@@ -517,7 +517,7 @@
     "question": "Cost Anomaly Detection est-il basé sur le machine learning ?",
     "options": ["Oui", "Non", "Basé sur des règles fixes", "Basé sur des seuils"],
     "correct": 0,
-    "explication": "Il utilise ML pour apprendre les modèles de dépenses."
+    "explanation": "Il utilise ML pour apprendre les modèles de dépenses."
   },
   {
     "id": "AWS-CCP-243",
@@ -527,7 +527,7 @@
     "question": "Organizations permet-il des réductions sur les RI partagées ?",
     "options": ["Oui", "Non", "Uniquement pour les Savings Plans", "Uniquement pour les comptes master"],
     "correct": 0,
-    "explication": "Les RI et Savings Plans sont partagés entre les comptes de l'organisation."
+    "explanation": "Les RI et Savings Plans sont partagés entre les comptes de l'organisation."
   },
   {
     "id": "AWS-CCP-244",
@@ -542,7 +542,7 @@
       "Base de données"
     ],
     "correct": 0,
-    "explication": "Spot Fleet gère un ensemble d'instances Spot et On-Demand."
+    "explanation": "Spot Fleet gère un ensemble d'instances Spot et On-Demand."
   },
   {
     "id": "AWS-CCP-245",
@@ -552,7 +552,7 @@
     "question": "Quel est le préavis avant interruption d'une instance Spot ?",
     "options": ["2 minutes", "5 minutes", "10 minutes", "30 minutes"],
     "correct": 0,
-    "explication": "AWS donne un préavis de 2 minutes avant l'interruption."
+    "explanation": "AWS donne un préavis de 2 minutes avant l'interruption."
   },
   {
     "id": "AWS-CCP-246",
@@ -562,7 +562,7 @@
     "question": "Compute Savings Plans s'applique-t-il à Fargate ?",
     "options": ["Oui", "Non", "Uniquement à EC2", "Uniquement à Lambda"],
     "correct": 0,
-    "explication": "Compute Savings Plans couvre EC2, Fargate et Lambda."
+    "explanation": "Compute Savings Plans couvre EC2, Fargate et Lambda."
   },
   {
     "id": "AWS-CCP-247",
@@ -572,7 +572,7 @@
     "question": "EC2 Instance Savings Plans s'applique-t-il à une famille d'instances spécifique ?",
     "options": ["Oui", "Non", "À toutes les familles", "À toutes les régions"],
     "correct": 0,
-    "explication": "EC2 Instance Savings Plans est limité à une famille d'instances dans une région."
+    "explanation": "EC2 Instance Savings Plans est limité à une famille d'instances dans une région."
   },
   {
     "id": "AWS-CCP-248",
@@ -582,7 +582,7 @@
     "question": "SageMaker Savings Plans s'applique-t-il aux notebooks ?",
     "options": ["Oui", "Non", "Uniquement aux endpoints", "Uniquement aux jobs de training"],
     "correct": 0,
-    "explication": "Couvre les instances SageMaker (notebooks, training, endpoints)."
+    "explanation": "Couvre les instances SageMaker (notebooks, training, endpoints)."
   },
   {
     "id": "AWS-CCP-249",
@@ -597,7 +597,7 @@
       "Optimiser les coûts"
     ],
     "correct": 0,
-    "explication": "Les Cost Categories permettent de regrouper les coûts par équipe, projet, environnement."
+    "explanation": "Les Cost Categories permettent de regrouper les coûts par équipe, projet, environnement."
   },
   {
     "id": "AWS-CCP-250",
@@ -612,6 +612,6 @@
       "RI seulement"
     ],
     "correct": 0,
-    "explication": "Configurer des budgets et des alarmes pour surveiller les coûts."
+    "explanation": "Configurer des budgets et des alarmes pour surveiller les coûts."
   }
 ]

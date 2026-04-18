@@ -50,7 +50,12 @@
     "theme_label": "IAM Roles",
     "difficulty": "hard",
     "question": "Peut-on assumer un rôle IAM depuis un compte différent ?",
-    "options": ["Oui", "Non", "Uniquement avec organisations", "Uniquement avec identity center"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement avec organisations",
+      "Uniquement avec identity center"
+    ],
     "correct": 0,
     "explanation": "Les rôles IAM peuvent être assumés cross-compte avec une politique de confiance."
   },
@@ -255,7 +260,12 @@
     "theme_label": "AWS Shield",
     "difficulty": "hard",
     "question": "AWS Shield Standard est-il gratuit ?",
-    "options": ["Oui", "Non", "Uniquement pour EC2", "Uniquement pour CloudFront"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement pour EC2",
+      "Uniquement pour CloudFront"
+    ],
     "correct": 0,
     "explanation": "Shield Standard est inclus gratuitement pour tous les clients AWS."
   },
@@ -340,7 +350,12 @@
     "theme_label": "Shared Responsibility Model",
     "difficulty": "hard",
     "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DU cloud ?",
-    "options": ["AWS", "Le client", "Les deux", "Ni l'un ni l'autre"],
+    "options": [
+      "AWS",
+      "Le client",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
     "correct": 0,
     "explanation": "AWS est responsable de la sécurité DU cloud (matériel, réseau, hyperviseur)."
   },
@@ -350,7 +365,12 @@
     "theme_label": "Shared Responsibility Model",
     "difficulty": "hard",
     "question": "Dans le modèle de responsabilité partagée, qui est responsable de la sécurité DANS le cloud ?",
-    "options": ["Le client", "AWS", "Les deux", "Ni l'un ni l'autre"],
+    "options": [
+      "Le client",
+      "AWS",
+      "Les deux",
+      "Ni l'un ni l'autre"
+    ],
     "correct": 0,
     "explanation": "Le client est responsable de la sécurité DANS le cloud (données, OS, applications)."
   },
@@ -360,7 +380,12 @@
     "theme_label": "Encryption best practices",
     "difficulty": "hard",
     "question": "Doit-on chiffrer les données au repos ?",
-    "options": ["Oui", "Non", "Seulement les données sensibles", "Uniquement pour S3"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement les données sensibles",
+      "Uniquement pour S3"
+    ],
     "correct": 0,
     "explanation": "Le chiffrement au repos est recommandé pour toutes les données."
   },
@@ -370,7 +395,12 @@
     "theme_label": "Encryption best practices",
     "difficulty": "hard",
     "question": "Doit-on chiffrer les données en transit ?",
-    "options": ["Oui", "Non", "Seulement pour Internet", "Seulement pour les API"],
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement pour Internet",
+      "Seulement pour les API"
+    ],
     "correct": 0,
     "explanation": "Le chiffrement en transit (TLS) est recommandé pour toutes les communications."
   },
@@ -477,7 +507,7 @@
       "Uniquement IAM"
     ],
     "correct": 0,
-    "explication": "Plusieurs mécanismes d'authentification et d'autorisation."
+    "explanation": "Plusieurs mécanismes d'authentification et d'autorisation."
   },
   {
     "id": "AWS-DEV-375",
@@ -492,7 +522,7 @@
       "Compute"
     ],
     "correct": 0,
-    "explication": "Cognito gère l'authentification des utilisateurs (User Pools) et la fédération (Identity Pools)."
+    "explanation": "Cognito gère l'authentification des utilisateurs (User Pools) et la fédération (Identity Pools)."
   },
   {
     "id": "AWS-DEV-376",
@@ -500,9 +530,14 @@
     "theme_label": "Cognito User Pools",
     "difficulty": "hard",
     "question": "Cognito User Pools permet-il la connexion via des fournisseurs sociaux ?",
-    "options": ["Oui", "Non", "Uniquement via email", "Uniquement via SMS"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement via email",
+      "Uniquement via SMS"
+    ],
     "correct": 0,
-    "explication": "Cognito supporte Facebook, Google, Amazon, Apple, SAML, OIDC."
+    "explanation": "Cognito supporte Facebook, Google, Amazon, Apple, SAML, OIDC."
   },
   {
     "id": "AWS-DEV-377",
@@ -517,7 +552,7 @@
       "Gérer les mots de passe"
     ],
     "correct": 0,
-    "explication": "Identity Pools permettent d'assumer des rôles IAM pour accéder aux services AWS."
+    "explanation": "Identity Pools permettent d'assumer des rôles IAM pour accéder aux services AWS."
   },
   {
     "id": "AWS-DEV-378",
@@ -532,7 +567,7 @@
       "Uniquement XSS"
     ],
     "correct": 0,
-    "explication": "AWS propose des managed rule groups pour les attaques courantes."
+    "explanation": "AWS propose des managed rule groups pour les attaques courantes."
   },
   {
     "id": "AWS-DEV-379",
@@ -540,9 +575,14 @@
     "theme_label": "AWS Shield Advanced",
     "difficulty": "hard",
     "question": "Quel est le coût mensuel de Shield Advanced ?",
-    "options": ["3 000 $ par mois", "1 000 $", "5 000 $", "10 000 $"],
+    "options": [
+      "3 000 $ par mois",
+      "1 000 $",
+      "5 000 $",
+      "10 000 $"
+    ],
     "correct": 0,
-    "explication": "Shield Advanced coûte 3 000 $ par mois + frais d'utilisation."
+    "explanation": "Shield Advanced coûte 3 000 $ par mois + frais d'utilisation."
   },
   {
     "id": "AWS-DEV-380",
@@ -557,7 +597,7 @@
       "Direct Connect"
     ],
     "correct": 0,
-    "explication": "Network Firewall protège au niveau réseau (VPC)."
+    "explanation": "Network Firewall protège au niveau réseau (VPC)."
   },
   {
     "id": "AWS-DEV-381",
@@ -572,7 +612,7 @@
       "Direct Connect"
     ],
     "correct": 0,
-    "explication": "Firewall Manager applique des règles de sécurité à travers l'organisation."
+    "explanation": "Firewall Manager applique des règles de sécurité à travers l'organisation."
   },
   {
     "id": "AWS-DEV-382",
@@ -587,7 +627,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Security Hub agrège les findings de GuardDuty, Inspector, Macie, etc."
+    "explanation": "Security Hub agrège les findings de GuardDuty, Inspector, Macie, etc."
   },
   {
     "id": "AWS-DEV-383",
@@ -602,7 +642,7 @@
       "WAF"
     ],
     "correct": 0,
-    "explication": "Macie utilise le machine learning pour identifier les données sensibles (PII, etc.)."
+    "explanation": "Macie utilise le machine learning pour identifier les données sensibles (PII, etc.)."
   },
   {
     "id": "AWS-DEV-384",
@@ -617,7 +657,7 @@
       "WAF"
     ],
     "correct": 0,
-    "explication": "Detective aide à investiguer les findings de GuardDuty et Security Hub."
+    "explanation": "Detective aide à investiguer les findings de GuardDuty et Security Hub."
   },
   {
     "id": "AWS-DEV-385",
@@ -632,7 +672,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Trusted Advisor fournit des recommandations pour optimiser votre environnement AWS."
+    "explanation": "Trusted Advisor fournit des recommandations pour optimiser votre environnement AWS."
   },
   {
     "id": "AWS-DEV-386",
@@ -647,7 +687,7 @@
       "CDN"
     ],
     "correct": 0,
-    "explication": "Artifact fournit des rapports de conformité et des accords (NDA, BAA)."
+    "explanation": "Artifact fournit des rapports de conformité et des accords (NDA, BAA)."
   },
   {
     "id": "AWS-DEV-387",
@@ -662,7 +702,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Audit Manager aide à préparer des audits en collectant des preuves automatiquement."
+    "explanation": "Audit Manager aide à préparer des audits en collectant des preuves automatiquement."
   },
   {
     "id": "AWS-DEV-388",
@@ -677,7 +717,7 @@
       "Seulement RDS"
     ],
     "correct": 0,
-    "explication": "De nombreux services AWS sont certifiés PCI DSS."
+    "explanation": "De nombreux services AWS sont certifiés PCI DSS."
   },
   {
     "id": "AWS-DEV-389",
@@ -692,7 +732,7 @@
       "Seulement RDS"
     ],
     "correct": 0,
-    "explication": "AWS propose un Business Associate Agreement (BAA) pour les services éligibles HIPAA."
+    "explanation": "AWS propose un Business Associate Agreement (BAA) pour les services éligibles HIPAA."
   },
   {
     "id": "AWS-DEV-390",
@@ -700,9 +740,14 @@
     "theme_label": "GDPR compliance",
     "difficulty": "hard",
     "question": "AWS est-il conforme GDPR ?",
-    "options": ["Oui", "Non", "Partiellement", "Uniquement en Europe"],
+    "options": [
+      "Oui",
+      "Non",
+      "Partiellement",
+      "Uniquement en Europe"
+    ],
     "correct": 0,
-    "explication": "AWS est conforme GDPR avec des engagements contractuels."
+    "explanation": "AWS est conforme GDPR avec des engagements contractuels."
   },
   {
     "id": "AWS-DEV-391",
@@ -717,7 +762,7 @@
       "RDS"
     ],
     "correct": 0,
-    "explication": "Plusieurs services aident à détecter et répondre aux incidents."
+    "explanation": "Plusieurs services aident à détecter et répondre aux incidents."
   },
   {
     "id": "AWS-DEV-392",
@@ -732,7 +777,7 @@
       "Auditer des politiques"
     ],
     "correct": 0,
-    "explication": "Policy Simulator permet de valider l'effet d'une politique."
+    "explanation": "Policy Simulator permet de valider l'effet d'une politique."
   },
   {
     "id": "AWS-DEV-393",
@@ -747,7 +792,7 @@
       "Rôles pour S3"
     ],
     "correct": 0,
-    "explication": "Roles Anywhere étend les rôles IAM à des workloads on-premise."
+    "explanation": "Roles Anywhere étend les rôles IAM à des workloads on-premise."
   },
   {
     "id": "AWS-DEV-394",
@@ -762,7 +807,7 @@
       "VPN"
     ],
     "correct": 0,
-    "explication": "Verified Access permet un accès sécurisé aux applications internes sans VPN."
+    "explanation": "Verified Access permet un accès sécurisé aux applications internes sans VPN."
   },
   {
     "id": "AWS-DEV-395",
@@ -770,9 +815,14 @@
     "theme_label": "VPC security",
     "difficulty": "hard",
     "question": "Doit-on utiliser des VPC Flow Logs ?",
-    "options": ["Oui, pour l'audit", "Non", "Optionnel", "Uniquement pour les VPC publics"],
+    "options": [
+      "Oui, pour l'audit",
+      "Non",
+      "Optionnel",
+      "Uniquement pour les VPC publics"
+    ],
     "correct": 0,
-    "explication": "Les Flow Logs aident à diagnostiquer et auditer le trafic réseau."
+    "explanation": "Les Flow Logs aident à diagnostiquer et auditer le trafic réseau."
   },
   {
     "id": "AWS-DEV-396",
@@ -787,7 +837,7 @@
       "Seulement EBS"
     ],
     "correct": 0,
-    "explication": "La plupart des services AWS supportent le chiffrement au repos."
+    "explanation": "La plupart des services AWS supportent le chiffrement au repos."
   },
   {
     "id": "AWS-DEV-397",
@@ -802,7 +852,7 @@
       "Seulement CloudFront"
     ],
     "correct": 0,
-    "explication": "Tous les services AWS supportent TLS pour les communications."
+    "explanation": "Tous les services AWS supportent TLS pour les communications."
   },
   {
     "id": "AWS-DEV-398",
@@ -817,7 +867,7 @@
       "Pas de logs"
     ],
     "correct": 0,
-    "explication": "Les logs doivent être centralisés et protégés."
+    "explanation": "Les logs doivent être centralisés et protégés."
   },
   {
     "id": "AWS-DEV-399",
@@ -825,9 +875,14 @@
     "theme_label": "Security best practices",
     "difficulty": "hard",
     "question": "Faut-il activer CloudTrail dans toutes les régions ?",
-    "options": ["Oui", "Non", "Uniquement dans la région principale", "Uniquement dans les régions actives"],
+    "options": [
+      "Oui",
+      "Non",
+      "Uniquement dans la région principale",
+      "Uniquement dans les régions actives"
+    ],
     "correct": 0,
-    "explication": "CloudTrail multi-région capture tous les appels API, même dans les régions non utilisées."
+    "explanation": "CloudTrail multi-région capture tous les appels API, même dans les régions non utilisées."
   },
   {
     "id": "AWS-DEV-400",
@@ -842,6 +897,310 @@
       "Rotation annuelle"
     ],
     "correct": 0,
-    "explication": "Des politiques de mot de passe fortes et la MFA sont essentielles."
+    "explanation": "Des politiques de mot de passe fortes et la MFA sont essentielles."
+  },
+  {
+    "id": "AWS-DEV-S&I-001",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM peuvent être attachées à des utilisateurs, des groupes et des rôles.",
+      "Les politiques IAM peuvent définir les permissions pour accéder aux ressources AWS.",
+      "Les politiques IAM ne peuvent pas être utilisées pour définir des permissions personnalisées.",
+      "Les politiques IAM ne peuvent pas être combinées avec les autorisations par défaut."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les politiques IAM peuvent être attachées à des utilisateurs, des groupes et des rôles (A). Les politiques IAM peuvent définir les permissions pour accéder aux ressources AWS (B). Les politiques IAM peuvent être utilisées pour définir des permissions personnalisées (C est incorrect). Les politiques IAM peuvent être combinées avec les autorisations par défaut (D est incorrect)."
+  },
+  {
+    "id": "AWS-DEV-S&I-002",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour les rôles IAM ?",
+    "options": [
+      "Créer un rôle pour chaque utilisateur individuel.",
+      "Utiliser des rôles de service pour les applications et services AWS.",
+      "Créer un rôle pour chaque ressource AWS individuelle.",
+      "Aucune pratique particulière n'est nécessaire."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "Utiliser des rôles de service pour les applications et services AWS est la meilleure pratique car cela permet une gestion plus efficace des permissions et facilite la rotation des clés."
+  },
+  {
+    "id": "AWS-DEV-S&I-003",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions IAM :",
+    "options": [
+      "Les conditions IAM permettent de limiter les permissions en fonction d'autres paramètres.",
+      "Les conditions IAM ne peuvent être utilisées que sur les politiques de groupe.",
+      "Les conditions IAM sont ignorées si elles ne correspondent pas aux paramètres spécifiés.",
+      "Les conditions IAM peuvent être utilisées sur les politiques d'utilisateur."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les conditions IAM permettent de limiter les permissions en fonction d'autres paramètres (A). Les conditions IAM ne peuvent être utilisées que sur les politiques de groupe (B est incorrect). Les conditions IAM sont ignorées si elles ne correspondent pas aux paramètres spécifiés (C est incorrect). Les conditions IAM peuvent être utilisées sur les politiques d'utilisateur (D)."
+  },
+  {
+    "id": "AWS-DEV-S&I-004",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "hard",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est l'utilité de AWS WAF ?",
+    "options": [
+      "Fournit un pare-feu pour protéger les applications web contre les menaces.",
+      "Permet de stocker des données dans le cloud.",
+      "Fournit un service de messagerie électronique.",
+      "Permet de gérer les identités et les accès aux ressources AWS."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS WAF (Web Application Firewall) fournit un pare-feu pour protéger les applications web contre les menaces."
+  },
+  {
+    "id": "AWS-DEV-S&I-005",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM sont des documents JSON qui définissent les permissions.",
+      "Une politique IAM peut être appliquée à un utilisateur, un groupe ou un rôle.",
+      "Les politiques IAM ne peuvent pas être utilisées pour définir des permissions sur les ressources AWS.",
+      "Les politiques IAM peuvent être héritées par les entités auxquelles elles sont attachées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les politiques IAM sont des documents JSON qui définissent les permissions (A). Une politique IAM peut être appliquée à un utilisateur, un groupe ou un rôle (B). Les politiques IAM peuvent être utilisées pour définir des permissions sur les ressources AWS (C est incorrect). Les politiques IAM peuvent être héritées par les entités auxquelles elles sont attachées (D)."
+  },
+  {
+    "id": "AWS-DEV-S&I-006",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la différence entre un rôle IAM et une politique IAM ?",
+    "options": [
+      "Un rôle IAM définit les permissions, tandis qu'une politique IAM applique ces permissions à des entités spécifiques.",
+      "Un rôle IAM est une politique IAM qui peut être partagée entre différents comptes AWS.",
+      "Un rôle IAM est une entité qui peut exécuter des actions sur les ressources AWS, tandis qu'une politique IAM définit ces actions.",
+      "Un rôle IAM est une politique IAM qui peut être utilisée pour définir des permissions sur les ressources AWS."
+    ],
+    "correct": 2,
+    "correct_multiple": null,
+    "explanation": "Un rôle IAM est une entité qui peut exécuter des actions sur les ressources AWS, tandis qu'une politique IAM définit ces actions (C est correct). Un rôle IAM définit les permissions, tandis qu'une politique IAM applique ces permissions à des entités spécifiques (A est incorrect). Un rôle IAM n'est pas une politique IAM qui peut être partagée entre différents comptes AWS (B est incorrect). Un rôle IAM n'est pas une politique IAM qui peut être utilisée pour définir des permissions sur les ressources AWS (D est incorrect)."
+  },
+  {
+    "id": "AWS-DEV-S&I-007",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions IAM :",
+    "options": [
+      "Les conditions IAM permettent de définir des restrictions supplémentaires sur les autorisations.",
+      "Une condition IAM peut être utilisée pour limiter l'accès à une ressource en fonction de la date et de l'heure.",
+      "Les conditions IAM ne peuvent être utilisées que sur les politiques IAM et non sur les rôles IAM.",
+      "Une condition IAM peut être utilisée pour restreindre l'accès à une ressource en fonction de la taille du fichier."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les conditions IAM permettent de définir des restrictions supplémentaires sur les autorisations (A). Une condition IAM peut être utilisée pour limiter l'accès à une ressource en fonction de la date et de l'heure (B). Les conditions IAM peuvent être utilisées sur les politiques IAM et sur les rôles IAM (C est incorrect). Une condition IAM ne peut pas être utilisée pour restreindre l'accès à une ressource en fonction de la taille du fichier (D est incorrect)."
+  },
+  {
+    "id": "AWS-DEV-S&I-008",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale d'AWS WAF ?",
+    "options": [
+      "Gérer les identités et les accès aux ressources AWS.",
+      "Protéger les applications web contre les attaques et les menaces.",
+      "Gérer les politiques IAM pour les utilisateurs et les groupes.",
+      "Analyser et surveiller les activités réseau."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "AWS WAF est un service de pare-feu web qui protège les applications web contre les attaques et les menaces (B est correct). Gérer les identités et les accès aux ressources AWS est la fonction de IAM (A est incorrect). Gérer les politiques IAM pour les utilisateurs et les groupes est la fonction de IAM (C est incorrect). Analyser et surveiller les activités réseau est la fonction de CloudTrail (D est incorrect)."
+  },
+  {
+    "id": "AWS-DEV-S&I-009",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM sont utilisées pour définir les permissions des utilisateurs et groupes.",
+      "Les politiques IAM peuvent être attachées à des utilisateurs, des groupes et des rôles.",
+      "Les politiques IAM ne peuvent être utilisées que pour les services AWS.",
+      "Les politiques IAM sont héritables des groupes auxquels un utilisateur appartient."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1
+    ],
+    "explanation": "Les politiques IAM sont utilisées pour définir les permissions des utilisateurs et groupes (A). Les politiques IAM peuvent être attachées à des utilisateurs, des groupes et des rôles (B). Les politiques IAM ne peuvent être utilisées que pour les services AWS (C) est incorrect, car elles s'appliquent à de nombreux services AWS. Les politiques IAM ne sont pas héritables des groupes auxquels un utilisateur appartient (D) est incorrect, car les politiques sont appliquées directement aux utilisateurs et rôles."
+  },
+  {
+    "id": "AWS-DEV-S&I-010",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Best Practices",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour les permissions IAM ?",
+    "options": [
+      "Principe du moindre privilège",
+      "Donner toutes les permissions",
+      "Donner des permissions admin",
+      "Aucune permission"
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "Le principe du moindre privilège accorde uniquement les permissions nécessaires, ce qui est la meilleure pratique pour les permissions IAM."
+  },
+  {
+    "id": "AWS-DEV-S&I-011",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les rôles IAM :",
+    "options": [
+      "Les rôles IAM peuvent être utilisés pour accorder des permissions à des applications et services externes.",
+      "Les rôles IAM ne peuvent être utilisés que pour les utilisateurs AWS.",
+      "Les rôles IAM sont héritables des utilisateurs auxquels ils sont associés.",
+      "Les rôles IAM peuvent être associés à des utilisateurs, des groupes et des entités de service."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      3
+    ],
+    "explanation": "Les rôles IAM peuvent être utilisés pour accorder des permissions à des applications et services externes (A). Les rôles IAM ne peuvent être utilisés que pour les utilisateurs AWS (B) est incorrect, car ils peuvent également être associés à des entités de service. Les rôles IAM ne sont pas héritables des utilisateurs auxquels ils sont associés (C) est incorrect, car les rôles sont appliqués directement aux utilisateurs et entités de service. Les rôles IAM peuvent être associés à des utilisateurs, des groupes et des entités de service (D)."
+  },
+  {
+    "id": "AWS-DEV-S&I-012",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Conditions",
+    "difficulty": "hard",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les conditions IAM :",
+    "options": [
+      "Les conditions IAM permettent de limiter les permissions en fonction des conditions spécifiques.",
+      "Les conditions IAM peuvent être utilisées pour limiter les permissions en fonction de l'heure de la journée.",
+      "Les conditions IAM ne peuvent être utilisées que pour les services AWS spécifiques.",
+      "Les conditions IAM peuvent être associées à des politiques IAM et aux rôles IAM."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les conditions IAM permettent de limiter les permissions en fonction des conditions spécifiques (A). Les conditions IAM peuvent être utilisées pour limiter les permissions en fonction de l'heure de la journée (B). Les conditions IAM ne peuvent être utilisées que pour les services AWS spécifiques (C) est incorrect, car elles s'appliquent à de nombreux services AWS. Les conditions IAM peuvent être associées à des politiques IAM et aux rôles IAM (D)."
+  },
+  {
+    "id": "AWS-DEV-S&I-013",
+    "theme": "Security & IAM",
+    "theme_label": "AWS WAF",
+    "difficulty": "medium",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la fonction principale de AWS WAF ?",
+    "options": [
+      "Filtrer les requêtes entrantes et sortantes pour protéger contre les attaques web.",
+      "Gérer les utilisateurs et les groupes dans votre organisation AWS.",
+      "Analyser les journaux d'activité de vos services AWS pour détecter les violations de sécurité.",
+      "Gérer les configurations réseau et la connectivité entre vos services AWS."
+    ],
+    "correct": 0,
+    "correct_multiple": null,
+    "explanation": "AWS WAF filtre les requêtes entrantes et sortantes pour protéger contre les attaques web."
+  },
+  {
+    "id": "AWS-DEV-S&I-014",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Une politique IAM peut être attachee à un utilisateur, un groupe ou un rôle.",
+      "Les politiques IAM peuvent être utilisées pour définir des permissions personnalisées.",
+      "Une politique IAM peut être associée à plusieurs entités (utilisateurs, groupes, rôles).",
+      "Les politiques IAM ne peuvent être utilisées que pour définir des permissions d'accès aux services AWS.",
+      "Une politique IAM peut être héritée par les entités auxquelles elle est attachées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Une politique IAM peut être attachee à un utilisateur, un groupe ou un rôle (A). Les politiques IAM peuvent être utilisées pour définir des permissions personnalisées (B). Une politique IAM peut être associée à plusieurs entités (utilisateurs, groupes, rôles) (C). Les politiques IAM ne peuvent être utilisées que pour définir des permissions d'accès aux services AWS (D est incorrect). Une politique IAM peut être héritée par les entités auxquelles elle est attachées (E)."
+  },
+  {
+    "id": "AWS-DEV-S&I-015",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Roles",
+    "difficulty": "easy",
+    "type": "SINGLE_CHOICE",
+    "question": "Quelle est la meilleure pratique pour les rôles IAM ?",
+    "options": [
+      "Créer un rôle avec des permissions d'accès administrateur pour toutes les entités.",
+      "Créer un rôle avec des permissions d'accès limitées pour chaque entité.",
+      "Créer un rôle avec des permissions d'accès administrateur pour une seule entité.",
+      "Créer un rôle avec des permissions d'accès limitées pour toutes les entités."
+    ],
+    "correct": 1,
+    "correct_multiple": null,
+    "explanation": "La meilleure pratique consiste à créer un rôle avec des permissions d'accès limitées pour chaque entité (B)."
+  },
+  {
+    "id": "AWS-DEV-S&I-016",
+    "theme": "Security & IAM",
+    "theme_label": "IAM Policies",
+    "difficulty": "medium",
+    "type": "MULTI_CHOICE",
+    "question": "Sélectionnez TOUTES les affirmations correctes concernant les politiques IAM :",
+    "options": [
+      "Les politiques IAM définissent les permissions pour les utilisateurs, groupes et rôles.",
+      "Les politiques IAM peuvent être attachées à des utilisateurs individuels.",
+      "Les politiques IAM ne peuvent pas être utilisées pour contrôler l'accès aux services AWS.",
+      "Les politiques IAM peuvent être utilisées pour définir des permissions basées sur les conditions.",
+      "Les politiques IAM ne peuvent pas être versionnées."
+    ],
+    "correct": 0,
+    "correct_multiple": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Les politiques IAM définissent les permissions pour les utilisateurs, groupes et rôles (A). Les politiques IAM peuvent être attachées à des utilisateurs individuels (B). Les politiques IAM peuvent être utilisées pour définir des permissions basées sur les conditions (D). Les politiques IAM ne peuvent pas être utilisées pour contrôler l'accès aux services AWS (C). Les politiques IAM peuvent être versionnées (E)."
   }
 ]
